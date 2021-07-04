@@ -1,6 +1,6 @@
 # MGame
 
-An OpenStreetMap rally game
+A rally game based on OpenStreetMap data.
 
 ## Screenshots
 
