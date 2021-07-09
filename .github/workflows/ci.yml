@@ -15,7 +15,11 @@ jobs:
 
     steps:
       - name: Install dependencies
-        run: sudo apt-get install -y g++ ninja-build libglfw3-dev
+        run: |
+          sudo apt-get install -y \
+            g++ \
+            ninja-build \
+            libglfw3-dev
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -50,7 +54,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pacman --noconfirm -S mingw-w64-x86_64-glfw mingw-w64-x86_64-gcc make
+          pacman --noconfirm -S \
+            mingw-w64-x86_64-glfw \
+            mingw-w64-x86_64-gcc \
+            mingw-w64-x86_64-ninja \
+            mingw-w64-x86_64-cmake \
+            make
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
