@@ -26,19 +26,19 @@ package:
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
-			Mlib/$(platform_dir)/Bin/libMlib.so \
-			Mlib/$(platform_dir)/Bin/libMlibCv.so \
-			Mlib/$(platform_dir)/Bin/libMlibGeometry.so \
-			Mlib/$(platform_dir)/Bin/libMlibImages.so \
-			Mlib/$(platform_dir)/Bin/libMlibMath.so \
-			Mlib/$(platform_dir)/Bin/libMlibPhysics.so \
-			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.so \
-			Mlib/$(platform_dir)/Bin/libMlibRender.so \
-			Mlib/$(platform_dir)/Bin/libMlibScene.so \
-			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.so \
-			Mlib/$(platform_dir)/Bin/libMlibStbImage.so \
-			Mlib/$(platform_dir)/Bin/libMlibStrings.so \
-			Mlib/$(platform_dir)/Bin/libMlibThreads.so \
+			Mlib/$(platform_dir)/Bin/libMlib.dll \
+			Mlib/$(platform_dir)/Bin/libMlibCv.dll \
+			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
+			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
+			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
+			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
+			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \
+			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
+			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
+			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.dll \
+			Mlib/$(platform_dir)/Bin/libMlibStbImage.dll \
+			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
+			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
 			/mingw64/bin/libgcc_s_seh-1.dll \
 			/mingw64/bin/libgomp-1.dll \
 			/mingw64/bin/libstdc++-6.dll \
