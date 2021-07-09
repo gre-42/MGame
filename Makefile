@@ -4,18 +4,12 @@ platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
     else \
         echo U${CMAKE_BUILD_TYPE}; \
     fi
-build_target != if [ "$$OSTYPE" = "msys" ] ; then \
-        echo debug; \
-    else \
-        echo debug10; \
-    fi
-data_dir = data
 bin_dir = $(platform_dir)
 
 all: build package
 
 build:
-	make -C Mlib ${build_target} CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+	make -C Mlib build10 CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 
 package:
 	if [ "$$OSTYPE" = "msys" ] ; then \
