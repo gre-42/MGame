@@ -10,7 +10,7 @@ bin_dir = $(platform_dir)
 all: build package
 
 build:
-	make -C Mlib build10 CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+	make -C Mlib build CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 
 package:
 	if [ "$$OSTYPE" = "msys" ] ; then \
