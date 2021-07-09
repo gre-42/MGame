@@ -1,0 +1,51 @@
+include ../../scripts/include_all.scn;
+include ../nyc/osm_resource_nyc.scn;
+
+macro_playback scene_racing_static
+    OSM_MAP_RESOURCE:osm_resource_nyc
+    DIRTMAP_TEXTURE:textures/dirtmap_dense.png
+    DIRTMAP_OFFSET:0
+    DIRTMAP_DISCRETENESS:1
+    DIRT_SCALE:0.5
+    DIRTMAP_WRAP_MODE:repeat
+    DIRTMAP_LEFT:-500
+    DIRTMAP_RIGHT:500
+    DIRTMAP_BOTTOM:-500
+    DIRTMAP_TOP:500
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png
+    GAME_LEVEL:1;
+
+macro_begin instantiate_transient_objects;
+    macro_playback generic_scene_racing_dynamic
+        IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
+        SUN_LEFT:-2000
+        SUN_RIGHT:2000
+        SUN_BOTTOM:-1000
+        SUN_TOP:1000
+        IF_CREATE_PLAYER_CAR:
+        CAR_NODE_X:-117
+        CAR_NODE_Y:-170
+        CAR_NODE_Z:120
+        CAR_NODE_ANGLE_X:0
+        CAR_NODE_ANGLE_Y:120
+        CAR_NODE_ANGLE_Z:0
+        SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR=_M3
+        PLAYBACK_SPEED:PLAYBACK_SPEED=1
+        IF_RECORD_TRACK:IF_RECORD_TRACK=#
+        RECORDINGS_DIR:__DIR__
+        IF_PLAYBACK_TRACK_1:
+        IF_PLAYBACK_TRACK_2:#
+        IF_PLAYBACK_TRACK_3:#
+        IF_PLAYBACK_WINNER_0:
+        IF_PLAYBACK_WINNER_1:
+        IF_PLAYBACK_WINNER_2:#
+        IF_CHECKPOINTS:
+        IF_RACING:#
+        IF_RALLY:
+        IF_BURN_IN:#;
+macro_end;
+
+macro_playback instantiate_transient_objects
+    IF_UPDATE_EXISTING_SCENE:#;
+macro_playback setup_traffic_wo_pedestrians context=primary_scene;
+macro_playback create_main_menu;

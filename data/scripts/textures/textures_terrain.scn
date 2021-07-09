@@ -1,0 +1,282 @@
+add_texture_descriptor
+    name=Curb_Grass_Asphalt
+    color=textures/curb_grass_asphalt.png
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Gravel010
+    color=textures/cc0textures/Gravel010_2K_Color.jpg
+    normal=textures/cc0textures/Gravel010_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Gravel010_Alpha
+    color=textures/cc0textures/Gravel010_2K_Color.png
+    normal=textures/cc0textures/Gravel010_2K_Normal.jpg
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Plaster003
+    color=textures/cc0textures/Plaster003_2K_Color.jpg
+    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Plaster003_wh
+    color=textures/cc0textures/Plaster003_2K_Color_wh.jpg
+    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Plaster003_ye
+    color=textures/cc0textures/Plaster003_2K_Color_ye.jpg
+    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Bricks051
+    color=textures/cc0textures/Bricks051_2K_Color.jpg
+    normal=textures/cc0textures/Bricks051_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Concrete020
+    color=textures/cc0textures/Concrete020_2K_Color.jpg
+    normal=textures/cc0textures/Concrete020_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Asphalt015
+    color=textures/cc0textures/Asphalt015_2K_Color.jpg
+    normal=textures/cc0textures/Asphalt015_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=PavingStones038
+    color=textures/cc0textures/PavingStones038_2K_Color.jpg
+    normal=textures/cc0textures/PavingStones038_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=PavingStones035
+    color=textures/cc0textures/PavingStones035_2K_Color_da.jpg
+    normal=textures/cc0textures/PavingStones035_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=PavingStones052
+    color=textures/cc0textures/PavingStones052_2K_Color.jpg
+    normal=textures/cc0textures/PavingStones052_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Metal038
+    color=textures/cc0textures/Metal038_2K_Color.jpg
+    normal=textures/cc0textures/Metal038_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=grass_ground
+    color=textures/SR/grass_ground_d.jpg
+    normal=textures/SR/grass_ground_n.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground029
+    color=textures/cc0textures/Ground029_2K_Color.jpg
+    normal=textures/cc0textures/Ground029_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground037_Sl
+    color=textures/cc0textures/Ground037_2K_Color_Sl.jpg
+    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground037_Sl_red
+    color=textures/cc0textures/Ground037_2K_Color_Sl.jpg
+    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    color_mode=rgb
+    histogram=textures/histograms/red_green.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground025
+    color=textures/cc0textures/Ground025_2K_Color.jpg
+    normal=textures/cc0textures/Ground025_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=grass12y_Ground037_Sl
+    color=textures/SR/grass12y-.png
+    color_mode=rgba
+    histogram=textures/histograms/Ground037_2K_Color_Sl.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=grass2g
+    color=textures/SR/grass2g.png
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Rock028
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    normal=textures/cc0textures/Rock028_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Rock036
+    color=textures/cc0textures/Rock036_2K_Color.jpg
+    normal=textures/cc0textures/Rock036_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Rocks04
+    color=textures/texturehaven/aerial_rocks_04_diff_2k.jpg
+    normal=textures/texturehaven/aerial_rocks_04_nor_2k.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road003_Dirt
+    color=textures/cc0textures/Road003_2K_Dirt.png
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Asphalt016_Dirt
+    color=textures/cc0textures/Asphalt016_2K_Dirt.png
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road003
+    color=textures/cc0textures/Road003_2K_Color.jpg
+    normal=textures/cc0textures/Road003_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007
+    color=textures/cc0textures/Road007_2K_Color.jpg
+    normal=textures/cc0textures/Road007_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_Alpha
+    color=textures/cc0textures/Road007_2K_Color_Dirt_Sharp2.png
+    normal=textures/cc0textures/Road007_2K_Normal.jpg
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_No_Lines
+    color=textures/cc0textures/Road007_2K_Color_No_Lines.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_Yellow_1x_Lane
+    color=textures/cc0textures/Road007_2K_Color_Yellow_Lines_1x_Lane.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_Yellow_2_Lanes
+    color=textures/cc0textures/Road007_2K_Color_Yellow_Lines_2_Lanes.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_White_1x_Lane
+    color=textures/cc0textures/Road007_2K_Color_White_Lines_1x_Lane.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_Broad_White_1_Lane
+    color=textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Road007_White_2_Lanes
+    color=textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg
+    normal=textures/cc0textures/Road007_2K_Normal_No_Lines.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=concrete1_2K_wh_street
+    color=textures/cc0textures/concrete1_2K_wh_street.jpg
+    normal=textures/cc0textures/concrete1_2K_norm.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=concrete1_2K_wh
+    color=textures/cc0textures/concrete1_2K_wh.jpg
+    normal=textures/cc0textures/concrete1_2K_norm.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=concrete1_2K_ye
+    color=textures/cc0textures/concrete1_2K_ye.jpg
+    normal=textures/cc0textures/concrete1_2K_norm.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=PavingStones046
+    color=textures/cc0textures/PavingStones046_2K_Color.jpg
+    normal=textures/cc0textures/PavingStones046_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Bark007
+    color=textures/cc0textures/Bark007_2K_Color.jpg
+    normal=textures/cc0textures/Bark007_2K_Normal.jpg
+    color_mode=rgb
+    anisotropic_filtering_level=0;
+
+add_texture_descriptor
+    name=fence1
+    color=textures/barriers/fence1.png
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Concrete008_Barrier
+    color=textures/cc0textures/Concrete008_2K_Color_Barrier.png
+    normal=textures/cc0textures/Concrete008_2K_Normal.jpg
+    color_mode=rgba
+    anisotropic_filtering_level=16;

@@ -1,0 +1,17 @@
+obj_resource
+    name=playback_box
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+node_instance parent=<dynamic-root> name=box_playback_node position=0 0 0 rotation=0 0 0 scale=1;
+renderable_instance name=box_playback node=box_playback_node resource=playback_box;

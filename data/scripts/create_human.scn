@@ -1,0 +1,33 @@
+macro_begin create_human;
+    node_instance
+        parent=<dynamic-root>
+        name=human_node-SUFFIX
+        position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
+        rotation=0 HUMAN_NODE_ANGLE_Y 0
+        scale=1;
+    set_renderable_style
+        selector=
+        node=human_node-SUFFIX
+        ambience=-1 -1 -1
+        diffusivity=-1 -1 -1
+        specularity=-1 -1 -1
+        animation_name=walk_mh1
+        animation_loop_begin=0
+        animation_loop_end=1.0417
+        animation_loop_time=0;
+    macro_playback create_human-HUMAN_NAME
+        DECIMATE:DECIMATE
+        SUFFIX:SUFFIX
+        IF_WITH_PHYSICS:IF_WITH_PHYSICS
+        IF_WITH_GUN:IF_WITH_GUN=#
+        IF_MANUAL_AIM:IF_MANUAL_AIM=#
+        IF_AUTO_AIM:IF_AUTO_AIM=#;
+    player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
+    # visual_node_status_3rd
+        node=human_node-SUFFIX
+        format=8
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        offset=0 0.3
+        font_height=16
+        line_distance=16;
+macro_end;

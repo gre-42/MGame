@@ -1,0 +1,74 @@
+obj_resource
+    name=OT_hitbox
+    filename=models/box.obj
+    position=0 0.85 0
+    rotation=0 0 0
+    scale=1.2 1.0 3.4
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+gen_triangle_rays name=OT_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
+
+obj_resource
+    name=OT_tirelines
+    filename=models/empty.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+gen_ray name=OT_tirelines from=-1.2 0.2 -1.2 to=-1.2 -0.65 -1.2; # left front;
+gen_ray name=OT_tirelines from=+1.2 0.2 -1.2 to=+1.2 -0.65 -1.2; # right front;
+gen_ray name=OT_tirelines from=-1.2 0.2 +2.6 to=-1.2 -0.65 +2.6; # left rear;
+gen_ray name=OT_tirelines from=+1.2 0.2 +2.6 to=+1.2 -0.65 +2.6; # right rear;
+
+macro_begin load_OT_part;
+    obj_resource
+        name=NAME
+        filename=models/SR/NAME.obj
+        position=0 POSITION_Y 0
+        rotation=0 180 0
+        scale=1 1 1
+        distances=DIST_MIN DIST_MAX
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        is_black=IS_BLACK
+        aggregate_mode=off
+        transformation_mode=all
+        triangle_tangent_error_behavior=zero
+        no_werror;
+
+    # downsample name=NAME factor=10;
+macro_end;
+
+macro_begin load-OT;
+    macro_playback load_OT_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:OT/OT_body-DECIMATE POSITION_Y:0.2;
+    macro_playback load_OT_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:OT/OT_glass-DECIMATE POSITION_Y:0.2;
+    macro_playback load_OT_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:OT/OT_interior-DECIMATE POSITION_Y:0.2;
+    macro_playback load_OT_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:OT/OT_wheel_front-DECIMATE POSITION_Y:0;
+    macro_playback load_OT_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:OT/OT_wheel_rear-DECIMATE POSITION_Y:0;
+macro_end;
+
+macro_playback load-OT DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:;
+macro_playback load-OT DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:_d3;
+macro_playback load-OT DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d1;

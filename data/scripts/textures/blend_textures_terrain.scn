@@ -1,0 +1,96 @@
+#############;
+# Ground037 #;
+#############;
+add_blend_map_texture
+    name=Ground037_Sl_near
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 50 100
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_far
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=50 100 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_far_red
+    texture=#Ground037_Sl_red
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=50 100 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.1
+    weight=1;
+
+###########;
+# Rock028 #;
+###########;
+add_blend_map_texture
+    name=Rock028_200_near
+    texture=#Rock028
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 300 500
+    normal=0 1 0
+    cosine=-1 -1 0.85 0.9
+    scale=0.1
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_200_far
+    texture=#Rock028
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=300 500 INFINITY INFINITY
+    normal=0 1 0
+    cosine=-1 -1 0.85 0.9
+    scale=0.01
+    weight=5;
+
+# add_blend_map_texture
+    name=Rock036_200
+    texture=#Rock036
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 50 100
+    normal=0.89 0.62 0.07
+    cosine=-1 -1 1 1
+    scale=0.5
+    weight=1;
+
+################;
+# grass_ground #;
+################;
+add_blend_map_texture
+    name=grass_ground_near
+    texture=#grass_ground
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 50 100
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=grass_ground_far
+    texture=#grass_ground
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=50 100 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.1
+    weight=1;

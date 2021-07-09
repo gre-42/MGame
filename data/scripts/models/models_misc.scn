@@ -1,0 +1,159 @@
+# obj_resource
+    name=checkpoint_arrow
+    filename=models/Arrow/arrow.obj
+    position=0 5 0
+    rotation=0 90 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+square_resource
+    name=glow
+    texture_filename=textures/opengameart/glowCircle_1024.png
+    min=-1 4
+    max=1 6
+    is_small=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=continuous
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=box
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=pipe
+    filename=models/pipe.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=pipe_box
+    filename=models/pipe_box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=pipe_box_boundary
+    filename=models/pipe_box_boundary.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=topdown_locator
+    filename=models/TransparentBox/tbox.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=4 1 8
+    is_small=0
+    blend_mode=continuous
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=flag
+    filename=models/box.obj
+    position=0 500 0
+    rotation=0 0 0
+    scale=1 500 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=beacon
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 0.1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
+    name=beacon1
+    filename=models/box1.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 0.1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;

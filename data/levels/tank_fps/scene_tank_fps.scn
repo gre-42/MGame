@@ -1,0 +1,780 @@
+macro_begin _scene_tank_load_resources;
+    append_focus scene;
+
+    # square_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
+    blending_x_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
+    blending_x_resource name=tree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10;
+    blending_x_resource name=tree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10;
+
+    binary_x_resource name=bgrass texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassG.png min=-0.4 0 max=0.4 0.6 ambience=2 2 2 is_small=1 occluder_type=off;
+    binary_x_resource name=bflower texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png min=-0.07 0 max=0.07 0.3 ambience=2 2 2 is_small=1 occluder_type=off;
+    binary_x_resource name=bflower2 texture_filename=textures/cc0textures/FlowerSet001_2K_Color_2.png min=-0.07 0 max=0.07 0.14 ambience=2 2 2 is_small=1 occluder_type=off;
+    # binary_x_resource name=bfoliage texture_filename=textures/cc0textures/Foliage002_2K_Color.png min=-2 0 max=2 4 ambience=2 2 2 is_small=1 occluder_type=off;
+    # binary_x_resource name=btree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
+    # binary_x_resource name=btree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
+    # binary_x_resource name=bench texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
+    # obj_resource name=btree2 filename=models/proctree/tree.obj position=0 0 0 rotation=0 0 0 scale=1 1 1 is_small=0 blend_mode=binary aggregate_mode=off;
+
+    binary_x_resource name=btree texture_filename=textures/proctree/out-1-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree2 texture_filename=textures/proctree/out-3-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree3 texture_filename=textures/proctree/out-5-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree4 texture_filename=textures/proctree/out-7-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_type=black;
+
+    # binary_x_resource name=btree-large texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 15 ambience=2 2 2 is_small=0;
+    # binary_x_resource name=btree-large2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 15 ambience=2 2 2 is_small=0;
+
+    binary_x_resource name=btree-large texture_filename=textures/proctree/out-2-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree-large2 texture_filename=textures/proctree/out-4-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree-large3 texture_filename=textures/proctree/out-6-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
+    binary_x_resource name=btree-large4 texture_filename=textures/proctree/out-8-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
+
+    # obj_resource name=bench filename=models/bench3/Cgtuts_Wood_Bench_OBJ_Tri.obj position=0 0 0 rotation=0 0 0 scale=0.01 0.01 0.01 is_small=0 blend_mode=off aggregate_mode=off occluded_type=off occluder_type=off;
+    # obj_resource name=coffee-shop filename=models/coffee-shop/Coffee_Shop.obj position=0 0 0 rotation=0 0 0 scale=0.05 0.05 0.05 is_small=0 blend_mode=off aggregate_mode=off occluded_type=off occluder_type=off;
+    obj_resource
+        name=street_light
+        filename=models/street_light/street_light.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.2 0.2 0.2
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    ###############;
+    # muscle-cupe #;
+    ###############;
+    obj_resource
+        name=muscle-cupe-hitbox
+        filename=models/box.obj
+        position=0 0.6 0
+        rotation=0 0 0
+        scale=0.9 0.75 2.25
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    gen_triangle_rays name=muscle-cupe-hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
+
+    obj_resource
+        name=muscle-cupe-tirelines
+        filename=models/empty.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    gen_ray name=muscle-cupe-tirelines from=-0.9 0.2 -2.25 to=-0.9 -0.55 -2.25; # left front;
+    gen_ray name=muscle-cupe-tirelines from=+0.9 0.2 -2.25 to=+0.9 -0.55 -2.25; # right front;
+    gen_ray name=muscle-cupe-tirelines from=-0.9 0.2 +2.25 to=-0.9 -0.55 +2.25; # left rear;
+    gen_ray name=muscle-cupe-tirelines from=+0.9 0.2 +2.25 to=+0.9 -0.55 +2.25; # right rear;
+
+    ########;
+    # M4A1 #;
+    ########;
+    obj_resource
+        name=M4A1
+        filename=models/M4A1/m4a1.obj
+        position=0 -1 1
+        rotation=0 180 0
+        scale=0.1 0.1 0.1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    #########;
+    # human #;
+    #########;
+    obj_resource
+        name=human-hitbox
+        filename=models/box.obj
+        position=0 0.35 0
+        rotation=0 0 0
+        scale=0.5 0.7 0.5
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    gen_triangle_rays name=human-hitbox npoints=5 lengths=0.5 0.7 0.5 delete_triangles=0;
+
+    obj_resource
+        name=human-tirelines
+        filename=models/empty.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    gen_ray name=human-tirelines from=0 -0.3 0 to=0 -0.9 0;
+
+    #######;
+    # OSM #;
+    #######;
+    include osm_tank_fps_resource.scn;
+    macro_playback osm_tank_fps_resource;
+
+    # obj_resource
+        name=muscle-cupe
+        filename=../../assets/muscle/Muscle Cupe Car 3D Model.obj
+        position=0 0.2 0
+        rotation=0 180 0
+        scale=0.02 0.02 0.02
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    obj_resource
+        name=tank_bullet_renderable
+        filename=models/bullet.obj
+        position=0 0 0
+        rotation=-90 0 0
+        scale=0.2 0.4 0.2
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    # obj_resource
+        name=tank_bullet_hitbox
+        filename=models/box.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.5 0.5 10
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    # gen_triangle_rays name=tank_bullet_hitbox npoints=1 lengths=0.5 0.5 10 delete_triangles=1;
+
+    obj_resource
+        name=tank_bullet_hitbox
+        filename=models/empty.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    gen_ray name=tank_bullet_hitbox from=0 0 -10 to=0 0 10;
+
+    obj_resource
+        name=box
+        filename=models/box.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    obj_resource
+        name=flag
+        filename=models/box.obj
+        position=0 500 0
+        rotation=0 0 0
+        scale=1 500 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    obj_resource
+        name=beacon
+        filename=models/box.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    # obj_resource name=OilRig filename=models/OilRig.obj position=0 -50 0 rotation=0 0 0 scale=1 1 1;
+    # obj_resource name=office40x25 filename=models/industrial15x22.obj position=0 -40 0 rotation=0 0 0 scale=1 1 1;
+    # obj_resource name=office40x25 filename=models/house.obj position=0 -137 0 rotation=0 0 0 scale=3.281 3.281 3.281 no_werror;
+    # obj_resource name=office40x25 filename=models/HouseLong.obj position=0 -137 0 rotation=0 0 0 scale=1 1 1 no_werror;
+macro_end;
+
+macro_begin _scene_tank_instantiate;
+    #######;
+    # OSM #;
+    #######;
+    node_instance parent=<static-root> name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
+    renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
+    rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain;
+    # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
+
+    ##########;
+    # OilRig #;
+    ##########;
+    # node_instance parent=<static-root> name=OilRig-node position=0 0 0 rotation=0 0 0 scale=1;
+    # renderable_instance name=OilRig-inst node=OilRig-node resource=OilRig;
+
+    ##########;
+    # Office #;
+    ##########;
+    # node_instance parent=<static-root> name=office40x25-node position=0 0 0 rotation=0 0 0 scale=1;
+    # renderable_instance name=office40x25-inst node=office40x25-node resource=office40x25;
+
+    #########;
+    # Grass #;
+    #########;
+    # node_instance parent=<static-root> name=grass-node position=0 -137 0 rotation=0 0 0 scale=1;
+    # renderable_instance name=grass node=grass-node resource=grass;
+
+    # node_instance parent=<static-root> name=grass2-node position=0 -135 2 rotation=0 0 0 scale=1;
+    # renderable_instance name=grass2 node=grass2-node resource=grass;
+
+    ##########;
+    # Player #;
+    ##########;
+    player_create name=you team=red game_mode=racing unstuck_mode=off driving_mode=car_arena driving_direction=center;
+
+    #######;
+    # Car #;
+    #######;
+    # IF_PLAYER_TANK node_instance parent=<dynamic-root> name=car_node position=1100 -120 100 rotation=10 90 10 scale=1;
+    # IF_PLAYER_HUMAN node_instance parent=<dynamic-root> name=human_node position=1100 -120 100 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-1 position=1110 -120 120 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-2 position=1110 -120 140 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-3 position=1100 -120 160 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-4 position=1100 -120 180 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-5 position=1110 -120 100 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-6 position=1100 -120 120 rotation=10 90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-7 position=120 -140 540 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-8 position=125 -140 560 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-9 position=130 -140 580 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-10 position=135 -140 500 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-11 position=140 -140 520 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-12 position=145 -140 540 rotation=10 -90 10 scale=1;
+    node_instance parent=<dynamic-root> name=car_node-13 position=150 -140 560 rotation=10 -90 10 scale=1;
+
+    IF_PLAYER_TANK macro_playback create_tiger_tank PLAYER_NAME:you TEAM:red
+        gun_node=main_gun_end_node-SUFFIX:gun_node=
+        player_set_surface_power:#
+        player_set_tire_angle:#
+        visual_node_status_3rd:#
+        SUFFIX:
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM
+        IF_WITH_PHYSICS:
+        IF_STATIC:#
+        IF_DYNAMIC:
+        CAR_NODE_X:1100
+        CAR_NODE_Y:-120
+        CAR_NODE_Z:100
+        CAR_NODE_ANGLE_X:10
+        CAR_NODE_ANGLE_Y:90
+        CAR_NODE_ANGLE_Z:10;
+    IF_PLAYER_HUMAN macro_playback create_human
+        PLAYER_NAME:you
+        TEAM:red
+        SUFFIX:
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM
+        IF_WITH_PHYSICS:
+        IF_WITH_GUN:
+        CAR_NODE_X:1100
+        CAR_NODE_Y:-120
+        CAR_NODE_Z:100
+        HUMAN_NODE_ANGLE_Y:90
+        HUMAN_NAME:_mh1
+        DECIMATE:DECIMATE
+        SUFFIX:SUFFIX;
+
+    macro_playback create_tiger_tank PLAYER_NAME:npc1    TEAM:red  SUFFIX:1  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc2    TEAM:red  SUFFIX:2  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc3    TEAM:red  SUFFIX:3  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc4    TEAM:red  SUFFIX:4  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc5    TEAM:red  SUFFIX:5  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc6    TEAM:red  SUFFIX:6  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc7    TEAM:blue SUFFIX:7  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc8    TEAM:blue SUFFIX:8  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc9    TEAM:blue SUFFIX:9  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc10   TEAM:blue SUFFIX:10 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc11   TEAM:blue SUFFIX:11 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    # macro_playback create_tiger_tank PLAYER_NAME:npc12 TEAM:blue SUFFIX:12 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+    # macro_playback create_tiger_tank PLAYER_NAME:npc13 TEAM:blue SUFFIX:13 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_STATIC:# IF_DYNAMIC:;
+
+    # player_set_waypoint player_name=npc1 position=-100 -500;
+    # team_set_waypoint team-name=red position=-100 -500;
+    team_set_waypoint team-name=red position=150 560;
+    team_set_waypoint team-name=blue position=1100 100;
+
+    burn_in seconds=20;
+
+    # relative_transformer node=turret_node;
+    # relative_transformer node=main_gun_node;
+
+    # yaw_pitch_look_at_nodes yaw_node=turret_node pitch_node=main_gun_node parent_follower_rigid_body_node=car_node followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-1 pitch_node=main_gun_node-1 parent_follower_rigid_body_node=car_node-1 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-2 pitch_node=main_gun_node-2 parent_follower_rigid_body_node=car_node-2 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-3 pitch_node=main_gun_node-3 parent_follower_rigid_body_node=car_node-3 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-4 pitch_node=main_gun_node-4 parent_follower_rigid_body_node=car_node-4 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-5 pitch_node=main_gun_node-5 parent_follower_rigid_body_node=car_node-5 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-6 pitch_node=main_gun_node-6 parent_follower_rigid_body_node=car_node-6 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-7 pitch_node=main_gun_node-7 parent_follower_rigid_body_node=car_node-7 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-8 pitch_node=main_gun_node-8 parent_follower_rigid_body_node=car_node-8 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    # yaw_pitch_look_at_nodes yaw_node=turret_node-9 pitch_node=main_gun_node-9 parent_follower_rigid_body_node=car_node-9 followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+
+    # trigger_gun_ai base_shooter_node=car_node-1 base_target_node=car_node gun_node=main_gun_end_node-1;
+    # trigger_gun_ai base_shooter_node=car_node-2 base_target_node=car_node gun_node=main_gun_end_node-2;
+
+    # player_create name=asdf team=red game_mode=racing;
+    # player_set_node player_name=asdf node=car_node;
+    # player_set_aiming_gun player_name=asdf yaw_node=turret_node gun_node=;
+
+    # player_create name=npc1 team=blue game_mode=racing;
+    # player_set_node player_name=npc1 node=car_node-1;
+    # player_set_aiming_gun player_name=npc1 yaw_node=turret_node-1 gun_node=main_gun_end_node-1;
+
+    # player_create name=npc2 team=blue game_mode=racing;
+    # player_set_node player_name=npc2 node=car_node-2;
+    # player_set_aiming_gun player_name=npc2 yaw_node=turret_node-2 gun_node=main_gun_end_node-2;
+
+    ##########;
+    # Wheels #;
+    ##########;
+    #node_instance parent=car_node name=wheel-node-00 position=-1 -0.5 -2 rotation=1 0 2 scale=0.5;
+    #renderable_instance name=box node=wheel-node-00 resource=box;
+    #collidable-mesh rigid_body-node=car_node node=wheel-node-00 resource=box;
+
+    #node_instance parent=car_node name=wheel-node-01 position=-1 -0.5 2 rotation=1 0 2 scale=0.5;
+    #renderable_instance name=box node=wheel-node-01 resource=box;
+    #collidable-mesh rigid_body-node=car_node node=wheel-node-01 resource=box;
+
+    #node_instance parent=car_node name=wheel-node-10 position=1 -0.5 -2 rotation=1 0 2 scale=0.5;
+    #renderable_instance name=box node=wheel-node-10 resource=box;
+    #collidable-mesh rigid_body-node=car_node node=wheel-node-10 resource=box;
+
+    #node_instance parent=car_node name=wheel-node-11 position=1 -0.5 2 rotation=1 0 2 scale=0.5;
+    #renderable_instance name=box node=wheel-node-11 resource=box;
+    #collidable-mesh rigid_body-node=car_node node=wheel-node-11 resource=box;
+
+    #######;
+    # Box #;
+    #######;
+    macro_begin create-box;
+        renderable_instance name=box-SUFFIX node=box-node-SUFFIX resource=muscle-cupe-hitbox;
+        rigid_cuboid node=box-node-SUFFIX hitbox=muscle-cupe-hitbox mass=1200 size=5 5 5 collidable_mode=small_moving;
+        #collidable-mesh rigid_body-node=box-node node=box-node resource=muscle-cupe-hitbox;
+    macro_end;
+
+    node_instance parent=<dynamic-root> name=box-node position=0 -30 -5 rotation=0 90 0 scale=1;
+    node_instance parent=<dynamic-root> name=box-node-1 position=0 -30 +5 rotation=0 90 0 scale=1;
+    node_instance parent=<dynamic-root> name=box-node-2 position=-5 -30 0 rotation=0 90 0 scale=1;
+    node_instance parent=<dynamic-root> name=box-node-3 position=+5 -30 0 rotation=0 90 0 scale=1;
+
+    # macro_playback create-box SUFFIX:;
+    # macro_playback create-box SUFFIX:1;
+    # macro_playback create-box SUFFIX:2;
+    # macro_playback create-box SUFFIX:3;
+
+    ##########;
+    # Camera #;
+    ##########;
+    # always behind car;
+    # node_instance parent=car_node name=camera position=0 5 60 rotation=-3 0 0 scale=1;
+
+    # top-down, near;
+    # node_instance parent=<dynamic-root> name=camera position=0 -100 0 rotation=-90 0 0 scale=1;
+
+    # top-down, far;
+    # node_instance parent=<dynamic-root> name=camera position=0 500 0 rotation=-90 0 0 scale=1;
+
+    # 45°, far;
+    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+
+    # GT;
+    node_instance parent=<dynamic-root> name=follower_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+
+    # side of car, near;
+    # node_instance parent=<dynamic-root> name=camera position=0 10 100 rotation=-5 0 0 scale=1;
+
+    # side of car, far;
+    # node_instance parent=<dynamic-root> name=camera position=0 10 500 rotation=-2 0 0 scale=1;
+
+    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
+    perspective_camera node=main_gun_end_node y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
+
+    include create_cameras.scn;
+
+    IF_PLAYER_TANK macro_playback create_tiger_tank-cameras;
+    IF_PLAYER_HUMAN macro_playback create_human_cameras;
+
+    # abs_key_binding node=car_node key=UP force=0 0 -100 position=0 0 0 surface_power=0;
+    # abs_key_binding node=car_node key=DOWN force=0 0 100 position=0 0 0 surface_power=0;
+    # abs_key_binding node=car_node key=LEFT force=0 0 10000 position=-1 0 0 surface_power=0;
+    # abs_key_binding node=car_node key=LEFT force=0 0 -10000 position=1 0 0 surface_power=0;
+    # abs_key_binding node=car_node key=RIGHT force=0 0 10000 position=1 0 0 surface_power=0;
+    # abs_key_binding node=car_node key=RIGHT force=0 0 -10000 position=-1 0 0 surface_power=0;
+
+    # Car;
+    macro_begin create_car_key_bindings;
+        abs_idle_binding
+            node=car_node
+            tires_z=0 0 -1;
+        abs_key_binding
+            node=car_node
+            key=LEFT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=-1
+            tire_id=0
+            tire_angle_velocities=30 100 150
+            tire_angles=30 6 1.5;
+        abs_key_binding
+            node=car_node
+            key=LEFT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=-1
+            tire_id=1
+            tire_angle_velocities=30 100 150
+            tire_angles=30 6 1.5;
+        abs_key_binding
+            node=car_node
+            key=RIGHT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=1
+            tire_id=0
+            tire_angle_velocities=30 100 150
+            tire_angles=-30 -6 -1.5;
+        abs_key_binding
+            node=car_node
+            key=RIGHT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=1
+            tire_id=1
+            tire_angle_velocities=30 100 150
+            tire_angles=-30 -6 -1.5;
+
+        # Tank;
+        # abs_key_binding node=car_node key=LEFT force=0 0 0 position=0 0 0 surface_power=100000 tire_id=0;
+        # abs_key_binding node=car_node key=LEFT force=0 0 0 position=0 0 0 surface_power=-100000 tire_id=1;
+        # abs_key_binding node=car_node key=RIGHT force=0 0 0 position=0 0 0 surface_power=-100000 tire_id=0;
+        # abs_key_binding node=car_node key=RIGHT force=0 0 0 position=0 0 0 surface_power=100000 tire_id=1;
+
+        abs_key_binding
+            node=car_node
+            key=LEFT_SHIFT
+            gamepad_button=B
+            force=0 20000 0
+            position=0 0 0;
+
+        # 120 PS = 88259.8 Watt;
+        # 150 PS = 110325 Watt;
+        # 200 PS = 147100 Watt;
+        # 400 PS = 294200 Watt;
+        # 1000 PS = 735499 Watt;
+
+        abs_key_binding
+            node=car_node
+            key=UP
+            gamepad_button=X
+            joystick_digital_axis=4
+            joystick_digital_axis_sign=-1
+            surface_power=294200;
+        abs_key_binding
+            node=car_node
+            key=DOWN
+            gamepad_button=A
+            joystick_digital_axis=4
+            joystick_digital_axis_sign=1
+            surface_power=-294200;
+
+        IF_MANUAL_AIM rel_key_binding
+            node=turret_node
+            key=D
+            joystick_digital_axis=1
+            joystick_digital_axis_sign=1
+            angular_velocity_press=0 -0.1 0
+            angular_velocity_repeat=0 -1 0;
+        IF_MANUAL_AIM rel_key_binding
+            node=turret_node
+            key=A
+            joystick_digital_axis=1
+            joystick_digital_axis_sign=-1
+            angular_velocity_press=0 0.1 0
+            angular_velocity_repeat=0 1 0;
+
+        IF_MANUAL_AIM rel_key_binding
+            node=main_gun_node
+            key=W
+            joystick_digital_axis=2
+            joystick_digital_axis_sign=-1
+            angular_velocity_press=0.1 0 0
+            angular_velocity_repeat=1 0 0;
+        IF_MANUAL_AIM rel_key_binding
+            node=main_gun_node
+            key=S
+            joystick_digital_axis=2
+            joystick_digital_axis_sign=1
+            angular_velocity_press=-0.1 0 0
+            angular_velocity_repeat=-1 0 0;
+
+        gun_key_binding
+            node=main_gun_end_node
+            key=SPACE
+            gamepad_button=RIGHT_BUMPER;
+    macro_end;
+    macro_begin create_human_key_bindings;
+        abs_idle_binding
+            node=human_node
+            tires_z=0 0 0;
+        abs_key_binding
+            node=human_node
+            key=LEFT_SHIFT
+            gamepad_button=B
+            force=0 2000 0
+            position=0 0 0;
+        abs_key_binding
+            node=human_node
+            key=A
+            joystick_digital_axis=1
+            joystick_digital_axis_sign=-1
+            surface_power=30000
+            max_velocity=9
+            tires_z=-1 0 0;
+        abs_key_binding
+            node=human_node
+            key=D
+            joystick_digital_axis=1
+            joystick_digital_axis_sign=1
+            surface_power=30000
+            max_velocity=9
+            tires_z=1 0 0;
+        # IF_MANUAL_AIM abs_key_binding
+            node=human_node
+            key=LEFT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=-1
+            rotate=0 0.01 0;
+        # IF_MANUAL_AIM abs_key_binding
+            node=human_node
+            key=RIGHT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=1
+            rotate=0 -0.01 0;
+        IF_MANUAL_AIM rel_key_binding
+            node=human_node
+            key=LEFT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=-1
+            angular_velocity_press=0 0.01 0
+            angular_velocity_repeat=0 0.5 0;
+        IF_MANUAL_AIM rel_key_binding
+            node=human_node
+            key=RIGHT
+            joystick_digital_axis=3
+            joystick_digital_axis_sign=1
+            angular_velocity_press=0 -0.01 0
+            angular_velocity_repeat=0 -0.5 0;
+        abs_key_binding
+            node=human_node
+            key=W
+            joystick_digital_axis=2
+            joystick_digital_axis_sign=-1
+            surface_power=30000
+            max_velocity=9
+            tires_z=0 0 -1;
+        abs_key_binding
+            node=human_node
+            key=S
+            joystick_digital_axis=2
+            joystick_digital_axis_sign=1
+            surface_power=30000
+            max_velocity=9
+            tires_z=0 0 1;
+        
+        IF_MANUAL_AIM rel_key_binding
+            node=main_gun_node
+            key=UP
+            joystick_digital_axis=4
+            joystick_digital_axis_sign=-1
+            angular_velocity_press=0.01 0 0
+            angular_velocity_repeat=1 0 0;
+        IF_MANUAL_AIM rel_key_binding
+            node=main_gun_node
+            key=DOWN
+            joystick_digital_axis=4
+            joystick_digital_axis_sign=1
+            angular_velocity_press=-0.01 0 0
+            angular_velocity_repeat=-1 0 0;
+
+        gun_key_binding
+            node=main_gun_end_node
+            key=SPACE
+            gamepad_button=RIGHT_BUMPER;
+    macro_end;
+
+    IF_PLAYER_TANK macro_playback create_car_key_bindings IF_MANUAL_AIM:IF_MANUAL_AIM;
+    IF_PLAYER_HUMAN macro_playback create_human_key_bindings IF_MANUAL_AIM:IF_MANUAL_AIM;
+
+    # console_log node=car_node format=10;
+    IF_PLAYER_TANK visual_node_status node=car_node format=14 ttf_file=fonts/RobotoMono-Bold.ttf position=50 40 font_height=32 line_distance=32;
+    IF_PLAYER_HUMAN visual_node_status node=human_node format=14 ttf_file=fonts/RobotoMono-Bold.ttf position=50 40 font_height=32 line_distance=32;
+
+    IF_PLAYER_TANK hud_image node=car_node filename=textures/hud/crosshair.png update=once center=0 0 size=0.05 0.05;
+    IF_PLAYER_HUMAN hud_image node=human_node filename=textures/hud/crosshair.png update=once center=0 0 size=0.05 0.05;
+    set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node;
+    IF_PLAYER_TANK set_camera_cycle name=near follower_camera turret_camera_node;
+    IF_PLAYER_HUMAN set_camera_cycle name=near human_camera_node main_gun_zoom_node;
+    IF_PLAYER_HUMAN set_camera human_camera_node;
+
+    macro_begin add_attached_light_tank;
+        node_instance parent=<dynamic-root> name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
+        keep_offset follower=light_node1 followed=car_node offset=0 10 10;
+        ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
+        light node=light_node1 black_node=car_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
+    macro_end;
+
+    macro_begin add_attached_light_human;
+        node_instance parent=<dynamic-root> name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
+        keep_offset follower=light_node1 followed=human_node offset=0 10 10;
+        ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
+        light node=light_node1 black_node=human_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
+    macro_end;
+
+    macro_playback add_distant_light LEFT:-4000 RIGHT:4000 BOTTOM:-2000 TOP:2000;
+    IF_PLAYER_TANK macro_playback add_attached_light_tank;
+    IF_PLAYER_HUMAN macro_playback add_attached_light_human;
+
+    node_instance parent=<dynamic-root> name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
+    ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=-2000 right_plane=2000 bottom_plane=-1000 top_plane=1000 requires_postprocessing=0;
+
+    set_dirtmap filename=textures/dirtmap.png offset=0 discreteness=4 wrap_mode=clamp_to_edge;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_X 0x8515;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_X 0x8516;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_Y 0x8517;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_Y 0x8518;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_Z 0x8519;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_Z 0x851A;
+    set_skybox alias=skybox filenames=textures/skybox/right.jpg textures/skybox/left.jpg textures/skybox/top.jpg textures/skybox/bottom.jpg textures/skybox/back.jpg textures/skybox/front.jpg;
+
+    camera_key_binding key=C gamepad_button=Y joystick_digital_axis= joystick_digital_axis_sign=NAN;
+
+    append_focus countdown_pending;
+
+    countdown
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=300 300
+        font_height=64
+        line_distance=64
+        nseconds=5;
+macro_end;
+
+include ../../scripts/include_all.scn;
+
+macro_playback _scene_tank_load_resources;
+
+#########;
+# Scene #;
+#########;
+create_scene
+    name=primary_scene
+    z_order=0
+    fly=PRIMARY_SCENE_FLY
+    rotate=PRIMARY_SCENE_ROTATE
+    print_gamepad_buttons=PRIMARY_SCENE_PRINT_GAMEPAD_BUTTONS
+    depth_fog=PRIMARY_SCENE_DEPTH_FOG
+    low_pass=PRIMARY_SCENE_LOW_PASS
+    high_pass=PRIMARY_SCENE_HIGH_PASS
+    vfx=PRIMARY_SCENE_VFX
+    with_dirtmap=PRIMARY_SCENE_WITH_DIRTMAP
+    with_skybox=PRIMARY_SCENE_WITH_SKYBOX
+    with_flying_logic=PRIMARY_SCENE_WITH_FLYING_LOGIC
+    clear_mode=PRIMARY_SCENE_CLEAR_MODE
+    max_tracks=5;
+
+###############;
+# Player tank #;
+###############;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM:# IF_MANUAL_AIM: IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM: IF_MANUAL_AIM:# IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
+
+################;
+# Player human #;
+################;
+macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM:# IF_MANUAL_AIM: IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM: IF_MANUAL_AIM:# IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
+
+macro_playback create_main_menu;

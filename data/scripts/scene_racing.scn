@@ -1,0 +1,310 @@
+macro_begin _scene_racing_instantiate_static_objects;
+    ################;
+    # OSM instance #;
+    ################;
+    node_instance parent=<static-root> name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
+    renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
+    rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain;
+    # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
+
+    register_geographic_mapping name=world node=osm_map_node resource=osm_map;
+
+    ##########;
+    # Player #;
+    ##########;
+    player_create
+        name=you
+        team=red
+        game_mode=racing
+        unstuck_mode=off
+        driving_mode=car_arena
+        driving_direction=center;
+
+    players_stats
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-600 40
+        font_height=24
+        line_distance=24;
+
+    ui_background
+        texture=textures/ui_background.png
+        update=once
+        focus_mask=countdown_any;
+
+    countdown
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=300 300
+        font_height=64
+        line_distance=64
+        nseconds=5;
+
+    ###########;
+    # Dirtmap #;
+    ###########;
+    node_instance parent=<dynamic-root> name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
+    ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=DIRTMAP_LEFT right_plane=DIRTMAP_RIGHT bottom_plane=DIRTMAP_BOTTOM top_plane=DIRTMAP_TOP requires_postprocessing=0;
+    set_dirtmap filename=DIRTMAP_TEXTURE offset=DIRTMAP_OFFSET discreteness=DIRTMAP_DISCRETENESS scale=DIRT_SCALE wrap_mode=DIRTMAP_WRAP_MODE;
+    set_soft_light filename=SOFT_LIGHT_TEXTURE;
+
+    ##########;
+    # Skybox #;
+    ##########;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_X 0x8515;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_X 0x8516;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_Y 0x8517;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_Y 0x8518;
+    # GL_TEXTURE_CUBE_MAP_POSITIVE_Z 0x8519;
+    # GL_TEXTURE_CUBE_MAP_NEGATIVE_Z 0x851A;
+    set_skybox alias=skybox filenames=textures/skybox/right.jpg textures/skybox/left.jpg textures/skybox/top.jpg textures/skybox/bottom.jpg textures/skybox/back.jpg textures/skybox/front.jpg;
+
+    # include playback_resource.scn;
+
+    #########;
+    # Light #;
+    #########;
+    macro_playback add_distant_light LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+macro_end;
+
+macro_begin _scene_racing_instantiate_transient_objects;
+    set_focuses scene countdown_pending;
+
+    ################;
+    # Car instance #;
+    ################;
+
+    # macro_playback create_audi_a6;
+    # macro_playback create_muscle_cupe;
+    # macro_playback create_OT;
+    # macro_playback create_M3 -SUFFIX: IF_WITH_PHYSICS:;
+    # macro_playback create_TW;
+    # macro_playback create_XZ -SUFFIX: IF_WITH_PHYSICS:;
+    macro_playback create_car
+        CAR_NODE_X:CAR_NODE_X
+        CAR_NODE_Y:CAR_NODE_Y
+        CAR_NODE_Z:CAR_NODE_Z
+        CAR_NODE_ANGLE_X:CAR_NODE_ANGLE_X
+        CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
+        CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
+        CAR_NAME:SHOWROOM_PLAYER_CAR
+        DECIMATE:
+        SUFFIX:
+        IF_WITH_GRAPHICS:
+        IF_WITH_PHYSICS:
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        IF_STATIC:#
+        IF_DYNAMIC:
+        IF_PLAYBACK_TRACK:#
+        IF_PLAYBACK_WINNER:#
+        IF_PLAYER:#
+        IF_SHADOW:
+        IF_DAMAGEABLE:#
+        IF_STYLE:#;
+
+    IF_CREATE_PLAYER_CAR player_set_node player_name=you node=car_node;
+
+    IF_BURN_IN burn_in seconds=20;
+    
+    #############;
+    # Recording #;
+    #############;
+    IF_RECORD_TRACK record_track node=car_node filename=/tmp/track.m;
+    IF_RECORD_TRACK record_track_gpx node=car_node filename=/tmp/track.gpx;
+
+    macro_begin create_playback;
+        macro_playback create_car
+            CAR_NODE_X:1
+            CAR_NODE_Y:2
+            CAR_NODE_Z:3
+            CAR_NODE_ANGLE_X:4
+            CAR_NODE_ANGLE_Y:5
+            CAR_NODE_ANGLE_Z:6
+            CAR_NAME:PLAYBACK_CAR
+            DECIMATE:DECIMATE
+            SUFFIX:_playback_track-PSUFFIX
+            IF_WITH_GRAPHICS:
+            IF_WITH_PHYSICS:#
+            IF_PLAYBACK_TRACK:
+            PLAYBACK_SPEED:PLAYBACK_SPEED
+            RECORDINGS_DIR:RECORDINGS_DIR
+            PSUFFIX:PSUFFIX
+            IF_PLAYBACK_WINNER:#
+            IF_PLAYER:#
+            IF_SHADOW:
+            IF_DAMAGEABLE:#
+            IF_STYLE:#;
+    macro_end;
+
+    macro_begin create_winner_playback;
+        macro_playback create_car
+            CAR_NODE_X:1
+            CAR_NODE_Y:2
+            CAR_NODE_Z:3
+            CAR_NODE_ANGLE_X:4
+            CAR_NODE_ANGLE_Y:5
+            CAR_NODE_ANGLE_Z:6
+            CAR_NAME:PLAYBACK_CAR
+            DECIMATE:DECIMATE
+            SUFFIX:_playback_winner-PSUFFIX
+            IF_WITH_GRAPHICS:
+            IF_WITH_PHYSICS:#
+            IF_PLAYBACK_TRACK:#
+            IF_PLAYBACK_WINNER:
+            PLAYBACK_SPEED:PLAYBACK_SPEED
+            RANK:RANK
+            IF_PLAYER:#
+            IF_SHADOW:
+            IF_DAMAGEABLE:#
+            IF_STYLE:#;
+    macro_end;
+
+    IF_PLAYBACK_TRACK_1 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_M3 DECIMATE:_d3 PSUFFIX:1;
+    IF_PLAYBACK_TRACK_2 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_XZ DECIMATE:_d3 PSUFFIX:2;
+    IF_PLAYBACK_TRACK_3 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_FN DECIMATE:_d3 PSUFFIX:3;
+
+    define_winner_conditionals begin_rank=0 end_rank=3;
+    IF_PLAYBACK_WINNER_0 IF_WINNER_RANK0_EXISTS macro_playback create_winner_playback RANK:0 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER0 DECIMATE:_d3 PSUFFIX:1;
+    IF_PLAYBACK_WINNER_1 IF_WINNER_RANK1_EXISTS macro_playback create_winner_playback RANK:1 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER1 DECIMATE:_d3 PSUFFIX:2;
+    IF_PLAYBACK_WINNER_2 IF_WINNER_RANK2_EXISTS macro_playback create_winner_playback RANK:2 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER2 DECIMATE:_d3 PSUFFIX:3;
+
+    IF_CHECKPOINTS check_points
+        moving_node=car_node
+        resource=glow
+        player=you
+        nbeacons=40
+        nth=30
+        nahead=30
+        radius=30
+        height_changed=0
+        track_filename=RECORDINGS_DIR/track1.m;
+
+    camera_key_binding key=C gamepad_button=Y joystick_digital_axis= joystick_digital_axis_sign=NAN;
+
+    ###########;
+    # Cameras #;
+    ###########;
+    IF_CREATE_PLAYER_CAR macro_playback create_car_cameras FAR_PLANE:FAR_PLANE;
+    # macro_playback create_truck_cameras;
+    IF_CREATE_PLAYER_CAR set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
+    IF_CREATE_PLAYER_CAR set_camera_cycle name=near follower_camera;
+    IF_CREATE_PLAYER_CAR set_camera follower_camera;
+
+    # Car;
+    IF_CREATE_PLAYER_CAR IF_RACING macro_playback create_car_key_bindings_racing;
+    IF_CREATE_PLAYER_CAR IF_RALLY macro_playback create_car_key_bindings_rally;
+
+    # STATUS_TIME = 1 << 0;
+    # STATUS_POSITION = 1 << 1;
+    # STATUS_SPEED = 1 << 2;
+    # STATUS_HEALTH = 1 << 3;
+    # STATUS_ACCELERATION = 1 << 4;
+    # STATUS_DIAMETER = 1 << 5;
+    # STATUS_DIAMETER2 = 1 << 6;
+    # STATUS_ENERGY = 1 << 7;
+    # 4: v;
+    # 20: v, a;
+    # 116: v, a, d, d2;
+    # 244: v, a, d, d2, E;
+    # 246: v, a, d, d2, E, p;
+    # 14: v, s, health (if exists);
+    IF_CREATE_PLAYER_CAR IF_DEVEL visual_node_status
+        node=car_node
+        format=246
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=50 40
+        font_height=24
+        line_distance=24;
+    
+    IF_CREATE_PLAYER_CAR IF_RELEASE visual_node_status
+        node=car_node
+        format=4
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=50 40
+        font_height=24
+        line_distance=24;
+
+    # IF_CREATE_PLAYER_CAR macro_playback add_attached_light LSUFFIX:1 CSUFFIX:;
+
+    IF_CREATE_PLAYER_CAR node_instance parent=<dynamic-root> name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
+    IF_CREATE_PLAYER_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
+    IF_CREATE_PLAYER_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;
+macro_end;
+
+macro_begin _scene_racing_delete_transient_objects;
+    IF_CREATE_PLAYER_CAR delete_root_node name=car_node;
+    delete_root_nodes regex=car_node_playback_track\d+;
+    delete_root_nodes regex=car_node_playback_winner\d+;
+
+    wait_until_paused_and_delete_scheduled_advance_times;
+macro_end;
+
+macro_begin scene_racing_static;
+    macro_playback OSM_MAP_RESOURCE GAME_LEVEL:GAME_LEVEL;
+
+    create_scene
+        name=primary_scene
+        z_order=0
+        fly=PRIMARY_SCENE_FLY
+        rotate=PRIMARY_SCENE_ROTATE
+        print_gamepad_buttons=PRIMARY_SCENE_PRINT_GAMEPAD_BUTTONS
+        depth_fog=PRIMARY_SCENE_DEPTH_FOG
+        low_pass=PRIMARY_SCENE_LOW_PASS
+        high_pass=PRIMARY_SCENE_HIGH_PASS
+        vfx=PRIMARY_SCENE_VFX
+        with_dirtmap=PRIMARY_SCENE_WITH_DIRTMAP
+        with_skybox=PRIMARY_SCENE_WITH_SKYBOX
+        with_flying_logic=PRIMARY_SCENE_WITH_FLYING_LOGIC
+        clear_mode=PRIMARY_SCENE_CLEAR_MODE
+        max_tracks=5;
+
+    macro_playback
+        _scene_racing_instantiate_static_objects
+        context=primary_scene
+        DIRTMAP_LEFT:DIRTMAP_LEFT
+        DIRTMAP_RIGHT:DIRTMAP_RIGHT
+        DIRTMAP_BOTTOM:DIRTMAP_BOTTOM
+        DIRTMAP_TOP:DIRTMAP_TOP
+        DIRTMAP_TEXTURE:DIRTMAP_TEXTURE
+        DIRTMAP_OFFSET:DIRTMAP_OFFSET
+        DIRTMAP_DISCRETENESS:DIRTMAP_DISCRETENESS
+        DIRT_SCALE:DIRT_SCALE
+        DIRTMAP_WRAP_MODE:DIRTMAP_WRAP_MODE
+        SOFT_LIGHT_TEXTURE:SOFT_LIGHT_TEXTURE;
+macro_end;
+
+macro_begin generic_scene_racing_dynamic;
+    IF_UPDATE_EXISTING_SCENE macro_playback
+        _scene_racing_delete_transient_objects
+        context=primary_scene
+        IF_CREATE_PLAYER_CAR:IF_CREATE_PLAYER_CAR
+        IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1
+        IF_PLAYBACK_TRACK_2:IF_PLAYBACK_TRACK_2
+        IF_PLAYBACK_TRACK_3:IF_PLAYBACK_TRACK_3
+        IF_PLAYBACK_WINNER_0:IF_PLAYBACK_WINNER_0
+        IF_PLAYBACK_WINNER_1:IF_PLAYBACK_WINNER_1
+        IF_PLAYBACK_WINNER_2:IF_PLAYBACK_WINNER_2;
+    macro_playback
+        _scene_racing_instantiate_transient_objects
+        context=primary_scene
+        IF_CREATE_PLAYER_CAR:IF_CREATE_PLAYER_CAR
+        CAR_NODE_X:CAR_NODE_X
+        CAR_NODE_Y:CAR_NODE_Y
+        CAR_NODE_Z:CAR_NODE_Z
+        CAR_NODE_ANGLE_X:CAR_NODE_ANGLE_X
+        CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
+        CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
+        SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR
+        PLAYBACK_SPEED:PLAYBACK_SPEED
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        IF_BURN_IN:IF_BURN_IN
+        IF_RECORD_TRACK:IF_RECORD_TRACK
+        RECORDINGS_DIR:RECORDINGS_DIR
+        IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1
+        IF_PLAYBACK_TRACK_2:IF_PLAYBACK_TRACK_2
+        IF_PLAYBACK_TRACK_3:IF_PLAYBACK_TRACK_3
+        IF_PLAYBACK_WINNER_0:IF_PLAYBACK_WINNER_0
+        IF_PLAYBACK_WINNER_1:IF_PLAYBACK_WINNER_1
+        IF_PLAYBACK_WINNER_2:IF_PLAYBACK_WINNER_2
+        IF_CHECKPOINTS:IF_CHECKPOINTS;
+macro_end;

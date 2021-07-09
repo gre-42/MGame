@@ -1,0 +1,60 @@
+macro_begin _create_camera_nodes;
+    # always behind car;
+    # node_instance parent=car_node name=camera position=0 5 60 rotation=-3 0 0 scale=1;
+
+    # top-down, near;
+    # node_instance parent=<dynamic-root> name=camera position=0 -100 0 rotation=-90 0 0 scale=1;
+
+    # top-down, far;
+    # node_instance parent=<dynamic-root> name=camera position=0 500 0 rotation=-90 0 0 scale=1;
+
+    # 45°, far;
+    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+
+    # GT;
+    node_instance parent=car_node name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
+
+    # side of car, near;
+    # node_instance parent=<dynamic-root> name=camera position=0 10 100 rotation=-5 0 0 scale=1;
+
+    # side of car, far;
+    # node_instance parent=<dynamic-root> name=camera position=0 10 500 rotation=-2 0 0 scale=1;
+
+    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+macro_end;
+
+macro_begin create_car_cameras;
+
+    macro_playback _create_camera_nodes
+        FAR_PLANE:FAR_PLANE;
+
+    look_at_node follower=45_deg_camera followed=car_node;
+    follow_node
+        follower=follower_camera
+        followed=car_node
+        distance=10
+        node_displacement=0 1.5 0
+        look_at_displacement=0 1.5 0
+        snappiness=2
+        y_adaptivity=15
+        y_snappiness=0.05;
+
+macro_end;
+
+macro_begin create_truck_cameras;
+
+    macro_playback _create_camera_nodes;
+
+    look_at_node follower=45_deg_camera followed=car_node;
+    follow_node
+        follower=follower_camera
+        followed=car_node
+        distance=15
+        node_displacement=0 2.3 0
+        look_at_displacement=0 2.3 0
+        snappiness=2
+        y_adaptivity=15
+        y_snappiness=0.05;
+
+macro_end;

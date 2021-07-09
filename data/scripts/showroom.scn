@@ -1,0 +1,70 @@
+macro_begin create_showroom_car;
+    node_instance
+        parent=<dynamic-root>
+        name=car_node
+        position=0 0.7 -11
+        rotation=0 135 0
+        scale=1;
+
+    macro_playback create-SHOWROOM_PLAYER_CAR
+        DECIMATE:-SHOWROOM_DECIMATE
+        SUFFIX:
+        IF_WITH_GRAPHICS:
+        IF_WITH_PHYSICS:
+        IF_RACING:#
+        IF_RALLY:
+        IF_STATIC:#
+        IF_DYNAMIC:
+        HAND_BRAKE_PULLED:1;
+    macro_playback add_attached_light LSUFFIX:_car CSUFFIX:;
+macro_end;
+
+macro_begin change_showroom_car;
+    delete_root_node name=car_node;
+    macro_playback create_showroom_car;
+macro_end;
+
+macro_begin _initialize_showroom_scene;
+    macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
+    macro_playback add_distant_light LEFT:-400 RIGHT:400 BOTTOM:-200 TOP:200;
+
+    obj_resource
+        name=cylinder
+        filename=models/cylinder.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=4 0.1 4
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=white
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    node_instance parent=<dynamic-root> name=stage position=0 -1.3 -11 rotation=0 0 0 scale=1;
+    renderable_instance name=stage node=stage resource=cylinder;
+    rigid_cuboid node=stage hitbox=cylinder mass=INFINITY size=1 2 3 w=0 10 0 collidable_mode=terrain;
+    relative_transformer node=stage w=0 10 0;
+macro_end;
+
+macro_begin create_showroom_scene;
+    create_scene
+        name=showroom
+        z_order=0
+        fly=0
+        rotate=0
+        print_gamepad_buttons=0
+        depth_fog=0
+        low_pass=0
+        high_pass=0
+        vfx=0
+        with_dirtmap=0
+        with_skybox=0
+        with_flying_logic=0
+        clear_mode=depth
+        max_tracks=5;
+    macro_playback _initialize_showroom_scene context=showroom;
+macro_end;

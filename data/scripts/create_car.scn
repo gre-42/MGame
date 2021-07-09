@@ -1,0 +1,47 @@
+macro_begin create_car;
+    node_instance
+        parent=<dynamic-root>
+        name=car_node-SUFFIX
+        position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
+        rotation=CAR_NODE_ANGLE_X CAR_NODE_ANGLE_Y CAR_NODE_ANGLE_Z;
+    IF_STYLE set_renderable_style
+        selector=body
+        node=car_node-SUFFIX
+        ambience=R G B
+        diffusivity=R G B
+        specularity=R G B
+        animation_name=
+        animation_loop_begin=NAN
+        animation_loop_end=NAN
+        animation_loop_time=NAN;
+
+    macro_playback create-CAR_NAME
+        DECIMATE:DECIMATE
+        SUFFIX:SUFFIX
+        IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
+        IF_WITH_PHYSICS:IF_WITH_PHYSICS
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        IF_STATIC:IF_STATIC=#
+        IF_DYNAMIC:IF_DYNAMIC=#;
+    IF_PLAYBACK_TRACK playback_track
+        node=car_node-SUFFIX
+        speed=PLAYBACK_SPEED
+        filename=RECORDINGS_DIR/track-PSUFFIX.m;
+    IF_PLAYBACK_WINNER playback_winner_track
+        node=car_node-SUFFIX
+        speed=PLAYBACK_SPEED
+        rank=RANK;
+
+    IF_PLAYER player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
+    IF_SHADOW macro_playback add_attached_light LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
+    IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
+    IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
+    # visual_node_status_3rd
+        node=car_node-SUFFIX
+        format=256
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        offset=0 0.3
+        font_height=16
+        line_distance=16;
+macro_end;

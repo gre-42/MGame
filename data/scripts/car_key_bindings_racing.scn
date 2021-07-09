@@ -1,0 +1,65 @@
+macro_begin create_car_key_bindings_racing;
+    abs_idle_binding
+        node=car_node
+        tires_z=0 0 -1;
+    abs_key_binding
+        node=car_node
+        key=LEFT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        tire_id=0
+        tire_angle_velocities=30 100
+        tire_angles=30 12;
+    abs_key_binding
+        node=car_node
+        key=LEFT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        tire_id=1
+        tire_angle_velocities=30 100
+        tire_angles=30 12;
+    abs_key_binding
+        node=car_node
+        key=RIGHT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        tire_id=0
+        tire_angle_velocities=30 100
+        tire_angles=-30 -12;
+    abs_key_binding
+        node=car_node
+        key=RIGHT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        tire_id=1
+        tire_angle_velocities=30 100
+        tire_angles=-30 -12;
+
+    abs_key_binding
+        node=car_node
+        key=LEFT_SHIFT
+        gamepad_button=B
+        force=0 20000 0
+        position=0 0 0;
+
+    # 120 PS = 88259.8 Watt;
+    # 150 PS = 110325 Watt;
+    # 200 PS = 147100 Watt;
+    # 400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    abs_key_binding
+        node=car_node
+        key=UP
+        gamepad_button=X
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=-1
+        surface_power=294200;
+    abs_key_binding
+        node=car_node
+        key=DOWN
+        gamepad_button=A
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=1
+        surface_power=-294200;
+macro_end;

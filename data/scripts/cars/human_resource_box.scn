@@ -1,0 +1,35 @@
+obj_resource
+    name=human_hitbox
+    filename=models/box.obj
+    position=0 0.35 0
+    rotation=0 0 0
+    scale=0.25 0.7 0.25
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+gen_triangle_rays name=human_hitbox npoints=5 lengths=0.25 0.7 0.25 delete_triangles=0;
+
+obj_resource
+    name=human_tirelines
+    filename=models/empty.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+gen_ray name=human_tirelines from=0 -0.3 0 to=0 -0.9 0;

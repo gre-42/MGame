@@ -1,0 +1,25 @@
+macro_begin setup_traffic_with_pedestrians;
+    macro_playback traffic.create_npc_and_human PLAYER_NAME:h_npc1 HUMAN_NAME:_mh1;
+    macro_playback traffic.create_npc_and_human PLAYER_NAME:h_npc2 HUMAN_NAME:_mh1;
+    macro_playback traffic.create_npc_and_human PLAYER_NAME:h_npc3 HUMAN_NAME:_mh1;
+    macro_playback traffic.create_npc_and_human PLAYER_NAME:h_npc4 HUMAN_NAME:_mh1;
+
+    # From: https://wiki.rage.mp/index.php?title=Vehicle_Colors;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc1  CAR_NAME:_M3  R:0.07 G:0.22 B:0.24;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc2  CAR_NAME:_M3  R:0.95 G:0.80 B:0.25;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc3  CAR_NAME:_M3  R:0.74 G:0.67 B:0.56;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc4  CAR_NAME:_XZ  R:0.07 G:0.22 B:0.24;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc5  CAR_NAME:_XZ  R:0.95 G:0.80 B:0.25;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc6  CAR_NAME:_FN  R:0.85 G:0.10 B:0.09;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc7  CAR_NAME:_FN  R:0.07 G:0.22 B:0.24;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc8  CAR_NAME:_LK4 R:0.74 G:0.67 B:0.56;
+    macro_playback traffic.create_npc_and_parking_car PLAYER_NAME:pc_npc9  CAR_NAME:_LK4 R:0.85 G:0.10 B:0.09;
+
+    macro_playback traffic.create_npc_and_driving_car PLAYER_NAME:dc_npc1  CAR_NAME:_XZ  R:0.74 G:0.67 B:0.56;
+    macro_playback traffic.create_npc_and_driving_car PLAYER_NAME:dc_npc2  CAR_NAME:_FN  R:0.95 G:0.80 B:0.25;
+    macro_playback traffic.create_npc_and_driving_car PLAYER_NAME:dc_npc3  CAR_NAME:_LK4 R:0.07 G:0.22 B:0.24;
+
+    set_vip player=you;
+
+    set_spawn_points node=osm_map_node resource=osm_map;
+macro_end;

@@ -1,0 +1,314 @@
+obj_resource
+    name=basketball_hoop
+    filename=models/Basketball/BasketballHoop.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=binary
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
+    name=street_light
+    filename=models/street_light/street_light.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.2 0.2 0.2
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=traffic_cone
+    filename=models/traffic_cone/traffic_cone.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.5 0.5 0.5
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
+    name=corner_sign
+    filename=models/corner_sign/corner_sign.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=2 2 2
+    is_small=1
+    blend_mode=binary
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
+    name=road_bollard
+    filename=models/road_bollard/road_bollard.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.3 0.3 0.3
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
+    name=road_bollard_hitbox
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=position;
+
+obj_resource
+    name=street_light_hitbox
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 5
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=position;
+
+obj_resource
+    name=02_1_02_hitbox
+    filename=models/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.2 1 0.2
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=position;
+
+obj_resource
+    name=50_16_01_hitbox
+    filename=models/box.obj
+    position=0 0.8 0
+    rotation=0 0 0
+    scale=5 1.6 0.1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=0
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=position_yangle;
+
+obj_resource
+    name=dumpster
+    filename=models/opengameart/Dumpster/Dumpster.obj
+    position=-1.25 -0.15 0.67
+    rotation=0 0 0
+    scale=0.02 0.02 0.02
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
+    name=trashcan1
+    filename=models/opengameart/Trashcan1/trashcan_tri.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.3 0.3 0.3
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=trashcan2
+    filename=models/opengameart/Trashcan2/Trashcan.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
+    name=mailbox
+    filename=models/opengameart/Mailbox/Mailbox_flat.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
+    name=bench
+    filename=models/opengameart/Bench/bench.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 0.1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
+    name=table_and_chairs
+    filename=models/opengameart/Table_And_Chairs/table_and_chairs.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.4 0.4 0.4
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=ship
+    filename=models/ship/ship.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=black
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle
+    triangle_tangent_error_behavior=zero;
+
+macro_begin load_hedge;
+    obj_resource
+        name=NAME
+        filename=FILENAME
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.1 0.1 0.1
+        distances=0 300
+        is_small=1
+        blend_mode=binary
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=0
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=instances_sorted
+        transformation_mode=position_yangle;
+macro_end;
+
+macro_begin load_facade;
+    obj_resource
+        name=NAME
+        filename=models/opengameart/Facade/NAME.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=instances_sorted
+        transformation_mode=position_yangle;
+macro_end;
+
+macro_playback load_hedge NAME:hedge_long        FILENAME:models/opengameart/Hedge/Long/HedgeLongExp.obj;
+macro_playback load_hedge NAME:hedge_small       FILENAME:models/opengameart/Hedge/Small/HedgeSmallExp.obj;
+macro_playback load_hedge NAME:hedge_long_round  FILENAME:models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj;
+macro_playback load_hedge NAME:hedge_small_round FILENAME:models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj;
+
+macro_playback load_facade NAME:entrance0;
+macro_playback load_facade NAME:entrance1;
+
+macro_playback load_facade NAME:sign0;
+macro_playback load_facade NAME:sign1;
+macro_playback load_facade NAME:sign2;
+macro_playback load_facade NAME:sign3;
+macro_playback load_facade NAME:sign4;
+macro_playback load_facade NAME:sign5;
+
+macro_playback load_facade NAME:door0;
+macro_playback load_facade NAME:door1;

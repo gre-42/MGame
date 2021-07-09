@@ -1,0 +1,65 @@
+macro_begin create_tiger_tank_physics;
+    rigid_cuboid node=car_node-SUFFIX hitbox=tiger_tank_hitbox tirelines=tiger_tank_tirelines mass=MASS size=3.6 3 8 collidable_mode=COLLIDABLE_MODE name=tiger_tank;
+    gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=car_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
+    damageable node=car_node-SUFFIX health=200;
+
+    IF_MANUAL_AIM relative_transformer node=turret_node-SUFFIX;
+    IF_MANUAL_AIM relative_transformer node=main_gun_node-SUFFIX;
+    IF_AUTO_AIM yaw_pitch_look_at_nodes yaw_node=turret_node-SUFFIX pitch_node=main_gun_node-SUFFIX parent_follower_rigid_body_node=car_node-SUFFIX followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+
+    player_create name=PLAYER_NAME team=TEAM game_mode=racing unstuck_mode=off driving_mode=car_arena driving_direction=center;
+    player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
+    IF_AUTO_AIM player_set_aiming_gun player_name=PLAYER_NAME yaw_node=turret_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
+    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
+    player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
+    player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
+
+    visual_node_status_3rd
+        node=car_node-SUFFIX
+        format=264
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        offset=0 0.3
+        font_height=16
+        line_distance=16;
+    #  120 PS = 88259.8 Watt;
+    #  150 PS = 110325 Watt;
+    #  200 PS = 147100 Watt;
+    #  400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    create_engine rigid_body=car_node-SUFFIX name=main power=294200 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=breaks power=0 hand_brake_pulled=HAND_BRAKE_PULLED;
+
+    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 +4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 +4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
+macro_end;
+
+macro_begin create_tiger_tank;
+    # renderable_instance name=box node=car_node-SUFFIX resource=muscle-cupe-hitbox;
+    # renderable_instance name=car-inst node=car_node-SUFFIX resource=muscle-cupe;
+    IF_WITH_GRAPHICS renderable_instance name=chassis-inst node=car_node-SUFFIX resource=tiger_tank regex=Left|Right|Hull;
+
+    # car_node-SUFFIX;
+    #     turret_node-SUFFIX (0 0 1, yaw_node);
+    #         turret_shift_node-SUFFIX (0 0 -1, renderable);
+    #             main_gun_node-SUFFIX (0 1.2 -0.3, pitch_node);
+    #                 main_gun_shift_node-SUFFIX (0 -1.2 0.3, renderable);
+    #                 main_gun_end_node-SUFFIX (0 0 -20);
+    node_instance parent=car_node-SUFFIX name=turret_node-SUFFIX position=0 0 1 rotation=0 45 0 scale=1;
+    node_instance parent=turret_node-SUFFIX name=turret_shift_node-SUFFIX position=0 0 -1 rotation=0 0 0 scale=1;
+    IF_WITH_GRAPHICS renderable_instance name=turret_inst node=turret_shift_node-SUFFIX resource=tiger_tank regex=Machine_Gun|Main_Turret|Hatch;
+    node_instance parent=turret_shift_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
+    node_instance parent=main_gun_node-SUFFIX name=main_gun_shift_node-SUFFIX position=0 -1.2 0.3 rotation=0 0 0 scale=1;
+    IF_WITH_GRAPHICS renderable_instance name=main_gun_inst node=main_gun_shift_node-SUFFIX resource=tiger_tank regex=Main_Gun;
+
+    # renderable_instance name=flag-inst node=car_node-SUFFIX resource=flag;
+    # renderable_instance name=car_box-SUFFIX node=car_node-SUFFIX resource=tiger_tank_hitbox;
+    # collidable-mesh rigid_body-node=car_node-SUFFIX node=car_node-SUFFIX resource=tiger_tank_hitbox;
+
+    node_instance parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
+
+    IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+macro_end;

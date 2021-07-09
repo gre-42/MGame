@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -eu
+
+# From: https://stackoverflow.com/questions/242538/unix-shell-script-find-out-which-directory-the-script-file-resides
+
+# Absolute path to this script, e.g. /home/user/bin/foo.sh
+SCRIPT=$(readlink -f "$0")
+# Absolute path this script is in, thus /home/user/bin
+SCRIPTPATH=$(dirname "$SCRIPT")
+cd "$SCRIPTPATH"
+
+LD_LIBRARY_PATH=URelease URelease/render_scene_file \
+    data \
+    data/levels/main/main.scn \
+    --nsamples_msaa 2 \
+    --show_mouse_cursor \
+    --screen_width 1500 \
+    --screen_height 900

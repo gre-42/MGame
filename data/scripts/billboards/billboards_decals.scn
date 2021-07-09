@@ -1,0 +1,76 @@
+add_texture_descriptor
+    name=Leaf018_2
+    color=textures/cc0textures/decals/LeafSet018_2K_Color2.png
+    color_mode=rgba
+    histogram=textures/histograms/Ground037_2K_Color_Sl.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Leaf018_2_Red
+    color=textures/cc0textures/decals/LeafSet018_2K_Color2.png
+    color_mode=rgba
+    histogram=textures/proctree/texture_pack/twig/#24/diffuse.tga
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Paper
+    color=textures/decals/Paper.png
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+square_resource
+    name=Leaf018_2
+    texture_filename=#Leaf018_2
+    min=-0.4 -0.4
+    max=0.4 0.4
+    is_small=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=continuous
+    depth_func=less_equal
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    rotation=-90 0 0
+    translation=0 0.05 0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+square_resource
+    name=Leaf018_2_Red
+    texture_filename=#Leaf018_2_Red
+    min=-0.4 -0.4
+    max=0.4 0.4
+    is_small=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=continuous
+    depth_func=less_equal
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    rotation=-90 0 0
+    translation=0 0.05 0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+square_resource
+    name=Paper
+    texture_filename=#Paper
+    min=-0.4 -0.4
+    max=0.4 0.4
+    is_small=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=continuous
+    depth_func=less_equal
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    rotation=-90 0 0
+    translation=0 0.05 0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;

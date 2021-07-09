@@ -1,0 +1,44 @@
+obj_resource
+    name=mh1
+    filename=models/MakeHuman/t_pose_lowpoly.mhx2
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=mh1_d2
+    filename=models/MakeHuman/t_pose_lowpoly_d2.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
+
+import_bone_weights destination=mh1_d2 source=mh1 max_distance=0.1;
+
+# downsample name=mh1 factor=10;
+
+add_bvh_resource
+    name=walk_mh1
+    filename=models/MakeHuman/walking_periodic.bvh
+    smooth_radius=20
+    smooth_alpha=0.9
+    periodic=1;
