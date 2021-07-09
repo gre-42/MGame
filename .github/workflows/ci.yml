@@ -41,10 +41,15 @@ jobs:
   build-msys2:
     runs-on: windows-latest
     
+    defaults:
+      run:
+        shell: msys2 {0}
+
     steps:
       - uses: msys2/setup-msys2@v2
-      - shell: msys2 {0}
-        run: |
+
+      - name: Install dependencies
+      - run: |
           pacman --noconfirm -S mingw-w64-x86_64-glfw
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
