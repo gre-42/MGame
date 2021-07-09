@@ -67,7 +67,11 @@ jobs:
           submodules: true
 
       - name: Build
-        run: CXX=D:/a/_temp/msys/msys64/mingw64/bin/g++.exe make build
+        # run: CXX=D:/a/_temp/msys/msys64/mingw64/bin/g++.exe make build
+        run: |
+          mkdir MRelease
+          cd MRelease
+          cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ../
 
       - name: Package
         run: make package
