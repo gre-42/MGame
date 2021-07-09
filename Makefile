@@ -4,13 +4,19 @@ platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
     else \
         echo U${CMAKE_BUILD_TYPE}; \
     fi
+build_target != if [ "$$OSTYPE" = "msys" ] ; then \
+        echo build; \
+    else \
+        echo build10; \
+    fi
 ostype != echo "$$OSTYPE";
 bin_dir = $(platform_dir)
 
 all: build package
 
 build:
-	make -C Mlib build10 CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+	@echo "OS Type: $(ostype)"
+	make -C Mlib $(build_target) CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 
 package:
 	@echo "OS Type: $(ostype)"
