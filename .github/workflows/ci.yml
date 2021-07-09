@@ -45,7 +45,6 @@ jobs:
       - uses: msys2/setup-msys2@v2
       - shell: msys2 {0}
         run: |
-          pacman --noconfirm -Syu
           pacman --noconfirm -S mingw-w64-glfw
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
