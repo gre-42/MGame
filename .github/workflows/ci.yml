@@ -59,7 +59,8 @@ jobs:
             mingw-w64-x86_64-gcc \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-cmake \
-            make
+            make \
+            rsync
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -73,6 +74,7 @@ jobs:
           mkdir MRelease
           cd MRelease
           cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ../
+          ninja -v
 
       - name: Package
         run: make package
