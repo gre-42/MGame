@@ -50,7 +50,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pacman --noconfirm -S mingw-w64-x86_64-glfw
+          pacman --noconfirm -S mingw-w64-x86_64-glfw mingw-w64-x86_64-gcc make
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
