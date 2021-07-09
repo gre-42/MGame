@@ -42,7 +42,6 @@ jobs:
     runs-on: windows-latest
     
     steps:
-      - name: Install dependencies
       - uses: msys2/setup-msys2@v2
       - shell: msys2 {0}
         run: |
