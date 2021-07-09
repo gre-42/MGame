@@ -16,10 +16,12 @@ all: build package
 
 build:
 	@echo "OS Type: $(ostype)"
+	@echo "Platform dir: $(platform_dir)"
 	make -C Mlib $(build_target) CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
 
 package:
 	@echo "OS Type: $(ostype)"
+	@echo "Platform dir: $(platform_dir)"
 	if [ "$$OSTYPE" = "msys" ] ; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
