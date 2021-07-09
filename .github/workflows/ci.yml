@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install dependencies
+        run: sudo apt-get install -y g++ ninja-build
+      
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
