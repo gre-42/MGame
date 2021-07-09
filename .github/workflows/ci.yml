@@ -27,3 +27,24 @@ jobs:
 
       - name: Package
         run: make package
+    
+      - name: Archive artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: osm-rally-artifact
+          path: |
+            data
+            URelease
+            osm_racing_game
+            osm_racing_game.cmd
+
+  create-release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Create release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: osm-rally-artifact
+          token: ${{ secrets.GITHUB_TOKEN }}
