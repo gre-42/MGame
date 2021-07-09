@@ -69,6 +69,7 @@ jobs:
       - name: Build
         # run: CXX=D:/a/_temp/msys/msys64/mingw64/bin/g++.exe make build
         run: |
+          cd Mlib
           mkdir MRelease
           cd MRelease
           cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ../
