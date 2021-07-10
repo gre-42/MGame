@@ -35,7 +35,7 @@ jobs:
         run: make package
     
       - name: Archive artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2
         with:
           name: osm-rally-artifact-ubuntu
           path: |
@@ -77,7 +77,7 @@ jobs:
         run: make package
     
       - name: Archive artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v2
         with:
           name: osm-rally-artifact-msys2
           path: |
@@ -88,8 +88,18 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-ubuntu, build-msys2]
     steps:
+      - name: Download Ubuntu artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: osm-rally-artifact-ubuntu
+      
+      - name: Download MSYS2 artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: osm-rally-artifact-msys2
+          
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "osm-rally-artifact,osm-rally-artifact-msys2"
+          artifacts: "MGame/data,MGame/URelease,MGame/osm_racing_game,MGame/osm_racing_game.cmd"
           token: ${{ secrets.GITHUB_TOKEN }}
