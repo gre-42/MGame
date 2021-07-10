@@ -1,27 +1,42 @@
 macro_begin osm_tank_fps_resource;
     osm_resource
-        name=osm_map
-        filename=jb/map.osm
-        heightmap=jb/heightmap.pgm
-        terrain_textures=#Ground037_Sl
-        grass_dirt_texture=#Ground029
-        street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg
-        street_texture=#Road007
-        path_crossing_texture=#Gravel010
-        path_texture=#Gravel010
-        curb_street_texture=textures/curb_stone_grass_asphalt.png
-        curb_path_texture=textures/curb_stone_grass_gravel.png
-        curb2_street_texture=
-        curb2_path_texture=
+        name=osm_map,
+        filename=__DIR__/jb/map.osm,
+        heightmap=__DIR__/jb/heightmap.pgm,
+        terrain_undefined_textures=textures/pink.png,
+        terrain_grass_textures=
+            #grass_ground_near
+            #Ground037_Sl_far
+            #Rock028_200_near
+            #Rock028_200_far,
+        terrain_flowers_textures=
+            #grass_ground_near
+            #Ground037_Sl_far
+            #Rock028_200_near
+            #Rock028_200_far,
+        bounding_terrain_type=grass,
+        default_terrain_type=grass,
+        grass_dirt_texture=#Ground029,
+        street_dirt_texture=#Asphalt016_Dirt,
+        street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
+        street_textures=
+            lanes:1 texture:#Road007_Alpha,
+        path_crossing_texture=#Gravel010,
+        path_texture=#Gravel010,
+        curb_street_texture=textures/curb_stone_grass_asphalt.png,
+        curb_path_texture=textures/curb_stone_grass_gravel.png,
+        curb2_street_texture=,
+        curb2_path_texture=,
+        socle_textures=
+            #Bricks058,
         facade_textures=
             #Plaster003_wh
             #Plaster003_ye
-            #Plaster003
-        ceiling_texture=textures/street+asphalt-1024x1024.png
+            #Plaster003,
+        ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0
-        barrier_blend_mode=off
-        roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg
+            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0,
+        roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree
             btree2
@@ -30,52 +45,59 @@ macro_begin osm_tank_fps_resource;
             btree-large
             btree-large2
             btree-large3
-            btree-large4
+            btree-large4,
         grass_resource_names=
             bflower
-            bflower2
+            bflower2,
         near_grass_resource_names=
-        default_street_width=10
-        roof_width=2
-        scale=1e-3
-        uv_scale_terrain=1e-1
-        uv_scale_street=1e-1
-        uv_scale_facade=2.5e-1
-        uv_scale_ceiling=1e-1
-        uv_scale_barrier_wall=1e0
-        with_roofs=0
-        with_ceilings=1
-        building_bottom=0
-        default_building_top=10
-        default_barrier_top=2
-        remove_backfacing_triangles=1
-        with_tree_nodes=1
-        forest_outline_tree_distance=4
-        forest_outline_tree_inwards_distance=1
-        much_grass_distance=INFINITY
-        raceway_beacon_distance=INFINITY
-        with_terrain=1
-        with_buildings=1
-        only_raceways=0
-        highway_name_pattern=
-        excluded_highways=pedestrian path footway cycleway steps
-        path_tags=track tertiary
-        steiner_point_distances_road=0
-        steiner_point_distances_steiner=INFINITY
-        curb_alpha=0.9
-        curb2_alpha=1
-        curb_uv_x=1
-        curb2_uv_x=NAN
-        raise_streets_amount=0.2
-        extrude_curb_amount=0
-        extrude_street_amount=0
-        street_light_resource_names=
-        max_wall_width=10
-        with_height_bindings=0
-        street_node_smoothness=0
-        street_edge_smoothness=0
-        terrain_edge_smoothness=0
-        driving_direction=right
+            bflower2(p:0.1)
+            grass12y_near_Ground037_Sl
+            bflower(p:0.1),
+        near_flowers_resource_names=
+            bflower2(p:0.1)
+            grass2g_near
+            bflower(p:0.1),
+        default_street_width=7,
+        roof_width=2,
+        scale=1e-3,
+        uv_scale_terrain=1e-1,
+        uv_scale_street=1e-1,
+        uv_scale_facade=2.5e-1,
+        uv_scale_ceiling=1e-1,
+        uv_scale_barrier_wall=1e0,
+        with_roofs=0,
+        with_ceilings=1,
+        building_bottom=0,
+        default_building_top=10,
+        default_barrier_top=2,
+        remove_backfacing_triangles=1,
+        with_tree_nodes=1,
+        forest_outline_tree_distance=4,
+        forest_outline_tree_inwards_distance=1,
+        much_grass_distance=INFINITY,
+        raceway_beacon_distance=INFINITY,
+        with_terrain=1,
+        with_buildings=1,
+        only_raceways=0,
+        highway_name_pattern=,
+        excluded_highways=pedestrian path footway cycleway steps,
+        path_tags=track tertiary,
+        steiner_point_distances_road=0,
+        steiner_point_distances_steiner=INFINITY,
+        curb_alpha=0.9,
+        curb2_alpha=1,
+        curb_uv_x=1,
+        curb2_uv_x=NAN,
+        raise_streets_amount=0.2,
+        extrude_curb_amount=0,
+        extrude_street_amount=0,
+        street_light_resource_names=,
+        max_wall_width=10,
+        with_height_bindings=0,
+        street_node_smoothness=0,
+        street_edge_smoothness=0,
+        terrain_edge_smoothness=0,
+        driving_direction=right,
         blend_street=0;
 
     # osm_resource
