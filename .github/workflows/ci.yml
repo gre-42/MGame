@@ -101,5 +101,5 @@ jobs:
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "MGame/data,MGame/URelease,MGame/osm_racing_game,MGame/osm_racing_game.cmd"
+          artifacts: "data,URelease,osm_racing_game,osm_racing_game.cmd"
           token: ${{ secrets.GITHUB_TOKEN }}
