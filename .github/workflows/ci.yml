@@ -101,7 +101,7 @@ jobs:
           path: MGame
       
       - name: Create ZIP archive
-        run: zip MGame.zip MGame
+        run: zip -r MGame.zip MGame
           
       - name: Create release
         uses: ncipollo/release-action@v1
