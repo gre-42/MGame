@@ -1,0 +1,10 @@
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  greet:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo Hello world
