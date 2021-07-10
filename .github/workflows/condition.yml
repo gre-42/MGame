@@ -16,3 +16,8 @@ jobs:
     steps:
       - name: Print hello world
         run: echo Hello world
+  asdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print ref
+        run: echo asd ${{ github.ref }}
