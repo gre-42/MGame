@@ -57,8 +57,8 @@ package:
 run:
 	LD_LIBRARY_PATH=$(bin_dir) \
 		$(bin_dir)/render_scene_file \
-		$(data_dir) \
-		$(data_dir)/levels/main/main.scn \
+		data \
+		data/levels/main/main.scn \
 		--print_render_residual_time \
 		--nsamples_msaa 2 \
 		--show_mouse_cursor \
