@@ -50,30 +50,8 @@ macro_begin arena.create_npc_player;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
 
-macro_begin arena.create_car;
-    node_instance
-        parent=<dynamic-root>
-        name=car_node-SUFFIX
-        position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
-        rotation=CAR_NODE_ANGLE_X CAR_NODE_ANGLE_Y CAR_NODE_ANGLE_Z
-        scale=1;
-    macro_playback create-CAR_NAME
-        DECIMATE:DECIMATE
-        SUFFIX:SUFFIX
-        IF_WITH_GRAPHICS:
-        IF_WITH_PHYSICS:
-        IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY
-        IF_STATIC:#
-        IF_DYNAMIC:;
-    player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
-    macro_playback add_attached_light LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
-    damageable node=car_node-SUFFIX health=200;
-    crash node=car_node-SUFFIX damage=0.000001;
-macro_end;
-
 macro_begin arena.create_npc_car;
-    macro_playback arena.create_car
+    macro_playback create_car
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
@@ -81,12 +59,21 @@ macro_begin arena.create_npc_car;
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
         CAR_NAME:CAR_NAME
+        IF_STYLE:#
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
+        IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
-        PLAYER_NAME:PLAYER_NAME;
+        IF_STATIC:#
+        IF_DYNAMIC:
+        IF_PLAYBACK_TRACK:#
+        IF_PLAYBACK_WINNER:#
+        IF_PLAYER:
+        PLAYER_NAME:PLAYER_NAME
+        IF_SHADOW:
+        IF_DAMAGEABLE:;
     visual_node_status_3rd
         node=car_node-SUFFIX
         format=8
@@ -97,7 +84,7 @@ macro_begin arena.create_npc_car;
 macro_end;
 
 macro_begin arena.create_player_car;
-    macro_playback arena.create_car
+    macro_playback create_car
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
@@ -105,12 +92,21 @@ macro_begin arena.create_player_car;
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
         CAR_NAME:CAR_NAME
+        IF_STYLE:#
         DECIMATE:DECIMATE
         SUFFIX:
+        IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
-        PLAYER_NAME:PLAYER_NAME;
+        IF_PLAYBACK_TRACK:#
+        IF_PLAYBACK_WINNER:#
+        IF_PLAYER:
+        IF_STATIC:#
+        IF_DYNAMIC:
+        PLAYER_NAME:PLAYER_NAME
+        IF_SHADOW:
+        IF_DAMAGEABLE:;
     macro_playback create_car_cameras
         FAR_PLANE:FAR_PLANE;
     set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
