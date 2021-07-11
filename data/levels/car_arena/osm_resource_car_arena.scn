@@ -4,30 +4,42 @@ macro_begin osm_resource_car_arena;
         filename=__DIR__/map_car_arena.osm,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
-        terrain_grass_textures=#Ground037_Sl,
+        terrain_grass_textures=
+        #grass_ground_near
+            #Ground037_Sl_far
+            #Rock028_200_near
+            #Rock028_200_far,
+        bounding_terrain_type=grass,
+        default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
-        street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
-        street_texture=#Road007,
+        street_dirt_texture=#Asphalt016_Dirt,
+        street_crossing_texture=#Road007_No_Lines,
+        street_textures=
+            lanes:1 texture:#Road007_Alpha,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
         curb_street_texture=textures/curb_stone_grass_asphalt.png,
         curb_path_texture=textures/curb_stone_grass_gravel.png,
         curb2_street_texture=,
         curb2_path_texture=,
+        wall_textures=
+            lanes:1 texture:#PavingStones046 uvx:0.15,
+        socle_textures=
+            #Bricks058,
         facade_textures=
             #Plaster003
             #Plaster003_ye
             #Plaster003_wh,
         ceiling_texture=#Asphalt015,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0,
-        barrier_blend_mode=off,
+            texture:#fence1 uv:1 1 blend_mode:semi_continuous reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
-        grass_resource_names=
-            bflower
-            bflower2,
-        near_grass_resource_names=,
+        grass_resource_names=,
+        near_grass_resource_names=
+            bflower2(p:0.1)
+            grass12y_near_Ground037_Sl
+            bflower(p:0.1),
         default_street_width=10,
         roof_width=2,
         scale=1e-3,
@@ -35,7 +47,7 @@ macro_begin osm_resource_car_arena;
         uv_scale_street=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
-        uv_scale_barrier_wall=1e0,
+        uv_scale_barrier_wall=5,
         with_roofs=0,
         with_ceilings=1,
         building_bottom=0,
@@ -47,18 +59,26 @@ macro_begin osm_resource_car_arena;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=10,
         much_near_grass_distance=INFINITY,
+        much_near_flowers_distance=2,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
         only_raceways=0,
         highway_name_pattern=,
-        excluded_highways=pedestrian path footway cycleway steps,
-        path_tags=track tertiary,
+        excluded_highways=
+            pedestrian
+            path
+            footway
+            cycleway
+            steps,
+        path_tags=
+            track
+            tertiary,
         steiner_point_distances_road=,
         steiner_point_distances_steiner=,
-        curb_alpha=0.9,
+        curb_alpha=1,
         curb2_alpha=1,
-        curb_uv_x=1,
+        curb_uv_x=NAN,
         curb2_uv_x=NAN,
         raise_streets_amount=0,
         extrude_curb_amount=0,
@@ -70,5 +90,5 @@ macro_begin osm_resource_car_arena;
         street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
-        blend_street=0;
+        blend_street=1;
 macro_end;

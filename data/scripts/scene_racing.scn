@@ -78,7 +78,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     # macro_playback create_M3 -SUFFIX: IF_WITH_PHYSICS:;
     # macro_playback create_TW;
     # macro_playback create_XZ -SUFFIX: IF_WITH_PHYSICS:;
-    macro_playback create_car
+    IF_CREATE_PLAYER_CAR macro_playback create_car
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
