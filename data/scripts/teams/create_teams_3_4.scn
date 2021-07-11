@@ -1,0 +1,21 @@
+macro_begin setup_teams_3_4;
+    macro_playback teams.create_npc_and_car CAR_NAME:_M3 DECIMATE: PLAYER_NAME:npc1 TEAM:red;
+    macro_playback teams.create_npc_and_car CAR_NAME:_M3 DECIMATE: PLAYER_NAME:npc2 TEAM:red;
+    macro_playback teams.create_npc_and_car CAR_NAME:_M3 DECIMATE: PLAYER_NAME:npc3 TEAM:red;
+    macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc4 TEAM:blue;
+    macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc5 TEAM:blue;
+    macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc6 TEAM:blue;
+    macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc7 TEAM:blue;
+
+    set_preferred_car_spawner player=you macro=teams.create_player_car parameters=CAR_NAME:_M3 DECIMATE:;
+
+    set_spawn_points node=osm_map_node resource=osm_map;
+
+    visual_global_log
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-200 -400
+        font_height=24
+        line_distance=24
+        nentries=10
+        severity=critical;
+macro_end;

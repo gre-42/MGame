@@ -70,18 +70,18 @@ macro_end;
 macro_begin traffic.create_npc_and_human;
     macro_playback traffic.create_human_npc_player PLAYER_NAME:PLAYER_NAME UNSTUCK_MODE:delete;
     set_preferred_car_spawner player=PLAYER_NAME  macro=traffic.create_human parameters=HUMAN_NAME:HUMAN_NAME DECIMATE:_d2;
-    set_way_points player=PLAYER_NAME  node=osm_map_node resource=osm_map;
+    set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;
 
 macro_begin traffic.create_npc_and_parking_car;
-    macro_playback traffic.create_car_npc_player   PLAYER_NAME:PLAYER_NAME  UNSTUCK_MODE:off;
-    set_preferred_car_spawner player=PLAYER_NAME  macro=traffic.create_car parameters=CAR_NAME:CAR_NAME DECIMATE: R:R G:G B:B IF_DYNAMIC: ; # IF_STATIC;
+    macro_playback traffic.create_car_npc_player PLAYER_NAME:PLAYER_NAME UNSTUCK_MODE:off;
+    set_preferred_car_spawner player=PLAYER_NAME macro=traffic.create_car parameters=CAR_NAME:CAR_NAME DECIMATE: R:R G:G B:B IF_DYNAMIC: ; # IF_STATIC;
 macro_end;
 
 macro_begin traffic.create_npc_and_driving_car;
     macro_playback traffic.create_car_npc_player PLAYER_NAME:PLAYER_NAME UNSTUCK_MODE:delete;
     set_preferred_car_spawner player=PLAYER_NAME macro=traffic.create_car parameters=CAR_NAME:CAR_NAME DECIMATE: R:R G:G B:B IF_DYNAMIC: ; # IF_STATIC;
-    set_way_points player=PLAYER_NAME  node=osm_map_node resource=osm_map;
+    set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;
 
 include traffic_with_pedestrians.scn;
