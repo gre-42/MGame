@@ -1,0 +1,53 @@
+include ../../scripts/include_all.scn;
+include ../jb/osm_resource_jb_race_open_alpha.scn;
+
+macro_playback scene_racing_static
+    OSM_MAP_RESOURCE:osm_resource_jb_race
+    DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
+    DIRTMAP_OFFSET:0
+    DIRTMAP_DISCRETENESS:1
+    DIRT_SCALE:1
+    DIRTMAP_WRAP_MODE:repeat
+    DIRTMAP_LEFT:-500
+    DIRTMAP_RIGHT:500
+    DIRTMAP_BOTTOM:-500
+    DIRTMAP_TOP:500
+    SUN_LEFT:-500
+    SUN_RIGHT:500
+    SUN_BOTTOM:-250
+    SUN_TOP:250
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png;
+
+macro_begin instantiate_transient_objects;
+    macro_playback generic_scene_racing_dynamic
+        IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
+        IF_CREATE_PLAYER_CAR:#
+        PLAYBACK_SPEED:PLAYBACK_SPEED=1
+        IF_RECORD_TRACK:IF_RECORD_TRACK=#
+        RECORDINGS_DIR:__DIR__
+        IF_PLAYBACK_TRACK_1:#
+        IF_PLAYBACK_TRACK_2:#
+        IF_PLAYBACK_TRACK_3:#
+        IF_PLAYBACK_WINNER_0:#
+        IF_PLAYBACK_WINNER_1:#
+        IF_PLAYBACK_WINNER_2:#
+        IF_CHECKPOINTS:#
+        IF_RACING:#
+        IF_RALLY:
+        IF_BURN_IN:#;
+macro_end;
+
+macro_begin create_default_cameras;
+    node_instance parent=<dynamic-root> name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    perspective_camera node=stadium_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    
+    set_camera_cycle name=far stadium_camera;
+    set_camera_cycle name=near;
+    set_camera stadium_camera;
+macro_end;
+
+macro_playback instantiate_transient_objects
+    IF_UPDATE_EXISTING_SCENE:#;
+macro_playback create_default_cameras context=primary_scene;
+macro_playback setup_teams_3_4 context=primary_scene;
+macro_playback create_main_menu;

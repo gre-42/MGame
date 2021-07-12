@@ -1,7 +1,7 @@
 include ../../scripts/include_all.scn;
-# include osm_resource_jb_race_open_curb.scn;
-include osm_resource_jb_race_open_alpha.scn;
-# include osm_resource_jb_race_triangulate.scn;
+# include ../jb/osm_resource_jb_race_open_curb.scn;
+include ../jb/osm_resource_jb_race_open_alpha.scn;
+# include ../jb/osm_resource_jb_race_triangulate.scn;
 
 macro_playback scene_racing_static
     OSM_MAP_RESOURCE:osm_resource_jb_race
