@@ -226,7 +226,9 @@ macro_begin _scene_tank_instantiate;
     node_instance parent=<dynamic-root> name=car_node12 position=145 -140 540 rotation=10 -90 10 scale=1;
     node_instance parent=<dynamic-root> name=car_node13 position=150 -140 560 rotation=10 -90 10 scale=1;
 
-    IF_PLAYER_TANK macro_playback create_tiger_tank PLAYER_NAME:you TEAM:red
+    IF_PLAYER_TANK macro_playback create_tiger_tank
+        PLAYER_NAME:you
+        TEAM:red
         gun_node=main_gun_end_node-SUFFIX:gun_node=
         player_set_surface_power:#
         player_set_tire_angle:#
@@ -235,6 +237,7 @@ macro_begin _scene_tank_instantiate;
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM
         IF_WITH_PHYSICS:
+        IF_WITH_GRAPHICS:
         IF_STATIC:#
         IF_DYNAMIC:
         CAR_NODE_X:1100
