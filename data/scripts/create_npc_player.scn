@@ -9,16 +9,3 @@ macro_begin create_human_npc_player;
     player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
     player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;
-
-macro_begin create_car_npc_player;
-    player_create
-        name=PLAYER_NAME
-        team=TEAM
-        game_mode=GAME_MODE
-        unstuck_mode=UNSTUCK_MODE
-        driving_mode=DRIVING_MODE
-        driving_direction=DRIVING_DIRECTION;
-    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
-macro_end;

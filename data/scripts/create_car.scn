@@ -23,7 +23,9 @@ macro_begin create_car;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_STATIC:IF_STATIC=#
-        IF_DYNAMIC:IF_DYNAMIC=#;
+        IF_DYNAMIC:IF_DYNAMIC=#
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
     IF_PLAYBACK_TRACK playback_track
         node=car_node-SUFFIX
         speed=PLAYBACK_SPEED
@@ -34,6 +36,11 @@ macro_begin create_car;
         rank=RANK;
 
     IF_PLAYER player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
+    IF_PLAYER IF_NPC macro_playback get_into-CAR_NAME
+        PLAYER_NAME:PLAYER_NAME
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
     IF_SHADOW macro_playback add_attached_light LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
     IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;

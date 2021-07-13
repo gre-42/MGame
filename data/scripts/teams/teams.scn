@@ -2,13 +2,10 @@ macro_begin teams.create_npc_player;
     player_create
         name=PLAYER_NAME
         team=TEAM
-        game_mode=ramming
+        game_mode=GAME_MODE
         unstuck_mode=reverse
         driving_mode=car_arena
         driving_direction=center;
-    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
 
 macro_begin teams.create_npc_car;
@@ -32,9 +29,12 @@ macro_begin teams.create_npc_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
+        IF_NPC:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
-        IF_DAMAGEABLE:;
+        IF_DAMAGEABLE:
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
     visual_node_status_3rd
         node=car_node-SUFFIX
         format=8
@@ -63,11 +63,14 @@ macro_begin teams.create_player_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
+        IF_NPC:#
         IF_STATIC:#
         IF_DYNAMIC:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
-        IF_DAMAGEABLE:;
+        IF_DAMAGEABLE:
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
     macro_playback create_car_cameras
         FAR_PLANE:FAR_PLANE;
     set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
@@ -100,9 +103,17 @@ macro_begin teams.create_player_car;
 macro_end;
 
 macro_begin teams.create_npc_and_car;
-    macro_playback teams.create_npc_player PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    set_preferred_car_spawner player=PLAYER_NAME macro=teams.create_npc_car parameters=CAR_NAME:CAR_NAME DECIMATE:DECIMATE;
+    macro_playback teams.create_npc_player PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+    set_preferred_car_spawner
+        player=PLAYER_NAME
+        macro=teams.create_npc_car
+        parameters=
+            CAR_NAME:CAR_NAME
+            DECIMATE:DECIMATE
+            IF_MANUAL_AIM:IF_MANUAL_AIM
+            IF_AUTO_AIM:IF_AUTO_AIM;
     set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;
 
-include create_teams_3_4.scn;
+include create_teams_3_4_cars_ramming.scn;
+include create_teams_3_4_tanks_racing.scn;

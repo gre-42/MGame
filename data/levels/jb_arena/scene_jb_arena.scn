@@ -49,5 +49,5 @@ macro_end;
 macro_playback instantiate_transient_objects
     IF_UPDATE_EXISTING_SCENE:#;
 macro_playback create_default_cameras context=primary_scene;
-macro_playback setup_teams_3_4 context=primary_scene;
+macro_playback setup_teams_3_4_tanks_racing context=primary_scene;
 macro_playback create_main_menu;
