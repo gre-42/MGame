@@ -1,0 +1,24 @@
+macro_begin create_car_cameras_tank;
+    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    node_instance parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
+    node_instance parent=turret_node-SUFFIX name=turret_camera_node-SUFFIX position=0 5 20 rotation=0 0 0 scale=1;
+
+    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=turret_camera_node-SUFFIX y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
+
+    look_at_node follower=45_deg_camera followed=car_node-SUFFIX;
+    follow_node
+        follower=follower_camera
+        followed=car_node-SUFFIX
+        distance=20
+        node_displacement=0 6 0
+        look_at_displacement=0 4 0
+        snappiness=2
+        y_adaptivity=15
+        y_snappiness=0.05;
+
+    set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
+    set_camera_cycle name=near follower_camera turret_camera_node-SUFFIX;
+    set_camera follower_camera;
+macro_end;

@@ -457,7 +457,7 @@ macro_begin _scene_tank_instantiate;
             angular_velocity_press=-0.1 0 0
             angular_velocity_repeat=-1 0 0;
 
-        gun_key_binding
+        IF_MANUAL_SHOOT gun_key_binding
             node=main_gun_end_node
             key=SPACE
             gamepad_button=RIGHT_BUMPER;

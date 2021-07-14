@@ -53,4 +53,17 @@ macro_begin get_into_M3;
 macro_end;
 
 macro_begin bind_keys_M3;
+    IF_RACING macro_playback create_car_key_bindings_racing
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:#
+        IF_MANUAL_SHOOT:#;
+    IF_RALLY macro_playback create_car_key_bindings_rally
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:#
+        IF_MANUAL_SHOOT:#;
+macro_end;
+
+macro_begin create_cameras_M3;
+    macro_playback create_car_cameras_sedan
+        SUFFIX:SUFFIX;
 macro_end;

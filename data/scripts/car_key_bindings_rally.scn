@@ -1,9 +1,9 @@
 macro_begin create_car_key_bindings_rally;
     abs_idle_binding
-        node=car_node
+        node=car_node-SUFFIX
         tires_z=0 0 -1;
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=LEFT
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
@@ -11,7 +11,7 @@ macro_begin create_car_key_bindings_rally;
         tire_angle_velocities=10 80
         tire_angles=45 20;
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=LEFT
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
@@ -19,7 +19,7 @@ macro_begin create_car_key_bindings_rally;
         tire_angle_velocities=10 80
         tire_angles=45 20;
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=RIGHT
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
@@ -27,7 +27,7 @@ macro_begin create_car_key_bindings_rally;
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=RIGHT
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
@@ -36,7 +36,7 @@ macro_begin create_car_key_bindings_rally;
         tire_angles=-45 -20;
 
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=B
         force=0 20000 0
@@ -49,17 +49,52 @@ macro_begin create_car_key_bindings_rally;
     # 1000 PS = 735499 Watt;
 
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=UP
         gamepad_button=X
         joystick_digital_axis=4
         joystick_digital_axis_sign=-1
         surface_power=294200;
     abs_key_binding
-        node=car_node
+        node=car_node-SUFFIX
         key=DOWN
         gamepad_button=A
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
         surface_power=-294200;
+
+    IF_MANUAL_AIM rel_key_binding
+        node=turret_node-SUFFIX
+        key=D
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        angular_velocity_press=0 -0.1 0
+        angular_velocity_repeat=0 -1 0;
+    IF_MANUAL_AIM rel_key_binding
+        node=turret_node-SUFFIX
+        key=A
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        angular_velocity_press=0 0.1 0
+        angular_velocity_repeat=0 1 0;
+
+    IF_MANUAL_AIM rel_key_binding
+        node=main_gun_node-SUFFIX
+        key=W
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=-1
+        angular_velocity_press=0.1 0 0
+        angular_velocity_repeat=1 0 0;
+    IF_MANUAL_AIM rel_key_binding
+        node=main_gun_node-SUFFIX
+        key=S
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=1
+        angular_velocity_press=-0.1 0 0
+        angular_velocity_repeat=-1 0 0;
+
+    IF_MANUAL_SHOOT gun_key_binding
+        node=main_gun_end_node-SUFFIX
+        key=SPACE
+        gamepad_button=RIGHT_BUMPER;
 macro_end;
