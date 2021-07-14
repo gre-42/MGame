@@ -29,7 +29,6 @@ macro_begin teams.create_npc_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
-        IF_KEY_BINDINGS:#
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
         IF_DAMAGEABLE:
@@ -55,7 +54,7 @@ macro_begin teams.create_player_car;
         CAR_NAME:CAR_NAME
         IF_STYLE:#
         DECIMATE:DECIMATE
-        SUFFIX:
+        SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
@@ -63,7 +62,6 @@ macro_begin teams.create_player_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
-        IF_KEY_BINDINGS:
         IF_STATIC:#
         IF_DYNAMIC:
         PLAYER_NAME:PLAYER_NAME
@@ -71,14 +69,19 @@ macro_begin teams.create_player_car;
         IF_DAMAGEABLE:
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM;
-    macro_playback create_car_cameras
-        FAR_PLANE:FAR_PLANE;
-    set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
-    set_camera_cycle name=near follower_camera;
-    set_camera follower_camera;
+    macro_playback create_player_car_externals
+        CAR_NAME:CAR_NAME
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
 
-    IF_RACING macro_playback create_car_key_bindings_racing;
-    IF_RALLY macro_playback create_car_key_bindings_rally;
+    # macro_playback create_car_cameras;
+    # set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
+    # set_camera_cycle name=near follower_camera;
+    # set_camera follower_camera;
+
+    # IF_RACING macro_playback create_car_key_bindings_racing;
+    # IF_RALLY macro_playback create_car_key_bindings_rally;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;
@@ -94,7 +97,7 @@ macro_begin teams.create_player_car;
     # 244: v, a, d, d2, E;
     # 14: v, s, health (if exists);
     visual_node_status
-        node=car_node
+        node=car_node-SUFFIX
         format=254
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=50 40

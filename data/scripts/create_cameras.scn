@@ -26,8 +26,7 @@ macro_end;
 
 macro_begin create_car_cameras;
 
-    macro_playback _create_camera_nodes
-        FAR_PLANE:FAR_PLANE;
+    macro_playback _create_camera_nodes;
 
     look_at_node follower=45_deg_camera followed=car_node;
     follow_node

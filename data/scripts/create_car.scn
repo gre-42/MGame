@@ -41,10 +41,6 @@ macro_begin create_car;
         SUFFIX:SUFFIX
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM;
-    IF_PLAYER IF_KEY_BINDINGS macro_playback bind_keys-CAR_NAME
-        SUFFIX:SUFFIX
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM;
     IF_SHADOW macro_playback add_attached_light LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
     IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
@@ -55,4 +51,13 @@ macro_begin create_car;
         offset=0 0.3
         font_height=16
         line_distance=16;
+macro_end;
+
+macro_begin create_player_car_externals;
+    macro_playback bind_keys-CAR_NAME
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
+    macro_playback create_cameras-CAR_NAME
+        SUFFIX:SUFFIX;
 macro_end;

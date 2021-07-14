@@ -187,7 +187,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PLAYER_CAR macro_playback create_car_cameras FAR_PLANE:FAR_PLANE;
+    IF_CREATE_PLAYER_CAR macro_playback create_car_cameras;
     # macro_playback create_truck_cameras;
     IF_CREATE_PLAYER_CAR set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
     IF_CREATE_PLAYER_CAR set_camera_cycle name=near follower_camera;

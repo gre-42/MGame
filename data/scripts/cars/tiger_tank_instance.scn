@@ -65,6 +65,70 @@ macro_begin get_into_tiger_tank;
 macro_end;
 
 macro_begin bind_keys_tiger_tank;
+    abs_idle_binding
+        node=car_node-SUFFIX
+        tires_z=0 0 -1;
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=LEFT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        tire_id=0
+        tire_angle_velocities=10 80
+        tire_angles=45 20;
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=LEFT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        tire_id=1
+        tire_angle_velocities=10 80
+        tire_angles=45 20;
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=RIGHT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        tire_id=0
+        tire_angle_velocities=10 80
+        tire_angles=-45 -20;
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=RIGHT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        tire_id=1
+        tire_angle_velocities=10 80
+        tire_angles=-45 -20;
+
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=B
+        force=0 20000 0
+        position=0 0 0;
+
+    # 120 PS = 88259.8 Watt;
+    # 150 PS = 110325 Watt;
+    # 200 PS = 147100 Watt;
+    # 400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=UP
+        gamepad_button=X
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=-1
+        surface_power=294200;
+    abs_key_binding
+        node=car_node-SUFFIX
+        key=DOWN
+        gamepad_button=A
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=1
+        surface_power=-294200;
+
     IF_MANUAL_AIM rel_key_binding
         node=turret_node-SUFFIX
         key=D
@@ -99,4 +163,29 @@ macro_begin bind_keys_tiger_tank;
         node=main_gun_end_node-SUFFIX
         key=SPACE
         gamepad_button=RIGHT_BUMPER;
+macro_end;
+
+macro_begin create_cameras_tiger_tank;
+    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    node_instance parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
+    node_instance parent=turret_node-SUFFIX name=turret_camera_node-SUFFIX position=0 5 20 rotation=0 0 0 scale=1;
+
+    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=turret_camera_node-SUFFIX y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
+
+    look_at_node follower=45_deg_camera followed=car_node-SUFFIX;
+    follow_node
+        follower=follower_camera
+        followed=car_node-SUFFIX
+        distance=20
+        node_displacement=0 6 0
+        look_at_displacement=0 4 0
+        snappiness=2
+        y_adaptivity=15
+        y_snappiness=0.05;
+
+    set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
+    set_camera_cycle name=near follower_camera turret_camera_node-SUFFIX;
+    set_camera follower_camera;
 macro_end;

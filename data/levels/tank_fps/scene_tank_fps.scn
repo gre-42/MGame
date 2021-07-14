@@ -345,7 +345,7 @@ macro_begin _scene_tank_instantiate;
 
     include create_cameras.scn;
 
-    IF_PLAYER_TANK macro_playback create_tiger_tank-cameras;
+    IF_PLAYER_TANK macro_playback create_tiger_tank_cameras;
     IF_PLAYER_HUMAN macro_playback create_human_cameras;
 
     # abs_key_binding node=car_node key=UP force=0 0 -100 position=0 0 0 surface_power=0;
