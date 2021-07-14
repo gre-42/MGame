@@ -65,11 +65,9 @@ macro_begin get_into_tiger_tank;
 macro_end;
 
 macro_begin bind_keys_tiger_tank;
-    IF_RACING macro_playback create_car_key_bindings_racing
-        SUFFIX:SUFFIX
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_MANUAL_SHOOT:IF_MANUAL_AIM;
-    IF_RALLY macro_playback create_car_key_bindings_rally
+    macro_playback create_car_key_bindings
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
         SUFFIX:SUFFIX
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_MANUAL_SHOOT:IF_MANUAL_AIM;

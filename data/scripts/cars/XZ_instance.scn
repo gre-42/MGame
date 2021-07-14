@@ -53,4 +53,15 @@ macro_begin get_into_XZ;
 macro_end;
 
 macro_begin bind_keys_XZ;
+    macro_playback create_car_key_bindings
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:#
+        IF_MANUAL_SHOOT:#;
+macro_end;
+
+macro_begin create_cameras_XZ;
+    macro_playback create_car_cameras_sedan
+        SUFFIX:SUFFIX;
 macro_end;
