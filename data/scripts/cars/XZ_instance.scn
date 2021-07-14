@@ -51,3 +51,6 @@ macro_begin get_into_XZ;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
+
+macro_begin bind_keys_XZ;
+macro_end;

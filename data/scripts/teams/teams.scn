@@ -29,7 +29,7 @@ macro_begin teams.create_npc_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
-        IF_NPC:
+        IF_KEY_BINDINGS:#
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
         IF_DAMAGEABLE:
@@ -63,7 +63,7 @@ macro_begin teams.create_player_car;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
-        IF_NPC:#
+        IF_KEY_BINDINGS:
         IF_STATIC:#
         IF_DYNAMIC:
         PLAYER_NAME:PLAYER_NAME

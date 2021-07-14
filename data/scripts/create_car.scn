@@ -36,8 +36,12 @@ macro_begin create_car;
         rank=RANK;
 
     IF_PLAYER player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
-    IF_PLAYER IF_NPC macro_playback get_into-CAR_NAME
+    IF_PLAYER macro_playback get_into-CAR_NAME
         PLAYER_NAME:PLAYER_NAME
+        SUFFIX:SUFFIX
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_AUTO_AIM:IF_AUTO_AIM;
+    IF_PLAYER IF_KEY_BINDINGS macro_playback bind_keys-CAR_NAME
         SUFFIX:SUFFIX
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM;

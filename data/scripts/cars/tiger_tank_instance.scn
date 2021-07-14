@@ -63,3 +63,40 @@ macro_begin get_into_tiger_tank;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
+
+macro_begin bind_keys_tiger_tank;
+    IF_MANUAL_AIM rel_key_binding
+        node=turret_node-SUFFIX
+        key=D
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        angular_velocity_press=0 -0.1 0
+        angular_velocity_repeat=0 -1 0;
+    IF_MANUAL_AIM rel_key_binding
+        node=turret_node-SUFFIX
+        key=A
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        angular_velocity_press=0 0.1 0
+        angular_velocity_repeat=0 1 0;
+
+    IF_MANUAL_AIM rel_key_binding
+        node=main_gun_node-SUFFIX
+        key=W
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=-1
+        angular_velocity_press=0.1 0 0
+        angular_velocity_repeat=1 0 0;
+    IF_MANUAL_AIM rel_key_binding
+        node=main_gun_node-SUFFIX
+        key=S
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=1
+        angular_velocity_press=-0.1 0 0
+        angular_velocity_repeat=-1 0 0;
+
+    gun_key_binding
+        node=main_gun_end_node-SUFFIX
+        key=SPACE
+        gamepad_button=RIGHT_BUMPER;
+macro_end;

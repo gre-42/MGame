@@ -9,7 +9,7 @@ macro_begin setup_teams_3_4_tanks_racing;
     macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc6 TEAM:blue GAME_MODE:racing;
     macro_playback teams.create_npc_and_car CAR_NAME:_XZ DECIMATE: PLAYER_NAME:npc7 TEAM:blue GAME_MODE:racing;
 
-    set_preferred_car_spawner player=you macro=teams.create_player_car parameters=CAR_NAME:_M3 DECIMATE:;
+    set_preferred_car_spawner player=you macro=teams.create_player_car parameters=CAR_NAME:_tiger_tank DECIMATE: IF_MANUAL_AIM: IF_AUTO_AIM:#;
 
     set_spawn_points node=osm_map_node resource=osm_map;
 

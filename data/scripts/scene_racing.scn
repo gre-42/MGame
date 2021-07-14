@@ -20,6 +20,10 @@ macro_begin _scene_racing_instantiate_static_objects;
         driving_mode=car_arena
         driving_direction=center;
 
+    set_can_drive player=you value=0;
+    set_can_aim player=you value=0;
+    set_can_shoot player=you value=0;
+
     players_stats
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=-600 40
