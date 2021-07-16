@@ -104,5 +104,6 @@ macro_begin create_car_key_bindings_rally;
     IF_MANUAL_SHOOT gun_key_binding
         node=main_gun_end_node-SUFFIX
         key=SPACE
+        mouse_button=LEFT
         gamepad_button=RIGHT_BUMPER;
 macro_end;
