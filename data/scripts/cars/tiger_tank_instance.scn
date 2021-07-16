@@ -76,4 +76,5 @@ macro_end;
 macro_begin create_cameras_tiger_tank;
     macro_playback create_car_cameras_tank
         SUFFIX:SUFFIX;
+    hud_image node=car_node-SUFFIX filename=textures/hud/crosshair.png update=once center=0 0 size=0.05 0.05;
 macro_end;
