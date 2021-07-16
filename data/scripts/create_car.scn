@@ -54,12 +54,10 @@ macro_begin create_car;
 macro_end;
 
 macro_begin create_player_car_externals;
-    macro_playback bind_keys-CAR_NAME
+    macro_playback create_player_car_externals-CAR_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM;
-    macro_playback create_cameras-CAR_NAME
-        SUFFIX:SUFFIX;
 macro_end;

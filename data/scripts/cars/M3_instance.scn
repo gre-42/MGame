@@ -52,16 +52,13 @@ macro_begin get_into_M3;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
 
-macro_begin bind_keys_M3;
+macro_begin create_player_car_externals_M3;
     macro_playback create_car_key_bindings
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         SUFFIX:SUFFIX
         IF_MANUAL_AIM:#
         IF_MANUAL_SHOOT:#;
-macro_end;
-
-macro_begin create_cameras_M3;
     macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX;
 macro_end;
