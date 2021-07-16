@@ -68,38 +68,46 @@ macro_begin create_car_key_bindings_rally;
         key=D
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
-        angular_velocity_press=0 -0.1 0
-        angular_velocity_repeat=0 -1 0
         cursor_axis=0
-        cursor_sign_and_scale=0.1;
+        cursor_sign_and_scale=0.03
+        rotation_axis=0 1 0
+        angular_velocity_press=-0.1
+        angular_velocity_repeat=-1
+        speed_cursor=0.1;
     IF_MANUAL_AIM rel_key_binding
         node=turret_node-SUFFIX
         key=A
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
-        angular_velocity_press=0 0.1 0
-        angular_velocity_repeat=0 1 0
         cursor_axis=0
-        cursor_sign_and_scale=-0.1;
+        cursor_sign_and_scale=-0.03
+        rotation_axis=0 1 0
+        angular_velocity_press=0.1
+        angular_velocity_repeat=1
+        speed_cursor=0.1;
 
     IF_MANUAL_AIM rel_key_binding
         node=main_gun_node-SUFFIX
         key=W
         joystick_digital_axis=2
         joystick_digital_axis_sign=-1
-        angular_velocity_press=0.1 0 0
-        angular_velocity_repeat=1 0 0
         cursor_axis=1
-        cursor_sign_and_scale=-0.1;
+        cursor_sign_and_scale=-0.03
+        rotation_axis=1 0 0
+        angular_velocity_press=0.1
+        angular_velocity_repeat=1
+        speed_cursor=0.1;
     IF_MANUAL_AIM rel_key_binding
         node=main_gun_node-SUFFIX
         key=S
         joystick_digital_axis=2
         joystick_digital_axis_sign=1
-        angular_velocity_press=-0.1 0 0
-        angular_velocity_repeat=-1 0 0
         cursor_axis=1
-        cursor_sign_and_scale=0.1;
+        cursor_sign_and_scale=0.03
+        rotation_axis=1 0 0
+        angular_velocity_press=-0.1
+        angular_velocity_repeat=-1
+        speed_cursor=0.1;
 
     IF_MANUAL_SHOOT gun_key_binding
         node=main_gun_end_node-SUFFIX
