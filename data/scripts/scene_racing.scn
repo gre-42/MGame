@@ -187,18 +187,13 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PLAYER_CAR macro_playback create_cameras-SHOWROOM_PLAYER_CAR
-        SUFFIX:;
-    # macro_playback create_truck_cameras;
-    IF_CREATE_PLAYER_CAR set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
-    IF_CREATE_PLAYER_CAR set_camera_cycle name=near follower_camera;
-    IF_CREATE_PLAYER_CAR set_camera follower_camera;
-
-    # Car;
-    IF_CREATE_PLAYER_CAR macro_playback bind_keys-SHOWROOM_PLAYER_CAR
+    IF_CREATE_PLAYER_CAR macro_playback create_player_car_externals
+        CAR_NAME:SHOWROOM_PLAYER_CAR
         SUFFIX:
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:#
+        IF_AUTO_AIM:#;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;

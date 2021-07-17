@@ -46,9 +46,9 @@ macro_begin load_OT_part;
         scale=1 1 1
         distances=DIST_MIN DIST_MAX
         is_small=0
-        blend_mode=off
+        blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
+        cull_faces=0
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
