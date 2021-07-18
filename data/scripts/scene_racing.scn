@@ -233,7 +233,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
 macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;
-    IF_CREATE_PLAYER_CAR delete_root_node name=car_node;
+    respawn_all_players;
     delete_root_nodes regex=car_node_playback_track\d+;
     delete_root_nodes regex=car_node_playback_winner\d+;
 
@@ -277,14 +277,7 @@ macro_end;
 macro_begin generic_scene_racing_dynamic;
     IF_UPDATE_EXISTING_SCENE macro_playback
         _scene_racing_delete_transient_objects
-        context=primary_scene
-        IF_CREATE_PLAYER_CAR:IF_CREATE_PLAYER_CAR
-        IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1
-        IF_PLAYBACK_TRACK_2:IF_PLAYBACK_TRACK_2
-        IF_PLAYBACK_TRACK_3:IF_PLAYBACK_TRACK_3
-        IF_PLAYBACK_WINNER_0:IF_PLAYBACK_WINNER_0
-        IF_PLAYBACK_WINNER_1:IF_PLAYBACK_WINNER_1
-        IF_PLAYBACK_WINNER_2:IF_PLAYBACK_WINNER_2;
+        context=primary_scene;
     macro_playback
         _scene_racing_instantiate_transient_objects
         context=primary_scene
