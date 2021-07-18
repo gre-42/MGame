@@ -1,8 +1,8 @@
 macro_begin create_car_cameras_tank;
-    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
-    node_instance parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
-    # node_instance parent=turret_node-SUFFIX name=turret_camera_node-SUFFIX position=0 5 20 rotation=0 0 0 scale=1;
-    node_instance parent=main_gun_node-SUFFIX name=main_gun_camera_node-SUFFIX position=0 2 10 rotation=0 0 0 scale=1;
+    root_node_instance type=dynamic name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
+    # child_node_instance type=dynamic parent=turret_node-SUFFIX name=turret_camera_node-SUFFIX position=0 5 20 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_camera_node-SUFFIX position=0 2 10 rotation=0 0 0 scale=1;
 
     perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
     perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;

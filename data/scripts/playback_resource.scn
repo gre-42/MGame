@@ -13,5 +13,5 @@ obj_resource
     occluded_by_black=0
     aggregate_mode=off
     transformation_mode=all;
-node_instance parent=<dynamic-root> name=box_playback_node position=0 0 0 rotation=0 0 0 scale=1;
+root_node_instance type=dynamic name=box_playback_node position=0 0 0 rotation=0 0 0 scale=1;
 renderable_instance name=box_playback node=box_playback_node resource=playback_box;

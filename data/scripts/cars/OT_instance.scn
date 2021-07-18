@@ -27,13 +27,13 @@ macro_begin create_OT_physics;
 macro_end;
 
 macro_begin create_OT;
-    node_instance parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX position=-0.8 0 -1.2 rotation=0 0 0 scale=1;
-    node_instance parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=0.8 0 -1.2 rotation=0 0 0 scale=1;
-    node_instance parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX position=-0.8 0 2.6 rotation=0 0 0 scale=1;
-    node_instance parent=car_node-SUFFIX name=wheel_right_rear_node-SUFFIX position=0.8 0 2.6 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX position=-0.8 0 -1.2 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=0.8 0 -1.2 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX position=-0.8 0 2.6 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_rear_node-SUFFIX position=0.8 0 2.6 rotation=0 0 0 scale=1;
 
-    IF_WITH_GRAPHICS node_instance parent=wheel_left_front_node-SUFFIX name=wheel_left_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    IF_WITH_GRAPHICS node_instance parent=wheel_left_rear_node-SUFFIX name=wheel_left_rear_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_left_front_node-SUFFIX name=wheel_left_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_left_rear_node-SUFFIX name=wheel_left_rear_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS macro_playback create_OT_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_OT_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d1;
 

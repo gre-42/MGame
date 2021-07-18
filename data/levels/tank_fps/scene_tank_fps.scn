@@ -140,7 +140,7 @@ macro_begin _scene_tank_instantiate;
     #######;
     # OSM #;
     #######;
-    node_instance parent=<static-root> name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
+    root_node_instance type=static name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
     rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
@@ -150,22 +150,22 @@ macro_begin _scene_tank_instantiate;
     ##########;
     # OilRig #;
     ##########;
-    # node_instance parent=<static-root> name=OilRig-node position=0 0 0 rotation=0 0 0 scale=1;
+    # root_node_instance type=static name=OilRig-node position=0 0 0 rotation=0 0 0 scale=1;
     # renderable_instance name=OilRig-inst node=OilRig-node resource=OilRig;
 
     ##########;
     # Office #;
     ##########;
-    # node_instance parent=<static-root> name=office40x25-node position=0 0 0 rotation=0 0 0 scale=1;
+    # root_node_instance type=static name=office40x25-node position=0 0 0 rotation=0 0 0 scale=1;
     # renderable_instance name=office40x25-inst node=office40x25-node resource=office40x25;
 
     #########;
     # Grass #;
     #########;
-    # node_instance parent=<static-root> name=grass-node position=0 -137 0 rotation=0 0 0 scale=1;
+    # root_node_instance type=static name=grass-node position=0 -137 0 rotation=0 0 0 scale=1;
     # renderable_instance name=grass node=grass-node resource=grass;
 
-    # node_instance parent=<static-root> name=grass2-node position=0 -135 2 rotation=0 0 0 scale=1;
+    # root_node_instance type=static name=grass2-node position=0 -135 2 rotation=0 0 0 scale=1;
     # renderable_instance name=grass2 node=grass2-node resource=grass;
 
     ##########;
@@ -176,21 +176,21 @@ macro_begin _scene_tank_instantiate;
     #######;
     # Car #;
     #######;
-    # IF_PLAYER_TANK node_instance parent=<dynamic-root> name=car_node position=1100 -120 100 rotation=10 90 10 scale=1;
-    # IF_PLAYER_HUMAN node_instance parent=<dynamic-root> name=human_node position=1100 -120 100 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node1 position=1110 -120 120 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node2 position=1110 -120 140 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node3 position=1100 -120 160 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node4 position=1100 -120 180 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node5 position=1110 -120 100 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node6 position=1100 -120 120 rotation=10 90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node7 position=120 -140 540 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node8 position=125 -140 560 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node9 position=130 -140 580 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node10 position=135 -140 500 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node11 position=140 -140 520 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node12 position=145 -140 540 rotation=10 -90 10 scale=1;
-    node_instance parent=<dynamic-root> name=car_node13 position=150 -140 560 rotation=10 -90 10 scale=1;
+    # IF_PLAYER_TANK root_node_instance type=dynamic name=car_node position=1100 -120 100 rotation=10 90 10 scale=1;
+    # IF_PLAYER_HUMAN root_node_instance type=dynamic name=human_node position=1100 -120 100 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node1 position=1110 -120 120 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node2 position=1110 -120 140 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node3 position=1100 -120 160 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node4 position=1100 -120 180 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node5 position=1110 -120 100 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node6 position=1100 -120 120 rotation=10 90 10 scale=1;
+    root_node_instance type=dynamic name=car_node7 position=120 -140 540 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node8 position=125 -140 560 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node9 position=130 -140 580 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node10 position=135 -140 500 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node11 position=140 -140 520 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node12 position=145 -140 540 rotation=10 -90 10 scale=1;
+    root_node_instance type=dynamic name=car_node13 position=150 -140 560 rotation=10 -90 10 scale=1;
 
     IF_PLAYER_TANK macro_playback create_tiger_tank
         PLAYER_NAME:you
@@ -280,19 +280,19 @@ macro_begin _scene_tank_instantiate;
     ##########;
     # Wheels #;
     ##########;
-    #node_instance parent=car_node name=wheel-node-00 position=-1 -0.5 -2 rotation=1 0 2 scale=0.5;
+    #child_node_instance type=dynamic parent=car_node name=wheel-node-00 position=-1 -0.5 -2 rotation=1 0 2 scale=0.5;
     #renderable_instance name=box node=wheel-node-00 resource=box;
     #collidable-mesh rigid_body-node=car_node node=wheel-node-00 resource=box;
 
-    #node_instance parent=car_node name=wheel-node-01 position=-1 -0.5 2 rotation=1 0 2 scale=0.5;
+    #child_node_instance type=dynamic parent=car_node name=wheel-node-01 position=-1 -0.5 2 rotation=1 0 2 scale=0.5;
     #renderable_instance name=box node=wheel-node-01 resource=box;
     #collidable-mesh rigid_body-node=car_node node=wheel-node-01 resource=box;
 
-    #node_instance parent=car_node name=wheel-node-10 position=1 -0.5 -2 rotation=1 0 2 scale=0.5;
+    #child_node_instance type=dynamic parent=car_node name=wheel-node-10 position=1 -0.5 -2 rotation=1 0 2 scale=0.5;
     #renderable_instance name=box node=wheel-node-10 resource=box;
     #collidable-mesh rigid_body-node=car_node node=wheel-node-10 resource=box;
 
-    #node_instance parent=car_node name=wheel-node-11 position=1 -0.5 2 rotation=1 0 2 scale=0.5;
+    #child_node_instance type=dynamic parent=car_node name=wheel-node-11 position=1 -0.5 2 rotation=1 0 2 scale=0.5;
     #renderable_instance name=box node=wheel-node-11 resource=box;
     #collidable-mesh rigid_body-node=car_node node=wheel-node-11 resource=box;
 
@@ -305,10 +305,10 @@ macro_begin _scene_tank_instantiate;
         #collidable-mesh rigid_body-node=box-node node=box-node resource=muscle-cupe-hitbox;
     macro_end;
 
-    node_instance parent=<dynamic-root> name=box-node position=0 -30 -5 rotation=0 90 0 scale=1;
-    node_instance parent=<dynamic-root> name=box-node-1 position=0 -30 +5 rotation=0 90 0 scale=1;
-    node_instance parent=<dynamic-root> name=box-node-2 position=-5 -30 0 rotation=0 90 0 scale=1;
-    node_instance parent=<dynamic-root> name=box-node-3 position=+5 -30 0 rotation=0 90 0 scale=1;
+    root_node_instance type=dynamic name=box-node position=0 -30 -5 rotation=0 90 0 scale=1;
+    root_node_instance type=dynamic name=box-node-1 position=0 -30 +5 rotation=0 90 0 scale=1;
+    root_node_instance type=dynamic name=box-node-2 position=-5 -30 0 rotation=0 90 0 scale=1;
+    root_node_instance type=dynamic name=box-node-3 position=+5 -30 0 rotation=0 90 0 scale=1;
 
     # macro_playback create-box SUFFIX:;
     # macro_playback create-box SUFFIX:1;
@@ -319,25 +319,25 @@ macro_begin _scene_tank_instantiate;
     # Camera #;
     ##########;
     # always behind car;
-    # node_instance parent=car_node name=camera position=0 5 60 rotation=-3 0 0 scale=1;
+    # child_node_instance type=dynamic parent=car_node name=camera position=0 5 60 rotation=-3 0 0 scale=1;
 
     # top-down, near;
-    # node_instance parent=<dynamic-root> name=camera position=0 -100 0 rotation=-90 0 0 scale=1;
+    # root_node_instance type=dynamic name=camera position=0 -100 0 rotation=-90 0 0 scale=1;
 
     # top-down, far;
-    # node_instance parent=<dynamic-root> name=camera position=0 500 0 rotation=-90 0 0 scale=1;
+    # root_node_instance type=dynamic name=camera position=0 500 0 rotation=-90 0 0 scale=1;
 
     # 45°, far;
-    node_instance parent=<dynamic-root> name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    root_node_instance type=dynamic name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
 
     # GT;
-    node_instance parent=<dynamic-root> name=follower_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    root_node_instance type=dynamic name=follower_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
 
     # side of car, near;
-    # node_instance parent=<dynamic-root> name=camera position=0 10 100 rotation=-5 0 0 scale=1;
+    # root_node_instance type=dynamic name=camera position=0 10 100 rotation=-5 0 0 scale=1;
 
     # side of car, far;
-    # node_instance parent=<dynamic-root> name=camera position=0 10 500 rotation=-2 0 0 scale=1;
+    # root_node_instance type=dynamic name=camera position=0 10 500 rotation=-2 0 0 scale=1;
 
     perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
     perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
@@ -567,14 +567,14 @@ macro_begin _scene_tank_instantiate;
     IF_PLAYER_HUMAN set_camera human_camera_node;
 
     macro_begin add_attached_light_tank;
-        node_instance parent=<dynamic-root> name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
+        root_node_instance type=dynamic name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
         keep_offset follower=light_node1 followed=car_node offset=0 10 10;
         ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
         light node=light_node1 black_node=car_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
     macro_end;
 
     macro_begin add_attached_light_human;
-        node_instance parent=<dynamic-root> name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
+        root_node_instance type=dynamic name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
         keep_offset follower=light_node1 followed=human_node offset=0 10 10;
         ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
         light node=light_node1 black_node=human_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
@@ -584,7 +584,7 @@ macro_begin _scene_tank_instantiate;
     IF_PLAYER_TANK macro_playback add_attached_light_tank;
     IF_PLAYER_HUMAN macro_playback add_attached_light_human;
 
-    node_instance parent=<dynamic-root> name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
+    root_node_instance type=dynamic name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
     ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=-2000 right_plane=2000 bottom_plane=-1000 top_plane=1000 requires_postprocessing=0;
 
     set_dirtmap filename=textures/dirtmap.png offset=0 discreteness=4 scale=1 wrap_mode=clamp_to_edge;

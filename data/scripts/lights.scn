@@ -1,12 +1,12 @@
 macro_begin add_distant_light;
-    # node_instance parent=<dynamic-root> name=light_node0 position=0 2000 2400 rotation=-45 0 0 scale=1;
-    node_instance parent=<dynamic-root> name=light_node0 position=0 2000 2000 rotation=-45 0 0 scale=1;
+    # root_node_instance type=dynamic name=light_node0 position=0 2000 2400 rotation=-45 0 0 scale=1;
+    root_node_instance type=dynamic name=light_node0 position=0 2000 2000 rotation=-45 0 0 scale=1;
     ortho_camera node=light_node0 near_plane=1 far_plane=10000 left_plane=LEFT right_plane=RIGHT bottom_plane=BOTTOM top_plane=TOP requires_postprocessing=0;
     light node=light_node0 black_node= update=once with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
 macro_end;
 
 macro_begin add_attached_light;
-    node_instance parent=<dynamic-root> name=light_node-LSUFFIX position=0 100 0 rotation=-45 0 0 scale=1;
+    root_node_instance type=dynamic name=light_node-LSUFFIX position=0 100 0 rotation=-45 0 0 scale=1;
     keep_offset follower=light_node-LSUFFIX followed=car_node-CSUFFIX offset=0 10 10;
     ortho_camera node=light_node-LSUFFIX near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
     light node=light_node-LSUFFIX black_node=car_node-CSUFFIX update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;

@@ -38,7 +38,7 @@ macro_begin instantiate_transient_objects;
 macro_end;
 
 macro_begin create_default_cameras;
-    node_instance parent=<dynamic-root> name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    root_node_instance type=dynamic name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
     perspective_camera node=stadium_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
     
     set_camera_cycle name=far stadium_camera;

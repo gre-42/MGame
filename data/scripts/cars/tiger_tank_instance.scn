@@ -40,18 +40,18 @@ macro_begin create_tiger_tank;
     #             main_gun_node-SUFFIX (0 1.2 -0.3, pitch_node);
     #                 main_gun_shift_node-SUFFIX (0 -1.2 0.3, renderable);
     #                 main_gun_end_node-SUFFIX (0 0 -20);
-    node_instance parent=car_node-SUFFIX name=turret_node-SUFFIX position=0 0 1 rotation=0 45 0 scale=1;
-    node_instance parent=turret_node-SUFFIX name=turret_shift_node-SUFFIX position=0 0 -1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=turret_node-SUFFIX position=0 0 1 rotation=0 45 0 scale=1;
+    child_node_instance type=dynamic parent=turret_node-SUFFIX name=turret_shift_node-SUFFIX position=0 0 -1 rotation=0 0 0 scale=1;
     IF_WITH_GRAPHICS renderable_instance name=turret_inst node=turret_shift_node-SUFFIX resource=tiger_tank regex=Machine_Gun|Main_Turret|Hatch;
-    node_instance parent=turret_shift_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
-    node_instance parent=main_gun_node-SUFFIX name=main_gun_shift_node-SUFFIX position=0 -1.2 0.3 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=turret_shift_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_shift_node-SUFFIX position=0 -1.2 0.3 rotation=0 0 0 scale=1;
     IF_WITH_GRAPHICS renderable_instance name=main_gun_inst node=main_gun_shift_node-SUFFIX resource=tiger_tank regex=Main_Gun;
 
     # renderable_instance name=flag-inst node=car_node-SUFFIX resource=flag;
     # renderable_instance name=car_box-SUFFIX node=car_node-SUFFIX resource=tiger_tank_hitbox;
     # collidable-mesh rigid_body-node=car_node-SUFFIX node=car_node-SUFFIX resource=tiger_tank_hitbox;
 
-    node_instance parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;

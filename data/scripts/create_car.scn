@@ -1,6 +1,6 @@
 macro_begin create_car;
-    node_instance
-        parent=<dynamic-root>
+    root_node_instance
+        type=dynamic
         name=car_node-SUFFIX
         position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
         rotation=CAR_NODE_ANGLE_X CAR_NODE_ANGLE_Y CAR_NODE_ANGLE_Z;

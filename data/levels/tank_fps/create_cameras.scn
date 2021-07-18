@@ -1,5 +1,5 @@
 macro_begin create_tiger_tank_cameras;
-    node_instance parent=turret_node name=turret_camera_node position=0 5 20 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=turret_node name=turret_camera_node position=0 5 20 rotation=0 0 0 scale=1;
     perspective_camera node=turret_camera_node y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=car_node;
@@ -16,10 +16,10 @@ macro_begin create_tiger_tank_cameras;
     set_camera_cycle name=near follower_camera turret_camera_node;
 macro_end;
 macro_begin create_human_cameras;
-    node_instance parent=human_node name=human_camera_node position=0 5 20 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=human_node name=human_camera_node position=0 5 20 rotation=0 0 0 scale=1;
     perspective_camera node=human_camera_node y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
 
-    node_instance parent=main_gun_node name=main_gun_zoom_node position=0 2 0 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node name=main_gun_zoom_node position=0 2 0 rotation=0 0 0 scale=1;
     perspective_camera node=main_gun_zoom_node y_fov=0.2 near_plane=1 far_plane=10000 requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=human_node;

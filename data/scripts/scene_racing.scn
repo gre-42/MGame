@@ -2,7 +2,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     ################;
     # OSM instance #;
     ################;
-    node_instance parent=<static-root> name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
+    root_node_instance type=static name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
     rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
@@ -45,7 +45,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     ###########;
     # Dirtmap #;
     ###########;
-    node_instance parent=<dynamic-root> name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
+    root_node_instance type=dynamic name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
     ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=DIRTMAP_LEFT right_plane=DIRTMAP_RIGHT bottom_plane=DIRTMAP_BOTTOM top_plane=DIRTMAP_TOP requires_postprocessing=0;
     set_dirtmap filename=DIRTMAP_TEXTURE offset=DIRTMAP_OFFSET discreteness=DIRTMAP_DISCRETENESS scale=DIRT_SCALE wrap_mode=DIRTMAP_WRAP_MODE;
     set_soft_light filename=SOFT_LIGHT_TEXTURE;
@@ -67,6 +67,13 @@ macro_begin _scene_racing_instantiate_static_objects;
     # Light #;
     #########;
     macro_playback add_distant_light LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+
+    #############;
+    # Particles #;
+    #############;
+    root_node_instance type=static name=particles position=0 0 0 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=particles name=explosion_01 position=0 0 0 rotation=0 0 0 scale=1;
+    renderable_instance name=explosion_01 node=explosion_01 resource=explosion_01;
 macro_end;
 
 macro_begin _scene_racing_instantiate_transient_objects;
@@ -227,7 +234,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
 
     # IF_CREATE_PLAYER_CAR macro_playback add_attached_light LSUFFIX:1 CSUFFIX:;
 
-    IF_CREATE_PLAYER_CAR node_instance parent=<dynamic-root> name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
+    IF_CREATE_PLAYER_CAR root_node_instance type=dynamic name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
     IF_CREATE_PLAYER_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
     IF_CREATE_PLAYER_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;
 macro_end;
