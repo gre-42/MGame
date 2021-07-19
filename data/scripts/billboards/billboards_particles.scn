@@ -1,8 +1,8 @@
 square_resource
     name=explosion_01
     texture_filename=#explosion_01
-    min=-4 -4
-    max=4 4
+    min=-2 -2
+    max=2 2
     is_small=1
     occluded_type=color
     occluder_type=off
@@ -12,4 +12,5 @@ square_resource
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=off
-    transformation_mode=position_lookat;
+    transformation_mode=position_lookat
+    number_of_frames=16;
