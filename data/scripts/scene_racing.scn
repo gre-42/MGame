@@ -74,6 +74,16 @@ macro_begin _scene_racing_instantiate_static_objects;
     root_node_instance type=static name=particles position=0 0 0 rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=particles name=explosion_01 position=0 0 0 rotation=0 0 0 scale=1;
     renderable_instance name=explosion_01 node=explosion_01 resource=explosion_01;
+
+    ###########;
+    # Cameras #;
+    ###########;
+    root_node_instance type=dynamic name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    perspective_camera node=stadium_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    
+    set_camera_cycle name=far stadium_camera;
+    set_camera_cycle name=near;
+    set_camera stadium_camera;
 macro_end;
 
 macro_begin _scene_racing_instantiate_transient_objects;

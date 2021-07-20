@@ -37,17 +37,7 @@ macro_begin instantiate_transient_objects;
         IF_BURN_IN:#;
 macro_end;
 
-macro_begin create_default_cameras;
-    root_node_instance type=dynamic name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
-    perspective_camera node=stadium_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
-    
-    set_camera_cycle name=far stadium_camera;
-    set_camera_cycle name=near;
-    set_camera stadium_camera;
-macro_end;
-
 macro_playback instantiate_transient_objects
     IF_UPDATE_EXISTING_SCENE:#;
-macro_playback create_default_cameras context=primary_scene;
 macro_playback setup_teams_3_4_cars_ramming context=primary_scene;
 macro_playback create_main_menu;
