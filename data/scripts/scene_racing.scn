@@ -240,10 +240,6 @@ macro_begin _scene_racing_instantiate_transient_objects;
 macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;
-    # This function is executed from the UI thread,
-      so it needs to wait until the simulation is paused.;
-    wait_until_paused;
-
     respawn_all_players;
     delete_root_nodes regex=car_node_playback_track\d+;
     delete_root_nodes regex=car_node_playback_winner\d+;
