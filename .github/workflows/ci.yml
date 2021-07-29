@@ -98,7 +98,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: osm-rally-artifact-msys2
-          path: MGame
+          path: MGame/MRelease
       
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
