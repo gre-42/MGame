@@ -23,6 +23,8 @@ macro_begin create_human;
         IF_MANUAL_AIM:IF_MANUAL_AIM=#
         IF_AUTO_AIM:IF_AUTO_AIM=#;
     player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
+    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
+    player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
     # visual_node_status_3rd
         node=human_node-SUFFIX
         format=8

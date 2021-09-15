@@ -6,6 +6,4 @@ macro_begin create_human_npc_player;
         unstuck_mode=UNSTUCK_MODE
         driving_mode=DRIVING_MODE
         driving_direction=DRIVING_DIRECTION;
-    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
-    player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;
