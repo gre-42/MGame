@@ -22,23 +22,23 @@ macro_begin instantiate_transient_objects;
         SUN_BOTTOM:-1000
         SUN_TOP:1000
         IF_CREATE_PLAYER_CAR:
-        CAR_NODE_X:-200
+        CAR_NODE_X:3
         CAR_NODE_Y:-170
-        CAR_NODE_Z:-200
-        CAR_NODE_ANGLE_X:0
-        CAR_NODE_ANGLE_Y:-90
-        CAR_NODE_ANGLE_Z:0
+        CAR_NODE_Z:-242
+        CAR_NODE_ANGLE_X:180
+        CAR_NODE_ANGLE_Y:-13
+        CAR_NODE_ANGLE_Z:-180
         SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR=_M3
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
-        IF_PLAYBACK_TRACK_1:#
+        IF_PLAYBACK_TRACK_1:
         IF_PLAYBACK_TRACK_2:#
         IF_PLAYBACK_TRACK_3:#
-        IF_PLAYBACK_WINNER_0:#
-        IF_PLAYBACK_WINNER_1:#
-        IF_PLAYBACK_WINNER_2:#
-        IF_CHECKPOINTS:#
+        IF_PLAYBACK_WINNER_0:
+        IF_PLAYBACK_WINNER_1:
+        IF_PLAYBACK_WINNER_2:
+        IF_CHECKPOINTS:
         IF_RACING:#
         IF_RALLY:
         IF_BURN_IN:#;
