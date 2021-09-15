@@ -101,7 +101,9 @@ macro_begin osm_resource_sf;
             cycleway
             steps
             service,
-        path_tags=track tertiary,
+        path_tags=
+            track
+            tertiary,
         # steiner_point_distances_road=0 2 4 5,
         # steiner_point_distances_steiner=INFINITY 10 10 INFINITY,
         curb_alpha=0.7,
