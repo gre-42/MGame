@@ -3,7 +3,7 @@ macro_begin osm_resource_raceway0;
         ../textures/Facade017_8K_Color.jpg
         ../textures/cc0textures/Facade009_2K_Color.jpg
         ../textures/Facade014_4K_Color.jpg;
-    #   barrier_textures=texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0
+    #   barrier_textures=texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0
         uv_scale_barrier_wall=1e0;
 
     osm_resource
@@ -18,6 +18,8 @@ macro_begin osm_resource_raceway0;
         street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
         street_textures=
             lanes:1 texture:#Road007_Broad_White_1_Lane,
+        wall_textures=
+            lanes:1 texture:#PavingStones046 uvx:0.15,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
         curb_street_texture=#Curb_Grass_Asphalt,
@@ -60,14 +62,14 @@ macro_begin osm_resource_raceway0;
         default_barrier_top=2,
         remove_backfacing_triangles=1,
         with_tree_nodes=1,
-        forest_outline_tree_distance=10,
-        forest_outline_tree_inwards_distance=1,
+        forest_outline_tree_distance=30,
+        forest_outline_tree_inwards_distance=0,
         much_grass_distance=100,
         much_near_grass_distance=20,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
-        only_raceways=1,
+        only_raceways_and_walls=1,
         highway_name_pattern=,
         excluded_highways=
             pedestrian
@@ -87,6 +89,7 @@ macro_begin osm_resource_raceway0;
         raise_streets_amount=-0.2,
         extrude_curb_amount=0,
         extrude_street_amount=0,
+        extrude_wall_amount=1.2,
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=0,

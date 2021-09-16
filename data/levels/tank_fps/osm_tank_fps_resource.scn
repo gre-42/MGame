@@ -35,7 +35,7 @@ macro_begin osm_tank_fps_resource;
             #Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0,
+            texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree
@@ -78,7 +78,7 @@ macro_begin osm_tank_fps_resource;
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
-        only_raceways=0,
+        only_raceways_and_walls=0,
         highway_name_pattern=,
         excluded_highways=pedestrian path footway cycleway steps,
         path_tags=track tertiary,

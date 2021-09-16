@@ -258,6 +258,22 @@ obj_resource
     transformation_mode=position_yangle
     triangle_tangent_error_behavior=zero;
 
+obj_resource
+    name=tire_barrier2
+    filename=models/tire_barrier2/tire_barrier2.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=black
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
 macro_begin load_hedge;
     obj_resource
         name=NAME

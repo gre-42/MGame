@@ -33,7 +33,7 @@ macro_begin osm_resource_jb_race;
             #MarekWindow00001_512,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0,
+            texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         barrier_blend_mode=off,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
@@ -85,7 +85,7 @@ macro_begin osm_resource_jb_race;
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
-        only_raceways=0,
+        only_raceways_and_walls=0,
         highway_name_pattern=,
         excluded_highways=
             pedestrian

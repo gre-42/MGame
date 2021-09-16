@@ -93,7 +93,7 @@ macro_begin osm_resource_sf;
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
-        only_raceways=0,
+        only_raceways_and_walls=0,
         highway_name_pattern=,
         excluded_highways=pedestrian
             path
