@@ -17,7 +17,7 @@ macro_begin osm_resource_raceway0;
         grass_dirt_texture=#Ground029,
         street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
         street_textures=
-            lanes:1 texture:#Road007_No_Lines,
+            lanes:1 texture:#Road007_Broad_White_1_Lane,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
         curb_street_texture=#Curb_Grass_Asphalt,
@@ -30,7 +30,7 @@ macro_begin osm_resource_raceway0;
             #Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0,
+            texture:#traffic_barrier uv:1 1 blend_mode:binary wrap_mode_t:clamp_to_edge reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree
@@ -63,7 +63,7 @@ macro_begin osm_resource_raceway0;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
-        much_near_grass_distance=10,
+        much_near_grass_distance=20,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
