@@ -18,7 +18,7 @@ macro_begin osm_resource_sf;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#concrete1_2K_wh,
         street_textures=
-            lanes:1 texture:#concrete1_2K_wh_street,
+            lanes:1 texture0:#concrete1_2K_wh_street,
         path_crossing_texture=#concrete1_2K_wh,
         path_texture=#concrete1_2K_wh_street,
         curb_street_texture=#PavingStones035,

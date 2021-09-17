@@ -16,16 +16,16 @@ macro_begin osm_resource_jb_race;
         grass_dirt_texture=#Ground025,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture:#Road007_No_Lines
-            lanes:2 texture:#Road007_White_2_Lanes
-            lanes:4 texture:#Road007_White_1x_Lane uvx:4
-            lanes:6 texture:#Road007_White_1x_Lane uvx:6,
+            lanes:1 texture0:#Road007_No_Lines
+            lanes:2 texture0:#Road007_White_2_Lanes
+            lanes:4 texture0:#Road007_White_1x_Lane uvx:4
+            lanes:6 texture0:#Road007_White_1x_Lane uvx:6,
         curb_street_texture=#PavingStones035,
         curb2_street_texture=,
         curb_wall_texture=,
         curb2_wall_texture=,
         wall_textures=
-            lanes:1 texture:#PavingStones046 uvx:0.15,
+            lanes:1 texture0:#PavingStones046 uvx:0.15,
         facade_textures=
             #DE21F2_industryWindow00001_1024
             #DE21F2_industryWindow00002

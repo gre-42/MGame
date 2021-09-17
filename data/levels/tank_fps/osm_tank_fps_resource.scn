@@ -20,7 +20,7 @@ macro_begin osm_tank_fps_resource;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
         street_textures=
-            lanes:1 texture:#Road007_Alpha,
+            lanes:1 texture0:#Road007_Alpha,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
         curb_street_texture=textures/curb_stone_grass_asphalt.png,

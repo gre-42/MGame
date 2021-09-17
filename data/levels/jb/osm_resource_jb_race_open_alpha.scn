@@ -20,9 +20,9 @@ macro_begin osm_resource_jb_race;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture:#Road007_Alpha,
+            lanes:1 texture0:#Road007_Alpha,
         wall_textures=
-            lanes:1 texture:#PavingStones046 uvx:0.15,
+            lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
             #Bricks058,
         facade_textures=

@@ -15,7 +15,7 @@ macro_begin osm_resource_car_arena;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture:#Road007_Alpha,
+            lanes:1 texture0:#Road007_Alpha,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
         curb_street_texture=textures/curb_stone_grass_asphalt.png,
@@ -23,7 +23,7 @@ macro_begin osm_resource_car_arena;
         curb2_street_texture=,
         curb2_path_texture=,
         wall_textures=
-            lanes:1 texture:#PavingStones046 uvx:0.15,
+            lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
             #Bricks058,
         facade_textures=

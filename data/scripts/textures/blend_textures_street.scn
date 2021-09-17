@@ -1,0 +1,21 @@
+add_blend_map_texture
+    name=Road007_Broad_White_1_Lane_near
+    texture=#Road007_Broad_White_1_Lane_near
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 15 25
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=Road007_Broad_White_1_Lane_far
+    texture=#Road007_Broad_White_1_Lane_far
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=15 25 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;

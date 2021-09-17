@@ -19,10 +19,10 @@ macro_begin osm_resource_nyc;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture:#Road007_No_Lines
-            lanes:2 texture:#Road007_White_2_Lanes
-            lanes:4 texture:#Road007_White_1x_Lane uvx:4
-            lanes:6 texture:#Road007_White_1x_Lane uvx:6,
+            lanes:1 texture0:#Road007_No_Lines
+            lanes:2 texture0:#Road007_White_2_Lanes
+            lanes:4 texture0:#Road007_White_1x_Lane uvx:4
+            lanes:6 texture0:#Road007_White_1x_Lane uvx:6,
         path_crossing_texture=#Road007_No_Lines,
         path_texture=#Road007_No_Lines,
         curb_street_texture=#PavingStones035,
