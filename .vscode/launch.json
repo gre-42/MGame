@@ -8,7 +8,7 @@
             "name": "(gdb) Launch Mgame",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Mlib/UDebug/Bin/render_scene_file",
+            "program": "${workspaceFolder}/Mlib/URelWithDebInfo/Bin/render_scene_file",
             "args": [
                 "data",
                 "data/levels/main/main.scn",
