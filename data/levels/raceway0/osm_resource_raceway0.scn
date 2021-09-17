@@ -32,7 +32,7 @@ macro_begin osm_resource_raceway0;
             #Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#traffic_barrier uv:1 1 blend_mode:binary wrap_mode_t:clamp_to_edge reorient_uv0:0,
+            texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous wrap_mode_t:clamp_to_edge reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree
@@ -89,7 +89,7 @@ macro_begin osm_resource_raceway0;
         raise_streets_amount=-0.2,
         extrude_curb_amount=0,
         extrude_street_amount=0,
-        extrude_wall_amount=1.2,
+        extrude_wall_amount=1.5,
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=0,

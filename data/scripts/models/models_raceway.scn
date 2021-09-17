@@ -1,0 +1,15 @@
+obj_resource
+    name=shop42_ad
+    filename=models/shop42_ad/shop42_ad.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=black
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
