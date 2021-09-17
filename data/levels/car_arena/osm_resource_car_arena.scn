@@ -32,7 +32,7 @@ macro_begin osm_resource_car_arena;
             #Plaster003_wh,
         ceiling_texture=#Asphalt015,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:semi_continuous reorient_uv0:0,
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
         grass_resource_names=,

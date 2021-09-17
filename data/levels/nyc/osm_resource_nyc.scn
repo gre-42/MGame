@@ -41,7 +41,7 @@ macro_begin osm_resource_nyc;
             #MarekWindow00001_512,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#fence1 uv:1 1 blend_mode:semi_continuous reorient_uv0:0,
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree_small(p:1)(hitbox:02_1_02_hitbox)

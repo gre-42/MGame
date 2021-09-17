@@ -32,7 +32,8 @@ macro_begin osm_resource_raceway0;
             #Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
-            texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous wrap_mode_t:clamp_to_edge reorient_uv0:0,
+            name:traffic_barrier texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous wrap_mode_t:clamp_to_edge reorient_uv0:0
+            name:ad0 texture:#ad0 uv:0.125 0.5 blend_mode:off wrap_mode_t:clamp_to_edge reorient_uv0:1,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
             btree
@@ -48,7 +49,7 @@ macro_begin osm_resource_raceway0;
             bflower2(p:0.01)
             grass_tbdpec3r_low
             bflower(p:0.01),
-        default_street_width=14,
+        default_street_width=12,
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=1e-1,
