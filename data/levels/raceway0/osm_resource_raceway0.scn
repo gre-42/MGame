@@ -45,8 +45,9 @@ macro_begin osm_resource_raceway0;
             btree-large4,
         grass_resource_names=,
         near_grass_resource_names=
-            bflower2
-            bflower,
+            bflower2(p:0.01)
+            grass_tbdpec3r_low
+            bflower(p:0.01),
         default_street_width=14,
         roof_width=2,
         scale=1e-3,
@@ -65,7 +66,7 @@ macro_begin osm_resource_raceway0;
         forest_outline_tree_distance=30,
         forest_outline_tree_inwards_distance=0,
         much_grass_distance=100,
-        much_near_grass_distance=20,
+        much_near_grass_distance=2,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
