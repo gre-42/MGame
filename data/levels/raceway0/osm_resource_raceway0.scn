@@ -57,6 +57,7 @@ macro_begin osm_resource_raceway0;
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
         uv_scale_barrier_wall=1e0,
+        uv_scale_highway_wall=3e-1,
         with_roofs=0,
         with_ceilings=1,
         building_bottom=0,
