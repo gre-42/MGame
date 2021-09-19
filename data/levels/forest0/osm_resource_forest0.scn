@@ -12,10 +12,8 @@ macro_begin osm_resource_forest0;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=
-            #grass_ground_near
-            #Ground037_Sl_far
-            #Rock028_200_near
-            #Rock028_200_far,
+            #Ground037_near
+            #Ground037_far,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
