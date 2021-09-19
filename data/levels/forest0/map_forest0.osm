@@ -145,11 +145,11 @@
     <tag k='highway' v='raceway' />
     <tag k='width' v='12' />
   </node>
-  <node id='-117333' action='modify' visible='true' lat='37.84153041945' lon='-122.4900270365'>
+  <node id='-117333' action='modify' visible='true' lat='37.84153145036' lon='-122.49002698341'>
     <tag k='highway' v='raceway' />
     <tag k='width' v='12' />
   </node>
-  <node id='-117334' action='modify' visible='true' lat='37.84155037942' lon='-122.49084046671'>
+  <node id='-117334' action='modify' visible='true' lat='37.84156285562' lon='-122.49082892603'>
     <tag k='highway' v='raceway' />
     <tag k='width' v='12' />
   </node>
@@ -181,7 +181,7 @@
   <node id='-117360' action='modify' visible='true' lat='37.83831478897' lon='-122.48787290365' />
   <node id='-117361' action='modify' visible='true' lat='37.83860183853' lon='-122.48769422085' />
   <node id='-117362' action='modify' visible='true' lat='37.8389393042' lon='-122.48767605334' />
-  <node id='-117363' action='modify' visible='true' lat='37.83934475006' lon='-122.48774003609' />
+  <node id='-117363' action='modify' visible='true' lat='37.8393888598' lon='-122.48775567519' />
   <node id='-117364' action='modify' visible='true' lat='37.83905024255' lon='-122.48949090685' />
   <node id='-117365' action='modify' visible='true' lat='37.84041073377' lon='-122.48793151076' />
   <node id='-117366' action='modify' visible='true' lat='37.84078230722' lon='-122.48779703623' />
@@ -199,7 +199,7 @@
   <node id='-117378' action='modify' visible='true' lat='37.84163824208' lon='-122.48895552239' />
   <node id='-117379' action='modify' visible='true' lat='37.84186384018' lon='-122.48852214345' />
   <node id='-117380' action='modify' visible='true' lat='37.8415201905' lon='-122.48959412456' />
-  <node id='-117381' action='modify' visible='true' lat='37.84154445178' lon='-122.49046000923' />
+  <node id='-117381' action='modify' visible='true' lat='37.84154535502' lon='-122.49045996272' />
   <node id='-117382' action='modify' visible='true' lat='37.83907401367' lon='-122.49264521492' />
   <node id='-117383' action='modify' visible='true' lat='37.83963266522' lon='-122.49256712152' />
   <node id='-117384' action='modify' visible='true' lat='37.84033760245' lon='-122.49263028431' />
@@ -300,12 +300,23 @@
   <node id='-117516' action='modify' visible='true' lat='37.84430229223' lon='-122.48523380262' />
   <node id='-117517' action='modify' visible='true' lat='37.84429821231' lon='-122.48587853345' />
   <node id='-117534' action='modify' visible='true' lat='37.84430714814' lon='-122.48446644743' />
+  <node id='-117569' action='modify' visible='true' lat='37.84158823771' lon='-122.48603050453' />
+  <node id='-117579' action='modify' visible='true' lat='37.84158823595' lon='-122.48912034254' />
+  <node id='-117590' action='modify' visible='true' lat='37.84170997507' lon='-122.48878968719' />
+  <node id='-117613' action='modify' visible='true' lat='37.84153001282' lon='-122.48943759295' />
+  <node id='-117620' action='modify' visible='true' lat='37.8415247198' lon='-122.48981739978' />
+  <node id='-117635' action='modify' visible='true' lat='37.84157235692' lon='-122.49103724994' />
+  <node id='-117650' action='modify' visible='true' lat='37.84155104264' lon='-122.49063707046' />
+  <node id='-117658' action='modify' visible='true' lat='37.84153792286' lon='-122.49022853176' />
+  <node id='-117683' action='modify' visible='true' lat='37.83905989828' lon='-122.48769048155' />
+  <node id='-117702' action='modify' visible='true' lat='37.83924692413' lon='-122.48772846223' />
   <way id='-121425' action='modify' visible='true'>
     <nd ref='-117368' />
     <nd ref='-117377' />
     <nd ref='-117326' />
     <nd ref='-117369' />
     <nd ref='-117347' />
+    <nd ref='-117569' />
     <nd ref='-117327' />
     <nd ref='-117370' />
     <nd ref='-117348' />
@@ -426,9 +437,13 @@
   </way>
   <way id='-121432' action='modify' visible='true'>
     <nd ref='-117380' />
+    <nd ref='-117620' />
     <nd ref='-117333' />
+    <nd ref='-117658' />
     <nd ref='-117381' />
+    <nd ref='-117650' />
     <nd ref='-117334' />
+    <nd ref='-117635' />
     <nd ref='-117297' />
     <tag k='curb_delete' v='1' />
     <tag k='highway' v='raceway' />
@@ -436,7 +451,9 @@
   </way>
   <way id='-121433' action='modify' visible='true'>
     <nd ref='-117362' />
+    <nd ref='-117683' />
     <nd ref='-117321' />
+    <nd ref='-117702' />
     <nd ref='-117363' />
     <nd ref='-117345' />
     <nd ref='-117403' />
@@ -476,8 +493,11 @@
     <nd ref='-117375' />
     <nd ref='-117379' />
     <nd ref='-117331' />
+    <nd ref='-117590' />
     <nd ref='-117378' />
+    <nd ref='-117579' />
     <nd ref='-117332' />
+    <nd ref='-117613' />
     <nd ref='-117380' />
     <tag k='curb_left_delete' v='1' />
     <tag k='highway' v='raceway' />
