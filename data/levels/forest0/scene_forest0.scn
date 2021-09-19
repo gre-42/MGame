@@ -32,13 +32,13 @@ macro_begin instantiate_transient_objects;
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
-        IF_PLAYBACK_TRACK_1:#
+        IF_PLAYBACK_TRACK_1:
         IF_PLAYBACK_TRACK_2:#
         IF_PLAYBACK_TRACK_3:#
         IF_PLAYBACK_WINNER_0:
         IF_PLAYBACK_WINNER_1:
         IF_PLAYBACK_WINNER_2:
-        IF_CHECKPOINTS:#
+        IF_CHECKPOINTS:
         IF_RACING:#
         IF_RALLY:
         IF_BURN_IN:#;
