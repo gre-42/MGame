@@ -22,7 +22,7 @@ macro_begin osm_resource_forest0;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture0:#Road007_Alpha,
+            lanes:1 texture0:#Ground038_Way,
         wall_textures=
             lanes:1 texture0:#PavingStones046 uvx:0.15,
         facade_textures=
@@ -57,10 +57,19 @@ macro_begin osm_resource_forest0;
             Paper(p:0.1),
         default_street_width=3,
         wayside_resource_names=
-            min_dist:3
-            max_dist:5
-            Stone_model_tex_small(p:0.7)(hitbox:02_1_02_hitbox)
-            desert_rock01_small(p:0.7)(hitbox:02_1_02_hitbox),
+            min_dist:3.5
+            max_dist:100
+            btree_small(p:1)(hitbox:02_1_02_hitbox)
+            btree2_small(p:1)(hitbox:02_1_02_hitbox)
+            btree3_small(p:1)(hitbox:02_1_02_hitbox)
+            btree4_small(p:1)(hitbox:02_1_02_hitbox)
+            btree-large_small(p:1)(hitbox:02_1_02_hitbox)
+            btree-large2_small(p:1)(hitbox:02_1_02_hitbox),
+        wayside_resource_names=
+            min_dist:1.5
+            max_dist:3
+            Stone_model_tex_small(p:0.2)(hitbox:02_1_02_hitbox)
+            desert_rock01_small(p:0.2)(hitbox:02_1_02_hitbox),
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
@@ -78,7 +87,7 @@ macro_begin osm_resource_forest0;
         with_tree_nodes=1,
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
-        much_grass_distance=10,
+        much_grass_distance=INFINITY,
         much_near_grass_distance=2,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
@@ -92,8 +101,8 @@ macro_begin osm_resource_forest0;
             cycleway
             steps,
         path_tags=,
-        steiner_point_distances_road=0 4,
-        steiner_point_distances_steiner=INFINITY 10,
+        steiner_point_distances_road=0 2 30 100,
+        steiner_point_distances_steiner=INFINITY 7 7 100,
         curb_alpha=1,
         curb2_alpha=1,
         curb_uv_x=NAN,
