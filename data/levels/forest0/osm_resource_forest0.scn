@@ -46,9 +46,7 @@ macro_begin osm_resource_forest0;
             btree-large(p:1)(hitbox:02_1_02_hitbox)
             btree-large2(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
-            bflower2(p:0.1)
-            grass_tbdpec3r
-            bflower(p:0.1),
+            grass_tbdpec3r,
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
@@ -86,7 +84,7 @@ macro_begin osm_resource_forest0;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=INFINITY,
-        much_near_grass_distance=2,
+        much_near_grass_distance=3,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
