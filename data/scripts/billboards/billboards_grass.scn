@@ -132,6 +132,22 @@ square_resource
     transformation_mode=position_lookat;
 
 square_resource
+    name=grass_tbdpec3r_Ground037_Sl
+    texture_filename=#grass_tbdpec3r_Ground037_Sl
+    min=-0.6 -0.1
+    max=0.6 1.1
+    is_small=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=continuous
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    aggregate_mode=instances_sorted
+    transformation_mode=position_lookat;
+
+square_resource
     name=grass_tbdpec3r_low
     texture_filename=#grass_tbdpec3r_Ground037_Sl
     min=-0.6 -0.05

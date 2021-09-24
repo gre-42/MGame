@@ -5,13 +5,11 @@ macro_begin osm_resource_jb_race;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=
-            #grass_ground_near
-            #Ground037_Sl_far
+            #Ground037_Sl
             #Rock028_200_near
             #Rock028_200_far,
         terrain_flowers_textures=
-            #grass_ground_near
-            #Ground037_Sl_far
+            #Ground037_Sl
             #Rock028_200_near
             #Rock028_200_far,
         bounding_terrain_type=grass,
@@ -50,7 +48,7 @@ macro_begin osm_resource_jb_race;
             btree-large2(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
-            grass_tbdpec3r
+            grass_tbdpec3r_Ground037_Sl
             bflower(p:0.1),
         near_flowers_resource_names=
             bflower2(p:0.1)
