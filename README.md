@@ -15,3 +15,6 @@ A rally game based on OpenStreetMap data.
 
 ### Racetrack 0
 ![Screenshot-R0-2021-09-17](media/Screenshot-R0-2021-09-17.jpg)
+
+### Forest 0
+![Screenshot-R0-2021-09-17](media/Screenshot-F0-2021-09-24.jpg)
