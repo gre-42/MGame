@@ -419,7 +419,7 @@ macro_begin create_hedge_billboard;
         occluder_type=off
         occluded_by_black=0
         ambience=2.3 1.65 0.93
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=0
         aggregate_mode=instances_sorted
@@ -434,7 +434,7 @@ macro_begin create_hedge_billboard;
         occluder_type=off
         occluded_by_black=0
         ambience=2.3 1.65 0.93
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=0
         aggregate_mode=instances_sorted
@@ -503,7 +503,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -519,7 +519,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -535,7 +535,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -551,7 +551,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -567,7 +567,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -583,7 +583,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -599,7 +599,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
@@ -615,7 +615,7 @@ macro_begin create_trees;
         occluder_type=black
         occluded_by_black=0
         ambience=2 2 2
-        blend_mode=semi_continuous
+        blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE

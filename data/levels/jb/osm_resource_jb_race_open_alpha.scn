@@ -33,26 +33,26 @@ macro_begin osm_resource_jb_race;
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
-            btree(p:1)(hitbox:02_1_02_hitbox)
-            btree2(p:1)(hitbox:02_1_02_hitbox)
-            btree3(p:1)(hitbox:02_1_02_hitbox)
-            btree4(p:1)(hitbox:02_1_02_hitbox)
-            btree-large(p:1)(hitbox:02_1_02_hitbox)
-            btree-large2(p:1)(hitbox:02_1_02_hitbox),
+            vegetation0.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.5(p:1)(hitbox:02_1_02_hitbox),
         grass_resource_names=
-            btree(p:1)(hitbox:02_1_02_hitbox)
-            btree2(p:1)(hitbox:02_1_02_hitbox)
-            btree3(p:1)(hitbox:02_1_02_hitbox)
-            btree4(p:1)(hitbox:02_1_02_hitbox)
-            btree-large(p:1)(hitbox:02_1_02_hitbox)
-            btree-large2(p:1)(hitbox:02_1_02_hitbox),
+            vegetation0.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation0.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
             grass_tbdpec3r_Ground037_Sl
             bflower(p:0.1),
         near_flowers_resource_names=
             bflower2(p:0.1)
-            grass2g_near
+            vegetation0.6
             bflower(p:0.1),
         dirt_decals_resource_names=
             Leaf018_2
@@ -61,19 +61,17 @@ macro_begin osm_resource_jb_race;
         wayside_resource_names=
             min_dist:10
             max_dist:20
-            btree_small(p:0.2)(hitbox:02_1_02_hitbox)
-            btree2_small(p:0.2)(hitbox:02_1_02_hitbox)
-            btree3_small(p:0.2)(hitbox:02_1_02_hitbox)
-            btree4_small(p:0.2)(hitbox:02_1_02_hitbox)
-            btree-large_small(p:0.2)(hitbox:02_1_02_hitbox)
-            btree-large2_small(p:0.2)(hitbox:02_1_02_hitbox),
+            vegetation0.0(p:0.2)(hitbox:02_1_02_hitbox)
+            vegetation0.1(p:0.2)(hitbox:02_1_02_hitbox)
+            vegetation0.2(p:0.2)(hitbox:02_1_02_hitbox)
+            vegetation0.3(p:0.2)(hitbox:02_1_02_hitbox)
+            vegetation0.4(p:0.2)(hitbox:02_1_02_hitbox)
+            vegetation0.5(p:0.2)(hitbox:02_1_02_hitbox),
         wayside_resource_names=
             min_dist:1.5
             max_dist:3
-            Stone_model_tex_small(p:0.7)(hitbox:02_1_02_hitbox)
-            desert_rock01_small(p:0.7)(hitbox:02_1_02_hitbox)
-            square_hedge_small_round_billboard(p:0.7)(hitbox:02_1_02_hitbox)
-            square_hedge_long_round_billboard(p:0.2)(hitbox:02_1_02_hitbox),
+            Stone_model_tex_small(p:0.2)(hitbox:02_1_02_hitbox)
+            desert_rock01_small(p:0.2)(hitbox:02_1_02_hitbox),
         default_street_width=10,
         roof_width=2,
         scale=1e-3,
