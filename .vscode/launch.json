@@ -8,10 +8,10 @@
             "name": "(gdb) Launch Mgame",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Mlib/URelWithDebInfo/Bin/render_scene_file",
+            "program": "${workspaceFolder}/Mlib/UDebug/Bin/render_scene_file",
             "args": [
                 "data",
-                "data/levels/main/main.scn",
+                "data/levels/jb_race/scene_jb_race.scn",
                 "--print_render_residual_time",
                 "--print_physics_residual_time",
                 "--show_mouse_cursor",

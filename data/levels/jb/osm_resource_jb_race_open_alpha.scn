@@ -17,8 +17,11 @@ macro_begin osm_resource_jb_race;
         grass_dirt_texture=#Ground025,
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
+        path_crossing_texture=#Ground038_Dark,
         street_textures=
             lanes:1 texture0:#Road007_Alpha,
+        path_textures=
+            lanes:1 texture0:#Ground038_Way,
         wall_textures=
             lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
@@ -51,9 +54,8 @@ macro_begin osm_resource_jb_race;
             grass_tbdpec3r_Ground037_Sl
             bflower(p:0.1),
         near_flowers_resource_names=
-            bflower2(p:0.1)
             vegetation0.6
-            bflower(p:0.1),
+            vegetation0.7(p:0.05),
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
@@ -92,7 +94,7 @@ macro_begin osm_resource_jb_race;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
         much_near_grass_distance=2,
-        much_near_flowers_distance=2,
+        much_near_flowers_distance=2.5,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
@@ -104,7 +106,9 @@ macro_begin osm_resource_jb_race;
             footway
             cycleway
             steps,
-        path_tags=,
+        path_tags=
+            tertiary
+            track,
         steiner_point_distances_road=0 2 100,
         steiner_point_distances_steiner=INFINITY 7 100,
         curb_alpha=1,

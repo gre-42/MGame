@@ -10,7 +10,8 @@ add_texture_atlas
         texture_pos:0 1024 texture:textures/proctree/one/out-4-5.png
         texture_pos:1024 1024 texture:textures/proctree/one_large/out-1-10.png
         texture_pos:2048 1024 texture:textures/proctree/one_large/out-2-10.png
-        texture_pos:3072 0 texture:textures/SR/grass2g.png;
+        texture_pos:3072 0 texture:textures/SR/grass2g.png
+        texture_pos:3584 0 texture:textures/SR/grass9r.png;
 
 add_texture_descriptor
     name=vegetation0
@@ -34,10 +35,11 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat
     billboards=
-        uv_scale:0.25 0.5 uv_offset:0 0 vertex_scale:10 10 is_small:0
-        uv_scale:0.25 0.5 uv_offset:0.25 0 vertex_scale:10 10 is_small:0
-        uv_scale:0.25 0.5 uv_offset:0.5 0 vertex_scale:10 10 is_small:0
-        uv_scale:0.25 0.5 uv_offset:0 0.5 vertex_scale:10 10 is_small:0
-        uv_scale:0.25 0.5 uv_offset:0.25 0.5 vertex_scale:15 15 is_small:0
-        uv_scale:0.25 0.5 uv_offset:0.5 0.5 vertex_scale:15 15 is_small:0
-        uv_scale:0.125 0.25 uv_offset:0.75 0 vertex_scale:2 2 is_small:1;
+        uv_scale:0.25  0.5  uv_offset:0     0   vertex_scale:10 10 is_small:0
+        uv_scale:0.25  0.5  uv_offset:0.25  0   vertex_scale:10 10 is_small:0
+        uv_scale:0.25  0.5  uv_offset:0.5   0   vertex_scale:10 10 is_small:0
+        uv_scale:0.25  0.5  uv_offset:0     0.5 vertex_scale:10 10 is_small:0
+        uv_scale:0.25  0.5  uv_offset:0.25  0.5 vertex_scale:15 15 is_small:0
+        uv_scale:0.25  0.5  uv_offset:0.5   0.5 vertex_scale:15 15 is_small:0
+        uv_scale:0.125 0.25 uv_offset:0.75  0   vertex_scale: 2  2 is_small:1
+        uv_scale:0.125 0.25 uv_offset:0.875 0   vertex_scale: 2  2 is_small:1;
