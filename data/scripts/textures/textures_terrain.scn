@@ -165,6 +165,13 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
+    name=grass_tbdpec3r_Ground037
+    color=textures/quixel/tbdpec3r/Billboard_2K_Albedo.png
+    color_mode=rgba
+    histogram=textures/histograms/Ground037_2K_Color.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
     name=grass_tbdpec3r_Ground037_Sl
     color=textures/quixel/tbdpec3r/Billboard_2K_Albedo.png
     color_mode=rgba
