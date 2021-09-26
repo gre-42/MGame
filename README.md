@@ -11,7 +11,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-NYC-2021-07-04](media/Screenshot-NYC-2021-07-04.jpg)
 
 ### Jakobsburg
-![Screenshot-JB-2021-07-09](media/Screenshot-JB-2021-07-09.jpg)
+![Screenshot-JB-2021-09-26](media/Screenshot-JB-2021-09-26.jpg)
 
 ### Racetrack 0
 ![Screenshot-R0-2021-09-17](media/Screenshot-R0-2021-09-17.jpg)
