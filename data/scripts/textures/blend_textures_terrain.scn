@@ -7,7 +7,7 @@ add_blend_map_texture
     texture=#Ground003
     min_height=-INFINITY
     max_height=INFINITY
-    distances=0 0 15 25
+    distances=0 0 50 70
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.5
@@ -18,7 +18,7 @@ add_blend_map_texture
     texture=#Ground003
     min_height=-INFINITY
     max_height=INFINITY
-    distances=15 25 INFINITY INFINITY
+    distances=50 70 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.1
