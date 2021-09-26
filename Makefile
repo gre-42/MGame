@@ -72,6 +72,7 @@ run_dev: build
 		--print_render_residual_time \
 		--print_physics_residual_time \
 		--nsamples_msaa 2 \
+		--show_mouse_cursor \
 		--screen_width 1500 \
 		--screen_height 900 \
 		--devel_mode
