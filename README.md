@@ -4,13 +4,7 @@ A rally game based on OpenStreetMap data.
 
 ## Screenshots
 
-### San Francisco
-![Screenshot-SF-2021-07-04](media/Screenshot-SF-2021-07-04.jpg)
-
-### New York City
-![Screenshot-NYC-2021-07-04](media/Screenshot-NYC-2021-07-04.jpg)
-
-### Jakobsburg
+### Track JB
 ![Screenshot-JB-2021-09-26](media/Screenshot-JB-2021-09-26.jpg)
 
 ### Racetrack 0
@@ -18,3 +12,9 @@ A rally game based on OpenStreetMap data.
 
 ### Forest 0
 ![Screenshot-R0-2021-09-17](media/Screenshot-F0-2021-09-24.jpg)
+
+### San Francisco
+![Screenshot-SF-2021-07-04](media/Screenshot-SF-2021-07-04.jpg)
+
+### New York City
+![Screenshot-NYC-2021-07-04](media/Screenshot-NYC-2021-07-04.jpg)
