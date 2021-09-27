@@ -19,7 +19,7 @@ macro_begin osm_resource_jb_race;
         street_textures=
             lanes:1 texture0:#Road007_Alpha,
         path_textures=
-            lanes:1 texture0:#Ground038_Way,
+            lanes:1 texture0:#Ground038_Way_near texture1:#Ground038_Dark_far,
         wall_textures=
             lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
@@ -68,8 +68,8 @@ macro_begin osm_resource_jb_race;
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
-        uv_scale_street=3e-2,
-        uv_scale_path=3e-2,
+        uv_scale_street=1e-1,
+        uv_scale_path=1e-1,
         uv_scale_wall=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,

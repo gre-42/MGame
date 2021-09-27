@@ -19,3 +19,25 @@ add_blend_map_texture
     cosine=-1 -1 1 1
     scale=1
     weight=1;
+
+add_blend_map_texture
+    name=Ground038_Way_near
+    texture=#Ground038_Way
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 15 25
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground038_Dark_far
+    texture=#Ground038_Dark
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=15 25 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.5
+    weight=1;
