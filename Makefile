@@ -1,8 +1,9 @@
 CMAKE_BUILD_TYPE ?= Release
+build_prefix = G
 platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
-        echo M${CMAKE_BUILD_TYPE}; \
+        echo $(build_prefix)M$(CMAKE_BUILD_TYPE); \
     else \
-        echo U${CMAKE_BUILD_TYPE}; \
+        echo $(build_prefix)U$(CMAKE_BUILD_TYPE); \
     fi
 build_target != if [ "$$OSTYPE" = "msys" ] ; then \
         echo build; \
@@ -17,7 +18,10 @@ all: build package
 build:
 	@echo "OS Type: $(ostype)"
 	@echo "Platform dir: $(platform_dir)"
-	make -C Mlib $(build_target) CMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}
+	BUILD_PREFIX=$(build_prefix) \
+	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
+		make -C Mlib $(build_target) \
+			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
 package:
 	@echo "OS Type: $(ostype)"
@@ -27,7 +31,6 @@ package:
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
 			Mlib/$(platform_dir)/Bin/libMlib.dll \
-			Mlib/$(platform_dir)/Bin/libMlibCv.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
