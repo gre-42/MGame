@@ -41,7 +41,7 @@ jobs:
           name: osm-rally-artifact-ubuntu
           path: |
             data
-            URelease
+            GURelease
             osm_racing_game
             osm_racing_game.cmd
  
@@ -82,7 +82,7 @@ jobs:
         with:
           name: osm-rally-artifact-msys2
           path: |
-            MRelease
+            GMRelease
 
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -99,7 +99,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: osm-rally-artifact-msys2
-          path: MGame/MRelease
+          path: MGame/GMRelease
       
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
