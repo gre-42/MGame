@@ -10,7 +10,7 @@ SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-LD_LIBRARY_PATH=URelease URelease/render_scene_file \
+LD_LIBRARY_PATH=URelease GURelease/render_scene_file \
     data \
     data/levels/main/main.scn \
     --nsamples_msaa 2 \

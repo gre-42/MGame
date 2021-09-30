@@ -1,4 +1,4 @@
-MRelease\render_scene_file.exe ^
+GMRelease\render_scene_file.exe ^
     data ^
     data\levels\main\main.scn ^
     --nsamples_msaa 2 ^
