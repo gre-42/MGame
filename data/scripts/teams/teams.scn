@@ -59,11 +59,11 @@ macro_begin teams.create_player_car;
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_STATIC:#
+        IF_DYNAMIC:
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
-        IF_STATIC:#
-        IF_DYNAMIC:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
         IF_DAMAGEABLE:
