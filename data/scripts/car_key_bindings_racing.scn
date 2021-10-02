@@ -54,12 +54,12 @@ macro_begin create_car_key_bindings_racing;
         gamepad_button=X
         joystick_digital_axis=4
         joystick_digital_axis_sign=-1
-        surface_power=294200;
+        surface_power=INFINITY;
     abs_key_binding
         node=car_node-SUFFIX
         key=DOWN
         gamepad_button=A
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
-        surface_power=-294200;
+        surface_power=-INFINITY;
 macro_end;
