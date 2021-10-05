@@ -119,5 +119,8 @@ macro_begin osm_resource_jb_race;
         street_edge_smoothness=0.1,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
-        blend_street=1;
+        blend_street=1,
+        street_surface_central_resource_name=road_central1,
+        street_surface_endpoint0_resource_name=road_endpoint1_0,
+        street_surface_endpoint1_resource_name=road_endpoint1_1;
 macro_end;
