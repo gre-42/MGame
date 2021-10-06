@@ -20,7 +20,7 @@ macro_begin osm_resource_forest0;
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture0:#Ground038_Way_near texture1:#Ground038_Dark_far,
+            lanes:1 texture0:#Ground038_Way_Wheels,
         near_grass_resource_names=
             grass_tbdpec3r,
         dirt_decals_resource_names=

@@ -19,7 +19,7 @@ macro_begin osm_resource_jb_race;
         street_textures=
             lanes:1 texture0:#Road007_Alpha,
         path_textures=
-            lanes:1 texture0:#Ground038_Way_near texture1:#Ground038_Dark_far,
+            lanes:1 texture0:#Ground038_Way_Wheels,
         wall_textures=
             lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
@@ -116,7 +116,7 @@ macro_begin osm_resource_jb_race;
         max_wall_width=10,
         with_height_bindings=1,
         street_node_smoothness=0.9,
-        street_edge_smoothness=0.1,
+        street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
         blend_street=1,
