@@ -46,98 +46,74 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-obj_resource
-    name=road_central1
-    filename=models/road/central1.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+macro_begin load_road;
+    obj_resource
+        name=CENTRAL_NAME
+        filename=CENTRAL
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
 
-obj_resource
-    name=road_endpoint1_0
-    filename=models/road/endpoint1.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+    obj_resource
+        name=ENDPOINT0_NAME
+        filename=ENDPOINT
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
 
-obj_resource
-    name=road_endpoint1_1
-    filename=models/road/endpoint1.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=-1 -1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+    obj_resource
+        name=ENDPOINT1_NAME
+        filename=ENDPOINT
+        position=0 0 0
+        rotation=0 0 0
+        scale=-1 -1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
 
-obj_resource
-    name=road_low_central
-    filename=models/road/low_central.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+macro_end;
 
-obj_resource
-    name=road_low_endpoint_0
-    filename=models/road/low_endpoint.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+macro_playback load_road
+    CENTRAL_NAME:road_central1
+    ENDPOINT0_NAME:road_endpoint1_0
+    ENDPOINT1_NAME:road_endpoint1_1
+    CENTRAL:models/road/central1.obj
+    ENDPOINT:models/road/endpoint1.obj;
 
-obj_resource
-    name=road_low_endpoint_1
-    filename=models/road/low_endpoint.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=-1 -1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+macro_playback load_road
+    CENTRAL_NAME:road_low_central
+    ENDPOINT0_NAME:road_low_endpoint_0
+    ENDPOINT1_NAME:road_low_endpoint_1
+    CENTRAL:models/road/low_central.obj
+    ENDPOINT:models/road/low_endpoint.obj;
+
+macro_playback load_road
+    CENTRAL_NAME:road_low_central2
+    ENDPOINT0_NAME:road_low_endpoint2_0
+    ENDPOINT1_NAME:road_low_endpoint2_1
+    CENTRAL:models/road/low_central2.obj
+    ENDPOINT:models/road/low_endpoint2.obj;

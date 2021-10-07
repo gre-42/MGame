@@ -91,7 +91,7 @@ macro_begin osm_resource_forest0;
         terrain_edge_smoothness=0.1,
         driving_direction=right,
         blend_street=1,
-        street_surface_central_resource_name=road_low_central,
-        street_surface_endpoint0_resource_name=road_low_endpoint_0,
-        street_surface_endpoint1_resource_name=road_low_endpoint_1;
+        street_surface_central_resource_name=road_low_central2,
+        street_surface_endpoint0_resource_name=road_low_endpoint2_0,
+        street_surface_endpoint1_resource_name=road_low_endpoint2_1;
 macro_end;
