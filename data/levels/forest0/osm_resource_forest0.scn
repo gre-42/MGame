@@ -74,7 +74,7 @@ macro_begin osm_resource_forest0;
             steps,
         path_tags=,
         steiner_point_distances_road=0 2 30 100,
-        steiner_point_distances_steiner=INFINITY 7 7 100,
+        steiner_point_distances_steiner=INFINITY 7 20 100,
         curb_alpha=1,
         curb2_alpha=1,
         curb_uv_x=NAN,
