@@ -1,0 +1,89 @@
+add_texture_descriptor
+    name=tc0
+    color=textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png
+    color_mode=rgba
+    histogram=textures/histograms/Tree0.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=tc3
+    color=textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png
+    color_mode=rgba
+    histogram=textures/histograms/Tree5.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=tc4
+    color=textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png
+    color_mode=rgba
+    histogram=textures/histograms/Tree0.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=tc5
+    color=textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png
+    color_mode=rgba
+    histogram=textures/histograms/Tree5.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=tc6
+    color=textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png
+    color_mode=rgba
+    histogram=textures/histograms/Tree0.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=tcd0
+    color=textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png
+    color_mode=rgba
+    histogram=textures/histograms/TreeDead0.png
+    anisotropic_filtering_level=16;
+
+add_texture_atlas
+    name=vegetation1
+    width=4096
+    height=4096
+    color_mode=rgba
+    images=
+        texture_pos:0 0 texture:#tc0
+        texture_pos:1024 0 texture:#tc3
+        texture_pos:2048 0 texture:#tc4
+        texture_pos:0 2048 texture:#tc5
+        texture_pos:1024 2048 texture:#tc6
+        texture_pos:2048 2048 texture:#tcd0
+        texture_pos:3072 0 texture:textures/SR/grass2g.png
+        texture_pos:3584 0 texture:textures/SR/grass9r.png
+        texture_pos:3072 1024 texture:textures/cc0textures/Foliage002_2K_Color_Dense_1k.png;
+
+add_texture_descriptor
+    name=vegetation1
+    color=#vegetation1
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+square_resource
+    name=vegetation1
+    texture_filename=#vegetation1
+    min=-0.5 0
+    max=0.5 1
+    is_small=1
+    occluded_type=off
+    occluder_type=black
+    occluded_by_black=0
+    ambience=2 2 2
+    blend_mode=semi_continuous
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    aggregate_mode=instances_sorted
+    transformation_mode=position_lookat
+    billboards=
+        uv_scale:0.25  0.5   uv_offset:0     0    vertex_scale:10  20   is_small:0
+        uv_scale:0.25  0.5   uv_offset:0.25  0    vertex_scale:10  20   is_small:0
+        uv_scale:0.25  0.5   uv_offset:0.5   0    vertex_scale:10  20   is_small:0
+        uv_scale:0.25  0.5   uv_offset:0     0.5  vertex_scale:10  20   is_small:0
+        uv_scale:0.25  0.5   uv_offset:0.25  0.5  vertex_scale:10  20   is_small:0
+        uv_scale:0.25  0.5   uv_offset:0.5   0.5  vertex_scale:10  20   is_small:0
+        uv_scale:0.125 0.125 uv_offset:0.75  0    vertex_scale: 2   2   is_small:1
+        uv_scale:0.125 0.125 uv_offset:0.875 0    vertex_scale: 2   2   is_small:1
+        uv_scale:0.25  0.25  uv_offset:0.75  0.25 vertex_scale: 2.5 2.5 is_small:1;

@@ -31,12 +31,12 @@ macro_begin osm_resource_forest0;
         wayside_resource_names=
             min_dist:3.5
             max_dist:100
-            vegetation0.0(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.1(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.2(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.3(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.4(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.5(p:1)(hitbox:02_1_02_hitbox),
+            vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         wayside_resource_names=
             min_dist:1.5
             max_dist:3
