@@ -34,18 +34,18 @@ macro_begin osm_resource_jb_race;
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         grass_resource_names=
-            vegetation0.0(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.1(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.2(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.3(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.4(p:1)(hitbox:02_1_02_hitbox)
-            vegetation0.5(p:1)(hitbox:02_1_02_hitbox),
+            vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
             grass_tbdpec3r_Ground003
             bflower(p:0.1),
         near_flowers_resource_names=
-            vegetation0.8,
+            vegetation1.8,
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
@@ -53,12 +53,12 @@ macro_begin osm_resource_jb_race;
         wayside_resource_names=
             min_dist:10
             max_dist:20
-            vegetation0.0(p:0.1)(hitbox:02_1_02_hitbox)
-            vegetation0.1(p:0.1)(hitbox:02_1_02_hitbox)
-            vegetation0.2(p:0.1)(hitbox:02_1_02_hitbox)
-            vegetation0.3(p:0.1)(hitbox:02_1_02_hitbox)
-            vegetation0.4(p:0.1)(hitbox:02_1_02_hitbox)
-            vegetation0.5(p:0.1)(hitbox:02_1_02_hitbox),
+            vegetation1.0(p:0.1)(hitbox:02_1_02_hitbox)
+            vegetation1.1(p:0.1)(hitbox:02_1_02_hitbox)
+            vegetation1.2(p:0.1)(hitbox:02_1_02_hitbox)
+            vegetation1.3(p:0.1)(hitbox:02_1_02_hitbox)
+            vegetation1.4(p:0.1)(hitbox:02_1_02_hitbox)
+            vegetation1.5(p:0.1)(hitbox:02_1_02_hitbox),
         wayside_resource_names=
             min_dist:1.5
             max_dist:3
