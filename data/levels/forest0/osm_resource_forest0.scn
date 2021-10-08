@@ -12,17 +12,17 @@ macro_begin osm_resource_forest0;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=
-            #Ground037_near
-            #Ground037_far,
+            #Ground037_dark27_near
+            #Ground037_dark27_far,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
-            lanes:1 texture0:#Ground038_Way_Wheels,
+            lanes:1 texture0:#Ground038_Way_Wheels_dark27,
         near_grass_resource_names=
-            grass_tbdpec3r,
+            grass_tbdpec3r_dark27,
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
