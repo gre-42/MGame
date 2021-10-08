@@ -8,7 +8,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-JB-2021-09-26](media/Screenshot-JB-2021-09-26.jpg)
 
 ### Forest 0
-![Screenshot-R0-2021-09-17](media/Screenshot-F0-2021-10-07.jpg)
+![Screenshot-R0-2021-09-17](media/Screenshot-F0-2021-10-08.jpg)
 
 ### Racetrack 0
 ![Screenshot-R0-2021-09-17](media/Screenshot-R0-2021-09-17.jpg)
