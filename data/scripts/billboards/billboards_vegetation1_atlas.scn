@@ -3,6 +3,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png
     color_mode=rgba
     histogram=textures/histograms/Tree0.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -10,6 +11,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png
     color_mode=rgba
     histogram=textures/histograms/Tree5.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -17,6 +19,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png
     color_mode=rgba
     histogram=textures/histograms/Tree0.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -24,6 +27,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png
     color_mode=rgba
     histogram=textures/histograms/Tree5.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -31,6 +35,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png
     color_mode=rgba
     histogram=textures/histograms/Tree0.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -38,6 +43,7 @@ add_texture_descriptor
     color=textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png
     color_mode=rgba
     histogram=textures/histograms/TreeDead0.png
+    lighten=0.05 0.05 0.05
     anisotropic_filtering_level=16;
 
 add_texture_atlas
