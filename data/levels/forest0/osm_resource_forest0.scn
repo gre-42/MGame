@@ -27,7 +27,7 @@ macro_begin osm_resource_forest0;
             Leaf018_2
             Leaf018_2_Red
             Paper(p:0.1),
-        default_street_width=3,
+        default_street_width=14,
         wayside_resource_names=
             min_dist:3.5
             max_dist:100
@@ -91,7 +91,7 @@ macro_begin osm_resource_forest0;
         terrain_edge_smoothness=0.1,
         driving_direction=right,
         blend_street=1,
-        street_surface_central_resource_name=road_low_central2,
-        street_surface_endpoint0_resource_name=road_low_endpoint2_0,
-        street_surface_endpoint1_resource_name=road_low_endpoint2_1;
+        street_surface_central_resource_name=road_ditch_central,
+        street_surface_endpoint0_resource_name=road_ditch_endpoint_0,
+        street_surface_endpoint1_resource_name=road_ditch_endpoint_1;
 macro_end;
