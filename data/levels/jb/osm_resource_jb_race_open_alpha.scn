@@ -43,9 +43,11 @@ macro_begin osm_resource_jb_race;
         near_grass_resource_names=
             bflower2(p:0.1)
             grass_tbdpec3r_Ground003
-            bflower(p:0.1),
+            bflower(p:0.1)
+            vegetation1.10(p:0.002)
+            vegetation1.11(p:0.002),
         near_flowers_resource_names=
-            vegetation1.8,
+            vegetation1.9,
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
