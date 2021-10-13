@@ -5,7 +5,17 @@ macro_begin create_tiger_tank_physics;
 
     IF_MANUAL_AIM relative_transformer node=turret_node-SUFFIX;
     IF_MANUAL_AIM relative_transformer node=main_gun_node-SUFFIX;
-    IF_AUTO_AIM yaw_pitch_look_at_nodes yaw_node=turret_node-SUFFIX pitch_node=main_gun_node-SUFFIX parent_follower_rigid_body_node=car_node-SUFFIX followed= bullet_start_offset=20 bullet_velocity=900 gravity=9.8;
+    IF_AUTO_AIM yaw_pitch_look_at_nodes
+        yaw_node=turret_node-SUFFIX
+        pitch_node=main_gun_node-SUFFIX
+        parent_follower_rigid_body_node=car_node-SUFFIX
+        followed= bullet_start_offset=20
+        bullet_velocity=900
+        gravity=9.8
+        dyaw_max=0.2
+        pitch_min=-10
+        pitch_max=45
+        dpitch_max=0.2;
 
     visual_node_status_3rd
         node=car_node-SUFFIX
