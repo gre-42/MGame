@@ -4,9 +4,9 @@
 obj_resource
     name=tiger_tank_hitbox
     filename=models/box.obj
-    position=0 0.35 0
+    position=0 0.55 0
     rotation=0 0 0
-    scale=1.8 1.5 4
+    scale=1.8 1.3 4
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
@@ -35,10 +35,10 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-gen_ray name=tiger_tank_tirelines from=-1.8 -0.8 -4 to=-1.8 -1.55 -4; # left front;
-gen_ray name=tiger_tank_tirelines from=+1.8 -0.8 -4 to=+1.8 -1.55 -4; # right front;
-gen_ray name=tiger_tank_tirelines from=-1.8 -0.8 +4 to=-1.8 -1.55 +4; # left rear;
-gen_ray name=tiger_tank_tirelines from=+1.8 -0.8 +4 to=+1.8 -1.55 +4; # right rear;
+gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 -4 to=-1.8 -1.3 -4; # left front;
+gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 -4 to=+1.8 -1.3 -4; # right front;
+gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +4 to=-1.8 -1.3 +4; # left rear;
+gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +4 to=+1.8 -1.3 +4; # right rear;
 
 obj_resource
     name=tiger_tank
