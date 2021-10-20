@@ -1,6 +1,3 @@
-##############;
-# tiger tank #;
-##############;
 obj_resource
     name=tiger_tank_hitbox
     filename=models/box.obj
@@ -40,20 +37,26 @@ gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 -4 to=+1.8 -1.3 -4; # right fro
 gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +4 to=-1.8 -1.3 +4; # left rear;
 gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +4 to=+1.8 -1.3 +4; # right rear;
 
-obj_resource
-    name=tiger_tank
-    filename=models/free3d.com/tiger_tank/Tiger.obj
-    position=0 -1 0
-    rotation=0 92 0
-    scale=0.0025 0.0025 0.0025
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
-    is_black=1
-    aggregate_mode=off
-    transformation_mode=all
-    triangle_tangent_error_behavior=zero;
+macro_begin load_tiger_tank;
+    obj_resource
+        name=NAME
+        filename=models/free3d.com/tiger_tank/NAME.obj
+        position=0 -1 0
+        rotation=0 92 0
+        scale=0.0025 0.0025 0.0025
+        distances=DIST_MIN DIST_MAX
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        is_black=IS_BLACK
+        aggregate_mode=off
+        transformation_mode=all
+        triangle_tangent_error_behavior=zero;
+macro_end;
+
+macro_playback load_tiger_tank DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 NAME:Tiger;
+macro_playback load_tiger_tank DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 NAME:Tiger_d3;
