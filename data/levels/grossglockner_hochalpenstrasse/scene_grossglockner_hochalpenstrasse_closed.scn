@@ -1,0 +1,6 @@
+include scene_grossglockner_hochalpenstrasse.scn;
+
+macro_playback create_grossglockner_hochalpenstrasse
+    SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR=_M3
+    PLAYBACK_SPEED:PLAYBACK_SPEED=1
+    STYLE:_closed;
