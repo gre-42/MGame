@@ -119,6 +119,13 @@ macro_playback load_road
     ENDPOINT:models/road/low_endpoint2.obj;
 
 macro_playback load_road
+    CENTRAL_NAME:road_low_central3
+    ENDPOINT0_NAME:road_low_endpoint3_0
+    ENDPOINT1_NAME:road_low_endpoint3_1
+    CENTRAL:models/road/low_central3.obj
+    ENDPOINT:models/road/low_endpoint3.obj;
+
+macro_playback load_road
     CENTRAL_NAME:road_ditch_central
     ENDPOINT0_NAME:road_ditch_endpoint_0
     ENDPOINT1_NAME:road_ditch_endpoint_1
