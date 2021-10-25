@@ -96,6 +96,22 @@ obj_resource
     transformation_mode=position;
 
 obj_resource
+    name=road_bollard2
+    filename=models/road_bollard/road_bollard2.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.3 0.3 0.3
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
     name=street_light_hitbox
     filename=models/box.obj
     position=0 0 0

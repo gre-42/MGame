@@ -5,18 +5,18 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         heightmap=__DIR__/heightmap.pgm,
         terrain_grass_textures=
             #Ground003_near
-            #Ground003_far
+            #Ground037_Sl_far
             #Rock028_200_near
             #Rock028_200_far,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
         street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
-        street_texture=#Road007,
+        street_texture=#Road007_Bright_2_Lanes,
         path_crossing_texture=#Gravel010,
         path_texture=#Gravel010,
-        curb_street_texture=#PavingStones046,
-        curb_path_texture=#PavingStones046,
+        curb_street_texture=,
+        curb_path_texture=,
         curb2_street_texture=,
         curb2_path_texture=,
         socle_textures=
@@ -45,9 +45,9 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
-            bflower2(p:0.1)
-            grass_tbdpec3r_Ground003
-            bflower(p:0.1)
+            bflower2(p:0.01)
+            grass_tbdpec3r_Ground037_Sl
+            bflower(p:0.01)
             vegetation1.10(p:0.002)
             vegetation1.11(p:0.002),
         wayside_resource_names=
@@ -92,7 +92,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             track,
         steiner_point_distances_road=0 2 7 100,
         steiner_point_distances_steiner=INFINITY 7 7 100,
-        curb_alpha=0.9,
+        curb_alpha=1,
         curb2_alpha=1,
         curb_uv_x=1,
         curb2_uv_x=NAN,
