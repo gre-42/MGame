@@ -5,11 +5,6 @@ platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
     else \
         echo $(build_prefix)U$(CMAKE_BUILD_TYPE); \
     fi
-build_target != if [ "$$OSTYPE" = "msys" ] ; then \
-        echo build; \
-    else \
-        echo build10; \
-    fi
 ostype != echo "$$OSTYPE";
 bin_dir = $(platform_dir)
 
@@ -20,7 +15,7 @@ build:
 	@echo "Platform dir: $(platform_dir)"
 	BUILD_PREFIX=$(build_prefix) \
 	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
-		make -C Mlib $(build_target) \
+		make -C Mlib build \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
 package:
