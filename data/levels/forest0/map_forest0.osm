@@ -196,7 +196,55 @@
   <node id='-117658' action='modify' visible='true' lat='37.84153792286' lon='-122.49022853176' />
   <node id='-117683' action='modify' visible='true' lat='37.83905989828' lon='-122.48769048155' />
   <node id='-117702' action='modify' visible='true' lat='37.83924692413' lon='-122.48772846223' />
-  <way id='-121425' action='modify' visible='true'>
+  <way id='-121432' action='modify' visible='true'>
+    <nd ref='-117387' />
+    <nd ref='-117339' />
+    <nd ref='-117386' />
+    <nd ref='-117340' />
+    <nd ref='-117312' />
+    <nd ref='-117338' />
+    <nd ref='-117313' />
+    <nd ref='-117395' />
+    <nd ref='-117337' />
+    <nd ref='-117392' />
+    <nd ref='-117314' />
+    <nd ref='-117393' />
+    <nd ref='-117336' />
+    <nd ref='-117394' />
+    <nd ref='-117315' />
+    <nd ref='-117335' />
+    <nd ref='-117316' />
+    <nd ref='-117364' />
+    <nd ref='-117317' />
+    <nd ref='-117341' />
+    <nd ref='-117318' />
+    <nd ref='-117357' />
+    <nd ref='-117342' />
+    <nd ref='-117358' />
+    <nd ref='-117319' />
+    <nd ref='-117359' />
+    <nd ref='-117343' />
+    <nd ref='-117360' />
+    <nd ref='-117320' />
+    <nd ref='-117361' />
+    <nd ref='-117344' />
+    <nd ref='-117362' />
+    <nd ref='-117683' />
+    <nd ref='-117321' />
+    <nd ref='-117702' />
+    <nd ref='-117363' />
+    <nd ref='-117345' />
+    <nd ref='-117403' />
+    <nd ref='-117322' />
+    <nd ref='-117346' />
+    <nd ref='-117365' />
+    <nd ref='-117323' />
+    <nd ref='-117366' />
+    <nd ref='-117324' />
+    <nd ref='-117397' />
+    <nd ref='-117367' />
+    <nd ref='-117396' />
+    <nd ref='-117325' />
     <nd ref='-117368' />
     <nd ref='-117377' />
     <nd ref='-117326' />
@@ -219,56 +267,37 @@
     <nd ref='-117330' />
     <nd ref='-117406' />
     <nd ref='-117375' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121426' action='modify' visible='true'>
-    <nd ref='-117341' />
-    <nd ref='-117318' />
-    <nd ref='-117357' />
-    <nd ref='-117342' />
-    <nd ref='-117358' />
-    <nd ref='-117319' />
-    <nd ref='-117359' />
-    <nd ref='-117343' />
-    <nd ref='-117360' />
-    <nd ref='-117320' />
-    <nd ref='-117361' />
-    <nd ref='-117344' />
-    <nd ref='-117362' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121427' action='modify' visible='true'>
-    <nd ref='-117387' />
-    <nd ref='-117339' />
-    <nd ref='-117386' />
-    <nd ref='-117340' />
-    <nd ref='-117312' />
-    <nd ref='-117338' />
-    <nd ref='-117313' />
-    <nd ref='-117395' />
-    <nd ref='-117337' />
-    <nd ref='-117392' />
-    <nd ref='-117314' />
-    <nd ref='-117393' />
-    <nd ref='-117336' />
-    <nd ref='-117394' />
-    <nd ref='-117315' />
-    <nd ref='-117335' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121428' action='modify' visible='true'>
-    <nd ref='-117335' />
-    <nd ref='-117316' />
-    <nd ref='-117364' />
-    <nd ref='-117317' />
-    <nd ref='-117341' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121429' action='modify' visible='true'>
+    <nd ref='-117379' />
+    <nd ref='-117331' />
+    <nd ref='-117590' />
+    <nd ref='-117378' />
+    <nd ref='-117579' />
+    <nd ref='-117332' />
+    <nd ref='-117613' />
+    <nd ref='-117380' />
+    <nd ref='-117620' />
+    <nd ref='-117333' />
+    <nd ref='-117658' />
+    <nd ref='-117381' />
+    <nd ref='-117650' />
+    <nd ref='-117334' />
+    <nd ref='-117635' />
+    <nd ref='-117297' />
+    <nd ref='-117398' />
+    <nd ref='-117298' />
+    <nd ref='-117399' />
+    <nd ref='-117351' />
+    <nd ref='-117299' />
+    <nd ref='-117400' />
+    <nd ref='-117300' />
+    <nd ref='-117352' />
+    <nd ref='-117301' />
+    <nd ref='-117401' />
+    <nd ref='-117384' />
+    <nd ref='-117385' />
+    <nd ref='-117302' />
+    <nd ref='-117383' />
+    <nd ref='-117303' />
     <nd ref='-117382' />
     <nd ref='-117304' />
     <nd ref='-117355' />
@@ -285,96 +314,11 @@
     <nd ref='-117356' />
     <nd ref='-117390' />
     <nd ref='-117310' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121430' action='modify' visible='true'>
-    <nd ref='-117310' />
     <nd ref='-117404' />
     <nd ref='-117388' />
     <nd ref='-117405' />
     <nd ref='-117311' />
     <nd ref='-117387' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121431' action='modify' visible='true'>
-    <nd ref='-117297' />
-    <nd ref='-117398' />
-    <nd ref='-117298' />
-    <nd ref='-117399' />
-    <nd ref='-117351' />
-    <nd ref='-117299' />
-    <nd ref='-117400' />
-    <nd ref='-117300' />
-    <nd ref='-117352' />
-    <nd ref='-117301' />
-    <nd ref='-117401' />
-    <nd ref='-117384' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121432' action='modify' visible='true'>
-    <nd ref='-117380' />
-    <nd ref='-117620' />
-    <nd ref='-117333' />
-    <nd ref='-117658' />
-    <nd ref='-117381' />
-    <nd ref='-117650' />
-    <nd ref='-117334' />
-    <nd ref='-117635' />
-    <nd ref='-117297' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121433' action='modify' visible='true'>
-    <nd ref='-117362' />
-    <nd ref='-117683' />
-    <nd ref='-117321' />
-    <nd ref='-117702' />
-    <nd ref='-117363' />
-    <nd ref='-117345' />
-    <nd ref='-117403' />
-    <nd ref='-117322' />
-    <nd ref='-117346' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121434' action='modify' visible='true'>
-    <nd ref='-117384' />
-    <nd ref='-117385' />
-    <nd ref='-117302' />
-    <nd ref='-117383' />
-    <nd ref='-117303' />
-    <nd ref='-117382' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121435' action='modify' visible='true'>
-    <nd ref='-117346' />
-    <nd ref='-117365' />
-    <nd ref='-117323' />
-    <nd ref='-117366' />
-    <nd ref='-117324' />
-    <nd ref='-117397' />
-    <nd ref='-117367' />
-    <nd ref='-117396' />
-    <nd ref='-117325' />
-    <nd ref='-117368' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-  </way>
-  <way id='-121436' action='modify' visible='true'>
-    <nd ref='-117375' />
-    <nd ref='-117379' />
-    <nd ref='-117331' />
-    <nd ref='-117590' />
-    <nd ref='-117378' />
-    <nd ref='-117579' />
-    <nd ref='-117332' />
-    <nd ref='-117613' />
-    <nd ref='-117380' />
-    <tag k='curb_left_delete' v='1' />
     <tag k='highway' v='raceway' />
   </way>
   <way id='-121530' action='modify' visible='true'>
