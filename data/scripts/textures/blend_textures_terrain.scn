@@ -32,7 +32,7 @@ add_blend_map_texture
     texture=#Ground037_Sl
     min_height=-INFINITY
     max_height=INFINITY
-    distances=0 0 50 100
+    distances=0 0 15 25
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=1
@@ -43,10 +43,43 @@ add_blend_map_texture
     texture=#Ground037_Sl
     min_height=-INFINITY
     max_height=INFINITY
-    distances=50 100 INFINITY INFINITY
+    distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_far1
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=15 25 200 300
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_far2
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=200 300 1000 1500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.02
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_far3
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=1000 1500 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.005
     weight=1;
 
 add_blend_map_texture
@@ -54,7 +87,7 @@ add_blend_map_texture
     texture=#Ground037_Sl_red
     min_height=-INFINITY
     max_height=INFINITY
-    distances=50 100 INFINITY INFINITY
+    distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.1
@@ -134,7 +167,7 @@ add_blend_map_texture
     texture=#Rock036
     min_height=-INFINITY
     max_height=INFINITY
-    distances=0 0 50 100
+    distances=0 0 15 25
     normal=0.89 0.62 0.07
     cosine=-1 -1 1 1
     scale=0.5
@@ -148,7 +181,7 @@ add_blend_map_texture
     texture=#grass_ground
     min_height=-INFINITY
     max_height=INFINITY
-    distances=0 0 50 100
+    distances=0 0 15 25
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=1
@@ -159,7 +192,7 @@ add_blend_map_texture
     texture=#grass_ground
     min_height=-INFINITY
     max_height=INFINITY
-    distances=50 100 INFINITY INFINITY
+    distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.1

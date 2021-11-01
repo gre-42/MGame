@@ -5,6 +5,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
 
     macro_playback scene_racing_static
         OSM_MAP_RESOURCE:osm_resource_grossglockner_hochalpenstrasse-STYLE
+        OSM_POSITION_Y:-2000
         DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
         DIRTMAP_OFFSET:0
         DIRTMAP_DISCRETENESS:1
@@ -24,9 +25,9 @@ macro_begin create_grossglockner_hochalpenstrasse;
         macro_playback generic_scene_racing_dynamic
             IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
             IF_CREATE_PLAYER_CAR:
-            CAR_NODE_X:-753
-            CAR_NODE_Y:620
-            CAR_NODE_Z:2105
+            CAR_NODE_X:12.82654855_deg
+            CAR_NODE_Y:47.1171865_deg
+            CAR_NODE_Z:2150
             CAR_NODE_ANGLE_X:0
             CAR_NODE_ANGLE_Y:-90
             CAR_NODE_ANGLE_Z:0
