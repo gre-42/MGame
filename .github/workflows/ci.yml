@@ -13,14 +13,14 @@ on:
 
 jobs:
   build-ubuntu:
-    runs-on: ubuntu-21.10
+    runs-on: ubuntu-latest
 
     steps:
       - name: Install dependencies
         run: |
           sudo apt-get update && \
           sudo apt-get install -y \
-            g++ \
+            g++-10 \
             ninja-build \
             libglfw3-dev
       
@@ -30,7 +30,7 @@ jobs:
           submodules: true
 
       - name: Build
-        run: make build
+        run: CXX=g++-10 make build
 
       - name: Package
         run: make package
