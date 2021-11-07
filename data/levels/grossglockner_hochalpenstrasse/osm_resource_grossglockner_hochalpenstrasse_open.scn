@@ -4,10 +4,10 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         filename=__DIR__/map_grossglockner_hochalpenstrasse.osm,
         heightmap=__DIR__/heightmap_large.png,
         terrain_grass_textures=
-            #Ground037_Sl_near
-            #Ground037_Sl_far1
-            #Ground037_Sl_far2
-            #Ground037_Sl_far3
+            #Ground037_Sl_Rock028_near
+            #Ground037_Sl_Rock028_far1
+            #Ground037_Sl_Rock028_far2
+            #Ground037_Sl_Rock028_far3
             #Rock028_200_near
             #Rock028_200_far1
             #Rock028_200_far2,
