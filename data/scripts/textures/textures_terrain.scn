@@ -7,84 +7,84 @@ add_texture_descriptor
 add_texture_descriptor
     name=Gravel010
     color=textures/cc0textures/Gravel010_2K_Color.jpg
-    normal=textures/cc0textures/Gravel010_2K_Normal.jpg
+    normal=textures/cc0textures/Gravel010_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Gravel010_Alpha
     color=textures/cc0textures/Gravel010_2K_Color.png
-    normal=textures/cc0textures/Gravel010_2K_Normal.jpg
+    normal=textures/cc0textures/Gravel010_2K_NormalGL.jpg
     color_mode=rgba
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Plaster003
     color=textures/cc0textures/Plaster003_2K_Color.jpg
-    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Plaster003_wh
     color=textures/cc0textures/Plaster003_2K_Color_wh.jpg
-    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Plaster003_ye
     color=textures/cc0textures/Plaster003_2K_Color_ye.jpg
-    normal=textures/cc0textures/Plaster003_2K_Normal.jpg
+    normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Bricks051
     color=textures/cc0textures/Bricks051_2K_Color.jpg
-    normal=textures/cc0textures/Bricks051_2K_Normal.jpg
+    normal=textures/cc0textures/Bricks051_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Concrete020
     color=textures/cc0textures/Concrete020_2K_Color.jpg
-    normal=textures/cc0textures/Concrete020_2K_Normal.jpg
+    normal=textures/cc0textures/Concrete020_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Asphalt015
     color=textures/cc0textures/Asphalt015_2K_Color.jpg
-    normal=textures/cc0textures/Asphalt015_2K_Normal.jpg
+    normal=textures/cc0textures/Asphalt015_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=PavingStones038
     color=textures/cc0textures/PavingStones038_2K_Color.jpg
-    normal=textures/cc0textures/PavingStones038_2K_Normal.jpg
+    normal=textures/cc0textures/PavingStones038_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=PavingStones035
     color=textures/cc0textures/PavingStones035_2K_Color_da.jpg
-    normal=textures/cc0textures/PavingStones035_2K_Normal.jpg
+    normal=textures/cc0textures/PavingStones035_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=PavingStones052
     color=textures/cc0textures/PavingStones052_2K_Color.jpg
-    normal=textures/cc0textures/PavingStones052_2K_Normal.jpg
+    normal=textures/cc0textures/PavingStones052_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Metal038
     color=textures/cc0textures/Metal038_2K_Color.jpg
-    normal=textures/cc0textures/Metal038_2K_Normal.jpg
+    normal=textures/cc0textures/Metal038_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
@@ -105,21 +105,21 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground029
     color=textures/cc0textures/Ground029_2K_Color.jpg
-    normal=textures/cc0textures/Ground029_2K_Normal.jpg
+    normal=textures/cc0textures/Ground029_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Ground037
     color=textures/cc0textures/Ground037_2K_Color.jpg
-    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    normal=textures/cc0textures/Ground037_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Ground037_dark27
     color=textures/cc0textures/Ground037_2K_Color.jpg
-    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    normal=textures/cc0textures/Ground037_2K_NormalGL.jpg
     color_mode=rgb
     lighten=-0.27 -0.27 -0.27
     anisotropic_filtering_level=16;
@@ -127,7 +127,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground037_Sl
     color=textures/cc0textures/Ground037_2K_Color.jpg
-    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    normal=textures/cc0textures/Ground037_2K_NormalGL.jpg
     color_mode=rgb
     histogram=textures/histograms/Billboard_2K_Albedo_Lower.png
     anisotropic_filtering_level=16;
@@ -143,7 +143,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground037_Sl_red
     color=textures/cc0textures/Ground037_2K_Color_Sl.jpg
-    normal=textures/cc0textures/Ground037_2K_Normal.jpg
+    normal=textures/cc0textures/Ground037_2K_NormalGL.jpg
     color_mode=rgb
     histogram=textures/histograms/red_green.png
     anisotropic_filtering_level=16;
@@ -151,21 +151,21 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground025
     color=textures/cc0textures/Ground025_2K_Color.jpg
-    normal=textures/cc0textures/Ground025_2K_Normal.jpg
+    normal=textures/cc0textures/Ground025_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Ground038_Way_Wheels
     color=textures/cc0textures/Ground038_2K_Color_Way_Wheels.png
-    normal=textures/cc0textures/Ground038_2K_Normal.jpg
+    normal=textures/cc0textures/Ground038_2K_NormalGL.jpg
     color_mode=rgba
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Ground038_Way_Wheels_dark27
     color=textures/cc0textures/Ground038_2K_Color_Way_Wheels.png
-    normal=textures/cc0textures/Ground038_2K_Normal.jpg
+    normal=textures/cc0textures/Ground038_2K_NormalGL.jpg
     color_mode=rgba
     lighten=-0.27 -0.27 -0.27
     anisotropic_filtering_level=16;
@@ -173,7 +173,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground038_dark27
     color=textures/cc0textures/Ground038_2K_Color.jpg
-    normal=textures/cc0textures/Ground038_2K_Normal.jpg
+    normal=textures/cc0textures/Ground038_2K_NormalGL.jpg
     color_mode=rgb
     lighten=-0.27 -0.27 -0.27
     anisotropic_filtering_level=16;
@@ -235,7 +235,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Rock036
     color=textures/cc0textures/Rock036_2K_Color.jpg
-    normal=textures/cc0textures/Rock036_2K_Normal.jpg
+    normal=textures/cc0textures/Rock036_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
@@ -261,14 +261,14 @@ add_texture_descriptor
 add_texture_descriptor
     name=Road003
     color=textures/cc0textures/Road003_2K_Color.jpg
-    normal=textures/cc0textures/Road003_2K_Normal.jpg
+    normal=textures/cc0textures/Road003_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Road007
     color=textures/cc0textures/Road007_2K_Color.jpg
-    normal=textures/cc0textures/Road007_2K_Normal.jpg
+    normal=textures/cc0textures/Road007_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
@@ -283,7 +283,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Road007_Alpha
     color=textures/cc0textures/Road007_2K_Color_Dirt_Sharp2.png
-    normal=textures/cc0textures/Road007_2K_Normal.jpg
+    normal=textures/cc0textures/Road007_2K_NormalGL.jpg
     color_mode=rgba
     anisotropic_filtering_level=16;
 
@@ -367,14 +367,14 @@ add_texture_descriptor
 add_texture_descriptor
     name=PavingStones046
     color=textures/cc0textures/PavingStones046_2K_Color.jpg
-    normal=textures/cc0textures/PavingStones046_2K_Normal.jpg
+    normal=textures/cc0textures/PavingStones046_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Bark007
     color=textures/cc0textures/Bark007_2K_Color.jpg
-    normal=textures/cc0textures/Bark007_2K_Normal.jpg
+    normal=textures/cc0textures/Bark007_2K_NormalGL.jpg
     color_mode=rgb
     anisotropic_filtering_level=0;
 
@@ -387,7 +387,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Concrete008_Barrier
     color=textures/cc0textures/Concrete008_2K_Color_Barrier.png
-    normal=textures/cc0textures/Concrete008_2K_Normal.jpg
+    normal=textures/cc0textures/Concrete008_2K_NormalGL.jpg
     color_mode=rgba
     anisotropic_filtering_level=16;
 
