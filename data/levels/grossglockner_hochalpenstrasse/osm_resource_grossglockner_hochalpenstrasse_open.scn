@@ -47,6 +47,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             vegetation1.10(p:0.002)
             vegetation1.11(p:0.002),
         default_street_width=9,
+        default_lane_width=4,
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
