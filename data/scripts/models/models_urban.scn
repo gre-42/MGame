@@ -84,7 +84,7 @@ obj_resource
     filename=models/box.obj
     position=0 0 0
     rotation=0 0 0
-    scale=0.1 0.1 1
+    scale=0.16 1 0.16
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
@@ -112,11 +112,27 @@ obj_resource
     transformation_mode=position_yangle;
 
 obj_resource
+    name=road_bollard3
+    filename=models/road_bollard/road_bollard3.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.3 0.3 0.3
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
     name=street_light_hitbox
     filename=models/box.obj
     position=0 0 0
     rotation=0 0 0
-    scale=0.1 0.1 5
+    scale=0.1 5 0.1
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
