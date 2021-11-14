@@ -22,6 +22,9 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         curb_path_texture=#concrete1_2K_ye,
         curb2_street_texture=,
         curb2_path_texture=,
+        air_curb_street_texture=#concrete1_2K_ye,
+        air_curb_path_texture=#concrete1_2K_ye,
+        air_support_texture=#Concrete020,
         socle_textures=
             #Bricks058,
         facade_textures=
@@ -85,6 +88,8 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             track,
         steiner_point_distances_road=0 2 7 100,
         steiner_point_distances_steiner=INFINITY 7 7 100,
+        layer_heights_layer=0 1,
+        layer_heights_height=0 5,
         curb_alpha=0.9,
         curb2_alpha=1,
         curb_uv_x=1,
@@ -92,6 +97,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         raise_streets_amount=0,
         extrude_curb_amount=0,
         extrude_street_amount=-0.1,
+        extrude_air_support_amount=-0.5,
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=1,
