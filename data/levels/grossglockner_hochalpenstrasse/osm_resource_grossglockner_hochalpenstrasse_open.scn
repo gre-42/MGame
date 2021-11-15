@@ -90,9 +90,9 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         steiner_point_distances_steiner=INFINITY 7 7 100,
         layer_heights_layer=0 1,
         layer_heights_height=0 5,
-        curb_alpha=0.9,
+        curb_alpha=1,
         curb2_alpha=1,
-        curb_uv_x=1,
+        curb_uv_x=NAN,
         curb2_uv_x=NAN,
         raise_streets_amount=0,
         extrude_curb_amount=0,
@@ -105,5 +105,11 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         street_edge_smoothness=0.1,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
-        blend_street=0;
+        blend_street=0,
+        street_surface_central_resource_name=road_extrudable_central,
+        street_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
+        street_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
+        path_surface_central_resource_name=road_extrudable_central,
+        path_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
+        path_surface_endpoint1_resource_name=road_extrudable_endpoint_1;
 macro_end;
