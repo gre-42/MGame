@@ -97,6 +97,41 @@ macro_begin load_road;
 
 macro_end;
 
+macro_begin load_parking;
+    obj_resource
+        name=RIGHT_NAME
+        filename=MODEL
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+    obj_resource
+        name=LEFT_NAME
+        filename=MODEL
+        position=0 0 0
+        rotation=0 0 0
+        scale=-1 -1 1
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+
+macro_end;
+
 macro_playback load_road
     CENTRAL_NAME:road_central1
     ENDPOINT0_NAME:road_endpoint1_0
@@ -136,21 +171,10 @@ macro_playback load_road
     CENTRAL_NAME:road_extrudable_central
     ENDPOINT0_NAME:road_extrudable_endpoint_0
     ENDPOINT1_NAME:road_extrudable_endpoint_1
-    CENTRAL:models/road/extrudable_central.obj
-    ENDPOINT:models/road/extrudable_endpoint.obj;
+    CENTRAL:models/road/extrudable.curb-curb.obj
+    ENDPOINT:models/road/extrudable.plain-curb.obj;
 
-obj_resource
-    name=road_parking_edge
-    filename=models/road/parking_edge.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
-    aggregate_mode=off
-    transformation_mode=all;
+macro_playback load_parking
+    LEFT_NAME:road_parking_edge_left.central-central
+    RIGHT_NAME:road_parking_edge_right.central-central
+    MODEL:models/road/parking_edge.curb-curb.obj;
