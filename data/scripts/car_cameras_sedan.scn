@@ -2,8 +2,8 @@ macro_begin create_car_cameras_sedan;
     root_node_instance type=dynamic name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
 
-    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
-    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=60 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=car_node-SUFFIX;
     follow_node

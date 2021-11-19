@@ -339,9 +339,9 @@ macro_begin _scene_tank_instantiate;
     # side of car, far;
     # root_node_instance type=dynamic name=camera position=0 10 500 rotation=-2 0 0 scale=1;
 
-    perspective_camera node=45_deg_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
-    perspective_camera node=follower_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
-    perspective_camera node=main_gun_end_node y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=1;
+    perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=follower_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=1;
+    perspective_camera node=main_gun_end_node y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=1;
 
     include create_cameras.scn;
 

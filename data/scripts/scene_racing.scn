@@ -79,7 +79,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     # Cameras #;
     ###########;
     root_node_instance type=dynamic name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
-    perspective_camera node=stadium_camera y_fov=0.5 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    perspective_camera node=stadium_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
     
     set_camera_cycle name=far stadium_camera;
     set_camera_cycle name=near;
