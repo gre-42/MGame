@@ -125,5 +125,8 @@ macro_begin osm_resource_jb_race;
         blend_street=1,
         street_surface_central_resource_name=road_low_central3,
         street_surface_endpoint0_resource_name=road_low_endpoint3_0,
-        street_surface_endpoint1_resource_name=road_low_endpoint3_1;
+        street_surface_endpoint1_resource_name=road_low_endpoint3_1,
+        path_surface_central_resource_name=road_low_central3,
+        path_surface_endpoint0_resource_name=road_low_endpoint3_0,
+        path_surface_endpoint1_resource_name=road_low_endpoint3_1;
 macro_end;
