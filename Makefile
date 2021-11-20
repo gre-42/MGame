@@ -60,8 +60,8 @@ run:
 		--print_render_residual_time \
 		--nsamples_msaa 2 \
 		--show_mouse_cursor \
-		--screen_width 1500 \
-		--screen_height 900
+		--windowed_width 1500 \
+		--windowed_height 900
 
 run_dev: build
 	gdb -ex="catch throw" --ex=r --args Mlib/$(platform_dir)/Bin/render_scene_file \
@@ -71,6 +71,6 @@ run_dev: build
 		--print_physics_residual_time \
 		--nsamples_msaa 2 \
 		--show_mouse_cursor \
-		--screen_width 1500 \
-		--screen_height 900 \
+		--windowed_width 1500 \
+		--windowed_height 900 \
 		--devel_mode
