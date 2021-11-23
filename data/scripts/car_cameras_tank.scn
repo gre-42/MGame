@@ -5,7 +5,7 @@ macro_begin create_car_cameras_tank;
     child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_camera_node-SUFFIX position=0 2 10 rotation=0 0 0 scale=1;
 
     perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
-    perspective_camera node=follower_camera y_fov=30 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=follower_camera y_fov=60 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
     # perspective_camera node=turret_camera_node-SUFFIX y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=1;
     perspective_camera node=main_gun_camera_node-SUFFIX y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=1;
 
@@ -13,8 +13,8 @@ macro_begin create_car_cameras_tank;
     follow_node
         follower=follower_camera
         followed=car_node-SUFFIX
-        distance=20
-        node_displacement=0 6 0
+        distance=10
+        node_displacement=0 4 0
         look_at_displacement=0 4 0
         snappiness=2
         y_adaptivity=15
