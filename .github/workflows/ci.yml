@@ -24,7 +24,8 @@ jobs:
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
-            libalut-dev
+            libalut-dev \
+            libaudio-dev
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
