@@ -24,8 +24,7 @@ jobs:
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
-            libalut-dev \
-            libaudio-dev
+            libalut-dev
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -66,6 +65,8 @@ jobs:
             mingw-w64-x86_64-gcc \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-cmake \
+            mingw-w64-x86_64-openal \
+            mingw-w64-x86_64-freealut \
             make \
             rsync
 
