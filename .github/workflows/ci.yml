@@ -23,7 +23,8 @@ jobs:
             g++-10 \
             ninja-build \
             libglfw3-dev \
-            libopenal-dev
+            libopenal-dev \
+            libalut-dev
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
