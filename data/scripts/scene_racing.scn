@@ -71,9 +71,9 @@ macro_begin _scene_racing_instantiate_static_objects;
     #############;
     # Particles #;
     #############;
-    root_node_instance type=static name=particles position=0 0 0 rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=particles name=explosion_01 position=0 0 0 rotation=0 0 0 scale=1;
-    renderable_instance name=explosion_01 node=explosion_01 resource=explosion_01;
+    # root_node_instance type=static name=particles position=0 0 0 rotation=0 0 0 scale=1;
+    # child_node_instance type=dynamic parent=particles name=explosion_01 position=0 0 0 rotation=0 0 0 scale=1;
+    # renderable_instance name=explosion_01 node=explosion_01 resource=explosion_01;
 
     ###########;
     # Cameras #;
@@ -146,10 +146,10 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_WITH_GRAPHICS:
             IF_WITH_PHYSICS:#
             IF_PLAYBACK_TRACK:
+            IF_PLAYBACK_WINNER:#
             PLAYBACK_SPEED:PLAYBACK_SPEED
             RECORDINGS_DIR:RECORDINGS_DIR
             PSUFFIX:PSUFFIX
-            IF_PLAYBACK_WINNER:#
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
