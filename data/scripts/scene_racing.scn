@@ -177,6 +177,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_SHADOW:
             IF_DAMAGEABLE:#
             IF_STYLE:#;
+        add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
     macro_end;
 
     IF_PLAYBACK_TRACK_1 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_M3 DECIMATE:_d3 PSUFFIX:1;

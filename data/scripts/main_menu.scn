@@ -19,6 +19,7 @@ macro_begin _setup_menu_showroom;
 macro_end;
 
 macro_begin reload_transient_objects;
+    clear_nodes_not_allowed_to_be_unregistered;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
         SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR
