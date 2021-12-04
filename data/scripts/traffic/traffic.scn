@@ -52,6 +52,7 @@ macro_begin traffic.create_car;
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         IF_STATIC:IF_STATIC=#
         IF_DYNAMIC:IF_DYNAMIC=#
         IF_PLAYBACK_TRACK:#
@@ -76,7 +77,7 @@ macro_end;
 
 macro_begin traffic.create_npc_and_parking_car;
     macro_playback traffic.create_npc_player PLAYER_NAME:PLAYER_NAME UNSTUCK_MODE:off;
-    set_preferred_car_spawner player=PLAYER_NAME macro=traffic.create_car parameters=CAR_NAME:CAR_NAME DECIMATE: R:R G:G B:B IF_DYNAMIC: ; # IF_STATIC;
+    set_preferred_car_spawner player=PLAYER_NAME macro=traffic.create_car parameters=CAR_NAME:CAR_NAME DECIMATE: R:R G:G B:B IF_DYNAMIC: HAND_BRAKE_PULLED:1; # IF_STATIC;
 macro_end;
 
 macro_begin traffic.create_npc_and_driving_car;

@@ -38,8 +38,8 @@ macro_begin create_tiger_tank_physics;
     #  400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
-    create_engine rigid_body=car_node-SUFFIX name=main power=294200 hand_brake_pulled=HAND_BRAKE_PULLED;
-    create_engine rigid_body=car_node-SUFFIX name=breaks power=0 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
     wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
