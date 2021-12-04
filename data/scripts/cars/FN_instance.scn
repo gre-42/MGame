@@ -19,11 +19,11 @@ macro_begin create_FN_physics;
     #  400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
-    IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
     IF_RACING create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=14710 147100 147100 14710 gear_ratios=1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=-300 -200 -100 0 powers=14710 147100 147100 14710 gear_ratios=1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=14710 147100 147100 14710 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=-300 -200 -100 0 powers=14710 147100 147100 14710 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED;
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.75 -0.45 -1.45 radius=0.25 engine=main break_force=50000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.75 -0.45 -1.45 radius=0.25 engine=main break_force=50000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
