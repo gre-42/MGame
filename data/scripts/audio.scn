@@ -1,8 +1,8 @@
 add_audio
     name=car.driving
-    filename=data/sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/fast.wav
-    gain=0.2;
+    filename=data/sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/fast-mono.wav
+    gain=2;
 add_audio
     name=car.idle
-    filename=data/sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/idle.wav
-    gain=1;
+    filename=data/sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/idle-mono.wav
+    gain=10;
