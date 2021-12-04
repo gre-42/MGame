@@ -88,6 +88,7 @@ macro_begin osm_resource_nyc;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=INFINITY,
         much_near_grass_distance=2,
+        much_near_grass_distance_to_bdry=1,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
