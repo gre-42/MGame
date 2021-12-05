@@ -156,17 +156,17 @@ macro_begin _setup_menu_primary_scene;
 
     focused_text
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=200 200
-        font_height=32
-        line_distance=32
+        position=NAN NAN
+        font_height=64
+        line_distance=64
         focus_mask=loading
         text=Loading...;
     
     focused_text
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=200 200
-        font_height=32
-        line_distance=32
+        position=NAN NAN
+        font_height=64
+        line_distance=64
         focus_mask=game_over
         text=Game over;
 macro_end;
