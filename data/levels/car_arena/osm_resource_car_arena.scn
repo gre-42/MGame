@@ -5,10 +5,8 @@ macro_begin osm_resource_car_arena;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=
-        #grass_ground_near
-            #Ground037_Sl_far
-            #Rock028_200_near
-            #Rock028_200_far,
+            #Ground003_near
+            #Ground003_far,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -38,12 +36,14 @@ macro_begin osm_resource_car_arena;
         grass_resource_names=,
         near_grass_resource_names=
             bflower2(p:0.1)
-            grass12y_near_Ground037_Sl
-            bflower(p:0.1),
+            grass_tbdpec3r_Ground003
+            bflower(p:0.1)
+            vegetation1.10(p:0.002)
+            vegetation1.11(p:0.002),
         default_street_width=10,
         roof_width=2,
         scale=1e-3,
-        uv_scale_terrain=1e-1,
+        uv_scale_terrain=3e-1,
         uv_scale_street=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
@@ -58,7 +58,7 @@ macro_begin osm_resource_car_arena;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=10,
-        much_near_grass_distance=2,
+        much_near_grass_distance=3,
         much_near_flowers_distance=2,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
