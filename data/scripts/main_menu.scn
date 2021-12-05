@@ -31,6 +31,7 @@ macro_begin _setup_menu_primary_scene;
         texture=textures/ui_background.png
         update=once
         focus_mask=menu;
+
     ui_background
         texture=textures/ui_background.png
         update=once
@@ -153,12 +154,21 @@ macro_begin _setup_menu_primary_scene;
             name=110% value=PLAYBACK_SPEED:1.1
             name=120% value=PLAYBACK_SPEED:1.2;
 
-    loading
+    focused_text
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=200 200
         font_height=32
         line_distance=32
+        focus_mask=loading
         text=Loading...;
+    
+    focused_text
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=200 200
+        font_height=32
+        line_distance=32
+        focus_mask=game_over
+        text=Game over;
 macro_end;
 
 macro_begin create_main_menu;
