@@ -199,7 +199,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         radius=30
         height_changed=0
         track_filename=RECORDINGS_DIR/track1.m
-        on_finish=append_focus game_over;
+        on_finish=append_focuses game_over menu;
 
     camera_key_binding key=C gamepad_button=Y joystick_digital_axis= joystick_digital_axis_sign=NAN;
 
