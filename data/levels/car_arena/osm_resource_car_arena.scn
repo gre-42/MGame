@@ -25,9 +25,9 @@ macro_begin osm_resource_car_arena;
         socle_textures=
             #Bricks058,
         facade_textures=
-            #Plaster003
-            #Plaster003_ye
-            #Plaster003_wh,
+            Plaster003
+            Plaster003_ye
+            Plaster003_wh,
         ceiling_texture=#Asphalt015,
         barrier_textures=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous wrap_mode_t:repeat reorient_uv0:0,

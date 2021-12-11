@@ -30,9 +30,9 @@ macro_begin osm_tank_fps_resource;
         socle_textures=
             #Bricks058,
         facade_textures=
-            #Plaster003_wh
-            #Plaster003_ye
-            #Plaster003,
+            Plaster003_wh
+            Plaster003_ye
+            Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,

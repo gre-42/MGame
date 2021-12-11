@@ -14,9 +14,9 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_closed;
         curb2_street_texture=
         curb2_path_texture=
         facade_textures=
-            #Plaster003_wh
-            #Plaster003_ye
-            #Plaster003
+            Plaster003_wh
+            Plaster003_ye
+            Plaster003
         ceiling_texture=textures/street+asphalt-1024x1024.png
         barrier_textures=
             texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0

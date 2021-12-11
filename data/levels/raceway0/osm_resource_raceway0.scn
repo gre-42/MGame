@@ -27,9 +27,9 @@ macro_begin osm_resource_raceway0;
         curb2_street_texture=
         curb2_path_texture=,
         facade_textures=
-            #Plaster003_wh
-            #Plaster003_ye
-            #Plaster003,
+            Plaster003_wh
+            Plaster003_ye
+            Plaster003,
         ceiling_texture=textures/street+asphalt-1024x1024.png,
         barrier_textures=
             name:traffic_barrier texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous wrap_mode_t:clamp_to_edge reorient_uv0:0
