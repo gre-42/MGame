@@ -1,24 +1,3 @@
-add_texture_descriptor
-    name=Plaster003_2K_Color_Green
-    color=textures/cc0textures/Plaster003_2K_Color.jpg
-    color_mode=rgb
-    mean_color=0.45 0.5 0.45
-    anisotropic_filtering_level=16;
-
-add_texture_descriptor
-    name=Plaster003_2K_Color_Blue
-    color=textures/cc0textures/Plaster003_2K_Color.jpg
-    color_mode=rgb
-    mean_color=0.45 0.45 0.5
-    anisotropic_filtering_level=16;
-
-add_texture_descriptor
-    name=Plaster003_2K_Color_White
-    color=textures/cc0textures/Plaster003_2K_Color.jpg
-    color_mode=rgb
-    mean_color=0.45 0.45 0.45
-    anisotropic_filtering_level=16;
-
 macro_begin add_facade_exture;
     add_texture_atlas
         name=color_-NAME
@@ -58,15 +37,15 @@ macro_playback add_facade_exture
 
 macro_playback add_facade_exture
     NAME:facade_plaster_white
-    WALL_COLOR:#Plaster003_2K_Color_White
+    WALL_COLOR:#Plaster003_White
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
 macro_playback add_facade_exture
     NAME:facade_plaster_green
-    WALL_COLOR:#Plaster003_2K_Color_Green
+    WALL_COLOR:#Plaster003_Green
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
 macro_playback add_facade_exture
     NAME:facade_plaster_blue
-    WALL_COLOR:#Plaster003_2K_Color_Blue
+    WALL_COLOR:#Plaster003_Blue
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;

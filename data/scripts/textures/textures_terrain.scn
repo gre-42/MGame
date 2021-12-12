@@ -26,17 +26,27 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
-    name=Plaster003_wh
-    color=textures/cc0textures/Plaster003_2K_Color_wh.jpg
+    name=Plaster003_White
+    color=textures/cc0textures/Plaster003_2K_Color.jpg
     normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
     color_mode=rgb
+    mean_color=0.5 0.5 0.5
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
-    name=Plaster003_ye
-    color=textures/cc0textures/Plaster003_2K_Color_ye.jpg
+    name=Plaster003_Green
+    color=textures/cc0textures/Plaster003_2K_Color.jpg
     normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
     color_mode=rgb
+    mean_color=0.45 0.5 0.45
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Plaster003_Blue
+    color=textures/cc0textures/Plaster003_2K_Color.jpg
+    normal=textures/cc0textures/Plaster003_2K_NormalGL.jpg
+    color_mode=rgb
+    mean_color=0.45 0.45 0.5
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
