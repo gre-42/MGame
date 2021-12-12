@@ -37,8 +37,8 @@ macro_begin osm_resource_nyc;
         facade_textures=
             Plaster003(max_height:5)
             Plaster003_wh(max_height:5)
-            DE21F2_industryWindow00001_1024_Bricks(min_height:5)(max_height:50)
-            DE21F2_industryWindow00001_1024_Plaster(min_height:5)(max_height:50)
+            facade_bricks_red(min_height:5)(max_height:50)
+            facade_plaster_orange(min_height:5)(max_height:50)
             DE21F2_industryWindow00001_1024(min_height:50)
             DE21F2_industryWindow00002(min_height:50)
             DE21F2_industryWindow00003_gray(min_height:50)
