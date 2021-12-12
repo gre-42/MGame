@@ -48,12 +48,12 @@ macro_begin osm_resource_nyc;
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=
-            vegetation0.0(hitbox:02_1_02_hitbox)
-            vegetation0.1(hitbox:02_1_02_hitbox)
-            vegetation0.2(hitbox:02_1_02_hitbox)
-            vegetation0.3(hitbox:02_1_02_hitbox)
-            vegetation0.4(hitbox:02_1_02_hitbox)
-            vegetation0.5(hitbox:02_1_02_hitbox),
+            vegetation2.0(hitbox:02_1_02_hitbox)
+            vegetation2.1(hitbox:02_1_02_hitbox)
+            vegetation2.2(hitbox:02_1_02_hitbox)
+            vegetation2.3(hitbox:02_1_02_hitbox)
+            vegetation2.4(hitbox:02_1_02_hitbox)
+            vegetation2.5(hitbox:02_1_02_hitbox),
         grass_resource_names=,
         wayside_resource_names=
             min_dist:1
