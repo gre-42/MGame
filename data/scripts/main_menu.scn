@@ -26,6 +26,10 @@ macro_begin reload_transient_objects;
         PLAYBACK_SPEED:PLAYBACK_SPEED=1;
 macro_end;
 
+macro_begin _change_showroom_car_in_physics_thread;
+    execute_in_physics_thread macro_playback change_showroom_car;
+macro_end;
+
 macro_begin _setup_menu_primary_scene;
     ui_background
         texture=textures/ui_background.png
@@ -45,7 +49,7 @@ macro_begin _setup_menu_primary_scene;
         font_height=32
         line_distance=32
         default=0
-        reload_transient_objects=macro_playback reload_transient_objects;
+        reload_transient_objects=execute_in_physics_thread macro_playback reload_transient_objects;
 
     IF_DEVEL scene_selector
         id=scene_selector
@@ -110,7 +114,7 @@ macro_begin _setup_menu_primary_scene;
         line_distance=32
         default=0
         on_init=macro_playback create_showroom_car context=showroom
-        on_change=macro_playback change_showroom_car context=showroom
+        on_change=macro_playback _change_showroom_car_in_physics_thread context=showroom
         parameters=
             name=M3 value=SHOWROOM_PLAYER_CAR:_M3 SHOWROOM_DECIMATE:
             name=OT value=SHOWROOM_PLAYER_CAR:_OT SHOWROOM_DECIMATE:
