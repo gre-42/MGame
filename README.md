@@ -17,7 +17,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-GH-2021-11-14](media/Screenshot-GH-2021-11-21.jpg)
 
 ### San Francisco
-![Screenshot-SF-2021-07-04](media/Screenshot-SF-2021-11-21.jpg)
+![Screenshot-SF-2021-07-04](media/Screenshot-SF-2021-12-13.jpg)
 
 ### New York City
-![Screenshot-NYC-2021-07-04](media/Screenshot-NYC-2021-11-21.jpg)
+![Screenshot-NYC-2021-07-04](media/Screenshot-NYC-2021-12-13.jpg)
