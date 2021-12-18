@@ -1,7 +1,7 @@
-macro_begin osm_resource_car_arena;
+macro_begin osm_resource_arena;
     osm_resource
         name=osm_map,
-        filename=__DIR__/map_car_arena.osm,
+        filename=__DIR__/map_arena.osm,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=

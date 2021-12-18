@@ -1,8 +1,8 @@
 include ../../scripts/include_all.scn;
-include osm_resource_car_arena.scn;
+include osm_resource_arena.scn;
 
 macro_playback scene_racing_static
-    OSM_MAP_RESOURCE:osm_resource_car_arena
+    OSM_MAP_RESOURCE:osm_resource_arena
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1
