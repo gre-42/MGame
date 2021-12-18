@@ -1,0 +1,21 @@
+macro_begin setup_teams_3_4_humans_gunfight;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc1 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight R:1 G:0 B:0;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc2 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight R:1 G:0 B:0;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc3 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight R:1 G:0 B:0;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc4 HUMAN_NAME:_mh1 TEAM:blue GAME_MODE:gunfight R:0 G:0 B:1;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc5 HUMAN_NAME:_mh1 TEAM:blue GAME_MODE:gunfight R:0 G:0 B:1;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc6 HUMAN_NAME:_mh1 TEAM:blue GAME_MODE:gunfight R:0 G:0 B:1;
+    macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc7 HUMAN_NAME:_mh1 TEAM:blue GAME_MODE:gunfight R:0 G:0 B:1;
+
+    set_preferred_car_spawner player=you macro=teams.create_player_human parameters=HUMAN_NAME:_mh1 DECIMATE: IF_MANUAL_AIM: IF_AUTO_AIM:#;
+
+    set_spawn_points node=osm_map_node resource=osm_map;
+
+    visual_global_log
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-200 -400
+        font_height=24
+        line_distance=24
+        nentries=10
+        severity=critical;
+macro_end;

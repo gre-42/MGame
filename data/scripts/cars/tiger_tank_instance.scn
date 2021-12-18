@@ -15,7 +15,8 @@ macro_begin create_tiger_tank_physics;
         yaw_node=turret_node-SUFFIX
         pitch_node=main_gun_node-SUFFIX
         parent_follower_rigid_body_node=car_node-SUFFIX
-        followed= bullet_start_offset=20
+        followed=
+        bullet_start_offset=20
         bullet_velocity=900
         gravity=9.8
         dyaw_max=0.4

@@ -65,17 +65,6 @@ macro_begin create_car_key_bindings_rally;
 
     IF_MANUAL_AIM rel_key_binding
         node=turret_node-SUFFIX
-        key=RIGHT
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=1
-        cursor_axis=0
-        cursor_sign_and_scale=0.03
-        rotation_axis=0 1 0
-        angular_velocity_press=-0.1
-        angular_velocity_repeat=-1
-        speed_cursor=0.1;
-    IF_MANUAL_AIM rel_key_binding
-        node=turret_node-SUFFIX
         key=LEFT
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
@@ -84,6 +73,17 @@ macro_begin create_car_key_bindings_rally;
         rotation_axis=0 1 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
+        speed_cursor=0.1;
+    IF_MANUAL_AIM rel_key_binding
+        node=turret_node-SUFFIX
+        key=RIGHT
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        cursor_axis=0
+        cursor_sign_and_scale=0.03
+        rotation_axis=0 1 0
+        angular_velocity_press=-0.1
+        angular_velocity_repeat=-1
         speed_cursor=0.1;
 
     IF_MANUAL_AIM rel_key_binding

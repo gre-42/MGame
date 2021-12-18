@@ -1,9 +1,0 @@
-macro_begin create_human_npc_player;
-    player_create
-        name=PLAYER_NAME
-        team=TEAM
-        game_mode=GAME_MODE
-        unstuck_mode=UNSTUCK_MODE
-        driving_mode=DRIVING_MODE
-        driving_direction=DRIVING_DIRECTION;
-macro_end;
