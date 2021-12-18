@@ -5,6 +5,7 @@ macro_begin teams.create_player_human;
         CAR_NODE_Z:CAR_NODE_Z
         HUMAN_NODE_ANGLE_Y:HUMAN_NODE_ANGLE_Y
         HUMAN_NAME:HUMAN_NAME
+        IF_STYLE:IF_STYLE
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
@@ -14,9 +15,7 @@ macro_begin teams.create_player_human;
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_AUTO_AIM:IF_AUTO_AIM
         PLAYER_NAME:PLAYER_NAME
-        R:R
-        G:G
-        B:B;
+        R:R G:G B:B;
     macro_playback create_player_human_externals
         HUMAN_NAME:HUMAN_NAME
         SUFFIX:SUFFIX
