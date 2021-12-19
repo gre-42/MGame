@@ -241,10 +241,10 @@ macro_begin _scene_tank_instantiate;
     # macro_playback create_tiger_tank PLAYER_NAME:npc12 TEAM:blue SUFFIX:12 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
     # macro_playback create_tiger_tank PLAYER_NAME:npc13 TEAM:blue SUFFIX:13 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
 
-    # player_set_waypoint player_name=npc1 position=-100 -500;
-    # team_set_waypoint team-name=red position=-100 -500;
-    team_set_waypoint team-name=red position=150 560;
-    team_set_waypoint team-name=blue position=1100 100;
+    # player_set_waypoint player_name=npc1 position=-100 0 -500;
+    # team_set_waypoint team-name=red position=-100 0 -500;
+    team_set_waypoint team-name=red position=150 0 560;
+    team_set_waypoint team-name=blue position=1100 0 100;
 
     burn_in seconds=20;
 
@@ -628,6 +628,7 @@ create_scene
     with_dirtmap=PRIMARY_SCENE_WITH_DIRTMAP
     with_skybox=PRIMARY_SCENE_WITH_SKYBOX
     with_flying_logic=PRIMARY_SCENE_WITH_FLYING_LOGIC
+    with_pod_bot=1
     clear_mode=PRIMARY_SCENE_CLEAR_MODE
     max_tracks=5;
 

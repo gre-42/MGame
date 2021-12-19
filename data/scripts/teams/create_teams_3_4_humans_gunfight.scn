@@ -1,4 +1,7 @@
 macro_begin setup_teams_3_4_humans_gunfight;
+    # Must be above bot creation;
+    set_pod_bot_way_points node=osm_map_node resource=osm_map;
+
     macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc1 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight IF_STYLE: R:1 G:0 B:0;
     macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc2 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight IF_STYLE: R:1 G:0 B:0;
     macro_playback teams.create_npc_and_human DECIMATE: PLAYER_NAME:h_npc3 HUMAN_NAME:_mh1 TEAM:red  GAME_MODE:gunfight IF_STYLE: R:1 G:0 B:0;
