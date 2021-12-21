@@ -33,7 +33,7 @@ macro_begin teams.create_npc_human;
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:
         IF_MANUAL_AIM:#
-        IF_AUTO_AIM:
+        IF_AUTO_AIM:IF_AUTO_AIM
         PLAYER_NAME:PLAYER_NAME
         R:R G:G B:B;
 macro_end;
