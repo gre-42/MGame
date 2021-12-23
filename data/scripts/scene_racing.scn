@@ -12,7 +12,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     ##########;
     # Player #;
     ##########;
-    player_create
+    IF_CREATE_PC_PLAYER player_create
         name=you
         team=red
         game_mode=racing
@@ -20,9 +20,9 @@ macro_begin _scene_racing_instantiate_static_objects;
         driving_mode=car_arena
         driving_direction=center;
 
-    set_can_drive player=you value=0;
-    set_can_aim player=you value=0;
-    set_can_shoot player=you value=0;
+    IF_CREATE_PC_PLAYER set_can_drive player=you value=0;
+    IF_CREATE_PC_PLAYER set_can_aim player=you value=0;
+    IF_CREATE_PC_PLAYER set_can_shoot player=you value=0;
 
     players_stats
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -99,7 +99,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     # macro_playback create_M3 -SUFFIX: IF_WITH_PHYSICS:;
     # macro_playback create_TW;
     # macro_playback create_XZ -SUFFIX: IF_WITH_PHYSICS:;
-    IF_CREATE_PLAYER_CAR macro_playback create_car
+    IF_CREATE_PC_CAR macro_playback create_car
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
@@ -122,7 +122,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_DAMAGEABLE:#
         IF_STYLE:#;
 
-    IF_CREATE_PLAYER_CAR player_set_node player_name=you node=car_node;
+    IF_CREATE_PC_CAR player_set_node player_name=you node=car_node;
 
     IF_BURN_IN burn_in seconds=20;
     
@@ -206,7 +206,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PLAYER_CAR macro_playback create_player_car_externals
+    IF_CREATE_PC_CAR macro_playback create_player_car_externals
         CAR_NAME:SHOWROOM_PLAYER_CAR
         SUFFIX:
         IF_RACING:IF_RACING
@@ -228,7 +228,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     # 244: v, a, d, d2, E;
     # 246: v, a, d, d2, E, p;
     # 14: v, s, health (if exists);
-    IF_CREATE_PLAYER_CAR IF_DEVEL visual_node_status
+    IF_CREATE_PC_CAR IF_DEVEL visual_node_status
         node=car_node
         format=246
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -236,7 +236,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         font_height=24
         line_distance=24;
     
-    IF_CREATE_PLAYER_CAR IF_RELEASE visual_node_status
+    IF_CREATE_PC_CAR IF_RELEASE visual_node_status
         node=car_node
         format=4
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -244,11 +244,11 @@ macro_begin _scene_racing_instantiate_transient_objects;
         font_height=24
         line_distance=24;
 
-    # IF_CREATE_PLAYER_CAR macro_playback add_attached_light LSUFFIX:1 CSUFFIX:;
+    # IF_CREATE_PC_CAR macro_playback add_attached_light LSUFFIX:1 CSUFFIX:;
 
-    IF_CREATE_PLAYER_CAR root_node_instance type=dynamic name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
-    IF_CREATE_PLAYER_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
-    IF_CREATE_PLAYER_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;
+    IF_CREATE_PC_CAR root_node_instance type=dynamic name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
+    IF_CREATE_PC_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
+    IF_CREATE_PC_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;
 macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;
@@ -282,6 +282,7 @@ macro_begin scene_racing_static;
     macro_playback
         _scene_racing_instantiate_static_objects
         context=primary_scene
+        IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         OSM_POSITION_Y:OSM_POSITION_Y=-220
         DIRTMAP_LEFT:DIRTMAP_LEFT
         DIRTMAP_RIGHT:DIRTMAP_RIGHT
@@ -306,7 +307,8 @@ macro_begin generic_scene_racing_dynamic;
     macro_playback
         _scene_racing_instantiate_transient_objects
         context=primary_scene
-        IF_CREATE_PLAYER_CAR:IF_CREATE_PLAYER_CAR
+        IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
+        IF_CREATE_PC_CAR:IF_CREATE_PC_CAR
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z

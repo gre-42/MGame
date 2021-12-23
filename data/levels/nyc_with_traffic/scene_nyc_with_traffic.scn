@@ -22,7 +22,7 @@ macro_playback scene_racing_static
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
-        IF_CREATE_PLAYER_CAR:
+        IF_CREATE_PC_CAR:
         CAR_NODE_X:-117
         CAR_NODE_Y:-170
         CAR_NODE_Z:120

@@ -21,7 +21,7 @@ macro_playback scene_racing_static
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
-        IF_CREATE_PLAYER_CAR:#
+        IF_CREATE_PC_CAR:#
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__

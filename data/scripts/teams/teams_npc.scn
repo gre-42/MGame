@@ -1,4 +1,4 @@
-macro_begin teams.create_human_npc_player;
+macro_begin teams.create_player_for_human_and_npc;
     player_create
         name=PLAYER_NAME
         team=TEAM
@@ -8,7 +8,7 @@ macro_begin teams.create_human_npc_player;
         driving_direction=center;
 macro_end;
 
-macro_begin teams.create_car_npc_player;
+macro_begin teams.create_player_for_car_and_npc;
     player_create
         name=PLAYER_NAME
         team=TEAM
@@ -18,7 +18,7 @@ macro_begin teams.create_car_npc_player;
         driving_direction=center;
 macro_end;
 
-macro_begin teams.create_npc_human;
+macro_begin teams.create_human_for_npc;
     macro_playback create_human
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
@@ -38,7 +38,7 @@ macro_begin teams.create_npc_human;
         R:R G:G B:B;
 macro_end;
 
-macro_begin teams.create_npc_car;
+macro_begin teams.create_car_for_npc;
     macro_playback create_car
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
@@ -73,11 +73,11 @@ macro_begin teams.create_npc_car;
         line_distance=16;
 macro_end;
 
-macro_begin teams.create_npc_and_human;
-    macro_playback teams.create_human_npc_player PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+macro_begin teams.create_player_and_human_for_npc;
+    macro_playback teams.create_player_for_human_and_npc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
     set_preferred_car_spawner
         player=PLAYER_NAME
-        macro=teams.create_npc_human
+        macro=teams.create_human_for_npc
         parameters=
             HUMAN_NAME:HUMAN_NAME
             IF_STYLE:IF_STYLE
@@ -88,11 +88,11 @@ macro_begin teams.create_npc_and_human;
     set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;
 
-macro_begin teams.create_npc_and_car;
-    macro_playback teams.create_car_npc_player PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+macro_begin teams.create_player_and_car_for_npc;
+    macro_playback teams.create_player_for_car_and_npc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
     set_preferred_car_spawner
         player=PLAYER_NAME
-        macro=teams.create_npc_car
+        macro=teams.create_car_for_npc
         parameters=
             CAR_NAME:CAR_NAME
             DECIMATE:DECIMATE

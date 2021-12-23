@@ -37,8 +37,8 @@ macro_begin create_human;
         line_distance=16;
 macro_end;
 
-macro_begin create_player_human_externals;
-    macro_playback create_player_human_externals-HUMAN_NAME
+macro_begin create_externals_for_human_pc;
+    macro_playback create_externals_for_human_pc-HUMAN_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY

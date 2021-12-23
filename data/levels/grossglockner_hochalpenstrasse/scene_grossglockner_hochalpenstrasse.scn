@@ -24,7 +24,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
     macro_begin instantiate_transient_objects;
         macro_playback generic_scene_racing_dynamic
             IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
-            IF_CREATE_PLAYER_CAR:
+            IF_CREATE_PC_CAR:
             CAR_NODE_X:12.82654855_deg
             CAR_NODE_Y:47.1171865_deg
             CAR_NODE_Z:2150

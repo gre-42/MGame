@@ -42,7 +42,7 @@ macro_begin get_into_mh1;
     player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;
 
-macro_begin create_player_human_externals_mh1;
+macro_begin create_externals_for_human_pc_mh1;
     macro_playback create_human_key_bindings
         SUFFIX:SUFFIX
         IF_MANUAL_AIM:IF_MANUAL_AIM
