@@ -40,5 +40,5 @@ macro_end;
 
 macro_playback instantiate_transient_objects
     IF_UPDATE_EXISTING_SCENE:#;
-macro_playback setup_teams_3_4_humans_gunfight context=primary_scene;
+macro_playback setup_teams_3_4_humans_pod_bot context=primary_scene;
 macro_playback create_main_menu;
