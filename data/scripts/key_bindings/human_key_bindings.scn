@@ -64,7 +64,7 @@ macro_begin create_human_key_bindings;
         tires_z=0 0 1;
 
     IF_MANUAL_AIM rel_key_binding
-        node=main_gun_node-SUFFIX
+        node=human_node-SUFFIX
         key=UP
         joystick_digital_axis=4
         joystick_digital_axis_sign=-1
@@ -75,7 +75,7 @@ macro_begin create_human_key_bindings;
         angular_velocity_repeat=1
         speed_cursor=0.1;
     IF_MANUAL_AIM rel_key_binding
-        node=main_gun_node-SUFFIX
+        node=human_node-SUFFIX
         key=DOWN
         joystick_digital_axis=4
         joystick_digital_axis_sign=1

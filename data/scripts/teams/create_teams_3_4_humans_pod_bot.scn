@@ -3,7 +3,7 @@ macro_begin setup_teams_3_4_humans_pod_bot;
     set_pod_bot_way_points node=osm_map_node resource=osm_map;
     set_pod_bot_game_mode aim;
 
-    macro_playback teams.create_player_and_human_for_pc DECIMATE: PLAYER_NAME:you HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_pc IF_MANUAL_AIM: IF_AUTO_AIM:# IF_STYLE: R:1 G:0 B:0;
+    macro_playback teams.create_player_and_human_for_pc DECIMATE: PLAYER_NAME:you HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_pc IF_AUTO_AIM: IF_STYLE: R:1 G:0 B:0;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc1 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_AUTO_AIM: IF_STYLE: R:1 G:0 B:0;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc2 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_AUTO_AIM: IF_STYLE: R:1 G:0 B:0;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc3 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_AUTO_AIM: IF_STYLE: R:1 G:0 B:0;

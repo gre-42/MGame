@@ -11,9 +11,7 @@ macro_begin create_human_mh1;
 
     gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
 
-    IF_MANUAL_AIM relative_transformer node=human_node-SUFFIX;
-    IF_MANUAL_AIM relative_transformer node=main_gun_node-SUFFIX;
-    IF_AUTO_AIM yaw_pitch_look_at_nodes
+    yaw_pitch_look_at_nodes
         yaw_node=human_node-SUFFIX
         pitch_node=main_gun_node-SUFFIX
         parent_follower_rigid_body_node=human_node-SUFFIX
@@ -37,7 +35,7 @@ macro_begin create_human_mh1;
 macro_end;
 
 macro_begin get_into_mh1;
-    IF_AUTO_AIM player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
+    player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
     player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
     player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;
