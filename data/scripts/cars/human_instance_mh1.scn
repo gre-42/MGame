@@ -19,10 +19,10 @@ macro_begin create_human_mh1;
         bullet_start_offset=20
         bullet_velocity=900
         gravity=9.8
-        dyaw_max=0.4
+        dyaw_max=10.0
         pitch_min=-10
         pitch_max=45
-        dpitch_max=0.4
+        dpitch_max=10.0
         yaw_locked_on_max=2
         pitch_locked_on_max=2;
 

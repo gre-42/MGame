@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version='0.6' generator='JOSM'>
   <bounds minlat='49.0936' minlon='10.0505' maxlat='49.1194' maxlon='10.103' origin='CGImap 0.8.3 (444443 thorn-02.openstreetmap.org)' />
-  <node id='-101751' action='modify' visible='true' lat='49.10537586702' lon='10.07998235493' />
+  <node id='-101752' action='modify' visible='true' lat='49.10537586702' lon='10.07998235493' />
   <node id='-101753' action='modify' visible='true' lat='49.10655671296' lon='10.0816018579' />
   <node id='-101754' action='modify' visible='true' lat='49.10813517943' lon='10.08185184641' />
   <node id='-101755' action='modify' visible='true' lat='49.10950833788' lon='10.08063683336' />
@@ -124,7 +124,7 @@
   <node id='-102006' action='modify' visible='true' lat='49.10846015626' lon='10.08103988986' />
   <node id='-102007' action='modify' visible='true' lat='49.10925148679' lon='10.08020547473' />
   <way id='-101782' action='modify' visible='true'>
-    <nd ref='-101751' />
+    <nd ref='-101752' />
     <nd ref='-101753' />
     <nd ref='-101754' />
     <nd ref='-101755' />
@@ -134,7 +134,7 @@
     <nd ref='-101759' />
     <nd ref='-101760' />
     <nd ref='-101761' />
-    <nd ref='-101751' />
+    <nd ref='-101752' />
     <tag k='barrier' v='wall' />
     <tag k='height' v='5' />
   </way>
@@ -227,7 +227,7 @@
     <nd ref='-102000' />
     <nd ref='-102001' />
     <nd ref='-101992' />
-    <tag k='way_points' v='yes' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102595' action='modify' visible='true'>
     <nd ref='-101999' />
@@ -235,30 +235,34 @@
     <nd ref='-102004' />
     <nd ref='-102005' />
     <nd ref='-101992' />
-    <tag k='way_points' v='yes' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102599' action='modify' visible='true'>
     <nd ref='-101994' />
     <nd ref='-102006' />
     <nd ref='-102007' />
     <nd ref='-101998' />
-    <tag k='way_points' v='yes' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102696' action='modify' visible='true'>
     <nd ref='-102001' />
     <nd ref='-101996' />
     <nd ref='-101961' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102698' action='modify' visible='true'>
     <nd ref='-102000' />
     <nd ref='-102004' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102699' action='modify' visible='true'>
     <nd ref='-101997' />
     <nd ref='-102007' />
+    <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102700' action='modify' visible='true'>
     <nd ref='-101995' />
     <nd ref='-102006' />
+    <tag k='way_points' v='bidirectional' />
   </way>
 </osm>
