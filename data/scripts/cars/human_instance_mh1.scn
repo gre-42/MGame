@@ -2,7 +2,7 @@ macro_begin create_human_mh1;
     # renderable_instance name=human_hitbox node=human_node-SUFFIX resource=human_hitbox;
     child_node_instance type=dynamic parent=human_node-SUFFIX name=animation_node-SUFFIX position=0 -0.5 0 rotation=0 180 0 scale=1;
     renderable_instance name=human-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
-    child_node_instance type=dynamic parent=human_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
+    child_node_instance type=dynamic parent=human_node-SUFFIX name=main_gun_node-SUFFIX position=0 0.5 -0.3 rotation=30 0 0 scale=1;
     child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
     IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
