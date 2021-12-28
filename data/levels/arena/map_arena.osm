@@ -123,6 +123,10 @@
   <node id='-102005' action='modify' visible='true' lat='49.10635921752' lon='10.07524177446' />
   <node id='-102006' action='modify' visible='true' lat='49.10846015626' lon='10.08103988986' />
   <node id='-102007' action='modify' visible='true' lat='49.10925148679' lon='10.08020547473' />
+  <node id='-102018' action='modify' visible='true' lat='49.10638849213' lon='10.07887891024' />
+  <node id='-102094' action='modify' visible='true' lat='49.10939753487' lon='10.0770288508' />
+  <node id='-102095' action='modify' visible='true' lat='49.1084982653' lon='10.07746804546' />
+  <node id='-102107' action='modify' visible='true' lat='49.10676353381' lon='10.07706205037' />
   <way id='-101782' action='modify' visible='true'>
     <nd ref='-101752' />
     <nd ref='-101753' />
@@ -223,9 +227,11 @@
     <nd ref='-101996' />
     <nd ref='-101997' />
     <nd ref='-101998' />
+    <nd ref='-102094' />
     <nd ref='-101999' />
     <nd ref='-102000' />
     <nd ref='-102001' />
+    <nd ref='-102107' />
     <nd ref='-101992' />
     <tag k='way_points' v='bidirectional' />
   </way>
@@ -238,6 +244,7 @@
     <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102599' action='modify' visible='true'>
+    <nd ref='-102018' />
     <nd ref='-101994' />
     <nd ref='-102006' />
     <nd ref='-102007' />
@@ -245,12 +252,16 @@
     <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102696' action='modify' visible='true'>
+    <nd ref='-102004' />
     <nd ref='-102001' />
     <nd ref='-101996' />
-    <nd ref='-101961' />
+    <nd ref='-102018' />
+    <nd ref='-101992' />
     <tag k='way_points' v='bidirectional' />
   </way>
   <way id='-102698' action='modify' visible='true'>
+    <nd ref='-101997' />
+    <nd ref='-102095' />
     <nd ref='-102000' />
     <nd ref='-102004' />
     <tag k='way_points' v='bidirectional' />
@@ -263,6 +274,24 @@
   <way id='-102700' action='modify' visible='true'>
     <nd ref='-101995' />
     <nd ref='-102006' />
+    <nd ref='-101997' />
+    <tag k='way_points' v='bidirectional' />
+  </way>
+  <way id='-102720' action='modify' visible='true'>
+    <nd ref='-102018' />
+    <nd ref='-101993' />
+    <tag k='way_points' v='bidirectional' />
+  </way>
+  <way id='-102821' action='modify' visible='true'>
+    <nd ref='-102094' />
+    <nd ref='-102095' />
+    <nd ref='-101996' />
+    <tag k='way_points' v='bidirectional' />
+  </way>
+  <way id='-102842' action='modify' visible='true'>
+    <nd ref='-102018' />
+    <nd ref='-102107' />
+    <nd ref='-102005' />
     <tag k='way_points' v='bidirectional' />
   </way>
 </osm>
