@@ -24,11 +24,16 @@ macro_begin _scene_racing_instantiate_static_objects;
     IF_CREATE_PC_PLAYER set_can_aim player=you value=0;
     IF_CREATE_PC_PLAYER set_can_shoot player=you value=0;
 
+    # TEAM           = 1;
+    # BEST_LAP_TIME  = 2;
+    # CAR_HP         = 4;
+    # HISTORY        = 8;
     players_stats
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=-600 40
         font_height=24
-        line_distance=24;
+        line_distance=24
+        score_board=SCORE_BOARD;
 
     ui_background
         texture=textures/ui_background.png
@@ -283,6 +288,7 @@ macro_begin scene_racing_static;
         _scene_racing_instantiate_static_objects
         context=primary_scene
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
+        SCORE_BOARD:SCORE_BOARD
         OSM_POSITION_Y:OSM_POSITION_Y=-220
         DIRTMAP_LEFT:DIRTMAP_LEFT
         DIRTMAP_RIGHT:DIRTMAP_RIGHT

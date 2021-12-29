@@ -3,6 +3,7 @@ include ../jb/osm_resource_jb_race_open_alpha.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
+    SCORE_BOARD:10
     OSM_MAP_RESOURCE:osm_resource_jb_race
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
