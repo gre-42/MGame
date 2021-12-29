@@ -4,6 +4,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
     include osm_resource_grossglockner_hochalpenstrasse-STYLE.scn;
 
     macro_playback scene_racing_static
+        IF_CREATE_PC_PLAYER:
         OSM_MAP_RESOURCE:osm_resource_grossglockner_hochalpenstrasse-STYLE
         OSM_POSITION_Y:-2000
         DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png

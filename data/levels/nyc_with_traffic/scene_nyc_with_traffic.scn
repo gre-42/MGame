@@ -2,6 +2,7 @@ include ../../scripts/include_all.scn;
 include ../nyc/osm_resource_nyc.scn;
 
 macro_playback scene_racing_static
+    IF_CREATE_PC_PLAYER:
     OSM_MAP_RESOURCE:osm_resource_nyc
     DIRTMAP_TEXTURE:textures/dirtmap_dense.png
     DIRTMAP_OFFSET:0
