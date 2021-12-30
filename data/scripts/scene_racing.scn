@@ -83,7 +83,12 @@ macro_begin _scene_racing_instantiate_static_objects;
     ###########;
     # Cameras #;
     ###########;
-    root_node_instance type=dynamic name=stadium_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
+    root_node_instance
+        type=dynamic
+        name=stadium_camera
+        position=STADIUM_CAMERA_X STADIUM_CAMERA_Y STADIUM_CAMERA_Z
+        rotation=-45 0 0
+        scale=1;
     perspective_camera node=stadium_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
     
     set_camera_cycle name=far stadium_camera;
@@ -290,6 +295,9 @@ macro_begin scene_racing_static;
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         SCORE_BOARD:SCORE_BOARD
         OSM_POSITION_Y:OSM_POSITION_Y=-220
+        STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
+        STADIUM_CAMERA_Y:STADIUM_CAMERA_Y=2000
+        STADIUM_CAMERA_Z:STADIUM_CAMERA_Z=2400
         DIRTMAP_LEFT:DIRTMAP_LEFT
         DIRTMAP_RIGHT:DIRTMAP_RIGHT
         DIRTMAP_BOTTOM:DIRTMAP_BOTTOM
