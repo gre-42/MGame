@@ -7,9 +7,9 @@ macro_begin teams.create_player_for_pc;
         driving_mode=car_arena
         driving_direction=center;
 
-    set_can_drive player=you value=0;
-    set_can_aim player=you value=0;
-    set_can_shoot player=you value=0;
+    set_can_drive player=PLAYER_NAME value=0;
+    set_can_aim player=PLAYER_NAME value=0;
+    set_can_shoot player=PLAYER_NAME value=0;
 macro_end;
 
 macro_begin teams.create_human_for_pc;
@@ -105,5 +105,10 @@ macro_end;
 
 macro_begin teams.create_player_and_human_for_pc;
     macro_playback teams.create_player_for_pc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
-    set_preferred_car_spawner player=you macro=teams.create_human_for_pc parameters=HUMAN_NAME:_mh1 DECIMATE: IF_MANUAL_AIM: IF_AUTO_AIM:# IF_STYLE: R:1 G:0 B:0;
+    set_preferred_car_spawner player=PLAYER_NAME macro=teams.create_human_for_pc parameters=HUMAN_NAME:HUMAN_NAME DECIMATE: IF_MANUAL_AIM: IF_AUTO_AIM:# IF_STYLE:IF_STYLE R:R G:G B:B;
+macro_end;
+
+macro_begin teams.create_player_and_car_for_pc;
+    macro_playback teams.create_player_for_pc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+    set_preferred_car_spawner player=PLAYER_NAME macro=teams.create_car_for_pc parameters=CAR_NAME:CAR_NAME DECIMATE: IF_MANUAL_AIM: IF_AUTO_AIM:# IF_STYLE:IF_STYLE R:R G:G B:B;
 macro_end;

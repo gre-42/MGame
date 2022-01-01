@@ -9,9 +9,7 @@ macro_begin create_tiger_tank_physics;
     gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=car_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
     # damageable node=car_node-SUFFIX health=200;
 
-    IF_MANUAL_AIM relative_transformer node=turret_node-SUFFIX;
-    IF_MANUAL_AIM relative_transformer node=main_gun_node-SUFFIX;
-    IF_AUTO_AIM yaw_pitch_look_at_nodes
+    yaw_pitch_look_at_nodes
         yaw_node=turret_node-SUFFIX
         pitch_node=main_gun_node-SUFFIX
         parent_follower_rigid_body_node=car_node-SUFFIX
@@ -72,8 +70,8 @@ macro_begin create_tiger_tank;
     IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d3;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 IF_MANUAL_AIM:IF_MANUAL_AIM=# IF_AUTO_AIM:IF_AUTO_AIM=# PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
 macro_end;
 
 macro_begin get_into_tiger_tank;
