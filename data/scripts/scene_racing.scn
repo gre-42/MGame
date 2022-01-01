@@ -103,8 +103,6 @@ macro_begin _scene_racing_instantiate_transient_objects;
     # Car instance #;
     ################;
 
-    # macro_playback create_audi_a6;
-    # macro_playback create_muscle_cupe;
     # macro_playback create_OT;
     # macro_playback create_M3 -SUFFIX: IF_WITH_PHYSICS:;
     # macro_playback create_TW;

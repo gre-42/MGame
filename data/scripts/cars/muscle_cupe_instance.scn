@@ -1,4 +1,0 @@
-macro_begin create_muscle_cupe;
-    renderable_instance name=car-inst node=car_node resource=muscle-cupe;
-    rigid_cuboid node=car_node hitbox=muscle-cupe-hitbox tirelines=muscle-cupe-tirelines mass=MASS size=1.8 1.5 4.5 collidable_mode=small_moving;
-macro_end;
