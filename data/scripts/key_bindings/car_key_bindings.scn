@@ -1,6 +1,8 @@
 macro_begin create_car_key_bindings;
     IF_RACING macro_playback create_car_key_bindings_racing
+        IF_HAS_GUN:IF_HAS_GUN
         SUFFIX:SUFFIX;
     IF_RALLY macro_playback create_car_key_bindings_rally
+        IF_HAS_GUN:IF_HAS_GUN
         SUFFIX:SUFFIX;
 macro_end;
