@@ -32,8 +32,6 @@ macro_begin teams.create_human_for_npc;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:
-        IF_MANUAL_AIM:#
-        IF_AUTO_AIM:IF_AUTO_AIM
         PLAYER_NAME:PLAYER_NAME
         R:R G:G B:B;
 macro_end;
@@ -61,9 +59,7 @@ macro_begin teams.create_car_for_npc;
         IF_PLAYER:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
-        IF_DAMAGEABLE:
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM;
+        IF_DAMAGEABLE:;
     visual_node_status_3rd
         node=car_node-SUFFIX
         format=8
@@ -82,8 +78,6 @@ macro_begin teams.create_player_and_human_for_npc;
             HUMAN_NAME:HUMAN_NAME
             IF_STYLE:IF_STYLE
             DECIMATE:DECIMATE
-            IF_MANUAL_AIM:IF_MANUAL_AIM
-            IF_AUTO_AIM:IF_AUTO_AIM
             R:R G:G B:B;
     set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;
@@ -95,8 +89,6 @@ macro_begin teams.create_player_and_car_for_npc;
         macro=teams.create_car_for_npc
         parameters=
             CAR_NAME:CAR_NAME
-            DECIMATE:DECIMATE
-            IF_MANUAL_AIM:IF_MANUAL_AIM
-            IF_AUTO_AIM:IF_AUTO_AIM;
+            DECIMATE:DECIMATE;
     set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
 macro_end;

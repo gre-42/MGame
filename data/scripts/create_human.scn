@@ -19,15 +19,11 @@ macro_begin create_human;
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
-        IF_WITH_GUN:IF_WITH_GUN=#
-        IF_MANUAL_AIM:IF_MANUAL_AIM=#
-        IF_AUTO_AIM:IF_AUTO_AIM=#;
+        IF_WITH_GUN:IF_WITH_GUN=#;
     player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
     macro_playback get_into-HUMAN_NAME
         PLAYER_NAME:PLAYER_NAME
-        SUFFIX:SUFFIX
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM;
+        SUFFIX:SUFFIX;
     # visual_node_status_3rd
         node=human_node-SUFFIX
         format=8
@@ -41,7 +37,5 @@ macro_begin create_externals_for_human_pc;
     macro_playback create_externals_for_human_pc-HUMAN_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM;
+        IF_RALLY:IF_RALLY;
 macro_end;

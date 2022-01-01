@@ -200,8 +200,6 @@ macro_begin _scene_tank_instantiate;
         player_set_tire_angle:#
         visual_node_status_3rd:#
         SUFFIX:
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM
         IF_WITH_PHYSICS:
         IF_WITH_GRAPHICS:
         IF_STATIC:#
@@ -216,8 +214,6 @@ macro_begin _scene_tank_instantiate;
         PLAYER_NAME:you
         TEAM:red
         SUFFIX:
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_AUTO_AIM:IF_AUTO_AIM
         IF_WITH_PHYSICS:
         IF_WITH_GUN:
         CAR_NODE_X:1100
@@ -227,19 +223,19 @@ macro_begin _scene_tank_instantiate;
         HUMAN_NAME:_mh1
         DECIMATE:_d2;
 
-    macro_playback create_tiger_tank PLAYER_NAME:npc1    TEAM:red  SUFFIX:1  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc2    TEAM:red  SUFFIX:2  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc3    TEAM:red  SUFFIX:3  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc4    TEAM:red  SUFFIX:4  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc5    TEAM:red  SUFFIX:5  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc6    TEAM:red  SUFFIX:6  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc7    TEAM:blue SUFFIX:7  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc8    TEAM:blue SUFFIX:8  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc9    TEAM:blue SUFFIX:9  IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc10   TEAM:blue SUFFIX:10 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    macro_playback create_tiger_tank PLAYER_NAME:npc11   TEAM:blue SUFFIX:11 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    # macro_playback create_tiger_tank PLAYER_NAME:npc12 TEAM:blue SUFFIX:12 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
-    # macro_playback create_tiger_tank PLAYER_NAME:npc13 TEAM:blue SUFFIX:13 IF_AUTO_AIM: IF_MANUAL_AIM:# IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc1    TEAM:red  SUFFIX:1  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc2    TEAM:red  SUFFIX:2  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc3    TEAM:red  SUFFIX:3  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc4    TEAM:red  SUFFIX:4  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc5    TEAM:red  SUFFIX:5  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc6    TEAM:red  SUFFIX:6  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc7    TEAM:blue SUFFIX:7  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc8    TEAM:blue SUFFIX:8  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc9    TEAM:blue SUFFIX:9  IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc10   TEAM:blue SUFFIX:10 IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    macro_playback create_tiger_tank PLAYER_NAME:npc11   TEAM:blue SUFFIX:11 IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    # macro_playback create_tiger_tank PLAYER_NAME:npc12 TEAM:blue SUFFIX:12 IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
+    # macro_playback create_tiger_tank PLAYER_NAME:npc13 TEAM:blue SUFFIX:13 IF_WITH_PHYSICS: IF_WITH_GRAPHICS: IF_STATIC:# IF_DYNAMIC:;
 
     # player_set_waypoint player_name=npc1 position=-100 0 -500;
     # team_set_waypoint team-name=red position=-100 0 -500;
@@ -427,14 +423,14 @@ macro_begin _scene_tank_instantiate;
             joystick_digital_axis_sign=1
             surface_power=-INFINITY;
 
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=turret_node
             key=D
             joystick_digital_axis=1
             joystick_digital_axis_sign=1
             angular_velocity_press=0 -0.1 0
             angular_velocity_repeat=0 -1 0;
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=turret_node
             key=A
             joystick_digital_axis=1
@@ -442,14 +438,14 @@ macro_begin _scene_tank_instantiate;
             angular_velocity_press=0 0.1 0
             angular_velocity_repeat=0 1 0;
 
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=main_gun_node
             key=W
             joystick_digital_axis=2
             joystick_digital_axis_sign=-1
             angular_velocity_press=0.1 0 0
             angular_velocity_repeat=1 0 0;
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=main_gun_node
             key=S
             joystick_digital_axis=2
@@ -457,7 +453,7 @@ macro_begin _scene_tank_instantiate;
             angular_velocity_press=-0.1 0 0
             angular_velocity_repeat=-1 0 0;
 
-        IF_MANUAL_SHOOT gun_key_binding
+        gun_key_binding
             node=main_gun_end_node
             key=SPACE
             gamepad_button=RIGHT_BUMPER;
@@ -488,26 +484,26 @@ macro_begin _scene_tank_instantiate;
             surface_power=30000
             max_velocity=9
             tires_z=1 0 0;
-        # IF_MANUAL_AIM abs_key_binding
+        # abs_key_binding
             node=human_node
             key=LEFT
             joystick_digital_axis=3
             joystick_digital_axis_sign=-1
             rotate=0 0.01 0;
-        # IF_MANUAL_AIM abs_key_binding
+        # abs_key_binding
             node=human_node
             key=RIGHT
             joystick_digital_axis=3
             joystick_digital_axis_sign=1
             rotate=0 -0.01 0;
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=human_node
             key=LEFT
             joystick_digital_axis=3
             joystick_digital_axis_sign=-1
             angular_velocity_press=0 0.01 0
             angular_velocity_repeat=0 0.5 0;
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=human_node
             key=RIGHT
             joystick_digital_axis=3
@@ -531,14 +527,14 @@ macro_begin _scene_tank_instantiate;
             max_velocity=9
             tires_z=0 0 1;
         
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=main_gun_node
             key=UP
             joystick_digital_axis=4
             joystick_digital_axis_sign=-1
             angular_velocity_press=0.01 0 0
             angular_velocity_repeat=1 0 0;
-        IF_MANUAL_AIM rel_key_binding
+        rel_key_binding
             node=main_gun_node
             key=DOWN
             joystick_digital_axis=4
@@ -552,8 +548,8 @@ macro_begin _scene_tank_instantiate;
             gamepad_button=RIGHT_BUMPER;
     macro_end;
 
-    IF_PLAYER_TANK macro_playback create_car_key_bindings IF_MANUAL_AIM:IF_MANUAL_AIM;
-    IF_PLAYER_HUMAN macro_playback create_human_key_bindings IF_MANUAL_AIM:IF_MANUAL_AIM;
+    IF_PLAYER_TANK macro_playback create_car_key_bindings;
+    IF_PLAYER_HUMAN macro_playback create_human_key_bindings;
 
     # console_log node=car_node format=10;
     IF_PLAYER_TANK visual_node_status node=car_node format=14 ttf_file=fonts/RobotoMono-Bold.ttf position=50 40 font_height=32 line_distance=32;
@@ -635,13 +631,13 @@ create_scene
 ###############;
 # Player tank #;
 ###############;
-# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM:# IF_MANUAL_AIM: IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
-# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM: IF_MANUAL_AIM:# IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_PLAYER_TANK: IF_PLAYER_HUMAN:#;
 
 ################;
 # Player human #;
 ################;
-macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM:# IF_MANUAL_AIM: IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
-# macro_playback _scene_tank_instantiate context=primary_scene IF_AUTO_AIM: IF_MANUAL_AIM:# IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
+macro_playback _scene_tank_instantiate context=primary_scene IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
+# macro_playback _scene_tank_instantiate context=primary_scene IF_PLAYER_TANK:# IF_PLAYER_HUMAN:;
 
 macro_playback create_main_menu;
