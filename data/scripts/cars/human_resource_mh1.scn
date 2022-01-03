@@ -42,3 +42,17 @@ add_bvh_resource
     smooth_radius=20
     smooth_alpha=0.9
     periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.run
+    filename=models/Xonotic/pyria_run_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.idle
+    filename=models/Xonotic/pyria_idle_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;

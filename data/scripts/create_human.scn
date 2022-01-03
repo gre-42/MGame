@@ -11,9 +11,9 @@ macro_begin create_human;
         ambience=R G B
         diffusivity=R G B
         specularity=R G B
-        animation_name=walk_mh1
+        animation_name=pyria_xonotic.idle
         animation_loop_begin=0
-        animation_loop_end=1.0417
+        animation_loop_end=0.6
         animation_loop_time=0;
     macro_playback create_human-HUMAN_NAME
         DECIMATE:DECIMATE
