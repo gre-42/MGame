@@ -56,3 +56,17 @@ add_bvh_resource
     smooth_radius=0
     smooth_alpha=NAN
     periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.strafe_left
+    filename=models/Xonotic/pyria_strafe_left_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.strafe_right
+    filename=models/Xonotic/pyria_strafe_right_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
