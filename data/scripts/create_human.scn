@@ -23,7 +23,8 @@ macro_begin create_human;
     player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
     macro_playback get_into-HUMAN_NAME
         PLAYER_NAME:PLAYER_NAME
-        SUFFIX:SUFFIX;
+        SUFFIX:SUFFIX
+        IF_WITH_GUN:IF_WITH_GUN;
     # visual_node_status_3rd
         node=human_node-SUFFIX
         format=8

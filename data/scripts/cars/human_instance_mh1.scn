@@ -9,7 +9,7 @@ macro_begin create_human_mh1;
     # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
     rigid_cuboid node=human_node-SUFFIX hitbox=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human;
 
-    gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
+    IF_WITH_GUN gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
 
     yaw_pitch_look_at_nodes
         yaw_node=human_node-SUFFIX
@@ -33,11 +33,11 @@ macro_begin create_human_mh1;
 
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
 
-    IF_WITH_PHYSICS set_renderable_style_updater node=human_node-SUFFIX resource=pyria_xonotic;
+    set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=pyria_xonotic;
 macro_end;
 
 macro_begin get_into_mh1;
-    player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
+    IF_WITH_GUN player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
     player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
     player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;

@@ -35,38 +35,3 @@ obj_resource
 import_bone_weights destination=mh1_d2 source=mh1 max_distance=0.1;
 
 # downsample name=mh1 factor=10;
-
-add_bvh_resource
-    name=walk_mh1
-    filename=models/MakeHuman/walking_periodic.bvh
-    smooth_radius=20
-    smooth_alpha=0.9
-    periodic=1;
-
-add_bvh_resource
-    name=pyria_xonotic.run
-    filename=models/Xonotic/pyria_run_retargeted.bvh
-    smooth_radius=0
-    smooth_alpha=NAN
-    periodic=1;
-
-add_bvh_resource
-    name=pyria_xonotic.idle
-    filename=models/Xonotic/pyria_idle_retargeted.bvh
-    smooth_radius=0
-    smooth_alpha=NAN
-    periodic=1;
-
-add_bvh_resource
-    name=pyria_xonotic.strafe_left
-    filename=models/Xonotic/pyria_strafe_left_retargeted.bvh
-    smooth_radius=0
-    smooth_alpha=NAN
-    periodic=1;
-
-add_bvh_resource
-    name=pyria_xonotic.strafe_right
-    filename=models/Xonotic/pyria_strafe_right_retargeted.bvh
-    smooth_radius=0
-    smooth_alpha=NAN
-    periodic=1;

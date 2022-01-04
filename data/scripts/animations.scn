@@ -1,0 +1,34 @@
+add_bvh_resource
+    name=cmu_mocap.walking
+    filename=animations/CMU_mocap/cmu_mocap.walking.bvh
+    smooth_radius=20
+    smooth_alpha=0.9
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.run
+    filename=animations/Xonotic/pyria_run_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.idle
+    filename=animations/Xonotic/pyria_idle_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.strafe_left
+    filename=animations/Xonotic/pyria_strafe_left_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=pyria_xonotic.strafe_right
+    filename=animations/Xonotic/pyria_strafe_right_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;

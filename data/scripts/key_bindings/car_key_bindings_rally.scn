@@ -73,7 +73,7 @@ macro_begin create_car_key_bindings_rally;
         rotation_axis=0 1 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
-        speed_cursor=0.1;
+        speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
         key=RIGHT
@@ -84,7 +84,7 @@ macro_begin create_car_key_bindings_rally;
         rotation_axis=0 1 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
-        speed_cursor=0.1;
+        speed_cursor=0.05;
 
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
@@ -96,7 +96,7 @@ macro_begin create_car_key_bindings_rally;
         rotation_axis=1 0 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
-        speed_cursor=0.1;
+        speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
         key=DOWN
@@ -107,7 +107,7 @@ macro_begin create_car_key_bindings_rally;
         rotation_axis=1 0 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
-        speed_cursor=0.1;
+        speed_cursor=0.05;
 
     IF_HAS_GUN gun_key_binding
         node=main_gun_end_node-SUFFIX
