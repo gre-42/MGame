@@ -33,7 +33,7 @@ macro_begin create_human_mh1;
 
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
 
-    set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=pyria_xonotic;
+    set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
 macro_end;
 
 macro_begin get_into_mh1;
