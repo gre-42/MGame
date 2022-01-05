@@ -85,6 +85,10 @@ macro_begin create_human_key_bindings;
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=0.1;
+    
+    weapon_inventory_key_binding
+        node=main_gun_node-SUFFIX
+        
 
     gun_key_binding
         node=main_gun_end_node-SUFFIX

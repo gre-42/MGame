@@ -7,7 +7,7 @@ macro_begin create_human_box;
     # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
     rigid_cuboid node=human_node-SUFFIX hitbox=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human;
 
-    gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
+    gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool_down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
 
     yaw_pitch_look_at_nodes
         yaw_node=human_node-SUFFIX

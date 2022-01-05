@@ -1,0 +1,33 @@
+obj_resource
+    name=M4A1
+    filename=models/M4A1/m4a1_d36d.obj
+    position=0 -0.25 0.25
+    rotation=0 180 0
+    scale=0.025 0.025 0.025
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=Beretta92
+    filename=models/opengameart/textured-pistol/pistol.obj
+    position=0 -0.25 0.25
+    rotation=0 180 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=color
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;

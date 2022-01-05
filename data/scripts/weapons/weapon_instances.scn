@@ -1,0 +1,52 @@
+macro_begin try_delete_weapon;
+    clear_renderable_instance node=main_gun_node-SUFFIX name=main_gun_node-inst;
+    clear_absolute_observer node=main_gun_end_node-SUFFIX;
+macro_end;
+
+macro_begin add_weapon_m4a1;
+    macro_playback try_delete_weapon SUFFIX:SUFFIX;
+    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
+    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
+    gun
+        node=main_gun_end_node-SUFFIX
+        parent_rigid_body_node=human_node-SUFFIX
+        cool_down=0.1
+        renderable=tank_bullet_renderable
+        hitbox=tank_bullet_hitbox
+        mass=20
+        velocity=900
+        lifetime=20
+        damage=10
+        size=2.4 2.4 20;
+macro_end;
+
+macro_begin add_weapon_beretta92;
+    macro_playback try_delete_weapon SUFFIX:SUFFIX;
+    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
+    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=Beretta92;
+    gun
+        node=main_gun_end_node-SUFFIX
+        parent_rigid_body_node=human_node-SUFFIX
+        cool_down=0.5
+        renderable=tank_bullet_renderable
+        hitbox=tank_bullet_hitbox
+        mass=20
+        velocity=900
+        lifetime=20
+        damage=10
+        size=2.4 2.4 20;
+macro_end;
+
+macro_begin create_none_weapon;
+    gun
+        node=main_gun_end_node-SUFFIX
+        parent_rigid_body_node=human_node-SUFFIX
+        cool_down=INFINITY
+        renderable=tank_bullet_renderable
+        hitbox=tank_bullet_hitbox
+        mass=20
+        velocity=900
+        lifetime=0
+        damage=10
+        size=2.4 2.4 20;
+macro_end;

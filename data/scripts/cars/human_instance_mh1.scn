@@ -5,11 +5,24 @@ macro_begin create_human_mh1;
     child_node_instance type=dynamic parent=human_node-SUFFIX name=main_gun_node-SUFFIX position=0 0.5 -0.3 rotation=30 0 0 scale=1;
     child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
-    IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
     rigid_cuboid node=human_node-SUFFIX hitbox=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human;
 
-    IF_WITH_GUN gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool-down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
+    IF_WITH_GUN create_weapon_inventory
+        visual_node=main_gun_node-SUFFIX
+        physics_node=main_gun_end_node-SUFFIX;
+    IF_WITH_GUN add_weapon_to_inventory
+        visual_node=main_gun_node-SUFFIX
+        entry_name=m4a1
+        create=macro_playback add_weapon_m4a1 SUFFIX:SUFFIX;
+    IF_WITH_GUN add_weapon_to_inventory
+        visual_node=main_gun_node-SUFFIX
+        entry_name=beretta92
+        create=macro_playback add_weapon_beretta92 SUFFIX:SUFFIX;
+    IF_WITH_GUN equip_weapon
+        visual_node=main_gun_node-SUFFIX
+        entry_name=m4a1;
+    
+    macro_playback create_none_weapon SUFFIX:SUFFIX;
 
     yaw_pitch_look_at_nodes
         yaw_node=human_node-SUFFIX
