@@ -10,6 +10,7 @@ macro_begin add_weapon_m4a1;
     gun
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=human_node-SUFFIX
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=0.1
         renderable=tank_bullet_renderable
         hitbox=tank_bullet_hitbox
@@ -17,7 +18,9 @@ macro_begin add_weapon_m4a1;
         velocity=900
         lifetime=20
         damage=10
-        size=2.4 2.4 20;
+        size=2.4 2.4 20
+        punch_angle=0.005
+        carrier=avatar;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -27,6 +30,7 @@ macro_begin add_weapon_beretta92;
     gun
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=human_node-SUFFIX
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=0.5
         renderable=tank_bullet_renderable
         hitbox=tank_bullet_hitbox
@@ -34,13 +38,16 @@ macro_begin add_weapon_beretta92;
         velocity=900
         lifetime=20
         damage=10
-        size=2.4 2.4 20;
+        size=2.4 2.4 20
+        punch_angle=0.005
+        carrier=avatar;
 macro_end;
 
 macro_begin create_none_weapon;
     gun
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=human_node-SUFFIX
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=INFINITY
         renderable=tank_bullet_renderable
         hitbox=tank_bullet_hitbox
@@ -48,5 +55,7 @@ macro_begin create_none_weapon;
         velocity=900
         lifetime=0
         damage=10
-        size=2.4 2.4 20;
+        size=2.4 2.4 20
+        punch_angle=0.005
+        carrier=avatar;
 macro_end;
