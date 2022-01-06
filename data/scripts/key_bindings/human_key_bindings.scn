@@ -85,10 +85,23 @@ macro_begin create_human_key_bindings;
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=0.1;
-    
+
     weapon_inventory_key_binding
         node=main_gun_node-SUFFIX
-        
+        key=R
+        joystick_digital_axis=
+        joystick_digital_axis_sign=1
+        scroll_wheel_axis=1
+        scroll_wheel_sign_and_scale=1
+        weapon_increment=1;
+    weapon_inventory_key_binding
+        node=main_gun_node-SUFFIX
+        key=E
+        joystick_digital_axis=
+        joystick_digital_axis_sign=1
+        scroll_wheel_axis=1
+        scroll_wheel_sign_and_scale=-1
+        weapon_increment=-1;
 
     gun_key_binding
         node=main_gun_end_node-SUFFIX
