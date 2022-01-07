@@ -35,6 +35,9 @@ macro_begin _scene_racing_instantiate_static_objects;
         line_distance=24
         score_board=SCORE_BOARD;
 
+    #############;
+    # Countdown #;
+    #############;
     ui_background
         texture=textures/ui_background.png
         update=once

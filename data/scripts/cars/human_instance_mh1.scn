@@ -61,4 +61,11 @@ macro_begin create_externals_for_human_pc_mh1;
         SUFFIX:SUFFIX;
     macro_playback create_human_cameras
         SUFFIX:SUFFIX;
+    hud_image
+        name=crosshair
+        camera_node=main_gun_camera_node-SUFFIX
+        filename=textures/hud/crosshair.png
+        update=once
+        center=0 0
+        size=0.05 0.05;
 macro_end;
