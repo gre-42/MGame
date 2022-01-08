@@ -24,18 +24,17 @@ macro_begin create_human_mh1;
         pitch_locked_on_max=2;
 
     IF_WITH_GUN create_weapon_inventory
-        visual_node=main_gun_punch_angle_node-SUFFIX
-        physics_node=main_gun_end_node-SUFFIX;
+        storage_node=human_node-SUFFIX;
     IF_WITH_GUN add_weapon_to_inventory
-        visual_node=main_gun_punch_angle_node-SUFFIX
+        storage_node=human_node-SUFFIX
         entry_name=m4a1
         create=macro_playback add_weapon_m4a1 SUFFIX:SUFFIX;
     IF_WITH_GUN add_weapon_to_inventory
-        visual_node=main_gun_punch_angle_node-SUFFIX
+        storage_node=human_node-SUFFIX
         entry_name=beretta92
         create=macro_playback add_weapon_beretta92 SUFFIX:SUFFIX;
     IF_WITH_GUN equip_weapon
-        visual_node=main_gun_punch_angle_node-SUFFIX
+        storage_node=human_node-SUFFIX
         entry_name=m4a1;
     
     macro_playback create_none_weapon SUFFIX:SUFFIX;
