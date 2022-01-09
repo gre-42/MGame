@@ -44,7 +44,7 @@ macro_begin teams.create_car_for_pc;
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
         CAR_NAME:CAR_NAME
-        IF_STYLE:#
+        IF_STYLE:IF_STYLE
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
@@ -58,7 +58,8 @@ macro_begin teams.create_car_for_pc;
         IF_PLAYER:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
-        IF_DAMAGEABLE:;
+        IF_DAMAGEABLE:
+        R:R G:G B:B;
     macro_playback create_player_car_externals
         CAR_NAME:CAR_NAME
         SUFFIX:SUFFIX

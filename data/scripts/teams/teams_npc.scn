@@ -45,7 +45,7 @@ macro_begin teams.create_car_for_npc;
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
         CAR_NAME:CAR_NAME
-        IF_STYLE:#
+        IF_STYLE:IF_STYLE
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
@@ -59,7 +59,8 @@ macro_begin teams.create_car_for_npc;
         IF_PLAYER:
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:
-        IF_DAMAGEABLE:;
+        IF_DAMAGEABLE:
+        R:R G:G B:B;
     visual_node_status_3rd
         node=car_node-SUFFIX
         format=8
@@ -89,6 +90,8 @@ macro_begin teams.create_player_and_car_for_npc;
         macro=teams.create_car_for_npc
         parameters=
             CAR_NAME:CAR_NAME
-            DECIMATE:DECIMATE;
+            IF_STYLE:IF_STYLE
+            DECIMATE:DECIMATE
+            R:R G:G B:B;
     set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;

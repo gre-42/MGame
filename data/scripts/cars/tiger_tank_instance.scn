@@ -1,7 +1,7 @@
 macro_begin create_tiger_tank_graphics;
-    renderable_instance name=chassis-inst-SUFFIX node=car_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Left|Right|Hull;
-    renderable_instance name=turret_inst-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Machine_Gun|Main_Turret|Hatch;
-    renderable_instance name=main_gun_inst-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Main_Gun;
+    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Left|Right|Hull;
+    renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Machine_Gun|Main_Turret|Hatch;
+    renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Main_Gun;
 macro_end;
 
 macro_begin create_tiger_tank_physics;
