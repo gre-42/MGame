@@ -5,6 +5,7 @@ macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
     SCORE_BOARD:5
     OSM_MAP_RESOURCE:osm_resource_arena
+    IF_HAS_OVERLAY:#
     STADIUM_CAMERA_X:0
     STADIUM_CAMERA_Y:500
     STADIUM_CAMERA_Z:500
@@ -44,5 +45,7 @@ macro_end;
 
 macro_playback instantiate_transient_objects
     IF_UPDATE_EXISTING_SCENE:#;
-macro_playback setup_teams_3_4_humans_pod_bot context=primary_scene;
+macro_playback setup_teams_3_4_humans_pod_bot context=primary_scene
+    TEAMS_SPAWN_POINTS_RESOURCE:osm_map
+    TEAMS_WAY_POINTS_RESOURCE:osm_map;
 macro_playback create_main_menu;

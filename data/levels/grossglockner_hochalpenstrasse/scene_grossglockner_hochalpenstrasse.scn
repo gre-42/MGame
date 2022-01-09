@@ -7,6 +7,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
         IF_CREATE_PC_PLAYER:
         SCORE_BOARD:10
         OSM_MAP_RESOURCE:osm_resource_grossglockner_hochalpenstrasse-STYLE
+        IF_HAS_OVERLAY:#
         OSM_POSITION_Y:-2000
         DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
         DIRTMAP_OFFSET:0

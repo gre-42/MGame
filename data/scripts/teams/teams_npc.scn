@@ -79,7 +79,7 @@ macro_begin teams.create_player_and_human_for_npc;
             IF_STYLE:IF_STYLE
             DECIMATE:DECIMATE
             R:R G:G B:B;
-    set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
+    set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
 
 macro_begin teams.create_player_and_car_for_npc;
@@ -90,5 +90,5 @@ macro_begin teams.create_player_and_car_for_npc;
         parameters=
             CAR_NAME:CAR_NAME
             DECIMATE:DECIMATE;
-    set_way_points player=PLAYER_NAME node=osm_map_node resource=osm_map;
+    set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;

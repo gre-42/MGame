@@ -269,7 +269,12 @@ macro_begin _scene_racing_delete_transient_objects;
 macro_end;
 
 macro_begin scene_racing_static;
-    macro_playback OSM_MAP_RESOURCE GAME_LEVEL:GAME_LEVEL;
+    macro_playback OSM_MAP_RESOURCE
+        GAME_LEVEL:GAME_LEVEL
+        HEIGHTMAP:HEIGHTMAP;
+
+    IF_HAS_OVERLAY macro_playback OSM_MAP_OVERLAY_RESOURCE
+        GAME_LEVEL:GAME_LEVEL;
 
     create_scene
         name=primary_scene
@@ -341,5 +346,7 @@ macro_begin generic_scene_racing_dynamic;
         IF_PLAYBACK_WINNER_0:IF_PLAYBACK_WINNER_0
         IF_PLAYBACK_WINNER_1:IF_PLAYBACK_WINNER_1
         IF_PLAYBACK_WINNER_2:IF_PLAYBACK_WINNER_2
-        IF_CHECKPOINTS:IF_CHECKPOINTS;
+        IF_CHECKPOINTS:IF_CHECKPOINTS
+        TEAMS_SPAWN_POINTS_RESOURCE:TEAMS_SPAWN_POINTS_RESOURCE
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
 macro_end;

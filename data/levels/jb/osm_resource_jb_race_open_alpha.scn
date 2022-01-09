@@ -2,7 +2,7 @@ macro_begin osm_resource_jb_race;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_jb.osm,
-        heightmap=__DIR__/heightmap.pgm,
+        heightmap=__DIR__/HEIGHTMAP,
         terrain_undefined_textures=textures/pink.png,
         terrain_grass_textures=
             #Ground003_near
@@ -128,5 +128,6 @@ macro_begin osm_resource_jb_race;
         street_surface_endpoint1_resource_name=road_low_endpoint3_1,
         path_surface_central_resource_name=road_low_central3,
         path_surface_endpoint0_resource_name=road_low_endpoint3_0,
-        path_surface_endpoint1_resource_name=road_low_endpoint3_1;
+        path_surface_endpoint1_resource_name=road_low_endpoint3_1,
+        game_level=GAME_LEVEL;
 macro_end;
