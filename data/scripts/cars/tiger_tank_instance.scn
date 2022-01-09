@@ -51,13 +51,13 @@ macro_begin create_tiger_tank_physics;
     #  400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
-    create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.5 2 4 8 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-25 -20 -10 0 powers=0 2.66e11 2.66e11 2e10 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=-25 -20 -10 0 powers=0 2.66e11 2.66e11 2e10 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED;
 
-    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 -4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 +4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
-    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 +4 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 -4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 -4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 +4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 +4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=3;
 macro_end;
 
 macro_begin create_tiger_tank;
@@ -83,15 +83,15 @@ macro_begin create_tiger_tank;
     child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
     IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
-    IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d3;
+    IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d3-SUFFIX DECIMATE:_d3;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:56e3     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
 macro_end;
 
 macro_begin get_into_tiger_tank;
     player_set_aiming_gun player_name=PLAYER_NAME yaw_node=turret_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
-    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
+    player_set_surface_power player_name=PLAYER_NAME forward=2.66e11 backward=-2.66e11;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
     player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
