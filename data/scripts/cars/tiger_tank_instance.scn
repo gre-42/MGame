@@ -2,6 +2,17 @@ macro_begin create_tiger_tank_graphics;
     renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Left|Right|Hull;
     renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Machine_Gun|Main_Turret|Hatch;
     renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE regex=Main_Gun;
+
+    renderable_instance name=wheel-SUFFIX node=wheel_left_0_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_right_0_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_left_1_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_right_1_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_left_2_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_right_2_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_left_3_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_right_3_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_left_4_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    renderable_instance name=wheel-SUFFIX node=wheel_right_4_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
 macro_end;
 
 macro_begin create_tiger_tank_physics;
@@ -27,13 +38,13 @@ macro_begin create_tiger_tank_physics;
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=car_node-SUFFIX
         punch_angle_node=main_gun_punch_angle_node-SUFFIX
-        cool_down=0.5
+        cool_down=10
         renderable=tank_bullet_renderable
         hitbox=tank_bullet_hitbox
         mass=20
         velocity=900
         lifetime=20
-        damage=10
+        damage=100
         size=2.4 2.4 20
         punch_angle=0.1
         carrier=vehicle;
@@ -51,16 +62,45 @@ macro_begin create_tiger_tank_physics;
     #  400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
-    create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-25 -20 -10 0 powers=0 2.66e11 2.66e11 2e10 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=-25 -20 -10 0 powers=0 2.66e11 2.66e11 2e10 gear_ratios=0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=main
+        angular_vels=-25 -20 -10 0 10 20 25
+        powers=0 5.32e11 5.32e11 2e10 5.32e11 5.32e11 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=0;
 
-    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 -4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 -4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node= position=-1.8 -0.8 +4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=2;
-    wheel rigid_body=car_node-SUFFIX node= position=+1.8 -0.8 +4 radius=0.25 engine=main break_force=2.5e5 sKs=5e5 sKa=2e4 pKs=5e6 pKa=1e5 musF=2e5 4e5 musC=1.1 0.97 mufF=2e5 4e5 mufC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_0_node-SUFFIX  position=-1.8 -0.8 -2.4 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_0_node-SUFFIX position=+1.8 -0.8 -2.4 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_1_node-SUFFIX  position=-1.8 -0.8 -0.8 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_1_node-SUFFIX position=+1.8 -0.8 -0.8 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_2_node-SUFFIX  position=-1.8 -0.8 +0.8 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=4;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_2_node-SUFFIX position=+1.8 -0.8 +0.8 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=5;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_3_node-SUFFIX  position=-1.8 -0.8 +2.4 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=6;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_3_node-SUFFIX position=+1.8 -0.8 +2.4 radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=7;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_4_node-SUFFIX  position=-1.8 -0.8 +4   radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=8;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_4_node-SUFFIX position=+1.8 -0.8 +4   radius=0.25 engine=main break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=9;
 macro_end;
 
 macro_begin create_tiger_tank;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_0_node-SUFFIX  position=-1.8 -0.8 -2.4 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_0_node-SUFFIX position=+1.8 -0.8 -2.4 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_1_node-SUFFIX  position=-1.8 -0.8 -0.8 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_1_node-SUFFIX position=+1.8 -0.8 -0.8 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_2_node-SUFFIX  position=-1.8 -0.8 +0.8 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_2_node-SUFFIX position=+1.8 -0.8 +0.8 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_3_node-SUFFIX  position=-1.8 -0.8 +2.4 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_3_node-SUFFIX position=+1.8 -0.8 +2.4 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_4_node-SUFFIX  position=-1.8 -0.8 +4   rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_4_node-SUFFIX position=+1.8 -0.8 +4   rotation=0 0 0 scale=1;
+
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_0_node-SUFFIX name=wheel_right_0_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_1_node-SUFFIX name=wheel_right_1_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_2_node-SUFFIX name=wheel_right_2_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_3_node-SUFFIX name=wheel_right_3_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_4_node-SUFFIX name=wheel_right_4_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     # renderable_instance name=box node=car_node-SUFFIX resource=muscle-cupe-hitbox;
     # renderable_instance name=car-inst node=car_node-SUFFIX resource=muscle-cupe;
 
