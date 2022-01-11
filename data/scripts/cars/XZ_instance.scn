@@ -29,6 +29,11 @@ macro_begin create_XZ_physics;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.8 -0.3 -1.35 radius=0.25 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX position=-0.8 -0.3 1.37 radius=0.25 engine=breaks break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_rear_node-SUFFIX position=0.8 -0.3 1.37 radius=0.25 engine=breaks break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
+
+    create_car_controller
+        node=car_node-SUFFIX
+        tire_ids=0 1
+        tire_angles=45 45;
 macro_end;
 
 macro_begin create_XZ;
