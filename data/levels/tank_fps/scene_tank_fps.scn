@@ -142,7 +142,7 @@ macro_begin _scene_tank_instantiate;
     #######;
     root_node_instance type=static name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
-    rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain;
+    rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain name=osm_map;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 
     register_geographic_mapping name=world node=osm_map_node resource=osm_map;
@@ -297,7 +297,7 @@ macro_begin _scene_tank_instantiate;
     #######;
     macro_begin create-box;
         renderable_instance name=box-SUFFIX node=box-node-SUFFIX resource=muscle-cupe-hitbox;
-        rigid_cuboid node=box-node-SUFFIX hitbox=muscle-cupe-hitbox mass=1200 size=5 5 5 collidable_mode=small_moving;
+        rigid_cuboid node=box-node-SUFFIX hitbox=muscle-cupe-hitbox mass=1200 size=5 5 5 collidable_mode=small_moving name=box;
         #collidable-mesh rigid_body-node=box-node node=box-node resource=muscle-cupe-hitbox;
     macro_end;
 

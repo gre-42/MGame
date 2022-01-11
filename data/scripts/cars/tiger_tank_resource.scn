@@ -32,16 +32,16 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 -2.4 to=-1.8 -1.3 -2.4; # left  front;
-gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 -2.4 to=+1.8 -1.3 -2.4; # right front;
+gen_ray name=tiger_tank_tirelines from=-1.8 +0.3 -2.4 to=-1.8 -0.5 -2.4; # left  front;
+gen_ray name=tiger_tank_tirelines from=+1.8 +0.3 -2.4 to=+1.8 -0.5 -2.4; # right front;
 gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 -0.8 to=-1.8 -1.3 -0.8; # left  1;
 gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 -0.8 to=+1.8 -1.3 -0.8; # right 1;
 gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +0.8 to=-1.8 -1.3 +0.8; # left  2;
 gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +0.8 to=+1.8 -1.3 +0.8; # right 2;
 gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +2.4 to=-1.8 -1.3 +2.4; # left  3;
 gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +2.4 to=+1.8 -1.3 +2.4; # right 3;
-gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +4   to=-1.8 -1.3 +4;   # left  rear;
-gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +4   to=+1.8 -1.3 +4;   # right rear;
+gen_ray name=tiger_tank_tirelines from=-1.8 +0.3 +4   to=-1.8 -0.5 +4;   # left  rear;
+gen_ray name=tiger_tank_tirelines from=+1.8 +0.3 +4   to=+1.8 -0.5 +4;   # right rear;
 
 macro_begin load_tiger_tank;
     obj_resource
