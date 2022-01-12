@@ -71,7 +71,7 @@ macro_begin create_tiger_tank_physics;
     create_engine
         rigid_body=car_node-SUFFIX
         name=left
-        angular_vels=-30 -20 20 30
+        angular_vels=-25 -20 20 25
         powers=0 2.66e11 2.66e11 0
         gear_ratios=0.5 1 2 3
         hand_brake_pulled=HAND_BRAKE_PULLED
@@ -79,7 +79,7 @@ macro_begin create_tiger_tank_physics;
     create_engine
         rigid_body=car_node-SUFFIX
         name=right
-        angular_vels=-30 -20 20 30
+        angular_vels=-25 -20 20 25
         powers=0 2.66e11 2.66e11 0
         gear_ratios=0.5 1 2 3
         hand_brake_pulled=HAND_BRAKE_PULLED
