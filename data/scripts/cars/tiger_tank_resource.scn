@@ -1,4 +1,4 @@
-obj_resource
+# obj_resource
     name=tiger_tank_hitbox
     filename=models/box.obj
     position=0 0.55 0
@@ -13,6 +13,23 @@ obj_resource
     occluded_by_black=0
     aggregate_mode=off
     transformation_mode=all;
+
+obj_resource
+    name=tiger_tank_hitbox
+    filename=models/free3d.com/tiger_tank/Tiger_Hitbox.obj
+    position=0 -1 0
+    rotation=0 90 0
+    scale=0.6 0.6 0.6
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
 
 gen_triangle_rays name=tiger_tank_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
