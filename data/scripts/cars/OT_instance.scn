@@ -10,7 +10,14 @@ macro_begin create_OT_graphics;
 macro_end;
 
 macro_begin create_OT_physics;
-    rigid_cuboid node=car_node-SUFFIX hitbox=OT_hitbox tirelines=OT_tirelines mass=MASS size=1.8 1.5 4.5 collidable_mode=COLLIDABLE_MODE name=OT;
+    rigid_cuboid
+        node=car_node-SUFFIX
+        hitbox=OT_hitbox
+        tirelines=OT_tirelines
+        mass=MASS
+        size=1.8 1.5 4.5
+        collidable_mode=COLLIDABLE_MODE
+        name=OT-SUFFIX;
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
     #  200 PS = 147100 Watt;

@@ -12,7 +12,15 @@ macro_begin create_LK4_graphics;
 macro_end;
 
 macro_begin create_LK4_physics;
-    rigid_cuboid node=car_node-SUFFIX hitbox=LK4_hitbox tirelines=LK4-tirelines mass=MASS size=1.7 1.2 4.1 com=0 -0.2 -0.2 collidable_mode=COLLIDABLE_MODE name=LK4;
+    rigid_cuboid
+        node=car_node-SUFFIX
+        hitbox=LK4_hitbox
+        tirelines=LK4-tirelines
+        mass=MASS
+        size=1.7 1.2 4.1
+        com=0 -0.2 -0.2
+        collidable_mode=COLLIDABLE_MODE
+        name=LK4-SUFFIX;
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
     #  200 PS = 147100 Watt;

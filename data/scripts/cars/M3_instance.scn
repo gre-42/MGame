@@ -12,7 +12,14 @@ macro_begin create_M3_graphics;
 macro_end;
 
 macro_begin create_M3_physics;
-    rigid_cuboid node=car_node-SUFFIX hitbox=M3_hitbox tirelines=M3-tirelines mass=MASS size=1.7 1.2 4.1 com=0 -0.2 -0.2 collidable_mode=COLLIDABLE_MODE name=M3;
+    rigid_cuboid
+        node=car_node-SUFFIX
+        hitbox=M3_hitbox
+        tirelines=M3-tirelines
+        mass=MASS size=1.7 1.2 4.1
+        com=0 -0.2 -0.2
+        collidable_mode=COLLIDABLE_MODE
+        name=M3-SUFFIX;
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
     #  200 PS = 147100 Watt;

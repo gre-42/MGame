@@ -297,7 +297,12 @@ macro_begin _scene_tank_instantiate;
     #######;
     macro_begin create-box;
         renderable_instance name=box-SUFFIX node=box-node-SUFFIX resource=muscle-cupe-hitbox;
-        rigid_cuboid node=box-node-SUFFIX hitbox=muscle-cupe-hitbox mass=1200 size=5 5 5 collidable_mode=small_moving name=box;
+        rigid_cuboid
+            node=box-node-SUFFIX
+            hitbox=muscle-cupe-hitbox
+            mass=1200 size=5 5 5
+            collidable_mode=small_moving
+            name=box-SUFFIX;
         #collidable-mesh rigid_body-node=box-node node=box-node resource=muscle-cupe-hitbox;
     macro_end;
 

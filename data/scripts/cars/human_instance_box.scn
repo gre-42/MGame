@@ -5,7 +5,7 @@ macro_begin create_human_box;
 
     IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
     # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    rigid_cuboid node=human_node-SUFFIX hitbox=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human;
+    rigid_cuboid node=human_node-SUFFIX hitbox=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human-SUFFIX;
 
     gun node=main_gun_end_node-SUFFIX parent_rigid_body_node=human_node-SUFFIX cool_down=0.5 renderable=tank_bullet_renderable hitbox=tank_bullet_hitbox mass=20 velocity=900 lifetime=20 damage=10 size=2.4 2.4 20;
 
@@ -27,7 +27,6 @@ macro_begin create_human_box;
     damageable node=human_node-SUFFIX health=200;
 
     IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.5 1 2 3;
-    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1;
 
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
 macro_end;

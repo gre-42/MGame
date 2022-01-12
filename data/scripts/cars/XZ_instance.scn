@@ -12,7 +12,15 @@ macro_begin create_XZ_graphics;
 macro_end;
 
 macro_begin create_XZ_physics;
-    rigid_cuboid node=car_node-SUFFIX hitbox=XZ_hitbox tirelines=XZ_tirelines mass=MASS size=1.8 1 4.6 com=0 -0.2 0.2 collidable_mode=COLLIDABLE_MODE name=XZ;
+    rigid_cuboid
+        node=car_node-SUFFIX
+        hitbox=XZ_hitbox
+        tirelines=XZ_tirelines
+        mass=MASS
+        size=1.8 1 4.6
+        com=0 -0.2 0.2
+        collidable_mode=COLLIDABLE_MODE
+        name=XZ-SUFFIX;
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
     #  200 PS = 147100 Watt;
