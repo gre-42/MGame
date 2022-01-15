@@ -20,7 +20,8 @@ macro_begin create_tiger_tank_physics;
         node=car_node-SUFFIX
         hitbox=tiger_tank_hitbox
         tirelines=tiger_tank_tirelines
-        mass=MASS size=3.6 3 8
+        mass=MASS
+        size=3.6 3 8
         collidable_mode=COLLIDABLE_MODE
         name=tiger_tank-SUFFIX;
     # damageable node=car_node-SUFFIX health=200;
