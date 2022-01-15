@@ -33,9 +33,9 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-gen_ray name=ah_64_tirelines from=-1.0 +0.3 -0.8 to=-1.0 -0.5 -0.8; # left  front;
-gen_ray name=ah_64_tirelines from=+1.0 +0.3 -0.8 to=+1.0 -0.5 -0.8; # right front;
-gen_ray name=ah_64_tirelines from=+0.0 +0.3 +9.9 to=+0.0 -0.5 +9.9; # central rear;
+gen_ray name=ah_64_tirelines from=-1.0 +0.6  -0.8 to=-1.0 -0.2  -0.8; # left  front;
+gen_ray name=ah_64_tirelines from=+1.0 +0.6  -0.8 to=+1.0 -0.2  -0.8; # right front;
+gen_ray name=ah_64_tirelines from=+0.0 +1.45 +9.9 to=+0.0 +0.65 +9.9; # central rear;
 
 macro_begin load_ah_64;
     obj_resource
@@ -46,7 +46,7 @@ macro_begin load_ah_64;
         scale=1 1 1
         distances=DIST_MIN DIST_MAX
         is_small=0
-        blend_mode=off
+        blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces=1
         occluded_type=color
