@@ -1,0 +1,26 @@
+{
+    "library": "teams",
+    "game_mode": "racing",
+    "teams": {
+        "red": { "style": { "color": [1, 0.8, 0.8] } },
+        "blue": { "style": { "color": [0.8, 0.8, 1] } }
+    },
+    "players": [
+        {
+            "controller": "pc", "name": "you", "team": "red",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc1", "team": "red",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc2", "team": "blue",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc3", "team": "blue",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        }
+    ]
+}

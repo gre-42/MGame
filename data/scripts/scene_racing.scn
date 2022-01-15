@@ -35,6 +35,17 @@ macro_begin _scene_racing_instantiate_static_objects;
         line_distance=24
         score_board=SCORE_BOARD;
 
+    ##############;
+    # Global log #;
+    ##############;
+    visual_global_log
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-200 -400
+        font_height=24
+        line_distance=24
+        nentries=10
+        severity=critical;
+
     #############;
     # Countdown #;
     #############;

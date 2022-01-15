@@ -17,12 +17,4 @@ macro_begin setup_teams_3_4_cars_ramming;
     set_preferred_car_spawner player=you macro=teams.create_car_for_pc parameters=CAR_NAME:_M3 DECIMATE:;
 
     set_spawn_points node=osm_map_node resource=TEAMS_SPAWN_POINTS_RESOURCE;
-
-    visual_global_log
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-200 -400
-        font_height=24
-        line_distance=24
-        nentries=10
-        severity=critical;
 macro_end;

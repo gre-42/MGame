@@ -1,0 +1,8 @@
+macro_begin setup_teams;
+    load_players
+        json=PLAYERS_JSON
+        way_points=TEAMS_WAY_POINTS_RESOURCE;
+    set_spawn_points
+        node=osm_map_node
+        resource=TEAMS_SPAWN_POINTS_RESOURCE;
+macro_end;
