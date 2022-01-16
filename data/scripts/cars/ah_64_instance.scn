@@ -63,14 +63,40 @@ macro_begin create_ah_64_physics;
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=main_rotor
+        angular_vels=-25 -20 20 25
+        powers=0 2.8e6 2.8e6 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=rear_rotor
+        angular_vels=-25 -20 20 25
+        powers=0 2.8e5 2.8e5 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +1.2  +9.9 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
 
+    rotor rigid_body=car_node-SUFFIX position=0 4.2 0   rotation=90  0 0 engine=main_rotor power2lift=1e-1 tire_id=3;
+    rotor rigid_body=car_node-SUFFIX position=0 4.2 9.1 rotation= 0 90 0 engine=rear_rotor power2lift=1e-1 tire_id=4;
+
     create_heli_controller
         node=car_node-SUFFIX
         tire_ids=0 1
-        tire_angles=45 45;
+        tire_angles=45 45
+        main_rotor_id=3
+        rear_rotor_id=4
+        ascend_multiplier=1e0
+        yaw_multiplier=1e3
+        vehicle_domain=air;
 macro_end;
 
 macro_begin create_ah_64;

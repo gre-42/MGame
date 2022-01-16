@@ -43,6 +43,14 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
         surface_power=-INFINITY;
+    vehicle_controller_key_binding
+        node=car_node-SUFFIX
+        key=E
+        lift_power=INFINITY;
+    vehicle_controller_key_binding
+        node=car_node-SUFFIX
+        key=Q
+        lift_power=-INFINITY;
 
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
