@@ -14,7 +14,7 @@ macro_begin create_ah_64_physics;
         hitbox=ah_64_hitbox
         tirelines=ah_64_tirelines
         mass=MASS
-        size=3.6 3 8
+        size=2 2 9
         com=0 2.2 0
         collidable_mode=COLLIDABLE_MODE
         name=ah_64-SUFFIX;
