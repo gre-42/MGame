@@ -46,11 +46,11 @@ macro_begin create_car_key_bindings_rally;
     vehicle_controller_key_binding
         node=car_node-SUFFIX
         key=E
-        lift_power=INFINITY;
+        ascend_velocity=10;
     vehicle_controller_key_binding
         node=car_node-SUFFIX
         key=Q
-        lift_power=-INFINITY;
+        ascend_velocity=-10;
 
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX

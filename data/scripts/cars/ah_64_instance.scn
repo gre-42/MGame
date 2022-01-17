@@ -15,6 +15,7 @@ macro_begin create_ah_64_physics;
         tirelines=ah_64_tirelines
         mass=MASS
         size=3.6 3 8
+        com=0 2.2 0
         collidable_mode=COLLIDABLE_MODE
         name=ah_64-SUFFIX;
 
@@ -85,8 +86,8 @@ macro_begin create_ah_64_physics;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +1.2  +9.9 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
 
-    rotor rigid_body=car_node-SUFFIX position=0 4.2 0   rotation=90  0 0 engine=main_rotor power2lift=1e-1 tire_id=3;
-    rotor rigid_body=car_node-SUFFIX position=0 4.2 9.1 rotation= 0 90 0 engine=rear_rotor power2lift=1e-1 tire_id=4;
+    rotor rigid_body=car_node-SUFFIX position=0 4.2 0   rotation=90  0 0 engine=main_rotor power2lift=5e-2 tire_id=3;
+    rotor rigid_body=car_node-SUFFIX position=0 4.2 9.1 rotation= 0 90 0 engine=rear_rotor power2lift=5e-2 tire_id=4;
 
     create_heli_controller
         node=car_node-SUFFIX
@@ -94,8 +95,11 @@ macro_begin create_ah_64_physics;
         tire_angles=45 45
         main_rotor_id=3
         rear_rotor_id=4
-        ascend_multiplier=1e0
-        yaw_multiplier=1e3
+        yaw_multiplier=1e6
+        ascend_p=1e6
+        ascend_i=0
+        ascend_d=1e8
+        ascend_a=0.1
         vehicle_domain=air;
 macro_end;
 
