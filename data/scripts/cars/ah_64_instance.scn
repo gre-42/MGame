@@ -86,7 +86,7 @@ macro_begin create_ah_64_physics;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +1.2  +9.9 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
 
-    rotor rigid_body=car_node-SUFFIX position=0 4.2 0   rotation=90  0 0 engine=main_rotor power2lift=5e-2 tire_id=3;
+    rotor rigid_body=car_node-SUFFIX position=0 4.2 0   rotation=90  0 0 engine=main_rotor power2lift=5e-2 max_align_to_gravity=30 tire_id=3;
     rotor rigid_body=car_node-SUFFIX position=0 4.2 9.1 rotation= 0 90 0 engine=rear_rotor power2lift=5e-2 tire_id=4;
 
     create_heli_controller
@@ -95,7 +95,9 @@ macro_begin create_ah_64_physics;
         tire_angles=45 45
         main_rotor_id=3
         rear_rotor_id=4
-        yaw_multiplier=1e6
+        pitch_multiplier=0.1
+        yaw_multiplier=1e5
+        roll_multiplier=0.2
         ascend_p=1e6
         ascend_i=0
         ascend_d=1e8
