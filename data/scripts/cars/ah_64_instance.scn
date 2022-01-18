@@ -38,13 +38,13 @@ macro_begin create_ah_64_physics;
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=car_node-SUFFIX
         punch_angle_node=main_gun_punch_angle_node-SUFFIX
-        cool_down=10
+        cool_down=0.1
         renderable=tank_bullet_renderable
         hitbox=tank_bullet_hitbox
         mass=20
         velocity=900
         lifetime=20
-        damage=100
+        damage=10
         size=2.4 2.4 20
         punch_angle=0.1
         carrier=vehicle;
@@ -93,7 +93,7 @@ macro_begin create_ah_64_physics;
         engine=main_rotor
         power2lift=5e-2
         max_align_to_gravity=30
-        align_to_gravity_pid_p=0.1
+        align_to_gravity_pid_p=0.2
         align_to_gravity_pid_i=0
         align_to_gravity_pid_d=10
         align_to_gravity_pid_a=0.1
