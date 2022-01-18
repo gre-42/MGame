@@ -97,6 +97,7 @@ macro_begin create_ah_64_physics;
         align_to_gravity_pid_i=0
         align_to_gravity_pid_d=10
         align_to_gravity_pid_a=0.1
+        drift_reduction_factor=0.01
         tire_id=3;
     rotor
         rigid_body=car_node-SUFFIX
