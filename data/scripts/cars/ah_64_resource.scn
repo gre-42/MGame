@@ -2,7 +2,7 @@ obj_resource
     name=ah_64_hitbox
     filename=models/sketchfab.com/AH-64-apache/hitbox.obj
     position=0 0 0
-    rotation=-15 180 0
+    rotation=-5 180 0
     scale=1 1 1
     is_small=0
     blend_mode=off
@@ -42,7 +42,7 @@ macro_begin load_ah_64;
         name=NAME
         filename=models/sketchfab.com/AH-64-apache/NAME.obj
         position=0 0 0
-        rotation=-15 180 0
+        rotation=-5 180 0
         scale=1 1 1
         distances=DIST_MIN DIST_MAX
         is_small=0
