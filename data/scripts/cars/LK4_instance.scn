@@ -41,7 +41,7 @@ macro_begin create_LK4_physics;
     create_car_controller
         node=car_node-SUFFIX
         tire_ids=0 1
-        tire_angles=45 45;
+        tire_angles=30 30;
 macro_end;
 
 macro_begin create_LK4;
@@ -62,8 +62,6 @@ macro_end;
 
 macro_begin get_into_LK4;
     player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=0 tire_angle_left=30 tire_angle_right=-30;
-    player_set_tire_angle player_name=PLAYER_NAME tire_id=1 tire_angle_left=30 tire_angle_right=-30;
 macro_end;
 
 macro_begin create_player_car_externals_LK4;
