@@ -19,11 +19,11 @@ macro_begin create_ah_64_physics;
         collidable_mode=COLLIDABLE_MODE
         name=ah_64-SUFFIX;
 
-    rigid_cuboid
+    rigid_disk
         node=blades-SUFFIX
         hitbox=boxz
-        mass=MASS
-        size=2 2 0.1
+        mass=30
+        radius=7.3
         com=0 0 0
         collidable_mode=COLLIDABLE_MODE
         name=blades-SUFFIX;
@@ -98,10 +98,10 @@ macro_begin create_ah_64_physics;
     rotor
         vehicle=car_node-SUFFIX
         blades=blades-SUFFIX
-        vehicle_mount_0=0  0.0 0
-        vehicle_mount_1=0 -3.2 0
-        blades_mount_0=0 0 1.0
-        blades_mount_1=0 0 4.2
+        vehicle_mount_0=0 4.2 0
+        vehicle_mount_1=0 0   0
+        blades_mount_0= 0 0   0.0
+        blades_mount_1= 0 0   4.2
         position=0 4.2 0
         rotation=90 0 0
         engine=main_rotor
