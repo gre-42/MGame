@@ -19,6 +19,15 @@ macro_begin create_ah_64_physics;
         collidable_mode=COLLIDABLE_MODE
         name=ah_64-SUFFIX;
 
+    rigid_cuboid
+        node=blades-SUFFIX
+        hitbox=boxz
+        mass=MASS
+        size=2 2 0.1
+        com=0 0 0
+        collidable_mode=COLLIDABLE_MODE
+        name=blades-SUFFIX;
+
     yaw_pitch_look_at_nodes
         yaw_node=turret_node-SUFFIX
         pitch_node=main_gun_node-SUFFIX
@@ -87,7 +96,12 @@ macro_begin create_ah_64_physics;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.9 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
 
     rotor
-        rigid_body=car_node-SUFFIX
+        vehicle=car_node-SUFFIX
+        blades=blades-SUFFIX
+        vehicle_mount_0=0  0.0 0
+        vehicle_mount_1=0 -3.2 0
+        blades_mount_0=0 0 1.0
+        blades_mount_1=0 0 4.2
         position=0 4.2 0
         rotation=90 0 0
         engine=main_rotor
@@ -100,7 +114,7 @@ macro_begin create_ah_64_physics;
         drift_reduction_factor=0.01
         tire_id=3;
     rotor
-        rigid_body=car_node-SUFFIX
+        vehicle=car_node-SUFFIX
         position=0 3.4 9.1
         rotation=0 90 0
         engine=rear_rotor
@@ -148,11 +162,14 @@ macro_begin create_ah_64;
 
     child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=blades-SUFFIX position=0 4.2 0 rotation=90 0 0 scale=1;
+
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d5-SUFFIX DECIMATE:_d5;
+    IF_WITH_GRAPHICS renderable_instance name=blades-SUFFIX node=blades-SUFFIX resource=boxz;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:6e3     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:6e3      COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
 macro_end;
 
 macro_begin get_into_ah_64;
