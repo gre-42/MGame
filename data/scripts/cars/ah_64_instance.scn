@@ -1,11 +1,14 @@
 macro_begin create_ah_64_graphics;
-    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=AH_64-DECIMATE;
+    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=AH_64-DECIMATE regex=cockpit|glass|hull;
     renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
 
     renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+
+    renderable_instance name=blades-SUFFIX node=blades_shift_node-NODE_SUFFIX resource=blades_AH_64-DECIMATE regex=main_rotor;
+    renderable_instance name=rear_rotor-SUFFIX node=rear_rotor_node-NODE_SUFFIX resource=tail_rotor_spinning_AH_64-DECIMATE;
 macro_end;
 
 macro_begin create_ah_64_physics;
@@ -91,9 +94,9 @@ macro_begin create_ah_64_physics;
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -0.8 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.9 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 radius=0.25 engine=wheels break_force=2.5e5 sKs=1.67e5 sKa=6.7e3 pKs=1.67e6 pKa=3.33e4 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
 
     rotor
         vehicle=car_node-SUFFIX
@@ -138,9 +141,9 @@ macro_begin create_ah_64_physics;
 macro_end;
 
 macro_begin create_ah_64;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -0.8 rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -0.8 rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.9 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 rotation=0 0 0 scale=1;
 
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_front_node-SUFFIX name=wheel_right_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
 
@@ -163,10 +166,11 @@ macro_begin create_ah_64;
     child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
 
     child_node_instance type=dynamic parent=car_node-SUFFIX name=blades-SUFFIX position=0 4.2 0 rotation=90 0 0 scale=1;
+    child_node_instance type=dynamic parent=blades-SUFFIX name=blades_shift_node-SUFFIX position=0 0 4.2 rotation=-90 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=rear_rotor_node-SUFFIX position=0 3.4 9.1 rotation=0 0 0 scale=1;
 
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d5-SUFFIX DECIMATE:_d5;
-    IF_WITH_GRAPHICS renderable_instance name=blades-SUFFIX node=blades-SUFFIX resource=boxz;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:6e3      COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;

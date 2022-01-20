@@ -33,22 +33,60 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-gen_ray name=ah_64_tirelines from=-1.0 +0.6  -0.8 to=-1.0 -0.2  -0.8; # left  front;
-gen_ray name=ah_64_tirelines from=+1.0 +0.6  -0.8 to=+1.0 -0.2  -0.8; # right front;
-gen_ray name=ah_64_tirelines from=+0.0 +0.65 +9.9 to=+0.0 -0.15 +9.9; # central rear;
+gen_ray name=ah_64_tirelines from=-1.0 +0.6  -1.1 to=-1.0 -0.2  -1.1; # left  front;
+gen_ray name=ah_64_tirelines from=+1.0 +0.6  -1.1 to=+1.0 -0.2  -1.1; # right front;
+gen_ray name=ah_64_tirelines from=+0.0 +0.65 +9.6 to=+0.0 -0.15 +9.6; # central rear;
 
 macro_begin load_ah_64;
     obj_resource
-        name=NAME
-        filename=models/sketchfab.com/AH-64-apache/NAME.obj
-        position=0 0 0
+        name=AH_64-DECIMATE
+        filename=models/sketchfab.com/AH-64-apache/AH_64-DECIMATE.obj
+        position=0 0 -0.3
         rotation=-5 180 0
         scale=1 1 1
         distances=DIST_MIN DIST_MAX
         is_small=0
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
+        cull_faces=0
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        is_black=IS_BLACK
+        aggregate_mode=off
+        transformation_mode=all
+        triangle_tangent_error_behavior=zero;
+    
+    obj_resource
+        name=blades_AH_64-DECIMATE
+        filename=models/sketchfab.com/AH-64-apache/AH_64-DECIMATE.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        distances=DIST_MIN DIST_MAX
+        is_small=0
+        blend_mode=continuous
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=0
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        is_black=IS_BLACK
+        aggregate_mode=off
+        transformation_mode=all
+        triangle_tangent_error_behavior=zero;
+    
+    obj_resource
+        name=tail_rotor_spinning_AH_64-DECIMATE
+        filename=models/sketchfab.com/AH-64-apache/tail_rotor_spinning-DECIMATE.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        distances=DIST_MIN DIST_MAX
+        is_small=0
+        blend_mode=continuous
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=0
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
@@ -58,5 +96,5 @@ macro_begin load_ah_64;
         triangle_tangent_error_behavior=zero;
 macro_end;
 
-macro_playback load_ah_64 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 NAME:AH_64;
-macro_playback load_ah_64 DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 NAME:AH_64_d5;
+macro_playback load_ah_64 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:;
+macro_playback load_ah_64 DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d5;
