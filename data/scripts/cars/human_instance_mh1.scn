@@ -48,13 +48,13 @@ macro_begin create_human_mh1;
 
     damageable node=human_node-SUFFIX health=200;
 
-    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs   angular_vels=0 powers=1000 gear_ratios=1;
+    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs angular_vels=0 powers=1000 gear_ratios=1;
 
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
 
     IF_WITH_PHYSICS create_human_controller
         node=human_node-SUFFIX
-        angular_velocity=30
+        angular_velocity=50
         steering_multiplier=1;
 
     set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
@@ -63,7 +63,6 @@ macro_end;
 macro_begin get_into_mh1;
     IF_WITH_GUN player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
     player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
-    player_set_angular_velocity player_name=PLAYER_NAME angular_velocity_left=50 angular_velocity_right=-50;
 macro_end;
 
 macro_begin create_externals_for_human_pc_mh1;

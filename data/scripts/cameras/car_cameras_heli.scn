@@ -11,7 +11,7 @@ macro_begin create_car_cameras_heli;
     follow_node
         follower=follower_camera
         followed=car_node-SUFFIX
-        distance=10
+        distance=15
         node_displacement=0 4 0
         look_at_displacement=0 4 0
         snappiness=2
