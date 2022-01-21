@@ -46,17 +46,19 @@ macro_begin create_car_key_bindings_rally;
     vehicle_controller_key_binding
         node=car_node-SUFFIX
         key=E
+        joystick_digital_axis=6
+        joystick_digital_axis_sign=1
         ascend_velocity=10;
     vehicle_controller_key_binding
         node=car_node-SUFFIX
         key=Q
+        gamepad_button=RIGHT_BUMPER
         ascend_velocity=-10;
 
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
         key=LEFT
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=-1
+        gamepad_button=LEFT_BUMPER
         cursor_axis=0
         cursor_sign_and_scale=-0.03
         rotation_axis=0 1 0
@@ -66,7 +68,7 @@ macro_begin create_car_key_bindings_rally;
     IF_HAS_GUN rel_key_binding
         node=turret_node-SUFFIX
         key=RIGHT
-        joystick_digital_axis=1
+        joystick_digital_axis=5
         joystick_digital_axis_sign=1
         cursor_axis=0
         cursor_sign_and_scale=0.03
@@ -102,5 +104,5 @@ macro_begin create_car_key_bindings_rally;
         node=main_gun_end_node-SUFFIX
         key=SPACE
         mouse_button=LEFT
-        gamepad_button=RIGHT_BUMPER;
+        gamepad_button=TRIANGLE;
 macro_end;
