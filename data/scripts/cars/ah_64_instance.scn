@@ -23,6 +23,10 @@ macro_begin create_ah_64_physics;
         collidable_mode=COLLIDABLE_MODE
         name=ah_64-SUFFIX;
 
+    set_rigid_body_target
+        node=car_node-SUFFIX
+        target=0 2.2 0;
+
     rigid_disk
         node=blades-SUFFIX
         hitbox=boxz
