@@ -22,7 +22,9 @@ macro_begin create_human_box;
         pitch_max=45
         dpitch_max=10
         yaw_locked_on_max=2
-        pitch_locked_on_max=2;
+        pitch_locked_on_max=2
+        verror_std=1
+        verror_alpha=0.002;
 
     damageable node=human_node-SUFFIX health=200;
 

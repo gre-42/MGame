@@ -49,7 +49,9 @@ macro_begin create_ah_64_physics;
         pitch_max=45
         dpitch_max=0.8
         yaw_locked_on_max=2
-        pitch_locked_on_max=2;
+        pitch_locked_on_max=2
+        verror_std=1
+        verror_alpha=0.002;
 
     gun
         node=main_gun_end_node-SUFFIX
