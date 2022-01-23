@@ -32,7 +32,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             DE21F2_industryWindow00002
             DE21F2_industryWindow00003_gray
             MarekWindow00001_512,
-        ceiling_texture=textures/street+asphalt-1024x1024.png,
+        ceiling_texture=#Asphalt015,
         barrier_textures=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,

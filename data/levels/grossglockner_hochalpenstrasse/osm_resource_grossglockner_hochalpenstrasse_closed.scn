@@ -5,7 +5,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_closed;
         heightmap=__DIR__/heightmap.pgm
         terrain_textures=#Ground037_Sl
         grass_dirt_texture=#Ground025
-        street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg
+        street_crossing_texture=#Road007_No_Lines,
         street_texture=#Road007
         path_crossing_texture=#Gravel010
         path_texture=#Gravel010
@@ -16,7 +16,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_closed;
         facade_textures=
             Plaster003_White
             Plaster003
-        ceiling_texture=textures/street+asphalt-1024x1024.png
+        ceiling_texture=#Asphalt015
         barrier_textures=
             texture:#fence1 uv:1 1 blend_mode:binary reorient_uv0:0
         barrier_blend_mode=off

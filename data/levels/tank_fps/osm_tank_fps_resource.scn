@@ -18,7 +18,7 @@ macro_begin osm_tank_fps_resource;
         default_terrain_type=grass,
         grass_dirt_texture=#Ground029,
         street_dirt_texture=#Asphalt016_Dirt,
-        street_crossing_texture=textures/cc0textures/Road007_2K_Color_No_Lines.jpg,
+        street_crossing_texture=#Road007_No_Lines,
         street_textures=
             lanes:1 texture0:#Road007_Alpha,
         path_crossing_texture=#Gravel010,
@@ -32,7 +32,7 @@ macro_begin osm_tank_fps_resource;
         facade_textures=
             Plaster003_White
             Plaster003,
-        ceiling_texture=textures/street+asphalt-1024x1024.png,
+        ceiling_texture=#Asphalt015,
         barrier_textures=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
