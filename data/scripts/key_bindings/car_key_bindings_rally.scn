@@ -16,7 +16,7 @@ macro_begin create_car_key_bindings_rally;
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
 
-    abs_key_binding
+    # abs_key_binding
         node=car_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=B
@@ -104,4 +104,10 @@ macro_begin create_car_key_bindings_rally;
         key=SPACE
         mouse_button=LEFT
         gamepad_button=TRIANGLE;
+
+    IF_HAS_GUN IF_MANUAL_AIM player_key_binding
+        node=car_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=B
+        select_next_opponent;
 macro_end;

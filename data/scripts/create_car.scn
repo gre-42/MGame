@@ -54,5 +54,6 @@ macro_begin create_player_car_externals;
     macro_playback create_player_car_externals-CAR_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:IF_MANUAL_AIM;
 macro_end;

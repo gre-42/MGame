@@ -160,6 +160,7 @@ macro_begin create_player_car_externals_tiger_tank;
     macro_playback create_car_key_bindings
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_HAS_GUN:
         SUFFIX:SUFFIX;
     macro_playback create_car_cameras_tank

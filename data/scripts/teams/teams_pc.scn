@@ -8,7 +8,7 @@ macro_begin teams.create_player_for_pc;
         driving_direction=center;
 
     set_can_drive player=PLAYER_NAME value=0;
-    set_can_aim player=PLAYER_NAME value=0;
+    IF_MANUAL_AIM set_can_aim player=PLAYER_NAME value=0;
     set_can_shoot player=PLAYER_NAME value=0;
 macro_end;
 
@@ -64,7 +64,8 @@ macro_begin teams.create_car_for_pc;
         CAR_NAME:CAR_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:IF_MANUAL_AIM;
 
     # macro_playback create_car_cameras;
     # set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
@@ -97,11 +98,37 @@ macro_begin teams.create_car_for_pc;
 macro_end;
 
 macro_begin teams.create_player_and_human_for_pc;
-    macro_playback teams.create_player_for_pc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
-    set_preferred_car_spawner player=PLAYER_NAME macro=teams.create_human_for_pc parameters=HUMAN_NAME:HUMAN_NAME DECIMATE: IF_STYLE:IF_STYLE R:R G:G B:B;
+    macro_playback
+        teams.create_player_for_pc
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        GAME_MODE:GAME_MODE
+        IF_MANUAL_AIM:IF_MANUAL_AIM;
+    set_preferred_car_spawner
+        player=PLAYER_NAME
+        macro=teams.create_human_for_pc
+        parameters=
+            HUMAN_NAME:HUMAN_NAME
+            DECIMATE:
+            IF_STYLE:IF_STYLE
+            R:R G:G B:B
+            IF_MANUAL_AIM:IF_MANUAL_AIM;
 macro_end;
 
 macro_begin teams.create_player_and_car_for_pc;
-    macro_playback teams.create_player_for_pc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
-    set_preferred_car_spawner player=PLAYER_NAME macro=teams.create_car_for_pc parameters=CAR_NAME:CAR_NAME DECIMATE: IF_STYLE:IF_STYLE R:R G:G B:B;
+    macro_playback
+        teams.create_player_for_pc
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        GAME_MODE:GAME_MODE
+        IF_MANUAL_AIM:IF_MANUAL_AIM;
+    set_preferred_car_spawner
+        player=PLAYER_NAME
+        macro=teams.create_car_for_pc
+        parameters=
+            CAR_NAME:CAR_NAME
+            DECIMATE:
+            IF_STYLE:IF_STYLE
+            R:R G:G B:B
+            IF_MANUAL_AIM:IF_MANUAL_AIM;
 macro_end;
