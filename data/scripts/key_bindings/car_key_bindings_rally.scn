@@ -105,7 +105,7 @@ macro_begin create_car_key_bindings_rally;
         mouse_button=LEFT
         gamepad_button=TRIANGLE;
 
-    IF_HAS_GUN IF_MANUAL_AIM player_key_binding
+    IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
         node=car_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=B
