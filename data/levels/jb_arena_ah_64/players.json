@@ -5,9 +5,14 @@
         "red": { "style": { "color": [1, 0.8, 0.8] } },
         "blue": { "style": { "color": [0.8, 0.8, 1] } }
     },
+    "default_skills": {
+        "manual_aim": false,
+        "verror_std": 1
+    },
     "players": [
         {
-            "controller": "pc", "name": "you", "team": "red", "manual_aim": false,
+            "controller": "pc", "name": "you", "team": "red",
+            "skills": { "verror_std": 0.1 },
             "spawned_vehicle": { "type": "ah_64" }
         },
         {

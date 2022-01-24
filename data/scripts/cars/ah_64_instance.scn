@@ -50,7 +50,7 @@ macro_begin create_ah_64_physics;
         dpitch_max=0.8
         yaw_locked_on_max=2
         pitch_locked_on_max=2
-        verror_std=1
+        verror_std=VERROR_STD
         verror_alpha=0.002;
 
     gun
@@ -185,8 +185,26 @@ macro_begin create_ah_64;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d5-SUFFIX DECIMATE:_d5;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_ah_64_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:6e3      COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_STATIC  macro_playback create_ah_64_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:INFINITY
+        COLLIDABLE_MODE:small_static
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VERROR_STD:VERROR_STD;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_ah_64_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:6e3
+        COLLIDABLE_MODE:small_moving
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VERROR_STD:VERROR_STD;
 macro_end;
 
 macro_begin get_into_ah_64;
