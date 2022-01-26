@@ -1,90 +1,85 @@
 macro_begin create_human_key_bindings;
-    abs_idle_binding
-        node=human_node-SUFFIX
-        tires_z=0 0 0;
+    avatar_controller_idle_binding
+        node=human_node-SUFFIX;
     abs_key_binding
         node=human_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=B
         force=0 2000 0
         position=0 0 0;
-    abs_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=A
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
         surface_power=30000
-        max_velocity=9
         tires_z=-1 0 0;
-    abs_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=D
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
         surface_power=30000
-        max_velocity=9
         tires_z=1 0 0;
-    rel_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=LEFT
         joystick_digital_axis=3
         joystick_digital_axis_sign=-1
         cursor_axis=0
         cursor_sign_and_scale=-0.03
-        rotation_axis=0 1 0
+        yaw
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.1;
-    rel_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=RIGHT
         joystick_digital_axis=3
         joystick_digital_axis_sign=1
         cursor_axis=0
         cursor_sign_and_scale=0.03
-        rotation_axis=0 1 0
+        yaw
         angular_velocity_press=-0.01
         angular_velocity_repeat=-0.5
-        speed_cursor=0.1;
-    abs_key_binding
+        speed_cursor=-0.1;
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=W
         joystick_digital_axis=2
         joystick_digital_axis_sign=-1
         surface_power=30000
-        max_velocity=9
         tires_z=0 0 -1;
-    abs_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=S
         joystick_digital_axis=2
         joystick_digital_axis_sign=1
         surface_power=30000
-        max_velocity=9
         tires_z=0 0 1;
 
-    rel_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=UP
         joystick_digital_axis=4
         joystick_digital_axis_sign=-1
         cursor_axis=1
         cursor_sign_and_scale=-0.03
-        rotation_axis=1 0 0
+        pitch
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.1;
-    rel_key_binding
+    avatar_controller_key_binding
         node=human_node-SUFFIX
         key=DOWN
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
         cursor_axis=1
         cursor_sign_and_scale=0.03
-        rotation_axis=1 0 0
+        pitch
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
-        speed_cursor=0.1;
+        speed_cursor=-0.1;
 
     weapon_inventory_key_binding
         node=human_node-SUFFIX
