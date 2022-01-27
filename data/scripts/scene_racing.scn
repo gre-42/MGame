@@ -135,6 +135,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_WITH_PHYSICS:
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        VERROR_STD:VERROR_STD
         IF_STATIC:#
         IF_DYNAMIC:
         IF_PLAYBACK_TRACK:#
@@ -175,7 +177,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_STYLE:#;
+            IF_STYLE:#
+            VERROR_STD:1;
     macro_end;
 
     macro_begin create_winner_playback;
@@ -198,7 +201,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_STYLE:#;
+            IF_STYLE:#
+            VERROR_STD:1;
         add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
     macro_end;
 
@@ -232,7 +236,9 @@ macro_begin _scene_racing_instantiate_transient_objects;
         CAR_NAME:SHOWROOM_PLAYER_CAR
         SUFFIX:
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        VERROR_STD:VERROR_STD;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;
@@ -349,6 +355,8 @@ macro_begin generic_scene_racing_dynamic;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_BURN_IN:IF_BURN_IN
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        VERROR_STD:VERROR_STD
         IF_RECORD_TRACK:IF_RECORD_TRACK
         RECORDINGS_DIR:RECORDINGS_DIR
         IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1

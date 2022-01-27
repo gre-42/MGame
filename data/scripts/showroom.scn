@@ -15,7 +15,8 @@ macro_begin create_showroom_car;
         IF_RALLY:
         IF_STATIC:#
         IF_DYNAMIC:
-        HAND_BRAKE_PULLED:1;
+        HAND_BRAKE_PULLED:1
+        VERROR_STD:1;
     macro_playback add_attached_light LSUFFIX:_car CSUFFIX:;
 macro_end;
 
