@@ -597,7 +597,7 @@ macro_begin _scene_tank_instantiate;
     # GL_TEXTURE_CUBE_MAP_NEGATIVE_Z 0x851A;
     set_skybox alias=skybox filenames=textures/skybox/right.jpg textures/skybox/left.jpg textures/skybox/top.jpg textures/skybox/bottom.jpg textures/skybox/back.jpg textures/skybox/front.jpg;
 
-    camera_key_binding key=C gamepad_button=BACK joystick_digital_axis= joystick_digital_axis_sign=NAN;
+    camera_key_binding key=C gamepad_button=BACK;
 
     append_focuses countdown_pending;
 
