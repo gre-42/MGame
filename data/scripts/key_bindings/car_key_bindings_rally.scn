@@ -116,4 +116,10 @@ macro_begin create_car_key_bindings_rally;
         gamepad_button=B
         gamepad_button2=Y
         select_next_opponent;
+
+    player_key_binding
+        node=car_node-SUFFIX
+        gamepad_button=B
+        gamepad_button2=A
+        select_next_vehicle;
 macro_end;

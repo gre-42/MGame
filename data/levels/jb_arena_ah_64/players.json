@@ -1,13 +1,17 @@
 {
     "library": "teams",
-    "game_mode": "racing",
     "teams": {
         "red": { "style": { "color": [1, 0.8, 0.8] } },
         "blue": { "style": { "color": [0.8, 0.8, 1] } }
     },
-    "default_skills": {
-        "manual_aim": false,
-        "verror_std": 1
+    "defaults": {
+        "game_mode": "racing",
+        "unstuck_mode": "reverse",
+        "set_way_points": true,
+        "skills": {
+            "manual_aim": false,
+            "verror_std": 1
+        }
     },
     "players": [
         {
@@ -25,6 +29,13 @@
         },
         {
             "controller": "npc", "name": "npc3", "team": "blue",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc4", "team": "red",
+            "game_mode": "bystander",
+            "unstuck_mode": "off",
+            "set_way_points": false,
             "spawned_vehicle": { "type": "tiger_tank" }
         }
     ]

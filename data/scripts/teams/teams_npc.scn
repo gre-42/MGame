@@ -13,7 +13,7 @@ macro_begin teams.create_player_for_car_and_npc;
         name=PLAYER_NAME
         team=TEAM
         game_mode=GAME_MODE
-        unstuck_mode=reverse
+        unstuck_mode=UNSTUCK_MODE
         driving_mode=car_arena
         driving_direction=center;
 macro_end;
@@ -71,7 +71,11 @@ macro_begin teams.create_car_for_npc;
 macro_end;
 
 macro_begin teams.create_player_and_human_for_npc;
-    macro_playback teams.create_player_for_human_and_npc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+    macro_playback
+        teams.create_player_for_human_and_npc
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        GAME_MODE:GAME_MODE;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_human_for_npc
@@ -80,11 +84,16 @@ macro_begin teams.create_player_and_human_for_npc;
             IF_STYLE:IF_STYLE
             DECIMATE:DECIMATE
             R:R G:G B:B;
-    set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
+    IF_SET_WAY_POINTS set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
 
 macro_begin teams.create_player_and_car_for_npc;
-    macro_playback teams.create_player_for_car_and_npc PLAYER_NAME:PLAYER_NAME TEAM:TEAM GAME_MODE:GAME_MODE;
+    macro_playback
+        teams.create_player_for_car_and_npc
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        GAME_MODE:GAME_MODE
+        UNSTUCK_MODE:UNSTUCK_MODE;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_car_for_npc
@@ -93,5 +102,5 @@ macro_begin teams.create_player_and_car_for_npc;
             IF_STYLE:IF_STYLE
             DECIMATE:DECIMATE
             R:R G:G B:B;
-    set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
+    IF_SET_WAY_POINTS set_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
