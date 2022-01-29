@@ -42,6 +42,8 @@ macro_begin _setup_menu_primary_scene;
         focus_mask=loading;
 
     tab_menu
+        key=ENTER
+        gamepad_button=A
         id=submenus
         title=
         ttf_file=fonts/RobotoMono-Bold.ttf
