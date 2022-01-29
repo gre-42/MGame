@@ -55,8 +55,7 @@ macro_begin create_tiger_tank_physics;
         lifetime=20
         damage=100
         size=2.4 2.4 20
-        punch_angle=0.1
-        carrier=vehicle;
+        punch_angle=0.1;
 
     # visual_node_status_3rd
         node=car_node-SUFFIX

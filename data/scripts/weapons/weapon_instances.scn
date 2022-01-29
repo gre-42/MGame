@@ -19,8 +19,7 @@ macro_begin add_weapon_m4a1;
         lifetime=20
         damage=10
         size=2.4 2.4 20
-        punch_angle=0.3
-        carrier=avatar;
+        punch_angle=0.3;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -39,8 +38,7 @@ macro_begin add_weapon_beretta92;
         lifetime=20
         damage=10
         size=2.4 2.4 20
-        punch_angle=0.3
-        carrier=avatar;
+        punch_angle=0.3;
 macro_end;
 
 macro_begin create_none_weapon;
@@ -56,6 +54,5 @@ macro_begin create_none_weapon;
         lifetime=0
         damage=10
         size=2.4 2.4 20
-        punch_angle=0.3
-        carrier=avatar;
+        punch_angle=0.3;
 macro_end;

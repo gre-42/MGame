@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/Mlib",
+                "/usr/local/include/opencv4",
+                "/usr/include/SDL2"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++-10",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "MSYS2",
+            "includePath": [
+                "${workspaceFolder}\\Mlib",
+                "D:\\Programs\\msys64\\mingw64\\include\\c++\\10.3.0",
+                "D:\\Programs\\msys64\\usr\\include"
+            ],
+            "defines": ["_USE_MATH_DEFINES"],
+            "compilerPath": "D:\\Programs\\msys64\\mingw64\\bin\\g++.exe",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

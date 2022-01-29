@@ -65,8 +65,7 @@ macro_begin create_ah_64_physics;
         lifetime=20
         damage=10
         size=2.4 2.4 20
-        punch_angle=0.1
-        carrier=vehicle;
+        punch_angle=0.1;
 
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
