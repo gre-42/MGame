@@ -8,6 +8,7 @@ macro_begin create_car_key_bindings_rally;
         key=A
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
+        not_gamepad_button=B
         tire_angle_velocities=10 80
         tire_angles=45 20;
     car_controller_key_binding
@@ -16,6 +17,7 @@ macro_begin create_car_key_bindings_rally;
         key=D
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
+        not_gamepad_button=B
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
 
@@ -38,6 +40,7 @@ macro_begin create_car_key_bindings_rally;
         gamepad_button=X
         joystick_digital_axis=4
         joystick_digital_axis_sign=-1
+        not_gamepad_button=B
         surface_power=INFINITY;
     car_controller_key_binding
         player=PLAYER_NAME
@@ -46,6 +49,7 @@ macro_begin create_car_key_bindings_rally;
         gamepad_button=A
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
+        not_gamepad_button=B
         surface_power=-INFINITY;
     car_controller_key_binding
         player=PLAYER_NAME
@@ -53,12 +57,14 @@ macro_begin create_car_key_bindings_rally;
         key=E
         joystick_digital_axis=6
         joystick_digital_axis_sign=1
+        not_gamepad_button=B
         ascend_velocity=10;
     car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=Q
         gamepad_button=RIGHT_BUMPER
+        not_gamepad_button=B
         ascend_velocity=-10;
 
     IF_HAS_GUN rel_key_binding
@@ -68,6 +74,7 @@ macro_begin create_car_key_bindings_rally;
         gamepad_button=LEFT_BUMPER
         cursor_axis=0
         cursor_sign_and_scale=-0.03
+        not_gamepad_button=B
         rotation_axis=0 1 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
@@ -80,6 +87,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=1
         cursor_axis=0
         cursor_sign_and_scale=0.03
+        not_gamepad_button=B
         rotation_axis=0 1 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
@@ -93,6 +101,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=-1
         cursor_axis=1
         cursor_sign_and_scale=-0.03
+        not_gamepad_button=B
         rotation_axis=1 0 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
@@ -105,6 +114,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=1
         cursor_axis=1
         cursor_sign_and_scale=0.03
+        not_gamepad_button=B
         rotation_axis=1 0 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
