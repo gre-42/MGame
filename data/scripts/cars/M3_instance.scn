@@ -71,5 +71,6 @@ macro_begin create_player_car_externals_M3;
         IF_HAS_GUN:#
         SUFFIX:SUFFIX;
     macro_playback create_car_cameras_sedan
-        SUFFIX:SUFFIX;
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
 macro_end;

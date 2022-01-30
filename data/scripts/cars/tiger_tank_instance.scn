@@ -163,7 +163,8 @@ macro_begin create_player_car_externals_tiger_tank;
         IF_HAS_GUN:
         SUFFIX:SUFFIX;
     macro_playback create_car_cameras_tank
-        SUFFIX:SUFFIX;
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
     hud_image
         name=crosshair
         camera_node=main_gun_camera_node-SUFFIX

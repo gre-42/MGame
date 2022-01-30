@@ -74,7 +74,8 @@ macro_begin create_externals_for_human_pc_mh1;
     macro_playback create_human_key_bindings
         SUFFIX:SUFFIX;
     macro_playback create_human_cameras
-        SUFFIX:SUFFIX;
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
     hud_image
         name=crosshair
         camera_node=main_gun_camera_node-SUFFIX
