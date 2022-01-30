@@ -61,12 +61,15 @@ macro_begin teams.create_car_for_pc;
         IF_SHADOW:
         IF_DAMAGEABLE:
         R:R G:G B:B;
-    macro_playback create_player_car_externals
-        CAR_NAME:CAR_NAME
-        SUFFIX:SUFFIX
-        IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY
-        IF_MANUAL_AIM:IF_MANUAL_AIM;
+    set_externals_creator
+        player=PLAYER_NAME
+        macro=macro_playback create_player_car_externals
+            CAR_NAME:CAR_NAME
+            SUFFIX:SUFFIX
+            IF_RACING:IF_RACING
+            IF_RALLY:IF_RALLY
+            IF_MANUAL_AIM:IF_MANUAL_AIM;
+    create_externals player=PLAYER_NAME;
 
     # macro_playback create_car_cameras;
     # set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;

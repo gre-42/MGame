@@ -238,7 +238,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_MANUAL_AIM:IF_MANUAL_AIM
-        VERROR_STD:VERROR_STD;
+        VERROR_STD:VERROR_STD
+        PLAYER_NAME:you;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;
