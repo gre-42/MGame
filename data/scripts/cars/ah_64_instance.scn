@@ -217,7 +217,8 @@ macro_begin create_player_car_externals_ah_64;
         IF_RALLY:IF_RALLY
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_HAS_GUN:
-        SUFFIX:SUFFIX;
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
     macro_playback create_car_cameras_heli
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
