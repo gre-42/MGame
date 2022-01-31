@@ -231,13 +231,15 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PC_CAR macro_playback create_player_car_externals
-        CAR_NAME:SHOWROOM_PLAYER_CAR
-        SUFFIX:
-        IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY
-        IF_MANUAL_AIM:
-        PLAYER_NAME:you;
+    IF_CREATE_PC_CAR set_externals_creator
+        player=you
+        macro=macro_playback create_player_car_externals
+            CAR_NAME:SHOWROOM_PLAYER_CAR
+            SUFFIX:
+            IF_RACING:IF_RACING
+            IF_RALLY:IF_RALLY
+            IF_MANUAL_AIM:;
+    IF_CREATE_PC_CAR create_externals player=you;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;
