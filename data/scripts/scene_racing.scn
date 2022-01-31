@@ -135,8 +135,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_WITH_PHYSICS:
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        VERROR_STD:VERROR_STD
+        VERROR_STD:0
         IF_STATIC:#
         IF_DYNAMIC:
         IF_PLAYBACK_TRACK:#
@@ -237,8 +236,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         SUFFIX:
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        VERROR_STD:VERROR_STD
+        IF_MANUAL_AIM:
         PLAYER_NAME:you;
 
     # STATUS_TIME = 1 << 0;
