@@ -24,7 +24,7 @@ macro_begin create_human_cameras;
     set_camera_cycle name=near follower_camera main_gun_camera_node-SUFFIX;
     set_camera follower_camera;
 
-    append_externals_deleter player=PLAYER_NAME macro=delete_root_node name=45_deg_camera;
-    append_externals_deleter player=PLAYER_NAME macro=delete_child_node name=follower_camera;
-    append_externals_deleter player=PLAYER_NAME macro=delete_child_node name=main_gun_camera_node-SUFFIX;
+    append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
+    append_externals_deleter player=PLAYER_NAME node=follower_camera;
+    append_externals_deleter player=PLAYER_NAME node=main_gun_camera_node-SUFFIX;
 macro_end;

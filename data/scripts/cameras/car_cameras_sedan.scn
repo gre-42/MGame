@@ -20,6 +20,6 @@ macro_begin create_car_cameras_sedan;
     set_camera_cycle name=near follower_camera;
     set_camera follower_camera;
 
-    append_externals_deleter player=PLAYER_NAME macro=delete_root_node name=45_deg_camera;
-    append_externals_deleter player=PLAYER_NAME macro=delete_child_node name=follower_camera;
+    append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
+    append_externals_deleter player=PLAYER_NAME node=follower_camera;
 macro_end;
