@@ -32,7 +32,8 @@ macro_begin teams.create_human_for_pc;
         HUMAN_NAME:HUMAN_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        PLAYER_NAME:PLAYER_NAME;
 macro_end;
 
 macro_begin teams.create_car_for_pc;

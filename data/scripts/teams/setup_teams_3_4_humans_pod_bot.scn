@@ -3,21 +3,22 @@ macro_begin setup_teams_3_4_humans_pod_bot;
     set_pod_bot_way_points node=osm_map_node resource=osm_map;
     set_pod_bot_game_mode aim;
 
-    macro_playback teams.create_player_and_human_for_pc DECIMATE: PLAYER_NAME:you HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_pc IF_STYLE: R:1 G:0.8 B:0.8 IF_MANUAL_AIM:;
+    macro_playback teams.create_player_and_human_for_pc DECIMATE: PLAYER_NAME:you HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_pc IF_STYLE: R:1 G:0.8 B:0.8 IF_MANUAL_AIM:
+        IF_SET_WAY_POINTS:#;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc1 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_STYLE: R:1 G:0.8 B:0.8
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc2 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_STYLE: R:1 G:0.8 B:0.8
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc3 HUMAN_NAME:_mh1 TEAM:terrorist GAME_MODE:pod_bot_npc IF_STYLE: R:1 G:0.8 B:0.8
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc4 HUMAN_NAME:_mh1 TEAM:counter GAME_MODE:pod_bot_npc IF_STYLE: R:0.8 G:0.8 B:1
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc5 HUMAN_NAME:_mh1 TEAM:counter GAME_MODE:pod_bot_npc IF_STYLE: R:0.8 G:0.8 B:1
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc6 HUMAN_NAME:_mh1 TEAM:counter GAME_MODE:pod_bot_npc IF_STYLE: R:0.8 G:0.8 B:1
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
     macro_playback teams.create_player_and_human_for_npc DECIMATE: PLAYER_NAME:h_npc7 HUMAN_NAME:_mh1 TEAM:counter GAME_MODE:pod_bot_npc IF_STYLE: R:0.8 G:0.8 B:1
-        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
+        TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE IF_SET_WAY_POINTS:;
 
     set_spawn_points node=osm_map_node resource=TEAMS_SPAWN_POINTS_RESOURCE;
 macro_end;

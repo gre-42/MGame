@@ -38,5 +38,6 @@ macro_begin create_externals_for_human_pc;
     macro_playback create_externals_for_human_pc-HUMAN_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
-        IF_RALLY:IF_RALLY;
+        IF_RALLY:IF_RALLY
+        PLAYER_NAME:PLAYER_NAME;
 macro_end;
