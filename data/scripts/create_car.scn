@@ -73,18 +73,16 @@ macro_begin create_player_car_externals;
     # 244: v, a, d, d2, E;
     # 246: v, a, d, d2, E, p;
     # 14: v, s, health (if exists);
-    IF_DEVEL visual_node_status
+    IF_DEVEL visual_player_status
         player=PLAYER_NAME
-        node=car_node-SUFFIX
         format=246
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=50 40
         font_height=24
         line_distance=24;
     
-    IF_RELEASE visual_node_status
+    IF_RELEASE visual_player_status
         player=PLAYER_NAME
-        node=car_node-SUFFIX
         format=4
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=50 40

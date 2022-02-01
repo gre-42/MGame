@@ -79,28 +79,6 @@ macro_begin teams.create_car_for_pc;
 
     # IF_RACING macro_playback create_car_key_bindings_racing;
     # IF_RALLY macro_playback create_car_key_bindings_rally;
-
-    # STATUS_TIME = 1 << 0;
-    # STATUS_POSITION = 1 << 1;
-    # STATUS_SPEED = 1 << 2;
-    # STATUS_HEALTH = 1 << 3;
-    # STATUS_ACCELERATION = 1 << 4;
-    # STATUS_DIAMETER = 1 << 5;
-    # STATUS_DIAMETER2 = 1 << 6;
-    # STATUS_ENERGY = 1 << 7;
-    # 4: v;
-    # 20: v, a;
-    # 116: v, a, d, d2;
-    # 244: v, a, d, d2, E;
-    # 14: v, s, health (if exists);
-    visual_node_status
-        player=PLAYER_NAME
-        node=car_node-SUFFIX
-        format=254
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        position=50 40
-        font_height=24
-        line_distance=24;
 macro_end;
 
 macro_begin teams.create_player_and_human_for_pc;
