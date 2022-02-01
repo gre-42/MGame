@@ -58,4 +58,36 @@ macro_begin create_player_car_externals;
         IF_RALLY:IF_RALLY
         IF_MANUAL_AIM:IF_MANUAL_AIM
         PLAYER_NAME:PLAYER_NAME;
+
+    # STATUS_TIME = 1 << 0;
+    # STATUS_POSITION = 1 << 1;
+    # STATUS_SPEED = 1 << 2;
+    # STATUS_HEALTH = 1 << 3;
+    # STATUS_ACCELERATION = 1 << 4;
+    # STATUS_DIAMETER = 1 << 5;
+    # STATUS_DIAMETER2 = 1 << 6;
+    # STATUS_ENERGY = 1 << 7;
+    # 4: v;
+    # 20: v, a;
+    # 116: v, a, d, d2;
+    # 244: v, a, d, d2, E;
+    # 246: v, a, d, d2, E, p;
+    # 14: v, s, health (if exists);
+    IF_DEVEL visual_node_status
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        format=246
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=50 40
+        font_height=24
+        line_distance=24;
+    
+    IF_RELEASE visual_node_status
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        format=4
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=50 40
+        font_height=24
+        line_distance=24;
 macro_end;

@@ -94,6 +94,7 @@ macro_begin teams.create_car_for_pc;
     # 244: v, a, d, d2, E;
     # 14: v, s, health (if exists);
     visual_node_status
+        player=PLAYER_NAME
         node=car_node-SUFFIX
         format=254
         ttf_file=fonts/RobotoMono-Bold.ttf
