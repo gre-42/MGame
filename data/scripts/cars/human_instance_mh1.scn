@@ -84,3 +84,9 @@ macro_begin create_externals_for_human_pc_mh1;
         center=0 0
         size=0.05 0.05;
 macro_end;
+
+macro_begin add_attached_light_mh1;
+    macro_playback add_attached_light_human
+        LSUFFIX:LSUFFIX
+        CSUFFIX:CSUFFIX;
+macro_end;

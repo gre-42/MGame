@@ -69,3 +69,9 @@ macro_begin create_player_car_externals_TW;
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
 macro_end;
+
+macro_begin add_attached_light_TW;
+    macro_playback add_attached_light_sedan
+        LSUFFIX:LSUFFIX
+        CSUFFIX:CSUFFIX;
+macro_end;

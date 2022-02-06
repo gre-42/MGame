@@ -17,7 +17,7 @@ macro_begin _create_showroom_car;
         IF_DYNAMIC:
         HAND_BRAKE_PULLED:1
         VERROR_STD:1;
-    macro_playback add_attached_light LSUFFIX:_car CSUFFIX:;
+    macro_playback add_attached_light-SUFFIX LSUFFIX:_car CSUFFIX:;
 macro_end;
 
 macro_begin create_showroom_car;
@@ -49,7 +49,7 @@ macro_begin _initialize_showroom_scene;
         cull_faces=1
         occluded_type=color
         occluder_type=white
-        occluded_by_black=0
+        occluded_by_black=1
         aggregate_mode=off
         transformation_mode=all;
 

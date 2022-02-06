@@ -241,8 +241,6 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_MANUAL_AIM:;
     IF_CREATE_PC_CAR create_externals player=you;
 
-    # IF_CREATE_PC_CAR macro_playback add_attached_light LSUFFIX:1 CSUFFIX:;
-
     IF_CREATE_PC_CAR root_node_instance type=dynamic name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
     IF_CREATE_PC_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
     IF_CREATE_PC_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;

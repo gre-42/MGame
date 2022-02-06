@@ -230,3 +230,9 @@ macro_begin create_player_car_externals_ah_64;
         center=0 0
         size=0.05 0.05;
 macro_end;
+
+macro_begin add_attached_light_ah_64;
+    macro_playback add_attached_light_heli
+        LSUFFIX:LSUFFIX
+        CSUFFIX:CSUFFIX;
+macro_end;
