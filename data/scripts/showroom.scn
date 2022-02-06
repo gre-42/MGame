@@ -1,4 +1,4 @@
-macro_begin create_showroom_car;
+macro_begin _create_showroom_car;
     root_node_instance
         type=dynamic
         name=car_node
@@ -6,8 +6,8 @@ macro_begin create_showroom_car;
         rotation=0 135 0
         scale=1;
 
-    macro_playback create-SHOWROOM_PLAYER_CAR
-        DECIMATE:-SHOWROOM_DECIMATE
+    macro_playback create-SUFFIX
+        DECIMATE:DECIMATE
         SUFFIX:
         IF_WITH_GRAPHICS:
         IF_WITH_PHYSICS:
@@ -20,9 +20,17 @@ macro_begin create_showroom_car;
     macro_playback add_attached_light LSUFFIX:_car CSUFFIX:;
 macro_end;
 
+macro_begin create_showroom_car;
+    macro_playback _create_showroom_car
+        SUFFIX:SHOWROOM_PLAYER_CAR
+        DECIMATE:SHOWROOM_DECIMATE;
+macro_end;
+
 macro_begin change_showroom_car;
     delete_root_node name=car_node;
-    macro_playback create_showroom_car;
+    macro_playback _create_showroom_car
+        SUFFIX:SUFFIX
+        DECIMATE:DECIMATE;
 macro_end;
 
 macro_begin _initialize_showroom_scene;
