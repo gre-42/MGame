@@ -1,7 +1,5 @@
 macro_begin create_human_mh1;
-    # renderable_instance name=human_hitbox node=human_node-SUFFIX resource=human_hitbox;
     child_node_instance type=dynamic parent=human_node-SUFFIX name=animation_node-SUFFIX position=0 -0.5 0 rotation=0 180 0 scale=1;
-    renderable_instance name=human-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
     child_node_instance type=dynamic parent=human_node-SUFFIX name=main_gun_node-SUFFIX position=0 0.5 -0.3 rotation=30 0 0 scale=1;
     child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_punch_angle_node-SUFFIX position=0 0 0 rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
@@ -10,6 +8,7 @@ macro_begin create_human_mh1;
         node=human_node-SUFFIX
         hitbox=human_hitbox
         tirelines=human_tirelines
+        grind_contacts=human_grind_contacts
         mass=70
         size=INFINITY INFINITY INFINITY
         collidable_mode=small_moving
@@ -63,6 +62,10 @@ macro_begin create_human_mh1;
         node=human_node-SUFFIX;
 
     set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
+
+    # renderable_instance name=human_hitbox node=human_node-SUFFIX resource=human_hitbox;
+    renderable_instance name=human_grind_contact node=human_node-SUFFIX resource=human_grind_contacts;
+    renderable_instance name=human-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
 macro_end;
 
 macro_begin get_into_mh1;
