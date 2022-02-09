@@ -2,12 +2,12 @@ macro_begin _scene_racing_instantiate_static_objects;
     ################;
     # OSM instance #;
     ################;
-    root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=-90 0 0 scale=1e3;
+    root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
     rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain name=osm_map;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 
-    register_geographic_mapping name=world node=osm_map_node resource=osm_map;
+    IF_WITH_GEOGRAPHIC_MAPPING register_geographic_mapping name=world node=osm_map_node resource=osm_map;
 
     ##########;
     # Player #;
@@ -285,6 +285,9 @@ macro_begin scene_racing_static;
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         SCORE_BOARD:SCORE_BOARD
         OSM_POSITION_Y:OSM_POSITION_Y=-220
+        OSM_ROTATION_X:OSM_ROTATION_X=-90
+        OSM_SCALE:OSM_SCALE=1e3
+        IF_WITH_GEOGRAPHIC_MAPPING:IF_WITH_GEOGRAPHIC_MAPPING=
         STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
         STADIUM_CAMERA_Y:STADIUM_CAMERA_Y=2000
         STADIUM_CAMERA_Z:STADIUM_CAMERA_Z=2400

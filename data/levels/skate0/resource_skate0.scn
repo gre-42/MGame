@@ -1,0 +1,17 @@
+macro_begin osm_resource_skate0;
+    obj_resource
+        name=osm_map
+        filename=__DIR__/skate0.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        occluded_type=color
+        occluder_type=white
+        occluded_by_black=1
+        aggregate_mode=off
+        transformation_mode=all;
+macro_end;

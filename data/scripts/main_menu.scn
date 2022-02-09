@@ -92,7 +92,8 @@ macro_begin _setup_menu_primary_scene;
             name=WIP: Tank FPS value=levels/tank_fps/scene_tank_fps.scn
             name=WIP: Tank FPS 2 value=levels/jb_arena/scene_jb_arena.scn
             name=WIP: Tank FPS 2 AH-64 value=levels/jb_arena_ah_64/scene_jb_arena_ah_64.scn
-            name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn;
+            name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn
+            name=WIP: Skate0 value=levels/skate0/scene_skate0.scn;
 
     IF_RELEASE scene_selector
         id=scene_selector
