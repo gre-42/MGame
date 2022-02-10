@@ -180,3 +180,5 @@ macro_begin add_attached_light_tiger_tank;
         LSUFFIX:LSUFFIX
         CSUFFIX:CSUFFIX;
 macro_end;
+
+global CLASS_tiger_tank = car;

@@ -22,19 +22,19 @@ macro_begin reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
-        SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR
+        SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE
         PLAYBACK_SPEED:PLAYBACK_SPEED=1;
 macro_end;
 
-macro_begin __change_showroom_car_in_physics_thread;
-    execute_in_physics_thread macro_playback change_showroom_car
+macro_begin __change_showroom_vehicle_in_physics_thread;
+    execute_in_physics_thread macro_playback change_showroom_vehicle
         SUFFIX:SUFFIX
         DECIMATE:DECIMATE;
 macro_end;
 
-macro_begin _change_showroom_car_in_physics_thread;
-    macro_playback __change_showroom_car_in_physics_thread
-        SUFFIX:SHOWROOM_PLAYER_CAR
+macro_begin _change_showroom_vehicle_in_physics_thread;
+    macro_playback __change_showroom_vehicle_in_physics_thread
+        SUFFIX:SHOWROOM_PLAYER_VEHICLE
         DECIMATE:SHOWROOM_DECIMATE;
 macro_end;
 
@@ -126,18 +126,19 @@ macro_begin _setup_menu_primary_scene;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=macro_playback create_showroom_car context=showroom,
-        on_change=macro_playback _change_showroom_car_in_physics_thread context=showroom,
+        on_init=macro_playback create_showroom_vehicle context=showroom,
+        on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
-            name=M3 value=SHOWROOM_PLAYER_CAR:_M3 SHOWROOM_DECIMATE:
-            name=OT value=SHOWROOM_PLAYER_CAR:_OT SHOWROOM_DECIMATE:
-            name=TW value=SHOWROOM_PLAYER_CAR:_TW SHOWROOM_DECIMATE:
-            name=XZ value=SHOWROOM_PLAYER_CAR:_XZ SHOWROOM_DECIMATE:
-            name=LK4 value=SHOWROOM_PLAYER_CAR:_LK4 SHOWROOM_DECIMATE:
-            name=FN value=SHOWROOM_PLAYER_CAR:_FN SHOWROOM_DECIMATE:
-            name=AH-64 value=SHOWROOM_PLAYER_CAR:_ah_64 SHOWROOM_DECIMATE:;
+            name=M3 value=SHOWROOM_PLAYER_VEHICLE:_M3 SHOWROOM_DECIMATE:
+            name=OT value=SHOWROOM_PLAYER_VEHICLE:_OT SHOWROOM_DECIMATE:
+            name=TW value=SHOWROOM_PLAYER_VEHICLE:_TW SHOWROOM_DECIMATE:
+            name=XZ value=SHOWROOM_PLAYER_VEHICLE:_XZ SHOWROOM_DECIMATE:
+            name=LK4 value=SHOWROOM_PLAYER_VEHICLE:_LK4 SHOWROOM_DECIMATE:
+            name=FN value=SHOWROOM_PLAYER_VEHICLE:_FN SHOWROOM_DECIMATE:
+            name=AH-64 value=SHOWROOM_PLAYER_VEHICLE:_ah_64 SHOWROOM_DECIMATE:
+            name=MH1 value=SHOWROOM_PLAYER_VEHICLE:_mh1 SHOWROOM_DECIMATE:;
 
-            # name=Tiger value=SHOWROOM_PLAYER_CAR:_tiger_tank SHOWROOM_DECIMATE:;
+            # name=Tiger value=SHOWROOM_PLAYER_VEHICLE:_tiger_tank SHOWROOM_DECIMATE:;
 
     # fill_pixel_region_with_texture
         source_scene=showroom

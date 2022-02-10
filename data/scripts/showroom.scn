@@ -1,12 +1,20 @@
-macro_begin _create_showroom_car;
-    root_node_instance
-        type=dynamic
-        name=car_node
-        position=0 0.7 -11
-        rotation=0 135 0
-        scale=1;
-
-    macro_playback create-SUFFIX
+macro_begin _create_showroom_vehicle;
+    macro_playback create_-CLASS-SHOWROOM_PLAYER_VEHICLE
+        HUMAN_NAME:SHOWROOM_PLAYER_VEHICLE
+        HUMAN_NODE_X:0
+        HUMAN_NODE_Y:0.7
+        HUMAN_NODE_Z:-11
+        HUMAN_NODE_ANGLE_Y:135
+        CAR_NAME:SHOWROOM_PLAYER_VEHICLE
+        CAR_NODE_X:0
+        CAR_NODE_Y:0.7
+        CAR_NODE_Z:-11
+        CAR_NODE_ANGLE_X:0
+        CAR_NODE_ANGLE_Y:135
+        CAR_NODE_ANGLE_Z:0
+        IF_HUMAN_STYLE:
+        IF_CAR_STYLE:#
+        R:-1 G:-1 B:-1
         DECIMATE:DECIMATE
         SUFFIX:
         IF_WITH_GRAPHICS:
@@ -16,19 +24,24 @@ macro_begin _create_showroom_car;
         IF_STATIC:#
         IF_DYNAMIC:
         HAND_BRAKE_PULLED:1
-        VERROR_STD:1;
-    macro_playback add_attached_light-SUFFIX LSUFFIX:_car CSUFFIX:;
+        VERROR_STD:1
+        IF_SHADOW:
+        IF_PLAYBACK_TRACK:#
+        IF_PLAYBACK_WINNER:#
+        IF_PLAYER:#
+        IF_DAMAGEABLE:#
+        IF_EXTERNALS:#;
 macro_end;
 
-macro_begin create_showroom_car;
-    macro_playback _create_showroom_car
-        SUFFIX:SHOWROOM_PLAYER_CAR
+macro_begin create_showroom_vehicle;
+    macro_playback _create_showroom_vehicle
+        SUFFIX:SHOWROOM_PLAYER_VEHICLE
         DECIMATE:SHOWROOM_DECIMATE;
 macro_end;
 
-macro_begin change_showroom_car;
-    delete_root_node name=car_node;
-    macro_playback _create_showroom_car
+macro_begin change_showroom_vehicle;
+    delete_root_nodes regex=^(car|human)_node$;
+    macro_playback _create_showroom_vehicle
         SUFFIX:SUFFIX
         DECIMATE:DECIMATE;
 macro_end;

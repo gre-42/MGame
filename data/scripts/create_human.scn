@@ -2,10 +2,10 @@ macro_begin create_human;
     root_node_instance
         type=dynamic
         name=human_node-SUFFIX
-        position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
+        position=HUMAN_NODE_X HUMAN_NODE_Y HUMAN_NODE_Z
         rotation=0 HUMAN_NODE_ANGLE_Y 0
         scale=1;
-    IF_STYLE set_renderable_style
+    IF_HUMAN_STYLE set_renderable_style
         selector=
         node=human_node-SUFFIX
         ambience=R G B
@@ -15,16 +15,26 @@ macro_begin create_human;
         animation_loop_begin=0
         animation_loop_end=3
         animation_loop_time=0;
-    macro_playback create_human-HUMAN_NAME
+    macro_playback create-HUMAN_NAME
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
+        IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_WITH_GUN:IF_WITH_GUN=#;
-    player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
-    macro_playback get_into-HUMAN_NAME
+    IF_PLAYER player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
+    IF_PLAYER macro_playback get_into-HUMAN_NAME
         PLAYER_NAME:PLAYER_NAME
         SUFFIX:SUFFIX
         IF_WITH_GUN:IF_WITH_GUN;
+    IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human-SUFFIX CSUFFIX:SUFFIX;
+    IF_EXTERNALS set_externals_creator
+        player=PLAYER_NAME
+        macro=macro_playback create_externals_for_human_pc
+            HUMAN_NAME:HUMAN_NAME
+            SUFFIX:SUFFIX
+            IF_RACING:IF_RACING
+            IF_RALLY:IF_RALLY
+            IF_MANUAL_AIM:IF_MANUAL_AIM;
     # visual_node_status_3rd
         node=human_node-SUFFIX
         format=8

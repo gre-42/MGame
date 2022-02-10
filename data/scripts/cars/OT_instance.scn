@@ -75,3 +75,5 @@ macro_begin add_attached_light_OT;
         LSUFFIX:LSUFFIX
         CSUFFIX:CSUFFIX;
 macro_end;
+
+global CLASS_OT = car;

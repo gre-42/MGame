@@ -236,3 +236,5 @@ macro_begin add_attached_light_ah_64;
         LSUFFIX:LSUFFIX
         CSUFFIX:CSUFFIX;
 macro_end;
+
+global CLASS_ah_64 = car;

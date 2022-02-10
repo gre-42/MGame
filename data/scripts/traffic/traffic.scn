@@ -20,20 +20,23 @@ macro_end;
 
 macro_begin traffic.create_human;
     macro_playback create_human
-        CAR_NODE_X:CAR_NODE_X
-        CAR_NODE_Y:CAR_NODE_Y
-        CAR_NODE_Z:CAR_NODE_Z
+        HUMAN_NODE_X:HUMAN_NODE_X
+        HUMAN_NODE_Y:HUMAN_NODE_Y
+        HUMAN_NODE_Z:HUMAN_NODE_Z
         HUMAN_NODE_ANGLE_Y:HUMAN_NODE_ANGLE_Y
         HUMAN_NAME:HUMAN_NAME
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
+        IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:#
         PLAYER_NAME:PLAYER_NAME
-        IF_STYLE:
-        R:-1 G:-1 B:-1;
+        IF_HUMAN_STYLE:
+        R:-1 G:-1 B:-1
+        IF_PLAYER:
+        IF_EXTERNALS:#;
 macro_end;
 
 macro_begin traffic.create_car;
@@ -60,17 +63,8 @@ macro_begin traffic.create_car;
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:#
         IF_DAMAGEABLE:#
-        IF_STYLE:
+        IF_CAR_STYLE:
         R:R G:G B:B;
-    
-    set_externals_creator
-        player=PLAYER_NAME
-        macro=macro_playback create_player_car_externals
-            CAR_NAME:CAR_NAME
-            SUFFIX:SUFFIX
-            IF_RACING:IF_RACING
-            IF_RALLY:IF_RALLY
-            IF_MANUAL_AIM:#;
 macro_end;
 
 macro_begin traffic.create_npc_and_human;

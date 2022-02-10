@@ -121,31 +121,39 @@ macro_begin _scene_racing_instantiate_transient_objects;
     # macro_playback create_M3 -SUFFIX: IF_WITH_PHYSICS:;
     # macro_playback create_TW;
     # macro_playback create_XZ -SUFFIX: IF_WITH_PHYSICS:;
-    IF_CREATE_PC_CAR macro_playback create_car
+    IF_CREATE_PC_CAR macro_playback create_-CLASS-SHOWROOM_PLAYER_VEHICLE
+        HUMAN_NAME:SHOWROOM_PLAYER_VEHICLE
+        CAR_NAME:SHOWROOM_PLAYER_VEHICLE
+        HUMAN_NODE_X:HUMAN_NODE_X
+        HUMAN_NODE_Y:HUMAN_NODE_Y
+        HUMAN_NODE_Z:HUMAN_NODE_Z
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
+        HUMAN_NODE_ANGLE_Y:HUMAN_NODE_ANGLE_Y
         CAR_NODE_ANGLE_X:CAR_NODE_ANGLE_X
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
-        CAR_NAME:SHOWROOM_PLAYER_CAR
+        IF_HUMAN_STYLE:
+        IF_CAR_STYLE:#
+        R:-1 G:-1 B:-1
         DECIMATE:
         SUFFIX:
         IF_WITH_GRAPHICS:
         IF_WITH_PHYSICS:
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_WITH_GUN:#
         VERROR_STD:0
         IF_STATIC:#
         IF_DYNAMIC:
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
-        IF_PLAYER:#
+        IF_PLAYER:
         IF_SHADOW:
         IF_DAMAGEABLE:#
-        IF_STYLE:#;
-
-    IF_CREATE_PC_CAR player_set_node player_name=you node=car_node;
+        PLAYER_NAME:you
+        IF_EXTERNALS:;
 
     IF_BURN_IN burn_in seconds=20;
     
@@ -176,8 +184,9 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_STYLE:#
-            VERROR_STD:1;
+            IF_CAR_STYLE:#
+            VERROR_STD:1
+            IF_EXTERNALS:#;
     macro_end;
 
     macro_begin create_winner_playback;
@@ -200,8 +209,9 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_STYLE:#
-            VERROR_STD:1;
+            IF_CAR_STYLE:#
+            VERROR_STD:1
+            IF_EXTERNALS:#;
         add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
     macro_end;
 
@@ -231,25 +241,13 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PC_CAR set_externals_creator
-        player=you
-        macro=macro_playback create_player_car_externals
-            CAR_NAME:SHOWROOM_PLAYER_CAR
-            SUFFIX:
-            IF_RACING:IF_RACING
-            IF_RALLY:IF_RALLY
-            IF_MANUAL_AIM:;
     IF_CREATE_PC_CAR create_externals player=you;
-
-    IF_CREATE_PC_CAR root_node_instance type=dynamic name=bird_node position=0 500 0 rotation=-90 0 0 scale=1;
-    IF_CREATE_PC_CAR keep_offset follower=bird_node followed=car_node offset=0 500 0;
-    IF_CREATE_PC_CAR ortho_camera node=bird_node near_plane=1 far_plane=10000 left_plane=-500 right_plane=500 bottom_plane=-500 top_plane=500 requires_postprocessing=0;
 macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;
     respawn_all_players;
-    delete_root_nodes regex=car_node_playback_track\d+;
-    delete_root_nodes regex=car_node_playback_winner\d+;
+    delete_root_nodes regex=vehicle_node_playback_track\d+;
+    delete_root_nodes regex=vehicle_node_playback_winner\d+;
 
     delete_scheduled_advance_times;
 macro_end;
@@ -316,13 +314,17 @@ macro_begin generic_scene_racing_dynamic;
         context=primary_scene
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         IF_CREATE_PC_CAR:IF_CREATE_PC_CAR
+        HUMAN_NODE_X:HUMAN_NODE_X
+        HUMAN_NODE_Y:HUMAN_NODE_Y
+        HUMAN_NODE_Z:HUMAN_NODE_Z
         CAR_NODE_X:CAR_NODE_X
         CAR_NODE_Y:CAR_NODE_Y
         CAR_NODE_Z:CAR_NODE_Z
+        HUMAN_NODE_ANGLE_Y:HUMAN_NODE_ANGLE_Y
         CAR_NODE_ANGLE_X:CAR_NODE_ANGLE_X
         CAR_NODE_ANGLE_Y:CAR_NODE_ANGLE_Y
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
-        SHOWROOM_PLAYER_CAR:SHOWROOM_PLAYER_CAR
+        SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE
         PLAYBACK_SPEED:PLAYBACK_SPEED
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY

@@ -81,3 +81,5 @@ macro_begin add_attached_light_FN;
         LSUFFIX:LSUFFIX
         CSUFFIX:CSUFFIX;
 macro_end;
+
+global CLASS_FN = car;

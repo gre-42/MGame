@@ -4,7 +4,7 @@ macro_begin create_car;
         name=car_node-SUFFIX
         position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
         rotation=CAR_NODE_ANGLE_X CAR_NODE_ANGLE_Y CAR_NODE_ANGLE_Z;
-    IF_STYLE set_renderable_style
+    IF_CAR_STYLE set_renderable_style
         selector=body|chassis|turret|main_gun
         node=car_node-SUFFIX
         ambience=R G B
@@ -14,7 +14,6 @@ macro_begin create_car;
         animation_loop_begin=NAN
         animation_loop_end=NAN
         animation_loop_time=NAN;
-
     macro_playback create-CAR_NAME
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
@@ -35,13 +34,23 @@ macro_begin create_car;
         speed=PLAYBACK_SPEED
         rank=RANK;
 
-    IF_PLAYER player_set_node player_name=PLAYER_NAME node=car_node-SUFFIX;
+    IF_PLAYER player_set_node
+        player_name=PLAYER_NAME
+        node=car_node-SUFFIX;
     IF_PLAYER macro_playback get_into-CAR_NAME
         PLAYER_NAME:PLAYER_NAME
         SUFFIX:SUFFIX;
     IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
     IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
+    IF_EXTERNALS set_externals_creator
+        player=PLAYER_NAME
+        macro=macro_playback create_player_car_externals
+            CAR_NAME:CAR_NAME
+            SUFFIX:SUFFIX
+            IF_RACING:IF_RACING
+            IF_RALLY:IF_RALLY
+            IF_MANUAL_AIM:IF_MANUAL_AIM;
     # visual_node_status_3rd
         node=car_node-SUFFIX
         format=256
