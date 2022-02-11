@@ -61,7 +61,22 @@ macro_begin _setup_menu_primary_scene;
         default=0
         reload_transient_objects=execute_in_physics_thread macro_playback reload_transient_objects;
 
-    IF_DEVEL scene_selector
+    parameter_setter
+        id=game_mode_selector,
+        title=Game mode,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 80,
+        font_height=32,
+        line_distance=32,
+        default=0,
+        on_init=,
+        on_change=reload_scene,
+        parameters=
+            name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
+            name=Skating         value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:  IF_GAME_MODE_TD:#
+            name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
+
+    IF_DEVEL IF_GAME_MODE_RALLY scene_selector
         id=scene_selector
         title=Scene
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -80,7 +95,6 @@ macro_begin _setup_menu_primary_scene;
             name=WIP: San Francisco with traffic value=levels/sf_with_traffic/scene_sf_with_traffic.scn
             name=WIP: San Francisco without traffic value=levels/sf_wo_traffic/scene_sf_wo_traffic.scn
             name=WIP: Car arena value=levels/arena/scene_arena_cars.scn
-            name=WIP: Team deathmatch arena value=levels/arena/scene_arena_humans.scn
             name=WIP: Monaco value=levels/monaco/scene_monaco.scn
             name=WIP: Nuerburgring Grand Prix value=levels/nr_grand_prix/scene_nr_grand_prix.scn
             name=WIP: Nuerburgring Norschleife value=levels/nr_nordschleife/scene_nr_nordschleife.scn
@@ -89,13 +103,32 @@ macro_begin _setup_menu_primary_scene;
             name=WIP: Argolis Forest value=levels/argolis/scene_argolis_forest.scn
             name=WIP: Argolis Desert value=levels/argolis/scene_argolis_desert.scn
             name=WIP: Argolis Green value=levels/argolis/scene_argolis_green.scn
+            name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn;
+    
+    IF_DEVEL IF_GAME_MODE_TD scene_selector
+        id=scene_selector
+        title=Scene
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=20 80
+        font_height=32
+        line_distance=32
+        scene_files=
+            name=WIP: Team deathmatch arena value=levels/arena/scene_arena_humans.scn
             name=WIP: Tank FPS value=levels/tank_fps/scene_tank_fps.scn
             name=WIP: Tank FPS 2 value=levels/jb_arena/scene_jb_arena.scn
-            name=WIP: Tank FPS 2 AH-64 value=levels/jb_arena_ah_64/scene_jb_arena_ah_64.scn
-            name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn
+            name=WIP: Tank FPS 2 AH-64 value=levels/jb_arena_ah_64/scene_jb_arena_ah_64.scn;
+    
+    IF_DEVEL IF_GAME_MODE_SKATING scene_selector
+        id=scene_selector
+        title=Scene
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=20 80
+        font_height=32
+        line_distance=32
+        scene_files=
             name=WIP: Skate0 value=levels/skate0/scene_skate0.scn;
 
-    IF_RELEASE scene_selector
+    IF_RELEASE IF_GAME_MODE_RALLY scene_selector
         id=scene_selector
         title=Scene
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -118,7 +151,7 @@ macro_begin _setup_menu_primary_scene;
 
     # clear_parameters;
 
-    parameter_setter
+    IF_GAME_MODE_RALLY parameter_setter
         id=car_selector,
         title=Car,
         ttf_file=fonts/RobotoMono-Bold.ttf,
@@ -135,10 +168,22 @@ macro_begin _setup_menu_primary_scene;
             name=XZ value=SHOWROOM_PLAYER_VEHICLE:_XZ SHOWROOM_DECIMATE:
             name=LK4 value=SHOWROOM_PLAYER_VEHICLE:_LK4 SHOWROOM_DECIMATE:
             name=FN value=SHOWROOM_PLAYER_VEHICLE:_FN SHOWROOM_DECIMATE:
-            name=AH-64 value=SHOWROOM_PLAYER_VEHICLE:_ah_64 SHOWROOM_DECIMATE:
-            name=MH1 value=SHOWROOM_PLAYER_VEHICLE:_mh1 SHOWROOM_DECIMATE:;
+            name=AH-64 value=SHOWROOM_PLAYER_VEHICLE:_ah_64 SHOWROOM_DECIMATE:;
 
             # name=Tiger value=SHOWROOM_PLAYER_VEHICLE:_tiger_tank SHOWROOM_DECIMATE:;
+    
+    IF_GAME_MODE_SKATING parameter_setter
+        id=car_selector,
+        title=Car,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 80,
+        font_height=32,
+        line_distance=32,
+        default=0,
+        on_init=macro_playback create_showroom_vehicle context=showroom,
+        on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
+        parameters=
+            name=MH1 value=SHOWROOM_PLAYER_VEHICLE:_mh1 SHOWROOM_DECIMATE:;
 
     # fill_pixel_region_with_texture
         source_scene=showroom
@@ -156,7 +201,7 @@ macro_begin _setup_menu_primary_scene;
         position=20 80
         size=512 256;
 
-    IF_DEVEL parameter_setter
+    IF_DEVEL IF_GAME_MODE_RALLY parameter_setter
         id=playback_speed_selector,
         title=Playback speed,
         ttf_file=fonts/RobotoMono-Bold.ttf,
@@ -194,5 +239,5 @@ macro_begin create_main_menu;
     macro_playback create_showroom_scene;
 
     macro_playback _setup_menu_primary_scene context=primary_scene;
-    macro_playback _setup_menu_showroom context=showroom;
+    !IF_GAME_MODE_TD macro_playback _setup_menu_showroom context=showroom;
 macro_end;
