@@ -28,13 +28,13 @@ macro_end;
 
 macro_begin __change_showroom_vehicle_in_physics_thread;
     execute_in_physics_thread macro_playback change_showroom_vehicle
-        SUFFIX:SUFFIX
+        VEHICLE_NAME:VEHICLE_NAME
         DECIMATE:DECIMATE;
 macro_end;
 
 macro_begin _change_showroom_vehicle_in_physics_thread;
     macro_playback __change_showroom_vehicle_in_physics_thread
-        SUFFIX:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
         DECIMATE:SHOWROOM_DECIMATE;
 macro_end;
 

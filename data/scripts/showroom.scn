@@ -1,11 +1,11 @@
 macro_begin _create_showroom_vehicle;
-    macro_playback create_-CLASS-SHOWROOM_PLAYER_VEHICLE
-        HUMAN_NAME:SHOWROOM_PLAYER_VEHICLE
+    macro_playback create_-CLASS-VEHICLE_NAME
+        HUMAN_NAME:VEHICLE_NAME
         HUMAN_NODE_X:0
         HUMAN_NODE_Y:0.7
         HUMAN_NODE_Z:-11
         HUMAN_NODE_ANGLE_Y:135
-        CAR_NAME:SHOWROOM_PLAYER_VEHICLE
+        CAR_NAME:VEHICLE_NAME
         CAR_NODE_X:0
         CAR_NODE_Y:0.7
         CAR_NODE_Z:-11
@@ -35,14 +35,14 @@ macro_end;
 
 macro_begin create_showroom_vehicle;
     macro_playback _create_showroom_vehicle
-        SUFFIX:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
         DECIMATE:SHOWROOM_DECIMATE;
 macro_end;
 
 macro_begin change_showroom_vehicle;
     delete_root_nodes regex=^(car|human)_node$;
     macro_playback _create_showroom_vehicle
-        SUFFIX:SUFFIX
+        VEHICLE_NAME:VEHICLE_NAME
         DECIMATE:DECIMATE;
 macro_end;
 
