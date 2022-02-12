@@ -4,7 +4,30 @@ macro_begin _scene_racing_instantiate_static_objects;
     ################;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
-    rigid_cuboid node=osm_map_node hitbox=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain name=osm_map;
+
+    IF_GEN_GRIND_LINES gen_grind_lines source_name=osm_map dest_name=osm_map_grind_lines angle=20;
+    !IF_GEN_GRIND_LINES obj_resource
+        name=osm_map_grind_lines
+        filename=models/empty.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        is_small=1
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_type=off
+        occluder_type=off
+        occluded_by_black=0
+        aggregate_mode=off
+        transformation_mode=all;
+    rigid_cuboid
+        node=osm_map_node
+        hitbox=osm_map
+        grind_lines=osm_map_grind_lines
+        mass=INFINITY
+        size=1 2 3
+        collidable_mode=terrain
+        name=osm_map;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 
     IF_WITH_GEOGRAPHIC_MAPPING register_geographic_mapping name=world node=osm_map_node resource=osm_map;
@@ -285,6 +308,7 @@ macro_begin scene_racing_static;
         OSM_POSITION_Y:OSM_POSITION_Y=-220
         OSM_ROTATION_X:OSM_ROTATION_X=-90
         OSM_SCALE:OSM_SCALE=1e3
+        IF_GEN_GRIND_LINES:IF_GEN_GRIND_LINES=#
         IF_WITH_GEOGRAPHIC_MAPPING:IF_WITH_GEOGRAPHIC_MAPPING=
         STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
         STADIUM_CAMERA_Y:STADIUM_CAMERA_Y=2000
