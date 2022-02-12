@@ -246,8 +246,8 @@ macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;
     respawn_all_players;
-    delete_root_nodes regex=vehicle_node_playback_track\d+;
-    delete_root_nodes regex=vehicle_node_playback_winner\d+;
+    delete_root_nodes regex=(car|human)_node_playback_track\d+;
+    delete_root_nodes regex=(car|human)_node_playback_winner\d+;
 
     delete_scheduled_advance_times;
 macro_end;
