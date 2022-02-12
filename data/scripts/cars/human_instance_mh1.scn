@@ -66,7 +66,7 @@ macro_begin create_mh1;
     # IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node-SUFFIX resource=human_hitbox;
     IF_WITH_GRAPHICS renderable_instance name=human_grind_contact node=human_node-SUFFIX resource=human_grind_contacts;
     IF_WITH_GRAPHICS renderable_instance name=human-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
-    IF_WITH_GRAPHICS renderable_instance name=human-inst-d2 node=animation_node-SUFFIX resource=mh1_d2;
+    IF_WITH_GRAPHICS renderable_instance name=human-inst-d1 node=animation_node-SUFFIX resource=mh1_d1;
 macro_end;
 
 macro_begin get_into_mh1;

@@ -33,6 +33,7 @@ macro_begin traffic.create_human;
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:#
         PLAYER_NAME:PLAYER_NAME
+        IF_SHADOW:#
         IF_HUMAN_STYLE:
         R:-1 G:-1 B:-1
         IF_PLAYER:
@@ -64,7 +65,8 @@ macro_begin traffic.create_car;
         IF_SHADOW:#
         IF_DAMAGEABLE:#
         IF_CAR_STYLE:
-        R:R G:G B:B;
+        R:R G:G B:B
+        IF_EXTERNALS:#;
 macro_end;
 
 macro_begin traffic.create_npc_and_human;

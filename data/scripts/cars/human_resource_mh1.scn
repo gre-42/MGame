@@ -16,24 +16,28 @@ obj_resource
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
-obj_resource
-    name=mh1_d2
-    filename=models/MakeHuman/t_pose_lowpoly_d2.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=1 1 1
-    distances=100 1000
-    is_small=0
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
-    is_black=1
-    aggregate_mode=off
-    transformation_mode=all
-    triangle_tangent_error_behavior=zero;
+macro_begin load_mh1;
+    obj_resource
+        name=mh1-DECIMATE
+        filename=models/MakeHuman/t_pose_lowpoly-DECIMATE.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        distances=DIST_MIN DIST_MAX
+        is_small=0
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_type=color
+        occluder_type=off
+        occluded_by_black=0
+        is_black=IS_BLACK
+        aggregate_mode=off
+        transformation_mode=all
+        triangle_tangent_error_behavior=zero;
+    import_bone_weights destination=mh1-DECIMATE source=mh1 max_distance=0.1;
+macro_end;
 
-import_bone_weights destination=mh1_d2 source=mh1 max_distance=0.1;
+macro_playback load_mh1 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:_d2;
+macro_playback load_mh1 DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d1;
 
 # downsample name=mh1 factor=10;
