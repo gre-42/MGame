@@ -5,7 +5,11 @@ macro_begin _scene_racing_instantiate_static_objects;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
 
-    IF_GEN_GRIND_LINES gen_grind_lines source_name=osm_map dest_name=osm_map_grind_lines angle=20;
+    IF_GEN_GRIND_LINES gen_grind_lines
+        source_name=osm_map
+        dest_name=osm_map_grind_lines
+        edge_angle=20
+        normal_angle=45;
     !IF_GEN_GRIND_LINES obj_resource
         name=osm_map_grind_lines
         filename=models/empty.obj
