@@ -43,7 +43,6 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
@@ -63,7 +62,6 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=off
         occluder_type=off
         occluded_by_black=0
@@ -81,7 +79,6 @@ macro_begin _scene_tank_load_resources;
         is_small=1
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=off
         occluder_type=off
         occluded_by_black=0
@@ -105,7 +102,6 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
@@ -121,7 +117,6 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=off
         occluder_type=off
         occluded_by_black=0

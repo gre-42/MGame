@@ -7,7 +7,6 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -25,7 +24,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -37,13 +35,13 @@ gen_ray name=human_tirelines from=0 -0.3 0 to=0 -0.9 0;
 obj_resource
     name=human_grind_contacts
     filename=models/plane.obj
-    position=0 0.35 0
+    position=0 -0.6 0
     rotation=90 0 0
     scale=1 1 0.25
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
+    cull_faces_default=0
     occluded_type=off
     occluder_type=off
     occluded_by_black=0

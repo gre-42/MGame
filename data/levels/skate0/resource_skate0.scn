@@ -8,7 +8,6 @@ macro_begin osm_resource_skate0;
         is_small=1
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=color
         occluder_type=white
         occluded_by_black=1

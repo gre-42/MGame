@@ -7,7 +7,6 @@ obj_resource
     is_small=1
     blend_mode=binary
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -23,7 +22,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -40,7 +38,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -56,7 +53,7 @@ obj_resource
     is_small=1
     blend_mode=binary
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
+    cull_faces_alpha=0
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -72,7 +69,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -88,7 +84,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -104,7 +99,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -120,7 +114,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -136,7 +129,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -152,7 +144,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -168,7 +159,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=0
     occluded_type=off
     occluder_type=off
     occluded_by_black=0
@@ -184,7 +174,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -200,7 +189,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -217,7 +205,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -233,7 +220,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -249,7 +235,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -265,7 +250,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
@@ -282,7 +266,6 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=off
     occluder_type=black
     occluded_by_black=0
@@ -299,7 +282,6 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    cull_faces=1
     occluded_type=off
     occluder_type=black
     occluded_by_black=0
@@ -317,7 +299,7 @@ macro_begin load_hedge;
         is_small=1
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=0
+        cull_faces_alpha=0
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
@@ -335,7 +317,6 @@ macro_begin load_facade;
         is_small=1
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        cull_faces=1
         occluded_type=color
         occluder_type=off
         occluded_by_black=0
