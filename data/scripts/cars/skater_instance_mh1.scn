@@ -7,7 +7,7 @@ macro_begin create_skating_mh1;
     rigid_cuboid
         node=skater_node-SUFFIX
         hitbox=human_hitbox
-        tirelines=human_tirelines
+        tirelines=skater_tirelines
         grind_contacts=skater_grind_contacts
         mass=70
         size=INFINITY INFINITY INFINITY
@@ -36,6 +36,9 @@ macro_begin create_skating_mh1;
         SUFFIX:SUFFIX;
     IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=legs angular_vels=0 powers=1000 gear_ratios=1;
     IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
     IF_WITH_PHYSICS create_human_as_car_controller
         node=skater_node-SUFFIX
         steering_multiplier=0.03;
