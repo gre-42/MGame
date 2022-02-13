@@ -5,6 +5,11 @@ macro_begin _create_showroom_vehicle;
         HUMAN_NODE_Y:0.7
         HUMAN_NODE_Z:-11
         HUMAN_NODE_ANGLE_Y:135
+        SKATER_NAME:VEHICLE_NAME
+        SKATER_NODE_X:0
+        SKATER_NODE_Y:0.7
+        SKATER_NODE_Z:-11
+        SKATER_NODE_ANGLE_Y:135
         CAR_NAME:VEHICLE_NAME
         CAR_NODE_X:0
         CAR_NODE_Y:0.7
@@ -13,6 +18,7 @@ macro_begin _create_showroom_vehicle;
         CAR_NODE_ANGLE_Y:135
         CAR_NODE_ANGLE_Z:0
         IF_HUMAN_STYLE:
+        IF_SKATER_STYLE:
         IF_CAR_STYLE:#
         R:-1 G:-1 B:-1
         DECIMATE:DECIMATE

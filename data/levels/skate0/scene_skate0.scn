@@ -33,16 +33,10 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
         IF_CREATE_PC_CAR:
-        HUMAN_NODE_X:0
-        HUMAN_NODE_Y:5
-        HUMAN_NODE_Z:10
-        CAR_NODE_X:0
-        CAR_NODE_Y:5
-        CAR_NODE_Z:10
-        HUMAN_NODE_ANGLE_Y:0
-        CAR_NODE_ANGLE_X:0
-        CAR_NODE_ANGLE_Y:0
-        CAR_NODE_ANGLE_Z:0
+        SKATER_NODE_X:0
+        SKATER_NODE_Y:5
+        SKATER_NODE_Z:10
+        SKATER_NODE_ANGLE_Y:0
         SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE=_M3
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#

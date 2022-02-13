@@ -1,0 +1,73 @@
+macro_begin create_skating_mh1;
+    child_node_instance type=dynamic parent=skater_node-SUFFIX name=animation_node-SUFFIX position=0 -0.5 0 rotation=0 180 0 scale=1;
+    child_node_instance type=dynamic parent=skater_node-SUFFIX name=main_gun_node-SUFFIX position=0 0.5 -0.3 rotation=30 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_punch_angle_node-SUFFIX position=0 0 0 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
+
+    rigid_cuboid
+        node=skater_node-SUFFIX
+        hitbox=human_hitbox
+        tirelines=human_tirelines
+        grind_contacts=skater_grind_contacts
+        mass=70
+        size=INFINITY INFINITY INFINITY
+        collidable_mode=small_moving
+        name=skater-SUFFIX;
+
+    yaw_pitch_look_at_nodes
+        yaw_node=skater_node-SUFFIX
+        pitch_node=main_gun_node-SUFFIX
+        parent_follower_rigid_body_node=skater_node-SUFFIX
+        followed=
+        bullet_start_offset=20
+        bullet_velocity=900
+        gravity=9.8
+        dyaw_max=10
+        pitch_min=-10
+        pitch_max=45
+        dpitch_max=10
+        yaw_locked_on_max=2
+        pitch_locked_on_max=2
+        verror_std=1
+        verror_alpha=0.002;
+
+    macro_playback create_none_weapon
+        PARENT_RIGID_BODY_NODE:skater_node-SUFFIX
+        SUFFIX:SUFFIX;
+    IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=legs angular_vels=0 powers=1000 gear_ratios=1;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node= position=0 0 0 radius=1 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
+    IF_WITH_PHYSICS create_human_as_car_controller
+        node=skater_node-SUFFIX
+        steering_multiplier=0.03;
+    IF_WITH_PHYSICS set_grind_point
+        node=skater_node-SUFFIX
+        position=0 -0.6 0;
+
+    set_avatar_style_updater avatar_node=skater_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
+
+    # IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=skater_node-SUFFIX resource=human_hitbox;
+    IF_WITH_GRAPHICS renderable_instance name=skater_grind_contact node=skater_node-SUFFIX resource=skater_grind_contacts;
+    IF_WITH_GRAPHICS renderable_instance name=skater-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
+    IF_WITH_GRAPHICS renderable_instance name=skater-inst-d1 node=animation_node-SUFFIX resource=mh1_d1;
+macro_end;
+
+macro_begin get_into_skating_mh1;
+    player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
+macro_end;
+
+macro_begin create_externals_for_skater_pc_skating_mh1;
+    macro_playback create_skater_key_bindings
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+    macro_playback create_skater_cameras
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+macro_end;
+
+macro_begin add_attached_light_skating_mh1;
+    macro_playback add_attached_light_skater
+        LSUFFIX:LSUFFIX
+        CSUFFIX:CSUFFIX;
+macro_end;
+
+global CLASS_skating_mh1 = skater;

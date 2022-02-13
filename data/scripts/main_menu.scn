@@ -188,7 +188,7 @@ macro_begin _setup_menu_primary_scene;
         on_init=macro_playback create_showroom_vehicle context=showroom,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
-            name=MH1 value=SHOWROOM_PLAYER_VEHICLE:_mh1 SHOWROOM_DECIMATE:;
+            name=MH1 value=SHOWROOM_PLAYER_VEHICLE:_skating_mh1 SHOWROOM_DECIMATE:;
 
     # fill_pixel_region_with_texture
         source_scene=showroom

@@ -13,6 +13,14 @@ macro_begin add_attached_light_human;
     # renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;
 macro_end;
 
+macro_begin add_attached_light_skater;
+    root_node_instance type=dynamic name=light_node-LSUFFIX position=0 0 0 rotation=-45 90 0 scale=1;
+    keep_offset follower=light_node-LSUFFIX followed=skater_node-CSUFFIX offset=10 10 0;
+    ortho_camera node=light_node-LSUFFIX near_plane=1 far_plane=10000 left_plane=-2 right_plane=2 bottom_plane=-2 top_plane=2 requires_postprocessing=0;
+    light node=light_node-LSUFFIX black_node=skater_node-CSUFFIX update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
+    # renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;
+macro_end;
+
 macro_begin add_attached_light_sedan;
     root_node_instance type=dynamic name=light_node-LSUFFIX position=0 0 0 rotation=-45 90 0 scale=1;
     keep_offset follower=light_node-LSUFFIX followed=car_node-CSUFFIX offset=10 10 0;

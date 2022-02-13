@@ -1,0 +1,75 @@
+macro_begin create_skater_key_bindings;
+    car_controller_idle_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX;
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=A
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        not_gamepad_button=B
+        tire_angle_velocities=10 80
+        tire_angles=45 20;
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=D
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        tire_angle_velocities=10 80
+        tire_angles=-45 -20;
+
+    # abs_key_binding
+        node=skater_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=B
+        force=0 20000 0;
+
+    # 120 PS = 88259.8 Watt;
+    # 150 PS = 110325 Watt;
+    # 200 PS = 147100 Watt;
+    # 400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=W
+        gamepad_button=X
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=-1
+        not_gamepad_button=B
+        surface_power=INFINITY;
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=S
+        gamepad_button=A
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        surface_power=-INFINITY;
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=E
+        joystick_digital_axis=6
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        ascend_velocity=10;
+    car_controller_key_binding
+        player=PLAYER_NAME
+        node=skater_node-SUFFIX
+        key=Q
+        gamepad_button=RIGHT_BUMPER
+        not_gamepad_button=B
+        ascend_velocity=-10;
+
+    player_key_binding
+        node=skater_node-SUFFIX
+        gamepad_button=B
+        gamepad_button2=A
+        select_next_vehicle;
+macro_end;

@@ -44,7 +44,7 @@ macro_end;
 macro_begin create_none_weapon;
     gun
         node=main_gun_end_node-SUFFIX
-        parent_rigid_body_node=human_node-SUFFIX
+        parent_rigid_body_node=PARENT_RIGID_BODY_NODE
         punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=INFINITY
         renderable=tank_bullet_renderable
