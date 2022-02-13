@@ -19,11 +19,17 @@ macro_begin create_skater_key_bindings;
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
 
-    abs_key_binding
+    # abs_key_binding
         node=skater_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=Y
         force=0 2000 0;
+    
+    abs_key_binding
+        node=skater_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=Y
+        wants_to_jump=1;
 
     abs_key_binding
         node=skater_node-SUFFIX
