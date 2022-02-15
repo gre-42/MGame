@@ -9,7 +9,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         source_name=osm_map
         dest_name=osm_map_grind_lines
         edge_angle=20
-        normal_angle=45;
+        normal_angle=60;
     !IF_GEN_GRIND_LINES obj_resource
         name=osm_map_grind_lines
         filename=models/empty.obj

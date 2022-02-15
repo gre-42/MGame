@@ -2,22 +2,28 @@ macro_begin create_skater_key_bindings;
     car_controller_idle_binding
         player=PLAYER_NAME
         node=skater_node-SUFFIX;
-    car_controller_key_binding
-        player=PLAYER_NAME
+    rel_key_binding
         node=skater_node-SUFFIX
         key=A
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
-        tire_angle_velocities=10 80
-        tire_angles=45 20;
-    car_controller_key_binding
-        player=PLAYER_NAME
+        cursor_axis=0
+        cursor_sign_and_scale=-0.03
+        rotation_axis=0 1 0
+        angular_velocity_press=2
+        angular_velocity_repeat=2
+        speed_cursor=0.1;
+    rel_key_binding
         node=skater_node-SUFFIX
         key=D
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
-        tire_angle_velocities=10 80
-        tire_angles=-45 -20;
+        cursor_axis=0
+        cursor_sign_and_scale=0.03
+        rotation_axis=0 1 0
+        angular_velocity_press=-2
+        angular_velocity_repeat=-2
+        speed_cursor=-0.1;
 
     # abs_key_binding
         node=skater_node-SUFFIX

@@ -19,7 +19,8 @@ macro_begin create_skater;
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
-        IF_WITH_PHYSICS:IF_WITH_PHYSICS;
+        IF_WITH_PHYSICS:IF_WITH_PHYSICS
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
     IF_PLAYER player_set_node player_name=PLAYER_NAME node=skater_node-SUFFIX;
     IF_PLAYER macro_playback get_into-SKATER_NAME
         PLAYER_NAME:PLAYER_NAME

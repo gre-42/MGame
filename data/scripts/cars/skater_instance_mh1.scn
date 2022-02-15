@@ -11,8 +11,13 @@ macro_begin create_skating_mh1;
         grind_contacts=skater_grind_contacts
         mass=70
         size=INFINITY INFINITY INFINITY
+        com=0 -0.6 0
         collidable_mode=small_moving
         name=skater-SUFFIX;
+
+    set_rigid_body_align_to_surface_normal
+        node=skater_node-SUFFIX
+        value=1;
 
     yaw_pitch_look_at_nodes
         yaw_node=skater_node-SUFFIX
@@ -40,19 +45,23 @@ macro_begin create_skating_mh1;
     child_node_instance type=dynamic parent=skater_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=-0.25 -0.35 +0.25 rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=skater_node-SUFFIX name=wheel_right_rear_node-SUFFIX  position=+0.25 -0.35 +0.25 rotation=0 0 0 scale=1;
 
-    IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=legs angular_vels=0 powers=1000 gear_ratios=1;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=0 0 0 radius=0.25 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0 0 0 radius=0.25 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=0 0 0 radius=0.25 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position=0 0 0 radius=0.25 engine=legs break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
-    IF_WITH_PHYSICS create_human_as_car_controller
+    IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=main angular_vels=0 powers=1000 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=breaks angular_vels=0 powers=1000 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-0.25 -0.35 -0.25 radius=0.25 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+0.25 -0.35 -0.25 radius=0.25 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=-0.25 -0.35 +0.25 radius=0.25 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position=+0.25 -0.35 +0.25 radius=0.25 engine=main break_force=5000 sKs=1e4 sKa=4e2 pKs=1e5 pKa=2e3 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
+    # IF_WITH_PHYSICS create_car_controller
+        node=skater_node-SUFFIX;
+    create_car_controller
         node=skater_node-SUFFIX
-        steering_multiplier=0.03;
+        tire_ids=
+        tire_angles=;
     IF_WITH_PHYSICS set_grind_point
         node=skater_node-SUFFIX
         position=0 -0.6 0;
 
-    set_avatar_style_updater avatar_node=skater_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
+    # set_avatar_style_updater avatar_node=skater_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
 
     # IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=skater_node-SUFFIX resource=human_hitbox;
     IF_WITH_GRAPHICS renderable_instance name=skater_grind_contact node=skater_node-SUFFIX resource=skater_grind_contacts;
