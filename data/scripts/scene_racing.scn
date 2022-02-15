@@ -177,6 +177,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:#
+        IF_MANUAL_AIM:#
         VERROR_STD:0
         IF_STATIC:#
         IF_DYNAMIC:
