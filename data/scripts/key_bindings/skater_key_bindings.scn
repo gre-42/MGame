@@ -1,7 +1,8 @@
 macro_begin create_skater_key_bindings;
     car_controller_idle_binding
         player=PLAYER_NAME
-        node=skater_node-SUFFIX;
+        node=skater_node-SUFFIX
+        surface_power=INFINITY;
     rel_key_binding
         node=skater_node-SUFFIX
         key=A
@@ -34,7 +35,7 @@ macro_begin create_skater_key_bindings;
     abs_key_binding
         node=skater_node-SUFFIX
         key=LEFT_SHIFT
-        gamepad_button=Y
+        gamepad_button=A
         wants_to_jump=1;
 
     abs_key_binding
@@ -52,36 +53,8 @@ macro_begin create_skater_key_bindings;
     car_controller_key_binding
         player=PLAYER_NAME
         node=skater_node-SUFFIX
-        key=W
-        gamepad_button=X
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=-1
-        surface_power=INFINITY;
-    car_controller_key_binding
-        player=PLAYER_NAME
-        node=skater_node-SUFFIX
         key=S
-        gamepad_button=A
-        joystick_digital_axis=4
+        joystick_digital_axis=2
         joystick_digital_axis_sign=1
-        surface_power=-INFINITY;
-    car_controller_key_binding
-        player=PLAYER_NAME
-        node=skater_node-SUFFIX
-        key=E
-        joystick_digital_axis=6
-        joystick_digital_axis_sign=1
-        ascend_velocity=10;
-    car_controller_key_binding
-        player=PLAYER_NAME
-        node=skater_node-SUFFIX
-        key=Q
-        gamepad_button=RIGHT_BUMPER
-        ascend_velocity=-10;
-
-    player_key_binding
-        node=skater_node-SUFFIX
-        gamepad_button=B
-        gamepad_button2=A
-        select_next_vehicle;
+        surface_power=NAN;
 macro_end;
