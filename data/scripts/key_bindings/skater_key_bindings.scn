@@ -11,8 +11,8 @@ macro_begin create_skater_key_bindings;
         cursor_axis=0
         cursor_sign_and_scale=-0.03
         rotation_axis=0 1 0
-        angular_velocity_press=2
-        angular_velocity_repeat=2
+        angular_velocity_press=3
+        angular_velocity_repeat=3
         speed_cursor=0.1;
     rel_key_binding
         node=skater_node-SUFFIX
@@ -22,8 +22,8 @@ macro_begin create_skater_key_bindings;
         cursor_axis=0
         cursor_sign_and_scale=0.03
         rotation_axis=0 1 0
-        angular_velocity_press=-2
-        angular_velocity_repeat=-2
+        angular_velocity_press=-3
+        angular_velocity_repeat=-3
         speed_cursor=-0.1;
 
     # abs_key_binding
