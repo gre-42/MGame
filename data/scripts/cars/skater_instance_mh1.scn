@@ -65,17 +65,20 @@ macro_begin create_skating_mh1;
         node=skater_node-SUFFIX
         position=0 -0.6 0;
 
-    # set_avatar_style_updater avatar_node=skater_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
+    set_skater_style_updater node=skater_node-SUFFIX resource=skate;
 
     # IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=skater_node-SUFFIX resource=human_hitbox;
-    IF_WITH_GRAPHICS renderable_instance name=skater_grind_contact node=skater_node-SUFFIX resource=skater_grind_contacts;
+    # IF_WITH_GRAPHICS renderable_instance name=skater_grind_contact node=skater_node-SUFFIX resource=skater_grind_contacts;
     IF_WITH_GRAPHICS renderable_instance name=skater-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
     IF_WITH_GRAPHICS renderable_instance name=skater-inst-d1 node=animation_node-SUFFIX resource=mh1_d1;
 
-    IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
-    IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_front_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
-    IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
-    IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_rear_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=skater_node-SUFFIX name=skateboard_node-SUFFIX   position=0 -0.6 0 rotation=0 90 0 scale=1;
+    IF_WITH_GRAPHICS renderable_instance name=skater_skateboard node=skateboard_node-SUFFIX resource=skateboard;
+
+    # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
+    # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_front_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
+    # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
+    # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_rear_node-SUFFIX resource=M3/M3_wheel-DECIMATE;
 macro_end;
 
 macro_begin get_into_skating_mh1;
