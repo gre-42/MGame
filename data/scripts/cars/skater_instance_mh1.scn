@@ -15,9 +15,9 @@ macro_begin create_skating_mh1;
         collidable_mode=small_moving
         name=skater-SUFFIX;
 
-    set_rigid_body_align_to_surface_normal
+    set_rigid_body_align_to_surface_relaxation
         node=skater_node-SUFFIX
-        value=1;
+        value=0.05;
 
     set_rigid_body_revert_surface_power_threshold
         node=skater_node-SUFFIX
