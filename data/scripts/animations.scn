@@ -60,3 +60,17 @@ add_bvh_resource
     smooth_radius=0
     smooth_alpha=NAN
     periodic=1;
+
+add_bvh_resource
+    name=skate.left.jump.skateboard
+    filename=animations/Skate/skate_left_jump_skateboard.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=skate.right.jump.skateboard
+    filename=animations/Skate/skate_right_jump_skateboard.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
