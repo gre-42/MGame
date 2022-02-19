@@ -11,9 +11,9 @@ macro_begin create_skater;
         ambience=R G B
         diffusivity=R G B
         specularity=R G B
-        animation_name=xonotic_pyria.idle
+        animation_name=skate.right
         animation_loop_begin=0
-        animation_loop_end=3
+        animation_loop_end=full
         animation_loop_time=0;
     macro_playback create-SKATER_NAME
         DECIMATE:DECIMATE
