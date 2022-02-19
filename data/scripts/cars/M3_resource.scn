@@ -30,10 +30,10 @@ obj_resource
     aggregate_mode=off
     transformation_mode=all;
 
-gen_ray name=M3-tirelines from=-0.8 -0.2 -1.35 to=-0.8 -1 -1.35; # left front;
-gen_ray name=M3-tirelines from=+0.8 -0.2 -1.35 to=+0.8 -1 -1.35; # right front;
-gen_ray name=M3-tirelines from=-0.8 -0.2 +1.20 to=-0.8 -1 +1.20; # left rear;
-gen_ray name=M3-tirelines from=+0.8 -0.2 +1.20 to=+0.8 -1 +1.20; # right rear;
+gen_ray name=M3-tirelines from=-0.7 -0.2 -1.35 to=-0.7 -1 -1.35; # left front;
+gen_ray name=M3-tirelines from=+0.7 -0.2 -1.35 to=+0.7 -1 -1.35; # right front;
+gen_ray name=M3-tirelines from=-0.7 -0.2 +1.20 to=-0.7 -1 +1.20; # left rear;
+gen_ray name=M3-tirelines from=+0.7 -0.2 +1.20 to=+0.7 -1 +1.20; # right rear;
 
 macro_begin load-M3-part;
     obj_resource
