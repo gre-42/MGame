@@ -28,7 +28,7 @@ macro_playback scene_racing_static
     SUN_RIGHT:250
     SUN_BOTTOM:-125
     SUN_TOP:125
-    SOFT_LIGHT_TEXTURE:textures/soft_light.png;
+    SOFT_LIGHT_TEXTURE:;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
