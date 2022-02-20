@@ -9,6 +9,7 @@ macro_begin create_skating_mh1;
         hitbox=human_hitbox
         tirelines=skater_tirelines
         grind_contacts=skater_grind_contacts
+        alignment_contacts=skater_alignment_contacts
         mass=70
         size=INFINITY INFINITY INFINITY
         com=0 -0.6 0
