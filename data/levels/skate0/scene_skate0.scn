@@ -24,10 +24,10 @@ macro_playback scene_racing_static
     DIRTMAP_RIGHT:500
     DIRTMAP_BOTTOM:-500
     DIRTMAP_TOP:500
-    SUN_LEFT:-500
-    SUN_RIGHT:500
-    SUN_BOTTOM:-250
-    SUN_TOP:250
+    SUN_LEFT:-250
+    SUN_RIGHT:250
+    SUN_BOTTOM:-125
+    SUN_TOP:125
     SOFT_LIGHT_TEXTURE:textures/soft_light.png;
 
 macro_begin instantiate_transient_objects;
