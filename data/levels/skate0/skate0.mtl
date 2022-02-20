@@ -1,26 +1,6 @@
 # Blender 3.2.0 Alpha MTL File: 'skate0.blend'
 # www.blender.org
 
-newmtl Material.001
-Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.000000 0.009661
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-
-newmtl Material.003
-Ns 360.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.000510 0.000000 0.800000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-
 newmtl None
 Ns 555.555481
 Ka 1.000000 1.000000 1.000000
@@ -66,6 +46,17 @@ d 1.000000
 illum 1
 map_Kd  ../../textures/cc0textures/concrete1_2K_wh.jpg
 map_Bump  -bm 1.000000 ../../textures/cc0textures/concrete1_2K_normGL.jpg
+
+newmtl metal032
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/Metal032_2K_Color.jpg
 
 newmtl metal038
 Ns 555.555481
