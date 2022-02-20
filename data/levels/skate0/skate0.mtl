@@ -1,8 +1,8 @@
-# Blender MTL File: 'skate0.blend'
-# Material Count: 6
+# Blender 3.2.0 Alpha MTL File: 'skate0.blend'
+# www.blender.org
 
 newmtl Material.001
-Ns 225.000000
+Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.000000 0.009661
 Ks 0.500000 0.500000 0.500000
@@ -11,18 +11,8 @@ Ni 1.450000
 d 1.000000
 illum 2
 
-newmtl Material.002
-Ns 225.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.024063 0.800000 0.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-
 newmtl Material.003
-Ns 323.999994
+Ns 360.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.000510 0.000000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -32,7 +22,7 @@ d 1.000000
 illum 2
 
 newmtl None
-Ns 500.000001
+Ns 555.555481
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.800000 0.800000 0.800000
@@ -42,7 +32,7 @@ d 1.000000
 illum 2
 
 newmtl alignment_plane
-Ns 225.000000
+Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.500000 0.500000 0.500000
@@ -50,11 +40,23 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd ../../textures/alignment_plane.png
-map_d ../../textures/alignment_plane.png
+map_Kd  ../../textures/alignment_plane.png
+map_d  ../../textures/alignment_plane.png
+
+newmtl asphalt015.OccludedTypeColor.OccluderTypeWhite
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/Asphalt015_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/Asphalt015_2K_NormalGL.jpg
 
 newmtl concrete1_wh
-Ns 225.000000
+Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.800000 0.800000 0.800000
 Ks 0.000000 0.000000 0.000000
@@ -62,5 +64,17 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Bump ../../textures/cc0textures/concrete1_2K_normGL.jpg
-map_Kd ../../textures/cc0textures/concrete1_2K_wh.jpg
+map_Kd  ../../textures/cc0textures/concrete1_2K_wh.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/concrete1_2K_normGL.jpg
+
+newmtl metal038
+Ns 555.555481
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/Metal038_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/Metal038_2K_NormalGL.jpg
