@@ -43,6 +43,13 @@ macro_begin create_skater_key_bindings;
         key=Q
         gamepad_button=B
         wants_to_grind=1;
+    
+    abs_key_binding
+        node=skater_node-SUFFIX
+        key=UP
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=-1
+        fly_forward_factor=100;
 
     # 120 PS = 88259.8 Watt;
     # 150 PS = 110325 Watt;
