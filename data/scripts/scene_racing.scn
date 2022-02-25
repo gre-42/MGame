@@ -43,7 +43,7 @@ macro_begin _scene_racing_instantiate_static_objects;
 
     # Must be below extractions;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
-    renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
+    renderable_instance name=osm-inst node=osm_map_node resource=osm_map exclude=\bHitbox\b;
 
     rigid_cuboid
         node=osm_map_node
@@ -53,7 +53,8 @@ macro_begin _scene_racing_instantiate_static_objects;
         mass=INFINITY
         size=1 2 3
         collidable_mode=terrain
-        name=osm_map;
+        name=osm_map
+        exclude=\bVisual\b;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 
     IF_WITH_GEOGRAPHIC_MAPPING register_geographic_mapping name=world node=osm_map_node resource=osm_map;

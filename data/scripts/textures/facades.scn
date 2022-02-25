@@ -6,7 +6,7 @@ macro_begin add_facade_exture;
         color_mode=rgb
         images=
             texture_pos:0 0 texture:WALL_COLOR
-            texture_pos:512 512 texture:textures/osm/DE21F2_industryWindow00001_1024.png;
+            texture_pos:512 512 texture:textures/osm/DE21F2_industryWindow00001_1k.png;
 
     add_texture_atlas
         name=normal_-NAME
@@ -15,7 +15,7 @@ macro_begin add_facade_exture;
         color_mode=rgb
         images=
             texture_pos:0 0 texture:WALL_NORMAL
-            texture_pos:512 512 texture:textures/osm/DE21F2_industryWindow00001_1024_NormalGL.png;
+            texture_pos:512 512 texture:textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png;
 
     add_texture_descriptor
         name=NAME
