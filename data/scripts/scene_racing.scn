@@ -24,11 +24,11 @@ macro_begin _scene_racing_instantiate_static_objects;
     copy_renderable_resources
         source_name=osm_map
         dest_name=osm_map_renderables
-        exclude=\bHitbox\b;
+        exclude=\bHitbox(?:\b|_);
     copy_physics_resources
         source_name=osm_map
         dest_name=osm_map_physics
-        exclude=\bVisual\b;
+        exclude=\bVisual(?:\b|_);
     IF_GEN_GRIND_LINES gen_grind_lines
         source_name=osm_map_physics
         dest_name=osm_map_grind_lines
