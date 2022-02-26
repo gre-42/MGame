@@ -15,6 +15,10 @@ obj_resource
 
 gen_triangle_rays name=FN_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
+modify_physics_material_tags
+    resource_name=FN_hitbox
+    add=obj_chassis;
+
 obj_resource
     name=FN-tirelines
     filename=models/empty.obj
@@ -29,6 +33,10 @@ obj_resource
     occluded_by_black=0
     aggregate_mode=off
     transformation_mode=all;
+
+modify_physics_material_tags
+    resource_name=FN-tirelines
+    add=obj_tire_line;
 
 gen_ray name=FN-tirelines from=-0.8 -0.2 -1.35 to=-0.8 -1 -1.35; # left front;
 gen_ray name=FN-tirelines from=+0.8 -0.2 -1.35 to=+0.8 -1 -1.35; # right front;

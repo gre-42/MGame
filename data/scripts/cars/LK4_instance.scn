@@ -14,8 +14,7 @@ macro_end;
 macro_begin create_LK4_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=LK4_hitbox
-        tirelines=LK4-tirelines
+        hitboxes=LK4_hitbox LK4-tirelines
         mass=MASS
         size=1.7 1.2 4.1
         com=0 -0.2 -0.2

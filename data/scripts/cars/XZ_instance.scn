@@ -14,8 +14,7 @@ macro_end;
 macro_begin create_XZ_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=XZ_hitbox
-        tirelines=XZ_tirelines
+        hitboxes=XZ_hitbox XZ_tirelines
         mass=MASS
         size=1.8 1 4.6
         com=0 -0.2 0.2

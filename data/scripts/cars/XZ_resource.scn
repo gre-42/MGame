@@ -15,6 +15,10 @@ obj_resource
 
 gen_triangle_rays name=XZ_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
+modify_physics_material_tags
+    resource_name=XZ_hitbox
+    add=obj_chassis;
+
 obj_resource
     name=XZ_tirelines
     filename=models/empty.obj
@@ -34,6 +38,10 @@ gen_ray name=XZ_tirelines from=-0.85 -0.1 -1.35 to=-0.85 -0.9 -1.35; # left fron
 gen_ray name=XZ_tirelines from=+0.85 -0.1 -1.35 to=+0.85 -0.9 -1.35; # right front;
 gen_ray name=XZ_tirelines from=-0.85 -0.1 +1.37 to=-0.85 -0.9 +1.37; # left rear;
 gen_ray name=XZ_tirelines from=+0.85 -0.1 +1.37 to=+0.85 -0.9 +1.37; # right rear;
+
+modify_physics_material_tags
+    resource_name=XZ_tirelines
+    add=obj_tire_line;
 
 macro_begin load_XZ_part;
     obj_resource

@@ -12,8 +12,7 @@ macro_end;
 macro_begin create_OT_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=OT_hitbox
-        tirelines=OT_tirelines
+        hitboxes=OT_hitbox OT_tirelines
         mass=MASS
         size=1.8 1.5 4.5
         collidable_mode=COLLIDABLE_MODE

@@ -14,8 +14,7 @@ macro_end;
 macro_begin create_FN_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=FN_hitbox
-        tirelines=FN-tirelines
+        hitboxes=FN_hitbox FN-tirelines
         mass=MASS
         size=1.7 1.2 4.1
         com=0 -0.2 -0.15

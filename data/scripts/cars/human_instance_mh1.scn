@@ -6,8 +6,7 @@ macro_begin create_mh1;
 
     rigid_cuboid
         node=human_node-SUFFIX
-        hitbox=human_hitbox
-        tirelines=human_tirelines
+        hitboxes=human_hitbox human_tirelines
         mass=70
         size=INFINITY INFINITY INFINITY
         collidable_mode=small_moving

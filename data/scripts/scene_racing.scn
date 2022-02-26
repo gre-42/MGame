@@ -3,37 +3,26 @@ macro_begin _scene_racing_instantiate_static_objects;
     # OSM instance #;
     ################;
     # Must be above instantiation, and should be above transformations;
-    IF_EXTRACT_ALIGNMENT_PLANES extract_alignment_planes
-        source_name=osm_map
-        dest_name=osm_map_alignment_planes
-        object_prefix=alignment_plane;
-    !IF_EXTRACT_ALIGNMENT_PLANES obj_resource
-        name=osm_map_alignment_planes
-        filename=models/empty.obj
-        position=0 0 0
-        rotation=0 0 0
-        scale=1 1 1
-        is_small=1
-        blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
-        aggregate_mode=off
-        transformation_mode=all;
-    copy_renderable_resources
-        source_name=osm_map
-        dest_name=osm_map_renderables
-        exclude=\bHitbox(?:\b|_);
-    copy_physics_resources
-        source_name=osm_map
-        dest_name=osm_map_physics
-        exclude=\bVisual(?:\b|_);
+    IF_EXTRACT_ALIGNMENT_PLANES modify_physics_material_tags
+        resource_name=osm_map
+        add=obj_alignment_plane
+        remove=attr_visible
+        include=\balignment_plane(?:\b|_);
+    modify_physics_material_tags
+        resource_name=osm_map
+        remove=attr_visible
+        include=\bHitbox(?:\b|_);
+    modify_physics_material_tags
+        resource_name=osm_map
+        remove=attr_collide
+        include=\bVisual(?:\b|_);
     IF_GEN_GRIND_LINES gen_grind_lines
-        source_name=osm_map_physics
+        source_name=osm_map
         dest_name=osm_map_grind_lines
         edge_angle=20
-        normal_angle=60;
+        normal_angle=60
+        included_tags=attr_collide
+        excluded_tags=obj_alignment_plane;
     !IF_GEN_GRIND_LINES obj_resource
         name=osm_map_grind_lines
         filename=models/empty.obj
@@ -51,13 +40,11 @@ macro_begin _scene_racing_instantiate_static_objects;
 
     # Must be below extractions;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
-    renderable_instance name=osm-inst node=osm_map_node resource=osm_map_renderables;
+    renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
 
     rigid_cuboid
         node=osm_map_node
-        hitbox=osm_map_physics
-        grind_lines=osm_map_grind_lines
-        alignment_planes=osm_map_alignment_planes
+        hitboxes=osm_map osm_map_grind_lines
         mass=INFINITY
         size=1 2 3
         collidable_mode=terrain

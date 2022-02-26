@@ -75,7 +75,7 @@ macro_begin _initialize_showroom_scene;
     renderable_instance name=stage node=stage resource=cylinder;
     rigid_cuboid
         node=stage
-        hitbox=cylinder
+        hitboxes=cylinder
         mass=INFINITY
         size=1 2 3
         w=0 10 0

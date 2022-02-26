@@ -14,8 +14,7 @@ macro_end;
 macro_begin create_M3_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=M3_hitbox
-        tirelines=M3-tirelines
+        hitboxes=M3_hitbox M3-tirelines
         mass=MASS
         size=1.7 1.2 4.1
         com=0 -0.2 -0.2

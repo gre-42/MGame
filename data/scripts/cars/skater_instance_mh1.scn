@@ -6,10 +6,7 @@ macro_begin create_skating_mh1;
 
     rigid_cuboid
         node=skater_node-SUFFIX
-        hitbox=skater_hitbox
-        tirelines=skater_tirelines
-        grind_contacts=skater_grind_contacts
-        alignment_contacts=skater_alignment_contacts
+        hitboxes=skater_hitbox skater_tirelines skater_grind_contacts skater_alignment_contacts
         mass=70
         size=INFINITY INFINITY INFINITY
         com=0 -0.6 0

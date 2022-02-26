@@ -15,6 +15,10 @@ obj_resource
 
 gen_triangle_rays name=human_hitbox npoints=5 lengths=0.25 0.7 0.25 delete_triangles=0;
 
+modify_physics_material_tags
+    resource_name=human_hitbox
+    add=obj_chassis;
+
 obj_resource
     name=human_tirelines
     filename=models/empty.obj
@@ -31,3 +35,7 @@ obj_resource
     transformation_mode=all;
 
 gen_ray name=human_tirelines from=0 -0.3 0 to=0 -0.9 0;
+
+modify_physics_material_tags
+    resource_name=human_tirelines
+    add=obj_tire_line;

@@ -15,8 +15,7 @@ macro_end;
 macro_begin create_ah_64_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitbox=ah_64_hitbox
-        tirelines=ah_64_tirelines
+        hitboxes=ah_64_hitbox ah_64_tirelines
         mass=MASS
         size=2 2 9
         com=0 2.2 0
@@ -29,7 +28,7 @@ macro_begin create_ah_64_physics;
 
     rigid_disk
         node=blades-SUFFIX
-        hitbox=boxz
+        hitboxes=ah64_blades
         mass=30
         radius=7.3
         com=0 0 0
