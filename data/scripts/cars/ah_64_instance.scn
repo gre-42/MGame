@@ -1,5 +1,5 @@
 macro_begin create_ah_64_graphics;
-    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=AH_64-DECIMATE include=cockpit|glass|hull;
+    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=AH_64-DECIMATE included_names=cockpit|glass|hull;
     renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
 
@@ -7,9 +7,9 @@ macro_begin create_ah_64_graphics;
     renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
 
-    renderable_instance name=blades-SUFFIX node=blades_shift_node-NODE_SUFFIX resource=blades_AH_64-DECIMATE include=main_rotor;
+    renderable_instance name=blades-SUFFIX node=blades_shift_node-NODE_SUFFIX resource=blades_AH_64-DECIMATE included_names=main_rotor;
     # renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_node-NODE_SUFFIX resource=tail_rotor_spinning_AH_64-DECIMATE;
-    renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_shift_node-NODE_SUFFIX resource=AH_64-DECIMATE include=tail_rotor;
+    renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_shift_node-NODE_SUFFIX resource=AH_64-DECIMATE included_names=tail_rotor;
 macro_end;
 
 macro_begin create_ah_64_physics;
