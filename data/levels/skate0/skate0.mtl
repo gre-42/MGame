@@ -1,15 +1,38 @@
 # Blender 3.2.0 Alpha MTL File: 'skate0.blend'
 # www.blender.org
 
-newmtl None
-Ns 555.555481
+newmtl Material_Trashcan
+Ns 96.078415
 Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
-Ks 0.800000 0.800000 0.800000
+Kd 0.600000 0.600000 0.600000
+Ks 0.600000 0.600000 0.600000
 Ke 0.000000 0.000000 0.000000
-Ni 1.450000
+Ni 1.000000
 d 1.000000
 illum 2
+map_Kd  ../../models/opengameart/Trashcan2/Texture/Diffuse.png
+map_Ks  ../../models/opengameart/Trashcan2/Texture/Specular.png
+map_Bump  -bm 1.000000 ../../models/opengameart/Trashcan2/Texture/Normal.png
+
+newmtl Metal
+Ns 224.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.370730 0.375740 0.375740
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Wood
+Ns 224.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.400000 0.314530 0.217960
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
 
 newmtl alignment_plane
 Ns 250.000000
@@ -22,6 +45,18 @@ d 1.000000
 illum 2
 map_Kd  ../../textures/alignment_plane.png
 map_d  ../../textures/alignment_plane.png
+
+newmtl asphalt015
+Ns 555.555481
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/Asphalt015_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/Asphalt015_2K_NormalGL.jpg
 
 newmtl asphalt015.OccludedTypeColor.OccluderTypeWhite
 Ns 250.000000
@@ -47,6 +82,84 @@ illum 1
 map_Kd  ../../textures/cc0textures/concrete1_2K_wh.jpg
 map_Bump  -bm 1.000000 ../../textures/cc0textures/concrete1_2K_normGL.jpg
 
+newmtl drivef
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/barriers/ad0.png
+
+newmtl fence
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/barriers/fence1.png
+map_d  ../../textures/barriers/fence1.png
+
+newmtl ground037
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd  ../../textures/cc0textures/Ground037_2K_Color_Sl.jpg
+
+newmtl industry_window1
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/osm/DE21F2_industryWindow00001_1k.png
+
+newmtl light
+Ns 555.555481
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.800000 0.800000 0.800000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl marble021
+Ns 96.078415
+Ka 1.000000 1.000000 1.000000
+Kd 0.600000 0.600000 0.600000
+Ks 0.600000 0.600000 0.600000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/Marble021_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/Marble021_2K_NormalGL.jpg
+
+newmtl marek_window1
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/osm/MarekWindow00001_512.png
+
 newmtl metal032
 Ns 360.000000
 Ka 1.000000 1.000000 1.000000
@@ -69,3 +182,38 @@ d 1.000000
 illum 2
 map_Kd  ../../textures/cc0textures/Metal038_2K_Color.jpg
 map_Bump  -bm 1.000000 ../../textures/cc0textures/Metal038_2K_NormalGL.jpg
+
+newmtl paving_stones038.OccludedTypeColor.OccluderTypeWhite
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../textures/cc0textures/PavingStones038_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/PavingStones038_2K_NormalGL.jpg
+
+newmtl planks021
+Ns 555.555481
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd  ../../textures/cc0textures/Planks026A_2K_Color.jpg
+map_Bump  -bm 1.000000 ../../textures/cc0textures/Planks026A_2K_NormalGL.jpg
+
+newmtl shop24
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd  ../../models/shop42_ad/shop42.png
