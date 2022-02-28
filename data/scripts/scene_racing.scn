@@ -38,6 +38,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         occluded_by_black=0
         aggregate_mode=off
         transformation_mode=all;
+    gen_instances name=osm_map;
 
     # Must be below extractions;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
