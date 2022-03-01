@@ -16,11 +16,15 @@ macro_begin _scene_racing_instantiate_static_objects;
         resource_name=osm_map
         remove=attr_collide
         included_names=\bVisual(?:\b|_);
+    modify_physics_material_tags
+        resource_name=osm_map
+        add=attr_align_strict
+        included_names=\bAlignStrict(?:\b|_);
     IF_GEN_GRIND_LINES gen_grind_lines
         source_name=osm_map
         dest_name=osm_map_grind_lines
         edge_angle=20
-        normal_angle=60
+        averaged_normal_angle=60
         excluded_names=\bNoGrind(?:\b|_)
         included_tags=attr_collide
         excluded_tags=obj_alignment_plane;
