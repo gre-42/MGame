@@ -42,7 +42,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         occluded_by_black=0
         aggregate_mode=off
         transformation_mode=all;
-    gen_instances name=osm_map;
+    IF_GEN_INSTANCES gen_instances name=osm_map;
 
     # Must be below extractions;
     root_node_instance type=static name=osm_map_node position=0 OSM_POSITION_Y 0 rotation=OSM_ROTATION_X 0 0 scale=OSM_SCALE;
@@ -343,6 +343,7 @@ macro_begin scene_racing_static;
         OSM_ROTATION_X:OSM_ROTATION_X=-90
         OSM_SCALE:OSM_SCALE=1e3
         IF_GEN_GRIND_LINES:IF_GEN_GRIND_LINES=#
+        IF_GEN_INSTANCES:IF_GEN_INSTANCES=#
         IF_EXTRACT_ALIGNMENT_PLANES:IF_EXTRACT_ALIGNMENT_PLANES=#
         IF_WITH_GEOGRAPHIC_MAPPING:IF_WITH_GEOGRAPHIC_MAPPING=
         STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
