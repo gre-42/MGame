@@ -18,8 +18,7 @@ macro_end;
 macro_begin create_tiger_tank_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitboxes=tiger_tank_hitbox
-        tirelines=tiger_tank_tirelines
+        hitboxes=tiger_tank_hitbox tiger_tank_tirelines
         mass=MASS
         size=3.6 3 8
         collidable_mode=COLLIDABLE_MODE

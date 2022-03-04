@@ -31,6 +31,10 @@ obj_resource
 
 gen_triangle_rays name=tiger_tank_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
+modify_physics_material_tags
+    resource_name=tiger_tank_hitbox
+    add=obj_chassis;
+
 obj_resource
     name=tiger_tank_tirelines
     filename=models/empty.obj
@@ -56,6 +60,10 @@ gen_ray name=tiger_tank_tirelines from=-1.8 -0.5 +2.4 to=-1.8 -1.3 +2.4; # left 
 gen_ray name=tiger_tank_tirelines from=+1.8 -0.5 +2.4 to=+1.8 -1.3 +2.4; # right 3;
 gen_ray name=tiger_tank_tirelines from=-1.8 +0.3 +4   to=-1.8 -0.5 +4;   # left  rear;
 gen_ray name=tiger_tank_tirelines from=+1.8 +0.3 +4   to=+1.8 -0.5 +4;   # right rear;
+
+modify_physics_material_tags
+    resource_name=tiger_tank_tirelines
+    add=obj_tire_line;
 
 macro_begin load_tiger_tank;
     obj_resource
