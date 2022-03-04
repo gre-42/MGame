@@ -46,18 +46,6 @@ illum 2
 map_Kd  ../../textures/alignment_plane.png
 map_d  ../../textures/alignment_plane.png
 
-newmtl asphalt015
-Ns 555.555481
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
-Ks 0.800000 0.800000 0.800000
-Ke 0.000000 0.000000 0.000000
-Ni 1.450000
-d 1.000000
-illum 2
-map_Kd  ../../textures/cc0textures/Asphalt015_2K_Color.jpg
-map_Bump  -bm 1.000000 ../../textures/cc0textures/Asphalt015_2K_NormalGL.jpg
-
 newmtl asphalt015.OccludedTypeColor.OccluderTypeWhite
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
