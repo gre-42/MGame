@@ -151,3 +151,7 @@ obj_resource
     transformation_mode=all;
 
 gen_ray name=tank_bullet_hitbox from=0 0 -10 to=0 0 10;
+
+modify_physics_material_tags
+    resource_name=tank_bullet_hitbox
+    add=obj_chassis;
