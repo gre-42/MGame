@@ -129,7 +129,7 @@ macro_begin osm_resource_nyc;
         tunnel_bdry_resource_name=pipe_box_boundary,
         default_tunnel_pipe_width=1,
         default_tunnel_pipe_height=6,
-        water_texture=textures/altphotos/water/sea-ocean-water-texture-seamless3.png,
+        water_texture=#ocean,
         water_height=40,
         game_level=GAME_LEVEL;
 macro_end;

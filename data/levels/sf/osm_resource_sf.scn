@@ -11,7 +11,7 @@ macro_begin osm_resource_sf;
         terrain_elevated_grass_base_textures=#Concrete020,
         terrain_stone_textures=#concrete1_2K_ye,
         terrain_asphalt_textures=#Road007_No_Lines,
-        terrain_water_floor_textures=textures/altphotos/water/sea-ocean-water-texture-seamless3.png,
+        terrain_water_floor_textures=#ocean,
         terrain_water_floor_base_textures=#Concrete020,
         bounding_terrain_type=water_floor,
         default_terrain_type=stone,
