@@ -1,4 +1,5 @@
-macro_begin add_facade_exture;
+macro_begin add_facade_texture;
+    # Draw a window into the center of a facade texture;
     add_texture_atlas
         name=color_-NAME
         width=2048
@@ -25,27 +26,27 @@ macro_begin add_facade_exture;
         anisotropic_filtering_level=16;
 macro_end;
 
-macro_playback add_facade_exture
+macro_playback add_facade_texture
     NAME:facade_bricks_red
     WALL_COLOR:textures/cc0textures/Bricks059_2K_Color.jpg
     WALL_NORMAL:textures/cc0textures/Bricks059_2K_NormalGL.jpg;
 
-macro_playback add_facade_exture
+macro_playback add_facade_texture
     NAME:facade_plaster_orange
     WALL_COLOR:textures/cc0textures/Plaster003_2K_Color.jpg
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
-macro_playback add_facade_exture
+macro_playback add_facade_texture
     NAME:facade_plaster_white
     WALL_COLOR:#Plaster003_White
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
-macro_playback add_facade_exture
+macro_playback add_facade_texture
     NAME:facade_plaster_green
     WALL_COLOR:#Plaster003_Green
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
-macro_playback add_facade_exture
+macro_playback add_facade_texture
     NAME:facade_plaster_blue
     WALL_COLOR:#Plaster003_Blue
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
