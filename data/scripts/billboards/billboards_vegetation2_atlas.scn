@@ -1,19 +1,36 @@
+macro_begin _add_hist_tree;
+    add_texture_descriptor
+        name=NAME
+        color=FILENAME
+        color_mode=rgba
+        histogram=textures/histograms/TexturesCom_Trees0130_1.png
+        anisotropic_filtering_level=16;
+macro_end;
+
+macro_playback _add_hist_tree NAME:Trees0058_2     FILENAME:textures/textures.com/TexturesCom_Trees0058_2_masked_S_1k.png;
+macro_playback _add_hist_tree NAME:Trees0058_3     FILENAME:textures/textures.com/TexturesCom_Trees0058_3_masked_S_1k.png;
+macro_playback _add_hist_tree NAME:Trees0122_1     FILENAME:textures/textures.com/TexturesCom_Trees0122_1_masked_S_1k.png;
+macro_playback _add_hist_tree NAME:HedgeLong       FILENAME:models/opengameart/Hedge/Long/HedgeLong.png;
+macro_playback _add_hist_tree NAME:HedgeLongRound  FILENAME:models/opengameart/Hedge/LongRound/HedgeLongRound.png;
+macro_playback _add_hist_tree NAME:HedgeSmall      FILENAME:models/opengameart/Hedge/Small/HedgeSmall.png;
+macro_playback _add_hist_tree NAME:HedgeSmallRound FILENAME:models/opengameart/Hedge/SmallRound/HedgeSmallRound.png;
+
 add_texture_atlas
     name=vegetation2
     width=4096
     height=2048
     color_mode=rgba
     images=
-        texture_pos:0 0 texture:textures/proctree/one_24/out-1-5.png
-        texture_pos:1024 0 texture:textures/proctree/one_24/out-2-5.png
-        texture_pos:2048 0 texture:textures/proctree/one/out-3-5.png
-        texture_pos:0 1024 texture:textures/proctree/one/out-4-5.png
-        texture_pos:1024 1024 texture:textures/proctree/one_large/out-1-10.png
-        texture_pos:2048 1024 texture:textures/proctree/one_large/out-2-10.png
-        texture_pos:3072 0 texture:models/opengameart/Hedge/Long/HedgeLong.png
-        texture_pos:3584 0 texture:models/opengameart/Hedge/LongRound/HedgeLongRound.png
-        texture_pos:3072 1024 texture:models/opengameart/Hedge/Small/HedgeSmall.png
-        texture_pos:3584 1024 texture:models/opengameart/Hedge/SmallRound/HedgeSmallRound.png;
+        texture_pos:0 0 texture:textures/textures.com/TexturesCom_Trees0129_1_masked_S_5x1k.png
+        texture_pos:512 0 texture:textures/textures.com/TexturesCom_Trees0130_1_masked_S_5x1k.png
+        texture_pos:1024 0 texture:textures/textures.com/TexturesCom_Trees0131_1_masked_S_5x1k.png
+        texture_pos:1536 0 texture:#Trees0058_2
+        texture_pos:0 1024 texture:#Trees0058_3
+        texture_pos:1024 1024 texture:#Trees0122_1
+        texture_pos:3072 0 texture:#HedgeLong
+        texture_pos:3584 0 texture:#HedgeLongRound
+        texture_pos:3072 1024 texture:#HedgeSmall
+        texture_pos:3584 1024 texture:#HedgeSmallRound;
 
 add_texture_descriptor
     name=vegetation2
@@ -37,16 +54,16 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat
     billboards=
-        uv_scale:0.25  0.5  uv_offset:0     0   vertex_scale:10  10 is_small:1
-        uv_scale:0.25  0.5  uv_offset:0.25  0   vertex_scale:10  10 is_small:1
-        uv_scale:0.25  0.5  uv_offset:0.5   0   vertex_scale:10  10 is_small:1
-        uv_scale:0.25  0.5  uv_offset:0     0.5 vertex_scale:10  10 is_small:1
-        uv_scale:0.25  0.5  uv_offset:0.25  0.5 vertex_scale:15  15 is_small:1
-        uv_scale:0.25  0.5  uv_offset:0.5   0.5 vertex_scale:15  15 is_small:1
-        uv_scale:0.125 0.5  uv_offset:0.75  0   vertex_scale: 3   6 is_small:1
-        uv_scale:0.125 0.5  uv_offset:0.875 0   vertex_scale: 3   6 is_small:1
-        uv_scale:0.125 0.25 uv_offset:0.75  0.5 vertex_scale: 3   3 is_small:1
-        uv_scale:0.125 0.25 uv_offset:0.875 0.5 vertex_scale: 3   3 is_small:1;
+        uv_scale:0.125 0.5  uv_offset:0     0   vertex_scale: 7.5 15   is_small:1
+        uv_scale:0.125 0.5  uv_offset:0.125 0   vertex_scale: 7.5 15   is_small:1
+        uv_scale:0.125 0.5  uv_offset:0.25  0   vertex_scale: 7.5 15   is_small:1
+        uv_scale:0.25  0.5  uv_offset:0.375 0   vertex_scale: 5    5   is_small:1
+        uv_scale:0.25  0.5  uv_offset:0     0.5 vertex_scale: 5    5   is_small:1
+        uv_scale:0.25  0.5  uv_offset:0.25  0.5 vertex_scale: 5    5   is_small:1
+        uv_scale:0.125 0.5  uv_offset:0.75  0   vertex_scale: 3    6   is_small:1
+        uv_scale:0.125 0.5  uv_offset:0.875 0   vertex_scale: 3    6   is_small:1
+        uv_scale:0.125 0.25 uv_offset:0.75  0.5 vertex_scale: 3    3   is_small:1
+        uv_scale:0.125 0.25 uv_offset:0.875 0.5 vertex_scale: 3    3   is_small:1;
 
 # 6: hedge_long;
 # 7: hedge_long_round;
