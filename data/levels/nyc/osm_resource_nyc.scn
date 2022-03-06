@@ -7,7 +7,7 @@ macro_begin osm_resource_nyc;
         terrain_grass_textures=#Ground037_Sl,
         terrain_elevated_grass_textures=#Ground037_Sl,
         terrain_elevated_grass_base_textures=#Concrete020,
-        terrain_stone_textures=#PavingStones038,
+        terrain_stone_textures=#Pavement_ConcreteSidewalk3,
         terrain_asphalt_textures=#Road007_No_Lines,
         bounding_terrain_type=stone,
         default_terrain_type=stone,
@@ -15,12 +15,12 @@ macro_begin osm_resource_nyc;
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
             lanes:1 texture0:#Road007_No_Lines
-            lanes:2 texture0:#Road007_White_2_Lanes
+            lanes:2 texture0:#RoadOld_Yellow
             lanes:4 texture0:#Road007_White_1x_Lane uvx:4
             lanes:6 texture0:#Road007_White_1x_Lane uvx:6,
         path_crossing_texture=#Road007_No_Lines,
         path_texture=#Road007_No_Lines,
-        curb_street_texture=#PavingStones035,
+        curb_street_texture=#Pavement_ConcreteSidewalk3,
         curb_path_texture=#PavingStones035,
         curb2_street_texture=,
         curb2_path_texture=,
