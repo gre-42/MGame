@@ -107,3 +107,8 @@ square_resource
         uv_scale: 0.25  0.25  uv_offset:0.75  0.5    vertex_scale: 4   4   is_small:1
         uv_scale: 0.25  0.25  uv_offset:0.75  0.75   vertex_scale: 4   4   is_small:1
         uv_scale:-0.25  0.25  uv_offset:1     0.25   vertex_scale: 2   2   is_small:1;
+
+# save_texture_atlas_png
+    name=vegetation1
+    filename=/tmp/vegetation1.png
+    color_mode=rgba;
