@@ -291,6 +291,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         radius=30
         height_changed=0
         track_filename=RECORDINGS_DIR/track1.m
+        deselection_ambience=1.5 1.5 1.5
         on_finish=append_focuses game_over menu;
 
     camera_key_binding key=C gamepad_button=BACK;
