@@ -26,10 +26,14 @@ package:
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
 			Mlib/$(platform_dir)/Bin/libMlib.dll \
+			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
+			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
+			Mlib/$(platform_dir)/Bin/libMlibFps.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
+			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \
 			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
 			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
