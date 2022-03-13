@@ -18,6 +18,8 @@ macro_begin osm_resource_nyc;
             lanes:2 texture0:#RoadOld_Yellow
             lanes:4 texture0:#Road007_White_1x_Lane uvx:4
             lanes:6 texture0:#Road007_White_1x_Lane uvx:6,
+        wall_textures=
+            lanes:1 texture0:#PavingStones046 uvx:0.15,
         path_crossing_texture=#Road007_No_Lines,
         path_texture=#Road007_No_Lines,
         curb_street_texture=#Pavement_ConcreteSidewalk3,
@@ -74,6 +76,7 @@ macro_begin osm_resource_nyc;
         uv_scale_terrain=3e-1,
         uv_scale_street=1e-1,
         uv_scale_path=1e-1,
+        uv_scale_wall=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
         uv_scale_barrier_wall=5,
@@ -112,6 +115,7 @@ macro_begin osm_resource_nyc;
         raise_streets_amount=0,
         extrude_curb_amount=0,
         extrude_street_amount=-0.05,
+        extrude_wall_amount=1.5,
         extrude_air_curb_amount=0.5,
         extrude_air_support_amount=-0.5,
         extrude_grass_amount=-0.05,
