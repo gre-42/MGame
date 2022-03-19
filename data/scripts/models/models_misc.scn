@@ -121,6 +121,21 @@ obj_resource
     transformation_mode=all;
 
 obj_resource
+    name=gizmo
+    filename=models/gizmo.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_type=off
+    occluder_type=off
+    occluded_by_black=0
+    aggregate_mode=off
+    transformation_mode=all;
+
+obj_resource
     name=tank_bullet_renderable
     filename=models/bullet.obj
     position=0 0 0

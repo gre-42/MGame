@@ -21,6 +21,7 @@ macro_begin create_tiger_tank_physics;
         hitboxes=tiger_tank_hitbox tiger_tank_tirelines
         mass=MASS
         size=3.6 3 8
+        com=0 -0.5 1
         collidable_mode=COLLIDABLE_MODE
         name=tiger_tank-SUFFIX;
     # damageable node=car_node-SUFFIX health=200;
@@ -121,8 +122,8 @@ macro_begin create_tiger_tank;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_2_node-SUFFIX name=wheel_right_2_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_3_node-SUFFIX name=wheel_right_3_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_4_node-SUFFIX name=wheel_right_4_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    # renderable_instance name=box node=car_node-SUFFIX resource=muscle-cupe-hitbox;
-    # renderable_instance name=car-inst node=car_node-SUFFIX resource=muscle-cupe;
+    # child_node_instance type=dynamic parent=car_node-SUFFIX name=com_node-SUFFIX position=0 -0.5 1 rotation=0 0 0 scale=1;
+    # renderable_instance name=gizmo node=com_node-SUFFIX resource=gizmo;
 
     # car_node-SUFFIX;
     #     turret_node-SUFFIX (0 0 1, yaw_node);
