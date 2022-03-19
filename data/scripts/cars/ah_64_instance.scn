@@ -57,13 +57,13 @@ macro_begin create_ah_64_physics;
         parent_rigid_body_node=car_node-SUFFIX
         punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=0.1
-        renderable=tank_bullet_renderable
-        hitbox=tank_bullet_hitbox
-        mass=20
-        velocity=900
-        lifetime=20
-        damage=10
-        size=2.4 2.4 20
+        bullet_renderable=tank_bullet_renderable
+        bullet_hitbox=tank_bullet_hitbox
+        bullet_mass=20
+        bullet_velocity=900
+        bullet_lifetime=20
+        bullet_damage=10
+        bullet_size=2.4 2.4 20
         punch_angle=0.1;
 
     #  120 PS = 88259.8 Watt;
