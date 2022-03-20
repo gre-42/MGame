@@ -4,7 +4,7 @@ include ../jb/osm_resource_jb_wpts1.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
-    SCORE_BOARD:5
+    SCORE_BOARD:21
     OSM_MAP_RESOURCE:osm_resource_jb_race
     IF_HAS_OVERLAY:
     OSM_MAP_OVERLAY_RESOURCE:osm_resource_jb_wpts1
