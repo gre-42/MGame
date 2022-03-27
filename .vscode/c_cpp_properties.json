@@ -4,11 +4,15 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/Mlib",
+                "${workspaceFolder}/Mlib/recastnavigation/Recast/Include",
+                "${workspaceFolder}/Mlib/recastnavigation/Detour/Include",
+                "${workspaceFolder}/Mlib/recastnavigation/DetourCrowd/Include",
+                "${workspaceFolder}/Mlib/recastnavigation/DebugUtils/Include",
                 "/usr/local/include/opencv4",
                 "/usr/include/SDL2"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/g++-10",
+            "compilerPath": "/usr/bin/g++",
             "cppStandard": "c++20",
             "intelliSenseMode": "gcc-x64"
         },
