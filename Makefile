@@ -8,11 +8,13 @@ platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
 ostype != echo "$$OSTYPE";
 bin_dir = $(platform_dir)
 
-all: build package
+all: recastnavigation build package
+
+recastnavigation:
+	make -C Mlib recastnavigation \
+		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
 build:
-	@echo "OS Type: $(ostype)"
-	@echo "Platform dir: $(platform_dir)"
 	BUILD_PREFIX=$(build_prefix) \
 	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
 		make -C Mlib build \
