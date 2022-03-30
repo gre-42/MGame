@@ -6,5 +6,6 @@ macro_begin osm_resource_jb_wpts1;
         scale=1e-3,
         base_osm_map_resource=osm_map,
         navmesh_resource=osm_map,
+        agent_radius=10,
         game_level=GAME_LEVEL;
 macro_end;
