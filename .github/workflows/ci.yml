@@ -32,7 +32,7 @@ jobs:
           submodules: true
 
       - name: Build
-        run: CXX=g++-10 make build
+        run: CXX=g++-10 make
 
       - name: Package
         run: make package
@@ -76,7 +76,7 @@ jobs:
           submodules: true
 
       - name: Build
-        run: make build
+        run: make
 
       - name: Package
         run: make package
