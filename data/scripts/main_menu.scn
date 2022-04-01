@@ -43,7 +43,7 @@ macro_begin _clear_selection_ids_and_reload;
     reload_scene scene_filename=data/levels/main/main.scn;
 macro_end;
 
-macro_begin _setup_menu_primary_scene;
+macro_begin _setup_menu_primary_scene_game_mode_selector;
     ui_background
         texture=textures/ui_background.png
         update=once
@@ -80,7 +80,9 @@ macro_begin _setup_menu_primary_scene;
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Skating         value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:  IF_GAME_MODE_TD:#
             name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
+macro_end;
 
+macro_begin _setup_menu_primary_scene_rest;
     IF_DEVEL IF_GAME_MODE_RALLY scene_selector
         id=scene_selector
         title=Scene
@@ -241,8 +243,8 @@ macro_begin _setup_menu_primary_scene;
 macro_end;
 
 macro_begin create_main_menu;
-    macro_playback create_showroom_scene;
-
-    macro_playback _setup_menu_primary_scene context=primary_scene;
+    macro_playback _setup_menu_primary_scene_game_mode_selector context=primary_scene;
+    !IF_GAME_MODE_TD macro_playback create_showroom_scene;
     !IF_GAME_MODE_TD macro_playback _setup_menu_showroom context=showroom;
+    macro_playback _setup_menu_primary_scene_rest context=primary_scene;
 macro_end;
