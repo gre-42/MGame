@@ -1,3 +1,5 @@
+.PHONY: recastnavigation build package run run_dev
+
 CMAKE_BUILD_TYPE ?= Release
 build_prefix = G
 platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
@@ -34,6 +36,8 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
+			Mlib/$(platform_dir)/Bin/libMlibNavigation.dll \
+			Mlib/$(platform_dir)/Bin/libMlibOsmLoader.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \

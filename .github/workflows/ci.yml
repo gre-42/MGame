@@ -25,7 +25,7 @@ jobs:
             libglfw3-dev \
             libopenal-dev \
             libalut-dev
-      
+
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with:
@@ -36,7 +36,7 @@ jobs:
 
       - name: Package
         run: make package
-    
+
       - name: Archive artifact
         uses: actions/upload-artifact@v2
         with:
@@ -46,10 +46,10 @@ jobs:
             GURelease
             osm_racing_game
             osm_racing_game.cmd
- 
+
   build-msys2:
     runs-on: windows-latest
-    
+
     defaults:
       run:
         shell: msys2 {0}
@@ -80,7 +80,7 @@ jobs:
 
       - name: Package
         run: make package
-    
+
       - name: Archive artifact
         uses: actions/upload-artifact@v2
         with:
@@ -98,16 +98,16 @@ jobs:
         with:
           name: osm-rally-artifact-ubuntu
           path: MGame
-      
+
       - name: Download MSYS2 artifact
         uses: actions/download-artifact@v2
         with:
           name: osm-rally-artifact-msys2
           path: MGame/GMRelease
-      
+
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
-          
+
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
