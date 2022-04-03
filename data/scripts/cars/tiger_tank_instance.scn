@@ -3,16 +3,16 @@ macro_begin create_tiger_tank_graphics;
     renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE included_names=Machine_Gun|Main_Turret|Hatch;
     renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=Tiger-DECIMATE included_names=Main_Gun;
 
-    renderable_instance name=wheel-SUFFIX node=wheel_left_0_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_0_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_left_1_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_1_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_left_2_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_2_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_left_3_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_3_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_left_4_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_4_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_0_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_0_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_1_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_1_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_2_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_2_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_3_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_3_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_4_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_4_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
 macro_end;
 
 macro_begin create_tiger_tank_physics;
@@ -117,11 +117,12 @@ macro_begin create_tiger_tank;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_4_node-SUFFIX  position=-1.8 -0.0 +4   rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_4_node-SUFFIX position=+1.8 -0.0 +4   rotation=0 0 0 scale=1;
 
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_0_node-SUFFIX name=wheel_right_0_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_1_node-SUFFIX name=wheel_right_1_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_2_node-SUFFIX name=wheel_right_2_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_3_node-SUFFIX name=wheel_right_3_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_4_node-SUFFIX name=wheel_right_4_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_0_node-SUFFIX name=wheel_right_0_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_1_node-SUFFIX name=wheel_right_1_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_2_node-SUFFIX name=wheel_right_2_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_3_node-SUFFIX name=wheel_right_3_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_4_node-SUFFIX name=wheel_right_4_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+
     # child_node_instance type=dynamic parent=car_node-SUFFIX name=com_node-SUFFIX position=0 -0.5 1 rotation=0 0 0 scale=1;
     # renderable_instance name=gizmo node=com_node-SUFFIX resource=gizmo;
 

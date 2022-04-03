@@ -3,9 +3,9 @@ macro_begin create_ah_64_graphics;
     renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
     renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
 
-    renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
-    renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel_d3;
-    renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
 
     renderable_instance name=blades-SUFFIX node=blades_shift_node-NODE_SUFFIX resource=blades_AH_64-DECIMATE included_names=main_rotor;
     # renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_node-NODE_SUFFIX resource=tail_rotor_spinning_AH_64-DECIMATE;
@@ -155,7 +155,7 @@ macro_begin create_ah_64;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 rotation=0 0 0 scale=1;
 
-    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_front_node-SUFFIX name=wheel_right_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_front_node-SUFFIX name=wheel_right_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
 
     # car_node-SUFFIX;
     #     turret_node-SUFFIX (0 0 1, yaw_node);
