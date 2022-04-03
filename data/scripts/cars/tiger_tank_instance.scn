@@ -87,16 +87,16 @@ macro_begin create_tiger_tank_physics;
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_0_node-SUFFIX  position=-1.8 -0.0 -2.4 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_0_node-SUFFIX position=+1.8 -0.0 -2.4 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_1_node-SUFFIX  position=-1.8 -0.8 -0.8 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=2;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_1_node-SUFFIX position=+1.8 -0.8 -0.8 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=3;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_2_node-SUFFIX  position=-1.8 -0.8 +0.8 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=4;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_2_node-SUFFIX position=+1.8 -0.8 +0.8 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=5;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_3_node-SUFFIX  position=-1.8 -0.8 +2.4 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=6;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_3_node-SUFFIX position=+1.8 -0.8 +2.4 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=7;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_4_node-SUFFIX  position=-1.8 -0.0 +4   radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=8;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_4_node-SUFFIX position=+1.8 -0.0 +4   radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 mufF=6.7e4 1.33e5 mufC=1.1 0.97 tire_id=9;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_0_node-SUFFIX  position=-1.8 -0.0 -2.4 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_0_node-SUFFIX position=+1.8 -0.0 -2.4 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_1_node-SUFFIX  position=-1.8 -0.8 -0.8 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_1_node-SUFFIX position=+1.8 -0.8 -0.8 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_2_node-SUFFIX  position=-1.8 -0.8 +0.8 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=4;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_2_node-SUFFIX position=+1.8 -0.8 +0.8 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=5;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_3_node-SUFFIX  position=-1.8 -0.8 +2.4 radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=6;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_3_node-SUFFIX position=+1.8 -0.8 +2.4 radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=7;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_4_node-SUFFIX  position=-1.8 -0.0 +4   radius=0.25 engine=left  break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=8;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_4_node-SUFFIX position=+1.8 -0.0 +4   radius=0.25 engine=right break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=9;
 
     create_tank_controller
         node=car_node-SUFFIX

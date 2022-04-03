@@ -49,10 +49,10 @@ macro_begin create_skating_mh1;
 
     IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=main angular_vels=-125 -100 100 125 powers=0 20000 20000 0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
     IF_WITH_PHYSICS create_engine rigid_body=skater_node-SUFFIX name=breaks angular_vels=-125 -100 100 125 powers=0 20000 20000 0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-0.15 -0.5 -0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=0;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+0.15 -0.5 -0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=1;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=-0.15 -0.5 +0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=2;
-    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position=+0.15 -0.5 +0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 mufF=4e3 8e3 mufC=1.1 0.97 tire_id=3;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-0.15 -0.5 -0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+0.15 -0.5 -0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=-0.15 -0.5 +0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=2;
+    IF_WITH_PHYSICS wheel rigid_body=skater_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position=+0.15 -0.5 +0.35 radius=0.1 engine=main break_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=3;
     # IF_WITH_PHYSICS create_car_controller
         node=skater_node-SUFFIX;
     create_car_controller
