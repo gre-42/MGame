@@ -24,9 +24,8 @@ macro_begin osm_resource_arena;
             lanes:1 texture0:#PavingStones046 uvx:0.15,
         socle_textures=
             #Bricks058,
-        facade_textures=
-            Plaster003
-            Plaster003_White,
+        facade_textures=facade:Plaster003
+        facade_textures=facade:Plaster003_White,
         ceiling_texture=#Asphalt015,
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous wrap_mode_t:repeat reorient_uv0:0,
