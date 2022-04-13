@@ -1,7 +1,8 @@
 macro_begin add_facade_texture_with_histogram;
     add_texture_descriptor
-        name=hist_-NAME
+        name=wall_-NAME
         color=WALL_COLOR
+        normal=WALL_NORMAL
         color_mode=rgb
         histogram=HISTOGRAM
         anisotropic_filtering_level=16;
@@ -13,7 +14,7 @@ macro_begin add_facade_texture_with_histogram;
         height=2048
         color_mode=rgb
         images=
-            texture_pos:0 0 texture:#hist_-NAME
+            texture_pos:0 0 texture:#wall_-NAME
             texture_pos:512 512 texture:textures/osm/DE21F2_industryWindow00001_1k.png;
 
     add_texture_atlas
@@ -34,6 +35,13 @@ macro_begin add_facade_texture_with_histogram;
 macro_end;
 
 macro_begin add_facade_texture;
+    add_texture_descriptor
+        name=wall_-NAME
+        color=WALL_COLOR
+        normal=WALL_NORMAL
+        color_mode=rgb
+        anisotropic_filtering_level=16;
+
     # Draw a window into the center of a facade texture;
     add_texture_atlas
         name=color_-NAME
