@@ -173,6 +173,13 @@ macro_playback load_road
     CENTRAL:models/road/cylinder_central.obj
     ENDPOINT:models/road/cylinder_endpoint.obj;
 
+macro_playback load_road
+    CENTRAL_NAME:road_cylinder2_central
+    ENDPOINT0_NAME:road_cylinder2_endpoint_0
+    ENDPOINT1_NAME:road_cylinder2_endpoint_1
+    CENTRAL:models/road/cylinder2_central.obj
+    ENDPOINT:models/road/cylinder2_endpoint.obj;
+
 macro_playback load_parking
     LEFT_NAME:road_parking_edge_left.central-central
     RIGHT_NAME:road_parking_edge_right.central-central
