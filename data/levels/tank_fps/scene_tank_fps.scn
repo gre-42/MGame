@@ -564,14 +564,14 @@ macro_begin _scene_tank_instantiate;
 
     macro_begin add_attached_light_tank;
         root_node_instance type=dynamic name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
-        keep_offset follower=light_node1 followed=car_node offset=0 10 10;
+        keep_offset_from_movable follower=light_node1 followed=car_node offset=0 10 10;
         ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
         light node=light_node1 black_node=car_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
     macro_end;
 
     macro_begin add_attached_light_human;
         root_node_instance type=dynamic name=light_node1 position=0 100 0 rotation=-45 0 0 scale=1;
-        keep_offset follower=light_node1 followed=human_node offset=0 10 10;
+        keep_offset_from_movable follower=light_node1 followed=human_node offset=0 10 10;
         ortho_camera node=light_node1 near_plane=1 far_plane=10000 left_plane=-3 right_plane=3 bottom_plane=-3 top_plane=3 requires_postprocessing=0;
         light node=light_node1 black_node=human_node update=always with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
     macro_end;

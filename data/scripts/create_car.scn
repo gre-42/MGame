@@ -40,7 +40,7 @@ macro_begin create_car;
     IF_PLAYER macro_playback get_into-CAR_NAME
         PLAYER_NAME:PLAYER_NAME
         SUFFIX:SUFFIX;
-    IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
+    # IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
     IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
     IF_EXTERNALS set_externals_creator

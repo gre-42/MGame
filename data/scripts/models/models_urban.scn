@@ -25,6 +25,7 @@ obj_resource
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
+    is_black=1
     aggregate_mode=instances_sorted
     transformation_mode=position
     triangle_tangent_error_behavior=zero;
@@ -72,6 +73,7 @@ obj_resource
     occluded_type=color
     occluder_type=off
     occluded_by_black=0
+    is_black=1
     aggregate_mode=instances_sorted
     transformation_mode=position;
 

@@ -136,6 +136,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     # Light #;
     #########;
     macro_playback add_distant_light LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+    macro_playback add_local_instances_light;
 
     #############;
     # Particles #;
@@ -269,7 +270,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_CAR_STYLE:#
             VERROR_STD:1
             IF_EXTERNALS:#;
-        add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
+        # add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
     macro_end;
 
     IF_PLAYBACK_TRACK_1 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_M3 DECIMATE: PSUFFIX:1;

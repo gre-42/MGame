@@ -26,7 +26,7 @@ macro_begin create_human;
         PLAYER_NAME:PLAYER_NAME
         SUFFIX:SUFFIX
         IF_WITH_GUN:IF_WITH_GUN;
-    IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human-SUFFIX CSUFFIX:SUFFIX;
+    # IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human-SUFFIX CSUFFIX:SUFFIX;
     IF_EXTERNALS set_externals_creator
         player=PLAYER_NAME
         macro=macro_playback create_externals_for_human_pc
