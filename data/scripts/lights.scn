@@ -6,8 +6,8 @@ macro_begin add_distant_light;
 macro_end;
 
 macro_begin add_local_instances_light;
-    root_node_instance type=dynamic name=light_node-LSUFFIX position=0 0 0 rotation=-45 90 0 scale=1;
-    keep_offset_from_camera follower=light_node-LSUFFIX offset=10 10 0;
+    root_node_instance type=dynamic name=light_node-LSUFFIX position=0 0 0 rotation=-45 0 0 scale=1;
+    keep_offset_from_camera follower=light_node-LSUFFIX offset=10 0 10;
     ortho_camera node=light_node-LSUFFIX near_plane=-1000 far_plane=1000 left_plane=-50 right_plane=50 bottom_plane=-50 top_plane=50 requires_postprocessing=0;
     light node=light_node-LSUFFIX black_node= render_pass=lightmap_local_instances_static with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
     # renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;
