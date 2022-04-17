@@ -577,6 +577,7 @@ macro_begin _scene_tank_instantiate;
     macro_end;
 
     macro_playback add_distant_light LEFT:-4000 RIGHT:4000 BOTTOM:-2000 TOP:2000;
+    macro_playback add_local_instances_light;
     IF_PLAYER_TANK macro_playback add_attached_light_tank;
     IF_PLAYER_HUMAN macro_playback add_attached_light_human;
 
