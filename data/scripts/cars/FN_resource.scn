@@ -99,4 +99,4 @@ macro_end;
 
 macro_playback load-FN DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:;
 macro_playback load-FN DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:_d3;
-macro_playback load-FN DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d1;
+macro_playback load-FN DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d0.5;
