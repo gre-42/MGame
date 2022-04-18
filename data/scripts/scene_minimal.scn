@@ -1,6 +1,7 @@
 macro_begin scene_minimal;
     root_node_instance type=dynamic name=follower_camera position=0 0 0 rotation=0 0 0 scale=1;
     perspective_camera node=follower_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
+    # ortho_camera node=follower_camera near_plane=1 far_plane=10000 left_plane=-10 right_plane=10 bottom_plane=-10 top_plane=10 requires_postprocessing=0;
 
     IF_DIRTMAP root_node_instance type=dynamic name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
     IF_DIRTMAP ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=-2000 right_plane=2000 bottom_plane=-1000 top_plane=1000 requires_postprocessing=0;
