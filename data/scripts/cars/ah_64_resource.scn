@@ -7,9 +7,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
@@ -29,9 +28,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -55,10 +53,8 @@ macro_begin load_ah_64;
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
@@ -73,10 +69,8 @@ macro_begin load_ah_64;
         is_small=0
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
@@ -91,17 +85,15 @@ macro_begin load_ah_64;
         is_small=0
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
 macro_end;
 
-macro_playback load_ah_64 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:;
-macro_playback load_ah_64 DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d5;
+macro_playback load_ah_64 DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:;
+macro_playback load_ah_64 DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_black_local_instances DECIMATE:_d5;
 
 obj_resource
     name=ah64_blades
@@ -112,9 +104,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 

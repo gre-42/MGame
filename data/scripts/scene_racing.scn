@@ -37,9 +37,8 @@ macro_begin _scene_racing_instantiate_static_objects;
         is_small=1
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
     IF_GEN_INSTANCES gen_instances name=osm_map;

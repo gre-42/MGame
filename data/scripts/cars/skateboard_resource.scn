@@ -7,9 +7,7 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
-    is_black=1
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=lightmap_black_local_instances
     aggregate_mode=off
     transformation_mode=all;

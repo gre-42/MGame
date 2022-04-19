@@ -7,9 +7,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -22,9 +21,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -37,9 +35,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -53,9 +50,8 @@ macro_begin load_road;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -68,9 +64,8 @@ macro_begin load_road;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -83,9 +78,8 @@ macro_begin load_road;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -101,9 +95,8 @@ macro_begin load_parking;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -116,9 +109,8 @@ macro_begin load_parking;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 

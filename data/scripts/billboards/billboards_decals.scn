@@ -24,9 +24,8 @@ square_resource
     min=-0.4 -0.4
     max=0.4 0.4
     is_small=1
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_local_instances
+    occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
     depth_func=less_equal
@@ -43,9 +42,8 @@ square_resource
     min=-0.4 -0.4
     max=0.4 0.4
     is_small=1
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_local_instances
+    occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
     depth_func=less_equal
@@ -62,9 +60,8 @@ square_resource
     min=-0.4 -0.4
     max=0.4 0.4
     is_small=1
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_local_instances
+    occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
     depth_func=less_equal

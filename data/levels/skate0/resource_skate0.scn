@@ -8,7 +8,7 @@ macro_begin osm_resource_skate0;
         is_small=1
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
+        occluded_pass=none
         occluder_type=black
         occluded_by_black=1
         aggregate_mode=off

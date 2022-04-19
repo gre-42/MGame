@@ -7,9 +7,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -28,9 +27,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -55,10 +53,8 @@ macro_begin load-LK4-part;
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero
@@ -78,10 +74,8 @@ macro_begin load-LK4-wheel;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero
@@ -91,12 +85,12 @@ macro_begin load-LK4-wheel;
 macro_end;
 
 macro_begin load-LK4;
-    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:LK4/LK4_body-DECIMATE;
-    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:LK4/LK4_glass-DECIMATE;
-    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:LK4/LK4_interior-DECIMATE;
-    macro_playback load-LK4-wheel DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX IS_BLACK:IS_BLACK NAME:LK4/LK4_wheel-DECIMATE;
+    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS NAME:LK4/LK4_body-DECIMATE;
+    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS NAME:LK4/LK4_glass-DECIMATE;
+    macro_playback load-LK4-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS NAME:LK4/LK4_interior-DECIMATE;
+    macro_playback load-LK4-wheel DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS NAME:LK4/LK4_wheel-DECIMATE;
 macro_end;
 
-macro_playback load-LK4 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:;
-macro_playback load-LK4 DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 DECIMATE:_d3;
-macro_playback load-LK4 DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 DECIMATE:_d1;
+macro_playback load-LK4 DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:;
+macro_playback load-LK4 DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:_d3;
+macro_playback load-LK4 DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_black_local_instances DECIMATE:_d1;

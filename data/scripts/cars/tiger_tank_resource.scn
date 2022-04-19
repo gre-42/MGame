@@ -7,9 +7,8 @@
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -22,9 +21,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
@@ -44,9 +42,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -76,14 +73,12 @@ macro_begin load_tiger_tank;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
-        is_black=IS_BLACK
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
 macro_end;
 
-macro_playback load_tiger_tank DIST_MIN:0   DIST_MAX:100  IS_BLACK:0 NAME:Tiger;
-macro_playback load_tiger_tank DIST_MIN:100 DIST_MAX:1000 IS_BLACK:1 NAME:Tiger_d3;
+macro_playback load_tiger_tank DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           NAME:Tiger;
+macro_playback load_tiger_tank DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_black_local_instances NAME:Tiger_d3;

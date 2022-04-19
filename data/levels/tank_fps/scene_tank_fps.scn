@@ -6,10 +6,10 @@ macro_begin _scene_tank_load_resources;
     # blending_x_resource name=tree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10;
     # blending_x_resource name=tree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10;
 
-    # binary_x_resource name=bgrass texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassG.png min=-0.4 0 max=0.4 0.6 ambience=2 2 2 is_small=1 occluder_type=off;
-    # binary_x_resource name=bflower texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png min=-0.07 0 max=0.07 0.3 ambience=2 2 2 is_small=1 occluder_type=off;
-    # binary_x_resource name=bflower2 texture_filename=textures/cc0textures/FlowerSet001_2K_Color_2.png min=-0.07 0 max=0.07 0.14 ambience=2 2 2 is_small=1 occluder_type=off;
-    # # binary_x_resource name=bfoliage texture_filename=textures/cc0textures/Foliage002_2K_Color.png min=-2 0 max=2 4 ambience=2 2 2 is_small=1 occluder_type=off;
+    # binary_x_resource name=bgrass texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassG.png min=-0.4 0 max=0.4 0.6 ambience=2 2 2 is_small=1 occluder_pass=none;
+    # binary_x_resource name=bflower texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png min=-0.07 0 max=0.07 0.3 ambience=2 2 2 is_small=1 occluder_pass=none;
+    # binary_x_resource name=bflower2 texture_filename=textures/cc0textures/FlowerSet001_2K_Color_2.png min=-0.07 0 max=0.07 0.14 ambience=2 2 2 is_small=1 occluder_pass=none;
+    # # binary_x_resource name=bfoliage texture_filename=textures/cc0textures/Foliage002_2K_Color.png min=-2 0 max=2 4 ambience=2 2 2 is_small=1 occluder_pass=none;
     # # binary_x_resource name=btree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
     # # binary_x_resource name=btree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
     # # binary_x_resource name=bench texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
@@ -28,8 +28,8 @@ macro_begin _scene_tank_load_resources;
     # binary_x_resource name=btree-large3 texture_filename=textures/proctree/out-6-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
     # binary_x_resource name=btree-large4 texture_filename=textures/proctree/out-8-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_type=black;
 
-    # obj_resource name=bench filename=models/bench3/Cgtuts_Wood_Bench_OBJ_Tri.obj position=0 0 0 rotation=0 0 0 scale=0.01 0.01 0.01 is_small=0 blend_mode=off aggregate_mode=off occluded_type=off occluder_type=off;
-    # obj_resource name=coffee-shop filename=models/coffee-shop/Coffee_Shop.obj position=0 0 0 rotation=0 0 0 scale=0.05 0.05 0.05 is_small=0 blend_mode=off aggregate_mode=off occluded_type=off occluder_type=off;
+    # obj_resource name=bench filename=models/bench3/Cgtuts_Wood_Bench_OBJ_Tri.obj position=0 0 0 rotation=0 0 0 scale=0.01 0.01 0.01 is_small=0 blend_mode=off aggregate_mode=off occluded_pass=none occluder_pass=none;
+    # obj_resource name=coffee-shop filename=models/coffee-shop/Coffee_Shop.obj position=0 0 0 rotation=0 0 0 scale=0.05 0.05 0.05 is_small=0 blend_mode=off aggregate_mode=off occluded_pass=none occluder_pass=none;
 
     ########;
     # M4A1 #;
@@ -43,9 +43,8 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
@@ -62,9 +61,8 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -79,9 +77,8 @@ macro_begin _scene_tank_load_resources;
         is_small=1
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -102,9 +99,8 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=color
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 
@@ -117,9 +113,8 @@ macro_begin _scene_tank_load_resources;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=off
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
 

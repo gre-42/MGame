@@ -7,9 +7,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=black
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_once
     transformation_mode=position;
 
@@ -22,9 +21,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=black
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_once
     transformation_mode=position;
 
@@ -38,9 +36,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=black
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
     transformation_mode=position;
 
@@ -54,9 +51,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=off
-    occluder_type=black
-    occluded_by_black=0
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
     transformation_mode=position;
 
@@ -69,9 +65,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
     aggregate_mode=instances_sorted
     transformation_mode=position;
 
@@ -84,9 +79,8 @@ obj_resource
     is_small=1
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
     aggregate_mode=off;
 
 obj_resource
@@ -98,9 +92,8 @@ obj_resource
     is_small=0
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
-    occluded_type=color
-    occluder_type=off
-    occluded_by_black=0
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
     aggregate_mode=off
     transformation_mode=all;
 
@@ -115,9 +108,8 @@ macro_begin load_tree;
         is_small=1
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_type=off
-        occluder_type=black
-        occluded_by_black=0
+        occluded_pass=none
+        occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted
         transformation_mode=position_yangle;
 macro_end;
