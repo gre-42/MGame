@@ -47,11 +47,15 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibStbImage.dll \
 			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
 			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
+			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
+			Mlib/RecastBuild/Detour/libDetour.dll \
 			/mingw64/bin/libgcc_s_seh-1.dll \
 			/mingw64/bin/libgomp-1.dll \
 			/mingw64/bin/libstdc++-6.dll \
 			/mingw64/bin/libvulkan-1.dll \
 			/mingw64/bin/libwinpthread-1.dll \
+			/mingw64/bin/libopenal-1.dll \
+			/mingw64/bin/libalut-0.dll \
 			$(bin_dir)/; \
 	else \
 		rsync -avh --checksum \
@@ -59,6 +63,8 @@ package:
 			/usr/lib/x86_64-linux-gnu/libglfw.so.3.3 \
 			Mlib/$(platform_dir)/Bin/render_scene_file \
 			Mlib/$(platform_dir)/Lib/ \
+			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
+			Mlib/RecastBuild/Detour/libDetour.so* \
 			$(bin_dir)/; \
 	fi
 
