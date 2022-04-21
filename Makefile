@@ -49,6 +49,7 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/RecastBuild/Detour/libDetour.dll \
+			Mlib/RecastBuild/Recast/libRecast.dll \
 			/mingw64/bin/libgcc_s_seh-1.dll \
 			/mingw64/bin/libgomp-1.dll \
 			/mingw64/bin/libstdc++-6.dll \
@@ -65,6 +66,7 @@ package:
 			Mlib/$(platform_dir)/Lib/ \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
 			Mlib/RecastBuild/Detour/libDetour.so* \
+			Mlib/RecastBuild/Recast/libRecast.so* \
 			$(bin_dir)/; \
 	fi
 
