@@ -5,8 +5,8 @@ add_cubemap
         textures/skybox/learnopengl.com/left.jpg,
         textures/skybox/learnopengl.com/top.jpg,
         textures/skybox/learnopengl.com/bottom.jpg,
-        textures/skybox/learnopengl.com/back.jpg,
-        textures/skybox/learnopengl.com/front.jpg;
+        textures/skybox/learnopengl.com/front.jpg,
+        textures/skybox/learnopengl.com/back.jpg;
 
 add_cubemap
     alias=skybox_rgb
@@ -15,5 +15,16 @@ add_cubemap
         textures/skybox/rgb/left.png,
         textures/skybox/rgb/top.png,
         textures/skybox/rgb/bottom.png,
-        textures/skybox/rgb/back.png,
-        textures/skybox/rgb/front.png;
+        textures/skybox/rgb/front.png,
+        textures/skybox/rgb/back.png;
+
+add_cubemap
+    alias=reflection_map
+    desaturate=1
+    filenames=
+        textures/skybox/cc0textures.com/px.png,
+        textures/skybox/cc0textures.com/nx.png,
+        textures/skybox/cc0textures.com/py.png,
+        textures/skybox/cc0textures.com/ny.png,
+        textures/skybox/cc0textures.com/pz.png,
+        textures/skybox/cc0textures.com/nz.png;
