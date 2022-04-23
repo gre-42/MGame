@@ -1,9 +1,19 @@
 add_cubemap
     alias=skybox
     filenames=
-        textures/skybox/right.jpg,
-        textures/skybox/left.jpg,
-        textures/skybox/top.jpg,
-        textures/skybox/bottom.jpg,
-        textures/skybox/back.jpg,
-        textures/skybox/front.jpg;
+        textures/skybox/learnopengl.com/right.jpg,
+        textures/skybox/learnopengl.com/left.jpg,
+        textures/skybox/learnopengl.com/top.jpg,
+        textures/skybox/learnopengl.com/bottom.jpg,
+        textures/skybox/learnopengl.com/back.jpg,
+        textures/skybox/learnopengl.com/front.jpg;
+
+add_cubemap
+    alias=skybox_rgb
+    filenames=
+        textures/skybox/rgb/right.png,
+        textures/skybox/rgb/left.png,
+        textures/skybox/rgb/top.png,
+        textures/skybox/rgb/bottom.png,
+        textures/skybox/rgb/back.png,
+        textures/skybox/rgb/front.png;
