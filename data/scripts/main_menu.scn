@@ -1,21 +1,21 @@
 macro_begin _setup_menu_showroom;
     pause_on_lose_focus
         focus_mask=menu
-        submenu=car_selector;
+        submenus=car_selector car_color_selector;
 
     # scene_to_texture
         texture_name=scene
         update=always
         size=500 300
         focus_mask=menu
-        submenu=car_selector;
+        submenus=car_selector car_color_selector;
 
     scene_to_pixel_region
         target_scene=primary_scene
         position=20 80
         size=600 350
         focus_mask=menu
-        submenu=car_selector;
+        submenus=car_selector car_color_selector;
 macro_end;
 
 macro_begin reload_transient_objects;
@@ -29,12 +29,18 @@ macro_end;
 macro_begin __change_showroom_vehicle_in_physics_thread;
     execute_in_physics_thread macro_playback change_showroom_vehicle
         VEHICLE_NAME:VEHICLE_NAME
+        VEHICLE_COLOR_R:VEHICLE_COLOR_R
+        VEHICLE_COLOR_G:VEHICLE_COLOR_G
+        VEHICLE_COLOR_B:VEHICLE_COLOR_B
         DECIMATE:DECIMATE;
 macro_end;
 
 macro_begin _change_showroom_vehicle_in_physics_thread;
     macro_playback __change_showroom_vehicle_in_physics_thread
         VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
+        VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
+        VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
         DECIMATE:SHOWROOM_DECIMATE;
 macro_end;
 
@@ -154,7 +160,7 @@ macro_begin _setup_menu_primary_scene_rest;
 
     pause_on_lose_focus
         focus_mask=scene
-        submenu=;
+        submenus=;
 
     # clear_parameters;
 
@@ -166,7 +172,7 @@ macro_begin _setup_menu_primary_scene_rest;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=macro_playback create_showroom_vehicle context=showroom,
+        on_init=,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
             name=M3 value=SHOWROOM_PLAYER_VEHICLE:_M3 SHOWROOM_DECIMATE:
@@ -179,6 +185,22 @@ macro_begin _setup_menu_primary_scene_rest;
 
             # name=Tiger value=SHOWROOM_PLAYER_VEHICLE:_tiger_tank SHOWROOM_DECIMATE:;
     
+    IF_GAME_MODE_RALLY parameter_setter
+        id=car_color_selector,
+        title=Color,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 80,
+        font_height=32,
+        line_distance=32,
+        default=0,
+        on_init=macro_playback create_showroom_vehicle context=showroom,
+        on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
+        parameters=
+            name=White value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:1
+            name=Red   value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:0.1  SHOWROOM_PLAYER_VEHICLE_B:0.1
+            name=Green value=SHOWROOM_PLAYER_VEHICLE_R:0.6  SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:0.2
+            name=Blue  value=SHOWROOM_PLAYER_VEHICLE_R:0.08 SHOWROOM_PLAYER_VEHICLE_G:0.08 SHOWROOM_PLAYER_VEHICLE_B:0.8;
+
     IF_GAME_MODE_SKATING parameter_setter
         id=car_selector,
         title=Car,
@@ -199,7 +221,7 @@ macro_begin _setup_menu_primary_scene_rest;
         position=20 80
         size=500 300
         focus_mask=menu
-        submenu=car_selector;
+        submenus=car_selector car_color_selector;
 
     controls
         id=controls
