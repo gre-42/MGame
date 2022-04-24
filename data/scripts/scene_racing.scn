@@ -268,7 +268,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_CAR_STYLE:#
+            IF_CAR_STYLE:
+            R:R G:G B:B
             VERROR_STD:1
             IF_EXTERNALS:#;
         # add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
@@ -279,9 +280,9 @@ macro_begin _scene_racing_instantiate_transient_objects;
     IF_PLAYBACK_TRACK_3 macro_playback create_playback RECORDINGS_DIR:RECORDINGS_DIR PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_FN DECIMATE: PSUFFIX:3;
 
     define_winner_conditionals begin_rank=0 end_rank=3;
-    IF_PLAYBACK_WINNER_0 IF_WINNER_RANK0_EXISTS macro_playback create_winner_playback RANK:0 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER0 DECIMATE: PSUFFIX:1;
-    IF_PLAYBACK_WINNER_1 IF_WINNER_RANK1_EXISTS macro_playback create_winner_playback RANK:1 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER1 DECIMATE: PSUFFIX:2;
-    IF_PLAYBACK_WINNER_2 IF_WINNER_RANK2_EXISTS macro_playback create_winner_playback RANK:2 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER2 DECIMATE: PSUFFIX:3;
+    IF_PLAYBACK_WINNER_0 IF_WINNER_RANK0_EXISTS macro_playback create_winner_playback RANK:0 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER0 R:R_WINNER0 G:G_WINNER0 B:B_WINNER0 DECIMATE: PSUFFIX:1;
+    IF_PLAYBACK_WINNER_1 IF_WINNER_RANK1_EXISTS macro_playback create_winner_playback RANK:1 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER1 R:R_WINNER1 G:G_WINNER1 B:B_WINNER1 DECIMATE: PSUFFIX:2;
+    IF_PLAYBACK_WINNER_2 IF_WINNER_RANK2_EXISTS macro_playback create_winner_playback RANK:2 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER2 R:R_WINNER2 G:G_WINNER2 B:B_WINNER2 DECIMATE: PSUFFIX:3;
 
     IF_CHECKPOINTS check_points
         moving_node=car_node
