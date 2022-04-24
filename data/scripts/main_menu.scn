@@ -197,6 +197,7 @@ macro_begin _setup_menu_primary_scene_rest;
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
             name=White value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:1
+            name=Gray  value=SHOWROOM_PLAYER_VEHICLE_R:0.5  SHOWROOM_PLAYER_VEHICLE_G:0.5  SHOWROOM_PLAYER_VEHICLE_B:0.5
             name=Red   value=SHOWROOM_PLAYER_VEHICLE_R:0.7  SHOWROOM_PLAYER_VEHICLE_G:0.05 SHOWROOM_PLAYER_VEHICLE_B:0.09
             name=Green value=SHOWROOM_PLAYER_VEHICLE_R:0.52 SHOWROOM_PLAYER_VEHICLE_G:0.63 SHOWROOM_PLAYER_VEHICLE_B:0.54
             name=Blue  value=SHOWROOM_PLAYER_VEHICLE_R:0.51 SHOWROOM_PLAYER_VEHICLE_G:0.56 SHOWROOM_PLAYER_VEHICLE_B:0.62
