@@ -50,7 +50,7 @@ macro_begin load-TW-part;
         scale=1 1 1
         distances=DIST_MIN DIST_MAX
         is_small=0
-        blend_mode=off
+        blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
