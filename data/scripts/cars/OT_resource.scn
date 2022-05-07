@@ -36,10 +36,10 @@ modify_physics_material_tags
     resource_name=OT_tirelines
     add=obj_tire_line;
 
-gen_ray name=OT_tirelines from=-0.8 0.2 -1.2 to=-0.8 -0.65 -1.2; # left front;
-gen_ray name=OT_tirelines from=+0.8 0.2 -1.2 to=+0.8 -0.65 -1.2; # right front;
-gen_ray name=OT_tirelines from=-0.8 0.2 +2.6 to=-0.8 -0.65 +2.6; # left rear;
-gen_ray name=OT_tirelines from=+0.8 0.2 +2.6 to=+0.8 -0.65 +2.6; # right rear;
+gen_ray name=OT_tirelines from=-0.8 0.2 -1.2 to=-0.8 -0.7 -1.2; # left front;
+gen_ray name=OT_tirelines from=+0.8 0.2 -1.2 to=+0.8 -0.7 -1.2; # right front;
+gen_ray name=OT_tirelines from=-0.8 0.2 +2.6 to=-0.8 -0.7 +2.6; # left rear;
+gen_ray name=OT_tirelines from=+0.8 0.2 +2.6 to=+0.8 -0.7 +2.6; # right rear;
 
 macro_begin load_OT_part;
     obj_resource
