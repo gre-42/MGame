@@ -64,7 +64,7 @@ macro_begin traffic.create_car;
         PLAYER_NAME:PLAYER_NAME
         IF_SHADOW:#
         IF_DAMAGEABLE:#
-        IF_CAR_STYLE:
+        IF_CAR_BODY_RENDERABLE_STYLE:
         R:R G:G B:B
         IF_EXTERNALS:#;
 macro_end;

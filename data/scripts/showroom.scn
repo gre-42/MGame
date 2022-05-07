@@ -19,7 +19,7 @@ macro_begin _create_showroom_vehicle;
         CAR_NODE_ANGLE_Z:0
         IF_HUMAN_STYLE:
         IF_SKATER_STYLE:
-        IF_CAR_STYLE:
+        IF_CAR_BODY_RENDERABLE_STYLE:
         R:VEHICLE_COLOR_R
         G:VEHICLE_COLOR_G
         B:VEHICLE_COLOR_B

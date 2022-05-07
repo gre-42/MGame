@@ -191,7 +191,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         CAR_NODE_ANGLE_Z:CAR_NODE_ANGLE_Z
         IF_HUMAN_STYLE:
         IF_SKATER_STYLE:
-        IF_CAR_STYLE:
+        IF_CAR_BODY_RENDERABLE_STYLE:
         R:SHOWROOM_PLAYER_VEHICLE_R
         G:SHOWROOM_PLAYER_VEHICLE_G
         B:SHOWROOM_PLAYER_VEHICLE_B
@@ -243,7 +243,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_CAR_STYLE:#
+            IF_CAR_BODY_RENDERABLE_STYLE:#
             VERROR_STD:1
             IF_EXTERNALS:#;
     macro_end;
@@ -268,7 +268,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_PLAYER:#
             IF_SHADOW:
             IF_DAMAGEABLE:#
-            IF_CAR_STYLE:
+            IF_CAR_BODY_RENDERABLE_STYLE:
             R:R G:G B:B
             VERROR_STD:1
             IF_EXTERNALS:#;

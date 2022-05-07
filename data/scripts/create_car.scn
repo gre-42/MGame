@@ -4,7 +4,7 @@ macro_begin create_car;
         name=car_node-SUFFIX
         position=CAR_NODE_X CAR_NODE_Y CAR_NODE_Z
         rotation=CAR_NODE_ANGLE_X CAR_NODE_ANGLE_Y CAR_NODE_ANGLE_Z;
-    IF_CAR_STYLE set_renderable_style
+    IF_CAR_BODY_RENDERABLE_STYLE set_renderable_style
         selector=body|chassis|turret|main_gun
         node=car_node-SUFFIX
         ambience=R G B
