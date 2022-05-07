@@ -5,7 +5,7 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Forest 0
-![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-04-23.jpg)
+![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-05-07.jpg)
 
 ### Track JB
 ![Screenshot-JB-2022-04-23](media/Screenshot-JB-2022-04-23.jpg)
