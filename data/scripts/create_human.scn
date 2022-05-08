@@ -10,7 +10,6 @@ macro_begin create_human;
         node=human_node-SUFFIX
         ambience=R G B
         diffusivity=R G B
-        specularity=R G B
         animation_name=xonotic_pyria.idle
         animation_loop_begin=0
         animation_loop_end=full
