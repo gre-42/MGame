@@ -83,17 +83,6 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Sl_far_red
-    texture=#Ground037_Sl_red
-    min_height=-INFINITY
-    max_height=INFINITY
-    distances=15 25 INFINITY INFINITY
-    normal=0 0 0
-    cosine=-1 -1 1 1
-    scale=0.1
-    weight=1;
-
-add_blend_map_texture
     name=Ground037_near
     texture=#Ground037
     min_height=-INFINITY
