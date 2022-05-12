@@ -26,6 +26,9 @@ macro_begin create_FN_physics;
     #  400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
+    # child_node_instance type=dynamic parent=car_node-SUFFIX name=com_node-SUFFIX position=0 -0.2 -0.15 rotation=0 0 0 scale=1;
+    # renderable_instance name=gizmo node=com_node-SUFFIX resource=gizmo;
+
     IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.25 0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
     IF_RACING create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
