@@ -258,6 +258,9 @@ macro_begin _setup_menu_primary_scene_rest;
         on_init=,
         on_change=,
         parameters=
+            name=10% value=PLAYBACK_SPEED:0.1
+            name=20% value=PLAYBACK_SPEED:0.2
+            name=40% value=PLAYBACK_SPEED:0.4
             name=80% value=PLAYBACK_SPEED:0.8
             name=90% value=PLAYBACK_SPEED:0.9
             name=100% value=PLAYBACK_SPEED:1
