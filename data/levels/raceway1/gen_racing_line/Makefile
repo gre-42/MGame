@@ -24,6 +24,5 @@ racing_line_raceway1.m:
 	../../../../Mlib/racing_line/racing_line_to_mgame.py \
 		outputs_raceway1 \
 		racing_line_raceway1.m \
-		playback_raceway1.m \
 		--translation raceway1_t.m \
 		--rotation raceway1_R.m
