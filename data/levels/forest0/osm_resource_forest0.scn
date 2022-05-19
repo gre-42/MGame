@@ -23,7 +23,7 @@ macro_begin osm_resource_forest0;
             lanes:1 texture0:#Ground038_Way_Wheels,
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/racing_line_forest0.m,
-        racing_line_playback=__DIR__/racing_line_playback_forest0.m,
+        racing_line_playback=__DIR__/checkpoints.m,
         near_grass_resource_names=
             grass_tbdpec3r,
         dirt_decals_resource_names=
@@ -32,7 +32,7 @@ macro_begin osm_resource_forest0;
             Paper(p:0.1),
         default_street_width=14,
         wayside_resource_names=
-            min_dist:4
+            min_dist:3.5
             max_dist:100
             vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
@@ -63,7 +63,7 @@ macro_begin osm_resource_forest0;
         forest_outline_tree_distance=INFINITY,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=INFINITY,
-        much_near_grass_distance=3.5,
+        much_near_grass_distance=3,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
