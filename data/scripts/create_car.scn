@@ -27,7 +27,7 @@ macro_begin create_car;
     IF_PLAYBACK_TRACK playback_track
         node=car_node-SUFFIX
         speed=PLAYBACK_SPEED
-        filename=RECORDINGS_DIR/track-PSUFFIX.m;
+        filename=PLAYBACK_FILENAME;
     IF_PLAYBACK_WINNER playback_winner_track
         node=car_node-SUFFIX
         speed=PLAYBACK_SPEED
