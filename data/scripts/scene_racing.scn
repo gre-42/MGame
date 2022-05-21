@@ -73,7 +73,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     IF_CREATE_PC_PLAYER set_can_aim player=you value=0;
     IF_CREATE_PC_PLAYER set_can_shoot player=you value=0;
 
-    IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK;
+    IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK speedup=PC_PLAYER_PLAYBACK_SPEEDUP;
     IF_PC_PLAYER_PLAYBACK set_can_drive player=you value=1;
 
     # TEAM           = 1;
@@ -348,6 +348,7 @@ macro_begin scene_racing_static;
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         IF_PC_PLAYER_PLAYBACK:IF_PC_PLAYER_PLAYBACK
         PC_PLAYER_PLAYBACK:PC_PLAYER_PLAYBACK
+        PC_PLAYER_PLAYBACK_SPEEDUP:PC_PLAYER_PLAYBACK_SPEEDUP
         SCORE_BOARD:SCORE_BOARD
         OSM_POSITION_Y:OSM_POSITION_Y=-220
         OSM_ROTATION_X:OSM_ROTATION_X=-90
