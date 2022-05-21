@@ -99,9 +99,9 @@ macro_begin create_ah_64_physics;
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 radius=0.25 engine=wheels break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 radius=0.25 engine=wheels break_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=2;
 
     rotor
         vehicle=car_node-SUFFIX
