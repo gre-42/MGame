@@ -73,6 +73,9 @@ macro_begin _scene_racing_instantiate_static_objects;
     IF_CREATE_PC_PLAYER set_can_aim player=you value=0;
     IF_CREATE_PC_PLAYER set_can_shoot player=you value=0;
 
+    IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK;
+    IF_PC_PLAYER_PLAYBACK set_can_drive player=you value=1;
+
     # TEAM           = 1;
     # BEST_LAP_TIME  = 2;
     # CAR_HP         = 4;
@@ -343,6 +346,8 @@ macro_begin scene_racing_static;
         _scene_racing_instantiate_static_objects
         context=primary_scene
         IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
+        IF_PC_PLAYER_PLAYBACK:IF_PC_PLAYER_PLAYBACK
+        PC_PLAYER_PLAYBACK:PC_PLAYER_PLAYBACK
         SCORE_BOARD:SCORE_BOARD
         OSM_POSITION_Y:OSM_POSITION_Y=-220
         OSM_ROTATION_X:OSM_ROTATION_X=-90
@@ -377,7 +382,6 @@ macro_begin generic_scene_racing_dynamic;
     macro_playback
         _scene_racing_instantiate_transient_objects
         context=primary_scene
-        IF_CREATE_PC_PLAYER:IF_CREATE_PC_PLAYER
         IF_CREATE_PC_CAR:IF_CREATE_PC_CAR
         HUMAN_NODE_X:HUMAN_NODE_X
         HUMAN_NODE_Y:HUMAN_NODE_Y

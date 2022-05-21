@@ -3,6 +3,8 @@ include osm_resource_raceway1.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
+    IF_PC_PLAYER_PLAYBACK:
+    PC_PLAYER_PLAYBACK:__DIR__/checkpoints.m
     SCORE_BOARD:10
     OSM_MAP_RESOURCE:osm_resource_raceway1
     IF_HAS_OVERLAY:#
