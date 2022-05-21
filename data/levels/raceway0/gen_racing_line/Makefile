@@ -26,3 +26,7 @@ racing_line_raceway0.m:
 		racing_line_raceway0.m \
 		--translation raceway0_t.m \
 		--rotation raceway0_R.m
+
+stats:
+	../../../../Mlib/racing_line/racing_line_stats.py \
+		outputs_raceway0
