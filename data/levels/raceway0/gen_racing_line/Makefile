@@ -70,6 +70,13 @@ optimize_raceway0: raceway0.csv Makefile
 	docker cp ../../../../Mlib/racing_line/result_plots_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
 	docker exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < result_plots_mintime.py.patch"
 
+	# # Reoptimize curvature
+	# docker exec $(CONTAINER) sed -i 's/"reopt_mintime_solution": False/"reopt_mintime_solution": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+
+	# # Patch min-curvature script to plot to SVG
+	# docker cp ../../../../Mlib/racing_line/opt_min_curv.py.patch $(CONTAINER):/tmp/
+	# docker exec $(CONTAINER) bash -c "cd /usr/local/lib/python*/dist-packages/trajectory_planning_helpers && mv /tmp/opt_min_curv.py.patch . && patch < opt_min_curv.py.patch"
+
 	docker exec -t $(CONTAINER) python3 /global_racetrajectory_optimization/main_globaltraj.py
 	rm -rf outputs_raceway0
 	docker cp $(CONTAINER):/global_racetrajectory_optimization/outputs outputs_raceway0
