@@ -1,22 +1,55 @@
-.PHONY: racing_line_raceway1.m
+.PHONY: raceway1.1.csv optimize_raceway1.1 racing_line_raceway1.1.m stats stats.1
 
 CONTAINER ?= racing_line
+RACEWAY1 ?= raceway1
+OUTPUTS_RACEWAY1 ?= outputs_raceway1
 
-all: optimize_raceway1 racing_line_raceway1.m
+all: optimize_raceway1 optimize_raceway1.1 racing_line_raceway1.1.m deploy
 
-raceway1.csv: ../../../../Mlib/racing_line/osm_to_racing_line.py ../map_raceway1.osm Makefile
-	../../../../Mlib/racing_line/osm_to_racing_line.py \
+raceway1.csv: ../../../../Mlib/racing_line/osm_to_race_track.py ../map_raceway1.osm Makefile
+	../../../../Mlib/racing_line/osm_to_race_track.py \
 		../map_raceway1.osm \
 		raceway1.csv \
 		--translation raceway1_t.m \
 		--rotation raceway1_R.m \
 		--start_node_id -114585 \
-		--street_width 20
+		--street_width 15
 
-optimize_raceway1: raceway1.csv Makefile
+raceway1.1.csv:
+	../../../../Mlib/racing_line/racing_line_to_race_track.py \
+		outputs_raceway1 \
+		raceway1.1.csv \
+		--down_sampling 10 \
+		--street_width 5
+
+optimize_raceway1.1:
+	make optimize_raceway1 \
+		CONTAINER=$(CONTAINER) \
+		RACEWAY1=raceway1.1 \
+		OUTPUTS_RACEWAY1=outputs_raceway1.1
+
+racing_line_raceway1.1.m:
+	../../../../Mlib/racing_line/racing_line_to_mgame.py \
+		outputs_raceway1.1 \
+		racing_line_raceway1.1.m \
+		--translation raceway1_t.m \
+		--rotation raceway1_R.m
+
+deploy:
+	cp racing_line_raceway1.1.m ../racing_line_raceway1.m
+
+stats:
+	../../../../Mlib/racing_line/racing_line_stats.py \
+		outputs_raceway1
+
+stats.1:
+	../../../../Mlib/racing_line/racing_line_stats.py \
+		outputs_raceway1.1
+
+optimize_raceway1: $(RACEWAY1).csv Makefile
 	docker run -dit --rm --name $(CONTAINER) racing_line
-	docker cp raceway1.csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
-	docker exec $(CONTAINER) sed -i s/berlin_2018/raceway1/g /global_racetrajectory_optimization/main_globaltraj.py
+	docker cp $(RACEWAY1).csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
+	docker exec $(CONTAINER) sed -i s/berlin_2018/$(RACEWAY1)/g /global_racetrajectory_optimization/main_globaltraj.py
 
 	# Enable plotting
 	docker exec $(CONTAINER) sed -i 's/"mincurv_curv_lin": False/"mincurv_curv_lin": True/g' /global_racetrajectory_optimization/main_globaltraj.py
@@ -24,6 +57,18 @@ optimize_raceway1: raceway1.csv Makefile
 	docker exec $(CONTAINER) sed -i 's/"racetraj_vel_3d": False/"racetraj_vel_3d": True/g' /global_racetrajectory_optimization/main_globaltraj.py
 	docker exec $(CONTAINER) sed -i 's/"spline_normals": False/"spline_normals": True/g' /global_racetrajectory_optimization/main_globaltraj.py
 	docker exec $(CONTAINER) sed -i 's/"mintime_plots": False/"mintime_plots": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+
+	# Increase step size by a factor of 2.
+	docker exec $(CONTAINER) sed -i 's/"stepsize_prep": 1.0/"stepsize_prep": 2.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"stepsize_reg": 3.0/"stepsize_reg": 6.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"stepsize_interp_after_opt": 2.0/"stepsize_interp_after_opt": 4.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# # Increase smoothness of controls
+	# docker exec $(CONTAINER) sed -i 's/"penalty_delta": 10.0/"penalty_delta": 40.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	# docker exec $(CONTAINER) sed -i 's/"penalty_F": 0.01/"penalty_F": 0.04/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set maximum velocity to 288kph
+	docker exec $(CONTAINER) sed -i 's/"v_max": 70.0/"v_max": 80.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
 	# Set power to 400PS.
 	docker exec $(CONTAINER) sed -i 's/"power_max": 230000.0/"power_max": 294200.0/g' /global_racetrajectory_optimization/params/racecar.ini
@@ -34,8 +79,15 @@ optimize_raceway1: raceway1.csv Makefile
 	# Decrease maximum break force to maximum inside friction bounds (vehicle mass is 1200kg).
 	docker exec $(CONTAINER) sed -i 's/"f_brake_max": 20000.0/"f_brake_max": 11760.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
-	# Set f_z0 to 1/4*(vehicle mass=1200kg)*9.8.
-	docker exec $(CONTAINER) sed -i 's/"f_z0": 3000.0/"f_z0": 2940.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	# Move COM to origin
+	# docker exec $(CONTAINER) sed -i 's/"cog_z": 0.38/"cog_z": 0.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Enable 4 wheel drive
+	docker exec $(CONTAINER) sed -i 's/"k_brake_front": 0.6/"k_brake_front": 0.5/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"k_drive_front": 0.0/"k_drive_front": 0.5/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# # Set f_z0 to 1/4*(vehicle mass=1200kg)*9.8.
+	# docker exec $(CONTAINER) sed -i 's/"f_z0": 3000.0/"f_z0": 2940.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
 	# # Set mue=0.5.
 	# docker exec $(CONTAINER) sed -i 's/"mue": 1.0/"mue": 0.5/g' /global_racetrajectory_optimization/params/racecar.ini
@@ -52,9 +104,9 @@ optimize_raceway1: raceway1.csv Makefile
 
 	# Enable limitation of accelerations.
 	docker exec $(CONTAINER) sed -i 's/"safe_traj": false/"safe_traj": true/g' /global_racetrajectory_optimization/params/racecar.ini
-	docker exec $(CONTAINER) sed -i 's/"ax_pos_safe": null/"ax_pos_safe": 9.8/g' /global_racetrajectory_optimization/params/racecar.ini
-	docker exec $(CONTAINER) sed -i 's/"ax_neg_safe": null/"ax_neg_safe": -9.8/g' /global_racetrajectory_optimization/params/racecar.ini
-	docker exec $(CONTAINER) sed -i 's/"ay_safe": null/"ay_safe": 9.8/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"ax_pos_safe": null/"ax_pos_safe": 9.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"ax_neg_safe": null/"ax_neg_safe": -9.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	docker exec $(CONTAINER) sed -i 's/"ay_safe": null/"ay_safe": 9.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
 	# # Retain only static forces
 	# docker exec $(CONTAINER) sed -i 's/f_z_fl = f_zstat_fl + f_zlift_fl + f_zdyn_fl/f_z_fl = f_zstat_fl/g' /global_racetrajectory_optimization/params/racecar.ini
@@ -78,17 +130,6 @@ optimize_raceway1: raceway1.csv Makefile
 	# docker exec $(CONTAINER) bash -c "cd /usr/local/lib/python*/dist-packages/trajectory_planning_helpers && mv /tmp/opt_min_curv.py.patch . && patch < opt_min_curv.py.patch"
 
 	docker exec -t $(CONTAINER) python3 /global_racetrajectory_optimization/main_globaltraj.py
-	rm -rf outputs_raceway1
-	docker cp $(CONTAINER):/global_racetrajectory_optimization/outputs outputs_raceway1
+	rm -rf $(OUTPUTS_RACEWAY1)
+	docker cp $(CONTAINER):/global_racetrajectory_optimization/outputs $(OUTPUTS_RACEWAY1)
 	docker stop $(CONTAINER)
-
-racing_line_raceway1.m:
-	../../../../Mlib/racing_line/racing_line_to_mgame.py \
-		outputs_raceway1 \
-		racing_line_raceway1.m \
-		--translation raceway1_t.m \
-		--rotation raceway1_R.m
-
-stats:
-	../../../../Mlib/racing_line/racing_line_stats.py \
-		outputs_raceway1 --begin 3300 --end 3400

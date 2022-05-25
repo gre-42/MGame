@@ -24,6 +24,7 @@ raceway0.1.csv:
 
 optimize_raceway0.1:
 	make optimize_raceway0 \
+		CONTAINER=$(CONTAINER) \
 		RACEWAY0=raceway0.1 \
 		OUTPUTS_RACEWAY0=outputs_raceway0.1
 
@@ -66,8 +67,8 @@ optimize_raceway0: $(RACEWAY0).csv Makefile
 	# docker exec $(CONTAINER) sed -i 's/"penalty_delta": 10.0/"penalty_delta": 40.0/g' /global_racetrajectory_optimization/params/racecar.ini
 	# docker exec $(CONTAINER) sed -i 's/"penalty_F": 0.01/"penalty_F": 0.04/g' /global_racetrajectory_optimization/params/racecar.ini
 
-	# Set maximum velocity to 144kph
-	docker exec $(CONTAINER) sed -i 's/"v_max": 70.0/"v_max": 40.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	# Set maximum velocity to 288kph
+	docker exec $(CONTAINER) sed -i 's/"v_max": 70.0/"v_max": 80.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
 	# Set power to 400PS.
 	docker exec $(CONTAINER) sed -i 's/"power_max": 230000.0/"power_max": 294200.0/g' /global_racetrajectory_optimization/params/racecar.ini
