@@ -73,6 +73,9 @@ optimize_raceway0: $(RACEWAY0).csv Makefile
 	# Set power to 400PS.
 	docker exec $(CONTAINER) sed -i 's/"power_max": 230000.0/"power_max": 294200.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
+	# Set moment of inertia to 2000kg*m²
+	docker exec $(CONTAINER) sed -i 's/"I_z": 1200.0/"I_z": 2000.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
 	# Increase maximum driving force to maximum inside friction bounds (vehicle mass is 1200kg).
 	docker exec $(CONTAINER) sed -i 's/"f_drive_max": 7000.0/"f_drive_max": 11760.0/g' /global_racetrajectory_optimization/params/racecar.ini
 
