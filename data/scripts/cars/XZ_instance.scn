@@ -40,7 +40,8 @@ macro_begin create_XZ_physics;
     create_car_controller
         node=car_node-SUFFIX
         tire_ids=0 1
-        tire_angles=30 30;
+        tire_angles=30 30
+        tire_angle_pid=1 1 0 0.1;
 macro_end;
 
 macro_begin create_XZ;
