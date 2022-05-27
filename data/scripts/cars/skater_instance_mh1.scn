@@ -57,8 +57,8 @@ macro_begin create_skating_mh1;
         node=skater_node-SUFFIX;
     create_car_controller
         node=skater_node-SUFFIX
-        tire_ids=
-        tire_angles=
+        front_tire_ids=
+        max_tire_angle=NAN
         tire_angle_pid=NAN NAN NAN NAN;
     IF_WITH_PHYSICS set_grind_point
         node=skater_node-SUFFIX
