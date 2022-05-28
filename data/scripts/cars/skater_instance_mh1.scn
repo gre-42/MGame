@@ -58,8 +58,7 @@ macro_begin create_skating_mh1;
     create_car_controller
         node=skater_node-SUFFIX
         front_tire_ids=
-        max_tire_angle=NAN
-        tire_angle_pid=NAN NAN NAN NAN;
+        max_tire_angle=NAN;
     IF_WITH_PHYSICS set_grind_point
         node=skater_node-SUFFIX
         position=0 -0.6 0;
@@ -84,7 +83,12 @@ macro_begin create_skating_mh1;
 macro_end;
 
 macro_begin get_into_skating_mh1;
-    player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=NAN
+        tire_angle_pid=NAN NAN NAN NAN;
 macro_end;
 
 macro_begin create_externals_for_skater_pc_skating_mh1;

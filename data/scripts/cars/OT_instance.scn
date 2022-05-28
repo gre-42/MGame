@@ -34,8 +34,7 @@ macro_begin create_OT_physics;
     create_car_controller
         node=car_node-SUFFIX
         front_tire_ids=0 1
-        max_tire_angle=30
-        tire_angle_pid=1 1 0 0.1;
+        max_tire_angle=30;
 macro_end;
 
 macro_begin create_OT;
@@ -54,7 +53,12 @@ macro_begin create_OT;
 macro_end;
 
 macro_begin get_into_OT;
-    player_set_surface_power player_name=PLAYER_NAME forward=294200 backward=-294200;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=30
+        tire_angle_pid=1 1 0 0.2;
 macro_end;
 
 macro_begin create_player_car_externals_OT;
