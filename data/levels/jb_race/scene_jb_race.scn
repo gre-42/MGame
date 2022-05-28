@@ -5,6 +5,9 @@ include ../jb/osm_resource_jb_race_open_alpha.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
+    IF_PC_PLAYER_PLAYBACK:#
+    PC_PLAYER_PLAYBACK:__DIR__/checkpoints.m
+    PC_PLAYER_PLAYBACK_SPEEDUP:1
     SCORE_BOARD:10
     OSM_MAP_RESOURCE:osm_resource_jb_race
     IF_HAS_OVERLAY:#
@@ -23,15 +26,17 @@ macro_playback scene_racing_static
     SUN_TOP:1000
     SOFT_LIGHT_TEXTURE:textures/soft_light.png
     HEIGHTMAP:heightmap.pgm
+    RACING_LINE_TRACK:__DIR__/racing_line_jb_race.m
+    RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
     GAME_LEVEL:;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
         IF_CREATE_PC_CAR:
-        CAR_NODE_X:501
-        CAR_NODE_Y:-180
-        CAR_NODE_Z:-818
+        CAR_NODE_X:1.008363134939195760e+01_deg
+        CAR_NODE_Y:4.911385574724339875e+01_deg
+        CAR_NODE_Z:3.967913629893590155e+01
         CAR_NODE_ANGLE_X:0
         CAR_NODE_ANGLE_Y:140
         CAR_NODE_ANGLE_Z:0
@@ -43,7 +48,7 @@ macro_begin instantiate_transient_objects;
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
         IF_PLAYBACK_CHECKPOINTS:#
-        IF_PLAYBACK_TRACK_1:
+        IF_PLAYBACK_TRACK_1:#
         IF_PLAYBACK_TRACK_2:#
         IF_PLAYBACK_TRACK_3:#
         IF_PLAYBACK_WINNER_0:
