@@ -205,6 +205,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_WITH_GUN:#
+        IF_MANUAL_DRIVE:!IF_PC_PLAYER_PLAYBACK
         IF_MANUAL_AIM:#
         VERROR_STD:0
         IF_STATIC:#
@@ -386,6 +387,7 @@ macro_begin generic_scene_racing_dynamic;
         _scene_racing_instantiate_transient_objects
         context=primary_scene
         IF_CREATE_PC_CAR:IF_CREATE_PC_CAR
+        IF_PC_PLAYER_PLAYBACK:IF_PC_PLAYER_PLAYBACK
         HUMAN_NODE_X:HUMAN_NODE_X
         HUMAN_NODE_Y:HUMAN_NODE_Y
         HUMAN_NODE_Z:HUMAN_NODE_Z
@@ -408,6 +410,7 @@ macro_begin generic_scene_racing_dynamic;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_BURN_IN:IF_BURN_IN
+        IF_PC_PLAYER_PLAYBACK:IF_PC_PLAYER_PLAYBACK
         IF_MANUAL_AIM:IF_MANUAL_AIM
         VERROR_STD:VERROR_STD
         IF_RECORD_TRACK:IF_RECORD_TRACK

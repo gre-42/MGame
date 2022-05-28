@@ -1,8 +1,8 @@
 macro_begin create_car_key_bindings_rally;
-    car_controller_idle_binding
+    IF_MANUAL_DRIVE car_controller_idle_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX;
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=A
@@ -11,7 +11,7 @@ macro_begin create_car_key_bindings_rally;
         not_gamepad_button=B
         tire_angle_velocities=10 80
         tire_angles=45 20;
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=D
@@ -33,7 +33,7 @@ macro_begin create_car_key_bindings_rally;
     # 400 PS = 294200 Watt;
     # 1000 PS = 735499 Watt;
 
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=W
@@ -42,7 +42,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=-1
         not_gamepad_button=B
         surface_power=INFINITY;
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=S
@@ -51,7 +51,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=1
         not_gamepad_button=B
         surface_power=-INFINITY;
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=E
@@ -59,7 +59,7 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis_sign=1
         not_gamepad_button=B
         ascend_velocity=10;
-    car_controller_key_binding
+    IF_MANUAL_DRIVE car_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=Q

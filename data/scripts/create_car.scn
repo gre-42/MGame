@@ -49,6 +49,7 @@ macro_begin create_car;
             SUFFIX:SUFFIX
             IF_RACING:IF_RACING
             IF_RALLY:IF_RALLY
+            IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
             IF_MANUAL_AIM:IF_MANUAL_AIM;
     # visual_node_status_3rd
         node=car_node-SUFFIX
@@ -64,6 +65,7 @@ macro_begin create_player_car_externals;
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
         IF_MANUAL_AIM:IF_MANUAL_AIM
         PLAYER_NAME:PLAYER_NAME;
 
