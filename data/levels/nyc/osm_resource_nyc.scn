@@ -94,6 +94,9 @@ macro_begin osm_resource_nyc;
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
+        racing_line_texture=#racing_line,
+        racing_line_track=RACING_LINE_TRACK,
+        racing_line_playback=RACING_LINE_PLAYBACK,
         tree_resource_names=
             vegetation2.0(hitbox:02_1_02_hitbox)
             vegetation2.1(hitbox:02_1_02_hitbox)
