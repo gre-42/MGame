@@ -5,13 +5,13 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Forest 0
-![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-05-29b.png)
+![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-05-29c.png)
 
 ### Track JB
-![Screenshot-JB-2022-05-29](media/Screenshot-JB-2022-05-29.png)
+![Screenshot-JB-2022-05-29](media/Screenshot-JB-2022-05-29b.png)
 
 ### Racetrack 0
-![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-05-29.png)
+![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-05-29b.png)
 
 ### New York City
 ![Screenshot-NYC-2022-04-23](media/Screenshot-NYC-2022-04-23.jpg)
