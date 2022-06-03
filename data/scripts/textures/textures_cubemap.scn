@@ -28,3 +28,13 @@ add_cubemap
         textures/skybox/cc0textures.com/ny.png,
         textures/skybox/cc0textures.com/pz.png,
         textures/skybox/cc0textures.com/nz.png;
+
+add_cubemap
+    alias=skybox_night
+    filenames=
+        textures/skybox/opengameart.org/space-skybox-0/4.png,
+        textures/skybox/opengameart.org/space-skybox-0/2.png,
+        textures/skybox/opengameart.org/space-skybox-0/6.png,
+        textures/skybox/opengameart.org/space-skybox-0/5.png,
+        textures/skybox/opengameart.org/space-skybox-0/1.png,
+        textures/skybox/opengameart.org/space-skybox-0/3.png;

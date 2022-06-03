@@ -62,7 +62,7 @@ macro_end;
 
 macro_begin _initialize_showroom_scene;
     macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
-    macro_playback add_distant_light LEFT:-400 RIGHT:400 BOTTOM:-200 TOP:200;
+    macro_playback add_distant_light_day LEFT:-400 RIGHT:400 BOTTOM:-200 TOP:200;
     macro_playback add_local_instances_light;
 
     obj_resource

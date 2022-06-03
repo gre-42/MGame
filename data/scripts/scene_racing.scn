@@ -130,15 +130,16 @@ macro_begin _scene_racing_instantiate_static_objects;
     # GL_TEXTURE_CUBE_MAP_NEGATIVE_Y 0x8518;
     # GL_TEXTURE_CUBE_MAP_POSITIVE_Z 0x8519;
     # GL_TEXTURE_CUBE_MAP_NEGATIVE_Z 0x851A;
-    set_skybox alias=skybox;
+    set_skybox alias=SKYBOX;
 
     # include playback_resource.scn;
 
     #########;
     # Light #;
     #########;
-    macro_playback add_distant_light LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
-    macro_playback add_local_instances_light;
+    IF_DAY macro_playback add_distant_light_day LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+    IF_NIGHT macro_playback add_distant_light_night LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+    IF_DAY macro_playback add_local_instances_light;
 
     #############;
     # Particles #;
@@ -360,6 +361,9 @@ macro_begin scene_racing_static;
         IF_GEN_INSTANCES:IF_GEN_INSTANCES=#
         IF_EXTRACT_ALIGNMENT_PLANES:IF_EXTRACT_ALIGNMENT_PLANES=#
         IF_WITH_GEOGRAPHIC_MAPPING:IF_WITH_GEOGRAPHIC_MAPPING=
+        SKYBOX:SKYBOX
+        IF_DAY:IF_DAY
+        IF_NIGHT:IF_NIGHT
         STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
         STADIUM_CAMERA_Y:STADIUM_CAMERA_Y=2000
         STADIUM_CAMERA_Z:STADIUM_CAMERA_Z=2400

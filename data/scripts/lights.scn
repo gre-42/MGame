@@ -1,10 +1,15 @@
-macro_begin add_distant_light;
+macro_begin add_distant_light_day;
     # root_node_instance type=dynamic name=light_node0 position=0 2000 2400 rotation=-45 0 0 scale=1;
     root_node_instance type=dynamic name=light_node0 position=0 2000 2000 rotation=-45 0 0 scale=1;
     ortho_camera node=light_node0 near_plane=1 far_plane=10000 left_plane=LEFT right_plane=RIGHT bottom_plane=BOTTOM top_plane=TOP requires_postprocessing=0;
     # light node=light_node0 black_node= render_pass=lightmap_global_static with_depth_texture=0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1 shadow=1;
     light_without_shadow node=light_node0 ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1;
     light_only_shadow node=light_node0 black_node= render_pass=lightmap_black_global_static;
+macro_end;
+
+macro_begin add_distant_light_night;
+    root_node_instance type=dynamic name=light_node0 position=0 2000 2000 rotation=-45 0 0 scale=1;
+    light_without_shadow node=light_node0 ambience=0.1 0.1 0.1 diffusivity=0.2 0.2 0.2 specularity=0.2 0.2 0.2;
 macro_end;
 
 macro_begin add_local_instances_light;

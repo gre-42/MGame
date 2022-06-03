@@ -21,9 +21,9 @@ macro_playback scene_racing_static
     SUN_BOTTOM:-1000
     SUN_TOP:1000
     SOFT_LIGHT_TEXTURE:textures/soft_light.png
-    SKYBOX:skybox
-    IF_DAY:
-    IF_NIGHT:#
+    SKYBOX:skybox_night
+    IF_DAY:#
+    IF_NIGHT:
     RACING_LINE_TRACK:__DIR__/racing_line_nyc_with_traffic_track2.m
     RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
     GAME_LEVEL:2;
