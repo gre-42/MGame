@@ -38,3 +38,13 @@ add_cubemap
         textures/skybox/opengameart.org/space-skybox-0/5.png,
         textures/skybox/opengameart.org/space-skybox-0/1.png,
         textures/skybox/opengameart.org/space-skybox-0/3.png;
+
+add_cubemap
+    alias=reflection_map_night
+    filenames=
+        textures/skybox/opengameart.org/space-skybox-0-lights/4.png,
+        textures/skybox/opengameart.org/space-skybox-0-lights/2.png,
+        textures/skybox/opengameart.org/space-skybox-0-lights/6.png,
+        textures/skybox/opengameart.org/space-skybox-0-lights/5.png,
+        textures/skybox/opengameart.org/space-skybox-0-lights/1.png,
+        textures/skybox/opengameart.org/space-skybox-0-lights/3.png;

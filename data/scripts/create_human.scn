@@ -5,11 +5,11 @@ macro_begin create_human;
         position=HUMAN_NODE_X HUMAN_NODE_Y HUMAN_NODE_Z
         rotation=0 HUMAN_NODE_ANGLE_Y 0
         scale=1;
-    IF_HUMAN_STYLE set_renderable_style
-        selector=
+    IF_HUMAN_STYLE add_color_style
         node=human_node-SUFFIX
         ambience=R G B
-        diffusivity=R G B
+        diffusivity=R G B;
+    IF_HUMAN_STYLE set_animation_state
         animation_name=xonotic_pyria.idle
         animation_loop_begin=0
         animation_loop_end=full

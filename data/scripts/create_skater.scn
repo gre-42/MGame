@@ -5,12 +5,12 @@ macro_begin create_skater;
         position=SKATER_NODE_X SKATER_NODE_Y SKATER_NODE_Z
         rotation=0 SKATER_NODE_ANGLE_Y 0
         scale=1;
-    IF_SKATER_STYLE set_renderable_style
-        selector=
+    IF_SKATER_STYLE add_color_style
         node=skater_node-SUFFIX
         ambience=R G B
         diffusivity=R G B
-        specularity=R G B
+        specularity=R G B;
+    IF_SKATER_STYLE set_animation_state
         animation_name=skate.right
         animation_loop_begin=0
         animation_loop_end=full
