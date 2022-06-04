@@ -99,6 +99,21 @@ obj_resource
     transformation_mode=all;
 
 obj_resource
+    name=sphere
+    filename=models/sphere.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1 1 1
+    is_small=0
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=off
+    transformation_mode=all
+    reflection_map=car;
+
+obj_resource
     name=beacon1
     filename=models/box1.obj
     position=0 0 0

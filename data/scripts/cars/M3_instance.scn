@@ -4,6 +4,7 @@ macro_begin create_M3_graphics;
     renderable_instance name=M3_interior-SUFFIX node=car_node-NODE_SUFFIX resource=M3/M3_interior-DECIMATE;
     # renderable_instance name=M3_hitbox-SUFFIX node=car_node-NODE_SUFFIX resource=M3_hitbox;
     # renderable_instance name=M3_topdown_locator-SUFFIX node=car_node-NODE_SUFFIX resource=topdown_locator;
+    # renderable_instance name=M3_sphere-SUFFIX node=car_node-NODE_SUFFIX resource=sphere;
 
     renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
     renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel-DECIMATE;
