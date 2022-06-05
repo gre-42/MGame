@@ -9,6 +9,13 @@ macro_begin create_OT_graphics;
     renderable_instance name=wheel-SUFFIX node=wheel_right_rear_node-NODE_SUFFIX resource=OT/OT_wheel_rear-DECIMATE;
 macro_end;
 
+macro_begin create_OT_lights;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=light_left_front-SUFFIX  position=-0.5 0 -22 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=light_right_front-SUFFIX position=+0.5 0 -22 rotation=0 0 0 scale=1;
+    renderable_instance name=blob-SUFFIX node=light_left_front-SUFFIX  resource=car_light_beam;
+    renderable_instance name=blob-SUFFIX node=light_right_front-SUFFIX resource=car_light_beam;
+macro_end;
+
 macro_begin create_OT_physics;
     rigid_cuboid
         node=car_node-SUFFIX
@@ -47,6 +54,7 @@ macro_begin create_OT;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_left_rear_node-SUFFIX name=wheel_left_rear_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS macro_playback create_OT_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_OT_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d1;
+    IF_WITH_GRAPHICS macro_playback create_OT_lights SUFFIX:SUFFIX;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_OT_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_OT_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;

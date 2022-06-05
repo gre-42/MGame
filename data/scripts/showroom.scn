@@ -63,7 +63,8 @@ macro_end;
 macro_begin _initialize_showroom_scene;
     macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
     macro_playback add_distant_light_day LEFT:-400 RIGHT:400 BOTTOM:-200 TOP:200;
-    macro_playback add_local_instances_light;
+    macro_playback add_local_instances_light LSUFFIX:-local_instances;
+    # macro_playback add_local_blob_instances_light LSUFFIX:-blobs;
 
     obj_resource
         name=cylinder
@@ -74,7 +75,7 @@ macro_begin _initialize_showroom_scene;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_pass=lightmap_black_node
+        occluded_pass=lightmap_blobs
         occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;

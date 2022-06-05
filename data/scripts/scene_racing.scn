@@ -139,7 +139,8 @@ macro_begin _scene_racing_instantiate_static_objects;
     #########;
     IF_DAY macro_playback add_distant_light_day LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
     IF_NIGHT macro_playback add_distant_light_night LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
-    IF_DAY macro_playback add_local_instances_light;
+    IF_DAY macro_playback add_local_instances_light LSUFFIX:-local_instances;
+    IF_NIGHT macro_playback add_local_blob_instances_light LSUFFIX:-blobs;
 
     ##################;
     # Reflection map #;
