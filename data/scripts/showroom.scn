@@ -75,7 +75,7 @@ macro_begin _initialize_showroom_scene;
         is_small=0
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
-        occluded_pass=lightmap_blobs
+        occluded_pass=lightmap_black_node
         occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
