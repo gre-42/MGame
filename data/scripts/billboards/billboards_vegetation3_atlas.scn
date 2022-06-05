@@ -27,7 +27,7 @@ square_resource
     min=-0.5 0
     max=0.5 1
     is_small=1
-    occluded_pass=none
+    occluded_pass=lightmap_blobs
     occluder_pass=lightmap_black_global_and_local
     ambience=2 2 2
     blend_mode=semi_continuous
