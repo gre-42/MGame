@@ -41,15 +41,6 @@ macro_begin _create_showroom_vehicle;
         IF_EXTERNALS:#;
 macro_end;
 
-macro_begin create_showroom_vehicle;
-    macro_playback _create_showroom_vehicle
-        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
-        VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
-        VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
-        VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
-        DECIMATE:SHOWROOM_DECIMATE;
-macro_end;
-
 macro_begin change_showroom_vehicle;
     delete_root_nodes regex=^(car|human)_node$;
     macro_playback _create_showroom_vehicle

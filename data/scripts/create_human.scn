@@ -10,6 +10,7 @@ macro_begin create_human;
         ambience=R G B
         diffusivity=R G B;
     IF_HUMAN_STYLE set_animation_state
+        node=skater_node-SUFFIX
         animation_name=xonotic_pyria.idle
         animation_loop_begin=0
         animation_loop_end=full

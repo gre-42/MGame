@@ -9,8 +9,7 @@ macro_begin osm_resource_skate0;
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
-        occluder_type=black
-        occluded_by_black=1
+        occluder_pass=lightmap_black_local_instances
         aggregate_mode=off
         transformation_mode=all;
 macro_end;

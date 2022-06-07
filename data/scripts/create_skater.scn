@@ -8,9 +8,9 @@ macro_begin create_skater;
     IF_SKATER_STYLE add_color_style
         node=skater_node-SUFFIX
         ambience=R G B
-        diffusivity=R G B
-        specularity=R G B;
+        diffusivity=R G B;
     IF_SKATER_STYLE set_animation_state
+        node=skater_node-SUFFIX
         animation_name=skate.right
         animation_loop_begin=0
         animation_loop_end=full
