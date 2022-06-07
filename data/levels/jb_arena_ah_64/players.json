@@ -9,14 +9,20 @@
         "unstuck_mode": "reverse",
         "set_way_points": true,
         "skills": {
+            "manual_drive": false,
             "manual_aim": false,
+            "manual_shoot": false,
             "verror_std": 1
         }
     },
     "players": [
         {
             "controller": "pc", "name": "you", "team": "red",
-            "skills": { "verror_std": 0.1 },
+            "skills": {
+                "verror_std": 0.1,
+                "manual_drive": true,
+                "manual_shoot": true
+            },
             "spawned_vehicle": { "type": "ah_64" }
         },
         {

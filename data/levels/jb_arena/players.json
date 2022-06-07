@@ -9,13 +9,16 @@
         "unstuck_mode": "reverse",
         "set_way_points": true,
         "skills": {
+            "manual_drive": false,
             "manual_aim": false,
+            "manual_shoot": false,
             "verror_std": 1
         }
     },
     "players": [
         {
             "controller": "pc", "name": "you", "team": "red",
+            "skills": { "manual_drive": true, "manual_shoot": true },
             "spawned_vehicle": { "type": "tiger_tank" }
         },
         {

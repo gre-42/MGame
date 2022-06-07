@@ -157,8 +157,8 @@ macro_begin get_into_tiger_tank;
         player_name=PLAYER_NAME
         surface_power_forward=INFINITY
         surface_power_backward=-INFINITY
-        max_tire_angle=30
-        tire_angle_pid=1 0 0 0;
+        max_tire_angle=45
+        tire_angle_pid=1 0 50 0;
 macro_end;
 
 macro_begin create_player_car_externals_tiger_tank;
