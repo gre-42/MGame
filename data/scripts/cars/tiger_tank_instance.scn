@@ -153,7 +153,12 @@ macro_end;
 
 macro_begin get_into_tiger_tank;
     player_set_aiming_gun player_name=PLAYER_NAME yaw_node=turret_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
-    player_set_surface_power player_name=PLAYER_NAME forward=INFINITY backward=-INFINITY;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=30
+        tire_angle_pid=1 0 0 0;
 macro_end;
 
 macro_begin create_player_car_externals_tiger_tank;

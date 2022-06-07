@@ -1,5 +1,6 @@
 include main_menu/main_menu_rally.scn;
 include main_menu/main_menu_skating.scn;
+include main_menu/main_menu_td.scn;
 
 macro_begin reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;

@@ -88,8 +88,8 @@ macro_begin teams.create_player_and_human_for_npc;
         macro=teams.create_human_for_npc
         parameters=
             HUMAN_NAME:HUMAN_NAME
-            IF_HUMAN_STYLE:IF_HUMAN_STYLE
             DECIMATE:DECIMATE
+            IF_HUMAN_STYLE:IF_HUMAN_STYLE
             R:R G:G B:B;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
@@ -106,9 +106,10 @@ macro_begin teams.create_player_and_car_for_npc;
         macro=teams.create_car_for_npc
         parameters=
             CAR_NAME:CAR_NAME
-            IF_CAR_BODY_RENDERABLE_STYLE:IF_CAR_BODY_RENDERABLE_STYLE
             DECIMATE:DECIMATE
+            IF_CAR_BODY_RENDERABLE_STYLE:IF_CAR_BODY_RENDERABLE_STYLE
             R:R G:G B:B
+            IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
             IF_MANUAL_AIM:IF_MANUAL_AIM;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
