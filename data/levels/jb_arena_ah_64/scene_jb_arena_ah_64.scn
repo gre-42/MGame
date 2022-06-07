@@ -4,6 +4,7 @@ include ../jb/osm_resource_jb_wpts1.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
+    IF_PC_PLAYER_PLAYBACK:#
     SCORE_BOARD:21
     OSM_MAP_RESOURCE:osm_resource_jb_race
     IF_HAS_OVERLAY:
@@ -23,12 +24,18 @@ macro_playback scene_racing_static
     SUN_TOP:1000
     SOFT_LIGHT_TEXTURE:textures/soft_light.png
     HEIGHTMAP:real_heightmap.png
-    GAME_LEVEL:real_heightmap;
+    RACING_LINE_TRACK:
+    RACING_LINE_PLAYBACK:
+    GAME_LEVEL:real_heightmap
+    SKYBOX:skybox
+    IF_DAY:
+    IF_NIGHT:#;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
         IF_CREATE_PC_CAR:#
+        IF_PC_PLAYER_PLAYBACK:#
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
