@@ -66,7 +66,12 @@ macro_end;
 
 macro_begin get_into_mh1;
     IF_WITH_GUN player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
-    player_set_surface_power player_name=PLAYER_NAME forward=1000 backward=-1000;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=0
+        tire_angle_pid=0 0 0 0;
 macro_end;
 
 macro_begin create_externals_for_human_pc_mh1;
