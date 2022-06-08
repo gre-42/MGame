@@ -18,3 +18,6 @@ A rally game based on OpenStreetMap data.
 
 ### New York City (fly)
 ![Screenshot-NYC-2022-04-14](media/Screenshot-NYC-2022-04-14-fly.jpg)
+
+### New York City (at night)
+![Screenshot-NYC-night-2022-06-09](media/Screenshot-NYC-night-2022-06-09.png)
