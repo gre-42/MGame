@@ -131,6 +131,8 @@ macro_begin _scene_racing_instantiate_static_objects;
     # GL_TEXTURE_CUBE_MAP_POSITIVE_Z 0x8519;
     # GL_TEXTURE_CUBE_MAP_NEGATIVE_Z 0x851A;
     set_skybox alias=SKYBOX;
+    IF_DAY set_background_color color=0.68 0.85 1;
+    IF_NIGHT set_background_color color=0 0 0;
 
     # include playback_resource.scn;
 
