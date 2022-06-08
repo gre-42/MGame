@@ -20,7 +20,8 @@ square_resource
     is_small=1
     occluded_pass=none
     occluder_pass=none
-    ambience=2 2 2
+    emissivity=1 1 1
+    ambience=0 0 0
     blend_mode=continuous
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=0
