@@ -28,7 +28,10 @@ macro_playback scene_racing_static
     HEIGHTMAP:heightmap.pgm
     RACING_LINE_TRACK:__DIR__/racing_line_jb_race.m
     RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
-    GAME_LEVEL:;
+    GAME_LEVEL:
+    SKYBOX:skybox
+    IF_DAY:
+    IF_NIGHT:#;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
