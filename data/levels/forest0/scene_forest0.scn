@@ -22,7 +22,10 @@ macro_playback scene_racing_static
     SUN_RIGHT:500
     SUN_BOTTOM:-500
     SUN_TOP:500
-    SOFT_LIGHT_TEXTURE:textures/soft_light.png;
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png
+    SKYBOX:skybox
+    IF_DAY:
+    IF_NIGHT:#;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
