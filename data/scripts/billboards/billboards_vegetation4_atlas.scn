@@ -1,0 +1,58 @@
+# textures/histograms/Billboard_2K_Albedo_Lower.png
+# textures/histograms/TexturesCom_Trees0130_1.png;
+
+macro_begin _add_hist_tree4;
+    add_texture_descriptor
+        name=NAME
+        color=FILENAME
+        color_mode=rgba
+        histogram=textures/histograms/TexturesCom_Trees0130_1.png
+        anisotropic_filtering_level=16;
+macro_end;
+
+macro_playback _add_hist_tree4 NAME:Trees0023 FILENAME:textures/textures.com/bushes/TexturesCom_Trees0023_masked_S.png;
+macro_playback _add_hist_tree4 NAME:Trees0024 FILENAME:textures/textures.com/bushes/TexturesCom_Trees0024_1_masked_S.png;
+macro_playback _add_hist_tree4 NAME:Trees0029 FILENAME:textures/textures.com/bushes/TexturesCom_Trees0029_masked_S.png;
+macro_playback _add_hist_tree4 NAME:Trees0096 FILENAME:textures/textures.com/bushes/TexturesCom_Trees0096_masked_S.png;
+
+add_texture_atlas
+    name=vegetation4
+    width=2048
+    height=2048
+    color_mode=rgba
+    images=
+        texture_pos:   0    0 texture:#Trees0023
+        texture_pos:1024    0 texture:#Trees0024
+        texture_pos:   0 1024 texture:#Trees0029
+        texture_pos:1024 1024 texture:#Trees0096;
+
+add_texture_descriptor
+    name=vegetation4
+    color=#vegetation4
+    color_mode=rgba
+    anisotropic_filtering_level=16;
+
+square_resource
+    name=vegetation4
+    texture_filename=#vegetation4
+    min=-2 -0.5
+    max=2 3.5
+    is_small=1
+    occluded_pass=none
+    occluder_pass=none
+    ambience=2 2 2
+    blend_mode=semi_continuous
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    aggregate_mode=instances_sorted
+    transformation_mode=position_lookat
+    billboards=
+        uv_scale:0.5 0.5  uv_offset:0   0   vertex_scale:0.8 0.8 is_small:1 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0.5 0   vertex_scale:1.5 1.5 is_small:1 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0   0.5 vertex_scale:1.5 1.5 is_small:1 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0.5 0.5 vertex_scale:0.8 0.8 is_small:1 occluder_pass:lightmap_black_global_and_local;
+
+# save_texture_atlas_png
+    name=vegetation4
+    filename=/tmp/vegetation4.png
+    color_mode=rgba;

@@ -14,10 +14,10 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
-        street_crossing_texture=#Road007_Bright_No_Lines,
-        street_texture=#Road007_Bright_2_Lanes,
-        path_crossing_texture=#Road007_Bright_No_Lines,
-        path_texture=#Road007_Bright_No_Lines,
+        street_crossing_texture=#Road007_No_Lines,
+        street_texture=#Road007,
+        path_crossing_texture=#Gravel010,
+        path_texture=#Gravel010,
         curb_street_texture=#concrete1_2K_ye,
         curb_path_texture=#concrete1_2K_ye,
         curb2_street_texture=,
@@ -98,12 +98,10 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
-            bflower2(p:0.01)
-            grass_tbdpec3r_Ground037
-            bflower(p:0.01)
-            vegetation1.8
-            vegetation1.10(p:0.005)
-            vegetation1.11(p:0.005),
+            vegetation4.0
+            vegetation4.1
+            vegetation4.2
+            vegetation4.3,
         default_street_width=9,
         default_lane_width=4,
         roof_width=2,
@@ -125,7 +123,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
-        much_near_grass_distance=4,
+        much_near_grass_distance=6,
         much_near_grass_distance_to_bdry=1,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
