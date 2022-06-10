@@ -3,6 +3,7 @@ include ../sf/osm_resource_sf.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
+    IF_PC_PLAYER_PLAYBACK:#
     SCORE_BOARD:10
     OSM_MAP_RESOURCE:osm_resource_sf
     IF_HAS_OVERLAY:#
@@ -19,12 +20,18 @@ macro_playback scene_racing_static
     SUN_RIGHT:2000
     SUN_BOTTOM:-1000
     SUN_TOP:1000
-    SOFT_LIGHT_TEXTURE:textures/soft_light.png;
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png
+    SKYBOX:skybox
+    IF_DAY:
+    IF_NIGHT:#
+    RACING_LINE_TRACK:__DIR__/racing_line_sf_with_traffic.m
+    RACING_LINE_PLAYBACK:__DIR__/checkpoints.m;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
         IF_CREATE_PC_CAR:
+        IF_PC_PLAYER_PLAYBACK:#
         CAR_NODE_X:-618
         CAR_NODE_Y:-174
         CAR_NODE_Z:-689
@@ -39,16 +46,16 @@ macro_begin instantiate_transient_objects;
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
         IF_PLAYBACK_CHECKPOINTS:#
-        IF_PLAYBACK_TRACK_1:
-        IF_PLAYBACK_TRACK_2:
-        IF_PLAYBACK_TRACK_3:
+        IF_PLAYBACK_TRACK_1:#
+        IF_PLAYBACK_TRACK_2:#
+        IF_PLAYBACK_TRACK_3:#
         IF_PLAYBACK_WINNER_0:
         IF_PLAYBACK_WINNER_1:
         IF_PLAYBACK_WINNER_2:#
         IF_CHECKPOINTS:
         IF_RACING:#
         IF_RALLY:
-        IF_BURN_IN:#;
+        IF_BURN_IN:;
 macro_end;
 
 macro_playback instantiate_transient_objects
