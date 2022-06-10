@@ -99,10 +99,11 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.01)
-            grass_tbdpec3r
+            grass_tbdpec3r_Ground037
             bflower(p:0.01)
-            vegetation1.10(p:0.002)
-            vegetation1.11(p:0.002),
+            vegetation1.8
+            vegetation1.10(p:0.005)
+            vegetation1.11(p:0.005),
         default_street_width=9,
         default_lane_width=4,
         roof_width=2,
@@ -124,7 +125,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
-        much_near_grass_distance=3,
+        much_near_grass_distance=4,
         much_near_grass_distance_to_bdry=1,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
