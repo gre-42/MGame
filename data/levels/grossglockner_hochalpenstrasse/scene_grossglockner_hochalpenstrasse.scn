@@ -5,7 +5,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
 
     macro_playback scene_racing_static
         IF_CREATE_PC_PLAYER:
-    IF_PC_PLAYER_PLAYBACK:#
+        IF_PC_PLAYER_PLAYBACK:#
         SCORE_BOARD:10
         OSM_MAP_RESOURCE:osm_resource_grossglockner_hochalpenstrasse-STYLE
         IF_HAS_OVERLAY:#
@@ -26,7 +26,8 @@ macro_begin create_grossglockner_hochalpenstrasse;
         SOFT_LIGHT_TEXTURE:textures/soft_light.png
         SKYBOX:skybox
         IF_DAY:
-        IF_NIGHT:#;
+        IF_NIGHT:#
+        GAME_LEVEL:GAME_LEVEL;
 
     macro_begin instantiate_transient_objects;
         macro_playback generic_scene_racing_dynamic
