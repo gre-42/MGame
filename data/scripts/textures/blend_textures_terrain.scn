@@ -28,8 +28,8 @@ add_blend_map_texture
 # Ground037 #;
 #############;
 add_blend_map_texture
-    name=Ground037_Sl_Rock028_near
-    texture=#Ground037_Sl_Rock028
+    name=Ground037_Rock028_near
+    texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=0 0 15 25
@@ -39,8 +39,8 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Sl_Rock028_far
-    texture=#Ground037_Sl_Rock028
+    name=Ground037_Rock028_far
+    texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 INFINITY INFINITY
@@ -50,8 +50,8 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Sl_Rock028_far1
-    texture=#Ground037_Sl_Rock028
+    name=Ground037_Rock028_far1
+    texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 200 300
@@ -61,8 +61,8 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Sl_Rock028_far2
-    texture=#Ground037_Sl_Rock028
+    name=Ground037_Rock028_far2
+    texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=200 300 1000 1500
@@ -72,8 +72,8 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Sl_Rock028_far3
-    texture=#Ground037_Sl_Rock028
+    name=Ground037_Rock028_far3
+    texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=1000 1500 INFINITY INFINITY
