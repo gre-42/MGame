@@ -66,7 +66,8 @@ macro_begin scene_selector_rally_release;
             name=San Francisco with traffic value=levels/sf_with_traffic/scene_sf_with_traffic.scn
             name=Raceway 0 value=levels/raceway0/scene_raceway0.scn
             name=Raceway 1 value=levels/raceway1/scene_raceway1.scn
-            name=Forest 0 value=levels/forest0/scene_forest0.scn;
+            name=Forest 0 value=levels/forest0/scene_forest0.scn
+            name=Grossglockner Hochalpenstrasse value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn;
 macro_end;
 
 macro_begin parameter_setters_rally;

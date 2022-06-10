@@ -21,3 +21,6 @@ A rally game based on OpenStreetMap data.
 
 ### New York City (at night)
 ![Screenshot-NYC-night-2022-06-09](media/Screenshot-NYC-night-2022-06-09.png)
+
+### Großglockner High Alpine Road
+![Screenshot-GH-2022-06-10](media/Screenshot-GH-2022-06-10.png)
