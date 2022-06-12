@@ -31,7 +31,7 @@ macro_begin create_TW_physics;
     # 1000 PS = 735499 Watt;
 
     create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.25 0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=breaks angular_vels=0 powers=1 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.8 0 -2 radius=0.48 engine=main brake_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.8 0 -2 radius=0.48 engine=main brake_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
