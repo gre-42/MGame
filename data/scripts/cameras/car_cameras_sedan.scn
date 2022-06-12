@@ -1,9 +1,12 @@
 macro_begin create_car_cameras_sedan;
     root_node_instance type=dynamic name=45_deg_camera position=0 2000 2400 rotation=-45 0 0 scale=1;
     child_node_instance type=dynamic parent=car_node-SUFFIX name=follower_camera position=0 10 10 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=cockpit_camera position=COCKPIT_CAMERA_X COCKPIT_CAMERA_Y COCKPIT_CAMERA_Z rotation=0 0 0 scale=1;
+    # renderable_instance name=gizmo node=cockpit_camera resource=gizmo;
 
     perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
     perspective_camera node=follower_camera y_fov=60 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=cockpit_camera y_fov=60 near_plane=0.1 far_plane=FAR_PLANE requires_postprocessing=1;
     # ortho_camera node=follower_camera near_plane=1 far_plane=1000 left_plane=-10 right_plane=10 bottom_plane=-10 top_plane=10 requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=car_node-SUFFIX;
@@ -18,9 +21,10 @@ macro_begin create_car_cameras_sedan;
         y_snappiness=0.05;
 
     set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
-    set_camera_cycle name=near follower_camera;
+    set_camera_cycle name=near follower_camera cockpit_camera;
     set_camera follower_camera;
 
     append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
     append_externals_deleter player=PLAYER_NAME node=follower_camera;
+    append_externals_deleter player=PLAYER_NAME node=cockpit_camera;
 macro_end;

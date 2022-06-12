@@ -80,7 +80,10 @@ macro_begin create_player_car_externals_OT;
         PLAYER_NAME:PLAYER_NAME;
     macro_playback create_car_cameras_truck
         SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        COCKPIT_CAMERA_X:-0.4
+        COCKPIT_CAMERA_Y:1.5
+        COCKPIT_CAMERA_Z:-0.1;
 macro_end;
 
 macro_begin add_attached_light_OT;

@@ -80,7 +80,10 @@ macro_begin create_player_car_externals_TW;
         PLAYER_NAME:PLAYER_NAME;
     macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        COCKPIT_CAMERA_X:-0.5
+        COCKPIT_CAMERA_Y:0.55
+        COCKPIT_CAMERA_Z:0.2;
 macro_end;
 
 macro_begin add_attached_light_TW;

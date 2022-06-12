@@ -87,7 +87,10 @@ macro_begin create_player_car_externals_M3;
         PLAYER_NAME:PLAYER_NAME;
     macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        COCKPIT_CAMERA_X:-0.45
+        COCKPIT_CAMERA_Y:0.3
+        COCKPIT_CAMERA_Z:-0.3;
 macro_end;
 
 macro_begin add_attached_light_M3;
