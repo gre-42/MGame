@@ -16,6 +16,6 @@ create_scene
     clear_mode=color_and_depth
     max_tracks=5;
 
-macro_playback scene_minimal context=primary_scene IF_DIRTMAP: IF_SKYBOX:;
+macro_playback scene_minimal context=primary_scene IF_DIRTMAP:# IF_SKYBOX:#;
 append_focuses menu;
 macro_playback create_main_menu;
