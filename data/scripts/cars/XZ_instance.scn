@@ -88,8 +88,8 @@ macro_begin create_player_car_externals_XZ;
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME
         COCKPIT_CAMERA_X:-0.45
-        COCKPIT_CAMERA_Y:0.4
-        COCKPIT_CAMERA_Z:0.2;
+        COCKPIT_CAMERA_Y:0.45
+        COCKPIT_CAMERA_Z:0.1;
 macro_end;
 
 macro_begin add_attached_light_XZ;
