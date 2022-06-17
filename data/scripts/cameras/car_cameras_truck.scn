@@ -6,7 +6,7 @@ macro_begin create_car_cameras_truck;
 
     perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
     perspective_camera node=follower_camera y_fov=60 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
-    perspective_camera node=cockpit_camera y_fov=60 near_plane=0.1 far_plane=FAR_PLANE requires_postprocessing=1;
+    perspective_camera node=cockpit_camera y_fov=90 near_plane=0.1 far_plane=FAR_PLANE requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=car_node-SUFFIX;
     follow_node
