@@ -3,7 +3,7 @@ macro_begin osm_resource_raceway1;
         name=osm_map,
         filename=__DIR__/map_raceway1.osm,
         heightmap=__DIR__/heightmap.pgm,
-        terrain_undefined_textures=textures/pink.png,
+        terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=#Ground037_Sl,
         bounding_terrain_type=grass,
         default_terrain_type=grass,

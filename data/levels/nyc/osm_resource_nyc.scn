@@ -3,7 +3,7 @@ macro_begin osm_resource_nyc;
         name=osm_map,
         filename=__DIR__/map_nyc.osm,
         heightmap=__DIR__/heightmap.pgm,
-        terrain_undefined_textures=textures/pink.png,
+        terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=#Ground037_Sl,
         terrain_elevated_grass_textures=#Ground037_Sl,
         terrain_elevated_grass_base_textures=#Concrete020,
