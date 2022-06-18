@@ -1,0 +1,175 @@
+macro_begin osm_resource_canyon0;
+    osm_resource
+        name=osm_map,
+        filename=__DIR__/map_canyon0.osm,
+        heightmap=__DIR__/heightmap.png,
+        terrain_grass_textures=
+            #Ground037_Rock028_near
+            #Ground037_Rock028_far1
+            #Ground037_Rock028_far2
+            #Ground037_Rock028_far3
+            #Rock028_200_near
+            #Rock028_200_far1
+            #Rock028_200_far2,
+        bounding_terrain_type=grass,
+        default_terrain_type=grass,
+        grass_dirt_texture=#Ground025,
+        street_crossing_texture=#Road007_No_Lines,
+        street_texture=#Road007,
+        path_crossing_texture=#Gravel010,
+        path_texture=#Gravel010,
+        curb_street_texture=#concrete1_2K_ye,
+        curb_path_texture=#concrete1_2K_ye,
+        curb2_street_texture=,
+        curb2_path_texture=,
+        air_curb_street_texture=#concrete1_2K_ye,
+        air_curb_path_texture=#concrete1_2K_ye,
+        air_support_texture=#Concrete020,
+        socle_textures=
+            #Bricks058,
+        facade_textures=facade:Plaster003
+                        max_height:5,
+        facade_textures=facade:Plaster003_White
+                        max_height:5,
+        facade_textures=selector:brick
+                        facade:wall_facade_bricks_red
+                        min_height:5
+                        max_height:50
+                        facade_edge_size:0.5 0.5
+                        facade_inner_size:1.4 1.4
+                        interior_size:1.5 1.5 0.2
+                        left:DE21F2_industryWindow00001_left
+                        right:DE21F2_industryWindow00001_right
+                        floor:DE21F2_industryWindow00001_bottom
+                        ceiling:DE21F2_industryWindow00001_top
+                        back:DE21F2_industryWindow00001_1k,
+        facade_textures=facade:wall_facade_plaster_orange
+                        min_height:5
+                        max_height:50
+                        facade_edge_size:0.5 0.5
+                        facade_inner_size:1.4 1.4
+                        interior_size:1.5 1.5 0.2
+                        left:DE21F2_industryWindow00001_left
+                        right:DE21F2_industryWindow00001_right
+                        floor:DE21F2_industryWindow00001_bottom
+                        ceiling:DE21F2_industryWindow00001_top
+                        back:DE21F2_industryWindow00001_1k,
+        facade_textures=facade:wall_facade_plaster_white
+                        min_height:50
+                        facade_edge_size:0.5 0.5
+                        facade_inner_size:0.7 0.7
+                        interior_size:5 3 4
+                        left:DallasW_negx
+                        right:DallasW_posx
+                        floor:DallasW_negy
+                        ceiling:DallasW_posy
+                        back:DallasW_posz,
+        facade_textures=facade:wall_facade_plaster_white
+                        min_height:50
+                        facade_edge_size:0.5 0.5
+                        facade_inner_size:0.7 0.7
+                        interior_size:5 3 4
+                        left:MarriottMadisonWest_negx
+                        right:MarriottMadisonWest_posx
+                        floor:MarriottMadisonWest_negy
+                        ceiling:MarriottMadisonWest_posy
+                        back:MarriottMadisonWest_posz,
+        facade_textures=facade:wall_facade_plaster_white
+                        min_height:50
+                        facade_edge_size:0.5 0.5
+                        facade_inner_size:0.7 0.7
+                        interior_size:5 3 4
+                        left:room.left
+                        right:room.right
+                        floor:room.floor
+                        ceiling:room.ceiling
+                        back:room.back,
+        facade_textures=facade:MarekWindow00001_512
+                        min_height:50,
+        ceiling_texture=#Asphalt015,
+        barrier_styles=
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
+        roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
+        racing_line_texture=#racing_line,
+        racing_line_track=RACING_LINE_TRACK,
+        racing_line_playback=RACING_LINE_PLAYBACK,
+        tree_resource_names=
+            vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
+        near_grass_resource_names=
+            bflower2(p:0.01)(max_bdry:4)
+            grass_tbdpec3r_Ground037_Sl(max_bdry:4)
+            bflower(p:0.01)(max_bdry:4)
+            vegetation4.0(p1:0.25)(min_bdry:3)
+            vegetation4.1(p1:0.25)(min_bdry:3)
+            vegetation4.2(p1:0.25)(min_bdry:3)
+            vegetation4.3(p1:0.25)(min_bdry:3),
+        default_street_width=9,
+        default_lane_width=4,
+        roof_width=2,
+        scale=1e-3,
+        uv_scale_terrain=3e-1,
+        uv_scale_street=1e-1,
+        uv_scale_path=1e-1,
+        uv_scale_wall=1e-1,
+        uv_scale_facade=2.5e-1,
+        uv_scale_ceiling=1e-1,
+        uv_scale_barrier_wall=1e0,
+        with_roofs=0,
+        with_ceilings=1,
+        building_bottom=0,
+        default_building_top=10,
+        default_barrier_top=2,
+        remove_backfacing_triangles=1,
+        with_tree_nodes=1,
+        forest_outline_tree_distance=10,
+        forest_outline_tree_inwards_distance=1,
+        much_grass_distance=100,
+        much_near_grass_distance=3,
+        much_near_grass_distance_to_bdry=1,
+        raceway_beacon_distance=INFINITY,
+        with_terrain=1,
+        with_buildings=1,
+        only_raceways_and_walls=0,
+        highway_name_pattern=,
+        excluded_highways=
+            pedestrian
+            path
+            footway
+            cycleway
+            steps
+            service,
+        path_tags=
+            track,
+        steiner_point_distances_road=0 2 7 25,
+        steiner_point_distances_steiner=INFINITY 7 7 25,
+        layer_heights_layer=0 1,
+        layer_heights_height=0 5,
+        curb_alpha=1,
+        curb2_alpha=1,
+        curb_uv_x=NAN,
+        curb2_uv_x=NAN,
+        raise_streets_amount=0,
+        extrude_curb_amount=0,
+        extrude_street_amount=-0.1,
+        extrude_air_support_amount=-0.5,
+        street_light_resource_names=,
+        max_wall_width=10,
+        with_height_bindings=1,
+        street_node_smoothness=0.9,
+        street_edge_smoothness=0.1,
+        terrain_edge_smoothness=0.1,
+        driving_direction=right,
+        blend_street=0,
+        street_surface_central_resource_name=road_extrudable_central,
+        street_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
+        street_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
+        path_surface_central_resource_name=road_extrudable_central,
+        path_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
+        path_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
+        game_level=GAME_LEVEL;
+macro_end;

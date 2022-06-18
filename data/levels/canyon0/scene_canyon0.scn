@@ -1,0 +1,67 @@
+include ../../scripts/include_all.scn;
+include osm_resource_canyon0.scn;
+
+macro_playback scene_racing_static
+    IF_CREATE_PC_PLAYER:
+    IF_PC_PLAYER_PLAYBACK:#
+    SCORE_BOARD:10
+    OSM_MAP_RESOURCE:osm_resource_canyon0
+    IF_HAS_OVERLAY:#
+    OSM_POSITION_Y:-2000
+    DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
+    DIRTMAP_OFFSET:0
+    DIRTMAP_DISCRETENESS:1
+    DIRT_SCALE:1
+    DIRTMAP_WRAP_MODE:repeat
+    DIRTMAP_LEFT:-500
+    DIRTMAP_RIGHT:500
+    DIRTMAP_BOTTOM:-500
+    DIRTMAP_TOP:500
+    SUN_LEFT:-2000
+    SUN_RIGHT:2000
+    SUN_BOTTOM:-1400
+    SUN_TOP:1000
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png
+    SKYBOX:skybox
+    IF_DAY:
+    IF_NIGHT:#
+    RACING_LINE_TRACK:
+    RACING_LINE_PLAYBACK:
+    GAME_LEVEL:;
+
+macro_begin instantiate_transient_objects;
+    macro_playback generic_scene_racing_dynamic
+        IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
+        IF_CREATE_PC_CAR:
+        IF_PC_PLAYER_PLAYBACK:#
+        CAR_NODE_X:-112.111938_deg
+        CAR_NODE_Y:36.0938873_deg
+        CAR_NODE_Z:700
+        CAR_NODE_ANGLE_X:0
+        CAR_NODE_ANGLE_Y:-90
+        CAR_NODE_ANGLE_Z:0
+        SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE=_M3
+        SHOWROOM_PLAYER_VEHICLE_R:SHOWROOM_PLAYER_VEHICLE_R=1
+        SHOWROOM_PLAYER_VEHICLE_G:SHOWROOM_PLAYER_VEHICLE_G=1
+        SHOWROOM_PLAYER_VEHICLE_B:SHOWROOM_PLAYER_VEHICLE_B=1
+        PLAYBACK_SPEED:PLAYBACK_SPEED=1
+        IF_RECORD_TRACK:IF_RECORD_TRACK=#
+        RECORDINGS_DIR:__DIR__
+        IF_PLAYBACK_CHECKPOINTS:#
+        IF_PLAYBACK_TRACK_1:#
+        IF_PLAYBACK_TRACK_2:#
+        IF_PLAYBACK_TRACK_3:#
+        IF_PLAYBACK_WINNER_0:
+        IF_PLAYBACK_WINNER_1:
+        IF_PLAYBACK_WINNER_2:#
+        IF_MANUAL_AIM:
+        VERROR_STD:0.1
+        IF_CHECKPOINTS:#
+        IF_RACING:#
+        IF_RALLY:
+        IF_BURN_IN:#;
+macro_end;
+
+macro_playback instantiate_transient_objects
+    IF_UPDATE_EXISTING_SCENE:#;
+macro_playback create_main_menu;
