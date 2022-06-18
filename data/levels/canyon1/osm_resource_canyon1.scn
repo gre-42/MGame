@@ -1,7 +1,7 @@
-macro_begin osm_resource_canyon0;
+macro_begin osm_resource_canyon1;
     osm_resource
         name=osm_map,
-        filename=__DIR__/map_canyon0.osm,
+        filename=__DIR__/map_canyon1.osm,
         heightmap=__DIR__/heightmap.png,
         terrain_grass_textures=
             #Ground037_Rock028_near
@@ -121,7 +121,7 @@ macro_begin osm_resource_canyon0;
             Stone_model_tex_small_d1_s11
             desert_rock01_small_d1_s3
             desert_rock01_small_d1_s13,
-        default_street_width=6,
+        default_street_width=8,
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
@@ -159,8 +159,8 @@ macro_begin osm_resource_canyon0;
         path_tags=
             path
             track,
-        steiner_point_distances_road=0,
-        steiner_point_distances_steiner=25,
+        steiner_point_distances_road=0 20 100,
+        steiner_point_distances_steiner=INFINITY 20 100,
         layer_heights_layer=0 1,
         layer_heights_height=0 5,
         curb_alpha=1,
