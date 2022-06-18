@@ -163,6 +163,43 @@ add_blend_map_texture
     scale=0.002
     weight=5;
 
+###############;
+# Rock028_029 #;
+###############;
+add_blend_map_texture
+    name=Rock028_029_200_near
+    texture=#Rock028_029
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 300 500
+    normal=0 1 0
+    cosine=-1 -1 0.8 0.85
+    discreteness=0
+    scale=0.1
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_029_200_far1
+    texture=#Rock028_029
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=300 500 1000 1500
+    normal=0 1 0
+    cosine=-1 -1 0.8 0.85
+    scale=0.01
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_029_200_far2
+    texture=#Rock028_029
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=1000 1500 INFINITY INFINITY
+    normal=0 1 0
+    cosine=-1 -1 0.8 0.85
+    scale=0.002
+    weight=5;
+
 # add_blend_map_texture
     name=Rock036_200
     texture=#Rock036

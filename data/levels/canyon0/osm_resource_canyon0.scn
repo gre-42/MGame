@@ -8,9 +8,9 @@ macro_begin osm_resource_canyon0;
             #Ground037_Rock028_far1
             #Ground037_Rock028_far2
             #Ground037_Rock028_far3
-            #Rock028_200_near
-            #Rock028_200_far1
-            #Rock028_200_far2,
+            #Rock028_029_200_near
+            #Rock028_029_200_far1
+            #Rock028_029_200_far2,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -104,10 +104,19 @@ macro_begin osm_resource_canyon0;
             bflower2(p:0.01)(max_bdry:4)
             grass_tbdpec3r_Ground037_Sl(max_bdry:4)
             bflower(p:0.01)(max_bdry:4)
-            vegetation4.0(p1:0.25)(min_bdry:3)
-            vegetation4.1(p1:0.25)(min_bdry:3)
-            vegetation4.2(p1:0.25)(min_bdry:3)
-            vegetation4.3(p1:0.25)(min_bdry:3),
+            vegetation4.0(p1:0.2)(min_bdry:3)
+            vegetation4.1(p1:0.2)(min_bdry:3)
+            vegetation4.2(p1:0.2)(min_bdry:3)
+            vegetation4.3(p1:0.2)(min_bdry:3)
+            Stone_model_tex_small_d1_s3
+            Stone_model_tex_small_d1_s11
+            desert_rock01_small_d1_s3
+            desert_rock01_small_d1_s13,
+        near_rocks_resource_names=
+            Stone_model_tex_small_d1_s3
+            Stone_model_tex_small_d1_s11
+            desert_rock01_small_d1_s3
+            desert_rock01_small_d1_s13,
         default_street_width=9,
         default_lane_width=4,
         roof_width=2,
@@ -129,7 +138,7 @@ macro_begin osm_resource_canyon0;
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
-        much_near_grass_distance=3,
+        much_near_grass_distance=2,
         much_near_grass_distance_to_bdry=1,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
