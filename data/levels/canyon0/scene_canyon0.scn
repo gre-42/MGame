@@ -36,7 +36,7 @@ macro_begin instantiate_transient_objects;
         IF_PC_PLAYER_PLAYBACK:#
         CAR_NODE_X:-112.111938_deg
         CAR_NODE_Y:36.0938873_deg
-        CAR_NODE_Z:700
+        CAR_NODE_Z:550
         CAR_NODE_ANGLE_X:0
         CAR_NODE_ANGLE_Y:-90
         CAR_NODE_ANGLE_Z:0
@@ -59,7 +59,7 @@ macro_begin instantiate_transient_objects;
         IF_CHECKPOINTS:#
         IF_RACING:#
         IF_RALLY:
-        IF_BURN_IN:#;
+        IF_BURN_IN:;
 macro_end;
 
 macro_playback instantiate_transient_objects

@@ -42,8 +42,23 @@ obj_resource
     transformation_mode=position;
 
 obj_resource
+    name=Stone_model_tex_small_d4
+    filename=models/opengameart/Stone_model_tex/stone_d4.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1.5 1.5 1.5
+    distances=0 200
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
     name=Stone_model_tex_small_d1_s3
-    filename=models/opengameart/Stone_model_tex/stone_d1.obj
+    filename=models/opengameart/Stone_model_tex/stone_canyon_d1.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
@@ -58,7 +73,7 @@ obj_resource
 
 obj_resource
     name=Stone_model_tex_small_d1_s11
-    filename=models/opengameart/Stone_model_tex/stone_d1.obj
+    filename=models/opengameart/Stone_model_tex/stone_canyon_d1.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.6 0.6 0.6
@@ -87,8 +102,23 @@ obj_resource
     transformation_mode=position;
 
 obj_resource
+    name=desert_rock01_small_d2_s15
+    filename=models/opengameart/desert_rock01/rock01_mean_d2.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=1.5 1.5 1.5
+    distances=0 200
+    is_small=1
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=lightmap_black_local_instances
+    aggregate_mode=instances_sorted
+    transformation_mode=position;
+
+obj_resource
     name=desert_rock01_small_d1_s3
-    filename=models/opengameart/desert_rock01/rock01_mean_d1.obj
+    filename=models/opengameart/desert_rock01/rock01_mean_canyon_d1.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
@@ -103,7 +133,7 @@ obj_resource
 
 obj_resource
     name=desert_rock01_small_d1_s13
-    filename=models/opengameart/desert_rock01/rock01_mean_d1.obj
+    filename=models/opengameart/desert_rock01/rock01_mean_canyon_d1.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.5 0.5 0.5

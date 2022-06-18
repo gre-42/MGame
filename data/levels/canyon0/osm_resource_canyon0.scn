@@ -108,11 +108,15 @@ macro_begin osm_resource_canyon0;
             vegetation4.1(p1:0.2)(min_bdry:3)
             vegetation4.2(p1:0.2)(min_bdry:3)
             vegetation4.3(p1:0.2)(min_bdry:3)
+            Stone_model_tex_small_d4(p:0.01)
+            desert_rock01_small_d2_s15(p:0.01)
             Stone_model_tex_small_d1_s3
             Stone_model_tex_small_d1_s11
             desert_rock01_small_d1_s3
             desert_rock01_small_d1_s13,
         near_rocks_resource_names=
+            Stone_model_tex_small_d4(p:0.01)
+            desert_rock01_small_d2_s15(p:0.01)
             Stone_model_tex_small_d1_s3
             Stone_model_tex_small_d1_s11
             desert_rock01_small_d1_s3
