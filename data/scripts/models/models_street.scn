@@ -4,7 +4,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -18,7 +18,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -32,7 +32,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -47,7 +47,7 @@ macro_begin load_road;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        is_small=0
+        center_distances=0 INFINITY
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
@@ -61,7 +61,7 @@ macro_begin load_road;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        is_small=0
+        center_distances=0 INFINITY
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
@@ -75,7 +75,7 @@ macro_begin load_road;
         position=0 0 0
         rotation=0 0 0
         scale=-1 -1 1
-        is_small=0
+        center_distances=0 INFINITY
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
@@ -92,7 +92,7 @@ macro_begin load_parking;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        is_small=0
+        center_distances=0 INFINITY
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
@@ -106,7 +106,7 @@ macro_begin load_parking;
         position=0 0 0
         rotation=0 0 0
         scale=-1 -1 1
-        is_small=0
+        center_distances=0 INFINITY
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none

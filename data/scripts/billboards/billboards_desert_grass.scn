@@ -42,7 +42,7 @@ square_resource
     texture_filename=#var_desert_bush_1
     min=-1.2 0
     max=1.2 2.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -57,7 +57,7 @@ square_resource
     texture_filename=#var_desert_bush_2
     min=-1.7 0
     max=1.7 3.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -72,7 +72,7 @@ square_resource
     texture_filename=#var_desert_flower
     min=-0.11 0
     max=0.11 0.44
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -87,7 +87,7 @@ square_resource
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
     max=0.5 1
-    is_small=1
+    center_distances=0 501
     ambience=2.7838 2.4315 1.7721
     blend_mode=binary
     alpha_distances=0 0 INFINITY INFINITY
@@ -100,7 +100,7 @@ square_resource
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
     max=0.5 1
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9111 2.1244
@@ -115,7 +115,7 @@ square_resource
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
     max=0.5 1
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9 2.1244
@@ -130,7 +130,7 @@ square_resource
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
     max=0.5 1
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9111 2.1

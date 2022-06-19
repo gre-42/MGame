@@ -4,8 +4,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    distances=0 100
-    is_small=0
+    center_distances=0 100
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -21,8 +20,7 @@ macro_begin load_mh1;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        distances=DIST_MIN DIST_MAX
-        is_small=0
+        center_distances=DIST_MIN DIST_MAX
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static

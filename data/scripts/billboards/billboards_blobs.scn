@@ -10,7 +10,7 @@ square_resource
     texture_filename=#blob0
     min=-6 -6
     max=6 6
-    is_small=1
+    center_distances=0 501
     occluded_pass=none
     occluder_pass=lightmap_blobs
     ambience=1 1 1
@@ -37,7 +37,7 @@ square_resource
     texture_filename=#car_light_beam
     min=-10 -20
     max=10 20
-    is_small=1
+    center_distances=0 501
     occluded_pass=none
     occluder_pass=lightmap_blobs
     ambience=1 1 1

@@ -4,7 +4,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=1
+    center_distances=0 501
     blend_mode=binary
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -18,7 +18,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.2 0.2 0.2
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -33,7 +33,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.5 0.5 0.5
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -47,7 +47,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=2 2 2
-    is_small=1
+    center_distances=0 501
     blend_mode=binary
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces_alpha=0
@@ -62,7 +62,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -76,7 +76,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.16 1 0.16
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -90,7 +90,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -104,7 +104,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -118,7 +118,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.1 5 0.1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -132,7 +132,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.2 1 0.2
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -146,7 +146,7 @@ obj_resource
     position=0 0.8 0
     rotation=0 0 0
     scale=5 1.6 0.1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -160,7 +160,7 @@ obj_resource
     position=-1.25 -0.15 0.67
     rotation=0 0 0
     scale=0.02 0.02 0.02
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -174,7 +174,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.3 0.3 0.3
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_local_instances
@@ -189,7 +189,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -203,7 +203,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_local_instances
@@ -217,7 +217,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.1 0.1 0.1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -231,7 +231,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.4 0.4 0.4
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -246,7 +246,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -261,7 +261,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -276,8 +276,7 @@ macro_begin load_hedge;
         position=0 0 0
         rotation=0 0 0
         scale=0.1 0.1 0.1
-        distances=0 300
-        is_small=1
+        center_distances=0 501
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
@@ -294,7 +293,7 @@ macro_begin load_facade;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        is_small=1
+        center_distances=0 501
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_node

@@ -43,7 +43,6 @@ square_resource
     texture_filename=#vegetation2
     min=-0.5 0
     max=0.5 1
-    is_small=1
     occluded_pass=lightmap_blobs
     occluder_pass=lightmap_black_global_and_local
     ambience=2 2 2
@@ -53,16 +52,16 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat
     billboards=
-        uv_scale:0.125 0.5  uv_offset:0     0   vertex_scale: 7.5 15   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.5  uv_offset:0.125 0   vertex_scale: 7.5 15   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.5  uv_offset:0.25  0   vertex_scale: 7.5 15   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.25  0.5  uv_offset:0.375 0   vertex_scale: 5    5   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.25  0.5  uv_offset:0     0.5 vertex_scale: 5    5   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.25  0.5  uv_offset:0.25  0.5 vertex_scale: 5    5   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.5  uv_offset:0.75  0   vertex_scale: 3    6   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.5  uv_offset:0.875 0   vertex_scale: 3    6   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.25 uv_offset:0.75  0.5 vertex_scale: 3    3   is_small:1 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.125 0.25 uv_offset:0.875 0.5 vertex_scale: 3    3   is_small:1 occluder_pass:lightmap_black_global_and_local;
+        uv_scale:0.125 0.5  uv_offset:0     0   vertex_scale: 7.5 15   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.5  uv_offset:0.125 0   vertex_scale: 7.5 15   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.5  uv_offset:0.25  0   vertex_scale: 7.5 15   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.25  0.5  uv_offset:0.375 0   vertex_scale: 5    5   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.25  0.5  uv_offset:0     0.5 vertex_scale: 5    5   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.25  0.5  uv_offset:0.25  0.5 vertex_scale: 5    5   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.5  uv_offset:0.75  0   vertex_scale: 3    6   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.5  uv_offset:0.875 0   vertex_scale: 3    6   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.25 uv_offset:0.75  0.5 vertex_scale: 3    3   max_distance:503 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.125 0.25 uv_offset:0.875 0.5 vertex_scale: 3    3   max_distance:503 occluder_pass:lightmap_black_global_and_local;
 
 # 6: hedge_long;
 # 7: hedge_long_round;

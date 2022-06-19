@@ -40,7 +40,7 @@ square_resource
     texture_filename=#var_grass
     min=-1.5 0
     max=1.5 3
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -55,7 +55,7 @@ square_resource
     texture_filename=#var_grass2
     min=-0.7 0
     max=0.7 1.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -70,7 +70,7 @@ square_resource
     texture_filename=#var_grass3
     min=-0.7 0
     max=0.7 1.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -85,7 +85,7 @@ square_resource
     texture_filename=textures/SR/grass12y-.png
     min=-0.7 0
     max=0.7 1.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -100,7 +100,7 @@ square_resource
     texture_filename=#grass12y_Ground037_Sl
     min=-0.6 -0.5
     max=0.6 0.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -115,7 +115,7 @@ square_resource
     texture_filename=#grass_tbdpec3r
     min=-0.6 0
     max=0.6 0.6
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -130,7 +130,7 @@ square_resource
     texture_filename=#grass_tbdpec3r_dark27
     min=-0.6 0
     max=0.6 0.6
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -145,7 +145,7 @@ square_resource
     texture_filename=#grass_tbdpec3r_Ground003
     min=-0.6 0
     max=0.6 0.6
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -160,7 +160,7 @@ square_resource
     texture_filename=#grass_tbdpec3r_Ground037
     min=-0.6 0
     max=0.6 0.6
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -175,7 +175,7 @@ square_resource
     texture_filename=#grass_tbdpec3r_Ground037_Sl
     min=-0.6 0
     max=0.6 0.6
-    is_small=1
+    center_distances=0 350
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -190,7 +190,7 @@ square_resource
     texture_filename=#grass_tbdpec3r_Ground037_Sl
     min=-0.6 -0.05
     max=0.6 0.4
-    is_small=1
+    center_distances=0 350
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -205,7 +205,7 @@ square_resource
     texture_filename=#grass2g
     min=-1 -0.2
     max=1 1.8
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -220,7 +220,7 @@ square_resource
     texture_filename=textures/SR/grass3g.png
     min=-0.7 0
     max=0.7 1.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -235,7 +235,7 @@ square_resource
     texture_filename=textures/cc0textures/Leaves.png
     min=-0.7 0
     max=0.7 0.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -249,7 +249,7 @@ square_resource
     texture_filename=textures/cc0textures/Leaves.png
     min=-0.7 0
     max=0.7 0.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 1.9 2
@@ -263,7 +263,7 @@ square_resource
     texture_filename=textures/cc0textures/Leaves.png
     min=-0.7 0
     max=0.7 0.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 1.9
@@ -277,7 +277,7 @@ square_resource
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png
     min=-0.11 0
     max=0.11 0.44
-    is_small=1
+    center_distances=0 250
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -292,7 +292,7 @@ square_resource
     texture_filename=textures/cc0textures/FlowerSet001_2K_Color_2.png
     min=-0.07 0
     max=0.07 0.14
-    is_small=1
+    center_distances=0 250
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -314,7 +314,7 @@ square_resource
     texture_filename=textures/cc0textures/Foliage002_2K_Color_1024_2.png
     min=-0.5 0
     max=0.5 2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -329,7 +329,7 @@ square_resource
     texture_filename=textures/opengameart/kuudere_lisadikaprio/casual_smile.png
     min=-0.425 0
     max=0.425 1.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -344,7 +344,7 @@ square_resource
     texture_filename=models/MakeHuman/female-standing1.png
     min=-0.55 0
     max=0.55 2.2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -359,7 +359,7 @@ square_resource
     texture_filename=models/MakeHuman/female-standing2.png
     min=-0.55 0
     max=0.55 2.2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -374,7 +374,7 @@ square_resource
     texture_filename=models/MakeHuman/female-standing3.png
     min=-0.55 0
     max=0.55 2.2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -389,7 +389,7 @@ square_resource
     texture_filename=models/MakeHuman/female-standing4.png
     min=-0.55 0
     max=0.55 2.2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -404,7 +404,7 @@ square_resource
     texture_filename=textures/opengameart/kuudere_lisadikaprio/school_uniform_smile.png
     min=-0.425 0
     max=0.425 1.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -419,7 +419,7 @@ square_resource
     texture_filename=textures/opengameart/kuudere_lisadikaprio/jacket_school_uniform_smile.png
     min=-0.425 0
     max=0.425 1.7
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=1 1 1
@@ -436,7 +436,7 @@ macro_begin create_hedge_billboard;
         texture_filename_90=models/opengameart/Hedge/FILENAME_90
         min=-1.5 0
         max=1.5 HEIGHT
-        is_small=1
+        center_distances=0 501
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
         ambience=2.3 1.65 0.93
@@ -450,7 +450,7 @@ macro_begin create_hedge_billboard;
         texture_filename=models/opengameart/Hedge/FILENAME_0
         min=-1.5 0
         max=1.5 HEIGHT
-        is_small=1
+        center_distances=0 501
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
         ambience=2.3 1.65 0.93
@@ -504,7 +504,7 @@ macro_playback create_hedge_billboard
 #     position=0 0 0
 #     rotation=0 0 0
 #     scale=2 2 2
-#     is_small=1
+#     center_distances=0 501
 #     blend_mode=binary
 #     cull_faces_alpha=0
 #     occluded_pass=none
@@ -518,7 +518,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_24/out-1-5.png
         min=-5 0
         max=5 10
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -533,7 +533,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_24/out-2-5.png
         min=-5 0
         max=5 10
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -548,7 +548,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one/out-3-5.png
         min=-5 0
         max=5 10
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -563,7 +563,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one/out-4-5.png
         min=-5 0
         max=5 10
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -578,7 +578,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_large/out-1-10.png
         min=-7.5 0
         max=7.5 15
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -593,7 +593,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_large/out-2-10.png
         min=-7.5 0
         max=7.5 15
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -608,7 +608,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_large/out-3-10.png
         min=-7.5 0
         max=7.5 15
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -623,7 +623,7 @@ macro_begin create_trees;
         texture_filename=textures/proctree/one_large/out-4-10.png
         min=-7.5 0
         max=7.5 15
-        is_small=IS_SMALL
+        center_distances=0 DISTANCE_MAX
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
@@ -634,15 +634,15 @@ macro_begin create_trees;
         transformation_mode=position_lookat;
 macro_end;
 
-macro_playback create_trees SUFFIX: IS_SMALL:0 AGGREGATE_MODE:instances_once;
-macro_playback create_trees SUFFIX:_small IS_SMALL:1 AGGREGATE_MODE:instances_sorted;
+macro_playback create_trees SUFFIX: DISTANCE_MAX:INFINITY AGGREGATE_MODE:instances_once;
+macro_playback create_trees SUFFIX:_small DISTANCE_MAX:501 AGGREGATE_MODE:instances_sorted;
 
 # square_resource
     name=rock028_large
     texture_filename=textures/procrock/rock028.png
     min=-2 -2
     max=2 2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -657,7 +657,7 @@ macro_playback create_trees SUFFIX:_small IS_SMALL:1 AGGREGATE_MODE:instances_so
     texture_filename=textures/procrock/rock028.png
     min=-1 -1
     max=1 1
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
@@ -672,7 +672,7 @@ macro_playback create_trees SUFFIX:_small IS_SMALL:1 AGGREGATE_MODE:instances_so
     texture_filename=textures/procrock/rock028.png
     min=-0.5 -0.5
     max=0.5 0.5
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2

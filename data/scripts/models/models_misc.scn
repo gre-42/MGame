@@ -4,7 +4,7 @@
     position=0 5 0
     rotation=0 90 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -17,7 +17,7 @@ square_resource
     texture_filename=textures/opengameart/glowCircle_1024.png
     min=-1 4
     max=1 6
-    is_small=1
+    center_distances=0 501
     occluded_pass=none
     occluder_pass=none
     emissivity=1 1 1
@@ -34,7 +34,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -48,7 +48,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=4 1 8
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=continuous
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces_alpha=0
@@ -63,7 +63,7 @@ obj_resource
     position=0 500 0
     rotation=0 0 0
     scale=1 500 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -77,7 +77,7 @@ obj_resource
     position=0 0 500
     rotation=0 0 0
     scale=1 1 500
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -91,7 +91,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.1 0.1 0.1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -105,7 +105,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -120,7 +120,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=0.1 0.1 0.1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -134,7 +134,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -148,7 +148,7 @@ obj_resource
     position=0 0 0
     rotation=-90 0 0
     scale=0.2 0.4 0.2
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -162,7 +162,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none

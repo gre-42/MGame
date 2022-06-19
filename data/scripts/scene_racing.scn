@@ -34,7 +34,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
-        is_small=1
+        center_distances=0 501
         blend_mode=off
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none

@@ -4,7 +4,7 @@ obj_resource
     position=0 0.25 0
     rotation=0 0 0
     scale=0.25 0.7 0.25
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
@@ -24,7 +24,7 @@ obj_resource
     position=0 -0.6 0
     rotation=90 0 0
     scale=0.5 0.8 0.25
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces_default=0
@@ -51,7 +51,7 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    is_small=1
+    center_distances=0 501
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none

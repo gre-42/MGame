@@ -4,7 +4,7 @@ obj_resource
     position=0 -0.25 0.25
     rotation=0 180 0
     scale=0.025 0.025 0.025
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
@@ -19,7 +19,7 @@ obj_resource
     position=0 0 0
     rotation=0 -90 90
     scale=0.1 0.1 0.1
-    is_small=0
+    center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static

@@ -23,7 +23,7 @@ square_resource
     texture_filename=#Leaf018_2
     min=-0.4 -0.4
     max=0.4 0.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -41,7 +41,7 @@ square_resource
     texture_filename=#Leaf018_2_Red
     min=-0.4 -0.4
     max=0.4 0.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2
@@ -59,7 +59,7 @@ square_resource
     texture_filename=#Paper
     min=-0.4 -0.4
     max=0.4 0.4
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     ambience=2 2 2

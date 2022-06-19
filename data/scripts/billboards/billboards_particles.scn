@@ -3,7 +3,7 @@ square_resource
     texture_filename=#explosion_01
     min=-2 -2
     max=2 2
-    is_small=1
+    center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
