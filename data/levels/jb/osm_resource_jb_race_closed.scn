@@ -4,9 +4,9 @@ macro_begin osm_resource_jb_race;
         filename=__DIR__/map_jb.osm,
         heightmap=__DIR__/heightmap.pgm,
         terrain_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         grass_dirt_texture=#Ground025,
         street_crossing_texture=#Road007_No_Lines,

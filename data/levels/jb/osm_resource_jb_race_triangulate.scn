@@ -4,14 +4,14 @@ macro_begin osm_resource_jb_race;
         filename=__DIR__/map_jb_race_triangulate.osm,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         terrain_grass_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         grass_dirt_texture=#Ground025,
         street_crossing_texture=#Road007_No_Lines,
@@ -65,6 +65,7 @@ macro_begin osm_resource_jb_race;
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
+        uv_period_terrain=512,
         uv_scale_street=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,

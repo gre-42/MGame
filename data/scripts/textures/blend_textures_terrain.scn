@@ -3,7 +3,7 @@
 #############;
 
 add_blend_map_texture
-    name=Ground003_near
+    name=Ground003_2
     texture=#Ground003
     min_height=-INFINITY
     max_height=INFINITY
@@ -14,14 +14,14 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground003_far
+    name=Ground003_8
     texture=#Ground003
     min_height=-INFINITY
     max_height=INFINITY
     distances=50 70 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;
 
 #############;
@@ -39,51 +39,51 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Rock028_far
+    name=Ground037_Rock028_8
     texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Rock028_far1
+    name=Ground037_Rock028_8_1
     texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 200 300
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Rock028_far2
+    name=Ground037_Rock028_64
     texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=200 300 1000 1500
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.02
+    scale=0.015625
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_Rock028_far3
+    name=Ground037_Rock028_256
     texture=#Ground037_Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=1000 1500 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.005
+    scale=0.00390625
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_near
+    name=Ground037_1
     texture=#Ground037
     min_height=-INFINITY
     max_height=INFINITY
@@ -94,18 +94,18 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_far
+    name=Ground037_8
     texture=#Ground037
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_dark27_near
+    name=Ground037_dark27_1
     texture=#Ground037_dark27
     min_height=-INFINITY
     max_height=INFINITY
@@ -116,21 +116,21 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=Ground037_dark27_far
+    name=Ground037_dark27_8
     texture=#Ground037_dark27
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;
 
 ###########;
 # Rock028 #;
 ###########;
 add_blend_map_texture
-    name=Rock028_200_near
+    name=Rock028_200_8
     texture=#Rock028
     min_height=-INFINITY
     max_height=INFINITY
@@ -138,36 +138,36 @@ add_blend_map_texture
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
     discreteness=0
-    scale=0.1
+    scale=0.125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_200_far1
+    name=Rock028_200_128
     texture=#Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=300 500 1000 1500
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
-    scale=0.01
+    scale=0.0078125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_200_far2
+    name=Rock028_200_512
     texture=#Rock028
     min_height=-INFINITY
     max_height=INFINITY
     distances=1000 1500 INFINITY INFINITY
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
-    scale=0.002
+    scale=0.001953125
     weight=5;
 
 ###############;
 # Rock028_029 #;
 ###############;
 add_blend_map_texture
-    name=Rock028_029_200_near
+    name=Rock028_029_200_8
     texture=#Rock028_029
     min_height=-INFINITY
     max_height=INFINITY
@@ -175,29 +175,29 @@ add_blend_map_texture
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
     discreteness=0
-    scale=0.1
+    scale=0.125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_029_200_far1
+    name=Rock028_029_200_128
     texture=#Rock028_029
     min_height=-INFINITY
     max_height=INFINITY
     distances=300 500 1000 1500
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
-    scale=0.01
+    scale=0.0078125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_029_200_far2
+    name=Rock028_029_200_512
     texture=#Rock028_029
     min_height=-INFINITY
     max_height=INFINITY
     distances=1000 1500 INFINITY INFINITY
     normal=0 1 0
     cosine=-1 -1 0.8 0.85
-    scale=0.002
+    scale=0.001953125
     weight=5;
 
 # add_blend_map_texture
@@ -215,7 +215,7 @@ add_blend_map_texture
 # Rock028_gc2_mountain #;
 ########################;
 add_blend_map_texture
-    name=Rock028_gc2_mountain_near
+    name=Rock028_gc2_mountain_8
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
     max_height=INFINITY
@@ -223,36 +223,36 @@ add_blend_map_texture
     normal=0 0 0
     cosine=-1 -1 1 1
     discreteness=0
-    scale=0.1
+    scale=0.125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_gc2_mountain_far1
+    name=Rock028_gc2_mountain_128
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
     max_height=INFINITY
     distances=300 500 1000 1500
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.01
+    scale=0.0078125
     weight=5;
 
 add_blend_map_texture
-    name=Rock028_gc2_mountain_far2
+    name=Rock028_gc2_mountain_512
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
     max_height=INFINITY
     distances=1000 1500 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.002
+    scale=0.001953125
     weight=5;
 
 ################;
 # grass_ground #;
 ################;
 add_blend_map_texture
-    name=grass_ground_near
+    name=grass_ground_1
     texture=#grass_ground
     min_height=-INFINITY
     max_height=INFINITY
@@ -263,12 +263,12 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
-    name=grass_ground_far
+    name=grass_ground_8
     texture=#grass_ground
     min_height=-INFINITY
     max_height=INFINITY
     distances=15 25 INFINITY INFINITY
     normal=0 0 0
     cosine=-1 -1 1 1
-    scale=0.1
+    scale=0.125
     weight=1;

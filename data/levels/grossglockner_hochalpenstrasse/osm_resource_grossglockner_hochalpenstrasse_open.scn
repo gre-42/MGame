@@ -5,12 +5,12 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         heightmap=__DIR__/heightmap_large.png,
         terrain_grass_textures=
             #Ground037_Rock028_near
-            #Ground037_Rock028_far1
-            #Ground037_Rock028_far2
-            #Ground037_Rock028_far3
-            #Rock028_200_near
-            #Rock028_200_far1
-            #Rock028_200_far2,
+            #Ground037_Rock028_8_1
+            #Ground037_Rock028_64
+            #Ground037_Rock028_256
+            #Rock028_200_8
+            #Rock028_200_128
+            #Rock028_200_512,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -113,6 +113,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
+        uv_period_terrain=512,
         uv_scale_street=1e-1,
         uv_scale_path=1e-1,
         uv_scale_wall=1e-1,

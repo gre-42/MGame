@@ -5,8 +5,8 @@ macro_begin osm_resource_arena;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
-            #Ground003_near
-            #Ground003_far,
+            #Ground003_2
+            #Ground003_8,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -42,6 +42,7 @@ macro_begin osm_resource_arena;
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
+        uv_period_terrain=512,
         uv_scale_street=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,

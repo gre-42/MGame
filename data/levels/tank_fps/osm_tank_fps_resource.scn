@@ -5,14 +5,14 @@ macro_begin osm_tank_fps_resource;
         heightmap=__DIR__/jb/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         terrain_flowers_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         bounding_terrain_type=grass,
         default_terrain_type=grass,

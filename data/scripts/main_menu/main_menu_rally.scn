@@ -34,7 +34,7 @@ macro_begin scene_selector_rally_devel;
             name=Raceway 0 value=levels/raceway0/scene_raceway0.scn
             name=Raceway 1 value=levels/raceway1/scene_raceway1.scn
             name=Forest 0 value=levels/forest0/scene_forest0.scn
-            name=WIP: Grossglockner Hochalpenstrasse Open value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn
+            name=Grossglockner Hochalpenstrasse Open value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn
             name=WIP: Grossglockner Hochalpenstrasse Closed value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_closed.scn
             name=WIP: NYC without traffic value=levels/nyc_wo_traffic/scene_nyc_wo_traffic.scn
             name=WIP: San Francisco with traffic value=levels/sf_with_traffic/scene_sf_with_traffic.scn
@@ -50,7 +50,7 @@ macro_begin scene_selector_rally_devel;
             name=WIP: Argolis Green value=levels/argolis/scene_argolis_green.scn
             name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn
             name=WIP: Canyon0 value=levels/canyon0/scene_canyon0.scn
-            name=WIP: Canyon1 value=levels/canyon1/scene_canyon1.scn;
+            name=Canyon1 value=levels/canyon1/scene_canyon1.scn;
 macro_end;
 
 macro_begin scene_selector_rally_release;
@@ -70,7 +70,8 @@ macro_begin scene_selector_rally_release;
             name=Raceway 0 value=levels/raceway0/scene_raceway0.scn
             name=Raceway 1 value=levels/raceway1/scene_raceway1.scn
             name=Forest 0 value=levels/forest0/scene_forest0.scn
-            name=Grossglockner Hochalpenstrasse value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn;
+            name=Grossglockner Hochalpenstrasse value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn
+            name=Canyon1 value=levels/canyon1/scene_canyon1.scn;
 macro_end;
 
 macro_begin parameter_setters_rally;

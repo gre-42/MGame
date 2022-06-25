@@ -5,9 +5,9 @@ macro_begin osm_resource_jb_race;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
-            #grass_ground_near
+            #grass_ground_1
             #Ground037_Sl_far
-            #Rock028_200_near
+            #Rock028_200_8
             #Rock028_200_far,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -62,6 +62,7 @@ macro_begin osm_resource_jb_race;
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
+        uv_period_terrain=512,
         uv_scale_street=3e-2,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
