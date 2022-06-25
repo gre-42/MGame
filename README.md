@@ -26,4 +26,4 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-GH-2022-06-11](media/Screenshot-GH-2022-06-11.png)
 
 ### Canyon1
-![Screenshot-C1-2022-06-25](media/Screenshot-C1-2022-06-25.png)
+![Screenshot-C1-2022-06-25b](media/Screenshot-C1-2022-06-25b.png)
