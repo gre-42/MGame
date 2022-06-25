@@ -56,10 +56,10 @@ macro_begin instantiate_transient_objects;
         IF_PLAYBACK_WINNER_2:#
         IF_MANUAL_AIM:
         VERROR_STD:0.1
-        IF_CHECKPOINTS:#
+        IF_CHECKPOINTS:
         IF_RACING:#
         IF_RALLY:
-        IF_BURN_IN:#;
+        IF_BURN_IN:;
 macro_end;
 
 macro_playback instantiate_transient_objects
