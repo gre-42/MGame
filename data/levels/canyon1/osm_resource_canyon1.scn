@@ -4,13 +4,10 @@ macro_begin osm_resource_canyon1;
         filename=__DIR__/map_canyon1.osm,
         heightmap=__DIR__/heightmap.png,
         terrain_grass_textures=
-            #Ground037_Rock028_near
-            #Ground037_Rock028_far1
-            #Ground037_Rock028_far2
-            #Ground037_Rock028_far3
-            #Rock028_029_200_near
-            #Rock028_029_200_far1
-            #Rock028_029_200_far2,
+            #black
+            #Rock028_gc2_mountain_near
+            #Rock028_gc2_mountain_far1
+            #Rock028_gc2_mountain_far2,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -18,7 +15,7 @@ macro_begin osm_resource_canyon1;
         street_texture=#Road007,
         path_crossing_texture=#Gravel010,
         path_textures=
-            lanes:1 texture0:#Ground038_Way_Wheels,
+            lanes:1 texture0:#Ground038_Way_Wheels_gc2,
         socle_textures=
             #Bricks058,
         facade_textures=facade:Plaster003
@@ -95,33 +92,26 @@ macro_begin osm_resource_canyon1;
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
-            bflower2(p:0.01)(max_bdry:4)
-            grass_tbdpec3r_Ground037_Sl(max_bdry:4)
+            bflower2(p:0.01)(min_bdry:1)(max_bdry:4)
+            grass_tbdpec3r_Ground037_Sl(p:0.1)(min_bdry:1)(max_bdry:4)
             bflower(p:0.01)(max_bdry:4)
-            vegetation4.0(p1:0.25)(min_bdry:3)
-            vegetation4.1(p1:0.25)(min_bdry:3)
-            vegetation4.2(p1:0.25)(min_bdry:3)
-            vegetation4.3(p1:0.25)(min_bdry:3)
-            vegetation1.0(p:0.001)
-            vegetation1.1(p:0.001)
-            vegetation1.2(p:0.001)
-            vegetation1.3(p:0.001)
-            vegetation1.4(p:0.001)
-            vegetation1.5(p:0.001)
-            Stone_model_tex_small_d4(p:0.01)
-            desert_rock01_small_d2_s15(p:0.01)
-            Stone_model_tex_small_d1_s3
-            Stone_model_tex_small_d1_s11
-            desert_rock01_small_d1_s3
-            desert_rock01_small_d1_s13,
-        near_rocks_resource_names=
-            Stone_model_tex_small_d4(p:0.01)
-            desert_rock01_small_d2_s15(p:0.01)
-            Stone_model_tex_small_d1_s3
-            Stone_model_tex_small_d1_s11
-            desert_rock01_small_d1_s3
-            desert_rock01_small_d1_s13,
-        default_street_width=8,
+            vegetation4.0(p:0.25)(min_bdry:1)(max_bdry:4)
+            vegetation4.1(p:0.25)(min_bdry:1)(max_bdry:4)
+            vegetation4.2(p:0.25)(min_bdry:1)(max_bdry:4)
+            vegetation4.3(p:0.25)(min_bdry:1)(max_bdry:4)
+            vegetation1.0(p:0.001)(min_bdry:8)
+            vegetation1.1(p:0.001)(min_bdry:8)
+            vegetation1.2(p:0.001)(min_bdry:8)
+            vegetation1.3(p:0.001)(min_bdry:8)
+            vegetation1.4(p:0.001)(min_bdry:8)
+            vegetation1.5(p:0.001)(min_bdry:8)
+            Stone_model_tex_small_d4(p:0.01)(min_bdry:1)(max_bdry:4)
+            desert_rock01_small_d2_s15(p:0.01)(min_bdry:1)(max_bdry:4)
+            Stone_model_tex_small_d1_s3(p:0.3)(min_bdry:1)(max_bdry:8)
+            Stone_model_tex_small_d1_s11(p:0.3)(min_bdry:1)(max_bdry:8)
+            desert_rock01_small_d1_s3(p:0.3)(min_bdry:1)(max_bdry:8)
+            desert_rock01_small_d1_s13(p:0.3)(min_bdry:1)(max_bdry:8),
+        default_street_width=10,
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
@@ -144,7 +134,6 @@ macro_begin osm_resource_canyon1;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
         much_near_grass_distance=3,
-        much_near_grass_distance_to_bdry=1,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
@@ -159,8 +148,8 @@ macro_begin osm_resource_canyon1;
         path_tags=
             path
             track,
-        steiner_point_distances_road=0 20 100,
-        steiner_point_distances_steiner=INFINITY 20 100,
+        steiner_point_distances_road=0 5 50 50,
+        steiner_point_distances_steiner=INFINITY 7 7 50,
         layer_heights_layer=0 1,
         layer_heights_height=0 5,
         curb_alpha=1,
@@ -178,5 +167,12 @@ macro_begin osm_resource_canyon1;
         terrain_edge_smoothness=0.1,
         driving_direction=right,
         blend_street=1,
+        street_bumps_central_resource_name=road_bumps_central,
+        street_bumps_endpoint0_resource_name=road_bumps_endpoint_0,
+        street_bumps_endpoint1_resource_name=road_bumps_endpoint_1,
+        path_bumps_central_resource_name=road_bumps_central,
+        path_bumps_endpoint0_resource_name=road_bumps_endpoint_0,
+        path_bumps_endpoint1_resource_name=road_bumps_endpoint_1,
+        bump_height=1,
         game_level=;
 macro_end;

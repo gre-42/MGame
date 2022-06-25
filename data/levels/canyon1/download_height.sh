@@ -11,10 +11,10 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 ../../../Mlib/GURelease/Bin/download_heightmap \
     --zoom 12 \
-    --min_lat 35.6426 \
-    --min_lon -113.4544 \
-    --max_lat 35.7692 \
-    --max_lon -113.3 \
+    --min_lat 35.7353000 \
+    --min_lon -113.3753000 \
+    --max_lat 35.7669000 \
+    --max_lon -113.3214000 \
     --tile_pixels 512 \
     --result_width 1024 \
     --result_height 1024 \

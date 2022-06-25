@@ -211,6 +211,43 @@ add_blend_map_texture
     scale=0.5
     weight=1;
 
+########################;
+# Rock028_gc2_mountain #;
+########################;
+add_blend_map_texture
+    name=Rock028_gc2_mountain_near
+    texture=#Rock028_gc2_mountain
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 300 500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    discreteness=0
+    scale=0.1
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_gc2_mountain_far1
+    texture=#Rock028_gc2_mountain
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=300 500 1000 1500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.01
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_gc2_mountain_far2
+    texture=#Rock028_gc2_mountain
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=1000 1500 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.002
+    weight=5;
+
 ################;
 # grass_ground #;
 ################;
