@@ -13,9 +13,9 @@ macro_begin osm_resource_canyon1;
         grass_dirt_texture=#Ground025,
         street_crossing_texture=#Road007_No_Lines,
         street_texture=#Road007,
-        path_crossing_texture=#Ground038_gc2,
+        path_crossing_texture=#Ground029_Crossing,
         path_textures=
-            lanes:1 texture0:#Ground038_Way_Wheels_gc2,
+            lanes:1 texture0:#Ground029_Street,
         socle_textures=
             #Bricks058,
         facade_textures=facade:Plaster003
@@ -92,25 +92,25 @@ macro_begin osm_resource_canyon1;
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
-            bflower2(p:0.01)(min_bdry:1)(max_bdry:4)
-            grass_tbdpec3r_Ground037_Sl(p:0.1)(min_bdry:1)(max_bdry:4)
+            bflower2(p:0.01)(min_bdry:0.5)(max_bdry:4)
+            grass_tbdpec3r_Ground037_Sl(p:0.1)(min_bdry:0.5)(max_bdry:4)
             bflower(p:0.01)(max_bdry:4)
-            vegetation4.0(p:0.25)(min_bdry:1)(max_bdry:4)
-            vegetation4.1(p:0.25)(min_bdry:1)(max_bdry:4)
-            vegetation4.2(p:0.25)(min_bdry:1)(max_bdry:4)
-            vegetation4.3(p:0.25)(min_bdry:1)(max_bdry:4)
+            vegetation4.0(p:0.25)(min_bdry:0.5)(max_bdry:4)
+            vegetation4.1(p:0.25)(min_bdry:0.5)(max_bdry:4)
+            vegetation4.2(p:0.25)(min_bdry:0.5)(max_bdry:4)
+            vegetation4.3(p:0.25)(min_bdry:0.5)(max_bdry:4)
             vegetation1.0(p:0.001)(min_bdry:8)
             vegetation1.1(p:0.001)(min_bdry:8)
             vegetation1.2(p:0.001)(min_bdry:8)
             vegetation1.3(p:0.001)(min_bdry:8)
             vegetation1.4(p:0.001)(min_bdry:8)
             vegetation1.5(p:0.001)(min_bdry:8)
-            Stone_model_tex_small_d4(p:0.01)(min_bdry:1)(max_bdry:4)
-            desert_rock01_small_d2_s15(p:0.01)(min_bdry:1)(max_bdry:4)
-            Stone_model_tex_small_d1_s3(p:0.3)(min_bdry:1)(max_bdry:8)
-            Stone_model_tex_small_d1_s11(p:0.3)(min_bdry:1)(max_bdry:8)
-            desert_rock01_small_d1_s3(p:0.3)(min_bdry:1)(max_bdry:8)
-            desert_rock01_small_d1_s13(p:0.3)(min_bdry:1)(max_bdry:8),
+            Stone_model_tex_small_d4(p:0.01)(min_bdry:0.5)(max_bdry:4)
+            desert_rock01_small_d2_s15(p:0.01)(min_bdry:0.5)(max_bdry:4)
+            Stone_model_tex_small_d1_s3(p:0.3)(min_bdry:0.5)(max_bdry:8)
+            Stone_model_tex_small_d1_s11(p:0.3)(min_bdry:0.5)(max_bdry:8)
+            desert_rock01_small_d1_s3(p:0.3)(min_bdry:0.5)(max_bdry:8)
+            desert_rock01_small_d1_s13(p:0.3)(min_bdry:0.5)(max_bdry:8),
         default_street_width=10,
         roof_width=2,
         scale=1e-3,
