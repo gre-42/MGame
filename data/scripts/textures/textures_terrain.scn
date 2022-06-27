@@ -164,6 +164,7 @@ add_texture_descriptor
 add_texture_descriptor
     name=Ground029_Street
     color=textures/cc0textures/Ground029_2K_Color_Interior.png
+    specular=textures/cc0textures/Ground029_2K_Specular_Interior.png
     color_mode=rgba
     histogram=textures/histograms/gc2_road.png
     lighten=-0.2 -0.2 -0.2
