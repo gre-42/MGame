@@ -41,15 +41,15 @@ square_resource
     occluder_pass=none
     ambience=2 2 2
     blend_mode=semi_continuous
-    alpha_distances=0 0 450 600
+    alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat
     billboards=
-        uv_scale:0.5 0.5  uv_offset:0   0   vertex_scale:0.8 0.8 max_distance:750 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.5 0.5  uv_offset:0.5 0   vertex_scale:1.5 1.5 max_distance:750 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.5 0.5  uv_offset:0   0.5 vertex_scale:1.5 1.5 max_distance:750 occluder_pass:lightmap_black_global_and_local
-        uv_scale:0.5 0.5  uv_offset:0.5 0.5 vertex_scale:0.8 0.8 max_distance:750 occluder_pass:lightmap_black_global_and_local;
+        uv_scale:0.5 0.5  uv_offset:0   0   vertex_scale:0.8 0.8 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0.5 0   vertex_scale:1.5 1.5 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0   0.5 vertex_scale:1.5 1.5 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
+        uv_scale:0.5 0.5  uv_offset:0.5 0.5 vertex_scale:0.8 0.8 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local;
 
 # save_texture_atlas_png
     name=vegetation4
