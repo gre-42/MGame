@@ -69,9 +69,9 @@ macro_begin _scene_racing_instantiate_static_objects;
         driving_mode=car_rally
         driving_direction=center;
 
-    IF_CREATE_PC_PLAYER set_can_drive player=you source=ai value=0;
-    IF_CREATE_PC_PLAYER set_can_aim player=you source=ai value=0;
-    IF_CREATE_PC_PLAYER set_can_shoot player=you source=ai value=0;
+    IF_CREATE_PC_PLAYER set_can_drive player=you source=user value=1;
+    IF_CREATE_PC_PLAYER set_can_aim player=you source=user value=1;
+    IF_CREATE_PC_PLAYER set_can_shoot player=you source=user value=1;
 
     IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK speedup=PC_PLAYER_PLAYBACK_SPEEDUP;
     IF_PC_PLAYER_PLAYBACK set_can_drive player=you source=ai value=1;
