@@ -60,17 +60,8 @@ macro_begin create_TW;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_TW_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
 macro_end;
 
-macro_begin get_into_TW;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
-        max_tire_angle=30
-        tire_angle_pid=1 1 0 0.2;
-macro_end;
-
 macro_begin create_player_car_externals_TW;
-    macro_playback create_car_key_bindings
+    IF_PC macro_playback create_car_key_bindings
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
@@ -78,12 +69,18 @@ macro_begin create_player_car_externals_TW;
         IF_HAS_GUN:#
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    macro_playback create_car_cameras_sedan
+    IF_PC macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME
         COCKPIT_CAMERA_X:-0.5
         COCKPIT_CAMERA_Y:0.55
         COCKPIT_CAMERA_Z:0.2;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=30
+        tire_angle_pid=1 1 0 0.2;
 macro_end;
 
 macro_begin add_attached_light_TW;

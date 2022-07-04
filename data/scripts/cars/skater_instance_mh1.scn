@@ -82,22 +82,19 @@ macro_begin create_skating_mh1;
     # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_rear_node-SUFFIX resource=beacon1;
 macro_end;
 
-macro_begin get_into_skating_mh1;
+macro_begin create_externals_for_skater_pc_skating_mh1;
+    IF_PC macro_playback create_skater_key_bindings
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+    IF_PC macro_playback create_skater_cameras
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=INFINITY
         surface_power_backward=-INFINITY
         max_tire_angle=NAN
         tire_angle_pid=NAN NAN NAN NAN;
-macro_end;
-
-macro_begin create_externals_for_skater_pc_skating_mh1;
-    macro_playback create_skater_key_bindings
-        SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
-    macro_playback create_skater_cameras
-        SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
 macro_end;
 
 macro_begin add_attached_light_skating_mh1;

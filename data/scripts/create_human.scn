@@ -20,12 +20,8 @@ macro_begin create_human;
         SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
-        IF_WITH_GUN:IF_WITH_GUN=#;
-    IF_PLAYER player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
-    IF_PLAYER macro_playback get_into-HUMAN_NAME
-        PLAYER_NAME:PLAYER_NAME
-        SUFFIX:SUFFIX
         IF_WITH_GUN:IF_WITH_GUN;
+    IF_PLAYER player_set_node player_name=PLAYER_NAME node=human_node-SUFFIX;
     # IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human-SUFFIX CSUFFIX:SUFFIX;
     IF_EXTERNALS set_externals_creator
         player=PLAYER_NAME
@@ -34,7 +30,10 @@ macro_begin create_human;
             SUFFIX:SUFFIX
             IF_RACING:IF_RACING
             IF_RALLY:IF_RALLY
-            IF_MANUAL_AIM:IF_MANUAL_AIM;
+            IF_MANUAL_AIM:IF_MANUAL_AIM
+            IF_PC:IF_PC
+            IF_WITH_GUN:IF_WITH_GUN
+            PLAYER_NAME:PLAYER_NAME;
     # visual_node_status_3rd
         node=human_node-SUFFIX
         format=8
@@ -49,5 +48,7 @@ macro_begin create_externals_for_human_pc;
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
+        IF_PC:IF_PC
+        IF_WITH_GUN:IF_WITH_GUN
         PLAYER_NAME:PLAYER_NAME;
 macro_end;

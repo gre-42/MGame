@@ -185,7 +185,7 @@ macro_begin create_ah_64;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_ah_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d5-SUFFIX DECIMATE:_d5;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_ah_64_physics
+    IF_WITH_PHYSICS IF_STATIC macro_playback create_ah_64_physics
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         SUFFIX:SUFFIX
@@ -207,18 +207,8 @@ macro_begin create_ah_64;
         VERROR_STD:VERROR_STD;
 macro_end;
 
-macro_begin get_into_ah_64;
-    player_set_aiming_gun player_name=PLAYER_NAME yaw_node=turret_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
-        max_tire_angle=30
-        tire_angle_pid=1 0 0 0;
-macro_end;
-
 macro_begin create_player_car_externals_ah_64;
-    macro_playback create_car_key_bindings
+    IF_PC macro_playback create_car_key_bindings
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
@@ -226,16 +216,26 @@ macro_begin create_player_car_externals_ah_64;
         IF_HAS_GUN:
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    macro_playback create_car_cameras_heli
+    IF_PC macro_playback create_car_cameras_heli
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    hud_image
+    IF_PC hud_image
         name=crosshair
         camera_node=main_gun_camera_node-SUFFIX
         filename=textures/hud/crosshair.png
         update=once
         center=0 0
         size=0.05 0.05;
+    player_set_aiming_gun
+        player_name=PLAYER_NAME
+        yaw_node=turret_node-SUFFIX
+        gun_node=main_gun_end_node-SUFFIX;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=30
+        tire_angle_pid=1 0 0 0;
 macro_end;
 
 macro_begin add_attached_light_ah_64;

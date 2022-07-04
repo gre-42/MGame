@@ -32,13 +32,10 @@ macro_begin create_car;
     IF_PLAYER player_set_node
         player_name=PLAYER_NAME
         node=car_node-SUFFIX;
-    IF_PLAYER macro_playback get_into-CAR_NAME
-        PLAYER_NAME:PLAYER_NAME
-        SUFFIX:SUFFIX;
     # IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
     IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
-    IF_EXTERNALS set_externals_creator
+    IF_PLAYER set_externals_creator
         player=PLAYER_NAME
         macro=macro_playback create_player_car_externals
             CAR_NAME:CAR_NAME
@@ -46,7 +43,8 @@ macro_begin create_car;
             IF_RACING:IF_RACING
             IF_RALLY:IF_RALLY
             IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-            IF_MANUAL_AIM:IF_MANUAL_AIM;
+            IF_MANUAL_AIM:IF_MANUAL_AIM
+            IF_PC:IF_PC;
     # visual_node_status_3rd
         node=car_node-SUFFIX
         format=256
@@ -63,7 +61,8 @@ macro_begin create_player_car_externals;
         IF_RALLY:IF_RALLY
         IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
         IF_MANUAL_AIM:IF_MANUAL_AIM
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        IF_PC:IF_PC;
 
     # STATUS_TIME = 1 << 0;
     # STATUS_POSITION = 1 << 1;
@@ -79,7 +78,7 @@ macro_begin create_player_car_externals;
     # 244: v, a, d, d2, E;
     # 246: v, a, d, d2, E, p;
     # 14: v, s, health (if exists);
-    IF_DEVEL visual_player_status
+    IF_PC IF_DEVEL visual_player_status
         player=PLAYER_NAME
         format=246
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -87,7 +86,7 @@ macro_begin create_player_car_externals;
         font_height=24
         line_distance=24;
     
-    IF_RELEASE visual_player_status
+    IF_PC IF_RELEASE visual_player_status
         player=PLAYER_NAME
         format=4
         ttf_file=fonts/RobotoMono-Bold.ttf

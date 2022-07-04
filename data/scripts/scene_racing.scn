@@ -69,12 +69,12 @@ macro_begin _scene_racing_instantiate_static_objects;
         driving_mode=car_rally
         driving_direction=center;
 
-    IF_CREATE_PC_PLAYER set_can_drive player=you value=0;
-    IF_CREATE_PC_PLAYER set_can_aim player=you value=0;
-    IF_CREATE_PC_PLAYER set_can_shoot player=you value=0;
+    IF_CREATE_PC_PLAYER set_can_drive player=you source=ai value=0;
+    IF_CREATE_PC_PLAYER set_can_aim player=you source=ai value=0;
+    IF_CREATE_PC_PLAYER set_can_shoot player=you source=ai value=0;
 
     IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK speedup=PC_PLAYER_PLAYBACK_SPEEDUP;
-    IF_PC_PLAYER_PLAYBACK set_can_drive player=you value=1;
+    IF_PC_PLAYER_PLAYBACK set_can_drive player=you source=ai value=1;
 
     # TEAM           = 1;
     # BEST_LAP_TIME  = 2;
@@ -234,7 +234,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         IF_SHADOW:
         IF_DAMAGEABLE:#
         PLAYER_NAME:you
-        IF_EXTERNALS:;
+        IF_PC:;
 
     IF_BURN_IN burn_in seconds=20;
     
@@ -267,7 +267,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_DAMAGEABLE:#
             IF_CAR_BODY_RENDERABLE_STYLE:#
             VERROR_STD:1
-            IF_EXTERNALS:#;
+            IF_PC:#;
     macro_end;
 
     macro_begin create_winner_playback;
@@ -293,7 +293,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
             IF_CAR_BODY_RENDERABLE_STYLE:
             R:R G:G B:B
             VERROR_STD:1
-            IF_EXTERNALS:#;
+            IF_PC:#;
         # add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX;
     macro_end;
 
@@ -326,7 +326,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     ###########;
     # Cameras #;
     ###########;
-    IF_CREATE_PC_CAR create_externals player=you;
+    IF_CREATE_PC_CAR create_externals player=you mode=pc;
 macro_end;
 
 macro_begin _scene_racing_delete_transient_objects;

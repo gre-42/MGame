@@ -22,9 +22,6 @@ macro_begin create_skater;
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
     IF_PLAYER player_set_node player_name=PLAYER_NAME node=skater_node-SUFFIX;
-    IF_PLAYER macro_playback get_into-SKATER_NAME
-        PLAYER_NAME:PLAYER_NAME
-        SUFFIX:SUFFIX;
     # IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater-SUFFIX CSUFFIX:SUFFIX;
     IF_EXTERNALS set_externals_creator
         player=PLAYER_NAME

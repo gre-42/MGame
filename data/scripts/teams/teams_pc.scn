@@ -7,9 +7,13 @@ macro_begin teams.create_player_for_pc;
         driving_mode=car_arena
         driving_direction=center;
 
-    IF_MANUAL_DRIVE set_can_drive player=PLAYER_NAME value=0;
-    IF_MANUAL_AIM set_can_aim player=PLAYER_NAME value=0;
-    IF_MANUAL_SHOOT set_can_shoot player=PLAYER_NAME value=0;
+    set_can_drive player=PLAYER_NAME source=user value=USER_DRIVE;
+    set_can_aim player=PLAYER_NAME source=user value=USER_AIM;
+    set_can_shoot player=PLAYER_NAME source=user value=USER_SHOOT;
+
+    set_can_drive player=PLAYER_NAME source=ai value=AI_DRIVE;
+    set_can_aim player=PLAYER_NAME source=ai value=AI_AIM;
+    set_can_shoot player=PLAYER_NAME source=ai value=AI_SHOOT;
 macro_end;
 
 macro_begin teams.create_human_for_pc;
@@ -32,7 +36,7 @@ macro_begin teams.create_human_for_pc;
         IF_EXTERNALS:
         IF_PLAYER:
         IF_SHADOW:;
-    create_externals player=PLAYER_NAME;
+    create_externals player=PLAYER_NAME mode=pc;
 macro_end;
 
 macro_begin teams.create_car_for_pc;
@@ -58,15 +62,12 @@ macro_begin teams.create_car_for_pc;
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:
         PLAYER_NAME:PLAYER_NAME
+        IF_PC:
         IF_SHADOW:
         IF_DAMAGEABLE:
         R:R G:G B:B
-        IF_EXTERNALS:
-        IF_SHADOW:
-        IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_MANUAL_SHOOT:IF_MANUAL_SHOOT;
-    create_externals player=PLAYER_NAME;
+        IF_SHADOW:;
+    create_externals player=PLAYER_NAME mode=pc;
 
     # macro_playback create_car_cameras;
     # set_camera_cycle name=far 45_deg_camera light_node0 light_node_car-PLAYER_NAME dirtmap_node;
@@ -83,9 +84,12 @@ macro_begin teams.create_player_and_human_for_pc;
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
         GAME_MODE:GAME_MODE
-        IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_MANUAL_SHOOT:IF_MANUAL_SHOOT;
+        USER_DRIVE:USER_DRIVE
+        USER_AIM:USER_AIM
+        USER_SHOOT:USER_SHOOT
+        AI_DRIVE:AI_DRIVE
+        AI_AIM:AI_AIM
+        AI_SHOOT:AI_SHOOT;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_human_for_pc
@@ -94,9 +98,6 @@ macro_begin teams.create_player_and_human_for_pc;
             DECIMATE:
             IF_HUMAN_STYLE:IF_HUMAN_STYLE
             R:R G:G B:B
-            IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-            IF_MANUAL_AIM:IF_MANUAL_AIM
-            IF_MANUAL_SHOOT:IF_MANUAL_SHOOT
             VERROR_STD:VERROR_STD;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
@@ -107,9 +108,12 @@ macro_begin teams.create_player_and_car_for_pc;
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
         GAME_MODE:GAME_MODE
-        IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-        IF_MANUAL_AIM:IF_MANUAL_AIM
-        IF_MANUAL_SHOOT:IF_MANUAL_SHOOT;
+        USER_DRIVE:USER_DRIVE
+        USER_AIM:USER_AIM
+        USER_SHOOT:USER_SHOOT
+        AI_DRIVE:AI_DRIVE
+        AI_AIM:AI_AIM
+        AI_SHOOT:AI_SHOOT;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_car_for_pc
@@ -118,9 +122,6 @@ macro_begin teams.create_player_and_car_for_pc;
             DECIMATE:
             IF_CAR_BODY_RENDERABLE_STYLE:IF_CAR_BODY_RENDERABLE_STYLE
             R:R G:G B:B
-            IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
-            IF_MANUAL_AIM:IF_MANUAL_AIM
-            IF_MANUAL_SHOOT:IF_MANUAL_SHOOT
             VERROR_STD:VERROR_STD;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
