@@ -1,0 +1,247 @@
+macro_begin create_AH_64_graphics;
+    renderable_instance name=chassis-SUFFIX node=car_node-NODE_SUFFIX resource=AH_64-DECIMATE included_names=cockpit|glass|hull;
+    renderable_instance name=turret-SUFFIX node=turret_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    renderable_instance name=main_gun-SUFFIX node=main_gun_shift_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_right_front_node_visual-NODE_SUFFIX resource=M3/M3_wheel_d3;
+    IF_SHOW_DEBUG_WHEELS renderable_instance name=wheel-SUFFIX node=wheel_left_rear_node-NODE_SUFFIX resource=M3/M3_wheel_d3;
+
+    renderable_instance name=blades-SUFFIX node=blades_shift_node-NODE_SUFFIX resource=blades_AH_64-DECIMATE included_names=main_rotor;
+    # renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_node-NODE_SUFFIX resource=tail_rotor_spinning_AH_64-DECIMATE;
+    renderable_instance name=tail_rotor-SUFFIX node=tail_rotor_shift_node-NODE_SUFFIX resource=AH_64-DECIMATE included_names=tail_rotor;
+macro_end;
+
+macro_begin create_AH_64_physics;
+    rigid_cuboid
+        node=car_node-SUFFIX
+        hitboxes=AH_64_hitbox AH_64_tirelines
+        mass=MASS
+        size=2 2 9
+        com=0 2.2 0
+        collidable_mode=COLLIDABLE_MODE
+        name=AH_64-SUFFIX;
+
+    set_rigid_body_target
+        node=car_node-SUFFIX
+        target=0 2.2 0;
+
+    rigid_disk
+        node=blades-SUFFIX
+        hitboxes=ah64_blades
+        mass=30
+        radius=7.3
+        com=0 0 0
+        collidable_mode=COLLIDABLE_MODE
+        name=blades-SUFFIX;
+
+    yaw_pitch_look_at_nodes
+        yaw_node=turret_node-SUFFIX
+        pitch_node=main_gun_node-SUFFIX
+        parent_follower_rigid_body_node=car_node-SUFFIX
+        followed=
+        bullet_start_offset=20
+        bullet_velocity=900
+        gravity=9.8
+        dyaw_max=0.8
+        pitch_min=-10
+        pitch_max=45
+        dpitch_max=0.8
+        yaw_locked_on_max=2
+        pitch_locked_on_max=2
+        verror_std=VERROR_STD
+        verror_alpha=0.002;
+
+    gun
+        node=main_gun_end_node-SUFFIX
+        parent_rigid_body_node=car_node-SUFFIX
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX
+        cool_down=0.1
+        bullet_renderable=tank_bullet_renderable
+        bullet_hitbox=tank_bullet_hitbox
+        bullet_mass=20
+        bullet_velocity=900
+        bullet_lifetime=20
+        bullet_damage=10
+        bullet_size=2.4 2.4 20
+        punch_angle=0.1;
+
+    #  120 PS = 88259.8 Watt;
+    #  150 PS = 110325 Watt;
+    #  200 PS = 147100 Watt;
+    #  400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=wheels
+        angular_vels=-25 -20 20 25
+        powers=0 2.66e11 2.66e11 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=main_rotor
+        angular_vels=-25 -20 20 25
+        powers=0 2.8e6 2.8e6 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+
+    create_engine
+        rigid_body=car_node-SUFFIX
+        name=tail_rotor
+        angular_vels=-25 -20 20 25
+        powers=0 2.8e5 2.8e5 0
+        gear_ratios=0.5 1 2 3
+        hand_brake_pulled=HAND_BRAKE_PULLED
+        audio=car;
+
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=2;
+
+    rotor
+        vehicle=car_node-SUFFIX
+        blades=blades-SUFFIX
+        vehicle_mount_0=0 4.2 0
+        vehicle_mount_1=0 0   0
+        blades_mount_0= 0 0   0.0
+        blades_mount_1= 0 0   4.2
+        position=0 4.2 0
+        rotation=90 0 0
+        engine=main_rotor
+        power2lift=5e-2
+        rpm=400
+        gravity_correction=move
+        radius=7.3
+        max_align_to_gravity=30
+        align_to_gravity_pid_p=0.2
+        align_to_gravity_pid_i=0
+        align_to_gravity_pid_d=40
+        align_to_gravity_pid_a=0.1
+        drift_reduction_factor=1
+        drift_reduction_reference_velocity=10
+        tire_id=3;
+    rotor
+        vehicle=car_node-SUFFIX
+        position=0 3.4 9.1
+        rotation=0 90 0
+        engine=tail_rotor
+        power2lift=5e-2
+        rpm=400
+        tire_id=4;
+
+    create_heli_controller
+        node=car_node-SUFFIX
+        tire_ids=0 1
+        tire_angles=45 45
+        main_rotor_id=3
+        tail_rotor_id=4
+        pitch_multiplier=0.25
+        yaw_multiplier=3e5
+        roll_multiplier=0.25
+        ascend_p=1e6
+        ascend_i=0
+        ascend_d=1e8
+        ascend_a=0.1
+        vehicle_domain=air;
+macro_end;
+
+macro_begin create_AH_64;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 rotation=0 0 0 scale=1;
+
+    IF_SHOW_DEBUG_WHEELS IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_front_node-SUFFIX name=wheel_right_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
+
+    # car_node-SUFFIX;
+    #     turret_node-SUFFIX (0 0 1, yaw_node);
+    #         turret_shift_node-SUFFIX (0 0 -1, renderable);
+    #             main_gun_node-SUFFIX (0 1.2 -0.3, pitch_node);
+    #                 main_gun_shift_node-SUFFIX (0 -1.2 0.3, renderable);
+    #                 main_gun_end_node-SUFFIX (0 0 -20);
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=turret_node-SUFFIX position=0 0 1 rotation=0 45 0 scale=1;
+    child_node_instance type=dynamic parent=turret_node-SUFFIX name=turret_shift_node-SUFFIX position=0 0 -1 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=turret_shift_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_punch_angle_node-SUFFIX position=0 0 0 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_shift_node-SUFFIX position=0 -1.2 0.3 rotation=0 0 0 scale=1;
+
+    # renderable_instance name=flag-inst node=car_node-SUFFIX resource=flag;
+    # renderable_instance name=car_box-SUFFIX node=car_node-SUFFIX resource=AH_64_hitbox;
+    # collidable-mesh rigid_body-node=car_node-SUFFIX node=car_node-SUFFIX resource=AH_64_hitbox;
+
+    child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
+
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=blades-SUFFIX position=0 4.2 0 rotation=90 0 0 scale=1;
+    child_node_instance type=dynamic parent=blades-SUFFIX name=blades_shift_node-SUFFIX position=0 0 4.2 rotation=-90 0 0 scale=1;
+    # child_node_instance type=dynamic parent=car_node-SUFFIX name=rear_rotor_node-SUFFIX position=0 3.4 9.1 rotation=0 0 0 scale=1;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node-SUFFIX name=tail_rotor_node-SUFFIX position=0 3.4 9.1 rotation=0 0 0 scale=1;
+    IF_WITH_GRAPHICS relative_transformer node=tail_rotor_node-SUFFIX w=2000 0 0;
+    IF_WITH_GRAPHICS child_node_instance type=dynamic parent=tail_rotor_node-SUFFIX name=tail_rotor_shift_node-SUFFIX position=0 -3.4 -9.1 rotation=0 0 0 scale=1;
+
+    IF_WITH_GRAPHICS macro_playback create_AH_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
+    IF_WITH_GRAPHICS macro_playback create_AH_64_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d5-SUFFIX DECIMATE:_d5;
+
+    IF_WITH_PHYSICS IF_STATIC macro_playback create_AH_64_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:INFINITY
+        COLLIDABLE_MODE:small_static
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VERROR_STD:VERROR_STD;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_AH_64_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:6e3
+        COLLIDABLE_MODE:small_moving
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VERROR_STD:VERROR_STD;
+macro_end;
+
+macro_begin create_player_car_externals_AH_64;
+    IF_PC macro_playback create_car_key_bindings
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        IF_MANUAL_DRIVE:IF_MANUAL_DRIVE
+        IF_MANUAL_AIM:IF_MANUAL_AIM
+        IF_HAS_GUN:
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+    IF_PC macro_playback create_car_cameras_heli
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+    IF_PC hud_image
+        name=crosshair
+        camera_node=main_gun_camera_node-SUFFIX
+        filename=textures/hud/crosshair.png
+        update=once
+        center=0 0
+        size=0.05 0.05;
+    player_set_aiming_gun
+        player_name=PLAYER_NAME
+        yaw_node=turret_node-SUFFIX
+        gun_node=main_gun_end_node-SUFFIX;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=30
+        tire_angle_pid=1 0 0 0;
+macro_end;
+
+macro_begin add_attached_light_AH_64;
+    macro_playback add_attached_light_heli
+        LSUFFIX:LSUFFIX
+        CSUFFIX:CSUFFIX;
+macro_end;
+
+global CLASS_AH_64 = car;

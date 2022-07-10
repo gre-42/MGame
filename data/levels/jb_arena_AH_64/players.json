@@ -1,0 +1,61 @@
+{
+    "library": "teams",
+    "teams": {
+        "red": { "style": { "color": [1, 0.8, 0.8] } },
+        "blue": { "style": { "color": [0.8, 0.8, 1] } }
+    },
+    "defaults": {
+        "game_mode": "team_deathmatch",
+        "unstuck_mode": "reverse",
+        "set_way_points": true,
+        "skills": {
+            "ai": {
+                "can_drive": true,
+                "can_aim": true,
+                "can_shoot": true,
+                "verror_std": 1
+            },
+            "user": {
+                "can_drive": false,
+                "can_aim": false,
+                "can_shoot": false
+            }
+        }
+    },
+    "players": [
+        {
+            "controller": "pc", "name": "you", "team": "red",
+            "skills": {
+                "ai": {
+                    "can_drive": false,
+                    "can_shoot": false,
+                    "verror_std": 0.1
+                },
+                "user": {
+                    "can_drive": true,
+                    "can_shoot": true
+                }
+            },
+            "spawned_vehicle": { "type": "AH_64" }
+        },
+        {
+            "controller": "npc", "name": "npc1", "team": "red",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc2", "team": "blue",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc3", "team": "blue",
+            "spawned_vehicle": { "type": "tiger_tank" }
+        },
+        {
+            "controller": "npc", "name": "npc4", "team": "red",
+            "game_mode": "bystander",
+            "unstuck_mode": "off",
+            "set_way_points": false,
+            "spawned_vehicle": { "type": "tiger_tank" }
+        }
+    ]
+}
