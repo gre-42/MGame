@@ -5,7 +5,7 @@ macro_begin osm_resource_aircraft_carrier0;
         position=0 0 0
         rotation=0 0 0
         scale=100 100 100
-        center_distances=0 501
+        center_distances=0 INFINITY
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
@@ -21,15 +21,14 @@ macro_begin osm_resource_aircraft_carrier0;
         position=0 0 0
         rotation=0 0 0
         scale=100 100 100
-        center_distances=0 501
+        center_distances=0 INFINITY
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=off
-        transformation_mode=all
-        reflection_map=car;
+        transformation_mode=all;
     
     compound_resource
         source_names=ofs_kestrel ocean

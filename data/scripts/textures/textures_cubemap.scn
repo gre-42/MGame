@@ -19,6 +19,16 @@ add_cubemap
         textures/skybox/rgb/back.png;
 
 add_cubemap
+    alias=skybox_ocean
+    filenames=
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/px.png,
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/nx.png,
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/py.png,
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/ny.png,
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/pz.png,
+        textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/nz.png;
+
+add_cubemap
     alias=reflection_map
     desaturate=1
     filenames=
