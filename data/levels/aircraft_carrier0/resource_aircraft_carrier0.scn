@@ -4,13 +4,13 @@ macro_begin osm_resource_aircraft_carrier0;
         filename=models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj
         position=0 0 0
         rotation=0 0 0
-        scale=100 100 100
+        scale=200 200 200
         center_distances=0 INFINITY
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
         occluded_pass=none
-        occluder_pass=lightmap_black_local_instances
+        occluder_pass=lightmap_black_global_static
         aggregate_mode=off
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
@@ -20,13 +20,13 @@ macro_begin osm_resource_aircraft_carrier0;
         filename=__DIR__/ocean.obj
         position=0 0 0
         rotation=0 0 0
-        scale=100 100 100
+        scale=100 200 100
         center_distances=0 INFINITY
         blend_mode=binary
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
-        occluded_pass=none
-        occluder_pass=lightmap_black_local_instances
+        occluded_pass=lightmap_black_local_instances
+        occluder_pass=none
         aggregate_mode=off
         transformation_mode=all;
     

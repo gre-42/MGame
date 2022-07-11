@@ -52,7 +52,7 @@ macro_begin load_F_35_part;
         blend_mode=continuous
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
-        occluded_pass=lightmap_black_global_static
+        occluded_pass=none
         occluder_pass=OCCLUDER_PASS
         aggregate_mode=off
         transformation_mode=all

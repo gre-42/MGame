@@ -1,0 +1,130 @@
+macro_begin create_plane_key_bindings;
+    IF_MANUAL_DRIVE plane_controller_idle_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX;
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=A
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=-1
+        not_gamepad_button=B
+        roll=-10;
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=D
+        joystick_digital_axis=1
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        roll=10;
+
+    # abs_key_binding
+        node=car_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=B
+        force=0 20000 0;
+
+    # 120 PS = 88259.8 Watt;
+    # 150 PS = 110325 Watt;
+    # 200 PS = 147100 Watt;
+    # 400 PS = 294200 Watt;
+    # 1000 PS = 735499 Watt;
+
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=W
+        gamepad_button=X
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=-1
+        not_gamepad_button=B
+        turbine_power=INFINITY;
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=S
+        gamepad_button=A
+        joystick_digital_axis=4
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        turbine_power=-INFINITY;
+
+    IF_HAS_GUN rel_key_binding
+        player=PLAYER_NAME
+        node=turret_node-SUFFIX
+        key=LEFT
+        gamepad_button=LEFT_BUMPER
+        cursor_axis=0
+        cursor_sign_and_scale=-0.03
+        not_gamepad_button=B
+        rotation_axis=0 1 0
+        angular_velocity_press=0.1
+        angular_velocity_repeat=1
+        speed_cursor=0.05;
+    IF_HAS_GUN rel_key_binding
+        player=PLAYER_NAME
+        node=turret_node-SUFFIX
+        key=RIGHT
+        joystick_digital_axis=5
+        joystick_digital_axis_sign=1
+        cursor_axis=0
+        cursor_sign_and_scale=0.03
+        not_gamepad_button=B
+        rotation_axis=0 1 0
+        angular_velocity_press=-0.1
+        angular_velocity_repeat=-1
+        speed_cursor=-0.05;
+
+    IF_HAS_GUN rel_key_binding
+        player=PLAYER_NAME
+        node=turret_node-SUFFIX
+        key=UP
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=-1
+        cursor_axis=1
+        cursor_sign_and_scale=-0.03
+        not_gamepad_button=B
+        rotation_axis=1 0 0
+        angular_velocity_press=0.1
+        angular_velocity_repeat=1
+        speed_cursor=0.05;
+    IF_HAS_GUN rel_key_binding
+        player=PLAYER_NAME
+        node=turret_node-SUFFIX
+        key=DOWN
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=1
+        cursor_axis=1
+        cursor_sign_and_scale=0.03
+        not_gamepad_button=B
+        rotation_axis=1 0 0
+        angular_velocity_press=-0.1
+        angular_velocity_repeat=-1
+        speed_cursor=-0.05;
+
+    IF_HAS_GUN gun_key_binding
+        player=PLAYER_NAME
+        node=main_gun_end_node-SUFFIX
+        key=SPACE
+        mouse_button=LEFT
+        gamepad_button=Y
+        not_gamepad_button=B;
+
+    IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
+        node=car_node-SUFFIX
+        key=LEFT_SHIFT
+        select_next_opponent;
+    
+    IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
+        node=car_node-SUFFIX
+        gamepad_button=B
+        gamepad_button2=Y
+        select_next_opponent;
+
+    player_key_binding
+        node=car_node-SUFFIX
+        gamepad_button=B
+        gamepad_button2=A
+        select_next_vehicle;
+macro_end;
