@@ -2,6 +2,7 @@ macro_begin create_plane_key_bindings;
     IF_MANUAL_DRIVE plane_controller_idle_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX;
+
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
@@ -18,6 +19,23 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis_sign=1
         not_gamepad_button=B
         roll=10;
+
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=UP
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=-1
+        not_gamepad_button=B
+        pitch=10;
+    IF_MANUAL_DRIVE plane_controller_key_binding
+        player=PLAYER_NAME
+        node=car_node-SUFFIX
+        key=DOWN
+        joystick_digital_axis=2
+        joystick_digital_axis_sign=1
+        not_gamepad_button=B
+        pitch=-10;
 
     # abs_key_binding
         node=car_node-SUFFIX
@@ -72,33 +90,6 @@ macro_begin create_plane_key_bindings;
         cursor_sign_and_scale=0.03
         not_gamepad_button=B
         rotation_axis=0 1 0
-        angular_velocity_press=-0.1
-        angular_velocity_repeat=-1
-        speed_cursor=-0.05;
-
-    IF_HAS_GUN rel_key_binding
-        player=PLAYER_NAME
-        node=turret_node-SUFFIX
-        key=UP
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=-1
-        cursor_axis=1
-        cursor_sign_and_scale=-0.03
-        not_gamepad_button=B
-        rotation_axis=1 0 0
-        angular_velocity_press=0.1
-        angular_velocity_repeat=1
-        speed_cursor=0.05;
-    IF_HAS_GUN rel_key_binding
-        player=PLAYER_NAME
-        node=turret_node-SUFFIX
-        key=DOWN
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=1
-        cursor_axis=1
-        cursor_sign_and_scale=0.03
-        not_gamepad_button=B
-        rotation_axis=1 0 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=-0.05;

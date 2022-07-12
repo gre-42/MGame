@@ -49,6 +49,47 @@ macro_begin create_F_35_physics;
         lift=2
         drag=2
         wing_id=1;
+    
+    # 0: yaw;
+    # 1: roll;
+    # 2: -roll;
+    # 3: pitch;
+    # 4: pitch;
+    
+    rudder
+        vehicle=car_node-SUFFIX
+        position=0 0 6
+        rotation=0 0 90
+        force=0.0002
+        rudder_id=0;
+    
+    rudder
+        vehicle=car_node-SUFFIX
+        position=-2 0 0
+        rotation=0 0 0
+        force=0.0002
+        rudder_id=1;
+    
+    rudder
+        vehicle=car_node-SUFFIX
+        position=2 0 0
+        rotation=0 0 0
+        force=0.0002
+        rudder_id=2;
+    
+    rudder
+        vehicle=car_node-SUFFIX
+        position=-1 0 6
+        rotation=0 0 0
+        force=0.0002
+        rudder_id=3;
+    
+    rudder
+        vehicle=car_node-SUFFIX
+        position=1 0 6
+        rotation=0 0 0
+        force=0.0002
+        rudder_id=4;
 
     create_plane_controller
         node=car_node-SUFFIX
