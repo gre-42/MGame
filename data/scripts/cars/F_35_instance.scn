@@ -32,7 +32,23 @@ macro_begin create_F_35_physics;
         engine=turbine
         power2lift=5e-1
         rpm=0
-        tire_id=4;
+        rotor_id=4;
+    
+    wing
+        vehicle=car_node-SUFFIX
+        position=-2 0 0
+        rotation=0 0 0
+        lift=2
+        drag=2
+        wing_id=0;
+    
+    wing
+        vehicle=car_node-SUFFIX
+        position=2 0 0
+        rotation=0 0 0
+        lift=2
+        drag=2
+        wing_id=1;
 
     create_plane_controller
         node=car_node-SUFFIX

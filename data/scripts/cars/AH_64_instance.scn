@@ -124,7 +124,7 @@ macro_begin create_AH_64_physics;
         align_to_gravity_pid_a=0.1
         drift_reduction_factor=1
         drift_reduction_reference_velocity=10
-        tire_id=3;
+        rotor_id=3;
     rotor
         vehicle=car_node-SUFFIX
         position=0 3.4 9.1
@@ -132,7 +132,7 @@ macro_begin create_AH_64_physics;
         engine=tail_rotor
         power2lift=5e-2
         rpm=400
-        tire_id=4;
+        rotor_id=4;
 
     create_heli_controller
         node=car_node-SUFFIX
