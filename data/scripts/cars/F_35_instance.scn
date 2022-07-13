@@ -50,54 +50,66 @@ macro_begin create_F_35_physics;
         drag=0.05 0.2 0.05
         wing_id=1;
     
-    # 0: yaw;
-    # 1: roll;
-    # 2: -roll;
-    # 3: pitch;
-    # 4: pitch;
-    
-    rudder
-        vehicle=car_node-SUFFIX
-        position=0 -0.2 6
-        rotation=0 0 90
-        force=0.0003
-        drag=0.05 0.2 0.05
-        rudder_id=0;
-    
-    rudder
-        vehicle=car_node-SUFFIX
-        position=-4 0 0
-        rotation=0 0 0
-        force=0.0002
-        drag=0 0 0
-        rudder_id=1;
-    
-    rudder
-        vehicle=car_node-SUFFIX
-        position=4 0 0
-        rotation=0 0 0
-        force=0.0002
-        drag=0 0 0
-        rudder_id=2;
-    
+    # 0: pitch;
     rudder
         vehicle=car_node-SUFFIX
         position=-1 0 6
         rotation=0 0 0
         force=0.0002
         drag=0.01 0.1 0.01
-        rudder_id=3;
+        rudder_id=0;
     
+    # 1: pitch;
     rudder
         vehicle=car_node-SUFFIX
         position=1 0 6
         rotation=0 0 0
         force=0.0002
         drag=0.01 0.1 0.01
+        rudder_id=1;
+
+    # 2: yaw left;
+    rudder
+        vehicle=car_node-SUFFIX
+        position=0 0.5 6
+        rotation=0 0 90
+        force=0.0003
+        drag=0.05 0.2 0.05
+        rudder_id=2;
+    
+    # 3: yaw right;
+    rudder
+        vehicle=car_node-SUFFIX
+        position=0 0.5 6
+        rotation=0 0 90
+        force=0.0003
+        drag=0.05 0.2 0.05
+        rudder_id=3;
+
+    # 4: left roll;
+    rudder
+        vehicle=car_node-SUFFIX
+        position=-4 0 0
+        rotation=0 0 0
+        force=0.0002
+        drag=0 0 0
         rudder_id=4;
+
+    # 5: right roll;
+    rudder
+        vehicle=car_node-SUFFIX
+        position=4 0 0
+        rotation=0 0 0
+        force=0.0002
+        drag=0 0 0
+        rudder_id=5;
 
     create_plane_controller
         node=car_node-SUFFIX
+        pitch_rudder_ids=0 1
+        yaw_rudder_ids=2 3
+        left_roll_rudder_ids=4
+        right_roll_rudder_ids=5
         tire_ids=0 1
         tire_angles=30 30
         yaw_amount_to_tire_angle=10
