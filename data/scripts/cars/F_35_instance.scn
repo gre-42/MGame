@@ -36,18 +36,18 @@ macro_begin create_F_35_physics;
     
     wing
         vehicle=car_node-SUFFIX
-        position=-2 0 0
+        position=-4 0 -0.2
         rotation=0 0 0
-        lift=2
-        drag=2
+        lift=0.5
+        drag=0.05 0.2 0.05
         wing_id=0;
     
     wing
         vehicle=car_node-SUFFIX
-        position=2 0 0
+        position=4 0 -0.2
         rotation=0 0 0
-        lift=2
-        drag=2
+        lift=0.5
+        drag=0.05 0.2 0.05
         wing_id=1;
     
     # 0: yaw;
@@ -58,23 +58,26 @@ macro_begin create_F_35_physics;
     
     rudder
         vehicle=car_node-SUFFIX
-        position=0 0 6
+        position=0 -0.2 6
         rotation=0 0 90
-        force=0.0002
+        force=0.0003
+        drag=0.05 0.2 0.05
         rudder_id=0;
     
     rudder
         vehicle=car_node-SUFFIX
-        position=-2 0 0
+        position=-4 0 0
         rotation=0 0 0
         force=0.0002
+        drag=0 0 0
         rudder_id=1;
     
     rudder
         vehicle=car_node-SUFFIX
-        position=2 0 0
+        position=4 0 0
         rotation=0 0 0
         force=0.0002
+        drag=0 0 0
         rudder_id=2;
     
     rudder
@@ -82,6 +85,7 @@ macro_begin create_F_35_physics;
         position=-1 0 6
         rotation=0 0 0
         force=0.0002
+        drag=0.01 0.1 0.01
         rudder_id=3;
     
     rudder
@@ -89,6 +93,7 @@ macro_begin create_F_35_physics;
         position=1 0 6
         rotation=0 0 0
         force=0.0002
+        drag=0.01 0.1 0.01
         rudder_id=4;
 
     create_plane_controller
@@ -116,6 +121,9 @@ macro_begin create_F_35;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_rear_node-SUFFIX name=wheel_right_rear_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS macro_playback create_F_35_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_F_35_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d1;
+
+    # IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node-SUFFIX name=gizmo_node-SUFFIX position=0 0 0 rotation=0 0 0 scale=1;
+    # IF_WITH_GRAPHICS renderable_instance name=gizmo node=gizmo_node-SUFFIX resource=gizmo;
 
     # IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node-SUFFIX name=turbine_node-SUFFIX position=0 -0.2 5.5 rotation=0 0 0 scale=1;
     # IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node-SUFFIX resource=flag_z;

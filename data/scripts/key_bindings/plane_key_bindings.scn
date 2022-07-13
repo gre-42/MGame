@@ -10,7 +10,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
         not_gamepad_button=B
-        roll=-10;
+        roll=-5;
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
@@ -18,7 +18,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
         not_gamepad_button=B
-        roll=10;
+        roll=5;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
@@ -27,7 +27,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=2
         joystick_digital_axis_sign=-1
         not_gamepad_button=B
-        pitch=10;
+        pitch=5;
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
@@ -35,7 +35,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=2
         joystick_digital_axis_sign=1
         not_gamepad_button=B
-        pitch=-10;
+        pitch=-5;
 
     # abs_key_binding
         node=car_node-SUFFIX
@@ -68,31 +68,20 @@ macro_begin create_plane_key_bindings;
         not_gamepad_button=B
         flaps_angle=10;
 
-    IF_HAS_GUN rel_key_binding
+    IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
-        node=turret_node-SUFFIX
+        node=car_node-SUFFIX
         key=LEFT
         gamepad_button=LEFT_BUMPER
-        cursor_axis=0
-        cursor_sign_and_scale=-0.03
         not_gamepad_button=B
-        rotation_axis=0 1 0
-        angular_velocity_press=0.1
-        angular_velocity_repeat=1
-        speed_cursor=0.05;
-    IF_HAS_GUN rel_key_binding
+        yaw=-5;
+    IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
-        node=turret_node-SUFFIX
+        node=car_node-SUFFIX
         key=RIGHT
-        joystick_digital_axis=5
-        joystick_digital_axis_sign=1
-        cursor_axis=0
-        cursor_sign_and_scale=0.03
+        gamepad_button=RIGHT_BUMPER
         not_gamepad_button=B
-        rotation_axis=0 1 0
-        angular_velocity_press=-0.1
-        angular_velocity_repeat=-1
-        speed_cursor=-0.05;
+        yaw=5;
 
     IF_HAS_GUN gun_key_binding
         player=PLAYER_NAME
