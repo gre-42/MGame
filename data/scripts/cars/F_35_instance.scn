@@ -36,60 +36,76 @@ macro_begin create_F_35_physics;
     
     wing
         vehicle=car_node-SUFFIX
-        position=-4 0 -0.2
+        position=-4 -0.2 -0.2
         rotation=0 0 0
         lift=0.5
-        drag=0.05 0.2 0.05
+        drag=0.5 1 0.5
         wing_id=0;
     
     wing
         vehicle=car_node-SUFFIX
-        position=4 0 -0.2
+        position=4 -0.2 -0.2
         rotation=0 0 0
         lift=0.5
-        drag=0.05 0.2 0.05
+        drag=0.5 1 0.5
         wing_id=1;
+
+    wing
+        vehicle=car_node-SUFFIX
+        position=-1 -0.2 6
+        rotation=0 0 0
+        lift=0.03
+        drag=0.05 0.2 0.05
+        wing_id=2;
+    
+    wing
+        vehicle=car_node-SUFFIX
+        position=1 -0.2 6
+        rotation=0 0 0
+        lift=0.03
+        drag=0.05 0.2 0.05
+        wing_id=3;
     
     # 0: pitch;
     rudder
         vehicle=car_node-SUFFIX
-        position=-1 0 6
+        position=-1 -0.2 6
         rotation=0 0 0
         force=0.0002
-        drag=0.01 0.1 0.01
+        drag=0 0 0
         rudder_id=0;
     
     # 1: pitch;
     rudder
         vehicle=car_node-SUFFIX
-        position=1 0 6
+        position=1 -0.2 6
         rotation=0 0 0
         force=0.0002
-        drag=0.01 0.1 0.01
+        drag=0 0 0
         rudder_id=1;
 
     # 2: yaw left;
     rudder
         vehicle=car_node-SUFFIX
-        position=0 0.5 6
+        position=-0.5 0.5 6
         rotation=0 0 90
         force=0.0003
-        drag=0.05 0.2 0.05
+        drag=0 0.2 0
         rudder_id=2;
     
     # 3: yaw right;
     rudder
         vehicle=car_node-SUFFIX
-        position=0 0.5 6
+        position=0.5 0.5 6
         rotation=0 0 90
         force=0.0003
-        drag=0.05 0.2 0.05
+        drag=0 0.2 0
         rudder_id=3;
 
     # 4: left roll;
     rudder
         vehicle=car_node-SUFFIX
-        position=-4 0 0
+        position=-4 -0.2 0
         rotation=0 0 0
         force=0.0002
         drag=0 0 0
@@ -98,7 +114,7 @@ macro_begin create_F_35_physics;
     # 5: right roll;
     rudder
         vehicle=car_node-SUFFIX
-        position=4 0 0
+        position=4 -0.2 0
         rotation=0 0 0
         force=0.0002
         drag=0 0 0
