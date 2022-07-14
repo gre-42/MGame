@@ -34,6 +34,7 @@ macro_begin create_F_35_physics;
         rpm=0
         rotor_id=4;
     
+    # 0: front left;
     wing
         vehicle=car_node-SUFFIX
         position=-4 -0.2 -0.2
@@ -42,6 +43,7 @@ macro_begin create_F_35_physics;
         drag=0.5 1 0.5
         wing_id=0;
     
+    # 1: front right;
     wing
         vehicle=car_node-SUFFIX
         position=4 -0.2 -0.2
@@ -50,37 +52,39 @@ macro_begin create_F_35_physics;
         drag=0.5 1 0.5
         wing_id=1;
 
+    # 2: rear left;
     wing
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        lift=0.03
-        drag=0.05 0.2 0.05
+        lift=0.07
+        drag=0.05 0.3 0.05
         wing_id=2;
     
+    # 3: rear right;
     wing
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        lift=0.03
-        drag=0.05 0.2 0.05
+        lift=0.07
+        drag=0.05 0.3 0.05
         wing_id=3;
     
-    # 0: pitch;
+    # 0: pitch left;
     rudder
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        force=0.0002
+        force=0.0003
         drag=0 0 0
         rudder_id=0;
     
-    # 1: pitch;
+    # 1: pitch right;
     rudder
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        force=0.0002
+        force=0.0003
         drag=0 0 0
         rudder_id=1;
 
@@ -102,7 +106,7 @@ macro_begin create_F_35_physics;
         drag=0 0.2 0
         rudder_id=3;
 
-    # 4: left roll;
+    # 4: roll left;
     rudder
         vehicle=car_node-SUFFIX
         position=-4 -0.2 0
@@ -111,7 +115,7 @@ macro_begin create_F_35_physics;
         drag=0 0 0
         rudder_id=4;
 
-    # 5: right roll;
+    # 5: roll right;
     rudder
         vehicle=car_node-SUFFIX
         position=4 -0.2 0
@@ -119,6 +123,15 @@ macro_begin create_F_35_physics;
         force=0.0002
         drag=0 0 0
         rudder_id=5;
+    
+    # 6: front;
+    rudder
+        vehicle=car_node-SUFFIX
+        position=0 -0.2 2
+        rotation=0 0 0
+        force=0.0002
+        drag=0.05 0.3 0.05
+        rudder_id=6;
 
     create_plane_controller
         node=car_node-SUFFIX
