@@ -36,11 +36,11 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-4 -0.2 -0.2
         rotation=0 0 0
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=25
-        angle_c=4.5e-3
-        drag=0.5 8 0.5
+        angle_c=1e-2
+        drag=7 60 7
         wing_id=0;
 
     # 1: front right (roll);
@@ -48,11 +48,11 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=4 -0.2 -0.2
         rotation=0 0 0
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=25
-        angle_c=4.5e-3
-        drag=0.5 8 0.5
+        angle_c=1e-2
+        drag=7 60 7
         wing_id=1;
 
     # 2: rear left (pitch);
@@ -60,11 +60,11 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=2
         angle_c=4.5e-2
-        drag=0.25 4.5 0.25
+        drag=2 8 2
         wing_id=2;
 
     # 3: rear right (pitch);
@@ -72,11 +72,11 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=2
         angle_c=4.5e-2
-        drag=0.25 4.5 0.25
+        drag=2 8 2
         wing_id=3;
 
     # 4: yaw left;
@@ -84,8 +84,8 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-0.5 0.5 6
         rotation=0 0 90
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=0
         angle_c=1e-2
         drag=0 3 0
@@ -96,8 +96,8 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=0.5 0.5 6
         rotation=0 0 90
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=0
         angle_c=1e-2
         drag=0 3 0
@@ -108,16 +108,17 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=0 -0.2 2
         rotation=0 0 0
-        fac_v=0 200 600 850
-        fac_c=1 1 0.5 0.25
+        fac_v=0 300 600 850
+        fac_c=1 1 0.25 0.125
         lift_c=0
         angle_c=0
-        drag=0.25 4 0.25
+        drag=0 4 0
         wing_id=6;
 
     create_plane_controller
         node=car_node-SUFFIX
-        pitch_wing_ids=2 3
+        front_pitch_wing_ids=0 1
+        rear_pitch_wing_ids=2 3
         yaw_wing_ids=4 5
         left_roll_wing_ids=0
         right_roll_wing_ids=1

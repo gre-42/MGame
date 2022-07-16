@@ -10,7 +10,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
         not_gamepad_button=B
-        roll=-5;
+        roll=-10;
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
@@ -18,7 +18,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
         not_gamepad_button=B
-        roll=5;
+        roll=10;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
