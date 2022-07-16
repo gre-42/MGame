@@ -31,111 +31,96 @@ macro_begin create_F_35_physics;
         rpm=0
         rotor_id=4;
 
-    # 0: front left;
+    # 0: front left (roll);
     wing
         vehicle=car_node-SUFFIX
         position=-4 -0.2 -0.2
         rotation=0 0 0
-        lift=25
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=25
+        angle_c=4.5e-3
         drag=0.5 8 0.5
         wing_id=0;
 
-    # 1: front right;
+    # 1: front right (roll);
     wing
         vehicle=car_node-SUFFIX
         position=4 -0.2 -0.2
         rotation=0 0 0
-        lift=25
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=25
+        angle_c=4.5e-3
         drag=0.5 8 0.5
         wing_id=1;
 
-    # 2: rear left;
+    # 2: rear left (pitch);
     wing
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        lift=2
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=2
+        angle_c=4.5e-2
         drag=0.25 4.5 0.25
         wing_id=2;
 
-    # 3: rear right;
+    # 3: rear right (pitch);
     wing
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        lift=2
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=2
+        angle_c=4.5e-2
         drag=0.25 4.5 0.25
         wing_id=3;
 
-    # 0: pitch left;
-    rudder
-        vehicle=car_node-SUFFIX
-        position=-1 -0.2 6
-        rotation=0 0 0
-        force=4.5e-2
-        drag=0 0 0
-        rudder_id=0;
-
-    # 1: pitch right;
-    rudder
-        vehicle=car_node-SUFFIX
-        position=1 -0.2 6
-        rotation=0 0 0
-        force=4.5e-2
-        drag=0 0 0
-        rudder_id=1;
-
-    # 2: yaw left;
-    rudder
+    # 4: yaw left;
+    wing
         vehicle=car_node-SUFFIX
         position=-0.5 0.5 6
         rotation=0 0 90
-        force=1e-2
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=0
+        angle_c=1e-2
         drag=0 3 0
-        rudder_id=2;
+        wing_id=4;
 
-    # 3: yaw right;
-    rudder
+    # 5: yaw right;
+    wing
         vehicle=car_node-SUFFIX
         position=0.5 0.5 6
         rotation=0 0 90
-        force=1e-2
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=0
+        angle_c=1e-2
         drag=0 3 0
-        rudder_id=3;
-
-    # 4: roll left;
-    rudder
-        vehicle=car_node-SUFFIX
-        position=-4 -0.2 0
-        rotation=0 0 0
-        force=4.5e-3
-        drag=0 0 0
-        rudder_id=4;
-
-    # 5: roll right;
-    rudder
-        vehicle=car_node-SUFFIX
-        position=4 -0.2 0
-        rotation=0 0 0
-        force=4.5e-3
-        drag=0 0 0
-        rudder_id=5;
+        wing_id=5;
 
     # 6: front;
-    rudder
+    wing
         vehicle=car_node-SUFFIX
         position=0 -0.2 2
         rotation=0 0 0
-        force=010000
+        fac_v=0 200 600 850
+        fac_c=1 1 0.5 0.25
+        lift_c=0
+        angle_c=0
         drag=0.25 4 0.25
-        rudder_id=6;
+        wing_id=6;
 
     create_plane_controller
         node=car_node-SUFFIX
-        pitch_rudder_ids=0 1
-        yaw_rudder_ids=2 3
-        left_roll_rudder_ids=4
-        right_roll_rudder_ids=5
+        pitch_wing_ids=2 3
+        yaw_wing_ids=4 5
+        left_roll_wing_ids=0
+        right_roll_wing_ids=1
         tire_ids=0 1
         tire_angles=30 30
         yaw_amount_to_tire_angle=10
