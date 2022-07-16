@@ -27,3 +27,6 @@ A rally game based on OpenStreetMap data.
 
 ### Canyon1
 ![Screenshot-C1-2022-07-02](media/Screenshot-C1-2022-07-02.png)
+
+### Aircraft carrier 0
+![Screenshot-A0-2022-07-16](media/Screenshot-A0-2022-07-16.png)
