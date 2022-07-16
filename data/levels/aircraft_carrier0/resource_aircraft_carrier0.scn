@@ -15,7 +15,7 @@ macro_begin osm_resource_aircraft_carrier0;
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
     
-    obj_resource
+    # obj_resource
         name=ocean
         filename=__DIR__/ocean.obj
         position=0 0 0
@@ -28,6 +28,26 @@ macro_begin osm_resource_aircraft_carrier0;
         occluded_pass=lightmap_black_local_instances
         occluder_pass=none
         aggregate_mode=off
+        transformation_mode=all;
+    
+    grid_resource
+        name=ocean
+        texture_filename=#ocean_uniform
+        size=50 50
+        occluded_pass=lightmap_black_global_static
+        occluder_pass=none
+        ambience=0 0 0
+        diffusivity=1 1 1
+        specularity=0.5 0.5 0.5
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        cull_faces=1
+        rotation=-90 0 0
+        translation=-25000 -38.4 25000
+        scale=1000
+        uv_scale=0.05
+        period=20
+        aggregate_mode=once
         transformation_mode=all;
     
     compound_resource
