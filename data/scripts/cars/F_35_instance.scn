@@ -7,49 +7,46 @@ macro_begin create_F_35_physics;
         node=car_node-SUFFIX
         hitboxes=F_35_hitbox F_35-tirelines
         mass=MASS
-        size=1.7 1.2 4.1
+        size=1.5 1.5 12
         com=0 -0.2 -0.2
         collidable_mode=COLLIDABLE_MODE
         name=F_35-SUFFIX;
-    #  120 PS = 88259.8 Watt;
-    #  150 PS = 110325 Watt;
-    #  200 PS = 147100 Watt;
-    #  400 PS = 294200 Watt;
-    # 1000 PS = 735499 Watt;
+    # 28000 pounds = 124550 Newton;
+    # 43000 pounds = 191274 Newton;
 
     create_engine rigid_body=car_node-SUFFIX name=wheels angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
-    create_engine rigid_body=car_node-SUFFIX name=turbine angular_vels=0 powers=147100 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=turbine angular_vels=0 powers=191274 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX position=-0.7 -0.45 1.20 radius=0.3 engine=wheels brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=2;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_rear_node-SUFFIX position=0.7 -0.45 1.20 radius=0.3 engine=wheels brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX position=-0.7 -0.45 1.20 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_rear_node-SUFFIX position=0.7 -0.45 1.20 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=3;
 
     rotor
         vehicle=car_node-SUFFIX
         position=0 -0.2 5.5
         rotation=180 0 0
         engine=turbine
-        power2lift=5e-1
+        power2lift=1
         rpm=0
         rotor_id=4;
-    
+
     # 0: front left;
     wing
         vehicle=car_node-SUFFIX
         position=-4 -0.2 -0.2
         rotation=0 0 0
-        lift=0.5
-        drag=0.5 1 0.5
+        lift=25
+        drag=0.5 8 0.5
         wing_id=0;
-    
+
     # 1: front right;
     wing
         vehicle=car_node-SUFFIX
         position=4 -0.2 -0.2
         rotation=0 0 0
-        lift=0.5
-        drag=0.5 1 0.5
+        lift=25
+        drag=0.5 8 0.5
         wing_id=1;
 
     # 2: rear left;
@@ -57,34 +54,34 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        lift=0.07
-        drag=0.05 0.3 0.05
+        lift=2
+        drag=0.25 4.5 0.25
         wing_id=2;
-    
+
     # 3: rear right;
     wing
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        lift=0.07
-        drag=0.05 0.3 0.05
+        lift=2
+        drag=0.25 4.5 0.25
         wing_id=3;
-    
+
     # 0: pitch left;
     rudder
         vehicle=car_node-SUFFIX
         position=-1 -0.2 6
         rotation=0 0 0
-        force=0.0003
+        force=4.5e-2
         drag=0 0 0
         rudder_id=0;
-    
+
     # 1: pitch right;
     rudder
         vehicle=car_node-SUFFIX
         position=1 -0.2 6
         rotation=0 0 0
-        force=0.0003
+        force=4.5e-2
         drag=0 0 0
         rudder_id=1;
 
@@ -93,17 +90,17 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-0.5 0.5 6
         rotation=0 0 90
-        force=0.0003
-        drag=0 0.2 0
+        force=1e-2
+        drag=0 3 0
         rudder_id=2;
-    
+
     # 3: yaw right;
     rudder
         vehicle=car_node-SUFFIX
         position=0.5 0.5 6
         rotation=0 0 90
-        force=0.0003
-        drag=0 0.2 0
+        force=1e-2
+        drag=0 3 0
         rudder_id=3;
 
     # 4: roll left;
@@ -111,7 +108,7 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=-4 -0.2 0
         rotation=0 0 0
-        force=0.0002
+        force=4.5e-3
         drag=0 0 0
         rudder_id=4;
 
@@ -120,17 +117,17 @@ macro_begin create_F_35_physics;
         vehicle=car_node-SUFFIX
         position=4 -0.2 0
         rotation=0 0 0
-        force=0.0002
+        force=4.5e-3
         drag=0 0 0
         rudder_id=5;
-    
+
     # 6: front;
     rudder
         vehicle=car_node-SUFFIX
         position=0 -0.2 2
         rotation=0 0 0
-        force=0.0002
-        drag=0.05 0.3 0.05
+        force=010000
+        drag=0.25 4 0.25
         rudder_id=6;
 
     create_plane_controller
@@ -144,7 +141,7 @@ macro_begin create_F_35_physics;
         yaw_amount_to_tire_angle=10
         turbine_id=0
         vehicle_domain=air;
-    
+
     create_plane_as_car_controller
         node=car_node-SUFFIX
         tire_ids=0 1
@@ -170,7 +167,7 @@ macro_begin create_F_35;
     # IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node-SUFFIX resource=flag_z;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_F_35_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_F_35_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_F_35_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:20000    COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
 macro_end;
 
 macro_begin create_player_car_externals_F_35;
