@@ -29,4 +29,4 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-C1-2022-07-02](media/Screenshot-C1-2022-07-02.png)
 
 ### Aircraft carrier 0
-![Screenshot-A0-2022-07-16](media/Screenshot-A0-2022-07-16.png)
+![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)
