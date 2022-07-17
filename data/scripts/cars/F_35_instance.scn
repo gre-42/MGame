@@ -46,7 +46,7 @@ macro_begin create_F_35_physics;
         rpm=0
         rotor_id=4;
 
-    # 0: front left (roll);
+    # 0: front left (roll + pitch);
     wing
         vehicle=car_node-SUFFIX
         angle_of_attack_node=left_front_aileron_node-SUFFIX
@@ -56,12 +56,12 @@ macro_begin create_F_35_physics;
         fac_v=0 300 600 850
         fac_c=1 1 0.25 0.125
         lift_c=25
-        angle_yz=0.6
-        angle_zz=0.6
+        angle_yz=1
+        angle_zz=1
         drag=7 60 7
         wing_id=0;
 
-    # 1: front right (roll);
+    # 1: front right (roll + pitch);
     wing
         vehicle=car_node-SUFFIX
         angle_of_attack_node=right_front_aileron_node-SUFFIX
@@ -71,12 +71,12 @@ macro_begin create_F_35_physics;
         fac_v=0 300 600 850
         fac_c=1 1 0.25 0.125
         lift_c=25
-        angle_yz=0.6
-        angle_zz=0.6
+        angle_yz=1
+        angle_zz=1
         drag=7 60 7
         wing_id=1;
 
-    # 2: rear left (pitch);
+    # 2: rear left (roll + pitch);
     wing
         vehicle=car_node-SUFFIX
         angle_of_attack_node=left_rear_wing_node-SUFFIX
@@ -85,12 +85,12 @@ macro_begin create_F_35_physics;
         fac_v=0 300 600 850
         fac_c=1 1 0.25 0.125
         lift_c=2
-        angle_yz=2.6
-        angle_zz=2.6
+        angle_yz=1
+        angle_zz=1
         drag=2 8 2
         wing_id=2;
 
-    # 3: rear right (pitch);
+    # 3: rear right (roll + pitch);
     wing
         vehicle=car_node-SUFFIX
         angle_of_attack_node=right_rear_wing_node-SUFFIX
@@ -99,8 +99,8 @@ macro_begin create_F_35_physics;
         fac_v=0 300 600 850
         fac_c=1 1 0.25 0.125
         lift_c=2
-        angle_yz=2.6
-        angle_zz=2.6
+        angle_yz=1
+        angle_zz=1
         drag=2 8 2
         wing_id=3;
 
