@@ -66,7 +66,7 @@ macro_begin create_plane_key_bindings;
         joystick_digital_axis=4
         joystick_digital_axis_sign=1
         not_gamepad_button=B
-        flaps_angle=10;
+        brake=20;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
@@ -74,14 +74,14 @@ macro_begin create_plane_key_bindings;
         key=LEFT
         gamepad_button=LEFT_BUMPER
         not_gamepad_button=B
-        yaw=-5;
+        yaw=-20;
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX
         key=RIGHT
         gamepad_button=RIGHT_BUMPER
         not_gamepad_button=B
-        yaw=5;
+        yaw=20;
 
     IF_HAS_GUN gun_key_binding
         player=PLAYER_NAME
