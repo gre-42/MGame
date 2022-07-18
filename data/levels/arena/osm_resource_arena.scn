@@ -15,7 +15,7 @@ macro_begin osm_resource_arena;
         street_textures=
             lanes:1 texture0:#Road007_Alpha,
         path_crossing_texture=#Gravel010,
-        path_texture=#Gravel010,
+        path_texture=#Gravel010_Alpha,
         curb_street_texture=textures/curb_stone_grass_asphalt.png,
         curb_path_texture=textures/curb_stone_grass_gravel.png,
         curb2_street_texture=,
@@ -31,22 +31,34 @@ macro_begin osm_resource_arena;
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
-        grass_resource_names=,
+        grass_resource_names=
+            vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
             grass_tbdpec3r_Ground003
             bflower(p:0.1)
             vegetation1.10(p:0.002)
-            vegetation1.11(p:0.002),
-        default_street_width=10,
+            vegetation1.11(p:0.002)
+            bamboo(p:0.05)(min_bdry:3)(max_bdry:8)
+            palm(p:0.2)(min_bdry:3)(max_bdry:8)
+            pine(p:0.2)(min_bdry:3)(max_bdry:8)
+            shrub(p:0.2)(min_bdry:3)(max_bdry:8)
+            spikes(p:0.2)(min_bdry:3)(max_bdry:8),
+        default_street_width=5,
         roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
         uv_period_terrain=512,
-        uv_scale_street=1e-1,
+        uv_scale_path=1e-1,
         uv_scale_facade=2.5e-1,
         uv_scale_ceiling=1e-1,
         uv_scale_barrier_wall=5,
+        uv_scale_crossings=1e-1,
         with_roofs=0,
         with_ceilings=1,
         building_bottom=0,
@@ -56,7 +68,7 @@ macro_begin osm_resource_arena;
         with_tree_nodes=1,
         forest_outline_tree_distance=10,
         forest_outline_tree_inwards_distance=1,
-        much_grass_distance=10,
+        much_grass_distance=20,
         much_near_grass_distance=3,
         much_near_flowers_distance=2,
         raceway_beacon_distance=INFINITY,
@@ -88,6 +100,8 @@ macro_begin osm_resource_arena;
         street_node_smoothness=0,
         street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
+        with_street_way_points=0,
+        with_sidewalk_way_points=0,
         driving_direction=right,
         blend_street=1;
 macro_end;
