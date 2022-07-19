@@ -89,12 +89,12 @@ macro_begin osm_resource_arena;
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
         grass_resource_names=
-            vegetation1.0(p:1)(hitbox:02_1_02_hitbox)
-            vegetation1.1(p:1)(hitbox:02_1_02_hitbox)
-            vegetation1.2(p:1)(hitbox:02_1_02_hitbox)
-            vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
-            vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
-            vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
+            vegetation2.0(p:1)(hitbox:02_1_02_hitbox)
+            vegetation2.1(p:1)(hitbox:02_1_02_hitbox)
+            vegetation2.2(p:1)(hitbox:02_1_02_hitbox)
+            vegetation2.3(p:1)(hitbox:02_1_02_hitbox)
+            vegetation2.4(p:1)(hitbox:02_1_02_hitbox)
+            vegetation2.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
             grass_tbdpec3r_Ground003
