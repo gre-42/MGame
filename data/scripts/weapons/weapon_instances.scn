@@ -1,6 +1,9 @@
 macro_begin try_delete_weapon;
+    # Delete gun renderable, but keep node "main_gun_node";
     clear_renderable_instance node=main_gun_node-SUFFIX name=main_gun_node-inst;
-    clear_absolute_observer node=main_gun_end_node-SUFFIX;
+    # Send "node destroyed" to the "gun"-object and remove the gun from the node;
+    # "destroyed" will let the "gun" schedule itself for deletion;
+    clear_absolute_observer_and_notify_destroyed node=main_gun_end_node-SUFFIX;
 macro_end;
 
 macro_begin add_weapon_m4a1;
