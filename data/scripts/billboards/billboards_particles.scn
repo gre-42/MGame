@@ -10,6 +10,6 @@ square_resource
     blend_mode=continuous
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=position_lookat
     number_of_frames=16;

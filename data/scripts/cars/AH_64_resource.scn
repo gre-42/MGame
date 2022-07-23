@@ -9,7 +9,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
@@ -30,7 +30,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all;
 
 modify_physics_material_tags
@@ -54,7 +54,7 @@ macro_begin load_AH_64;
         cull_faces_alpha=0
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
     
@@ -69,7 +69,7 @@ macro_begin load_AH_64;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
     
@@ -84,7 +84,7 @@ macro_begin load_AH_64;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
 macro_end;
@@ -103,7 +103,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all;
 
 modify_physics_material_tags

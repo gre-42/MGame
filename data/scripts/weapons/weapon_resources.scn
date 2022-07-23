@@ -9,7 +9,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
@@ -24,6 +24,21 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=frag_grenade
+    filename=models/sketchfab.com/frag_grenade/frag_grenade.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=50 50 50
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
+    aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;

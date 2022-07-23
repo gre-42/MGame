@@ -11,7 +11,7 @@ macro_begin osm_resource_aircraft_carrier0;
         cull_faces_alpha=0
         occluded_pass=none
         occluder_pass=lightmap_black_global_static
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
     
@@ -27,7 +27,7 @@ macro_begin osm_resource_aircraft_carrier0;
         cull_faces_alpha=0
         occluded_pass=lightmap_black_local_instances
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
     
     grid_resource

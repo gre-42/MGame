@@ -10,6 +10,6 @@ macro_begin osm_resource_skate0;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
 macro_end;

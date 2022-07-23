@@ -9,7 +9,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
@@ -25,7 +25,7 @@ macro_begin load_mh1;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
     import_bone_weights destination=mh1-DECIMATE source=mh1 max_distance=0.1;

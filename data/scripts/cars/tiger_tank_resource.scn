@@ -9,7 +9,7 @@
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all;
 
 obj_resource
@@ -23,7 +23,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
@@ -44,7 +44,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=none
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all;
 
 gen_ray name=tiger_tank_tirelines from=-1.8 +0.3 -2.4 to=-1.8 -0.5 -2.4; # left  front;
@@ -74,7 +74,7 @@ macro_begin load_tiger_tank;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
 macro_end;

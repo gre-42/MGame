@@ -13,7 +13,7 @@ macro_begin _scene_tank_load_resources;
     # # binary_x_resource name=btree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
     # # binary_x_resource name=btree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
     # # binary_x_resource name=bench texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0;
-    # # obj_resource name=btree2 filename=models/proctree/tree.obj position=0 0 0 rotation=0 0 0 scale=1 1 1 is_small=0 blend_mode=binary aggregate_mode=off;
+    # # obj_resource name=btree2 filename=models/proctree/tree.obj position=0 0 0 rotation=0 0 0 scale=1 1 1 is_small=0 blend_mode=binary aggregate_mode=none;
 
     # binary_x_resource name=btree texture_filename=textures/proctree/out-1-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_pass=black;
     # binary_x_resource name=btree2 texture_filename=textures/proctree/out-3-5.png min=-5 0 max=5 10 ambience=2 2 2 is_small=0 occluder_pass=black;
@@ -28,8 +28,8 @@ macro_begin _scene_tank_load_resources;
     # binary_x_resource name=btree-large3 texture_filename=textures/proctree/out-6-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_pass=black;
     # binary_x_resource name=btree-large4 texture_filename=textures/proctree/out-8-10.png min=-7.5 0 max=7.5 15 ambience=2 2 2 is_small=0 occluder_pass=black;
 
-    # obj_resource name=bench filename=models/bench3/Cgtuts_Wood_Bench_OBJ_Tri.obj position=0 0 0 rotation=0 0 0 scale=0.01 0.01 0.01 is_small=0 blend_mode=off aggregate_mode=off occluded_pass=none occluder_pass=none;
-    # obj_resource name=coffee-shop filename=models/coffee-shop/Coffee_Shop.obj position=0 0 0 rotation=0 0 0 scale=0.05 0.05 0.05 is_small=0 blend_mode=off aggregate_mode=off occluded_pass=none occluder_pass=none;
+    # obj_resource name=bench filename=models/bench3/Cgtuts_Wood_Bench_OBJ_Tri.obj position=0 0 0 rotation=0 0 0 scale=0.01 0.01 0.01 is_small=0 blend_mode=off aggregate_mode=none occluded_pass=none occluder_pass=none;
+    # obj_resource name=coffee-shop filename=models/coffee-shop/Coffee_Shop.obj position=0 0 0 rotation=0 0 0 scale=0.05 0.05 0.05 is_small=0 blend_mode=off aggregate_mode=none occluded_pass=none occluder_pass=none;
 
     ########;
     # M4A1 #;
@@ -45,7 +45,7 @@ macro_begin _scene_tank_load_resources;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
 
@@ -63,7 +63,7 @@ macro_begin _scene_tank_load_resources;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
 
     gen_triangle_rays name=human-hitbox npoints=5 lengths=0.5 0.7 0.5 delete_triangles=0;
@@ -79,7 +79,7 @@ macro_begin _scene_tank_load_resources;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
 
     gen_ray name=human-tirelines from=0 -0.3 0 to=0 -0.9 0;
@@ -101,7 +101,7 @@ macro_begin _scene_tank_load_resources;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
 
     # obj_resource
@@ -115,7 +115,7 @@ macro_begin _scene_tank_load_resources;
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
         occluder_pass=none
-        aggregate_mode=off
+        aggregate_mode=none
         transformation_mode=all;
 
     # gen_triangle_rays name=tank_bullet_hitbox npoints=1 lengths=0.5 0.5 10 delete_triangles=1;

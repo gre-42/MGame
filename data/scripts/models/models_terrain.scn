@@ -163,7 +163,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
-    aggregate_mode=off;
+    aggregate_mode=none;
 
 obj_resource
     name=raceway_beacon
@@ -176,7 +176,7 @@ obj_resource
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
-    aggregate_mode=off
+    aggregate_mode=none
     transformation_mode=all;
 
 macro_begin load_tree;
