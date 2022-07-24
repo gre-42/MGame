@@ -5,8 +5,8 @@ macro_begin osm_resource_arena;
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
-            #Ground003_2
-            #Ground003_8,
+            #Ground037_1
+            #Ground037_8,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         grass_dirt_texture=#Ground025,
@@ -97,7 +97,7 @@ macro_begin osm_resource_arena;
             vegetation2.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names=
             bflower2(p:0.1)
-            grass_tbdpec3r_Ground003
+            grass_tbdpec3r
             bflower(p:0.1)
             vegetation1.10(p:0.002)
             vegetation1.11(p:0.002)
