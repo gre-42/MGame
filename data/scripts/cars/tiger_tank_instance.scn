@@ -43,6 +43,11 @@ macro_begin create_tiger_tank_physics;
         verror_std=1
         verror_alpha=0.002;
 
+    set_inventory_capacity
+        inventory_node=car_node-SUFFIX
+        item_type=tiger_tank_ammo
+        capacity=2000;
+
     gun
         node=main_gun_end_node-SUFFIX
         parent_rigid_body_node=car_node-SUFFIX
@@ -55,6 +60,7 @@ macro_begin create_tiger_tank_physics;
         bullet_lifetime=20
         bullet_damage=100
         bullet_size=2.4 2.4 20
+        ammo_type=tiger_tank_ammo
         punch_angle=0.1;
 
     # visual_node_status_3rd
