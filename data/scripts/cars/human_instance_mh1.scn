@@ -48,18 +48,19 @@ macro_begin create_mh1;
         cycle_node=human_node-SUFFIX
         entry_name=m4a1
         ammo_type=m4a1_ammo
-        create=macro_playback add_weapon_m4a1 SUFFIX:SUFFIX;
+        create=macro_playback add_weapon_m4a1 AMMO_TYPE:AMMO_TYPE SUFFIX:SUFFIX;
     IF_WITH_GUN add_weapon_to_cycle
         cycle_node=human_node-SUFFIX
         entry_name=beretta92
         ammo_type=beretta92_ammo
-        create=macro_playback add_weapon_beretta92 SUFFIX:SUFFIX;
+        create=macro_playback add_weapon_beretta92 AMMO_TYPE:AMMO_TYPE SUFFIX:SUFFIX;
     IF_WITH_GUN equip_weapon
         cycle_node=human_node-SUFFIX
         entry_name=m4a1;
     
     macro_playback create_none_weapon
         PARENT_RIGID_BODY_NODE:human_node-SUFFIX
+        AMMO_TYPE:none_weapon_ammo_type
         SUFFIX:SUFFIX;
 
     damageable node=human_node-SUFFIX health=200;
