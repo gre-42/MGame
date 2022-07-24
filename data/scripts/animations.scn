@@ -6,8 +6,15 @@ add_bvh_resource
     periodic=1;
 
 add_bvh_resource
-    name=xonotic_pyria.run
-    filename=animations/Xonotic/pyria_run_retargeted.bvh
+    name=xonotic_pyria.run_forward
+    filename=animations/Xonotic/pyria_run_forward_retargeted.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
+    name=xonotic_pyria.run_backward
+    filename=animations/Xonotic/pyria_run_backward_retargeted.bvh
     smooth_radius=0
     smooth_alpha=NAN
     periodic=1;
