@@ -29,18 +29,33 @@ macro_begin create_mh1;
         verror_std=1
         verror_alpha=0.002;
 
-    create_weapon_inventory
-        storage_node=human_node-SUFFIX;
-    IF_WITH_GUN add_weapon_to_inventory
-        storage_node=human_node-SUFFIX
+    create_weapon_cycle
+        inventory_node=human_node-SUFFIX
+        cycle_node=human_node-SUFFIX;
+    IF_WITH_GUN set_inventory_capacity
+        inventory_node=human_node-SUFFIX
+        item_type=m4a1_ammo
+        capacity=200;
+    IF_WITH_GUN set_inventory_capacity
+        inventory_node=human_node-SUFFIX
+        item_type=beretta92_ammo
+        capacity=200;
+    IF_WITH_GUN set_inventory_capacity
+        inventory_node=human_node-SUFFIX
+        item_type=frag_grenade
+        capacity=10;
+    IF_WITH_GUN add_weapon_to_cycle
+        cycle_node=human_node-SUFFIX
         entry_name=m4a1
+        ammo_type=m4a1_ammo
         create=macro_playback add_weapon_m4a1 SUFFIX:SUFFIX;
-    IF_WITH_GUN add_weapon_to_inventory
-        storage_node=human_node-SUFFIX
+    IF_WITH_GUN add_weapon_to_cycle
+        cycle_node=human_node-SUFFIX
         entry_name=beretta92
+        ammo_type=beretta92_ammo
         create=macro_playback add_weapon_beretta92 SUFFIX:SUFFIX;
     IF_WITH_GUN equip_weapon
-        storage_node=human_node-SUFFIX
+        cycle_node=human_node-SUFFIX
         entry_name=m4a1;
     
     macro_playback create_none_weapon
