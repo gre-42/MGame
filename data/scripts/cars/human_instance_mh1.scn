@@ -21,8 +21,8 @@ macro_begin create_mh1;
         bullet_velocity=900
         gravity=9.8
         dyaw_max=10
-        pitch_min=-10
-        pitch_max=45
+        pitch_min=-60
+        pitch_max=60
         dpitch_max=10
         yaw_locked_on_max=2
         pitch_locked_on_max=2
