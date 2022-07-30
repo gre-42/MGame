@@ -33,7 +33,6 @@ macro_begin teams.create_human_for_pc;
         IF_WITH_GUN:
         PLAYER_NAME:PLAYER_NAME
         R:R G:G B:B
-        IF_EXTERNALS:
         IF_PLAYER:
         IF_SHADOW:;
     create_externals player=PLAYER_NAME mode=pc;

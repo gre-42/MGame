@@ -21,16 +21,17 @@ macro_begin create_skater;
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
-    IF_PLAYER player_set_node player_name=PLAYER_NAME node=skater_node-SUFFIX;
+    IF_PLAYER player_set_node
+        player_name=PLAYER_NAME
+        node=skater_node-SUFFIX;
     # IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater-SUFFIX CSUFFIX:SUFFIX;
-    IF_EXTERNALS set_externals_creator
+    IF_PLAYER set_externals_creator
         player=PLAYER_NAME
-        macro=macro_playback create_externals_for_skater_pc
+        macro=macro_playback create_player_skater_externals
             SKATER_NAME:SKATER_NAME
             SUFFIX:SUFFIX
             IF_RACING:IF_RACING
-            IF_RALLY:IF_RALLY
-            IF_MANUAL_AIM:IF_MANUAL_AIM;
+            IF_RALLY:IF_RALLY;
     # visual_node_status_3rd
         node=skater_node-SUFFIX
         format=8
@@ -40,10 +41,11 @@ macro_begin create_skater;
         line_distance=16;
 macro_end;
 
-macro_begin create_externals_for_skater_pc;
-    macro_playback create_externals_for_skater_pc-SKATER_NAME
+macro_begin create_player_skater_externals;
+    macro_playback create_player_skater_externals-SKATER_NAME
         SUFFIX:SUFFIX
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        IF_PC:IF_PC;
 macro_end;

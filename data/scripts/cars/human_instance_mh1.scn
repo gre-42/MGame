@@ -80,7 +80,7 @@ macro_begin create_mh1;
     IF_WITH_GRAPHICS renderable_instance name=human-inst-d1 node=animation_node-SUFFIX resource=mh1_d1;
 macro_end;
 
-macro_begin create_externals_for_human_pc_mh1;
+macro_begin create_player_human_externals_mh1;
     IF_PC macro_playback create_human_key_bindings
         SUFFIX:SUFFIX;
     IF_PC macro_playback create_human_cameras

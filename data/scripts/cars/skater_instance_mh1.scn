@@ -82,7 +82,7 @@ macro_begin create_skating_mh1;
     # IF_WITH_GRAPHICS renderable_instance name=wheel-SUFFIX node=wheel_right_rear_node-SUFFIX resource=beacon1;
 macro_end;
 
-macro_begin create_externals_for_skater_pc_skating_mh1;
+macro_begin create_player_skater_externals_skating_mh1;
     IF_PC macro_playback create_skater_key_bindings
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;

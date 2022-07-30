@@ -52,7 +52,6 @@ macro_begin teams.create_human_for_npc;
         PLAYER_NAME:PLAYER_NAME
         R:R G:G B:B
         IF_PLAYER:
-        IF_EXTERNALS:
         IF_SHADOW:
         IF_MANUAL_AIM:IF_MANUAL_AIM;
     create_externals player=PLAYER_NAME mode=npc;

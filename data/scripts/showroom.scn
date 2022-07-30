@@ -37,8 +37,7 @@ macro_begin _create_showroom_vehicle;
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#
         IF_PLAYER:#
-        IF_DAMAGEABLE:#
-        IF_EXTERNALS:#;
+        IF_DAMAGEABLE:#;
 macro_end;
 
 macro_begin change_showroom_vehicle;
