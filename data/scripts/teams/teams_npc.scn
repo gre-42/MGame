@@ -4,7 +4,7 @@ macro_begin teams.create_player_for_human_and_npc;
         team=TEAM
         game_mode=GAME_MODE
         unstuck_mode=off
-        driving_mode=car_arena
+        driving_mode=human_arena
         driving_direction=center;
 
     set_can_drive player=PLAYER_NAME source=user value=USER_DRIVE;
