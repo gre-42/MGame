@@ -43,6 +43,20 @@ obj_resource
     transformation_mode=all;
 
 obj_resource
+    name=box_on_ground
+    filename=models/box.obj
+    position=0 1 0
+    rotation=0 0 0
+    scale=1 1 1
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all;
+
+obj_resource
     name=topdown_locator
     filename=models/TransparentBox/tbox.obj
     position=0 0 0
