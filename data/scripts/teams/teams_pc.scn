@@ -26,6 +26,8 @@ macro_begin teams.create_human_for_pc;
         IF_HUMAN_STYLE:IF_HUMAN_STYLE
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
+        VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
@@ -51,6 +53,7 @@ macro_begin teams.create_car_for_pc;
         DECIMATE:DECIMATE
         SUFFIX:SUFFIX
         VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
         IF_RACING:IF_RACING
@@ -97,7 +100,8 @@ macro_begin teams.create_player_and_human_for_pc;
             DECIMATE:
             IF_HUMAN_STYLE:IF_HUMAN_STYLE
             R:R G:G B:B
-            VERROR_STD:VERROR_STD;
+            VERROR_STD:VERROR_STD
+            VERROR_ALPHA:VERROR_ALPHA;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
 
@@ -121,6 +125,7 @@ macro_begin teams.create_player_and_car_for_pc;
             DECIMATE:
             IF_CAR_BODY_RENDERABLE_STYLE:IF_CAR_BODY_RENDERABLE_STYLE
             R:R G:G B:B
-            VERROR_STD:VERROR_STD;
+            VERROR_STD:VERROR_STD
+            VERROR_ALPHA:VERROR_ALPHA;
     IF_SET_WAY_POINTS set_pathfinding_way_points player=PLAYER_NAME node=osm_map_node resource=TEAMS_WAY_POINTS_RESOURCE;
 macro_end;

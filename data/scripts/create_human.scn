@@ -20,7 +20,9 @@ macro_begin create_human;
         SUFFIX:SUFFIX
         IF_WITH_GRAPHICS:IF_WITH_GRAPHICS
         IF_WITH_PHYSICS:IF_WITH_PHYSICS
-        IF_WITH_GUN:IF_WITH_GUN;
+        IF_WITH_GUN:IF_WITH_GUN
+        VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA;
     IF_PLAYER player_set_node
         player_name=PLAYER_NAME
         node=human_node-SUFFIX;

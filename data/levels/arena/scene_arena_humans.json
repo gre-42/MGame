@@ -13,7 +13,8 @@
                 "can_drive": true,
                 "can_aim": true,
                 "can_shoot": true,
-                "verror_std": 1
+                "verror_std": 20,
+                "verror_alpha": 0.002
             },
             "user": {
                 "can_drive": false,

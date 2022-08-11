@@ -35,8 +35,8 @@ macro_begin create_skating_mh1;
         dpitch_max=10
         yaw_locked_on_max=2
         pitch_locked_on_max=2
-        verror_std=1
-        verror_alpha=0.002;
+        verror_std=VERROR_STD
+        verror_alpha=VERROR_ALPHA;
 
     macro_playback create_none_weapon
         PARENT_RIGID_BODY_NODE:skater_node-SUFFIX

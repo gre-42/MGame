@@ -200,7 +200,8 @@ macro_begin create_AH_64;
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
-        VERROR_STD:VERROR_STD;
+        VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_AH_64_physics
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
@@ -210,7 +211,8 @@ macro_begin create_AH_64;
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
-        VERROR_STD:VERROR_STD;
+        VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA;
 macro_end;
 
 macro_begin create_player_car_externals_AH_64;

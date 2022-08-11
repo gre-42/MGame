@@ -19,7 +19,8 @@ macro_begin create_car;
         IF_STATIC:IF_STATIC=#
         IF_DYNAMIC:IF_DYNAMIC=#
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
-        VERROR_STD:VERROR_STD;
+        VERROR_STD:VERROR_STD
+        VERROR_ALPHA:VERROR_ALPHA;
     IF_PLAYBACK_TRACK playback_track
         node=car_node-SUFFIX
         speed=PLAYBACK_SPEED
