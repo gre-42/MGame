@@ -57,8 +57,10 @@ macro_begin create_grossglockner_hochalpenstrasse;
             IF_PLAYBACK_WINNER_1:
             IF_PLAYBACK_WINNER_2:#
             IF_MANUAL_AIM:
-            VERROR_STD:0.1
-            VERROR_ALPHA:0.002
+            VELOCITY_ERROR_STD:0.1
+            YAW_ERROR_STD:0
+            PITCH_ERROR_STD:0
+            ERROR_ALPHA:0.002
             IF_CHECKPOINTS:
             IF_RACING:#
             IF_RALLY:

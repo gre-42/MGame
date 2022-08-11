@@ -23,7 +23,8 @@ macro_begin add_weapon_m4a1;
         bullet_damage=10
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
-        punch_angle=0.3;
+        punch_angle_idle_std=0.1
+        punch_angle_shoot_std=0.3;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -43,7 +44,8 @@ macro_begin add_weapon_beretta92;
         bullet_damage=10
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
-        punch_angle=0.3;
+        punch_angle_idle_std=0.1
+        punch_angle_shoot_std=0.3;
 macro_end;
 
 macro_begin create_none_weapon;
@@ -60,5 +62,6 @@ macro_begin create_none_weapon;
         bullet_damage=10
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
-        punch_angle=0.3;
+        punch_angle_idle_std=0.1
+        punch_angle_shoot_std=0.3;
 macro_end;

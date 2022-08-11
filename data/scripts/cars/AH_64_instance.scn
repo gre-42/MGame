@@ -49,8 +49,10 @@ macro_begin create_AH_64_physics;
         dpitch_max=0.8
         yaw_locked_on_max=2
         pitch_locked_on_max=2
-        verror_std=VERROR_STD
-        verror_alpha=0.002;
+        velocity_error_std=VELOCITY_ERROR_STD
+        yaw_error_std=YAW_ERROR_STD
+        pitch_error_std=PITCH_ERROR_STD
+        error_alpha=0.002;
 
     set_inventory_capacity
         inventory_node=car_node-SUFFIX
@@ -70,7 +72,8 @@ macro_begin create_AH_64_physics;
         bullet_damage=10
         bullet_size=2.4 2.4 20
         ammo_type=ah_64_ammo
-        punch_angle=0.1;
+        punch_angle_idle_std=0.01
+        punch_angle_shoot_std=0.1;
 
     #  120 PS = 88259.8 Watt;
     #  150 PS = 110325 Watt;
@@ -200,8 +203,10 @@ macro_begin create_AH_64;
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
-        VERROR_STD:VERROR_STD
-        VERROR_ALPHA:VERROR_ALPHA;
+        VELOCITY_ERROR_STD:VELOCITY_ERROR_STD
+        YAW_ERROR_STD:YAW_ERROR_STD
+        PITCH_ERROR_STD:PITCH_ERROR_STD
+        ERROR_ALPHA:ERROR_ALPHA;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_AH_64_physics
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
@@ -211,8 +216,10 @@ macro_begin create_AH_64;
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
-        VERROR_STD:VERROR_STD
-        VERROR_ALPHA:VERROR_ALPHA;
+        VELOCITY_ERROR_STD:VELOCITY_ERROR_STD
+        YAW_ERROR_STD:YAW_ERROR_STD
+        PITCH_ERROR_STD:PITCH_ERROR_STD
+        ERROR_ALPHA:ERROR_ALPHA;
 macro_end;
 
 macro_begin create_player_car_externals_AH_64;

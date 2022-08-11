@@ -32,7 +32,10 @@ macro_begin _create_showroom_vehicle;
         IF_STATIC:#
         IF_DYNAMIC:
         HAND_BRAKE_PULLED:1
-        VERROR_STD:1
+        VELOCITY_ERROR_STD:0
+        YAW_ERROR_STD:0
+        PITCH_ERROR_STD:0
+        ERROR_ALPHA:1
         IF_SHADOW:
         IF_PLAYBACK_TRACK:#
         IF_PLAYBACK_WINNER:#

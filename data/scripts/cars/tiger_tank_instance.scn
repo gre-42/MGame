@@ -40,8 +40,10 @@ macro_begin create_tiger_tank_physics;
         dpitch_max=0.8
         yaw_locked_on_max=2
         pitch_locked_on_max=2
-        verror_std=VERROR_STD
-        verror_alpha=VERROR_ALPHA;
+        velocity_error_std=VELOCITY_ERROR_STD
+        yaw_error_std=YAW_ERROR_STD
+        pitch_error_std=PITCH_ERROR_STD
+        error_alpha=ERROR_ALPHA;
 
     set_inventory_capacity
         inventory_node=car_node-SUFFIX
@@ -61,7 +63,8 @@ macro_begin create_tiger_tank_physics;
         bullet_damage=100
         bullet_size=2.4 2.4 20
         ammo_type=tiger_tank_ammo
-        punch_angle=0.1;
+        punch_angle_idle_std=0.01
+        punch_angle_shoot_std=0.1;
 
     # visual_node_status_3rd
         node=car_node-SUFFIX
