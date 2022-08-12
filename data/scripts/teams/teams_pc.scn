@@ -95,7 +95,8 @@ macro_begin teams.create_player_and_human_for_pc;
         USER_SHOOT:USER_SHOOT
         AI_DRIVE:AI_DRIVE
         AI_AIM:AI_AIM
-        AI_SHOOT:AI_SHOOT;
+        AI_SHOOT:AI_SHOOT
+        AI_SELECT_BEST_WEAPON:AI_SELECT_BEST_WEAPON;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_human_for_pc
@@ -122,7 +123,8 @@ macro_begin teams.create_player_and_car_for_pc;
         USER_SHOOT:USER_SHOOT
         AI_DRIVE:AI_DRIVE
         AI_AIM:AI_AIM
-        AI_SHOOT:AI_SHOOT;
+        AI_SHOOT:AI_SHOOT
+        AI_SELECT_BEST_WEAPON:AI_SELECT_BEST_WEAPON;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_car_for_pc

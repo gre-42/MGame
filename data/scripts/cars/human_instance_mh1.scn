@@ -54,12 +54,16 @@ macro_begin create_mh1;
         cycle_node=human_node-SUFFIX
         entry_name=m4a1
         ammo_type=m4a1_ammo
-        create=macro_playback add_weapon_m4a1 AMMO_TYPE:AMMO_TYPE SUFFIX:SUFFIX;
+        cool_down=0.1
+        bullet_damage=10
+        create=macro_playback add_weapon_m4a1 AMMO_TYPE:AMMO_TYPE COOL_DOWN:COOL_DOWN BULLET_DAMAGE:BULLET_DAMAGE SUFFIX:SUFFIX;
     IF_WITH_GUN add_weapon_to_cycle
         cycle_node=human_node-SUFFIX
         entry_name=beretta92
         ammo_type=beretta92_ammo
-        create=macro_playback add_weapon_beretta92 AMMO_TYPE:AMMO_TYPE SUFFIX:SUFFIX;
+        cool_down=0.5
+        bullet_damage=10
+        create=macro_playback add_weapon_beretta92 AMMO_TYPE:AMMO_TYPE COOL_DOWN:COOL_DOWN BULLET_DAMAGE:BULLET_DAMAGE SUFFIX:SUFFIX;
     IF_WITH_GUN set_desired_weapon
         cycle_node=human_node-SUFFIX
         entry_name=m4a1;

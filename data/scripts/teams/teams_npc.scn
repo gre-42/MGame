@@ -14,6 +14,7 @@ macro_begin teams.create_player_for_human_and_npc;
     set_can_drive player=PLAYER_NAME source=ai value=AI_DRIVE;
     set_can_aim player=PLAYER_NAME source=ai value=AI_AIM;
     set_can_shoot player=PLAYER_NAME source=ai value=AI_SHOOT;
+    set_can_select_best_weapon player=PLAYER_NAME source=ai value=AI_SELECT_BEST_WEAPON;
 macro_end;
 
 macro_begin teams.create_player_for_car_and_npc;
@@ -32,6 +33,7 @@ macro_begin teams.create_player_for_car_and_npc;
     set_can_drive player=PLAYER_NAME source=ai value=AI_DRIVE;
     set_can_aim player=PLAYER_NAME source=ai value=AI_AIM;
     set_can_shoot player=PLAYER_NAME source=ai value=AI_SHOOT;
+    set_can_select_best_weapon player=PLAYER_NAME source=ai value=AI_SELECT_BEST_WEAPON;
 macro_end;
 
 macro_begin teams.create_human_for_npc;
@@ -112,7 +114,8 @@ macro_begin teams.create_player_and_human_for_npc;
         USER_SHOOT:USER_SHOOT
         AI_DRIVE:AI_DRIVE
         AI_AIM:AI_AIM
-        AI_SHOOT:AI_SHOOT;
+        AI_SHOOT:AI_SHOOT
+        AI_SELECT_BEST_WEAPON:AI_SELECT_BEST_WEAPON;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_human_for_npc
@@ -140,7 +143,8 @@ macro_begin teams.create_player_and_car_for_npc;
         USER_SHOOT:USER_SHOOT
         AI_DRIVE:AI_DRIVE
         AI_AIM:AI_AIM
-        AI_SHOOT:AI_SHOOT;
+        AI_SHOOT:AI_SHOOT
+        AI_SELECT_BEST_WEAPON:AI_SELECT_BEST_WEAPON;
     set_preferred_car_spawner
         player=PLAYER_NAME
         macro=teams.create_car_for_npc
