@@ -33,6 +33,7 @@ macro_begin create_tiger_tank_physics;
         followed=
         bullet_start_offset=20
         bullet_velocity=900
+        bullet_feels_gravity=1
         gravity=9.8
         dyaw_max=0.8
         pitch_min=-10
@@ -57,6 +58,7 @@ macro_begin create_tiger_tank_physics;
         cool_down=10
         bullet_renderable=tank_bullet_renderable
         bullet_hitbox=tank_bullet_hitbox
+        bullet_feels_gravity=1
         bullet_mass=20
         bullet_velocity=900
         bullet_lifetime=20

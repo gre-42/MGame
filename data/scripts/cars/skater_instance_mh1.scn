@@ -28,6 +28,7 @@ macro_begin create_skating_mh1;
         followed=
         bullet_start_offset=20
         bullet_velocity=900
+        bullet_feels_gravity=1
         gravity=9.8
         dyaw_max=10
         pitch_min=-10

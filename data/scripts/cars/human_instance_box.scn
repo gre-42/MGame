@@ -13,6 +13,7 @@ macro_begin create_human_box;
         cool_down=0.5
         bullet_renderable=tank_bullet_renderable
         bullet_hitboxes=tank_bullet_hitbox
+        bullet_feels_gravity=1
         bullet_mass=20
         bullet_velocity=900
         bullet_lifetime=20
@@ -26,6 +27,7 @@ macro_begin create_human_box;
         followed=
         bullet_start_offset=20
         bullet_velocity=900
+        bullet_feels_gravity=1
         gravity=9.8
         dyaw_max=10
         pitch_min=-10

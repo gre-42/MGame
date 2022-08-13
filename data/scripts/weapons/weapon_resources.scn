@@ -42,3 +42,33 @@ obj_resource
     aggregate_mode=none
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=m72_law
+    filename=models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher.obj
+    position=0 0 -0.5
+    rotation=0 90 0
+    scale=0.2 0.2 0.2
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
+
+obj_resource
+    name=m72_law_rocket
+    filename=models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher-rocket.obj
+    position=0 0 0
+    rotation=0 90 0
+    scale=0.2 0.2 0.2
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all
+    triangle_tangent_error_behavior=zero;
