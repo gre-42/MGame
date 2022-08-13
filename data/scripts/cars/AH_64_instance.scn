@@ -238,7 +238,6 @@ macro_begin create_player_car_externals_AH_64;
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
     IF_PC hud_image
-        name=crosshair
         camera_node=main_gun_camera_node-SUFFIX
         filename=textures/hud/crosshair.png
         update=once
