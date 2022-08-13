@@ -99,6 +99,6 @@ macro_begin create_none_weapon;
         punch_angle_idle_std=0.1
         punch_angle_shoot_std=0.3;
     ypln_set_bullet_velocity
-        node=human_node-SUFFIX
+        node=PARENT_RIGID_BODY_NODE
         velocity=0;
 macro_end;
