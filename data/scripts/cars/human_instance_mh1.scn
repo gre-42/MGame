@@ -60,6 +60,8 @@ macro_begin create_mh1;
         bullet_damage=10
         bullet_damage_radius=0
         bullet_velocity=900
+        range_min=0
+        range_max=2000
         create=macro_playback add_weapon_m4a1
             AMMO_TYPE:AMMO_TYPE
             COOL_DOWN:COOL_DOWN
@@ -75,6 +77,8 @@ macro_begin create_mh1;
         bullet_damage=10
         bullet_damage_radius=0
         bullet_velocity=900
+        range_min=0
+        range_max=2000
         create=macro_playback add_weapon_beretta92
             AMMO_TYPE:AMMO_TYPE
             COOL_DOWN:COOL_DOWN
@@ -90,6 +94,8 @@ macro_begin create_mh1;
         bullet_damage=100
         bullet_damage_radius=5
         bullet_velocity=15
+        range_min=8
+        range_max=20
         create=macro_playback add_weapon_frag_grenade
             AMMO_TYPE:AMMO_TYPE
             COOL_DOWN:COOL_DOWN
