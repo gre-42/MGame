@@ -20,7 +20,7 @@ macro_begin create_mh1;
         parent_follower_rigid_body_node=human_node-SUFFIX
         followed=
         bullet_start_offset=0.5
-        bullet_velocity=900
+        bullet_velocity=NAN
         gravity=9.8
         dyaw_max=10
         pitch_min=-60
@@ -58,21 +58,45 @@ macro_begin create_mh1;
         ammo_type=m4a1_ammo
         cool_down=0.1
         bullet_damage=10
-        create=macro_playback add_weapon_m4a1 AMMO_TYPE:AMMO_TYPE COOL_DOWN:COOL_DOWN BULLET_DAMAGE:BULLET_DAMAGE SUFFIX:SUFFIX;
+        bullet_damage_radius=0
+        bullet_velocity=900
+        create=macro_playback add_weapon_m4a1
+            AMMO_TYPE:AMMO_TYPE
+            COOL_DOWN:COOL_DOWN
+            BULLET_DAMAGE:BULLET_DAMAGE
+            BULLET_DAMAGE_RADIUS:BULLET_DAMAGE_RADIUS
+            BULLET_VELOCITY:BULLET_VELOCITY
+            SUFFIX:SUFFIX;
     IF_WITH_GUN add_weapon_to_cycle
         cycle_node=human_node-SUFFIX
         entry_name=beretta92
         ammo_type=beretta92_ammo
         cool_down=0.5
         bullet_damage=10
-        create=macro_playback add_weapon_beretta92 AMMO_TYPE:AMMO_TYPE COOL_DOWN:COOL_DOWN BULLET_DAMAGE:BULLET_DAMAGE SUFFIX:SUFFIX;
+        bullet_damage_radius=0
+        bullet_velocity=900
+        create=macro_playback add_weapon_beretta92
+            AMMO_TYPE:AMMO_TYPE
+            COOL_DOWN:COOL_DOWN
+            BULLET_DAMAGE:BULLET_DAMAGE
+            BULLET_DAMAGE_RADIUS:BULLET_DAMAGE_RADIUS
+            BULLET_VELOCITY:BULLET_VELOCITY
+            SUFFIX:SUFFIX;
     IF_WITH_GUN add_weapon_to_cycle
         cycle_node=human_node-SUFFIX
         entry_name=frag_grenade
         ammo_type=frag_grenade
-        cool_down=2
+        cool_down=0.5
         bullet_damage=100
-        create=macro_playback add_weapon_frag_grenade AMMO_TYPE:AMMO_TYPE COOL_DOWN:COOL_DOWN BULLET_DAMAGE:BULLET_DAMAGE SUFFIX:SUFFIX;
+        bullet_damage_radius=5
+        bullet_velocity=15
+        create=macro_playback add_weapon_frag_grenade
+            AMMO_TYPE:AMMO_TYPE
+            COOL_DOWN:COOL_DOWN
+            BULLET_DAMAGE:BULLET_DAMAGE
+            BULLET_DAMAGE_RADIUS:BULLET_DAMAGE_RADIUS
+            BULLET_VELOCITY:BULLET_VELOCITY
+            SUFFIX:SUFFIX;
     IF_WITH_GUN set_desired_weapon
         cycle_node=human_node-SUFFIX
         entry_name=m4a1;
@@ -112,7 +136,10 @@ macro_begin create_player_human_externals_mh1;
         update=once
         center=0 0
         size=0.05 0.05;
-    IF_WITH_GUN player_set_aiming_gun player_name=PLAYER_NAME yaw_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX;
+    IF_WITH_GUN player_set_aiming_gun
+        player_name=PLAYER_NAME
+        yaw_node=human_node-SUFFIX
+        gun_node=main_gun_end_node-SUFFIX;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=INFINITY

@@ -18,13 +18,17 @@ macro_begin add_weapon_m4a1;
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
         bullet_mass=20
-        bullet_velocity=900
+        bullet_velocity=BULLET_VELOCITY
         bullet_lifetime=20
         bullet_damage=BULLET_DAMAGE
+        bullet_damage_radius=BULLET_DAMAGE_RADIUS
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
         punch_angle_idle_std=0.1
         punch_angle_shoot_std=0.3;
+    ypln_set_bullet_velocity
+        node=human_node-SUFFIX
+        velocity=BULLET_VELOCITY;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -39,13 +43,17 @@ macro_begin add_weapon_beretta92;
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
         bullet_mass=20
-        bullet_velocity=900
+        bullet_velocity=BULLET_VELOCITY
         bullet_lifetime=20
         bullet_damage=BULLET_DAMAGE
+        bullet_damage_radius=BULLET_DAMAGE_RADIUS
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
         punch_angle_idle_std=0.1
         punch_angle_shoot_std=0.3;
+    ypln_set_bullet_velocity
+        node=human_node-SUFFIX
+        velocity=BULLET_VELOCITY;
 macro_end;
 
 macro_begin add_weapon_frag_grenade;
@@ -60,13 +68,17 @@ macro_begin add_weapon_frag_grenade;
         bullet_renderable=frag_grenade
         bullet_hitbox=grenade_hitbox
         bullet_mass=0.5
-        bullet_velocity=15
+        bullet_velocity=BULLET_VELOCITY
         bullet_lifetime=900
-        bullet_damage=100
+        bullet_damage=BULLET_DAMAGE
+        bullet_damage_radius=BULLET_DAMAGE_RADIUS
         bullet_size=0.1 0.1 0.1
         ammo_type=AMMO_TYPE
         punch_angle_idle_std=0.1
         punch_angle_shoot_std=0.3;
+    ypln_set_bullet_velocity
+        node=human_node-SUFFIX
+        velocity=BULLET_VELOCITY;
 macro_end;
 
 macro_begin create_none_weapon;
@@ -78,11 +90,15 @@ macro_begin create_none_weapon;
         bullet_renderable=tank_bullet_renderable
         bullet_hitbox=tank_bullet_hitbox
         bullet_mass=20
-        bullet_velocity=900
+        bullet_velocity=0
         bullet_lifetime=0
         bullet_damage=0
+        bullet_damage_radius=0
         bullet_size=2.4 2.4 20
         ammo_type=AMMO_TYPE
         punch_angle_idle_std=0.1
         punch_angle_shoot_std=0.3;
+    ypln_set_bullet_velocity
+        node=human_node-SUFFIX
+        velocity=0;
 macro_end;
