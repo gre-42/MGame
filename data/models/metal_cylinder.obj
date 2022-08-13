@@ -1,6 +1,6 @@
 # Blender v2.90.0 OBJ File: ''
 # www.blender.org
-mtllib cylinder.mtl
+mtllib metal_cylinder.mtl
 o Cylinder.001
 v 0.000000 -1.000000 -1.000000
 v 0.000000 1.000000 -1.000000
@@ -806,7 +806,7 @@ vn -0.0448 -0.7001 -0.7126
 vn -0.0448 0.7001 -0.7126
 vn 0.0000 -0.7001 -0.7140
 vn 0.0000 0.7001 -0.7140
-usemtl None
+usemtl metal
 s off
 f 62/1/1 30/2/1 190/3/1
 f 143/4/2 175/5/2 15/6/2

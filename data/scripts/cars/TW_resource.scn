@@ -1,6 +1,6 @@
 obj_resource
     name=TW-hitbox
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0.85 0
     rotation=0 0 0
     scale=1.5 1.0 3.4
@@ -20,7 +20,7 @@ modify_physics_material_tags
 
 obj_resource
     name=TW-tirelines
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1

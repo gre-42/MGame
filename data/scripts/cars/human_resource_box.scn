@@ -1,6 +1,6 @@
 obj_resource
     name=human_hitbox
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0.35 0
     rotation=0 0 0
     scale=0.25 0.7 0.25
@@ -12,15 +12,33 @@ obj_resource
     aggregate_mode=none
     transformation_mode=all;
 
-gen_triangle_rays name=human_hitbox npoints=5 lengths=0.25 0.7 0.25 delete_triangles=0;
-
 modify_physics_material_tags
     resource_name=human_hitbox
-    add=obj_chassis;
+    add=obj_hitbox;
+
+obj_resource
+    name=human_distancebox
+    filename=models/primitives/box.obj
+    position=0 0.35 -0.25
+    rotation=0 0 0
+    scale=0.25 0.7 0.5
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all;
+
+gen_triangle_rays name=human_distancebox npoints=5 lengths=0.25 0.7 0.25 delete_triangles=0;
+
+modify_physics_material_tags
+    resource_name=human_distancebox
+    add=obj_distancebox;
 
 obj_resource
     name=human_tirelines
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1

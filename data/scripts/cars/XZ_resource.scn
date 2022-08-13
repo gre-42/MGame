@@ -1,6 +1,6 @@
 obj_resource
     name=XZ_hitbox
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.9 0.5 2.3
@@ -20,7 +20,7 @@ modify_physics_material_tags
 
 obj_resource
     name=XZ_tirelines
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1

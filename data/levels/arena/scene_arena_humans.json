@@ -14,9 +14,9 @@
                 "can_aim": true,
                 "can_shoot": true,
                 "can_select_best_weapon": true,
-                "velocity_error_std": 1,
-                "yaw_error_std": 0.05,
-                "pitch_error_std": 0.05,
+                "velocity_error_std": 0.5,
+                "yaw_error_std": 0.02,
+                "pitch_error_std": 0.02,
                 "error_alpha": 0.002
             },
             "user": {

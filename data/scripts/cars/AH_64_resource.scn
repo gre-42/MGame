@@ -21,7 +21,7 @@ modify_physics_material_tags
 
 obj_resource
     name=AH_64_tirelines
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
@@ -94,7 +94,7 @@ macro_playback load_AH_64 DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_blac
 
 obj_resource
     name=ah64_blades
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0 -0.1
     rotation=0 0 0
     scale=5 5 0.1

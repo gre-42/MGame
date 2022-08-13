@@ -48,6 +48,27 @@ macro_begin add_weapon_beretta92;
         punch_angle_shoot_std=0.3;
 macro_end;
 
+macro_begin add_weapon_frag_grenade;
+    macro_playback try_delete_weapon SUFFIX:SUFFIX;
+    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
+    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=frag_grenade;
+    gun
+        node=main_gun_end_node-SUFFIX
+        parent_rigid_body_node=human_node-SUFFIX
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX
+        cool_down=COOL_DOWN
+        bullet_renderable=frag_grenade
+        bullet_hitbox=grenade_hitbox
+        bullet_mass=0.5
+        bullet_velocity=15
+        bullet_lifetime=900
+        bullet_damage=100
+        bullet_size=0.1 0.1 0.1
+        ammo_type=AMMO_TYPE
+        punch_angle_idle_std=0.1
+        punch_angle_shoot_std=0.3;
+macro_end;
+
 macro_begin create_none_weapon;
     gun
         node=main_gun_end_node-SUFFIX

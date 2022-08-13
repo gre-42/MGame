@@ -54,7 +54,7 @@ macro_begin _scene_tank_load_resources;
     #########;
     obj_resource
         name=human-hitbox
-        filename=models/box.obj
+        filename=models/primitives/box.obj
         position=0 0.35 0
         rotation=0 0 0
         scale=0.5 0.7 0.5
@@ -70,7 +70,7 @@ macro_begin _scene_tank_load_resources;
 
     obj_resource
         name=human-tirelines
-        filename=models/empty.obj
+        filename=models/primitives/empty.obj
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
@@ -106,7 +106,7 @@ macro_begin _scene_tank_load_resources;
 
     # obj_resource
         name=tank_bullet_hitbox
-        filename=models/box.obj
+        filename=models/primitives/box.obj
         position=0 0 0
         rotation=0 0 0
         scale=0.5 0.5 10

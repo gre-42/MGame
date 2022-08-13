@@ -1,6 +1,6 @@
 obj_resource
     name=skater_hitbox
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0.25 0
     rotation=0 0 0
     scale=0.25 0.7 0.25
@@ -47,7 +47,7 @@ modify_physics_material_tags
 
 obj_resource
     name=skater_tirelines
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1

@@ -30,7 +30,7 @@ square_resource
 
 obj_resource
     name=box
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
@@ -44,7 +44,7 @@ obj_resource
 
 obj_resource
     name=box_on_ground
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 1 0
     rotation=0 0 0
     scale=1 1 1
@@ -73,7 +73,7 @@ obj_resource
 
 obj_resource
     name=flag
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 500 0
     rotation=0 0 0
     scale=1 500 1
@@ -87,7 +87,7 @@ obj_resource
 
 obj_resource
     name=flag_z
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0 500
     rotation=0 0 0
     scale=1 1 500
@@ -101,7 +101,7 @@ obj_resource
 
 obj_resource
     name=beacon
-    filename=models/box.obj
+    filename=models/primitives/box.obj
     position=0 0 0
     rotation=0 0 0
     scale=0.1 0.1 0.1
@@ -115,7 +115,7 @@ obj_resource
 
 obj_resource
     name=sphere
-    filename=models/sphere.obj
+    filename=models/primitives/sphere.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
@@ -172,7 +172,7 @@ obj_resource
 
 obj_resource
     name=tank_bullet_hitbox
-    filename=models/empty.obj
+    filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
@@ -189,3 +189,21 @@ gen_ray name=tank_bullet_hitbox from=0 0 0 to=0 0 -20;
 modify_physics_material_tags
     resource_name=tank_bullet_hitbox
     add=obj_bullet_line_segment;
+
+obj_resource
+    name=grenade_hitbox
+    filename=models/primitives/box.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.1 0.1 0.1
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all;
+
+modify_physics_material_tags
+    resource_name=grenade_hitbox
+    add=obj_bullet_mesh;

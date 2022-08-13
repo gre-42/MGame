@@ -30,7 +30,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         excluded_tags=obj_alignment_plane;
     !IF_GEN_GRIND_LINES obj_resource
         name=osm_map_grind_lines
-        filename=models/empty.obj
+        filename=models/primitives/empty.obj
         position=0 0 0
         rotation=0 0 0
         scale=1 1 1
