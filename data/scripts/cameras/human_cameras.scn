@@ -25,7 +25,7 @@ macro_begin create_human_cameras_pc;
 
     set_camera_cycle name=far 45_deg_camera light_node0 light_node1 dirtmap_node bird_node;
     set_camera_cycle name=near follower_camera main_gun_camera_node-SUFFIX;
-    set_camera follower_camera;
+    set_camera main_gun_camera_node-SUFFIX;
 
     append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
     append_externals_deleter player=PLAYER_NAME node=follower_camera;
