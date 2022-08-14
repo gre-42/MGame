@@ -346,6 +346,17 @@ macro_begin _scene_racing_delete_transient_objects;
     delete_scheduled_advance_times;
 macro_end;
 
+macro_begin _setup_weapon_closeup;
+    macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
+    scene_to_pixel_region
+        target_scene=primary_scene
+        z_order=1
+        position=20 80
+        size=600 350
+        focus_mask=scene
+        submenus=;
+macro_end;
+
 macro_begin scene_racing_static;
     macro_playback OSM_MAP_RESOURCE
         GAME_LEVEL:GAME_LEVEL
@@ -371,6 +382,24 @@ macro_begin scene_racing_static;
         with_pod_bot=1
         clear_mode=PRIMARY_SCENE_CLEAR_MODE
         max_tracks=5;
+    
+    create_scene
+        name=weapon_closeup
+        z_order=0
+        fly=0
+        rotate=0
+        print_gamepad_buttons=0
+        depth_fog=0
+        low_pass=0
+        high_pass=0
+        with_dirtmap=0
+        with_skybox=0
+        with_flying_logic=0
+        with_pod_bot=0
+        clear_mode=depth
+        max_tracks=5;
+
+    macro_playback _setup_weapon_closeup context=weapon_closeup;
 
     macro_playback
         _scene_racing_instantiate_static_objects
