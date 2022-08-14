@@ -6,6 +6,17 @@ macro_begin try_delete_weapon;
     clear_absolute_observer_and_notify_destroyed node=main_gun_end_node-SUFFIX;
 macro_end;
 
+macro_begin _add_weapon_closeup_scheduler;
+    execute_in_physics_thread macro_playback _add_weapon_closeup
+        RESOURCE:RESOURCE;
+macro_end;
+
+macro_begin _add_weapon_closeup;
+    delete_root_nodes regex=^closeup_node$;
+    root_node_instance type=dynamic name=closeup_node position=0 0 -3 rotation=0 0 0 scale=5;
+    renderable_instance name=closeup-inst node=closeup_node resource=RESOURCE;
+macro_end;
+
 macro_begin add_weapon_m4a1;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
@@ -31,6 +42,14 @@ macro_begin add_weapon_m4a1;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
+    clear_node_hider node=main_gun_node-SUFFIX;
+    set_node_hider
+        node_to_hide=main_gun_node-SUFFIX
+        camera_node=main_gun_camera_node-SUFFIX
+        on_hide=macro_playback
+            _add_weapon_closeup_scheduler
+            context=weapon_closeup
+            RESOURCE:M4A1;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -58,16 +77,14 @@ macro_begin add_weapon_beretta92;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
-macro_end;
-
-macro_begin _add_weapon_frag_grenade_closeup_scheduler;
-    execute_in_physics_thread macro_playback _add_weapon_frag_grenade_closeup context=weapon_closeup;
-macro_end;
-
-macro_begin _add_weapon_frag_grenade_closeup;
-    delete_root_nodes regex=^closeup_node$;
-    root_node_instance type=dynamic name=closeup_node position=0 0 -10 rotation=0 0 0 scale=1;
-    renderable_instance name=frag_grenade-inst node=closeup_node resource=frag_grenade;
+    clear_node_hider node=main_gun_node-SUFFIX;
+    set_node_hider
+        node_to_hide=main_gun_node-SUFFIX
+        camera_node=main_gun_camera_node-SUFFIX
+        on_hide=macro_playback
+            _add_weapon_closeup_scheduler
+            context=weapon_closeup
+            RESOURCE:Beretta92;
 macro_end;
 
 macro_begin add_weapon_frag_grenade;
@@ -100,8 +117,9 @@ macro_begin add_weapon_frag_grenade;
         node_to_hide=main_gun_node-SUFFIX
         camera_node=main_gun_camera_node-SUFFIX
         on_hide=macro_playback
-            _add_weapon_frag_grenade_closeup_scheduler
-            context=weapon_closeup;
+            _add_weapon_closeup_scheduler
+            context=weapon_closeup
+            RESOURCE:frag_grenade;
 macro_end;
 
 macro_begin add_weapon_m72_law;
@@ -129,6 +147,14 @@ macro_begin add_weapon_m72_law;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
+    clear_node_hider node=main_gun_node-SUFFIX;
+    set_node_hider
+        node_to_hide=main_gun_node-SUFFIX
+        camera_node=main_gun_camera_node-SUFFIX
+        on_hide=macro_playback
+            _add_weapon_closeup_scheduler
+            context=weapon_closeup
+            RESOURCE:m72_law;
 macro_end;
 
 macro_begin create_none_weapon;

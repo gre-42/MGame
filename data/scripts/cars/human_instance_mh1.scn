@@ -162,7 +162,9 @@ macro_end;
 macro_begin create_player_human_externals_mh1;
     IF_PC macro_playback create_human_key_bindings
         SUFFIX:SUFFIX;
-    IF_PC macro_playback create_human_cameras
+    macro_playback create_human_cameras_persistent
+        SUFFIX:SUFFIX;
+    IF_PC macro_playback create_human_cameras_pc
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
     IF_PC hud_image
