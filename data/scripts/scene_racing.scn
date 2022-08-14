@@ -353,7 +353,7 @@ macro_begin _setup_weapon_closeup;
         z_order=1
         position=0.2 0.4
         size=1 1
-        focus_mask=scene
+        focus_mask=always
         submenus=;
 macro_end;
 
