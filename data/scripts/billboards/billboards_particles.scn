@@ -1,8 +1,24 @@
 square_resource
-    name=explosion_01
+    name=small_explosion
     texture_filename=#explosion_01
-    min=-2 -2
-    max=2 2
+    min=-0.5 -0.5
+    max=0.5 0.5
+    center_distances=0 501
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=none
+    ambience=2 2 2
+    blend_mode=continuous
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    aggregate_mode=none
+    transformation_mode=position_lookat
+    number_of_frames=16;
+
+square_resource
+    name=large_explosion
+    texture_filename=#explosion_01
+    min=-5 -5
+    max=5 5
     center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none

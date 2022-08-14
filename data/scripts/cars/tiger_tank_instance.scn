@@ -58,6 +58,8 @@ macro_begin create_tiger_tank_physics;
         cool_down=10
         bullet_renderable=tank_bullet_renderable
         bullet_hitbox=tank_bullet_hitbox
+        bullet_explosion_resource=large_explosion
+        bullet_explosion_animation_time=0.6
         bullet_feels_gravity=1
         bullet_mass=20
         bullet_velocity=900

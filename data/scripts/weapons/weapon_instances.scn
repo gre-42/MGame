@@ -39,6 +39,8 @@ macro_begin add_weapon_m4a1;
         cool_down=COOL_DOWN
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
+        bullet_explosion_resource=small_explosion
+        bullet_explosion_animation_time=0.3
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=20
         bullet_velocity=BULLET_VELOCITY
@@ -77,6 +79,8 @@ macro_begin add_weapon_beretta92;
         cool_down=COOL_DOWN
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
+        bullet_explosion_resource=small_explosion
+        bullet_explosion_animation_time=0.3
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=20
         bullet_velocity=BULLET_VELOCITY
@@ -115,6 +119,8 @@ macro_begin add_weapon_frag_grenade;
         cool_down=COOL_DOWN
         bullet_renderable=frag_grenade
         bullet_hitbox=grenade_hitbox
+        bullet_explosion_resource=large_explosion
+        bullet_explosion_animation_time=0.6
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=0.5
         bullet_velocity=BULLET_VELOCITY
@@ -153,6 +159,8 @@ macro_begin add_weapon_m72_law;
         cool_down=COOL_DOWN
         bullet_renderable=m72_law_rocket
         bullet_hitbox=tank_bullet_hitbox
+        bullet_explosion_resource=large_explosion
+        bullet_explosion_animation_time=0.6
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=10
         bullet_velocity=BULLET_VELOCITY
@@ -186,8 +194,10 @@ macro_begin create_none_weapon;
         parent_rigid_body_node=PARENT_RIGID_BODY_NODE
         punch_angle_node=main_gun_punch_angle_node-SUFFIX
         cool_down=INFINITY
-        bullet_renderable=tank_bullet_renderable
-        bullet_hitbox=tank_bullet_hitbox
+        bullet_renderable=_
+        bullet_hitbox=_
+        bullet_explosion_resource=_
+        bullet_explosion_animation_time=NAN
         bullet_feels_gravity=0
         bullet_mass=20
         bullet_velocity=0
