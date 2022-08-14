@@ -12,9 +12,12 @@ macro_begin _add_weapon_closeup_scheduler;
 macro_end;
 
 macro_begin _add_weapon_closeup;
-    delete_root_nodes regex=^closeup_node$;
-    root_node_instance type=dynamic name=closeup_node position=0 0 -3 rotation=0 0 0 scale=5;
+    delete_root_nodes regex=^(closeup_node|light_node)$;
+    root_node_instance type=dynamic name=closeup_node position=0 0 -3 rotation=20 20 0 scale=2;
     renderable_instance name=closeup-inst node=closeup_node resource=RESOURCE;
+
+    root_node_instance type=dynamic name=light_node position=-3 3 0 rotation=-45 0 0 scale=1;
+    light_without_shadow node=light_node ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1;
 macro_end;
 
 macro_begin add_weapon_m4a1;

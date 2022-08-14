@@ -348,11 +348,11 @@ macro_end;
 
 macro_begin _setup_weapon_closeup;
     macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
-    scene_to_pixel_region
+    scene_to_percentage_region
         target_scene=primary_scene
         z_order=1
-        position=20 80
-        size=600 350
+        position=0.2 0.4
+        size=1 1
         focus_mask=scene
         submenus=;
 macro_end;
