@@ -1,7 +1,22 @@
 # square_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
-blending_x_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
-blending_x_resource name=tree texture_filename=textures/00210_Baeume_Key_LOW-cropped.png min=-5 0 max=5 10;
-blending_x_resource name=tree2 texture_filename=textures/pine_norm_gr1.png min=-5 0 max=5 10;
+blending_x_resource
+    name=grass
+    texture_filename=textures/grass.png
+    min=-2 0
+    max=2 4
+    aggregate_mode=sorted;
+blending_x_resource
+    name=tree
+    texture_filename=textures/00210_Baeume_Key_LOW-cropped.png
+    min=-5 0
+    max=5 10
+    aggregate_mode=sorted;
+blending_x_resource
+    name=tree2
+    texture_filename=textures/pine_norm_gr1.png
+    min=-5 0
+    max=5 10
+    aggregate_mode=sorted;
 
 # binary_x_resource name=bgrass-large texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassG.png min=-1.6 0 max=1.6 2.4 ambience=2 2 2 is_small=1;
 # # binary_x_resource name=bgrass-large2 texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassW.png min=-2 0 max=2 3 ambience=1.85 2 1.07 is_small=1;

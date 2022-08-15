@@ -39,8 +39,8 @@ macro_begin add_weapon_m4a1;
         cool_down=COOL_DOWN
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
-        bullet_explosion_resource=small_explosion
-        bullet_explosion_animation_time=0.3
+        bullet_explosion_resource=medium_explosion_cross
+        bullet_explosion_animation_time=0.1
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=20
         bullet_velocity=BULLET_VELOCITY
@@ -79,8 +79,8 @@ macro_begin add_weapon_beretta92;
         cool_down=COOL_DOWN
         bullet_renderable=
         bullet_hitbox=tank_bullet_hitbox
-        bullet_explosion_resource=small_explosion
-        bullet_explosion_animation_time=0.3
+        bullet_explosion_resource=medium_explosion_cross
+        bullet_explosion_animation_time=0.1
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=20
         bullet_velocity=BULLET_VELOCITY
@@ -119,7 +119,7 @@ macro_begin add_weapon_frag_grenade;
         cool_down=COOL_DOWN
         bullet_renderable=frag_grenade
         bullet_hitbox=grenade_hitbox
-        bullet_explosion_resource=large_explosion
+        bullet_explosion_resource=large_explosion_cross
         bullet_explosion_animation_time=0.6
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=0.5
@@ -159,7 +159,7 @@ macro_begin add_weapon_m72_law;
         cool_down=COOL_DOWN
         bullet_renderable=m72_law_rocket
         bullet_hitbox=tank_bullet_hitbox
-        bullet_explosion_resource=large_explosion
+        bullet_explosion_resource=large_explosion_cross
         bullet_explosion_animation_time=0.6
         bullet_feels_gravity=BULLET_FEELS_GRAVITY
         bullet_mass=10

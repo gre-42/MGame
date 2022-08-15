@@ -4,7 +4,7 @@ square_resource
     min=-0.5 -0.5
     max=0.5 0.5
     center_distances=0 501
-    occluded_pass=lightmap_black_global_static
+    occluded_pass=none
     occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
@@ -20,7 +20,7 @@ square_resource
     min=-5 -5
     max=5 5
     center_distances=0 501
-    occluded_pass=lightmap_black_global_static
+    occluded_pass=none
     occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
@@ -29,3 +29,35 @@ square_resource
     aggregate_mode=none
     transformation_mode=position_lookat
     number_of_frames=16;
+
+blending_x_resource
+    name=large_explosion_cross
+    texture_filename=#explosion_01
+    min=-5 -5
+    max=5 5
+    aggregate_mode=none
+    number_of_frames=16;
+
+square_resource
+    name=medium_explosion
+    texture_filename=#explosion_orange_brown_1
+    min=-0.5 -0.5
+    max=0.5 0.5
+    center_distances=0 501
+    occluded_pass=none
+    occluder_pass=none
+    ambience=2 2 2
+    blend_mode=continuous
+    alpha_distances=0 0 INFINITY INFINITY
+    cull_faces=1
+    aggregate_mode=none
+    transformation_mode=position_lookat
+    number_of_frames=4;
+
+blending_x_resource
+    name=medium_explosion_cross
+    texture_filename=#explosion_gray
+    min=-0.5 -0.5
+    max=0.5 0.5
+    aggregate_mode=none
+    number_of_frames=4;
