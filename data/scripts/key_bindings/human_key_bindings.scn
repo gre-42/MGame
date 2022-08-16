@@ -1,12 +1,17 @@
 macro_begin create_human_key_bindings;
     avatar_controller_idle_binding
         node=human_node-SUFFIX;
-    abs_key_binding
+    # abs_key_binding
         node=human_node-SUFFIX
         key=LEFT_SHIFT
         gamepad_button=B
         force=0 2000 0
         position=0 0 0;
+    abs_key_binding
+        node=human_node-SUFFIX
+        key=LEFT_SHIFT
+        gamepad_button=B
+        wants_to_jump=1;
     avatar_controller_key_binding
         node=human_node-SUFFIX
         key=A

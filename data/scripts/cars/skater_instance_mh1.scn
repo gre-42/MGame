@@ -66,6 +66,8 @@ macro_begin create_skating_mh1;
         node=skater_node-SUFFIX
         position=0 -0.6 0;
 
+    IF_WITH_PHYSICS set_jump_strength node=skater_node-SUFFIX value=0.25;
+
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=skater_node-SUFFIX name=skateboard_node-SUFFIX   position=0 -0.5 0 rotation=0 0 0 scale=1;
     IF_WITH_GRAPHICS set_skater_style_updater
         skater_node=skater_node-SUFFIX
