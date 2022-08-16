@@ -82,14 +82,16 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         on_init=,
         on_change=macro_playback _clear_selection_ids_and_reload,
         parameters=
-            name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#;
+            name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
+            name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
 macro_end;
 
 macro_begin _setup_menu_primary_scene_rest;
     IF_DEVEL IF_GAME_MODE_RALLY macro_playback scene_selector_rally_devel;
-    IF_DEVEL IF_GAME_MODE_TD macro_playback scene_selector_td;
+    IF_DEVEL IF_GAME_MODE_TD macro_playback scene_selector_td_devel;
     IF_DEVEL IF_GAME_MODE_SKATING macro_playback scene_selector_skating;
     IF_RELEASE IF_GAME_MODE_RALLY macro_playback scene_selector_rally_release;
+    IF_RELEASE IF_GAME_MODE_TD macro_playback scene_selector_td_release;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
 

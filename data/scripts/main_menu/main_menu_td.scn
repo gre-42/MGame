@@ -1,4 +1,4 @@
-macro_begin scene_selector_td;
+macro_begin scene_selector_td_devel;
     scene_selector
         id=scene_selector
         title=Scene
@@ -7,10 +7,22 @@ macro_begin scene_selector_td;
         font_height=32
         line_distance=32
         scene_files=
-            name=WIP: Team deathmatch arena value=levels/arena/scene_arena_humans.scn
+            name=Team deathmatch arena value=levels/arena/scene_arena_humans.scn
             name=WIP: Team deathmatch arena (PODBot) value=levels/arena/scene_arena_humans_pod_bot.scn
             name=WIP: Tank FPS value=levels/tank_fps/scene_tank_fps.scn
             name=WIP: Tank FPS 2 value=levels/jb_arena/scene_jb_arena.scn
             name=WIP: Tank FPS 2 AH-64 value=levels/jb_arena_AH_64/scene_jb_arena_AH_64.scn
             name=WIP: Aircraft carrier 0 value=levels/aircraft_carrier0/scene_aircraft_carrier0.scn;
+macro_end;
+
+macro_begin scene_selector_td_release;
+    scene_selector
+        id=scene_selector
+        title=Scene
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=20 80
+        font_height=32
+        line_distance=32
+        scene_files=
+            name=Team deathmatch arena value=levels/arena/scene_arena_humans.scn;
 macro_end;
