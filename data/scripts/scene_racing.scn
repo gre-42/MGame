@@ -347,7 +347,11 @@ macro_begin _setup_new_round;
 macro_end;
 
 macro_begin _setup_weapon_closeup;
+    root_node_instance type=dynamic name=light_node position=-3 3 0 rotation=-45 0 0 scale=1;
+    light_without_shadow node=light_node ambience=0.5 0.5 0.5 diffusivity=1 1 1 specularity=1 1 1;
+
     macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
+
     scene_to_percentage_region
         target_scene=primary_scene
         z_order=1

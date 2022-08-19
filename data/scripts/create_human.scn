@@ -11,7 +11,7 @@ macro_begin create_human;
         diffusivity=R G B;
     IF_HUMAN_STYLE set_animation_state
         node=human_node-SUFFIX
-        animation_name=xonotic_pyria.idle
+        animation_loop_name=xonotic_pyria.idle
         animation_loop_begin=0
         animation_loop_end=full
         animation_loop_time=0;

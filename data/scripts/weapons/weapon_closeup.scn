@@ -1,0 +1,18 @@
+macro_begin _delete_weapon_closeup_nodes;
+    delete_root_nodes regex=^weapon_closeup_node$;
+macro_end;
+
+macro_begin _add_weapon_closeup_scheduler_on_hide;
+    execute_in_physics_thread macro_playback _add_weapon_closeup
+        RESOURCE:RESOURCE;
+macro_end;
+
+macro_begin _add_weapon_closeup_scheduler_on_destroy;
+    execute_in_physics_thread macro_playback _delete_weapon_closeup_nodes;
+macro_end;
+
+macro_begin _add_weapon_closeup;
+    macro_playback _delete_weapon_closeup_nodes;
+    root_node_instance type=dynamic name=weapon_closeup_node position=0 0 -3 rotation=20 20 0 scale=2;
+    renderable_instance name=closeup-inst node=weapon_closeup_node resource=RESOURCE;
+macro_end;

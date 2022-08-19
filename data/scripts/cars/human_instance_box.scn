@@ -8,16 +8,16 @@ macro_begin create_human_box;
     rigid_cuboid node=human_node-SUFFIX hitboxes=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human-SUFFIX;
 
     gun
-        node=main_gun_end_node-SUFFIX
-        parent_rigid_body_node=human_node-SUFFIX
-        cool_down=0.5
-        bullet_renderable=tank_bullet_renderable
-        bullet_hitboxes=tank_bullet_hitbox
-        bullet_feels_gravity=1
-        bullet_mass=20
-        bullet_velocity=900
-        bullet_lifetime=20
-        bullet_damage=10
+        node=main_gun_end_node-SUFFIX,
+        parent_rigid_body_node=human_node-SUFFIX,
+        cool_down=0.5,
+        bullet_renderable=tank_bullet_renderable,
+        bullet_hitboxes=tank_bullet_hitbox,
+        bullet_feels_gravity=1,
+        bullet_mass=20,
+        bullet_velocity=900,
+        bullet_lifetime=20,
+        bullet_damage=10,
         size=2.4 2.4 20;
 
     yaw_pitch_look_at_nodes

@@ -52,7 +52,7 @@ macro_begin create_mh1;
     IF_WITH_GUN set_inventory_capacity
         inventory_node=human_node-SUFFIX
         item_type=m72_law_rocket
-        capacity=10;
+        capacity=2;
     set_inventory_capacity
         inventory_node=human_node-SUFFIX
         item_type=none_weapon_ammo_type

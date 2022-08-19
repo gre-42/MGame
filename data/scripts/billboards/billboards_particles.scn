@@ -39,10 +39,10 @@ blending_x_resource
     number_of_frames=16;
 
 square_resource
-    name=medium_explosion
+    name=muzzle_flash_0
     texture_filename=#explosion_orange_brown_1
-    min=-0.5 -0.5
-    max=0.5 0.5
+    min=-0.15 -0.15
+    max=0.15 0.15
     center_distances=0 501
     occluded_pass=none
     occluder_pass=none
