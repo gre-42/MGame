@@ -160,6 +160,9 @@ macro_begin add_weapon_m72_law;
         bullet_damage=BULLET_DAMAGE,
         bullet_damage_radius=BULLET_DAMAGE_RADIUS,
         bullet_size=2.4 2.4 20,
+        bullet_trail_resource=smoke,
+        bullet_trail_dt=0.005,
+        bullet_trail_animation_time=0.5,
         ammo_type=AMMO_TYPE,
         punch_angle_idle_std=0.1,
         punch_angle_shoot_std=0.3;
