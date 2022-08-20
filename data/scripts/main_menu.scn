@@ -95,10 +95,6 @@ macro_begin _setup_menu_primary_scene_rest;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
 
-    pause_on_lose_focus
-        focus_mask=scene
-        submenus=;
-
     # clear_parameters;
 
     IF_GAME_MODE_RALLY macro_playback parameter_setters_rally IF_DEVEL:IF_DEVEL;

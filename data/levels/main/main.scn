@@ -3,6 +3,8 @@ include ../../scripts/include_all.scn;
 create_scene
     name=primary_scene
     z_order=0
+    focus_mask=scene
+    submenus=
     fly=0
     rotate=0
     print_gamepad_buttons=0

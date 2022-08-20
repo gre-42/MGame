@@ -135,7 +135,8 @@ macro_begin create_mh1;
             SUFFIX:SUFFIX;
     IF_WITH_GUN set_desired_weapon
         cycle_node=human_node-SUFFIX
-        entry_name=m4a1;
+        entry_name=m4a1
+        equip_instantly=0;
     
     macro_playback create_none_weapon
         PARENT_RIGID_BODY_NODE:human_node-SUFFIX

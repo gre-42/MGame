@@ -1,8 +1,4 @@
 macro_begin _setup_menu_showroom_rally;
-    pause_on_lose_focus
-        focus_mask=menu
-        submenus=car_selector car_color_selector;
-
     # scene_to_texture
         texture_name=scene
         update=always

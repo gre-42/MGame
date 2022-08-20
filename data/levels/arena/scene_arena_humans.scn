@@ -56,3 +56,6 @@ macro_playback setup_teams context=primary_scene
     TEAMS_SPAWN_POINTS_RESOURCE:osm_map
     TEAMS_WAY_POINTS_RESOURCE:osm_map;
 macro_playback create_main_menu;
+macro_playback
+    setup_new_round
+    context=primary_scene;

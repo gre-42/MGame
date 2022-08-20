@@ -610,6 +610,8 @@ macro_playback _scene_tank_load_resources;
 create_scene
     name=primary_scene
     z_order=0
+    focus_mask=scene
+    submenus=
     fly=PRIMARY_SCENE_FLY
     rotate=PRIMARY_SCENE_ROTATE
     print_gamepad_buttons=PRIMARY_SCENE_PRINT_GAMEPAD_BUTTONS

@@ -90,6 +90,8 @@ macro_begin create_showroom_scene;
     create_scene
         name=showroom
         z_order=0
+        focus_mask=menu
+        submenus=car_selector car_color_selector
         fly=0
         rotate=0
         print_gamepad_buttons=0
