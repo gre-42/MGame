@@ -336,7 +336,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
     IF_CREATE_PC_CAR create_externals player=you mode=pc;
 macro_end;
 
-macro_begin setup_new_round;
+macro_begin _setup_new_round;
     set_focuses scene countdown_pending;
     delete_root_nodes regex=^(car|human)_node_playback_track\d+$;
     delete_root_nodes regex=^(car|human)_node_playback_winner\d+$;
@@ -388,7 +388,7 @@ macro_begin scene_racing_static;
         clear_mode=PRIMARY_SCENE_CLEAR_MODE
         max_tracks=5
         setup_new_round=macro_playback
-            setup_new_round
+            _setup_new_round
             context=primary_scene;
     
     create_scene
@@ -449,8 +449,8 @@ macro_begin scene_racing_static;
 macro_end;
 
 macro_begin generic_scene_racing_dynamic;
-    IF_UPDATE_EXISTING_SCENE macro_playback
-        setup_new_round
+    macro_playback
+        _setup_new_round
         context=primary_scene;
     macro_playback
         _scene_racing_instantiate_transient_objects

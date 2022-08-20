@@ -26,7 +26,6 @@ macro_playback scene_racing_static
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
-        IF_UPDATE_EXISTING_SCENE:IF_UPDATE_EXISTING_SCENE
         IF_CREATE_PC_CAR:#
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
@@ -44,9 +43,8 @@ macro_begin instantiate_transient_objects;
         IF_BURN_IN:#;
 macro_end;
 
-macro_playback instantiate_transient_objects
-    IF_UPDATE_EXISTING_SCENE:#;
 macro_playback setup_teams_3_4_cars_ramming context=primary_scene
     TEAMS_SPAWN_POINTS_RESOURCE:osm_map
     TEAMS_WAY_POINTS_RESOURCE:osm_map;
+macro_playback instantiate_transient_objects;
 macro_playback create_main_menu;
