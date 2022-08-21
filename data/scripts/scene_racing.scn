@@ -361,6 +361,8 @@ macro_begin _setup_weapon_closeup;
 macro_end;
 
 macro_begin scene_racing_static;
+    macro_playback create_scene_loading;
+
     macro_playback OSM_MAP_RESOURCE
         GAME_LEVEL:GAME_LEVEL
         HEIGHTMAP:HEIGHTMAP
