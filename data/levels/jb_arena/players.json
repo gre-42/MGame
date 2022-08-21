@@ -13,7 +13,11 @@
                 "can_drive": true,
                 "can_aim": true,
                 "can_shoot": true,
-                "velocity_error_std": 1
+                "can_select_best_weapon": true,
+                "velocity_error_std": 1,
+                "yaw_error_std": 0,
+                "pitch_error_std": 0,
+                "error_alpha": 0.002
             },
             "user": {
                 "can_drive": false,

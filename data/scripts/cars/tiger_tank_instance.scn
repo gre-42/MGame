@@ -51,23 +51,28 @@ macro_begin create_tiger_tank_physics;
         item_type=tiger_tank_ammo
         capacity=2000;
 
+    add_to_inventory
+        inventory_node=car_node-SUFFIX
+        item_type=tiger_tank_ammo
+        amount=500;
+
     gun
-        node=main_gun_end_node-SUFFIX
-        parent_rigid_body_node=car_node-SUFFIX
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX
-        cool_down=10
-        bullet_renderable=tank_bullet_renderable
-        bullet_hitbox=tank_bullet_hitbox
-        bullet_explosion_resource=large_explosion
-        bullet_explosion_animation_time=0.6
-        bullet_feels_gravity=1
-        bullet_mass=20
-        bullet_velocity=900
-        bullet_lifetime=20
-        bullet_damage=100
-        bullet_size=2.4 2.4 20
-        ammo_type=tiger_tank_ammo
-        punch_angle_idle_std=0.01
+        node=main_gun_end_node-SUFFIX,
+        parent_rigid_body_node=car_node-SUFFIX,
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
+        cool_down=10,
+        bullet_renderable=tank_bullet_renderable,
+        bullet_hitbox=tank_bullet_hitbox,
+        bullet_explosion_resource=large_explosion,
+        bullet_explosion_animation_time=0.6,
+        bullet_feels_gravity=1,
+        bullet_mass=20,
+        bullet_velocity=900,
+        bullet_lifetime=20,
+        bullet_damage=100,
+        bullet_size=2.4 2.4 20,
+        ammo_type=tiger_tank_ammo,
+        punch_angle_idle_std=0.01,
         punch_angle_shoot_std=0.1;
 
     # visual_node_status_3rd
@@ -160,8 +165,32 @@ macro_begin create_tiger_tank;
     IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:SUFFIX DECIMATE:DECIMATE;
     IF_WITH_GRAPHICS macro_playback create_tiger_tank_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d3-SUFFIX DECIMATE:_d3;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:56e3     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0 PLAYER_NAME:PLAYER_NAME TEAM:TEAM;
+    IF_WITH_PHYSICS IF_STATIC macro_playback create_tiger_tank_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:INFINITY
+        COLLIDABLE_MODE:small_static
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VELOCITY_ERROR_STD:VELOCITY_ERROR_STD
+        YAW_ERROR_STD:YAW_ERROR_STD
+        PITCH_ERROR_STD:PITCH_ERROR_STD
+        ERROR_ALPHA:ERROR_ALPHA;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_tiger_tank_physics
+        IF_RACING:IF_RACING
+        IF_RALLY:IF_RALLY
+        SUFFIX:SUFFIX
+        MASS:56e3
+        COLLIDABLE_MODE:small_moving
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        PLAYER_NAME:PLAYER_NAME
+        TEAM:TEAM
+        VELOCITY_ERROR_STD:VELOCITY_ERROR_STD
+        YAW_ERROR_STD:YAW_ERROR_STD
+        PITCH_ERROR_STD:PITCH_ERROR_STD
+        ERROR_ALPHA:ERROR_ALPHA;
 macro_end;
 
 macro_begin create_player_car_externals_tiger_tank;

@@ -53,12 +53,17 @@ macro_begin create_AH_64_physics;
         velocity_error_std=VELOCITY_ERROR_STD
         yaw_error_std=YAW_ERROR_STD
         pitch_error_std=PITCH_ERROR_STD
-        error_alpha=0.002;
+        error_alpha=ERROR_ALPHA;
 
     set_inventory_capacity
         inventory_node=car_node-SUFFIX
         item_type=ah_64_ammo
         capacity=2000;
+    
+    add_to_inventory
+        inventory_node=car_node-SUFFIX
+        item_type=ah_64_ammo
+        amount=1500;
 
     gun
         node=main_gun_end_node-SUFFIX,
@@ -72,7 +77,6 @@ macro_begin create_AH_64_physics;
         bullet_feels_gravity=1,
         bullet_mass=20,
         bullet_velocity=900,
-        bullet_feels_gravity=1,
         bullet_lifetime=20,
         bullet_damage=10,
         bullet_size=2.4 2.4 20,
