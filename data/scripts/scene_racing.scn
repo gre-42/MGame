@@ -336,13 +336,18 @@ macro_begin _scene_racing_instantiate_transient_objects;
     IF_CREATE_PC_CAR create_externals player=you mode=pc;
 macro_end;
 
-macro_begin _setup_new_round;
+macro_begin __setup_new_round;
     set_focuses scene countdown_pending;
     delete_root_nodes regex=^(car|human)_node_playback_track\d+$;
     delete_root_nodes regex=^(car|human)_node_playback_winner\d+$;
     delete_root_nodes regex=^(bullet|explosion)-\d+$;
     delete_scheduled_advance_times;
     respawn_all_players;
+    invalidate_aggregate_renderers;
+macro_end;
+
+macro_begin _setup_new_round;
+    with_delete_node_mutex macro_playback __setup_new_round;
 macro_end;
 
 macro_begin _setup_weapon_closeup;
