@@ -594,7 +594,7 @@ macro_begin _scene_tank_instantiate;
 
     countdown
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=300 300
+        position=NAN NAN
         font_height=64
         line_distance=64
         nseconds=5;
