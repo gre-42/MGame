@@ -2,7 +2,7 @@ include main_menu/main_menu_rally.scn;
 include main_menu/main_menu_skating.scn;
 include main_menu/main_menu_td.scn;
 
-macro_begin reload_transient_objects;
+macro_begin _reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
@@ -54,7 +54,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         font_height=32
         line_distance=32
         default=0
-        reload_transient_objects=execute_in_physics_thread macro_playback reload_transient_objects;
+        reload_transient_objects=execute_in_physics_thread with_delete_node_mutex macro_playback _reload_transient_objects;
 
     IF_DEVEL parameter_setter
         id=game_mode_selector,
