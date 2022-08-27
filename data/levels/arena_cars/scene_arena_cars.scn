@@ -1,9 +1,8 @@
 include ../../scripts/include_all.scn;
-include osm_resource_arena.scn;
+include ../arena/osm_resource_arena.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
-    IF_PC_PLAYER_PLAYBACK:#
     SCORE_BOARD:21
     OSM_MAP_RESOURCE:osm_resource_arena
     IF_HAS_OVERLAY:#
@@ -23,15 +22,11 @@ macro_playback scene_racing_static
     SUN_RIGHT:500
     SUN_BOTTOM:-250
     SUN_TOP:250
-    SOFT_LIGHT_TEXTURE:textures/soft_light.png
-    SKYBOX:skybox
-    IF_DAY:
-    IF_NIGHT:#;
+    SOFT_LIGHT_TEXTURE:textures/soft_light.png;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:#
-        IF_PC_PLAYER_PLAYBACK:#
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
@@ -48,7 +43,7 @@ macro_begin instantiate_transient_objects;
         IF_BURN_IN:#;
 macro_end;
 
-macro_playback setup_teams_3_4_humans_pod_bot context=primary_scene
+macro_playback setup_teams_3_4_cars_ramming context=primary_scene
     TEAMS_SPAWN_POINTS_RESOURCE:osm_map
     TEAMS_WAY_POINTS_RESOURCE:osm_map;
 macro_playback instantiate_transient_objects;
