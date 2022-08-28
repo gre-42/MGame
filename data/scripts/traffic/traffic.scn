@@ -38,7 +38,11 @@ macro_begin traffic.create_human;
         IF_SHADOW:#
         IF_HUMAN_STYLE:
         R:-1 G:-1 B:-1
-        IF_PLAYER:;
+        IF_PLAYER:
+        VELOCITY_ERROR_STD:0
+        YAW_ERROR_STD:0
+        PITCH_ERROR_STD:0
+        ERROR_ALPHA:0.002;
     create_externals player=PLAYER_NAME mode=npc;
 macro_end;
 

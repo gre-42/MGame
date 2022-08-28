@@ -61,3 +61,5 @@ macro_end;
 macro_playback instantiate_transient_objects;
 macro_playback setup_traffic_wo_pedestrians context=primary_scene;
 macro_playback create_main_menu;
+macro_playback preload context=primary_scene
+    RESOURCES_JSON:__DIR__/resources.json;
