@@ -127,7 +127,8 @@ macro_end;
 
 macro_begin create_main_menu;
     macro_playback _setup_menu_primary_scene_game_mode_selector context=primary_scene;
-    !IF_GAME_MODE_TD macro_playback create_showroom_scene;
+    IF_GAME_MODE_RALLY macro_playback create_showroom_scene_rally;
+    IF_GAME_MODE_SKATING macro_playback create_showroom_scene_skating;
     IF_GAME_MODE_RALLY macro_playback _setup_menu_showroom_rally context=showroom;
     IF_GAME_MODE_SKATING macro_playback _setup_menu_showroom_skating context=showroom;
     macro_playback _setup_menu_primary_scene_rest context=primary_scene;

@@ -32,10 +32,12 @@ include models/models_vegetation.scn;
 
 include lights.scn;
 include main_menu.scn;
-include scene_loading.scn;
-include scene_minimal.scn;
-include scene_racing.scn;
-include showroom.scn;
+include scenes/scene_loading.scn;
+include scenes/scene_minimal.scn;
+include scenes/scene_racing.scn;
+include scenes/showroom.scn;
+include scenes/showroom_rally.scn;
+include scenes/showroom_skating.scn;
 include preload.scn;
 include teams/teams.scn;
 include traffic/traffic.scn;
