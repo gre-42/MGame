@@ -96,4 +96,11 @@ macro_begin create_player_car_externals;
         position=50 40
         font_height=24
         line_distance=24;
+    
+    IF_PC visual_player_bullet_count
+        player=PLAYER_NAME
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-100 -40
+        font_height=24
+        line_distance=24;
 macro_end;

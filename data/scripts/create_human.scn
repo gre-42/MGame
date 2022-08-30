@@ -57,4 +57,33 @@ macro_begin create_player_human_externals;
         IF_WITH_GUN:IF_WITH_GUN
         PLAYER_NAME:PLAYER_NAME
         IF_PC:IF_PC;
+    IF_PC macro_playback create_human_key_bindings
+        SUFFIX:SUFFIX;
+    macro_playback create_human_cameras_persistent
+        SUFFIX:SUFFIX;
+    IF_PC macro_playback create_human_cameras_pc
+        SUFFIX:SUFFIX
+        PLAYER_NAME:PLAYER_NAME;
+    IF_PC hud_image
+        camera_node=main_gun_camera_node-SUFFIX
+        filename=textures/hud/crosshair.png
+        update=once
+        center=0 0
+        size=0.05 0.05;
+    IF_PC visual_player_bullet_count
+        player=PLAYER_NAME
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=-100 -40
+        font_height=24
+        line_distance=24;
+    IF_WITH_GUN player_set_aiming_gun
+        player_name=PLAYER_NAME
+        yaw_node=human_node-SUFFIX
+        gun_node=main_gun_end_node-SUFFIX;
+    player_set_vehicle_control_parameters
+        player_name=PLAYER_NAME
+        surface_power_forward=INFINITY
+        surface_power_backward=-INFINITY
+        max_tire_angle=0
+        tire_angle_pid=0 0 0 0;
 macro_end;

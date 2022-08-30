@@ -163,29 +163,7 @@ macro_begin create_mh1;
 macro_end;
 
 macro_begin create_player_human_externals_mh1;
-    IF_PC macro_playback create_human_key_bindings
-        SUFFIX:SUFFIX;
-    macro_playback create_human_cameras_persistent
-        SUFFIX:SUFFIX;
-    IF_PC macro_playback create_human_cameras_pc
-        SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
-    IF_PC hud_image
-        camera_node=main_gun_camera_node-SUFFIX
-        filename=textures/hud/crosshair.png
-        update=once
-        center=0 0
-        size=0.05 0.05;
-    IF_WITH_GUN player_set_aiming_gun
-        player_name=PLAYER_NAME
-        yaw_node=human_node-SUFFIX
-        gun_node=main_gun_end_node-SUFFIX;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
-        max_tire_angle=0
-        tire_angle_pid=0 0 0 0;
+    # Do nothing;
 macro_end;
 
 macro_begin add_attached_light_mh1;
