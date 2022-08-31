@@ -343,6 +343,7 @@ macro_begin __setup_new_round;
     delete_root_nodes regex=^(bullet|explosion)-\d+$;
     delete_scheduled_advance_times;
     respawn_all_players;
+    reset_supply_depot_cooldowns;
     invalidate_aggregate_renderers;
 macro_end;
 
