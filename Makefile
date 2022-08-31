@@ -22,6 +22,12 @@ build:
 		make -C Mlib build \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
+build_clang:
+	BUILD_PREFIX=$(build_prefix) \
+	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
+		make -C Mlib build_clang \
+			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+
 package:
 	@echo "OS Type: $(ostype)"
 	@echo "Platform dir: $(platform_dir)"
