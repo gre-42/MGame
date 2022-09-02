@@ -32,4 +32,4 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)
 
 ### Team deathmatch 0
-![Screenshot-D0-2022-08-16](media/Screenshot-D0-2022-08-16.png)
+![Screenshot-D0-2022-09-02](media/Screenshot-D0-2022-09-02.png)
