@@ -360,7 +360,7 @@ macro_begin _setup_weapon_closeup;
     scene_to_percentage_region
         target_scene=primary_scene
         z_order=1
-        position=0.2 0.4
+        position=0.1 0.5
         size=1 1
         focus_mask=always
         submenus=;

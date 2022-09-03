@@ -13,6 +13,6 @@ macro_end;
 
 macro_begin _add_weapon_closeup;
     macro_playback _delete_weapon_closeup_nodes;
-    root_node_instance type=dynamic name=weapon_closeup_node position=0 0 -3 rotation=20 20 0 scale=2;
+    root_node_instance type=dynamic name=weapon_closeup_node position=0 0 -3 rotation=20 10 0 scale=2;
     renderable_instance name=closeup-inst node=weapon_closeup_node resource=RESOURCE;
 macro_end;

@@ -2,8 +2,8 @@ include weapon_closeup.scn;
 include muzzle_flash_closeup.scn;
 
 macro_begin try_delete_weapon;
-    # Delete gun renderable, but keep node "main_gun_node";
-    clear_renderable_instance node=main_gun_node-SUFFIX name=main_gun_node-inst;
+    # Delete gun renderable, but keep node "main_gun_node_visual";
+    clear_renderable_instance node=main_gun_node_visual-SUFFIX name=main_gun_node_visual-inst;
     # Send "node destroyed" to the "gun"-object and remove the gun from the node;
     # "destroyed" will let the "gun" schedule itself for deletion;
     clear_absolute_observer_and_notify_destroyed node=main_gun_end_node-SUFFIX;
@@ -11,8 +11,8 @@ macro_end;
 
 macro_begin add_weapon_m4a1;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
+    # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
+    renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=M4A1;
     gun
         node=main_gun_end_node-SUFFIX,
         parent_rigid_body_node=human_node-SUFFIX,
@@ -47,10 +47,10 @@ macro_begin add_weapon_m4a1;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
-    clear_node_hider node=main_gun_node-SUFFIX;
+    clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
-        node_to_hide=main_gun_node-SUFFIX,
-        camera_node=main_gun_camera_node-SUFFIX,
+        node_to_hide=main_gun_node_visual-SUFFIX,
+        camera_node=human_head_node-SUFFIX,
         on_hide=macro_playback
             _add_weapon_closeup_scheduler_on_hide
             context=weapon_closeup
@@ -62,8 +62,8 @@ macro_end;
 
 macro_begin add_weapon_beretta92;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=Beretta92;
+    # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
+    renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=Beretta92;
     gun
         node=main_gun_end_node-SUFFIX,
         parent_rigid_body_node=human_node-SUFFIX,
@@ -87,10 +87,10 @@ macro_begin add_weapon_beretta92;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
-    clear_node_hider node=main_gun_node-SUFFIX;
+    clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
-        node_to_hide=main_gun_node-SUFFIX,
-        camera_node=main_gun_camera_node-SUFFIX,
+        node_to_hide=main_gun_node_visual-SUFFIX,
+        camera_node=human_head_node-SUFFIX,
         on_hide=macro_playback
             _add_weapon_closeup_scheduler_on_hide
             context=weapon_closeup
@@ -102,8 +102,8 @@ macro_end;
 
 macro_begin add_weapon_frag_grenade;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=frag_grenade;
+    # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
+    renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=frag_grenade;
     gun
         node=main_gun_end_node-SUFFIX,
         parent_rigid_body_node=human_node-SUFFIX,
@@ -127,10 +127,10 @@ macro_begin add_weapon_frag_grenade;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
-    clear_node_hider node=main_gun_node-SUFFIX;
+    clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
-        node_to_hide=main_gun_node-SUFFIX,
-        camera_node=main_gun_camera_node-SUFFIX,
+        node_to_hide=main_gun_node_visual-SUFFIX,
+        camera_node=human_head_node-SUFFIX,
         on_hide=macro_playback
             _add_weapon_closeup_scheduler_on_hide
             context=weapon_closeup
@@ -142,8 +142,8 @@ macro_end;
 
 macro_begin add_weapon_m72_law;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=m72_law;
+    # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
+    renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=m72_law;
     gun
         node=main_gun_end_node-SUFFIX,
         parent_rigid_body_node=human_node-SUFFIX,
@@ -170,10 +170,10 @@ macro_begin add_weapon_m72_law;
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
         feels_gravity=BULLET_FEELS_GRAVITY;
-    clear_node_hider node=main_gun_node-SUFFIX;
+    clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
-        node_to_hide=main_gun_node-SUFFIX,
-        camera_node=main_gun_camera_node-SUFFIX,
+        node_to_hide=main_gun_node_visual-SUFFIX,
+        camera_node=human_head_node-SUFFIX,
         on_hide=macro_playback
             _add_weapon_closeup_scheduler_on_hide
             context=weapon_closeup

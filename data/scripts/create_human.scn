@@ -66,7 +66,7 @@ macro_begin create_player_human_externals;
         PLAYER_NAME:PLAYER_NAME;
     IF_PC hud_image
         gun_node=main_gun_end_node-SUFFIX
-        camera_node=main_gun_camera_node-SUFFIX
+        camera_node=human_head_node-SUFFIX
         filename=textures/hud/crosshair.png
         update=once
         center=0 0
