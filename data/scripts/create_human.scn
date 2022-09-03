@@ -67,6 +67,7 @@ macro_begin create_player_human_externals;
     IF_PC hud_image
         gun_node=main_gun_end_node-SUFFIX
         camera_node=human_head_node-SUFFIX
+        ypln_node=human_node-SUFFIX
         filename=textures/hud/crosshair.png
         update=once
         center=0 0
@@ -79,7 +80,7 @@ macro_begin create_player_human_externals;
         line_distance=24;
     IF_WITH_GUN player_set_aiming_gun
         player_name=PLAYER_NAME
-        yaw_node=human_node-SUFFIX
+        ypln_node=human_node-SUFFIX
         gun_node=main_gun_end_node-SUFFIX;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME

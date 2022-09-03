@@ -213,7 +213,7 @@ macro_begin create_player_car_externals_tiger_tank;
         size=0.05 0.05;
     player_set_aiming_gun
         player_name=PLAYER_NAME
-        yaw_node=turret_node-SUFFIX
+        ypln_node=turret_node-SUFFIX
         gun_node=main_gun_end_node-SUFFIX;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME

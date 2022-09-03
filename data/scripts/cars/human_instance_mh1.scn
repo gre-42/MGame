@@ -6,6 +6,7 @@ macro_begin create_mh1;
     # -0.5 is inside the opponent's hitbox ending at -0.25 - 0.5;
     child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_punch_angle_node-SUFFIX position=0 0 -0.5 rotation=0 0 0 scale=1;
     child_node_instance type=dynamic parent=main_gun_punch_angle_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 0 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=human_node-SUFFIX name=human_head_node-SUFFIX position=0 1.2 0 rotation=0 0 0 scale=1;
 
     rigid_cuboid
         node=human_node-SUFFIX
@@ -20,6 +21,7 @@ macro_begin create_mh1;
         pitch_node=main_gun_node-SUFFIX
         parent_follower_rigid_body_node=human_node-SUFFIX
         followed=
+        head_node=human_head_node-SUFFIX
         bullet_start_offset=0.5
         bullet_velocity=NAN
         bullet_feels_gravity=1

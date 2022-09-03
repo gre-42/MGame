@@ -1,6 +1,4 @@
 macro_begin create_human_cameras_persistent;
-    child_node_instance type=dynamic parent=human_node-SUFFIX name=human_head_node-SUFFIX position=0 1.2 0 rotation=0 0 0 scale=1;
-    copy_rotation from=main_gun_node-SUFFIX to=human_head_node-SUFFIX;
 macro_end;
 
 macro_begin create_human_cameras_pc;

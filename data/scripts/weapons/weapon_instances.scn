@@ -46,7 +46,8 @@ macro_begin add_weapon_m4a1;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY;
+        feels_gravity=BULLET_FEELS_GRAVITY
+        dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
         node_to_hide=main_gun_node_visual-SUFFIX,
@@ -86,7 +87,8 @@ macro_begin add_weapon_beretta92;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY;
+        feels_gravity=BULLET_FEELS_GRAVITY
+        dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
         node_to_hide=main_gun_node_visual-SUFFIX,
@@ -126,7 +128,8 @@ macro_begin add_weapon_frag_grenade;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY;
+        feels_gravity=BULLET_FEELS_GRAVITY
+        dpitch_head=-15;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
         node_to_hide=main_gun_node_visual-SUFFIX,
@@ -169,7 +172,8 @@ macro_begin add_weapon_m72_law;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY;
+        feels_gravity=BULLET_FEELS_GRAVITY
+        dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     set_node_hider
         node_to_hide=main_gun_node_visual-SUFFIX,
@@ -206,5 +210,6 @@ macro_begin create_none_weapon;
     ypln_update_bullet_properties
         node=PARENT_RIGID_BODY_NODE
         velocity=0
-        feels_gravity=0;
+        feels_gravity=0
+        dpitch_head=0;
 macro_end;
