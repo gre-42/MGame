@@ -34,15 +34,15 @@ macro_begin add_weapon_m4a1;
         punch_angle_shoot_std=0.3,
         muzzle_flash_resource=muzzle_flash_0,
         muzzle_flash_position=0 0.05 -0.45,
-        muzzle_flash_animation_time=0.1,
+        muzzle_flash_animation_time=0.2,
         generate_muzzle_flash_hider=macro_playback _generate_muzzle_flash_hider
             MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX
             SUFFIX:SUFFIX
             RESOURCE:muzzle_flash_0
             ANIMATION_TIME:0.05
-            POSITION_X:-0.4
-            POSITION_Y:0.55
-            POSITION_Z:-4.1;
+            POSITION_X:-0.23
+            POSITION_Y:0.61
+            POSITION_Z:-4.3;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
