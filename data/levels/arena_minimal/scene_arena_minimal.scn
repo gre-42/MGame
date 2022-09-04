@@ -4,7 +4,7 @@ include ../arena_minimal/osm_resource_arena_minimal.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:21
+    SCORE_BOARD:53
     OSM_MAP_RESOURCE:osm_resource_arena_minimal
     IF_HAS_OVERLAY:#
     STADIUM_CAMERA_X:0

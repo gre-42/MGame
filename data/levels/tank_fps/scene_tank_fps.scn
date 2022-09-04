@@ -449,6 +449,7 @@ macro_begin _scene_tank_instantiate;
             angular_velocity_repeat=-1 0 0;
 
         gun_key_binding
+            player=you
             node=main_gun_end_node
             key=SPACE
             gamepad_button=RIGHT_BUMPER;
@@ -538,6 +539,7 @@ macro_begin _scene_tank_instantiate;
             angular_velocity_repeat=-1 0 0;
 
         gun_key_binding
+            player=you
             node=main_gun_end_node
             key=SPACE
             gamepad_button=RIGHT_BUMPER;

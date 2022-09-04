@@ -80,9 +80,11 @@ macro_begin _scene_racing_instantiate_static_objects;
     # BEST_LAP_TIME  = 2;
     # CAR_HP         = 4;
     # HISTORY        = 8;
+    # NWINS          = 16;
+    # NKILLS         = 32;
     players_stats
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-600 40
+        position=-800 40
         font_height=24
         line_distance=24
         score_board=SCORE_BOARD;

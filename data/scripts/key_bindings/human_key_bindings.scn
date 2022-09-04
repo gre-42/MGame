@@ -104,6 +104,7 @@ macro_begin create_human_key_bindings;
         weapon_increment=-1;
 
     gun_key_binding
+        player=PLAYER_NAME
         node=main_gun_end_node-SUFFIX
         key=SPACE
         mouse_button=LEFT
