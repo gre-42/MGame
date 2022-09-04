@@ -1,5 +1,5 @@
 macro_begin _delete_muzzle_flash_closeup_nodes;
-    delete_root_nodes regex=^muzzle_flash_closeup_node.*$;
+    delete_root_node name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX;
 macro_end;
 
 macro_begin _add_muzzle_flash_closeup_scheduler_on_hide;
@@ -7,21 +7,22 @@ macro_begin _add_muzzle_flash_closeup_scheduler_on_hide;
         POSITION_X:POSITION_X
         POSITION_Y:POSITION_Y
         POSITION_Z:POSITION_Z
-        RESOURCE:RESOURCE;
+        RESOURCE:RESOURCE
+        ANIMATION_TIME:ANIMATION_TIME
+        MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX;
 macro_end;
 
 macro_begin _add_muzzle_flash_closeup_scheduler_on_destroy;
-    execute_in_physics_thread macro_playback _delete_muzzle_flash_closeup_nodes;
+    execute_in_physics_thread macro_playback _delete_muzzle_flash_closeup_nodes
+        MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX;
 macro_end;
 
 macro_begin _add_muzzle_flash_closeup;
-    macro_playback _delete_muzzle_flash_closeup_nodes;
     root_node_instance type=dynamic name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX position=POSITION_X POSITION_Y POSITION_Z rotation=0 0 0 scale=1;
     set_animation_state
         node=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX
-        aperiodic_animation_name=explosion_orange_brown_1
         aperiodic_animation_begin=0
-        aperiodic_animation_end=0.05
+        aperiodic_animation_end=ANIMATION_TIME
         aperiodic_animation_time=0;
     renderable_instance name=closeup-inst node=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX resource=RESOURCE;
 macro_end;
@@ -41,5 +42,6 @@ macro_begin _generate_muzzle_flash_hider;
             MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX,
         on_destroy=macro_playback
             _add_muzzle_flash_closeup_scheduler_on_destroy
-            context=weapon_closeup;
+            context=weapon_closeup
+            MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX;
 macro_end;
