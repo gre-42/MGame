@@ -4,7 +4,7 @@ include ../arena/osm_resource_arena.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:53
+    SCORE_BOARD:37
     OSM_MAP_RESOURCE:osm_resource_arena
     IF_HAS_OVERLAY:#
     STADIUM_CAMERA_X:0
@@ -51,7 +51,8 @@ macro_end;
 macro_playback setup_teams context=primary_scene
     PLAYERS_JSON:__DIR__/scene_arena_humans.json
     TEAMS_SPAWN_POINTS_RESOURCE:osm_map
-    TEAMS_WAY_POINTS_RESOURCE:osm_map;
+    TEAMS_WAY_POINTS_RESOURCE:osm_map
+    OBJECTIVE:kill_count;
 macro_playback instantiate_transient_objects;
 macro_playback create_main_menu;
 macro_playback preload context=primary_scene

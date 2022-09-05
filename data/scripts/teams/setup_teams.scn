@@ -5,4 +5,5 @@ macro_begin setup_teams;
     set_spawn_points
         node=osm_map_node
         resource=TEAMS_SPAWN_POINTS_RESOURCE;
+    set_objective OBJECTIVE;
 macro_end;
