@@ -198,8 +198,8 @@ macro_begin create_none_weapon;
         bullet_damage_radius=0,
         bullet_size=2.4 2.4 20,
         ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3;
+        punch_angle_idle_std=0,
+        punch_angle_shoot_std=0;
     ypln_update_bullet_properties
         node=PARENT_RIGID_BODY_NODE
         velocity=0
