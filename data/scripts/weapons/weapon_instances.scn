@@ -61,9 +61,9 @@ macro_begin add_weapon_m4a1;
             SUFFIX:SUFFIX
             RESOURCE:muzzle_flash_0
             ANIMATION_TIME:0.1
-            POSITION_X:0.03
-            POSITION_Y:0
-            POSITION_Z:-1;
+            POSITION_X:0
+            POSITION_Y:0.062
+            POSITION_Z:-0.66;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
@@ -97,7 +97,18 @@ macro_begin add_weapon_beretta92;
         bullet_size=2.4 2.4 20,
         ammo_type=AMMO_TYPE,
         punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3;
+        punch_angle_shoot_std=0.3,
+        muzzle_flash_resource=muzzle_flash_0,
+        muzzle_flash_position=0 0.05 0,
+        muzzle_flash_animation_time=0.1,
+        generate_muzzle_flash_hider=macro_playback _generate_muzzle_flash_hider
+            MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX
+            SUFFIX:SUFFIX
+            RESOURCE:muzzle_flash_0
+            ANIMATION_TIME:0.1
+            POSITION_X:0
+            POSITION_Y:0.086
+            POSITION_Z:-0.265;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
