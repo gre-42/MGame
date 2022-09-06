@@ -12,7 +12,7 @@ macro_end;
 macro_begin _set_node_hider;
     set_node_hider
         node_to_hide=main_gun_node_visual-SUFFIX,
-        camera_node=human_head_node-SUFFIX,
+        camera_node=human_head_camera_node-SUFFIX,
         punch_angle_node=main_gun_punch_angle_node-SUFFIX,
         on_hide=macro_playback
             _add_weapon_closeup_scheduler_on_hide

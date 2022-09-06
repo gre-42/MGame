@@ -36,7 +36,7 @@ macro_end;
 macro_begin _generate_muzzle_flash_hider;
     set_node_hider
         node_to_hide=muzzle_flash_node_-MUZZLE_FLASH_SUFFIX,
-        camera_node=human_head_node-SUFFIX,
+        camera_node=human_head_camera_node-SUFFIX,
         on_hide=macro_playback
             _add_muzzle_flash_closeup_scheduler_on_hide
             context=weapon_closeup
