@@ -9,6 +9,27 @@ macro_begin try_delete_weapon;
     clear_absolute_observer_and_notify_destroyed node=main_gun_end_node-SUFFIX;
 macro_end;
 
+macro_begin _set_node_hider;
+    set_node_hider
+        node_to_hide=main_gun_node_visual-SUFFIX,
+        camera_node=human_head_node-SUFFIX,
+        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
+        on_hide=macro_playback
+            _add_weapon_closeup_scheduler_on_hide
+            context=weapon_closeup
+            RESOURCE:RESOURCE
+            PUNCH_ANGLE_PITCH:PUNCH_ANGLE_PITCH
+            PUNCH_ANGLE_YAW:PUNCH_ANGLE_YAW,
+        on_destroy=macro_playback
+            _add_weapon_closeup_scheduler_on_destroy
+            context=weapon_closeup,
+        on_update=macro_playback
+            _add_weapon_closeup_scheduler_on_update
+            context=weapon_closeup
+            PUNCH_ANGLE_PITCH:PUNCH_ANGLE_PITCH
+            PUNCH_ANGLE_YAW:PUNCH_ANGLE_YAW;
+macro_end;
+
 macro_begin add_weapon_m4a1;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
@@ -49,16 +70,9 @@ macro_begin add_weapon_m4a1;
         feels_gravity=BULLET_FEELS_GRAVITY
         dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
-    set_node_hider
-        node_to_hide=main_gun_node_visual-SUFFIX,
-        camera_node=human_head_node-SUFFIX,
-        on_hide=macro_playback
-            _add_weapon_closeup_scheduler_on_hide
-            context=weapon_closeup
-            RESOURCE:M4A1,
-        on_destroy=macro_playback
-            _add_weapon_closeup_scheduler_on_destroy
-            context=weapon_closeup;
+    macro_playback _set_node_hider
+        SUFFIX:SUFFIX
+        RESOURCE:M4A1;
 macro_end;
 
 macro_begin add_weapon_beretta92;
@@ -90,16 +104,9 @@ macro_begin add_weapon_beretta92;
         feels_gravity=BULLET_FEELS_GRAVITY
         dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
-    set_node_hider
-        node_to_hide=main_gun_node_visual-SUFFIX,
-        camera_node=human_head_node-SUFFIX,
-        on_hide=macro_playback
-            _add_weapon_closeup_scheduler_on_hide
-            context=weapon_closeup
-            RESOURCE:Beretta92,
-        on_destroy=macro_playback
-            _add_weapon_closeup_scheduler_on_destroy
-            context=weapon_closeup;
+    macro_playback _set_node_hider
+        SUFFIX:SUFFIX
+        RESOURCE:Beretta92;
 macro_end;
 
 macro_begin add_weapon_frag_grenade;
@@ -131,16 +138,9 @@ macro_begin add_weapon_frag_grenade;
         feels_gravity=BULLET_FEELS_GRAVITY
         dpitch_head=-15;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
-    set_node_hider
-        node_to_hide=main_gun_node_visual-SUFFIX,
-        camera_node=human_head_node-SUFFIX,
-        on_hide=macro_playback
-            _add_weapon_closeup_scheduler_on_hide
-            context=weapon_closeup
-            RESOURCE:frag_grenade,
-        on_destroy=macro_playback
-            _add_weapon_closeup_scheduler_on_destroy
-            context=weapon_closeup;
+    macro_playback _set_node_hider
+        SUFFIX:SUFFIX
+        RESOURCE:frag_grenade;
 macro_end;
 
 macro_begin add_weapon_m72_law;
@@ -175,16 +175,9 @@ macro_begin add_weapon_m72_law;
         feels_gravity=BULLET_FEELS_GRAVITY
         dpitch_head=0;
     clear_node_hider node=main_gun_node_visual-SUFFIX;
-    set_node_hider
-        node_to_hide=main_gun_node_visual-SUFFIX,
-        camera_node=human_head_node-SUFFIX,
-        on_hide=macro_playback
-            _add_weapon_closeup_scheduler_on_hide
-            context=weapon_closeup
-            RESOURCE:m72_law,
-        on_destroy=macro_playback
-            _add_weapon_closeup_scheduler_on_destroy
-            context=weapon_closeup;
+    macro_playback _set_node_hider
+        SUFFIX:SUFFIX
+        RESOURCE:m72_law;
 macro_end;
 
 macro_begin create_none_weapon;
