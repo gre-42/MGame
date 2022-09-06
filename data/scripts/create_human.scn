@@ -47,6 +47,9 @@ macro_begin create_human;
         offset=0 0.3
         font_height=16
         line_distance=16;
+    set_node_hider
+        node_to_hide=human_node-SUFFIX,
+        camera_node=human_head_camera_node-SUFFIX;
 macro_end;
 
 macro_begin create_player_human_externals;

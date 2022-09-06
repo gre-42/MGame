@@ -1,5 +1,5 @@
 macro_begin create_human_cameras_persistent;
-    perspective_camera node=human_head_camera_node-SUFFIX y_fov=60 near_plane=1 far_plane=10000 requires_postprocessing=1;
+    perspective_camera node=human_head_camera_node-SUFFIX y_fov=60 near_plane=0.1 far_plane=10000 requires_postprocessing=1;
 macro_end;
 
 macro_begin create_human_cameras_pc;
