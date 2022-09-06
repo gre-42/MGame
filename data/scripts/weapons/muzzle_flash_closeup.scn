@@ -1,5 +1,5 @@
 macro_begin _delete_muzzle_flash_closeup_nodes;
-    delete_root_node name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX;
+    try_delete_node name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX;
 macro_end;
 
 macro_begin _add_muzzle_flash_closeup_scheduler_on_hide;
@@ -18,7 +18,13 @@ macro_begin _add_muzzle_flash_closeup_scheduler_on_destroy;
 macro_end;
 
 macro_begin _add_muzzle_flash_closeup;
-    root_node_instance type=dynamic name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX position=POSITION_X POSITION_Y POSITION_Z rotation=0 0 0 scale=1;
+    child_node_instance
+        type=dynamic
+        parent=punch_angle_node_closeup
+        name=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX
+        position=POSITION_X POSITION_Y POSITION_Z
+        rotation=0 0 0
+        scale=1;
     set_animation_state
         node=muzzle_flash_closeup_node_-MUZZLE_FLASH_SUFFIX
         aperiodic_animation_begin=0

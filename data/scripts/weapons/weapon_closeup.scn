@@ -1,5 +1,5 @@
 macro_begin _delete_weapon_closeup_nodes;
-    delete_root_nodes regex=^weapon_closeup_node$;
+    try_delete_root_node name=weapon_closeup_node;
 macro_end;
 
 macro_begin _add_weapon_closeup_scheduler_on_hide;

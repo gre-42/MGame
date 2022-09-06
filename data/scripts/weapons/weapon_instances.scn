@@ -61,9 +61,9 @@ macro_begin add_weapon_m4a1;
             SUFFIX:SUFFIX
             RESOURCE:muzzle_flash_0
             ANIMATION_TIME:0.1
-            POSITION_X:-0.23
-            POSITION_Y:0.61
-            POSITION_Z:-4.3;
+            POSITION_X:0.03
+            POSITION_Y:0
+            POSITION_Z:-1;
     ypln_update_bullet_properties
         node=human_node-SUFFIX
         velocity=BULLET_VELOCITY
