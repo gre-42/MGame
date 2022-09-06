@@ -73,7 +73,10 @@ macro_begin create_skating_mh1;
         skater_node=skater_node-SUFFIX
         skateboard_node=skateboard_node-SUFFIX
         resource=skate;
-    IF_WITH_GRAPHICS set_node_bone_name node=skateboard_node-SUFFIX bone=node;
+    IF_WITH_GRAPHICS set_node_bone
+        node=skateboard_node-SUFFIX
+        bone=node
+        slerp_t=1;
 
     # IF_WITH_GRAPHICS renderable_instance name=skater_hitbox node=skater_node-SUFFIX resource=skater_hitbox;
     # IF_WITH_GRAPHICS renderable_instance name=skater_grind_contact node=skater_node-SUFFIX resource=skater_grind_contacts;

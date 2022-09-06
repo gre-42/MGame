@@ -159,7 +159,10 @@ macro_begin create_mh1;
         node=human_node-SUFFIX;
 
     set_avatar_style_updater avatar_node=human_node-SUFFIX gun_node=main_gun_end_node-SUFFIX resource_wo_gun=cmu_mocap resource_w_gun=xonotic_pyria;
-    set_node_bone_name node=human_head_node-SUFFIX bone=head;
+    set_node_bone
+        node=human_head_node-SUFFIX
+        bone=head
+        slerp_t=0.1;
 
     # IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node-SUFFIX resource=human_hitbox;
     IF_WITH_GRAPHICS renderable_instance name=human-inst node=animation_node-SUFFIX resource=mh1-DECIMATE;
