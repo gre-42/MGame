@@ -54,6 +54,7 @@ macro_end;
 macro_playback setup_teams context=primary_scene
     PLAYERS_JSON:__DIR__/players.json
     TEAMS_SPAWN_POINTS_RESOURCE:osm_map_overlay
-    TEAMS_WAY_POINTS_RESOURCE:osm_map_overlay;
+    TEAMS_WAY_POINTS_RESOURCE:osm_map_overlay
+    OBJECTIVE:kill_count;
 macro_playback instantiate_transient_objects;
 macro_playback create_main_menu;
