@@ -24,7 +24,7 @@ macro_begin create_tiger_tank_physics;
         com=0 -0.5 1
         collidable_mode=COLLIDABLE_MODE
         name=tiger_tank-SUFFIX;
-    # damageable node=car_node-SUFFIX health=200;
+    # damageable node=car_node-SUFFIX health=200 delete_node_when_health_leq_zero=1;
 
     yaw_pitch_look_at_nodes
         yaw_node=turret_node-SUFFIX

@@ -40,7 +40,7 @@ macro_begin create_human_box;
         pitch_error_std=PITCH_ERROR_STD
         error_alpha=ERROR_ALPHA;
 
-    damageable node=human_node-SUFFIX health=200 delete_node=0;
+    damageable node=human_node-SUFFIX health=200 delete_node_when_health_leq_zero=0;
 
     IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs   angular_vels=-300 -200 -100 0 powers=29420 294200 294200 29420 gear_ratios=0.5 1 2 3;
 

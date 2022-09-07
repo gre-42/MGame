@@ -148,7 +148,7 @@ macro_begin create_mh1;
         AMMO_TYPE:none_weapon_ammo_type
         SUFFIX:SUFFIX;
 
-    damageable node=human_node-SUFFIX health=200 delete_node=0;
+    damageable node=human_node-SUFFIX health=200 delete_node_when_health_leq_zero=0;
 
     IF_WITH_PHYSICS set_jump_strength node=human_node-SUFFIX value=0.3;
 

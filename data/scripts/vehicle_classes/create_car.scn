@@ -36,7 +36,7 @@ macro_begin create_car;
         player_name=PLAYER_NAME
         node=car_node-SUFFIX;
     # IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car-SUFFIX CSUFFIX:SUFFIX;
-    IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200 delete_node=1;
+    IF_DAMAGEABLE damageable node=car_node-SUFFIX health=200 delete_node_when_health_leq_zero=1;
     IF_DAMAGEABLE crash node=car_node-SUFFIX damage=0.000001;
     IF_PLAYER set_externals_creator
         player=PLAYER_NAME
