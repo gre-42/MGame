@@ -41,6 +41,13 @@ add_bvh_resource
     periodic=1;
 
 add_bvh_resource
+    name=xonotic_pyria.die
+    filename=animations/Xonotic/pyria_dietwo.bvh
+    smooth_radius=0
+    smooth_alpha=NAN
+    periodic=1;
+
+add_bvh_resource
     name=skate.left
     filename=animations/Skate/skate_left.bvh
     smooth_radius=0
