@@ -1,5 +1,4 @@
 macro_begin create_human_cameras_persistent;
-    perspective_camera node=human_head_camera_node-SUFFIX y_fov=60 near_plane=0.1 far_plane=10000 requires_postprocessing=1;
 macro_end;
 
 macro_begin create_human_cameras_pc;
@@ -10,6 +9,7 @@ macro_begin create_human_cameras_pc;
     perspective_camera node=45_deg_camera y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=0;
     perspective_camera node=follower_camera y_fov=60 near_plane=1 far_plane=FAR_PLANE requires_postprocessing=1;
     # perspective_camera node=turret_camera_node-SUFFIX y_fov=30 near_plane=1 far_plane=10000 requires_postprocessing=1;
+    perspective_camera node=human_head_camera_node-SUFFIX y_fov=60 near_plane=0.1 far_plane=10000 requires_postprocessing=1;
 
     look_at_node follower=45_deg_camera followed=human_node-SUFFIX;
     follow_node
@@ -28,4 +28,5 @@ macro_begin create_human_cameras_pc;
 
     append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
     append_externals_deleter player=PLAYER_NAME node=follower_camera;
+    append_externals_deleter player=PLAYER_NAME node=human_head_camera_node-SUFFIX;
 macro_end;

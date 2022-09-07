@@ -14,11 +14,11 @@ include textures/blend_textures_terrain.scn;
 include textures/blend_textures_street.scn;
 
 include animations.scn;
-include car_instances.scn;
-include car_resources.scn;
-include create_car.scn;
-include create_human.scn;
-include create_skater.scn;
+include vehicles/vehicle_instances.scn;
+include vehicles/vehicle_resources.scn;
+include vehicle_classes/create_car.scn;
+include vehicle_classes/create_human.scn;
+include vehicle_classes/create_skater.scn;
 include billboards/billboards.scn;
 include weapons/weapon_instances.scn;
 include weapons/weapon_resources.scn;
