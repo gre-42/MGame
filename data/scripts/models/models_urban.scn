@@ -5,7 +5,7 @@ obj_resource
     rotation=0 0 0
     scale=1 1 1
     center_distances=0 501
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
@@ -48,7 +48,7 @@ obj_resource
     rotation=0 0 0
     scale=2 2 2
     center_distances=0 501
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces_alpha=0
     occluded_pass=lightmap_black_global_static
@@ -305,7 +305,7 @@ macro_begin load_hedge;
         rotation=0 0 0
         scale=0.1 0.1 0.1
         center_distances=0 501
-        blend_mode=binary
+        blend_mode=binary_05
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
         occluded_pass=lightmap_black_node

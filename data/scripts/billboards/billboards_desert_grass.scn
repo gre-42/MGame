@@ -46,7 +46,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -61,7 +61,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -76,7 +76,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=2 2 2
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -89,7 +89,7 @@ square_resource
     max=0.5 1
     center_distances=0 501
     ambience=2.7838 2.4315 1.7721
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -104,7 +104,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9111 2.1244
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -119,7 +119,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9 2.1244
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted
@@ -134,7 +134,7 @@ square_resource
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     ambience=3.4178 2.9111 2.1
-    blend_mode=binary
+    blend_mode=binary_05
     alpha_distances=0 0 INFINITY INFINITY
     cull_faces=1
     aggregate_mode=instances_sorted

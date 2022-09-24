@@ -188,7 +188,7 @@ macro_begin load_tree;
         scale=SCALE SCALE SCALE
         center_distances=0 300
         center_distances=0 501
-        blend_mode=binary
+        blend_mode=binary_05
         alpha_distances=0 0 INFINITY INFINITY
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances

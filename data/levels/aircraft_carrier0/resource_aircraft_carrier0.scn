@@ -6,7 +6,7 @@ macro_begin osm_resource_aircraft_carrier0;
         rotation=0 0 0
         scale=200 200 200
         center_distances=0 INFINITY
-        blend_mode=binary
+        blend_mode=binary_05
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
         occluded_pass=none
@@ -22,7 +22,7 @@ macro_begin osm_resource_aircraft_carrier0;
         rotation=0 0 0
         scale=100 200 100
         center_distances=0 INFINITY
-        blend_mode=binary
+        blend_mode=binary_05
         alpha_distances=0 0 INFINITY INFINITY
         cull_faces_alpha=0
         occluded_pass=lightmap_black_local_instances
