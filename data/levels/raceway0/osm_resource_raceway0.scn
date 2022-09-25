@@ -3,7 +3,7 @@ macro_begin osm_resource_raceway0;
         ../textures/Facade017_8K_Color.jpg
         ../textures/cc0textures/Facade009_2K_Color.jpg
         ../textures/Facade014_4K_Color.jpg;
-    #   barrier_styles=texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0
+    #   barrier_styles=texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0
         uv_scale_barrier_wall=1e0;
 
     osm_resource

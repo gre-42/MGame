@@ -23,7 +23,7 @@ macro_begin osm_resource_jb_race;
         facade_textures=facade:MarekWindow00001_512,
         ceiling_texture=#Asphalt015,
         barrier_styles=
-            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary wrap_mode_t:repeat reorient_uv0:0,
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0,
         barrier_blend_mode=off,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         tree_resource_names=,
