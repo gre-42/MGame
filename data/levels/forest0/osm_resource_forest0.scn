@@ -77,6 +77,8 @@ macro_begin osm_resource_forest0;
             cycleway
             steps,
         path_tags=,
+        smoothed_highways=raceway,
+        max_smooth_highway_length=2,
         steiner_point_distances_road=0 2 30 100,
         steiner_point_distances_steiner=INFINITY 7 20 100,
         curb_alpha=1,
@@ -90,7 +92,8 @@ macro_begin osm_resource_forest0;
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=1,
-        street_node_smoothness=0.9,
+        street_node_smoothness=0.98,
+        street_node_smoothing_iterations=500,
         street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
         driving_direction=right,

@@ -83,6 +83,8 @@ macro_begin osm_resource_raceway0;
         path_tags=
             track
             tertiary,
+        smoothed_highways=raceway,
+        max_smooth_highway_length=2,
         steiner_point_distances_road=0,
         steiner_point_distances_steiner=INFINITY,
         curb_alpha=0.9,
