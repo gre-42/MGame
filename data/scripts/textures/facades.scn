@@ -81,6 +81,11 @@ macro_playback add_facade_texture
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
 
 macro_playback add_facade_texture
+    NAME:facade_plaster_gray
+    WALL_COLOR:#Plaster003_Gray
+    WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
+
+macro_playback add_facade_texture
     NAME:facade_plaster_white
     WALL_COLOR:#Plaster003_White
     WALL_NORMAL:textures/cc0textures/Plaster003_2K_NormalGL.jpg;
@@ -99,5 +104,5 @@ add_texture_descriptor
     name=building_big_office3_window
     color=textures/city-buildings-asset-pack/building_big_office3_window.png
     color_mode=rgb
-    lighten=-0.2 -0.2 -0.2
+    lighten=-0.3 -0.3 -0.3
     anisotropic_filtering_level=16;

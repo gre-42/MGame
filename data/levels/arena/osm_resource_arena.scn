@@ -26,7 +26,7 @@ macro_begin osm_resource_arena;
             #Bricks058,
         facade_textures=facade:Plaster003
                         max_height:5,
-        facade_textures=facade:Plaster003_White
+        facade_textures=facade:Plaster003_Gray
                         max_height:5,
         facade_textures=selector:brick
                         facade:wall_facade_bricks_red
@@ -51,7 +51,7 @@ macro_begin osm_resource_arena;
                         floor:DE21F2_industryWindow00001_bottom
                         ceiling:DE21F2_industryWindow00001_top
                         back:DE21F2_industryWindow00001_1k,
-        facade_textures=facade:wall_facade_plaster_white
+        facade_textures=facade:wall_facade_plaster_gray
                         min_height:50
                         facade_edge_size:0.5 0.5
                         facade_inner_size:0.7 0.7
@@ -61,7 +61,7 @@ macro_begin osm_resource_arena;
                         floor:DallasW_negy
                         ceiling:DallasW_posy
                         back:DallasW_posz,
-        facade_textures=facade:wall_facade_plaster_white
+        facade_textures=facade:wall_facade_plaster_gray
                         min_height:50
                         facade_edge_size:0.5 0.5
                         facade_inner_size:0.7 0.7
@@ -71,7 +71,7 @@ macro_begin osm_resource_arena;
                         floor:MarriottMadisonWest_negy
                         ceiling:MarriottMadisonWest_posy
                         back:MarriottMadisonWest_posz,
-        facade_textures=facade:wall_facade_plaster_white
+        facade_textures=facade:wall_facade_plaster_gray
                         min_height:50
                         facade_edge_size:0.5 0.5
                         facade_inner_size:0.7 0.7
