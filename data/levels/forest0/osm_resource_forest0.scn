@@ -77,7 +77,7 @@ macro_begin osm_resource_forest0;
             steps,
         path_tags=,
         smoothed_highways=raceway,
-        max_smooth_highway_length=2,
+        max_smooth_highway_length=4,
         steiner_point_distances_road=0 2 30 100,
         steiner_point_distances_steiner=INFINITY 7 20 100,
         curb_alpha=1,

@@ -107,8 +107,17 @@ macro_begin osm_resource_jb_race;
         path_tags=
             tertiary
             track,
+        smoothed_highways=
+            primary
+            tertiary
+            residential
+            service
+            unclassified
+            construction
+            track,
+        max_smooth_highway_length=4,
         steiner_point_distances_road=0 2 30 100,
-        steiner_point_distances_steiner=INFINITY 7 7 100,
+        steiner_point_distances_steiner=INFINITY 7 30 100,
         curb_alpha=1,
         curb2_alpha=1,
         curb_uv_x=NAN,
@@ -120,16 +129,17 @@ macro_begin osm_resource_jb_race;
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=1,
-        street_node_smoothness=0.9,
+        street_node_smoothness=0.98,
+        street_node_smoothing_iterations=500,
         street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
         blend_street=1,
-        street_surface_central_resource_name=road_low_central3,
-        street_surface_endpoint0_resource_name=road_low_endpoint3_0,
-        street_surface_endpoint1_resource_name=road_low_endpoint3_1,
-        path_surface_central_resource_name=road_low_central3,
-        path_surface_endpoint0_resource_name=road_low_endpoint3_0,
-        path_surface_endpoint1_resource_name=road_low_endpoint3_1,
+        street_surface_central_resource_name=road_cylinder2_central,
+        street_surface_endpoint0_resource_name=road_cylinder2_endpoint_0,
+        street_surface_endpoint1_resource_name=road_cylinder2_endpoint_1,
+        path_surface_central_resource_name=road_cylinder2_central,
+        path_surface_endpoint0_resource_name=road_cylinder2_endpoint_0,
+        path_surface_endpoint1_resource_name=road_cylinder2_endpoint_1,
         game_level=GAME_LEVEL;
 macro_end;
