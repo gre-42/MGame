@@ -5,13 +5,13 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Forest 0
-![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-05-29c.png)
+![Screenshot-R0-2022-04-23](media/Screenshot-F0-2022-10-02.png)
 
 ### Track JB
 ![Screenshot-JB-2022-05-29](media/Screenshot-JB-2022-05-29b.png)
 
 ### Racetrack 0
-![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-05-29b.png)
+![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-10-02.png)
 
 ### New York City
 ![Screenshot-NYC-2022-04-23](media/Screenshot-NYC-2022-04-23.jpg)
@@ -21,6 +21,9 @@ A rally game based on OpenStreetMap data.
 
 ### New York City (at night)
 ![Screenshot-NYC-night-2022-06-09](media/Screenshot-NYC-night-2022-06-09.png)
+
+### City 0
+![Screenshot-T0-2022-10-02](media/Screenshot-T0-2022-10-02.png)
 
 ### Großglockner High Alpine Road
 ![Screenshot-GH-2022-06-11](media/Screenshot-GH-2022-06-11.png)
