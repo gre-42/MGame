@@ -45,7 +45,6 @@ macro_begin osm_resource_forest0;
             max_dist:3
             Stone_model_tex_small(p:0.2)(hitbox:02_1_02_hitbox)
             desert_rock01_small(p:0.2)(hitbox:02_1_02_hitbox),
-        roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
         uv_period_terrain=512,

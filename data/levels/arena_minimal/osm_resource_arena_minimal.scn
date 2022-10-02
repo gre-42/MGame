@@ -60,7 +60,6 @@ macro_begin osm_resource_arena_minimal;
             bflower(p:0.1)
             bamboo(p:0.05)(min_bdry:3)(max_bdry:8),
         default_street_width=5,
-        roof_width=2,
         scale=1e-3,
         uv_scale_terrain=3e-1,
         uv_period_terrain=512,
