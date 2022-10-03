@@ -173,7 +173,7 @@ macro_begin osm_resource_nyc;
         street_light_resource_names=street_light_blob,
         max_wall_width=10,
         with_height_bindings=1,
-        street_node_smoothness=0.9,
+        street_node_smoothness=1,
         street_edge_smoothness=0,
         terrain_edge_smoothness=0.1,
         driving_direction=right,

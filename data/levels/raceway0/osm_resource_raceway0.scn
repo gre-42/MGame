@@ -97,7 +97,7 @@ macro_begin osm_resource_raceway0;
         street_light_resource_names=,
         max_wall_width=10,
         with_height_bindings=0,
-        street_node_smoothness=0.9,
+        street_node_smoothness=1,
         street_edge_smoothness=0.1,
         terrain_edge_smoothness=0.1,
         driving_direction=right,
