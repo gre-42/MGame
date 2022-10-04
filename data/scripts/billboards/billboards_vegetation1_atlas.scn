@@ -111,7 +111,8 @@ square_resource
         uv_scale: 0.25  0.125 uv_offset:0.75  0.125  vertex_scale: 2.5 1.25 alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale: 0.25  0.25  uv_offset:0.75  0.25   vertex_scale: 2.5 2.5  alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale: 0.25  0.25  uv_offset:0.75  0.5    vertex_scale: 4   4    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
-        uv_scale: 0.25  0.25  uv_offset:0.75  0.75   vertex_scale: 4   4    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none;
+        uv_scale: 0.25  0.25  uv_offset:0.75  0.75   vertex_scale: 4   4    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
+        uv_scale:-0.25  0.25  uv_offset:1     0.25   vertex_scale: 2   2    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none;
 
 # save_texture_atlas_png
     name=vegetation1
