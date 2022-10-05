@@ -89,12 +89,12 @@ macro_begin osm_resource_jb_race;
             vegetation1.9
             vegetation1.12,
         near_trees_resource_names=
-            vegetation1.0
-            vegetation1.1
-            vegetation1.2
-            vegetation1.3
-            vegetation1.4
-            vegetation1.5,
+            vegetation1.0(hitbox:02_1_02_hitbox)
+            vegetation1.1(hitbox:02_1_02_hitbox)
+            vegetation1.2(hitbox:02_1_02_hitbox)
+            vegetation1.3(hitbox:02_1_02_hitbox)
+            vegetation1.4(hitbox:02_1_02_hitbox)
+            vegetation1.5(hitbox:02_1_02_hitbox),
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red
