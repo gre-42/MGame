@@ -113,6 +113,20 @@ obj_resource
     transformation_mode=position_yangle;
 
 obj_resource
+    name=fence_stick
+    filename=models/opengameart/Wood/fence_stick.obj
+    position=0 0 0
+    rotation=0 0 0
+    scale=0.4 0.3 0.4
+    center_distances=0 501
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=lightmap_black_global_static
+    occluder_pass=lightmap_black_local_instances
+    aggregate_mode=instances_sorted
+    transformation_mode=position_yangle;
+
+obj_resource
     name=street_light_hitbox
     filename=models/primitives/box.obj
     position=0 0 0
