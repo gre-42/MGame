@@ -14,9 +14,9 @@ macro_begin osm_resource_canyon1;
         street_crossing_texture=#Road007_No_Lines,
         street_texture=#Road007,
         street_reflection_map=wet_street,
-        path_crossing_texture=#Ground029_Crossing,
+        path_crossing_texture=#Ground029_Crossing_Canyon,
         path_textures=
-            lanes:1 texture0:#Ground029_Street,
+            lanes:1 texture0:#Ground029_Street_Canyon,
         socle_textures=
             #Bricks058,
         facade_textures=facade:Plaster003
@@ -107,10 +107,10 @@ macro_begin osm_resource_canyon1;
         near_grass_resource_names = vegetation1.5(p:0.001)(min_bdry:8),
         near_grass_resource_names = Stone_model_tex_small_d4(p:0.01)(min_bdry:0.5)(max_bdry:4),
         near_grass_resource_names = desert_rock01_small_d2_s15(p:0.01)(min_bdry:0.5)(max_bdry:4),
-        near_grass_resource_names = Stone_model_tex_small_d1_s3(p:0.3)(min_bdry:0.5)(max_bdry:8),
-        near_grass_resource_names = Stone_model_tex_small_d1_s11(p:0.3)(min_bdry:0.5)(max_bdry:8),
-        near_grass_resource_names = desert_rock01_small_d1_s3(p:0.3)(min_bdry:0.5)(max_bdry:8),
-        near_grass_resource_names = desert_rock01_small_d1_s13(p:0.3)(min_bdry:0.5)(max_bdry:8),
+        near_grass_resource_names = Stone_model_tex_small_d1_s3_canyon(p:0.3)(min_bdry:0.5)(max_bdry:8),
+        near_grass_resource_names = Stone_model_tex_small_d1_s11_canyon(p:0.3)(min_bdry:0.5)(max_bdry:8),
+        near_grass_resource_names = desert_rock01_small_d1_s3_canyon(p:0.3)(min_bdry:0.5)(max_bdry:8),
+        near_grass_resource_names = desert_rock01_small_d1_s13_canyon(p:0.3)(min_bdry:0.5)(max_bdry:8),
         default_street_width=10,
         scale=1e-3,
         uv_scale_terrain=3e-1,

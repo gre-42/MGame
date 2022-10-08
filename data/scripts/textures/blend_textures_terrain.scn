@@ -249,6 +249,43 @@ add_blend_map_texture
     weight=5;
 
 ################;
+# Rock028_Dune #;
+################;
+add_blend_map_texture
+    name=Rock028_Dune_8
+    texture=#Rock028_Dune
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 300 500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    discreteness=0
+    scale=0.125
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_Dune_128
+    texture=#Rock028_Dune
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=300 500 1000 1500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.0078125
+    weight=5;
+
+add_blend_map_texture
+    name=Rock028_Dune_512
+    texture=#Rock028_Dune
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=1000 1500 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.001953125
+    weight=5;
+
+################;
 # grass_ground #;
 ################;
 add_blend_map_texture

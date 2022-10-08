@@ -124,11 +124,19 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
-    name=Ground029_Crossing
+    name=Ground029_Crossing_Canyon
     color=textures/cc0textures/Ground029_2K_Color.jpg
     color_mode=rgb
     histogram=textures/histograms/gc2_road.png
     lighten=-0.2 -0.2 -0.2
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground029_Crossing_Desert
+    color=textures/cc0textures/Ground029_2K_Color.jpg
+    color_mode=rgb
+    histogram=textures/histograms/desert_road.png
+    lighten=0 0 0
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -178,12 +186,23 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
-    name=Ground029_Street
+    name=Ground029_Street_Canyon
     color=textures/cc0textures/Ground029_2K_Color_Interior.png
+    alpha=textures/Way_Alpha4_Interior.png
     specular=textures/cc0textures/Ground029_2K_Specular_Interior.png
     color_mode=rgba
     histogram=textures/histograms/gc2_road.png
     lighten=-0.2 -0.2 -0.2
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground029_Street_Desert
+    color=textures/cc0textures/Ground029_2K_Color_Interior.png
+    alpha=textures/Way_Alpha4_Interior.png
+    specular=textures/cc0textures/Ground029_2K_Specular_Interior.png
+    color_mode=rgba
+    histogram=textures/histograms/desert_road.png
+    lighten=0 0 0
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -270,14 +289,16 @@ add_texture_descriptor
 
 add_texture_descriptor
     name=Rock028
-    color=textures/cc0textures/Rock028_2K_Color.png
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    alpha=textures/cc0textures/Rock028_2K_Displacement.png
     normal=textures/cc0textures/Rock028_2K_NormalGL.jpg
     color_mode=rgba
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
     name=Rock028_029
-    color=textures/cc0textures/Rock028_2K_Color.png
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    alpha=textures/cc0textures/Rock028_2K_Displacement.png
     normal=textures/cc0textures/Rock028_2K_NormalGL.jpg
     color_mode=rgba
     histogram=textures/histograms/Rock029.png
@@ -285,10 +306,18 @@ add_texture_descriptor
 
 add_texture_descriptor
     name=Rock028_gc2_mountain
-    color=textures/cc0textures/Rock028_2K_Color.png
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    alpha=textures/cc0textures/Rock028_2K_Displacement.png
     normal=textures/cc0textures/Rock028_2K_NormalGL.jpg
     color_mode=rgba
     histogram=textures/histograms/gc2_mountain.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Rock028_Dune
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    color_mode=rgb
+    histogram=textures/histograms/desert_dune.png
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
