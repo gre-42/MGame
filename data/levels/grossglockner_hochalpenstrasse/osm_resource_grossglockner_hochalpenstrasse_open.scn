@@ -100,14 +100,13 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=
-            bflower2(p:0.01)(min_bdry:1)(max_bdry:4)
-            grass_tbdpec3r_Ground037_Sl(min_bdry:1)(max_bdry:4)
-            bflower(p:0.01)(min_bdry:1)(max_bdry:4)
-            vegetation4.0(p:0.5)(min_bdry:3)(max_bdry:8)
-            vegetation4.1(p:0.5)(min_bdry:3)(max_bdry:8)
-            vegetation4.2(p:0.5)(min_bdry:3)(max_bdry:8)
-            vegetation4.3(p:0.5)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = bflower2(p:0.01)(min_bdry:1)(max_bdry:4),
+        near_grass_resource_names = grass_tbdpec3r_Ground037_Sl(min_bdry:1)(max_bdry:4),
+        near_grass_resource_names = bflower(p:0.01)(min_bdry:1)(max_bdry:4),
+        near_grass_resource_names = vegetation4.0(p:0.5)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = vegetation4.1(p:0.5)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = vegetation4.2(p:0.5)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = vegetation4.3(p:0.5)(min_bdry:3)(max_bdry:8),
         default_street_width=9,
         default_lane_width=4,
         scale=1e-3,

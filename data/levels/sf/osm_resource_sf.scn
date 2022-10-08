@@ -116,10 +116,9 @@ macro_begin osm_resource_sf;
             btree4(p:0.7)(hitbox:02_1_02_hitbox)
             btree-large(p:0.7)(hitbox:02_1_02_hitbox)
             btree-large2(p:0.7)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=
-            bflower2(p:0.1)(min_bdry:1)
-            grass_tbdpec3r_Ground037_Sl_low(min_bdry:1)
-            bflower(p:0.1)(min_bdry:1),
+        near_grass_resource_names = bflower2(p:0.1)(min_bdry:1),
+        near_grass_resource_names = grass_tbdpec3r_Ground037_Sl_low(min_bdry:1),
+        near_grass_resource_names = bflower(p:0.1)(min_bdry:1),
         dirt_decals_resource_names=
             Leaf018_2
             Leaf018_2_Red

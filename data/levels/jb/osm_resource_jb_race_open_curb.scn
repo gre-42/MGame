@@ -40,10 +40,9 @@ macro_begin osm_resource_jb_race;
             btree4(p:1)(hitbox:02_1_02_hitbox)
             btree-large(p:1)(hitbox:02_1_02_hitbox)
             btree-large2(p:1)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=
-            bflower2(p:0.1)
-            grass12y_near_Ground037_Sl
-            bflower(p:0.1),
+        near_grass_resource_names = bflower2(p:0.1),
+        near_grass_resource_names = grass12y_near_Ground037_Sl,
+        near_grass_resource_names = bflower(p:0.1),
         wayside_resource_names=
             min_dist:10
             max_dist:20

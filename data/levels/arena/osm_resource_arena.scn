@@ -95,17 +95,16 @@ macro_begin osm_resource_arena;
             vegetation2.3(p:1)(hitbox:02_1_02_hitbox)
             vegetation2.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation2.5(p:1)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=
-            bflower2(p:0.1)
-            grass_tbdpec3r
-            bflower(p:0.1)
-            vegetation1.10(p:0.002)
-            vegetation1.11(p:0.002)
-            bamboo(p:0.05)(min_bdry:3)(max_bdry:8)
-            palm(p:0.2)(min_bdry:3)(max_bdry:8)
-            pine(p:0.2)(min_bdry:3)(max_bdry:8)
-            shrub(p:0.2)(min_bdry:3)(max_bdry:8)
-            spikes(p:0.2)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = bflower2       (p:0.1),
+        near_grass_resource_names = grass_tbdpec3r,
+        near_grass_resource_names = bflower        (p:0.1),
+        near_grass_resource_names = vegetation1.10 (p:0.002),
+        near_grass_resource_names = vegetation1.11 (p:0.002),
+        near_grass_resource_names = bamboo         (p:0.05)(min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = palm           (p:0.2) (min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = pine           (p:0.2) (min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = shrub          (p:0.2) (min_bdry:3)(max_bdry:8),
+        near_grass_resource_names = spikes         (p:0.2) (min_bdry:3)(max_bdry:8),
         default_street_width=5,
         scale=1e-3,
         uv_scale_terrain=3e-1,

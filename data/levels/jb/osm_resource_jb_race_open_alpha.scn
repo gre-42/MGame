@@ -79,12 +79,21 @@ macro_begin osm_resource_jb_race;
             vegetation1.3(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.4(p:1)(hitbox:02_1_02_hitbox)
             vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=
-            bflower2(p:0.1)
-            grass_tbdpec3r_Ground003
-            bflower(p:0.1)
-            vegetation1.10(p:0.002)
-            vegetation1.11(p:0.002),
+        near_grass_resource_names         = bflower2                 (p:0.1),
+        near_grass_resource_names         = grass_tbdpec3r_Ground003,
+        near_grass_resource_names         = bflower                  (p:0.1),
+        near_grass_resource_names         = vegetation1.10           (p:0.002),
+        near_grass_resource_names         = vegetation1.11           (p:0.002),
+        near_wayside_grass_resource_names = bflower2                 (p:0.1)             (max_bdry:10),
+        near_wayside_grass_resource_names = grass_tbdpec3r_Ground003                     (max_bdry:10),
+        near_wayside_grass_resource_names = bflower                  (p:0.1)             (max_bdry:10),
+        near_wayside_grass_resource_names = vegetation1.10           (p:0.002)           (max_bdry:10),
+        near_wayside_grass_resource_names = vegetation1.11           (p:0.002)           (max_bdry:10),
+        near_wayside_grass_resource_names = bflower2                 (p:0.1)     (p1:0.1),
+        near_wayside_grass_resource_names = grass_tbdpec3r_Ground003             (p1:0.1),
+        near_wayside_grass_resource_names = bflower                  (p:0.1)     (p1:0.1),
+        near_wayside_grass_resource_names = vegetation1.10           (p:0.002)   (p1:0.1),
+        near_wayside_grass_resource_names = vegetation1.11           (p:0.002)   (p1:0.1),
         near_flowers_resource_names=
             vegetation1.9
             vegetation1.12,
@@ -136,6 +145,7 @@ macro_begin osm_resource_jb_race;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
         much_near_grass_distance=3,
+        much_near_wayside_grass_distance=1,
         much_near_flowers_distance=2.5,
         much_near_trees_distance=8,
         raceway_beacon_distance=INFINITY,

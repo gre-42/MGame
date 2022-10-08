@@ -37,10 +37,9 @@ macro_begin osm_resource_raceway1;
             vegetation0.4
             vegetation0.5,
         grass_resource_names=,
-        near_grass_resource_names=
-            bflower2(p:0.01)
-            grass_tbdpec3r_Ground037_Sl_low
-            bflower(p:0.01),
+        near_grass_resource_names = bflower2(p:0.01),
+        near_grass_resource_names = grass_tbdpec3r_Ground037_Sl_low,
+        near_grass_resource_names = bflower(p:0.01),
         default_street_width=12,
         scale=1e-3,
         uv_scale_terrain=1e-1,

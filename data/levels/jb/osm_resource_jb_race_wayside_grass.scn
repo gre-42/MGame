@@ -47,7 +47,6 @@ macro_begin osm_resource_jb_race;
             btree4_small(p:1)(hitbox:02_1_02_hitbox)
             btree-large_small(p:1)(hitbox:02_1_02_hitbox)
             btree-large2_small(p:1)(hitbox:02_1_02_hitbox),
-        near_grass_resource_names=,
         default_street_width=10,
         scale=1e-3,
         uv_scale_terrain=1e-1,

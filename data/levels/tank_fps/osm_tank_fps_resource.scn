@@ -47,10 +47,9 @@ macro_begin osm_tank_fps_resource;
         grass_resource_names=
             bflower
             bflower2,
-        near_grass_resource_names=
-            bflower2(p:0.1)
-            grass12y_near_Ground037_Sl
-            bflower(p:0.1),
+        near_grass_resource_names = bflower2(p:0.1),
+        near_grass_resource_names = grass12y_near_Ground037_Sl,
+        near_grass_resource_names = bflower(p:0.1),
         near_flowers_resource_names=
             bflower2(p:0.1)
             grass2g_near
