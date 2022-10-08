@@ -158,8 +158,8 @@ square_resource
 square_resource
     name=grass_tbdpec3r_Ground003
     texture_filename=#grass_tbdpec3r_Ground003
-    min=-0.6 0
-    max=0.6 0.6
+    min=-1 0
+    max=1 1
     center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
