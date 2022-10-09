@@ -28,7 +28,7 @@ A rally game based on OpenStreetMap data.
 ### Großglockner High Alpine Road
 ![Screenshot-GH-2022-10-09](media/Screenshot-GH-2022-10-09.png)
 
-### Desert1
+### Desert 1
 ![Screenshot-D1-2022-10-09](media/Screenshot-D1-2022-10-09.png)
 
 ### Aircraft carrier 0
