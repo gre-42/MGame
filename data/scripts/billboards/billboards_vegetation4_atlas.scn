@@ -38,7 +38,7 @@ square_resource
     min=-2 -0.5
     max=2 3.5
     occluded_pass=none
-    occluder_pass=none
+    occluder_pass=lightmap_black_global_and_local
     ambience=2 2 2
     blend_mode=semi_continuous_02
     alpha_distances=0 0 INFINITY INFINITY

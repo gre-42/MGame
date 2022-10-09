@@ -29,7 +29,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-GH-2022-10-09](media/Screenshot-GH-2022-10-09.png)
 
 ### Desert 1
-![Screenshot-DS1-2022-10-09b](media/Screenshot-DS1-2022-10-09b.png)
+![Screenshot-DS1-2022-10-09c](media/Screenshot-DS1-2022-10-09c.png)
 
 ### Aircraft carrier 0
 ![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)
