@@ -26,10 +26,10 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-T0-2022-10-02](media/Screenshot-T0-2022-10-02.png)
 
 ### Großglockner High Alpine Road
-![Screenshot-GH-2022-06-11](media/Screenshot-GH-2022-06-11.png)
+![Screenshot-GH-2022-10-09](media/Screenshot-GH-2022-10-09.png)
 
-### Canyon1
-![Screenshot-C1-2022-07-02](media/Screenshot-C1-2022-07-02.png)
+### Desert1
+![Screenshot-D1-2022-10-09](media/Screenshot-D1-2022-10-09.png)
 
 ### Aircraft carrier 0
 ![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)

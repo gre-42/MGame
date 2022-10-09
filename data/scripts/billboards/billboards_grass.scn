@@ -171,6 +171,21 @@ square_resource
     transformation_mode=position_lookat;
 
 square_resource
+    name=grass_tbdpec3r_desert_bush
+    texture_filename=#grass_tbdpec3r_desert_bush
+    min=-1.2 0
+    max=1.2 1.2
+    center_distances=0 501
+    occluded_pass=lightmap_black_local_instances
+    occluder_pass=none
+    ambience=2 2 2
+    blend_mode=continuous
+    alpha_distances=0 0 50 200
+    cull_faces=1
+    aggregate_mode=instances_sorted
+    transformation_mode=position_lookat;
+
+square_resource
     name=grass_tbdpec3r_Ground037
     texture_filename=#grass_tbdpec3r_Ground037
     min=-0.6 0
