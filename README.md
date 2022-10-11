@@ -26,7 +26,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-T0-2022-10-02](media/Screenshot-T0-2022-10-02.png)
 
 ### Großglockner High Alpine Road
-![Screenshot-GH-2022-10-09b](media/Screenshot-GH-2022-10-09b.png)
+![Screenshot-GH-2022-10-12](media/Screenshot-GH-2022-10-12.png)
 
 ### Desert 1
 ![Screenshot-DS1-2022-10-09c](media/Screenshot-DS1-2022-10-09c.png)
