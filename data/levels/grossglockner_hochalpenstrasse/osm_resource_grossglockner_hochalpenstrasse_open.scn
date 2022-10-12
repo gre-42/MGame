@@ -116,7 +116,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         default_barrier_top=2,
         remove_backfacing_triangles=1,
         with_tree_nodes=1,
-        forest_outline_tree_distance=10,
+        forest_outline_tree_distance=INFINITY,
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=100,
         much_near_grass_distance=3,
