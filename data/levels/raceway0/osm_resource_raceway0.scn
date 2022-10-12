@@ -36,13 +36,12 @@ macro_begin osm_resource_raceway0;
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/racing_line_raceway0.m,
         racing_line_playback=__DIR__/checkpoints.m,
-        tree_resource_names=
-            vegetation0.0
-            vegetation0.1
-            vegetation0.2
-            vegetation0.3
-            vegetation0.4
-            vegetation0.5,
+        tree_resource_names = vegetation0.0,
+        tree_resource_names = vegetation0.1,
+        tree_resource_names = vegetation0.2,
+        tree_resource_names = vegetation0.3,
+        tree_resource_names = vegetation0.4,
+        tree_resource_names = vegetation0.5,
         grass_resource_names=,
         near_grass_resource_names = bflower2(p:0.01),
         near_grass_resource_names = grass_tbdpec3r_Ground037_Sl_low,

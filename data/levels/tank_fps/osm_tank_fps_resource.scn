@@ -35,15 +35,14 @@ macro_begin osm_tank_fps_resource;
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
-        tree_resource_names=
-            btree
-            btree2
-            btree3
-            btree4
-            btree-large
-            btree-large2
-            btree-large3
-            btree-large4,
+        tree_resource_names = btree,
+        tree_resource_names = btree2,
+        tree_resource_names = btree3,
+        tree_resource_names = btree4,
+        tree_resource_names = btree-large,
+        tree_resource_names = btree-large2,
+        tree_resource_names = btree-large3,
+        tree_resource_names = btree-large4,
         grass_resource_names=
             bflower
             bflower2,
