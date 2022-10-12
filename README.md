@@ -4,11 +4,17 @@ A rally game based on OpenStreetMap data.
 
 ## Screenshots
 
+### Track JB
+![Screenshot-JB-2022-10-08.png](media/Screenshot-JB-2022-10-08.png)
+
+### Großglockner High Alpine Road
+![Screenshot-GH-2022-10-12c](media/Screenshot-GH-2022-10-12c.png)
+
 ### Forest 0
 ![Screenshot-R0-2022-10-12](media/Screenshot-F0-2022-10-12.png)
 
-### Track JB
-![Screenshot-JB-2022-10-08.png](media/Screenshot-JB-2022-10-08.png)
+### Desert 1
+![Screenshot-DS1-2022-10-09c](media/Screenshot-DS1-2022-10-09c.png)
 
 ### Racetrack 0
 ![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-10-02.png)
@@ -24,12 +30,6 @@ A rally game based on OpenStreetMap data.
 
 ### City 0
 ![Screenshot-T0-2022-10-02](media/Screenshot-T0-2022-10-02.png)
-
-### Großglockner High Alpine Road
-![Screenshot-GH-2022-10-12c](media/Screenshot-GH-2022-10-12c.png)
-
-### Desert 1
-![Screenshot-DS1-2022-10-09c](media/Screenshot-DS1-2022-10-09c.png)
 
 ### Aircraft carrier 0
 ![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)
