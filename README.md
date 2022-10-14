@@ -8,7 +8,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-JB-2022-10-08.png](media/Screenshot-JB-2022-10-08.png)
 
 ### Großglockner High Alpine Road
-![Screenshot-GH-2022-10-12c](media/Screenshot-GH-2022-10-12c.png)
+![Screenshot-GH-2022-10-14](media/Screenshot-GH-2022-10-14.png)
 
 ### Forest 0
 ![Screenshot-R0-2022-10-12](media/Screenshot-F0-2022-10-12.png)
