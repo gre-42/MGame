@@ -87,14 +87,12 @@ macro_begin osm_resource_arena;
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous_02 wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
-        tree_resource_names=,
-        grass_resource_names=
-            vegetation2.0(p:1)(hitbox:02_1_02_hitbox)
-            vegetation2.1(p:1)(hitbox:02_1_02_hitbox)
-            vegetation2.2(p:1)(hitbox:02_1_02_hitbox)
-            vegetation2.3(p:1)(hitbox:02_1_02_hitbox)
-            vegetation2.4(p:1)(hitbox:02_1_02_hitbox)
-            vegetation2.5(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.0(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.1(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.2(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.3(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.4(p:1)(hitbox:02_1_02_hitbox),
+        grass_resource_names=vegetation2.5(p:1)(hitbox:02_1_02_hitbox),
         near_grass_resource_names = bflower2       (p:0.1),
         near_grass_resource_names = grass_tbdpec3r,
         near_grass_resource_names = bflower        (p:0.1),
