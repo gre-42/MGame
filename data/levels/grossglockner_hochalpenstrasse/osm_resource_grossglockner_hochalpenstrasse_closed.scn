@@ -80,8 +80,6 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_closed;
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
-        tree_resource_names=,
-        grass_resource_names=,
         wayside_resource_names=
             min_dist:1
             max_dist:10
