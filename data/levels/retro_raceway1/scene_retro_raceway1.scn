@@ -31,9 +31,9 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:
         IF_PC_PLAYER_PLAYBACK:#
-        CAR_NODE_X:3
-        CAR_NODE_Y:-150
-        CAR_NODE_Z:-242
+        CAR_NODE_X:-122.404612_deg
+        CAR_NODE_Y:37.773448_deg
+        CAR_NODE_Z:172
         CAR_NODE_ANGLE_X:180
         CAR_NODE_ANGLE_Y:-13
         CAR_NODE_ANGLE_Z:-180
