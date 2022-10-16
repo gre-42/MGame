@@ -65,7 +65,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
                         back:building_big_office3_window,
         ceiling_texture=#Asphalt015,
         barrier_styles=
-            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0,
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0 ambience:1 specularity:1,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         racing_line_texture=#racing_line,
         racing_line_track=RACING_LINE_TRACK,
