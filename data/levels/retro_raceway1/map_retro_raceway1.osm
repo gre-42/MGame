@@ -1586,54 +1586,6 @@
   <node id='-138335' action='modify' visible='true' lat='37.77707447648' lon='-122.39828310766'>
     <tag k='distance_to_way' v='11.4' />
   </node>
-  <node id='-138514' action='modify' visible='true' lat='37.77935790465' lon='-122.39657969252'>
-    <tag k='distance_to_way' v='11.5' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138515' action='modify' visible='true' lat='37.77925548702' lon='-122.39734711325'>
-    <tag k='distance_to_way' v='11.5' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138516' action='modify' visible='true' lat='37.77899272873' lon='-122.39798052982'>
-    <tag k='distance_to_way' v='11.5' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138517' action='modify' visible='true' lat='37.77863089978' lon='-122.39824439817'>
-    <tag k='distance_to_way' v='11.5' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138519' action='modify' visible='true' lat='37.77935525029' lon='-122.39657530577'>
-    <tag k='distance_to_way' v='12' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138520' action='modify' visible='true' lat='37.77925101853' lon='-122.39734807321'>
-    <tag k='distance_to_way' v='12' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138521' action='modify' visible='true' lat='37.77899048226' lon='-122.39797781332'>
-    <tag k='distance_to_way' v='12' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138522' action='modify' visible='true' lat='37.7786274238' lon='-122.3982431346'>
-    <tag k='distance_to_way' v='12' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138524' action='modify' visible='true' lat='37.77936094282' lon='-122.39657486182'>
-    <tag k='distance_to_way' v='11' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138525' action='modify' visible='true' lat='37.77925920144' lon='-122.39734589421'>
-    <tag k='distance_to_way' v='11' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138526' action='modify' visible='true' lat='37.77899389889' lon='-122.39798401815'>
-    <tag k='distance_to_way' v='11' />
-    <tag k='smoothen' v='yes' />
-  </node>
-  <node id='-138527' action='modify' visible='true' lat='37.77862784425' lon='-122.39825265542'>
-    <tag k='distance_to_way' v='11' />
-    <tag k='smoothen' v='yes' />
-  </node>
   <node id='-138615' action='modify' visible='true' lat='37.77687518205' lon='-122.39973776123'>
     <tag k='distance_to_way' v='11.6' />
   </node>
@@ -1858,77 +1810,192 @@
     <tag k='distance_to_way' v='15' />
     <tag k='smoothen' v='yes' />
   </node>
-  <way id='-103224' action='modify' visible='true'>
-    <nd ref='-138209' />
-    <nd ref='-138218' />
-    <nd ref='-137997' />
-    <nd ref='-138211' />
-    <nd ref='-138206' />
-    <nd ref='-138158' />
-    <nd ref='-138212' />
-    <nd ref='-137743' />
-    <nd ref='-137993' />
-    <nd ref='-137992' />
-    <nd ref='-137991' />
-    <nd ref='-137962' />
-    <nd ref='-137989' />
-    <nd ref='-137988' />
-    <nd ref='-137990' />
-    <nd ref='-137958' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103225' action='modify' visible='true'>
-    <nd ref='-137755' />
-    <nd ref='-137732' />
-    <nd ref='-137771' />
-    <nd ref='-137756' />
-    <nd ref='-137772' />
-    <nd ref='-137733' />
-    <nd ref='-137773' />
-    <nd ref='-137757' />
-    <nd ref='-137774' />
-    <nd ref='-137734' />
-    <nd ref='-137775' />
-    <nd ref='-137758' />
-    <nd ref='-137776' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103226' action='modify' visible='true'>
-    <nd ref='-137908' />
-    <nd ref='-137753' />
-    <nd ref='-137907' />
-    <nd ref='-137754' />
-    <nd ref='-137726' />
-    <nd ref='-137752' />
-    <nd ref='-137727' />
-    <nd ref='-137916' />
-    <nd ref='-137751' />
-    <nd ref='-137913' />
-    <nd ref='-137728' />
-    <nd ref='-137914' />
-    <nd ref='-137750' />
-    <nd ref='-137915' />
-    <nd ref='-137729' />
-    <nd ref='-137749' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103227' action='modify' visible='true'>
-    <nd ref='-137749' />
-    <nd ref='-137730' />
-    <nd ref='-137778' />
-    <nd ref='-137731' />
-    <nd ref='-137755' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103228' action='modify' visible='true'>
+  <node id='-140216' action='modify' visible='true' lat='37.7786481824' lon='-122.39824023351'>
+    <tag k='distance_to_way' v='11' />
+  </node>
+  <node id='-140217' action='modify' visible='true' lat='37.77864504627' lon='-122.39821876068'>
+    <tag k='distance_to_way' v='12' />
+  </node>
+  <node id='-140218' action='modify' visible='true' lat='37.77865401924' lon='-122.39821497349'>
+    <tag k='distance_to_way' v='12' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140219' action='modify' visible='true' lat='37.77905186064' lon='-122.39789392779'>
+    <tag k='distance_to_way' v='12' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140220' action='modify' visible='true' lat='37.7792284222' lon='-122.39728498958'>
+    <tag k='distance_to_way' v='12' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140221' action='modify' visible='true' lat='37.77932793673' lon='-122.39646285757'>
+    <tag k='distance_to_way' v='12' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140222' action='modify' visible='true' lat='37.7792672616' lon='-122.39568181768'>
+    <tag k='distance_to_way' v='12' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140223' action='modify' visible='true' lat='37.7792685196' lon='-122.39566476282'>
+    <tag k='distance_to_way' v='12' />
+  </node>
+  <node id='-140224' action='modify' visible='true' lat='37.77928348926' lon='-122.39566606661'>
+    <tag k='distance_to_way' v='11' />
+  </node>
+  <node id='-140225' action='modify' visible='true' lat='37.77928226926' lon='-122.39568310184'>
+    <tag k='distance_to_way' v='11' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140226' action='modify' visible='true' lat='37.77935327947' lon='-122.39646403258'>
+    <tag k='distance_to_way' v='11' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140227' action='modify' visible='true' lat='37.77926139154' lon='-122.3973013342'>
+    <tag k='distance_to_way' v='11' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140228' action='modify' visible='true' lat='37.77906772815' lon='-122.3979132745'>
+    <tag k='distance_to_way' v='11' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140229' action='modify' visible='true' lat='37.7786582846' lon='-122.39823602631'>
+    <tag k='distance_to_way' v='11' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140230' action='modify' visible='true' lat='37.77864949571' lon='-122.39823618996'>
+    <tag k='distance_to_way' v='11.2' />
+  </node>
+  <node id='-140231' action='modify' visible='true' lat='37.77865781148' lon='-122.39823271691'>
+    <tag k='distance_to_way' v='11.2' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140232' action='modify' visible='true' lat='37.77906493771' lon='-122.39791027448'>
+    <tag k='distance_to_way' v='11.2' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140233' action='modify' visible='true' lat='37.77925872848' lon='-122.3972995999'>
+    <tag k='distance_to_way' v='11.2' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140234' action='modify' visible='true' lat='37.77934944372' lon='-122.39646417285'>
+    <tag k='distance_to_way' v='11.2' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140235' action='modify' visible='true' lat='37.77928026024' lon='-122.39568295871'>
+    <tag k='distance_to_way' v='11.2' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140236' action='modify' visible='true' lat='37.77928070493' lon='-122.3956699617'>
+    <tag k='distance_to_way' v='11.2' />
+  </node>
+  <node id='-140237' action='modify' visible='true' lat='37.77927089556' lon='-122.39566936681'>
+    <tag k='distance_to_way' v='11.8' />
+  </node>
+  <node id='-140238' action='modify' visible='true' lat='37.77927044114' lon='-122.39568262583'>
+    <tag k='distance_to_way' v='11.8' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140239' action='modify' visible='true' lat='37.77933246188' lon='-122.39646318262'>
+    <tag k='distance_to_way' v='11.8' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140240' action='modify' visible='true' lat='37.77923152235' lon='-122.39728525954'>
+    <tag k='distance_to_way' v='11.8' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140241' action='modify' visible='true' lat='37.77905494601' lon='-122.39789766306'>
+    <tag k='distance_to_way' v='11.8' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140242' action='modify' visible='true' lat='37.77865500023' lon='-122.39821960936'>
+    <tag k='distance_to_way' v='11.8' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140243' action='modify' visible='true' lat='37.77864765699' lon='-122.39822271074'>
+    <tag k='distance_to_way' v='11.8' />
+  </node>
+  <node id='-140244' action='modify' visible='true' lat='37.77865036734' lon='-122.39823129094'>
+    <tag k='distance_to_way' v='11.4' />
+  </node>
+  <node id='-140245' action='modify' visible='true' lat='37.77865710791' lon='-122.39822847035'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140246' action='modify' visible='true' lat='37.77906185233' lon='-122.39790653921'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140247' action='modify' visible='true' lat='37.77925562832' lon='-122.39729932994'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140248' action='modify' visible='true' lat='37.77934491857' lon='-122.3964638478'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140249' action='modify' visible='true' lat='37.7792773663' lon='-122.39568300755'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140250' action='modify' visible='true' lat='37.77927729445' lon='-122.39567246055'>
+    <tag k='distance_to_way' v='11.4' />
+  </node>
+  <node id='-140251' action='modify' visible='true' lat='37.77927374742' lon='-122.39567239503'>
+    <tag k='distance_to_way' v='11.6' />
+  </node>
+  <node id='-140252' action='modify' visible='true' lat='37.77927382013' lon='-122.39568288243'>
+    <tag k='distance_to_way' v='11.6' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140253' action='modify' visible='true' lat='37.77933629763' lon='-122.39646304234'>
+    <tag k='distance_to_way' v='11.6' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140254' action='modify' visible='true' lat='37.77923418541' lon='-122.39728699384'>
+    <tag k='distance_to_way' v='11.4' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140255' action='modify' visible='true' lat='37.77905773645' lon='-122.39790066308'>
+    <tag k='distance_to_way' v='11.6' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140256' action='modify' visible='true' lat='37.77865538862' lon='-122.39822343313'>
+    <tag k='distance_to_way' v='11.6' />
+    <tag k='smoothen' v='yes' />
+  </node>
+  <node id='-140257' action='modify' visible='true' lat='37.77864951957' lon='-122.39822591083'>
+    <tag k='distance_to_way' v='11.6' />
+  </node>
+  <way id='-103231' action='modify' visible='true'>
+    <nd ref='-137794' />
+    <nd ref='-137960' />
+    <nd ref='-137747' />
+    <nd ref='-138013' />
+    <nd ref='-137795' />
+    <nd ref='-138011' />
+    <nd ref='-138010' />
+    <nd ref='-138012' />
+    <nd ref='-138006' />
+    <nd ref='-138007' />
+    <nd ref='-137748' />
+    <nd ref='-138008' />
+    <nd ref='-137711' />
+    <nd ref='-138009' />
+    <nd ref='-137919' />
+    <nd ref='-137712' />
+    <nd ref='-137920' />
+    <nd ref='-137765' />
+    <nd ref='-137713' />
+    <nd ref='-137921' />
+    <nd ref='-137714' />
+    <nd ref='-137766' />
+    <nd ref='-137715' />
+    <nd ref='-137922' />
+    <nd ref='-137798' />
+    <nd ref='-137799' />
+    <nd ref='-137716' />
+    <nd ref='-137797' />
+    <nd ref='-137717' />
     <nd ref='-137796' />
     <nd ref='-137718' />
     <nd ref='-137769' />
@@ -1945,54 +2012,41 @@
     <nd ref='-137770' />
     <nd ref='-137911' />
     <nd ref='-137724' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103229' action='modify' visible='true'>
-    <nd ref='-137724' />
     <nd ref='-137925' />
     <nd ref='-137909' />
     <nd ref='-137926' />
     <nd ref='-137725' />
     <nd ref='-137908' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103230' action='modify' visible='true'>
-    <nd ref='-137711' />
-    <nd ref='-138009' />
-    <nd ref='-137919' />
-    <nd ref='-137712' />
-    <nd ref='-137920' />
-    <nd ref='-137765' />
-    <nd ref='-137713' />
-    <nd ref='-137921' />
-    <nd ref='-137714' />
-    <nd ref='-137766' />
-    <nd ref='-137715' />
-    <nd ref='-137922' />
-    <nd ref='-137798' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103231' action='modify' visible='true'>
-    <nd ref='-137794' />
-    <nd ref='-137960' />
-    <nd ref='-137747' />
-    <nd ref='-138013' />
-    <nd ref='-137795' />
-    <nd ref='-138011' />
-    <nd ref='-138010' />
-    <nd ref='-138012' />
-    <nd ref='-138006' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-103232' action='modify' visible='true'>
+    <nd ref='-137753' />
+    <nd ref='-137907' />
+    <nd ref='-137754' />
+    <nd ref='-137726' />
+    <nd ref='-137752' />
+    <nd ref='-137727' />
+    <nd ref='-137916' />
+    <nd ref='-137751' />
+    <nd ref='-137913' />
+    <nd ref='-137728' />
+    <nd ref='-137914' />
+    <nd ref='-137750' />
+    <nd ref='-137915' />
+    <nd ref='-137729' />
+    <nd ref='-137749' />
+    <nd ref='-137730' />
+    <nd ref='-137778' />
+    <nd ref='-137731' />
+    <nd ref='-137755' />
+    <nd ref='-137732' />
+    <nd ref='-137771' />
+    <nd ref='-137756' />
+    <nd ref='-137772' />
+    <nd ref='-137733' />
+    <nd ref='-137773' />
+    <nd ref='-137757' />
+    <nd ref='-137774' />
+    <nd ref='-137734' />
+    <nd ref='-137775' />
+    <nd ref='-137758' />
     <nd ref='-137776' />
     <nd ref='-137735' />
     <nd ref='-137777' />
@@ -2000,7 +2054,164 @@
     <nd ref='-137924' />
     <nd ref='-137736' />
     <nd ref='-137760' />
-    <tag k='curb_delete' v='1' />
+    <nd ref='-137779' />
+    <nd ref='-137737' />
+    <nd ref='-137780' />
+    <nd ref='-137738' />
+    <nd ref='-137918' />
+    <nd ref='-137781' />
+    <nd ref='-137917' />
+    <nd ref='-137739' />
+    <nd ref='-138052' />
+    <nd ref='-138050' />
+    <nd ref='-138034' />
+    <nd ref='-138051' />
+    <nd ref='-138035' />
+    <nd ref='-138154' />
+    <nd ref='-138036' />
+    <nd ref='-138053' />
+    <nd ref='-138037' />
+    <nd ref='-138161' />
+    <nd ref='-138054' />
+    <nd ref='-138162' />
+    <nd ref='-138038' />
+    <nd ref='-138155' />
+    <nd ref='-138055' />
+    <nd ref='-138056' />
+    <nd ref='-138033' />
+    <nd ref='-138057' />
+    <nd ref='-138039' />
+    <nd ref='-138058' />
+    <nd ref='-138164' />
+    <nd ref='-138041' />
+    <nd ref='-138165' />
+    <nd ref='-138059' />
+    <nd ref='-138166' />
+    <nd ref='-138040' />
+    <nd ref='-138167' />
+    <nd ref='-138163' />
+    <nd ref='-138168' />
+    <nd ref='-137782' />
+    <nd ref='-137791' />
+    <nd ref='-137740' />
+    <nd ref='-137783' />
+    <nd ref='-137761' />
+    <nd ref='-138217' />
+    <nd ref='-137741' />
+    <nd ref='-137784' />
+    <nd ref='-137762' />
+    <nd ref='-137785' />
+    <nd ref='-137742' />
+    <nd ref='-137790' />
+    <nd ref='-137763' />
+    <nd ref='-138207' />
+    <nd ref='-137787' />
+    <nd ref='-138208' />
+    <nd ref='-138232' />
+    <nd ref='-138231' />
+    <nd ref='-138230' />
+    <nd ref='-138229' />
+    <nd ref='-138228' />
+    <nd ref='-138222' />
+    <nd ref='-138223' />
+    <nd ref='-138224' />
+    <nd ref='-138225' />
+    <nd ref='-138226' />
+    <nd ref='-137965' />
+    <nd ref='-137985' />
+    <nd ref='-137982' />
+    <nd ref='-137955' />
+    <nd ref='-137983' />
+    <nd ref='-137963' />
+    <nd ref='-137987' />
+    <nd ref='-137979' />
+    <nd ref='-137986' />
+    <nd ref='-137966' />
+    <nd ref='-137980' />
+    <nd ref='-137961' />
+    <nd ref='-137981' />
+    <nd ref='-137964' />
+    <nd ref='-137984' />
+    <nd ref='-137967' />
+    <nd ref='-138227' />
+    <nd ref='-137974' />
+    <nd ref='-137973' />
+    <nd ref='-137972' />
+    <nd ref='-138213' />
+    <nd ref='-137971' />
+    <nd ref='-137975' />
+    <nd ref='-138216' />
+    <nd ref='-137978' />
+    <nd ref='-138215' />
+    <nd ref='-137968' />
+    <nd ref='-137956' />
+    <nd ref='-137977' />
+    <nd ref='-137969' />
+    <nd ref='-137976' />
+    <nd ref='-137970' />
+    <nd ref='-138160' />
+    <nd ref='-137994' />
+    <nd ref='-138214' />
+    <nd ref='-138197' />
+    <nd ref='-138199' />
+    <nd ref='-138170' />
+    <nd ref='-138198' />
+    <nd ref='-138200' />
+    <nd ref='-138221' />
+    <nd ref='-138048' />
+    <nd ref='-138220' />
+    <nd ref='-138159' />
+    <nd ref='-138201' />
+    <nd ref='-137995' />
+    <nd ref='-138202' />
+    <nd ref='-138156' />
+    <nd ref='-138203' />
+    <nd ref='-137996' />
+    <nd ref='-138205' />
+    <nd ref='-138172' />
+    <nd ref='-138204' />
+    <nd ref='-138157' />
+    <nd ref='-138210' />
+    <nd ref='-138171' />
+    <nd ref='-138209' />
+    <nd ref='-138218' />
+    <nd ref='-137997' />
+    <nd ref='-138211' />
+    <nd ref='-138206' />
+    <nd ref='-138158' />
+    <nd ref='-138212' />
+    <nd ref='-137743' />
+    <nd ref='-137993' />
+    <nd ref='-137992' />
+    <nd ref='-137991' />
+    <nd ref='-137962' />
+    <nd ref='-137989' />
+    <nd ref='-137988' />
+    <nd ref='-137990' />
+    <nd ref='-137958' />
+    <nd ref='-138002' />
+    <nd ref='-138003' />
+    <nd ref='-138004' />
+    <nd ref='-138005' />
+    <nd ref='-138219' />
+    <nd ref='-138001' />
+    <nd ref='-138000' />
+    <nd ref='-137999' />
+    <nd ref='-137957' />
+    <nd ref='-137998' />
+    <nd ref='-137959' />
+    <nd ref='-137786' />
+    <nd ref='-137764' />
+    <nd ref='-137788' />
+    <nd ref='-137928' />
+    <nd ref='-137744' />
+    <nd ref='-137927' />
+    <nd ref='-137789' />
+    <nd ref='-137793' />
+    <nd ref='-137745' />
+    <nd ref='-137792' />
+    <nd ref='-137746' />
+    <nd ref='-137794' />
     <tag k='highway' v='raceway' />
     <tag k='width' v='10' />
   </way>
@@ -2164,17 +2375,6 @@
     <tag k='height' v='1' />
     <tag k='style' v='traffic_barrier' />
   </way>
-  <way id='-120893' action='modify' visible='true'>
-    <nd ref='-137798' />
-    <nd ref='-137799' />
-    <nd ref='-137716' />
-    <nd ref='-137797' />
-    <nd ref='-137717' />
-    <nd ref='-137796' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
   <way id='-121561' action='modify' visible='true'>
     <nd ref='-137929' />
     <nd ref='-137930' />
@@ -2218,153 +2418,6 @@
   <way id='-121684' action='modify' visible='true'>
     <nd ref='-137949' />
     <nd ref='-137950' />
-  </way>
-  <way id='-122470' action='modify' visible='true'>
-    <nd ref='-138005' />
-    <nd ref='-138219' />
-    <nd ref='-138001' />
-    <nd ref='-138000' />
-    <nd ref='-137999' />
-    <nd ref='-137957' />
-    <nd ref='-137998' />
-    <nd ref='-137959' />
-    <nd ref='-137786' />
-    <nd ref='-137764' />
-    <nd ref='-137788' />
-    <nd ref='-137928' />
-    <nd ref='-137744' />
-    <nd ref='-137927' />
-    <nd ref='-137789' />
-    <nd ref='-137793' />
-    <nd ref='-137745' />
-    <nd ref='-137792' />
-    <nd ref='-137746' />
-    <nd ref='-137794' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125117' action='modify' visible='true'>
-    <nd ref='-137787' />
-    <nd ref='-138208' />
-    <nd ref='-138232' />
-    <nd ref='-138231' />
-    <nd ref='-138230' />
-    <nd ref='-138229' />
-    <nd ref='-138228' />
-    <nd ref='-138222' />
-    <nd ref='-138223' />
-    <nd ref='-138224' />
-    <nd ref='-138225' />
-    <nd ref='-138226' />
-    <nd ref='-137965' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125120' action='modify' visible='true'>
-    <nd ref='-137965' />
-    <nd ref='-137985' />
-    <nd ref='-137982' />
-    <nd ref='-137955' />
-    <nd ref='-137983' />
-    <nd ref='-137963' />
-    <nd ref='-137987' />
-    <nd ref='-137979' />
-    <nd ref='-137986' />
-    <nd ref='-137966' />
-    <nd ref='-137980' />
-    <nd ref='-137961' />
-    <nd ref='-137981' />
-    <nd ref='-137964' />
-    <nd ref='-137984' />
-    <nd ref='-137967' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125127' action='modify' visible='true'>
-    <nd ref='-137967' />
-    <nd ref='-138227' />
-    <nd ref='-137974' />
-    <nd ref='-137973' />
-    <nd ref='-137972' />
-    <nd ref='-138213' />
-    <nd ref='-137971' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125145' action='modify' visible='true'>
-    <nd ref='-138198' />
-    <nd ref='-138200' />
-    <nd ref='-138221' />
-    <nd ref='-138048' />
-    <nd ref='-138220' />
-    <nd ref='-138159' />
-    <nd ref='-138201' />
-    <nd ref='-137995' />
-    <nd ref='-138202' />
-    <nd ref='-138156' />
-    <nd ref='-138203' />
-    <nd ref='-137996' />
-    <nd ref='-138205' />
-    <nd ref='-138172' />
-    <nd ref='-138204' />
-    <nd ref='-138157' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125149' action='modify' visible='true'>
-    <nd ref='-137958' />
-    <nd ref='-138002' />
-    <nd ref='-138003' />
-    <nd ref='-138004' />
-    <nd ref='-138005' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125166' action='modify' visible='true'>
-    <nd ref='-138006' />
-    <nd ref='-138007' />
-    <nd ref='-137748' />
-    <nd ref='-138008' />
-    <nd ref='-137711' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125539' action='modify' visible='true'>
-    <nd ref='-137760' />
-    <nd ref='-137779' />
-    <nd ref='-137737' />
-    <nd ref='-137780' />
-    <nd ref='-137738' />
-    <nd ref='-137918' />
-    <nd ref='-137781' />
-    <nd ref='-137917' />
-    <nd ref='-137739' />
-    <nd ref='-138052' />
-    <nd ref='-138050' />
-    <nd ref='-138034' />
-    <nd ref='-138051' />
-    <nd ref='-138035' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-125616' action='modify' visible='true'>
-    <nd ref='-138054' />
-    <nd ref='-138162' />
-    <nd ref='-138038' />
-    <nd ref='-138155' />
-    <nd ref='-138055' />
-    <nd ref='-138056' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
   </way>
   <way id='-125708' action='modify' visible='true'>
     <nd ref='-138060' />
@@ -2547,57 +2600,6 @@
     <tag k='highway' v='wall' />
     <tag k='width' v='0.5' />
   </way>
-  <way id='-126191' action='modify' visible='true'>
-    <nd ref='-138058' />
-    <nd ref='-138164' />
-    <nd ref='-138041' />
-    <nd ref='-138165' />
-    <nd ref='-138059' />
-    <nd ref='-138166' />
-    <nd ref='-138040' />
-    <nd ref='-138167' />
-    <nd ref='-138163' />
-    <nd ref='-138168' />
-    <nd ref='-137782' />
-    <nd ref='-137791' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126305' action='modify' visible='true'>
-    <nd ref='-138035' />
-    <nd ref='-138154' />
-    <nd ref='-138036' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126306' action='modify' visible='true'>
-    <nd ref='-138036' />
-    <nd ref='-138053' />
-    <nd ref='-138037' />
-    <nd ref='-138161' />
-    <nd ref='-138054' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126334' action='modify' visible='true'>
-    <nd ref='-138039' />
-    <nd ref='-138058' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126337' action='modify' visible='true'>
-    <nd ref='-138056' />
-    <nd ref='-138033' />
-    <nd ref='-138057' />
-    <nd ref='-138039' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
   <way id='-126584' action='modify' visible='true'>
     <nd ref='-138181' />
     <nd ref='-138182' />
@@ -2623,69 +2625,6 @@
     <tag k='curb_delete' v='1' />
     <tag k='highway' v='wall' />
     <tag k='width' v='0.5' />
-  </way>
-  <way id='-126769' action='modify' visible='true'>
-    <nd ref='-137970' />
-    <nd ref='-138160' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126770' action='modify' visible='true'>
-    <nd ref='-138160' />
-    <nd ref='-137994' />
-    <nd ref='-138214' />
-    <nd ref='-138197' />
-    <nd ref='-138199' />
-    <nd ref='-138170' />
-    <nd ref='-138198' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-126810' action='modify' visible='true'>
-    <nd ref='-138157' />
-    <nd ref='-138210' />
-    <nd ref='-138171' />
-    <nd ref='-138209' />
-    <tag k='curb_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-127089' action='modify' visible='true'>
-    <nd ref='-137971' />
-    <nd ref='-137975' />
-    <nd ref='-138216' />
-    <nd ref='-137978' />
-    <nd ref='-138215' />
-    <nd ref='-137968' />
-    <nd ref='-137956' />
-    <nd ref='-137977' />
-    <nd ref='-137969' />
-    <nd ref='-137976' />
-    <nd ref='-137970' />
-    <tag k='curb_left_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
-  </way>
-  <way id='-127153' action='modify' visible='true'>
-    <nd ref='-137791' />
-    <nd ref='-137740' />
-    <nd ref='-137783' />
-    <nd ref='-137761' />
-    <nd ref='-138217' />
-    <nd ref='-137741' />
-    <nd ref='-137784' />
-    <nd ref='-137762' />
-    <nd ref='-137785' />
-    <nd ref='-137742' />
-    <nd ref='-137790' />
-    <nd ref='-137763' />
-    <nd ref='-138207' />
-    <nd ref='-137787' />
-    <tag k='curb_right_delete' v='1' />
-    <tag k='highway' v='raceway' />
-    <tag k='width' v='10' />
   </way>
   <way id='-127209' action='modify' visible='true'>
     <nd ref='-138325' />
@@ -2727,29 +2666,6 @@
     <tag k='height' v='2' />
     <tag k='style' v='hedge0' />
   </way>
-  <way id='-127277' action='modify' visible='true'>
-    <nd ref='-138514' />
-    <nd ref='-138515' />
-    <nd ref='-138516' />
-    <nd ref='-138517' />
-    <tag k='barrier' v='guard_rail' />
-    <tag k='height' v='2' />
-    <tag k='style' v='hedge1' />
-  </way>
-  <way id='-127278' action='modify' visible='true'>
-    <nd ref='-138524' />
-    <nd ref='-138525' />
-    <nd ref='-138526' />
-    <nd ref='-138527' />
-    <nd ref='-138522' />
-    <nd ref='-138521' />
-    <nd ref='-138520' />
-    <nd ref='-138519' />
-    <nd ref='-138524' />
-    <tag k='barrier' v='guard_rail' />
-    <tag k='height' v='2' />
-    <tag k='style' v='hedge0' />
-  </way>
   <way id='-127328' action='modify' visible='true'>
     <nd ref='-137829' />
     <nd ref='-138629' />
@@ -2766,6 +2682,66 @@
     <nd ref='-137828' />
     <nd ref='-138883' />
     <nd ref='-137829' />
+    <tag k='barrier' v='guard_rail' />
+    <tag k='height' v='2' />
+    <tag k='style' v='hedge0' />
+  </way>
+  <way id='-128194' action='modify' visible='true'>
+    <nd ref='-140216' />
+    <nd ref='-140217' />
+    <nd ref='-140218' />
+    <nd ref='-140219' />
+    <nd ref='-140220' />
+    <nd ref='-140221' />
+    <nd ref='-140222' />
+    <nd ref='-140223' />
+    <nd ref='-140224' />
+    <nd ref='-140225' />
+    <nd ref='-140226' />
+    <nd ref='-140227' />
+    <nd ref='-140228' />
+    <nd ref='-140229' />
+    <nd ref='-140216' />
+    <tag k='barrier' v='guard_rail' />
+    <tag k='height' v='2' />
+    <tag k='style' v='hedge0' />
+  </way>
+  <way id='-128195' action='modify' visible='true'>
+    <nd ref='-140230' />
+    <nd ref='-140231' />
+    <nd ref='-140232' />
+    <nd ref='-140233' />
+    <nd ref='-140234' />
+    <nd ref='-140235' />
+    <nd ref='-140236' />
+    <nd ref='-140237' />
+    <nd ref='-140238' />
+    <nd ref='-140239' />
+    <nd ref='-140240' />
+    <nd ref='-140241' />
+    <nd ref='-140242' />
+    <nd ref='-140243' />
+    <nd ref='-140230' />
+    <tag k='barrier' v='guard_rail' />
+    <tag k='height' v='2' />
+    <tag k='style' v='hedge1' />
+  </way>
+  <way id='-128196' action='modify' visible='true'>
+    <nd ref='-140244' />
+    <nd ref='-140245' />
+    <nd ref='-140246' />
+    <nd ref='-140247' />
+    <nd ref='-140248' />
+    <nd ref='-140249' />
+    <nd ref='-140250' />
+    <nd ref='-140251' />
+    <nd ref='-140252' />
+    <nd ref='-140253' />
+    <nd ref='-140254' />
+    <nd ref='-140255' />
+    <nd ref='-140256' />
+    <nd ref='-140257' />
+    <nd ref='-140244' />
     <tag k='barrier' v='guard_rail' />
     <tag k='height' v='2' />
     <tag k='style' v='hedge0' />

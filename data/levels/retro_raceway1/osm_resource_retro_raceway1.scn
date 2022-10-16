@@ -5,7 +5,11 @@ macro_begin osm_resource_retro_raceway1;
         heightmap=__DIR__/../jb/heightmap.pgm,
         height_scale=3,
         terrain_undefined_textures=textures/debug/pink.png,
-        terrain_grass_textures=#Ground037_Sl,
+        terrain_grass_textures=
+            #Ground037_Sl_near
+            #Ground037_Sl_8
+            #Ground037_Sl_64
+            #Ground037_Sl_256,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
         street_crossing_texture=#Road007_No_Lines,
@@ -19,10 +23,10 @@ macro_begin osm_resource_retro_raceway1;
         facade_textures=facade:Plaster003,
         ceiling_texture=#Asphalt015,
         barrier_styles=
-            name:traffic_barrier texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous_02 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:1 specularity:1
-            name:ad0 texture:#ad0 uv:0.125 0.5 blend_mode:off wrap_mode_t:clamp_to_edge reorient_uv0:1 ambience:1 specularity:1
-            name:hedge0 texture:#hedge0 uv:0.125 0.5 blend_mode:binary_05 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:2 specularity:0
-            name:hedge1 texture:#hedge0 uv:-0.125 0.5 blend_mode:binary_05 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:2 specularity:0,
+            name:traffic_barrier texture:#traffic_barrier uv:1 1 blend_mode:semi_continuous_02 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:1 diffusivity:1 specularity:1
+            name:ad0 texture:#ad0 uv:0.125 0.5 blend_mode:off wrap_mode_t:clamp_to_edge reorient_uv0:1 ambience:1 diffusivity:1 specularity:1
+            name:hedge0 texture:#hedge0 uv:0.125 0.5 blend_mode:binary_05 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:3 diffusivity:0 specularity:0
+            name:hedge1 texture:#hedge0 uv:-0.125 0.5 blend_mode:binary_05 wrap_mode_t:clamp_to_edge reorient_uv0:0 ambience:3 diffusivity:0 specularity:0,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/racing_line_retro_raceway1.m,
@@ -38,7 +42,8 @@ macro_begin osm_resource_retro_raceway1;
         near_grass_resource_names = vegetation1.5(p:0.02)(min_bdry:25)(max_bdry:35)(hitbox:02_1_02_hitbox),
         default_street_width=12,
         scale=1e-3,
-        uv_scale_terrain=1e-1,
+        uv_scale_terrain=3e-1,
+        uv_period_terrain=256,
         uv_scale_street=1e-1,
         uv_scale_wall=1e-1,
         uv_scale_facade=2.5e-1,

@@ -24,9 +24,9 @@ add_blend_map_texture
     scale=0.125
     weight=1;
 
-#############;
-# Ground037 #;
-#############;
+#####################;
+# Ground037 Rock028 #;
+#####################;
 add_blend_map_texture
     name=Ground037_Rock028_near
     texture=#Ground037_Rock028
@@ -124,6 +124,53 @@ add_blend_map_texture
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=0.125
+    weight=1;
+
+################;
+# Ground037 Sl #;
+################;
+add_blend_map_texture
+    name=Ground037_Sl_near
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 15 25
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_8
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=15 25 200 300
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.125
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_64
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=200 300 1000 1500
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.015625
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_Sl_256
+    texture=#Ground037_Sl
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=1000 1500 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.00390625
     weight=1;
 
 ###########;
