@@ -85,6 +85,7 @@ macro_begin parameter_setters_rally;
         on_init=,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
+            name=Dodge Monaco 1974 value=SHOWROOM_PLAYER_VEHICLE:_DM74 SHOWROOM_DECIMATE:
             name=M3 value=SHOWROOM_PLAYER_VEHICLE:_M3 SHOWROOM_DECIMATE:
             name=OT value=SHOWROOM_PLAYER_VEHICLE:_OT SHOWROOM_DECIMATE:
             name=TW value=SHOWROOM_PLAYER_VEHICLE:_TW SHOWROOM_DECIMATE:

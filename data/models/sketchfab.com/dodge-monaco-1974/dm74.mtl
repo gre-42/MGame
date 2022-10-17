@@ -1,0 +1,25 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl wire_224198087.001
+Ns 96.078421
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump textures/DodgeMonaco_Normal_OpenGL.png
+map_Kd textures/DodgeMonaco_Base_Color.png
+map_Ks textures/DodgeMonaco_Metallic.png
+
+newmtl glass
+Ns 96.078421
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.5
+illum 2
