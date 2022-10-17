@@ -1,55 +1,55 @@
-.PHONY: retro_rayway1.1.csv optimize_retro_rayway1.1 racing_line_retro_rayway1.1.m stats stats.1
+.PHONY: retro_raceway1.1.csv optimize_retro_raceway1.1 racing_line_retro_raceway1.1.m stats stats.1
 
 CONTAINER ?= racing_line
-RETRO_RAYWAY1 ?= retro_rayway1
-OUTPUTS_RETRO_RAYWAY1 ?= outputs_retro_rayway1
+RETRO_RACEWAY1 ?= retro_raceway1
+OUTPUTS_RETRO_RACEWAY1 ?= outputs_retro_raceway1
 
-all: optimize_retro_rayway1 optimize_retro_rayway1.1 racing_line_retro_rayway1.1.m deploy
+all: optimize_retro_raceway1 optimize_retro_raceway1.1 racing_line_retro_raceway1.1.m deploy
 
-retro_rayway1.csv: ../../../../Mlib/racing_line/osm_to_race_track.py ../map_retro_rayway1.osm Makefile
+retro_raceway1.csv: ../../../../Mlib/racing_line/osm_to_race_track.py ../map_retro_raceway1.osm Makefile
 	../../../../Mlib/racing_line/osm_to_race_track.py \
-		../map_retro_rayway1.osm \
-		retro_rayway1.csv \
-		--translation retro_rayway1_t.m \
-		--rotation retro_rayway1_R.m \
-		--start_node_id -114585 \
-		--street_width 15
+		../map_retro_raceway1.osm \
+		retro_raceway1.csv \
+		--translation retro_raceway1_t.m \
+		--rotation retro_raceway1_R.m \
+		--start_node_id -137778 \
+		--street_width 5
 
-retro_rayway1.1.csv:
+retro_raceway1.1.csv:
 	../../../../Mlib/racing_line/racing_line_to_race_track.py \
-		outputs_retro_rayway1 \
-		retro_rayway1.1.csv \
+		outputs_retro_raceway1 \
+		retro_raceway1.1.csv \
 		--down_sampling 10 \
 		--street_width 5
 
-optimize_retro_rayway1.1:
-	make optimize_retro_rayway1 \
+optimize_retro_raceway1.1:
+	make optimize_retro_raceway1 \
 		CONTAINER=$(CONTAINER) \
-		RETRO_RAYWAY1=retro_rayway1.1 \
-		OUTPUTS_RETRO_RAYWAY1=outputs_retro_rayway1.1
+		RETRO_RACEWAY1=retro_raceway1.1 \
+		OUTPUTS_RETRO_RACEWAY1=outputs_retro_raceway1.1
 
-racing_line_retro_rayway1.1.m:
+racing_line_retro_raceway1.1.m:
 	../../../../Mlib/racing_line/racing_line_to_mgame.py \
-		outputs_retro_rayway1.1 \
-		racing_line_retro_rayway1.1.m \
-		--translation retro_rayway1_t.m \
-		--rotation retro_rayway1_R.m
+		outputs_retro_raceway1.1 \
+		racing_line_retro_raceway1.1.m \
+		--translation retro_raceway1_t.m \
+		--rotation retro_raceway1_R.m
 
 deploy:
-	cp racing_line_retro_rayway1.1.m ../racing_line_retro_rayway1.m
+	cp racing_line_retro_raceway1.1.m ../racing_line_retro_raceway1.m
 
 stats:
 	../../../../Mlib/racing_line/racing_line_stats.py \
-		outputs_retro_rayway1
+		outputs_retro_raceway1
 
 stats.1:
 	../../../../Mlib/racing_line/racing_line_stats.py \
-		outputs_retro_rayway1.1
+		outputs_retro_raceway1.1
 
-optimize_retro_rayway1: $(RETRO_RAYWAY1).csv Makefile
+optimize_retro_raceway1: $(RETRO_RACEWAY1).csv Makefile
 	docker run -dit --rm --name $(CONTAINER) racing_line
-	docker cp $(RETRO_RAYWAY1).csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
-	docker exec $(CONTAINER) sed -i s/berlin_2018/$(RETRO_RAYWAY1)/g /global_racetrajectory_optimization/main_globaltraj.py
+	docker cp $(RETRO_RACEWAY1).csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
+	docker exec $(CONTAINER) sed -i s/berlin_2018/$(RETRO_RACEWAY1)/g /global_racetrajectory_optimization/main_globaltraj.py
 
 	# Enable plotting
 	docker exec $(CONTAINER) sed -i 's/"mincurv_curv_lin": False/"mincurv_curv_lin": True/g' /global_racetrajectory_optimization/main_globaltraj.py
@@ -133,6 +133,6 @@ optimize_retro_rayway1: $(RETRO_RAYWAY1).csv Makefile
 	# docker exec $(CONTAINER) bash -c "cd /usr/local/lib/python*/dist-packages/trajectory_planning_helpers && mv /tmp/opt_min_curv.py.patch . && patch < opt_min_curv.py.patch"
 
 	docker exec -t $(CONTAINER) python3 /global_racetrajectory_optimization/main_globaltraj.py
-	rm -rf $(OUTPUTS_RETRO_RAYWAY1)
-	docker cp $(CONTAINER):/global_racetrajectory_optimization/outputs $(OUTPUTS_RETRO_RAYWAY1)
+	rm -rf $(OUTPUTS_RETRO_RACEWAY1)
+	docker cp $(CONTAINER):/global_racetrajectory_optimization/outputs $(OUTPUTS_RETRO_RACEWAY1)
 	docker stop $(CONTAINER)
