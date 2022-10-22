@@ -5,7 +5,7 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Track JB
-![Screenshot-JB-2022-10-08.png](media/Screenshot-JB-2022-10-08.png)
+![Screenshot-JB-2022-10-22.png](media/Screenshot-JB-2022-10-22.png)
 
 ### Großglockner High Alpine Road
 ![Screenshot-GH-2022-10-14](media/Screenshot-GH-2022-10-14.png)
