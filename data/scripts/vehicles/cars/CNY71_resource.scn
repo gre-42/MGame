@@ -3,7 +3,21 @@ obj_resource
     filename=models/primitives/box.obj
     position=0 0 0
     rotation=0 0 0
-    scale=1.15 0.6 2.85
+    scale=1.15 0.45 2.85
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all;
+
+obj_resource
+    name=CNY71_massbox
+    filename=models/primitives/box.obj
+    position=0 -0.3 0
+    rotation=0 0 0
+    scale=1.15 0.3 2.85
     center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
@@ -45,7 +59,7 @@ macro_begin load_CNY71_part;
     obj_resource
         name=CNY71/NAME
         filename=models/sketchfab.com/Chrysler-New_Yorker_1971/NAME.obj
-        position=-0.275 -0.7 -1.1
+        position=-0.275 -0.75 -1.1
         rotation=0 -90 0
         scale=3.9 3.9 3.9
         center_distances=DIST_MIN DIST_MAX

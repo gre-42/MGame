@@ -1,5 +1,6 @@
 macro_begin create_CNY71_graphics;
     renderable_instance name=CNY71_chassis-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71/chassis-DECIMATE;
+    # renderable_instance name=CNY71_massbox-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71_massbox;
     # renderable_instance name=CNY71_hitbox-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71_hitbox;
     # renderable_instance name=CNY71_topdown_locator-SUFFIX node=car_node-NODE_SUFFIX resource=topdown_locator;
 
@@ -21,8 +22,8 @@ macro_begin create_CNY71_physics;
         node=car_node-SUFFIX
         hitboxes=CNY71_hitbox CNY71-tirelines
         mass=MASS
-        size=2.3 1.2 5.7
-        com=0 0 0
+        size=2.3 0.6 5.7
+        com=0 -0.3 0
         collidable_mode=COLLIDABLE_MODE
         name=CNY71-SUFFIX;
     #  120 PS = 88259.8 Watt;
@@ -40,10 +41,10 @@ macro_begin create_CNY71_physics;
     IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-111 -70 -50 0 powers=0 147100 147100 14710 gear_ratios=0.25 0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
     IF_RALLY create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=-111 -70 -50 0 powers=0 147100 147100 14710 gear_ratios=0.25 0.5 1 2 3 hand_brake_pulled=HAND_BRAKE_PULLED;
 
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-0.7 -0.5 -1.5  radius=0.3 engine=main   brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position= 0.7 -0.5 -1.5  radius=0.3 engine=main   brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
-    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=-0.7 -0.5  1.25 radius=0.3 engine=brakes brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=2;
-    wheel rigid_body=car_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position= 0.7 -0.5  1.25 radius=0.3 engine=brakes brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=3;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-0.7 -0.58 -1.5  radius=0.3 engine=main   brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position= 0.7 -0.58 -1.5  radius=0.3 engine=main   brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
+    wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=-0.7 -0.58  1.25 radius=0.3 engine=brakes brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=2;
+    wheel rigid_body=car_node-SUFFIX node=wheel_right_rear_node-SUFFIX  position= 0.7 -0.58  1.25 radius=0.3 engine=brakes brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=3;
 
     create_car_controller
         node=car_node-SUFFIX
@@ -52,10 +53,10 @@ macro_begin create_CNY71_physics;
 macro_end;
 
 macro_begin create_CNY71;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX  position=-0.7 -0.4 -1.5  rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position= 0.7 -0.4 -1.5  rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=-0.7 -0.4  1.25 rotation=0 0 0 scale=1;
-    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_rear_node-SUFFIX  position= 0.7 -0.4  1.25 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_front_node-SUFFIX  position=-0.7 -0.48 -1.5  rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_front_node-SUFFIX position= 0.7 -0.48 -1.5  rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_left_rear_node-SUFFIX   position=-0.7 -0.48  1.25 rotation=0 0 0 scale=1;
+    child_node_instance type=dynamic parent=car_node-SUFFIX name=wheel_right_rear_node-SUFFIX  position= 0.7 -0.48  1.25 rotation=0 0 0 scale=1;
 
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_front_node-SUFFIX name=wheel_right_front_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
     IF_WITH_GRAPHICS child_node_instance type=dynamic parent=wheel_right_rear_node-SUFFIX name=wheel_right_rear_node_visual-SUFFIX position=0 0 0 rotation=0 180 0 scale=1;
@@ -64,7 +65,7 @@ macro_begin create_CNY71;
     IF_WITH_GRAPHICS macro_playback create_CNY71_lights SUFFIX:SUFFIX;
 
     IF_WITH_PHYSICS IF_STATIC  macro_playback create_CNY71_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_CNY71_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:2100     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_CNY71_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:2000     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
 macro_end;
 
 macro_begin create_player_car_externals_CNY71;
