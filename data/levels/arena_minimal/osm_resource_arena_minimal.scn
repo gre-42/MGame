@@ -48,7 +48,7 @@ macro_begin osm_resource_arena_minimal;
                         back:DallasW_posz,
         ceiling_texture=#Asphalt015,
         barrier_styles=
-            name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous_02 wrap_mode_t:repeat reorient_uv0:0,
+            name:fence1 texture:#fence1 uv:1 1 blend_mode:semi_continuous_02 wrap_mode_t:repeat reorient_uv0:0 ambience:1 diffusivity:1 specularity:1,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         grass_resource_names = bflower2(p:0.1),
         grass_resource_names = grass_tbdpec3r,
