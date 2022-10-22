@@ -599,7 +599,10 @@ macro_begin _scene_tank_instantiate;
         position=NAN NAN
         font_height=64
         line_distance=64
-        nseconds=5;
+        nseconds=5
+        pending_focus=countdown_pending
+        counting_focus=countdown_pending
+        text=;
 macro_end;
 
 include ../../scripts/include_all.scn;

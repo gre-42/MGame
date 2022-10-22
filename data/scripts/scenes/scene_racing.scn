@@ -107,13 +107,31 @@ macro_begin _scene_racing_instantiate_static_objects;
         texture=textures/ui_background.png
         update=once
         focus_mask=countdown_any;
+    
+    ui_background
+        texture=textures/ui_background.png
+        update=once
+        focus_mask=game_over_countdown_any;
 
     countdown
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
         font_height=64
         line_distance=64
-        nseconds=5;
+        nseconds=5
+        pending_focus=countdown_pending
+        counting_focus=countdown_counting
+        text=;
+
+    countdown
+        ttf_file=fonts/RobotoMono-Bold.ttf
+        position=NAN NAN
+        font_height=64
+        line_distance=64
+        nseconds=3
+        pending_focus=game_over_countdown_pending
+        counting_focus=game_over_countdown_counting
+        text=Game over;
 
     ###########;
     # Dirtmap #;
@@ -328,7 +346,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         height_changed=0
         track_filename=RECORDINGS_DIR/checkpoints.m
         deselection_emissivity=0.7 0.7 0.7
-        on_finish=append_focuses game_over menu;
+        on_finish=set_focuses menu game_over_countdown_pending;
 
     camera_key_binding key=C gamepad_button=BACK;
 
