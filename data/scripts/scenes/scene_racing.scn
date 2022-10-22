@@ -400,7 +400,8 @@ macro_begin scene_racing_static;
         setup_new_round=macro_playback
             _setup_new_round
             context=primary_scene;
-    
+    macro_playback _set_session_and_reload_history context=primary_scene;
+
     create_scene
         name=weapon_closeup
         z_order=0

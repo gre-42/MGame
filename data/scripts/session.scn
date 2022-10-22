@@ -1,0 +1,3 @@
+macro_begin _set_session_and_reload_history;
+    set_session_and_reload_history session=PRIMARY_SCENE_SESSION;
+macro_end;

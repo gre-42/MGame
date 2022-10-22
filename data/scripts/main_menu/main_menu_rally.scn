@@ -115,6 +115,23 @@ macro_begin parameter_setters_rally;
             name=Blue  value=SHOWROOM_PLAYER_VEHICLE_R:0.51 SHOWROOM_PLAYER_VEHICLE_G:0.56 SHOWROOM_PLAYER_VEHICLE_B:0.62
             name=Black value=SHOWROOM_PLAYER_VEHICLE_R:0.06 SHOWROOM_PLAYER_VEHICLE_G:0.07 SHOWROOM_PLAYER_VEHICLE_B:0.06;
 
+    parameter_setter
+        id=session_manager,
+        title=Session,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 80,
+        font_height=32,
+        line_distance=32,
+        default=0,
+        on_init=,
+        on_change=macro_playback _set_session_and_reload_history context=primary_scene,
+        parameters=
+            name=Session1 value=PRIMARY_SCENE_SESSION:session1
+            name=Session2 value=PRIMARY_SCENE_SESSION:session2
+            name=Session3 value=PRIMARY_SCENE_SESSION:session3
+            name=Session4 value=PRIMARY_SCENE_SESSION:session4
+            name=Session5 value=PRIMARY_SCENE_SESSION:session5;
+
     IF_DEVEL parameter_setter
         id=playback_speed_selector,
         title=Playback speed,
