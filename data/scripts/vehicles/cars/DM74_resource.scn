@@ -1,9 +1,23 @@
 obj_resource
     name=DM74_hitbox
     filename=models/primitives/box.obj
-    position=0 0 0
+    position=0 0.05 0.3
     rotation=0 0 0
-    scale=1.15 0.6 2.85
+    scale=1 0.55 2.83
+    center_distances=0 INFINITY
+    blend_mode=off
+    alpha_distances=0 0 INFINITY INFINITY
+    occluded_pass=none
+    occluder_pass=none
+    aggregate_mode=none
+    transformation_mode=all;
+
+obj_resource
+    name=DM74_massbox
+    filename=models/primitives/box.obj
+    position=0 -0.18 0.3
+    rotation=0 0 0
+    scale=1 0.33 2.83
     center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY

@@ -3,7 +3,7 @@ obj_resource
     filename=models/primitives/box.obj
     position=0 0 0
     rotation=0 0 0
-    scale=1.15 0.45 2.85
+    scale=0.85 0.45 2.85
     center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY
@@ -15,9 +15,9 @@ obj_resource
 obj_resource
     name=CNY71_massbox
     filename=models/primitives/box.obj
-    position=0 -0.3 0
+    position=0 -0.3 0.05
     rotation=0 0 0
-    scale=1.15 0.3 2.85
+    scale=0.85 0.3 2.45
     center_distances=0 INFINITY
     blend_mode=off
     alpha_distances=0 0 INFINITY INFINITY

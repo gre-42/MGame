@@ -1,7 +1,7 @@
 macro_begin create_CNY71_graphics;
     renderable_instance name=CNY71_chassis-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71/chassis-DECIMATE;
-    # renderable_instance name=CNY71_massbox-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71_massbox;
     # renderable_instance name=CNY71_hitbox-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71_hitbox;
+    # renderable_instance name=CNY71_massbox-SUFFIX node=car_node-NODE_SUFFIX resource=CNY71_massbox;
     # renderable_instance name=CNY71_topdown_locator-SUFFIX node=car_node-NODE_SUFFIX resource=topdown_locator;
 
     renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=CNY71/wheel-DECIMATE;
@@ -22,8 +22,8 @@ macro_begin create_CNY71_physics;
         node=car_node-SUFFIX
         hitboxes=CNY71_hitbox CNY71-tirelines
         mass=MASS
-        size=2.3 0.6 5.7
-        com=0 -0.3 0
+        size=1.7 0.6 4.9
+        com=0 -0.3 0.05
         collidable_mode=COLLIDABLE_MODE
         name=CNY71-SUFFIX;
     #  120 PS = 88259.8 Watt;

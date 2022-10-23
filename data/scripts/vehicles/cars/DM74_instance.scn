@@ -1,6 +1,7 @@
 macro_begin create_DM74_graphics;
     renderable_instance name=DM74_chassis-SUFFIX node=car_node-NODE_SUFFIX resource=DM74/chassis-DECIMATE;
     # renderable_instance name=DM74_hitbox-SUFFIX node=car_node-NODE_SUFFIX resource=DM74_hitbox;
+    # renderable_instance name=DM74_massbox-SUFFIX node=car_node-NODE_SUFFIX resource=DM74_massbox;
     # renderable_instance name=DM74_topdown_locator-SUFFIX node=car_node-NODE_SUFFIX resource=topdown_locator;
 
     renderable_instance name=wheel-SUFFIX node=wheel_left_front_node-NODE_SUFFIX resource=DM74/wheel-DECIMATE;
@@ -21,8 +22,8 @@ macro_begin create_DM74_physics;
         node=car_node-SUFFIX
         hitboxes=DM74_hitbox DM74-tirelines
         mass=MASS
-        size=2.3 1.2 5.7
-        com=0 0 0
+        size=2 0.66 5.66
+        com=0 -0.18 0
         collidable_mode=COLLIDABLE_MODE
         name=DM74-SUFFIX;
     #  120 PS = 88259.8 Watt;
