@@ -3,7 +3,8 @@ macro_begin scene_selector_td_devel;
         id=scene_selector
         title=Scene
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 80
+        position=20 -900
+        size=NAN 850
         font_height=32
         line_distance=32
         scene_files=
@@ -21,7 +22,8 @@ macro_begin scene_selector_td_release;
         id=scene_selector
         title=Scene
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 80
+        position=20 -900
+        size=NAN 850
         font_height=32
         line_distance=32
         scene_files=

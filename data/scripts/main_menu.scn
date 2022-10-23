@@ -52,7 +52,8 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         id=submenus
         title=
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 20
+        position=20 -60
+        size=NAN 60
         font_height=32
         line_distance=32
         default=0
@@ -62,7 +63,8 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         id=game_mode_selector,
         title=Game mode,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 80,
+        position=20 -900,
+        size=NAN 850,
         font_height=32,
         line_distance=32,
         default=0,

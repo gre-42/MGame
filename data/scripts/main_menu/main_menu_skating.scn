@@ -9,7 +9,7 @@ macro_begin _setup_menu_showroom_skating;
     scene_to_pixel_region
         target_scene=primary_scene
         z_order=2
-        position=20 80
+        position=20 -500
         size=600 350
         focus_mask=menu
         submenus=car_selector;
@@ -20,7 +20,8 @@ macro_begin scene_selector_skating;
         id=scene_selector
         title=Scene
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 80
+        position=20 -900
+        size=NAN 850
         font_height=32
         line_distance=32
         scene_files=
@@ -32,7 +33,8 @@ macro_begin parameter_setters_skating;
         id=car_selector,
         title=Skater,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 80,
+        position=20 -900,
+        size=NAN 850,
         font_height=32,
         line_distance=32,
         default=0,

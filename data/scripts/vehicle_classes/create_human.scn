@@ -79,7 +79,8 @@ macro_begin create_player_human_externals;
     IF_PC visual_player_bullet_count
         player=PLAYER_NAME
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-100 -40
+        position=-100 0
+        size=100 40
         font_height=24
         line_distance=24;
     IF_WITH_GUN player_set_aiming_gun

@@ -85,7 +85,8 @@ macro_begin create_player_car_externals;
         player=PLAYER_NAME
         format=246
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=50 40
+        position=50 -400
+        size=800 400
         font_height=24
         line_distance=24;
     
@@ -93,14 +94,16 @@ macro_begin create_player_car_externals;
         player=PLAYER_NAME
         format=4
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=50 40
+        position=50 -400
+        size=800 400
         font_height=24
         line_distance=24;
     
     IF_PC visual_player_bullet_count
         player=PLAYER_NAME
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-100 -40
+        position=-100 0
+        size=100 40
         font_height=24
         line_distance=24;
 macro_end;
