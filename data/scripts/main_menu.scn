@@ -35,11 +35,13 @@ macro_end;
 
 macro_begin _setup_menu_primary_scene_game_mode_selector;
     ui_background
+        z_order=1
         texture=textures/ui_background.png
         update=once
         focus_mask=menu;
 
     ui_background
+        z_order=1
         texture=textures/ui_background.png
         update=once
         focus_mask=loading;

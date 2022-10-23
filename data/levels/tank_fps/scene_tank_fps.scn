@@ -595,6 +595,7 @@ macro_begin _scene_tank_instantiate;
     append_focuses countdown_pending;
 
     countdown
+        z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
         font_height=64
