@@ -2,6 +2,7 @@ macro_begin _setup_scene_loading;
     macro_playback scene_minimal IF_DIRTMAP:# IF_SKYBOX:#;
 
     ui_background
+        z_order=1
         texture=textures/ui_background.png
         update=once
         focus_mask=always;

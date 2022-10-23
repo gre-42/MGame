@@ -76,6 +76,14 @@ macro_begin _scene_racing_instantiate_static_objects;
     IF_PC_PLAYER_PLAYBACK set_playback_way_points player=you filename=PC_PLAYER_PLAYBACK speedup=PC_PLAYER_PLAYBACK_SPEEDUP;
     IF_PC_PLAYER_PLAYBACK set_can_drive player=you source=ai value=1;
 
+    ui_background
+        z_order=1
+        texture=textures/ui_background.png
+        position=-800 -400
+        size=800 400
+        update=once
+        focus_mask=always;
+
     # TEAM           = 1;
     # BEST_LAP_TIME  = 2;
     # CAR_HP         = 4;
@@ -83,6 +91,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     # NWINS          = 16;
     # NKILLS         = 32;
     players_stats
+        z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=-800 40
         font_height=24
@@ -104,16 +113,19 @@ macro_begin _scene_racing_instantiate_static_objects;
     # Countdown #;
     #############;
     ui_background
+        z_order=1
         texture=textures/ui_background.png
         update=once
         focus_mask=countdown_any;
     
     ui_background
+        z_order=1
         texture=textures/ui_background.png
         update=once
         focus_mask=game_over_countdown_any;
 
     countdown
+        z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
         font_height=64
@@ -124,6 +136,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         text=;
 
     countdown
+        z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
         font_height=64
