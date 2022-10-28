@@ -360,6 +360,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         radius=30
         height_changed=0
         track_filename=RECORDINGS_DIR/checkpoints.m
+        laps=PRIMARY_SCENE_RACE_LAPS
         deselection_emissivity=0.7 0.7 0.7
         on_finish=set_focuses menu game_over_countdown_pending;
 

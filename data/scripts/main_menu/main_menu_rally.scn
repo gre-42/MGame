@@ -120,7 +120,7 @@ macro_begin parameter_setters_rally;
             name=Black value=SHOWROOM_PLAYER_VEHICLE_R:0.06 SHOWROOM_PLAYER_VEHICLE_G:0.07 SHOWROOM_PLAYER_VEHICLE_B:0.06;
 
     parameter_setter
-        id=session_manager,
+        id=session_selector,
         title=Session,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         position=20 -900,
@@ -131,11 +131,29 @@ macro_begin parameter_setters_rally;
         on_init=,
         on_change=macro_playback _set_session_and_reload_history context=primary_scene,
         parameters=
-            name=Session1 value=PRIMARY_SCENE_SESSION:session1
-            name=Session2 value=PRIMARY_SCENE_SESSION:session2
-            name=Session3 value=PRIMARY_SCENE_SESSION:session3
-            name=Session4 value=PRIMARY_SCENE_SESSION:session4
-            name=Session5 value=PRIMARY_SCENE_SESSION:session5;
+            name=Session1 value=PRIMARY_SCENE_RACE_SESSION:session1
+            name=Session2 value=PRIMARY_SCENE_RACE_SESSION:session2
+            name=Session3 value=PRIMARY_SCENE_RACE_SESSION:session3
+            name=Session4 value=PRIMARY_SCENE_RACE_SESSION:session4
+            name=Session5 value=PRIMARY_SCENE_RACE_SESSION:session5;
+
+    parameter_setter
+        id=laps_selector,
+        title=Laps,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 -900,
+        size=NAN 850,
+        font_height=32,
+        line_distance=32,
+        default=0,
+        on_init=,
+        on_change=macro_playback _set_session_and_reload_history context=primary_scene,
+        parameters=
+            name=1 Lap   value=PRIMARY_SCENE_RACE_LAPS:1
+            name=2 Laps  value=PRIMARY_SCENE_RACE_LAPS:2
+            name=4 Laps  value=PRIMARY_SCENE_RACE_LAPS:4
+            name=8 Laps  value=PRIMARY_SCENE_RACE_LAPS:8
+            name=16 Laps value=PRIMARY_SCENE_RACE_LAPS:16;
 
     IF_DEVEL parameter_setter
         id=playback_speed_selector,
