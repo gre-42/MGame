@@ -85,7 +85,7 @@ macro_begin parameter_setters_rally;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=,
+        on_first_render=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
             name=Chrysler - New Yorker 1971 value=SHOWROOM_PLAYER_VEHICLE:_CNY71 SHOWROOM_DECIMATE:
@@ -109,7 +109,7 @@ macro_begin parameter_setters_rally;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=macro_playback create_showroom_vehicle_rally context=showroom,
+        on_first_render=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         parameters=
             name=White value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:1
@@ -128,7 +128,7 @@ macro_begin parameter_setters_rally;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=,
+        on_first_render=,
         on_change=macro_playback _set_session_and_reload_history context=primary_scene,
         parameters=
             name=Session1 value=PRIMARY_SCENE_RACE_SESSION:session1
@@ -146,7 +146,7 @@ macro_begin parameter_setters_rally;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=,
+        on_first_render=,
         on_change=macro_playback _set_session_and_reload_history context=primary_scene,
         parameters=
             name=1 Lap   value=PRIMARY_SCENE_RACE_LAPS:1
@@ -164,7 +164,7 @@ macro_begin parameter_setters_rally;
         font_height=32,
         line_distance=32,
         default=2,
-        on_init=,
+        on_first_render=,
         on_change=,
         parameters=
             name=80% value=PLAYBACK_SPEED:0.8

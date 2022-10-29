@@ -64,7 +64,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=,
+        on_first_render=,
         on_change=macro_playback clear_selection_ids_and_reload,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
@@ -79,7 +79,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         font_height=32,
         line_distance=32,
         default=0,
-        on_init=,
+        on_first_render=,
         on_change=macro_playback clear_selection_ids_and_reload,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
