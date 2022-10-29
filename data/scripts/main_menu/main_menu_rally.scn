@@ -154,6 +154,7 @@ macro_begin parameter_setters_rally;
             name=4 Laps  value=PRIMARY_SCENE_RACE_LAPS:4
             name=8 Laps  value=PRIMARY_SCENE_RACE_LAPS:8
             name=16 Laps value=PRIMARY_SCENE_RACE_LAPS:16;
+    !IF_RACEWAY_CIRCULAR set_parameter PRIMARY_SCENE_RACE_LAPS:1;
 
     IF_DEVEL parameter_setter
         id=playback_speed_selector,
