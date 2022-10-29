@@ -129,7 +129,7 @@ macro_begin parameter_setters_rally;
         line_distance=32,
         default=0,
         on_first_render=,
-        on_change=macro_playback _set_session_and_reload_history context=primary_scene,
+        on_change=,
         parameters=
             name=Session1 value=PRIMARY_SCENE_RACE_SESSION:session1
             name=Session2 value=PRIMARY_SCENE_RACE_SESSION:session2
@@ -147,7 +147,7 @@ macro_begin parameter_setters_rally;
         line_distance=32,
         default=0,
         on_first_render=,
-        on_change=macro_playback _set_session_and_reload_history context=primary_scene,
+        on_change=,
         parameters=
             name=1 Lap   value=PRIMARY_SCENE_RACE_LAPS:1
             name=2 Laps  value=PRIMARY_SCENE_RACE_LAPS:2

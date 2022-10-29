@@ -378,6 +378,11 @@ macro_begin __setup_new_round;
     delete_root_nodes regex=^(car|human)_node_playback_winner\d+$;
     delete_root_nodes regex=^(bullet|explosion)-\d+$;
     delete_scheduled_advance_times;
+    set_race_configuration_and_reload_history
+        session=PRIMARY_SCENE_RACE_SESSION
+        laps=PRIMARY_SCENE_RACE_LAPS
+        milliseconds=0
+        readonly=0;
     respawn_all_players;
     reset_supply_depot_cooldowns;
     invalidate_aggregate_renderers;
@@ -431,10 +436,11 @@ macro_begin scene_racing_static;
         with_pod_bot=1
         clear_mode=PRIMARY_SCENE_CLEAR_MODE
         max_tracks=5
+        session=PRIMARY_SCENE_RACE_SESSION
+        laps=PRIMARY_SCENE_RACE_LAPS
         setup_new_round=macro_playback
             _setup_new_round
             context=primary_scene;
-    macro_playback _set_session_and_reload_history context=primary_scene;
 
     create_scene
         name=weapon_closeup
@@ -451,8 +457,7 @@ macro_begin scene_racing_static;
         with_skybox=0
         with_flying_logic=0
         with_pod_bot=0
-        clear_mode=depth
-        max_tracks=5;
+        clear_mode=depth;
 
     macro_playback _setup_weapon_closeup context=weapon_closeup;
 

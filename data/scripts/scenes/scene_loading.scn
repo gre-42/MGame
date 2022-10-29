@@ -32,8 +32,7 @@ macro_begin create_scene_loading;
         with_skybox=0
         with_flying_logic=0
         with_pod_bot=0
-        clear_mode=color_and_depth
-        max_tracks=5;
+        clear_mode=color_and_depth;
 
     macro_playback _setup_scene_loading context=loading;
 macro_end;

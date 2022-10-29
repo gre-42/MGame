@@ -1,7 +1,0 @@
-macro_begin _set_session_and_reload_history;
-    set_race_configuration_and_reload_history
-        session=PRIMARY_SCENE_RACE_SESSION
-        laps=PRIMARY_SCENE_RACE_LAPS
-        milliseconds=0
-        readonly=0;
-macro_end;
