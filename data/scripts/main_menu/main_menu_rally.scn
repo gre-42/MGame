@@ -17,40 +17,40 @@ macro_end;
 
 macro_begin scene_selector_rally_devel;
     scene_selector
-        id=scene_selector
-        title=Scene
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 -900
-        size=NAN 850
-        font_height=32
-        line_distance=32
+        id=scene_selector,
+        title=Scene,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 -900,
+        size=NAN 850,
+        font_height=32,
+        line_distance=32,
+        on_change=macro_playback reload,
         scene_files=
-            name=JB value=levels/jb_race/scene_jb_race.scn
-            name=NYC with traffic, track 1 value=levels/nyc_with_traffic/scene_nyc_with_traffic.scn
-            name=NYC with traffic, track 2 value=levels/nyc_with_traffic_track2/scene_nyc_with_traffic_track2.scn
-            name=NYC with traffic, track 2, night value=levels/nyc_with_traffic_track2/scene_nyc_with_traffic_track2_night.scn
-            name=Raceway 0 value=levels/raceway0/scene_raceway0.scn
-            name=Raceway 1 value=levels/raceway1/scene_raceway1.scn
-            name=Forest 0 value=levels/forest0/scene_forest0.scn
-            name=Grossglockner Hochalpenstrasse Open value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn
-            name=WIP: Grossglockner Hochalpenstrasse Closed value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_closed.scn
-            name=WIP: NYC without traffic value=levels/nyc_wo_traffic/scene_nyc_wo_traffic.scn
-            name=WIP: San Francisco with traffic value=levels/sf_with_traffic/scene_sf_with_traffic.scn
-            name=WIP: San Francisco without traffic value=levels/sf_wo_traffic/scene_sf_wo_traffic.scn
-            name=WIP: Car arena value=levels/arena_cars/scene_arena_cars.scn
-            name=WIP: Monaco value=levels/monaco/scene_monaco.scn
-            name=WIP: Nuerburgring Grand Prix value=levels/nr_grand_prix/scene_nr_grand_prix.scn
-            name=WIP: Nuerburgring Norschleife value=levels/nr_nordschleife/scene_nr_nordschleife.scn
-            name=WIP: Silverstone value=levels/silverstone/scene_silverstone.scn
-            name=WIP: Spa Francorchamps value=levels/spa_francorchamps/scene_spa_francorchamps.scn
-            name=WIP: Argolis Forest value=levels/argolis/scene_argolis_forest.scn
-            name=WIP: Argolis Desert value=levels/argolis/scene_argolis_desert.scn
-            name=WIP: Argolis Green value=levels/argolis/scene_argolis_green.scn
-            name=WIP: Golden Gate with traffic value=levels/gg/scene_gg_with_traffic.scn
-            name=WIP: Canyon0 value=levels/canyon0/scene_canyon0.scn
-            name=Canyon 1 value=levels/canyon1/scene_canyon1.scn
-            name=Desert 1 value=levels/desert1/scene_desert1.scn
-            name=Retro raceway 1 value=levels/retro_raceway1/scene_retro_raceway1.scn;
+            name=JB value=levels/jb_race/manifest_jb_race.json
+            name=NYC with traffic, track 1 value=levels/nyc_with_traffic/manifest_nyc_with_traffic.json
+            name=NYC with traffic, track 2 value=levels/nyc_with_traffic_track2/manifest_nyc_with_traffic_track2.json
+            name=NYC with traffic, track 2, night value=levels/nyc_with_traffic_track2/manifest_nyc_with_traffic_track2_night.json
+            name=Raceway 0 value=levels/raceway0/manifest_raceway0.json
+            name=Raceway 1 value=levels/raceway1/manifest_raceway1.json
+            name=Forest 0 value=levels/forest0/manifest_forest0.json
+            name=Grossglockner Hochalpenstrasse Open value=levels/grossglockner_hochalpenstrasse/manifest_grossglockner_hochalpenstrasse_open.json
+            name=WIP: Grossglockner Hochalpenstrasse Closed value=levels/grossglockner_hochalpenstrasse/manifest_grossglockner_hochalpenstrasse_closed.json
+            name=WIP: NYC without traffic value=levels/nyc_wo_traffic/manifest_nyc_wo_traffic.json
+            name=WIP: San Francisco with traffic value=levels/sf_with_traffic/manifest_sf_with_traffic.json
+            name=WIP: San Francisco without traffic value=levels/sf_wo_traffic/manifest_sf_wo_traffic.json
+            name=WIP: Monaco value=levels/monaco/manifest_monaco.json
+            name=WIP: Nuerburgring Grand Prix value=levels/nr_grand_prix/manifest_nr_grand_prix.json
+            name=WIP: Nuerburgring Norschleife value=levels/nr_nordschleife/manifest_nr_nordschleife.json
+            name=WIP: Silverstone value=levels/silverstone/manifest_silverstone.json
+            name=WIP: Spa Francorchamps value=levels/spa_francorchamps/manifest_spa_francorchamps.json
+            name=WIP: Argolis Forest value=levels/argolis/manifest_argolis_forest.json
+            name=WIP: Argolis Desert value=levels/argolis/manifest_argolis_desert.json
+            name=WIP: Argolis Green value=levels/argolis/manifest_argolis_green.json
+            name=WIP: Golden Gate with traffic value=levels/gg/manifest_gg_with_traffic.json
+            name=WIP: Canyon0 value=levels/canyon0/manifest_canyon0.json
+            name=Canyon 1 value=levels/canyon1/manifest_canyon1.json
+            name=Desert 1 value=levels/desert1/manifest_desert1.json
+            name=Retro raceway 1 value=levels/retro_raceway1/manifest_retro_raceway1.json;
 macro_end;
 
 macro_begin scene_selector_rally_release;
@@ -63,16 +63,16 @@ macro_begin scene_selector_rally_release;
         font_height=32
         line_distance=32
         scene_files=
-            name=JB value=levels/jb_race/scene_jb_race.scn
-            name=NYC with traffic, track 1 value=levels/nyc_with_traffic/scene_nyc_with_traffic.scn
-            name=NYC with traffic, track 2 value=levels/nyc_with_traffic_track2/scene_nyc_with_traffic_track2.scn
-            name=NYC with traffic, track 2, night value=levels/nyc_with_traffic_track2/scene_nyc_with_traffic_track2_night.scn
-            name=San Francisco with traffic value=levels/sf_with_traffic/scene_sf_with_traffic.scn
-            name=Raceway 0 value=levels/raceway0/scene_raceway0.scn
-            name=Raceway 1 value=levels/raceway1/scene_raceway1.scn
-            name=Forest 0 value=levels/forest0/scene_forest0.scn
-            name=Grossglockner Hochalpenstrasse value=levels/grossglockner_hochalpenstrasse/scene_grossglockner_hochalpenstrasse_open.scn
-            name=Desert 1 value=levels/desert1/scene_desert1.scn;
+            name=JB value=levels/jb_race/manifest_jb_race.json
+            name=NYC with traffic, track 1 value=levels/nyc_with_traffic/manifest_nyc_with_traffic.json
+            name=NYC with traffic, track 2 value=levels/nyc_with_traffic_track2/manifest_nyc_with_traffic_track2.json
+            name=NYC with traffic, track 2, night value=levels/nyc_with_traffic_track2/manifest_nyc_with_traffic_track2_night.json
+            name=San Francisco with traffic value=levels/sf_with_traffic/manifest_sf_with_traffic.json
+            name=Raceway 0 value=levels/raceway0/manifest_raceway0.json
+            name=Raceway 1 value=levels/raceway1/manifest_raceway1.json
+            name=Forest 0 value=levels/forest0/manifest_forest0.json
+            name=Grossglockner Hochalpenstrasse value=levels/grossglockner_hochalpenstrasse/manifest_grossglockner_hochalpenstrasse_open.json
+            name=Desert 1 value=levels/desert1/manifest_desert1.json;
 macro_end;
 
 macro_begin parameter_setters_rally;
@@ -137,7 +137,7 @@ macro_begin parameter_setters_rally;
             name=Session4 value=PRIMARY_SCENE_RACE_SESSION:session4
             name=Session5 value=PRIMARY_SCENE_RACE_SESSION:session5;
 
-    parameter_setter
+    IF_RACEWAY_CIRCULAR parameter_setter
         id=laps_selector,
         title=Laps,
         ttf_file=fonts/RobotoMono-Bold.ttf,

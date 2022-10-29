@@ -1,16 +1,18 @@
 macro_begin scene_selector_td_devel;
     scene_selector
-        id=scene_selector
-        title=Scene
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 -900
-        size=NAN 850
-        font_height=32
-        line_distance=32
+        id=scene_selector,
+        title=Scene,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 -900,
+        size=NAN 850,
+        font_height=32,
+        line_distance=32,
+        on_change=macro_playback reload,
         scene_files=
             name=Team deathmatch arena value=levels/arena_humans/scene_arena_humans.scn
             name=WIP: Team deathmatch arena minimal value=levels/arena_minimal/scene_arena_minimal.scn
             name=WIP: Team deathmatch arena (PODBot) value=levels/arena_humans/scene_arena_humans_pod_bot.scn
+            name=WIP: Car arena value=levels/arena_cars/manifest_arena_cars.json
             name=WIP: Tank FPS value=levels/tank_fps/scene_tank_fps.scn
             name=WIP: Tank FPS 2 value=levels/jb_arena/scene_jb_arena.scn
             name=WIP: Tank FPS 2 AH-64 value=levels/jb_arena_AH_64/scene_jb_arena_AH_64.scn
@@ -19,13 +21,14 @@ macro_end;
 
 macro_begin scene_selector_td_release;
     scene_selector
-        id=scene_selector
-        title=Scene
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 -900
-        size=NAN 850
-        font_height=32
-        line_distance=32
+        id=scene_selector,
+        title=Scene,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        position=20 -900,
+        size=NAN 850,
+        font_height=32,
+        line_distance=32,
+        on_change=macro_playback reload,
         scene_files=
             name=Team deathmatch arena value=levels/arena_humans/scene_arena_humans.scn;
 macro_end;

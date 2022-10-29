@@ -1,6 +1,7 @@
-include main_menu/main_menu_rally.scn;
-include main_menu/main_menu_skating.scn;
-include main_menu/main_menu_td.scn;
+include main_menu_rally.scn;
+include main_menu_skating.scn;
+include main_menu_td.scn;
+include reload.scn;
 
 macro_begin _reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;
@@ -26,11 +27,6 @@ macro_begin _change_showroom_vehicle_in_physics_thread;
         VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
         VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
         DECIMATE:SHOWROOM_DECIMATE;
-macro_end;
-
-macro_begin _clear_selection_ids_and_reload;
-    clear_selection_ids except=game_mode_selector;
-    reload_scene scene_filename=data/levels/main/main.scn;
 macro_end;
 
 macro_begin _setup_menu_primary_scene_game_mode_selector;
@@ -69,7 +65,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         line_distance=32,
         default=0,
         on_init=,
-        on_change=macro_playback _clear_selection_ids_and_reload,
+        on_change=macro_playback clear_selection_ids_and_reload,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Skating         value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:  IF_GAME_MODE_TD:#
@@ -84,7 +80,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         line_distance=32,
         default=0,
         on_init=,
-        on_change=macro_playback _clear_selection_ids_and_reload,
+        on_change=macro_playback clear_selection_ids_and_reload,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
