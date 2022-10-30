@@ -360,7 +360,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         radius=30
         height_changed=0
         track_filename=RECORDINGS_DIR/checkpoints.m
-        laps=PRIMARY_SCENE_RACE_LAPS
+        laps=RACE_LAPS
         deselection_emissivity=0.7 0.7 0.7
         on_finish=set_focuses menu game_over_countdown_pending;
 
@@ -378,18 +378,20 @@ macro_begin __setup_new_round;
     delete_root_nodes regex=^(car|human)_node_playback_winner\d+$;
     delete_root_nodes regex=^(bullet|explosion)-\d+$;
     delete_scheduled_advance_times;
-    set_race_configuration_and_reload_history
-        session=PRIMARY_SCENE_RACE_SESSION
-        laps=PRIMARY_SCENE_RACE_LAPS
-        milliseconds=0
-        readonly=0;
+    set_race_identifier_and_reload_history
+        session=RACE_SESSION
+        laps=RACE_LAPS
+        milliseconds=0;
+    start_race readonly=0;
     respawn_all_players;
     reset_supply_depot_cooldowns;
     invalidate_aggregate_renderers;
 macro_end;
 
 macro_begin _setup_new_round;
-    with_delete_node_mutex macro_playback __setup_new_round;
+    with_delete_node_mutex macro_playback __setup_new_round
+        RACE_SESSION:RACE_SESSION
+        RACE_LAPS:RACE_LAPS;
 macro_end;
 
 macro_begin _setup_weapon_closeup;
@@ -436,11 +438,10 @@ macro_begin scene_racing_static;
         with_pod_bot=1
         clear_mode=PRIMARY_SCENE_CLEAR_MODE
         max_tracks=5
-        session=PRIMARY_SCENE_RACE_SESSION
-        laps=PRIMARY_SCENE_RACE_LAPS
         setup_new_round=macro_playback
-            _setup_new_round
-            context=primary_scene;
+            _setup_new_round context=primary_scene
+            RACE_SESSION:RACE_SESSION
+            RACE_LAPS:RACE_LAPS;
 
     create_scene
         name=weapon_closeup
@@ -500,8 +501,9 @@ macro_end;
 
 macro_begin generic_scene_racing_dynamic;
     macro_playback
-        _setup_new_round
-        context=primary_scene;
+        _setup_new_round context=primary_scene
+        RACE_SESSION:RACE_SESSION
+        RACE_LAPS:RACE_LAPS;
     macro_playback
         _scene_racing_instantiate_transient_objects
         context=primary_scene
@@ -537,6 +539,7 @@ macro_begin generic_scene_racing_dynamic;
         ERROR_ALPHA:ERROR_ALPHA
         IF_RECORD_TRACK:IF_RECORD_TRACK
         RECORDINGS_DIR:RECORDINGS_DIR
+        RACE_LAPS:RACE_LAPS
         IF_PLAYBACK_CHECKPOINTS:IF_PLAYBACK_CHECKPOINTS
         IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1
         IF_PLAYBACK_TRACK_2:IF_PLAYBACK_TRACK_2

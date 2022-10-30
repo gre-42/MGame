@@ -8,7 +8,9 @@ macro_begin _reload_transient_objects;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
         SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE
-        PLAYBACK_SPEED:PLAYBACK_SPEED=1;
+        PLAYBACK_SPEED:PLAYBACK_SPEED
+        RACE_SESSION:RACE_SESSION
+        RACE_LAPS:RACE_LAPS;
 macro_end;
 
 macro_begin __change_showroom_vehicle_in_physics_thread;
