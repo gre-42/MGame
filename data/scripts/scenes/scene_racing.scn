@@ -90,6 +90,9 @@ macro_begin _scene_racing_instantiate_static_objects;
     # HISTORY        = 8;
     # NWINS          = 16;
     # NKILLS         = 32;
+    # NLAPS          = 64;
+    # RANK           = 128;
+    # RACE_TIME      = 256;
     players_stats
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf

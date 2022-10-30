@@ -4,7 +4,7 @@ include ../sf/osm_resource_sf.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:10
+    SCORE_BOARD:456
     OSM_MAP_RESOURCE:osm_resource_sf
     IF_HAS_OVERLAY:#
     DIRTMAP_TEXTURE:textures/dirtmap_dense.png
