@@ -15,20 +15,6 @@ macro_begin _setup_menu_showroom_skating;
         submenus=car_selector;
 macro_end;
 
-macro_begin scene_selector_skating;
-    scene_selector
-        id=scene_selector,
-        title=Scene,
-        ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
-        on_change=macro_playback reload,
-        scene_files=
-            name=WIP: Skate0 value=levels/skate0/scene_skate0.scn;
-macro_end;
-
 macro_begin parameter_setters_skating;
     parameter_setter
         id=car_selector,

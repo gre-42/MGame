@@ -1,4 +1,9 @@
 {
     "script_file": "scene_jb_race.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "jb_race",
+        "LEVEL_NAME": "JB",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_RALLY"
 }

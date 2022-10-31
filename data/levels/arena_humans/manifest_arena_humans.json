@@ -1,4 +1,9 @@
 {
     "script_file": "scene_arena_humans.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "arena_humans",
+        "LEVEL_NAME": "Arena humans",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_TD"
 }

@@ -1,4 +1,9 @@
 {
     "script_file": "scene_desert1.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "desert1",
+        "LEVEL_NAME": "Desert 1",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_RALLY"
 }

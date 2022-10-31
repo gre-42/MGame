@@ -1,4 +1,9 @@
 {
     "script_file": "scene_nyc_with_traffic_track2.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "nyc_with_traffic_track2",
+        "LEVEL_NAME": "NYC with traffic, track 2",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_RALLY"
 }

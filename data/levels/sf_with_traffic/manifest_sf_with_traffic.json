@@ -1,4 +1,9 @@
 {
     "script_file": "scene_sf_with_traffic.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "sf_with_traffic",
+        "LEVEL_NAME": "San Francisco with traffic",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_RALLY"
 }

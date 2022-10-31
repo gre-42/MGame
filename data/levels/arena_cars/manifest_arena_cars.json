@@ -1,4 +1,9 @@
 {
     "script_file": "scene_arena_cars.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "arena_cars",
+        "LEVEL_NAME": "Arena cars",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_TD"
 }

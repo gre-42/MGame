@@ -1,4 +1,9 @@
 {
     "script_file": "scene_forest0.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": ""}
+    "variables": {
+        "LEVEL_ID": "forest0",
+        "LEVEL_NAME": "Forest 0",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_RALLY"
 }

@@ -381,11 +381,12 @@ macro_begin __setup_new_round;
     delete_root_nodes regex=^(car|human)_node_playback_winner\d+$;
     delete_root_nodes regex=^(bullet|explosion)-\d+$;
     delete_scheduled_advance_times;
-    set_race_identifier_and_reload_history
+    IF_GAME_MODE_RALLY set_race_identifier_and_reload_history
+        level_id=LEVEL_ID
         session=RACE_SESSION
         laps=RACE_LAPS
         milliseconds=0;
-    start_race readonly=0;
+    IF_GAME_MODE_RALLY start_race readonly=0;
     respawn_all_players;
     reset_supply_depot_cooldowns;
     invalidate_aggregate_renderers;

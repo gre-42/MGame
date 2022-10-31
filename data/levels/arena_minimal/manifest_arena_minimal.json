@@ -1,4 +1,9 @@
 {
     "script_file": "scene_arena_minimal.scn",
-    "variables": {"IF_RACEWAY_CIRCULAR": "#"}
+    "variables": {
+        "LEVEL_ID": "arena_minimal",
+        "LEVEL_NAME": "Arena minimal",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": "IF_GAME_MODE_TD"
 }
