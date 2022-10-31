@@ -41,7 +41,9 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibFps.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
+			Mlib/$(platform_dir)/Bin/libMlibMacroExecutor.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
+			Mlib/$(platform_dir)/Bin/libMlibMemory.dll \
 			Mlib/$(platform_dir)/Bin/libMlibNavigation.dll \
 			Mlib/$(platform_dir)/Bin/libMlibOsmLoader.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
