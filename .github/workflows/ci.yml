@@ -88,6 +88,28 @@ jobs:
           path: |
             GMRelease
 
+  build-msvc:
+    runs-on: windows-latest
+
+    steps:
+      - uses: ilammy/msvc-dev-cmd@v1
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1
+          Mlib/build_recastnavigation.cmd
+
+      - name: Build
+        run: |
+          set BUILD_PREFIX=G
+          set CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF"
+          Mlib/build.cmd
+
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
