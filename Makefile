@@ -61,7 +61,7 @@ package:
 			/mingw64/bin/libgcc_s_seh-1.dll \
 			/mingw64/bin/libgomp-1.dll \
 			/mingw64/bin/libstdc++-6.dll \
-			/mingw64/bin/libvulkan-1.dll \
+			/mingw64/bin/vulkan-1.dll \
 			/mingw64/bin/libwinpthread-1.dll \
 			/mingw64/bin/libopenal-1.dll \
 			/mingw64/bin/libalut-0.dll \
