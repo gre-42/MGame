@@ -101,14 +101,21 @@ jobs:
 
       - name: Install dependencies
         run: |
-          PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1
-          Mlib/build_recastnavigation.cmd
+          PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1 || exit /b
+          Mlib/build_recastnavigation.cmd || exit /b
 
       - name: Build
         run: |
           set BUILD_PREFIX=G
           set CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF"
-          Mlib/build.cmd
+          Mlib/build.cmd || exit /b
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: osm-rally-artifact-msvc
+          path: |
+            Mlib/GVS/Bin/Release
 
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
