@@ -93,6 +93,9 @@ jobs:
 
     steps:
       - uses: ilammy/msvc-dev-cmd@v1
+      
+      - name: Disable Windows Defender
+        run: Set-MpPreference -DisableRealtimeMonitoring $true
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
