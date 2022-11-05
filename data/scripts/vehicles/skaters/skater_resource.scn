@@ -12,7 +12,7 @@ obj_resource
     aggregate_mode=none
     transformation_mode=all;
 
-gen_triangle_rays name=skater_hitbox npoints=20 lengths=0.25 0.7 0.25 delete_triangles=0;
+# gen_triangle_rays name=skater_hitbox npoints=20 lengths=0.25 0.7 0.25 delete_triangles=0;
 
 modify_physics_material_tags
     resource_name=skater_hitbox
