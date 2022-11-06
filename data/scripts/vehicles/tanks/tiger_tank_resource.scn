@@ -27,7 +27,7 @@ obj_resource
     transformation_mode=all
     triangle_tangent_error_behavior=zero;
 
-# gen_triangle_rays name=tiger_tank_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
+gen_triangle_rays name=tiger_tank_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
 modify_physics_material_tags
     resource_name=tiger_tank_hitbox
