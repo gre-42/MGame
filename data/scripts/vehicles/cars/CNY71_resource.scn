@@ -31,6 +31,9 @@ gen_triangle_rays name=CNY71_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangl
 modify_physics_material_tags
     resource_name=CNY71_hitbox
     add=obj_chassis;
+modify_physics_material_tags
+    resource_name=CNY71_hitbox
+    add=attr_convex;
 
 obj_resource
     name=CNY71-tirelines

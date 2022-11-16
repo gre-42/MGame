@@ -72,6 +72,9 @@ macro_begin _initialize_showroom_scene;
         occluder_pass=none
         aggregate_mode=none
         transformation_mode=all;
+    modify_physics_material_tags
+        resource_name=cylinder
+        add=attr_convex;
 
     root_node_instance type=dynamic name=stage position=0 -1.3 -11 rotation=0 0 0 scale=1;
     renderable_instance name=stage node=stage resource=cylinder;
@@ -82,6 +85,6 @@ macro_begin _initialize_showroom_scene;
         size=1 2 3
         w=0 10 0
         collidable_mode=terrain
-        name=stage-SUFFIX;
+        name=stage;
     relative_transformer node=stage w=0 10 0;
 macro_end;
