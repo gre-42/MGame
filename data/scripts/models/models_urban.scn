@@ -83,6 +83,9 @@ obj_resource
     occluder_pass=none
     aggregate_mode=none
     transformation_mode=position;
+modify_physics_material_tags
+    resource_name=road_bollard_hitbox
+    add=attr_convex;
 
 obj_resource
     name=road_bollard2
@@ -153,6 +156,9 @@ obj_resource
     occluder_pass=none
     aggregate_mode=none
     transformation_mode=position;
+modify_physics_material_tags
+    resource_name=02_1_02_hitbox
+    add=attr_convex;
 
 obj_resource
     name=50_16_01_hitbox
@@ -167,6 +173,9 @@ obj_resource
     occluder_pass=none
     aggregate_mode=none
     transformation_mode=position_yangle;
+modify_physics_material_tags
+    resource_name=50_16_01_hitbox
+    add=attr_convex;
 
 obj_resource
     name=10_10_10_hitbox
