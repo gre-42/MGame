@@ -12,4 +12,7 @@ macro_begin osm_resource_skate0;
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=none
         transformation_mode=all;
+    modify_physics_material_tags
+        resource_name=osm_map
+        add=attr_concave;
 macro_end;
