@@ -16,7 +16,7 @@ gen_triangle_rays name=skater_hitbox npoints=20 lengths=0.25 0.7 0.25 delete_tri
 
 modify_physics_material_tags
     resource_name=skater_hitbox
-    add=obj_chassis;
+    add=obj_chassis|attr_convex;
 
 obj_resource
     name=skater_grind_contacts

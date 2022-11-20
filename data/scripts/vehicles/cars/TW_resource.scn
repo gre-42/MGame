@@ -1,5 +1,5 @@
 obj_resource
-    name=TW-hitbox
+    name=TW_hitbox
     filename=models/primitives/box.obj
     position=0 0.85 0
     rotation=0 0 0
@@ -12,14 +12,14 @@ obj_resource
     aggregate_mode=none
     transformation_mode=all;
 
-gen_triangle_rays name=TW-hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
+gen_triangle_rays name=TW_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=0;
 
 modify_physics_material_tags
-    resource_name=TW-hitbox
-    add=obj_chassis;
+    resource_name=TW_hitbox
+    add=obj_chassis|attr_convex;
 
 obj_resource
-    name=TW-tirelines
+    name=TW_tirelines
     filename=models/primitives/empty.obj
     position=0 0 0
     rotation=0 0 0
@@ -32,16 +32,16 @@ obj_resource
     aggregate_mode=none
     transformation_mode=all;
 
-gen_ray name=TW-tirelines from=-1.5 0.2 -2 to=-1.5 -0.65 -2; # left front;
-gen_ray name=TW-tirelines from=+1.5 0.2 -2 to=+1.5 -0.65 -2; # right front;
-gen_ray name=TW-tirelines from=-1.5 0.2 +2 to=-1.5 -0.65 +2; # left rear;
-gen_ray name=TW-tirelines from=+1.5 0.2 +2 to=+1.5 -0.65 +2; # right rear;
+gen_ray name=TW_tirelines from=-1.5 0.2 -2 to=-1.5 -0.65 -2; # left front;
+gen_ray name=TW_tirelines from=+1.5 0.2 -2 to=+1.5 -0.65 -2; # right front;
+gen_ray name=TW_tirelines from=-1.5 0.2 +2 to=-1.5 -0.65 +2; # left rear;
+gen_ray name=TW_tirelines from=+1.5 0.2 +2 to=+1.5 -0.65 +2; # right rear;
 
 modify_physics_material_tags
-    resource_name=TW-tirelines
+    resource_name=TW_tirelines
     add=obj_tire_line;
 
-macro_begin load-TW-part;
+macro_begin load_TW_part;
     obj_resource
         name=NAME
         filename=models/SR/NAME.obj
@@ -62,13 +62,13 @@ macro_begin load-TW-part;
     # downsample name=NAME factor=10;
 macro_end;
 
-macro_begin load-TW;
-    macro_playback load-TW-part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:TW/TW_body-DECIMATE POSITION_Y:0.4;
-    macro_playback load-TW-part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:TW/TW_glass-DECIMATE POSITION_Y:0.4;
-    macro_playback load-TW-part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_interior-DECIMATE POSITION_Y:0.4;
-    macro_playback load-TW-part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_wheel_front-DECIMATE POSITION_Y:0;
-    macro_playback load-TW-part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_wheel_rear-DECIMATE POSITION_Y:0;
+macro_begin load_TW;
+    macro_playback load_TW_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:TW/TW_body-DECIMATE POSITION_Y:0.4;
+    macro_playback load_TW_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:TW/TW_glass-DECIMATE POSITION_Y:0.4;
+    macro_playback load_TW_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_interior-DECIMATE POSITION_Y:0.4;
+    macro_playback load_TW_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_wheel_front-DECIMATE POSITION_Y:0;
+    macro_playback load_TW_part DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:TW/TW_wheel_rear-DECIMATE POSITION_Y:0;
 macro_end;
-macro_playback load-TW DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:;
-macro_playback load-TW DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:_d3;
-macro_playback load-TW DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_black_local_instances DECIMATE:_d1;
+macro_playback load_TW DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:;
+macro_playback load_TW DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:_d3;
+macro_playback load_TW DIST_MIN:100 DIST_MAX:1000 OCCLUDER_PASS:lightmap_black_local_instances DECIMATE:_d1;

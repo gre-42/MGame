@@ -19,7 +19,7 @@ macro_end;
 macro_begin create_TW_physics;
     rigid_cuboid
         node=car_node-SUFFIX
-        hitboxes=TW-hitbox TW-tirelines
+        hitboxes=TW_hitbox TW_tirelines
         mass=MASS
         size=3 2 6.8
         collidable_mode=COLLIDABLE_MODE

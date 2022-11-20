@@ -16,7 +16,7 @@ gen_triangle_rays name=XZ_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangles=
 
 modify_physics_material_tags
     resource_name=XZ_hitbox
-    add=obj_chassis;
+    add=obj_chassis|attr_convex;
 
 obj_resource
     name=XZ_tirelines

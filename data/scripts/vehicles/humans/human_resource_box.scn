@@ -34,7 +34,7 @@ gen_triangle_rays name=human_distancebox npoints=5 lengths=0.25 0.7 0.25 delete_
 
 modify_physics_material_tags
     resource_name=human_distancebox
-    add=obj_distancebox;
+    add=obj_distancebox|attr_convex;
 
 obj_resource
     name=human_tirelines

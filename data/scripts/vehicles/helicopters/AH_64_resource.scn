@@ -17,7 +17,7 @@ gen_triangle_rays name=AH_64_hitbox npoints=5 lengths=0.7 0.7 0.7 delete_triangl
 
 modify_physics_material_tags
     resource_name=AH_64_hitbox
-    add=obj_chassis;
+    add=obj_chassis|attr_concave;
 
 obj_resource
     name=AH_64_tirelines
@@ -108,4 +108,4 @@ obj_resource
 
 modify_physics_material_tags
     resource_name=ah64_blades
-    add=obj_chassis;
+    add=obj_chassis|attr_convex;
