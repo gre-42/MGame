@@ -190,6 +190,9 @@ obj_resource
     occluder_pass=none
     aggregate_mode=none
     transformation_mode=position_yangle;
+modify_physics_material_tags
+    resource_name=10_10_10_hitbox
+    add=attr_convex;
 
 obj_resource
     name=dumpster
