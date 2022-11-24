@@ -9,6 +9,8 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis=1
         joystick_digital_axis_sign=-1
         not_gamepad_button=B
+        joystick_analog_axis=1
+        joystick_analog_axis_sign_and_scale=-1
         tire_angle_velocities=10 80
         tire_angles=45 20;
     IF_MANUAL_DRIVE car_controller_key_binding
@@ -18,6 +20,8 @@ macro_begin create_car_key_bindings_rally;
         joystick_digital_axis=1
         joystick_digital_axis_sign=1
         not_gamepad_button=B
+        joystick_analog_axis=1
+        joystick_analog_axis_sign_and_scale=1
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
 
