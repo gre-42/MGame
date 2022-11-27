@@ -27,4 +27,8 @@ macro_begin create_car_cameras_sedan;
     append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
     append_externals_deleter player=PLAYER_NAME node=follower_camera;
     append_externals_deleter player=PLAYER_NAME node=cockpit_camera;
+
+    set_node_hider
+        node_to_hide=car_node-SUFFIX,
+        camera_node=cockpit_camera;
 macro_end;

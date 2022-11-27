@@ -76,7 +76,8 @@ macro_begin create_player_car_externals_DM74;
         IF_MANUAL_AIM:#
         IF_HAS_GUN:#
         SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        ROLE:DRIVER;
     IF_PC macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME

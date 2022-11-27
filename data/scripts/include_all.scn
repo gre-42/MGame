@@ -1,3 +1,4 @@
+include controls.scn;
 include audio.scn;
 
 include textures/facades.scn;
@@ -54,7 +55,5 @@ include cameras/human_cameras.scn;
 include cameras/skater_cameras.scn;
 include key_bindings/human_key_bindings.scn;
 include key_bindings/skater_key_bindings.scn;
-include key_bindings/car_key_bindings_racing.scn;
-include key_bindings/car_key_bindings_rally.scn;
 include key_bindings/car_key_bindings.scn;
 include key_bindings/plane_key_bindings.scn;

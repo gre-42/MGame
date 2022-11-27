@@ -28,4 +28,8 @@ macro_begin create_car_cameras_tank;
     append_externals_deleter player=PLAYER_NAME node=45_deg_camera;
     append_externals_deleter player=PLAYER_NAME node=follower_camera;
     append_externals_deleter player=PLAYER_NAME node=main_gun_camera_node-SUFFIX;
+
+    set_node_hider
+        node_to_hide=car_node-SUFFIX,
+        camera_node=main_gun_camera_node-SUFFIX;
 macro_end;

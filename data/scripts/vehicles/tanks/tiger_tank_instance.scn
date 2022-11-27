@@ -120,7 +120,7 @@ macro_begin create_tiger_tank_physics;
         node=car_node-SUFFIX
         left_tire_ids=0 2 4 6 8
         right_tire_ids=1 3 5 7 9
-        steering_multiplier=5e11;
+        steering_multiplier=1e7;
 macro_end;
 
 macro_begin create_tiger_tank;
@@ -201,7 +201,8 @@ macro_begin create_player_car_externals_tiger_tank;
         IF_MANUAL_AIM:IF_MANUAL_AIM
         IF_HAS_GUN:
         SUFFIX:SUFFIX
-        PLAYER_NAME:PLAYER_NAME;
+        PLAYER_NAME:PLAYER_NAME
+        ROLE:GUNNER;
     IF_PC macro_playback create_car_cameras_tank
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
