@@ -113,6 +113,7 @@ macro_begin parameter_setters_rally;
             name=100% value=PLAYBACK_SPEED:1
             name=110% value=PLAYBACK_SPEED:1.1
             name=120% value=PLAYBACK_SPEED:1.2;
+    !IF_DEVEL constant_parameter PLAYBACK_SPEED:1;
 macro_end;
 
 macro_begin create_showroom_vehicle_rally;

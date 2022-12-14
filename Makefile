@@ -83,6 +83,7 @@ run:
 		$(bin_dir)/render_scene_file \
 		data \
 		data/levels/main/main.scn \
+		--app_reldir .osm_rally \
 		--print_render_residual_time \
 		--nsamples_msaa 2 \
 		--show_mouse_cursor \
@@ -93,6 +94,7 @@ run_dev: build
 	gdb -ex="catch throw" --ex=r --args Mlib/$(platform_dir)/Bin/render_scene_file \
 		data \
 		data/levels/main/main.scn \
+		--app_reldir .osm_rally \
 		--print_render_residual_time \
 		--print_physics_residual_time \
 		--nsamples_msaa 2 \
