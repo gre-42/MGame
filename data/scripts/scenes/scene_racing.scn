@@ -444,7 +444,6 @@ macro_begin scene_racing_static;
         with_dirtmap=PRIMARY_SCENE_WITH_DIRTMAP
         with_skybox=PRIMARY_SCENE_WITH_SKYBOX
         with_flying_logic=PRIMARY_SCENE_WITH_FLYING_LOGIC
-        with_pod_bot=1
         clear_mode=PRIMARY_SCENE_CLEAR_MODE
         max_tracks=5
         setup_new_round=macro_playback
@@ -468,7 +467,6 @@ macro_begin scene_racing_static;
         with_dirtmap=0
         with_skybox=0
         with_flying_logic=0
-        with_pod_bot=0
         clear_mode=depth;
 
     macro_playback _setup_weapon_closeup context=weapon_closeup;

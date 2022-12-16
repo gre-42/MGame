@@ -13,7 +13,6 @@ macro_begin create_showroom_scene_skating;
         with_dirtmap=0
         with_skybox=0
         with_flying_logic=0
-        with_pod_bot=0
         clear_mode=depth;
     macro_playback _initialize_showroom_scene context=showroom;
 macro_end;
