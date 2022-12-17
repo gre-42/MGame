@@ -139,7 +139,7 @@ macro_begin _setup_menu_primary_scene_rest;
         id=controls
         title=Controls
         gamepad_texture=textures/gamepad.png
-        position=20 80
+        position=20 -350
         size=512 256;
 
     focused_text
