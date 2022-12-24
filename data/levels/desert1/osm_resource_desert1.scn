@@ -2,6 +2,7 @@ macro_begin osm_resource_desert1;
     osm_resource
         name=osm_map,
         filename=__DIR__/../canyon1/map_canyon1.osm,
+        cache_filename=__APPDATA__/canyon1.cereal.binary,
         heightmap=__DIR__/../canyon1/heightmap.png,
         terrain_grass_textures=
             #black
@@ -78,9 +79,9 @@ macro_begin osm_resource_desert1;
         barrier_styles=
             name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0 ambience:1 diffusivity:1 specularity:1,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
-        racing_line_texture=#racing_line,
-        racing_line_track=RACING_LINE_TRACK,
-        racing_line_playback=RACING_LINE_PLAYBACK,
+        racing_line_texture=,
+        racing_line_track=,
+        racing_line_playback=,
         tree_resource_names = vegetation1.0(p:1)(hitbox:02_1_02_hitbox),
         tree_resource_names = vegetation1.1(p:1)(hitbox:02_1_02_hitbox),
         tree_resource_names = vegetation1.2(p:1)(hitbox:02_1_02_hitbox),
