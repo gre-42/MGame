@@ -144,57 +144,6 @@ obj_resource
     transformation_mode=position;
 
 obj_resource
-    name=02_1_02_hitbox
-    filename=models/primitives/box.obj
-    position=0 0 0
-    rotation=0 0 0
-    scale=0.2 1 0.2
-    center_distances=0 501
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    occluded_pass=none
-    occluder_pass=none
-    aggregate_mode=none
-    transformation_mode=position;
-modify_physics_material_tags
-    resource_name=02_1_02_hitbox
-    add=attr_convex;
-
-obj_resource
-    name=50_16_01_hitbox
-    filename=models/primitives/box.obj
-    position=0 0.8 0
-    rotation=0 0 0
-    scale=5 1.6 0.1
-    center_distances=0 501
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    occluded_pass=none
-    occluder_pass=none
-    aggregate_mode=none
-    transformation_mode=position_yangle;
-modify_physics_material_tags
-    resource_name=50_16_01_hitbox
-    add=attr_convex;
-
-obj_resource
-    name=10_10_10_hitbox
-    filename=models/primitives/box.obj
-    position=0 1 0
-    rotation=0 0 0
-    scale=1 1 1
-    center_distances=0 501
-    blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
-    occluded_pass=none
-    occluder_pass=none
-    aggregate_mode=none
-    transformation_mode=position_yangle;
-modify_physics_material_tags
-    resource_name=10_10_10_hitbox
-    add=attr_convex;
-
-obj_resource
     name=dumpster
     filename=models/opengameart/Dumpster/Dumpster.obj
     position=-1.25 -0.15 0.67
