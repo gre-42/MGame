@@ -1,0 +1,8 @@
+set_surface_contact_info
+    material0=surface_base_tire
+    material1=surface_base_gravel
+    surface_stiction_factor=0.9
+    smoke_particle_resource_name=dust
+    smoke_particle_instance_prefix=dust
+    smoke_particle_generation_dt=0.1
+    smoke_particle_animation_duration=3;

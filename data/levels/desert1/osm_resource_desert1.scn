@@ -2,7 +2,7 @@ macro_begin osm_resource_desert1;
     osm_resource
         name=osm_map,
         filename=__DIR__/../canyon1/map_canyon1.osm,
-        cache_filename=__APPDATA__/canyon1.cereal.binary,
+        cache_filename=__APPDATA__/desert1.cereal.binary,
         heightmap=__DIR__/../canyon1/heightmap.png,
         terrain_grass_textures=
             #black
@@ -11,6 +11,8 @@ macro_begin osm_resource_desert1;
             #Rock028_Dune_512,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
+        terrain_materials=surface_base_gravel,
+        street_materials=surface_base_gravel,
         path_crossing_texture=#Ground029_Crossing_Desert,
         path_textures=
             lanes:1 texture0:#Ground029_Street_Desert,
@@ -166,6 +168,5 @@ macro_begin osm_resource_desert1;
         blend_street=1,
         street_surface_central_resource_name=road_ditch_central,
         street_surface_endpoint0_resource_name=road_ditch_endpoint_0,
-        street_surface_endpoint1_resource_name=road_ditch_endpoint_1,
-        game_level=;
+        street_surface_endpoint1_resource_name=road_ditch_endpoint_1;
 macro_end;
