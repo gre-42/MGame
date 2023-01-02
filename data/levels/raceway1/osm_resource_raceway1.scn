@@ -2,6 +2,7 @@ macro_begin osm_resource_raceway1;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_raceway1.osm,
+        cache_filename=__APPDATA__/raceway1.cereal.binary,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=#Ground037_Sl,
@@ -28,7 +29,7 @@ macro_begin osm_resource_raceway1;
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/racing_line_raceway1.m,
-        racing_line_playback=__DIR__/checkpoints.m,
+        racing_line_playback=__APPDATA__/raceway1_checkpoints.m,
         tree_resource_names = vegetation0.0,
         tree_resource_names = vegetation0.1,
         tree_resource_names = vegetation0.2,
