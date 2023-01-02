@@ -13,6 +13,8 @@ macro_begin osm_resource_retro_raceway1;
             #Ground037_Sl_256,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
+        terrain_materials=surface_base_gravel,
+        street_materials=surface_base_tarmac,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
             lanes:1 texture0:#Road007_Broad_White_1_Lane_near texture1:#Road007_Broad_White_1_Lane_far,
