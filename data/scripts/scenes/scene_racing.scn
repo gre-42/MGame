@@ -440,7 +440,7 @@ macro_begin scene_racing_static;
     create_scene
         name=primary_scene
         z_order=0
-        focus_mask=scene|countdown_any
+        focus_mask=scene|countdown_any|game_over_countdown_any
         submenus=
         fly=PRIMARY_SCENE_FLY
         rotate=PRIMARY_SCENE_ROTATE
@@ -462,7 +462,7 @@ macro_begin scene_racing_static;
     create_scene
         name=weapon_closeup
         z_order=0
-        focus_mask=scene|countdown_any
+        focus_mask=scene|countdown_any|game_over_countdown_any
         submenus=
         fly=0
         rotate=0
