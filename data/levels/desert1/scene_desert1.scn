@@ -8,6 +8,7 @@ macro_playback scene_racing_static
     OSM_MAP_RESOURCE:osm_resource_desert1
     IF_HAS_OVERLAY:#
     OSM_POSITION_Y:-2000
+    IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1

@@ -10,6 +10,8 @@ macro_playback scene_racing_static
     STADIUM_CAMERA_X:0
     STADIUM_CAMERA_Y:500
     STADIUM_CAMERA_Z:500
+    CACHE_FILENAME:__APPDATA__/arena_humans.cereal.binary
+    IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1

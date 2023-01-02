@@ -133,6 +133,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         focus_mask=game_over_countdown_any;
 
     countdown
+        node=countdown
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
@@ -144,6 +145,7 @@ macro_begin _scene_racing_instantiate_static_objects;
         text=;
 
     countdown
+        node=game_over_countdown
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
@@ -157,9 +159,13 @@ macro_begin _scene_racing_instantiate_static_objects;
     ###########;
     # Dirtmap #;
     ###########;
-    root_node_instance type=dynamic name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
-    ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=DIRTMAP_LEFT right_plane=DIRTMAP_RIGHT bottom_plane=DIRTMAP_BOTTOM top_plane=DIRTMAP_TOP requires_postprocessing=0;
-    set_dirtmap filename=DIRTMAP_TEXTURE offset=DIRTMAP_OFFSET discreteness=DIRTMAP_DISCRETENESS scale=DIRT_SCALE wrap_mode=DIRTMAP_WRAP_MODE;
+    IF_DIRTMAP root_node_instance type=dynamic name=dirtmap_node position=0 1000 0 rotation=-90 0 0 scale=1;
+    IF_DIRTMAP ortho_camera node=dirtmap_node near_plane=1 far_plane=10000 left_plane=DIRTMAP_LEFT right_plane=DIRTMAP_RIGHT bottom_plane=DIRTMAP_BOTTOM top_plane=DIRTMAP_TOP requires_postprocessing=0;
+    IF_DIRTMAP set_dirtmap filename=DIRTMAP_TEXTURE offset=DIRTMAP_OFFSET discreteness=DIRTMAP_DISCRETENESS scale=DIRT_SCALE wrap_mode=DIRTMAP_WRAP_MODE;
+
+    ##############;
+    # Soft light #;
+    ##############;
     set_soft_light filename=SOFT_LIGHT_TEXTURE;
 
     ##########;
@@ -422,6 +428,7 @@ macro_begin scene_racing_static;
     macro_playback create_scene_loading;
 
     macro_playback OSM_MAP_RESOURCE
+        CACHE_FILENAME:CACHE_FILENAME
         GAME_LEVEL:GAME_LEVEL
         HEIGHTMAP:HEIGHTMAP
         RACING_LINE_TRACK:RACING_LINE_TRACK
@@ -494,6 +501,7 @@ macro_begin scene_racing_static;
         DIRTMAP_RIGHT:DIRTMAP_RIGHT
         DIRTMAP_BOTTOM:DIRTMAP_BOTTOM
         DIRTMAP_TOP:DIRTMAP_TOP
+        IF_DIRTMAP:IF_DIRTMAP
         DIRTMAP_TEXTURE:DIRTMAP_TEXTURE
         DIRTMAP_OFFSET:DIRTMAP_OFFSET
         DIRTMAP_DISCRETENESS:DIRTMAP_DISCRETENESS

@@ -9,6 +9,7 @@ macro_playback scene_racing_static
     SCORE_BOARD:456
     OSM_MAP_RESOURCE:osm_resource_forest0
     IF_HAS_OVERLAY:#
+    IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1

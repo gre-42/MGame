@@ -2,6 +2,7 @@ macro_begin osm_resource_arena;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_arena.osm,
+        cache_filename=CACHE_FILENAME,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
