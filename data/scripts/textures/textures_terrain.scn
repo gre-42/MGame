@@ -140,6 +140,13 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
+    name=Ground029_Crossing_Snow
+    color=textures/cc0textures/Ground029_2K_Color.jpg
+    color_mode=rgb
+    histogram=textures/histograms/snow.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
     name=Ground037
     color=textures/cc0textures/Ground037_2K_Color.jpg
     normal=textures/cc0textures/Ground037_2K_NormalGL.jpg
@@ -196,13 +203,30 @@ add_texture_descriptor
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
-    name=Ground029_Street_Desert
+    name=Ground029_Street_Desert_Dry
+    color=textures/cc0textures/Ground029_2K_Color_Interior.png
+    alpha=textures/Way_Alpha4_Interior.png
+    color_mode=rgba
+    histogram=textures/histograms/desert_road.png
+    lighten=0 0 0
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground029_Street_Desert_Wet
     color=textures/cc0textures/Ground029_2K_Color_Interior.png
     alpha=textures/Way_Alpha4_Interior.png
     specular=textures/cc0textures/Ground029_2K_Specular_Interior.png
     color_mode=rgba
     histogram=textures/histograms/desert_road.png
     lighten=0 0 0
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Ground029_Street_Snow
+    color=textures/cc0textures/Ground029_2K_Color_Interior.png
+    alpha=textures/Way_Alpha4_Interior.png
+    color_mode=rgba
+    histogram=textures/histograms/snow.png
     anisotropic_filtering_level=16;
 
 add_texture_descriptor
@@ -332,6 +356,13 @@ add_texture_descriptor
     color=textures/cc0textures/Rock028_2K_Color.jpg
     color_mode=rgb
     histogram=textures/histograms/desert_dune.png
+    anisotropic_filtering_level=16;
+
+add_texture_descriptor
+    name=Rock028_Snow
+    color=textures/cc0textures/Rock028_2K_Color.jpg
+    color_mode=rgb
+    histogram=textures/histograms/snow.png
     anisotropic_filtering_level=16;
 
 add_texture_descriptor

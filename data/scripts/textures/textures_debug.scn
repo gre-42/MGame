@@ -33,3 +33,14 @@ add_texture_descriptor
     color=textures/debug/black.png
     color_mode=rgb
     anisotropic_filtering_level=16;
+
+add_blend_map_texture
+    name=black_001
+    texture=#black
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=0.01;

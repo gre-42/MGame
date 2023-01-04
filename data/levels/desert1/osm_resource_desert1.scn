@@ -15,72 +15,7 @@ macro_begin osm_resource_desert1;
         street_materials=surface_base_gravel,
         path_crossing_texture=#Ground029_Crossing_Desert,
         path_textures=
-            lanes:1 texture0:#Ground029_Street_Desert,
-        socle_textures=
-            #Bricks058,
-        facade_textures=facade:Plaster003
-                        max_height:5,
-        facade_textures=facade:Plaster003_Gray
-                        max_height:5,
-        facade_textures=selector:brick
-                        facade:wall_facade_bricks_red
-                        min_height:5
-                        max_height:50
-                        facade_edge_size:0.5 0.5
-                        facade_inner_size:1.4 1.4
-                        interior_size:1.5 1.5 0.2
-                        left:DE21F2_industryWindow00001_left
-                        right:DE21F2_industryWindow00001_right
-                        floor:DE21F2_industryWindow00001_bottom
-                        ceiling:DE21F2_industryWindow00001_top
-                        back:DE21F2_industryWindow00001_1k,
-        facade_textures=facade:wall_facade_plaster_orange
-                        min_height:5
-                        max_height:50
-                        facade_edge_size:0.5 0.5
-                        facade_inner_size:1.4 1.4
-                        interior_size:1.5 1.5 0.2
-                        left:DE21F2_industryWindow00001_left
-                        right:DE21F2_industryWindow00001_right
-                        floor:DE21F2_industryWindow00001_bottom
-                        ceiling:DE21F2_industryWindow00001_top
-                        back:DE21F2_industryWindow00001_1k,
-        facade_textures=facade:wall_facade_plaster_gray
-                        min_height:50
-                        facade_edge_size:0.5 0.5
-                        facade_inner_size:0.7 0.7
-                        interior_size:5 3 4
-                        left:DallasW_negx
-                        right:DallasW_posx
-                        floor:DallasW_negy
-                        ceiling:DallasW_posy
-                        back:DallasW_posz,
-        facade_textures=facade:wall_facade_plaster_gray
-                        min_height:50
-                        facade_edge_size:0.5 0.5
-                        facade_inner_size:0.7 0.7
-                        interior_size:5 3 4
-                        left:MarriottMadisonWest_negx
-                        right:MarriottMadisonWest_posx
-                        floor:MarriottMadisonWest_negy
-                        ceiling:MarriottMadisonWest_posy
-                        back:MarriottMadisonWest_posz,
-        facade_textures=facade:wall_facade_plaster_gray
-                        min_height:50
-                        facade_edge_size:0.5 0.5
-                        facade_inner_size:0.7 0.7
-                        interior_size:5 3 4
-                        left:room.left
-                        right:room.right
-                        floor:room.floor
-                        ceiling:room.ceiling
-                        back:room.back,
-        facade_textures=facade:MarekWindow00001_512
-                        min_height:50,
-        ceiling_texture=#Asphalt015,
-        barrier_styles=
-            name:fence1 texture:#fence1 uv:1 1 blend_mode:binary_05 wrap_mode_t:repeat reorient_uv0:0 ambience:1 diffusivity:1 specularity:1,
-        roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
+            lanes:1 texture0:#Ground029_Street_Desert_Dry,
         racing_line_texture=,
         racing_line_track=,
         racing_line_playback=,

@@ -8,3 +8,14 @@ set_surface_contact_info
     smoke_particle_generation_velocities=4 5 50,
     smoke_particle_generation_frequencies=0 2.5 25,
     smoke_particle_animation_duration=1.5;
+
+set_surface_contact_info
+    material0=surface_base_tire,
+    material1=surface_base_snow,
+    surface_stiction_factor=0.8,
+    minimum_velocity_for_smoke=5,
+    smoke_particle_resource_name=snow,
+    smoke_particle_instance_prefix=snow,
+    smoke_particle_generation_velocities=4 5 50,
+    smoke_particle_generation_frequencies=0 2.5 25,
+    smoke_particle_animation_duration=1.5;
