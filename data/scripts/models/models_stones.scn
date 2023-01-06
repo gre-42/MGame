@@ -1,0 +1,181 @@
+macro_begin _add_stone_models;
+    obj_resource
+        name=Stone_model_tex_small_d1_s3-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.3 0.3 0.3
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=Stone_model_tex_small_d1_s5-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.5 0.5 0.5
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=Stone_model_tex_small_d1_s6-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.6 0.6 0.6
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=Stone_model_tex_small_d1_s10-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=desert_rock01_small_d1_s3-SUFFIX
+        filename=models/opengameart/desert_rock01/rock01_mean_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.3 0.3 0.3
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=desert_rock01_small_d1_s5-SUFFIX
+        filename=models/opengameart/desert_rock01/rock01_mean_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.5 0.5 0.5
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=desert_rock01_small_d1_s8-SUFFIX
+        filename=models/opengameart/desert_rock01/rock01_mean_d1.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=0.8 0.8 0.8
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=none
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+    
+    obj_resource
+        name=Stone_model_tex_small_d4-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone_d4.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1.5 1.5 1.5
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=lightmap_black_local_instances
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    !IF_ANDROID obj_resource
+        name=desert_rock01_small-SUFFIX
+        filename=models/opengameart/desert_rock01/rock01_mean.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=lightmap_black_local_instances
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
+    obj_resource
+        name=desert_rock01_small_d2_s15-SUFFIX
+        filename=models/opengameart/desert_rock01/rock01_mean_d2.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1.5 1.5 1.5
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=lightmap_black_local_instances
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+macro_end;
+
+macro_playback _add_stone_models
+    SUFFIX:
+    DESATURATE:0
+    HISTOGRAM:;
+
+macro_playback _add_stone_models
+    SUFFIX:_canyon
+    DESATURATE:0
+    HISTOGRAM:textures/histograms/Rock029.png;
+
+macro_playback _add_stone_models
+    SUFFIX:_dune
+    DESATURATE:0
+    HISTOGRAM:textures/histograms/desert_dune.png;
+
+macro_playback _add_stone_models
+    SUFFIX:_snow
+    DESATURATE:1
+    HISTOGRAM:textures/histograms/snow_tree.png;
