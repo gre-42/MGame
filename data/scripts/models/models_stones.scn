@@ -1,4 +1,20 @@
 macro_begin _add_stone_models;
+    !IF_ANDROID obj_resource
+        name=Stone_model_tex_small-SUFFIX
+        filename=models/opengameart/Stone_model_tex/stone.obj
+        position=0 0 0
+        rotation=0 0 0
+        scale=1 1 1
+        center_distances=0 504
+        blend_mode=off
+        alpha_distances=0 0 INFINITY INFINITY
+        occluded_pass=none
+        occluder_pass=lightmap_black_local_instances
+        aggregate_mode=instances_sorted
+        transformation_mode=position
+        desaturate=DESATURATE
+        histogram=HISTOGRAM;
+
     obj_resource
         name=Stone_model_tex_small_d1_s3-SUFFIX
         filename=models/opengameart/Stone_model_tex/stone_d1.obj
