@@ -46,6 +46,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
     tab_menu
         key=ENTER
         gamepad_button=A
+        tap_button=START
         id=submenus
         title=
         ttf_file=fonts/RobotoMono-Bold.ttf
@@ -56,7 +57,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         default=0
         reload_transient_objects=execute_in_physics_thread with_delete_node_mutex macro_playback _reload_transient_objects;
 
-    IF_DEVEL parameter_setter
+    !IF_ANDROID IF_DEVEL parameter_setter
         id=game_mode_selector,
         title=Game mode,
         ttf_file=fonts/RobotoMono-Bold.ttf,
@@ -72,7 +73,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
             name=Skating         value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:  IF_GAME_MODE_TD:#
             name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
     
-    IF_RELEASE parameter_setter
+    !IF_ANDROID IF_RELEASE parameter_setter
         id=game_mode_selector,
         title=Game mode,
         ttf_file=fonts/RobotoMono-Bold.ttf,
@@ -86,9 +87,13 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
+
+    IF_ANDROID constant_parameter IF_GAME_MODE_RALLY:;
+    IF_ANDROID constant_parameter IF_GAME_MODE_SKATING:#;
+    IF_ANDROID constant_parameter IF_GAME_MODE_TD:#;
 macro_end;
 
-macro_begin _scene_selector_devel;
+macro_begin _setup_menu_primary_scene_rest;
     # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
@@ -99,25 +104,6 @@ macro_begin _scene_selector_devel;
         font_height=32,
         line_distance=32,
         scene_directory=levels;
-macro_end;
-
-macro_begin _scene_selector_release;
-    # on_change=macro_playback reload, ;
-    scene_selector
-        id=scene_selector,
-        title=Scene,
-        ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
-        scene_directory=levels,
-        exclude=WIP;
-macro_end;
-
-macro_begin _setup_menu_primary_scene_rest;
-    IF_DEVEL macro_playback _scene_selector_devel;
-    IF_RELEASE macro_playback _scene_selector_release;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
 
