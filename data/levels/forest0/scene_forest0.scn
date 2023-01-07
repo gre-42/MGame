@@ -4,8 +4,6 @@ include osm_resource_forest0.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
     IF_PC_PLAYER_PLAYBACK:#
-    PC_PLAYER_PLAYBACK:__DIR__/checkpoints.m
-    PC_PLAYER_PLAYBACK_SPEEDUP:1
     SCORE_BOARD:456
     OSM_MAP_RESOURCE:osm_resource_forest0
     IF_HAS_OVERLAY:#
