@@ -13,6 +13,7 @@ macro_begin osm_resource_snow1;
         default_terrain_type=grass,
         terrain_materials=surface_base_snow,
         street_materials=surface_base_snow,
+        path_materials=surface_base_snow,
         path_crossing_texture=#Ground029_Crossing_Snow,
         path_textures=
             lanes:1 texture0:#Ground029_Street_Snow,

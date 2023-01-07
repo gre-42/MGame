@@ -13,6 +13,7 @@ macro_begin osm_resource_desert1;
         default_terrain_type=grass,
         terrain_materials=surface_base_gravel,
         street_materials=surface_base_gravel,
+        path_materials=surface_base_gravel,
         path_crossing_texture=#Ground029_Crossing_Desert,
         path_textures=
             lanes:1 texture0:#Ground029_Street_Desert_Dry,
