@@ -89,6 +89,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
 macro_end;
 
 macro_begin _scene_selector_devel;
+    # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
         title=Scene,
@@ -97,11 +98,11 @@ macro_begin _scene_selector_devel;
         size=NAN 850,
         font_height=32,
         line_distance=32,
-        on_change=macro_playback reload,
         scene_directory=levels;
 macro_end;
 
 macro_begin _scene_selector_release;
+    # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
         title=Scene,
@@ -110,7 +111,6 @@ macro_begin _scene_selector_release;
         size=NAN 850,
         font_height=32,
         line_distance=32,
-        on_change=macro_playback reload,
         scene_directory=levels,
         exclude=WIP;
 macro_end;
