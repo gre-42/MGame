@@ -59,6 +59,12 @@ macro_begin instantiate_transient_objects;
         PITCH_ERROR_STD:0
         ERROR_ALPHA:0.002
         IF_CHECKPOINTS:
+        CHECK_POINTS_ACTIVE_R:0.3
+        CHECK_POINTS_ACTIVE_G:0.3
+        CHECK_POINTS_ACTIVE_B:1
+        CHECK_POINTS_INACTIVE_R:0.1
+        CHECK_POINTS_INACTIVE_G:0.1
+        CHECK_POINTS_INACTIVE_B:0.2
         IF_RACING:#
         IF_RALLY:
         IF_BURN_IN:;

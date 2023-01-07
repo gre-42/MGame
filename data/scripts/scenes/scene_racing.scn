@@ -373,7 +373,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
         height_changed=0
         track_filename=RECORDINGS_DIR/checkpoints.m
         laps=RACE_LAPS
-        deselection_emissivity=0.7 0.7 0.7
+        selection_emissivity=CHECK_POINTS_ACTIVE_R CHECK_POINTS_ACTIVE_G CHECK_POINTS_ACTIVE_B
+        deselection_emissivity=CHECK_POINTS_INACTIVE_R CHECK_POINTS_INACTIVE_G CHECK_POINTS_INACTIVE_B
         on_finish=set_focuses menu game_over_countdown_pending;
 
     camera_key_binding key=C gamepad_button=BACK;
@@ -565,6 +566,12 @@ macro_begin generic_scene_racing_dynamic;
         IF_PLAYBACK_WINNER_1:IF_PLAYBACK_WINNER_1
         IF_PLAYBACK_WINNER_2:IF_PLAYBACK_WINNER_2
         IF_CHECKPOINTS:IF_CHECKPOINTS
+        CHECK_POINTS_ACTIVE_R:CHECK_POINTS_ACTIVE_R=-1
+        CHECK_POINTS_ACTIVE_G:CHECK_POINTS_ACTIVE_G=-1
+        CHECK_POINTS_ACTIVE_B:CHECK_POINTS_ACTIVE_B=-1
+        CHECK_POINTS_INACTIVE_R:CHECK_POINTS_INACTIVE_R=0.7
+        CHECK_POINTS_INACTIVE_G:CHECK_POINTS_INACTIVE_G=0.7
+        CHECK_POINTS_INACTIVE_B:CHECK_POINTS_INACTIVE_B=0.7
         TEAMS_SPAWN_POINTS_RESOURCE:TEAMS_SPAWN_POINTS_RESOURCE
         TEAMS_WAY_POINTS_RESOURCE:TEAMS_WAY_POINTS_RESOURCE;
 macro_end;
