@@ -9,8 +9,10 @@ macro_begin _setup_menu_showroom_rally;
     scene_to_pixel_region
         target_scene=primary_scene
         z_order=2
-        position=20 -500
-        size=600 350
+        left=showroom_left
+        right=showroom_right
+        bottom=showroom_bottom
+        top=showroom_top
         focus_mask=menu
         submenus=car_selector car_color_selector;
 macro_end;
@@ -20,10 +22,12 @@ macro_begin parameter_setters_rally;
         id=car_selector,
         title=Car,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         default=0,
         on_first_render=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
@@ -45,10 +49,12 @@ macro_begin parameter_setters_rally;
         id=car_color_selector,
         title=Color,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         default=0,
         on_first_render=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
         on_change=macro_playback _change_showroom_vehicle_in_physics_thread context=showroom,
@@ -64,10 +70,12 @@ macro_begin parameter_setters_rally;
         id=session_selector,
         title=Session,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         default=0,
         on_first_render=,
         on_change=,
@@ -83,10 +91,12 @@ macro_begin parameter_setters_rally;
         title=Laps,
         requires=IF_RACEWAY_CIRCULAR:,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         default=0,
         on_first_render=,
         on_change=,

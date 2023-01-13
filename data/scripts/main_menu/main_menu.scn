@@ -34,26 +34,27 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
     ui_background
         z_order=1
         texture=textures/ui_background.png
+        left=min
+        right=max
+        bottom=min
+        top=max
         update=once
-        focus_mask=menu;
-
-    ui_background
-        z_order=1
-        texture=textures/ui_background.png
-        update=once
-        focus_mask=loading;
+        focus_mask=menu|loading;
 
     tab_menu
         key=ENTER
         gamepad_button=A
         tap_button=START
         id=submenus
+        max_entry_distance=1
         title=
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=20 -60
-        size=NAN 60
-        font_height=32
-        line_distance=32
+        left=tabmenu_left
+        right=tabmenu_right
+        bottom=tabmenu_bottom
+        top=tabmenu_top
+        font_height=normal
+        line_distance=normal
         default=0
         reload_transient_objects=execute_in_physics_thread with_delete_node_mutex macro_playback _reload_transient_objects;
 
@@ -61,8 +62,10 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         id=game_mode_selector,
         title=Game mode,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
         font_height=32,
         line_distance=32,
         default=0,
@@ -77,10 +80,12 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         id=game_mode_selector,
         title=Game mode,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         default=0,
         on_first_render=,
         on_change=macro_playback clear_selection_ids_and_reload,
@@ -97,12 +102,15 @@ macro_begin _setup_menu_primary_scene_rest;
     # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
+        max_entry_distance=5,
         title=Scene,
         ttf_file=fonts/RobotoMono-Bold.ttf,
-        position=20 -900,
-        size=NAN 850,
-        font_height=32,
-        line_distance=32,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
         scene_directory=levels;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
@@ -125,16 +133,20 @@ macro_begin _setup_menu_primary_scene_rest;
         id=controls
         title=Controls
         gamepad_texture=textures/gamepad.png
-        position=20 -350
-        size=512 256;
+        left=submenu_left
+        right=controls_right
+        bottom=controls_bottom
+        top=submenu_top;
 
     focused_text
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
-        font_height=64
-        line_distance=64
+        font_height=huge
+        line_distance=huge
         focus_mask=game_over
         text=Game over;
+
+    IF_ANDROID macro_playback create_tap_buttons;
 macro_end;
 
 macro_begin create_main_menu;

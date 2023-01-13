@@ -4,14 +4,18 @@ macro_begin _setup_scene_loading;
     ui_background
         z_order=1
         texture=textures/ui_background.png
+        left=min
+        right=max
+        bottom=min
+        top=max
         update=once
         focus_mask=always;
 
     focused_text
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
-        font_height=64
-        line_distance=64
+        font_height=huge
+        line_distance=huge
         focus_mask=always
         text=Loading...;
 macro_end;

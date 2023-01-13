@@ -35,6 +35,7 @@ include models/models_urban.scn;
 include models/models_vegetation.scn;
 
 include lights.scn;
+include screen_constraints.scn;
 include main_menu/main_menu.scn;
 include scenes/scene_loading.scn;
 include scenes/scene_minimal.scn;

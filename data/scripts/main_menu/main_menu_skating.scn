@@ -9,8 +9,10 @@ macro_begin _setup_menu_showroom_skating;
     scene_to_pixel_region
         target_scene=primary_scene
         z_order=2
-        position=20 -500
-        size=600 350
+        left=showroom_left
+        right=showroom_right
+        bottom=showroom_bottom
+        top=showroom_top
         focus_mask=menu
         submenus=car_selector;
 macro_end;

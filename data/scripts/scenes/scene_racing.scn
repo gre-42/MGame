@@ -82,8 +82,10 @@ macro_begin _scene_racing_instantiate_static_objects;
     ui_background
         z_order=1
         texture=textures/ui_background.png
-        position=-600 -200
-        size=600 200
+        left=highscore_left
+        right=highscore_right
+        bottom=highscore_bottom
+        top=highscore_top
         update=once
         focus_mask=always;
 
@@ -99,10 +101,12 @@ macro_begin _scene_racing_instantiate_static_objects;
     players_stats
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-600 -200
-        size=600 200
-        font_height=24
-        line_distance=24
+        left=highscore_left
+        right=highscore_right
+        bottom=highscore_bottom
+        top=highscore_top
+        font_height=normal
+        line_distance=normal
         score_board=SCORE_BOARD;
 
     ##############;
@@ -110,10 +114,12 @@ macro_begin _scene_racing_instantiate_static_objects;
     ##############;
     visual_global_log
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=-200 -200
-        size=200 200
-        font_height=24
-        line_distance=24
+        left=global_log_left
+        right=global_log_right
+        bottom=global_log_bottom
+        top=global_log_top
+        font_height=normal
+        line_distance=normal
         nentries=10
         severity=critical;
 
@@ -123,22 +129,20 @@ macro_begin _scene_racing_instantiate_static_objects;
     ui_background
         z_order=1
         texture=textures/ui_background.png
+        left=min
+        right=max
+        bottom=min
+        top=max
         update=once
-        focus_mask=countdown_any;
-    
-    ui_background
-        z_order=1
-        texture=textures/ui_background.png
-        update=once
-        focus_mask=game_over_countdown_any;
+        focus_mask=countdown_any|game_over_countdown_any;
 
     countdown
         node=countdown
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
-        font_height=64
-        line_distance=64
+        font_height=huge
+        line_distance=huge
         nseconds=5
         pending_focus=countdown_pending
         counting_focus=countdown_counting
@@ -149,8 +153,8 @@ macro_begin _scene_racing_instantiate_static_objects;
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
         position=NAN NAN
-        font_height=64
-        line_distance=64
+        font_height=huge
+        line_distance=huge
         nseconds=3
         pending_focus=game_over_countdown_pending
         counting_focus=game_over_countdown_counting
