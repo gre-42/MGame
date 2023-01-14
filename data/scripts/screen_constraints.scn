@@ -74,7 +74,7 @@ additive_screen_constraint name=start_button_right value=0 anchor=highscore_left
 # Tabmenu #;
 ###########;
 constant_screen_constraint name=tabmenu_left   value=0 units=inches;
-additive_screen_constraint name=tabmenu_right  value=0 anchor=escape_button_left units=inches;
+constant_screen_constraint name=tabmenu_right  value=2 units=inches;
 additive_screen_constraint name=tabmenu_bottom value=-0.2 anchor=max units=inches;
 additive_screen_constraint name=tabmenu_top    value=-0.05 anchor=max units=inches;
 
@@ -82,7 +82,7 @@ additive_screen_constraint name=tabmenu_top    value=-0.05 anchor=max units=inch
 # Submenu #;
 ###########;
 constant_screen_constraint name=submenu_left   value=0 units=inches;
-constant_screen_constraint name=submenu_right  value=2 units=inches;
+additive_screen_constraint name=submenu_right  value=0 anchor=tabmenu_right units=inches;
 additive_screen_constraint name=submenu_bottom value=0.05 anchor=lower_buttons_top units=inches;
 additive_screen_constraint name=submenu_top    value=-0.05 anchor=tabmenu_bottom units=inches;
 
@@ -95,10 +95,10 @@ additive_screen_constraint name=controls_bottom value=-256 anchor=submenu_top un
 ############;
 # Showroom #;
 ############;
-additive_screen_constraint name=showroom_left   value=0 anchor=submenu_right units=inches;
-additive_screen_constraint name=showroom_right  value=-1 anchor=max units=inches;
-additive_screen_constraint name=showroom_bottom value=0.05 anchor=lower_buttons_top units=inches;
-additive_screen_constraint name=showroom_top    value=-0.05 anchor=tabmenu_bottom units=inches;
+additive_screen_constraint name=showroom_left   value=0 anchor=tabmenu_right units=inches;
+additive_screen_constraint name=showroom_right  value=0 anchor=max units=inches;
+additive_screen_constraint name=showroom_bottom value=0 anchor=lower_buttons_top units=inches;
+additive_screen_constraint name=showroom_top    value=0 anchor=tabmenu_bottom units=inches;
 
 #########;
 # Fonts #;
