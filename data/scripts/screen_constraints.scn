@@ -1,7 +1,7 @@
 #############;
 # Highscore #;
 #############;
-additive_screen_constraint name=highscore_left   value=-1.5 anchor=max units=inches;
+additive_screen_constraint name=highscore_left   value=-2.5 anchor=max units=inches;
 additive_screen_constraint name=highscore_right  value=0 anchor=max units=inches;
 additive_screen_constraint name=highscore_bottom value=-0.6 anchor=max units=inches;
 additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches;
@@ -10,7 +10,7 @@ additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches
 # Player status #;
 #################;
 constant_screen_constraint name=player_status_left   value=0 units=inches;
-constant_screen_constraint name=player_status_right  value=0.5 units=inches;
+constant_screen_constraint name=player_status_right  value=1 units=inches;
 additive_screen_constraint name=player_status_bottom value=-1 anchor=max units=inches;
 additive_screen_constraint name=player_status_top    value=0 anchor=max units=inches;
 
