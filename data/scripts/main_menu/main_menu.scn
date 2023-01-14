@@ -102,7 +102,6 @@ macro_begin _setup_menu_primary_scene_rest;
     # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
-        max_entry_distance=5,
         title=Scene,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
