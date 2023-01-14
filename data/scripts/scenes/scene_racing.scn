@@ -114,10 +114,10 @@ macro_begin _scene_racing_instantiate_static_objects;
     ##############;
     visual_global_log
         ttf_file=fonts/RobotoMono-Bold.ttf
-        left=global_log_left
-        right=global_log_right
-        bottom=global_log_bottom
-        top=global_log_top
+        left=highscore_left
+        right=highscore_right
+        bottom=highscore_bottom
+        top=highscore_top
         font_height=normal
         line_distance=normal
         nentries=10

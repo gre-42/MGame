@@ -6,14 +6,6 @@ additive_screen_constraint name=highscore_right  value=0 anchor=max units=inches
 additive_screen_constraint name=highscore_bottom value=-0.6 anchor=max units=inches;
 additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches;
 
-##############;
-# Global log #;
-##############;
-additive_screen_constraint name=global_log_left   value=-1 anchor=max units=inches;
-additive_screen_constraint name=global_log_right  value=0 anchor=max units=inches;
-additive_screen_constraint name=global_log_bottom value=-0.5 anchor=highscore_bottom units=inches;
-additive_screen_constraint name=global_log_top    value=0 anchor=highscore_bottom units=inches;
-
 #################;
 # Player status #;
 #################;
