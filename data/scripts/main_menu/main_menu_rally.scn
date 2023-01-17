@@ -21,6 +21,7 @@ macro_begin parameter_setters_rally;
     parameter_setter
         id=car_selector,
         title=Car,
+        icon=car_selector_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -48,6 +49,7 @@ macro_begin parameter_setters_rally;
     parameter_setter
         id=car_color_selector,
         title=Color,
+        icon=car_color_selector_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -69,6 +71,7 @@ macro_begin parameter_setters_rally;
     parameter_setter
         id=session_selector,
         title=Session,
+        icon=session_selector_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -89,6 +92,7 @@ macro_begin parameter_setters_rally;
     parameter_setter
         id=laps_selector,
         title=Laps,
+        icon=laps_selector_icon,
         requires=IF_RACEWAY_CIRCULAR:,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
@@ -110,6 +114,7 @@ macro_begin parameter_setters_rally;
     IF_DEVEL parameter_setter
         id=playback_speed_selector,
         title=Playback speed,
+        icon=playback_speed_selector_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         position=20 -900,
         size=NAN 850,

@@ -1,7 +1,7 @@
 #############;
 # Highscore #;
 #############;
-additive_screen_constraint name=highscore_left   value=-2.5 anchor=max units=inches;
+additive_screen_constraint name=highscore_left   value=-2 anchor=max units=inches;
 additive_screen_constraint name=highscore_right  value=0 anchor=max units=inches;
 additive_screen_constraint name=highscore_bottom value=-0.6 anchor=max units=inches;
 additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches;
@@ -10,7 +10,7 @@ additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches
 # Player status #;
 #################;
 constant_screen_constraint name=player_status_left   value=0 units=inches;
-constant_screen_constraint name=player_status_right  value=1 units=inches;
+constant_screen_constraint name=player_status_right  value=0.5 units=inches;
 additive_screen_constraint name=player_status_bottom value=-1 anchor=max units=inches;
 additive_screen_constraint name=player_status_top    value=0 anchor=max units=inches;
 
@@ -67,8 +67,16 @@ additive_screen_constraint name=start_button_right value=0 anchor=highscore_left
 ###########;
 constant_screen_constraint name=tabmenu_left   value=0 units=inches;
 constant_screen_constraint name=tabmenu_right  value=2 units=inches;
-additive_screen_constraint name=tabmenu_bottom value=-0.2 anchor=max units=inches;
-additive_screen_constraint name=tabmenu_top    value=-0.05 anchor=max units=inches;
+additive_screen_constraint name=tabmenu_bottom value=-0.9 anchor=max units=inches;
+additive_screen_constraint name=tabmenu_top    value=0 anchor=max units=inches;
+
+#################;
+# Tabmenu icons #;
+#################;
+constant_screen_constraint name=tabmenu_icon_left   value=0 units=inches;
+constant_screen_constraint name=tabmenu_icon_right  value=0.9 units=inches;
+additive_screen_constraint name=tabmenu_icon_bottom value=0 anchor=tabmenu_bottom units=inches;
+additive_screen_constraint name=tabmenu_icon_top    value=0 anchor=tabmenu_top units=inches;
 
 ###########;
 # Submenu #;

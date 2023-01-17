@@ -46,9 +46,13 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         gamepad_button=A
         tap_button=START
         id=submenus
-        max_entry_distance=1
-        title=
+        max_entry_distance=5
+        selection_marker=selection_marker
         ttf_file=fonts/RobotoMono-Bold.ttf
+        icon_left=tabmenu_icon_left
+        icon_right=tabmenu_icon_right
+        icon_bottom=tabmenu_icon_bottom
+        icon_top=tabmenu_icon_top
         left=tabmenu_left
         right=tabmenu_right
         bottom=tabmenu_bottom
@@ -61,6 +65,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
     !IF_ANDROID IF_DEVEL parameter_setter
         id=game_mode_selector,
         title=Game mode,
+        icon=game_mode_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -79,6 +84,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
     !IF_ANDROID IF_RELEASE parameter_setter
         id=game_mode_selector,
         title=Game mode,
+        icon=game_mode_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -103,6 +109,7 @@ macro_begin _setup_menu_primary_scene_rest;
     scene_selector
         id=scene_selector,
         title=Scene,
+        icon=scene_selector_icon,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
@@ -131,6 +138,7 @@ macro_begin _setup_menu_primary_scene_rest;
     controls
         id=controls
         title=Controls
+        icon=controls_icon
         gamepad_texture=textures/gamepad.png
         left=submenu_left
         right=controls_right
