@@ -46,7 +46,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         gamepad_button=A
         tap_button=START
         id=submenus
-        max_entry_distance=5
+        max_entry_distance=10
         selection_marker=selection_marker
         ttf_file=fonts/RobotoMono-Bold.ttf
         icon_left=tabmenu_icon_left

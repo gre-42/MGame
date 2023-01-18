@@ -98,7 +98,7 @@ additive_screen_constraint name=controls_bottom value=-256 anchor=submenu_top un
 additive_screen_constraint name=showroom_left   value=0 anchor=tabmenu_right units=inches;
 additive_screen_constraint name=showroom_right  value=0 anchor=max units=inches;
 additive_screen_constraint name=showroom_bottom value=0 anchor=lower_buttons_top units=inches;
-additive_screen_constraint name=showroom_top    value=0 anchor=tabmenu_bottom units=inches;
+additive_screen_constraint name=showroom_top    value=0 anchor=upper_buttons_bottom units=inches;
 
 #########;
 # Fonts #;
