@@ -2,6 +2,7 @@ macro_begin osm_resource_nyc;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_nyc.osm,
+        cache_filename=__APPDATA__/nyc-GAME_LEVEL.cereal.binary,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=#Ground037_Sl,
@@ -11,6 +12,10 @@ macro_begin osm_resource_nyc;
         terrain_asphalt_textures=#Road007_No_Lines,
         bounding_terrain_type=stone,
         default_terrain_type=stone,
+        terrain_materials=surface_base_stone,
+        street_materials=surface_base_tarmac,
+        path_materials=surface_base_tarmac,
+        wall_materials=surface_base_stone,
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#Road007_No_Lines,
         street_textures=
