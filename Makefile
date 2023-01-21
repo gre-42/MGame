@@ -52,7 +52,8 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
 			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
 			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStbImage.dll \
+			Mlib/$(platform_dir)/Bin/libMlibStb.dll \
+			Mlib/$(platform_dir)/Bin/libMlibStbCpp.dll \
 			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
 			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
