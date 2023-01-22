@@ -2,7 +2,7 @@ macro_begin osm_resource_jb_race;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_jb.osm,
-        cache_filename=__APPDATA__/jb.cereal.binary,
+        cache_filename=__APPDATA__/jb-GAME_LEVEL.cereal.binary,
         heightmap=__DIR__/HEIGHTMAP,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=
