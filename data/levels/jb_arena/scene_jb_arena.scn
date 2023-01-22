@@ -9,6 +9,7 @@ macro_playback scene_racing_static
     OSM_MAP_RESOURCE:osm_resource_jb_race
     IF_HAS_OVERLAY:
     OSM_MAP_OVERLAY_RESOURCE:osm_resource_jb_wpts1
+    IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1

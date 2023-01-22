@@ -98,8 +98,8 @@ macro_begin teams.create_car_for_npc;
         format=8
         ttf_file=fonts/RobotoMono-Bold.ttf
         offset=0 0.3
-        font_height=16
-        line_distance=16;
+        font_height=normal
+        line_distance=normal;
     create_externals player=PLAYER_NAME mode=npc;
 macro_end;
 
