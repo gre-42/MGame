@@ -152,7 +152,7 @@ macro_begin create_mh1;
 
     IF_WITH_PHYSICS set_jump_strength node=human_node-SUFFIX value=0.3;
 
-    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs angular_vels=-50 -9 9 50 powers=NAN 2000 2000 NAN gear_ratios=1;
+    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs angular_vels=-50 -9 9 50 powers=NAN 2.7 2.7 NAN gear_ratios=1;
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=legs brake_force=5000 Ks=1e4 Ka=4e2 musF=0 musC=5 tire_id=0;
     IF_WITH_PHYSICS create_human_as_car_controller
         node=human_node-SUFFIX

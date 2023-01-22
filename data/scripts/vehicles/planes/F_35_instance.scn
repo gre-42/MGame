@@ -30,7 +30,7 @@ macro_begin create_F_35_physics;
     # 43000 pounds = 191274 Newton;
 
     create_engine rigid_body=car_node-SUFFIX name=wheels angular_vels=0 powers=0 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
-    create_engine rigid_body=car_node-SUFFIX name=turbine angular_vels=0 powers=191274 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
+    create_engine rigid_body=car_node-SUFFIX name=turbine angular_vels=0 powers=260 gear_ratios=1 hand_brake_pulled=HAND_BRAKE_PULLED;
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.7 -0.45 -1.35 radius=0.3 engine=wheels brake_force=50000 Ks=1e5 Ka=4e3 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;

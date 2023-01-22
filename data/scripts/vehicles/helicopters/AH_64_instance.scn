@@ -84,17 +84,17 @@ macro_begin create_AH_64_physics;
         punch_angle_idle_std=0.01,
         punch_angle_shoot_std=0.1;
 
-    #  120 PS = 88259.8 Watt;
-    #  150 PS = 110325 Watt;
-    #  200 PS = 147100 Watt;
-    #  400 PS = 294200 Watt;
-    # 1000 PS = 735499 Watt;
+    #  120 hp = 88259.8 Watt;
+    #  150 hp = 110325 Watt;
+    #  200 hp = 147100 Watt;
+    #  400 hp = 294200 Watt;
+    # 1000 hp = 735499 Watt;
 
     create_engine
         rigid_body=car_node-SUFFIX
         name=wheels
         angular_vels=-25 -20 20 25
-        powers=0 2.66e11 2.66e11 0
+        powers=0 3.6e8 3.6e8 0
         gear_ratios=0.5 1 2 3
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
@@ -103,7 +103,7 @@ macro_begin create_AH_64_physics;
         rigid_body=car_node-SUFFIX
         name=main_rotor
         angular_vels=-25 -20 20 25
-        powers=0 2.8e6 2.8e6 0
+        powers=0 4e3 4e3 0
         gear_ratios=0.5 1 2 3
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
@@ -112,7 +112,7 @@ macro_begin create_AH_64_physics;
         rigid_body=car_node-SUFFIX
         name=tail_rotor
         angular_vels=-25 -20 20 25
-        powers=0 2.8e5 2.8e5 0
+        powers=0 400 400 0
         gear_ratios=0.5 1 2 3
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;

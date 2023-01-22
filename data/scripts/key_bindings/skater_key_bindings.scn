@@ -51,11 +51,11 @@ macro_begin create_skater_key_bindings;
         joystick_digital_axis_sign=-1
         fly_forward_factor=100;
 
-    # 120 PS = 88259.8 Watt;
-    # 150 PS = 110325 Watt;
-    # 200 PS = 147100 Watt;
-    # 400 PS = 294200 Watt;
-    # 1000 PS = 735499 Watt;
+    # 120 hp = 88259.8 Watt;
+    # 150 hp = 110325 Watt;
+    # 200 hp = 147100 Watt;
+    # 400 hp = 294200 Watt;
+    # 1000 hp = 735499 Watt;
 
     car_controller_key_binding
         player=PLAYER_NAME
