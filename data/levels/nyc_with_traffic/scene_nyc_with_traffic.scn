@@ -28,8 +28,7 @@ macro_playback scene_racing_static
     IF_SYNTHWAVE:#
     RACING_LINE_TRACK:__DIR__/racing_line_nyc_with_traffic.m
     RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
-    GAME_LEVEL:1
-    GAME_STYLE:;
+    GAME_LEVEL:1;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic

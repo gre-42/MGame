@@ -446,14 +446,12 @@ macro_begin scene_racing_static;
     macro_playback OSM_MAP_RESOURCE
         CACHE_FILENAME:CACHE_FILENAME
         GAME_LEVEL:GAME_LEVEL
-        GAME_STYLE:GAME_STYLE
         HEIGHTMAP:HEIGHTMAP
         RACING_LINE_TRACK:RACING_LINE_TRACK
         RACING_LINE_PLAYBACK:RACING_LINE_PLAYBACK;
 
     IF_HAS_OVERLAY macro_playback OSM_MAP_OVERLAY_RESOURCE
-        GAME_LEVEL:GAME_LEVEL
-        GAME_STYLE:GAME_STYLE;
+        GAME_LEVEL:GAME_LEVEL;
 
     create_scene
         name=primary_scene
