@@ -33,7 +33,8 @@ macro_playback scene_racing_static
     SOFT_LIGHT_TEXTURE:
     SKYBOX:skybox_ocean
     IF_DAY:
-    IF_NIGHT:#;
+    IF_NIGHT:#
+    IF_SYNTHWAVE:#;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic

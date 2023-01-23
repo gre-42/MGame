@@ -25,9 +25,11 @@ macro_playback scene_racing_static
     SKYBOX:skybox
     IF_DAY:
     IF_NIGHT:#
+    IF_SYNTHWAVE:#
     RACING_LINE_TRACK:__DIR__/racing_line_nyc_with_traffic.m
     RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
-    GAME_LEVEL:1;
+    GAME_LEVEL:1
+    GAME_STYLE:;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic

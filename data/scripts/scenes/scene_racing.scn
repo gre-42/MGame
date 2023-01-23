@@ -184,6 +184,7 @@ macro_begin _scene_racing_instantiate_static_objects;
     set_skybox alias=SKYBOX;
     IF_DAY set_background_color color=0.68 0.85 1;
     IF_NIGHT set_background_color color=0 0 0;
+    IF_SYNTHWAVE set_background_color color=0.65 0.36 0.91;
 
     # include playback_resource.scn;
 
@@ -192,8 +193,10 @@ macro_begin _scene_racing_instantiate_static_objects;
     #########;
     IF_DAY macro_playback add_distant_light_day LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
     IF_NIGHT macro_playback add_distant_light_night LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
+    IF_SYNTHWAVE macro_playback add_distant_light_night LEFT:SUN_LEFT=-4000 RIGHT:SUN_RIGHT=4000 BOTTOM:SUN_BOTTOM=-2000 TOP:SUN_TOP=2000;
     IF_DAY macro_playback add_local_instances_light LSUFFIX:-local_instances;
     IF_NIGHT macro_playback add_local_blob_instances_light LSUFFIX:-blobs;
+    IF_SYNTHWAVE macro_playback add_local_blob_instances_light LSUFFIX:-blobs;
 
     ##################;
     # Reflection map #;
@@ -202,12 +205,20 @@ macro_begin _scene_racing_instantiate_static_objects;
         reflection_strength=0.5
         reflection_maps=
             key=car value=reflection_map
-            key=wet_street value=reflection_map;
+            key=wet_street value=reflection_map
+            key=ground value=;
     IF_NIGHT add_color_style
         reflection_strength=0.5
         reflection_maps=
             key=car value=reflection_map_night
-            key=wet_street value=reflection_map_night;
+            key=wet_street value=reflection_map_night
+            key=ground value=;
+    IF_SYNTHWAVE
+        add_color_style
+        reflection_strength=0.5
+        reflection_maps=
+            key=car value=reflection_map_synthwave
+            key=ground value=reflection_map_synthwave;
 
     #############;
     # Particles #;
@@ -435,12 +446,14 @@ macro_begin scene_racing_static;
     macro_playback OSM_MAP_RESOURCE
         CACHE_FILENAME:CACHE_FILENAME
         GAME_LEVEL:GAME_LEVEL
+        GAME_STYLE:GAME_STYLE
         HEIGHTMAP:HEIGHTMAP
         RACING_LINE_TRACK:RACING_LINE_TRACK
         RACING_LINE_PLAYBACK:RACING_LINE_PLAYBACK;
 
     IF_HAS_OVERLAY macro_playback OSM_MAP_OVERLAY_RESOURCE
-        GAME_LEVEL:GAME_LEVEL;
+        GAME_LEVEL:GAME_LEVEL
+        GAME_STYLE:GAME_STYLE;
 
     create_scene
         name=primary_scene
@@ -499,6 +512,7 @@ macro_begin scene_racing_static;
         SKYBOX:SKYBOX
         IF_DAY:IF_DAY
         IF_NIGHT:IF_NIGHT
+        IF_SYNTHWAVE:IF_SYNTHWAVE
         STADIUM_CAMERA_X:STADIUM_CAMERA_X=0
         STADIUM_CAMERA_Y:STADIUM_CAMERA_Y=2000
         STADIUM_CAMERA_Z:STADIUM_CAMERA_Z=2400

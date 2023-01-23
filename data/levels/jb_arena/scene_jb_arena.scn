@@ -30,7 +30,8 @@ macro_playback scene_racing_static
     GAME_LEVEL:real_heightmap
     SKYBOX:skybox
     IF_DAY:
-    IF_NIGHT:#;
+    IF_NIGHT:#
+    IF_SYNTHWAVE:#;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
