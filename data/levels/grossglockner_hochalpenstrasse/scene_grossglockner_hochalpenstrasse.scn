@@ -28,6 +28,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
         SKYBOX:skybox
         IF_DAY:
         IF_NIGHT:#
+        IF_SYNTHWAVE:#
         RACING_LINE_TRACK:__DIR__/racing_line_grossglockner_hochalpenstrasse.m
         RACING_LINE_PLAYBACK:__APPDATA__/grossglockner_hochalpenstrasse_checkpoints.m
         GAME_LEVEL:GAME_LEVEL;
