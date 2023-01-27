@@ -4,7 +4,7 @@ include resource_skate0.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:5
+    SCORE_BOARD:team|car_hp
     OSM_MAP_RESOURCE:osm_resource_skate0
     OSM_POSITION_Y:0
     OSM_ROTATION_X:0

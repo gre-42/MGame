@@ -3,7 +3,7 @@ include ../arena/osm_resource_arena.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
-    SCORE_BOARD:21
+    SCORE_BOARD:team|car_hp|nwins
     OSM_MAP_RESOURCE:osm_resource_arena
     IF_HAS_OVERLAY:#
     STADIUM_CAMERA_X:0

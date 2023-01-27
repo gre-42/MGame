@@ -4,7 +4,7 @@ include osm_resource_forest0.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:456
+    SCORE_BOARD:history|laps|rank|race_time
     OSM_MAP_RESOURCE:osm_resource_forest0
     IF_HAS_OVERLAY:#
     IF_DIRTMAP:

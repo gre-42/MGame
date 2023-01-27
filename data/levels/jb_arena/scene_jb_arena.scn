@@ -5,7 +5,7 @@ include ../jb/osm_resource_jb_wpts1.scn;
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:#
     IF_PC_PLAYER_PLAYBACK:#
-    SCORE_BOARD:21
+    SCORE_BOARD:team|car_hp|nkills
     OSM_MAP_RESOURCE:osm_resource_jb_race
     IF_HAS_OVERLAY:
     OSM_MAP_OVERLAY_RESOURCE:osm_resource_jb_wpts1

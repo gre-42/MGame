@@ -6,7 +6,7 @@ macro_playback scene_racing_static
     IF_PC_PLAYER_PLAYBACK:#
     PC_PLAYER_PLAYBACK:__DIR__/checkpoints.m
     PC_PLAYER_PLAYBACK_SPEEDUP:1
-    SCORE_BOARD:456
+    SCORE_BOARD:history|laps|rank|race_time
     OSM_MAP_RESOURCE:osm_resource_raceway0
     IF_HAS_OVERLAY:#
     IF_DIRTMAP:
