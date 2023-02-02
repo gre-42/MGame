@@ -92,6 +92,14 @@ additive_screen_constraint name=submenu_top    value=-0.05 anchor=tabmenu_bottom
 additive_screen_constraint name=controls_right  value=512 anchor=submenu_left units=pixels;
 additive_screen_constraint name=controls_bottom value=-256 anchor=submenu_top units=pixels;
 
+##############;
+# Scene icon #;
+##############;
+additive_screen_constraint name=scene_icon_left   value=0 anchor=submenu_right units=inches;
+additive_screen_constraint name=scene_icon_right  value=2 anchor=submenu_right units=inches;
+additive_screen_constraint name=scene_icon_bottom value=-1 anchor=submenu_top units=inches;
+additive_screen_constraint name=scene_icon_top    value=0 anchor=submenu_top units=inches;
+
 ############;
 # Showroom #;
 ############;

@@ -105,6 +105,18 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
 macro_end;
 
 macro_begin _setup_menu_primary_scene_rest;
+    add_to_gallery resource=textures/menu/missing.png instance=level_icon;
+    ui_exhibit
+        z_order=1
+        id_in_gallery=level_icon
+        left=scene_icon_left
+        right=scene_icon_right
+        bottom=scene_icon_bottom
+        top=scene_icon_top
+        update=once
+        focus_mask=menu|loading
+        submenus=scene_selector;
+
     # on_change=macro_playback reload, ;
     scene_selector
         id=scene_selector,
@@ -117,6 +129,7 @@ macro_begin _setup_menu_primary_scene_rest;
         top=submenu_top,
         font_height=normal,
         line_distance=normal,
+        on_change=update_gallery resource=LEVEL_ICON_FILE instance=level_icon,
         scene_directory=levels;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
