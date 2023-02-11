@@ -102,9 +102,7 @@ macro_begin create_player_skater_externals_skating_mh1;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
-        max_tire_angle=NAN
-        tire_angle_pid=NAN NAN NAN NAN;
+        surface_power_backward=-INFINITY;
 macro_end;
 
 macro_begin add_attached_light_skating_mh1;

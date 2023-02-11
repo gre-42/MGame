@@ -7,6 +7,7 @@ macro_playback scene_racing_static
     SCORE_BOARD:history|laps|rank|race_time
     OSM_MAP_RESOURCE:osm_resource_sf
     IF_HAS_OVERLAY:#
+    IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/dirtmap_dense.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1
@@ -24,6 +25,7 @@ macro_playback scene_racing_static
     SKYBOX:skybox
     IF_DAY:
     IF_NIGHT:#
+    IF_SYNTHWAVE:#
     RACING_LINE_TRACK:__DIR__/racing_line_sf_with_traffic.m
     RACING_LINE_PLAYBACK:__DIR__/checkpoints.m;
 

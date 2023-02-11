@@ -2,6 +2,7 @@ macro_begin osm_resource_sf;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_sf.osm,
+        cache_filename=__APPDATA__/sf.cereal.binary,
         heightmap=__DIR__/heightmap.pgm,
         heightmap_mask=__DIR__/heightmap_mask.pgm,
         heightmap_extension=500,
@@ -15,6 +16,10 @@ macro_begin osm_resource_sf;
         terrain_water_floor_base_textures=#Concrete020,
         bounding_terrain_type=water_floor,
         default_terrain_type=stone,
+        terrain_materials=surface_base_stone,
+        street_materials=surface_base_tarmac,
+        path_materials=surface_base_tarmac,
+        wall_materials=surface_base_stone,
         street_dirt_texture=#Asphalt016_Dirt,
         street_crossing_texture=#concrete1_2K_wh,
         street_textures=
@@ -90,31 +95,12 @@ macro_begin osm_resource_sf;
         racing_line_texture=#racing_line,
         racing_line_track=RACING_LINE_TRACK,
         racing_line_playback=RACING_LINE_PLAYBACK,
-        tree_resource_names=
-            vegetation2.0(hitbox:02_1_02_hitbox)
-            vegetation2.1(hitbox:02_1_02_hitbox)
-            vegetation2.2(hitbox:02_1_02_hitbox)
-            vegetation2.3(hitbox:02_1_02_hitbox)
-            vegetation2.4(hitbox:02_1_02_hitbox)
-            vegetation2.5(hitbox:02_1_02_hitbox),
-        # wayside_resource_names=
-            min_dist:1
-            max_dist:10
-            dumpster(p:0.1)(hitbox:02_1_02_hitbox)
-            trashcan1(p:0.1)(hitbox:02_1_02_hitbox)
-            trashcan2(p:0.5)(hitbox:02_1_02_hitbox)
-            mailbox(p:0.02)(hitbox:02_1_02_hitbox)
-            bench(p:0.5)(hitbox:02_1_02_hitbox)
-            female-standing1(p:1)(hitbox:02_1_02_hitbox)
-            female-standing2(p:1)(hitbox:02_1_02_hitbox)
-            female-standing3(p:1)(hitbox:02_1_02_hitbox)
-            female-standing4(p:1)(hitbox:02_1_02_hitbox)
-            btree(p:0.7)(hitbox:02_1_02_hitbox)
-            btree2(p:0.7)(hitbox:02_1_02_hitbox)
-            btree3(p:0.7)(hitbox:02_1_02_hitbox)
-            btree4(p:0.7)(hitbox:02_1_02_hitbox)
-            btree-large(p:0.7)(hitbox:02_1_02_hitbox)
-            btree-large2(p:0.7)(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.0(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.1(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.2(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.3(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.4(hitbox:02_1_02_hitbox),
+        tree_resource_names = vegetation2.5(hitbox:02_1_02_hitbox),
         near_grass_resource_names = bflower2(p:0.1)(min_bdry:1),
         near_grass_resource_names = grass_tbdpec3r_Ground037_Sl_low(min_bdry:1),
         near_grass_resource_names = bflower(p:0.1)(min_bdry:1),

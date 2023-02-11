@@ -2,7 +2,8 @@ macro_begin create_skater_key_bindings;
     car_controller_idle_binding
         player=PLAYER_NAME
         node=skater_node-SUFFIX
-        surface_power=INFINITY;
+        surface_power=INFINITY
+        drive_relaxation=1;
     rel_key_binding
         node=skater_node-SUFFIX
         key=LEFT

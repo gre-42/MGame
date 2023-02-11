@@ -92,7 +92,5 @@ macro_begin create_player_human_externals;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
-        max_tire_angle=0
-        tire_angle_pid=0 0 0 0;
+        surface_power_backward=-INFINITY;
 macro_end;
