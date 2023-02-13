@@ -1,0 +1,10 @@
+{
+    "name": "F-35",
+    "on_init": [
+        "include F_35_resource.scn",
+        "include F_35_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_F_35"
+    },
+    "requires": ["IF_GAME_MODE_TD"]
+}

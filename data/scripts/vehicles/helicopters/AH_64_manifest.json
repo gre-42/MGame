@@ -1,0 +1,10 @@
+{
+    "name": "AH-64",
+    "on_init": [
+        "include AH_64_resource.scn",
+        "include AH_64_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_AH_64"
+    },
+    "requires": ["IF_GAME_MODE_TD"]
+}

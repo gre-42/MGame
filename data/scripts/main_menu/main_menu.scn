@@ -1,5 +1,3 @@
-include main_menu_rally.scn;
-include main_menu_skating.scn;
 include reload.scn;
 
 macro_begin _reload_transient_objects;
@@ -23,7 +21,7 @@ macro_end;
 
 macro_begin _change_showroom_vehicle_in_physics_thread;
     macro_playback __change_showroom_vehicle_in_physics_thread
-        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_NAME:VEHICLE_SUFFIX
         VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
         VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
         VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
@@ -75,7 +73,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         line_distance=normal,
         default=0,
         on_first_render=,
-        on_change=macro_playback clear_selection_ids_and_reload,
+        on_change=,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Skating         value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:  IF_GAME_MODE_TD:#
@@ -94,7 +92,7 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         line_distance=normal,
         default=0,
         on_first_render=,
-        on_change=macro_playback clear_selection_ids_and_reload,
+        on_change=,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
             name=Team deathmatch value=IF_GAME_MODE_RALLY:# IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:;
@@ -129,16 +127,16 @@ macro_begin _setup_menu_primary_scene_rest;
         top=submenu_top,
         font_height=normal,
         line_distance=normal,
-        on_init=update_gallery resource=SELECTED_LEVEL_ICON_FILE instance=level_icon,
-        on_change=update_gallery resource=SELECTED_LEVEL_ICON_FILE instance=level_icon,
-        scene_directory=levels;
+        on_init=update_gallery resource=SELECTED_SCENE_LEVEL_ICON_FILE instance=level_icon,
+        on_change=update_gallery resource=SELECTED_SCENE_LEVEL_ICON_FILE instance=level_icon,
+        assets=levels,
+        asset_prefix=SELECTED_SCENE_;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
 
     # clear_parameters;
 
-    IF_GAME_MODE_RALLY macro_playback parameter_setters_rally IF_DEVEL:IF_DEVEL;
-    IF_GAME_MODE_SKATING macro_playback parameter_setters_skating;
+    macro_playback parameter_setters IF_DEVEL:IF_DEVEL;
 
     # fill_pixel_region_with_texture
         source_scene=showroom
@@ -172,9 +170,151 @@ macro_end;
 
 macro_begin create_main_menu;
     macro_playback _setup_menu_primary_scene_game_mode_selector context=primary_scene;
-    IF_GAME_MODE_RALLY macro_playback create_showroom_scene_rally;
-    IF_GAME_MODE_SKATING macro_playback create_showroom_scene_skating;
-    IF_GAME_MODE_RALLY macro_playback _setup_menu_showroom_rally context=showroom;
-    IF_GAME_MODE_SKATING macro_playback _setup_menu_showroom_skating context=showroom;
+    macro_playback create_showroom_scene;
+    macro_playback _setup_menu_showroom context=showroom;
     macro_playback _setup_menu_primary_scene_rest context=primary_scene;
+macro_end;
+
+macro_begin _setup_menu_showroom;
+    # scene_to_texture
+        texture_name=scene
+        update=always
+        size=500 300
+        focus_mask=menu
+        submenus=car_selector car_color_selector;
+
+    scene_to_pixel_region
+        target_scene=primary_scene
+        z_order=2
+        left=showroom_left
+        right=showroom_right
+        bottom=showroom_bottom
+        top=showroom_top
+        focus_mask=menu
+        submenus=car_selector car_color_selector;
+macro_end;
+
+macro_begin parameter_setters;
+    parameter_setter
+        id=car_selector,
+        title=Car,
+        icon=car_selector_icon,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
+        default=0,
+        on_first_render=macro_playback
+            _change_showroom_vehicle_in_physics_thread context=showroom
+                SHOWROOM_DECIMATE:,
+        on_change=macro_playback
+            _change_showroom_vehicle_in_physics_thread context=showroom
+                SHOWROOM_DECIMATE:,
+        assets=vehicles;
+    
+    parameter_setter
+        id=car_color_selector,
+        title=Color,
+        icon=car_color_selector_icon,
+        requires=IF_GAME_MODE_RALLY:,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
+        default=0,
+        on_first_render=macro_playback
+            _change_showroom_vehicle_in_physics_thread context=showroom
+                SHOWROOM_DECIMATE:,
+        on_change=macro_playback
+            _change_showroom_vehicle_in_physics_thread context=showroom
+                SHOWROOM_DECIMATE:,
+        parameters=
+            name=White value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:1
+            name=Gray  value=SHOWROOM_PLAYER_VEHICLE_R:0.5  SHOWROOM_PLAYER_VEHICLE_G:0.5  SHOWROOM_PLAYER_VEHICLE_B:0.5
+            name=Red   value=SHOWROOM_PLAYER_VEHICLE_R:0.7  SHOWROOM_PLAYER_VEHICLE_G:0.05 SHOWROOM_PLAYER_VEHICLE_B:0.09
+            name=Green value=SHOWROOM_PLAYER_VEHICLE_R:0.52 SHOWROOM_PLAYER_VEHICLE_G:0.63 SHOWROOM_PLAYER_VEHICLE_B:0.54
+            name=Blue  value=SHOWROOM_PLAYER_VEHICLE_R:0.51 SHOWROOM_PLAYER_VEHICLE_G:0.56 SHOWROOM_PLAYER_VEHICLE_B:0.62
+            name=Black value=SHOWROOM_PLAYER_VEHICLE_R:0.06 SHOWROOM_PLAYER_VEHICLE_G:0.07 SHOWROOM_PLAYER_VEHICLE_B:0.06;
+
+    parameter_setter
+        id=session_selector,
+        title=Session,
+        icon=session_selector_icon,
+        requires=IF_GAME_MODE_RALLY:,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
+        default=0,
+        on_first_render=,
+        on_change=,
+        parameters=
+            name=Session1 value=RACE_SESSION:session1
+            name=Session2 value=RACE_SESSION:session2
+            name=Session3 value=RACE_SESSION:session3
+            name=Session4 value=RACE_SESSION:session4
+            name=Session5 value=RACE_SESSION:session5;
+
+    parameter_setter
+        id=laps_selector,
+        title=Laps,
+        icon=laps_selector_icon,
+        requires=IF_GAME_MODE_RALLY: SELECTED_SCENE_IF_RACEWAY_CIRCULAR:,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
+        default=0,
+        on_first_render=,
+        on_change=,
+        parameters=
+            name=1 Lap   value=RACE_LAPS:1
+            name=2 Laps  value=RACE_LAPS:2
+            name=4 Laps  value=RACE_LAPS:4
+            name=8 Laps  value=RACE_LAPS:8
+            name=16 Laps value=RACE_LAPS:16;
+
+    IF_DEVEL parameter_setter
+        id=playback_speed_selector,
+        title=Playback speed,
+        icon=missing_icon,
+        requires=IF_GAME_MODE_RALLY:,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=submenu_left,
+        right=submenu_right,
+        bottom=submenu_bottom,
+        top=submenu_top,
+        font_height=normal,
+        line_distance=normal,
+        default=2,
+        on_first_render=,
+        on_change=,
+        parameters=
+            name=80% value=PLAYBACK_SPEED:0.8
+            name=90% value=PLAYBACK_SPEED:0.9
+            name=100% value=PLAYBACK_SPEED:1
+            name=110% value=PLAYBACK_SPEED:1.1
+            name=120% value=PLAYBACK_SPEED:1.2;
+    !IF_DEVEL constant_parameter PLAYBACK_SPEED:1;
+macro_end;
+
+macro_begin create_showroom_vehicle_rally;
+    macro_playback _create_showroom_vehicle
+        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
+        VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
+        VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
+        DECIMATE:SHOWROOM_DECIMATE;
 macro_end;

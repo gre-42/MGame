@@ -1,0 +1,10 @@
+{
+    "name": "Dodge Monaco 1974",
+    "on_init": [
+        "include DM74_resource.scn",
+        "include DM74_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_DM74"
+    },
+    "requires": ["IF_GAME_MODE_RALLY"]
+}

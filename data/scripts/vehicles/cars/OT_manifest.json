@@ -1,0 +1,10 @@
+{
+    "name": "OT",
+    "on_init": [
+        "include OT_resource.scn",
+        "include OT_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_OT"
+    },
+    "requires": ["IF_GAME_MODE_RALLY"]
+}

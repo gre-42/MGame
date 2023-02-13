@@ -1,0 +1,10 @@
+{
+    "name": "M3",
+    "on_init": [
+        "include M3_resource.scn",
+        "include M3_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_M3"
+    },
+    "requires": ["IF_GAME_MODE_RALLY"]
+}

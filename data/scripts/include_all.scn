@@ -17,8 +17,6 @@ include textures/blend_textures_terrain.scn;
 include textures/blend_textures_street.scn;
 
 include animations.scn;
-include vehicles/vehicle_instances.scn;
-include vehicles/vehicle_resources.scn;
 include vehicle_classes/create_car.scn;
 include vehicle_classes/create_human.scn;
 include vehicle_classes/create_skater.scn;
@@ -42,8 +40,6 @@ include scenes/scene_loading.scn;
 include scenes/scene_minimal.scn;
 include scenes/scene_racing.scn;
 include scenes/showroom.scn;
-include scenes/showroom_rally.scn;
-include scenes/showroom_skating.scn;
 include preload.scn;
 include teams/teams.scn;
 include traffic/traffic.scn;
@@ -60,3 +56,4 @@ include key_bindings/car_key_bindings.scn;
 include key_bindings/plane_key_bindings.scn;
 
 include materials.scn;
+include assets.scn;

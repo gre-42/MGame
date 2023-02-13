@@ -1,0 +1,10 @@
+{
+    "name": "LK4",
+    "on_init": [
+        "include LK4_resource.scn",
+        "include LK4_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_LK4"
+    },
+    "requires": ["IF_GAME_MODE_RALLY"]
+}

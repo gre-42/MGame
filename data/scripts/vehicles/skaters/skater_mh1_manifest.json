@@ -1,0 +1,10 @@
+{
+    "name": "Skating MH1",
+    "on_init": [
+        "include skater_resource.scn",
+        "include skater_instance_mh1.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_skating_mh1"
+    },
+    "requires": ["IF_GAME_MODE_SKATING"]
+}

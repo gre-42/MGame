@@ -1,0 +1,10 @@
+{
+    "name": "TW",
+    "on_init": [
+        "include TW_resource.scn",
+        "include TW_instance.scn"],
+    "variables": {
+        "VEHICLE_SUFFIX": "_TW"
+    },
+    "requires": ["IF_GAME_MODE_RALLY"]
+}
