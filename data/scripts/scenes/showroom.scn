@@ -62,7 +62,7 @@ macro_begin _create_showroom_vehicle;
 macro_end;
 
 macro_begin change_showroom_vehicle;
-    delete_root_nodes regex=^(car|human)_node$;
+    delete_root_nodes regex=^(car|human|skater)_node$;
     macro_playback _create_showroom_vehicle
         VEHICLE_NAME:VEHICLE_NAME
         VEHICLE_COLOR_R:VEHICLE_COLOR_R

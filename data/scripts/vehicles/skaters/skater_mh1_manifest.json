@@ -1,6 +1,7 @@
 {
     "name": "Skating MH1",
     "on_init": [
+        "include skateboard_resource.scn",
         "include skater_resource.scn",
         "include skater_instance_mh1.scn"],
     "variables": {

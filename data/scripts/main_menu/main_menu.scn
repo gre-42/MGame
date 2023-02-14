@@ -72,7 +72,6 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=,
         on_change=,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
@@ -91,7 +90,6 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=,
         on_change=,
         parameters=
             name=Rally           value=IF_GAME_MODE_RALLY:  IF_GAME_MODE_SKATING:# IF_GAME_MODE_TD:#
@@ -127,7 +125,6 @@ macro_begin _setup_menu_primary_scene_rest;
         top=submenu_top,
         font_height=normal,
         line_distance=normal,
-        on_init=update_gallery resource=SELECTED_SCENE_LEVEL_ICON_FILE instance=level_icon,
         on_change=update_gallery resource=SELECTED_SCENE_LEVEL_ICON_FILE instance=level_icon,
         assets=levels,
         asset_prefix=SELECTED_SCENE_;
@@ -207,9 +204,6 @@ macro_begin parameter_setters;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=macro_playback
-            _change_showroom_vehicle_in_physics_thread context=showroom
-                SHOWROOM_DECIMATE:,
         on_change=macro_playback
             _change_showroom_vehicle_in_physics_thread context=showroom
                 SHOWROOM_DECIMATE:,
@@ -228,9 +222,6 @@ macro_begin parameter_setters;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=macro_playback
-            _change_showroom_vehicle_in_physics_thread context=showroom
-                SHOWROOM_DECIMATE:,
         on_change=macro_playback
             _change_showroom_vehicle_in_physics_thread context=showroom
                 SHOWROOM_DECIMATE:,
@@ -255,7 +246,6 @@ macro_begin parameter_setters;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=,
         on_change=,
         parameters=
             name=Session1 value=RACE_SESSION:session1
@@ -277,7 +267,6 @@ macro_begin parameter_setters;
         font_height=normal,
         line_distance=normal,
         default=0,
-        on_first_render=,
         on_change=,
         parameters=
             name=1 Lap   value=RACE_LAPS:1
@@ -299,7 +288,6 @@ macro_begin parameter_setters;
         font_height=normal,
         line_distance=normal,
         default=2,
-        on_first_render=,
         on_change=,
         parameters=
             name=80% value=PLAYBACK_SPEED:0.8
