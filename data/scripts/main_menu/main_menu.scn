@@ -100,6 +100,10 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
     IF_ANDROID constant_parameter IF_GAME_MODE_TD:#;
 macro_end;
 
+macro_begin _update_scene_icon;
+    update_gallery resource=LEVEL_ICON_FILE instance=level_icon;
+macro_end;
+
 macro_begin _setup_menu_primary_scene_rest;
     add_to_gallery resource=textures/menu/missing.png instance=level_icon color_mode=rgb;
     ui_exhibit
@@ -125,9 +129,8 @@ macro_begin _setup_menu_primary_scene_rest;
         top=submenu_top,
         font_height=normal,
         line_distance=normal,
-        on_change=update_gallery resource=SELECTED_SCENE_LEVEL_ICON_FILE instance=level_icon,
-        assets=levels,
-        asset_prefix=SELECTED_SCENE_;
+        on_change=macro_playback _update_scene_icon,
+        assets=levels;
 
     # name=Zugspitze value=levels/zugspitze/scene_zugspitze.scn;
 
@@ -258,7 +261,7 @@ macro_begin parameter_setters;
         id=laps_selector,
         title=Laps,
         icon=laps_selector_icon,
-        requires=IF_GAME_MODE_RALLY: SELECTED_SCENE_IF_RACEWAY_CIRCULAR:,
+        requires=IF_GAME_MODE_RALLY: IF_RACEWAY_CIRCULAR:,
         ttf_file=fonts/RobotoMono-Bold.ttf,
         left=submenu_left,
         right=submenu_right,
