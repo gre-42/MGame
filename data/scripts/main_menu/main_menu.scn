@@ -4,7 +4,7 @@ macro_begin _reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
-        SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_SUFFIX:VEHICLE_SUFFIX
         PLAYBACK_SPEED:PLAYBACK_SPEED
         RACE_SESSION:RACE_SESSION
         RACE_LAPS:RACE_LAPS;
@@ -296,13 +296,4 @@ macro_begin parameter_setters;
             name=110% value=PLAYBACK_SPEED:1.1
             name=120% value=PLAYBACK_SPEED:1.2;
     !IF_DEVEL constant_parameter PLAYBACK_SPEED:1;
-macro_end;
-
-macro_begin create_showroom_vehicle_rally;
-    macro_playback _create_showroom_vehicle
-        VEHICLE_NAME:SHOWROOM_PLAYER_VEHICLE
-        VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
-        VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
-        VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
-        DECIMATE:SHOWROOM_DECIMATE;
 macro_end;

@@ -41,7 +41,7 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:
         IF_PC_PLAYER_PLAYBACK:#
-        SHOWROOM_PLAYER_VEHICLE:SHOWROOM_PLAYER_VEHICLE
+        VEHICLE_SUFFIX:VEHICLE_SUFFIX
         SHOWROOM_PLAYER_VEHICLE_R:-1
         SHOWROOM_PLAYER_VEHICLE_G:-1
         SHOWROOM_PLAYER_VEHICLE_B:-1
