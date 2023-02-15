@@ -1,6 +1,7 @@
 {
     "name": "MH1",
     "on_init": [
+        "include human_resource_box.scn",
         "include human_resource_mh1.scn",
         "include human_instance_mh1.scn"],
     "variables": {
