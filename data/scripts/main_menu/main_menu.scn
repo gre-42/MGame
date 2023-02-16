@@ -4,7 +4,7 @@ macro_begin _reload_transient_objects;
     clear_nodes_not_allowed_to_be_unregistered;
     macro_playback instantiate_transient_objects context=primary_scene
         IF_UPDATE_EXISTING_SCENE:
-        VEHICLE_SUFFIX:VEHICLE_SUFFIX
+        SELECTED_VEHICLE_SUFFIX:SELECTED_VEHICLE_SUFFIX
         PLAYBACK_SPEED:PLAYBACK_SPEED
         RACE_SESSION:RACE_SESSION
         RACE_LAPS:RACE_LAPS;
@@ -21,11 +21,11 @@ macro_end;
 
 macro_begin _change_showroom_vehicle_in_physics_thread;
     macro_playback __change_showroom_vehicle_in_physics_thread
-        VEHICLE_NAME:VEHICLE_SUFFIX
-        VEHICLE_COLOR_R:SHOWROOM_PLAYER_VEHICLE_R
-        VEHICLE_COLOR_G:SHOWROOM_PLAYER_VEHICLE_G
-        VEHICLE_COLOR_B:SHOWROOM_PLAYER_VEHICLE_B
-        DECIMATE:SHOWROOM_DECIMATE;
+        VEHICLE_NAME:SELECTED_VEHICLE_SUFFIX
+        VEHICLE_COLOR_R:SELECTED_PLAYER_VEHICLE_R
+        VEHICLE_COLOR_G:SELECTED_PLAYER_VEHICLE_G
+        VEHICLE_COLOR_B:SELECTED_PLAYER_VEHICLE_B
+        DECIMATE:SELECTED_DECIMATE;
 macro_end;
 
 macro_begin _setup_menu_primary_scene_game_mode_selector;
@@ -44,7 +44,6 @@ macro_begin _setup_menu_primary_scene_game_mode_selector;
         gamepad_button=A
         tap_button=START
         id=submenus
-        max_entry_distance=10
         selection_marker=selection_marker
         ttf_file=fonts/RobotoMono-Bold.ttf
         icon_left=tabmenu_icon_left
@@ -209,8 +208,9 @@ macro_begin parameter_setters;
         default=0,
         on_change=macro_playback
             _change_showroom_vehicle_in_physics_thread context=showroom
-                SHOWROOM_DECIMATE:,
-        assets=vehicles;
+                SELECTED_DECIMATE:,
+        assets=vehicles,
+        asset_prefix=SELECTED_;
     
     parameter_setter
         id=car_color_selector,
@@ -227,14 +227,14 @@ macro_begin parameter_setters;
         default=0,
         on_change=macro_playback
             _change_showroom_vehicle_in_physics_thread context=showroom
-                SHOWROOM_DECIMATE:,
+                SELECTED_DECIMATE:,
         parameters=
-            name=White value=SHOWROOM_PLAYER_VEHICLE_R:1    SHOWROOM_PLAYER_VEHICLE_G:1    SHOWROOM_PLAYER_VEHICLE_B:1
-            name=Gray  value=SHOWROOM_PLAYER_VEHICLE_R:0.5  SHOWROOM_PLAYER_VEHICLE_G:0.5  SHOWROOM_PLAYER_VEHICLE_B:0.5
-            name=Red   value=SHOWROOM_PLAYER_VEHICLE_R:0.7  SHOWROOM_PLAYER_VEHICLE_G:0.05 SHOWROOM_PLAYER_VEHICLE_B:0.09
-            name=Green value=SHOWROOM_PLAYER_VEHICLE_R:0.52 SHOWROOM_PLAYER_VEHICLE_G:0.63 SHOWROOM_PLAYER_VEHICLE_B:0.54
-            name=Blue  value=SHOWROOM_PLAYER_VEHICLE_R:0.51 SHOWROOM_PLAYER_VEHICLE_G:0.56 SHOWROOM_PLAYER_VEHICLE_B:0.62
-            name=Black value=SHOWROOM_PLAYER_VEHICLE_R:0.06 SHOWROOM_PLAYER_VEHICLE_G:0.07 SHOWROOM_PLAYER_VEHICLE_B:0.06;
+            name=White value=SELECTED_PLAYER_VEHICLE_R:1    SELECTED_PLAYER_VEHICLE_G:1    SELECTED_PLAYER_VEHICLE_B:1
+            name=Gray  value=SELECTED_PLAYER_VEHICLE_R:0.5  SELECTED_PLAYER_VEHICLE_G:0.5  SELECTED_PLAYER_VEHICLE_B:0.5
+            name=Red   value=SELECTED_PLAYER_VEHICLE_R:0.7  SELECTED_PLAYER_VEHICLE_G:0.05 SELECTED_PLAYER_VEHICLE_B:0.09
+            name=Green value=SELECTED_PLAYER_VEHICLE_R:0.52 SELECTED_PLAYER_VEHICLE_G:0.63 SELECTED_PLAYER_VEHICLE_B:0.54
+            name=Blue  value=SELECTED_PLAYER_VEHICLE_R:0.51 SELECTED_PLAYER_VEHICLE_G:0.56 SELECTED_PLAYER_VEHICLE_B:0.62
+            name=Black value=SELECTED_PLAYER_VEHICLE_R:0.06 SELECTED_PLAYER_VEHICLE_G:0.07 SELECTED_PLAYER_VEHICLE_B:0.06;
 
     parameter_setter
         id=session_selector,
