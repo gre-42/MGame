@@ -41,6 +41,11 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:
         IF_PC_PLAYER_PLAYBACK:#
+        IF_LOADED_GAME_MODE_RALLY:#
+        SKATER_NODE_X:0
+        SKATER_NODE_Y:5
+        SKATER_NODE_Z:10
+        SKATER_NODE_ANGLE_Y:0
         SELECTED_VEHICLE_SUFFIX:SELECTED_VEHICLE_SUFFIX
         SELECTED_PLAYER_VEHICLE_R:-1
         SELECTED_PLAYER_VEHICLE_G:-1
