@@ -406,12 +406,12 @@ macro_begin __setup_new_round;
     delete_root_nodes regex=^(car|human|skater)_node_playback_winner\d+$;
     delete_root_nodes regex=^(bullet|trail|explosion)-\d+$;
     delete_scheduled_advance_times;
-    IF_GAME_MODE_RALLY set_race_identifier_and_reload_history
+    IF_LOADED_GAME_MODE_RALLY set_race_identifier_and_reload_history
         level_id=LEVEL_ID
         session=RACE_SESSION
         laps=RACE_LAPS
         milliseconds=0;
-    IF_GAME_MODE_RALLY start_race readonly=0;
+    IF_LOADED_GAME_MODE_RALLY start_race readonly=0;
     respawn_all_players;
     reset_supply_depot_cooldowns;
     invalidate_aggregate_renderers;
@@ -419,7 +419,7 @@ macro_end;
 
 macro_begin _setup_new_round;
     with_delete_node_mutex macro_playback __setup_new_round
-        IF_GAME_MODE_RALLY:IF_GAME_MODE_RALLY
+        IF_LOADED_GAME_MODE_RALLY:IF_LOADED_GAME_MODE_RALLY
         LEVEL_ID:LEVEL_ID
         RACE_SESSION:RACE_SESSION
         RACE_LAPS:RACE_LAPS;
@@ -470,7 +470,7 @@ macro_begin scene_racing_static;
         max_tracks=5
         setup_new_round=macro_playback
             _setup_new_round context=primary_scene
-            IF_GAME_MODE_RALLY:IF_GAME_MODE_RALLY
+            IF_LOADED_GAME_MODE_RALLY:IF_LOADED_GAME_MODE_RALLY
             LEVEL_ID:LEVEL_ID
             RACE_SESSION:RACE_SESSION
             RACE_LAPS:RACE_LAPS;
@@ -534,7 +534,7 @@ macro_end;
 macro_begin generic_scene_racing_dynamic;
     macro_playback
         _setup_new_round context=primary_scene
-        IF_GAME_MODE_RALLY:IF_GAME_MODE_RALLY
+        IF_LOADED_GAME_MODE_RALLY:IF_LOADED_GAME_MODE_RALLY
         LEVEL_ID:LEVEL_ID
         RACE_SESSION:RACE_SESSION
         RACE_LAPS:RACE_LAPS;

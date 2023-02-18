@@ -35,6 +35,7 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:#
         IF_PC_PLAYER_PLAYBACK:#
+        IF_LOADED_GAME_MODE_RALLY:#
         PLAYBACK_SPEED:0
         RACE_SESSION:
         RACE_LAPS:0

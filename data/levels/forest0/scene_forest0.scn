@@ -42,7 +42,7 @@ macro_begin instantiate_transient_objects;
         SELECTED_PLAYER_VEHICLE_G:SELECTED_PLAYER_VEHICLE_G=1
         SELECTED_PLAYER_VEHICLE_B:SELECTED_PLAYER_VEHICLE_B=1
         PLAYBACK_SPEED:PLAYBACK_SPEED=1
-        IF_GAME_MODE_RALLY:IF_GAME_MODE_RALLY
+        IF_LOADED_GAME_MODE_RALLY:
         LEVEL_ID:LEVEL_ID
         RACE_SESSION:RACE_SESSION=session1
         RACE_LAPS:RACE_LAPS=1
@@ -61,9 +61,7 @@ macro_begin instantiate_transient_objects;
         IF_BURN_IN:;
 macro_end;
 
-macro_playback instantiate_transient_objects
-    IF_GAME_MODE_RALLY:IF_GAME_MODE_RALLY
-    LEVEL_ID:LEVEL_ID;
+macro_playback instantiate_transient_objects;
 # macro_playback setup_traffic_wo_pedestrians context=primary_scene;
 # macro_playback setup_traffic_with_pedestrians context=primary_scene;
 # macro_playback setup_traffic_only_pedestrians context=primary_scene;

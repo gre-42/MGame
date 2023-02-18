@@ -70,8 +70,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
             IF_BURN_IN:;
     macro_end;
 
-    macro_playback instantiate_transient_objects
-        IF_UPDATE_EXISTING_SCENE:#;
+    macro_playback instantiate_transient_objects;
     macro_playback create_main_menu;
 
     #   CAR_NODE_X:-1675

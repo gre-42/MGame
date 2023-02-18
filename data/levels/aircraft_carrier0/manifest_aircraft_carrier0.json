@@ -1,0 +1,10 @@
+{
+    "name": "Aircraft carrier 0",
+    "script_file": "scene_aircraft_carrier0.scn",
+    "variables": {
+        "LEVEL_ID": "aircraft_carrier0",
+        "LEVEL_ICON_FILE": "textures/debug/black.png",
+        "IF_RACEWAY_CIRCULAR": "#"
+    },
+    "requires": ["IF_GAME_MODE_TD"]
+}
