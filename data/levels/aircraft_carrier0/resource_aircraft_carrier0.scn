@@ -14,7 +14,10 @@ macro_begin osm_resource_aircraft_carrier0;
         aggregate_mode=none
         transformation_mode=all
         triangle_tangent_error_behavior=zero;
-    
+    modify_physics_material_tags
+        resource_name=ofs_kestrel
+        add=attr_concave;
+
     # obj_resource
         name=ocean
         filename=__DIR__/ocean.obj
@@ -49,6 +52,9 @@ macro_begin osm_resource_aircraft_carrier0;
         period=20
         aggregate_mode=once
         transformation_mode=all;
+    modify_physics_material_tags
+        resource_name=ocean
+        add=attr_concave;
     
     compound_resource
         source_names=ofs_kestrel ocean

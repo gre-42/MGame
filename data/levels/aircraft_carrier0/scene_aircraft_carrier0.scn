@@ -17,15 +17,7 @@ macro_playback scene_racing_static
     STADIUM_CAMERA_X:0
     STADIUM_CAMERA_Y:500
     STADIUM_CAMERA_Z:500
-    DIRTMAP_TEXTURE:textures/procterrain/grf_2048.png
-    DIRTMAP_OFFSET:0
-    DIRTMAP_DISCRETENESS:1
-    DIRT_SCALE:1
-    DIRTMAP_WRAP_MODE:repeat
-    DIRTMAP_LEFT:-500
-    DIRTMAP_RIGHT:500
-    DIRTMAP_BOTTOM:-500
-    DIRTMAP_TOP:500
+    IF_DIRTMAP:#
     SUN_LEFT:-250
     SUN_RIGHT:250
     SUN_BOTTOM:-125
@@ -51,6 +43,7 @@ macro_begin instantiate_transient_objects;
         SELECTED_PLAYER_VEHICLE_G:-1
         SELECTED_PLAYER_VEHICLE_B:-1
         PLAYBACK_SPEED:0
+        IF_LOADED_GAME_MODE_RALLY:#
         RACE_SESSION:session1
         RACE_LAPS:0
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
