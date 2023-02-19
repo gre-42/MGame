@@ -10,7 +10,7 @@ macro_begin osm_resource_arena;
             #Ground037_8,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
-        terrain_materials=surface_base_grass,
+        terrain_undefined_materials=surface_base_stone
         path_materials=surface_base_gravel,
         grass_dirt_texture=#Ground025,
         path_crossing_texture=#Gravel010,

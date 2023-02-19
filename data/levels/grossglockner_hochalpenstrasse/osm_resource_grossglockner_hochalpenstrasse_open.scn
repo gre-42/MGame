@@ -14,7 +14,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
             #Rock028_200_512,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
-        terrain_materials=surface_base_grass,
+        terrain_undefined_materials=surface_base_stone
         street_materials=surface_base_tarmac,
         path_materials=surface_base_gravel,
         grass_dirt_texture=#Ground025,

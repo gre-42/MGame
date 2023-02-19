@@ -16,7 +16,7 @@ macro_begin osm_resource_sf;
         terrain_water_floor_base_textures=#Concrete020,
         bounding_terrain_type=water_floor,
         default_terrain_type=stone,
-        terrain_materials=surface_base_stone,
+        terrain_undefined_materials=surface_base_stone
         street_materials=surface_base_tarmac,
         path_materials=surface_base_tarmac,
         wall_materials=surface_base_stone,

@@ -16,7 +16,7 @@ macro_begin osm_resource_jb_race;
             #Ground003_8,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
-        terrain_materials=surface_base_grass,
+        terrain_undefined_materials=surface_base_stone
         street_materials=surface_base_tarmac,
         path_materials=surface_base_gravel,
         wall_materials=surface_base_stone,

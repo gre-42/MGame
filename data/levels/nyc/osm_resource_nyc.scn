@@ -12,7 +12,7 @@ macro_begin osm_resource_nyc;
         terrain_asphalt_textures=#Road007_No_Lines,
         bounding_terrain_type=stone,
         default_terrain_type=stone,
-        terrain_materials=surface_base_stone,
+        terrain_undefined_materials=surface_base_stone
         street_materials=surface_base_tarmac,
         path_materials=surface_base_tarmac,
         wall_materials=surface_base_stone,
