@@ -13,7 +13,7 @@ macro_begin osm_resource_retro_raceway1;
             #Ground037_Sl_256,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
-        terrain_undefined_materials=surface_base_stone
+        terrain_undefined_materials=surface_base_stone,
         street_materials=surface_base_tarmac,
         path_materials=surface_base_gravel,
         wall_materials=surface_base_stone,

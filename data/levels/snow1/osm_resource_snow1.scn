@@ -11,7 +11,7 @@ macro_begin osm_resource_snow1;
             #Rock028_Snow_512,
         bounding_terrain_type=grass,
         default_terrain_type=grass,
-        terrain_undefined_materials=surface_base_stone
+        terrain_undefined_materials=surface_base_stone,
         street_materials=surface_base_snow,
         path_materials=surface_base_snow,
         path_crossing_texture=#Ground029_Crossing_Snow,
