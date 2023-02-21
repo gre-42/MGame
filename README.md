@@ -17,7 +17,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-R0-2022-10-12](media/Screenshot-F0-2022-10-12.png)
 
 ### Desert 1
-![Screenshot-DS1-2022-10-09c](media/Screenshot-DS1-2022-10-09c.png)
+![Screenshot-DS1-2023-02-21](media/Screenshot-DS1-2023-02-21.png)
 
 ### Racetrack 0
 ![Screenshot-R0-2022-04-23](media/Screenshot-R0-2022-10-02.png)
