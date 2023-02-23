@@ -70,6 +70,8 @@ macro_begin osm_resource_island0;
         forest_outline_tree_inwards_distance=1,
         much_grass_distance=INFINITY,
         much_near_grass_distance=3,
+        much_near_flowers_distance=5,
+        much_near_trees_distance=8,
         raceway_beacon_distance=INFINITY,
         with_terrain=1,
         with_buildings=1,
