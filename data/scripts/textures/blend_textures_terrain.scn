@@ -105,6 +105,28 @@ add_blend_map_texture
     weight=1;
 
 add_blend_map_texture
+    name=Ground037_island_1
+    texture=#Ground037_island
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=0 0 15 25
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=1
+    weight=1;
+
+add_blend_map_texture
+    name=Ground037_island_8
+    texture=#Ground037_island
+    min_height=-INFINITY
+    max_height=INFINITY
+    distances=15 25 INFINITY INFINITY
+    normal=0 0 0
+    cosine=-1 -1 1 1
+    scale=0.125
+    weight=1;
+
+add_blend_map_texture
     name=Ground037_dark27_1
     texture=#Ground037_dark27
     min_height=-INFINITY

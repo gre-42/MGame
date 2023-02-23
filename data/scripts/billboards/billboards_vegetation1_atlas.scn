@@ -73,10 +73,9 @@ add_texture_atlas
         texture_pos:0 2048 texture:#tc5
         texture_pos:1024 2048 texture:#tc6
         texture_pos:2048 2048 texture:#tcd0
-        texture_pos:3072 0 texture:textures/SR/grass2g.png
-        texture_pos:3584 0 texture:textures/SR/grass9r.png
-        texture_pos:3072 512 texture:#grass_tbdpec3r_Ground037
-        texture_pos:3072 1024 texture:#foliage_gradient
+        texture_pos:3072 10 texture:#grass_tbdpec3r_island_bright
+        texture_pos:3072 522 texture:#grass_tbdpec3r_island_green
+        texture_pos:3072 1034 texture:#foliage_gradient
         texture_pos:3072 2048 texture:#tb
         texture_pos:3072 3072 texture:textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png;
 
@@ -106,9 +105,8 @@ square_resource
         uv_scale: 0.25  0.5   uv_offset:0     0.5    vertex_scale:10  20    alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
         uv_scale: 0.25  0.5   uv_offset:0.25  0.5    vertex_scale:10  20    alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
         uv_scale: 0.25  0.5   uv_offset:0.5   0.5    vertex_scale:10  20    alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
-        uv_scale: 0.125 0.125 uv_offset:0.75  0      vertex_scale: 2   2    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
-        uv_scale: 0.125 0.125 uv_offset:0.875 0      vertex_scale: 2   2    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
-        uv_scale: 0.25  0.125 uv_offset:0.75  0.125  vertex_scale: 2.5 1.25 alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
+        uv_scale: 0.25  0.125 uv_offset:0.75  0      vertex_scale: 3.5 1.75 alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
+        uv_scale: 0.25  0.125 uv_offset:0.75  0.125  vertex_scale: 3.5 1.75 alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale: 0.25  0.25  uv_offset:0.75  0.25   vertex_scale: 2.5 2.5  alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale: 0.25  0.25  uv_offset:0.75  0.5    vertex_scale: 4   4    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale: 0.25  0.25  uv_offset:0.75  0.75   vertex_scale: 4   4    alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
