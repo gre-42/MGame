@@ -16,7 +16,7 @@ add_texture_descriptor
 square_resource
     name=vegetation7
     texture_filename=#vegetation7
-    min=-0.5 0
+    min=-0.5 -0.05
     max=0.5 1
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
