@@ -13,6 +13,9 @@ A rally game based on OpenStreetMap data.
 ### Retro racetrack 1
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2022-10-17.png)
 
+### Island 0
+![Screenshot-I0-2023-02-24](media/Screenshot-I0-2023-02-24.png)
+
 ### Forest 0
 ![Screenshot-R0-2022-10-12](media/Screenshot-F0-2022-10-12.png)
 
