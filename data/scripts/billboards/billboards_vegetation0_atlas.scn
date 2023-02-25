@@ -14,6 +14,11 @@ add_texture_atlas
         texture_pos:3584 0 texture:textures/SR/grass9r.png
         texture_pos:3072 1024 texture:textures/cc0textures/Foliage002_2K_Color_Dense_1k.png;
 
+# save_texture_atlas_png
+    name=vegetation0
+    filename=/tmp/vegetation0.png
+    color_mode=rgba;
+
 add_texture_descriptor
     name=vegetation0
     color=#vegetation0
@@ -43,8 +48,3 @@ square_resource
         uv_scale:0.125 0.25 uv_offset:0.75  0   vertex_scale: 2   2   alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale:0.125 0.25 uv_offset:0.875 0   vertex_scale: 2   2   alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none
         uv_scale:0.25  0.5  uv_offset:0.75  0.5 vertex_scale: 2.5 2.5 alpha_distances:0 0 250 400 max_distance:503 occluder_pass:none;
-
-# save_texture_atlas_png
-    name=vegetation0
-    filename=/tmp/vegetation0.png
-    color_mode=rgba;

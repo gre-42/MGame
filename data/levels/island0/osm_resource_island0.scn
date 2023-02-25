@@ -59,7 +59,7 @@ macro_begin osm_resource_island0;
         uv_scale_ceiling=1e-1,
         uv_scale_barrier_wall=1e0,
         uv_scale_highway_wall=3e-1,
-        with_roofs=0,
+        with_roofs=1,
         with_ceilings=1,
         building_bottom=0,
         default_building_top=10,

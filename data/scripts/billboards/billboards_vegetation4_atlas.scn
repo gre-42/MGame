@@ -26,6 +26,11 @@ add_texture_atlas
         texture_pos:   0 1024 texture:#Trees0029
         texture_pos:1024 1024 texture:#Trees0096;
 
+# save_texture_atlas_png
+    name=vegetation4
+    filename=/tmp/vegetation4.png
+    color_mode=rgba;
+
 add_texture_descriptor
     name=vegetation4
     color=#vegetation4
@@ -50,8 +55,3 @@ square_resource
         uv_scale:0.5 0.5  uv_offset:0.5 0   vertex_scale:1.5 1.5 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
         uv_scale:0.5 0.5  uv_offset:0   0.5 vertex_scale:1.5 1.5 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local
         uv_scale:0.5 0.5  uv_offset:0.5 0.5 vertex_scale:0.8 0.8 alpha_distances:0 0 450 600 max_distance:750 occluder_pass:lightmap_black_global_and_local;
-
-# save_texture_atlas_png
-    name=vegetation4
-    filename=/tmp/vegetation4.png
-    color_mode=rgba;
