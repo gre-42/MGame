@@ -1,4 +1,4 @@
-macro_begin osm_resource_raceway0;
+macro_begin osm_resource_race_track0;
     #   facade_textures=
         ../textures/Facade017_8K_Color.jpg
         ../textures/cc0textures/Facade009_2K_Color.jpg
@@ -8,8 +8,8 @@ macro_begin osm_resource_raceway0;
 
     osm_resource
         name=osm_map,
-        filename=__DIR__/map_raceway0.osm,
-        cache_filename=__APPDATA__/raceway0.cereal.binary,
+        filename=__DIR__/map_race_track0.osm,
+        cache_filename=__APPDATA__/race_track0.cereal.binary,
         heightmap=__DIR__/heightmap.pgm,
         terrain_undefined_textures=textures/debug/pink.png,
         terrain_grass_textures=#Ground037_Sl,
@@ -39,8 +39,8 @@ macro_begin osm_resource_raceway0;
             name:ad0 texture:#ad0 uv:0.125 0.5 blend_mode:off wrap_mode_t:clamp_to_edge reorient_uv0:1 ambience:1 diffusivity:1 specularity:1,
         roof_texture=textures/cc0textures/RoofingTiles002_2K_Color.jpg,
         racing_line_texture=#racing_line,
-        racing_line_track=__DIR__/racing_line_raceway0.m,
-        racing_line_playback=__APPDATA__/raceway0_checkpoints.m,
+        racing_line_track=__DIR__/racing_line_race_track0.m,
+        racing_line_playback=__APPDATA__/race_track0_checkpoints.m,
         tree_resource_names = vegetation0.0,
         tree_resource_names = vegetation0.1,
         tree_resource_names = vegetation0.2,

@@ -1,5 +1,5 @@
 include scripts/include_all.scn;
-include osm_resource_raceway1.scn;
+include osm_resource_retro_race_track1.scn;
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:
@@ -7,7 +7,7 @@ macro_playback scene_racing_static
     PC_PLAYER_PLAYBACK:__DIR__/checkpoints.m
     PC_PLAYER_PLAYBACK_SPEEDUP:1
     SCORE_BOARD:history|laps|rank|race_time
-    OSM_MAP_RESOURCE:osm_resource_raceway1
+    OSM_MAP_RESOURCE:osm_resource_retro_race_track1
     IF_HAS_OVERLAY:#
     IF_DIRTMAP:
     DIRTMAP_TEXTURE:textures/dirtmap_dense.png
@@ -33,9 +33,9 @@ macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic
         IF_CREATE_PC_CAR:
         IF_PC_PLAYER_PLAYBACK:#
-        CAR_NODE_X:3
-        CAR_NODE_Y:-170
-        CAR_NODE_Z:-242
+        CAR_NODE_X:-122.404612_deg
+        CAR_NODE_Y:37.773448_deg
+        CAR_NODE_Z:172
         CAR_NODE_ANGLE_X:180
         CAR_NODE_ANGLE_Y:-13
         CAR_NODE_ANGLE_Z:-180
