@@ -128,8 +128,8 @@ square_resource
 square_resource
     name=grass_tbdpec3r
     texture_filename=#grass_tbdpec3r
-    min=-0.6 0
-    max=0.6 0.6
+    min=-1.1 0
+    max=1.1 0.7
     center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
@@ -158,8 +158,8 @@ square_resource
 square_resource
     name=grass_tbdpec3r_Ground003
     texture_filename=#grass_tbdpec3r_Ground003
-    min=-1 0
-    max=1 1
+    min=-1.2 0
+    max=1.2 1
     center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
@@ -218,8 +218,8 @@ square_resource
 square_resource
     name=grass_tbdpec3r_Ground037_Sl_large
     texture_filename=#grass_tbdpec3r_Ground037_Sl
-    min=-1 0
-    max=1 1
+    min=-1.2 0
+    max=1.2 1
     center_distances=0 350
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
@@ -233,8 +233,8 @@ square_resource
 square_resource
     name=grass_tbdpec3r_Ground037_Sl_low
     texture_filename=#grass_tbdpec3r_Ground037_Sl
-    min=-0.6 -0.05
-    max=0.6 0.4
+    min=-1 -0.05
+    max=1 0.4
     center_distances=0 350
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none

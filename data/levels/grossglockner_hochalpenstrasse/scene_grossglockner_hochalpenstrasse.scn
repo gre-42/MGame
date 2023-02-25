@@ -37,6 +37,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
         macro_playback generic_scene_racing_dynamic
             IF_CREATE_PC_CAR:
             IF_PC_PLAYER_PLAYBACK:#
+            IF_LOADED_GAME_MODE_RALLY:
             CAR_NODE_X:12.826221_deg
             CAR_NODE_Y:47.117129_deg
             CAR_NODE_Z:2150
