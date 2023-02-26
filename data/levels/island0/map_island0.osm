@@ -267,7 +267,7 @@
     <tag k='distance_to_way' v='9m' />
   </node>
   <node id='-138007' action='modify' visible='true' lat='37.83961788485' lon='-122.49009648914' />
-  <node id='-138016' action='modify' visible='true' lat='37.83795882804' lon='-122.48835870849'>
+  <node id='-138016' action='modify' visible='true' lat='37.83795345307' lon='-122.48835190256'>
     <tag k='distance_to_way' v='9m' />
   </node>
   <node id='-138025' action='modify' visible='true' lat='37.83773666209' lon='-122.48836778306' />
@@ -551,6 +551,15 @@
   <node id='-138992' action='modify' visible='true' lat='37.84176766492' lon='-122.48591193545'>
     <tag k='distance_to_way' v='9m' />
   </node>
+  <node id='-139005' action='modify' visible='true' lat='37.83800003079' lon='-122.48893947433'>
+    <tag k='distance_to_way' v='9m' />
+  </node>
+  <node id='-139012' action='modify' visible='true' lat='37.83793732277' lon='-122.48855834228'>
+    <tag k='distance_to_way' v='9m' />
+  </node>
+  <node id='-139022' action='modify' visible='true' lat='37.83797315593' lon='-122.48815906108'>
+    <tag k='distance_to_way' v='9m' />
+  </node>
   <way id='-121432' action='modify' visible='true'>
     <nd ref='-137801' />
     <nd ref='-137753' />
@@ -767,8 +776,11 @@
   </way>
   <way id='-121542' action='modify' visible='true'>
     <nd ref='-137918' />
+    <nd ref='-139005' />
     <nd ref='-137919' />
+    <nd ref='-139012' />
     <nd ref='-138016' />
+    <nd ref='-139022' />
     <nd ref='-137920' />
     <nd ref='-137921' />
     <nd ref='-138025' />
