@@ -2,6 +2,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_closed;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_grossglockner_hochalpenstrasse.osm,
+        cache_filename=__APPDATA__/LEVEL_ID.cereal.binary,
         heightmap=__DIR__/heightmap_large.png,
         terrain_grass_textures=#Ground037_Sl,
         bounding_terrain_type=grass,

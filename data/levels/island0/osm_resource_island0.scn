@@ -2,7 +2,7 @@ macro_begin osm_resource_island0;
     osm_resource
         name=osm_map,
         filename=__DIR__/map_island0.osm,
-        cache_filename=__APPDATA__/island0.cereal.binary,
+        cache_filename=__APPDATA__/LEVEL_ID.cereal.binary,
         heightmap=__DIR__/../forest0/heightmap.pgm,
         grass_foliagemap=textures/foliagemap.png,
         terrain_undefined_textures=textures/debug/pink.png,
@@ -26,7 +26,7 @@ macro_begin osm_resource_island0;
             lanes:1 texture0:#Road007_Alpha3,
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/../forest0/racing_line_forest0.m,
-        racing_line_playback=__APPDATA__/island0_checkpoints.m,
+        racing_line_playback=__APPDATA__/LEVEL_ID.checkpoints.m,
         near_grass_resource_names=vegetation7.0,
         near_dirty_grass_resource_names=vegetation7.1,
         near_flowers_resource_names=

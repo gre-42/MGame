@@ -28,7 +28,7 @@ macro_playback scene_racing_static
     SOFT_LIGHT_TEXTURE:textures/soft_light.png
     HEIGHTMAP:heightmap.pgm
     RACING_LINE_TRACK:__DIR__/racing_line_jb_race.m
-    RACING_LINE_PLAYBACK:__DIR__/checkpoints.m
+    RACING_LINE_PLAYBACK:__APPDATA__/LEVEL_ID.checkpoints.m
     GAME_LEVEL:
     SKYBOX:skybox
     IF_DAY:
@@ -55,6 +55,7 @@ macro_begin instantiate_transient_objects;
         RACE_LAPS:1
         IF_RECORD_TRACK:IF_RECORD_TRACK=#
         RECORDINGS_DIR:__DIR__
+        CHECKPOINTS_FILE:__APPDATA__/LEVEL_ID.checkpoints.m
         IF_PLAYBACK_CHECKPOINTS:#
         IF_PLAYBACK_TRACK_1:#
         IF_PLAYBACK_TRACK_2:#

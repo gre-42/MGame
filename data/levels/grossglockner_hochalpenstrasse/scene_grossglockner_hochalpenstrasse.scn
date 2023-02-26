@@ -30,7 +30,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
         IF_NIGHT:#
         IF_SYNTHWAVE:#
         RACING_LINE_TRACK:__DIR__/racing_line_grossglockner_hochalpenstrasse.m
-        RACING_LINE_PLAYBACK:__APPDATA__/grossglockner_hochalpenstrasse_checkpoints.m
+        RACING_LINE_PLAYBACK:__APPDATA__/LEVEL_ID.checkpoints.m
         GAME_LEVEL:GAME_LEVEL;
 
     macro_begin instantiate_transient_objects;
@@ -53,6 +53,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
             RACE_LAPS:1
             IF_RECORD_TRACK:IF_RECORD_TRACK=#
             RECORDINGS_DIR:__DIR__
+            CHECKPOINTS_FILE:__APPDATA__/LEVEL_ID.checkpoints.m
             IF_PLAYBACK_CHECKPOINTS:#
             IF_PLAYBACK_TRACK_1:#
             IF_PLAYBACK_TRACK_2:#

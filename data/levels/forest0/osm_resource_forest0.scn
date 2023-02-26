@@ -26,7 +26,7 @@ macro_begin osm_resource_forest0;
             lanes:1 texture0:#Ground038_Way_Wheels,
         racing_line_texture=#racing_line,
         racing_line_track=__DIR__/racing_line_forest0.m,
-        racing_line_playback=__APPDATA__/forest0_checkpoints.m,
+        racing_line_playback=__APPDATA__/LEVEL_ID.checkpoints.m,
         near_grass_resource_names = grass_tbdpec3r,
         dirt_decals_resource_names=
             Leaf018_2
