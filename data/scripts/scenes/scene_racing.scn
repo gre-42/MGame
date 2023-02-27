@@ -404,7 +404,7 @@ macro_begin __setup_new_round;
     set_focuses scene countdown_pending;
     delete_root_nodes regex=^(car|human|skater)_node_playback_track\d+$;
     delete_root_nodes regex=^(car|human|skater)_node_playback_winner\d+$;
-    delete_root_nodes regex=^(bullet|trail|explosion)-\d+$;
+    delete_root_nodes regex=^(bullet|trail|particles_\w+|snow|explosion)-\d+$;
     delete_scheduled_advance_times;
     IF_LOADED_GAME_MODE_RALLY set_race_identifier_and_reload_history
         level_id=LEVEL_ID
