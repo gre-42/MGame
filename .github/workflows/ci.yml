@@ -103,11 +103,13 @@ jobs:
           submodules: recursive
 
       - name: Install dependencies
+        shell: cmd
         run: |
           PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1 || exit /b
           Mlib/build_recastnavigation.cmd || exit /b
 
       - name: Build
+        shell: cmd
         run: |
           set BUILD_PREFIX=G
           set CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF"
