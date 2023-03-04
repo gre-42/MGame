@@ -45,12 +45,15 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
 			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
 			Mlib/$(platform_dir)/Bin/libMlibFps.dll \
+			Mlib/$(platform_dir)/Bin/libMlibGeography.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
+			Mlib/$(platform_dir)/Bin/libMlibLayout.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMacroExecutor.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMemory.dll \
 			Mlib/$(platform_dir)/Bin/libMlibNavigation.dll \
+			Mlib/$(platform_dir)/Bin/libMlibOs.dll \
 			Mlib/$(platform_dir)/Bin/libMlibOsmLoader.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
