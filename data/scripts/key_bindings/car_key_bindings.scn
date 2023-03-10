@@ -3,27 +3,19 @@ macro_begin create_car_key_bindings;
         player=PLAYER_NAME
         node=car_node-SUFFIX;
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.steer_left
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=A
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=-1
-        tap_button=LEFT
-        not_gamepad_button=B
-        joystick_analog_axis=1
-        joystick_analog_axis_sign_and_scale=-1
         tire_angle_velocities=10 80
         tire_angles=45 20;
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.steer_right
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=D
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=1
-        tap_button=RIGHT
-        not_gamepad_button=B
-        joystick_analog_axis=1
-        joystick_analog_axis_sign_and_scale=1
         tire_angle_velocities=10 80
         tire_angles=-45 -20;
 
@@ -40,120 +32,94 @@ macro_begin create_car_key_bindings;
     # 1000 hp = 735499 Watt;
 
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.forward
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=W
-        gamepad_button=X
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=-1
-        tap_button=UP
-        not_gamepad_button=B
-        joystick_analog_axis=FORWARD_CAR_JOYSTICK_ANALOG_AXIS_-ROLE
-        joystick_analog_axis_sign_and_scale=FORWARD_CAR_JOYSTICK_ANALOG_AXIS_SIGN_AND_SCALE_-ROLE
         surface_power=INFINITY;
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.backwards
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=S
-        gamepad_button=A
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=1
-        tap_button=DOWN
-        not_gamepad_button=B
-        joystick_analog_axis=BACKWARDS_CAR_JOYSTICK_ANALOG_AXIS_-ROLE
-        joystick_analog_axis_sign_and_scale=BACKWARDS_CAR_JOYSTICK_ANALOG_AXIS_SIGN_AND_SCALE_-ROLE
         surface_power=-INFINITY;
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.ascend
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=E
-        joystick_digital_axis=ASCEND_CAR_JOYSTICK_DIGITAL_AXIS_-ROLE
-        joystick_digital_axis_sign=ASCEND_CAR_JOYSTICK_DIGITAL_AXIS_SIGN_-ROLE
-        not_gamepad_button=B
         ascend_velocity=10;
     IF_MANUAL_DRIVE car_controller_key_binding
+        unique=car_or_heli
+        id=car_or_heli.descend
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=Q
-        gamepad_button=RIGHT_BUMPER
-        not_gamepad_button=B
         ascend_velocity=-10;
 
     IF_HAS_GUN rel_key_binding
+        unique=car_or_heli
+        id=car_or_heli.rotate_gun_left
+        role=ROLE
         player=PLAYER_NAME
         node=turret_node-SUFFIX
-        key=LEFT
-        gamepad_button=LEFT_BUMPER
-        cursor_axis=0
-        cursor_sign_and_scale=-0.03
-        not_gamepad_button=B
         rotation_axis=0 1 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
+        unique=car_or_heli
+        id=car_or_heli.rotate_gun_right
+        role=ROLE
         player=PLAYER_NAME
         node=turret_node-SUFFIX
-        key=RIGHT
-        joystick_digital_axis=TURRET_RIGHT_CAR_JOYSTICK_DIGITAL_AXIS_-ROLE
-        joystick_digital_axis_sign=TURRET_RIGHT_CAR_JOYSTICK_DIGITAL_AXIS_SIGN_-ROLE
-        cursor_axis=0
-        cursor_sign_and_scale=0.03
-        not_gamepad_button=B
         rotation_axis=0 1 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=-0.05;
 
     IF_HAS_GUN rel_key_binding
+        unique=car_or_heli
+        id=car_or_heli.rotate_gun_up
+        role=ROLE
         player=PLAYER_NAME
         node=turret_node-SUFFIX
-        key=UP
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=-1
-        cursor_axis=1
-        cursor_sign_and_scale=-0.03
-        not_gamepad_button=B
         rotation_axis=1 0 0
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
+        unique=car_or_heli
+        id=car_or_heli.rotate_gun_down
+        role=ROLE
         player=PLAYER_NAME
         node=turret_node-SUFFIX
-        key=DOWN
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=1
-        cursor_axis=1
-        cursor_sign_and_scale=0.03
-        not_gamepad_button=B
         rotation_axis=1 0 0
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=-0.05;
 
     IF_HAS_GUN gun_key_binding
+        unique=car_or_heli
+        id=car_or_heli.shoot
+        role=ROLE
         player=PLAYER_NAME
-        node=main_gun_end_node-SUFFIX
-        key=SPACE
-        mouse_button=LEFT
-        gamepad_button=Y
-        not_gamepad_button=B;
+        node=main_gun_end_node-SUFFIX;
 
     IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
+        unique=car_or_heli
+        id=car_or_heli.select_next_opponent
+        role=ROLE
         node=car_node-SUFFIX
-        key=LEFT_SHIFT
-        select_next_opponent;
-    
-    IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
-        node=car_node-SUFFIX
-        gamepad_button=B
-        gamepad_button2=Y
         select_next_opponent;
 
     player_key_binding
+        unique=car_or_heli
+        id=car_or_heli.select_next_vehicle
+        role=ROLE
         node=car_node-SUFFIX
-        gamepad_button=B
-        gamepad_button2=A
         select_next_vehicle;
 macro_end;

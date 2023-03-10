@@ -50,10 +50,7 @@ include cameras/car_cameras_heli.scn;
 include cameras/car_cameras_plane.scn;
 include cameras/human_cameras.scn;
 include cameras/skater_cameras.scn;
-include key_bindings/human_key_bindings.scn;
-include key_bindings/skater_key_bindings.scn;
-include key_bindings/car_key_bindings.scn;
-include key_bindings/plane_key_bindings.scn;
+include key_bindings/key_bindings.scn;
 
 include materials.scn;
 include assets.scn;

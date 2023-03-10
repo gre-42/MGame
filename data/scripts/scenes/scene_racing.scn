@@ -392,12 +392,18 @@ macro_begin _scene_racing_instantiate_transient_objects;
         deselection_emissivity=CHECK_POINTS_INACTIVE_R CHECK_POINTS_INACTIVE_G CHECK_POINTS_INACTIVE_B
         on_finish=set_focuses menu game_over_countdown_pending;
 
-    camera_key_binding key=C gamepad_button=BACK;
-
     ###########;
     # Cameras #;
     ###########;
     IF_CREATE_PC_CAR create_externals player=you mode=pc;
+
+    ################;
+    # Key bindings #;
+    ################;
+    camera_key_binding id=change_camera;
+    load_key_configurations
+        filename=__APPDATA__/key_configurations.json
+        fallback_filename=__DIR__/key_configurations.json;
 macro_end;
 
 macro_begin __setup_new_round;
