@@ -69,7 +69,7 @@ macro_begin create_player_car_externals_TW;
         IF_HAS_GUN:#
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME
-        ROLE:DRIVER;
+        ROLE:driver;
     IF_PC macro_playback create_car_cameras_sedan
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME
