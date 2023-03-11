@@ -123,22 +123,19 @@
         "unique": "avatar",
         "id": "avatar.strafe_left",
         "key": "A",
-        "joystick_digital_axis": "1",
-        "joystick_digital_axis_sign": -1
+        "joystick_digital_axes": {"default": {"axis": "1", "sign": -1}}
     },
     {
         "unique": "avatar",
         "id": "avatar.strafe_right",
         "key": "D",
-        "joystick_digital_axis": "1",
-        "joystick_digital_axis_sign": 1
+        "joystick_digital_axes": {"default": {"axis": "1", "sign": 1}}
     },
     {
         "unique": "avatar",
         "id": "avatar.rotate_left",
         "key": "LEFT",
-        "joystick_digital_axis": "3",
-        "joystick_digital_axis_sign": -1,
+        "joystick_digital_axes": {"default": {"axis": "3", "sign": -1}},
         "cursor_axis": 0,
         "cursor_sign_and_scale": -0.03
     },
@@ -146,8 +143,7 @@
         "unique": "avatar",
         "id": "avatar.rotate_right",
         "key": "RIGHT",
-        "joystick_digital_axis": "3",
-        "joystick_digital_axis_sign": 1,
+        "joystick_digital_axes": {"default": {"axis": "3", "sign": 1}},
         "cursor_axis": 0,
         "cursor_sign_and_scale": 0.03
     },
@@ -155,22 +151,19 @@
         "unique": "avatar",
         "id": "avatar.forward",
         "key": "W",
-        "joystick_digital_axis": "2",
-        "joystick_digital_axis_sign": -1
+        "joystick_digital_axes": {"default": {"axis": "2", "sign": -1}}
     },
     {
         "unique": "avatar",
         "id": "avatar.backwards",
         "key": "S",
-        "joystick_digital_axis": "2",
-        "joystick_digital_axis_sign": 1
+        "joystick_digital_axes": {"default": {"axis": "2", "sign": 1}}
     },
     {
         "unique": "avatar",
         "id": "avatar.rotate_up",
         "key": "UP",
-        "joystick_digital_axis": "4",
-        "joystick_digital_axis_sign": -1,
+        "joystick_digital_axes": {"default": {"axis": "4", "sign": -1}},
         "cursor_axis": 1,
         "cursor_sign_and_scale": -0.03
     },
@@ -178,8 +171,7 @@
         "unique": "avatar",
         "id": "avatar.rotate_down",
         "key": "DOWN",
-        "joystick_digital_axis": "4",
-        "joystick_digital_axis_sign": 1,
+        "joystick_digital_axes": {"default": {"axis": "4", "sign": 1}},
         "cursor_axis": 1,
         "cursor_sign_and_scale": 0.03
     },
@@ -203,5 +195,45 @@
         "key": "SPACE",
         "mouse_button": "LEFT",
         "gamepad_button": "TRIANGLE"
+    },
+    {
+        "unique": "skater",
+        "id": "skater.rotate_left",
+        "key": "LEFT",
+        "joystick_digital_axes": {"default": {"axis": "1", "sign": -1}},
+        "cursor_axis": 0,
+        "cursor_sign_and_scale": -0.03
+    },
+    {
+        "unique": "skater",
+        "id": "skater.rotate_right",
+        "key": "RIGHT",
+        "joystick_digital_axes": {"default": {"axis": "1", "sign": 1}},
+        "cursor_axis": 0,
+        "cursor_sign_and_scale": 0.03
+    },
+    {
+        "unique": "skater",
+        "id": "skater.jump",
+        "key": "LEFT_SHIFT",
+        "gamepad_button": "A"
+    },
+    {
+        "unique": "skater",
+        "id": "skater.grind",
+        "key": "Q",
+        "gamepad_button": "B"
+    },
+    {
+        "unique": "skater",
+        "id": "skater.forward",
+        "key": "UP",
+        "joystick_digital_axes": {"default": {"axis": "2", "sign": -1}}
+    },
+    {
+        "unique": "skater",
+        "id": "skater.brake",
+        "key": "DOWN",
+        "joystick_digital_axes": {"default": {"axis": "2", "sign": 1}}
     }
 ]

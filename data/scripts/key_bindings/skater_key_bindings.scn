@@ -5,23 +5,17 @@ macro_begin create_skater_key_bindings;
         surface_power=INFINITY
         drive_relaxation=1;
     rel_key_binding
+        id=skater.rotate_left
+        role=ROLE
         node=skater_node-SUFFIX
-        key=LEFT
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=-1
-        cursor_axis=0
-        cursor_sign_and_scale=-0.03
         rotation_axis=0 1 0
         angular_velocity_press=3
         angular_velocity_repeat=3
         speed_cursor=0.1;
     rel_key_binding
+        id=skater.rotate_right
+        role=ROLE
         node=skater_node-SUFFIX
-        key=RIGHT
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=1
-        cursor_axis=0
-        cursor_sign_and_scale=0.03
         rotation_axis=0 1 0
         angular_velocity_press=-3
         angular_velocity_repeat=-3
@@ -34,22 +28,21 @@ macro_begin create_skater_key_bindings;
         force=0 2000 0;
     
     abs_key_binding
+        id=skater.jump
+        role=ROLE
         node=skater_node-SUFFIX
-        key=LEFT_SHIFT
-        gamepad_button=A
         wants_to_jump=1;
 
     abs_key_binding
+        id=skater.grind
+        role=ROLE
         node=skater_node-SUFFIX
-        key=Q
-        gamepad_button=B
         wants_to_grind=1;
     
     abs_key_binding
+        id=skater.forward
+        role=ROLE
         node=skater_node-SUFFIX
-        key=UP
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=-1
         fly_forward_factor=100;
 
     # 120 hp = 88259.8 Watt;
@@ -59,10 +52,9 @@ macro_begin create_skater_key_bindings;
     # 1000 hp = 735499 Watt;
 
     car_controller_key_binding
+        id=skater.brake
+        role=ROLE
         player=PLAYER_NAME
         node=skater_node-SUFFIX
-        key=DOWN
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=1
         surface_power=NAN;
 macro_end;
