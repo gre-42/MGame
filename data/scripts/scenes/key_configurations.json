@@ -112,5 +112,96 @@
         "id": "car_or_heli.select_next_vehicle",
         "gamepad_button": "B",
         "gamepad_button2": "A"
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.jump",
+        "key": "LEFT_SHIFT",
+        "gamepad_button": "B"
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.strafe_left",
+        "key": "A",
+        "joystick_digital_axis": "1",
+        "joystick_digital_axis_sign": -1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.strafe_right",
+        "key": "D",
+        "joystick_digital_axis": "1",
+        "joystick_digital_axis_sign": 1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.rotate_left",
+        "key": "LEFT",
+        "joystick_digital_axis": "3",
+        "joystick_digital_axis_sign": -1,
+        "cursor_axis": 0,
+        "cursor_sign_and_scale": -0.03
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.rotate_right",
+        "key": "RIGHT",
+        "joystick_digital_axis": "3",
+        "joystick_digital_axis_sign": 1,
+        "cursor_axis": 0,
+        "cursor_sign_and_scale": 0.03
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.forward",
+        "key": "W",
+        "joystick_digital_axis": "2",
+        "joystick_digital_axis_sign": -1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.backwards",
+        "key": "S",
+        "joystick_digital_axis": "2",
+        "joystick_digital_axis_sign": 1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.rotate_up",
+        "key": "UP",
+        "joystick_digital_axis": "4",
+        "joystick_digital_axis_sign": -1,
+        "cursor_axis": 1,
+        "cursor_sign_and_scale": -0.03
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.rotate_down",
+        "key": "DOWN",
+        "joystick_digital_axis": "4",
+        "joystick_digital_axis_sign": 1,
+        "cursor_axis": 1,
+        "cursor_sign_and_scale": 0.03
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.next_weapon",
+        "key": "R",
+        "scroll_wheel_axis": 1,
+        "scroll_wheel_sign_and_scale": 1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.previous_weapon",
+        "key": "E",
+        "scroll_wheel_axis": 1,
+        "scroll_wheel_sign_and_scale": -1
+    },
+    {
+        "unique": "avatar",
+        "id": "avatar.shoot",
+        "key": "SPACE",
+        "mouse_button": "LEFT",
+        "gamepad_button": "TRIANGLE"
     }
 ]

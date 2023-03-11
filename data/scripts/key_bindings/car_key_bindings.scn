@@ -3,7 +3,6 @@ macro_begin create_car_key_bindings;
         player=PLAYER_NAME
         node=car_node-SUFFIX;
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.steer_left
         role=ROLE
         player=PLAYER_NAME
@@ -11,7 +10,6 @@ macro_begin create_car_key_bindings;
         tire_angle_velocities=10 80
         tire_angles=45 20;
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.steer_right
         role=ROLE
         player=PLAYER_NAME
@@ -32,28 +30,24 @@ macro_begin create_car_key_bindings;
     # 1000 hp = 735499 Watt;
 
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.forward
         role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
         surface_power=INFINITY;
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.backwards
         role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
         surface_power=-INFINITY;
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.ascend
         role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
         ascend_velocity=10;
     IF_MANUAL_DRIVE car_controller_key_binding
-        unique=car_or_heli
         id=car_or_heli.descend
         role=ROLE
         player=PLAYER_NAME
@@ -61,7 +55,6 @@ macro_begin create_car_key_bindings;
         ascend_velocity=-10;
 
     IF_HAS_GUN rel_key_binding
-        unique=car_or_heli
         id=car_or_heli.rotate_gun_left
         role=ROLE
         player=PLAYER_NAME
@@ -71,7 +64,6 @@ macro_begin create_car_key_bindings;
         angular_velocity_repeat=1
         speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
-        unique=car_or_heli
         id=car_or_heli.rotate_gun_right
         role=ROLE
         player=PLAYER_NAME
@@ -82,7 +74,6 @@ macro_begin create_car_key_bindings;
         speed_cursor=-0.05;
 
     IF_HAS_GUN rel_key_binding
-        unique=car_or_heli
         id=car_or_heli.rotate_gun_up
         role=ROLE
         player=PLAYER_NAME
@@ -92,7 +83,6 @@ macro_begin create_car_key_bindings;
         angular_velocity_repeat=1
         speed_cursor=0.05;
     IF_HAS_GUN rel_key_binding
-        unique=car_or_heli
         id=car_or_heli.rotate_gun_down
         role=ROLE
         player=PLAYER_NAME
@@ -103,21 +93,18 @@ macro_begin create_car_key_bindings;
         speed_cursor=-0.05;
 
     IF_HAS_GUN gun_key_binding
-        unique=car_or_heli
         id=car_or_heli.shoot
         role=ROLE
         player=PLAYER_NAME
         node=main_gun_end_node-SUFFIX;
 
     IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
-        unique=car_or_heli
         id=car_or_heli.select_next_opponent
         role=ROLE
         node=car_node-SUFFIX
         select_next_opponent;
 
     player_key_binding
-        unique=car_or_heli
         id=car_or_heli.select_next_vehicle
         role=ROLE
         node=car_node-SUFFIX

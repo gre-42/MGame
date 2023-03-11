@@ -8,101 +8,82 @@ macro_begin create_human_key_bindings;
         force=0 2000 0
         position=0 0 0;
     abs_key_binding
+        id=avatar.jump
+        role=ROLE
         node=human_node-SUFFIX
-        key=LEFT_SHIFT
-        gamepad_button=B
         wants_to_jump=1;
     avatar_controller_key_binding
+        id=avatar.strafe_left
+        role=ROLE
         node=human_node-SUFFIX
-        key=A
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=-1
         surface_power=30000
         tires_z=-1 0 0;
     avatar_controller_key_binding
+        id=avatar.strafe_right
+        role=ROLE
         node=human_node-SUFFIX
-        key=D
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=1
         surface_power=30000
         tires_z=1 0 0;
     avatar_controller_key_binding
+        id=avatar.rotate_left
+        role=ROLE
         node=human_node-SUFFIX
-        key=LEFT
-        joystick_digital_axis=3
-        joystick_digital_axis_sign=-1
-        cursor_axis=0
-        cursor_sign_and_scale=-0.03
         yaw
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.1;
     avatar_controller_key_binding
+        id=avatar.rotate_right
+        role=ROLE
         node=human_node-SUFFIX
-        key=RIGHT
-        joystick_digital_axis=3
-        joystick_digital_axis_sign=1
-        cursor_axis=0
-        cursor_sign_and_scale=0.03
         yaw
         angular_velocity_press=-0.01
         angular_velocity_repeat=-0.5
         speed_cursor=-0.1;
     avatar_controller_key_binding
+        id=avatar.forward
+        role=ROLE
         node=human_node-SUFFIX
-        key=W
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=-1
         surface_power=30000
         tires_z=0 0 -1;
     avatar_controller_key_binding
+        id=avatar.backwards
+        role=ROLE
         node=human_node-SUFFIX
-        key=S
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=1
         surface_power=30000
         tires_z=0 0 1;
 
     avatar_controller_key_binding
+        id=avatar.rotate_up
+        role=ROLE
         node=human_node-SUFFIX
-        key=UP
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=-1
-        cursor_axis=1
-        cursor_sign_and_scale=-0.03
         pitch
         angular_velocity_press=0.1
         angular_velocity_repeat=1
         speed_cursor=0.1;
     avatar_controller_key_binding
+        id=avatar.rotate_down
+        role=ROLE
         node=human_node-SUFFIX
-        key=DOWN
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=1
-        cursor_axis=1
-        cursor_sign_and_scale=0.03
         pitch
         angular_velocity_press=-0.1
         angular_velocity_repeat=-1
         speed_cursor=-0.1;
 
     weapon_cycle_key_binding
+        id=avatar.next_weapon
+        role=ROLE
         node=human_node-SUFFIX
-        key=R
-        scroll_wheel_axis=1
-        scroll_wheel_sign_and_scale=1
         weapon_increment=1;
     weapon_cycle_key_binding
+        id=avatar.previous_weapon
+        role=ROLE
         node=human_node-SUFFIX
-        key=E
-        scroll_wheel_axis=1
-        scroll_wheel_sign_and_scale=-1
         weapon_increment=-1;
 
     gun_key_binding
+        id=avatar.shoot
+        role=ROLE
         player=PLAYER_NAME
-        node=main_gun_end_node-SUFFIX
-        key=SPACE
-        mouse_button=LEFT
-        gamepad_button=TRIANGLE;
+        node=main_gun_end_node-SUFFIX;
 macro_end;
