@@ -202,7 +202,7 @@ macro_begin create_player_car_externals_tiger_tank;
         IF_HAS_GUN:
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME
-        ROLE:GUNNER;
+        ROLE:gunner;
     IF_PC macro_playback create_car_cameras_tank
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
