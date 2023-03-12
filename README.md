@@ -26,7 +26,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-R0-2023-02-25](media/Screenshot-R0-2023-02-25.png)
 
 ### Großglockner High Alpine Road
-![Screenshot-GH-2023-03-12b](media/Screenshot-GH-2023-03-12b.png)
+![Screenshot-GH-2023-03-12c](media/Screenshot-GH-2023-03-12c.png)
 
 ### New York City
 ![Screenshot-NYC-2022-04-23](media/Screenshot-NYC-2022-04-23.jpg)
