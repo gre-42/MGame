@@ -82,9 +82,7 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         tree_resource_names = vegetation1.4(p:1)(hitbox:02_1_02_hitbox),
         tree_resource_names = vegetation1.5(p:1)(hitbox:02_1_02_hitbox),
 
-        near_wayside1_grass_resource_names = bflower2(p:0.4)(min_bdry:1)(max_bdry:8),
         near_wayside1_grass_resource_names = grass_tbdpec3r_Ground037_Sl_large(min_bdry:1)(max_bdry:8),
-        near_wayside1_grass_resource_names = bflower(p:0.4)(min_bdry:1)(max_bdry:8),
         near_wayside1_grass_resource_names = vegetation1.0(p:0.05)(min_bdry:3)(max_bdry:8)(hitbox:02_1_02_hitbox),
         near_wayside1_grass_resource_names = vegetation1.1(p:0.05)(min_bdry:3)(max_bdry:8)(hitbox:02_1_02_hitbox),
         near_wayside1_grass_resource_names = vegetation1.2(p:0.05)(min_bdry:3)(max_bdry:8)(hitbox:02_1_02_hitbox),
