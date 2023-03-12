@@ -117,8 +117,8 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         near_wayside2_rocks_resource_names = Stone_model_tex_small_d1_s10(min_bdry:10)(max_bdry:50),
         near_wayside2_rocks_resource_names = desert_rock01_small_d1_s5(min_bdry:10)(max_bdry:50),
         near_wayside2_rocks_resource_names = desert_rock01_small_d1_s8(min_bdry:10)(max_bdry:50),
-        default_street_width=9,
-        default_lane_width=4,
+        default_street_width=11,
+        default_lane_width=5.5,
         scale=1e-3,
         uv_scale_terrain=3e-1,
         uv_period_terrain=512,
@@ -184,8 +184,8 @@ macro_begin osm_resource_grossglockner_hochalpenstrasse_open;
         street_surface_central_resource_name=road_extrudable_central,
         street_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
         street_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
-        path_surface_central_resource_name=road_extrudable_central,
-        path_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
-        path_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
+        # path_surface_central_resource_name=road_extrudable_central,
+        # path_surface_endpoint0_resource_name=road_extrudable_endpoint_0,
+        # path_surface_endpoint1_resource_name=road_extrudable_endpoint_1,
         game_level=GAME_LEVEL;
 macro_end;
