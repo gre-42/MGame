@@ -41,7 +41,7 @@ gen_ray name=M3-tirelines from=+0.7 -0.2 -1.35 to=+0.7 -1 -1.35; # right front;
 gen_ray name=M3-tirelines from=-0.7 -0.2 +1.20 to=-0.7 -1 +1.20; # left rear;
 gen_ray name=M3-tirelines from=+0.7 -0.2 +1.20 to=+0.7 -1 +1.20; # right rear;
 
-macro_begin load-M3-part;
+macro_begin load_M3_part;
     obj_resource
         name=NAME
         filename=models/SR/NAME.obj
@@ -84,9 +84,9 @@ macro_begin load-M3-wheel;
 macro_end;
 
 macro_begin load-M3;
-    macro_playback load-M3-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_body-DECIMATE;
-    macro_playback load-M3-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_glass-DECIMATE;
-    macro_playback load-M3-part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_interior-DECIMATE;
+    macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_body-DECIMATE;
+    macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_glass-DECIMATE;
+    macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_interior-DECIMATE;
     macro_playback load-M3-wheel DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_wheel-DECIMATE;
 macro_end;
 
