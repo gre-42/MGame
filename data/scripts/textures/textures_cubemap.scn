@@ -8,7 +8,7 @@ add_cubemap
         textures/skybox/learnopengl.com/front.jpg,
         textures/skybox/learnopengl.com/back.jpg;
 
-add_cubemap
+!IF_ANDROID add_cubemap
     alias=skybox_rgb
     filenames=
         textures/skybox/rgb/right.png,
@@ -18,7 +18,7 @@ add_cubemap
         textures/skybox/rgb/front.png,
         textures/skybox/rgb/back.png;
 
-add_cubemap
+!IF_ANDROID add_cubemap
     alias=skybox_ocean
     filenames=
         textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/px.png,
@@ -39,7 +39,7 @@ add_cubemap
         textures/skybox/cc0textures.com/pz.png,
         textures/skybox/cc0textures.com/nz.png;
 
-add_cubemap
+!IF_ANDROID add_cubemap
     alias=skybox_night
     filenames=
         textures/skybox/opengameart.org/space-skybox-0/4.png,
@@ -49,7 +49,7 @@ add_cubemap
         textures/skybox/opengameart.org/space-skybox-0/1.png,
         textures/skybox/opengameart.org/space-skybox-0/3.png;
 
-add_cubemap
+!IF_ANDROID add_cubemap
     alias=reflection_map_night
     filenames=
         textures/skybox/opengameart.org/space-skybox-0-lights/4.png,
@@ -59,7 +59,7 @@ add_cubemap
         textures/skybox/opengameart.org/space-skybox-0-lights/1.png,
         textures/skybox/opengameart.org/space-skybox-0-lights/3.png;
 
-add_cubemap
+!IF_ANDROID add_cubemap
     alias=reflection_map_synthwave
     filenames=
         textures/skybox/synthwave/1.png,

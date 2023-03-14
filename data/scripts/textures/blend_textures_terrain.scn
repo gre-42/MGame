@@ -2,7 +2,7 @@
 # Ground003 #;
 #############;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground003_2
     texture=#Ground003
     min_height=-INFINITY
@@ -13,7 +13,7 @@ add_blend_map_texture
     scale=0.5
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground003_8
     texture=#Ground003
     min_height=-INFINITY
@@ -27,7 +27,7 @@ add_blend_map_texture
 #####################;
 # Ground037 Rock028 #;
 #####################;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Rock028_near
     texture=#Ground037_Rock028
     min_height=-INFINITY
@@ -38,7 +38,7 @@ add_blend_map_texture
     scale=1
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Rock028_8
     texture=#Ground037_Rock028
     min_height=-INFINITY
@@ -49,7 +49,7 @@ add_blend_map_texture
     scale=0.125
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Rock028_8_1
     texture=#Ground037_Rock028
     min_height=-INFINITY
@@ -60,7 +60,7 @@ add_blend_map_texture
     scale=0.125
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Rock028_64
     texture=#Ground037_Rock028
     min_height=-INFINITY
@@ -71,7 +71,7 @@ add_blend_map_texture
     scale=0.015625
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Rock028_256
     texture=#Ground037_Rock028
     min_height=-INFINITY
@@ -126,7 +126,7 @@ add_blend_map_texture
     scale=0.125
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_dark27_1
     texture=#Ground037_dark27
     min_height=-INFINITY
@@ -137,7 +137,7 @@ add_blend_map_texture
     scale=1
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_dark27_8
     texture=#Ground037_dark27
     min_height=-INFINITY
@@ -151,7 +151,7 @@ add_blend_map_texture
 ################;
 # Ground037 Sl #;
 ################;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Sl_near
     texture=#Ground037_Sl
     min_height=-INFINITY
@@ -162,7 +162,7 @@ add_blend_map_texture
     scale=1
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Sl_8
     texture=#Ground037_Sl
     min_height=-INFINITY
@@ -173,7 +173,7 @@ add_blend_map_texture
     scale=0.125
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Sl_64
     texture=#Ground037_Sl
     min_height=-INFINITY
@@ -184,7 +184,7 @@ add_blend_map_texture
     scale=0.015625
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Ground037_Sl_256
     texture=#Ground037_Sl
     min_height=-INFINITY
@@ -198,7 +198,7 @@ add_blend_map_texture
 ###########;
 # Rock028 #;
 ###########;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_200_8
     texture=#Rock028
     min_height=-INFINITY
@@ -210,7 +210,7 @@ add_blend_map_texture
     scale=0.125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_200_128
     texture=#Rock028
     min_height=-INFINITY
@@ -221,7 +221,7 @@ add_blend_map_texture
     scale=0.0078125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_200_512
     texture=#Rock028
     min_height=-INFINITY
@@ -235,7 +235,7 @@ add_blend_map_texture
 ###############;
 # Rock028_029 #;
 ###############;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_029_200_8
     texture=#Rock028_029
     min_height=-INFINITY
@@ -247,7 +247,7 @@ add_blend_map_texture
     scale=0.125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_029_200_128
     texture=#Rock028_029
     min_height=-INFINITY
@@ -258,7 +258,7 @@ add_blend_map_texture
     scale=0.0078125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_029_200_512
     texture=#Rock028_029
     min_height=-INFINITY
@@ -269,7 +269,7 @@ add_blend_map_texture
     scale=0.001953125
     weight=5;
 
-# add_blend_map_texture
+# !IF_ANDROID add_blend_map_texture
     name=Rock036_200
     texture=#Rock036
     min_height=-INFINITY
@@ -283,7 +283,7 @@ add_blend_map_texture
 ########################;
 # Rock028_gc2_mountain #;
 ########################;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_gc2_mountain_8
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
@@ -295,7 +295,7 @@ add_blend_map_texture
     scale=0.125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_gc2_mountain_128
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
@@ -306,7 +306,7 @@ add_blend_map_texture
     scale=0.0078125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_gc2_mountain_512
     texture=#Rock028_gc2_mountain
     min_height=-INFINITY
@@ -343,7 +343,7 @@ add_blend_map_texture
     scale=0.0078125
     weight=5;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=Rock028_Dune_512
     texture=#Rock028_Dune
     min_height=-INFINITY
@@ -394,7 +394,7 @@ add_blend_map_texture
 ################;
 # grass_ground #;
 ################;
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=grass_ground_1
     texture=#grass_ground
     min_height=-INFINITY
@@ -405,7 +405,7 @@ add_blend_map_texture
     scale=1
     weight=1;
 
-add_blend_map_texture
+!IF_ANDROID add_blend_map_texture
     name=grass_ground_8
     texture=#grass_ground
     min_height=-INFINITY

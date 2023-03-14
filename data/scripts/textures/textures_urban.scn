@@ -1,56 +1,56 @@
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00001_1k
     color=textures/osm/DE21F2_industryWindow00001_1k.png
     color_mode=rgb
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00001_top
     color=textures/osm/DE21F2_industryWindow00001_boundary_top.png
     color_mode=rgb
     lighten=-0.3 -0.3 -0.3
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00001_bottom
     color=textures/osm/DE21F2_industryWindow00001_boundary_bottom.png
     color_mode=rgb
     lighten=0.3 0.3 0.3
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00001_left
     color=textures/osm/DE21F2_industryWindow00001_boundary_left.png
     color_mode=rgb
     lighten=0 0 0
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00001_right
     color=textures/osm/DE21F2_industryWindow00001_boundary_right.png
     color_mode=rgb
     lighten=0 0 0
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00002
     color=textures/osm/DE21F2_industryWindow00002.png
     color_mode=rgb
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=DE21F2_industryWindow00003_gray
     color=textures/osm/DE21F2_industryWindow00003_gray.png
     color_mode=rgb
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=MarekWindow00001_512
     color=textures/osm/MarekWindow00001_512.png
     color_mode=rgb
     anisotropic_filtering_level=16;
 
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=Bricks058
     color=textures/cc0textures/Bricks058_2K_Color.jpg
     normal=textures/cc0textures/Bricks058_2K_NormalGL.jpg

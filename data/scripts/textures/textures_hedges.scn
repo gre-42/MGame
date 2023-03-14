@@ -1,4 +1,4 @@
-add_texture_descriptor
+!IF_ANDROID add_texture_descriptor
     name=hedge0
     color=models/opengameart/Hedge/LargeFoliage/hedge_sparse.png
     color_mode=rgba

@@ -63,7 +63,7 @@ macro_begin load_M3_part;
     # downsample name=NAME factor=10;
 macro_end;
 
-macro_begin load-M3-wheel;
+macro_begin load_M3_wheel;
     obj_resource
         name=NAME
         filename=models/SR/NAME.obj
@@ -87,7 +87,7 @@ macro_begin load-M3;
     macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_body-DECIMATE;
     macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:car NAME:M3/M3_glass-DECIMATE;
     macro_playback load_M3_part  DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_interior-DECIMATE;
-    macro_playback load-M3-wheel DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_wheel-DECIMATE;
+    macro_playback load_M3_wheel DIST_MIN:DIST_MIN DIST_MAX:DIST_MAX OCCLUDER_PASS:OCCLUDER_PASS REFLECTION_MAP:    NAME:M3/M3_wheel-DECIMATE;
 macro_end;
 
 macro_playback load-M3 DIST_MIN:0   DIST_MAX:100  OCCLUDER_PASS:none                           DECIMATE:;

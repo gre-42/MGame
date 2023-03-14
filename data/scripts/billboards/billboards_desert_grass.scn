@@ -37,7 +37,7 @@
     histogram=textures/histograms/desert_grass2_flower.png
     anisotropic_filtering_level=0;
 
-square_resource
+!IF_ANDROID square_resource
     name=bush_svg
     texture_filename=#var_desert_bush_1
     min=-1.2 0
@@ -52,7 +52,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bush_svg_large
     texture_filename=#var_desert_bush_2
     min=-1.7 0
@@ -67,7 +67,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bdesert_flower
     texture_filename=#var_desert_flower
     min=-0.11 0
@@ -95,7 +95,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large-desert
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
@@ -110,7 +110,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large2-desert
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0
@@ -125,7 +125,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large3-desert
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_CA_1k_W.png
     min=-0.5 0

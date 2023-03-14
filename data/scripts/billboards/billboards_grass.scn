@@ -1,17 +1,17 @@
 # square_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
-blending_x_resource
+!IF_ANDROID blending_x_resource
     name=grass
     texture_filename=textures/grass.png
     min=-2 0
     max=2 4
     aggregate_mode=sorted;
-blending_x_resource
+!IF_ANDROID blending_x_resource
     name=tree
     texture_filename=textures/00210_Baeume_Key_LOW-cropped.png
     min=-5 0
     max=5 10
     aggregate_mode=sorted;
-blending_x_resource
+!IF_ANDROID blending_x_resource
     name=tree2
     texture_filename=textures/pine_norm_gr1.png
     min=-5 0
@@ -50,7 +50,7 @@ blending_x_resource
     histogram=textures/cc0textures/Ground037_2K_Color_Sl.jpg
     anisotropic_filtering_level=0;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large
     texture_filename=#var_grass
     min=-1.5 0
@@ -65,7 +65,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large2
     texture_filename=#var_grass2
     min=-0.7 0
@@ -80,7 +80,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bgrass-large3
     texture_filename=#var_grass3
     min=-0.7 0
@@ -95,7 +95,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass12y
     texture_filename=textures/SR/grass12y-.png
     min=-0.7 0
@@ -110,7 +110,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass12y_near_Ground037_Sl
     texture_filename=#grass12y_Ground037_Sl
     min=-0.6 -0.5
@@ -125,11 +125,11 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r
     texture_filename=#grass_tbdpec3r
-    min=-1.1 0
-    max=1.1 0.7
+    min=-0.6 0
+    max=0.6 0.6
     center_distances=0 501
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
@@ -140,7 +140,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_dark27
     texture_filename=#grass_tbdpec3r_dark27
     min=-0.6 0
@@ -155,11 +155,11 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_Ground003
     texture_filename=#grass_tbdpec3r_Ground003
-    min=-1.2 0
-    max=1.2 1
+    min=-1 0
+    max=1 1
     center_distances=0 501
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
@@ -185,7 +185,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_Ground037
     texture_filename=#grass_tbdpec3r_Ground037
     min=-0.6 0
@@ -200,7 +200,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_Ground037_Sl
     texture_filename=#grass_tbdpec3r_Ground037_Sl
     min=-0.6 0
@@ -215,11 +215,11 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_Ground037_Sl_large
     texture_filename=#grass_tbdpec3r_Ground037_Sl
-    min=-3 0
-    max=3 2
+    min=-1 0
+    max=1 1
     center_distances=0 350
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
@@ -230,11 +230,11 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass_tbdpec3r_Ground037_Sl_low
     texture_filename=#grass_tbdpec3r_Ground037_Sl
-    min=-1 -0.05
-    max=1 0.4
+    min=-0.6 -0.05
+    max=0.6 0.4
     center_distances=0 350
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
@@ -245,7 +245,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass2g_near
     texture_filename=#grass2g
     min=-1 -0.2
@@ -260,7 +260,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=grass3g
     texture_filename=textures/SR/grass3g.png
     min=-0.7 0
@@ -317,7 +317,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bflower
     texture_filename=textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png
     min=-0.11 0
@@ -332,7 +332,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=bflower2
     texture_filename=textures/cc0textures/FlowerSet001_2K_Color_2.png
     min=-0.07 0
@@ -369,7 +369,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=kuudere_lisadikaprio_casual_smile
     texture_filename=textures/opengameart/kuudere_lisadikaprio/casual_smile.png
     min=-0.425 0
@@ -384,7 +384,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=female-standing1
     texture_filename=models/MakeHuman/female-standing1.png
     min=-0.55 0
@@ -399,7 +399,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=female-standing2
     texture_filename=models/MakeHuman/female-standing2.png
     min=-0.55 0
@@ -414,7 +414,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=female-standing3
     texture_filename=models/MakeHuman/female-standing3.png
     min=-0.55 0
@@ -429,7 +429,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=female-standing4
     texture_filename=models/MakeHuman/female-standing4.png
     min=-0.55 0
@@ -444,7 +444,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=kuudere_lisadikaprio_school_uniform_smile
     texture_filename=textures/opengameart/kuudere_lisadikaprio/school_uniform_smile.png
     min=-0.425 0
@@ -459,7 +459,7 @@ square_resource
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
 
-square_resource
+!IF_ANDROID square_resource
     name=kuudere_lisadikaprio_jacket_school_uniform_smile
     texture_filename=textures/opengameart/kuudere_lisadikaprio/jacket_school_uniform_smile.png
     min=-0.425 0
@@ -524,22 +524,22 @@ macro_end;
 ##################;
 # Hedge textures #;
 ##################;
-macro_playback _add_hist_hedge_0_90
+!IF_ANDROID macro_playback _add_hist_hedge_0_90
     NAME:hedge_small
     FILENAME_0:Small/HedgeSmall.png
     FILENAME_90:Small/HedgeSmall90.png;
 
-macro_playback _add_hist_hedge_0_90
+!IF_ANDROID macro_playback _add_hist_hedge_0_90
     NAME:hedge_small_round
     FILENAME_0:SmallRound/HedgeSmallRound.png
     FILENAME_90:SmallRound/HedgeSmallRound90.png;
 
-macro_playback _add_hist_hedge_0_90
+!IF_ANDROID macro_playback _add_hist_hedge_0_90
     NAME:hedge_long
     FILENAME_0:Long/HedgeLong.png
     FILENAME_90:Long/HedgeLong90.png;
 
-macro_playback _add_hist_hedge_0_90
+!IF_ANDROID macro_playback _add_hist_hedge_0_90
     NAME:hedge_long_round
     FILENAME_0:LongRound/HedgeLongRound.png
     FILENAME_90:LongRound/HedgeLongRound90.png;
@@ -547,25 +547,25 @@ macro_playback _add_hist_hedge_0_90
 ####################;
 # Hedge billboards #;
 ####################;
-macro_playback create_hedge_billboard
+!IF_ANDROID macro_playback create_hedge_billboard
     SUFFIX:hedge_small_billboard
     TEXTURE_0:#0_hedge_small
     TEXTURE_90:#90_hedge_small
     HEIGHT:3;
 
-macro_playback create_hedge_billboard
+!IF_ANDROID macro_playback create_hedge_billboard
     SUFFIX:hedge_small_round_billboard
     TEXTURE_0:#0_hedge_small_round
     TEXTURE_90:#90_hedge_small_round
     HEIGHT:3;
 
-macro_playback create_hedge_billboard
+!IF_ANDROID macro_playback create_hedge_billboard
     SUFFIX:hedge_long_billboard
     TEXTURE_0:#0_hedge_long
     TEXTURE_90:#90_hedge_long
     HEIGHT:6;
 
-macro_playback create_hedge_billboard
+!IF_ANDROID macro_playback create_hedge_billboard
     SUFFIX:hedge_long_round_billboard
     TEXTURE_0:#0_hedge_long_round
     TEXTURE_90:#90_hedge_long_round
@@ -720,8 +720,8 @@ macro_begin create_trees;
         transformation_mode=position_lookat;
 macro_end;
 
-macro_playback create_trees SUFFIX: DISTANCE_MAX:INFINITY AGGREGATE_MODE:instances_once;
-macro_playback create_trees SUFFIX:_small DISTANCE_MAX:501 AGGREGATE_MODE:instances_sorted;
+!IF_ANDROID macro_playback create_trees SUFFIX: DISTANCE_MAX:INFINITY AGGREGATE_MODE:instances_once;
+!IF_ANDROID macro_playback create_trees SUFFIX:_small DISTANCE_MAX:501 AGGREGATE_MODE:instances_sorted;
 
 # square_resource
     name=rock028_large
