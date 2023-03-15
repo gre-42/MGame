@@ -386,18 +386,27 @@ macro_begin _scene_racing_instantiate_transient_objects;
     IF_PLAYBACK_WINNER_2 IF_WINNER_RANK2_EXISTS macro_playback create_winner_playback RANK:2 PLAYBACK_SPEED:PLAYBACK_SPEED PLAYBACK_CAR:_-VEHICLE_WINNER2 R:R_WINNER2 G:G_WINNER2 B:B_WINNER2 DECIMATE: PSUFFIX:3;
 
     IF_CHECKPOINTS check_points
-        moving_node=car_node
-        resource=glow
-        player=you
-        nbeacons=40
-        nth=30
-        nahead=30
-        radius=30
-        height_changed=0
-        track_filename=CHECKPOINTS_FILE
-        laps=RACE_LAPS
-        selection_emissivity=CHECK_POINTS_ACTIVE_R CHECK_POINTS_ACTIVE_G CHECK_POINTS_ACTIVE_B
-        deselection_emissivity=CHECK_POINTS_INACTIVE_R CHECK_POINTS_INACTIVE_G CHECK_POINTS_INACTIVE_B
+        moving_node=car_node,
+        resource=glow,
+        player=you,
+        nbeacons=40,
+        nth=30,
+        nahead=30,
+        radius=30,
+        height_changed=0,
+        track_filename=CHECKPOINTS_FILE,
+        laps=RACE_LAPS,
+        pacenotes_filename=PACENOTES_FILE,
+        pacenotes_nahead=0,
+        pacenotes_textures=xxx yyy,
+        pacenotes_ttf=fonts/RobotoMono-Bold.ttf,
+        pacenotes_left=pacenotes_left,
+        pacenotes_right=pacenotes_right,
+        pacenotes_bottom=pacenotes_bottom,
+        pacenotes_top=pacenotes_top,
+        pacenotes_font_height=normal,
+        selection_emissivity=CHECK_POINTS_ACTIVE_R CHECK_POINTS_ACTIVE_G CHECK_POINTS_ACTIVE_B,
+        deselection_emissivity=CHECK_POINTS_INACTIVE_R CHECK_POINTS_INACTIVE_G CHECK_POINTS_INACTIVE_B,
         on_finish=set_focuses menu game_over_countdown_pending;
 
     ###########;
@@ -580,6 +589,7 @@ macro_begin generic_scene_racing_dynamic;
         IF_RECORD_TRACK:IF_RECORD_TRACK
         RECORDINGS_DIR:RECORDINGS_DIR
         CHECKPOINTS_FILE:CHECKPOINTS_FILE
+        PACENOTES_FILE:PACENOTES_FILE
         RACE_LAPS:RACE_LAPS
         IF_PLAYBACK_CHECKPOINTS:IF_PLAYBACK_CHECKPOINTS
         IF_PLAYBACK_TRACK_1:IF_PLAYBACK_TRACK_1

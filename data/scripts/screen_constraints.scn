@@ -128,3 +128,11 @@ constant_screen_constraint name=huge   value=0.3 units=inches;
 constant_screen_constraint name=tick_radius    value=0.3  units=inches;
 constant_screen_constraint name=pointer_width  value=0.02 units=inches;
 constant_screen_constraint name=pointer_length value=0.3  units=inches;
+
+#############;
+# Pacenotes #;
+#############;
+additive_screen_constraint name=pacenotes_left   value=0 anchor=submenu_right units=inches;
+additive_screen_constraint name=pacenotes_right  value=0 anchor=max units=inches;
+additive_screen_constraint name=pacenotes_bottom value=0 anchor=lower_buttons_top units=inches;
+additive_screen_constraint name=pacenotes_top    value=0 anchor=upper_buttons_bottom units=inches;
