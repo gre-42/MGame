@@ -54,6 +54,7 @@ macro_begin create_grossglockner_hochalpenstrasse;
             IF_RECORD_TRACK:IF_RECORD_TRACK=#
             RECORDINGS_DIR:__DIR__
             CHECKPOINTS_FILE:__APPDATA__/LEVEL_ID.checkpoints.m
+            PACENOTES_FILE:
             IF_PLAYBACK_CHECKPOINTS:#
             IF_PLAYBACK_TRACK_1:#
             IF_PLAYBACK_TRACK_2:#
