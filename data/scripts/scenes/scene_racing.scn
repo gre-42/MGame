@@ -397,14 +397,35 @@ macro_begin _scene_racing_instantiate_transient_objects;
         track_filename=CHECKPOINTS_FILE,
         laps=RACE_LAPS,
         pacenotes_filename=PACENOTES_FILE,
-        pacenotes_nahead=0,
-        pacenotes_textures=xxx yyy,
+        pacenotes_nahead=120,
+        pacenotes_pictures_left=
+            pacenote_l0
+            pacenote_l1
+            pacenote_l2
+            pacenote_l3
+            pacenote_l4
+            pacenote_l5
+            pacenote_l6
+            pacenote_l7,
+        pacenotes_pictures_right=
+            pacenote_r0
+            pacenote_r1
+            pacenote_r2
+            pacenote_r3
+            pacenote_r4
+            pacenote_r5
+            pacenote_r6
+            pacenote_r7,
         pacenotes_ttf=fonts/RobotoMono-Bold.ttf,
-        pacenotes_left=pacenotes_left,
-        pacenotes_right=pacenotes_right,
-        pacenotes_bottom=pacenotes_bottom,
-        pacenotes_top=pacenotes_top,
-        pacenotes_font_height=normal,
+        pacenotes_text_left=pacenotes_text_left,
+        pacenotes_text_right=pacenotes_text_right,
+        pacenotes_text_bottom=pacenotes_text_bottom,
+        pacenotes_text_top=pacenotes_text_top,
+        pacenotes_picture_left=pacenotes_picture_left,
+        pacenotes_picture_right=pacenotes_picture_right,
+        pacenotes_picture_bottom=pacenotes_picture_bottom,
+        pacenotes_picture_top=pacenotes_picture_top,
+        pacenotes_font_height=huge,
         selection_emissivity=CHECK_POINTS_ACTIVE_R CHECK_POINTS_ACTIVE_G CHECK_POINTS_ACTIVE_B,
         deselection_emissivity=CHECK_POINTS_INACTIVE_R CHECK_POINTS_INACTIVE_G CHECK_POINTS_INACTIVE_B,
         on_finish=set_focuses menu game_over_countdown_pending;
