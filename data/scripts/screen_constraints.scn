@@ -7,32 +7,32 @@ fractional_screen_constraint name=center value=0.5 anchor_a=min anchor_b=max;
 # Highscore #;
 #############;
 additive_screen_constraint name=highscore_left   value=-2.5 anchor=max units=inches;
-additive_screen_constraint name=highscore_right  value=0 anchor=max units=inches;
+additive_screen_constraint name=highscore_right  value=0    anchor=max units=inches;
 additive_screen_constraint name=highscore_bottom value=-0.6 anchor=max units=inches;
-additive_screen_constraint name=highscore_top    value=0 anchor=max units=inches;
+additive_screen_constraint name=highscore_top    value=0    anchor=max units=inches;
 
 #################;
 # Player status #;
 #################;
-constant_screen_constraint name=player_status_left   value=0 units=inches;
+constant_screen_constraint name=player_status_left   value=0   units=inches;
 constant_screen_constraint name=player_status_right  value=0.5 units=inches;
-additive_screen_constraint name=player_status_bottom value=-1 anchor=max units=inches;
-additive_screen_constraint name=player_status_top    value=0 anchor=max units=inches;
+additive_screen_constraint name=player_status_bottom value=-1  anchor=max units=inches;
+additive_screen_constraint name=player_status_top    value=0   anchor=max units=inches;
 
 ################;
 # Player speed #;
 ################;
-constant_screen_constraint name=player_speed_left   value=0 units=inches;
-constant_screen_constraint name=player_speed_right  value=1 units=inches;
+constant_screen_constraint name=player_speed_left   value=0  units=inches;
+constant_screen_constraint name=player_speed_right  value=1  units=inches;
 additive_screen_constraint name=player_speed_bottom value=-1 anchor=max units=inches;
-additive_screen_constraint name=player_speed_top    value=0 anchor=max units=inches;
+additive_screen_constraint name=player_speed_top    value=0  anchor=max units=inches;
 
 ################;
 # Bullet count #;
 ################;
-additive_screen_constraint name=bullet_count_left   value=-1 anchor=max units=inches;
-additive_screen_constraint name=bullet_count_right  value=0 anchor=max units=inches;
-constant_screen_constraint name=bullet_count_bottom value=0 units=inches;
+additive_screen_constraint name=bullet_count_left   value=-1  anchor=max units=inches;
+additive_screen_constraint name=bullet_count_right  value=0   anchor=max units=inches;
+constant_screen_constraint name=bullet_count_bottom value=0   units=inches;
 constant_screen_constraint name=bullet_count_top    value=0.5 units=inches;
 
 #################;
@@ -54,71 +54,71 @@ constant_screen_constraint name=right_button_right value=2.25 units=inches;
 #######################;
 additive_screen_constraint name=down_button_left  value=-2.25 anchor=max units=inches;
 additive_screen_constraint name=down_button_right value=-1.25 anchor=max units=inches;
-additive_screen_constraint name=up_button_left    value=-1 anchor=max units=inches;
-additive_screen_constraint name=up_button_right   value=0 anchor=max units=inches;
+additive_screen_constraint name=up_button_left    value=-1    anchor=max units=inches;
+additive_screen_constraint name=up_button_right   value=0     anchor=max units=inches;
 
 #################;
 # Upper buttons #;
 #################;
 additive_screen_constraint name=upper_buttons_bottom value=-0.5 anchor=max units=inches;
-additive_screen_constraint name=upper_buttons_top    value=0 anchor=max units=inches;
+additive_screen_constraint name=upper_buttons_top    value=0    anchor=max units=inches;
 
 #####################;
 # Upper left button #;
 #####################;
-additive_screen_constraint name=escape_button_left  value=-1 anchor=highscore_left units=inches;
+additive_screen_constraint name=escape_button_left  value=-1   anchor=highscore_left units=inches;
 additive_screen_constraint name=escape_button_right value=-0.5 anchor=highscore_left units=inches;
 
 ######################;
 # Upper right button #;
 ######################;
 additive_screen_constraint name=start_button_left  value=-0.5 anchor=highscore_left units=inches;
-additive_screen_constraint name=start_button_right value=0 anchor=highscore_left units=inches;
+additive_screen_constraint name=start_button_right value=0    anchor=highscore_left units=inches;
 
 ###########;
 # Tabmenu #;
 ###########;
-constant_screen_constraint name=tabmenu_left   value=0 units=inches;
-additive_screen_constraint name=tabmenu_right  value=0 anchor=escape_button_left units=inches;
+constant_screen_constraint name=tabmenu_left   value=0    units=inches;
+additive_screen_constraint name=tabmenu_right  value=0    anchor=escape_button_left units=inches;
 additive_screen_constraint name=tabmenu_bottom value=-0.9 anchor=max units=inches;
-additive_screen_constraint name=tabmenu_top    value=0 anchor=max units=inches;
+additive_screen_constraint name=tabmenu_top    value=0    anchor=max units=inches;
 
 #################;
 # Tabmenu icons #;
 #################;
-constant_screen_constraint name=tabmenu_icon_left   value=0 units=inches;
+constant_screen_constraint name=tabmenu_icon_left   value=0   units=inches;
 constant_screen_constraint name=tabmenu_icon_right  value=0.9 units=inches;
-additive_screen_constraint name=tabmenu_icon_bottom value=0 anchor=tabmenu_bottom units=inches;
-additive_screen_constraint name=tabmenu_icon_top    value=0 anchor=tabmenu_top units=inches;
+additive_screen_constraint name=tabmenu_icon_bottom value=0   anchor=tabmenu_bottom units=inches;
+additive_screen_constraint name=tabmenu_icon_top    value=0   anchor=tabmenu_top units=inches;
 
 ###########;
 # Submenu #;
 ###########;
-constant_screen_constraint name=submenu_left   value=0 units=inches;
-constant_screen_constraint name=submenu_right  value=2 units=inches;
-additive_screen_constraint name=submenu_bottom value=0.05 anchor=lower_buttons_top units=inches;
+constant_screen_constraint name=submenu_left   value=0     units=inches;
+constant_screen_constraint name=submenu_right  value=2     units=inches;
+additive_screen_constraint name=submenu_bottom value=0.05  anchor=lower_buttons_top units=inches;
 additive_screen_constraint name=submenu_top    value=-0.05 anchor=tabmenu_bottom units=inches;
 
 ############;
 # Controls #;
 ############;
-additive_screen_constraint name=controls_right  value=512 anchor=submenu_left units=pixels;
+additive_screen_constraint name=controls_right  value=512  anchor=submenu_left units=pixels;
 additive_screen_constraint name=controls_bottom value=-256 anchor=submenu_top units=pixels;
 
 ##############;
 # Scene icon #;
 ##############;
-additive_screen_constraint name=scene_icon_left   value=0 anchor=submenu_right units=inches;
-additive_screen_constraint name=scene_icon_right  value=2 anchor=submenu_right units=inches;
+additive_screen_constraint name=scene_icon_left   value=0  anchor=submenu_right units=inches;
+additive_screen_constraint name=scene_icon_right  value=2  anchor=submenu_right units=inches;
 additive_screen_constraint name=scene_icon_bottom value=-1 anchor=submenu_top units=inches;
-additive_screen_constraint name=scene_icon_top    value=0 anchor=submenu_top units=inches;
+additive_screen_constraint name=scene_icon_top    value=0  anchor=submenu_top units=inches;
 
 ############;
 # Showroom #;
 ############;
-additive_screen_constraint name=showroom_left   value=0 anchor=submenu_right units=inches;
-additive_screen_constraint name=showroom_right  value=0 anchor=max units=inches;
-additive_screen_constraint name=showroom_bottom value=0 anchor=lower_buttons_top units=inches;
+additive_screen_constraint name=showroom_left   value=0 anchor=submenu_right        units=inches;
+additive_screen_constraint name=showroom_right  value=0 anchor=max                  units=inches;
+additive_screen_constraint name=showroom_bottom value=0 anchor=lower_buttons_top    units=inches;
 additive_screen_constraint name=showroom_top    value=0 anchor=upper_buttons_bottom units=inches;
 
 #########;
@@ -138,6 +138,6 @@ constant_screen_constraint name=pointer_length value=0.3  units=inches;
 # Pacenotes #;
 #############;
 additive_screen_constraint name=pacenotes_left   value=-0.5 anchor=center units=inches;
-additive_screen_constraint name=pacenotes_right  value=0.5 anchor=center units=inches;
+additive_screen_constraint name=pacenotes_right  value=0.5  anchor=center units=inches;
 additive_screen_constraint name=pacenotes_bottom value=-0.5 anchor=center units=inches;
-additive_screen_constraint name=pacenotes_top    value=0.5 anchor=center units=inches;
+additive_screen_constraint name=pacenotes_top    value=0.5  anchor=center units=inches;
