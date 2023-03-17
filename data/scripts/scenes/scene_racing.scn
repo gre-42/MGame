@@ -417,6 +417,9 @@ macro_begin _scene_racing_instantiate_transient_objects;
             pacenote_r6
             pacenote_r7,
         pacenotes_ttf=fonts/RobotoMono-Bold.ttf,
+        pacenotes_R=0,
+        pacenotes_G=0,
+        pacenotes_B=0,
         pacenotes_text_left=pacenotes_text_left,
         pacenotes_text_right=pacenotes_text_right,
         pacenotes_text_bottom=pacenotes_text_bottom,
