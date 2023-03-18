@@ -397,7 +397,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         track_filename=CHECKPOINTS_FILE,
         laps=RACE_LAPS,
         pacenotes_filename=PACENOTES_FILE,
-        pacenotes_nahead=120,
+        pacenotes_meters_ahead=50,
         pacenotes_pictures_left=
             pacenote_l0
             pacenote_l1
