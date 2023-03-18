@@ -398,6 +398,8 @@ macro_begin _scene_racing_instantiate_transient_objects;
         laps=RACE_LAPS,
         pacenotes_filename=PACENOTES_FILE,
         pacenotes_meters_ahead=50,
+        pacenotes_minimum_covered_meters=200,
+        pacenotes_maximum_number=3,
         pacenotes_pictures_left=
             pacenote_l0
             pacenote_l1
@@ -420,6 +422,7 @@ macro_begin _scene_racing_instantiate_transient_objects;
         pacenotes_R=0,
         pacenotes_G=0,
         pacenotes_B=0,
+        pacenotes_widget_distance=pacenotes_widget_distance,
         pacenotes_text_left=pacenotes_text_left,
         pacenotes_text_right=pacenotes_text_right,
         pacenotes_text_bottom=pacenotes_text_bottom,

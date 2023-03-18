@@ -137,6 +137,8 @@ constant_screen_constraint name=pointer_length value=0.3  units=inches;
 #############;
 # Pacenotes #;
 #############;
+constant_screen_constraint name=pacenotes_widget_distance value=1 units=inches;
+
 additive_screen_constraint name=pacenotes_text_left   value=-0.5 anchor=center units=inches;
 additive_screen_constraint name=pacenotes_text_right  value=0.5  anchor=center units=inches;
 additive_screen_constraint name=pacenotes_text_bottom value=-0.25 anchor=center units=inches;
