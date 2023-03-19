@@ -7,7 +7,7 @@ macro_begin _add_stone_models;
         scale=1 1 1
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted
@@ -23,7 +23,7 @@ macro_begin _add_stone_models;
         scale=0.3 0.3 0.3
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -39,7 +39,7 @@ macro_begin _add_stone_models;
         scale=0.5 0.5 0.5
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -55,7 +55,7 @@ macro_begin _add_stone_models;
         scale=0.6 0.6 0.6
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -71,7 +71,7 @@ macro_begin _add_stone_models;
         scale=1 1 1
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -87,7 +87,7 @@ macro_begin _add_stone_models;
         scale=0.3 0.3 0.3
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -103,7 +103,7 @@ macro_begin _add_stone_models;
         scale=0.5 0.5 0.5
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -119,7 +119,7 @@ macro_begin _add_stone_models;
         scale=0.8 0.8 0.8
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=instances_sorted
@@ -135,7 +135,7 @@ macro_begin _add_stone_models;
         scale=1.5 1.5 1.5
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted
@@ -151,7 +151,7 @@ macro_begin _add_stone_models;
         scale=1 1 1
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted
@@ -167,7 +167,7 @@ macro_begin _add_stone_models;
         scale=1.5 1.5 1.5
         center_distances=0 504
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted

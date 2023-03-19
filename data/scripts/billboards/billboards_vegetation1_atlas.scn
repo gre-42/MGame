@@ -99,7 +99,7 @@ square_resource
     occluder_pass=lightmap_black_global_and_local
     ambience=2 2 2
     blend_mode=semi_continuous_02
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat

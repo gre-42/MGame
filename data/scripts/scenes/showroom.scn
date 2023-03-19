@@ -83,9 +83,9 @@ macro_begin _initialize_showroom_scene;
         position=0 0 0
         rotation=0 0 0
         scale=4 0.1 4
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_node
         occluder_pass=none
         aggregate_mode=none
@@ -99,7 +99,7 @@ macro_begin _initialize_showroom_scene;
     rigid_cuboid
         node=stage
         hitboxes=cylinder
-        mass=INFINITY
+        mass=inf
         size=1 2 3
         w=0 10 0
         collidable_mode=terrain

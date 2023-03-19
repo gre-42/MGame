@@ -91,6 +91,6 @@ macro_begin create_player_human_externals;
         gun_node=main_gun_end_node-SUFFIX;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY;
+        surface_power_forward=inf
+        surface_power_backward=-inf;
 macro_end;

@@ -4,9 +4,9 @@ obj_resource
     position=0 0.35 0
     rotation=0 0 0
     scale=0.25 0.7 0.25
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -22,9 +22,9 @@ obj_resource
     position=0 0.35 -0.25
     rotation=0 0 0
     scale=0.25 0.7 0.5
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -44,7 +44,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none

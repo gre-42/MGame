@@ -28,7 +28,7 @@ square_resource
     ambience=2 2 2
     blend_mode=semi_continuous_02
     z_order=1
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat

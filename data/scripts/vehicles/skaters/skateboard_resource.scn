@@ -6,7 +6,7 @@ obj_resource
     scale=3.6 3.6 3.6
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=none

@@ -37,9 +37,9 @@ add_texture_descriptor
 add_blend_map_texture
     name=black_001
     texture=#black
-    min_height=-INFINITY
-    max_height=INFINITY
-    distances=0 0 INFINITY INFINITY
+    min_height=-inf
+    max_height=inf
+    distances=0 0 inf inf
     normal=0 0 0
     cosine=-1 -1 1 1
     scale=1

@@ -8,7 +8,7 @@ macro_begin create_skating_mh1;
         node=skater_node-SUFFIX
         hitboxes=skater_hitbox skater_tirelines skater_grind_contacts skater_alignment_contacts
         mass=70
-        size=INFINITY INFINITY INFINITY
+        size=inf inf inf
         com=0 -0.6 0
         collidable_mode=small_moving
         name=skater-SUFFIX;
@@ -61,7 +61,7 @@ macro_begin create_skating_mh1;
     create_car_controller
         node=skater_node-SUFFIX
         front_tire_ids=
-        max_tire_angle=NAN;
+        max_tire_angle=nan;
     IF_WITH_PHYSICS set_grind_point
         node=skater_node-SUFFIX
         position=0 -0.6 0;
@@ -101,8 +101,8 @@ macro_begin create_player_skater_externals_skating_mh1;
         PLAYER_NAME:PLAYER_NAME;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY;
+        surface_power_forward=inf
+        surface_power_backward=-inf;
 macro_end;
 
 macro_begin add_attached_light_skating_mh1;

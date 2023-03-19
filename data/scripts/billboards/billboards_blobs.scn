@@ -15,7 +15,7 @@
     occluder_pass=lightmap_blobs
     ambience=1 1 1
     blend_mode=invisible
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     rotation=-90 0 0
     translation=0 0 0
@@ -42,7 +42,7 @@ square_resource
     occluder_pass=lightmap_blobs
     ambience=1 1 1
     blend_mode=invisible
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     rotation=-90 0 0
     translation=0 0 0

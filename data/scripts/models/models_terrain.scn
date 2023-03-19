@@ -6,7 +6,7 @@
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     aggregate_mode=instances_sorted
@@ -18,9 +18,9 @@ obj_resource
     position=0 500 0
     rotation=0 0 0
     scale=0.2 500 0.2
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     aggregate_mode=none
@@ -36,7 +36,7 @@ macro_begin load_tree;
         center_distances=0 300
         center_distances=0 501
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=instances_sorted

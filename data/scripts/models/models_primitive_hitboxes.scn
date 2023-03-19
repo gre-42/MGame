@@ -6,7 +6,7 @@ obj_resource
     scale=0.2 1 0.2
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -23,7 +23,7 @@ modify_physics_material_tags
     scale=5 1.6 0.1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -40,7 +40,7 @@ modify_physics_material_tags
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none

@@ -14,7 +14,7 @@ macro_begin create_mh1;
         node=human_node-SUFFIX
         hitboxes=human_hitbox human_distancebox human_tirelines
         mass=70
-        size=INFINITY INFINITY INFINITY
+        size=inf inf inf
         collidable_mode=small_moving
         name=human-SUFFIX;
 
@@ -25,7 +25,7 @@ macro_begin create_mh1;
         followed=
         head_node=human_head_camera_node-SUFFIX
         bullet_start_offset=0.5
-        bullet_velocity=NAN
+        bullet_velocity=nan
         bullet_feels_gravity=1
         gravity=9.8
         dyaw_max=10
@@ -151,7 +151,7 @@ macro_begin create_mh1;
 
     IF_WITH_PHYSICS set_jump_strength node=human_node-SUFFIX value=0.3;
 
-    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs angular_vels=-50 -9 9 50 powers=NAN 2.7 2.7 NAN gear_ratios=1;
+    IF_WITH_PHYSICS create_engine rigid_body=human_node-SUFFIX name=legs angular_vels=-50 -9 9 50 powers=nan 2.7 2.7 nan gear_ratios=1;
     IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=legs brake_force=5000 Ks=1e4 Ka=4e2 musF=0 musC=5 tire_id=0;
     IF_WITH_PHYSICS create_human_as_car_controller
         node=human_node-SUFFIX

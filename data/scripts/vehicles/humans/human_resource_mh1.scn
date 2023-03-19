@@ -6,7 +6,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 100
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -22,7 +22,7 @@ macro_begin load_mh1;
         scale=1 1 1
         center_distances=DIST_MIN DIST_MAX
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
         aggregate_mode=none

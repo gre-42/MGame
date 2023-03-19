@@ -206,7 +206,7 @@ macro_begin create_AH_64;
         IF_RACING:IF_RACING
         IF_RALLY:IF_RALLY
         SUFFIX:SUFFIX
-        MASS:INFINITY
+        MASS:inf
         COLLIDABLE_MODE:small_static
         HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
         PLAYER_NAME:PLAYER_NAME
@@ -257,8 +257,8 @@ macro_begin create_player_car_externals_AH_64;
         gun_node=main_gun_end_node-SUFFIX;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
+        surface_power_forward=inf
+        surface_power_backward=-inf
         max_tire_angle=30
         tire_angle_pid=1 0 0 0;
 macro_end;

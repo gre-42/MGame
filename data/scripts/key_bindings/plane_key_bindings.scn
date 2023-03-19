@@ -67,7 +67,7 @@ macro_begin create_plane_key_bindings;
         not_gamepad_button=B
         joystick_analog_axis=4
         joystick_analog_axis_sign_and_scale=-1
-        turbine_power=INFINITY;
+        turbine_power=inf;
     IF_MANUAL_DRIVE plane_controller_key_binding
         player=PLAYER_NAME
         node=car_node-SUFFIX

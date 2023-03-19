@@ -6,7 +6,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=none
     aggregate_mode=instances_sorted
@@ -20,7 +20,7 @@ obj_resource
     scale=0.2 0.2 0.2
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -35,7 +35,7 @@ obj_resource
     scale=0.5 0.5 0.5
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -49,7 +49,7 @@ obj_resource
     scale=2 2 2
     center_distances=0 501
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces_alpha=0
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
@@ -64,7 +64,7 @@ obj_resource
     scale=0.3 0.3 0.3
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -78,7 +78,7 @@ obj_resource
     scale=0.16 1 0.16
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -95,7 +95,7 @@ obj_resource
     scale=0.3 0.3 0.3
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -109,7 +109,7 @@ obj_resource
     scale=0.3 0.2 0.3
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -123,7 +123,7 @@ obj_resource
     scale=0.4 0.3 0.4
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -137,7 +137,7 @@ obj_resource
     scale=0.1 5 0.1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -151,7 +151,7 @@ obj_resource
     scale=0.02 0.02 0.02
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -165,7 +165,7 @@ obj_resource
     scale=0.3 0.3 0.3
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     aggregate_mode=instances_sorted
@@ -180,7 +180,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -194,7 +194,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_local_instances
     occluder_pass=none
     aggregate_mode=instances_sorted
@@ -208,7 +208,7 @@ obj_resource
     scale=0.1 0.1 0.1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -222,7 +222,7 @@ obj_resource
     scale=0.4 0.4 0.4
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=lightmap_black_global_static
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -235,9 +235,9 @@ obj_resource
     position=0 0 0
     rotation=0 0 0
     scale=1 1 1
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -252,7 +252,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -266,7 +266,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=lightmap_black_local_instances
     aggregate_mode=instances_sorted
@@ -281,7 +281,7 @@ macro_begin load_hedge;
         scale=0.1 0.1 0.1
         center_distances=0 501
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces_alpha=0
         occluded_pass=lightmap_black_node
         occluder_pass=none
@@ -298,7 +298,7 @@ macro_begin load_facade;
         scale=1 1 1
         center_distances=0 501
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_node
         occluder_pass=none
         aggregate_mode=instances_sorted

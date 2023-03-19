@@ -40,9 +40,9 @@ macro_begin _scene_tank_load_resources;
         position=0 -1 1
         rotation=0 180 0
         scale=0.1 0.1 0.1
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
         aggregate_mode=none
@@ -58,9 +58,9 @@ macro_begin _scene_tank_load_resources;
         position=0 0.35 0
         rotation=0 0 0
         scale=0.5 0.7 0.5
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=none
@@ -76,7 +76,7 @@ macro_begin _scene_tank_load_resources;
         scale=1 1 1
         center_distances=0 501
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=none
@@ -96,9 +96,9 @@ macro_begin _scene_tank_load_resources;
         position=0 0.2 0
         rotation=0 180 0
         scale=0.02 0.02 0.02
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_global_static
         occluder_pass=none
         aggregate_mode=none
@@ -110,9 +110,9 @@ macro_begin _scene_tank_load_resources;
         position=0 0 0
         rotation=0 0 0
         scale=0.5 0.5 10
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=none
         aggregate_mode=none
@@ -132,7 +132,7 @@ macro_begin _scene_tank_instantiate;
     #######;
     root_node_instance type=static name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
     renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
-    rigid_cuboid node=osm_map_node hitboxes=osm_map mass=INFINITY size=1 2 3 collidable_mode=terrain name=osm_map;
+    rigid_cuboid node=osm_map_node hitboxes=osm_map mass=inf size=1 2 3 collidable_mode=terrain name=osm_map;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 
     register_geographic_mapping name=world node=osm_map_node resource=osm_map;
@@ -409,14 +409,14 @@ macro_begin _scene_tank_instantiate;
             gamepad_button=X
             joystick_digital_axis=4
             joystick_digital_axis_sign=-1
-            surface_power=INFINITY;
+            surface_power=inf;
         abs_key_binding
             node=car_node
             key=DOWN
             gamepad_button=A
             joystick_digital_axis=4
             joystick_digital_axis_sign=1
-            surface_power=-INFINITY;
+            surface_power=-inf;
 
         rel_key_binding
             node=turret_node
@@ -597,7 +597,7 @@ macro_begin _scene_tank_instantiate;
     countdown
         z_order=1
         ttf_file=fonts/RobotoMono-Bold.ttf
-        position=NAN NAN
+        position=nan nan
         font_height=64
         line_distance=64
         nseconds=5

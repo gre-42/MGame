@@ -62,7 +62,7 @@ macro_begin create_LK4;
     IF_WITH_GRAPHICS macro_playback create_LK4_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d1;
     IF_WITH_GRAPHICS macro_playback create_LK4_lights SUFFIX:SUFFIX;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:INFINITY COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
+    IF_WITH_PHYSICS IF_STATIC  macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:inf COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
     IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
 macro_end;
 
@@ -84,8 +84,8 @@ macro_begin create_player_car_externals_LK4;
         COCKPIT_CAMERA_Z:-0.1;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
-        surface_power_forward=INFINITY
-        surface_power_backward=-INFINITY
+        surface_power_forward=inf
+        surface_power_backward=-inf
         max_tire_angle=30
         tire_angle_pid=1 1 0 0.2;
 macro_end;

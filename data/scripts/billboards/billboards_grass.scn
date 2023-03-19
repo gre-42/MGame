@@ -60,7 +60,7 @@
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -75,7 +75,7 @@
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -90,7 +90,7 @@
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -105,7 +105,7 @@
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -270,7 +270,7 @@ square_resource
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -327,7 +327,7 @@ square_resource
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -342,7 +342,7 @@ square_resource
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -364,7 +364,7 @@ square_resource
     occluder_pass=none
     ambience=2 2 2
     blend_mode=continuous
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -379,7 +379,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -394,7 +394,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -409,7 +409,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -424,7 +424,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -439,7 +439,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -454,7 +454,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -469,7 +469,7 @@ square_resource
     occluder_pass=none
     ambience=1 1 1
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -501,7 +501,7 @@ macro_begin create_hedge_billboard;
         occluder_pass=none
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=0
         aggregate_mode=instances_sorted
         transformation_mode=position_yangle;
@@ -515,7 +515,7 @@ macro_begin create_hedge_billboard;
         occluder_pass=none
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=0
         aggregate_mode=instances_sorted
         transformation_mode=position_lookat;
@@ -609,7 +609,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -624,7 +624,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -639,7 +639,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -654,7 +654,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -669,7 +669,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -684,7 +684,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -699,7 +699,7 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
@@ -714,13 +714,13 @@ macro_begin create_trees;
         occluder_pass=lightmap_black_local_instances
         ambience=2 2 2
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         aggregate_mode=AGGREGATE_MODE
         transformation_mode=position_lookat;
 macro_end;
 
-!IF_ANDROID macro_playback create_trees SUFFIX: DISTANCE_MAX:INFINITY AGGREGATE_MODE:instances_once;
+!IF_ANDROID macro_playback create_trees SUFFIX: DISTANCE_MAX:inf AGGREGATE_MODE:instances_once;
 !IF_ANDROID macro_playback create_trees SUFFIX:_small DISTANCE_MAX:501 AGGREGATE_MODE:instances_sorted;
 
 # square_resource
@@ -733,7 +733,7 @@ macro_end;
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -748,7 +748,7 @@ macro_end;
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;
@@ -763,7 +763,7 @@ macro_end;
     occluder_pass=none
     ambience=2 2 2
     blend_mode=binary_05
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     cull_faces=1
     aggregate_mode=instances_sorted
     transformation_mode=position_lookat;

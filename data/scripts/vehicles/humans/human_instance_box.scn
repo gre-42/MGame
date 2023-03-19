@@ -5,7 +5,7 @@ macro_begin create_human_box;
 
     IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
     # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    rigid_cuboid node=human_node-SUFFIX hitboxes=human_hitbox tirelines=human_tirelines mass=70 size=INFINITY INFINITY INFINITY collidable_mode=small_moving name=human-SUFFIX;
+    rigid_cuboid node=human_node-SUFFIX hitboxes=human_hitbox tirelines=human_tirelines mass=70 size=inf inf inf collidable_mode=small_moving name=human-SUFFIX;
 
     gun
         node=main_gun_end_node-SUFFIX,

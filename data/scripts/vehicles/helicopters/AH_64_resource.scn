@@ -4,9 +4,9 @@ obj_resource
     position=0 0 0
     rotation=-5 180 0
     scale=1 1 1
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -27,7 +27,7 @@ obj_resource
     scale=1 1 1
     center_distances=0 501
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none
@@ -50,7 +50,7 @@ macro_begin load_AH_64;
         scale=1 1 1
         center_distances=DIST_MIN DIST_MAX
         blend_mode=continuous
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces_alpha=0
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
@@ -66,7 +66,7 @@ macro_begin load_AH_64;
         scale=1 1 1
         center_distances=DIST_MIN DIST_MAX
         blend_mode=continuous
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
         aggregate_mode=none
@@ -81,7 +81,7 @@ macro_begin load_AH_64;
         scale=1 1 1
         center_distances=DIST_MIN DIST_MAX
         blend_mode=continuous
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=lightmap_black_global_static
         occluder_pass=OCCLUDER_PASS
         aggregate_mode=none
@@ -98,9 +98,9 @@ obj_resource
     position=0 0 -0.1
     rotation=0 0 0
     scale=5 5 0.1
-    center_distances=0 INFINITY
+    center_distances=0 inf
     blend_mode=off
-    alpha_distances=0 0 INFINITY INFINITY
+    alpha_distances=0 0 inf inf
     occluded_pass=none
     occluder_pass=none
     aggregate_mode=none

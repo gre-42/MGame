@@ -7,7 +7,7 @@ macro_begin osm_resource_skate0;
         scale=1 1 1
         center_distances=0 501
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         occluded_pass=none
         occluder_pass=lightmap_black_local_instances
         aggregate_mode=none
