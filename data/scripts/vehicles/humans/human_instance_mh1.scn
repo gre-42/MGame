@@ -40,7 +40,6 @@ macro_begin create_mh1;
         error_alpha=ERROR_ALPHA;
 
     create_weapon_cycle
-        inventory_node=human_node-SUFFIX
         cycle_node=human_node-SUFFIX;
     IF_WITH_GUN set_inventory_capacity
         inventory_node=human_node-SUFFIX

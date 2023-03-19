@@ -158,7 +158,6 @@ macro_begin create_F_35_physics;
         tire_ids=0 1
         tire_angles=30 30
         yaw_amount_to_tire_angle=10
-        turbine_id=0
         vehicle_domain=air;
 
     create_plane_as_car_controller
