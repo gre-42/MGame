@@ -1,854 +1,790 @@
 {
-    "frames": 24932,
-    "length_in_meters": 9253.308545988455,
+    "frames": 513,
+    "length_in_meters": 9367.648941725502,
     "pacenotes": [
         {
-            "i0": 429,
-            "i1": 683,
-            "meters_to_start0": 110.23450246567465,
-            "meters_to_start1": 201.31593043063913,
+            "i0": 6,
+            "i1": 9,
+            "meters_to_start0": 138.9533449362812,
+            "meters_to_start1": 210.00209757026403,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 683,
-            "i1": 1009,
-            "meters_to_start0": 201.31593043063913,
-            "meters_to_start1": 367.1230018657126,
+            "i0": 9,
+            "i1": 16,
+            "meters_to_start0": 210.00209757026403,
+            "meters_to_start1": 383.83976455498356,
             "direction": "right",
-            "gear": 2
+            "gear": 3
         },
         {
-            "i0": 1009,
-            "i1": 1463,
-            "meters_to_start0": 367.1230018657126,
-            "meters_to_start1": 549.8546094360779,
+            "i0": 16,
+            "i1": 24,
+            "meters_to_start0": 383.83976455498356,
+            "meters_to_start1": 564.5628868881461,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 1463,
-            "i1": 1729,
-            "meters_to_start0": 549.8546094360779,
-            "meters_to_start1": 643.5381854815645,
+            "i0": 24,
+            "i1": 37,
+            "meters_to_start0": 564.5628868881461,
+            "meters_to_start1": 873.3419074989735,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 1729,
-            "i1": 1832,
-            "meters_to_start0": 643.5381854815645,
-            "meters_to_start1": 646.2692169266292,
+            "i0": 37,
+            "i1": 39,
+            "meters_to_start0": 873.3419074989735,
+            "meters_to_start1": 912.3993579821691,
             "direction": "left",
-            "gear": 1
+            "gear": 3
         },
         {
-            "i0": 1832,
-            "i1": 2216,
-            "meters_to_start0": 646.2692169266292,
-            "meters_to_start1": 794.3271208025269,
+            "i0": 39,
+            "i1": 42,
+            "meters_to_start0": 912.3993579821691,
+            "meters_to_start1": 963.8726981520584,
+            "direction": "right",
+            "gear": 4
+        },
+        {
+            "i0": 42,
+            "i1": 48,
+            "meters_to_start0": 963.8726981520584,
+            "meters_to_start1": 1078.8969253517523,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 48,
+            "i1": 53,
+            "meters_to_start0": 1078.8969253517523,
+            "meters_to_start1": 1170.331474058764,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 2216,
-            "i1": 2384,
-            "meters_to_start0": 794.3271208025269,
-            "meters_to_start1": 905.6941164743732,
+            "i0": 53,
+            "i1": 60,
+            "meters_to_start0": 1170.331474058764,
+            "meters_to_start1": 1333.053687284039,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 60,
+            "i1": 63,
+            "meters_to_start0": 1333.053687284039,
+            "meters_to_start1": 1391.6159293408325,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 63,
+            "i1": 69,
+            "meters_to_start0": 1391.6159293408325,
+            "meters_to_start1": 1539.6548116476154,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 69,
+            "i1": 73,
+            "meters_to_start0": 1539.6548116476154,
+            "meters_to_start1": 1628.9879755814395,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 73,
+            "i1": 76,
+            "meters_to_start0": 1628.9879755814395,
+            "meters_to_start1": 1705.0543544049028,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 76,
+            "i1": 80,
+            "meters_to_start0": 1705.0543544049028,
+            "meters_to_start1": 1792.7010790793397,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 80,
+            "i1": 84,
+            "meters_to_start0": 1792.7010790793397,
+            "meters_to_start1": 1903.5666175844574,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 84,
+            "i1": 86,
+            "meters_to_start0": 1903.5666175844574,
+            "meters_to_start1": 1958.5899206865543,
+            "direction": "right",
+            "gear": 4
+        },
+        {
+            "i0": 86,
+            "i1": 91,
+            "meters_to_start0": 1958.5899206865543,
+            "meters_to_start1": 2070.5677896087873,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 91,
+            "i1": 97,
+            "meters_to_start0": 2070.5677896087873,
+            "meters_to_start1": 2241.077358191219,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 97,
+            "i1": 102,
+            "meters_to_start0": 2241.077358191219,
+            "meters_to_start1": 2320.0852400881995,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 102,
+            "i1": 110,
+            "meters_to_start0": 2320.0852400881995,
+            "meters_to_start1": 2463.075173143885,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 110,
+            "i1": 113,
+            "meters_to_start0": 2463.075173143885,
+            "meters_to_start1": 2500.2027050559755,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 113,
+            "i1": 120,
+            "meters_to_start0": 2500.2027050559755,
+            "meters_to_start1": 2613.249965713714,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 120,
+            "i1": 125,
+            "meters_to_start0": 2613.249965713714,
+            "meters_to_start1": 2705.92611979099,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 125,
+            "i1": 128,
+            "meters_to_start0": 2705.92611979099,
+            "meters_to_start1": 2777.643465263988,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 128,
+            "i1": 139,
+            "meters_to_start0": 2777.643465263988,
+            "meters_to_start1": 3036.560728328707,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 139,
+            "i1": 142,
+            "meters_to_start0": 3036.560728328707,
+            "meters_to_start1": 3084.725704055234,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 142,
+            "i1": 145,
+            "meters_to_start0": 3084.725704055234,
+            "meters_to_start1": 3122.239459659446,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 145,
+            "i1": 152,
+            "meters_to_start0": 3122.239459659446,
+            "meters_to_start1": 3228.048724858605,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 152,
+            "i1": 158,
+            "meters_to_start0": 3228.048724858605,
+            "meters_to_start1": 3311.346570971402,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 158,
+            "i1": 160,
+            "meters_to_start0": 3311.346570971402,
+            "meters_to_start1": 3336.865087605939,
+            "direction": "right",
+            "gear": 5
+        },
+        {
+            "i0": 160,
+            "i1": 161,
+            "meters_to_start0": 3336.865087605939,
+            "meters_to_start1": 3349.195602738067,
             "direction": "left",
             "gear": 6
         },
         {
-            "i0": 2384,
-            "i1": 2465,
-            "meters_to_start0": 905.6941164743732,
-            "meters_to_start1": 950.3852974316327,
-            "direction": "right",
-            "gear": 5
-        },
-        {
-            "i0": 2465,
-            "i1": 2745,
-            "meters_to_start0": 950.3852974316327,
-            "meters_to_start1": 1056.330015849152,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 2745,
-            "i1": 3004,
-            "meters_to_start0": 1056.330015849152,
-            "meters_to_start1": 1113.3293969786703,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 3004,
-            "i1": 3544,
-            "meters_to_start0": 1113.3293969786703,
-            "meters_to_start1": 1312.3210383865814,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 3544,
-            "i1": 3764,
-            "meters_to_start0": 1312.3210383865814,
-            "meters_to_start1": 1376.1666586228664,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 3764,
-            "i1": 4051,
-            "meters_to_start0": 1376.1666586228664,
-            "meters_to_start1": 1502.6158071243601,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 4051,
-            "i1": 4369,
-            "meters_to_start0": 1502.6158071243601,
-            "meters_to_start1": 1598.277945665178,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 4369,
-            "i1": 4612,
-            "meters_to_start0": 1598.277945665178,
-            "meters_to_start1": 1673.956651792966,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 4612,
-            "i1": 4900,
-            "meters_to_start0": 1673.956651792966,
-            "meters_to_start1": 1761.2243070182408,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 4900,
-            "i1": 5288,
-            "meters_to_start0": 1761.2243070182408,
-            "meters_to_start1": 1873.13693348175,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 5288,
-            "i1": 5434,
-            "meters_to_start0": 1873.13693348175,
-            "meters_to_start1": 1911.5663214916656,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 5434,
-            "i1": 5730,
-            "meters_to_start0": 1911.5663214916656,
-            "meters_to_start1": 2039.8902352692533,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 5730,
-            "i1": 6086,
-            "meters_to_start0": 2039.8902352692533,
-            "meters_to_start1": 2198.619658309995,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 6086,
-            "i1": 6331,
-            "meters_to_start0": 2198.619658309995,
-            "meters_to_start1": 2266.520949051387,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 6331,
-            "i1": 6813,
-            "meters_to_start0": 2266.520949051387,
-            "meters_to_start1": 2420.841243074665,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 6813,
-            "i1": 6951,
-            "meters_to_start0": 2420.841243074665,
-            "meters_to_start1": 2465.874420517771,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 6951,
-            "i1": 7194,
-            "meters_to_start0": 2465.874420517771,
-            "meters_to_start1": 2530.023642514468,
-            "direction": "right",
-            "gear": 1
-        },
-        {
-            "i0": 7194,
-            "i1": 7283,
-            "meters_to_start0": 2530.023642514468,
-            "meters_to_start1": 2535.197391409352,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 7283,
-            "i1": 7410,
-            "meters_to_start0": 2535.197391409352,
-            "meters_to_start1": 2574.7264714511334,
-            "direction": "right",
-            "gear": 5
-        },
-        {
-            "i0": 7410,
-            "i1": 7631,
-            "meters_to_start0": 2574.7264714511334,
-            "meters_to_start1": 2636.791261327657,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 7631,
-            "i1": 7721,
-            "meters_to_start0": 2636.791261327657,
-            "meters_to_start1": 2639.9133621596143,
-            "direction": "right",
-            "gear": 1
-        },
-        {
-            "i0": 7721,
-            "i1": 7869,
-            "meters_to_start0": 2639.9133621596143,
-            "meters_to_start1": 2655.535902304416,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 7869,
-            "i1": 8069,
-            "meters_to_start0": 2655.535902304416,
-            "meters_to_start1": 2726.2469978487006,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 8069,
-            "i1": 8686,
-            "meters_to_start0": 2726.2469978487006,
-            "meters_to_start1": 3003.1067325732947,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 8686,
-            "i1": 8851,
-            "meters_to_start0": 3003.1067325732947,
-            "meters_to_start1": 3060.6246311909827,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 8851,
-            "i1": 8977,
-            "meters_to_start0": 3060.6246311909827,
-            "meters_to_start1": 3088.8050378177363,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 8977,
-            "i1": 9335,
-            "meters_to_start0": 3088.8050378177363,
-            "meters_to_start1": 3173.0420505563534,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 9335,
-            "i1": 9578,
-            "meters_to_start0": 3173.0420505563534,
-            "meters_to_start1": 3253.9412604725712,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 9578,
-            "i1": 9716,
-            "meters_to_start0": 3253.9412604725712,
-            "meters_to_start1": 3324.4675287792006,
-            "direction": "right",
-            "gear": 5
-        },
-        {
-            "i0": 9716,
-            "i1": 10284,
-            "meters_to_start0": 3324.4675287792006,
-            "meters_to_start1": 3553.26062299858,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 10284,
-            "i1": 10485,
-            "meters_to_start0": 3553.26062299858,
-            "meters_to_start1": 3632.5355285968553,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 10485,
-            "i1": 10888,
-            "meters_to_start0": 3632.5355285968553,
-            "meters_to_start1": 3788.7609814452762,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 10888,
-            "i1": 11257,
-            "meters_to_start0": 3788.7609814452762,
-            "meters_to_start1": 3866.137391724927,
-            "direction": "right",
-            "gear": 1
-        },
-        {
-            "i0": 11257,
-            "i1": 11338,
-            "meters_to_start0": 3866.137391724927,
-            "meters_to_start1": 3869.509864711765,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 11338,
-            "i1": 11425,
-            "meters_to_start0": 3869.509864711765,
-            "meters_to_start1": 3888.2386658914984,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 11425,
-            "i1": 11746,
-            "meters_to_start0": 3888.2386658914984,
-            "meters_to_start1": 4083.9126067770785,
-            "direction": "left",
-            "gear": 4
-        },
-        {
-            "i0": 11746,
-            "i1": 11893,
-            "meters_to_start0": 4083.9126067770785,
-            "meters_to_start1": 4160.981492378431,
+            "i0": 161,
+            "i1": 163,
+            "meters_to_start0": 3349.195602738067,
+            "meters_to_start1": 3382.657669536432,
             "direction": "right",
             "gear": 3
         },
         {
-            "i0": 11893,
-            "i1": 11975,
-            "meters_to_start0": 4160.981492378431,
-            "meters_to_start1": 4202.822141398453,
+            "i0": 163,
+            "i1": 170,
+            "meters_to_start0": 3382.657669536432,
+            "meters_to_start1": 3484.9346408774,
             "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 170,
+            "i1": 172,
+            "meters_to_start0": 3484.9346408774,
+            "meters_to_start1": 3508.0437371662506,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 172,
+            "i1": 177,
+            "meters_to_start0": 3508.0437371662506,
+            "meters_to_start1": 3600.7919761858725,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 177,
+            "i1": 182,
+            "meters_to_start0": 3600.7919761858725,
+            "meters_to_start1": 3674.2401557425296,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 182,
+            "i1": 192,
+            "meters_to_start0": 3674.2401557425296,
+            "meters_to_start1": 3862.2651795479424,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 192,
+            "i1": 197,
+            "meters_to_start0": 3862.2651795479424,
+            "meters_to_start1": 3939.8853596312465,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 197,
+            "i1": 202,
+            "meters_to_start0": 3939.8853596312465,
+            "meters_to_start1": 4150.938078313946,
+            "direction": "left",
+            "gear": 5
+        },
+        {
+            "i0": 202,
+            "i1": 204,
+            "meters_to_start0": 4150.938078313946,
+            "meters_to_start1": 4236.4375714279,
+            "direction": "right",
             "gear": 4
         },
         {
-            "i0": 11975,
-            "i1": 12082,
-            "meters_to_start0": 4202.822141398453,
-            "meters_to_start1": 4252.609540296653,
-            "direction": "right",
-            "gear": 3
-        },
-        {
-            "i0": 12082,
-            "i1": 12087,
-            "meters_to_start0": 4252.609540296653,
-            "meters_to_start1": 4254.824988997324,
+            "i0": 204,
+            "i1": 205,
+            "meters_to_start0": 4236.4375714279,
+            "meters_to_start1": 4265.565891405572,
             "direction": "left",
             "gear": 7
         },
         {
-            "i0": 12087,
-            "i1": 12489,
-            "meters_to_start0": 4254.824988997324,
-            "meters_to_start1": 4381.427882782304,
+            "i0": 205,
+            "i1": 212,
+            "meters_to_start0": 4265.565891405572,
+            "meters_to_start1": 4450.145393478385,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 12489,
-            "i1": 12633,
-            "meters_to_start0": 4381.427882782304,
-            "meters_to_start1": 4427.501201738966,
+            "i0": 212,
+            "i1": 214,
+            "meters_to_start0": 4450.145393478385,
+            "meters_to_start1": 4474.937209016868,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 12633,
-            "i1": 13088,
-            "meters_to_start0": 4427.501201738966,
-            "meters_to_start1": 4636.7897671032715,
+            "i0": 214,
+            "i1": 224,
+            "meters_to_start0": 4474.937209016868,
+            "meters_to_start1": 4707.616871149141,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 13088,
-            "i1": 13281,
-            "meters_to_start0": 4636.7897671032715,
-            "meters_to_start1": 4668.540381525322,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 13281,
-            "i1": 13352,
-            "meters_to_start0": 4668.540381525322,
-            "meters_to_start1": 4671.127656712823,
-            "direction": "right",
-            "gear": 1
-        },
-        {
-            "i0": 13352,
-            "i1": 13435,
-            "meters_to_start0": 4671.127656712823,
-            "meters_to_start1": 4685.884937058132,
+            "i0": 224,
+            "i1": 227,
+            "meters_to_start0": 4707.616871149141,
+            "meters_to_start1": 4742.6744155244,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 13435,
-            "i1": 13516,
-            "meters_to_start0": 4685.884937058132,
-            "meters_to_start1": 4716.9233780963195,
+            "i0": 227,
+            "i1": 229,
+            "meters_to_start0": 4742.6744155244,
+            "meters_to_start1": 4777.784927977385,
             "direction": "right",
             "gear": 4
         },
         {
-            "i0": 13516,
-            "i1": 14052,
-            "meters_to_start0": 4716.9233780963195,
-            "meters_to_start1": 4926.817806179839,
+            "i0": 229,
+            "i1": 244,
+            "meters_to_start0": 4777.784927977385,
+            "meters_to_start1": 4981.929872030091,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 14052,
-            "i1": 14181,
-            "meters_to_start0": 4926.817806179839,
-            "meters_to_start1": 4952.86382208147,
+            "i0": 244,
+            "i1": 247,
+            "meters_to_start0": 4981.929872030091,
+            "meters_to_start1": 5015.404811239696,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 14181,
-            "i1": 14195,
-            "meters_to_start0": 4952.86382208147,
-            "meters_to_start1": 4952.97886579327,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 14195,
-            "i1": 14217,
-            "meters_to_start0": 4952.97886579327,
-            "meters_to_start1": 4953.609393278954,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 14217,
-            "i1": 14576,
-            "meters_to_start0": 4953.609393278954,
-            "meters_to_start1": 5068.256134078471,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 14576,
-            "i1": 14852,
-            "meters_to_start0": 5068.256134078471,
-            "meters_to_start1": 5147.129290630246,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 14852,
-            "i1": 15016,
-            "meters_to_start0": 5147.129290630246,
-            "meters_to_start1": 5229.748182194628,
-            "direction": "left",
-            "gear": 4
-        },
-        {
-            "i0": 15016,
-            "i1": 15242,
-            "meters_to_start0": 5229.748182194628,
-            "meters_to_start1": 5353.365702417779,
-            "direction": "right",
-            "gear": 3
-        },
-        {
-            "i0": 15242,
-            "i1": 15717,
-            "meters_to_start0": 5353.365702417779,
-            "meters_to_start1": 5511.869608529534,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 15717,
-            "i1": 16368,
-            "meters_to_start0": 5511.869608529534,
-            "meters_to_start1": 5773.544309014449,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 16368,
-            "i1": 16680,
-            "meters_to_start0": 5773.544309014449,
-            "meters_to_start1": 5928.062656500285,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 16680,
-            "i1": 16729,
-            "meters_to_start0": 5928.062656500285,
-            "meters_to_start1": 5933.840258068262,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 16729,
-            "i1": 16783,
-            "meters_to_start0": 5933.840258068262,
-            "meters_to_start1": 5935.916261923276,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 16783,
-            "i1": 17126,
-            "meters_to_start0": 5935.916261923276,
-            "meters_to_start1": 6050.970468830608,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 17126,
-            "i1": 17451,
-            "meters_to_start0": 6050.970468830608,
-            "meters_to_start1": 6144.81338163838,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 17451,
-            "i1": 17878,
-            "meters_to_start0": 6144.81338163838,
-            "meters_to_start1": 6321.108046148876,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 17878,
-            "i1": 17958,
-            "meters_to_start0": 6321.108046148876,
-            "meters_to_start1": 6367.35124558236,
-            "direction": "left",
-            "gear": 4
-        },
-        {
-            "i0": 17958,
-            "i1": 18355,
-            "meters_to_start0": 6367.35124558236,
-            "meters_to_start1": 6556.377656177921,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 18355,
-            "i1": 18628,
-            "meters_to_start0": 6556.377656177921,
-            "meters_to_start1": 6706.721163187198,
+            "i0": 247,
+            "i1": 252,
+            "meters_to_start0": 5015.404811239696,
+            "meters_to_start1": 5135.5422917918995,
             "direction": "left",
             "gear": 3
         },
         {
-            "i0": 18628,
-            "i1": 18666,
-            "meters_to_start0": 6706.721163187198,
-            "meters_to_start1": 6727.559557458287,
+            "i0": 252,
+            "i1": 257,
+            "meters_to_start0": 5135.5422917918995,
+            "meters_to_start1": 5234.1428756346395,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 257,
+            "i1": 259,
+            "meters_to_start0": 5234.1428756346395,
+            "meters_to_start1": 5293.576949842238,
+            "direction": "left",
+            "gear": 5
+        },
+        {
+            "i0": 259,
+            "i1": 264,
+            "meters_to_start0": 5293.576949842238,
+            "meters_to_start1": 5397.920696708906,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 264,
+            "i1": 275,
+            "meters_to_start0": 5397.920696708906,
+            "meters_to_start1": 5571.710507011536,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 275,
+            "i1": 276,
+            "meters_to_start0": 5571.710507011536,
+            "meters_to_start1": 5584.047456855467,
+            "direction": "right",
+            "gear": 6
+        },
+        {
+            "i0": 276,
+            "i1": 277,
+            "meters_to_start0": 5584.047456855467,
+            "meters_to_start1": 5595.563911538063,
+            "direction": "left",
+            "gear": 5
+        },
+        {
+            "i0": 277,
+            "i1": 285,
+            "meters_to_start0": 5595.563911538063,
+            "meters_to_start1": 5680.292833190795,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 285,
+            "i1": 287,
+            "meters_to_start0": 5680.292833190795,
+            "meters_to_start1": 5697.669506377634,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 287,
+            "i1": 297,
+            "meters_to_start0": 5697.669506377634,
+            "meters_to_start1": 5854.7234061820745,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 297,
+            "i1": 310,
+            "meters_to_start0": 5854.7234061820745,
+            "meters_to_start1": 6012.890405558692,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 310,
+            "i1": 315,
+            "meters_to_start0": 6012.890405558692,
+            "meters_to_start1": 6115.6057435520415,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 315,
+            "i1": 319,
+            "meters_to_start0": 6115.6057435520415,
+            "meters_to_start1": 6209.523380589359,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 319,
+            "i1": 327,
+            "meters_to_start0": 6209.523380589359,
+            "meters_to_start1": 6392.984111674929,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 327,
+            "i1": 330,
+            "meters_to_start0": 6392.984111674929,
+            "meters_to_start1": 6431.850659576703,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 330,
+            "i1": 342,
+            "meters_to_start0": 6431.850659576703,
+            "meters_to_start1": 6611.020585496791,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 342,
+            "i1": 352,
+            "meters_to_start0": 6611.020585496791,
+            "meters_to_start1": 6767.81001868195,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 352,
+            "i1": 355,
+            "meters_to_start0": 6767.81001868195,
+            "meters_to_start1": 6791.992712389477,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 355,
+            "i1": 357,
+            "meters_to_start0": 6791.992712389477,
+            "meters_to_start1": 6807.688762520333,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 357,
+            "i1": 361,
+            "meters_to_start0": 6807.688762520333,
+            "meters_to_start1": 6881.987394242654,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 361,
+            "i1": 363,
+            "meters_to_start0": 6881.987394242654,
+            "meters_to_start1": 6924.8946994162,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 363,
+            "i1": 365,
+            "meters_to_start0": 6924.8946994162,
+            "meters_to_start1": 6974.948381141897,
+            "direction": "right",
+            "gear": 4
+        },
+        {
+            "i0": 365,
+            "i1": 369,
+            "meters_to_start0": 6974.948381141897,
+            "meters_to_start1": 7019.53797895583,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 369,
+            "i1": 379,
+            "meters_to_start0": 7019.53797895583,
+            "meters_to_start1": 7130.457440162986,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 379,
+            "i1": 382,
+            "meters_to_start0": 7130.457440162986,
+            "meters_to_start1": 7148.51200819287,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 382,
+            "i1": 387,
+            "meters_to_start0": 7148.51200819287,
+            "meters_to_start1": 7199.766943240751,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 387,
+            "i1": 392,
+            "meters_to_start0": 7199.766943240751,
+            "meters_to_start1": 7257.46826976595,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 392,
+            "i1": 396,
+            "meters_to_start0": 7257.46826976595,
+            "meters_to_start1": 7291.9313246434995,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 396,
+            "i1": 400,
+            "meters_to_start0": 7291.9313246434995,
+            "meters_to_start1": 7329.602602153056,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 400,
+            "i1": 406,
+            "meters_to_start0": 7329.602602153056,
+            "meters_to_start1": 7404.579301848551,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 406,
+            "i1": 416,
+            "meters_to_start0": 7404.579301848551,
+            "meters_to_start1": 7538.273913561024,
+            "direction": "left",
+            "gear": 3
+        },
+        {
+            "i0": 416,
+            "i1": 421,
+            "meters_to_start0": 7538.273913561024,
+            "meters_to_start1": 7590.89852099941,
+            "direction": "right",
+            "gear": 2
+        },
+        {
+            "i0": 421,
+            "i1": 429,
+            "meters_to_start0": 7590.89852099941,
+            "meters_to_start1": 7693.802024310841,
+            "direction": "left",
+            "gear": 2
+        },
+        {
+            "i0": 429,
+            "i1": 430,
+            "meters_to_start0": 7693.802024310841,
+            "meters_to_start1": 7707.902308122174,
             "direction": "right",
             "gear": 7
         },
         {
-            "i0": 18666,
-            "i1": 18689,
-            "meters_to_start0": 6727.559557458287,
-            "meters_to_start1": 6739.828907159009,
+            "i0": 430,
+            "i1": 438,
+            "meters_to_start0": 7707.902308122174,
+            "meters_to_start1": 7817.046057627736,
             "direction": "left",
-            "gear": 7
+            "gear": 2
         },
         {
-            "i0": 18689,
-            "i1": 18832,
-            "meters_to_start0": 6739.828907159009,
-            "meters_to_start1": 6803.614678898668,
+            "i0": 438,
+            "i1": 448,
+            "meters_to_start0": 7817.046057627736,
+            "meters_to_start1": 7992.395931301282,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 18832,
-            "i1": 18940,
-            "meters_to_start0": 6803.614678898668,
-            "meters_to_start1": 6853.148437471351,
+            "i0": 448,
+            "i1": 451,
+            "meters_to_start0": 7992.395931301282,
+            "meters_to_start1": 8043.62058925205,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 18940,
-            "i1": 19001,
-            "meters_to_start0": 6853.148437471351,
-            "meters_to_start1": 6883.970532561661,
+            "i0": 451,
+            "i1": 452,
+            "meters_to_start0": 8043.62058925205,
+            "meters_to_start1": 8067.995174765608,
             "direction": "right",
-            "gear": 5
+            "gear": 6
         },
         {
-            "i0": 19001,
-            "i1": 19214,
-            "meters_to_start0": 6883.970532561661,
-            "meters_to_start1": 6947.109700470471,
+            "i0": 452,
+            "i1": 456,
+            "meters_to_start0": 8067.995174765608,
+            "meters_to_start1": 8167.812358976963,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 19214,
-            "i1": 19616,
-            "meters_to_start0": 6947.109700470471,
-            "meters_to_start1": 7104.671196220378,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 19616,
-            "i1": 19741,
-            "meters_to_start0": 7104.671196220378,
-            "meters_to_start1": 7165.675854099395,
-            "direction": "left",
-            "gear": 3
-        },
-        {
-            "i0": 19741,
-            "i1": 20099,
-            "meters_to_start0": 7165.675854099395,
-            "meters_to_start1": 7324.536619394106,
+            "i0": 456,
+            "i1": 462,
+            "meters_to_start0": 8167.812358976963,
+            "meters_to_start1": 8272.512995191266,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 20099,
-            "i1": 20597,
-            "meters_to_start0": 7324.536619394106,
-            "meters_to_start1": 7669.219522878451,
+            "i0": 462,
+            "i1": 467,
+            "meters_to_start0": 8272.512995191266,
+            "meters_to_start1": 8375.762514989026,
             "direction": "left",
-            "gear": 3
+            "gear": 2
         },
         {
-            "i0": 20597,
-            "i1": 20853,
-            "meters_to_start0": 7669.219522878451,
-            "meters_to_start1": 7712.640053717598,
-            "direction": "right",
-            "gear": 1
-        },
-        {
-            "i0": 20853,
-            "i1": 20925,
-            "meters_to_start0": 7712.640053717598,
-            "meters_to_start1": 7745.820067516795,
-            "direction": "left",
-            "gear": 5
-        },
-        {
-            "i0": 20925,
-            "i1": 21211,
-            "meters_to_start0": 7745.820067516795,
-            "meters_to_start1": 7887.118957170086,
+            "i0": 467,
+            "i1": 475,
+            "meters_to_start0": 8375.762514989026,
+            "meters_to_start1": 8510.023468153133,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 21211,
-            "i1": 21677,
-            "meters_to_start0": 7887.118957170086,
-            "meters_to_start1": 8079.608849812342,
+            "i0": 475,
+            "i1": 477,
+            "meters_to_start0": 8510.023468153133,
+            "meters_to_start1": 8538.346669905122,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 21677,
-            "i1": 22000,
-            "meters_to_start0": 8079.608849812342,
-            "meters_to_start1": 8173.429195135011,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 22000,
-            "i1": 22275,
-            "meters_to_start0": 8173.429195135011,
-            "meters_to_start1": 8276.597193859907,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 22275,
-            "i1": 22277,
-            "meters_to_start0": 8276.597193859907,
-            "meters_to_start1": 8277.662047813066,
-            "direction": "right",
-            "gear": 7
-        },
-        {
-            "i0": 22277,
-            "i1": 22299,
-            "meters_to_start0": 8277.662047813066,
-            "meters_to_start1": 8289.294148497538,
-            "direction": "left",
-            "gear": 7
-        },
-        {
-            "i0": 22299,
-            "i1": 22680,
-            "meters_to_start0": 8289.294148497538,
-            "meters_to_start1": 8398.575022169625,
-            "direction": "right",
-            "gear": 2
-        },
-        {
-            "i0": 22680,
-            "i1": 22768,
-            "meters_to_start0": 8398.575022169625,
-            "meters_to_start1": 8427.933464519441,
-            "direction": "left",
-            "gear": 2
-        },
-        {
-            "i0": 22768,
-            "i1": 22833,
-            "meters_to_start0": 8427.933464519441,
-            "meters_to_start1": 8452.366241677995,
+            "i0": 477,
+            "i1": 479,
+            "meters_to_start0": 8538.346669905122,
+            "meters_to_start1": 8597.220235224226,
             "direction": "right",
             "gear": 3
         },
         {
-            "i0": 22833,
-            "i1": 22912,
-            "meters_to_start0": 8452.366241677995,
-            "meters_to_start1": 8473.746586664794,
+            "i0": 479,
+            "i1": 490,
+            "meters_to_start0": 8597.220235224226,
+            "meters_to_start1": 8843.488123084959,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 22912,
-            "i1": 23003,
-            "meters_to_start0": 8473.746586664794,
-            "meters_to_start1": 8490.944227032222,
+            "i0": 490,
+            "i1": 492,
+            "meters_to_start0": 8843.488123084959,
+            "meters_to_start1": 8875.169670139254,
             "direction": "right",
             "gear": 2
         },
         {
-            "i0": 23003,
-            "i1": 23401,
-            "meters_to_start0": 8490.944227032222,
-            "meters_to_start1": 8657.236245531598,
+            "i0": 492,
+            "i1": 497,
+            "meters_to_start0": 8875.169670139254,
+            "meters_to_start1": 9002.444668085403,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 23401,
-            "i1": 23547,
-            "meters_to_start0": 8657.236245531598,
-            "meters_to_start1": 8663.272580154224,
+            "i0": 497,
+            "i1": 499,
+            "meters_to_start0": 9002.444668085403,
+            "meters_to_start1": 9060.485279116847,
             "direction": "right",
-            "gear": 1
+            "gear": 3
         },
         {
-            "i0": 23547,
-            "i1": 23746,
-            "meters_to_start0": 8663.272580154224,
-            "meters_to_start1": 8720.304312125721,
+            "i0": 499,
+            "i1": 504,
+            "meters_to_start0": 9060.485279116847,
+            "meters_to_start1": 9214.401226905185,
             "direction": "left",
             "gear": 2
         },
         {
-            "i0": 23746,
-            "i1": 23823,
-            "meters_to_start0": 8720.304312125721,
-            "meters_to_start1": 8762.921309742902,
-            "direction": "right",
-            "gear": 5
-        },
-        {
-            "i0": 23823,
-            "i1": 23977,
-            "meters_to_start0": 8762.921309742902,
-            "meters_to_start1": 8858.072224567875,
-            "direction": "left",
-            "gear": 4
-        },
-        {
-            "i0": 23977,
-            "i1": 24120,
-            "meters_to_start0": 8858.072224567875,
-            "meters_to_start1": 8957.35628162945,
-            "direction": "right",
-            "gear": 5
-        },
-        {
-            "i0": 24120,
-            "i1": 24295,
-            "meters_to_start0": 8957.35628162945,
-            "meters_to_start1": 9076.033777176039,
-            "direction": "left",
-            "gear": 4
-        },
-        {
-            "i0": 24295,
-            "i1": 24467,
-            "meters_to_start0": 9076.033777176039,
-            "meters_to_start1": 9140.857659674966,
+            "i0": 504,
+            "i1": 509,
+            "meters_to_start0": 9214.401226905185,
+            "meters_to_start1": 9291.195550060205,
             "direction": "right",
             "gear": 2
-        },
-        {
-            "i0": 24467,
-            "i1": 24608,
-            "meters_to_start0": 9140.857659674966,
-            "meters_to_start1": 9148.269692481834,
-            "direction": "left",
-            "gear": 1
-        },
-        {
-            "i0": 24608,
-            "i1": 24668,
-            "meters_to_start0": 9148.269692481834,
-            "meters_to_start1": 9163.334799628024,
-            "direction": "right",
-            "gear": 5
         }
     ]
 }
