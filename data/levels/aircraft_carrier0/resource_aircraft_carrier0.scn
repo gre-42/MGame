@@ -5,9 +5,9 @@ macro_begin osm_resource_aircraft_carrier0;
         position=0 0 0
         rotation=0 0 0
         scale=200 200 200
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces_alpha=0
         occluded_pass=none
         occluder_pass=lightmap_black_global_static
@@ -24,9 +24,9 @@ macro_begin osm_resource_aircraft_carrier0;
         position=0 0 0
         rotation=0 0 0
         scale=100 200 100
-        center_distances=0 INFINITY
+        center_distances=0 inf
         blend_mode=binary_05
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces_alpha=0
         occluded_pass=lightmap_black_local_instances
         occluder_pass=none
@@ -43,7 +43,7 @@ macro_begin osm_resource_aircraft_carrier0;
         diffusivity=1 1 1
         specularity=0.5 0.5 0.5
         blend_mode=off
-        alpha_distances=0 0 INFINITY INFINITY
+        alpha_distances=0 0 inf inf
         cull_faces=1
         rotation=-90 0 0
         translation=-25000 -38.4 25000
