@@ -22,10 +22,10 @@ additive_screen_constraint name=player_status_top    value=0   anchor=max units=
 ################;
 # Player speed #;
 ################;
-constant_screen_constraint name=player_speed_left   value=0  units=inches;
-constant_screen_constraint name=player_speed_right  value=1  units=inches;
-additive_screen_constraint name=player_speed_bottom value=-1 anchor=max units=inches;
-additive_screen_constraint name=player_speed_top    value=0  anchor=max units=inches;
+additive_screen_constraint name=player_speed_left   value=-2    anchor=center units=inches;
+additive_screen_constraint name=player_speed_right  value=-0.5  anchor=center units=inches;
+additive_screen_constraint name=player_speed_bottom value=-0.25 anchor=center units=inches;
+additive_screen_constraint name=player_speed_top    value=1.25  anchor=center units=inches;
 
 ################;
 # Bullet count #;
@@ -130,21 +130,21 @@ constant_screen_constraint name=huge   value=0.3 units=inches;
 #######################;
 # Circular indicators #;
 #######################;
-constant_screen_constraint name=tick_radius    value=0.3  units=inches;
+constant_screen_constraint name=tick_radius    value=0.4  units=inches;
 constant_screen_constraint name=pointer_width  value=0.02 units=inches;
-constant_screen_constraint name=pointer_length value=0.3  units=inches;
+constant_screen_constraint name=pointer_length value=0.4  units=inches;
 
 #############;
 # Pacenotes #;
 #############;
 constant_screen_constraint name=pacenotes_widget_distance value=1 units=inches;
 
-additive_screen_constraint name=pacenotes_text_left   value=-0.5 anchor=center units=inches;
-additive_screen_constraint name=pacenotes_text_right  value=0.5  anchor=center units=inches;
+additive_screen_constraint name=pacenotes_text_left   value=-0.5  anchor=center units=inches;
+additive_screen_constraint name=pacenotes_text_right  value=0.5   anchor=center units=inches;
 additive_screen_constraint name=pacenotes_text_bottom value=-0.25 anchor=center units=inches;
 additive_screen_constraint name=pacenotes_text_top    value=0.25  anchor=center units=inches;
 
 additive_screen_constraint name=pacenotes_picture_left   value=-0.25 anchor=center units=inches;
 additive_screen_constraint name=pacenotes_picture_right  value=0.25  anchor=center units=inches;
-additive_screen_constraint name=pacenotes_picture_bottom value=0.25 anchor=center units=inches;
+additive_screen_constraint name=pacenotes_picture_bottom value=0.25  anchor=center units=inches;
 additive_screen_constraint name=pacenotes_picture_top    value=0.75  anchor=center units=inches;
