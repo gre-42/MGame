@@ -82,33 +82,33 @@ macro_begin create_player_car_externals;
     # 246: v, a, d, d2, E, p;
     # 14: v, s, health (if exists);
     IF_PC IF_DEVEL visual_player_status
-        player=PLAYER_NAME
-        format=position|speed|acceleration|diameter|diameter2|energy
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        left=player_status_left
-        right=player_status_right
-        bottom=player_status_bottom
-        top=player_status_top
-        font_height=normal
+        player=PLAYER_NAME,
+        format=position|speed|acceleration|diameter|diameter2|energy,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=player_status_left,
+        right=player_status_right,
+        bottom=player_status_bottom,
+        top=player_status_top,
+        font_height=normal,
         line_distance=normal;
     
     IF_PC IF_RELEASE visual_player_status
-        player=PLAYER_NAME
-        format=speed
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        left=player_speed_left
-        right=player_speed_right
-        bottom=player_speed_bottom
-        top=player_speed_top
-        font_height=normal
-        line_distance=normal
-        pointer=textures/pointer.png
-        tick_radius=tick_radius
-        pointer_width=pointer_width
-        pointer_length=pointer_length
-        minimum_value=0
-        maximum_value=250
-        blank_angle=45
+        player=PLAYER_NAME,
+        format=speed,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=player_speed_left,
+        right=player_speed_right,
+        bottom=player_speed_bottom,
+        top=player_speed_top,
+        font_height=normal,
+        line_distance=normal,
+        pointer=textures/pointer.png,
+        tick_radius=tick_radius,
+        pointer_width=pointer_width,
+        pointer_length=pointer_length,
+        minimum_value=0,
+        maximum_value=250,
+        blank_angle=45,
         ticks=0 30 60 90 120 150 180 210 240;
     
     IF_PC visual_player_bullet_count
@@ -120,4 +120,26 @@ macro_begin create_player_car_externals;
         top=bullet_count_top
         font_height=normal
         line_distance=normal;
+macro_end;
+
+macro_begin create_player_car_engine_rpm_meter;
+    visual_player_status
+        player=PLAYER_NAME,
+        child=engines ENGINE_NAME,
+        format=abs_angular_velocity,
+        ttf_file=fonts/RobotoMono-Bold.ttf,
+        left=player_engine_rpm_left,
+        right=player_engine_rpm_right,
+        bottom=player_engine_rpm_bottom,
+        top=player_engine_rpm_top,
+        font_height=normal,
+        line_distance=normal,
+        pointer=textures/pointer.png,
+        tick_radius=tick_radius,
+        pointer_width=pointer_width,
+        pointer_length=pointer_length,
+        minimum_value=0,
+        maximum_value=250,
+        blank_angle=45,
+        ticks=0 30 60 90 120 150 180 210 240;
 macro_end;

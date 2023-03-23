@@ -82,6 +82,9 @@ macro_begin create_player_car_externals_LK4;
         COCKPIT_CAMERA_X:-0.4
         COCKPIT_CAMERA_Y:0.5
         COCKPIT_CAMERA_Z:-0.1;
+    IF_PC macro_playback create_player_car_engine_rpm_meter
+        PLAYER_NAME:PLAYER_NAME
+        ENGINE_NAME:main;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=inf

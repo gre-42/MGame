@@ -27,6 +27,14 @@ additive_screen_constraint name=player_speed_right  value=-0.5  anchor=center un
 additive_screen_constraint name=player_speed_bottom value=-0.25 anchor=center units=inches;
 additive_screen_constraint name=player_speed_top    value=1.25  anchor=center units=inches;
 
+#####################;
+# Player engine rpm #;
+#####################;
+additive_screen_constraint name=player_engine_rpm_left   value=-1.5 anchor=player_speed_left   units=inches;
+additive_screen_constraint name=player_engine_rpm_right  value=-1.5 anchor=player_speed_right  units=inches;
+additive_screen_constraint name=player_engine_rpm_bottom value=0    anchor=player_speed_bottom units=inches;
+additive_screen_constraint name=player_engine_rpm_top    value=0    anchor=player_speed_top    units=inches;
+
 ################;
 # Bullet count #;
 ################;
