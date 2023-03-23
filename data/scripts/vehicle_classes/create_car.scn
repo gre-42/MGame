@@ -139,7 +139,7 @@ macro_begin create_player_car_engine_rpm_meter;
         pointer_width=pointer_width,
         pointer_length=pointer_length,
         minimum_value=0,
-        maximum_value=250,
+        maximum_value=4000,
         blank_angle=45,
-        ticks=0 30 60 90 120 150 180 210 240;
+        ticks=0 600 1200 1800 2400 3000 3600 4000;
 macro_end;
