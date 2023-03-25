@@ -84,7 +84,7 @@ macro_begin create_player_car_externals_DM74;
         COCKPIT_CAMERA_X:-0.4
         COCKPIT_CAMERA_Y:0.4
         COCKPIT_CAMERA_Z:-0.3;
-    IF_PC macro_playback create_player_car_engine_rpm_meter
+    !IF_ANDROID IF_PC macro_playback create_player_car_engine_rpm_meter
         PLAYER_NAME:PLAYER_NAME
         ENGINE_NAME:main;
     player_set_vehicle_control_parameters
