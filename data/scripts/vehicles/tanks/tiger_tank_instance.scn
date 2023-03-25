@@ -94,6 +94,7 @@ macro_begin create_tiger_tank_physics;
         angular_vels=-25 -20 20 25
         powers=0 3.6e8 3.6e8 0
         gear_ratios=0.5 1 2 3
+        max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
     create_engine
@@ -102,6 +103,7 @@ macro_begin create_tiger_tank_physics;
         angular_vels=-25 -20 20 25
         powers=0 3.6e8 3.6e8 0
         gear_ratios=0.5 1 2 3
+        max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
