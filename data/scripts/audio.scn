@@ -1,20 +1,3 @@
-add_audio
-    name=car_freesound.driving
-    filename=sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/fast-mono.wav
-    gain=1;
-add_audio
-    name=car_freesound.idle
-    filename=sounds/freesound/592396__dan-audiofile__fr-car-engine-start-rev-stop/idle-mono.wav
-    gain=1;
-
-add_audio
-    name=car.driving0
-    filename=sounds/ange-engine-sim/fast.wav
-    gain=1;
-add_audio
-    name=car.idle
-    filename=sounds/ange-engine-sim/idle.wav
-    gain=1;
 add_audio_sequence
     name=car.driving
     filename=sounds/ange-engine-sim/sequence/meta.json
