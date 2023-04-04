@@ -91,18 +91,18 @@ macro_begin create_tiger_tank_physics;
     create_engine
         rigid_body=car_node-SUFFIX
         name=left
-        angular_vels=-25 -20 20 25
-        powers=0 3.6e8 3.6e8 0
-        gear_ratios=0.5 1 2 3
+        angular_vels=-2500 -2000 0
+        powers=0 3.6e8 0
+        gear_ratios=10 20 40 -40 -20 -10
         max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
     create_engine
         rigid_body=car_node-SUFFIX
         name=right
-        angular_vels=-25 -20 20 25
-        powers=0 3.6e8 3.6e8 0
-        gear_ratios=0.5 1 2 3
+        angular_vels=-2500 -2000 0
+        powers=0 3.6e8 0
+        gear_ratios=10 20 40 -40 -20 -10
         max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
@@ -220,6 +220,9 @@ macro_begin create_player_car_externals_tiger_tank;
         player_name=PLAYER_NAME
         ypln_node=turret_node-SUFFIX
         gun_node=main_gun_end_node-SUFFIX;
+    # !IF_ANDROID IF_PC macro_playback create_player_car_engine_rpm_meter
+        PLAYER_NAME:PLAYER_NAME
+        ENGINE_NAME:left;
     player_set_vehicle_control_parameters
         player_name=PLAYER_NAME
         surface_power_forward=inf
