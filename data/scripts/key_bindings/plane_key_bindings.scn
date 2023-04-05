@@ -4,45 +4,29 @@ macro_begin create_plane_key_bindings;
         node=car_node-SUFFIX;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.roll_left
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=A
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=-1
-        not_gamepad_button=B
-        joystick_analog_axis=1
-        joystick_analog_axis_sign_and_scale=-1
         roll=-5;
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.roll_right
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=D
-        joystick_digital_axis=1
-        joystick_digital_axis_sign=1
-        not_gamepad_button=B
-        joystick_analog_axis=1
-        joystick_analog_axis_sign_and_scale=1
         roll=5;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.pitch_up
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=UP
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=-1
-        not_gamepad_button=B
-        joystick_analog_axis=2
-        joystick_analog_axis_sign_and_scale=-1
         pitch=10;
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.pitch_down
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=DOWN
-        joystick_digital_axis=2
-        joystick_digital_axis_sign=1
-        not_gamepad_button=B
-        joystick_analog_axis=2
-        joystick_analog_axis_sign_and_scale=1
         pitch=-10;
 
     # abs_key_binding
@@ -58,69 +42,46 @@ macro_begin create_plane_key_bindings;
     # 1000 hp = 735499 Watt;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.forward
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=W
-        gamepad_button=X
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=-1
-        not_gamepad_button=B
-        joystick_analog_axis=4
-        joystick_analog_axis_sign_and_scale=-1
         turbine_power=inf;
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.brake
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=S
-        gamepad_button=A
-        joystick_digital_axis=4
-        joystick_digital_axis_sign=1
-        not_gamepad_button=B
-        joystick_analog_axis=4
-        joystick_analog_axis_sign_and_scale=1
         brake=20;
 
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.yaw_left
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=LEFT
-        gamepad_button=LEFT_BUMPER
-        not_gamepad_button=B
-        joystick_analog_axis=5
-        joystick_analog_axis_sign_and_scale=1
         yaw=-20;
     IF_MANUAL_DRIVE plane_controller_key_binding
+        id=plane.yaw_right
+        role=ROLE
         player=PLAYER_NAME
         node=car_node-SUFFIX
-        key=RIGHT
-        gamepad_button=RIGHT_BUMPER
-        not_gamepad_button=B
-        joystick_analog_axis=6
-        joystick_analog_axis_sign_and_scale=1
         yaw=20;
 
     IF_HAS_GUN gun_key_binding
+        id=plane.shoot
+        role=ROLE
         player=PLAYER_NAME
-        node=main_gun_end_node-SUFFIX
-        key=SPACE
-        mouse_button=LEFT
-        gamepad_button=Y
-        not_gamepad_button=B;
+        node=main_gun_end_node-SUFFIX;
 
     IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
+        id=plane.select_next_opponent
+        role=ROLE
         node=car_node-SUFFIX
-        key=LEFT_SHIFT
         select_next_opponent;
     
-    IF_HAS_GUN !IF_MANUAL_AIM player_key_binding
-        node=car_node-SUFFIX
-        gamepad_button=B
-        gamepad_button2=Y
-        select_next_opponent;
-
     player_key_binding
+        id=plane.select_next_vehicle
+        role=ROLE
         node=car_node-SUFFIX
-        gamepad_button=B
-        gamepad_button2=A
         select_next_vehicle;
 macro_end;
