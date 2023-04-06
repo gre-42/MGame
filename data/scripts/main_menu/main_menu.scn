@@ -104,7 +104,6 @@ macro_begin _update_scene_icon;
 macro_end;
 
 macro_begin _setup_menu_primary_scene_rest;
-    add_to_gallery resource=textures/menu/missing.png instance=level_icon color_mode=rgb;
     ui_exhibit
         z_order=1
         id_in_gallery=level_icon
