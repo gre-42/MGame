@@ -53,4 +53,4 @@ include key_bindings/key_bindings.scn;
 IF_ANDROID include key_bindings/tap_buttons.scn;
 
 include materials.scn;
-include assets.scn;
+include assets.scn.json;
