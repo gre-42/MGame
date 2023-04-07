@@ -13,8 +13,8 @@
     {
         "declare_macro": "add_pacenote_picture",
         "content": [
-            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/GEAR.png" }, "literals": { "instance": "pacenote_l-GEAR", "color_mode": "rgba" } },
-            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/GEAR.png" }, "literals": { "instance": "pacenote_r-GEAR", "color_mode": "rgba", "flip_horizontally": true } }
+            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/$GEAR.png" }, "literals": { "instance": "pacenote_l$GEAR", "color_mode": "rgba" } },
+            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/$GEAR.png" }, "literals": { "instance": "pacenote_r$GEAR", "color_mode": "rgba", "flip_horizontally": true } }
         ]
     },
     {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "0"}},
