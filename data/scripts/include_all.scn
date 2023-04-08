@@ -15,7 +15,7 @@ include textures/textures_ocean.scn;
 include textures/blend_textures_terrain.scn;
 include textures/blend_textures_street.scn;
 
-include animations.scn;
+include animations.scn.json;
 include vehicle_classes/create_car.scn;
 include vehicle_classes/create_human.scn;
 include vehicle_classes/create_skater.scn;

@@ -1,0 +1,197 @@
+[
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "cmu_mocap.walking",
+            "smooth_radius": 20,
+            "smooth_alpha": 0.9,
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/CMU_mocap/cmu_mocap.walking.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.run_forward",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_run_forward_retargeted.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.run_backward",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_run_backward_retargeted.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.idle",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_idle_retargeted.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.strafe_left",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_strafe_left_retargeted.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.strafe_right",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_strafe_right_retargeted.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "xonotic_pyria.die",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": false
+        },
+        "pathes": {
+            "filename": "animations/Xonotic/pyria_dietwo.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.left",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_left.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.right",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_right.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.left.jump",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_left_jump.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.right.jump",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_right_jump.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.left.jump.skateboard",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_left_jump_skateboard.bvh"
+        }
+    },
+    {
+        "exclude": [
+            "IF_ANDROID"
+        ],
+        "call": "add_bvh_resource",
+        "literals": {
+            "name": "skate.right.jump.skateboard",
+            "smooth_radius": 0,
+            "smooth_alpha": "nan",
+            "periodic": true
+        },
+        "pathes": {
+            "filename": "animations/Skate/skate_right_jump_skateboard.bvh"
+        }
+    }
+]
