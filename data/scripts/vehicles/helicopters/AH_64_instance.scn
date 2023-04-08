@@ -96,7 +96,7 @@ macro_begin create_AH_64_physics;
         angular_vels=-25 -20 20 25
         powers=0 3.6e8 3.6e8 0
         gear_ratios=0.5 1 2 3
-        max_dw=2000
+        w_clutch=800 max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
@@ -106,7 +106,7 @@ macro_begin create_AH_64_physics;
         angular_vels=-2400 -1600 -800 0
         powers=0 4e3 4e3 0
         gear_ratios=-0.5 -1 -2 -3
-        max_dw=2000
+        w_clutch=800 max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 
@@ -116,7 +116,7 @@ macro_begin create_AH_64_physics;
         angular_vels=-1000 -800 800 1000
         powers=0 400 400 0
         gear_ratios=0.5 1 2 3
-        max_dw=2000
+        w_clutch=800 max_dw=2000
         hand_brake_pulled=HAND_BRAKE_PULLED
         audio=car;
 

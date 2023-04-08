@@ -36,11 +36,11 @@ macro_begin create_FN_physics;
     # child_node_instance type=dynamic parent=car_node-SUFFIX name=com_node-SUFFIX position=0 -0.2 -0.15 rotation=0 0 0 scale=1;
     # renderable_instance name=gizmo node=com_node-SUFFIX resource=gizmo;
 
-    IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-9000 -6000 -3000 0 -1 powers=40 400 400 40 40 gear_ratios=0.75 1.5 3 6 9 -9 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    IF_RACING create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=0 powers=0 gear_ratios=1 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-9000 -6000 -3000 0 -1 powers=40 400 400 40 40 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    IF_RACING create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=0 powers=0 gear_ratios=1 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
 
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
+    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.75 -0.45 -1.45 radius=0.3 engine=main brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.75 -0.45 -1.45 radius=0.3 engine=main brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
