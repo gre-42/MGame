@@ -201,24 +201,23 @@ macro_begin _scene_racing_instantiate_static_objects;
     ##################;
     # Reflection map #;
     ##################;
-    IF_DAY add_color_style
-        reflection_strength=0.5
-        reflection_maps=
-            key=car value=reflection_map
-            key=wet_street value=reflection_map
-            key=ground value=;
-    IF_NIGHT add_color_style
-        reflection_strength=0.5
-        reflection_maps=
-            key=car value=reflection_map_night
-            key=wet_street value=reflection_map_night
-            key=ground value=;
-    IF_SYNTHWAVE
-        add_color_style
-        reflection_strength=0.5
-        reflection_maps=
-            key=car value=reflection_map_synthwave
-            key=ground value=reflection_map_synthwave;
+    IF_DAY add_color_style {
+        "reflection_strength": 0.5,
+        "reflection_maps": {
+            "car": "reflection_map",
+            "wet_street": "reflection_map",
+            "ground": ""}};
+    IF_NIGHT add_color_style {
+        "reflection_strength": 0.5,
+        "reflection_maps": {
+            "car": "reflection_map_night",
+            "wet_street":  "reflection_map_night",
+            "ground": ""}};
+    IF_SYNTHWAVE add_color_style {
+        "reflection_strength": 0.5,
+        "reflection_maps": {
+            "car": "reflection_map_synthwave",
+            "ground": "reflection_map_synthwave"}};
 
     #############;
     # Particles #;

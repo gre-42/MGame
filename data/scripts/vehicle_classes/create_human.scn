@@ -5,10 +5,10 @@ macro_begin create_human;
         position=HUMAN_NODE_X HUMAN_NODE_Y HUMAN_NODE_Z
         rotation=0 HUMAN_NODE_ANGLE_Y 0
         scale=1;
-    IF_HUMAN_STYLE add_color_style
-        node=human_node-SUFFIX
-        ambience=R G B
-        diffusivity=R G B;
+    IF_HUMAN_STYLE add_color_style {
+        "node": "human_node-SUFFIX",
+        "ambience": [R, G, B],
+        "diffusivity": [R, G, B]};
     IF_HUMAN_STYLE set_animation_state
         node=human_node-SUFFIX
         animation_loop_name=xonotic_pyria.idle
@@ -68,14 +68,14 @@ macro_begin create_player_human_externals;
     IF_PC macro_playback create_human_cameras_pc
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    IF_PC hud_image
-        gun_node=main_gun_end_node-SUFFIX
-        camera_node=human_head_camera_node-SUFFIX
-        ypln_node=human_node-SUFFIX
-        filename=textures/hud/crosshair.png
-        update=once
-        center=0 0
-        size=0.05 0.05;
+    IF_PC hud_image {
+        "gun_node": "main_gun_end_node-SUFFIX",
+        "camera_node": "human_head_camera_node-SUFFIX",
+        "ypln_node": "human_node-SUFFIX",
+        "filename": "textures/hud/crosshair.png",
+        "update": "once",
+        "center": [0, 0],
+        "size": [0.05, 0.05]};
     IF_PC visual_player_bullet_count
         player=PLAYER_NAME
         ttf_file=fonts/RobotoMono-Bold.ttf

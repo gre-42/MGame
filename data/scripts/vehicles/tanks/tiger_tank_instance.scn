@@ -208,14 +208,14 @@ macro_begin create_player_car_externals_tiger_tank;
     IF_PC macro_playback create_car_cameras_tank
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    IF_PC hud_image
-        gun_node=main_gun_node-SUFFIX
-        camera_node=main_gun_camera_node-SUFFIX
-        ypln_node=turret_node-SUFFIX
-        filename=textures/hud/crosshair.png
-        update=once
-        center=0 0
-        size=0.05 0.05;
+    IF_PC hud_image {
+        "gun_node": "main_gun_node-SUFFIX",
+        "camera_node": "main_gun_camera_node-SUFFIX",
+        "ypln_node": "turret_node-SUFFIX",
+        "filename": "textures/hud/crosshair.png",
+        "update": "once",
+        "center": [0, 0],
+        "size": [0.05, 0.05]};
     player_set_aiming_gun
         player_name=PLAYER_NAME
         ypln_node=turret_node-SUFFIX

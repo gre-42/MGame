@@ -1,5 +1,5 @@
 macro_begin _scene_tank_load_resources;
-    append_focuses scene;
+    append_focuses ["scene"];
 
     # # square_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
     # blending_x_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;
@@ -592,7 +592,7 @@ macro_begin _scene_tank_instantiate;
 
     camera_key_binding key=C gamepad_button=BACK;
 
-    append_focuses countdown_pending;
+    append_focuses ["countdown_pending"];
 
     countdown
         z_order=1

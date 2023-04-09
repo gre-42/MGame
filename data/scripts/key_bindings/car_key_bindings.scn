@@ -1,7 +1,7 @@
 macro_begin create_car_key_bindings;
-    IF_MANUAL_DRIVE car_controller_idle_binding
-        player=PLAYER_NAME
-        node=car_node-SUFFIX;
+    IF_MANUAL_DRIVE car_controller_idle_binding {
+        "player": "PLAYER_NAME",
+        "node": "car_node-SUFFIX"};
     IF_MANUAL_DRIVE car_controller_key_binding
         id=car_or_heli.steer_left
         role=ROLE

@@ -16,5 +16,5 @@ create_scene
     clear_mode=color_and_depth;
 
 macro_playback scene_minimal context=primary_scene IF_DIRTMAP:# IF_SKYBOX:#;
-append_focuses menu;
+append_focuses ["menu"];
 macro_playback create_main_menu;
