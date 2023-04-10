@@ -90,35 +90,35 @@ macro_begin create_AH_64_physics;
     #  400 hp = 294200 Watt;
     # 1000 hp = 735499 Watt;
 
-    create_engine
-        rigid_body=car_node-SUFFIX
-        name=wheels
-        angular_vels=-2000 -800 0
-        powers=0 3.6e8 3.6e8
-        gear_ratios=-0.5 -1 -2 -3 3 2 1 0.5
-        w_clutch=800 max_dw=2000
-        hand_brake_pulled=HAND_BRAKE_PULLED
-        audio=car;
+    create_engine {
+        "rigid_body": "car_node-SUFFIX",
+        "name": "wheels",
+        "angular_vels": [-2000, -800, 0],
+        "powers": [0, 3.6e8, 3.6e8],
+        "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
+        "w_clutch": 800,
+        "max_dw": 2000,
+        "hand_brake_pulled": HAND_BRAKE_PULLED};
 
-    create_engine
-        rigid_body=car_node-SUFFIX
-        name=main_rotor
-        angular_vels=-2400 -1600 -800 0
-        powers=0 4e3 4e3 0
-        gear_ratios=-0.5 -1 -2 -3 3 2 1 0.5
-        w_clutch=800 max_dw=2000
-        hand_brake_pulled=HAND_BRAKE_PULLED
-        audio=car;
+    create_engine {
+        "rigid_body": "car_node-SUFFIX",
+        "name": "main_rotor",
+        "angular_vels": [-2400, -1600, -800, 0],
+        "powers": [0, 4e3, 4e3, 0],
+        "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
+        "w_clutch": 800,
+        "max_dw": 2000,
+        "hand_brake_pulled": HAND_BRAKE_PULLED};
 
-    create_engine
-        rigid_body=car_node-SUFFIX
-        name=tail_rotor
-        angular_vels=-1000 -800 0
-        powers=0 400 400
-        gear_ratios=-0.5 -1 -2 -3 3 2 1 0.5
-        w_clutch=800 max_dw=2000
-        hand_brake_pulled=HAND_BRAKE_PULLED
-        audio=car;
+    create_engine {
+        "rigid_body": "car_node-SUFFIX",
+        "name": "tail_rotor",
+        "angular_vels": [-1000, -800, 0],
+        "powers": [0, 400, 400],
+        "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
+        "w_clutch": 800,
+        "max_dw": 2000,
+        "hand_brake_pulled": HAND_BRAKE_PULLED};
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX  position=-1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
@@ -211,7 +211,7 @@ macro_begin create_AH_64;
         SUFFIX:SUFFIX
         MASS:inf
         COLLIDABLE_MODE:small_static
-        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=false
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
         VELOCITY_ERROR_STD:VELOCITY_ERROR_STD
@@ -224,7 +224,7 @@ macro_begin create_AH_64;
         SUFFIX:SUFFIX
         MASS:6e3
         COLLIDABLE_MODE:small_moving
-        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0
+        HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=false
         PLAYER_NAME:PLAYER_NAME
         TEAM:TEAM
         VELOCITY_ERROR_STD:VELOCITY_ERROR_STD

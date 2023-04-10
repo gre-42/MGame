@@ -49,7 +49,7 @@ macro_begin _create_showroom_vehicle;
         IF_RALLY:
         IF_STATIC:#
         IF_DYNAMIC:
-        HAND_BRAKE_PULLED:1
+        HAND_BRAKE_PULLED:true
         VELOCITY_ERROR_STD:0
         YAW_ERROR_STD:0
         PITCH_ERROR_STD:0

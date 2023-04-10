@@ -33,11 +33,11 @@ macro_begin create_LK4_physics;
     #  400 hp = 294200 Watt;
     # 1000 hp = 735499 Watt;
 
-    IF_RACING create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-9000 -6000 -3000 0 -1 powers=40 400 400 40 40 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    IF_RACING create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=0 powers=0 gear_ratios=1 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_RACING create_engine {"rigid_body": "car_node-SUFFIX", "name": "main",   "angular_vels": [-9000, -6000, -3000, 0, -1], "powers": [40, 400, 400, 40, 40], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": HAND_BRAKE_PULLED, "audio": {"name": "car", "p_idle": 90, "p_reference": 400}};
+    IF_RACING create_engine {"rigid_body": "car_node-SUFFIX", "name": "brakes", "angular_vels": [0], "powers": [0], "gear_ratios": [1], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": HAND_BRAKE_PULLED};
 
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=main   angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED audio=car;
-    IF_RALLY create_engine rigid_body=car_node-SUFFIX name=brakes angular_vels=-6000 -4200 -3000 0 -1 powers=20 200 200 20 20 gear_ratios=0.75 1.5 3 6 9 -9 w_clutch=800 max_dw=2000 hand_brake_pulled=HAND_BRAKE_PULLED;
+    IF_RALLY create_engine {"rigid_body": "car_node-SUFFIX", "name": "main",    "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": HAND_BRAKE_PULLED, "audio": {"name": "car", "p_idle": 90, "p_reference": 200}};
+    IF_RALLY create_engine {"rigid_body": "car_node-SUFFIX", "name": "brakes",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": HAND_BRAKE_PULLED};
 
     wheel rigid_body=car_node-SUFFIX node=wheel_left_front_node-SUFFIX position=-0.7 -0.45 -1.35 radius=0.4 engine=main brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=0.7 -0.45 -1.35 radius=0.4 engine=main brake_force=50000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=1;
@@ -62,8 +62,8 @@ macro_begin create_LK4;
     IF_WITH_GRAPHICS macro_playback create_LK4_graphics NODE_SUFFIX:SUFFIX SUFFIX:_d1-SUFFIX DECIMATE:_d1;
     IF_WITH_GRAPHICS macro_playback create_LK4_lights SUFFIX:SUFFIX;
 
-    IF_WITH_PHYSICS IF_STATIC  macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:inf COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
-    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=0;
+    IF_WITH_PHYSICS IF_STATIC  macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:inf COLLIDABLE_MODE:small_static HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=false;
+    IF_WITH_PHYSICS IF_DYNAMIC macro_playback create_LK4_physics IF_RACING:IF_RACING IF_RALLY:IF_RALLY SUFFIX:SUFFIX MASS:1200     COLLIDABLE_MODE:small_moving HAND_BRAKE_PULLED:HAND_BRAKE_PULLED=false;
 macro_end;
 
 macro_begin create_player_car_externals_LK4;
