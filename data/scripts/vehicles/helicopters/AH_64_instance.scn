@@ -255,10 +255,10 @@ macro_begin create_player_car_externals_AH_64;
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "center"};
-    player_set_aiming_gun
-        player_name=PLAYER_NAME
-        ypln_node=turret_node-SUFFIX
-        gun_node=main_gun_end_node-SUFFIX;
+    player_set_aiming_gun {
+        "player_name": "PLAYER_NAME",
+        "ypln_node": "turret_node-SUFFIX",
+        "gun_node": "main_gun_end_node-SUFFIX"};
     player_set_vehicle_control_parameters {
         "player_name": "PLAYER_NAME",
         "surface_power_forward": "inf",
