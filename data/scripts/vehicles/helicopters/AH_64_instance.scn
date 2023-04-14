@@ -258,12 +258,12 @@ macro_begin create_player_car_externals_AH_64;
         player_name=PLAYER_NAME
         ypln_node=turret_node-SUFFIX
         gun_node=main_gun_end_node-SUFFIX;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=inf
-        surface_power_backward=-inf
-        max_tire_angle=30
-        tire_angle_pid=1 0 0 0;
+    player_set_vehicle_control_parameters {
+        "player_name": "PLAYER_NAME",
+        "surface_power_forward": "inf",
+        "surface_power_backward": "-inf",
+        "max_tire_angle": 30,
+        "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}};
 macro_end;
 
 macro_begin add_attached_light_AH_64;

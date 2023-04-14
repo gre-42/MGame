@@ -89,8 +89,8 @@ macro_begin create_player_human_externals;
         player_name=PLAYER_NAME
         ypln_node=human_node-SUFFIX
         gun_node=main_gun_end_node-SUFFIX;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=inf
-        surface_power_backward=-inf;
+    player_set_vehicle_control_parameters {
+        "player_name": "PLAYER_NAME",
+        "surface_power_forward": "inf",
+        "surface_power_backward": "-inf"};
 macro_end;

@@ -76,12 +76,12 @@ macro_begin create_player_car_externals_OT;
         COCKPIT_CAMERA_X:-0.4
         COCKPIT_CAMERA_Y:1.5
         COCKPIT_CAMERA_Z:-0.1;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=inf
-        surface_power_backward=-inf
-        max_tire_angle=30
-        tire_angle_pid=1 1 0 0.2;
+    player_set_vehicle_control_parameters {
+        "player_name": "PLAYER_NAME",
+        "surface_power_forward": "inf",
+        "surface_power_backward": "-inf",
+        "max_tire_angle": 30,
+        "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}};
 macro_end;
 
 macro_begin add_attached_light_OT;

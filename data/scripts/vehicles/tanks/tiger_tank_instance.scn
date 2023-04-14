@@ -231,12 +231,12 @@ macro_begin create_player_car_externals_tiger_tank;
     # !IF_ANDROID IF_PC macro_playback create_player_car_engine_rpm_meter
         PLAYER_NAME:PLAYER_NAME
         ENGINE_NAME:left;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=inf
-        surface_power_backward=-inf
-        max_tire_angle=45
-        tire_angle_pid=1 0 50 0;
+    player_set_vehicle_control_parameters {
+        "player_name": "PLAYER_NAME",
+        "surface_power_forward": "inf",
+        "surface_power_backward": "-inf",
+        "max_tire_angle": 45,
+        "tire_angle_pid": {"pid": [1, 0, 50], "alpha": 0}};
 macro_end;
 
 macro_begin add_attached_light_tiger_tank;

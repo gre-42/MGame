@@ -99,10 +99,10 @@ macro_begin create_player_skater_externals_skating_mh1;
     IF_PC macro_playback create_skater_cameras
         SUFFIX:SUFFIX
         PLAYER_NAME:PLAYER_NAME;
-    player_set_vehicle_control_parameters
-        player_name=PLAYER_NAME
-        surface_power_forward=inf
-        surface_power_backward=-inf;
+    player_set_vehicle_control_parameters {
+        "player_name": "PLAYER_NAME",
+        "surface_power_forward": "inf",
+        "surface_power_backward": "-inf"};
 macro_end;
 
 macro_begin add_attached_light_skating_mh1;
