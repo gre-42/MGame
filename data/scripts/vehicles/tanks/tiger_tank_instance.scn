@@ -223,7 +223,17 @@ macro_begin create_player_car_externals_tiger_tank;
         "filename": "textures/hud/crosshair.png",
         "update": "once",
         "center": [0, 0],
-        "size": [0.05, 0.05]};
+        "size": [0.05, 0.05],
+        "error_behavior": "center"};
+    IF_PC hud_image {
+        "gun_node": "main_gun_end_node-SUFFIX",
+        "camera_node": "follower_camera",
+        "ypln_node": "turret_node-SUFFIX",
+        "filename": "textures/hud/crosshair.png",
+        "update": "once",
+        "center": [0, 0],
+        "size": [0.05, 0.05],
+        "error_behavior": "hide"};
     player_set_aiming_gun
         player_name=PLAYER_NAME
         ypln_node=turret_node-SUFFIX

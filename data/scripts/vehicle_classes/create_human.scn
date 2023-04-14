@@ -75,7 +75,8 @@ macro_begin create_player_human_externals;
         "filename": "textures/hud/crosshair.png",
         "update": "once",
         "center": [0, 0],
-        "size": [0.05, 0.05]};
+        "size": [0.05, 0.05],
+        "error_behavior": "center"};
     IF_PC visual_player_bullet_count
         player=PLAYER_NAME
         ttf_file=fonts/RobotoMono-Bold.ttf
