@@ -108,13 +108,17 @@ macro_begin create_AH_64_physics;
         "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
         "w_clutch": 800,
         "max_dw": 2000,
-        "hand_brake_pulled": HAND_BRAKE_PULLED};
+        "hand_brake_pulled": HAND_BRAKE_PULLED,
+        "audio": {
+            "name": "car",
+            "p_idle": 4e3,
+            "p_reference": 4e3}};
 
     create_engine {
         "rigid_body": "car_node-SUFFIX",
         "name": "tail_rotor",
         "angular_vels": [-1000, -800, 0],
-        "powers": [0, 400, 400],
+        "powers": [0, 400, 0],
         "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
         "w_clutch": 800,
         "max_dw": 2000,
