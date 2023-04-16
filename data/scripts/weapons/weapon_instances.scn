@@ -34,41 +34,42 @@ macro_begin add_weapon_m4a1;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
     renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=M4A1;
-    gun
-        node=main_gun_end_node-SUFFIX,
-        parent_rigid_body_node=human_node-SUFFIX,
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
-        cool_down=COOL_DOWN,
-        bullet_renderable=,
-        bullet_hitbox=tank_bullet_hitbox,
-        bullet_explosion_resource=medium_explosion_cross,
-        bullet_explosion_animation_time=0.1,
-        bullet_feels_gravity=BULLET_FEELS_GRAVITY,
-        bullet_mass=20,
-        bullet_velocity=BULLET_VELOCITY,
-        bullet_lifetime=20,
-        bullet_damage=BULLET_DAMAGE,
-        bullet_damage_radius=BULLET_DAMAGE_RADIUS,
-        bullet_size=2.4 2.4 20,
-        ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3,
-        muzzle_flash_resource=muzzle_flash_0,
-        muzzle_flash_position=0 0.05 -0.45,
-        muzzle_flash_animation_time=0.1,
-        generate_muzzle_flash_hider=macro_playback _generate_muzzle_flash_hider
-            MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX
-            SUFFIX:SUFFIX
-            RESOURCE:muzzle_flash_0
-            ANIMATION_TIME:0.1
-            POSITION_X:0
-            POSITION_Y:0.062
-            POSITION_Z:-0.66;
-    ypln_update_bullet_properties
-        node=human_node-SUFFIX
-        velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY
-        dpitch_head=0;
+    gun {
+        "node": "main_gun_end_node-SUFFIX",
+        "parent_rigid_body_node": "human_node-SUFFIX",
+        "punch_angle_node": "main_gun_punch_angle_node-SUFFIX",
+        "cool_down": COOL_DOWN,
+        "bullet_renderable": "",
+        "bullet_hitbox": "tank_bullet_hitbox",
+        "bullet_explosion_resource": "medium_explosion_cross",
+        "bullet_explosion_animation_time": 0.1,
+        "bullet_feels_gravity": BULLET_FEELS_GRAVITY,
+        "bullet_mass": 20,
+        "bullet_velocity": BULLET_VELOCITY,
+        "bullet_lifetime": 20,
+        "bullet_damage": BULLET_DAMAGE,
+        "bullet_damage_radius": BULLET_DAMAGE_RADIUS,
+        "bullet_size": [2.4, 2.4, 20],
+        "ammo_type": "AMMO_TYPE",
+        "punch_angle_idle_std": 0.1,
+        "punch_angle_shoot_std": 0.3,
+        "muzzle_flash_resource": "muzzle_flash_0",
+        "muzzle_flash_position": [0, 0.05, -0.45],
+        "muzzle_flash_animation_time": 0.1,
+        "generate_muzzle_flash_hider": [
+            "macro_playback _generate_muzzle_flash_hider",
+            "MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX",
+            "SUFFIX:SUFFIX",
+            "RESOURCE:muzzle_flash_0",
+            "ANIMATION_TIME:0.1",
+            "POSITION_X:0",
+            "POSITION_Y:0.062",
+            "POSITION_Z:-0.66"]};
+    ypln_update_bullet_properties {
+        "node": "human_node-SUFFIX",
+        "velocity": BULLET_VELOCITY,
+        "feels_gravity": BULLET_FEELS_GRAVITY,
+        "dpitch_head": 0};
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     macro_playback _set_node_hider
         SUFFIX:SUFFIX
@@ -79,41 +80,42 @@ macro_begin add_weapon_beretta92;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
     renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=Beretta92;
-    gun
-        node=main_gun_end_node-SUFFIX,
-        parent_rigid_body_node=human_node-SUFFIX,
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
-        cool_down=COOL_DOWN,
-        bullet_renderable=,
-        bullet_hitbox=tank_bullet_hitbox,
-        bullet_explosion_resource=medium_explosion_cross,
-        bullet_explosion_animation_time=0.1,
-        bullet_feels_gravity=BULLET_FEELS_GRAVITY,
-        bullet_mass=20,
-        bullet_velocity=BULLET_VELOCITY,
-        bullet_lifetime=20,
-        bullet_damage=BULLET_DAMAGE,
-        bullet_damage_radius=BULLET_DAMAGE_RADIUS,
-        bullet_size=2.4 2.4 20,
-        ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3,
-        muzzle_flash_resource=muzzle_flash_0,
-        muzzle_flash_position=0 0.05 0,
-        muzzle_flash_animation_time=0.1,
-        generate_muzzle_flash_hider=macro_playback _generate_muzzle_flash_hider
-            MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX
-            SUFFIX:SUFFIX
-            RESOURCE:muzzle_flash_0
-            ANIMATION_TIME:0.1
-            POSITION_X:0
-            POSITION_Y:0.086
-            POSITION_Z:-0.265;
-    ypln_update_bullet_properties
-        node=human_node-SUFFIX
-        velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY
-        dpitch_head=0;
+    gun {
+        "node": "main_gun_end_node-SUFFIX",
+        "parent_rigid_body_node": "human_node-SUFFIX",
+        "punch_angle_node": "main_gun_punch_angle_node-SUFFIX",
+        "cool_down": COOL_DOWN,
+        "bullet_renderable": "",
+        "bullet_hitbox": "tank_bullet_hitbox",
+        "bullet_explosion_resource": "medium_explosion_cross",
+        "bullet_explosion_animation_time": 0.1,
+        "bullet_feels_gravity": BULLET_FEELS_GRAVITY,
+        "bullet_mass": 20,
+        "bullet_velocity": BULLET_VELOCITY,
+        "bullet_lifetime": 20,
+        "bullet_damage": BULLET_DAMAGE,
+        "bullet_damage_radius": BULLET_DAMAGE_RADIUS,
+        "bullet_size": [2.4, 2.4, 20],
+        "ammo_type": "AMMO_TYPE",
+        "punch_angle_idle_std": 0.1,
+        "punch_angle_shoot_std": 0.3,
+        "muzzle_flash_resource": "muzzle_flash_0",
+        "muzzle_flash_position": [0, 0.05, 0],
+        "muzzle_flash_animation_time": 0.1,
+        "generate_muzzle_flash_hider": [
+            "macro_playback _generate_muzzle_flash_hider",
+            "MUZZLE_FLASH_SUFFIX:MUZZLE_FLASH_SUFFIX",
+            "SUFFIX:SUFFIX",
+            "RESOURCE:muzzle_flash_0",
+            "ANIMATION_TIME:0.1",
+            "POSITION_X:0",
+            "POSITION_Y:0.086",
+            "POSITION_Z:-0.265"]};
+    ypln_update_bullet_properties {
+        "node": "human_node-SUFFIX",
+        "velocity": BULLET_VELOCITY,
+        "feels_gravity": BULLET_FEELS_GRAVITY,
+        "dpitch_head": 0};
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     macro_playback _set_node_hider
         SUFFIX:SUFFIX
@@ -124,30 +126,30 @@ macro_begin add_weapon_frag_grenade;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
     renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=frag_grenade;
-    gun
-        node=main_gun_end_node-SUFFIX,
-        parent_rigid_body_node=human_node-SUFFIX,
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
-        cool_down=COOL_DOWN,
-        bullet_renderable=frag_grenade,
-        bullet_hitbox=grenade_hitbox,
-        bullet_explosion_resource=large_explosion_cross,
-        bullet_explosion_animation_time=0.6,
-        bullet_feels_gravity=BULLET_FEELS_GRAVITY,
-        bullet_mass=0.5,
-        bullet_velocity=BULLET_VELOCITY,
-        bullet_lifetime=900,
-        bullet_damage=BULLET_DAMAGE,
-        bullet_damage_radius=BULLET_DAMAGE_RADIUS,
-        bullet_size=0.1 0.1 0.1,
-        ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3;
-    ypln_update_bullet_properties
-        node=human_node-SUFFIX
-        velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY
-        dpitch_head=-15;
+    gun {
+        "node": "main_gun_end_node-SUFFIX",
+        "parent_rigid_body_node": "human_node-SUFFIX",
+        "punch_angle_node": "main_gun_punch_angle_node-SUFFIX",
+        "cool_down": COOL_DOWN,
+        "bullet_renderable": "frag_grenade",
+        "bullet_hitbox": "grenade_hitbox",
+        "bullet_explosion_resource": "large_explosion_cross",
+        "bullet_explosion_animation_time": 0.6,
+        "bullet_feels_gravity": BULLET_FEELS_GRAVITY,
+        "bullet_mass": 0.5,
+        "bullet_velocity": BULLET_VELOCITY,
+        "bullet_lifetime": 900,
+        "bullet_damage": BULLET_DAMAGE,
+        "bullet_damage_radius": BULLET_DAMAGE_RADIUS,
+        "bullet_size": [0.1, 0.1, 0.1],
+        "ammo_type": "AMMO_TYPE",
+        "punch_angle_idle_std": 0.1,
+        "punch_angle_shoot_std": 0.3};
+    ypln_update_bullet_properties {
+        "node": "human_node-SUFFIX",
+        "velocity": BULLET_VELOCITY,
+        "feels_gravity": BULLET_FEELS_GRAVITY,
+        "dpitch_head": -15};
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     macro_playback _set_node_hider
         SUFFIX:SUFFIX
@@ -158,33 +160,33 @@ macro_begin add_weapon_m72_law;
     macro_playback try_delete_weapon SUFFIX:SUFFIX;
     # renderable_instance name=main_gun_node_visual-box node=main_gun_node_visual-SUFFIX resource=box;
     renderable_instance name=main_gun_node_visual-inst node=main_gun_node_visual-SUFFIX resource=m72_law;
-    gun
-        node=main_gun_end_node-SUFFIX,
-        parent_rigid_body_node=human_node-SUFFIX,
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
-        cool_down=COOL_DOWN,
-        bullet_renderable=m72_law_rocket,
-        bullet_hitbox=tank_bullet_hitbox,
-        bullet_explosion_resource=large_explosion_cross,
-        bullet_explosion_animation_time=0.6,
-        bullet_feels_gravity=BULLET_FEELS_GRAVITY,
-        bullet_mass=10,
-        bullet_velocity=BULLET_VELOCITY,
-        bullet_lifetime=900,
-        bullet_damage=BULLET_DAMAGE,
-        bullet_damage_radius=BULLET_DAMAGE_RADIUS,
-        bullet_size=2.4 2.4 20,
-        bullet_trail_resource=smoke,
-        bullet_trail_dt=0.005,
-        bullet_trail_animation_time=0.5,
-        ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0.1,
-        punch_angle_shoot_std=0.3;
-    ypln_update_bullet_properties
-        node=human_node-SUFFIX
-        velocity=BULLET_VELOCITY
-        feels_gravity=BULLET_FEELS_GRAVITY
-        dpitch_head=0;
+    gun {
+        "node": "main_gun_end_node-SUFFIX",
+        "parent_rigid_body_node": "human_node-SUFFIX",
+        "punch_angle_node": "main_gun_punch_angle_node-SUFFIX",
+        "cool_down": COOL_DOWN,
+        "bullet_renderable": "m72_law_rocket",
+        "bullet_hitbox": "tank_bullet_hitbox",
+        "bullet_explosion_resource": "large_explosion_cross",
+        "bullet_explosion_animation_time": 0.6,
+        "bullet_feels_gravity": BULLET_FEELS_GRAVITY,
+        "bullet_mass": 10,
+        "bullet_velocity": BULLET_VELOCITY,
+        "bullet_lifetime": 900,
+        "bullet_damage": BULLET_DAMAGE,
+        "bullet_damage_radius": BULLET_DAMAGE_RADIUS,
+        "bullet_size": [2.4, 2.4, 20],
+        "bullet_trail_resource": "smoke",
+        "bullet_trail_dt": 0.005,
+        "bullet_trail_animation_time": 0.5,
+        "ammo_type": "AMMO_TYPE",
+        "punch_angle_idle_std": 0.1,
+        "punch_angle_shoot_std": 0.3};
+    ypln_update_bullet_properties {
+        "node": "human_node-SUFFIX",
+        "velocity": BULLET_VELOCITY,
+        "feels_gravity": BULLET_FEELS_GRAVITY,
+        "dpitch_head": 0};
     clear_node_hider node=main_gun_node_visual-SUFFIX;
     macro_playback _set_node_hider
         SUFFIX:SUFFIX
@@ -192,28 +194,28 @@ macro_begin add_weapon_m72_law;
 macro_end;
 
 macro_begin create_none_weapon;
-    gun
-        node=main_gun_end_node-SUFFIX,
-        parent_rigid_body_node=PARENT_RIGID_BODY_NODE,
-        punch_angle_node=main_gun_punch_angle_node-SUFFIX,
-        cool_down=inf,
-        bullet_renderable=_,
-        bullet_hitbox=_,
-        bullet_explosion_resource=_,
-        bullet_explosion_animation_time=nan,
-        bullet_feels_gravity=0,
-        bullet_mass=20,
-        bullet_velocity=0,
-        bullet_lifetime=0,
-        bullet_damage=0,
-        bullet_damage_radius=0,
-        bullet_size=2.4 2.4 20,
-        ammo_type=AMMO_TYPE,
-        punch_angle_idle_std=0,
-        punch_angle_shoot_std=0;
-    ypln_update_bullet_properties
-        node=PARENT_RIGID_BODY_NODE
-        velocity=0
-        feels_gravity=0
-        dpitch_head=0;
+    gun {
+        "node": "main_gun_end_node-SUFFIX",
+        "parent_rigid_body_node": "PARENT_RIGID_BODY_NODE",
+        "punch_angle_node": "main_gun_punch_angle_node-SUFFIX",
+        "cool_down": "inf",
+        "bullet_renderable": "_",
+        "bullet_hitbox": "_",
+        "bullet_explosion_resource": "_",
+        "bullet_explosion_animation_time": "nan",
+        "bullet_feels_gravity": false,
+        "bullet_mass": 20,
+        "bullet_velocity": 0,
+        "bullet_lifetime": 0,
+        "bullet_damage": 0,
+        "bullet_damage_radius": 0,
+        "bullet_size": [2.4, 2.4, 20],
+        "ammo_type": "AMMO_TYPE",
+        "punch_angle_idle_std": 0,
+        "punch_angle_shoot_std": 0};
+    ypln_update_bullet_properties {
+        "node": "PARENT_RIGID_BODY_NODE",
+        "velocity": 0,
+        "feels_gravity": false,
+        "dpitch_head": 0};
 macro_end;

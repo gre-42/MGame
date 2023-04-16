@@ -77,19 +77,19 @@ macro_begin create_player_human_externals;
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "center"};
-    IF_PC visual_player_bullet_count
-        player=PLAYER_NAME
-        ttf_file=fonts/RobotoMono-Bold.ttf
-        left=bullet_count_left
-        right=bullet_count_right
-        bottom=bullet_count_bottom
-        top=bullet_count_top
-        font_height=normal
-        line_distance=normal;
-    IF_WITH_GUN player_set_aiming_gun
-        player_name=PLAYER_NAME
-        ypln_node=human_node-SUFFIX
-        gun_node=main_gun_end_node-SUFFIX;
+    IF_PC visual_player_bullet_count {
+        "player": "PLAYER_NAME",
+        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+        "left": "bullet_count_left",
+        "right": "bullet_count_right",
+        "bottom": "bullet_count_bottom",
+        "top": "bullet_count_top",
+        "font_height": "normal",
+        "line_distance": "normal"};
+    IF_WITH_GUN player_set_aiming_gun {
+        "player_name": "PLAYER_NAME",
+        "ypln_node": "human_node-SUFFIX",
+        "gun_node": "main_gun_end_node-SUFFIX"};
     player_set_vehicle_control_parameters {
         "player_name": "PLAYER_NAME",
         "surface_power_forward": "inf",
