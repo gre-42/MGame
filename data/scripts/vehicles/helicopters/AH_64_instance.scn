@@ -128,36 +128,36 @@ macro_begin create_AH_64_physics;
     wheel rigid_body=car_node-SUFFIX node=wheel_right_front_node-SUFFIX position=+1.0 +0.35 -1.1 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=1;
     wheel rigid_body=car_node-SUFFIX node=wheel_left_rear_node-SUFFIX   position=+0.0 +0.4  +9.6 radius=0.25 engine=wheels brake_force=2.5e5 Ks=1.67e5 Ka=6.7e3 musF=6.7e4 1.33e5 musC=1.1 0.97 tire_id=2;
 
-    rotor
-        vehicle=car_node-SUFFIX
-        blades=blades-SUFFIX
-        vehicle_mount_0=0 4.2 0
-        vehicle_mount_1=0 0   0
-        blades_mount_0= 0 0   0.0
-        blades_mount_1= 0 0   4.2
-        position=0 4.2 0
-        rotation=90 0 0
-        engine=main_rotor
-        power2lift=5e-2
-        rpm=400
-        gravity_correction=move
-        radius=7.3
-        max_align_to_gravity=30
-        align_to_gravity_pid_p=0.2
-        align_to_gravity_pid_i=0
-        align_to_gravity_pid_d=40
-        align_to_gravity_pid_a=0.1
-        drift_reduction_factor=1
-        drift_reduction_reference_velocity=10
-        rotor_id=3;
-    rotor
-        vehicle=car_node-SUFFIX
-        position=0 3.4 9.1
-        rotation=0 90 0
-        engine=tail_rotor
-        power2lift=5e-2
-        rpm=400
-        rotor_id=4;
+    rotor {
+        "vehicle": "car_node-SUFFIX",
+        "blades": {
+            "node": "blades-SUFFIX",
+            "vehicle_mount_0": [0, 4.2, 0],
+            "vehicle_mount_1": [0, 0,   0],
+            "blades_mount_0":  [0, 0,   0.0],
+            "blades_mount_1":  [0, 0,   4.2]},
+        "position": [0, 4.2, 0],
+        "rotation": [90, 0, 0],
+        "engine": "main_rotor",
+        "power2lift": 5e-2,
+        "rpm": 400,
+        "gravity_correction": "move",
+        "radius": 7.3,
+        "max_align_to_gravity": 30,
+        "align_to_gravity_pid": {
+            "pid": [0.2, 0, 40],
+            "alpha": 0.1},
+        "drift_reduction_factor": 1,
+        "drift_reduction_reference_velocity": 10,
+        "rotor_id": 3};
+    rotor {
+        "vehicle": "car_node-SUFFIX",
+        "position": [0, 3.4, 9.1],
+        "rotation": [0, 90, 0],
+        "engine": "tail_rotor",
+        "power2lift": 5e-2,
+        "rpm": 400,
+        "rotor_id": 4};
 
     create_heli_controller
         node=car_node-SUFFIX
