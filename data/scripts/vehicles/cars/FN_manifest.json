@@ -1,10 +1,10 @@
 {
     "name": "FN",
     "on_init": [
-        "include FN_resource.scn",
-        "include FN_instance.scn"],
+        {"include": "FN_resource.scn.json"},
+        {"include": "FN_instance.scn.json"}],
     "variables": {
         "VEHICLE_SUFFIX": "_FN"
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

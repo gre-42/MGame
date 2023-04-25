@@ -4,7 +4,7 @@
     "variables": {
         "LEVEL_ID": "jb_race",
         "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

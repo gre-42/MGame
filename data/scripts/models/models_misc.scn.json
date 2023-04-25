@@ -1,0 +1,285 @@
+
+[
+    {
+        "comment": {
+            "exclude": ["IF_ANDROID"],
+            "call": "obj_resource",
+            "literals": {
+                "name": "checkpoint_arrow",
+                "filename": "models/Arrow/arrow.obj",
+                "position": [0, 5, 0],
+                "rotation": [0, 90, 0],
+                "scale": [1, 1, 1],
+                "center_distances": [0, "inf"],
+                "blend_mode": "off",
+                "alpha_distances": [0, 0, "inf", "inf"],
+                "occluded_pass": "none",
+                "occluder_pass": "none",
+                "aggregate_mode": "none",
+                "transformation_mode": "all"
+            }
+        }
+    },
+    {
+        "call": "square_resource",
+        "literals": {
+            "name": "glow",
+            "texture_filename": "textures/opengameart/glowCircle_1024.png",
+            "min": [-1, 4],
+            "max": [1, 6],
+            "center_distances": [0, 501],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "emissivity": [1, 1, 1],
+            "ambience": [0, 0, 0],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces": true,
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "box",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "box_on_ground",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 1, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "topdown_locator",
+            "filename": "models/TransparentBox/tbox.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [4, 1, 8],
+            "center_distances": [0, "inf"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": false,
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "flag",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 500, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 500, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "flag_z",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0, 500],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 500],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "beacon",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.1, 0.1, 0.1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "sphere",
+            "filename": "models/primitives/sphere.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "car"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "beacon1",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.1, 0.1, 0.1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "gizmo",
+            "filename": "models/gizmo.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "tank_bullet_renderable",
+            "filename": "models/bullet.obj",
+            "position": [0, 0, 0],
+            "rotation": [-90, 0, 0],
+            "scale": [0.2, 0.4, 0.2],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_static",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "tank_bullet_hitbox",
+            "filename": "models/primitives/empty.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "gen_ray",
+        "literals": {
+            "name": "tank_bullet_hitbox",
+            "from": [0, 0, 0],
+            "to": [0, 0, -20]
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "modify_physics_material_tags",
+        "literals": {
+            "resource_name": "tank_bullet_hitbox",
+            "add": "obj_bullet_line_segment"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+            "name": "grenade_hitbox",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.1, 0.1, 0.1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "modify_physics_material_tags",
+        "literals": {
+            "resource_name": "grenade_hitbox",
+            "add": "obj_bullet_mesh"
+        }
+    }
+]

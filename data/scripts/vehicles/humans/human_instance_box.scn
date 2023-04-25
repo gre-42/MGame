@@ -1,15 +1,15 @@
 macro_begin create_human_box;
-    renderable_instance name=human-inst node=human_node-SUFFIX resource=human_hitbox;
-    child_node_instance type=dynamic parent=human_node-SUFFIX name=main_gun_node-SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
-    child_node_instance type=dynamic parent=main_gun_node-SUFFIX name=main_gun_end_node-SUFFIX position=0 0 -20 rotation=0 0 0 scale=1;
+    renderable_instance name=human-inst node=human_node$SUFFIX resource=human_hitbox;
+    child_node_instance type=dynamic parent=human_node$SUFFIX name=main_gun_node$SUFFIX position=0 1.2 -0.3 rotation=30 0 0 scale=1;
+    {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
 
-    IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node-SUFFIX resource=M4A1;
-    # renderable_instance name=main_gun_node-box node=main_gun_node-SUFFIX resource=box;
-    rigid_cuboid node=human_node-SUFFIX hitboxes=human_hitbox tirelines=human_tirelines mass=70 size=inf inf inf collidable_mode=small_moving name=human-SUFFIX;
+    IF_WITH_GUN renderable_instance name=main_gun_node-inst node=main_gun_node$SUFFIX resource=M4A1;
+    # renderable_instance name=main_gun_node-box node=main_gun_node$SUFFIX resource=box;
+    rigid_cuboid node=human_node$SUFFIX hitboxes=human_hitbox tirelines=human_tirelines mass=70 size=inf inf inf collidable_mode=small_moving name=human$SUFFIX;
 
     gun {
-        "node": "main_gun_end_node-SUFFIX",
-        "parent_rigid_body_node": "human_node-SUFFIX",
+        "node": "main_gun_end_node$SUFFIX",
+        "parent_rigid_body_node": "human_node$SUFFIX",
         "cool_down": 0.5,
         "bullet_renderable": "tank_bullet_renderable",
         "bullet_hitboxes": "tank_bullet_hitbox",
@@ -21,9 +21,9 @@ macro_begin create_human_box;
         "size": [2.4, 2.4, 20]};
 
     yaw_pitch_look_at_nodes
-        yaw_node=human_node-SUFFIX
-        pitch_node=main_gun_node-SUFFIX
-        parent_follower_rigid_body_node=human_node-SUFFIX
+        yaw_node=human_node$SUFFIX
+        pitch_node=main_gun_node$SUFFIX
+        parent_follower_rigid_body_node=human_node$SUFFIX
         followed=
         bullet_start_offset=20
         bullet_velocity=900
@@ -40,16 +40,16 @@ macro_begin create_human_box;
         pitch_error_std=PITCH_ERROR_STD
         error_alpha=ERROR_ALPHA;
 
-    damageable node=human_node-SUFFIX health=200 delete_node_when_health_leq_zero=0;
+    damageable node=human_node$SUFFIX health=200 delete_node_when_health_leq_zero=0;
 
-    IF_WITH_PHYSICS create_engine {"rigid_body": "human_node-SUFFIX", "name": "legs",   "angular_vels": [-300, -200, -100, 0], "powers": [40, 400, 400, 40], "gear_ratios": [0.5, 1, 2, 3]};
+    {"required": ["IF_WITH_PHYSICS"], "call": "create_engine", "literals": {"rigid_body": "human_node$SUFFIX", "name": "legs",   "angular_vels": [-300, -200, -100, 0], "powers": [40, 400, 400, 40], "gear_ratios": [0.5, 1, 2, 3]}},
 
-    IF_WITH_PHYSICS wheel rigid_body=human_node-SUFFIX node= position=0 0 0 radius=1 engine=legs brake_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
+    IF_WITH_PHYSICS wheel rigid_body=human_node$SUFFIX node= position=0 0 0 radius=1 engine=legs brake_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
 macro_end;
 
 macro_begin get_into_box;
     player_set_aiming_gun {
         "player_name": "PLAYER_NAME",
-        "ypln_node": "human_node-SUFFIX",
-        "gun_node": "main_gun_end_node-SUFFIX"};
+        "ypln_node": "human_node$SUFFIX",
+        "gun_node": "main_gun_end_node$SUFFIX"};
 macro_end;

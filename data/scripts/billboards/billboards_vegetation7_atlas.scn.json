@@ -1,0 +1,56 @@
+[
+    {
+        "call": "add_texture_atlas",
+        "literals": {
+            "name": "vegetation7",
+            "width": 1024,
+            "height": 1024,
+            "color_mode": "rgba",
+            "images": [
+                {"texture_pos": [0, 20], "texture": "#grass_tbdpec3r_island_bright"},
+                {"texture_pos": [0, 532], "texture": "#grass_tbdpec3r_island_green1"}
+            ]
+        }
+    },
+    {
+        "comment": {
+            "call": "save_texture_atlas_png",
+            "literals": {
+                "name": "vegetation7",
+                "filename": "/tmp/vegetation7.png",
+                "color_mode": "rgba"
+            }
+        }
+    },
+    {
+        "call": "add_texture_descriptor",
+        "literals": {
+            "name": "vegetation7",
+            "color": "#vegetation7",
+            "color_mode": "rgba",
+            "anisotropic_filtering_level": 16
+        }
+    },
+    {
+        "call": "square_resource",
+        "literals": {
+            "name": "vegetation7",
+            "texture_filename": "#vegetation7",
+            "min": [-0.5, -0.05],
+            "max": [0.5, 1],
+            "occluded_pass": "lightmap_black_global_static",
+            "occluder_pass": "none",
+            "ambience": [2, 2, 2],
+            "blend_mode": "semi_continuous_02",
+            "z_order": 1,
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces": true,
+            "aggregate_mode": "instances_sorted",
+            "transformation_mode": "position_lookat",
+            "billboards": [
+                {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [3.5, 1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+                {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [3.5, 1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+            ]
+        }
+    }
+]

@@ -1,4 +1,4 @@
 [
-    {"call": "load_macro_manifests", "literals": {"id": "levels"}, "path_lists": {"directory": "levels"}},
-    {"call": "load_replacement_parameters", "literals": {"id": "vehicles"}, "path_lists": {"directory": "scripts/vehicles"}}
+    {"call": "load_macro_manifests", "literals": {"id": "levels", "directory": "levels"}},
+    {"call": "load_replacement_parameters", "literals": {"id": "vehicles", "directory": "scripts/vehicles"}}
 ]

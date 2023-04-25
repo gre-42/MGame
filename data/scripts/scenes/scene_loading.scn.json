@@ -1,0 +1,65 @@
+[
+    {
+        "declare_macro": "_setup_scene_loading",
+        "content": [
+            {
+                "playback": "scene_minimal",
+                "literals": {
+                    "IF_DIRTMAP": false,
+                    "IF_SKYBOX": false
+                }
+            },
+            {
+                "call": "ui_background",
+                "literals": {
+                    "z_order": 1,
+                    "texture": "textures/ui_background.png",
+                    "left": "min",
+                    "right": "max",
+                    "bottom": "min",
+                    "top": "max",
+                    "update": "once",
+                    "focus_mask": "always"
+                }
+            },
+            {
+                "call": "focused_text",
+                "literals": {
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "position": "nan nan",
+                    "font_height": "huge",
+                    "line_distance": "huge",
+                    "focus_mask": "always",
+                    "text": "Loading..."
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "create_scene_loading",
+        "content": [
+            {
+                "call": "create_scene",
+                "literals": {
+                    "name": "loading",
+                    "z_order": 0,
+                    "focus_mask": "scene",
+                    "submenus": [],
+                    "fly": false,
+                    "rotate": false,
+                    "print_gamepad_buttons": false,
+                    "depth_fog": false,
+                    "low_pass": false,
+                    "high_pass": false,
+                    "with_skybox": false,
+                    "with_flying_logic": false,
+                    "clear_mode": "color_and_depth"
+                }
+            },
+            {
+                "playback": "_setup_scene_loading",
+                "context": "loading"
+            }
+        ]
+    }
+]

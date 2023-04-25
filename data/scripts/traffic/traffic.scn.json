@@ -1,0 +1,217 @@
+[
+    {
+        "declare_macro": "traffic.create_human_npc_player",
+        "content": [
+            {
+                "call": "player_create",
+                "literals": {
+                    "name": "%PLAYER_NAME",
+                    "team": "red",
+                    "game_mode": "bystander",
+                    "unstuck_mode": "UNSTUCK_MODE",
+                    "driving_mode": "pedestrian",
+                    "driving_direction": "right"
+                }
+            },
+            {
+                "call": "set_can_drive",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "source": "ai",
+                    "value": true
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_car_npc_player",
+        "content": [
+            {
+                "call": "player_create",
+                "literals": {
+                    "name": "%PLAYER_NAME",
+                    "team": "red",
+                    "game_mode": "bystander",
+                    "unstuck_mode": "%UNSTUCK_MODE",
+                    "driving_mode": "car_city",
+                    "driving_direction": "right"
+                }
+            },
+            {
+                "call": "set_can_drive",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "source": "ai",
+                    "value": true
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_human",
+        "content": [
+            {
+                "playback": "create_human",
+                "literals": {
+                    "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+                    "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+                    "HUMAN_NAME": "%HUMAN_NAME",
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_WITH_GUN": false,
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "IF_SHADOW": false,
+                    "IF_HUMAN_STYLE": true,
+                    "COLOR": "%COLOR",
+                    "IF_PLAYER": true,
+                    "VELOCITY_ERROR_STD": 0,
+                    "YAW_ERROR_STD": 0,
+                    "PITCH_ERROR_STD": 0,
+                    "ERROR_ALPHA": 0.002
+                }
+            },
+            {
+                "call": "create_externals",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "mode": "npc"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_car",
+        "content": [
+            {
+                "playback": "create_car",
+                "literals": {
+                    "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+                    "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+                    "CAR_NAME": "%CAR_NAME",
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+                    "IF_STATIC": "%IF_STATIC",
+                    "IF_DYNAMIC": "%IF_DYNAMIC",
+                    "IF_PLAYBACK_TRACK": false,
+                    "IF_PLAYBACK_WINNER": false,
+                    "IF_PLAYER": true,
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "IF_SHADOW": false,
+                    "IF_DAMAGEABLE": false,
+                    "IF_CAR_BODY_RENDERABLE_STYLE": true,
+                    "COLOR": "%COLOR"
+                }
+            },
+            {
+                "call": "create_externals",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "mode": "npc"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_npc_and_human",
+        "content": [
+            {
+                "playback": "traffic.create_human_npc_player",
+                "literals": {
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "UNSTUCK_MODE": "delete"
+                }
+            },
+            {
+                "call": "set_preferred_car_spawner",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "macro": "traffic.create_human",
+                    "parameters": {
+                        "HUMAN_NAME":"%HUMAN_NAME",
+                        "DECIMATE":"_d2"
+                    }
+                }
+            },
+            {
+                "call": "set_pathfinding_way_points",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "node": "osm_map_node",
+                    "resource": "osm_map"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_npc_and_parking_car",
+        "content": [
+            {
+                "playback": "traffic.create_car_npc_player",
+                "literals": {
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "UNSTUCK_MODE": "off"
+                }
+            },
+            {
+                "call": "set_preferred_car_spawner",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "macro": "traffic.create_car",
+                    "parameters": {
+                        "CAR_NAME": "%CAR_NAME",
+                        "DECIMATE": "",
+                        "COLOR": "%COLOR",
+                        "IF_STATIC": false,
+                        "IF_DYNAMIC": true
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "traffic.create_npc_and_driving_car",
+        "content": [
+            {
+                "playback": "traffic.create_car_npc_player",
+                "literals": {
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "UNSTUCK_MODE": "delete"
+                }
+            },
+            {
+                "call": "set_preferred_car_spawner",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "macro": "traffic.create_car",
+                    "parameters": {
+                        "CAR_NAME": "%CAR_NAME",
+                        "DECIMATE": "",
+                        "COLOR": "%COLOR",
+                        "IF_STATIC": false,
+                        "IF_DYNAMIC": true
+                    }
+                }
+            },
+            {
+                "call": "set_pathfinding_way_points",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "node": "osm_map_node",
+                    "resource": "osm_map"
+                }
+            }
+        ]
+    },
+    { "include": "traffic_with_pedestrians.scn.json" },
+    { "include": "traffic_wo_pedestrians.scn.json" },
+    { "include": "traffic_only_pedestrians.scn.json" }
+]

@@ -1,28 +1,28 @@
 [
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/car.png" }, "literals": { "instance": "car_selector_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/color.png" }, "literals": { "instance": "car_color_selector_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/game_mode.png" }, "literals": { "instance": "game_mode_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/controls.png" }, "literals": {"instance": "controls_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/scene_selector.png" }, "literals": { "instance": "scene_selector_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/session.png" }, "literals": { "instance": "session_selector_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/laps.png" }, "literals": { "instance": "laps_selector_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/missing.png" }, "literals": { "instance": "missing_icon", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/selection_marker.png" }, "literals": { "instance": "selection_marker", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/dots.png" }, "literals": { "instance": "dots", "color_mode": "rgba" } },
-    { "call": "add_to_gallery", "pathes": { "resource": "textures/menu/missing.png" }, "literals": { "instance": "level_icon", "color_mode": "rgb" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/car.png", "instance": "car_selector_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/color.png", "instance": "car_color_selector_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/game_mode.png", "instance": "game_mode_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/controls.png", "instance": "controls_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/scene_selector.png", "instance": "scene_selector_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/session.png", "instance": "session_selector_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/laps.png", "instance": "laps_selector_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/missing.png", "instance": "missing_icon", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/selection_marker.png", "instance": "selection_marker", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/dots.png", "instance": "dots", "color_mode": "rgba" } },
+    { "call": "add_to_gallery", "literals": { "resource": "textures/menu/missing.png", "instance": "level_icon", "color_mode": "rgb" } },
     {
         "declare_macro": "add_pacenote_picture",
         "content": [
-            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/$GEAR.png" }, "literals": { "instance": "pacenote_l$GEAR", "color_mode": "rgba" } },
-            { "call": "add_to_gallery", "pathes": { "resource": "textures/pacenotes/$GEAR.png" }, "literals": { "instance": "pacenote_r$GEAR", "color_mode": "rgba", "flip_horizontally": true } }
+            { "call": "add_to_gallery", "literals": { "resource": "textures/pacenotes/$GEAR.png", "instance": "pacenote_l$GEAR", "color_mode": "rgba" } },
+            { "call": "add_to_gallery", "literals": { "resource": "textures/pacenotes/$GEAR.png", "instance": "pacenote_r$GEAR", "color_mode": "rgba", "flip_horizontally": true } }
         ]
     },
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "0"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "1"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "2"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "3"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "4"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "5"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "6"}},
-    {"playback": "add_pacenote_picture", "substitutions": {"GEAR": "7"}}
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "0"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "1"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "2"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "3"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "4"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "5"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "6"}},
+    {"playback": "add_pacenote_picture", "literals": {"GEAR": "7"}}
 ]

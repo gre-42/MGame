@@ -1,8 +1,0 @@
-macro_begin reload;
-    reload_scene scene_filename=levels/main/main.scn;
-macro_end;
-
-macro_begin clear_selection_ids_and_reload;
-    clear_selection_ids except=game_mode_selector;
-    macro_playback reload;
-macro_end;

@@ -3,7 +3,7 @@
     "script_file": "scene_sf_wo_traffic.scn",
     "variables": {
         "LEVEL_ID": "sf_wo_traffic",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
+    "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
 }

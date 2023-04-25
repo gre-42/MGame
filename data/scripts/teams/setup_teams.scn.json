@@ -1,0 +1,27 @@
+[
+    {
+        "declare_macro": "setup_teams",
+        "content": [
+            {
+                "call": "load_players",
+                "literals": {
+                    "json": "%PLAYERS_JSON",
+                    "way_points": "%TEAMS_WAY_POINTS_RESOURCE"
+                }
+            },
+            {
+                "call": "set_spawn_points",
+                "literals": {
+                    "node": "osm_map_node",
+                    "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
+                }
+            },
+            {
+                "call": "set_objective",
+                "literals": {
+                    "objective": "%OBJECTIVE"
+                }
+            }
+        ]
+    }
+]

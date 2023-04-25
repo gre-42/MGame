@@ -4,7 +4,7 @@
     "variables": {
         "LEVEL_ID": "nyc_with_traffic_track2_night",
         "LEVEL_ICON_FILE": "levels/nyc_with_traffic_track2/icon_night.png",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

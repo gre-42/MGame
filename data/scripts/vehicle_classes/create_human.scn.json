@@ -1,0 +1,185 @@
+[
+    {
+        "declare_macro": "create_human",
+        "content": [
+            {
+                "call": "root_node_instance",
+                "literals": {
+                    "type": "dynamic",
+                    "name": "human_node$SUFFIX",
+                    "scale": 1,
+                    "position": "%HUMAN_NODE_POSITION",
+                    "rotation": "%HUMAN_NODE_ROTATION"
+                }
+            },
+            {
+                "call": "add_color_style",
+                "required": ["IF_HUMAN_STYLE"],
+                "literals": {
+                    "node": "human_node$SUFFIX",
+                    "ambience": "%COLOR",
+                    "diffusivity": "%COLOR"
+                }
+            },
+            {
+                "required": ["IF_HUMAN_STYLE"],
+                "call": "set_animation_state",
+                "literals": {
+                    "node": "human_node$SUFFIX",
+                    "animation_loop_name": "xonotic_pyria.idle",
+                    "animation_loop_begin": 0,
+                    "animation_loop_end": "full",
+                    "animation_loop_time": 0
+                }
+            },
+            {
+                "playback": "create$HUMAN_NAME",
+                "literals": {
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_WITH_GUN": "%IF_WITH_GUN",
+                    "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                    "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                    "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                    "ERROR_ALPHA": "%ERROR_ALPHA"
+                }
+            },
+            {
+                "required": ["IF_PLAYER"],
+                "call": "player_set_node",
+                "literals": {
+                    "node": "human_node$SUFFIX"
+                },
+                "variables": {
+                    "player_name": "PLAYER_NAME"
+                }
+            },
+            {
+                "comment": "# IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human$SUFFIX CSUFFIX:SUFFIX;"
+            },
+            {
+                "required": ["IF_PLAYER"],
+                "call": "set_externals_creator",
+                "literals": {
+                    "macro": [
+                        {
+                            "playback": "create_player_human_externals",
+                            "literals": {
+                                "SUFFIX": "%SUFFIX",
+                                "HUMAN_NAME": "%HUMAN_NAME",
+                                "IF_RACING": "%IF_RACING",
+                                "IF_RALLY": "%IF_RALLY",
+                                "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                                "IF_PC": "%IF_PC",
+                                "IF_WITH_GUN": "%IF_WITH_GUN",
+                                "PLAYER_NAME": "%PLAYER_NAME"
+                            }
+                        }
+                    ],
+                    "player": "%PLAYER_NAME"
+                }
+            },
+            {
+                "comment": {
+                    "playback": "visual_node_status_3rd",
+                    "node": "human_node$SUFFIX",
+                    "format": 8,
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "offset": "0 0.3",
+                    "font_height": 16,
+                    "line_distance": 16
+                }
+            },
+            {
+                "call": "set_node_hider",
+                "literals": {
+                    "node_to_hide": "human_node$SUFFIX",
+                    "camera_node": "human_head_camera_node$SUFFIX"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "create_player_human_externals",
+        "content": [
+            {
+                "playback": "create_player_human_externals$HUMAN_NAME",
+                "literals": {
+                    "SUFFIX": "%SUFFIX",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_WITH_GUN": "%IF_WITH_GUN",
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "IF_PC": "%IF_PC"
+                }
+            },
+            {
+                "required": ["IF_PC"],
+                "playback": "create_human_key_bindings",
+                "literals": {
+                    "SUFFIX": "%SUFFIX",
+                    "PLAYER_NAME": "%PLAYER_NAME"
+                }
+            },
+            {
+                "playback": "create_human_cameras_persistent",
+                "literals": {
+                    "SUFFIX": "%SUFFIX"
+                }
+            },
+            {
+                "required": ["IF_PC"],
+                "playback": "create_human_cameras_pc",
+                "literals": {
+                    "SUFFIX": "%SUFFIX",
+                    "PLAYER_NAME": "%PLAYER_NAME"
+                }
+            },
+            {
+                "call": "hud_image",
+                "required": ["IF_PC"],
+                "literals": {
+                    "gun_node": "main_gun_end_node$SUFFIX",
+                    "camera_node": "human_head_camera_node$SUFFIX",
+                    "ypln_node": "human_node$SUFFIX",
+                    "update": "once",
+                    "center": [0, 0],
+                    "size": [0.05, 0.05],
+                    "error_behavior": "center",
+                    "filename": "textures/hud/crosshair.png"}
+            },
+            {
+                "call": "visual_player_bullet_count",
+                "required": ["IF_PC"],
+                "literals": {
+                    "player": "$PLAYER_NAME",
+                    "left": "bullet_count_left",
+                    "right": "bullet_count_right",
+                    "bottom": "bullet_count_bottom",
+                    "top": "bullet_count_top",
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "font_height": "normal",
+                    "line_distance": "normal"}
+            },
+            {
+                "required": ["IF_WITH_GUN"],
+                "call": "player_set_aiming_gun",
+                "literals": {
+                    "ypln_node": "human_node$SUFFIX",
+                    "gun_node": "main_gun_end_node$SUFFIX",
+                    "player_name": "%PLAYER_NAME"
+                }
+            },
+            {
+                "call": "player_set_vehicle_control_parameters",
+                "literals": {
+                    "surface_power_forward": "inf",
+                    "surface_power_backward": "-inf",
+                    "player_name": "%PLAYER_NAME"
+                }
+            }
+        ]
+    }
+]

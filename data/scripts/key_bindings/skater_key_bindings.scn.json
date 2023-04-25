@@ -1,0 +1,88 @@
+[
+    {
+        "declare_macro": "create_skater_key_bindings",
+        "content": [
+            {
+                "call": "car_controller_idle_binding",
+                "literals": {
+                    "player": "PLAYER_NAME",
+                    "node": "skater_node$SUFFIX",
+                    "surface_power": "inf",
+                    "drive_relaxation": 1
+                }
+            },
+            {
+                "call": "rel_key_binding",
+                "literals": {
+                    "id": "skater.rotate_left",
+                    "role": "%ROLE",
+                    "node": "skater_node$SUFFIX",
+                    "rotation_axis": [0, 1, 0],
+                    "angular_velocity_press": 3,
+                    "angular_velocity_repeat": 3,
+                    "speed_cursor": 0.1
+                }
+            },
+            {
+                "call": "rel_key_binding",
+                "literals": {
+                    "id": "skater.rotate_right",
+                    "role": "%ROLE",
+                    "node": "skater_node$SUFFIX",
+                    "rotation_axis": [0, 1, 0],
+                    "angular_velocity_press": -3,
+                    "angular_velocity_repeat": -3,
+                    "speed_cursor": -0.1
+                }
+            },
+            {
+                "comment": {
+                    "call": "abs_key_binding",
+                    "literals": {
+                        "node": "skater_node$SUFFIX",
+                        "key": "%LEFT_SHIFT",
+                        "gamepad_button": "Y",
+                        "force": [0, 2000, 0]
+                    }
+                }
+            },
+            {
+                "call": "abs_key_binding",
+                "literals": {
+                    "id": "skater.jump",
+                    "role": "%ROLE",
+                    "node": "skater_node$SUFFIX",
+                    "wants_to_jump": true
+                }
+            },
+            {
+                "call": "abs_key_binding",
+                "literals": {
+                    "id": "skater.grind",
+                    "role": "%ROLE",
+                    "node": "skater_node$SUFFIX",
+                    "wants_to_grind": true
+                }
+            },
+            {
+                "call": "abs_key_binding",
+                "literals": {
+                    "id": "skater.forward",
+                    "role": "%ROLE",
+                    "node": "skater_node$SUFFIX",
+                    "fly_forward_factor": 100
+                }
+            },
+            {
+                "call": "car_controller_key_binding",
+                "literals": {
+                    "id": "skater.brake",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "skater_node$SUFFIX",
+                    "surface_power": "nan"
+                }
+            }
+        ]
+    }
+]

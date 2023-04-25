@@ -1,0 +1,71 @@
+[
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "add_texture_descriptor",
+        "literals": {
+            "name": "blob0",
+            "color": "textures/blobs/blob0_color.png",
+            "alpha": "textures/blobs/blob0_alpha.png",
+            "color_mode": "rgba",
+            "anisotropic_filtering_level": 16
+        }
+    },
+    {
+        "exclude": ["IF_ANDROID"],
+        "call": "square_resource",
+        "literals": {
+            "name": "street_light_blob",
+            "texture_filename": "#blob0",
+            "min": [-6, -6],
+            "max": [6, 6],
+            "center_distances": [0, 501],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_blobs",
+            "ambience": [1, 1, 1],
+            "blend_mode": "invisible",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces": true,
+            "rotation": [-90, 0, 0],
+            "translation": [0, 0, 0],
+            "aggregate_mode": "instances_sorted",
+            "transformation_mode": "position"
+        }
+    },
+    {
+        "comment": [
+            "Darken car light so the intensity of",
+            "left + right ~ 1"
+        ]
+    },
+    {
+        "call": "add_texture_descriptor",
+        "literals": {
+            "name": "car_light_beam",
+            "color": "textures/blobs/car_light_beam_color.png",
+            "alpha": "textures/blobs/car_light_beam_alpha.png",
+            "color_mode": "rgba",
+            "lighten": [-0.7, -0.7, -0.7],
+            "anisotropic_filtering_level": 16
+        }
+    },
+    {
+        "call": "square_resource",
+        "literals": {
+            "name": "car_light_beam",
+            "texture_filename": "#car_light_beam",
+            "min": [-10, -20],
+            "max": [10, 20],
+            "center_distances": [0, 501],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_blobs",
+            "ambience": [1, 1, 1],
+            "blend_mode": "invisible",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces": true,
+            "rotation": [-90, 0, 0],
+            "translation": [0, 0, 0],
+            "aggregate_mode": "none",
+            "transformation_mode": "position"
+        }
+    }
+]

@@ -52,35 +52,43 @@ macro_begin _scene_tank_load_resources;
     #########;
     # human #;
     #########;
-    obj_resource
-        name=human-hitbox
-        filename=models/primitives/box.obj
-        position=0 0.35 0
-        rotation=0 0 0
-        scale=0.5 0.7 0.5
-        center_distances=0 inf
-        blend_mode=off
-        alpha_distances=0 0 inf inf
-        occluded_pass=none
-        occluder_pass=none
-        aggregate_mode=none
-        transformation_mode=all;
+    {
+        "call": "obj_resource",
+        "literals": {
+            "name": "human-hitbox",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 0.35, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.5, 0.7, 0.5],
+            "center_distances": [0 inf],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    }
 
-    gen_triangle_rays name=human-hitbox npoints=5 lengths=0.5 0.7 0.5 delete_triangles=0;
+    {"call": "gen_triangle_rays", "literals": {"name": "human-hitbox", "npoints": 5, "lengths": [0.5, 0.7, 0.5], "delete_triangles": false},
 
-    obj_resource
-        name=human-tirelines
-        filename=models/primitives/empty.obj
-        position=0 0 0
-        rotation=0 0 0
-        scale=1 1 1
-        center_distances=0 501
-        blend_mode=off
-        alpha_distances=0 0 inf inf
-        occluded_pass=none
-        occluder_pass=none
-        aggregate_mode=none
-        transformation_mode=all;
+    {
+        "call": "obj_resource",
+        "literals": {
+            "name": "human-tirelines",
+            "filename": "models/primitives/empty.obj",
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, 501],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    }
 
     gen_ray name=human-tirelines from=0 -0.3 0 to=0 -0.9 0;
 
@@ -185,7 +193,7 @@ macro_begin _scene_tank_instantiate;
     IF_PLAYER_TANK macro_playback create_tiger_tank
         PLAYER_NAME:you
         TEAM:red
-        gun_node=main_gun_end_node-SUFFIX:gun_node=
+        gun_node=main_gun_end_node$SUFFIX:gun_node=
         player_set_surface_power:#
         player_set_tire_angle:#
         visual_node_status_3rd:#
@@ -286,13 +294,13 @@ macro_begin _scene_tank_instantiate;
     # Box #;
     #######;
     macro_begin create-box;
-        renderable_instance name=box-SUFFIX node=box-node-SUFFIX resource=muscle-cupe-hitbox;
+        {"call": "renderable_instance", "literals": {"name": "box$SUFFIX", "node": "box-node$SUFFIX", "resource": "muscle-cupe-hitbox"}},
         rigid_cuboid
-            node=box-node-SUFFIX
+            node=box-node$SUFFIX
             hitboxes=muscle-cupe-hitbox
             mass=1200 size=5 5 5
             collidable_mode=small_moving
-            name=box-SUFFIX;
+            name=box$SUFFIX;
         #collidable-mesh rigid_body-node=box-node node=box-node resource=muscle-cupe-hitbox;
     macro_end;
 

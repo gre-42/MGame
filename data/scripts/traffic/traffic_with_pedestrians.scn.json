@@ -1,0 +1,81 @@
+[
+    {
+        "declare_macro": "setup_traffic_with_pedestrians",
+        "content": [
+            { 
+                "playback": "traffic.create_npc_and_human",
+                "literals": { "PLAYER_NAME": "h_npc1", "HUMAN_NAME": "_mh1" }
+            },
+            { 
+                "playback": "traffic.create_npc_and_human",
+                "literals": { "PLAYER_NAME": "h_npc2", "HUMAN_NAME": "_mh1" }
+            },
+            { 
+                "playback": "traffic.create_npc_and_human",
+                "literals": { "PLAYER_NAME": "h_npc3", "HUMAN_NAME": "_mh1" }
+            },
+            { 
+                "playback": "traffic.create_npc_and_human",
+                "literals": { "PLAYER_NAME": "h_npc4", "HUMAN_NAME": "_mh1" }
+            },
+
+            {
+                "comment": "From: https://wiki.rage.mp/index.php?title=Vehicle_Colors"
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc1", "CAR_NAME": "_M3", "COLOR": [0.07, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "_M3", "COLOR": [0.95, 0.80, 0.25] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "_M3", "COLOR": [0.74, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "_XZ", "COLOR": [0.95, 0.80, 0.25] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "_XZ", "COLOR": [0.74, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "_FN", "COLOR": [0.95, 0.80, 0.25] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "_FN", "COLOR": [0.74, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "_LK4", "COLOR": [0.95, 0.80, 0.25] }
+            },
+            {
+                "playback": "traffic.create_npc_and_parking_car",
+                "literals": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "_LK4", "COLOR": [0.74, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_driving_car",
+                "literals": { "PLAYER_NAME": "dc_npc1", "CAR_NAME": "_XZ", "COLOR": [0.07, 0.22, 0.24] }
+            },
+            {
+                "playback": "traffic.create_npc_and_driving_car",
+                "literals": { "PLAYER_NAME": "dc_npc2", "CAR_NAME": "_FN", "COLOR": [0.95, 0.80, 0.25] }
+            },
+            {
+                "playback": "traffic.create_npc_and_driving_car",
+                "literals": { "PLAYER_NAME": "dc_npc3", "CAR_NAME": "_LK4", "COLOR": [0.74, 0.22, 0.24] }
+            },
+            {
+                "call": "set_vip", "literals": { "player": "you" }
+            },
+            {
+                "call": "set_spawn_points", "literals": { "node": "osm_map_node", "resource": "osm_map" }
+            }
+        ]
+    }
+]

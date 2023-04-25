@@ -4,7 +4,7 @@
     "variables": {
         "LEVEL_ID": "arena_humans",
         "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_TD"]
+    "required": ["IF_GAME_MODE_TD"]
 }

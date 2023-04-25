@@ -1,0 +1,244 @@
+[
+    {
+        "declare_macro": "teams.create_player_for_human_and_npc",
+        "content": [
+            {
+                "call": "player_create",
+                "literals": {
+                    "name": "%PLAYER_NAME",
+                    "team": "%TEAM",
+                    "game_mode": "%GAME_MODE",
+                    "unstuck_mode": "off",
+                    "driving_mode": "human_arena",
+                    "driving_direction": "center"
+                }
+            },
+            {
+                "playback": "set_player_skills",
+                "literals": {
+                    "USER_DRIVE": "%USER_DRIVE",
+                    "USER_AIM": "%USER_AIM",
+                    "USER_SHOOT": "%USER_SHOOT",
+                    "AI_DRIVE": "%AI_DRIVE",
+                    "AI_AIM": "%AI_AIM",
+                    "AI_SHOOT": "%AI_SHOOT",
+                    "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "teams.create_player_for_car_and_npc",
+        "content": [
+            {
+                "call": "player_create",
+                "literals": {
+                    "name": "%PLAYER_NAME",
+                    "team": "%TEAM",
+                    "game_mode": "%GAME_MODE",
+                    "unstuck_mode": "%UNSTUCK_MODE",
+                    "driving_mode": "car_arena",
+                    "driving_direction": "center"
+                }
+            },
+            {
+                "playback": "set_player_skills",
+                "literals": {
+                    "USER_DRIVE": "%USER_DRIVE",
+                    "USER_AIM": "%USER_AIM",
+                    "USER_SHOOT": "%USER_SHOOT",
+                    "AI_DRIVE": "%AI_DRIVE",
+                    "AI_AIM": "%AI_AIM",
+                    "AI_SHOOT": "%AI_SHOOT",
+                    "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "teams.create_human_for_npc",
+        "content": [
+            {
+                "playback": "create_human",
+                "literals": {
+                    "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+                    "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+                    "HUMAN_NAME": "%HUMAN_NAME",
+                    "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_WITH_GUN": "%",
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "COLOR": "%COLOR",
+                    "IF_PLAYER": true,
+                    "IF_SHADOW": true,
+                    "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                    "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                    "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                    "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                    "ERROR_ALPHA": "%ERROR_ALPHA"
+                }
+            },
+            {
+                "call": "create_externals",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "mode": "npc"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "teams.create_car_for_npc",
+        "content": [
+            {
+                "playback": "create_car",
+                "literals": {
+                    "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+                    "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+                    "CAR_NAME": "%CAR_NAME",
+                    "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_STATIC": false,
+                    "IF_DYNAMIC": true,
+                    "IF_PLAYBACK_TRACK": false,
+                    "IF_PLAYBACK_WINNER": false,
+                    "IF_PLAYER": true,
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "IF_PC": false,
+                    "IF_SHADOW": true,
+                    "IF_DAMAGEABLE": true,
+                    "COLOR": "%COLOR",
+                    "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                    "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                    "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                    "ERROR_ALPHA": "%ERROR_ALPHA"
+                }
+            },
+            {
+                "call": "visual_node_status_3rd",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "format": "health",
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "offset": [0, 0.3],
+                    "font_height": "normal",
+                    "line_distance": "normal"
+                }
+            },
+            {
+                "call": "create_externals",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "mode": "npc"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "teams.create_player_and_human_for_npc",
+        "content": [
+            {
+                "playback": "teams.create_player_for_human_and_npc",
+                "literals": {
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "TEAM": "%TEAM",
+                    "GAME_MODE": "%GAME_MODE",
+                    "USER_DRIVE": "%USER_DRIVE",
+                    "USER_AIM": "%USER_AIM",
+                    "USER_SHOOT": "%USER_SHOOT",
+                    "AI_DRIVE": "%AI_DRIVE",
+                    "AI_AIM": "%AI_AIM",
+                    "AI_SHOOT": "%AI_SHOOT",
+                    "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
+                }
+            },
+            {
+                "call": "set_preferred_car_spawner",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "macro": {
+                        "playback": "teams.create_human_for_npc"
+                    },
+                    "parameters": {
+                        "HUMAN_NAME": "%HUMAN_NAME",
+                        "DECIMATE": "%DECIMATE",
+                        "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
+                        "COLOR": "%COLOR",
+                        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                        "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                        "ERROR_ALPHA": "%ERROR_ALPHA"
+                    }
+                }
+            },
+            {
+                "required": ["IF_SET_WAY_POINTS"],
+                "call": "set_pathfinding_way_points",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "node": "osm_map_node",
+                    "resource": "%TEAMS_WAY_POINTS_RESOURCE"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "teams.create_player_and_car_for_npc",
+        "content": [
+            {
+                "playback": "teams.create_player_for_car_and_npc",
+                "literals": {
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "TEAM": "%TEAM",
+                    "GAME_MODE": "%GAME_MODE",
+                    "UNSTUCK_MODE": "%UNSTUCK_MODE",
+                    "USER_DRIVE": "%USER_DRIVE",
+                    "USER_AIM": "%USER_AIM",
+                    "USER_SHOOT": "%USER_SHOOT",
+                    "AI_DRIVE": "%AI_DRIVE",
+                    "AI_AIM": "%AI_AIM",
+                    "AI_SHOOT": "%AI_SHOOT",
+                    "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
+                }
+            },
+            {
+                "call": "set_preferred_car_spawner",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "macro": "teams.create_car_for_npc",
+                    "parameters": {
+                        "CAR_NAME": "%CAR_NAME",
+                        "DECIMATE": "%DECIMATE",
+                        "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
+                        "COLOR": "%COLOR",
+                        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+                        "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                        "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                        "ERROR_ALPHA": "%ERROR_ALPHA"
+                    }
+                }
+            },
+            {
+                "required": ["IF_SET_WAY_POINTS"],
+                "call": "set_pathfinding_way_points",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "node": "osm_map_node",
+                    "resource": "%TEAMS_WAY_POINTS_RESOURCE"
+                }
+            }
+        ]
+    }
+]

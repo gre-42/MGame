@@ -1,0 +1,30 @@
+[
+    {
+        "declare_macro": "create_car_cameras_plane",
+        "content": [
+            {"call": "root_node_instance", "literals": {"type": "dynamic", "name": "45_deg_camera", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
+            {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "follower_camera", "position": [0, 10, 10]}},
+            {"call": "perspective_camera", "literals": {"node": "45_deg_camera", "y_fov": 30, "near_plane": 1, "far_plane": 10000, "requires_postprocessing": false}},
+            {"call": "perspective_camera", "literals": {"node": "follower_camera", "y_fov": 60, "near_plane": 1, "far_plane": "%FAR_PLANE", "requires_postprocessing": true}},
+            {"call": "look_at_node", "literals": {"follower": "45_deg_camera", "followed": "car_node$SUFFIX"}},
+            {
+                "call": "follow_node",
+                "literals": {
+                    "follower": "follower_camera",
+                    "followed": "car_node$SUFFIX",
+                    "distance": 15,
+                    "node_displacement": [0, 4, 0],
+                    "look_at_displacement": [0, 4, 0],
+                    "snappiness": 2,
+                    "y_adaptivity": 15,
+                    "y_snappiness": 0.05
+                }
+            },
+            {"call": "set_camera_cycle", "literals": {"name": "far", "cameras": ["45_deg_camera", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
+            {"call": "set_camera_cycle", "literals": {"name": "near", "cameras": ["follower_camera"]}},
+            {"call": "set_camera", "literals": {"name": "follower_camera"}},
+            {"call": "append_externals_deleter", "literals": {"player": "%PLAYER_NAME", "node": "45_deg_camera"}},
+            {"call": "append_externals_deleter", "literals": {"player": "%PLAYER_NAME", "node": "follower_camera"}}
+        ]
+    }
+]

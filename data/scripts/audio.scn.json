@@ -1,11 +1,9 @@
 [
     {
         "call": "add_audio_sequence",
-        "pathes": {
-            "filename": "sounds/ange-engine-sim/sequence/meta.json"
-        },
         "literals": {
             "name": "car.driving",
+            "filename": "sounds/ange-engine-sim/sequence/meta.json",
             "gain": 1
         }
     }

@@ -1,10 +1,11 @@
 {
     "name": "Chrysler - New Yorker 1971",
     "on_init": [
-        "include CNY71_resource.scn",
-        "include CNY71_instance.scn"],
+        {"include": "CNY71_resource.scn.json"},
+        {"include": "CNY71_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_CNY71"
+        "VEHICLE_SUFFIX": "_CNY71",
+        "VEHICLE_CLASS": "car"
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

@@ -4,7 +4,7 @@
     "variables": {
         "LEVEL_ID": "desert1",
         "LEVEL_ICON_FILE": "levels/desert1/icon.png",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

@@ -1,10 +1,10 @@
 {
     "name": "Tiger I",
     "on_init": [
-        "include tiger_tank_resource.scn",
-        "include tiger_tank_instance.scn"],
+        {"include": "tiger_tank_resource.scn.json"},
+        {"include": "tiger_tank_instance.scn.json"}],
     "variables": {
         "VEHICLE_SUFFIX": "_tiger_tank"
     },
-    "requires": ["IF_GAME_MODE_TD"]
+    "required": ["IF_GAME_MODE_TD"]
 }

@@ -3,7 +3,7 @@
     "script_file": "scene_grossglockner_hochalpenstrasse_closed.scn",
     "variables": {
         "LEVEL_ID": "grossglockner_hochalpenstrasse_closed",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
+    "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
 }

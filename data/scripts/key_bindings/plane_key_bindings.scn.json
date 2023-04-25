@@ -1,0 +1,144 @@
+[
+    {
+        "declare_macro": "create_plane_key_bindings",
+        "content": [
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_idle_binding",
+                "literals": {
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX"
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.roll_left",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "roll": -5
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.roll_right",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "roll": 5
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.pitch_up",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "pitch": 10
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.pitch_down",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "pitch": -10
+                }
+            },
+            {
+                "comment": {
+                    "call": "abs_key_binding",
+                    "literals": {
+                        "node": "car_node$SUFFIX",
+                        "key": "LEFT_SHIFT",
+                        "gamepad_button": "B",
+                        "force": [0, 20000, 0]
+                    }
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.forward",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "turbine_power": "inf"
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.brake",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "brake": 20
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.yaw_left",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "yaw": -20
+                }
+            },
+            {
+                "required": ["IF_MANUAL_DRIVE"],
+                "call": "plane_controller_key_binding",
+                "literals": {
+                    "id": "plane.yaw_right",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "car_node$SUFFIX",
+                    "yaw": 20
+                }
+            },
+            {
+                "required": ["IF_HAS_GUN"],
+                "call": "gun_key_binding",
+                "literals": {
+                    "id": "plane.shoot",
+                    "role": "%ROLE",
+                    "player": "%PLAYER_NAME",
+                    "node": "main_gun_end_node$SUFFIX"
+                }
+            },
+            {
+                "required": ["IF_HAS_GUN"],
+                "exclude": ["IF_MANUAL_AIM"],
+                "call": "player_key_binding",
+                "literals": {
+                    "id": "plane.select_next_opponent",
+                    "role": "%ROLE",
+                    "node": "car_node$SUFFIX",
+                    "select_next_opponent": true
+                }
+            },
+            {
+                "call": "player_key_binding",
+                "literals": {
+                    "id": "plane.select_next_vehicle",
+                    "role": "%ROLE",
+                    "node": "car_node$SUFFIX",
+                    "select_next_vehicle": true
+                }
+            }
+        ]
+    }
+]

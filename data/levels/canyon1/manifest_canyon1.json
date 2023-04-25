@@ -3,7 +3,7 @@
     "script_file": "scene_canyon1.scn",
     "variables": {
         "LEVEL_ID": "canyon1",
-        "IF_RACEWAY_CIRCULAR": "#"
+        "IF_RACEWAY_CIRCULAR": false
     },
-    "requires": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
+    "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
 }

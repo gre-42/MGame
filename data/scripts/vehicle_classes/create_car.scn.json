@@ -1,0 +1,225 @@
+[
+    {
+        "declare_macro": "create_car",
+        "content": [
+            {
+                "call": "root_node_instance",
+                "literals": {
+                    "type": "dynamic",
+                    "name": "car_node$SUFFIX",
+                    "position": "%CAR_NODE_POSITION",
+                    "rotation": "%CAR_NODE_ANGLES"
+                }
+            },
+            {
+                "call": "add_color_style",
+                "required": ["IF_CAR_BODY_RENDERABLE_STYLE"],
+                "literals": {
+                    "selector": "body|chassis|turret|main_gun",
+                    "node": "car_node$SUFFIX",
+                    "ambience": "%COLOR",
+                    "diffusivity": "%COLOR"
+                }
+            },
+            {
+                "playback": "create$CAR_NAME",
+                "literals": {
+                    "DECIMATE": "%DECIMATE",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_STATIC": "%IF_STATIC",
+                    "IF_DYNAMIC": "%IF_DYNAMIC",
+                    "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+                    "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+                    "YAW_ERROR_STD": "%YAW_ERROR_STD",
+                    "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+                    "ERROR_ALPHA": "%ERROR_ALPHA"
+                }
+            },
+            {
+                "required": ["IF_PLAYBACK_TRACK"],
+                "call": "playback_track",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "speed": "%PLAYBACK_SPEED",
+                    "filename": "%PLAYBACK_FILENAME"
+                }
+            },
+            {
+                "required": ["IF_PLAYBACK_WINNER"],
+                "call": "playback_winner_track",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "speed": "%PLAYBACK_SPEED",
+                    "rank": "%RANK"
+                }
+            },
+            {
+                "required": ["IF_PLAYER"],
+                "call": "player_set_node",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "player_name": "%PLAYER_NAME"
+                }
+            },
+            {
+                "comment": "IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car$SUFFIX CSUFFIX:SUFFIX"
+            },
+            {
+                "required": ["IF_DAMAGEABLE"],
+                "call": "damageable",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "health": 200,
+                    "delete_node_when_health_leq_zero": true
+                }
+            },
+            {
+                "required": ["IF_DAMAGEABLE"],
+                "call": "crash",
+                "literals": {
+                    "node": "car_node$SUFFIX",
+                    "damage": 0.000001
+                }
+            },
+            {
+                "required": ["IF_PLAYER"],
+                "call": "set_externals_creator",
+                "literals": {
+                    "macro": [
+                        {
+                            "playback": "create_player_car_externals",
+                            "literals": {
+                                "SUFFIX": "%SUFFIX",
+                                "CAR_NAME": "%CAR_NAME",
+                                "IF_RACING": "%IF_RACING",
+                                "IF_RALLY": "%IF_RALLY",
+                                "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+                                "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                                "IF_PC": "%IF_PC"
+                            }
+                        }
+                    ],
+                    "player": "%PLAYER_NAME"
+                }
+            },
+            {
+                "comment": {
+                    "call": "visual_node_status_3rd",
+                    "literals": {
+                        "node": "car_node$SUFFIX",
+                        "format": 256,
+                        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                        "offset": [0, 0.3],
+                        "font_height": "6",
+                        "line_distance": 16
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "create_player_car_externals",
+        "content": [
+            {
+                "playback": "create_player_car_externals$CAR_NAME",
+                "literals": {
+                    "SUFFIX": "%SUFFIX",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
+                    "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+                    "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "IF_PC": "%IF_PC"
+                }
+            },
+            {
+                "required": ["IF_PC", "IF_DEVEL"],
+                "call": "visual_player_status",
+                "literals": {
+                    "format": "position|speed|acceleration|diameter|diameter2|energy",
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "left": "player_status_left",
+                    "right": "player_status_right",
+                    "bottom": "player_status_bottom",
+                    "top": "player_status_top",
+                    "font_height": "normal",
+                    "line_distance": "normal",
+                    "player": "%PLAYER_NAME"
+                }
+            },
+            {
+                "required": ["IF_PC"],
+                "call": "visual_player_status",
+                "literals": {
+                    "player": "PLAYER_NAME",
+                    "format": "speed",
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "left": "player_speed_left",
+                    "right": "player_speed_right",
+                    "bottom": "player_speed_bottom",
+                    "top": "player_speed_top",
+                    "font_height": "normal",
+                    "line_distance": "normal",
+                    "circular": {
+                        "pointer": "textures/pointer.png",
+                        "tick_radius": "tick_radius",
+                        "pointer_width": "pointer_width",
+                        "pointer_length": "pointer_length",
+                        "minimum_value": 0,
+                        "maximum_value": 250,
+                        "blank_angle": 60,
+                        "ticks": ["0", "30", "60", "90", "120", "150", "180", "210", "240"]
+                    }
+                }
+            },
+            {
+                "required": ["IF_PC"],
+                "call": "visual_player_bullet_count",
+                "literals": {
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "left": "bullet_count_left",
+                    "right": "bullet_count_right",
+                    "bottom": "bullet_count_bottom",
+                    "top": "bullet_count_top",
+                    "font_height": "normal",
+                    "line_distance": "normal",
+                    "player": "%PLAYER_NAME"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "create_player_car_engine_rpm_meter",
+        "content": [
+            {
+                "call": "visual_player_status",
+                "literals": {
+                    "child": ["engines", "ENGINE_NAME"],
+                    "format": "abs_angular_velocity",
+                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                    "left": "player_engine_rpm_left",
+                    "right": "player_engine_rpm_right",
+                    "bottom": "player_engine_rpm_bottom",
+                    "top": "player_engine_rpm_top",
+                    "font_height": "normal",
+                    "line_distance": "normal",
+                    "circular": {
+                        "pointer": "textures/pointer.png",
+                        "tick_radius": "tick_radius",
+                        "pointer_width": "pointer_width",
+                        "pointer_length": "pointer_length",
+                        "minimum_value": 0,
+                        "maximum_value": 8400,
+                        "blank_angle": 60,
+                        "ticks": ["0", "1200", "2400", "3600", "4800", "6000", "7200", "8400"]
+                    },
+                    "player": "%PLAYER_NAME"
+                }
+            }
+        ]
+    }
+]

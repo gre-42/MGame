@@ -1,0 +1,27 @@
+[
+    {
+        "declare_macro": "reload",
+        "content": [
+            {
+                "call": "reload_scene",
+                "scripts": {
+                    "scene_filename": "levels/main/main.scn"
+                }
+            }
+        ]
+    },
+    {
+        "declare_macro": "clear_selection_ids_and_reload",
+        "content": [
+            {
+                "call": "clear_selection_ids",
+                "literals": {
+                    "except": "game_mode_selector"
+                }
+            },
+            {
+                "playback": "reload"
+            }
+        ]
+    }
+]

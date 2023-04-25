@@ -4,7 +4,7 @@
     "variables": {
         "LEVEL_ID": "race_track0",
         "LEVEL_ICON_FILE": "levels/race_track0/icon.png",
-        "IF_RACEWAY_CIRCULAR": ""
+        "IF_RACEWAY_CIRCULAR": true
     },
-    "requires": ["IF_GAME_MODE_RALLY"]
+    "required": ["IF_GAME_MODE_RALLY"]
 }

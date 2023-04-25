@@ -1,0 +1,19 @@
+[
+    {
+        "call": "obj_resource",
+        "literals": {
+            "name": "raceway_beacon",
+            "filename": "models/primitives/box.obj",
+            "position": [0, 500, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.2, 500, 0.2],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_static",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+        }
+    }
+]

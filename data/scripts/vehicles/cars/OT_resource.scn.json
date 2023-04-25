@@ -1,0 +1,82 @@
+[
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "OT_hitbox",
+      "filename": "models/primitives/box.obj",
+      "position": [0, 0.85, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1.2, 1.0, 3.4],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {"call": "gen_triangle_rays", "literals": {"name": "OT_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "OT_hitbox", "add": "obj_chassis|attr_convex"}},
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "OT_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "OT_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [-0.8, 0.2, -1.2], "to": [-0.8, -0.7, -1.2]}}, {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2, -1.2], "to": [ 0.8, -0.7, -1.2]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [-0.8, 0.2,  2.6], "to": [-0.8, -0.7,  2.6]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2,  2.6], "to": [ 0.8, -0.7,  2.6]}}, {"comment": "right rear"},
+  {
+    "declare_macro": "load_OT_part",
+    "content": [
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%NAME",
+          "filename": "models/SR/$NAME.obj",
+          "position": [0, "%POSITION_Y", 0],
+          "rotation": [0, 180, 0],
+          "scale": [1, 1, 1],
+          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": false,
+          "occluded_pass": "lightmap_black_global_static",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "reflection_map": "%REFLECTION_MAP",
+          "triangle_tangent_error_behavior": "zero",
+          "werror": false
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load-OT",
+    "content": [
+      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_body$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_glass$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_interior$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_front$DECIMATE", "POSITION_Y": 0}},
+      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_rear$DECIMATE", "POSITION_Y": 0}}
+    ]
+  },
+  {"playback": "load-OT", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},
+  {"playback": "load-OT", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3"}},
+  {"playback": "load-OT", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1"}}
+]
