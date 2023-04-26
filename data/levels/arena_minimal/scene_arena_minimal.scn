@@ -1,4 +1,4 @@
-include ../../scripts/include_all.scn;
+{"include": "../../scripts/include_all.scn.json"},
 include ../arena_minimal/osm_resource_arena_minimal.scn;
 
 macro_playback scene_racing_static

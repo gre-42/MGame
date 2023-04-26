@@ -614,7 +614,7 @@ macro_begin _scene_tank_instantiate;
         text=;
 macro_end;
 
-include ../../scripts/include_all.scn;
+{"include": "../../scripts/include_all.scn.json"},
 
 macro_playback _scene_tank_load_resources;
 

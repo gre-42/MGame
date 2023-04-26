@@ -1,4 +1,4 @@
-include ../../scripts/include_all.scn;
+{"include": "../../scripts/include_all.scn.json"},
 include resource_skate0.scn;
 
 macro_playback scene_racing_static

@@ -1,4 +1,4 @@
-include ../../scripts/include_all.scn;
+{"include": "../../scripts/include_all.scn.json"},
 include ../sf/osm_resource_sf.scn;
 
 macro_playback scene_racing

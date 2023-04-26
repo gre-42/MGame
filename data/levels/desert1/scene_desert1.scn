@@ -1,5 +1,5 @@
-include ../../scripts/include_all.scn;
-include osm_resource_desert1.scn;
+{"include": "../../scripts/include_all.scn.json"},
+{"include": "osm_resource_desert1.scn.json"},
 
 macro_playback scene_racing_static
     IF_CREATE_PC_PLAYER:

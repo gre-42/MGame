@@ -113,7 +113,7 @@
                 "call": "rigid_cuboid",
                 "literals": {
                     "node": "osm_map_node",
-                    "hitboxes": "osm_map osm_map_grind_lines",
+                    "hitboxes": ["osm_map", "osm_map_grind_lines"],
                     "mass": "inf",
                     "size": [1, 2, 3],
                     "collidable_mode": "terrain",
@@ -238,7 +238,7 @@
                     "node": "countdown",
                     "z_order": 1,
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "position": "nan nan",
+                    "position": ["nan", "nan"],
                     "font_height": "huge",
                     "line_distance": "huge",
                     "nseconds": 5,
@@ -253,7 +253,7 @@
                     "node": "game_over_countdown",
                     "z_order": 1,
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "position": "nan nan",
+                    "position": ["nan", "nan"],
                     "font_height": "huge",
                     "line_distance": "huge",
                     "nseconds": 3,
@@ -553,7 +553,7 @@
             },
             {
                 "required": ["IF_CREATE_PC_CAR"],
-                "playback":  "create_$CLASS$SELECTED_VEHICLE_SUFFIX",
+                "playback":  "create_$SELECTED_VEHICLE_CLASS",
                 "literals": {
                     "HUMAN_NAME": "%SELECTED_VEHICLE_SUFFIX",
                     "SKATER_NAME": "%SELECTED_VEHICLE_SUFFIX",
@@ -564,6 +564,7 @@
                     "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
                     "SKATER_NODE_ANGLE_Y": "%SKATER_NODE_ANGLE_Y",
                     "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+                    "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
                     "IF_HUMAN_STYLE": true,
                     "IF_SKATER_STYLE": true,
                     "IF_CAR_BODY_RENDERABLE_STYLE": true,
@@ -751,7 +752,7 @@
                     "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
                     "on_finish": {
                         "call": "set_focuses",
-                        "literals": ["menu", "game_over_countdown_pending"]
+                        "literals": {"focuses": "menu|game_over_countdown_pending"}
                     }
                 }
             },
@@ -773,7 +774,7 @@
         "content": [
             {
                 "call": "set_focuses",
-                "literals": ["scene", "countdown_pending"]
+                "literals": {"focuses": "scene|countdown_pending"}
             },
             {
                 "call": "delete_root_nodes",
@@ -800,9 +801,9 @@
                 "required": ["IF_LOADED_GAME_MODE_RALLY"],
                 "call": "set_race_identifier_and_reload_history",
                 "literals": {
-                    "level_id": "LEVEL_ID",
-                    "session": "RACE_SESSION",
-                    "laps": "RACE_LAPS",
+                    "level_id": "%LEVEL_ID",
+                    "session": "%RACE_SESSION",
+                    "laps": "%RACE_LAPS",
                     "milliseconds": 0
                 }
             },
@@ -838,6 +839,12 @@
                             "RACE_SESSION": "%RACE_SESSION",
                             "RACE_LAPS": "%RACE_LAPS"
                         }
+                    },
+                    "capture": {
+                        "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                        "LEVEL_ID": "%LEVEL_ID",
+                        "RACE_SESSION": "%RACE_SESSION",
+                        "RACE_LAPS": "%RACE_LAPS"
                     }
                 }
             }
@@ -892,14 +899,7 @@
                 "playback": "create_scene_loading"
             },
             {
-                "playback": "%OSM_MAP_RESOURCE",
-                "literals": {
-                    "CACHE_FILENAME": "%CACHE_FILENAME",
-                    "GAME_LEVEL": "%GAME_LEVEL",
-                    "HEIGHTMAP": "%HEIGHTMAP",
-                    "RACING_LINE_TRACK": "%RACING_LINE_TRACK",
-                    "RACING_LINE_PLAYBACK": "%RACING_LINE_PLAYBACK"
-                }
+                "playback": "%OSM_MAP_RESOURCE"
             },
             {
                 "required": ["IF_HAS_OVERLAY"],
@@ -925,7 +925,7 @@
                     "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
                     "clear_mode": "%PRIMARY_SCENE_CLEAR_MODE",
                     "max_tracks": 5,
-                    "setup_new_round": {
+                    "setup_new_round": [{
                         "playback": "_setup_new_round",
                         "context": "primary_scene",
                         "literals": {
@@ -934,7 +934,7 @@
                             "RACE_SESSION": "%RACE_SESSION",
                             "RACE_LAPS": "%RACE_LAPS"
                         }
-                    }
+                    }]
                 }
             },
             {
@@ -968,8 +968,8 @@
                     "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",
                     "PC_PLAYER_PLAYBACK_SPEEDUP": "%PC_PLAYER_PLAYBACK_SPEEDUP",
                     "SCORE_BOARD": "%SCORE_BOARD",
-                    "OSM_POSITION_Y": "%OSM_POSITION_Y",
-                    "OSM_ROTATION_X": "%OSM_ROTATION_X",
+                    "OSM_POSITION": "%OSM_POSITION",
+                    "OSM_ROTATION": "%OSM_ROTATION",
                     "OSM_SCALE": "%OSM_SCALE",
                     "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
                     "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
@@ -979,9 +979,7 @@
                     "IF_DAY": "%IF_DAY",
                     "IF_NIGHT": "%IF_NIGHT",
                     "IF_SYNTHWAVE": "%IF_SYNTHWAVE",
-                    "STADIUM_CAMERA_X": "%STADIUM_CAMERA_X",
-                    "STADIUM_CAMERA_Y": "%STADIUM_CAMERA_Y",
-                    "STADIUM_CAMERA_Z": "%STADIUM_CAMERA_Z",
+                    "STADIUM_CAMERA_POSITION": "%STADIUM_CAMERA_POSITION",
                     "DIRTMAP_LEFT": "%DIRTMAP_LEFT",
                     "DIRTMAP_RIGHT": "%DIRTMAP_RIGHT",
                     "DIRTMAP_BOTTOM": "%DIRTMAP_BOTTOM",
@@ -1008,10 +1006,10 @@
                 "playback": "_setup_new_round",
                 "context": "primary_scene",
                 "literals": {
-                    "IF_LOADED_GAME_MODE_RALLY": "IF_LOADED_GAME_MODE_RALLY",
-                    "LEVEL_ID": "LEVEL_ID",
-                    "RACE_SESSION": "RACE_SESSION",
-                    "RACE_LAPS": "RACE_LAPS"
+                    "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                    "LEVEL_ID": "%LEVEL_ID",
+                    "RACE_SESSION": "%RACE_SESSION",
+                    "RACE_LAPS": "%RACE_LAPS"
                 }
             },
             {
@@ -1026,9 +1024,8 @@
                     "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
                     "SKATER_NODE_ANGLE_Y": "%SKATER_NODE_ANGLE_Y",
                     "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-                    "SELECTED_VEHICLE_SUFFIX": "%SELECTED_VEHICLE_SUFFIX",
-                    "SELECTED_PLAYER_VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
                     "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+                    "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
                     "IF_RACING": "%IF_RACING",
                     "IF_RALLY": "%IF_RALLY",
                     "IF_BURN_IN": "%IF_BURN_IN",
@@ -1050,12 +1047,8 @@
                     "IF_PLAYBACK_WINNER_1": "%IF_PLAYBACK_WINNER_1",
                     "IF_PLAYBACK_WINNER_2": "%IF_PLAYBACK_WINNER_2",
                     "IF_CHECKPOINTS": "%IF_CHECKPOINTS",
-                    "CHECK_POINTS_ACTIVE_R": "%CHECK_POINTS_ACTIVE_R=-1",
-                    "CHECK_POINTS_ACTIVE_G": "%CHECK_POINTS_ACTIVE_G=-1",
-                    "CHECK_POINTS_ACTIVE_B": "%CHECK_POINTS_ACTIVE_B=-1",
-                    "CHECK_POINTS_INACTIVE_R": "%CHECK_POINTS_INACTIVE_R=0.7",
-                    "CHECK_POINTS_INACTIVE_G": "%CHECK_POINTS_INACTIVE_G=0.7",
-                    "CHECK_POINTS_INACTIVE_B": "%CHECK_POINTS_INACTIVE_B=0.7",
+                    "CHECK_POINTS_ACTIVE_COLOR": "%CHECK_POINTS_ACTIVE_COLOR",
+                    "CHECK_POINTS_INACTIVE_COLOR": "%CHECK_POINTS_INACTIVE_COLOR",
                     "TEAMS_SPAWN_POINTS_RESOURCE": "%TEAMS_SPAWN_POINTS_RESOURCE",
                     "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
                 }

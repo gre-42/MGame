@@ -26,7 +26,7 @@
                 "call": "focused_text",
                 "literals": {
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "position": "nan nan",
+                    "position": ["nan", "nan"],
                     "font_height": "huge",
                     "line_distance": "huge",
                     "focus_mask": "always",

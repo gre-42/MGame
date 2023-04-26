@@ -49,7 +49,7 @@ macro_end;
 
 macro_begin get_into_box;
     player_set_aiming_gun {
-        "player_name": "PLAYER_NAME",
+        "player_name": "%PLAYER_NAME",
         "ypln_node": "human_node$SUFFIX",
         "gun_node": "main_gun_end_node$SUFFIX"};
 macro_end;

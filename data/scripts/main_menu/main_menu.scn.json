@@ -35,6 +35,12 @@
                             "VEHICLE_COLOR": "%VEHICLE_COLOR",
                             "DECIMATE": "%DECIMATE"
                         }
+                    },
+                    "capture": {
+                        "VEHICLE_NAME": "%VEHICLE_NAME",
+                        "VEHICLE_CLASS": "%VEHICLE_CLASS",
+                        "VEHICLE_COLOR": "%VEHICLE_COLOR",
+                        "DECIMATE": "%DECIMATE"
                     }
                 }
             }
@@ -90,7 +96,17 @@
                     "font_height": "normal",
                     "line_distance": "normal",
                     "deflt": 0,
-                    "reload_transient_objects": "execute_in_physics_thread with_delete_node_mutex macro_playback _reload_transient_objects"
+                    "reload_transient_objects": {
+                        "call": "execute_in_physics_thread",
+                        "literals": {
+                            "command": {
+                                "call": "with_delete_node_mutex",
+                                "command": {
+                                    "playback": "_reload_transient_objects"
+                                }
+                            }
+                        }
+                    }
                 }
             },
             {

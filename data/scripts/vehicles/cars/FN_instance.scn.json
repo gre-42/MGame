@@ -121,7 +121,7 @@
       {
         "call": "player_set_vehicle_control_parameters",
         "literals": {
-          "player_name": "%PLAYER_NAME",
+          "player": "%PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": 30,

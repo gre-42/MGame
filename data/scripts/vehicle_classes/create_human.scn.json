@@ -9,7 +9,7 @@
                     "name": "human_node$SUFFIX",
                     "scale": 1,
                     "position": "%HUMAN_NODE_POSITION",
-                    "rotation": "%HUMAN_NODE_ROTATION"
+                    "rotation": [0, "%HUMAN_NODE_ANGLE_Y", 0]
                 }
             },
             {
@@ -50,10 +50,8 @@
                 "required": ["IF_PLAYER"],
                 "call": "player_set_node",
                 "literals": {
-                    "node": "human_node$SUFFIX"
-                },
-                "variables": {
-                    "player_name": "PLAYER_NAME"
+                    "node": "human_node$SUFFIX",
+                    "player": "%PLAYER_NAME"
                 }
             },
             {

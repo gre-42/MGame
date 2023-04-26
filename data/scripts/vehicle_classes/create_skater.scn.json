@@ -51,7 +51,7 @@
                 "call": "player_set_node",
                 "literals": {
                     "node": "skater_node$SUFFIX",
-                    "player_name": "%PLAYER_NAME"
+                    "player": "%PLAYER_NAME"
                 }
             },
             {
@@ -99,7 +99,7 @@
                     "SUFFIX": "SUFFIX",
                     "IF_RACING": "IF_RACING",
                     "IF_RALLY": "IF_RALLY",
-                    "PLAYER_NAME": "PLAYER_NAME",
+                    "PLAYER_NAME": "%PLAYER_NAME",
                     "IF_PC": "IF_PC"
                 }
             }

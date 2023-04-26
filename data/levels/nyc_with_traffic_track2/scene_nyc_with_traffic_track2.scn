@@ -1,4 +1,4 @@
-include ../../scripts/include_all.scn;
+{"include": "../../scripts/include_all.scn.json"},
 include ../nyc/osm_resource_nyc.scn;
 
 macro_playback scene_racing_static

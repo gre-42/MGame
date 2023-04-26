@@ -97,7 +97,7 @@
     "content": [
       {"required": ["IF_PC"], "playback": "create_skater_key_bindings", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME"}},
       {"required": ["IF_PC"], "playback": "create_skater_cameras", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME"}},
-      {"call": "player_set_vehicle_control_parameters", "literals": {"player_name": "%PLAYER_NAME", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
+      {"call": "player_set_vehicle_control_parameters", "literals": {"player": "%PLAYER_NAME", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
     ]
   },
   {

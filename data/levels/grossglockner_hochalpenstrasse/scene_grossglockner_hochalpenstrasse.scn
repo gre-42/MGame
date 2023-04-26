@@ -1,6 +1,6 @@
 macro_begin create_grossglockner_hochalpenstrasse;
 
-    include ../../scripts/include_all.scn;
+    {"include": "../../scripts/include_all.scn.json"},
     include osm_resource_grossglockner_hochalpenstrasse-STYLE.scn;
 
     macro_playback scene_racing_static

@@ -62,7 +62,7 @@
                 "call": "player_set_node",
                 "literals": {
                     "node": "car_node$SUFFIX",
-                    "player_name": "%PLAYER_NAME"
+                    "player": "%PLAYER_NAME"
                 }
             },
             {
@@ -89,21 +89,26 @@
                 "required": ["IF_PLAYER"],
                 "call": "set_externals_creator",
                 "literals": {
-                    "macro": [
-                        {
-                            "playback": "create_player_car_externals",
-                            "literals": {
-                                "SUFFIX": "%SUFFIX",
-                                "CAR_NAME": "%CAR_NAME",
-                                "IF_RACING": "%IF_RACING",
-                                "IF_RALLY": "%IF_RALLY",
-                                "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-                                "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-                                "IF_PC": "%IF_PC"
-                            }
+                    "macro": {
+                        "playback": "create_player_car_externals",
+                        "literals": {
+                            "SUFFIX": "%SUFFIX",
+                            "PLAYER_NAME": "%PLAYER_NAME",
+                            "CAR_NAME": "%CAR_NAME",
+                            "IF_RACING": "%IF_RACING",
+                            "IF_RALLY": "%IF_RALLY",
+                            "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+                            "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                            "IF_PC": "%IF_PC"
                         }
-                    ],
-                    "player": "%PLAYER_NAME"
+                    },
+                    "player": "%PLAYER_NAME",
+                    "capture": {
+                        "SUFFIX": "%SUFFIX",
+                        "CAR_NAME": "%CAR_NAME",
+                        "IF_RACING": "%IF_RACING",
+                        "IF_RALLY": "%IF_RALLY"
+                }
                 }
             },
             {
@@ -155,7 +160,7 @@
                 "required": ["IF_PC"],
                 "call": "visual_player_status",
                 "literals": {
-                    "player": "PLAYER_NAME",
+                    "player": "%PLAYER_NAME",
                     "format": "speed",
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
                     "left": "player_speed_left",
@@ -198,7 +203,7 @@
             {
                 "call": "visual_player_status",
                 "literals": {
-                    "child": ["engines", "ENGINE_NAME"],
+                    "child": ["engines", "%ENGINE_NAME"],
                     "format": "abs_angular_velocity",
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
                     "left": "player_engine_rpm_left",

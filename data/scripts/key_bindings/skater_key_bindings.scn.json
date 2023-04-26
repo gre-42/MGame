@@ -5,7 +5,7 @@
             {
                 "call": "car_controller_idle_binding",
                 "literals": {
-                    "player": "PLAYER_NAME",
+                    "player": "%PLAYER_NAME",
                     "node": "skater_node$SUFFIX",
                     "surface_power": "inf",
                     "drive_relaxation": 1
