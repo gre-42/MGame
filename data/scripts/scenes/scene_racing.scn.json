@@ -752,7 +752,7 @@
                     "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
                     "on_finish": {
                         "call": "set_focuses",
-                        "literals": {"focuses": "menu|game_over_countdown_pending"}
+                        "literals": {"focuses": ["menu", "game_over_countdown_pending"]}
                     }
                 }
             },
@@ -774,7 +774,7 @@
         "content": [
             {
                 "call": "set_focuses",
-                "literals": {"focuses": "scene|countdown_pending"}
+                "literals": {"focuses": ["scene", "countdown_pending"]}
             },
             {
                 "call": "delete_root_nodes",
