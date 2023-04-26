@@ -513,15 +513,16 @@
             {
                 "playback": "create_car",
                 "literals": {
-                    "CAR_NODE_X": 1,
-                    "CAR_NODE_Y": 2,
-                    "CAR_NODE_Z": 3,
-                    "CAR_NODE_ANGLE_X": 4,
-                    "CAR_NODE_ANGLE_Y": 5,
-                    "CAR_NODE_ANGLE_Z": 6,
+                    "CAR_NODE_POSITION": [1, 2, 3],
+                    "CAR_NODE_ANGLES": [4, 5, 6],
                     "CAR_NAME": "%PLAYBACK_CAR",
                     "DECIMATE": "%DECIMATE",
                     "SUFFIX": "_playback_winner$PSUFFIX",
+                    "HAND_BRAKE_PULLED": null,
+                    "IF_DYNAMIC": null,
+                    "IF_STATIC": null,
+                    "IF_RACING": null,
+                    "IF_RALLY": null,
                     "IF_WITH_GRAPHICS": true,
                     "IF_WITH_PHYSICS": false,
                     "IF_PLAYBACK_TRACK": false,
@@ -670,7 +671,7 @@
                 "literals": {
                     "RANK": 0,
                     "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-                    "PLAYBACK_CAR":"_$VEHICLE_WINNER0",
+                    "PLAYBACK_CAR":"_$WINNER0_VEHICLE",
                     "COLOR": "%WINNER0_COLOR",
                     "DECIMATE": "",
                     "PSUFFIX": "1"
@@ -680,24 +681,24 @@
                 "required": ["IF_PLAYBACK_WINNER_1", "IF_WINNER_RANK1_EXISTS"],
                 "playback": "create_winner_playback",
                 "literals": {
-                    "RANK": 0,
+                    "RANK": 1,
                     "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-                    "PLAYBACK_CAR":"_$VEHICLE_WINNER1",
+                    "PLAYBACK_CAR":"_$WINNER1_VEHICLE",
                     "COLOR": "%WINNER1_COLOR",
                     "DECIMATE": "",
-                    "PSUFFIX": "1"
+                    "PSUFFIX": "2"
                 }
             },
             {
                 "required": ["IF_PLAYBACK_WINNER_2", "IF_WINNER_RANK2_EXISTS"],
                 "playback": "create_winner_playback",
                 "literals": {
-                    "RANK": 0,
+                    "RANK": 2,
                     "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-                    "PLAYBACK_CAR":"_$VEHICLE_WINNER2",
+                    "PLAYBACK_CAR":"_$WINNER2_VEHICLE",
                     "COLOR": "%WINNER2_COLOR",
                     "DECIMATE": "",
-                    "PSUFFIX": "1"
+                    "PSUFFIX": "3"
                 }
             },
             {

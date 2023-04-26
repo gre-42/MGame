@@ -101,8 +101,10 @@
                         "literals": {
                             "command": {
                                 "call": "with_delete_node_mutex",
-                                "command": {
-                                    "playback": "_reload_transient_objects"
+                                "literals": {
+                                    "command": {
+                                        "playback": "_reload_transient_objects"
+                                    }
                                 }
                             }
                         }
