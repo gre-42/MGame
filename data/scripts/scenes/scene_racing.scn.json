@@ -343,46 +343,33 @@
             {
                 "required": ["IF_DAY"],
                 "playback": "add_distant_light_day",
-                "literals": {
-                    "LEFT": "%SUN_LEFT",
-                    "RIGHT": "%SUN_RIGHT",
-                    "BOTTOM": "%SUN_BOTTOM",
-                    "TOP": "%SUN_TOP"
-                }
+                "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
             },
             {
                 "required": ["IF_NIGHT"],
                 "playback": "add_distant_light_night",
-                "literals": {
-                    "LEFT": "%SUN_LEFT",
-                    "RIGHT": "%SUN_RIGHT",
-                    "BOTTOM": "%SUN_BOTTOM",
-                    "TOP": "%SUN_TOP"
-                }
+                "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
             },
             {
                 "required": ["IF_SYNTHWAVE"],
                 "playback": "add_distant_light_night",
-                "literals": {
-                    "LEFT": "%SUN_LEFT",
-                    "RIGHT": "%SUN_RIGHT",
-                    "BOTTOM": "%SUN_BOTTOM",
-                    "TOP": "%SUN_TOP"
+                "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
                 }
+            },
+            {
+                "required": ["IF_DAY"],
+                "playback": "add_local_instances_light",
+                "literals": { "LSUFFIX": "_local_instances" }
             },
             {
                 "required": ["IF_NIGHT"],
                 "playback": "add_local_blob_instances_light",
-                "literals": {
-                    "LSUFFIX": "-blobs"
-                }
+                "literals": { "LSUFFIX": "_blobs" }
             },
             {
                 "required": ["IF_SYNTHWAVE"],
                 "playback": "add_local_blob_instances_light",
-                "literals": {
-                    "LSUFFIX": "-blobs"
-                }
+                "literals": { "LSUFFIX": "_blobs" }
             },
             {
                 "comment": "Reflection map"
