@@ -786,7 +786,7 @@
                 "call": "delete_scheduled_advance_times"
             },
             {
-                "required": ["IF_LOADED_GAME_MODE_RALLY"],
+                "required": ["IF_GAME_MODE_RALLY"],
                 "call": "set_race_identifier_and_reload_history",
                 "literals": {
                     "level_id": "%LEVEL_ID",
@@ -796,7 +796,7 @@
                 }
             },
             {
-                "required": ["IF_LOADED_GAME_MODE_RALLY"],
+                "required": ["IF_GAME_MODE_RALLY"],
                 "call": "start_race",
                 "literals": {
                     "readonly": false
@@ -822,14 +822,14 @@
                     "command": {
                         "playback": "__setup_new_round",
                         "literals": {
-                            "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                            "IF_GAME_MODE_RALLY": "%IF_GAME_MODE_RALLY",
                             "LEVEL_ID": "%LEVEL_ID",
                             "RACE_SESSION": "%RACE_SESSION",
                             "RACE_LAPS": "%RACE_LAPS"
                         }
                     },
                     "capture": {
-                        "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                        "IF_GAME_MODE_RALLY": "%IF_GAME_MODE_RALLY",
                         "LEVEL_ID": "%LEVEL_ID",
                         "RACE_SESSION": "%RACE_SESSION",
                         "RACE_LAPS": "%RACE_LAPS"
@@ -917,7 +917,7 @@
                         "playback": "_setup_new_round",
                         "context": "primary_scene",
                         "literals": {
-                            "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                            "IF_GAME_MODE_RALLY": "%IF_GAME_MODE_RALLY",
                             "LEVEL_ID": "%LEVEL_ID",
                             "RACE_SESSION": "%RACE_SESSION",
                             "RACE_LAPS": "%RACE_LAPS"
@@ -994,7 +994,7 @@
                 "playback": "_setup_new_round",
                 "context": "primary_scene",
                 "literals": {
-                    "IF_LOADED_GAME_MODE_RALLY": "%IF_LOADED_GAME_MODE_RALLY",
+                    "IF_GAME_MODE_RALLY": "%IF_GAME_MODE_RALLY",
                     "LEVEL_ID": "%LEVEL_ID",
                     "RACE_SESSION": "%RACE_SESSION",
                     "RACE_LAPS": "%RACE_LAPS"
