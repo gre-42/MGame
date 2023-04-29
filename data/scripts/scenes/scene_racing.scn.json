@@ -871,18 +871,11 @@
   {
     "declare_macro": "scene_racing_static",
     "content": [
-      {
-        "playback": "create_scene_loading"
-      },
-      {
-        "playback": "%OSM_MAP_RESOURCE"
-      },
+      {"playback": "create_scene_loading"},
+      {"playback": "%OSM_MAP_RESOURCE"},
       {
         "required": ["IF_HAS_OVERLAY"],
-        "playback": "%OSM_MAP_OVERLAY_RESOURCE",
-        "literals": {
-          "GAME_LEVEL": "%GAME_LEVEL"
-        }
+        "playback": "%OSM_MAP_OVERLAY_RESOURCE"
       },
       {
         "call": "create_scene",

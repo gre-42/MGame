@@ -1,0 +1,97 @@
+[
+  {
+    "declare_macro": "create_grossglockner_hochalpenstrasse",
+    "content": [
+      {"include": "../../scripts/include_all.scn.json"},
+      {"call": "constant_parameter", "literals": { "name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m"}},
+      {"call": "constant_parameter", "literals": { "name": "LOADED_RACING_LINE_PLAYBACK", "value": "$__APPDATA__/$LEVEL_ID.checkpoints.m"}},
+      {"include": "osm_resource_grossglockner_hochalpenstrasse$STYLE.scn.json"},
+      {
+        "playback": "scene_racing_static",
+        "literals": {
+          "IF_CREATE_PC_PLAYER": true,
+          "IF_PC_PLAYER_PLAYBACK": false,
+          "PC_PLAYER_PLAYBACK": null,
+          "PC_PLAYER_PLAYBACK_SPEEDUP": null,
+          "STADIUM_CAMERA_POSITION": [0, 500, 500],
+          "SCORE_BOARD": "history|laps|rank|race_time",
+          "OSM_MAP_RESOURCE": "osm_resource_grossglockner_hochalpenstrasse$STYLE",
+          "OSM_POSITION": [-90, -2000, 0],
+          "OSM_ROTATION": [-90, 0, 0],
+          "OSM_SCALE": 1e3,
+          "IF_HAS_OVERLAY": false,
+          "IF_DIRTMAP": true,
+            "IF_EXTRACT_ALIGNMENT_PLANES": false,
+            "IF_GEN_GRIND_LINES": false,
+            "IF_GEN_INSTANCES": false,
+            "IF_WITH_GEOGRAPHIC_MAPPING": true,
+          "DIRTMAP_TEXTURE": "textures/procterrain/grf_2048.png",
+          "DIRTMAP_OFFSET": 0,
+          "DIRTMAP_DISCRETENESS": 1,
+          "DIRT_SCALE": 1,
+          "DIRTMAP_WRAP_MODE": "repeat",
+          "DIRTMAP_LEFT": -500,
+          "DIRTMAP_RIGHT": 500,
+          "DIRTMAP_BOTTOM": -500,
+          "DIRTMAP_TOP": 500,
+          "SUN_LEFT": -2000,
+          "SUN_RIGHT": 2000,
+          "SUN_BOTTOM": -1400,
+          "SUN_TOP": 1000,
+          "SOFT_LIGHT_TEXTURE": "textures/soft_light.png",
+          "SKYBOX": "skybox",
+          "IF_DAY": true,
+          "IF_NIGHT": false,
+          "IF_SYNTHWAVE": false
+        }
+      },
+      {
+        "declare_macro": "instantiate_transient_objects",
+        "content": [
+          {
+            "playback": "generic_scene_racing_dynamic",
+            "literals": {
+              "IF_CREATE_PC_CAR": true,
+              "IF_PC_PLAYER_PLAYBACK": false,
+              "CAR_NODE_POSITION": [
+                "12.826221_deg",
+                "47.117129_deg",
+                "2150"],
+              "CAR_NODE_ANGLES": [0, -90, 0],
+              "RECORDINGS_DIR": "%__DIR__",
+              "CHECKPOINTS_FILE": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+              "PACENOTES_FILE": "$__DIR__/pacenotes.json",
+              "CHECK_POINTS_ACTIVE_COLOR": [-1, -1, -1],
+              "CHECK_POINTS_INACTIVE_COLOR": [0.7, 0.7, 0.7],
+              "HAND_BRAKE_PULLED": false,
+              "ERROR_ALPHA": null,
+              "VELOCITY_ERROR_STD": null,
+              "YAW_ERROR_STD": null,
+              "HUMAN_NODE_ANGLE_Y": null,
+              "HUMAN_NODE_POSITION": null,
+              "IF_MANUAL_AIM": null,
+              "PITCH_ERROR_STD": null,
+              "SKATER_NODE_POSITION": null,
+              "SKATER_NODE_ANGLE_Y": null,
+              "TEAMS_SPAWN_POINTS_RESOURCE": null,
+              "TEAMS_WAY_POINTS_RESOURCE": null,
+              "IF_PLAYBACK_CHECKPOINTS": false,
+              "IF_PLAYBACK_TRACK_1": false,
+              "IF_PLAYBACK_TRACK_2": false,
+              "IF_PLAYBACK_TRACK_3": false,
+              "IF_PLAYBACK_WINNER_0": true,
+              "IF_PLAYBACK_WINNER_1": true,
+              "IF_PLAYBACK_WINNER_2": false,
+              "IF_CHECKPOINTS": true,
+              "IF_RACING": false,
+              "IF_RALLY": true,
+              "IF_BURN_IN": true
+            }
+          }
+        ]
+      },
+      {"playback": "instantiate_transient_objects"},
+      {"playback": "create_main_menu"}
+    ]
+  }
+]
