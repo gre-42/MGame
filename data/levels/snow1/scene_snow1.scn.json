@@ -1,6 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
-  {"include": "osm_resource_desert1.scn.json"},
+  {"include": "osm_resource_snow1.scn.json"},
   {
     "playback": "scene_racing_static",
     "literals": {
@@ -10,7 +10,7 @@
       "PC_PLAYER_PLAYBACK_SPEEDUP": null,
       "STADIUM_CAMERA_POSITION": [0, 500, 500],
       "SCORE_BOARD": "history|laps|rank|race_time",
-      "OSM_MAP_RESOURCE": "osm_resource_desert1",
+      "OSM_MAP_RESOURCE": "osm_resource_snow1",
       "OSM_POSITION": [-90, -2000, 0],
       "OSM_ROTATION": [-90, 0, 0],
       "OSM_SCALE": 1e3,
@@ -56,8 +56,8 @@
           "RECORDINGS_DIR": "%__DIR__",
           "CHECKPOINTS_FILE": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
           "PACENOTES_FILE": "$__DIR__/pacenotes.json",
-          "CHECK_POINTS_ACTIVE_COLOR": [-1, -1, -1],
-          "CHECK_POINTS_INACTIVE_COLOR": [0.7, 0.7, 0.7],
+          "CHECK_POINTS_ACTIVE_COLOR": [0.3, 0.3, 1],
+          "CHECK_POINTS_INACTIVE_COLOR": [0.1, 0.1, 0.2],
           "HAND_BRAKE_PULLED": false,
           "ERROR_ALPHA": null,
           "VELOCITY_ERROR_STD": null,
