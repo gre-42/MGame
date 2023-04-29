@@ -1,6 +1,6 @@
 [
     {"include": "../../scripts/include_all.scn.json"},
-    {"include": "osm_resource_desert1.scn.json"},
+    {"include": "osm_resource_forest0.scn.json"},
 
     {
         "playback": "scene_racing_static",
@@ -11,8 +11,8 @@
             "PC_PLAYER_PLAYBACK_SPEEDUP": null,
             "STADIUM_CAMERA_POSITION": [0, 500, 500],
             "SCORE_BOARD": "history|laps|rank|race_time",
-            "OSM_MAP_RESOURCE": "osm_resource_desert1",
-            "OSM_POSITION": [-90, -2000, 0],
+            "OSM_MAP_RESOURCE": "osm_resource_forest0",
+            "OSM_POSITION": [-90, -220, 0],
             "OSM_ROTATION": [-90, 0, 0],
             "OSM_SCALE": 1e3,
             "IF_HAS_OVERLAY": false,
@@ -30,11 +30,11 @@
             "DIRTMAP_RIGHT": 500,
             "DIRTMAP_BOTTOM": -500,
             "DIRTMAP_TOP": 500,
-            "SUN_LEFT": -2000,
-            "SUN_RIGHT": 2500,
-            "SUN_BOTTOM": -2500,
-            "SUN_TOP": 0,
-            "SOFT_LIGHT_TEXTURE": "",
+            "SUN_LEFT": -500,
+            "SUN_RIGHT": 500,
+            "SUN_BOTTOM": -500,
+            "SUN_TOP": 500,
+            "SOFT_LIGHT_TEXTURE": "textures/soft_light.png",
             "SKYBOX": "skybox",
             "IF_DAY": true,
             "IF_NIGHT": false,
@@ -51,10 +51,10 @@
                     "IF_CREATE_PC_CAR": true,
                     "IF_PC_PLAYER_PLAYBACK": false,
                     "CAR_NODE_POSITION": [
-                        "-113.3258598_deg",
-                        "35.7393636_deg",
-                        "142"],
-                    "CAR_NODE_ANGLES": [0, 140, 0],
+                        "-1.224895021433151783e+02_deg",
+                        "3.783904946168483718e+01_deg",
+                        "3.683313063486510686e+01"],
+                    "CAR_NODE_ANGLES": [0, 180, 0],
                     "RECORDINGS_DIR": "%__DIR__",
                     "CHECKPOINTS_FILE": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
                     "PACENOTES_FILE": "$__DIR__/pacenotes.json",
@@ -89,12 +89,5 @@
     },
 
     { "playback": "instantiate_transient_objects" },
-    { "playback": "create_main_menu" },
-    {
-        "call": "preload",
-        "context": "primary_scene",
-        "literals": {
-            "json": "$__DIR__/resources.json"
-        }
-    }
+    { "playback": "create_main_menu" }
 ]

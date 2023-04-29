@@ -1,490 +1,492 @@
 [
-    {
-        "include": "reload.scn.json"
-    },
-    {
-        "declare_macro": "_reload_transient_objects",
-        "content": [
-            {
-                "call": "clear_nodes_not_allowed_to_be_unregistered"
-            },
-            {
-                "playback": "instantiate_transient_objects",
-                "context": "primary_scene",
-                "literals": {
-                    "IF_UPDATE_EXISTING_SCENE": true,
-                    "SELECTED_VEHICLE_SUFFIX": "%SELECTED_VEHICLE_SUFFIX",
-                    "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-                    "RACE_SESSION": "%RACE_SESSION",
-                    "RACE_LAPS": "%RACE_LAPS"
-                }
+  {
+    "include": "reload.scn.json"
+  },
+  {
+    "declare_macro": "_reload_transient_objects",
+    "content": [
+      {
+        "call": "clear_nodes_not_allowed_to_be_unregistered"
+      },
+      {
+        "playback": "instantiate_transient_objects",
+        "context": "primary_scene",
+        "literals": {
+          "IF_UPDATE_EXISTING_SCENE": true,
+          "SELECTED_VEHICLE_SUFFIX": "%SELECTED_VEHICLE_SUFFIX",
+          "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+          "RACE_SESSION": "%RACE_SESSION",
+          "RACE_LAPS": "%RACE_LAPS"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_reload_transient_objects_in_physics_thread",
+    "content":  [
+      {
+        "comment": [
+          "Disable GUI modifications in the render thread so the physics",
+          "thread can read the global parameters without data races"]
+      },
+      {
+        "call": "set_focuses",
+        "literals": {"focuses": []}
+      },
+      {
+        "call": "execute_in_physics_thread",
+        "literals": {
+          "command": {
+            "call": "with_delete_node_mutex",
+            "literals": {
+              "command": {
+                "playback": "_reload_transient_objects"
+              }
             }
-        ]
-    },
-    {
-        "declare_macro": "__change_showroom_vehicle_in_physics_thread",
-        "content": [
-            {
-                "call": "execute_in_physics_thread",
-                "literals": {
-                    "command": {
-                        "playback": "change_showroom_vehicle",
-                        "literals": {
-                            "VEHICLE_NAME": "%VEHICLE_NAME",
-                            "VEHICLE_CLASS": "%VEHICLE_CLASS",
-                            "VEHICLE_COLOR": "%VEHICLE_COLOR",
-                            "DECIMATE": "%DECIMATE"
-                        }
-                    },
-                    "capture": {
-                        "VEHICLE_NAME": "%VEHICLE_NAME",
-                        "VEHICLE_CLASS": "%VEHICLE_CLASS",
-                        "VEHICLE_COLOR": "%VEHICLE_COLOR",
-                        "DECIMATE": "%DECIMATE"
-                    }
-                }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "__change_showroom_vehicle_in_physics_thread",
+    "content": [
+      {
+        "call": "execute_in_physics_thread",
+        "literals": {
+          "command": {
+            "playback": "change_showroom_vehicle",
+            "literals": {
+              "VEHICLE_NAME": "%VEHICLE_NAME",
+              "VEHICLE_CLASS": "%VEHICLE_CLASS",
+              "VEHICLE_COLOR": "%VEHICLE_COLOR",
+              "DECIMATE": "%DECIMATE"
             }
-        ]
-    },
-    {
-        "declare_macro": "_change_showroom_vehicle_in_physics_thread",
-        "content": [
+          },
+          "capture": {
+            "VEHICLE_NAME": "%VEHICLE_NAME",
+            "VEHICLE_CLASS": "%VEHICLE_CLASS",
+            "VEHICLE_COLOR": "%VEHICLE_COLOR",
+            "DECIMATE": "%DECIMATE"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_change_showroom_vehicle_in_physics_thread",
+    "content": [
+      {
+        "playback": "__change_showroom_vehicle_in_physics_thread",
+        "literals": {
+          "VEHICLE_NAME": "%SELECTED_VEHICLE_SUFFIX",
+          "VEHICLE_CLASS": "%SELECTED_VEHICLE_CLASS",
+          "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
+          "DECIMATE": "%SELECTED_DECIMATE"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_menu_primary_scene_game_mode_selector",
+    "content": [
+      {
+        "call": "ui_background",
+        "literals": {
+          "z_order": 1,
+          "texture": "textures/ui_background.png",
+          "left": "min",
+          "right": "max",
+          "bottom": "min",
+          "top": "max",
+          "update": "once",
+          "focus_mask": "menu|loading"
+        }
+      },
+      {
+        "call": "tab_menu",
+        "literals": {
+          "key": "ENTER",
+          "gamepad_button": "A",
+          "tap_button": "START",
+          "id": "submenus",
+          "selection_marker": "selection_marker",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "icon_left": "tabmenu_icon_left",
+          "icon_right": "tabmenu_icon_right",
+          "icon_bottom": "tabmenu_icon_bottom",
+          "icon_top": "tabmenu_icon_top",
+          "left": "tabmenu_left",
+          "right": "tabmenu_right",
+          "bottom": "tabmenu_bottom",
+          "top": "tabmenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "reload_transient_objects": {
+            "playback": "_reload_transient_objects_in_physics_thread"
+          }
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "required": ["IF_DEVEL"],
+        "exclude": ["IF_ANDROID"],
+        "literals": {
+          "id": "game_mode_selector",
+          "title": "Game mode",
+          "icon": "game_mode_icon",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
             {
-                "playback": "__change_showroom_vehicle_in_physics_thread",
-                "literals": {
-                    "VEHICLE_NAME": "%SELECTED_VEHICLE_SUFFIX",
-                    "VEHICLE_CLASS": "%SELECTED_VEHICLE_CLASS",
-                    "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
-                    "DECIMATE": "%SELECTED_DECIMATE"
-                }
+              "name": "Rally",
+              "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}
+            },
+            {
+              "name": "Skating",
+              "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": true, "IF_GAME_MODE_TD": false}
+            },
+            {
+              "name": "Team deathmatch",
+              "variables": {
+                "IF_GAME_MODE_RALLY": false,"IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}
             }
-        ]
-    },
-    {
-        "declare_macro": "_setup_menu_primary_scene_game_mode_selector",
-        "content": [
-            {
-                "call": "ui_background",
-                "literals": {
-                    "z_order": 1,
-                    "texture": "textures/ui_background.png",
-                    "left": "min",
-                    "right": "max",
-                    "bottom": "min",
-                    "top": "max",
-                    "update": "once",
-                    "focus_mask": "menu|loading"
-                }
-            },
-            {
-                "call": "tab_menu",
-                "literals": {
-                    "key": "ENTER",
-                    "gamepad_button": "A",
-                    "tap_button": "START",
-                    "id": "submenus",
-                    "selection_marker": "selection_marker",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "icon_left": "tabmenu_icon_left",
-                    "icon_right": "tabmenu_icon_right",
-                    "icon_bottom": "tabmenu_icon_bottom",
-                    "icon_top": "tabmenu_icon_top",
-                    "left": "tabmenu_left",
-                    "right": "tabmenu_right",
-                    "bottom": "tabmenu_bottom",
-                    "top": "tabmenu_top",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "reload_transient_objects": {
-                        "call": "execute_in_physics_thread",
-                        "literals": {
-                            "command": {
-                                "call": "with_delete_node_mutex",
-                                "literals": {
-                                    "command": {
-                                        "playback": "_reload_transient_objects"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "required": [
-                    "IF_DEVEL"
-                ],
-                "exclude": [
-                    "IF_ANDROID"
-                ],
-                "literals": {
-                    "id": "game_mode_selector",
-                    "title": "Game mode",
-                    "icon": "game_mode_icon",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "parameters": [
-                        {
-                            "name": "Rally",
-                            "variables": {
-                                "IF_GAME_MODE_RALLY": true,
-                                "IF_GAME_MODE_SKATING": false,
-                                "IF_GAME_MODE_TD": false
-                            }
-                        },
-                        {
-                            "name": "Skating",
-                            "variables": {
-                                "IF_GAME_MODE_RALLY": false,
-                                "IF_GAME_MODE_SKATING": true,
-                                "IF_GAME_MODE_TD": false
-                            }
-                        },
-                        {
-                            "name": "Team deathmatch",
-                            "variables": {
-                                "IF_GAME_MODE_RALLY": false,
-                                "IF_GAME_MODE_SKATING": false,
-                                "IF_GAME_MODE_TD": true
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "exclude": ["IF_ANDROID", "IF_DEVEL"],
-                "literals": {
-                    "id": "game_mode_selector",
-                    "title": "Game mode",
-                    "icon": "game_mode_icon",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "parameters": [
-                        {"name": "Rally", "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}},
-                        {"name": "Team deathmatch", "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}}
-                    ]
-                }
-            },
-            {
-                "call": "constant_parameter",
-                "required": ["IF_ANDROID"],
-                "literals": { "name": "IF_GAME_MODE_RALLY", "value": true }
-            },
-            {
-                "call": "constant_parameter",
-                "required": ["IF_ANDROID"],
-                "literals": { "IF_GAME_MODE_SKATING": false }
-            },
-            {
-                "call": "constant_parameter",
-                "required": ["IF_ANDROID"],
-                "literals": { "IF_GAME_MODE_TD": false }
-            }
-        ]
-    },
-    {
-        "declare_macro": "_update_scene_icon",
-        "content": [
-            {
-                "call": "update_gallery",
-                "literals": {
-                    "instance": "level_icon",
-                    "resource": "%LEVEL_ICON_FILE"
-                }
-            }
-        ]
-    },
-    {
-        "declare_macro": "_setup_menu_primary_scene_rest",
-        "content": [
-            {
-                "call": "ui_exhibit",
-                "literals": {
-                    "z_order": 1,
-                    "id_in_gallery": "level_icon",
-                    "left": "scene_icon_left",
-                    "right": "scene_icon_right",
-                    "bottom": "scene_icon_bottom",
-                    "top": "scene_icon_top",
-                    "update": "once",
-                    "focus_mask": "menu|loading",
-                    "submenus": ["scene_selector"]
-                }
-            },
-            {
-                "call": "scene_selector",
-                "literals": {
-                    "id": "scene_selector",
-                    "title": "Scene",
-                    "icon": "scene_selector_icon",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "on_change": {
-                        "playback": "_update_scene_icon"
-                    },
-                    "assets": "levels"
-                }
-            },
-            {
-                "playback": "parameter_setters",
-                "literals": {
-                    "IF_DEVEL": "%IF_DEVEL"
-                }
-            },
-            {
-                "comment": [
-                    "# fill_pixel_region_with_texture",
-                    "source_scene=showroom",
-                    "texture_name=scene",
-                    "update=always",
-                    "position=20 80",
-                    "size=500 300",
-                    "focus_mask=menu",
-                    "submenus=car_selector car_color_selector;"
-                ]
-            },
-            {
-                "call": "controls",
-                "literals": {
-                    "id": "controls",
-                    "title": "Controls",
-                    "icon": "controls_icon",
-                    "left": "submenu_left",
-                    "right": "controls_right",
-                    "bottom": "controls_bottom",
-                    "top": "submenu_top",
-                    "gamepad_texture": "textures/gamepad.png"
-                }
-            },
-            {
-                "call": "focused_text",
-                "literals": {
-                    "position": ["nan", "nan"],
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "huge",
-                    "line_distance": "huge",
-                    "focus_mask": "game_over",
-                    "text": "Game over"
-                }
-            },
-            {
-                "playback": "create_tap_buttons",
-                "required": ["IF_ANDROID"]
-            }
-        ]
-    },
-    {
-        "declare_macro": "create_main_menu",
-        "content": [
-            {
-                "playback": "_setup_menu_primary_scene_game_mode_selector",
-                "context": "primary_scene"
-            },
-            {
-                "playback": "create_showroom_scene"
-            },
-            {
-                "playback": "_setup_menu_showroom",
-                "context": "showroom"
-            },
-            {
-                "playback": "_setup_menu_primary_scene_rest",
-                "context": "primary_scene"
-            }
-        ]
-    },
-    {
-        "declare_macro": "_setup_menu_showroom",
-        "#comment": [
-            "# scene_to_texture",
-            "texture_name=scene",
-            "update=always",
-            "size=500 300",
-            "focus_mask=menu",
-            "submenus=car_selector car_color_selector;"
-        ],
-        "content": [
-            {
-                "call": "scene_to_pixel_region",
-                "literals": {
-                    "target_scene": "primary_scene",
-                    "z_order": 2,
-                    "left": "showroom_left",
-                    "right": "showroom_right",
-                    "bottom": "showroom_bottom",
-                    "top": "showroom_top",
-                    "focus_mask": "menu",
-                    "submenus": ["car_selector", "car_color_selector"]
-                }
-            }
-        ]
-    },
-    {
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "exclude": ["IF_ANDROID", "IF_DEVEL"],
+        "literals": {
+          "id": "game_mode_selector",
+          "title": "Game mode",
+          "icon": "game_mode_icon",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"name": "Rally", "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}},
+            {"name": "Team deathmatch", "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}}
+          ]
+        }
+      },
+      {
         "call": "constant_parameter",
-        "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 1] }
-    },
-    {
-        "declare_macro": "parameter_setters",
-        "content": [
-            {
-                "call": "parameter_setter",
-                "literals": {
-                    "id": "car_selector",
-                    "title": "Car",
-                    "icon": "car_selector_icon",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "on_change": [
-                        {
-                            "playback": "_change_showroom_vehicle_in_physics_thread",
-                            "context": "showroom",
-                            "literals": {
-                                "SELECTED_DECIMATE": ""
-                            }
-                        }
-                    ],
-                    "assets": "vehicles",
-                    "asset_prefix": "SELECTED_"
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "literals": {
-                    "id": "car_color_selector",
-                    "title": "Color",
-                    "icon": "car_color_selector_icon",
-                    "required": ["IF_GAME_MODE_RALLY"],
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "on_change": [
-                        {
-                            "playback": "_change_showroom_vehicle_in_physics_thread",
-                            "context": "showroom",
-                            "literals": {
-                                "SELECTED_DECIMATE": ""
-                            }
-                        }
-                    ],
-                    "parameters": [
-                        {"name": "White", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
-                        {"name": "Gray",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
-                        {"name": "Red",   "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
-                        {"name": "Green", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
-                        {"name": "Blue",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
-                        {"name": "Black", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
-                    ]
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "literals": {
-                    "id": "session_selector",
-                    "title": "Session",
-                    "icon": "session_selector_icon",
-                    "required": ["IF_GAME_MODE_RALLY"],
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "parameters": [
-                        {"name": "Session1", "variables": {"RACE_SESSION": "session1"}},
-                        {"name": "Session2", "variables": {"RACE_SESSION": "session2"}},
-                        {"name": "Session3", "variables": {"RACE_SESSION": "session3"}},
-                        {"name": "Session4", "variables": {"RACE_SESSION": "session4"}},
-                        {"name": "Session5", "variables": {"RACE_SESSION": "session5"}}
-                    ]
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "literals": {
-                    "id": "laps_selector",
-                    "title": "Laps",
-                    "icon": "laps_selector_icon",
-                    "required": ["IF_GAME_MODE_RALLY", "IF_RACEWAY_CIRCULAR"],
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 0,
-                    "parameters": [
-                        {"name": "1 Lap",   "variables": {"RACE_LAPS": 1}},
-                        {"name": "2 Laps",  "variables": {"RACE_LAPS": 2}},
-                        {"name": "4 Laps",  "variables": {"RACE_LAPS": 4}},
-                        {"name": "8 Laps",  "variables": {"RACE_LAPS": 8}},
-                        {"name": "16 Laps", "variables": {"RACE_LAPS": 16}}
-                    ]
-                }
-            },
-            {
-                "call": "parameter_setter",
-                "required": ["IF_DEVEL"],
-                "literals": {
-                    "id": "playback_speed_selector",
-                    "title": "Playback speed",
-                    "icon": "missing_icon",
-                    "required": ["IF_GAME_MODE_RALLY"],
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "submenu_left",
-                    "right": "submenu_right",
-                    "bottom": "submenu_bottom",
-                    "top": "submenu_top",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "deflt": 2,
-                    "parameters": [
-                        {"name": "80%", "variables": {"PLAYBACK_SPEED": 0.8}},
-                        {"name": "90%", "variables": {"PLAYBACK_SPEED": 0.9}},
-                        {"name": "100%", "variables": {"PLAYBACK_SPEED": 1}},
-                        {"name": "110%", "variables": {"PLAYBACK_SPEED": 1.1}},
-                        {"name": "120%", "variables": {"PLAYBACK_SPEED": 1.2}}
-                    ]
-                }
-            },
-            {
-                "call": "constant_parameter",
-                "exclude": ["IF_DEVEL"],
-                "literals": { "name": "PLAYBACK_SPEED", "value": 1 }
-            }
+        "required": ["IF_ANDROID"],
+        "literals": { "name": "IF_GAME_MODE_RALLY", "value": true }
+      },
+      {
+        "call": "constant_parameter",
+        "required": ["IF_ANDROID"],
+        "literals": { "IF_GAME_MODE_SKATING": false }
+      },
+      {
+        "call": "constant_parameter",
+        "required": ["IF_ANDROID"],
+        "literals": { "IF_GAME_MODE_TD": false }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_update_scene_icon",
+    "content": [
+      {
+        "call": "update_gallery",
+        "literals": {
+          "instance": "level_icon",
+          "resource": "%LEVEL_ICON_FILE"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_menu_primary_scene_rest",
+    "content": [
+      {
+        "call": "ui_exhibit",
+        "literals": {
+          "z_order": 1,
+          "id_in_gallery": "level_icon",
+          "left": "scene_icon_left",
+          "right": "scene_icon_right",
+          "bottom": "scene_icon_bottom",
+          "top": "scene_icon_top",
+          "update": "once",
+          "focus_mask": "menu|loading",
+          "submenus": ["scene_selector"]
+        }
+      },
+      {
+        "call": "scene_selector",
+        "literals": {
+          "id": "scene_selector",
+          "title": "Scene",
+          "icon": "scene_selector_icon",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "on_change": {
+            "playback": "_update_scene_icon"
+          },
+          "assets": "levels"
+        }
+      },
+      {
+        "playback": "parameter_setters",
+        "literals": {
+          "IF_DEVEL": "%IF_DEVEL"
+        }
+      },
+      {
+        "comment": [
+          "# fill_pixel_region_with_texture",
+          "source_scene=showroom",
+          "texture_name=scene",
+          "update=always",
+          "position=20 80",
+          "size=500 300",
+          "focus_mask=menu",
+          "submenus=car_selector car_color_selector;"
         ]
-    }
+      },
+      {
+        "call": "controls",
+        "literals": {
+          "id": "controls",
+          "title": "Controls",
+          "icon": "controls_icon",
+          "left": "submenu_left",
+          "right": "controls_right",
+          "bottom": "controls_bottom",
+          "top": "submenu_top",
+          "gamepad_texture": "textures/gamepad.png"
+        }
+      },
+      {
+        "call": "focused_text",
+        "literals": {
+          "position": ["nan", "nan"],
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "huge",
+          "line_distance": "huge",
+          "focus_mask": "game_over",
+          "text": "Game over"
+        }
+      },
+      {
+        "playback": "create_tap_buttons",
+        "required": ["IF_ANDROID"]
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_main_menu",
+    "content": [
+      {
+        "playback": "_setup_menu_primary_scene_game_mode_selector",
+        "context": "primary_scene"
+      },
+      {
+        "playback": "create_showroom_scene"
+      },
+      {
+        "playback": "_setup_menu_showroom",
+        "context": "showroom"
+      },
+      {
+        "playback": "_setup_menu_primary_scene_rest",
+        "context": "primary_scene"
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_menu_showroom",
+    "#comment": [
+      "# scene_to_texture",
+      "texture_name=scene",
+      "update=always",
+      "size=500 300",
+      "focus_mask=menu",
+      "submenus=car_selector car_color_selector;"
+    ],
+    "content": [
+      {
+        "call": "scene_to_pixel_region",
+        "literals": {
+          "target_scene": "primary_scene",
+          "z_order": 2,
+          "left": "showroom_left",
+          "right": "showroom_right",
+          "bottom": "showroom_bottom",
+          "top": "showroom_top",
+          "focus_mask": "menu",
+          "submenus": ["car_selector", "car_color_selector"]
+        }
+      }
+    ]
+  },
+  {
+    "call": "constant_parameter",
+    "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 1] }
+  },
+  {
+    "declare_macro": "parameter_setters",
+    "content": [
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "car_selector",
+          "title": "Car",
+          "icon": "car_selector_icon",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "on_change": [
+            {
+              "playback": "_change_showroom_vehicle_in_physics_thread",
+              "context": "showroom",
+              "literals": {
+                "SELECTED_DECIMATE": ""
+              }
+            }
+          ],
+          "assets": "vehicles",
+          "asset_prefix": "SELECTED_"
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "car_color_selector",
+          "title": "Color",
+          "icon": "car_color_selector_icon",
+          "required": ["IF_GAME_MODE_RALLY"],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "on_change": [
+            {
+              "playback": "_change_showroom_vehicle_in_physics_thread",
+              "context": "showroom",
+              "literals": {
+                "SELECTED_DECIMATE": ""
+              }
+            }
+          ],
+          "parameters": [
+            {"name": "White", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
+            {"name": "Gray",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
+            {"name": "Red",   "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
+            {"name": "Green", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
+            {"name": "Blue",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
+            {"name": "Black", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "session_selector",
+          "title": "Session",
+          "icon": "session_selector_icon",
+          "required": ["IF_GAME_MODE_RALLY"],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"name": "Session1", "variables": {"RACE_SESSION": "session1"}},
+            {"name": "Session2", "variables": {"RACE_SESSION": "session2"}},
+            {"name": "Session3", "variables": {"RACE_SESSION": "session3"}},
+            {"name": "Session4", "variables": {"RACE_SESSION": "session4"}},
+            {"name": "Session5", "variables": {"RACE_SESSION": "session5"}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "laps_selector",
+          "title": "Laps",
+          "icon": "laps_selector_icon",
+          "required": ["IF_GAME_MODE_RALLY", "IF_RACEWAY_CIRCULAR"],
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"name": "1 Lap",   "variables": {"RACE_LAPS": 1}},
+            {"name": "2 Laps",  "variables": {"RACE_LAPS": 2}},
+            {"name": "4 Laps",  "variables": {"RACE_LAPS": 4}},
+            {"name": "8 Laps",  "variables": {"RACE_LAPS": 8}},
+            {"name": "16 Laps", "variables": {"RACE_LAPS": 16}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "required": ["IF_DEVEL"],
+        "literals": {
+          "id": "playback_speed_selector",
+          "title": "Playback speed",
+          "icon": "missing_icon",
+          "required": ["IF_GAME_MODE_RALLY"],
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 2,
+          "parameters": [
+            {"name": "80%", "variables": {"PLAYBACK_SPEED": 0.8}},
+            {"name": "90%", "variables": {"PLAYBACK_SPEED": 0.9}},
+            {"name": "100%", "variables": {"PLAYBACK_SPEED": 1}},
+            {"name": "110%", "variables": {"PLAYBACK_SPEED": 1.1}},
+            {"name": "120%", "variables": {"PLAYBACK_SPEED": 1.2}}
+          ]
+        }
+      },
+      {
+        "call": "constant_parameter",
+        "exclude": ["IF_DEVEL"],
+        "literals": { "name": "PLAYBACK_SPEED", "value": 1 }
+      }
+    ]
+  }
 ]
