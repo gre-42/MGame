@@ -454,8 +454,10 @@
       },
       {
         "call": "load_key_configurations",
-        "__APPDATA__": { "filename": "key_configurations.json" },
-        "__DIR__": { "fallback_filename": "key_configurations.json" }
+        "literals": {
+          "filename": "$__APPDATA__/key_configurations.json",
+          "fallback_filename": "$__DIR__/key_configurations.json"
+        }
       }
     ]
   },
