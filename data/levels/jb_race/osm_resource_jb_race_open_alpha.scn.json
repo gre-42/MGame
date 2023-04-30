@@ -10,7 +10,7 @@
           "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
           "heightmap": "$__DIR__/../jb/heightmap.pgm",
           "grass_foliagemap": "textures/foliagemap.png",
-          "terrain_undefined_textures": "textures/debug/pink.png",
+          "terrain_undefined_textures": ["textures/debug/pink.png"],
           "terrain_grass_textures": [
             "#Ground003_2",
             "#Ground003_8"],

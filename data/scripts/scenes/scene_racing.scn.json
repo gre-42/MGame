@@ -467,12 +467,8 @@
       {
         "playback": "create_car",
         "literals": {
-          "CAR_NODE_X": 1,
-          "CAR_NODE_Y": 2,
-          "CAR_NODE_Z": 3,
-          "CAR_NODE_ANGLE_X": 4,
-          "CAR_NODE_ANGLE_Y": 5,
-          "CAR_NODE_ANGLE_Z": 6,
+          "CAR_NODE_POSITION": [1, 2, 3],
+          "CAR_NODE_ANGLES": [4, 5, 6],
           "CAR_NAME": "%PLAYBACK_CAR",
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "_playback_track$PSUFFIX",
