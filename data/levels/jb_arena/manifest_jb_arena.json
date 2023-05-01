@@ -1,10 +1,10 @@
 {
-    "name": "JB arena",
-    "script_file": "scene_jb_arena.scn",
-    "variables": {
-        "LEVEL_ID": "jb_arena",
-        "LEVEL_ICON_FILE": "textures/debug/black.png",
-        "IF_RACEWAY_CIRCULAR": false
-    },
-    "required": ["IF_GAME_MODE_TD"]
+  "name": "JB arena",
+  "script_file": "scene_jb_arena.scn.json",
+  "variables": {
+    "LEVEL_ID": "jb_arena",
+    "LEVEL_ICON_FILE": "textures/debug/black.png",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_TD"]
 }

@@ -892,10 +892,10 @@
           "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
           "clear_mode": "%PRIMARY_SCENE_CLEAR_MODE",
           "max_tracks": 5,
-          "setup_new_round": [{
+          "setup_new_round": {
             "playback": "_setup_new_round",
             "context": "primary_scene"
-          }]
+          }
         }
       },
       {

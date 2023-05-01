@@ -119,6 +119,7 @@
           "IF_PC": false,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
+          "HAND_BRAKE_PULLED": false,
           "COLOR": "%COLOR",
           "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
           "YAW_ERROR_STD": "%YAW_ERROR_STD",
@@ -240,14 +241,33 @@
         "call": "set_preferred_car_spawner",
         "literals": {
           "player": "%PLAYER_NAME",
-          "macro": "teams.create_car_for_npc",
-          "parameters": {
+          "macro": {
+            "playback": "teams.create_car_for_npc",
+            "literals": {
+              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+              "SUFFIX": "%SUFFIX",
+              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+              "IF_RACING": "%IF_RACING",
+              "IF_RALLY": "%IF_RALLY",
+              "PLAYER_NAME": "%PLAYER_NAME",
+
+              "CAR_NAME": "%CAR_NAME",
+              "DECIMATE": "%DECIMATE",
+              "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
+              "COLOR": "%COLOR",
+              "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+              "YAW_ERROR_STD": "%YAW_ERROR_STD",
+              "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+              "ERROR_ALPHA": "%ERROR_ALPHA"
+            }
+          },
+          "capture": {
             "CAR_NAME": "%CAR_NAME",
             "DECIMATE": "%DECIMATE",
             "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
             "COLOR": "%COLOR",
-            "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-            "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
             "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
             "YAW_ERROR_STD": "%YAW_ERROR_STD",
             "PITCH_ERROR_STD": "%PITCH_ERROR_STD",

@@ -93,7 +93,8 @@
           "IF_PC": true,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
-          "COLOR": "%COLOR"
+          "COLOR": "%COLOR",
+          "HAND_BRAKE_PULLED": false
         }
       },
       {
@@ -196,8 +197,31 @@
         "call": "set_preferred_car_spawner",
         "literals": {
           "player": "%PLAYER_NAME",
-          "macro": "%teams.create_car_for_pc",
-          "parameters": {
+          "macro": {
+            "playback": "teams.create_car_for_pc",
+            "literals": {
+              "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+              "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+              "SUFFIX": "%SUFFIX",
+              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+              "IF_RACING": "%IF_RACING",
+              "IF_RALLY": "%IF_RALLY",
+              "PLAYER_NAME": "%PLAYER_NAME",
+
+              "CAR_NAME": "%CAR_NAME",
+              "DECIMATE": "",
+              "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
+              "COLOR": "%COLOR",
+              "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+              "YAW_ERROR_STD": "%YAW_ERROR_STD",
+              "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+              "ERROR_ALPHA": "%ERROR_ALPHA"
+            }
+          },
+          "capture": {
             "CAR_NAME": "%CAR_NAME",
             "DECIMATE": "",
             "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
@@ -212,9 +236,11 @@
       {
         "required": ["IF_SET_WAY_POINTS"],
         "call": "set_pathfinding_way_points",
-        "player": "%PLAYER_NAME",
-        "node": "osm_map_node",
-        "resource": "%TEAMS_WAY_POINTS_RESOURCE"
+        "literals": {
+          "player": "%PLAYER_NAME",
+          "node": "osm_map_node",
+          "resource": "%TEAMS_WAY_POINTS_RESOURCE"
+        }
       }
     ]
   }
