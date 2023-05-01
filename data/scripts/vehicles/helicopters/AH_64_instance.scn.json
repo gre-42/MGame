@@ -283,8 +283,8 @@
       },
       {
         "required": ["IF_PC"], "playback": "create_car_cameras_heli", "literals": {
-          "SUFFIX": "SUFFIX",
-          "PLAYER_NAME": "PLAYER_NAME"
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME"
         }
       },
       {

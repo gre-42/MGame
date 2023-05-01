@@ -254,14 +254,14 @@
         "size": [0.05, 0.05],
         "error_behavior": "hide"}},
       {"call": "player_set_aiming_gun", "literals": {
-        "player_name": "%PLAYER_NAME",
+        "player": "%PLAYER_NAME",
         "ypln_node": "turret_node$SUFFIX",
         "gun_node": "main_gun_end_node$SUFFIX"}},
       {"comment": {"exclude": ["IF_ANDROID"], "required": ["IF_PC"], "playback": "create_player_car_engine_rpm_meter", "literals": {
         "PLAYER_NAME": "%PLAYER_NAME",
         "ENGINE_NAME": "left"}}},
       {"call": "player_set_vehicle_control_parameters", "literals": {
-        "player_name": "%PLAYER_NAME",
+        "player": "%PLAYER_NAME",
         "surface_power_forward": "inf",
         "surface_power_backward": "-inf",
         "max_tire_angle": 45,

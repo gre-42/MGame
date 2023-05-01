@@ -96,11 +96,11 @@
             {
                 "playback": "create_player_skater_externals$SKATER_NAME",
                 "variables": {
-                    "SUFFIX": "SUFFIX",
-                    "IF_RACING": "IF_RACING",
-                    "IF_RALLY": "IF_RALLY",
+                    "SUFFIX": "%SUFFIX",
+                    "IF_RACING": "%IF_RACING",
+                    "IF_RALLY": "%IF_RALLY",
                     "PLAYER_NAME": "%PLAYER_NAME",
-                    "IF_PC": "IF_PC"
+                    "IF_PC": "%IF_PC"
                 }
             }
         ]

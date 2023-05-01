@@ -167,7 +167,7 @@
                 "literals": {
                     "ypln_node": "human_node$SUFFIX",
                     "gun_node": "main_gun_end_node$SUFFIX",
-                    "player_name": "%PLAYER_NAME"
+                    "player": "%PLAYER_NAME"
                 }
             },
             {
@@ -175,7 +175,7 @@
                 "literals": {
                     "surface_power_forward": "inf",
                     "surface_power_backward": "-inf",
-                    "player_name": "%PLAYER_NAME"
+                    "player": "%PLAYER_NAME"
                 }
             }
         ]
