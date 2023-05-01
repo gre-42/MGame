@@ -28,6 +28,12 @@ build_clang:
 		make -C Mlib build_clang \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
+build_asan:
+	BUILD_PREFIX=$(build_prefix) \
+	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
+		make -C Mlib build_asan \
+			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+
 build_tsan:
 	BUILD_PREFIX=$(build_prefix) \
 	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
