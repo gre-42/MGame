@@ -24,7 +24,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": ["F_35_hitbox", "F_35$tirelines"],
+          "hitboxes": ["F_35_hitbox", "F_35_tirelines"],
           "mass": "%MASS",
           "size": [1.5, 1.5, 12],
           "com": [0, -0.2, -0.2],
@@ -62,10 +62,10 @@
           "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
-      {"call": "wheel", "rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0},
-      {"call": "wheel", "rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1},
-      {"call": "wheel", "rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2},
-      {"call": "wheel", "rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
       {
         "call": "rotor",
         "literals": {
@@ -123,11 +123,11 @@
           "rotation": [0, 0, 0],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
-          "lift_c": "2",
-          "angle_yz": "1",
-          "angle_zz": "1",
+          "lift_c": 2,
+          "angle_yz": 1,
+          "angle_zz": 1,
           "drag": [2, 8, 2],
-          "wing_id": "2"
+          "wing_id": 2
         }
       },
       {"comment": "3: rear right (roll + pitch)"},
@@ -201,14 +201,14 @@
         "call": "create_plane_controller",
         "literals": {
           "node": "car_node$SUFFIX",
-          "left_front_aileron_wing_ids": 0,
-          "right_front_aileron_wing_ids": 1,
-          "left_rear_aileron_wing_ids": 2,
-          "right_rear_aileron_wing_ids": 3,
-          "left_rudder_wing_ids": 4,
-          "right_rudder_wing_ids": 5,
-          "left_flap_wing_ids": 0,
-          "right_flap_wing_ids": 1,
+          "left_front_aileron_wing_ids": [0],
+          "right_front_aileron_wing_ids": [1],
+          "left_rear_aileron_wing_ids": [2],
+          "right_rear_aileron_wing_ids": [3],
+          "left_rudder_wing_ids": [4],
+          "right_rudder_wing_ids": [5],
+          "left_flap_wing_ids": [0],
+          "right_flap_wing_ids": [1],
           "tire_ids": [0, 1],
           "tire_angles": [30, 30],
           "yaw_amount_to_tire_angle": 10,

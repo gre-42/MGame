@@ -4,7 +4,8 @@
         {"include": "XZ_resource.scn.json"},
         {"include": "XZ_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_XZ"
+        "VEHICLE_SUFFIX": "_XZ",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
 }

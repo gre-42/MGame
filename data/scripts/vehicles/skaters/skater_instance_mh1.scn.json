@@ -28,7 +28,7 @@
           "parent_follower_rigid_body_node": "skater_node$SUFFIX",
           "bullet_start_offset": 20,
           "bullet_velocity": 900,
-          "bullet_feels_gravity": 1,
+          "bullet_feels_gravity": true,
           "gravity": 9.8,
           "dyaw_max": 10,
           "pitch_min": -10,

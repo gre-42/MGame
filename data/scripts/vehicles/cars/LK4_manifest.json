@@ -4,7 +4,8 @@
         {"include": "LK4_resource.scn.json"},
         {"include": "LK4_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_LK4"
+        "VEHICLE_SUFFIX": "_LK4",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
 }

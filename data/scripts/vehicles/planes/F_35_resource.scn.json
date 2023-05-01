@@ -21,7 +21,7 @@
     {
         "call": "obj_resource",
         "literals": {
-            "name": "F_35-tirelines",
+            "name": "F_35_tirelines",
             "filename": "models/primitives/empty.obj",
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
@@ -35,11 +35,11 @@
             "transformation_mode": "all"
         }
     },
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "F_35-tirelines", "add": "obj_tire_line"}},
-    {"call": "gen_ray", "literals": {"name": "F_35-tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
-    {"call": "gen_ray", "literals": {"name": "F_35-tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
-    {"call": "gen_ray", "literals": {"name": "F_35-tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
-    {"call": "gen_ray", "literals": {"name": "F_35-tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
+    {"call": "modify_physics_material_tags", "literals": {"resource_name": "F_35_tirelines", "add": "obj_tire_line"}},
+    {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
+    {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
+    {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
+    {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
     {
         "declare_macro": "load_F_35_part",
         "content": [

@@ -4,7 +4,8 @@
         {"include": "TW_resource.scn.json"},
         {"include": "TW_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_TW"
+        "VEHICLE_SUFFIX": "_TW",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
 }

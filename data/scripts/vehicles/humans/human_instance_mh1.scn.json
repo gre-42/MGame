@@ -32,7 +32,7 @@
           "head_node": "human_head_camera_node$SUFFIX",
           "bullet_start_offset": 0.5,
           "bullet_velocity": "nan",
-          "bullet_feels_gravity": 1,
+          "bullet_feels_gravity": true,
           "gravity": 9.8,
           "dyaw_max": 10,
           "pitch_min": -60,
@@ -63,7 +63,7 @@
           "bullet_damage": 10,
           "bullet_damage_radius": 0,
           "bullet_velocity": 900,
-          "bullet_feels_gravity": 1,
+          "bullet_feels_gravity": true,
           "range_min": 0,
           "range_max": 2000,
           "create": {
@@ -91,7 +91,7 @@
           "bullet_damage": 10,
           "bullet_damage_radius": 0,
           "bullet_velocity": 900,
-          "bullet_feels_gravity": 1,
+          "bullet_feels_gravity": true,
           "range_min": 0,
           "range_max": 2000,
           "create": {
@@ -119,7 +119,7 @@
           "bullet_damage": 100,
           "bullet_damage_radius": 5,
           "bullet_velocity": 15,
-          "bullet_feels_gravity": 1,
+          "bullet_feels_gravity": true,
           "range_min": 8,
           "range_max": 20,
           "create": {
@@ -147,7 +147,7 @@
           "bullet_damage": 100,
           "bullet_damage_radius": 5,
           "bullet_velocity": 50,
-          "bullet_feels_gravity": 0,
+          "bullet_feels_gravity": false,
           "range_min": 8,
           "range_max": 2000,
           "create": {
@@ -205,7 +205,7 @@
           "radius": 1,
           "engine": "legs",
           "brake_force": 5000,
-          "Ks": 1e4, "Ka": 4e2, "musF": 0, "musC": 5,
+          "Ks": 1e4, "Ka": 4e2, "musF": [0], "musC": [5],
           "tire_id": 0
         }
       },
@@ -230,7 +230,7 @@
         }
       },
       {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1-DECIMATE"}},
+      {"required": ["IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1$DECIMATE"}},
       {"required": ["IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "mh1_d1"}}
     ]
   },

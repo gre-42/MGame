@@ -4,7 +4,8 @@
         {"include": "OT_resource.scn.json"},
         {"include": "OT_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_OT"
+        "VEHICLE_SUFFIX": "_OT",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
 }

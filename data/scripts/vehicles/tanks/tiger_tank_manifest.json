@@ -4,7 +4,8 @@
         {"include": "tiger_tank_resource.scn.json"},
         {"include": "tiger_tank_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_tiger_tank"
+        "VEHICLE_SUFFIX": "_tiger_tank",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_TD"]
 }

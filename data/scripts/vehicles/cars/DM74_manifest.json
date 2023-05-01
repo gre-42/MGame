@@ -4,7 +4,8 @@
         {"include": "DM74_resource.scn.json"},
         {"include": "DM74_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_DM74"
+        "VEHICLE_SUFFIX": "_DM74",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
 }

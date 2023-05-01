@@ -5,7 +5,8 @@
         {"include": "skater_resource.scn.json"},
         {"include": "skater_instance_mh1.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_skating_mh1"
+        "VEHICLE_SUFFIX": "_skating_mh1",
+        "VEHICLE_CLASS": "skater"
     },
     "required": ["IF_GAME_MODE_SKATING"]
 }

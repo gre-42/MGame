@@ -4,7 +4,8 @@
         {"include": "AH_64_resource.scn.json"},
         {"include": "AH_64_instance.scn.json"}],
     "variables": {
-        "VEHICLE_SUFFIX": "_AH_64"
+        "VEHICLE_SUFFIX": "_AH_64",
+        "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_TD"]
 }
