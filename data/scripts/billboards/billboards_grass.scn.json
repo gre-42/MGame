@@ -627,8 +627,8 @@
                 "call": "binary_x_resource",
                 "literals": {
                     "name": "x_$SUFFIX",
-                    "texture_filename_0": "$TEXTURE_0",
-                    "texture_filename_90": "$TEXTURE_90",
+                    "texture_filename_0": "%TEXTURE_0",
+                    "texture_filename_90": "%TEXTURE_90",
                     "center_distances": [0, 501],
                     "occluded_pass": "lightmap_black_global_static",
                     "occluder_pass": "none",
@@ -646,7 +646,7 @@
                 "call": "square_resource",
                 "literals": {
                     "name": "square_$SUFFIX",
-                    "texture_filename": "$TEXTURE_0",
+                    "texture_filename": "%TEXTURE_0",
                     "center_distances": [0, 501],
                     "occluded_pass": "lightmap_black_global_static",
                     "occluder_pass": "none",

@@ -152,7 +152,7 @@
                 "call": "visual_player_bullet_count",
                 "required": ["IF_PC"],
                 "literals": {
-                    "player": "$PLAYER_NAME",
+                    "player": "%PLAYER_NAME",
                     "left": "bullet_count_left",
                     "right": "bullet_count_right",
                     "bottom": "bullet_count_bottom",

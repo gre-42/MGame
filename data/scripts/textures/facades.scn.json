@@ -1,229 +1,211 @@
 [
-    {
-        "declare_macro": "add_facade_texture_with_histogram",
-        "content": [
-            {
-                "call": "add_texture_descriptor",
-                "literals": {
-                    "name": "wall_$NAME",
-                    "color": "$WALL_COLOR",
-                    "normal": "$WALL_NORMAL",
-                    "color_mode": "rgb",
-                    "histogram": "$HISTOGRAM",
-                    "anisotropic_filtering_level": 16
-                }
-            },
-            {
-                "comment": "Draw a window into the center of a facade texture"
-            },
-            {
-                "call": "add_texture_atlas",
-                "literals": {
-                    "name": "color_$NAME",
-                    "width": 2048,
-                    "height": 2048,
-                    "color_mode": "rgb",
-                    "images": [
-                        {
-                            "texture_pos": [
-                                0,
-                                0
-                            ],
-                            "texture": "#wall_$NAME"
-                        },
-                        {
-                            "texture_pos": [
-                                512,
-                                512
-                            ],
-                            "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "call": "add_texture_atlas",
-                "literals": {
-                    "name": "normal_$NAME",
-                    "width": 2048,
-                    "height": 2048,
-                    "color_mode": "rgb",
-                    "images": [
-                        {
-                            "texture_pos": [
-                                0,
-                                0
-                            ],
-                            "texture": "$WALL_NORMAL"
-                        },
-                        {
-                            "texture_pos": [
-                                512,
-                                512
-                            ],
-                            "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "call": "add_texture_descriptor",
-                "literals": {
-                    "name": "%NAME",
-                    "color": "#color_$NAME",
-                    "normal": "#normal_$NAME",
-                    "color_mode": "rgb",
-                    "anisotropic_filtering_level": 16
-                }
-            }
-        ]
-    },
-    {
-        "declare_macro": "add_facade_texture",
-        "content": [
-            {
-                "call": "add_texture_descriptor",
-                "literals": {
-                    "name": "wall_$NAME",
-                    "color": "$WALL_COLOR",
-                    "normal": "$WALL_NORMAL",
-                    "color_mode": "rgb",
-                    "anisotropic_filtering_level": 16
-                }
-            },
-            {
-                "comment": "Draw a window into the center of a facade texture"
-            },
-            {
-                "call": "add_texture_atlas",
-                "literals": {
-                    "name": "color_$NAME",
-                    "width": 2048,
-                    "height": 2048,
-                    "color_mode": "rgb",
-                    "images": [
-                        {
-                            "texture_pos": [
-                                0,
-                                0
-                            ],
-                            "texture": "$WALL_COLOR"
-                        },
-                        {
-                            "texture_pos": [
-                                512,
-                                512
-                            ],
-                            "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "call": "add_texture_atlas",
-                "literals": {
-                    "name": "normal_$NAME",
-                    "width": 2048,
-                    "height": 2048,
-                    "color_mode": "rgb",
-                    "images": [
-                        {
-                            "texture_pos": [
-                                0,
-                                0
-                            ],
-                            "texture": "$WALL_NORMAL"
-                        },
-                        {
-                            "texture_pos": [
-                                512,
-                                512
-                            ],
-                            "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
-                        }
-                    ]
-                }
-            },
-            {
-                "call": "add_texture_descriptor",
-                "literals": {
-                    "name": "%NAME",
-                    "color": "#color_$NAME",
-                    "normal": "#normal_$NAME",
-                    "color_mode": "rgb",
-                    "anisotropic_filtering_level": 16
-                }
-            }
-        ]
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture_with_histogram",
-        "literals": {
-            "NAME": "facade_bricks_red",
-            "HISTOGRAM": "textures/histograms/google_maps/bricks.png",
-            "WALL_COLOR": "textures/cc0textures/Bricks059_2K_Color.jpg",
-            "WALL_NORMAL": "textures/cc0textures/Bricks059_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture",
-        "literals": {
-            "NAME": "facade_plaster_orange",
-            "WALL_COLOR": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture",
-        "literals": {
-            "NAME": "facade_plaster_gray",
-            "WALL_COLOR": "#Plaster003_Gray",
-            "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture",
-        "literals": {
-            "NAME": "facade_plaster_white",
-            "WALL_COLOR": "#Plaster003_White",
-            "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture",
-        "literals": {
-            "NAME": "facade_plaster_green",
-            "WALL_COLOR": "#Plaster003_Green",
-            "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
-        "playback": "add_facade_texture",
-        "literals": {
-            "NAME": "facade_plaster_blue",
-            "WALL_COLOR": "#Plaster003_Blue",
-            "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
-        }
-    },
-    {
-        "exclude": ["IF_ANDROID"],
+  {
+    "declare_macro": "add_facade_texture_with_histogram",
+    "content": [
+      {
         "call": "add_texture_descriptor",
         "literals": {
-            "name": "building_big_office3_window",
-            "color": "textures/city-buildings-asset-pack/building_big_office3_window.png",
-            "color_mode": "rgb",
-            "lighten": [
-                -0.3,
-                -0.3,
-                -0.3
-            ],
-            "anisotropic_filtering_level": 16
+          "name": "wall_$NAME",
+          "color": "%WALL_COLOR",
+          "normal": "%WALL_NORMAL",
+          "color_mode": "rgb",
+          "histogram": "%HISTOGRAM",
+          "anisotropic_filtering_level": 16
         }
+      },
+      {
+        "comment": "Draw a window into the center of a facade texture"
+      },
+      {
+        "call": "add_texture_atlas",
+        "literals": {
+          "name": "color_$NAME",
+          "width": 2048,
+          "height": 2048,
+          "color_mode": "rgb",
+          "images": [
+            {
+              "texture_pos": [
+                0,
+                0
+              ],
+              "texture": "#wall_$NAME"
+            },
+            {
+              "texture_pos": [
+                512,
+                512
+              ],
+              "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_texture_atlas",
+        "literals": {
+          "name": "normal_$NAME",
+          "width": 2048,
+          "height": 2048,
+          "color_mode": "rgb",
+          "images": [
+            {
+              "texture_pos": [0, 0],
+              "texture": "%WALL_NORMAL"
+            },
+            {
+              "texture_pos": [512, 512],
+              "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_texture_descriptor",
+        "literals": {
+          "name": "%NAME",
+          "color": "#color_$NAME",
+          "normal": "#normal_$NAME",
+          "color_mode": "rgb",
+          "anisotropic_filtering_level": 16
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "add_facade_texture",
+    "content": [
+      {
+        "call": "add_texture_descriptor",
+        "literals": {
+          "name": "wall_$NAME",
+          "color": "%WALL_COLOR",
+          "normal": "%WALL_NORMAL",
+          "color_mode": "rgb",
+          "anisotropic_filtering_level": 16
+        }
+      },
+      {
+        "comment": "Draw a window into the center of a facade texture"
+      },
+      {
+        "call": "add_texture_atlas",
+        "literals": {
+          "name": "color_$NAME",
+          "width": 2048,
+          "height": 2048,
+          "color_mode": "rgb",
+          "images": [
+            {
+              "texture_pos": [0, 0],
+              "texture": "%WALL_COLOR"
+            },
+            {
+              "texture_pos": [512, 512],
+              "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_texture_atlas",
+        "literals": {
+          "name": "normal_$NAME",
+          "width": 2048,
+          "height": 2048,
+          "color_mode": "rgb",
+          "images": [
+            {
+              "texture_pos": [0, 0],
+              "texture": "%WALL_NORMAL"
+            },
+            {
+              "texture_pos": [512, 512],
+              "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_texture_descriptor",
+        "literals": {
+          "name": "%NAME",
+          "color": "#color_$NAME",
+          "normal": "#normal_$NAME",
+          "color_mode": "rgb",
+          "anisotropic_filtering_level": 16
+        }
+      }
+    ]
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture_with_histogram",
+    "literals": {
+      "NAME": "facade_bricks_red",
+      "HISTOGRAM": "textures/histograms/google_maps/bricks.png",
+      "WALL_COLOR": "textures/cc0textures/Bricks059_2K_Color.jpg",
+      "WALL_NORMAL": "textures/cc0textures/Bricks059_2K_NormalGL.jpg"
     }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture",
+    "literals": {
+      "NAME": "facade_plaster_orange",
+      "WALL_COLOR": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
+    }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture",
+    "literals": {
+      "NAME": "facade_plaster_gray",
+      "WALL_COLOR": "#Plaster003_Gray",
+      "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
+    }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture",
+    "literals": {
+      "NAME": "facade_plaster_white",
+      "WALL_COLOR": "#Plaster003_White",
+      "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
+    }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture",
+    "literals": {
+      "NAME": "facade_plaster_green",
+      "WALL_COLOR": "#Plaster003_Green",
+      "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
+    }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "playback": "add_facade_texture",
+    "literals": {
+      "NAME": "facade_plaster_blue",
+      "WALL_COLOR": "#Plaster003_Blue",
+      "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
+    }
+  },
+  {
+    "exclude": ["IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "building_big_office3_window",
+      "color": "textures/city-buildings-asset-pack/building_big_office3_window.png",
+      "color_mode": "rgb",
+      "lighten": [
+        -0.3,
+        -0.3,
+        -0.3
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  }
 ]
