@@ -70,13 +70,23 @@
                                 "IF_RACING": "%IF_RACING",
                                 "IF_RALLY": "%IF_RALLY",
                                 "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+                                "IF_MANUAL_SHOOT": "%IF_MANUAL_SHOOT",
+                                "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
                                 "IF_PC": "%IF_PC",
                                 "IF_WITH_GUN": "%IF_WITH_GUN",
                                 "PLAYER_NAME": "%PLAYER_NAME"
                             }
                         }
                     ],
-                    "player": "%PLAYER_NAME"
+                    "player": "%PLAYER_NAME",
+                    "capture": {
+                        "SUFFIX": "%SUFFIX",
+                        "HUMAN_NAME": "%HUMAN_NAME",
+                        "IF_RACING": "%IF_RACING",
+                        "IF_RALLY": "%IF_RALLY",
+                        "IF_WITH_GUN": "%IF_WITH_GUN",
+                        "PLAYER_NAME": "%PLAYER_NAME"
+                    }
                 }
             },
             {
@@ -118,7 +128,8 @@
                 "playback": "create_human_key_bindings",
                 "literals": {
                     "SUFFIX": "%SUFFIX",
-                    "PLAYER_NAME": "%PLAYER_NAME"
+                    "PLAYER_NAME": "%PLAYER_NAME",
+                    "ROLE": "driver"
                 }
             },
             {

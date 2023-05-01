@@ -1,11 +1,15 @@
 {
-    "name": "AH-64",
-    "on_init": [
-        {"include": "AH_64_resource.scn.json"},
-        {"include": "AH_64_instance.scn.json"}],
+  "id": "AH_64",
+  "on_init": [
+    {"include": "AH_64_resource.scn.json"},
+    {"include": "AH_64_instance.scn.json"}
+  ],
+  "params": {
+    "title": "AH-64",
     "variables": {
-        "VEHICLE_SUFFIX": "_AH_64",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_AH_64",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_TD"]
+  }
 }

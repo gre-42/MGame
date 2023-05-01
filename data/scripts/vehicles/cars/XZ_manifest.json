@@ -1,11 +1,15 @@
 {
-    "name": "XZ",
-    "on_init": [
-        {"include": "XZ_resource.scn.json"},
-        {"include": "XZ_instance.scn.json"}],
+  "id": "XZ",
+  "on_init": [
+    {"include": "XZ_resource.scn.json"},
+    {"include": "XZ_instance.scn.json"}
+  ],
+  "params": {
+    "title": "XZ",
     "variables": {
-        "VEHICLE_SUFFIX": "_XZ",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_XZ",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
+  }
 }

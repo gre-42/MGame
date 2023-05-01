@@ -1,11 +1,15 @@
 {
-    "name": "M3",
-    "on_init": [
-        {"include": "M3_resource.scn.json"},
-        {"include": "M3_instance.scn.json"}],
+  "id": "M3",
+  "on_init": [
+    {"include": "M3_resource.scn.json"},
+    {"include": "M3_instance.scn.json"}
+  ],
+  "params": {
+    "title": "M3",
     "variables": {
-        "VEHICLE_SUFFIX": "_M3",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_M3",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
+  }
 }

@@ -1,11 +1,15 @@
 {
-    "name": "Tiger I",
-    "on_init": [
-        {"include": "tiger_tank_resource.scn.json"},
-        {"include": "tiger_tank_instance.scn.json"}],
+  "id": "tiger_tank",
+  "on_init": [
+    {"include": "tiger_tank_resource.scn.json"},
+    {"include": "tiger_tank_instance.scn.json"}
+  ],
+  "params": {
+    "title": "Tiger I",
     "variables": {
-        "VEHICLE_SUFFIX": "_tiger_tank",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_tiger_tank",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_TD"]
+  }
 }

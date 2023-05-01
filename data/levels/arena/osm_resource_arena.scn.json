@@ -1,0 +1,179 @@
+{
+  "declare_macro": "osm_resource_arena",
+  "content": {
+    "call": "osm_resource",
+    "literals": {
+      "name": "osm_map",
+      "filename": "$__DIR__/map_arena.osm",
+      "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
+      "heightmap": "$__DIR__/heightmap.pgm",
+      "terrain_undefined_textures": ["textures/debug/pink.png"],
+      "terrain_grass_textures": [
+        "#Ground037_1",
+        "#Ground037_8"],
+      "bounding_terrain_type": "grass",
+      "default_terrain_type": "grass",
+      "terrain_undefined_materials": "surface_base_stone",
+      "path_materials": "surface_base_gravel",
+      "grass_dirt_texture": "#Ground025",
+      "path_crossing_texture": "#Gravel010",
+      "path_texture": "#Gravel010_Alpha",
+      "socle_textures": [
+        "#Bricks058"],
+      "facade_textures": [
+        {"facade": "Plaster003", "max_height": 5},
+        {"facade": "Plaster003_Gray", "max_height": 5},
+        {
+          "selector": "brick",
+          "facade": "wall_facade_bricks_red",
+          "min_height": 5,
+          "max_height": 50,
+          "interior": {
+            "facade_edge_size": [0.5, 0.5],
+            "facade_inner_size": [1.4, 1.4],
+            "interior_size": [1.5, 1.5, 0.2],
+            "left": "DE21F2_industryWindow00001_left",
+            "right": "DE21F2_industryWindow00001_right",
+            "floor": "DE21F2_industryWindow00001_bottom",
+            "ceiling": "DE21F2_industryWindow00001_top",
+            "back": "DE21F2_industryWindow00001_1k"
+          }
+        },
+        {
+          "facade": "wall_facade_plaster_orange",
+          "min_height": 5,
+          "max_height": 50,
+          "interior": {
+            "facade_edge_size": [0.5, 0.5],
+            "facade_inner_size": [1.4, 1.4],
+            "interior_size": [1.5, 1.5, 0.2],
+            "left": "DE21F2_industryWindow00001_left",
+            "right": "DE21F2_industryWindow00001_right",
+            "floor": "DE21F2_industryWindow00001_bottom",
+            "ceiling": "DE21F2_industryWindow00001_top",
+            "back": "DE21F2_industryWindow00001_1k"
+          }
+        },
+        {
+          "facade": "wall_facade_plaster_gray",
+          "min_height": 50,
+          "interior": {
+            "facade_edge_size": [0.5, 0.5],
+            "facade_inner_size": [0.7, 0.7],
+            "interior_size": [5, 3, 4],
+            "left": "DallasW_negx",
+            "right": "DallasW_posx",
+            "floor": "DallasW_negy",
+            "ceiling": "DallasW_posy",
+            "back": "DallasW_posz"
+          }
+        },
+        {
+          "facade": "wall_facade_plaster_gray",
+          "min_height": 50,
+          "interior": {
+            "facade_edge_size": [0.5, 0.5],
+            "facade_inner_size": [0.7, 0.7],
+            "interior_size": [5, 3, 4],
+            "left": "MarriottMadisonWest_negx",
+            "right": "MarriottMadisonWest_posx",
+            "floor": "MarriottMadisonWest_negy",
+            "ceiling": "MarriottMadisonWest_posy",
+            "back": "MarriottMadisonWest_posz"
+          }
+        },
+        {
+          "facade": "wall_facade_plaster_gray",
+          "min_height": 50,
+          "interior": {
+            "facade_edge_size": [0.5, 0.5],
+            "facade_inner_size": [0.7, 0.7],
+            "interior_size": [5, 3, 4],
+            "left": "room.left",
+            "right": "room.right",
+            "floor": "room.floor",
+            "ceiling": "room.ceiling",
+            "back": "room.back"
+          }
+        },
+        {"facade": "MarekWindow00001_512", "min_height": 50}
+      ],
+      "ceiling_texture": "#Asphalt015",
+      "barrier_styles": [
+        {"name": "fence1", "texture": "#fence1", "uv": [1, 1], "blend_mode": "semi_continuous_02", "wrap_mode_t": "repeat", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity":1}],
+      "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+      "grass_resource_names": [
+        "vegetation2.0(p:1)(hitbox:02_1_02_hitbox)",
+        "vegetation2.1(p:1)(hitbox:02_1_02_hitbox)",
+        "vegetation2.2(p:1)(hitbox:02_1_02_hitbox)",
+        "vegetation2.3(p:1)(hitbox:02_1_02_hitbox)",
+        "vegetation2.4(p:1)(hitbox:02_1_02_hitbox)",
+        "vegetation2.5(p:1)(hitbox:02_1_02_hitbox)"],
+      "near_grass_resource_names": [
+        "bflower2     (p:0.1)",
+        "grass_tbdpec3r",
+        "bflower    (p:0.1)",
+        "vegetation1.9  (p:0.002)",
+        "vegetation1.10 (p:0.002)",
+        "bamboo     (p:0.05)(min_bdry:3)(max_bdry:8)",
+        "palm       (p:0.2) (min_bdry:3)(max_bdry:8)",
+        "pine       (p:0.2) (min_bdry:3)(max_bdry:8)",
+        "shrub      (p:0.2) (min_bdry:3)(max_bdry:8)",
+        "spikes     (p:0.2) (min_bdry:3)(max_bdry:8)"],
+      "default_street_width": 5,
+      "scale": 1e-3,
+      "uv_scale_terrain": 3e-1,
+      "uv_period_terrain": 512,
+      "uv_scale_path": 1e-1,
+      "uv_scale_facade": 2.5e-1,
+      "uv_scale_ceiling": 1e-1,
+      "uv_scale_barrier_wall": 5,
+      "uv_scale_crossings": 1e-1,
+      "with_roofs": false,
+      "with_ceilings": true,
+      "building_bottom": 0,
+      "default_building_top": 10,
+      "default_barrier_top": 2,
+      "remove_backfacing_triangles": true,
+      "with_tree_nodes": true,
+      "forest_outline_tree_distance": 10,
+      "forest_outline_tree_inwards_distance": 1,
+      "much_grass_distance": 20,
+      "much_near_grass_distance": 3,
+      "much_near_flowers_distance": 2,
+      "raceway_beacon_distance": "inf",
+      "with_terrain": true,
+      "with_buildings": true,
+      "only_raceways_and_walls": false,
+      "highway_name_pattern": "",
+      "excluded_highways": [
+        "pedestrian",
+        "path",
+        "footway",
+        "cycleway",
+        "steps"],
+      "path_tags": [
+        "track",
+        "tertiary"],
+      "steiner_point_distances_road": [],
+      "steiner_point_distances_steiner": [],
+      "curb_alpha": 1,
+      "curb2_alpha": 1,
+      "curb_uv_x": "nan",
+      "curb2_uv_x": "nan",
+      "raise_streets_amount": 0,
+      "extrude_curb_amount": 0,
+      "extrude_street_amount": 0,
+      "street_light_resource_names": [],
+      "max_wall_width": 10,
+      "with_height_bindings": true,
+      "street_node_smoothness": 0,
+      "street_edge_smoothness": 0,
+      "terrain_edge_smoothness": 0.1,
+      "with_street_way_points": false,
+      "with_sidewalk_way_points": false,
+      "driving_direction": "right",
+      "blend_street": true
+    }
+  }
+}

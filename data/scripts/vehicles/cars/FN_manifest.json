@@ -1,11 +1,15 @@
 {
-    "name": "FN",
-    "on_init": [
-        {"include": "FN_resource.scn.json"},
-        {"include": "FN_instance.scn.json"}],
+  "id": "FN",
+  "on_init": [
+    {"include": "FN_resource.scn.json"},
+    {"include": "FN_instance.scn.json"}
+  ],
+  "params": {
+    "title": "FN",
     "variables": {
-        "VEHICLE_SUFFIX": "_FN",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_FN",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
+  }
 }

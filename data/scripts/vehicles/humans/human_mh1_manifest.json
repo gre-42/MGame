@@ -1,12 +1,15 @@
 {
-    "name": "MH1",
+    "id": "mh1",
     "on_init": [
         {"include": "human_resource_box.scn.json"},
         {"include": "human_resource_mh1.scn.json"},
         {"include": "human_instance_mh1.scn.json"}],
-    "variables": {
-        "VEHICLE_SUFFIX": "_mh1",
-        "VEHICLE_CLASS": "human"
-    },
-    "required": ["IF_GAME_MODE_TD"]
+    "params": {
+        "title": "MH1",
+        "variables": {
+            "VEHICLE_SUFFIX": "_mh1",
+            "VEHICLE_CLASS": "human"
+        },
+        "required": ["IF_GAME_MODE_TD"]
+    }
 }

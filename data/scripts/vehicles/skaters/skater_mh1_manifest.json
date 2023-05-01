@@ -1,12 +1,15 @@
 {
-    "name": "Skating MH1",
+    "id": "skating_mh1",
     "on_init": [
         {"include": "skateboard_resource.scn.json"},
         {"include": "skater_resource.scn.json"},
         {"include": "skater_instance_mh1.scn.json"}],
-    "variables": {
-        "VEHICLE_SUFFIX": "_skating_mh1",
-        "VEHICLE_CLASS": "skater"
-    },
-    "required": ["IF_GAME_MODE_SKATING"]
+    "params": {
+        "title": "Skating MH1",
+        "variables": {
+            "VEHICLE_SUFFIX": "_skating_mh1",
+            "VEHICLE_CLASS": "skater"
+        },
+        "required": ["IF_GAME_MODE_SKATING"]
+    }
 }

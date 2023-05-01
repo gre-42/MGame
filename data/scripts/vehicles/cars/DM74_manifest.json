@@ -1,11 +1,15 @@
 {
-    "name": "Dodge Monaco 1974",
-    "on_init": [
-        {"include": "DM74_resource.scn.json"},
-        {"include": "DM74_instance.scn.json"}],
+  "id": "DM74",
+  "on_init": [
+    {"include": "DM74_resource.scn.json"},
+    {"include": "DM74_instance.scn.json"}
+  ],
+  "params": {
+    "title": "Dodge Monaco 1974",
     "variables": {
-        "VEHICLE_SUFFIX": "_DM74",
-        "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "_DM74",
+      "VEHICLE_CLASS": "car"
     },
     "required": ["IF_GAME_MODE_RALLY"]
+  }
 }

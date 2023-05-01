@@ -146,15 +146,15 @@
           "deflt": 0,
           "parameters": [
             {
-              "name": "Rally",
+              "title": "Rally",
               "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}
             },
             {
-              "name": "Skating",
+              "title": "Skating",
               "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": true, "IF_GAME_MODE_TD": false}
             },
             {
-              "name": "Team deathmatch",
+              "title": "Team deathmatch",
               "variables": {
                 "IF_GAME_MODE_RALLY": false,"IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}
             }
@@ -177,8 +177,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"name": "Rally", "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}},
-            {"name": "Team deathmatch", "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}}
+            {"title": "Rally", "variables": {"IF_GAME_MODE_RALLY": true, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": false}},
+            {"title": "Team deathmatch", "variables": {"IF_GAME_MODE_RALLY": false, "IF_GAME_MODE_SKATING": false, "IF_GAME_MODE_TD": true}}
           ]
         }
       },
@@ -400,12 +400,12 @@
             }
           ],
           "parameters": [
-            {"name": "White", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
-            {"name": "Gray",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
-            {"name": "Red",   "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
-            {"name": "Green", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
-            {"name": "Blue",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
-            {"name": "Black", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
+            {"title": "White", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
+            {"title": "Gray",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
+            {"title": "Red",   "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
+            {"title": "Green", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
+            {"title": "Blue",  "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
+            {"title": "Black", "variables": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
           ]
         }
       },
@@ -425,11 +425,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"name": "Session1", "variables": {"RACE_SESSION": "session1"}},
-            {"name": "Session2", "variables": {"RACE_SESSION": "session2"}},
-            {"name": "Session3", "variables": {"RACE_SESSION": "session3"}},
-            {"name": "Session4", "variables": {"RACE_SESSION": "session4"}},
-            {"name": "Session5", "variables": {"RACE_SESSION": "session5"}}
+            {"title": "Session1", "variables": {"RACE_SESSION": "session1"}},
+            {"title": "Session2", "variables": {"RACE_SESSION": "session2"}},
+            {"title": "Session3", "variables": {"RACE_SESSION": "session3"}},
+            {"title": "Session4", "variables": {"RACE_SESSION": "session4"}},
+            {"title": "Session5", "variables": {"RACE_SESSION": "session5"}}
           ]
         }
       },
@@ -449,11 +449,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"name": "1 Lap",   "variables": {"RACE_LAPS": 1}},
-            {"name": "2 Laps",  "variables": {"RACE_LAPS": 2}},
-            {"name": "4 Laps",  "variables": {"RACE_LAPS": 4}},
-            {"name": "8 Laps",  "variables": {"RACE_LAPS": 8}},
-            {"name": "16 Laps", "variables": {"RACE_LAPS": 16}}
+            {"title": "1 Lap",   "variables": {"RACE_LAPS": 1}},
+            {"title": "2 Laps",  "variables": {"RACE_LAPS": 2}},
+            {"title": "4 Laps",  "variables": {"RACE_LAPS": 4}},
+            {"title": "8 Laps",  "variables": {"RACE_LAPS": 8}},
+            {"title": "16 Laps", "variables": {"RACE_LAPS": 16}}
           ]
         }
       },
@@ -474,11 +474,11 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"name": "80%", "variables": {"PLAYBACK_SPEED": 0.8}},
-            {"name": "90%", "variables": {"PLAYBACK_SPEED": 0.9}},
-            {"name": "100%", "variables": {"PLAYBACK_SPEED": 1}},
-            {"name": "110%", "variables": {"PLAYBACK_SPEED": 1.1}},
-            {"name": "120%", "variables": {"PLAYBACK_SPEED": 1.2}}
+            {"title": "80%", "variables": {"PLAYBACK_SPEED": 0.8}},
+            {"title": "90%", "variables": {"PLAYBACK_SPEED": 0.9}},
+            {"title": "100%", "variables": {"PLAYBACK_SPEED": 1}},
+            {"title": "110%", "variables": {"PLAYBACK_SPEED": 1.1}},
+            {"title": "120%", "variables": {"PLAYBACK_SPEED": 1.2}}
           ]
         }
       },
