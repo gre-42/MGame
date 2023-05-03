@@ -61,8 +61,8 @@
             "rigid_body": "skater_node$SUFFIX",
             "name": "main",
             "angular_vels": [-2000, -1600, -800, 0],
-            "powers": ["nan", 5, 5, 0],
-            "gear_ratios": [-1.5, 1.5],
+            "powers": ["nan", 10, 10, 0],
+            "gear_ratios": [-1.2, 1.2],
             "w_clutch": 800,
             "max_dw": 2000,
             "hand_brake_pulled": "%HAND_BRAKE_PULLED"
@@ -75,8 +75,8 @@
             "rigid_body": "skater_node$SUFFIX",
             "name": "brakes",
             "angular_vels": [-2000, -1600, -800, 0],
-            "powers": ["nan", 5, 5, 0],
-            "gear_ratios": [-1.5, 1.5],
+            "powers": ["nan", 10, 10, 0],
+            "gear_ratios": [-1.2, 1.2],
             "w_clutch": 800,
             "max_dw": 2000,
             "hand_brake_pulled": "%HAND_BRAKE_PULLED"
