@@ -15,7 +15,7 @@
           "resource_name": "osm_map",
           "add": "obj_alignment_plane",
           "remove": "attr_visible",
-          "included_names": "\balignment_plane(?:\b|_)"
+          "included_names": "\\balignment_plane(?:\\b|_)"
         }
       },
       {
@@ -23,7 +23,7 @@
         "literals": {
           "resource_name": "osm_map",
           "remove": "attr_visible",
-          "included_names": "\bHitbox(?:\b|_)"
+          "included_names": "\\bHitbox(?:\\b|_)"
         }
       },
       {
@@ -31,7 +31,7 @@
         "literals": {
           "resource_name": "osm_map",
           "remove": "attr_collide",
-          "included_names": "\bVisual(?:\b|_)"
+          "included_names": "\\bVisual(?:\\b|_)"
         }
       },
       {
@@ -39,7 +39,7 @@
         "literals": {
           "resource_name": "osm_map",
           "add": "attr_align_strict",
-          "included_names": "\bAlignStrict(?:\b|_)"
+          "included_names": "\\bAlignStrict(?:\\b|_)"
         }
       },
       {
@@ -48,9 +48,9 @@
         "literals": {
           "source_name": "osm_map",
           "dest_name": "osm_map_grind_lines",
-          "edge_angle": "20",
-          "averaged_normal_angle": "60",
-          "excluded_names": "\bNoGrind(?:\b|_)",
+          "edge_angle": 20,
+          "averaged_normal_angle": 6,
+          "excluded_names": "\\bNoGrind(?:\\b|_)",
           "included_tags": "attr_collide",
           "excluded_tags": "obj_alignment_plane"
         }

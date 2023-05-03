@@ -1,108 +1,117 @@
 [
-    {
-        "declare_macro": "create_skater",
-        "content": [
+  {
+    "declare_macro": "create_skater",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "skater_node$SUFFIX",
+          "scale": 1,
+          "position": "%SKATER_NODE_POSITION",
+          "rotation": [0, "%SKATER_NODE_ANGLE_Y", 0]
+        }
+      },
+      {
+        "required": ["IF_SKATER_STYLE"],
+        "call": "add_color_style",
+        "literals": {
+          "node": "skater_node$SUFFIX",
+          "ambience": "%COLOR",
+          "diffusivity": "%COLOR"
+        }
+      },
+      {
+        "required": ["IF_SKATER_STYLE"],
+        "call": "set_animation_state",
+        "literals": {
+          "node": "skater_node$SUFFIX",
+          "animation_loop_name": "skate.right",
+          "animation_loop_begin": 0,
+          "animation_loop_end": "full",
+          "animation_loop_time": 0
+        }
+      },
+      {
+        "playback": "create$SKATER_NAME",
+        "literals": {
+          "DECIMATE": "%DECIMATE",
+          "SUFFIX": "%SUFFIX",
+          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+          "YAW_ERROR_STD": "%YAW_ERROR_STD",
+          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+          "ERROR_ALPHA": "%ERROR_ALPHA"
+        }
+      },
+      {
+        "required": ["IF_PLAYER"],
+        "call": "player_set_node",
+        "literals": {
+          "node": "skater_node$SUFFIX",
+          "player": "%PLAYER_NAME"
+        }
+      },
+      {
+        "comment": "# IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater$SUFFIX CSUFFIX:SUFFIX"
+      },
+      {
+        "required": ["IF_PLAYER"],
+        "call": "set_externals_creator",
+        "literals": {
+          "macro": [
             {
-                "call": "root_node_instance",
-                "literals": {
-                    "type": "dynamic",
-                    "name": "skater_node$SUFFIX",
-                    "scale": 1,
-                    "position": "%SKATER_POSITION",
-                    "rotation": "%SKATER_ROTATION"
-                }
-            },
-            {
-                "required": ["IF_SKATER_STYLE"],
-                "call": "add_color_style",
-                "literals": {
-                    "node": "skater_node$SUFFIX",
-                    "ambience": "%COLOR",
-                    "diffusivity": "%COLOR"
-                }
-            },
-            {
-                "required": ["IF_SKATER_STYLE"],
-                "call": "set_animation_state",
-                "literals": {
-                    "node": "skater_node$SUFFIX",
-                    "animation_loop_name": "skate.right",
-                    "animation_loop_begin": "0",
-                    "animation_loop_end": "full",
-                    "animation_loop_time": "0"
-                }
-            },
-            {
-                "playback": "create-SKATER_NAME",
-                "literals": {
-                    "DECIMATE": "%DECIMATE",
-                    "SUFFIX": "%SUFFIX",
-                    "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-                    "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-                    "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-                    "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-                    "YAW_ERROR_STD": "%YAW_ERROR_STD",
-                    "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-                    "ERROR_ALPHA": "%ERROR_ALPHA"
-                }
-            },
-            {
-                "required": ["IF_PLAYER"],
-                "call": "player_set_node",
-                "literals": {
-                    "node": "skater_node$SUFFIX",
-                    "player": "%PLAYER_NAME"
-                }
-            },
-            {
-                "comment": "# IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater$SUFFIX CSUFFIX:SUFFIX"
-            },
-            {
-                "required": ["IF_PLAYER"],
-                "call": "set_externals_creator",
-                "literals": {
-                    "macro": [
-                        {
-                            "playback": "create_player_skater_externals",
-                            "literals": {
-                                "SKATER_NAME": "%SKATER_NAME",
-                                "SUFFIX": "%SUFFIX",
-                                "IF_RACING": "%IF_RACING",
-                                "IF_RALLY": "%IF_RALLY"
-                            }
-                        }
-                    ],
-                    "player": "%PLAYER_NAME"
-                }
-            },
-            {
-                "comment": {
-                    "call": "visual_node_status_3rd",
-                    "literals": {
-                        "node": "skater_node$SUFFIX",
-                        "format": 8,
-                        "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                        "offset": [0, 0.3],
-                        "font_height": 16,
-                        "line_distance": 16
-                    }
-                }
+              "playback": "create_player_skater_externals",
+              "literals": {
+                "PLAYER_NAME": "%PLAYER_NAME",
+                "SKATER_NAME": "%SKATER_NAME",
+                "SUFFIX": "%SUFFIX",
+                "IF_RACING": "%IF_RACING",
+                "IF_RALLY": "%IF_RALLY",
+                "IF_PC": "%IF_PC"
+              }
             }
-        ]
-    },
-    {
-        "declare_macro": "create_player_skater_externals",
-        "content": [
-            {
-                "playback": "create_player_skater_externals$SKATER_NAME",
-                "variables": {
-                    "SUFFIX": "%SUFFIX",
-                    "IF_RACING": "%IF_RACING",
-                    "IF_RALLY": "%IF_RALLY",
-                    "PLAYER_NAME": "%PLAYER_NAME",
-                    "IF_PC": "%IF_PC"
-                }
-            }
-        ]
-    }
+          ],
+          "player": "%PLAYER_NAME",
+          "capture": {
+            "PLAYER_NAME": "%PLAYER_NAME",
+            "SKATER_NAME": "%SKATER_NAME",
+            "SUFFIX": "%SUFFIX",
+            "IF_RACING": "%IF_RACING",
+            "IF_RALLY": "%IF_RALLY"
+          }
+        }
+      },
+      {
+        "comment": {
+          "call": "visual_node_status_3rd",
+          "literals": {
+            "node": "skater_node$SUFFIX",
+            "format": 8,
+            "ttf_file": "fonts/RobotoMono-Bold.ttf",
+            "offset": [0, 0.3],
+            "font_height": 16,
+            "line_distance": 16
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_skater_externals",
+    "content": [
+      {
+        "playback": "create_player_skater_externals$SKATER_NAME",
+        "literals": {
+          "SUFFIX": "%SUFFIX",
+          "IF_RACING": "%IF_RACING",
+          "IF_RALLY": "%IF_RALLY",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "IF_PC": "%IF_PC"
+        }
+      }
+    ]
+  }
 ]
