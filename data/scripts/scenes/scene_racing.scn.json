@@ -49,7 +49,7 @@
           "source_name": "osm_map",
           "dest_name": "osm_map_grind_lines",
           "edge_angle": 20,
-          "averaged_normal_angle": 6,
+          "averaged_normal_angle": 60,
           "excluded_names": "\\bNoGrind(?:\\b|_)",
           "included_tags": "attr_collide",
           "excluded_tags": "obj_alignment_plane"
