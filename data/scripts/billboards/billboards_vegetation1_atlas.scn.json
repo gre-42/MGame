@@ -1,161 +1,161 @@
 [
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tc0",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Tree0.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tc3",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Tree5.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tc4",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Tree0.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tc5",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Tree5.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tc6",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Tree0.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tcd0",
-            "color": "textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/TreeDead0.png",
-            "lighten": [0.05, 0.05, 0.05],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "tb",
-            "color": "textures/opengameart/vaious-vegetation-sprites/thin-bush.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/thin-bush.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "foliage_gradient",
-            "color": "textures/cc0textures/Foliage002_2K_Color_Dense_1k.png",
-            "color_mode": "rgba",
-            "lighten_top": [0.05, 0.05, 0.05],
-            "lighten_bottom": [-0.2, -0.2, -0.2],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_atlas",
-        "literals": {
-            "name": "vegetation1",
-            "width": 4096,
-            "height": 4096,
-            "color_mode": "rgba",
-            "images": [
-                {"texture_pos": [0, 0], "texture": "#tc0"},
-                {"texture_pos": [1024, 0], "texture": "#tc3"},
-                {"texture_pos": [2048, 0], "texture": "#tc4"},
-                {"texture_pos": [0, 2048], "texture": "#tc5"},
-                {"texture_pos": [1024, 2048], "texture": "#tc6"},
-                {"texture_pos": [2048, 2048], "texture": "#tcd0"},
-                {"texture_pos": [3072, 10], "texture": "#grass_tbdpec3r_island_bright"},
-                {"texture_pos": [3072, 522], "texture": "#grass_tbdpec3r_island_green1"},
-                {"texture_pos": [3072, 1034], "texture": "#foliage_gradient"},
-                {"texture_pos": [3072, 2048], "texture": "#tb"},
-                {"texture_pos": [3072, 3072], "texture": "textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"}
-            ]
-        }
-    },
-    {
-        "comment": {
-            "call": "save_texture_atlas_png",
-            "literals": {
-                "name": "vegetation1",
-                "filename": "/tmp/vegetation1.png",
-                "color_mode": "rgba"
-            }
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "vegetation1",
-            "color": "#vegetation1",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "square_resource",
-        "literals": {
-            "name": "vegetation1",
-            "texture_filename": "#vegetation1",
-            "min": [-0.5, 0],
-            "max": [0.5, 1],
-            "occluded_pass": "lightmap_blobs",
-            "occluder_pass": "lightmap_black_global_and_local",
-            "ambience": [2, 2, 2],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "cull_faces": true,
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position_lookat",
-            "billboards": [
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0   ,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.25,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.5 ,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0   ,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.25,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.5 ,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-                {"uv_scale": [ 0.25,  0.125], "uv_offset": [0.75,  0    ], "vertex_scale": [ 3.5,  1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-                {"uv_scale": [ 0.25,  0.125], "uv_offset": [0.75,  0.125], "vertex_scale": [ 3.5,  1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-                {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.25 ], "vertex_scale": [ 2.5,  2.5 ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-                {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.5  ], "vertex_scale": [ 4  ,  4   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-                {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.75 ], "vertex_scale": [ 4  ,  4   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-                {"uv_scale": [-0.25,  0.25 ], "uv_offset": [1   ,  0.25 ], "vertex_scale": [ 2  ,  2   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
-            ]
-        }
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tc0",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Tree0.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
     }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tc3",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Tree5.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tc4",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Tree0.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tc5",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Tree5.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tc6",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Tree0.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tcd0",
+      "color": "textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/TreeDead0.png",
+      "lighten": [0.05, 0.05, 0.05],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "tb",
+      "color": "textures/opengameart/vaious-vegetation-sprites/thin-bush.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/thin-bush.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "foliage_gradient",
+      "color": "textures/cc0textures/Foliage002_2K_Color_Dense_1k.png",
+      "color_mode": "rgba",
+      "lighten_top": [0.05, 0.05, 0.05],
+      "lighten_bottom": [-0.2, -0.2, -0.2],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_atlas",
+    "literals": {
+      "name": "vegetation1",
+      "width": 4096,
+      "height": 4096,
+      "color_mode": "rgba",
+      "images": [
+        {"texture_pos": [0, 0], "texture": "#tc0"},
+        {"texture_pos": [1024, 0], "texture": "#tc3"},
+        {"texture_pos": [2048, 0], "texture": "#tc4"},
+        {"texture_pos": [0, 2048], "texture": "#tc5"},
+        {"texture_pos": [1024, 2048], "texture": "#tc6"},
+        {"texture_pos": [2048, 2048], "texture": "#tcd0"},
+        {"texture_pos": [3072, 10], "texture": "#grass_tbdpec3r_island_bright"},
+        {"texture_pos": [3072, 522], "texture": "#grass_tbdpec3r_island_green1"},
+        {"texture_pos": [3072, 1034], "texture": "#foliage_gradient"},
+        {"texture_pos": [3072, 2048], "texture": "#tb"},
+        {"texture_pos": [3072, 3072], "texture": "textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"}
+      ]
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_atlas_png",
+      "literals": {
+        "name": "vegetation1",
+        "filename": "/tmp/vegetation1.png",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "vegetation1",
+      "color": "#vegetation1",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "square_resource",
+    "literals": {
+      "name": "vegetation1",
+      "texture_filename": "#vegetation1",
+      "min": [-0.5, 0],
+      "max": [0.5, 1],
+      "occluded_pass": "lightmap_blobs",
+      "occluder_pass": "lightmap_black_global_and_local",
+      "ambience": [2, 2, 2],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position_lookat",
+      "billboards": [
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0   ,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.25,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.5 ,  0    ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0   ,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.25,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.5  ], "uv_offset": [0.5 ,  0.5  ], "vertex_scale": [10  , 20   ], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [ 0.25,  0.125], "uv_offset": [0.75,  0    ], "vertex_scale": [ 3.5,  1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [ 0.25,  0.125], "uv_offset": [0.75,  0.125], "vertex_scale": [ 3.5,  1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.25 ], "vertex_scale": [ 2.5,  2.5 ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.5  ], "vertex_scale": [ 4  ,  4   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [ 0.25,  0.25 ], "uv_offset": [0.75,  0.75 ], "vertex_scale": [ 4  ,  4   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [-0.25,  0.25 ], "uv_offset": [1   ,  0.25 ], "vertex_scale": [ 2  ,  2   ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+      ]
+    }
+  }
 ]

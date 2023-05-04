@@ -190,12 +190,12 @@
       {
         "call": "constant_parameter",
         "required": ["IF_ANDROID"],
-        "literals": { "IF_GAME_MODE_SKATING": false }
+        "literals": { "name": "IF_GAME_MODE_SKATING", "value": false }
       },
       {
         "call": "constant_parameter",
         "required": ["IF_ANDROID"],
-        "literals": { "IF_GAME_MODE_TD": false }
+        "literals": { "name": "IF_GAME_MODE_TD", "value": false }
       }
     ]
   },
