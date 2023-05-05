@@ -1,9 +1,16 @@
 {
-    "name": "WIP: Canyon 1",
-    "script_file": "scene_canyon1.scn",
-    "variables": {
-        "LEVEL_ID": "canyon1",
-        "IF_RACEWAY_CIRCULAR": false
-    },
-    "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
+  "name": "WIP: Canyon 1",
+  "macro": {
+    "include": "scene_canyon1.scn",
+    "literals": {
+      "LEVEL_ID": "%LEVEL_ID",
+      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
+    }
+  },
+  "variables": {
+    "LEVEL_ID": "canyon1",
+    "LEVEL_ICON_FILE": "textures/debug/black.png",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
 }

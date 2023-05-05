@@ -1,10 +1,16 @@
 {
-    "name": "JB",
-    "script_file": "scene_jb_race.scn.json",
-    "variables": {
-        "LEVEL_ID": "jb_race",
-        "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
-        "IF_RACEWAY_CIRCULAR": false
-    },
-    "required": ["IF_GAME_MODE_RALLY"]
+  "name": "JB",
+  "macro": {
+    "include": "scene_jb_race.scn.json",
+    "literals": {
+      "LEVEL_ID": "%LEVEL_ID",
+      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
+    }
+  },
+  "variables": {
+    "LEVEL_ID": "jb_race",
+    "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_RALLY"]
 }

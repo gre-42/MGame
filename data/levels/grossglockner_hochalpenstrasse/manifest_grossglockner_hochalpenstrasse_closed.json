@@ -1,9 +1,16 @@
 {
-    "name": "WIP: Grossglockner hochalpenstrasse (closed)",
-    "script_file": "scene_grossglockner_hochalpenstrasse_closed.scn",
-    "variables": {
-        "LEVEL_ID": "grossglockner_hochalpenstrasse_closed",
-        "IF_RACEWAY_CIRCULAR": false
-    },
-    "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
+  "name": "WIP: Grossglockner hochalpenstrasse (closed)",
+  "macro": {
+    "include": "scene_grossglockner_hochalpenstrasse_closed.scn",
+    "literals": {
+      "LEVEL_ID": "%LEVEL_ID",
+      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
+    }
+  },
+  "variables": {
+    "LEVEL_ID": "grossglockner_hochalpenstrasse_closed",
+    "LEVEL_ICON_FILE": "textures/debug/black.png",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_RALLY", "IF_DEVEL"]
 }

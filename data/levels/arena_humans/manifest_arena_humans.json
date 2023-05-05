@@ -1,10 +1,16 @@
 {
-    "name": "Arena humans",
-    "script_file": "scene_arena_humans.scn.json",
-    "variables": {
-        "LEVEL_ID": "arena_humans",
-        "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
-        "IF_RACEWAY_CIRCULAR": false
-    },
-    "required": ["IF_GAME_MODE_TD"]
+  "name": "Arena humans",
+  "macro": {
+    "include": "scene_arena_humans.scn.json",
+    "literals": {
+      "LEVEL_ID": "%LEVEL_ID",
+      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
+    }
+  },
+  "variables": {
+    "LEVEL_ID": "arena_humans",
+    "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_TD"]
 }
