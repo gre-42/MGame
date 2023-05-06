@@ -61,22 +61,19 @@
         "required": ["IF_PLAYER"],
         "call": "set_externals_creator",
         "literals": {
-          "macro": [
-            {
-              "playback": "create_player_skater_externals",
-              "literals": {
-                "PLAYER_NAME": "%PLAYER_NAME",
-                "SKATER_NAME": "%SKATER_NAME",
-                "SUFFIX": "%SUFFIX",
-                "IF_RACING": "%IF_RACING",
-                "IF_RALLY": "%IF_RALLY",
-                "IF_PC": "%IF_PC"
-              }
+          "macro": {
+            "playback": "create_player_skater_externals",
+            "literals": {
+              "PLAYER_NAME": "%PLAYER_NAME",
+              "SKATER_NAME": "%SKATER_NAME",
+              "SUFFIX": "%SUFFIX",
+              "IF_RACING": "%IF_RACING",
+              "IF_RALLY": "%IF_RALLY",
+              "IF_PC": "%IF_PC"
             }
-          ],
+          },
           "player": "%PLAYER_NAME",
           "capture": {
-            "PLAYER_NAME": "%PLAYER_NAME",
             "SKATER_NAME": "%SKATER_NAME",
             "SUFFIX": "%SUFFIX",
             "IF_RACING": "%IF_RACING",

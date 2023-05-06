@@ -39,7 +39,7 @@
         "call": "set_node_hider",
         "literals": {
           "node_to_hide": "main_gun_node_visual$SUFFIX",
-          "camera_node": "human_head_camera_node$SUFFIX",
+          "camera_node": "human_head_camera_node",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
           "on_hide": {
             "playback": "_add_weapon_closeup_scheduler_on_hide",
