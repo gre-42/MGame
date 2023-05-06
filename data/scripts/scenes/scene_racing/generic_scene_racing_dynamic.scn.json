@@ -1,0 +1,66 @@
+{
+  "declare_macro": "generic_scene_racing_dynamic",
+  "content": [
+    {
+      "call": "constant_parameter",
+      "literals": { "name": "IF_LOADED_GAME_MODE_RALLY", "value": "%IF_GAME_MODE_RALLY" }
+    },
+    {
+      "call": "constant_parameter",
+      "literals": { "name": "LOADED_LEVEL_ID", "value": "%LEVEL_ID" }
+    },
+    {
+      "call": "constant_parameter",
+      "literals": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
+    },
+    {
+      "call": "constant_parameter",
+      "literals": { "name": "LOADED_RACE_LAPS", "value": "%RACE_LAPS" }
+    },
+    {
+      "playback": "_setup_new_round",
+      "context": "primary_scene"
+    },
+    {
+      "playback": "_scene_racing_instantiate_transient_objects",
+      "context": "primary_scene",
+        "literals": {
+        "IF_CREATE_PC_CAR": "%IF_CREATE_PC_CAR",
+        "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
+        "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+        "SKATER_NODE_POSITION": "%SKATER_NODE_POSITION",
+        "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+        "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+        "SKATER_NODE_ANGLE_Y": "%SKATER_NODE_ANGLE_Y",
+        "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+        "IF_BURN_IN": "%IF_BURN_IN",
+        "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+        "YAW_ERROR_STD": "%YAW_ERROR_STD",
+        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+        "ERROR_ALPHA": "%ERROR_ALPHA",
+        "IF_RECORD_TRACK": "%IF_RECORD_TRACK",
+        "RECORDINGS_DIR": "%RECORDINGS_DIR",
+        "CHECKPOINTS_FILE": "%CHECKPOINTS_FILE",
+        "PACENOTES_FILE": "%PACENOTES_FILE",
+        "RACE_LAPS": "%RACE_LAPS",
+        "IF_PLAYBACK_CHECKPOINTS": "%IF_PLAYBACK_CHECKPOINTS",
+        "IF_PLAYBACK_TRACK_1": "%IF_PLAYBACK_TRACK_1",
+        "IF_PLAYBACK_TRACK_2": "%IF_PLAYBACK_TRACK_2",
+        "IF_PLAYBACK_TRACK_3": "%IF_PLAYBACK_TRACK_3",
+        "IF_PLAYBACK_WINNER_0": "%IF_PLAYBACK_WINNER_0",
+        "IF_PLAYBACK_WINNER_1": "%IF_PLAYBACK_WINNER_1",
+        "IF_PLAYBACK_WINNER_2": "%IF_PLAYBACK_WINNER_2",
+        "IF_CHECKPOINTS": "%IF_CHECKPOINTS",
+        "CHECK_POINTS_ACTIVE_COLOR": "%CHECK_POINTS_ACTIVE_COLOR",
+        "CHECK_POINTS_INACTIVE_COLOR": "%CHECK_POINTS_INACTIVE_COLOR",
+        "TEAMS_SPAWN_POINTS_RESOURCE": "%TEAMS_SPAWN_POINTS_RESOURCE",
+        "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
+      }
+    }
+  ]
+}

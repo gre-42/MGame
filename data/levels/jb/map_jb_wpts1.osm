@@ -31,6 +31,22 @@
   <node id='-144614' action='modify' visible='true' lat='49.10907036603' lon='10.08232137487' />
   <node id='-144615' action='modify' visible='true' lat='49.10350227773' lon='10.08476701088' />
   <node id='-144616' action='modify' visible='true' lat='49.10132783428' lon='10.0830983838' />
+  <node id='-144618' action='modify' visible='true' lat='49.10938965186' lon='10.08487139952'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='0.5' />
+  </node>
+  <node id='-144675' action='modify' visible='true' lat='49.10153853991' lon='10.08531135731'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='0.5' />
+  </node>
   <way id='-133939' action='modify' visible='true'>
     <nd ref='-144587' />
     <nd ref='-144588' />

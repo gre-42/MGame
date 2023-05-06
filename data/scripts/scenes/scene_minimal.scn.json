@@ -1,86 +1,86 @@
 [
-    {
-        "declare_macro": "scene_minimal",
-        "content": [
-            {
-                "call": "root_node_instance",
-                "literals": {
-                    "type": "dynamic",
-                    "name": "follower_camera",
-                    "position": ["0", "0", "0"],
-                    "rotation": [0, 0, 0],
-                    "scale": 1
-                }
-            },
-            {
-                "call": "perspective_camera",
-                "literals": {
-                    "node": "follower_camera",
-                    "y_fov": 30,
-                    "near_plane": 1,
-                    "far_plane": 10000,
-                    "requires_postprocessing": false
-                }
-            },
-            {
-                "comment": "# ortho_camera node=follower_camera near_plane=1 far_plane=10000 left_plane=-10 right_plane=10 bottom_plane=-10 top_plane=10 requires_postprocessing=0;"
-            },
-            {
-                "call": "root_node_instance",
-                "required": ["IF_DIRTMAP"],
-                "literals": {
-                    "type": "dynamic",
-                    "name": "dirtmap_node",
-                    "position": [0, 1000, 0],
-                    "rotation": [-90, 0, 0],
-                    "scale": 1
-                }
-            },
-            {
-                "call": "ortho_camera",
-                "required": ["IF_DIRTMAP"],
-                "literals": {
-                    "node": "dirtmap_node",
-                    "near_plane": 1,
-                    "far_plane": 10000,
-                    "left_plane": -2000,
-                    "right_plane": 2000,
-                    "bottom_plane": -1000,
-                    "top_plane": 1000,
-                    "requires_postprocessing": false
-                }
-            },
-            {
-                "call": "set_dirtmap",
-                "required": ["IF_DIRTMAP"],
-                "literals": {
-                    "offset": 0,
-                    "discreteness": 4,
-                    "scale": 1,
-                    "wrap_mode": "clamp_to_edge",
-                    "filename": "textures/dirtmap.png"
-                }
-            },
-            {
-                "call": "add_color_style",
-                "literals": {
-                    "reflection_strength": 0.5,
-                    "reflection_maps": {
-                        "car": "reflection_map"
-                    }
-                }
-            },
-            {
-                "call": "set_skybox",
-                "required": ["IF_SKYBOX"],
-                "literals": {
-                    "alias": "skybox"
-                }
-            },
-            {
-                "call": "set_background_color",
-                "literals": { "color": [0.3, 0.3, 0.3] }
-            }
-        ]
-    }
+  {
+    "declare_macro": "scene_minimal",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "follower_camera",
+          "position": ["0", "0", "0"],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "perspective_camera",
+        "literals": {
+          "node": "follower_camera",
+          "y_fov": 30,
+          "near_plane": 1,
+          "far_plane": 10000,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "comment": "# ortho_camera node=follower_camera near_plane=1 far_plane=10000 left_plane=-10 right_plane=10 bottom_plane=-10 top_plane=10 requires_postprocessing=0;"
+      },
+      {
+        "call": "root_node_instance",
+        "required": ["IF_DIRTMAP"],
+        "literals": {
+          "type": "dynamic",
+          "name": "dirtmap_node",
+          "position": [0, 1000, 0],
+          "rotation": [-90, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "required": ["IF_DIRTMAP"],
+        "literals": {
+          "node": "dirtmap_node",
+          "near_plane": 1,
+          "far_plane": 10000,
+          "left_plane": -2000,
+          "right_plane": 2000,
+          "bottom_plane": -1000,
+          "top_plane": 1000,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "set_dirtmap",
+        "required": ["IF_DIRTMAP"],
+        "literals": {
+          "offset": 0,
+          "discreteness": 4,
+          "scale": 1,
+          "wrap_mode": "clamp_to_edge",
+          "filename": "textures/dirtmap.png"
+        }
+      },
+      {
+        "call": "add_color_style",
+        "literals": {
+          "reflection_strength": 0.5,
+          "reflection_maps": {
+            "car": "reflection_map"
+          }
+        }
+      },
+      {
+        "call": "set_skybox",
+        "required": ["IF_SKYBOX"],
+        "literals": {
+          "alias": "skybox"
+        }
+      },
+      {
+        "call": "set_background_color",
+        "literals": { "color": [0.3, 0.3, 0.3] }
+      }
+    ]
+  }
 ]

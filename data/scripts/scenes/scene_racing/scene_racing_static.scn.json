@@ -1,0 +1,95 @@
+{
+  "declare_macro": "scene_racing_static",
+  "content": [
+    {"playback": "create_scene_loading"},
+    {"playback": "%OSM_MAP_RESOURCE"},
+    {
+      "required": ["IF_HAS_OVERLAY"],
+      "playback": "%OSM_MAP_OVERLAY_RESOURCE"
+    },
+    {
+      "call": "create_scene",
+      "literals": {
+        "name": "primary_scene",
+        "z_order": 0,
+        "focus_mask": "scene|countdown_any|game_over_countdown_any",
+        "submenus": [],
+        "fly": "%PRIMARY_SCENE_FLY",
+        "rotate": "%PRIMARY_SCENE_ROTATE",
+        "print_gamepad_buttons": "%PRIMARY_SCENE_PRINT_GAMEPAD_BUTTONS",
+        "depth_fog": "%PRIMARY_SCENE_DEPTH_FOG",
+        "low_pass": "%PRIMARY_SCENE_LOW_PASS",
+        "high_pass": "%PRIMARY_SCENE_HIGH_PASS",
+        "with_skybox": "%PRIMARY_SCENE_WITH_SKYBOX",
+        "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
+        "clear_mode": "%PRIMARY_SCENE_CLEAR_MODE",
+        "max_tracks": 5,
+        "setup_new_round": {
+          "playback": "_setup_new_round",
+          "context": "primary_scene"
+        }
+      }
+    },
+    {
+      "call": "create_scene",
+      "literals": {
+        "name": "weapon_closeup",
+        "z_order": 0,
+        "focus_mask": "scene|countdown_any|game_over_countdown_any",
+        "submenus": [],
+        "fly": false,
+        "rotate": false,
+        "print_gamepad_buttons": false,
+        "depth_fog": false,
+        "low_pass": false,
+        "high_pass": false,
+        "with_skybox": false,
+        "with_flying_logic": false,
+        "clear_mode": "depth"
+      }
+    },
+    {
+      "playback": "_setup_weapon_closeup",
+      "context": "weapon_closeup"
+    },
+    {
+      "playback": "_scene_racing_instantiate_static_objects",
+      "context": "primary_scene",
+      "literals": {
+        "IF_CREATE_PC_PLAYER": "%IF_CREATE_PC_PLAYER",
+        "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
+        "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",
+        "PC_PLAYER_PLAYBACK_SPEEDUP": "%PC_PLAYER_PLAYBACK_SPEEDUP",
+        "SCORE_BOARD": "%SCORE_BOARD",
+        "OSM_POSITION": "%OSM_POSITION",
+        "OSM_ROTATION": "%OSM_ROTATION",
+        "OSM_SCALE": "%OSM_SCALE",
+        "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
+        "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
+        "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
+        "IF_WITH_GEOGRAPHIC_MAPPING": "%IF_WITH_GEOGRAPHIC_MAPPING",
+        "SKYBOX": "%SKYBOX",
+        "IF_DAY": "%IF_DAY",
+        "IF_NIGHT": "%IF_NIGHT",
+        "IF_SYNTHWAVE": "%IF_SYNTHWAVE",
+        "STADIUM_CAMERA_POSITION": "%STADIUM_CAMERA_POSITION",
+        "IF_HAS_OVERLAY": "%IF_HAS_OVERLAY",
+        "DIRTMAP_LEFT": "%DIRTMAP_LEFT",
+        "DIRTMAP_RIGHT": "%DIRTMAP_RIGHT",
+        "DIRTMAP_BOTTOM": "%DIRTMAP_BOTTOM",
+        "DIRTMAP_TOP": "%DIRTMAP_TOP",
+        "IF_DIRTMAP": "%IF_DIRTMAP",
+        "DIRTMAP_TEXTURE": "%DIRTMAP_TEXTURE",
+        "DIRTMAP_OFFSET": "%DIRTMAP_OFFSET",
+        "DIRTMAP_DISCRETENESS": "%DIRTMAP_DISCRETENESS",
+        "DIRT_SCALE": "%DIRT_SCALE",
+        "DIRTMAP_WRAP_MODE": "%DIRTMAP_WRAP_MODE",
+        "SUN_LEFT": "%SUN_LEFT",
+        "SUN_RIGHT": "%SUN_RIGHT",
+        "SUN_BOTTOM": "%SUN_BOTTOM",
+        "SUN_TOP": "%SUN_TOP",
+        "SOFT_LIGHT_TEXTURE": "%SOFT_LIGHT_TEXTURE"
+      }
+    }
+  ]
+}

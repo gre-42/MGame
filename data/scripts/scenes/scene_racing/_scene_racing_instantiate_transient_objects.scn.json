@@ -1,0 +1,224 @@
+{
+  "declare_macro": "_scene_racing_instantiate_transient_objects",
+  "content": [
+    {
+      "comment": "Car instance"
+    },
+    {
+      "required": ["IF_CREATE_PC_CAR"],
+      "playback":  "create_$SELECTED_VEHICLE_CLASS",
+      "literals": {
+        "HUMAN_NAME": "%SELECTED_VEHICLE_SUFFIX",
+        "SKATER_NAME": "%SELECTED_VEHICLE_SUFFIX",
+        "CAR_NAME": "%SELECTED_VEHICLE_SUFFIX",
+        "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+        "SKATER_NODE_POSITION": "%SKATER_NODE_POSITION",
+        "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
+        "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+        "SKATER_NODE_ANGLE_Y": "%SKATER_NODE_ANGLE_Y",
+        "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+        "IF_HUMAN_STYLE": true,
+        "IF_SKATER_STYLE": true,
+        "IF_CAR_BODY_RENDERABLE_STYLE": true,
+        "COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
+        "DECIMATE": "",
+        "SUFFIX": "",
+        "IF_WITH_GRAPHICS": true,
+        "IF_WITH_PHYSICS": true,
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+        "IF_WITH_GUN": false,
+        "IF_STATIC": false,
+        "IF_DYNAMIC": true,
+        "IF_MANUAL_DRIVE": "%!IF_PC_PLAYER_PLAYBACK",
+        "IF_MANUAL_AIM": false,
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "VELOCITY_ERROR_STD": 0,
+        "YAW_ERROR_STD": 0,
+        "PITCH_ERROR_STD": 0,
+        "ERROR_ALPHA": 1,
+        "IF_SHADOW": true,
+        "IF_PLAYBACK_TRACK": false,
+        "IF_PLAYBACK_WINNER": false,
+        "IF_PLAYER": true,
+        "IF_DAMAGEABLE": false,
+        "PLAYER_NAME": "you",
+        "IF_PC": true
+      }
+    },
+    {
+      "required": ["IF_BURN_IN"],
+      "call": "burn_in",
+      "literals": {
+        "seconds": 20
+      }
+    },
+    {
+      "comment": "Recording"
+    },
+    {
+      "required": ["IF_RECORD_TRACK"],
+      "call": "record_track",
+      "literals": { "node": "car_node", "filename": "/tmp/track.m" }
+    },
+    {
+      "required": ["IF_RECORD_TRACK"],
+      "call": "record_track_gpx",
+      "literals": { "node": "car_node", "filename": "/tmp/track.gpx" }
+    },
+    {
+      "required": ["IF_PLAYBACK_CHECKPOINTS"],
+      "playback": "create_playback",
+      "literals": {
+        "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR": "_M3",
+        "DECIMATE": "",
+        "PSUFFIX": "checkpoints"
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_TRACK_1"],
+      "playback": "create_playback",
+      "literals": {
+        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR": "_M3",
+        "DECIMATE": "",
+        "PSUFFIX": "track1"
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_TRACK_2"],
+      "playback": "create_playback",
+      "literals": {
+        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR": "_XZ",
+        "DECIMATE": "",
+        "PSUFFIX": "track2"
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_TRACK_3"],
+      "playback": "create_playback",
+      "literals": {
+        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR": "_FN",
+        "DECIMATE": "",
+        "PSUFFIX": "track3"
+      }
+    },
+    {
+      "call": "define_winner_conditionals",
+      "literals": {
+        "begin_rank": 0,
+        "end_rank": 3
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_WINNER_0", "IF_WINNER_RANK0_EXISTS"],
+      "playback": "_create_winner_playback",
+      "literals": {
+        "RANK": 0,
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR":"_$WINNER0_VEHICLE",
+        "COLOR": "%WINNER0_COLOR",
+        "DECIMATE": "",
+        "PSUFFIX": "1"
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_WINNER_1", "IF_WINNER_RANK1_EXISTS"],
+      "playback": "_create_winner_playback",
+      "literals": {
+        "RANK": 1,
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR":"_$WINNER1_VEHICLE",
+        "COLOR": "%WINNER1_COLOR",
+        "DECIMATE": "",
+        "PSUFFIX": "2"
+      }
+    },
+    {
+      "required": ["IF_PLAYBACK_WINNER_2", "IF_WINNER_RANK2_EXISTS"],
+      "playback": "_create_winner_playback",
+      "literals": {
+        "RANK": 2,
+        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+        "PLAYBACK_CAR":"_$WINNER2_VEHICLE",
+        "COLOR": "%WINNER2_COLOR",
+        "DECIMATE": "",
+        "PSUFFIX": "3"
+      }
+    },
+    {
+      "required": ["IF_CHECKPOINTS"],
+      "call": "check_points",
+      "literals": {
+        "moving_node": "car_node",
+        "resource": "glow",
+        "player": "you",
+        "nbeacons": 40,
+        "nth": 30,
+        "nahead": 30,
+        "radius": 30,
+        "height_changed": false,
+        "track_filename": "%CHECKPOINTS_FILE",
+        "laps": "%RACE_LAPS",
+        "pacenotes_filename": "%PACENOTES_FILE",
+        "pacenotes_meters_ahead": 50,
+        "pacenotes_minimum_covered_meters": 200,
+        "pacenotes_maximum_number": 3,
+        "pacenotes_pictures_left": [
+          "pacenote_l0",
+          "pacenote_l1",
+          "pacenote_l2",
+          "pacenote_l3",
+          "pacenote_l4",
+          "pacenote_l5",
+          "pacenote_l6",
+          "pacenote_l7"],
+        "pacenotes_pictures_right": [
+          "pacenote_r0",
+          "pacenote_r1",
+          "pacenote_r2",
+          "pacenote_r3",
+          "pacenote_r4",
+          "pacenote_r5",
+          "pacenote_r6",
+          "pacenote_r7"],
+        "pacenotes_ttf": "fonts/RobotoMono-Bold.ttf",
+        "pacenotes_color": [0, 0, 0],
+        "pacenotes_widget_distance": "pacenotes_widget_distance",
+        "pacenotes_text_left": "pacenotes_text_left",
+        "pacenotes_text_right": "pacenotes_text_right",
+        "pacenotes_text_bottom": "pacenotes_text_bottom",
+        "pacenotes_text_top": "pacenotes_text_top",
+        "pacenotes_picture_left": "pacenotes_picture_left",
+        "pacenotes_picture_right": "pacenotes_picture_right",
+        "pacenotes_picture_bottom": "pacenotes_picture_bottom",
+        "pacenotes_picture_top": "pacenotes_picture_top",
+        "pacenotes_font_height": "huge",
+        "selection_emissivity": "%CHECK_POINTS_ACTIVE_COLOR",
+        "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
+        "on_finish": {
+          "call": "set_focuses",
+          "literals": {"focuses": ["menu", "game_over_countdown_pending"]}
+        }
+      }
+    },
+    {
+      "comment": "Cameras"
+    },
+    {
+      "required": ["IF_CREATE_PC_CAR"],
+      "call": "create_externals",
+      "literals": {
+        "player": "you",
+        "mode": "pc"
+      }
+    }
+  ]
+}

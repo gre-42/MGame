@@ -139,7 +139,7 @@ macro_begin _scene_tank_instantiate;
     # OSM #;
     #######;
     root_node_instance type=static name=osm_map_node position=0 -220 0 rotation=-90 0 0 scale=1e3;
-    renderable_instance name=osm-inst node=osm_map_node resource=osm_map;
+    renderable_instance name=osm_inst node=osm_map_node resource=osm_map;
     rigid_cuboid node=osm_map_node hitboxes=osm_map mass=inf size=1 2 3 collidable_mode=terrain name=osm_map;
     # collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map;
 

@@ -1,0 +1,183 @@
+[
+  {
+    "declare_macro": "_create_playback",
+    "content": [
+      {
+        "playback": "create_car",
+        "literals": {
+          "CAR_NODE_POSITION": [1, 2, 3],
+          "CAR_NODE_ANGLES": [4, 5, 6],
+          "CAR_NAME": "%PLAYBACK_CAR",
+          "DECIMATE": "%DECIMATE",
+          "SUFFIX": "_playback_track$PSUFFIX",
+          "IF_WITH_GRAPHICS": true,
+          "IF_WITH_PHYSICS": false,
+          "IF_PLAYBACK_TRACK": true,
+          "IF_PLAYBACK_WINNER": false,
+          "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+          "PLAYBACK_FILENAME": "%PLAYBACK_FILENAME",
+          "PSUFFIX": "%PSUFFIX",
+          "IF_PLAYER": false,
+          "IF_SHADOW": true,
+          "IF_DAMAGEABLE": false,
+          "IF_CAR_BODY_RENDERABLE_STYLE": false,
+          "VELOCITY_ERROR_STD": 0,
+          "YAW_ERROR_STD": 0,
+          "PITCH_ERROR_STD": 0,
+          "ERROR_ALPHA": 1,
+          "IF_PC": false
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_create_winner_playback",
+    "content": [
+      {
+        "playback": "create_car",
+        "literals": {
+          "CAR_NODE_POSITION": [1, 2, 3],
+          "CAR_NODE_ANGLES": [4, 5, 6],
+          "CAR_NAME": "%PLAYBACK_CAR",
+          "DECIMATE": "%DECIMATE",
+          "SUFFIX": "_playback_winner$PSUFFIX",
+          "HAND_BRAKE_PULLED": null,
+          "IF_DYNAMIC": null,
+          "IF_STATIC": null,
+          "IF_RACING": null,
+          "IF_RALLY": null,
+          "IF_WITH_GRAPHICS": true,
+          "IF_WITH_PHYSICS": false,
+          "IF_PLAYBACK_TRACK": false,
+          "IF_PLAYBACK_WINNER": true,
+          "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
+          "RANK": "%RANK",
+          "IF_PLAYER": false,
+          "IF_SHADOW": true,
+          "IF_DAMAGEABLE": false,
+          "IF_CAR_BODY_RENDERABLE_STYLE": true,
+          "COLOR": "%COLOR",
+          "VELOCITY_ERROR_STD": 0,
+          "YAW_ERROR_STD": 0,
+          "PITCH_ERROR_STD": 0,
+          "ERROR_ALPHA": 1,
+          "IF_PC": false
+        }
+      },
+      {
+        "comment": "add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-PSUFFIX"
+      }
+    ]
+  },
+  {
+    "declare_macro": "__setup_new_round",
+    "content": [
+      {
+        "call": "set_focuses",
+        "literals": {"focuses": ["scene", "countdown_pending"]}
+      },
+      {
+        "call": "delete_root_nodes",
+        "literals": {
+          "regex": "^(car|human|skater)_node_playback_track\\d+$"
+        }
+      },
+      {
+        "call": "delete_root_nodes",
+        "literals": {
+          "regex": "^(car|human|skater)_node_playback_winner\\d+$"
+        }
+      },
+      {
+        "call": "delete_root_nodes",
+        "literals": {
+          "regex": "^(bullet|trail|particles_\\w+|snow|explosion)___\\d+$"
+        }
+      },
+      {
+        "call": "delete_scheduled_advance_times"
+      },
+      {
+        "required": ["IF_LOADED_GAME_MODE_RALLY"],
+        "call": "set_race_identifier_and_reload_history",
+        "literals": {
+          "level_id": "%LOADED_LEVEL_ID",
+          "session": "%LOADED_RACE_SESSION",
+          "laps": "%LOADED_RACE_LAPS",
+          "milliseconds": 0
+        }
+      },
+      {
+        "required": ["IF_LOADED_GAME_MODE_RALLY"],
+        "call": "start_race",
+        "literals": {
+          "readonly": false
+        }
+      },
+      {
+        "call": "respawn_all_players"
+      },
+      {
+        "call": "reset_supply_depot_cooldowns"
+      },
+      {
+        "call": "invalidate_aggregate_renderers"
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_new_round",
+    "content": [
+      {
+        "call": "with_delete_node_mutex",
+        "literals": {
+          "command": {
+            "playback": "__setup_new_round"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_weapon_closeup",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "light_node",
+          "position": [-3, 3, 0],
+          "rotation": [-45, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "light_without_shadow",
+        "literals": {
+          "node": "light_node",
+          "ambience": [0.5, 0.5, 0.5],
+          "diffusivity": [1, 1, 1],
+          "specularity": [1, 1, 1]
+        }
+      },
+      {
+        "playback": "scene_minimal",
+        "literals": {
+          "IF_DIRTMAP": false,
+          "IF_SKYBOX": false
+        }
+      },
+      {
+        "call": "scene_to_percentage_region",
+        "literals": {
+          "target_scene": "primary_scene",
+          "z_order": 1,
+          "position": [0.1, 0.5],
+          "size": [1, 1],
+          "focus_mask": "always",
+          "submenus": []
+        }
+      }
+    ]
+  }
+]

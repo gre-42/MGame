@@ -5,7 +5,7 @@
     "literals": {
       "name": "osm_map_overlay",
       "filename": "$__DIR__/map_jb_wpts1.osm",
-      "cache_filename": "$__APPDATA__/jb_wpts1-GAME_LEVEL.cereal.binary",
+      "cache_filename": "$__APPDATA__/jb_wpts1$LOADED_GAME_LEVEL.cereal.binary",
       "with_terrain": false,
       "scale": 1e-3,
       "base_osm_map_resource": "osm_map",
