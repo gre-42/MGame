@@ -1,180 +1,178 @@
-[
+{
+  "declare_macro": "create_car_key_bindings",
+  "content": [
     {
-        "declare_macro": "create_car_key_bindings",
-        "content": [
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_idle_binding",
-                "literals": {
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX"
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.steer_left",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "tire_angle_velocities": [10, 80],
-                    "tire_angles": [45, 20]
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.steer_right",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "tire_angle_velocities": [10, 80],
-                    "tire_angles": [-45, -20]
-                }
-            },
-            {
-                "comment": {
-                    "call": "abs_key_binding",
-                    "literals": {
-                        "node": "car_node$SUFFIX",
-                        "key": "%LEFT_SHIFT",
-                        "gamepad_button": "B",
-                        "force": [0, 20000, 0]
-                    }
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.forward",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "surface_power": "inf"
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.backwards",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "surface_power": "-inf"
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.ascend",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "ascend_velocity": 10
-                }
-            },
-            {
-                "required": ["IF_MANUAL_DRIVE"],
-                "call": "car_controller_key_binding",
-                "literals": {
-                    "id": "car_or_heli.descend",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "car_node$SUFFIX",
-                    "ascend_velocity": -10
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "call": "rel_key_binding",
-                "literals": {
-                    "id": "car_or_heli.rotate_gun_left",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "turret_node$SUFFIX",
-                    "rotation_axis": [0, 1, 0],
-                    "angular_velocity_press": 0.1,
-                    "angular_velocity_repeat": 1,
-                    "speed_cursor": 0.05
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "call": "rel_key_binding",
-                "literals": {
-                    "id": "car_or_heli.rotate_gun_right",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "turret_node$SUFFIX",
-                    "rotation_axis": [0, 1, 0],
-                    "angular_velocity_press": -0.1,
-                    "angular_velocity_repeat": -1,
-                    "speed_cursor": -0.05
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "call": "rel_key_binding",
-                "literals": {
-                    "id": "car_or_heli.rotate_gun_up",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "turret_node$SUFFIX",
-                    "rotation_axis": [1, 0, 0],
-                    "angular_velocity_press": 0.1,
-                    "angular_velocity_repeat": 1,
-                    "speed_cursor": 0.05
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "call": "rel_key_binding",
-                "literals": {
-                    "id": "car_or_heli.rotate_gun_down",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "turret_node$SUFFIX",
-                    "rotation_axis": [1, 0, 0],
-                    "angular_velocity_press": -0.1,
-                    "angular_velocity_repeat": -1,
-                    "speed_cursor": -0.05
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "call": "gun_key_binding",
-                "literals": {
-                    "id": "car_or_heli.shoot",
-                    "role": "%ROLE",
-                    "player": "%PLAYER_NAME",
-                    "node": "main_gun_end_node$SUFFIX"
-                }
-            },
-            {
-                "required": ["IF_HAS_GUN"],
-                "exclude": ["IF_MANUAL_AIM"],
-                "call": "player_key_binding",
-                "literals": {
-                    "id": "car_or_heli.select_next_opponent",
-                    "role": "%ROLE",
-                    "node": "car_node$SUFFIX",
-                    "select_next_opponent": true
-                }
-            },
-            {
-                "call": "player_key_binding",
-                "literals": {
-                    "id": "car_or_heli.select_next_vehicle",
-                    "role": "%ROLE",
-                    "node": "car_node$SUFFIX",
-                    "select_next_vehicle": true
-                }
-            }
-        ]
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_idle_binding",
+      "literals": {
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX"
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.steer_left",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "tire_angle_velocities": [10, 80],
+        "tire_angles": [45, 20]
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.steer_right",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "tire_angle_velocities": [10, 80],
+        "tire_angles": [-45, -20]
+      }
+    },
+    {
+      "comment": {
+        "call": "abs_key_binding",
+        "literals": {
+          "node": "car_node$SUFFIX",
+          "key": "%LEFT_SHIFT",
+          "gamepad_button": "B",
+          "force": [0, 20000, 0]
+        }
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.forward",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "surface_power": "inf"
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.backwards",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "surface_power": "-inf"
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.ascend",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "ascend_velocity": 10
+      }
+    },
+    {
+      "required": ["IF_MANUAL_DRIVE"],
+      "call": "car_controller_key_binding",
+      "literals": {
+        "id": "car_or_heli.descend",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "car_node$SUFFIX",
+        "ascend_velocity": -10
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "call": "rel_key_binding",
+      "literals": {
+        "id": "car_or_heli.rotate_gun_left",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "turret_node$SUFFIX",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity_press": 0.1,
+        "angular_velocity_repeat": 1,
+        "speed_cursor": 0.05
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "call": "rel_key_binding",
+      "literals": {
+        "id": "car_or_heli.rotate_gun_right",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "turret_node$SUFFIX",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity_press": -0.1,
+        "angular_velocity_repeat": -1,
+        "speed_cursor": -0.05
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "call": "rel_key_binding",
+      "literals": {
+        "id": "car_or_heli.rotate_gun_up",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "turret_node$SUFFIX",
+        "rotation_axis": [1, 0, 0],
+        "angular_velocity_press": 0.1,
+        "angular_velocity_repeat": 1,
+        "speed_cursor": 0.05
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "call": "rel_key_binding",
+      "literals": {
+        "id": "car_or_heli.rotate_gun_down",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "turret_node$SUFFIX",
+        "rotation_axis": [1, 0, 0],
+        "angular_velocity_press": -0.1,
+        "angular_velocity_repeat": -1,
+        "speed_cursor": -0.05
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "call": "gun_key_binding",
+      "literals": {
+        "id": "car_or_heli.shoot",
+        "role": "%ROLE",
+        "player": "%PLAYER_NAME",
+        "node": "main_gun_end_node$SUFFIX"
+      }
+    },
+    {
+      "required": ["IF_HAS_GUN"],
+      "exclude": ["IF_MANUAL_AIM"],
+      "call": "player_key_binding",
+      "literals": {
+        "id": "car_or_heli.select_next_opponent",
+        "role": "%ROLE",
+        "node": "car_node$SUFFIX",
+        "select_next_opponent": true
+      }
+    },
+    {
+      "call": "player_key_binding",
+      "literals": {
+        "id": "car_or_heli.select_next_vehicle",
+        "role": "%ROLE",
+        "node": "car_node$SUFFIX",
+        "select_next_vehicle": true
+      }
     }
-]
+  ]
+}
