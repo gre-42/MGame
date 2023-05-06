@@ -290,8 +290,8 @@
         }
       },
       {
-        "playback": "create_tap_buttons",
-        "required": ["IF_ANDROID"]
+        "required": ["IF_ANDROID"],
+        "playback": "create_tap_buttons"
       }
     ]
   },
