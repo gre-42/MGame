@@ -3,12 +3,10 @@
   "macro": {
     "include": "../jb/scene_jb_arena.scn.json",
     "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR",
       "PLAYERS_JSON": "$__DIR__/players.json"
     }
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "jb_arena_ah_64",
     "LEVEL_ICON_FILE": "textures/debug/black.png",
     "IF_RACEWAY_CIRCULAR": false

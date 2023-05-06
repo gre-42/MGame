@@ -1,13 +1,9 @@
 {
   "name": "NYC with traffic",
   "macro": {
-    "include": "scene_nyc_with_traffic.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_nyc_with_traffic.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "nyc_with_traffic",
     "LEVEL_ICON_FILE": "textures/debug/black.png",
     "IF_RACEWAY_CIRCULAR": false

@@ -1,13 +1,9 @@
 {
   "name": "WIP: Arena cars",
   "macro": {
-    "include": "scene_arena_cars.scn",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_arena_cars.scn"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "arena_cars",
     "LEVEL_ICON_FILE": "textures/debug/black.png",
     "IF_RACEWAY_CIRCULAR": false

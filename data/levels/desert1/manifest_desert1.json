@@ -1,13 +1,9 @@
 {
   "name": "Desert 1",
   "macro": {
-    "include": "scene_desert1.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_desert1.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "desert1",
     "LEVEL_ICON_FILE": "levels/desert1/icon.png",
     "IF_RACEWAY_CIRCULAR": false

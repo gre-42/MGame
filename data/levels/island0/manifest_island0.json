@@ -1,13 +1,9 @@
 {
   "name": "Island 0",
   "macro": {
-    "include": "scene_island0.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_island0.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "island0",
     "LEVEL_ICON_FILE": "levels/island0/icon.png",
     "IF_RACEWAY_CIRCULAR": true

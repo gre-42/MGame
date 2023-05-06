@@ -1,13 +1,9 @@
 {
   "name": "Skate 0",
   "macro": {
-    "include": "scene_skate0.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_skate0.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "skate0",
     "LEVEL_ICON_FILE": "textures/debug/black.png",
     "IF_RACEWAY_CIRCULAR": false

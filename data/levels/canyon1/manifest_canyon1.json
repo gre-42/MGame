@@ -1,13 +1,9 @@
 {
   "name": "WIP: Canyon 1",
   "macro": {
-    "include": "scene_canyon1.scn",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_canyon1.scn"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "canyon1",
     "LEVEL_ICON_FILE": "textures/debug/black.png",
     "IF_RACEWAY_CIRCULAR": false

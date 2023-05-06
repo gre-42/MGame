@@ -1,13 +1,9 @@
 {
   "name": "Race track 0",
   "macro": {
-    "include": "scene_race_track0.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_race_track0.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "race_track0",
     "LEVEL_ICON_FILE": "levels/race_track0/icon.png",
     "IF_RACEWAY_CIRCULAR": true

@@ -1,13 +1,9 @@
 {
   "name": "Snow 1",
   "macro": {
-    "include": "scene_snow1.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_snow1.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "snow1",
     "LEVEL_ICON_FILE": "levels/snow1/icon.png",
     "IF_RACEWAY_CIRCULAR": false

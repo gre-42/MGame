@@ -1,13 +1,9 @@
 {
   "name": "JB",
   "macro": {
-    "include": "scene_jb_race.scn.json",
-    "literals": {
-      "LEVEL_ID": "%LEVEL_ID",
-      "IF_RACEWAY_CIRCULAR": "%IF_RACEWAY_CIRCULAR"
-    }
+    "include": "scene_jb_race.scn.json"
   },
-  "variables": {
+  "globals": {
     "LEVEL_ID": "jb_race",
     "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
     "IF_RACEWAY_CIRCULAR": false
