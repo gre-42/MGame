@@ -1,10 +1,6 @@
 [
-  {
-    "include": "weapon_closeup.scn.json"
-  },
-  {
-    "include": "muzzle_flash_closeup.scn.json"
-  },
+  {"include": "weapon_closeup.scn.json"},
+  {"include": "muzzle_flash_closeup.scn.json"},
   {
     "declare_macro": "try_delete_weapon",
     "content": [
@@ -34,40 +30,38 @@
   },
   {
     "declare_macro": "_set_node_hider",
-    "content": [
-      {
-        "call": "set_node_hider",
-        "literals": {
-          "node_to_hide": "main_gun_node_visual$SUFFIX",
-          "camera_node": "human_head_camera_node",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
-          "on_hide": {
-            "playback": "_add_weapon_closeup_scheduler_on_hide",
-            "context": "weapon_closeup",
-            "literals": {
-              "RESOURCE": "%RESOURCE",
-              "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-              "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-            }
-          },
-          "on_destroy": {
-            "playback": "_add_weapon_closeup_scheduler_on_destroy",
-            "context": "weapon_closeup"
-          },
-          "on_update": {
-            "playback": "_add_weapon_closeup_scheduler_on_update",
-            "context": "weapon_closeup",
-            "literals": {
-              "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-              "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-            }
-          },
-          "capture": {
-            "RESOURCE": "%RESOURCE"
+    "content": {
+      "call": "set_node_hider",
+      "literals": {
+        "node_to_hide": "main_gun_node_visual$SUFFIX",
+        "camera_node": "human_head_camera_node",
+        "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+        "on_hide": {
+          "playback": "_add_weapon_closeup_scheduler_on_hide",
+          "context": "weapon_closeup",
+          "literals": {
+            "RESOURCE": "%RESOURCE",
+            "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+            "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
+        },
+        "on_destroy": {
+          "playback": "_add_weapon_closeup_scheduler_on_destroy",
+          "context": "weapon_closeup"
+        },
+        "on_update": {
+          "playback": "_add_weapon_closeup_scheduler_on_update",
+          "context": "weapon_closeup",
+          "literals": {
+            "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+            "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
+          }
+        },
+        "capture": {
+          "RESOURCE": "%RESOURCE"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "add_weapon_m4a1",

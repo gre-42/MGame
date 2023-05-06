@@ -1,71 +1,63 @@
 [
   {
     "declare_macro": "_delete_weapon_closeup_nodes",
-    "content": [
-      {
-        "call": "try_delete_root_node",
-        "literals": {
-          "name": "weapon_closeup_node"
-        }
+    "content": {
+      "call": "try_delete_root_node",
+      "literals": {
+        "name": "weapon_closeup_node"
       }
-    ]
+    }
   },
   {
     "declare_macro": "_add_weapon_closeup_scheduler_on_hide",
-    "content": [
-      {
-        "call": "execute_in_physics_thread",
-        "literals": {
-          "command": {
-            "playback": "_add_weapon_closeup",
-            "literals": {
-              "RESOURCE": "%RESOURCE",
-              "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-              "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-            }
-          },
-          "capture": {
+    "content": {
+      "call": "execute_in_physics_thread",
+      "literals": {
+        "command": {
+          "playback": "_add_weapon_closeup",
+          "literals": {
             "RESOURCE": "%RESOURCE",
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
+        },
+        "capture": {
+          "RESOURCE": "%RESOURCE",
+          "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+          "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "_add_weapon_closeup_scheduler_on_destroy",
-    "content": [
-      {
-        "call": "execute_in_physics_thread",
-        "literals": {
-          "command": {
-            "playback": "_delete_weapon_closeup_nodes"
-          }
+    "content": {
+      "call": "execute_in_physics_thread",
+      "literals": {
+        "command": {
+          "playback": "_delete_weapon_closeup_nodes"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "_add_weapon_closeup_scheduler_on_update",
-    "content": [
-      {
-        "call": "execute_in_physics_thread",
-        "literals": {
-          "command": {
-            "playback": "_update_weapon_closeup",
-            "literals": {
-              "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-              "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-            }
-          },
-          "capture": {
+    "content": {
+      "call": "execute_in_physics_thread",
+      "literals": {
+        "command": {
+          "playback": "_update_weapon_closeup",
+          "literals": {
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
+        },
+        "capture": {
+          "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+          "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "_add_weapon_closeup",
@@ -106,14 +98,12 @@
   },
   {
     "declare_macro": "_update_weapon_closeup",
-    "content": [
-      {
-        "call": "set_node_rotation",
-        "literals": {
-          "name": "punch_angle_node_closeup",
-          "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
-        }
+    "content": {
+      "call": "set_node_rotation",
+      "literals": {
+        "name": "punch_angle_node_closeup",
+        "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
       }
-    ]
+    }
   }
 ]
