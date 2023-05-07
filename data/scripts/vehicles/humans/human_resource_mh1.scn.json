@@ -1,46 +1,46 @@
 [
-    {
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "mh1",
+      "filename": "models/MakeHuman/t_pose_lowpoly.mhx2",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 100],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "triangle_tangent_error_behavior": "zero"
+    }
+  },
+  {
+    "declare_macro": "load_mh1",
+    "content": [
+      {
         "call": "obj_resource",
         "literals": {
-            "name": "mh1",
-            "filename": "models/MakeHuman/t_pose_lowpoly.mhx2",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, 100],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "triangle_tangent_error_behavior": "zero"
+          "name": "mh1$DECIMATE",
+          "filename": "models/MakeHuman/t_pose_lowpoly$DECIMATE.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_global_static",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero"
         }
-    },
-    {
-        "declare_macro": "load_mh1",
-        "content": [
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "mh1$DECIMATE",
-                    "filename": "models/MakeHuman/t_pose_lowpoly$DECIMATE.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": ["%DIST_MIN", "%DIST_MAX"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "lightmap_black_global_static",
-                    "occluder_pass": "%OCCLUDER_PASS",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all",
-                    "triangle_tangent_error_behavior": "zero"
-                }
-            },
-            {"call": "import_bone_weights", "literals": {"destination": "mh1$DECIMATE", "source": "mh1", "max_distance": 0.1}}
-        ]
-    },
-    {"playback": "load_mh1", "literals": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                           "DECIMATE": "_d2"}},
-    {"playback": "load_mh1", "literals": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1"}}
+      },
+      {"call": "import_bone_weights", "literals": {"destination": "mh1$DECIMATE", "source": "mh1", "max_distance": 0.1}}
+    ]
+  },
+  {"playback": "load_mh1", "literals": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                           "DECIMATE": "_d2"}},
+  {"playback": "load_mh1", "literals": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1"}}
 ]
