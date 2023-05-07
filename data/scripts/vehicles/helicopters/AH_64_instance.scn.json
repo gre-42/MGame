@@ -289,6 +289,7 @@
       },
       {
         "required": ["IF_PC"], "call": "hud_image", "literals": {
+          "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "camera_node": "main_gun_camera_node$SUFFIX",
           "ypln_node": "turret_node$SUFFIX",

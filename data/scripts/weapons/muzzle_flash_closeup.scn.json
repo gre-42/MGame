@@ -91,7 +91,7 @@
       "call": "set_node_hider",
       "literals": {
         "node_to_hide": "muzzle_flash_node$MUZZLE_FLASH_SUFFIX",
-        "camera_node": "human_head_camera_node",
+        "camera_node": "human_head_camera_node$SUFFIX",
         "on_hide": {
           "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
           "context": "weapon_closeup",

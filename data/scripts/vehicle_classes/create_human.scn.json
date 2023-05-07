@@ -47,6 +47,12 @@
         }
       },
       {
+        "playback": "create_human_cameras_persistent",
+        "literals": {
+          "SUFFIX": "%SUFFIX"
+        }
+      },
+      {
         "required": ["IF_PLAYER"],
         "call": "player_set_node",
         "literals": {
@@ -123,12 +129,6 @@
         }
       },
       {
-        "playback": "create_human_cameras_persistent",
-        "literals": {
-          "SUFFIX": "%SUFFIX"
-        }
-      },
-      {
         "required": ["IF_PC"],
         "playback": "create_human_cameras_pc",
         "literals": {
@@ -140,8 +140,9 @@
         "call": "hud_image",
         "required": ["IF_PC"],
         "literals": {
+          "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
-          "camera_node": "human_head_camera_node",
+          "camera_node": "human_head_camera_node$SUFFIX",
           "ypln_node": "human_node$SUFFIX",
           "update": "once",
           "center": [0, 0],
