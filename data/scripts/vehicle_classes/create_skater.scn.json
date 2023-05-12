@@ -48,10 +48,10 @@
       },
       {
         "required": ["IF_PLAYER"],
-        "call": "player_set_node",
+        "call": "spawner_set_node",
         "literals": {
           "node": "skater_node$SUFFIX",
-          "player": "%PLAYER_NAME"
+          "spawner": "%PLAYER_NAME"
         }
       },
       {

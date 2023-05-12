@@ -93,30 +93,43 @@
     {"comment": "Player"},
     {
       "required": ["IF_CREATE_PC_PLAYER"],
-      "call": "player_create",
-      "literals": {
-        "name": "you",
-        "team": "red",
-        "game_mode": "racing",
-        "unstuck_mode": "off",
-        "driving_mode": "car_rally",
-        "driving_direction": "center"
-      }
-    },
-    {
-      "required": ["IF_CREATE_PC_PLAYER"],
-      "call": "set_can_drive",
-      "literals": { "player": "you", "source": "user", "value": true }
-    },
-    {
-      "required": ["IF_CREATE_PC_PLAYER"],
-      "call": "set_can_aim",
-      "literals": { "player": "you", "source": "user", "value": true }
-    },
-    {
-      "required": ["IF_CREATE_PC_PLAYER"],
-      "call": "set_can_shoot",
-      "literals": { "player": "you", "source": "user", "value": true }
+      "execute": [
+        {
+          "call": "player_create",
+          "literals": {
+            "name": "you",
+            "team": "red",
+            "game_mode": "racing",
+            "unstuck_mode": "off",
+            "driving_mode": "car_rally",
+            "driving_direction": "center"
+          }
+        },
+        {
+          "call": "spawner_create",
+          "literals": {
+            "name": "you"
+          }
+        },
+        {
+          "call": "spawner_set_player",
+          "literals": {
+            "name": "you"
+          }
+        },
+        {
+          "call": "set_can_drive",
+          "literals": { "player": "you", "source": "user", "value": true }
+        },
+        {
+          "call": "set_can_aim",
+          "literals": { "player": "you", "source": "user", "value": true }
+        },
+        {
+          "call": "set_can_shoot",
+          "literals": { "player": "you", "source": "user", "value": true }
+        }
+      ]
     },
     {
       "required": ["IF_PC_PLAYER_PLAYBACK"],

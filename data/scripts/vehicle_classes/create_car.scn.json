@@ -59,10 +59,10 @@
       },
       {
         "required": ["IF_PLAYER"],
-        "call": "player_set_node",
+        "call": "spawner_set_node",
         "literals": {
           "node": "car_node$SUFFIX",
-          "player": "%PLAYER_NAME"
+          "spawner": "%PLAYER_NAME"
         }
       },
       {
@@ -102,7 +102,7 @@
               "IF_PC": "%IF_PC"
             }
           },
-          "player": "%PLAYER_NAME",
+          "spawner": "%PLAYER_NAME",
           "capture": {
             "SUFFIX": "%SUFFIX",
             "CAR_NAME": "%CAR_NAME",
