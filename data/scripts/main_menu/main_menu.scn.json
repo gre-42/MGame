@@ -201,15 +201,13 @@
   },
   {
     "declare_macro": "_update_scene_icon",
-    "content": [
-      {
-        "call": "update_gallery",
-        "literals": {
-          "instance": "level_icon",
-          "resource": "%LEVEL_ICON_FILE"
-        }
+    "content": {
+      "call": "update_gallery",
+      "literals": {
+        "instance": "level_icon",
+        "resource": "%LEVEL_ICON_FILE"
       }
-    ]
+    }
   },
   {
     "declare_macro": "_setup_menu_primary_scene_rest",
