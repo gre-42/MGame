@@ -53,18 +53,18 @@
         }
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "spawner_set_node",
         "literals": {
           "node": "human_node$SUFFIX",
-          "spawner": "%PLAYER_NAME"
+          "spawner": "%SPAWNER_NAME"
         }
       },
       {
         "comment": "# IF_SHADOW macro_playback add_attached_light-HUMAN_NAME LSUFFIX:_human$SUFFIX CSUFFIX:SUFFIX;"
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {
@@ -82,7 +82,7 @@
               "IF_WITH_GUN": "%IF_WITH_GUN"
             }
           },
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "capture": {
             "SUFFIX": "%SUFFIX",
             "HUMAN_NAME": "%HUMAN_NAME",

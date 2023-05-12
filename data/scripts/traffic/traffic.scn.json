@@ -63,10 +63,12 @@
           "IF_RACING": "%IF_RACING",
           "IF_RALLY": "%IF_RALLY",
           "IF_WITH_GUN": false,
+          "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
           "IF_SHADOW": false,
           "IF_HUMAN_STYLE": true,
           "COLOR": "%COLOR",
+          "IF_SPAWNER": true,
           "IF_PLAYER": true,
           "VELOCITY_ERROR_STD": null,
           "YAW_ERROR_STD": null,
@@ -137,7 +139,7 @@
       {
         "call": "set_preferred_car_spawner",
         "literals": {
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "macro": "traffic.create_human",
           "parameters": {
             "HUMAN_NAME":"%HUMAN_NAME",
@@ -168,7 +170,7 @@
       {
         "call": "set_preferred_car_spawner",
         "literals": {
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "traffic.create_car",
             "literals": {
@@ -210,7 +212,7 @@
       {
         "call": "set_preferred_car_spawner",
         "literals": {
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "traffic.create_car",
             "literals": {

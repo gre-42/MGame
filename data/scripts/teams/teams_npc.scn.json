@@ -13,6 +13,8 @@
           "driving_direction": "center"
         }
       },
+      { "call": "spawner_create", "literals": { "name": "%PLAYER_NAME" } },
+      { "call": "spawner_set_player", "literals": { "name": "%PLAYER_NAME" } },
       {
         "playback": "set_player_skills",
         "literals": {
@@ -74,8 +76,10 @@
           "IF_RACING": "%IF_RACING",
           "IF_RALLY": "%IF_RALLY",
           "IF_WITH_GUN": true,
+          "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
           "COLOR": "%COLOR",
+          "IF_SPAWNER": true,
           "IF_PLAYER": true,
           "IF_SHADOW": true,
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
@@ -168,7 +172,7 @@
       {
         "call": "set_preferred_car_spawner",
         "literals": {
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_human_for_npc",
             "literals": {
@@ -183,6 +187,7 @@
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
               "IF_RACING": "%IF_RACING",
               "IF_RALLY": "%IF_RALLY",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
 
               "HUMAN_NAME": "%HUMAN_NAME",
@@ -196,6 +201,7 @@
             }
           },
           "capture": {
+            "PLAYER_NAME": "%PLAYER_NAME",
             "HUMAN_NAME": "%HUMAN_NAME",
             "DECIMATE": "%DECIMATE",
             "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
@@ -240,7 +246,7 @@
       {
         "call": "set_preferred_car_spawner",
         "literals": {
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_car_for_npc",
             "literals": {
