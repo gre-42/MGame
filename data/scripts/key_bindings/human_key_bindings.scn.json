@@ -4,6 +4,7 @@
     {
       "call": "avatar_controller_idle_binding",
       "literals": {
+        "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX"
       }
     },
