@@ -137,12 +137,6 @@
           "velocity": "%BULLET_VELOCITY",
           "feels_gravity": "%BULLET_FEELS_GRAVITY"
         }
-  },
-      {
-        "call": "clear_node_hider",
-        "literals": {
-          "node": "main_gun_node_visual$SUFFIX"
-        }
       },
       {
         "playback": "_set_node_hider",
@@ -227,12 +221,6 @@
           "velocity": "%BULLET_VELOCITY",
           "feels_gravity": "%BULLET_FEELS_GRAVITY"
         }
-  },
-  {
-        "call": "clear_node_hider",
-        "literals": {
-          "node": "main_gun_node_visual$SUFFIX"
-        }
       },
       {
         "playback": "_set_node_hider",
@@ -300,12 +288,6 @@
           "dpitch_head": -15,
           "velocity": "%BULLET_VELOCITY",
           "feels_gravity": "%BULLET_FEELS_GRAVITY"
-        }
-  },
-      {
-        "call": "clear_node_hider",
-        "literals": {
-          "node": "main_gun_node_visual$SUFFIX"
         }
       },
       {
@@ -377,12 +359,6 @@
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
           "feels_gravity": "%BULLET_FEELS_GRAVITY"
-        }
-  },
-      {
-        "call": "clear_node_hider",
-        "literals": {
-          "node": "main_gun_node_visual$SUFFIX"
         }
       },
       {
