@@ -20,7 +20,7 @@ jobs:
         run: |
           sudo apt-get update && \
           sudo apt-get install -y \
-            g++-10 \
+            g++ \
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
@@ -32,7 +32,7 @@ jobs:
           submodules: recursive
 
       - name: Build
-        run: CXX=g++-10 make
+        run: make
 
       - name: Package
         run: make package
