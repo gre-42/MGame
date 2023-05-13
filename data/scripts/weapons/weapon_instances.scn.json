@@ -2,30 +2,10 @@
   {"include": "weapon_closeup.scn.json"},
   {"include": "muzzle_flash_closeup.scn.json"},
   {
-    "declare_macro": "try_delete_weapon",
+    "declare_macro": "delete_weapon",
     "content": [
-      {
-        "comment": "Delete gun renderable, but keep node \"main_gun_node_visual\""
-      },
-      {
-        "call": "clear_renderable_instance",
-        "literals": {
-          "node": "main_gun_node_visual$SUFFIX",
-          "name": "main_gun_node_visual-inst"
-        }
-      },
-      {
-        "comment": [
-          "Send \"node destroyed\" to the \"gun\"-object and remove the gun from the node",
-          "\"destroyed\" will let the \"gun\" schedule itself for deletion"
-        ]
-      },
-      {
-        "call": "clear_absolute_observer_and_notify_destroyed",
-        "literals": {
-          "node": "main_gun_end_node$SUFFIX"
-        }
-      }
+      { "call": "destroy_node", "literals": { "node": "main_gun_end_node$SUFFIX" } },
+      { "call": "destroy_node", "literals": { "node": "main_gun_node_visual$SUFFIX" } }
     ]
   },
   {
@@ -66,12 +46,7 @@
   {
     "declare_macro": "add_weapon_m4a1",
     "content": [
-      {
-        "playback": "try_delete_weapon",
-        "literals": {
-          "SUFFIX": "%SUFFIX"
-        }
-      },
+      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
@@ -150,12 +125,7 @@
   {
     "declare_macro": "add_weapon_beretta92",
     "content": [
-      {
-        "playback": "try_delete_weapon",
-        "literals": {
-          "SUFFIX": "%SUFFIX"
-        }
-      },
+      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
@@ -234,12 +204,7 @@
   {
     "declare_macro": "add_weapon_frag_grenade",
     "content": [
-      {
-        "playback": "try_delete_weapon",
-        "literals": {
-          "SUFFIX": "%SUFFIX"
-        }
-      },
+      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
@@ -302,12 +267,7 @@
   {
     "declare_macro": "add_weapon_m72_law",
     "content": [
-      {
-        "playback": "try_delete_weapon",
-        "literals": {
-          "SUFFIX": "%SUFFIX"
-        }
-      },
+      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
