@@ -4,8 +4,8 @@
   {
     "declare_macro": "delete_weapon",
     "content": [
-      { "call": "destroy_node", "literals": { "node": "main_gun_end_node$SUFFIX" } },
-      { "call": "destroy_node", "literals": { "node": "main_gun_node_visual$SUFFIX" } }
+      { "call": "clear_node", "literals": { "node": "main_gun_end_node$SUFFIX" } },
+      { "call": "clear_node", "literals": { "node": "main_gun_node_visual$SUFFIX" } }
     ]
   },
   {
