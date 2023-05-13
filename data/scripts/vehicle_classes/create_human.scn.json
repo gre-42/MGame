@@ -71,6 +71,7 @@
             "playback": "create_player_human_externals",
             "literals": {
               "SUFFIX": "%SUFFIX",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "HUMAN_NAME": "%HUMAN_NAME",
               "IF_RACING": "%IF_RACING",
@@ -115,6 +116,7 @@
           "IF_RACING": "%IF_RACING",
           "IF_RALLY": "%IF_RALLY",
           "IF_WITH_GUN": "%IF_WITH_GUN",
+          "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
           "IF_PC": "%IF_PC"
         }

@@ -1,37 +1,6 @@
 [
   {
-    "declare_macro": "teams.create_player_for_pc",
-    "content": [
-      {
-        "call": "player_create",
-        "literals": {
-          "name": "%PLAYER_NAME",
-          "team": "%TEAM",
-          "game_mode": "%GAME_MODE",
-          "unstuck_mode": "off",
-          "driving_mode": "car_arena",
-          "driving_direction": "center"
-        }
-      },
-      { "call": "spawner_create", "literals": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "literals": { "name": "%PLAYER_NAME" } },
-      {
-        "playback": "set_player_skills",
-        "literals": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
-        }
-      }
-    ]
-  },
-  {
-    "declare_macro": "teams.create_human_for_pc",
+    "declare_macro": "teams.create_human_for_spawner",
     "content": [
       {
         "playback": "create_human",
@@ -58,18 +27,11 @@
           "IF_PLAYER": true,
           "IF_SHADOW": true
         }
-      },
-      {
-        "call": "create_externals",
-        "literals": {
-          "player": "%PLAYER_NAME",
-          "mode": "pc"
-        }
       }
     ]
   },
   {
-    "declare_macro": "teams.create_car_for_pc",
+    "declare_macro": "teams.create_car_for_spawner",
     "content": [
       {
         "playback": "create_car",
@@ -93,43 +55,21 @@
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,
-          "IF_PLAYER": true,
+          "IF_PLAYER": false,
           "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
           "IF_PC": true,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
           "COLOR": "%COLOR",
           "HAND_BRAKE_PULLED": false
         }
-      },
-      {
-        "call": "create_externals",
-        "literals": {
-          "player": "%PLAYER_NAME",
-          "mode": "pc"
-        }
       }
     ]
   },
   {
-    "declare_macro": "teams.create_player_and_human_for_pc",
+    "declare_macro": "teams.create_spawner_and_human",
     "content": [
-      {
-        "playback": "teams.create_player_for_pc",
-        "literals": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "TEAM": "%TEAM",
-          "GAME_MODE": "%GAME_MODE",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
-        }
-      },
+      { "call": "spawner_create", "literals": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
       {
         "call": "set_preferred_car_spawner",
         "literals": {
@@ -171,42 +111,19 @@
             "ERROR_ALPHA": "%ERROR_ALPHA"
           }
         }
-      },
-      {
-        "required": ["IF_SET_WAY_POINTS"],
-        "call": "set_pathfinding_way_points",
-        "literals": {
-          "player": "%PLAYER_NAME",
-          "node": "osm_map_node",
-          "resource": "%TEAMS_WAY_POINTS_RESOURCE"
-        }
       }
     ]
   },
   {
-    "declare_macro": "teams.create_player_and_car_for_pc",
+    "declare_macro": "teams.create_spawner_and_car",
     "content": [
-      {
-        "playback": "teams.create_player_for_pc",
-        "literals": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "TEAM": "%TEAM",
-          "GAME_MODE": "%GAME_MODE",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_BEST_WEAPON": "%AI_SELECT_BEST_WEAPON"
-        }
-      },
+      { "call": "spawner_create", "literals": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
       {
         "call": "set_preferred_car_spawner",
         "literals": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_car_for_pc",
+            "playback": "teams.create_car_for_spawner",
             "literals": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
@@ -218,7 +135,6 @@
               "IF_RACING": "%IF_RACING",
               "IF_RALLY": "%IF_RALLY",
               "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
 
               "CAR_NAME": "%CAR_NAME",
               "DECIMATE": "",
@@ -231,7 +147,6 @@
             }
           },
           "capture": {
-            "PLAYER_NAME": "%PLAYER_NAME",
             "CAR_NAME": "%CAR_NAME",
             "DECIMATE": "",
             "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
@@ -241,15 +156,6 @@
             "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
             "ERROR_ALPHA": "%ERROR_ALPHA"
           }
-        }
-      },
-      {
-        "required": ["IF_SET_WAY_POINTS"],
-        "call": "set_pathfinding_way_points",
-        "literals": {
-          "player": "%PLAYER_NAME",
-          "node": "osm_map_node",
-          "resource": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       }
     ]

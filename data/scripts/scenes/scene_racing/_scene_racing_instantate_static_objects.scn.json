@@ -105,7 +105,7 @@
             "driving_direction": "center"
           }
         },
-        { "call": "spawner_create", "literals": { "name": "you" } },
+        { "call": "spawner_create", "literals": { "name": "you", "team": "red" } },
         { "call": "spawner_set_player", "literals": { "name": "you" } },
         {
           "call": "set_can_drive",

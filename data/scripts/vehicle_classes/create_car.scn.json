@@ -58,11 +58,11 @@
         }
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "spawner_set_node",
         "literals": {
           "node": "car_node$SUFFIX",
-          "spawner": "%PLAYER_NAME"
+          "spawner": "%SPAWNER_NAME"
         }
       },
       {
@@ -86,13 +86,14 @@
         }
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {
             "playback": "create_player_car_externals",
             "literals": {
               "SUFFIX": "%SUFFIX",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "CAR_NAME": "%CAR_NAME",
               "IF_RACING": "%IF_RACING",
@@ -102,7 +103,7 @@
               "IF_PC": "%IF_PC"
             }
           },
-          "spawner": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "capture": {
             "SUFFIX": "%SUFFIX",
             "CAR_NAME": "%CAR_NAME",
@@ -137,6 +138,7 @@
           "IF_RALLY": "%IF_RALLY",
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+          "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
           "IF_PC": "%IF_PC"
         }

@@ -58,12 +58,13 @@
         "comment": "# IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater$SUFFIX CSUFFIX:SUFFIX"
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {
             "playback": "create_player_skater_externals",
             "literals": {
+              "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "SKATER_NAME": "%SKATER_NAME",
               "SUFFIX": "%SUFFIX",
@@ -72,7 +73,7 @@
               "IF_PC": "%IF_PC"
             }
           },
-          "player": "%PLAYER_NAME",
+          "spawner": "%SPAWNER_NAME",
           "capture": {
             "SKATER_NAME": "%SKATER_NAME",
             "SUFFIX": "%SUFFIX",
