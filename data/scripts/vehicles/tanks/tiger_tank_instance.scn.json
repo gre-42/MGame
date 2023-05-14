@@ -138,6 +138,7 @@
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_3_node$SUFFIX", "position": [ 1.8, -0.8,  2.4], "radius": 0.25, "engine": "right", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 7}},
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_4_node$SUFFIX",  "position": [-1.8, -0.0,  4  ], "radius": 0.25, "engine": "left",  "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 8}},
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_4_node$SUFFIX", "position": [ 1.8, -0.0,  4  ], "radius": 0.25, "engine": "right", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 9}},
+      {"call": "set_rigid_body_door_distance", "literals": {"node": "car_node$SUFFIX", "door_distance": 3}},
       {
         "call": "create_tank_controller",
         "literals": {
