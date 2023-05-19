@@ -2,6 +2,7 @@
   {"include": "billboards_blobs.scn.json"},
   {"include": "billboards_decals.scn.json"},
   {"include": "billboards_grass.scn.json"},
+  {"exclude": ["IF_ANDROID"], "include": "billboards_particles_atlas.scn.json"},
   {"include": "billboards_particles.scn.json"},
   {"exclude": ["IF_ANDROID"], "include": "billboards_vegetation0_atlas.scn.json"},
   {"include": "billboards_vegetation1_atlas.scn.json"},
