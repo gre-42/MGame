@@ -1,11 +1,26 @@
 [
   {
+    "call": "add_texture_atlas",
+    "literals": {
+      "name": "particles0",
+      "width": 2048,
+      "height": 512,
+      "color_mode": "rgba",
+      "images": [
+        {"texture_pos": [0,   0], "texture": "#smoke"},
+        {"texture_pos": [0, 128], "texture": "#particles_gravel"},
+        {"texture_pos": [0, 256], "texture": "#particles_dirt"},
+        {"texture_pos": [0, 384], "texture": "#particles_snow"}
+      ]
+    }
+  },
+  {
     "call": "square_resource",
     "literals": {
-      "name": "smoke_atlas",
-      "texture_filename": "#smoke",
-      "min": [-0.1, -0.1],
-      "max": [0.1, 0.1],
+      "name": "particles0",
+      "texture_filename": "#particles0",
+      "min": [-1, -1],
+      "max": [1, 1],
       "occluded_pass": "none",
       "occluder_pass": "none",
       "ambience": [2, 2, 2],
@@ -15,30 +30,81 @@
       "aggregate_mode": "none",
       "transformation_mode": "position_lookat",
       "billboards": [
-        {"uv_scale": [0.0625, 1], "uv_offset": [0     , 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.0625, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.1250, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.1875, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.2500, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.3125, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.3750, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.4375, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.5000, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.5625, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.6250, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.6875, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.7500, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.8125, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.8750, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.0625, 1], "uv_offset": [0.9375, 0], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0     ,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.0625,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1250,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1875,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.2500,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3125,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3750,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.4375,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5000,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5625,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6250,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6875,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.7500,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8125,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8750,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.9375,    0], "vertex_scale": [0.15, 0.15], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0     , 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.0625, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1250, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1875, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.2500, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3125, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3750, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.4375, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5000, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5625, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6250, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6875, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.7500, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8125, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8750, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.9375, 0.25], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0     , 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.0625, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1250, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1875, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.2500, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3125, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3750, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.4375, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5000, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5625, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6250, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6875, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.7500, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8125, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8750, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.9375, 0.5 ], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0     , 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.0625, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1250, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.1875, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.2500, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3125, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.3750, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.4375, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5000, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.5625, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6250, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.6875, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.7500, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8125, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.8750, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.0625, 0.25], "uv_offset": [0.9375, 0.75], "vertex_scale": [1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
       ]
     }
   },
   {
     "call": "animatable_billboards",
     "literals": {
-      "name": "animatable_smoke",
-      "billboards": "smoke_atlas",
+      "name": "animatable_particles0",
+      "billboards": "particles0",
       "max_num_instances": 10000
     }
   },
@@ -46,8 +112,35 @@
     "call": "animated_billboards",
     "literals": {
       "name": "smoke",
-      "animatable": "animatable_smoke",
+      "animatable": "animatable_particles0",
       "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+      "duration": 0.5
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "literals": {
+      "name": "particles_gravel",
+      "animatable": "animatable_particles0",
+      "frames": [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+      "duration": 0.5
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "literals": {
+      "name": "particles_dirt",
+      "animatable": "animatable_particles0",
+      "frames": [32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+      "duration": 0.5
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "literals": {
+      "name": "particles_snow",
+      "animatable": "animatable_particles0",
+      "frames": [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63],
       "duration": 0.5
     }
   }
