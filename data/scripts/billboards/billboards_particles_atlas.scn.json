@@ -39,7 +39,7 @@
     "literals": {
       "name": "animatable_smoke",
       "billboards": "smoke_atlas",
-      "max_num_instances": 500
+      "max_num_instances": 10000
     }
   },
   {
@@ -48,7 +48,7 @@
       "name": "smoke",
       "animatable": "animatable_smoke",
       "frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
-      "duration": 1
+      "duration": 0.5
     }
   }
 ]
