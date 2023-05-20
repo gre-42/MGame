@@ -81,7 +81,7 @@
                 }
             },
             {
-                "spawner": "set_preferred_car_spawner",
+                "call": "set_preferred_car_spawner",
                 "literals": {
                     "player": "you",
                     "macro": "teams.create_car_for_pc",
