@@ -24,7 +24,13 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": ["F_35_hitbox", "F_35_tirelines"],
+          "hitboxes": [
+            "F_35_hitbox_front",
+            "F_35_hitbox_mid",
+            "F_35_hitbox_rear",
+            "F_35_hitbox_rudder_left",
+            "F_35_hitbox_rudder_right",
+            "F_35_tirelines"],
           "mass": "%MASS",
           "size": [1.5, 1.5, 12],
           "com": [0, -0.2, -0.2],
@@ -197,6 +203,7 @@
           "wing_id": 6
         }
       },
+      {"call": "set_rigid_body_door_distance", "literals": {"node": "car_node$SUFFIX", "door_distance": 3}},
       {
         "call": "create_plane_controller",
         "literals": {
@@ -257,6 +264,11 @@
       {"comment": "Graphics"},
       {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_front", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_front"}}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_mid", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_mid"}}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
       {"required": ["IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
       {"required": ["IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
       {"comment": [
@@ -267,8 +279,8 @@
         "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
-      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_F_35_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "small_static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
-      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_F_35_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "small_moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_F_35_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
+      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_F_35_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
     ]
   },
   {

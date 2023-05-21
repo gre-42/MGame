@@ -19,7 +19,7 @@
           "hitboxes": ["human_hitbox", "human_distancebox", "human_tirelines"],
           "mass": 70,
           "size": ["inf", "inf", "inf"],
-          "collidable_mode": "small_moving",
+          "collidable_mode": "moving",
           "name": "human$SUFFIX"
         }
       },

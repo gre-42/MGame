@@ -77,8 +77,8 @@
       {"required": ["IF_WITH_GRAPHICS"], "playback": "create_FN_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d0.5$SUFFIX", "DECIMATE": "_d0.5"}},
       {"required": ["IF_WITH_GRAPHICS"], "playback": "create_FN_lights", "literals": {"SUFFIX": "%SUFFIX"}},
 
-      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_FN_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "small_static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
-      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_FN_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": 1200,  "COLLIDABLE_MODE": "small_moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_FN_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
+      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_FN_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": 1200,  "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
     ]
   },
   {

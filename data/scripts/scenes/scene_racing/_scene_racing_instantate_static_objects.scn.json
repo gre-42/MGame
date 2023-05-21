@@ -62,7 +62,7 @@
           "osm_map_overlay-grind_lines"],
         "mass": "inf",
         "size": [1, 2, 3],
-        "collidable_mode": "terrain",
+        "collidable_mode": "static",
         "name": "osm_map"
       }
     },
@@ -76,7 +76,7 @@
           "osm_map-grind_lines"],
         "mass": "inf",
         "size": [1, 2, 3],
-        "collidable_mode": "terrain",
+        "collidable_mode": "static",
         "name": "osm_map"
       }
     },

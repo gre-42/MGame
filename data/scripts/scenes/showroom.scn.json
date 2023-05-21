@@ -120,8 +120,25 @@
       {
         "call": "obj_resource",
         "literals": {
-          "name": "cylinder",
+          "name": "showroom_ground",
           "filename": "models/metal_cylinder.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [4, 0.1, 4],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_node",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "showroom_ground_hitbox",
+          "filename": "models/cylinder_hitbox.obj",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [4, 0.1, 4],
@@ -137,7 +154,7 @@
       {
         "call": "modify_physics_material_tags",
         "literals": {
-          "resource_name": "cylinder",
+          "resource_name": "showroom_ground_hitbox",
           "add": "attr_convex"
         }
       },
@@ -156,18 +173,18 @@
         "literals": {
           "name": "stage",
           "node": "stage",
-          "resource": "cylinder"
+          "resource": "showroom_ground"
         }
       },
       {
         "call": "rigid_cuboid",
         "literals": {
           "node": "stage",
-          "hitboxes": ["cylinder"],
+          "hitboxes": ["showroom_ground_hitbox"],
           "mass": "inf",
           "size": [1, 2, 3],
           "w": [0, 10, 0],
-          "collidable_mode": "terrain",
+          "collidable_mode": "static",
           "name": "stage"
         }
       },
