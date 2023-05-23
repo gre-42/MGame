@@ -1,0 +1,12 @@
+{
+  "name": "Islands 1",
+  "macro": {
+    "include": "scene_islands1.scn.json"
+  },
+  "globals": {
+    "LEVEL_ID": "islands1",
+    "LEVEL_ICON_FILE": "#black",
+    "IF_RACEWAY_CIRCULAR": false
+  },
+  "required": ["IF_GAME_MODE_TD"]
+}

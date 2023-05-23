@@ -57,9 +57,9 @@
         "node": "osm_map_node",
         "hitboxes": [
           "osm_map",
-          "osm_map-grind_lines",
+          "osm_map_grind_lines",
           "osm_map_overlay",
-          "osm_map_overlay-grind_lines"],
+          "osm_map_overlay_grind_lines"],
         "mass": "inf",
         "size": [1, 2, 3],
         "collidable_mode": "static",
@@ -73,7 +73,7 @@
         "node": "osm_map_node",
         "hitboxes": [
           "osm_map",
-          "osm_map-grind_lines"],
+          "osm_map_grind_lines"],
         "mass": "inf",
         "size": [1, 2, 3],
         "collidable_mode": "static",

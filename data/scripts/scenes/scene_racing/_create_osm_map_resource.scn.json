@@ -43,7 +43,7 @@
         "call": "gen_grind_lines",
         "literals": {
           "source_name": "%OSM_MAP",
-          "dest_name": "$OSM_MAP-grind_lines",
+          "dest_name": "$OSM_MAP-_grind_lines",
           "edge_angle": 20,
           "averaged_normal_angle": 60,
           "excluded_names": "\\bNoGrind(?:\\b|_)",
@@ -55,7 +55,7 @@
         "exclude": ["IF_GEN_GRIND_LINES"],
         "call": "obj_resource",
         "literals": {
-          "name": "$OSM_MAP-grind_lines",
+          "name": "$OSM_MAP-_grind_lines",
           "filename": "models/primitives/empty.obj",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
@@ -73,7 +73,7 @@
         "exclude": ["IF_GEN_GRIND_LINES"],
         "call": "modify_physics_material_tags",
         "literals": {
-          "resource_name": "$OSM_MAP-grind_lines",
+          "resource_name": "$OSM_MAP-_grind_lines",
           "add": "obj_grind_line"
         }
       },

@@ -33,81 +33,19 @@
     }
   },
   {
-    "comment": "Ground037 Rock028"
-  },
-  {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_256",
     "literals": {
-      "name": "Ground037_Rock028_near",
-      "texture": "#Ground037_Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 1,
-      "weight": 1
+      "NAME": "Ground037_Rock028",
+      "TEXTURE": "#Ground037_Rock028"
     }
   },
   {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_256",
     "literals": {
-      "name": "Ground037_Rock028_8",
-      "texture": "#Ground037_Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.125,
-      "weight": 1
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_Rock028_8_1",
-      "texture": "#Ground037_Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, 200, 300],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.125,
-      "weight": 1
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_Rock028_64",
-      "texture": "#Ground037_Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [200, 300, 1000, 1500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.015625,
-      "weight": 1
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_Rock028_256",
-      "texture": "#Ground037_Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.00390625,
-      "weight": 1
+      "NAME": "Ground037_island",
+      "TEXTURE": "#Ground037_island"
     }
   },
   {
@@ -129,34 +67,6 @@
     "literals": {
       "name": "Ground037_8",
       "texture": "#Ground037",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.125,
-      "weight": 1
-    }
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_island_1",
-      "texture": "#Ground037_island",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 1,
-      "weight": 1
-    }
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_island_8",
-      "texture": "#Ground037_island",
       "min_height": "-inf",
       "max_height": "inf",
       "distances": [15, 25, "inf", "inf"],
@@ -313,48 +223,10 @@
   },
   {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_512",
     "literals": {
-      "name": "Rock028_029_200_8",
-      "texture": "#Rock028_029",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 300, 500],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "discreteness": 0,
-      "scale": 0.125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_029_200_128",
-      "texture": "#Rock028_029",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [300, 500, 1000, 1500],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "scale": 0.0078125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_029_200_512",
-      "texture": "#Rock028_029",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "scale": 0.001953125,
-      "weight": 5
+      "NAME": "Rock028_029_200",
+      "TEXTURE": "#Rock028_029"
     }
   },
   {
