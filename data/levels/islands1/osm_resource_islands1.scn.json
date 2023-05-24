@@ -37,6 +37,61 @@
           {"lanes": 1, "texture0": "#Road007_Alpha3"}],
         "near_grass_resource_names": ["vegetation7.0"],
         "near_dirty_grass_resource_names": ["vegetation7.1"],
+        "socle_textures": [
+          "#Bricks058"],
+        "facade_textures": [
+          {"facade": "Plaster003", "max_height": 5},
+          {"facade": "Plaster003_Gray", "max_height": 5},
+          {
+            "selector": "brick",
+            "facade": "wall_facade_bricks_red",
+            "min_height": 5,
+            "max_height": 20,
+            "interior": {
+              "facade_edge_size": [1, 1],
+              "facade_inner_size": [2, 1.5],
+              "interior_size": [2, 2.5, 0.2],
+              "left": "DE21F2_industryWindow00001_left",
+              "right": "DE21F2_industryWindow00001_right",
+              "floor": "DE21F2_industryWindow00001_bottom",
+              "ceiling": "DE21F2_industryWindow00001_top",
+              "back": "DE21F2_industryWindow00001_1k"
+            }
+          },
+          {
+            "facade": "Concrete020",
+            "min_height": 5,
+            "interior": {
+              "facade_edge_size": [1, 1],
+              "facade_inner_size": [2, 1.5],
+              "interior_size": [2, 2.5, 0.2],
+              "left": "DE21F2_industryWindow00001_left",
+              "right": "DE21F2_industryWindow00001_right",
+              "floor": "DE21F2_industryWindow00001_bottom",
+              "ceiling": "DE21F2_industryWindow00001_top",
+              "back": "building_big_office3_window"
+            }
+          },
+          {
+            "facade": "wall_facade_plaster_white",
+            "min_height": 5,
+            "interior": {
+              "facade_edge_size": [1, 1],
+              "facade_inner_size": [2, 1.5],
+              "interior_size": [2, 2.5, 0.2],
+              "left": "DE21F2_industryWindow00001_left",
+              "right": "DE21F2_industryWindow00001_right",
+              "floor": "DE21F2_industryWindow00001_bottom",
+              "ceiling": "DE21F2_industryWindow00001_top",
+              "back": "building_big_office3_window"
+            }
+          }
+        ],
+        "ceiling_texture": "#Asphalt015",
+        "barrier_styles": [
+          {"name": "fence1", "texture": "#fence1", "uv":[1, 1], "blend_mode": "binary_05", "wrap_mode_t": "repeat", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity": 1}
+        ],
+        "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
         "near_flowers_resource_names": [
           "vegetation6.5(hitbox:02_1_02_hitbox)",
           "vegetation6.6(hitbox:02_1_02_hitbox)",
@@ -105,7 +160,7 @@
         "street_light_resource_names": [],
         "max_wall_width": 10,
         "with_height_bindings": true,
-        "street_node_smoothness": 1.7,
+        "street_node_smoothness": 0.7,
         "street_node_smoothing_iterations": 500,
         "street_edge_smoothness": 0,
         "terrain_edge_smoothness": 0.1,
