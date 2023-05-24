@@ -62,32 +62,32 @@
             "facade": "Concrete020",
             "min_height": 5,
             "interior": {
-            "facade_edge_size": [1, 1],
-            "facade_inner_size": [2, 1.5],
-            "interior_size": [2, 2.5, 0.2],
-            "left": "DE21F2_industryWindow00001_left",
-            "right": "DE21F2_industryWindow00001_right",
-            "floor": "DE21F2_industryWindow00001_bottom",
-            "ceiling": "DE21F2_industryWindow00001_top",
-            "back": "building_big_office3_window"
+              "facade_edge_size": [1, 1],
+              "facade_inner_size": [2, 1.5],
+              "interior_size": [2, 2.5, 0.2],
+              "left": "DE21F2_industryWindow00001_left",
+              "right": "DE21F2_industryWindow00001_right",
+              "floor": "DE21F2_industryWindow00001_bottom",
+              "ceiling": "DE21F2_industryWindow00001_top",
+              "back": "building_big_office3_window"
+            }
+          },
+          {
+            "facade": "wall_facade_plaster_white",
+            "min_height": 5,
+            "interior": {
+              "facade_edge_size": [1, 1],
+              "facade_inner_size": [2, 1.5],
+              "interior_size": [2, 2.5, 0.2],
+              "left": "DE21F2_industryWindow00001_left",
+              "right": "DE21F2_industryWindow00001_right",
+              "floor": "DE21F2_industryWindow00001_bottom",
+              "ceiling": "DE21F2_industryWindow00001_top",
+              "back": "building_big_office3_window"
+            }
           }
-        },
-        {
-          "facade": "wall_facade_plaster_white",
-          "min_height": 5,
-          "interior": {
-            "facade_edge_size": [1, 1],
-            "facade_inner_size": [2, 1.5],
-            "interior_size": [2, 2.5, 0.2],
-            "left": "DE21F2_industryWindow00001_left",
-            "right": "DE21F2_industryWindow00001_right",
-            "floor": "DE21F2_industryWindow00001_bottom",
-            "ceiling": "DE21F2_industryWindow00001_top",
-            "back": "building_big_office3_window"
-          }
-        }
-      ],
-      "ceiling_texture": "#Asphalt015",
+        ],
+        "ceiling_texture": "#Asphalt015",
         "barrier_styles": [
           {"name": "fence1", "texture": "#fence1", "uv":[1, 1], "blend_mode": "binary_05", "wrap_mode_t": "repeat", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity": 1}
         ],
