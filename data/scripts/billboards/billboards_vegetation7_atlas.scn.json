@@ -49,7 +49,9 @@
       "transformation_mode": "position_lookat",
       "billboards": [
         {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [3.5, 1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [3.5, 1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [3.5, 1.75], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [7, 3.5], "alpha_distances": [250, 400, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "none"},
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [7, 3.5], "alpha_distances": [250, 400, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "none"}
       ]
     }
   }

@@ -35,8 +35,6 @@
         "street_crossing_texture": "#Road007_No_Lines",
         "street_textures": [
           {"lanes": 1, "texture0": "#Road007_Alpha3"}],
-        "near_grass_resource_names": ["vegetation7.0"],
-        "near_dirty_grass_resource_names": ["vegetation7.1"],
         "socle_textures": [
           "#Bricks058"],
         "facade_textures": [
@@ -92,6 +90,10 @@
           {"name": "fence1", "texture": "#fence1", "uv":[1, 1], "blend_mode": "binary_05", "wrap_mode_t": "repeat", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity": 1}
         ],
         "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+        "near_grass_resource_names": ["vegetation7.0"],
+        "near_dirty_grass_resource_names": ["vegetation7.1"],
+        "far_grass_resource_names": ["vegetation7.2"],
+        "far_dirty_grass_resource_names": ["vegetation7.3"],
         "near_flowers_resource_names": [
           "vegetation6.5(hitbox:02_1_02_hitbox)",
           "vegetation6.6(hitbox:02_1_02_hitbox)",
@@ -142,6 +144,7 @@
         "forest_outline_tree_inwards_distance": 1,
         "much_grass_distance": "inf",
         "much_near_grass_distance": 3,
+        "much_far_grass_distance": 16,
         "much_near_flowers_distance": 5,
         "much_near_trees_distance": 8,
         "much_far_trees_distance": 16,
