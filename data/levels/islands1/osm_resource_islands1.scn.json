@@ -103,6 +103,12 @@
           "vegetation6.2(hitbox:02_1_02_hitbox)",
           "vegetation6.3(hitbox:02_1_02_hitbox)",
           "vegetation6.4(hitbox:02_1_02_hitbox)"],
+        "far_trees_resource_names": [
+          "vegetation6.12",
+          "vegetation6.13",
+          "vegetation6.14",
+          "vegetation6.15",
+          "vegetation6.16"],
         "dirt_decals_resource_names": [
           "Leaf018_2",
           "Leaf018_2_Red",
@@ -138,6 +144,7 @@
         "much_near_grass_distance": 3,
         "much_near_flowers_distance": 5,
         "much_near_trees_distance": 8,
+        "much_far_trees_distance": 16,
         "raceway_beacon_distance": "inf",
         "with_terrain": true,
         "with_buildings": true,
