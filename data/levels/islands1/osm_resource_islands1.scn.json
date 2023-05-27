@@ -94,11 +94,11 @@
         "near_dirty_grass_resource_names": ["vegetation7.1"],
         "far_grass_resource_names": ["vegetation7.2"],
         "far_dirty_grass_resource_names": ["vegetation7.3"],
-        "near_flowers_resource_names": [
-          "vegetation6.5(hitbox:02_1_02_hitbox)",
-          "vegetation6.6(hitbox:02_1_02_hitbox)",
-          "vegetation6.10(hitbox:02_1_02_hitbox)",
-          "vegetation6.11(hitbox:02_1_02_hitbox)"],
+        "far_flowers_resource_names": [
+          "vegetation6.17(hitbox:02_1_02_hitbox)",
+          "vegetation6.18(hitbox:02_1_02_hitbox)",
+          "vegetation6.19(hitbox:02_1_02_hitbox)",
+          "vegetation6.20(hitbox:02_1_02_hitbox)"],
         "far_trees_resource_names": [
           "vegetation6.12(hitbox:02_1_02_hitbox)",
           "vegetation6.13(hitbox:02_1_02_hitbox)",
@@ -146,6 +146,7 @@
         "much_near_grass_distance": 3,
         "much_far_grass_distance": 16,
         "much_near_flowers_distance": 5,
+        "much_far_flowers_distance": 10,
         "much_far_trees_distance": 10,
         "raceway_beacon_distance": "inf",
         "with_terrain": true,
