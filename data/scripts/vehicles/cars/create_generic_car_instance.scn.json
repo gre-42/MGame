@@ -1,0 +1,172 @@
+[
+  {
+    "declare_macro": "generic_car.create_graphics",
+    "content": [
+      {"call": "renderable_instance", "literals": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/chassis$DECIMATE"}},
+      
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$WHEEL_FRONT_RESOURCE$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$WHEEL_FRONT_RESOURCE$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$WHEEL_REAR_RESOURCE$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$WHEEL_REAR_RESOURCE$DECIMATE"}}
+    ]
+  },
+  {
+    "declare_macro": "generic_car.create_lights",
+    "content": [
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_left_front$SUFFIX",  "position": [-0.5, 0, -22]}},
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_right_front$SUFFIX", "position": [ 0.5, 0, -22]}},
+      {"call": "renderable_instance", "literals": {"name": "blob$SUFFIX", "node": "light_left_front$SUFFIX",  "resource": "car_light_beam"}},
+      {"call": "renderable_instance", "literals": {"name": "blob$SUFFIX", "node": "light_right_front$SUFFIX", "resource": "car_light_beam"}}
+    ]
+  },
+  {
+    "declare_macro": "generic_car.create_physics",
+    "content": [
+      {
+        "call": "rigid_cuboid",
+        "literals": {
+          "node": "car_node$SUFFIX",
+          "hitboxes": ["$NAME-_hitbox", "$NAME-_tirelines"],
+          "mass": "%MASS",
+          "size": [1.7, 0.6, 4.9],
+          "com": [0, -0.3, 0.05],
+          "collidable_mode": "%COLLIDABLE_MODE",
+          "name": "generic_car$SUFFIX"
+        }
+      },
+
+      {"comment": {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": "%COM"}}},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
+
+      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",   "angular_vels": [-9000, -6000, -3000, 0, -1], "powers": [40, 400, 400, 40, 40], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 400}}},
+      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes", "angular_vels": [0], "powers": [0], "gear_ratios": [1], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
+
+      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 200}}},
+      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
+
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_POSITION",  "radius": "%WHEEL_RADIUS", "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_POSITION", "radius": "%WHEEL_RADIUS", "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_POSITION",   "radius": "%WHEEL_RADIUS", "engine": "brakes", "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
+      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_POSITION",  "radius": "%WHEEL_RADIUS", "engine": "brakes", "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
+
+      {
+        "call": "create_car_controller",
+        "literals": {
+          "node": "car_node$SUFFIX",
+          "front_tire_ids": [0, 1],
+          "max_tire_angle": 30
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "generic_car.create",
+    "content": [
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_POSITION"}},
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_POSITION"}},
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_POSITION"}},
+      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_POSITION"}},
+
+      {"comment": "renderable_instance name=generic_car_hitbox$SUFFIX node=car_node$NODE_SUFFIX resource=$NAME-_hitbox"},
+      {"comment": "renderable_instance name=generic_car_massbox$SUFFIX node=car_node$NODE_SUFFIX resource=$NAME-_massbox"},
+      {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$NODE_SUFFIX resource=topdown_locator"},
+
+      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX", "name": "wheel_right_rear_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "literals": {
+        "NAME": "%NAME",
+        "NODE_SUFFIX": "%SUFFIX",
+        "SUFFIX": "%SUFFIX",
+        "DECIMATE": "%DECIMATE",
+        "WHEEL_FRONT_RESOURCE": "%WHEEL_FRONT_RESOURCE",
+        "WHEEL_REAR_RESOURCE": "%WHEEL_REAR_RESOURCE"
+        }
+      },
+      {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "literals": {
+        "NAME": "%NAME",
+        "NODE_SUFFIX": "%SUFFIX",
+        "SUFFIX": "$DECIMATE_SHADOW$SUFFIX",
+        "DECIMATE": "%DECIMATE_SHADOW",
+        "WHEEL_FRONT_RESOURCE": "%WHEEL_FRONT_RESOURCE",
+        "WHEEL_REAR_RESOURCE": "%WHEEL_REAR_RESOURCE"
+        }
+      },
+      {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights", "literals": {"NAME": "%NAME", "SUFFIX": "%SUFFIX"}},
+
+      {"required": ["IF_WITH_PHYSICS"], "playback": "generic_car.create_physics", "literals": {
+        "NAME": "%NAME",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+        "SUFFIX": "%SUFFIX",
+        "MASS": "%MASS",
+        "WHEEL_RADIUS": "%WHEEL_RADIUS",
+        "COLLIDABLE_MODE": "moving",
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "WHEEL_LEFT_FRONT_POSITION": "%WHEEL_LEFT_FRONT_POSITION",
+        "WHEEL_RIGHT_FRONT_POSITION": "%WHEEL_RIGHT_FRONT_POSITION",
+        "WHEEL_LEFT_REAR_POSITION": "%WHEEL_LEFT_REAR_POSITION",
+        "WHEEL_RIGHT_REAR_POSITION": "%WHEEL_RIGHT_REAR_POSITION"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "generic_car.create_player_car_externals",
+    "content": [
+      {
+        "required": ["IF_PC"],
+        "playback": "create_car_key_bindings",
+        "literals": {
+          "IF_RACING": "%IF_RACING",
+          "IF_RALLY": "%IF_RALLY",
+          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+          "IF_MANUAL_AIM": false,
+          "IF_HAS_GUN": false,
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "ROLE": "driver"
+        }
+      },
+      {
+        "required": ["IF_PC"],
+        "playback": "create_car_cameras_$CAMERA_CLASS",
+        "literals": {
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "COCKPIT_CAMERA_POSITION": "%COCKPIT_CAMERA_POSITION"
+        }
+      },
+      {
+        "required": ["IF_PC"],
+        "exclude": ["IF_ANDROID"],
+        "playback": "create_player_car_engine_rpm_meter",
+        "literals": {
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "ENGINE_NAME": "main"
+        }
+      },
+      {
+        "call": "player_set_vehicle_control_parameters",
+        "literals": {
+          "player": "%PLAYER_NAME",
+          "surface_power_forward": "inf",
+          "surface_power_backward": "-inf",
+          "max_tire_angle": 30,
+          "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "generic_car.add_attached_light",
+    "content": [
+      {
+        "playback": "add_attached_light_sedan",
+        "literals": {
+          "LSUFFIX": "%LSUFFIX",
+          "CSUFFIX": "%CSUFFIX"
+        }
+      }
+    ]
+  }
+]

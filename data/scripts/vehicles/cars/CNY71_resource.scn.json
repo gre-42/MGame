@@ -43,7 +43,7 @@
   {
     "call": "obj_resource",
     "literals": {
-      "name": "CNY71-tirelines",
+      "name": "CNY71_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
@@ -58,12 +58,12 @@
     }
   },
 
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "CNY71-tirelines", "add": "obj_tire_line"}},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "CNY71_tirelines", "add": "obj_tire_line"}},
 
-  {"call": "gen_ray", "literals": {"name": "CNY71-tirelines", "from": [-0.7, -0.2, -1.5],  "to": [-0.7, -1, -1.5]}},  {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "CNY71-tirelines", "from": [ 0.7, -0.2, -1.5],  "to": [ 0.7, -1, -1.5]}},  {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "CNY71-tirelines", "from": [-0.7, -0.2,  1.25], "to": [-0.7, -1,  1.25]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "CNY71-tirelines", "from": [ 0.7, -0.2,  1.25], "to": [ 0.7, -1,  1.25]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [-0.7, -0.2, -1.5],  "to": [-0.7, -1, -1.5]}},  {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [ 0.7, -0.2, -1.5],  "to": [ 0.7, -1, -1.5]}},  {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [-0.7, -0.2,  1.25], "to": [-0.7, -1,  1.25]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [ 0.7, -0.2,  1.25], "to": [ 0.7, -1,  1.25]}}, {"comment": "right rear"},
 
   {
     "declare_macro": "load_CNY71_part",

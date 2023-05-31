@@ -21,7 +21,7 @@
   {
     "call": "obj_resource",
     "literals": {
-      "name": "M3-tirelines",
+      "name": "M3_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
@@ -35,11 +35,11 @@
       "transformation_mode": "all"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "M3-tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "literals": {"name": "M3-tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "M3-tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "M3-tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "M3-tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "M3_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
   {
     "declare_macro": "load_M3_part",
     "content": [
@@ -96,7 +96,9 @@
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "M3/M3_body$DECIMATE"}},
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "M3/M3_glass$DECIMATE"}},
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_interior$DECIMATE"}},
-      {"playback": "load_M3_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_wheel$DECIMATE"}}
+      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_body$DECIMATE", "M3/M3_glass$DECIMATE", "M3/M3_interior$DECIMATE"], "dest_name": "M3/chassis$DECIMATE"}},
+      {"playback": "load_M3_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_wheel$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel$DECIMATE"}}
     ]
   },
   {"playback": "load_M3", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},

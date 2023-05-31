@@ -1,6 +1,7 @@
 {
   "id": "XZ",
   "on_init": [
+    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
     {"include": "XZ_resource.scn.json"},
     {"include": "XZ_instance.scn.json"}
   ],

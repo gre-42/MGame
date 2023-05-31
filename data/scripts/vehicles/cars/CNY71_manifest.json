@@ -1,6 +1,7 @@
 {
   "id": "CNY71",
   "on_init": [
+    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
     {"include": "CNY71_resource.scn.json"},
     {"include": "CNY71_instance.scn.json"}
   ],

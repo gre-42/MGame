@@ -21,7 +21,7 @@
   {
     "call": "obj_resource",
     "literals": {
-      "name": "FN-tirelines",
+      "name": "FN_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
@@ -35,11 +35,11 @@
       "transformation_mode": "all"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "FN-tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "literals": {"name": "FN-tirelines", "from": [-0.8, -0.2, -1.35], "to": [-0.8, -1, -1.35]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "FN-tirelines", "from": [ 0.8, -0.2, -1.35], "to": [ 0.8, -1, -1.35]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "FN-tirelines", "from": [-0.8, -0.2,  1.20], "to": [-0.8, -1,  1.20]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "FN-tirelines", "from": [ 0.8, -0.2,  1.20], "to": [ 0.8, -1,  1.20]}}, {"comment": "right rear"},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "FN_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "literals": {"name": "FN_tirelines", "from": [-0.8, -0.2, -1.35], "to": [-0.8, -1, -1.35]}}, {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "FN_tirelines", "from": [ 0.8, -0.2, -1.35], "to": [ 0.8, -1, -1.35]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "FN_tirelines", "from": [-0.8, -0.2,  1.20], "to": [-0.8, -1,  1.20]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "FN_tirelines", "from": [ 0.8, -0.2,  1.20], "to": [ 0.8, -1,  1.20]}}, {"comment": "right rear"},
   {
     "declare_macro": "load_FN_part",
     "content": [
@@ -96,6 +96,7 @@
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "FN/FN_body$DECIMATE"}},
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "FN/FN_glass$DECIMATE"}},
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_interior$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["FN/FN_body$DECIMATE", "FN/FN_glass$DECIMATE", "FN/FN_interior$DECIMATE"], "dest_name": "FN/chassis$DECIMATE"}},
       {"playback": "load_FN_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_wheel$DECIMATE"}}
     ]
   },

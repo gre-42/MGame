@@ -1,143 +1,49 @@
 [
   {
-    "declare_macro": "create_CNY71_graphics",
-    "content": [
-      {"call": "renderable_instance", "literals": {"name": "CNY71_chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "CNY71/chassis$DECIMATE"}},
-      
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "CNY71/wheel$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "CNY71/wheel$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "CNY71/wheel$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "CNY71/wheel$DECIMATE"}}
-    ]
-  },
-  {
-    "declare_macro": "create_CNY71_lights",
-    "content": [
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_left_front$SUFFIX",  "position": [-0.5, 0, -22]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_right_front$SUFFIX", "position": [ 0.5, 0, -22]}},
-      {"call": "renderable_instance", "literals": {"name": "blob$SUFFIX", "node": "light_left_front$SUFFIX",  "resource": "car_light_beam"}},
-      {"call": "renderable_instance", "literals": {"name": "blob$SUFFIX", "node": "light_right_front$SUFFIX", "resource": "car_light_beam"}}
-    ]
-  },
-  {
-    "declare_macro": "create_CNY71_physics",
-    "content": [
-      {
-        "call": "rigid_cuboid",
-        "literals": {
-          "node": "car_node$SUFFIX",
-          "hitboxes": ["CNY71_hitbox", "CNY71-tirelines"],
-          "mass": "%MASS",
-          "size": [1.7, 0.6, 4.9],
-          "com": [0, -0.3, 0.05],
-          "collidable_mode": "%COLLIDABLE_MODE",
-          "name": "CNY71$SUFFIX"
-        }
-      },
-
-      {"comment": {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": [0, -0.2, -0.15]}}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
-
-      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",   "angular_vels": [-9000, -6000, -3000, 0, -1], "powers": [40, 400, 400, 40, 40], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 400}}},
-      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes", "angular_vels": [0], "powers": [0], "gear_ratios": [1], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
-
-      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 200}}},
-      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
-
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.58, -1.5  ], "radius": 0.3, "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.58, -1.5  ], "radius": 0.3, "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.58,  1.25 ], "radius": 0.3, "engine": "brakes", "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.58,  1.25 ], "radius": 0.3, "engine": "brakes", "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
-
-      {
-        "call": "create_car_controller",
-        "literals": {
-          "node": "car_node$SUFFIX",
-          "front_tire_ids": [0, 1],
-          "max_tire_angle": 30
-        }
-      }
-    ]
-  },
-  {
     "declare_macro": "create_CNY71",
     "content": [
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.48, -1.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.48, -1.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.48,  1.25]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.48,  1.25]}},
+      {
+        "playback": "generic_car.create",
+        "literals": {
+          "NAME": "CNY71",
+          "SUFFIX": "%SUFFIX",
+          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+          "DECIMATE": "%DECIMATE",
+          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+          "IF_RACING": "%IF_RACING",
+          "IF_RALLY": "%IF_RALLY",
 
-      {"comment": "renderable_instance name=CNY71_hitbox$SUFFIX node=car_node$NODE_SUFFIX resource=CNY71_hitbox"},
-      {"comment": "renderable_instance name=CNY71_massbox$SUFFIX node=car_node$NODE_SUFFIX resource=CNY71_massbox"},
-      {"comment": "renderable_instance name=CNY71_topdown_locator$SUFFIX node=car_node$NODE_SUFFIX resource=topdown_locator"},
+          "DECIMATE_SHADOW": "_d1",
+          "WHEEL_FRONT_RESOURCE": "CNY71/wheel",
+          "WHEEL_REAR_RESOURCE": "CNY71/wheel",
 
-      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX", "name": "wheel_right_rear_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_CNY71_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_CNY71_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_CNY71_lights", "literals": {"SUFFIX": "%SUFFIX"}},
+          "MASS": 2000,
+          "WHEEL_RADIUS": 0.3,
 
-      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_CNY71_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
-      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_CNY71_physics", "literals": {"IF_RACING": "%IF_RACING", "IF_RALLY": "%IF_RALLY", "SUFFIX": "%SUFFIX", "MASS": 2000,  "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+          "WHEEL_LEFT_FRONT_POSITION":  [-0.7, -0.48, -1.5 ],
+          "WHEEL_RIGHT_FRONT_POSITION": [ 0.7, -0.48, -1.5 ],
+          "WHEEL_LEFT_REAR_POSITION":   [-0.7, -0.48,  1.25],
+          "WHEEL_RIGHT_REAR_POSITION":  [ 0.7, -0.48,  1.25]
+        }
+      }
     ]
   },
   {
     "declare_macro": "create_player_car_externals_CNY71",
-    "content": [
-      {
-        "required": ["IF_PC"],
-        "playback": "create_car_key_bindings",
-        "literals": {
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-          "IF_MANUAL_AIM": false,
-          "IF_HAS_GUN": false,
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "ROLE": "driver"
-        }
-      },
-      {
-        "required": ["IF_PC"],
-        "playback": "create_car_cameras_sedan",
-        "literals": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
-        }
-      },
-      {
-        "required": ["IF_PC"],
-        "exclude": ["IF_ANDROID"],
-        "playback": "create_player_car_engine_rpm_meter",
-        "literals": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "ENGINE_NAME": "main"
-        }
-      },
-      {
-        "call": "player_set_vehicle_control_parameters",
-        "literals": {
-          "player": "%PLAYER_NAME",
-          "surface_power_forward": "inf",
-          "surface_power_backward": "-inf",
-          "max_tire_angle": 30,
-          "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
-        }
+    "content": {
+      "playback": "generic_car.create_player_car_externals",
+      "literals": {
+        "IF_PC": "%IF_PC",
+        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "SUFFIX": "%SUFFIX",
+
+        "CAMERA_CLASS": "sedan",
+        "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
       }
-    ]
-  },
-  {
-    "declare_macro": "add_attached_light_CNY71",
-    "content": [
-      {
-        "playback": "add_attached_light_sedan",
-        "literals": {
-          "LSUFFIX": "%LSUFFIX",
-          "CSUFFIX": "%CSUFFIX"
-        }
-      }
-    ]
+    }
   }
 ]

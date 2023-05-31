@@ -1,6 +1,7 @@
 {
   "id": "M3",
   "on_init": [
+    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
     {"include": "M3_resource.scn.json"},
     {"include": "M3_instance.scn.json"}
   ],

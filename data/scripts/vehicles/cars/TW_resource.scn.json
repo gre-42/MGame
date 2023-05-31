@@ -77,6 +77,7 @@
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":"car", "NAME": "TW/TW_body$DECIMATE", "POSITION_Y": 0.4}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":"car", "NAME": "TW/TW_glass$DECIMATE", "POSITION_Y": 0.4}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_interior$DECIMATE", "POSITION_Y": 0.4}},
+      {"call": "compound_resource", "literals": {"source_names": ["TW/TW_body$DECIMATE", "TW/TW_glass$DECIMATE", "TW/TW_interior$DECIMATE"], "dest_name": "TW/chassis$DECIMATE"}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_wheel_front$DECIMATE", "POSITION_Y": 0}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_wheel_rear$DECIMATE", "POSITION_Y": 0}}
     ]

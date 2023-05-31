@@ -1,6 +1,7 @@
 {
   "id": "DM74",
   "on_init": [
+    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
     {"include": "DM74_resource.scn.json"},
     {"include": "DM74_instance.scn.json"}
   ],
