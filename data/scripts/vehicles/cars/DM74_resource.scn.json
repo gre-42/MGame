@@ -113,7 +113,9 @@
         "declare_macro": "load-DM74",
         "content": [
             {"playback": "load_DM74_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
-            {"playback": "load_DM74_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",    "NAME": "wheel$DECIMATE"}}
+            {"playback": "load_DM74_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",    "NAME": "wheel$DECIMATE"}},
+            {"call": "compound_resource", "literals": {"source_names": ["DM74/wheel$DECIMATE"], "dest_name": "DM74/wheel_front$DECIMATE"}},
+            {"call": "compound_resource", "literals": {"source_names": ["DM74/wheel$DECIMATE"], "dest_name": "DM74/wheel_rear$DECIMATE"}}      
         ]
     },
     {"playback": "load-DM74", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",                           "DECIMATE": ""}},

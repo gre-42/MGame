@@ -96,7 +96,9 @@
       {"playback": "load_XZ_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "XZ/XZ_glass$DECIMATE"}},
       {"playback": "load_XZ_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "XZ/XZ_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_body$DECIMATE", "XZ/XZ_glass$DECIMATE", "XZ/XZ_interior$DECIMATE"], "dest_name": "XZ/chassis$DECIMATE"}},
-      {"playback": "load_XZ_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "XZ/XZ_wheel$DECIMATE"}}
+      {"playback": "load_XZ_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "XZ/XZ_wheel$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "XZ/wheel_front$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "XZ/wheel_rear$DECIMATE"}}
     ]
   },
   {"playback": "load-XZ", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},

@@ -121,7 +121,9 @@
     "declare_macro": "load-CNY71",
     "content": [
       {"playback": "load_CNY71_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
-      {"playback": "load_CNY71_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "wheel$DECIMATE"}}
+      {"playback": "load_CNY71_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "wheel$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["CNY71/wheel$DECIMATE"], "dest_name": "CNY71/wheel_front$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["CNY71/wheel$DECIMATE"], "dest_name": "CNY71/wheel_rear$DECIMATE"}}
     ]
   },
   {"playback": "load-CNY71", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},

@@ -4,10 +4,10 @@
     "content": [
       {"call": "renderable_instance", "literals": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/chassis$DECIMATE"}},
       
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$WHEEL_FRONT_RESOURCE$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$WHEEL_FRONT_RESOURCE$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$WHEEL_REAR_RESOURCE$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$WHEEL_REAR_RESOURCE$DECIMATE"}}
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}}
     ]
   },
   {
@@ -77,18 +77,14 @@
         "NAME": "%NAME",
         "NODE_SUFFIX": "%SUFFIX",
         "SUFFIX": "%SUFFIX",
-        "DECIMATE": "%DECIMATE",
-        "WHEEL_FRONT_RESOURCE": "%WHEEL_FRONT_RESOURCE",
-        "WHEEL_REAR_RESOURCE": "%WHEEL_REAR_RESOURCE"
+        "DECIMATE": "%DECIMATE"
         }
       },
       {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "literals": {
         "NAME": "%NAME",
         "NODE_SUFFIX": "%SUFFIX",
         "SUFFIX": "$DECIMATE_SHADOW$SUFFIX",
-        "DECIMATE": "%DECIMATE_SHADOW",
-        "WHEEL_FRONT_RESOURCE": "%WHEEL_FRONT_RESOURCE",
-        "WHEEL_REAR_RESOURCE": "%WHEEL_REAR_RESOURCE"
+        "DECIMATE": "%DECIMATE_SHADOW"
         }
       },
       {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights", "literals": {"NAME": "%NAME", "SUFFIX": "%SUFFIX"}},

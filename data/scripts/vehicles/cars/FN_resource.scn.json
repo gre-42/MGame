@@ -97,7 +97,9 @@
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "FN/FN_glass$DECIMATE"}},
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["FN/FN_body$DECIMATE", "FN/FN_glass$DECIMATE", "FN/FN_interior$DECIMATE"], "dest_name": "FN/chassis$DECIMATE"}},
-      {"playback": "load_FN_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_wheel$DECIMATE"}}
+      {"playback": "load_FN_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_wheel$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_front$DECIMATE"}},
+      {"call": "compound_resource", "literals": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_rear$DECIMATE"}}
     ]
   },
   {"playback": "load-FN", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},
