@@ -63,7 +63,7 @@
             {
                 "call": "obj_resource",
                 "literals": {
-                    "name": "DM74/$NAME",
+                    "name": "DM74_obj/$NAME",
                     "filename": "models/sketchfab.com/dodge-monaco-1974/$NAME.obj",
                     "position": [0, 0.2, 1],
                     "rotation": [0, 180, 0],
@@ -89,7 +89,7 @@
             {
                 "call": "obj_resource",
                 "literals": {
-                    "name": "DM74/$NAME",
+                    "name": "DM74_obj/$NAME",
                     "filename": "models/sketchfab.com/dodge-monaco-1974/$NAME.obj",
                     "position": [0, 0, 0],
                     "rotation": [0, 0, 0],
@@ -114,11 +114,12 @@
         "content": [
             {"playback": "load_DM74_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
             {"playback": "load_DM74_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",    "NAME": "wheel$DECIMATE"}},
-            {"call": "compound_resource", "literals": {"source_names": ["DM74/wheel$DECIMATE"], "dest_name": "DM74/wheel_front$DECIMATE"}},
-            {"call": "compound_resource", "literals": {"source_names": ["DM74/wheel$DECIMATE"], "dest_name": "DM74/wheel_rear$DECIMATE"}}      
+            {"call": "compound_resource", "literals": {"source_names": ["DM74_obj/chassis$DECIMATE"], "dest_name": "DM74/chassis$SUFFIX"}},
+            {"call": "compound_resource", "literals": {"source_names": ["DM74_obj/wheel$DECIMATE"], "dest_name": "DM74/wheel_front$SUFFIX"}},
+            {"call": "compound_resource", "literals": {"source_names": ["DM74_obj/wheel$DECIMATE"], "dest_name": "DM74/wheel_rear$SUFFIX"}}      
         ]
     },
-    {"playback": "load-DM74", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",                           "DECIMATE": ""}},
-    {"playback": "load-DM74", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",                           "DECIMATE": "_d3"}},
-    {"playback": "load-DM74", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1"}}
+    {"playback": "load-DM74", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",                           "DECIMATE": "", "SUFFIX": ""}},
+    {"playback": "load-DM74", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",                           "DECIMATE": "_d3", "SUFFIX": "_d3"}},
+    {"playback": "load-DM74", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
 ]

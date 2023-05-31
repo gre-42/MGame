@@ -83,8 +83,8 @@
       {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "literals": {
         "NAME": "%NAME",
         "NODE_SUFFIX": "%SUFFIX",
-        "SUFFIX": "$DECIMATE_SHADOW$SUFFIX",
-        "DECIMATE": "%DECIMATE_SHADOW"
+        "SUFFIX": "_lowres$SUFFIX",
+        "DECIMATE": "_lowres"
         }
       },
       {"required": ["IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights", "literals": {"NAME": "%NAME", "SUFFIX": "%SUFFIX"}},

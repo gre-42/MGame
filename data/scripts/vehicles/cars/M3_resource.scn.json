@@ -96,13 +96,13 @@
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "M3/M3_body$DECIMATE"}},
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "M3/M3_glass$DECIMATE"}},
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_interior$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_body$DECIMATE", "M3/M3_glass$DECIMATE", "M3/M3_interior$DECIMATE"], "dest_name": "M3/chassis$DECIMATE"}},
       {"playback": "load_M3_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_wheel$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_front$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_rear$DECIMATE"}}
+      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_body$DECIMATE", "M3/M3_glass$DECIMATE", "M3/M3_interior$DECIMATE"], "dest_name": "M3/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_front$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_rear$SUFFIX"}}
     ]
   },
-  {"playback": "load_M3", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": ""}},
-  {"playback": "load_M3", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3"}},
-  {"playback": "load_M3", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1"}}
+  {"playback": "load_M3", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
+  {"playback": "load_M3", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3", "SUFFIX": "_d3"}},
+  {"playback": "load_M3", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
 ]
