@@ -10,6 +10,6 @@
             "VEHICLE_SUFFIX": "_skating_mh1",
             "VEHICLE_CLASS": "skater"
         },
-        "required": ["IF_GAME_MODE_SKATING"]
+        "required": ["GAME_MODE=='SKATING'"]
     }
 }

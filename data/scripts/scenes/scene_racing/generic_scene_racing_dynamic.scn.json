@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "constant_parameter",
-      "literals": { "name": "IF_LOADED_GAME_MODE_RALLY", "value": "%IF_GAME_MODE_RALLY" }
+      "literals": { "name": "LOADED_GAME_MODE", "value": "%GAME_MODE" }
     },
     {
       "call": "constant_parameter",

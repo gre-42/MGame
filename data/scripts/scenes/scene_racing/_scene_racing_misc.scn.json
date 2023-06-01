@@ -100,7 +100,7 @@
         "call": "delete_scheduled_advance_times"
       },
       {
-        "required": ["IF_LOADED_GAME_MODE_RALLY"],
+        "required": ["LOADED_GAME_MODE=='RALLY'"],
         "call": "set_race_identifier_and_reload_history",
         "literals": {
           "level_id": "%LOADED_LEVEL_ID",
@@ -110,7 +110,7 @@
         }
       },
       {
-        "required": ["IF_LOADED_GAME_MODE_RALLY"],
+        "required": ["LOADED_GAME_MODE=='RALLY'"],
         "call": "start_race",
         "literals": {
           "readonly": false

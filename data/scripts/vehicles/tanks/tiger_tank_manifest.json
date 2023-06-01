@@ -10,6 +10,6 @@
       "VEHICLE_SUFFIX": "_tiger_tank",
       "VEHICLE_CLASS": "car"
     },
-    "required": ["IF_GAME_MODE_TD"]
+    "required": ["GAME_MODE=='TD'"]
   }
 }

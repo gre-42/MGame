@@ -8,5 +8,5 @@
     "LEVEL_ICON_FILE": "levels/race_track0/icon.png",
     "IF_RACEWAY_CIRCULAR": true
   },
-  "required": ["IF_GAME_MODE_RALLY"]
+  "required": ["GAME_MODE=='RALLY'"]
 }

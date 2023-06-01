@@ -11,6 +11,6 @@
       "VEHICLE_SUFFIX": "_CNY71",
       "VEHICLE_CLASS": "car"
     },
-    "required": ["IF_GAME_MODE_RALLY"]
+    "required": ["GAME_MODE=='RALLY'"]
   }
 }

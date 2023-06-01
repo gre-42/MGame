@@ -10,6 +10,6 @@
             "VEHICLE_SUFFIX": "_mh1",
             "VEHICLE_CLASS": "human"
         },
-        "required": ["IF_GAME_MODE_TD"]
+        "required": ["GAME_MODE=='TD'"]
     }
 }

@@ -11,5 +11,5 @@
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },
-  "required": ["IF_GAME_MODE_TD"]
+  "required": ["GAME_MODE=='TD'"]
 }
