@@ -50,7 +50,6 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlib.dll \
 			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
 			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
-			Mlib/$(platform_dir)/Bin/libMlibFps.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeography.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
@@ -71,6 +70,7 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibStbCpp.dll \
 			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
 			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
+			Mlib/$(platform_dir)/Bin/libMlibTime.dll \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/RecastBuild/Detour/libDetour.dll \
 			Mlib/RecastBuild/Recast/libRecast.dll \
