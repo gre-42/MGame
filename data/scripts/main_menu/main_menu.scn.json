@@ -145,9 +145,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Rally", "globals": {"GAME_MODE": "RALLY"}},
-            {"title": "Skating", "globals": {"GAME_MODE": "SKATING"}},
-            {"title": "Team deathmatch", "globals": {"GAME_MODE": "TD"}}
+            {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
+            {"title": "Skating", "globals": {"GAME_MODE": "skating"}},
+            {"title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
         }
       },
@@ -167,15 +167,15 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Rally", "globals": {"GAME_MODE": "RALLY"}},
-            {"title": "Team deathmatch", "globals": {"IF_GAME_MODE": "TD"}}
+            {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
+            {"title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
         }
       },
       {
         "call": "constant_parameter",
         "required": ["IF_ANDROID"],
-        "literals": { "name": "GAME_MODE", "value": "RALLY" }
+        "literals": { "name": "GAME_MODE", "value": "rally" }
       }
     ]
   },
@@ -359,7 +359,7 @@
           "id": "car_color_selector",
           "title": "Color",
           "icon": "car_color_selector_icon",
-          "required": ["GAME_MODE=='RALLY'"],
+          "required": ["GAME_MODE=='rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -393,7 +393,7 @@
           "id": "session_selector",
           "title": "Session",
           "icon": "session_selector_icon",
-          "required": ["GAME_MODE=='RALLY'"],
+          "required": ["GAME_MODE=='rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -417,7 +417,7 @@
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_selector_icon",
-          "required": ["GAME_MODE=='RALLY'", "IF_RACEWAY_CIRCULAR"],
+          "required": ["GAME_MODE=='rally'", "IF_RACEWAY_CIRCULAR"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -442,7 +442,7 @@
           "id": "playback_speed_selector",
           "title": "Playback speed",
           "icon": "missing_icon",
-          "required": ["GAME_MODE=='RALLY'"],
+          "required": ["GAME_MODE=='rally'"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
