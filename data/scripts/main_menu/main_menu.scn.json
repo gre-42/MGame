@@ -176,16 +176,6 @@
         "call": "constant_parameter",
         "required": ["IF_ANDROID"],
         "literals": { "name": "GAME_MODE", "value": "RALLY" }
-      },
-      {
-        "call": "constant_parameter",
-        "required": ["IF_ANDROID"],
-        "literals": { "name": "GAME_MODE", "value": "SKATING" }
-      },
-      {
-        "call": "constant_parameter",
-        "required": ["IF_ANDROID"],
-        "literals": { "name": "GAME_MODE", "value": "TD" }
       }
     ]
   },

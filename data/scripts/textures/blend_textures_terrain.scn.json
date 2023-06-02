@@ -37,15 +37,18 @@
     "playback": "generate_blend_maps_256",
     "literals": {
       "NAME": "Ground037_Rock028",
-      "TEXTURE": "#Ground037_Rock028"
-    }
+      "TEXTURE": "#Ground037_Rock028",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
+}
   },
   {
-    "exclude": ["IF_ANDROID"],
     "playback": "generate_blend_maps_256",
     "literals": {
       "NAME": "Ground037_island",
-      "TEXTURE": "#Ground037_island"
+      "TEXTURE": "#Ground037_island",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
     }
   },
   {
@@ -107,269 +110,62 @@
     }
   },
   {
-    "comment": "Ground037 Sl"
-  },
-  {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_256",
     "literals": {
-      "name": "Ground037_Sl_near",
-      "texture": "#Ground037_Sl",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 1,
-      "weight": 1
+      "NAME": "Ground037_Sl",
+      "TEXTURE": "#Ground037_Sl",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
     }
   },
   {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_512",
     "literals": {
-      "name": "Ground037_Sl_8",
-      "texture": "#Ground037_Sl",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, 200, 300],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.125,
-      "weight": 1
+      "NAME": "Rock028_200",
+      "TEXTURE": "#Rock028",
+      "NORMAL": [0, 1, 0],
+      "COSINE": [-1, -1, 0.8, 0.85]
     }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_Sl_64",
-      "texture": "#Ground037_Sl",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [200, 300, 1000, 1500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.015625,
-      "weight": 1
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground037_Sl_256",
-      "texture": "#Ground037_Sl",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.00390625,
-      "weight": 1
-    }
-  },
-  {
-    "comment": "Rock028"
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_200_8",
-      "texture": "#Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 300, 500],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "discreteness": 0,
-      "scale": 0.125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_200_128",
-      "texture": "#Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [300, 500, 1000, 1500],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "scale": 0.0078125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_200_512",
-      "texture": "#Rock028",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 1, 0],
-      "cosine": [-1, -1, 0.8, 0.85],
-      "scale": 0.001953125,
-      "weight": 5
-    }
-  },
-  {
-    "comment": "Rock028_029"
   },
   {
     "exclude": ["IF_ANDROID"],
     "playback": "generate_blend_maps_512",
     "literals": {
       "NAME": "Rock028_029_200",
-      "TEXTURE": "#Rock028_029"
-    }
-  },
-  {
-    "comment": "Rock028_gc2_mountain"
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_gc2_mountain_8",
-      "texture": "#Rock028_gc2_mountain",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 300, 500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "discreteness": 0,
-      "scale": 0.125,
-      "weight": 5
+      "TEXTURE": "#Rock028_029",
+      "NORMAL": [0, 1, 0],
+      "COSINE": [-1, -1, 0.8, 0.85]
     }
   },
   {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_512",
     "literals": {
-      "name": "Rock028_gc2_mountain_128",
-      "texture": "#Rock028_gc2_mountain",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [300, 500, 1000, 1500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.0078125,
-      "weight": 5
+      "NAME": "Rock028_gc2_mountain",
+      "TEXTURE": "#Rock028_gc2_mountain",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
     }
   },
   {
     "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_512",
     "literals": {
-      "name": "Rock028_gc2_mountain_512",
-      "texture": "#Rock028_gc2_mountain",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.001953125,
-      "weight": 5
+      "NAME": "Rock028_Dune",
+      "TEXTURE": "#Rock028_Dune",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
     }
   },
   {
-    "comment": "Rock028_Dune"
-  },
-  {
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_512",
     "literals": {
-      "name": "Rock028_Dune_8",
-      "texture": "#Rock028_Dune",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 300, 500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "discreteness": 0,
-      "scale": 0.125,
-      "weight": 5
-    }
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_Dune_128",
-      "texture": "#Rock028_Dune",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [300, 500, 1000, 1500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.0078125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_Dune_512",
-      "texture": "#Rock028_Dune",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.001953125,
-      "weight": 5
-    }
-  },
-  {
-    "comment": "Rock028_Snow"
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_Snow_8",
-      "texture": "#Rock028_Snow",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 300, 500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "discreteness": 0,
-      "scale": 0.125,
-      "weight": 5
-    }
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_Snow_128",
-      "texture": "#Rock028_Snow",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [300, 500, 1000, 1500],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.0078125,
-      "weight": 5
-    }
-  },
-  {
-    "exclude": ["IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Rock028_Snow_512",
-      "texture": "#Rock028_Snow",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [1000, 1500, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.001953125,
-      "weight": 5
+      "NAME": "Rock028_Snow",
+      "TEXTURE": "#Rock028_Snow",
+      "NORMAL": [0, 0, 0],
+      "COSINE": [-1, -1, 1, 1]
     }
   },
   {

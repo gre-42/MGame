@@ -9,8 +9,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, 15, 25],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 1,
         "weight": 1
       }
@@ -23,8 +23,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [15, 25, "inf", "inf"],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.125,
         "weight": 1
       }
@@ -37,8 +37,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [15, 25, 200, 300],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.125,
         "weight": 1
       }
@@ -51,8 +51,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [200, 300, 1000, 1500],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.015625,
         "weight": 1
       }
@@ -65,8 +65,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [1000, 1500, "inf", "inf"],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.00390625,
         "weight": 1
       }

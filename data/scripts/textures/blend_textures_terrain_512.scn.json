@@ -10,15 +10,14 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, 300, 500],
-        "normal": [0, 1, 0],
-        "cosine": [-1, -1, 0.8, 0.85],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "discreteness": 0,
         "scale": 0.125,
         "weight": 5
       }
     },
     {
-      "exclude": ["IF_ANDROID"],
       "call": "add_blend_map_texture",
       "literals": {
         "name": "$NAME-_128",
@@ -26,8 +25,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [300, 500, 1000, 1500],
-        "normal": [0, 1, 0],
-        "cosine": [-1, -1, 0.8, 0.85],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.0078125,
         "weight": 5
       }
@@ -41,8 +40,8 @@
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [1000, 1500, "inf", "inf"],
-        "normal": [0, 1, 0],
-        "cosine": [-1, -1, 0.8, 0.85],
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
         "scale": 0.001953125,
         "weight": 5
       }
