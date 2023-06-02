@@ -1,29 +1,27 @@
 [
   {
     "declare_macro": "create_XZ",
-    "content": [
-      {
-        "playback": "generic_car.create",
-        "literals": {
-          "NAME": "XZ",
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "DECIMATE": "%DECIMATE",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
+    "content": {
+      "playback": "generic_car.create",
+      "literals": {
+        "NAME": "XZ",
+        "SUFFIX": "%SUFFIX",
+        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+        "DECIMATE": "%DECIMATE",
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
 
-          "MASS": 2000,
-          "WHEEL_RADIUS": 0.33,
+        "MASS": 2000,
+        "WHEEL_RADIUS": 0.33,
 
-          "WHEEL_LEFT_FRONT_POSITION":  [-0.8, -0.35, -1.35],
-          "WHEEL_RIGHT_FRONT_POSITION": [ 0.8, -0.35, -1.35],
-          "WHEEL_LEFT_REAR_POSITION":   [-0.8, -0.35,  1.37],
-          "WHEEL_RIGHT_REAR_POSITION":  [ 0.8, -0.35,  1.37]
-        }
+        "WHEEL_LEFT_FRONT_POSITION":  [-0.8, -0.35, -1.35],
+        "WHEEL_RIGHT_FRONT_POSITION": [ 0.8, -0.35, -1.35],
+        "WHEEL_LEFT_REAR_POSITION":   [-0.8, -0.35,  1.37],
+        "WHEEL_RIGHT_REAR_POSITION":  [ 0.8, -0.35,  1.37]
       }
-    ]
+    }
   },
   {
     "declare_macro": "create_player_car_externals_XZ",
