@@ -1,15 +1,13 @@
 {
   "id": "LK4",
-  "on_init": [
-    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
-    {"include": "LK4_resource.scn.json"},
-    {"include": "LK4_instance.scn.json"}
-  ],
+  "on_init": {"include": "LK4.scn.json"},
   "params": {
     "title": "LK4",
     "globals": {
       "VEHICLE_SUFFIX": "_LK4",
-      "VEHICLE_CLASS": "car"
+      "VEHICLE_CLASS": "car",
+      "TRAILER_HITCH_POSITION_FEMALE": null,
+      "TRAILER_HITCH_POSITION_MALE": [0, 0, 2]
     },
     "required": ["GAME_MODE=='rally'"]
   }

@@ -50,6 +50,11 @@
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_POSITION",  "radius": "%WHEEL_RADIUS", "engine": "brakes", "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
 
       {
+        "call": "set_trailer_hitch_positions",
+        "literals": {"rigid_body": "car_node$SUFFIX", "asset_id": "%NAME"}
+      },
+
+      {
         "call": "create_car_controller",
         "literals": {
           "node": "car_node$SUFFIX",

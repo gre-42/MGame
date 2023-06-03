@@ -75,7 +75,7 @@
       {
         "call": "delete_root_nodes",
         "literals": {
-          "regex": "^(car|human|skater)_node$"
+          "regex": "^(car|human|skater)_node(_trailer)?$"
         }
       },
       {

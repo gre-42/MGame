@@ -1,10 +1,6 @@
 {
   "id": "FN",
-  "on_init": [
-    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
-    {"include": "FN_resource.scn.json"},
-    {"include": "FN_instance.scn.json"}
-  ],
+  "on_init": {"include": "FN.scn.json"},
   "params": {
     "title": "FN",
     "globals": {

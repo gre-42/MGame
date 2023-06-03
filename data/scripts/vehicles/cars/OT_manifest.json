@@ -1,10 +1,6 @@
 {
   "id": "OT",
-  "on_init": [
-    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
-    {"include": "OT_resource.scn.json"},
-    {"include": "OT_instance.scn.json"}
-  ],
+  "on_init": {"include": "OT.scn.json"},
   "params": {
     "title": "OT",
     "globals": {

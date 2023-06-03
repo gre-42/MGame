@@ -1,10 +1,6 @@
 {
   "id": "M3",
-  "on_init": [
-    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
-    {"include": "M3_resource.scn.json"},
-    {"include": "M3_instance.scn.json"}
-  ],
+  "on_init": {"include": "M3.scn.json"},
   "params": {
     "title": "M3",
     "globals": {

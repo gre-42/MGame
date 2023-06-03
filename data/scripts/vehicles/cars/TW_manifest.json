@@ -1,10 +1,6 @@
 {
   "id": "TW",
-  "on_init": [
-    {"include": "scripts/vehicles/cars/create_generic_car_instance.scn.json"},
-    {"include": "TW_resource.scn.json"},
-    {"include": "TW_instance.scn.json"}
-  ],
+  "on_init": {"include": "TW.scn.json"},
   "params": {
     "title": "TW",
     "globals": {
