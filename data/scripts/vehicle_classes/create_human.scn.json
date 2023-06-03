@@ -54,9 +54,9 @@
       },
       {
         "required": ["IF_SPAWNER"],
-        "call": "spawner_set_node",
+        "call": "spawner_set_nodes",
         "literals": {
-          "node": "human_node$SUFFIX",
+          "regex": "^human_node$SUFFIX$",
           "spawner": "%SPAWNER_NAME"
         }
       },

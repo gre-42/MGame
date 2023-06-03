@@ -48,9 +48,9 @@
       },
       {
         "required": ["IF_PLAYER"],
-        "call": "spawner_set_node",
+        "call": "spawner_set_nodes",
         "literals": {
-          "node": "skater_node$SUFFIX",
+          "regex": "^skater_node$SUFFIX$",
           "spawner": "%PLAYER_NAME"
         }
       },

@@ -59,9 +59,9 @@
       },
       {
         "required": ["IF_SPAWNER"],
-        "call": "spawner_set_node",
+        "call": "spawner_set_nodes",
         "literals": {
-          "node": "car_node$SUFFIX",
+          "regex": "^car_node.*$SUFFIX$",
           "spawner": "%SPAWNER_NAME"
         }
       },
