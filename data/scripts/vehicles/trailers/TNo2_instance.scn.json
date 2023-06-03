@@ -1,0 +1,46 @@
+[
+  {
+    "declare_macro": "create_TNo2",
+    "content": {
+      "playback": "generic_car.create",
+      "literals": {
+        "NAME": "TNo2",
+        "SUFFIX": "%SUFFIX",
+        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+        "DECIMATE": "%DECIMATE",
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+
+        "SIZE": [1, 1, 1],
+        "COM": [0, 0, 0],
+
+        "MASS": 2000,
+        "WHEEL_RADIUS": 0.3,
+
+        "WHEEL_LEFT_FRONT_POSITION":  [-0.7, -0.48, -1.5 ],
+        "WHEEL_RIGHT_FRONT_POSITION": [ 0.7, -0.48, -1.5 ],
+        "WHEEL_LEFT_REAR_POSITION":   [-0.7, -0.48,  1.25],
+        "WHEEL_RIGHT_REAR_POSITION":  [ 0.7, -0.48,  1.25]
+      }
+    }
+  },
+  {
+    "declare_macro": "create_player_car_externals_TNo2",
+    "content": {
+      "playback": "generic_car.create_player_car_externals",
+      "literals": {
+        "IF_PC": "%IF_PC",
+        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+        "IF_RACING": "%IF_RACING",
+        "IF_RALLY": "%IF_RALLY",
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "SUFFIX": "%SUFFIX",
+
+        "CAMERA_CLASS": "sedan",
+        "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
+      }
+    }
+  }
+]

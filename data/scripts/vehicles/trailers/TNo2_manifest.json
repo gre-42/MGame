@@ -1,0 +1,14 @@
+{
+  "id": "TNo2",
+  "on_init": {"include": "TNo2.scn.json"},
+  "params": {
+    "title": "Trailer No 2",
+    "globals": {
+      "VEHICLE_SUFFIX": "_TNo2",
+      "VEHICLE_CLASS": "car",
+      "TRAILER_HITCH_POSITION_FEMALE": [0, 0, -3],
+      "TRAILER_HITCH_POSITION_MALE": null
+    },
+    "required": ["GAME_MODE=='never'"]
+  }
+}
