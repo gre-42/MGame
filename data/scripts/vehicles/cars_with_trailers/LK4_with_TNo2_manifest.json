@@ -5,10 +5,8 @@
     "title": "LK4 with trailer No 2",
     "globals": {
       "VEHICLE_SUFFIX": "_LK4_with_TNo2",
-      "VEHICLE_CLASS": "car",
-      "TRAILER_HITCH_POSITION_FEMALE": [0, 0, -3],
-      "TRAILER_HITCH_POSITION_MALE": null
+      "VEHICLE_CLASS": "car"
     },
-    "required": ["GAME_MODE=='transport'"]
+    "required": ["GAME_MODE=='rally'"]
   }
 }

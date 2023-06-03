@@ -1,71 +1,5 @@
 [
   {
-    "call": "obj_resource",
-    "literals": {
-      "name": "TNo2_hitbox",
-      "filename": "models/primitives/box.obj",
-      "position": [0, 0, 0.05],
-      "rotation": [0, 0, 0],
-      "scale": [0.85, 0.45, 2.4],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
-    }
-  },
-
-  {
-    "call": "obj_resource",
-    "literals": {
-      "name": "TNo2_massbox",
-      "filename": "models/primitives/box.obj",
-      "position": [0, -0.3, 0.05],
-      "rotation": [0, 0, 0],
-      "scale": [0.85, 0.3, 2.45],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
-    }
-  },
-
-  {"call": "gen_triangle_rays", "literals": {"name": "TNo2_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
-
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_hitbox", "add": "obj_chassis"}},
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_hitbox", "add": "attr_convex"}},
-
-  {
-    "call": "obj_resource",
-    "literals": {
-      "name": "TNo2_tirelines",
-      "filename": "models/primitives/empty.obj",
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
-    }
-  },
-
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
-
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-0.7, -0.2, -1.5],  "to": [-0.7, -1, -1.5]}},  {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 0.7, -0.2, -1.5],  "to": [ 0.7, -1, -1.5]}},  {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-0.7, -0.2,  1.25], "to": [-0.7, -1,  1.25]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 0.7, -0.2,  1.25], "to": [ 0.7, -1,  1.25]}}, {"comment": "right rear"},
-
-  {
     "declare_macro": "load_TNo2_part",
     "content": [
       {
@@ -73,8 +7,8 @@
         "literals": {
           "name": "TNo2_obj/$NAME",
           "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
-          "position": [-0.275, -0.75, -1.1],
-          "rotation": [0, -90, 0],
+          "position": [0, 0, 0],
+          "rotation": [0, 90, 0],
           "scale": [1, 1, 1],
           "center_distances": ["%DIST_MIN", "%DIST_MAX"],
           "blend_mode": "continuous",
@@ -92,6 +26,73 @@
     ]
   },
   {
+    "declare_macro": "load_TNo2_hitbox_part",
+    "content": [
+      {
+        "playback": "load_TNo2_part",
+        "literals": {
+          "NAME": "%NAME",
+          "DIST_MIN": 0,
+          "DIST_MAX": "inf",
+          "OCCLUDER_PASS": "none",
+          "REFLECTION_MAP": ""
+        }
+      },
+      {"call": "gen_triangle_rays", "literals": {"name": "TNo2_obj/$NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+      {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_obj/$NAME", "add": "obj_chassis|attr_convex"}}  
+    ]
+  },
+  {"comment": {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_front"}}},
+  {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_rear"}},
+
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "TNo2_massbox",
+      "filename": "models/primitives/box.obj",
+      "position": [0, 1.3, 0.3],
+      "rotation": [0, 0, 0],
+      "scale": [1.1, 1.3, 3.5],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "TNo2_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "physics_material": "attr_collide"
+    }
+  },
+
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
+
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 2  ], "to": [-1, -0.5, 2  ]}}, {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 2  ], "to": [ 1, -0.5, 2  ]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 2.5], "to": [-1, -0.5, 2.5]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 2.5], "to": [ 1, -0.5, 2.5]}}, {"comment": "right rear"},
+
+  {"comment": {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}}},
+  {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
+
+  {
     "declare_macro": "load_TNo2_wheel",
     "content": [
       {
@@ -100,7 +101,7 @@
           "name": "TNo2_obj/$NAME",
           "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
           "position": [0, 0, 0],
-          "rotation": [0, -90, 0],
+          "rotation": [0, 90, 0],
           "scale": [1, 1, 1],
           "center_distances": ["%DIST_MIN", "%DIST_MAX"],
           "blend_mode": "continuous",

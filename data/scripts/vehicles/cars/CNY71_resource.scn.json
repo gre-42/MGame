@@ -54,7 +54,8 @@
       "occluded_pass": "none",
       "occluder_pass": "none",
       "aggregate_mode": "none",
-      "transformation_mode": "all"
+      "transformation_mode": "all",
+      "physics_material": "attr_collide"
     }
   },
 
@@ -64,6 +65,8 @@
   {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [ 0.7, -0.2, -1.5],  "to": [ 0.7, -1, -1.5]}},  {"comment": "right front"},
   {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [-0.7, -0.2,  1.25], "to": [-0.7, -1,  1.25]}}, {"comment": "left rear"},
   {"call": "gen_ray", "literals": {"name": "CNY71_tirelines", "from": [ 0.7, -0.2,  1.25], "to": [ 0.7, -1,  1.25]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "literals": {"source_names": ["CNY71_hitbox", "CNY71_tirelines"], "dest_name": "CNY71_hitboxes"}},
 
   {
     "declare_macro": "load_CNY71_part",

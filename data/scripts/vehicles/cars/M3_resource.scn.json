@@ -32,7 +32,8 @@
       "occluded_pass": "none",
       "occluder_pass": "none",
       "aggregate_mode": "none",
-      "transformation_mode": "all"
+      "transformation_mode": "all",
+      "physics_material": "attr_collide"
     }
   },
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "M3_tirelines", "add": "obj_tire_line"}},
@@ -40,6 +41,9 @@
   {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
   {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
   {"call": "gen_ray", "literals": {"name": "M3_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "literals": {"source_names": ["M3_hitbox", "M3_tirelines"], "dest_name": "M3_hitboxes"}},
+
   {
     "declare_macro": "load_M3_part",
     "content": [

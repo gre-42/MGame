@@ -33,6 +33,13 @@
           "IF_RACING": "%IF_RACING",
           "IF_RALLY": "%IF_RALLY"
         }
+      },
+      {
+        "call": "connect_trailer",
+        "literals": {
+          "car": "car_node$SUFFIX",
+          "trailer": "car_node_trailer$SUFFIX"
+        }
       }
     ]
   },

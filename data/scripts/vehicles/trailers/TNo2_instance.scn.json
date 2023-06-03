@@ -13,16 +13,16 @@
         "IF_RACING": "%IF_RACING",
         "IF_RALLY": "%IF_RALLY",
 
-        "SIZE": [1, 1, 1],
-        "COM": [0, 0, 0],
+        "SIZE": [2.2, 2.6, 7],
+        "COM": [0, 1.3, 4],
 
         "MASS": 2000,
         "WHEEL_RADIUS": 0.3,
 
-        "WHEEL_LEFT_FRONT_POSITION":  [-0.7, -0.48, -1.5 ],
-        "WHEEL_RIGHT_FRONT_POSITION": [ 0.7, -0.48, -1.5 ],
-        "WHEEL_LEFT_REAR_POSITION":   [-0.7, -0.48,  1.25],
-        "WHEEL_RIGHT_REAR_POSITION":  [ 0.7, -0.48,  1.25]
+        "WHEEL_LEFT_FRONT_POSITION":  [-1, 0.3, 2.5],
+        "WHEEL_RIGHT_FRONT_POSITION": [ 1, 0.3, 2.5],
+        "WHEEL_LEFT_REAR_POSITION":   [-1, 0.3, 3],
+        "WHEEL_RIGHT_REAR_POSITION":  [ 1, 0.3, 3]
       }
     }
   },

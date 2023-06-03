@@ -35,7 +35,8 @@
       "occluded_pass": "none",
       "occluder_pass": "none",
       "aggregate_mode": "none",
-      "transformation_mode": "all"
+      "transformation_mode": "all",
+      "physics_material": "attr_collide"
     }
   },
 
@@ -45,6 +46,8 @@
   {"call": "gen_ray", "literals": {"name": "LK4_tirelines", "from": [ 0.8, -0.2,  1.20], "to": [ 0.8, -1.07,  1.20]}}, {"comment": "right rear"},
 
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "LK4_tirelines", "add": "obj_tire_line"}},
+
+  {"call": "compound_resource", "literals": {"source_names": ["LK4_hitbox", "LK4_tirelines"], "dest_name": "LK4_hitboxes"}},
 
   {
     "declare_macro": "load-LK4-part",

@@ -52,28 +52,33 @@
     },
     {
       "required": ["IF_HAS_OVERLAY"],
-      "call": "rigid_cuboid",
+      "call": "compound_resource",
       "literals": {
-        "node": "osm_map_node",
-        "hitboxes": [
+        "source_names": [
           "osm_map",
           "osm_map_grind_lines",
           "osm_map_overlay",
-          "osm_map_overlay_grind_lines"],
-        "mass": "inf",
-        "size": [1, 2, 3],
-        "collidable_mode": "static",
-        "name": "osm_map"
+          "osm_map_overlay_grind_lines"
+        ],
+        "dest_name": "osm_map_hitboxes"
       }
     },
     {
       "exclude": ["IF_HAS_OVERLAY"],
+      "call": "compound_resource",
+      "literals": {
+        "source_names": [
+          "osm_map",
+          "osm_map_grind_lines"
+        ],
+        "dest_name": "osm_map_hitboxes"
+      }
+    },
+    {
       "call": "rigid_cuboid",
       "literals": {
         "node": "osm_map_node",
-        "hitboxes": [
-          "osm_map",
-          "osm_map_grind_lines"],
+        "hitboxes": "osm_map_hitboxes",
         "mass": "inf",
         "size": [1, 2, 3],
         "collidable_mode": "static",

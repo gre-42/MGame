@@ -26,7 +26,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": ["$NAME-_hitbox", "$NAME-_tirelines"],
+          "hitboxes": "$NAME-_hitboxes",
           "mass": "%MASS",
           "size": "%SIZE",
           "com": "%COM",
@@ -72,7 +72,7 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_POSITION"}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_POSITION"}},
 
-      {"comment": "renderable_instance name=generic_car_hitbox$SUFFIX node=car_node$NODE_SUFFIX resource=$NAME-_hitbox"},
+      {"comment": {"call": "renderable_instance", "literals": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
       {"comment": "renderable_instance name=generic_car_massbox$SUFFIX node=car_node$NODE_SUFFIX resource=$NAME-_massbox"},
       {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$NODE_SUFFIX resource=topdown_locator"},
 

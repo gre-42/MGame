@@ -32,7 +32,8 @@
       "occluded_pass": "none",
       "occluder_pass": "none",
       "aggregate_mode": "none",
-      "transformation_mode": "all"
+      "transformation_mode": "all",
+      "physics_material": "attr_collide"
     }
   },
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "OT_tirelines", "add": "obj_tire_line"}},
@@ -40,6 +41,9 @@
   {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2, -1.2], "to": [ 0.8, -0.7, -1.2]}}, {"comment": "right front"},
   {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [-0.8, 0.2,  2.6], "to": [-0.8, -0.7,  2.6]}}, {"comment": "left rear"},
   {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2,  2.6], "to": [ 0.8, -0.7,  2.6]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "literals": {"source_names": ["OT_hitbox", "OT_tirelines"], "dest_name": "OT_hitboxes"}},
+
   {
     "declare_macro": "load_OT_part",
     "content": [
