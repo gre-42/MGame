@@ -5,7 +5,9 @@
     "title": "TW",
     "globals": {
       "VEHICLE_SUFFIX": "_TW",
-      "VEHICLE_CLASS": "car"
+      "VEHICLE_CLASS": "car",
+      "TRAILER_HITCH_POSITION_FEMALE": null,
+      "TRAILER_HITCH_POSITION_MALE": null
     },
     "required": ["GAME_MODE=='rally'"]
   }

@@ -28,8 +28,8 @@
           "node": "car_node$SUFFIX",
           "hitboxes": ["$NAME-_hitbox", "$NAME-_tirelines"],
           "mass": "%MASS",
-          "size": [1.7, 0.6, 4.9],
-          "com": [0, -0.3, 0.05],
+          "size": "%SIZE",
+          "com": "%COM",
           "collidable_mode": "%COLLIDABLE_MODE",
           "name": "generic_car$SUFFIX"
         }
@@ -99,6 +99,8 @@
         "IF_RACING": "%IF_RACING",
         "IF_RALLY": "%IF_RALLY",
         "SUFFIX": "%SUFFIX",
+        "SIZE": "%SIZE",
+        "COM": "%COM",
         "MASS": "%MASS",
         "WHEEL_RADIUS": "%WHEEL_RADIUS",
         "COLLIDABLE_MODE": "moving",
