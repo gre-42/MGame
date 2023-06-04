@@ -69,17 +69,13 @@
               "PLAYER_NAME": "%PLAYER_NAME",
               "SKATER_NAME": "%SKATER_NAME",
               "SUFFIX": "%SUFFIX",
-              "IF_RACING": "%IF_RACING",
-              "IF_RALLY": "%IF_RALLY",
               "IF_PC": "%IF_PC"
             }
           },
           "spawner": "%SPAWNER_NAME",
           "capture": {
             "SKATER_NAME": "%SKATER_NAME",
-            "SUFFIX": "%SUFFIX",
-            "IF_RACING": "%IF_RACING",
-            "IF_RALLY": "%IF_RALLY"
+            "SUFFIX": "%SUFFIX"
           }
         }
       },
@@ -106,8 +102,6 @@
         "literals": {
           "NAME": "%SKATER_NAME",
           "SUFFIX": "%SUFFIX",
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
           "PLAYER_NAME": "%PLAYER_NAME",
           "IF_PC": "%IF_PC"
         }

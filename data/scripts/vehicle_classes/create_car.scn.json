@@ -28,8 +28,6 @@
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
           "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
           "IF_STATIC": "%IF_STATIC",
           "IF_DYNAMIC": "%IF_DYNAMIC",
           "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
@@ -97,8 +95,6 @@
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "CAR_NAME": "%CAR_NAME",
-              "IF_RACING": "%IF_RACING",
-              "IF_RALLY": "%IF_RALLY",
               "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
               "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
               "IF_PC": "%IF_PC"
@@ -107,9 +103,7 @@
           "spawner": "%SPAWNER_NAME",
           "capture": {
             "SUFFIX": "%SUFFIX",
-            "CAR_NAME": "%CAR_NAME",
-            "IF_RACING": "%IF_RACING",
-            "IF_RALLY": "%IF_RALLY"
+            "CAR_NAME": "%CAR_NAME"
           }
         }
       },
@@ -135,8 +129,6 @@
         "playback": "create_player_car_externals_$CAR_NAME",
         "literals": {
           "SUFFIX": "%SUFFIX",
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
           "SPAWNER_NAME": "%SPAWNER_NAME",

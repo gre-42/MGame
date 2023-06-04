@@ -38,11 +38,8 @@
       {"comment": {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": "%COM"}}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
 
-      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",   "angular_vels": [-9000, -6000, -3000, 0, -1], "powers": [40, 400, 400, 40, 40], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 400}}},
-      {"required": ["IF_RACING"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes", "angular_vels": [0], "powers": [0], "gear_ratios": [1], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
-
-      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 200}}},
-      {"required": ["IF_RALLY"], "call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes",  "angular_vels": [-6000, -4200, -3000, 0, -1], "powers": [20, 200, 200, 20, 20], "gear_ratios": [0.75, 1.5, 3, 6, 9, -9], "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
+      {"call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "main",   "angular_vels": "%ANGULAR_VELS_FRONT", "powers": "%POWERS_FRONT", "gear_ratios": "%GEAR_RATIOS", "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED", "audio": {"name": "car", "p_idle": 90, "p_reference": 200}}},
+      {"call": "create_engine", "literals": {"rigid_body": "car_node$SUFFIX", "name": "brakes", "angular_vels": "%ANGULAR_VELS_REAR",  "powers": "%POWERS_REAR",  "gear_ratios": "%GEAR_RATIOS", "w_clutch": 800, "max_dw": 2000, "hand_brake_pulled": "%HAND_BRAKE_PULLED"}},
 
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_POSITION",  "radius": "%WHEEL_RADIUS", "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
       {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_POSITION", "radius": "%WHEEL_RADIUS", "engine": "main"  , "brake_force": 50000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
@@ -96,8 +93,6 @@
 
       {"required": ["IF_WITH_PHYSICS"], "playback": "generic_car.create_physics", "literals": {
         "NAME": "%NAME",
-        "IF_RACING": "%IF_RACING",
-        "IF_RALLY": "%IF_RALLY",
         "SUFFIX": "%SUFFIX",
         "SIZE": "%SIZE",
         "COM": "%COM",
@@ -108,7 +103,12 @@
         "WHEEL_LEFT_FRONT_POSITION": "%WHEEL_LEFT_FRONT_POSITION",
         "WHEEL_RIGHT_FRONT_POSITION": "%WHEEL_RIGHT_FRONT_POSITION",
         "WHEEL_LEFT_REAR_POSITION": "%WHEEL_LEFT_REAR_POSITION",
-        "WHEEL_RIGHT_REAR_POSITION": "%WHEEL_RIGHT_REAR_POSITION"
+        "WHEEL_RIGHT_REAR_POSITION": "%WHEEL_RIGHT_REAR_POSITION",
+        "ANGULAR_VELS_FRONT": "%ANGULAR_VELS_FRONT",
+        "ANGULAR_VELS_REAR": "%ANGULAR_VELS_REAR",
+        "POWERS_FRONT": "%POWERS_FRONT",
+        "POWERS_REAR": "%POWERS_REAR",
+        "GEAR_RATIOS": "%GEAR_RATIOS"
         }
       }
     ]
@@ -120,8 +120,6 @@
         "required": ["IF_PC"],
         "playback": "create_car_key_bindings",
         "literals": {
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": false,
           "IF_HAS_GUN": false,

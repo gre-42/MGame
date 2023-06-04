@@ -75,8 +75,6 @@
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "HUMAN_NAME": "%HUMAN_NAME",
-              "IF_RACING": "%IF_RACING",
-              "IF_RALLY": "%IF_RALLY",
               "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
               "IF_MANUAL_SHOOT": "%IF_MANUAL_SHOOT",
               "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
@@ -88,8 +86,6 @@
           "capture": {
             "SUFFIX": "%SUFFIX",
             "HUMAN_NAME": "%HUMAN_NAME",
-            "IF_RACING": "%IF_RACING",
-            "IF_RALLY": "%IF_RALLY",
             "IF_WITH_GUN": "%IF_WITH_GUN"
           }
         }
@@ -114,8 +110,6 @@
         "playback": "create_player_human_externals_$HUMAN_NAME",
         "literals": {
           "SUFFIX": "%SUFFIX",
-          "IF_RACING": "%IF_RACING",
-          "IF_RALLY": "%IF_RALLY",
           "IF_WITH_GUN": "%IF_WITH_GUN",
           "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
