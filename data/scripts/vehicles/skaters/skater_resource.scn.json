@@ -39,6 +39,9 @@
     {"call": "modify_physics_material_tags", "literals": {"resource_name": "skater_grind_contacts", "add": "obj_grind_contact"}},
     {"call": "gen_contour_edges", "literals": {"source_name": "skater_grind_contacts", "dest_name": "skater_alignment_contacts"}},
     {"call": "modify_physics_material_tags","literals": {"resource_name": "skater_alignment_contacts", "add": "obj_alignment_contact"}},
+    {"call": "compound_resource", "literals": {
+        "source_names": ["skater_hitbox", "skater_tirelines", "skater_grind_contacts", "skater_alignment_contacts"],
+        "dest_name": "skater_hitboxes"}},
     {
         "call": "obj_resource",
         "literals": {

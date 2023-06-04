@@ -8,7 +8,9 @@
         "title": "Skating MH1",
         "globals": {
             "VEHICLE_SUFFIX": "skating_mh1",
-            "VEHICLE_CLASS": "skater"
+            "VEHICLE_CLASS": "skater",
+            "NODE_PREFIXES": ["skater_node"],
+            "MAX_TIRE_ANGLE": null
         },
         "required": ["GAME_MODE=='skating'"]
     }

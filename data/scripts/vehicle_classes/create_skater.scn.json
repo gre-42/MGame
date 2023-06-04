@@ -33,7 +33,7 @@
         }
       },
       {
-        "playback": "create$SKATER_NAME",
+        "playback": "create_$SKATER_NAME",
         "literals": {
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
@@ -102,8 +102,9 @@
     "declare_macro": "create_player_skater_externals",
     "content": [
       {
-        "playback": "create_player_skater_externals$SKATER_NAME",
+        "playback": "create_player_skater_externals_$SKATER_NAME",
         "literals": {
+          "NAME": "%SKATER_NAME",
           "SUFFIX": "%SUFFIX",
           "IF_RACING": "%IF_RACING",
           "IF_RALLY": "%IF_RALLY",

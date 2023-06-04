@@ -59,7 +59,7 @@
         "literals": {
           "node": "car_node$SUFFIX",
           "front_tire_ids": [0, 1],
-          "max_tire_angle": 30
+          "asset_id": "%NAME"
         }
       }
     ]
@@ -152,9 +152,9 @@
         "call": "player_set_vehicle_control_parameters",
         "literals": {
           "player": "%PLAYER_NAME",
+          "asset_id": "%ASSET_ID",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": 30,
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }

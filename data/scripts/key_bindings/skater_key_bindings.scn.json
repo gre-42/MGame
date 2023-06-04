@@ -15,6 +15,7 @@
       "literals": {
         "id": "skater.rotate_left",
         "role": "%ROLE",
+        "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": 3,
@@ -27,6 +28,7 @@
       "literals": {
         "id": "skater.rotate_right",
         "role": "%ROLE",
+        "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": -3,
@@ -50,6 +52,7 @@
       "literals": {
         "id": "skater.jump",
         "role": "%ROLE",
+        "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_jump": true
       }
@@ -59,6 +62,7 @@
       "literals": {
         "id": "skater.grind",
         "role": "%ROLE",
+        "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_grind": true
       }
@@ -68,6 +72,7 @@
       "literals": {
         "id": "skater.forward",
         "role": "%ROLE",
+        "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "fly_forward_factor": 100
       }

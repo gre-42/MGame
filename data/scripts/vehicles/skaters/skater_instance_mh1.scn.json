@@ -10,7 +10,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "skater_node$SUFFIX",
-          "hitboxes": ["skater_hitbox", "skater_tirelines", "skater_grind_contacts", "skater_alignment_contacts"],
+          "hitboxes": "skater_hitboxes",
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "com": [0, -0.6, 0],
@@ -86,7 +86,7 @@
       {"required": ["IF_WITH_PHYSICS"], "call": "wheel", "literals": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.15, -0.5, -0.35], "radius": 0.1, "engine": "main", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
       {"required": ["IF_WITH_PHYSICS"], "call": "wheel", "literals": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.15, -0.5,  0.35], "radius": 0.1, "engine": "main", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
       {"required": ["IF_WITH_PHYSICS"], "call": "wheel", "literals": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.15, -0.5,  0.35], "radius": 0.1, "engine": "main", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
-      {"call": "create_car_controller", "literals": {"node": "skater_node$SUFFIX", "front_tire_ids": [], "max_tire_angle": "nan"}},
+      {"call": "create_car_controller", "literals": {"node": "skater_node$SUFFIX", "front_tire_ids": [], "asset_id": "skating_mh1"}},
       {"required": ["IF_WITH_PHYSICS"], "call": "set_grind_point", "literals": {"node": "skater_node$SUFFIX", "position": [0, -0.6, 0]}},
       {"required": ["IF_WITH_PHYSICS"], "call": "set_jump_strength", "literals": {"node": "skater_node$SUFFIX", "value": 0.125}},
       {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "skater_node$SUFFIX", "name": "skateboard_node$SUFFIX", "position": [0, -0.5, 0]}},
@@ -104,7 +104,7 @@
     "content": [
       {"required": ["IF_PC"], "playback": "create_skater_key_bindings", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
       {"required": ["IF_PC"], "playback": "create_skater_cameras", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
-      {"call": "player_set_vehicle_control_parameters", "literals": {"player": "%PLAYER_NAME", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
+      {"call": "player_set_vehicle_control_parameters", "literals": {"player": "%PLAYER_NAME", "asset_id": "%NAME", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
     ]
   },
   {

@@ -8,7 +8,8 @@
       "VEHICLE_CLASS": "car",
       "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": null,
-      "TRAILER_HITCH_POSITION_MALE": [0, -0.2, 2]
+      "TRAILER_HITCH_POSITION_MALE": [0, -0.2, 2],
+      "MAX_TIRE_ANGLE": 30
     },
     "required": ["GAME_MODE=='rally'"]
   }
