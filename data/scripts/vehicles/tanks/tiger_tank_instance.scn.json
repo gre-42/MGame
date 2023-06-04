@@ -24,7 +24,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": ["tiger_tank_hitbox", "tiger_tank_tirelines"],
+          "hitboxes": "tiger_tank_hitboxes",
           "mass": "%MASS",
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
@@ -68,7 +68,7 @@
           "bullet_hitbox": "tank_bullet_hitbox",
           "bullet_explosion_resource": "large_explosion",
           "bullet_explosion_animation_time": 0.6,
-          "bullet_feels_gravity": true,
+          "bullet_rigid_body_flags": "none",
           "bullet_mass": 20,
           "bullet_velocity": 900,
           "bullet_lifetime": 20,

@@ -67,6 +67,20 @@
   {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
   {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
   {
+    "call": "compound_resource",
+    "literals": {
+      "source_names": [
+      "F_35_hitbox_front",
+      "F_35_hitbox_mid",
+      "F_35_hitbox_rear",
+      "F_35_hitbox_rudder_left",
+      "F_35_hitbox_rudder_right",
+      "F_35_tirelines"
+      ],
+      "dest_name": "F_35_hitboxes"
+    }
+  },
+  {
     "declare_macro": "load_F_35",
     "content": {
       "playback": "load_F_35_part",

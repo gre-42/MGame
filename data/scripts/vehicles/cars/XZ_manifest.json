@@ -4,8 +4,9 @@
   "params": {
     "title": "XZ",
     "globals": {
-      "VEHICLE_SUFFIX": "_XZ",
+      "VEHICLE_SUFFIX": "XZ",
       "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": null,
       "TRAILER_HITCH_POSITION_MALE": null
     },

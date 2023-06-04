@@ -7,8 +7,9 @@
   "params": {
     "title": "F-35",
     "globals": {
-      "VEHICLE_SUFFIX": "_F_35",
-      "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "F_35",
+      "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"]
     },
     "required": ["GAME_MODE=='team_deathmatch'"]
   }

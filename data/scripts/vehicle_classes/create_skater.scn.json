@@ -47,11 +47,12 @@
         }
       },
       {
-        "required": ["IF_PLAYER"],
+        "required": ["IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "literals": {
-          "regex": "^skater_node$SUFFIX$",
-          "spawner": "%PLAYER_NAME"
+          "asset_id": "%SKATER_NAME",
+          "suffix": "%SUFFIX",
+          "spawner": "%SPAWNER_NAME"
         }
       },
       {

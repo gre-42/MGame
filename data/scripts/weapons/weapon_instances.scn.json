@@ -94,7 +94,7 @@
             }
           },
           "cool_down": "%COOL_DOWN",
-          "bullet_feels_gravity": "%BULLET_FEELS_GRAVITY",
+          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
           "bullet_velocity": "%BULLET_VELOCITY",
           "bullet_damage": "%BULLET_DAMAGE",
           "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
@@ -110,7 +110,7 @@
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
-          "feels_gravity": "%BULLET_FEELS_GRAVITY"
+          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
         }
       },
       {
@@ -173,7 +173,7 @@
             }
           },
           "cool_down": "%COOL_DOWN",
-          "bullet_feels_gravity": "%BULLET_FEELS_GRAVITY",
+          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
           "bullet_velocity": "%BULLET_VELOCITY",
           "bullet_damage": "%BULLET_DAMAGE",
           "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
@@ -189,7 +189,7 @@
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
-          "feels_gravity": "%BULLET_FEELS_GRAVITY"
+          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
         }
       },
       {
@@ -239,7 +239,7 @@
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
-          "bullet_feels_gravity": "%BULLET_FEELS_GRAVITY",
+          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
           "bullet_velocity": "%BULLET_VELOCITY",
           "bullet_damage": "%BULLET_DAMAGE",
           "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
@@ -252,7 +252,7 @@
           "node": "human_node$SUFFIX",
           "dpitch_head": -15,
           "velocity": "%BULLET_VELOCITY",
-          "feels_gravity": "%BULLET_FEELS_GRAVITY"
+          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
         }
       },
       {
@@ -305,7 +305,7 @@
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
-          "bullet_feels_gravity": "%BULLET_FEELS_GRAVITY",
+          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
           "bullet_velocity": "%BULLET_VELOCITY",
           "bullet_damage": "%BULLET_DAMAGE",
           "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
@@ -318,7 +318,7 @@
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
-          "feels_gravity": "%BULLET_FEELS_GRAVITY"
+          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
         }
       },
       {
@@ -343,7 +343,7 @@
           "bullet_hitbox": "_",
           "bullet_explosion_resource": "_",
           "bullet_explosion_animation_time": "nan",
-          "bullet_feels_gravity": false,
+          "bullet_rigid_body_flags": "none",
           "bullet_mass": 20,
           "bullet_velocity": 0,
           "bullet_lifetime": 0,
@@ -360,7 +360,7 @@
         "call": "ypln_update_bullet_properties",
         "literals": {
           "velocity": 0,
-          "feels_gravity": false,
+          "rigid_body_flags": "none",
           "dpitch_head": 0,
           "node": "%PARENT_RIGID_BODY_NODE"
         }

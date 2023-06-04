@@ -20,7 +20,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": ["AH_64_hitbox", "AH_64_tirelines"],
+          "hitboxes": "AH_64_hitboxes",
           "mass": "%MASS",
           "size": [2, 2, 9],
           "com": [0, 2.2, 0],
@@ -33,7 +33,7 @@
         "call": "rigid_disk",
         "literals": {
             "node": "blades$SUFFIX",
-            "hitboxes": ["ah64_blades"],
+            "hitboxes": "ah64_blades",
             "mass": 30,
             "radius": 7.3,
             "com": [0, 0, 0],
@@ -90,7 +90,7 @@
           "bullet_hitbox": "tank_bullet_hitbox",
           "bullet_explosion_resource": "small_explosion",
           "bullet_explosion_animation_time": 0.3,
-          "bullet_feels_gravity": true,
+          "bullet_rigid_body_flags": "none",
           "bullet_mass": 20,
           "bullet_velocity": 900,
           "bullet_lifetime": 20,

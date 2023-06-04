@@ -22,7 +22,7 @@
         }
       },
       {
-        "playback": "create$CAR_NAME",
+        "playback": "create_$CAR_NAME",
         "literals": {
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
@@ -61,12 +61,13 @@
         "required": ["IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "literals": {
-          "regex": "^car_node.*$SUFFIX$",
+          "asset_id": "%CAR_NAME",
+          "suffix": "%SUFFIX",
           "spawner": "%SPAWNER_NAME"
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light-CAR_NAME LSUFFIX:_car$SUFFIX CSUFFIX:SUFFIX"
+        "comment": "IF_SHADOW macro_playback add_attached_light_$CAR_NAME LSUFFIX:_car$SUFFIX CSUFFIX:SUFFIX"
       },
       {
         "required": ["IF_DAMAGEABLE"],
@@ -131,7 +132,7 @@
     "declare_macro": "create_player_car_externals",
     "content": [
       {
-        "playback": "create_player_car_externals$CAR_NAME",
+        "playback": "create_player_car_externals_$CAR_NAME",
         "literals": {
           "SUFFIX": "%SUFFIX",
           "IF_RACING": "%IF_RACING",

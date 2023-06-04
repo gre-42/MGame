@@ -40,6 +40,9 @@
     {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [-1.0,  0.6 , -1.1], "to": [-1.0, -0.2 , -1.1]}}, {"comment": "left  front"},
     {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 1.0,  0.6 , -1.1], "to": [ 1.0, -0.2 , -1.1]}}, {"comment": "right front"},
     {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 0.0,  0.65,  9.6], "to": [ 0.0, -0.15,  9.6]}}, {"comment": "central rear"},
+
+    {"call": "compound_resource", "literals": {"source_names": ["AH_64_hitbox", "AH_64_tirelines"], "dest_name": "AH_64_hitboxes"}},
+
     {
         "declare_macro": "load_AH_64",
         "content": [

@@ -74,7 +74,7 @@
       "literals": {
         "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "_M3",
+        "PLAYBACK_CAR": "M3",
         "DECIMATE": "",
         "PSUFFIX": "checkpoints"
       }
@@ -85,7 +85,7 @@
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "_M3",
+        "PLAYBACK_CAR": "M3",
         "DECIMATE": "",
         "PSUFFIX": "track1"
       }
@@ -96,7 +96,7 @@
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "_XZ",
+        "PLAYBACK_CAR": "XZ",
         "DECIMATE": "",
         "PSUFFIX": "track2"
       }
@@ -107,7 +107,7 @@
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "_FN",
+        "PLAYBACK_CAR": "_N",
         "DECIMATE": "",
         "PSUFFIX": "track3"
       }
@@ -125,7 +125,7 @@
       "literals": {
         "RANK": 0,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"_$WINNER0_VEHICLE",
+        "PLAYBACK_CAR":"$WINNER0_VEHICLE",
         "COLOR": "%WINNER0_COLOR",
         "DECIMATE": "",
         "PSUFFIX": "1"
@@ -137,7 +137,7 @@
       "literals": {
         "RANK": 1,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"_$WINNER1_VEHICLE",
+        "PLAYBACK_CAR":"$WINNER1_VEHICLE",
         "COLOR": "%WINNER1_COLOR",
         "DECIMATE": "",
         "PSUFFIX": "2"
@@ -149,7 +149,7 @@
       "literals": {
         "RANK": 2,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"_$WINNER2_VEHICLE",
+        "PLAYBACK_CAR":"$WINNER2_VEHICLE",
         "COLOR": "%WINNER2_COLOR",
         "DECIMATE": "",
         "PSUFFIX": "3"

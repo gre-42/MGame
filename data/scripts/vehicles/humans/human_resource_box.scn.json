@@ -54,5 +54,6 @@
         }
     },
     {"call": "gen_ray", "literals": {"name": "human_tirelines", "from": [0, -0.2, 0], "to": [0, -0.8, 0]}},
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_tirelines", "add": "obj_tire_line"}}
+    {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_tirelines", "add": "obj_tire_line"}},
+    {"call": "compound_resource", "literals": {"source_names": ["human_hitbox", "human_distancebox", "human_tirelines"], "dest_name": "human_hitboxes"}}
 ]

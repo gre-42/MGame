@@ -4,8 +4,9 @@
   "params": {
     "title": "Trailer No 2",
     "globals": {
-      "VEHICLE_SUFFIX": "_TNo2",
+      "VEHICLE_SUFFIX": "TNo2",
       "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": [0, 0.3, -4],
       "TRAILER_HITCH_POSITION_MALE": null
     },

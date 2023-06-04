@@ -24,13 +24,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": [
-            "F_35_hitbox_front",
-            "F_35_hitbox_mid",
-            "F_35_hitbox_rear",
-            "F_35_hitbox_rudder_left",
-            "F_35_hitbox_rudder_right",
-            "F_35_tirelines"],
+          "hitboxes": "F_35_hitboxes",
           "mass": "%MASS",
           "size": [1.5, 1.5, 12],
           "com": [0, -0.2, -0.2],

@@ -4,8 +4,9 @@
   "params": {
     "title": "Dodge Monaco 1974",
     "globals": {
-      "VEHICLE_SUFFIX": "_DM74",
+      "VEHICLE_SUFFIX": "DM74",
       "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": null,
       "TRAILER_HITCH_POSITION_MALE": null
     },

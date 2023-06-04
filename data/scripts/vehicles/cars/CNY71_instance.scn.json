@@ -27,6 +27,16 @@
     }
   },
   {
+    "declare_macro": "set_spawner_nodes_CN71",
+    "content": {
+      "call": "spawner_set_nodes",
+      "literals": {
+        "nodes": ["car_node$SUFFIX"],
+        "spawner": "%SPAWNER_NAME"
+      }
+    }
+  },
+  {
     "declare_macro": "create_player_car_externals_CNY71",
     "content": {
       "playback": "generic_car.create_player_car_externals",

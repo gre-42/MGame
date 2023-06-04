@@ -4,8 +4,9 @@
   "params": {
     "title": "Chrysler - New Yorker 1971",
     "globals": {
-      "VEHICLE_SUFFIX": "_CNY71",
+      "VEHICLE_SUFFIX": "CNY71",
       "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": null,
       "TRAILER_HITCH_POSITION_MALE": null
     },

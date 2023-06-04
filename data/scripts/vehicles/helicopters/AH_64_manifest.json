@@ -7,8 +7,9 @@
   "params": {
     "title": "AH-64",
     "globals": {
-      "VEHICLE_SUFFIX": "_AH_64",
-      "VEHICLE_CLASS": "car"
+      "VEHICLE_SUFFIX": "AH_64",
+      "VEHICLE_CLASS": "car",
+      "NODE_PREFIXES": ["car_node"]
     },
     "required": ["GAME_MODE=='team_deathmatch'"]
   }
