@@ -84,10 +84,10 @@
 
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
 
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1  ], "to": [-1, -0.5, 1  ]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1  ], "to": [ 1, -0.5, 1  ]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1.5], "to": [-1, -0.5, 1.5]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1.5], "to": [ 1, -0.5, 1.5]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 0.9], "to": [-1, -0.5, 0.9]}}, {"comment": "left front"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 0.9], "to": [ 1, -0.5, 0.9]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1.6], "to": [-1, -0.5, 1.6]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1.6], "to": [ 1, -0.5, 1.6]}}, {"comment": "right rear"},
 
   {"comment": {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}}},
   {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
