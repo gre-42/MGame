@@ -42,6 +42,7 @@
     {"call": "compound_resource", "literals": {
         "source_names": ["skater_hitbox", "skater_tirelines", "skater_grind_contacts", "skater_alignment_contacts"],
         "dest_name": "skater_hitboxes"}},
+    {"call": "compound_resource", "literals": {"source_names": ["skater_hitbox"], "dest_name": "skater_massbox"}},
     {
         "call": "obj_resource",
         "literals": {
