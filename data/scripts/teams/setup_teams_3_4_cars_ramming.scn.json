@@ -5,7 +5,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_M3",
+                    "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc1",
                     "TEAM": "red",
@@ -16,7 +16,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_M3",
+                    "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc2",
                     "TEAM": "red",
@@ -27,7 +27,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_M3",
+                    "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc3",
                     "TEAM": "red",
@@ -39,7 +39,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_XZ",
+                    "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc4",
                     "TEAM": "blue",
@@ -50,7 +50,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_XZ",
+                    "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc5",
                     "TEAM": "blue",
@@ -61,7 +61,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_XZ",
+                    "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc6",
                     "TEAM": "blue",
@@ -72,7 +72,7 @@
             {
                 "playback": "teams.create_player_and_car_for_npc",
                 "literals": {
-                    "CAR_NAME": "_XZ",
+                    "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc7",
                     "TEAM": "blue",
@@ -86,7 +86,7 @@
                     "player": "you",
                     "macro": "teams.create_car_for_pc",
                     "parameters": {
-                        "CAR_NAME": "_M3",
+                        "CAR_NAME": "M3",
                         "DECIMATE": ""
                     }
                 }
