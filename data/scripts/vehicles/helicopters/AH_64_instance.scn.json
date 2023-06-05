@@ -25,7 +25,8 @@
           "size": [2, 2, 9],
           "com": [0, 2.2, 0],
           "collidable_mode": "%COLLIDABLE_MODE",
-          "name": "AH_64$SUFFIX"
+          "name": "AH_64$SUFFIX",
+          "asset_id": "AH_64"
         }
       },
       {"call": "set_rigid_body_target", "literals": {"node": "car_node$SUFFIX", "target": [0, 2.2, 0]}},

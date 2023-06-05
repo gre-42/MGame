@@ -29,7 +29,8 @@
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
           "collidable_mode": "%COLLIDABLE_MODE",
-          "name": "tiger_tank$SUFFIX"
+          "name": "tiger_tank$SUFFIX",
+          "asset_id": "tiger_tank"
         }
       },
       {"comment": {"call": "damageable", "literals": {"node": "car_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": true}}},

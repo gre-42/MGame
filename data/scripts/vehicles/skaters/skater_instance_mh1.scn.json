@@ -15,7 +15,8 @@
           "size": ["inf", "inf", "inf"],
           "com": [0, -0.6, 0],
           "collidable_mode": "moving",
-          "name": "skater$SUFFIX"
+          "name": "skater$SUFFIX",
+          "asset_id": "skating_mh1"
         }
       },
       {"call": "set_rigid_body_align_to_surface_relaxation", "literals": {"node": "skater_node$SUFFIX", "value": 0.05}},
