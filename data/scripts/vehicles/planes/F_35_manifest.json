@@ -11,6 +11,6 @@
       "VEHICLE_CLASS": "car",
       "NODE_PREFIXES": ["car_node"]
     },
-    "required": ["GAME_MODE=='team_deathmatch'"]
+    "required": ["GAME_MODE in {'team_deathmatch'}"]
   }
 }

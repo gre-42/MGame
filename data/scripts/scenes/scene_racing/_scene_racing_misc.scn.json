@@ -98,7 +98,7 @@
         "call": "delete_scheduled_advance_times"
       },
       {
-        "required": ["LOADED_GAME_MODE=='rally'"],
+        "required": ["LOADED_GAME_MODE in {'rally'}"],
         "call": "set_race_identifier_and_reload_history",
         "literals": {
           "level_id": "%LOADED_LEVEL_ID",
@@ -108,7 +108,7 @@
         }
       },
       {
-        "required": ["LOADED_GAME_MODE=='rally'"],
+        "required": ["LOADED_GAME_MODE in {'rally'}"],
         "call": "start_race",
         "literals": {
           "readonly": false

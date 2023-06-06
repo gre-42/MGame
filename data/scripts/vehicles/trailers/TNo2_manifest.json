@@ -11,6 +11,6 @@
       "TRAILER_HITCH_POSITION_MALE": null,
       "MAX_TIRE_ANGLE": 0
     },
-    "required": ["GAME_MODE=='never'"]
+    "required": ["GAME_MODE in {}"]
   }
 }

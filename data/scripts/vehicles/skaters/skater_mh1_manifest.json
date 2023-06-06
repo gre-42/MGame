@@ -12,6 +12,6 @@
             "NODE_PREFIXES": ["skater_node"],
             "MAX_TIRE_ANGLE": null
         },
-        "required": ["GAME_MODE=='skating'"]
+        "required": ["GAME_MODE in {'skating'}"]
     }
 }

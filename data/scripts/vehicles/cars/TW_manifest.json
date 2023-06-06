@@ -11,6 +11,6 @@
       "TRAILER_HITCH_POSITION_MALE": null,
       "MAX_TIRE_ANGLE": 30
     },
-    "required": ["GAME_MODE=='rally'"]
+    "required": ["GAME_MODE in {'rally'}"]
   }
 }
