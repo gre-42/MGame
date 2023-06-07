@@ -102,6 +102,7 @@
         "call": "set_race_identifier_and_reload_history",
         "literals": {
           "level_id": "%LOADED_LEVEL_ID",
+          "restrictions": "%LOADED_RACE_RESTRICTIONS",
           "session": "%LOADED_RACE_SESSION",
           "laps": "%LOADED_RACE_LAPS",
           "milliseconds": 0

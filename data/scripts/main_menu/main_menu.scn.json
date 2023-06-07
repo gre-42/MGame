@@ -146,7 +146,6 @@
           "deflt": 0,
           "parameters": [
             {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"title": "Transport", "globals": {"GAME_MODE": "transport"}},
             {"title": "Skating", "globals": {"GAME_MODE": "skating"}},
             {"title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
@@ -174,25 +173,9 @@
         }
       },
       {
-        "call": "parameter_setter",
+        "call": "constant_parameter",
         "required": ["IF_ANDROID"],
-        "literals": {
-          "id": "game_mode_selector",
-          "title": "Game mode",
-          "icon": "game_mode_icon",
-          "left": "submenu_left",
-          "right": "submenu_right",
-          "bottom": "submenu_bottom",
-          "top": "submenu_top",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "deflt": 0,
-          "parameters": [
-            {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"title": "Transport", "globals": {"GAME_MODE": "transport"}}
-          ]
-        }
+        "literals": { "name": "GAME_MODE", "value": "rally" }
       }
     ]
   },
@@ -343,6 +326,27 @@
   {
     "declare_macro": "parameter_setters",
     "content": [
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "restrictions_selector",
+          "title": "Restrictions",
+          "icon": "restrictions_icon",
+          "required": ["GAME_MODE in {'rally'}"],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"title": "Car", "globals": {"RACE_RESTRICTIONS": "car"}},
+            {"title": "Car with trailer", "globals": {"RACE_RESTRICTIONS": "car_with_trailer"}}
+          ]
+        }
+      },
       {
         "call": "parameter_setter",
         "literals": {

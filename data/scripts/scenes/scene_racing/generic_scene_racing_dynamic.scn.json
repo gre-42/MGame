@@ -11,6 +11,10 @@
     },
     {
       "call": "constant_parameter",
+      "literals": { "name": "LOADED_RACE_RESTRICTIONS", "value": "%RACE_RESTRICTIONS" }
+    },
+    {
+      "call": "constant_parameter",
       "literals": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
     },
     {
