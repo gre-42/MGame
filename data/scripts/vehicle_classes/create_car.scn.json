@@ -50,7 +50,8 @@
         "required": ["IF_PLAYBACK_WINNER"],
         "call": "playback_winner_track",
         "literals": {
-          "node": "car_node$SUFFIX",
+          "asset_id": "%CAR_NAME",
+          "suffix": "%SUFFIX",
           "speed": "%PLAYBACK_SPEED",
           "rank": "%RANK"
         }

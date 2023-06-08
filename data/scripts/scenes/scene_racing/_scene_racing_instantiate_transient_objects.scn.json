@@ -157,7 +157,8 @@
       "required": ["IF_CHECKPOINTS"],
       "call": "check_points",
       "literals": {
-        "moving_node": "car_node",
+        "moving_asset_id": "%SELECTED_VEHICLE_SUFFIX",
+        "moving_suffix": "",
         "resource": "glow",
         "player": "you",
         "nbeacons": 40,

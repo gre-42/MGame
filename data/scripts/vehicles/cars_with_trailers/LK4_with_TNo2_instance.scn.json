@@ -13,11 +13,22 @@
         }
       },
       {
+        "required": ["IF_WITH_PHYSICS"],
         "call": "create_trailer_node",
         "literals": {
           "car_instance": "car_node$SUFFIX",
           "trailer_asset_id": "TNo2",
           "trailer_node": "car_node_trailer$SUFFIX"
+        }
+      },
+      {
+        "exclude": ["IF_WITH_PHYSICS"],
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "car_node_trailer$SUFFIX",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0]
         }
       },
       {
@@ -31,6 +42,7 @@
         }
       },
       {
+        "required": ["IF_WITH_PHYSICS"],
         "call": "connect_trailer",
         "literals": {
           "car": "car_node$SUFFIX",
