@@ -105,7 +105,7 @@
     "content": [
       {"required": ["IF_PC"], "playback": "create_skater_key_bindings", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
       {"required": ["IF_PC"], "playback": "create_skater_cameras", "literals": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
-      {"call": "player_set_vehicle_control_parameters", "literals": {"player": "%PLAYER_NAME", "asset_id": "%NAME", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
+      {"call": "player_set_vehicle_control_parameters", "literals": {"player": "%PLAYER_NAME", "asset_id": "skating_mh1", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
     ]
   },
   {

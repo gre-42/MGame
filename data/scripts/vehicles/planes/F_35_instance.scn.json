@@ -306,7 +306,7 @@
         "call": "player_set_vehicle_control_parameters",
         "literals": {
           "player": "%PLAYER_NAME",
-          "asset_id": "%NAME",
+          "asset_id": "F_35",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
