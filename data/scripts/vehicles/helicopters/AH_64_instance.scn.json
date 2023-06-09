@@ -20,7 +20,7 @@
         "call": "rigid_cuboid",
         "literals": {
           "node": "car_node$SUFFIX",
-          "hitboxes": "AH_64_hitboxes",
+          "hitboxes": "AH_box_64_hitboxes",
           "mass": "%MASS",
           "size": [2, 2, 9],
           "com": [0, 2.2, 0],
@@ -226,8 +226,8 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -1.2, 0.3]}},
       {"comment": [
         "renderable_instance name=flag-inst node=car_node$SUFFIX resource=flag",
-        "renderable_instance name=car_box$SUFFIX node=car_node$SUFFIX resource=AH_64_hitbox",
-        "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=AH_64_hitbox"
+        "renderable_instance name=car_box$SUFFIX node=car_node$SUFFIX resource=AH_box_64_hitbox",
+        "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=AH_box_64_hitbox"
       ]},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "blades$SUFFIX", "position": [0, 4.2, 0], "rotation": [90, 0, 0]}},

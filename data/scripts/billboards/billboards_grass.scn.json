@@ -601,7 +601,7 @@
             {
                 "call": "add_texture_descriptor",
                 "literals": {
-                    "name": "0_$NAME",
+                    "name": "$NAME-_0",
                     "color": "models/opengameart/Hedge/$FILENAME_0",
                     "color_mode": "rgba",
                     "histogram": "textures/histograms/TexturesCom_Trees0130_1.png",
@@ -611,7 +611,7 @@
             {
                 "call": "add_texture_descriptor",
                 "literals": {
-                    "name": "90_$NAME",
+                    "name": "$NAME-_90",
                     "color": "models/opengameart/Hedge/$FILENAME_90",
                     "color_mode": "rgba",
                     "histogram": "textures/histograms/TexturesCom_Trees0130_1.png",

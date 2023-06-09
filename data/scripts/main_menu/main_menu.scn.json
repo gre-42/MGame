@@ -448,11 +448,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "1 Lap",   "globals": {"RACE_LAPS": 1}},
-            {"title": "2 Laps",  "globals": {"RACE_LAPS": 2}},
-            {"title": "4 Laps",  "globals": {"RACE_LAPS": 4}},
-            {"title": "8 Laps",  "globals": {"RACE_LAPS": 8}},
-            {"title": "16 Laps", "globals": {"RACE_LAPS": 16}}
+            {"title": "'1 Lap'",   "globals": {"RACE_LAPS": 1}},
+            {"title": "'2 Laps'",  "globals": {"RACE_LAPS": 2}},
+            {"title": "'4 Laps'",  "globals": {"RACE_LAPS": 4}},
+            {"title": "'8 Laps'",  "globals": {"RACE_LAPS": 8}},
+            {"title": "'16 Laps'", "globals": {"RACE_LAPS": 16}}
           ]
         }
       },
@@ -473,11 +473,11 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"title": "80%", "globals": {"PLAYBACK_SPEED": 0.8}},
-            {"title": "90%", "globals": {"PLAYBACK_SPEED": 0.9}},
-            {"title": "100%", "globals": {"PLAYBACK_SPEED": 1}},
-            {"title": "110%", "globals": {"PLAYBACK_SPEED": 1.1}},
-            {"title": "120%", "globals": {"PLAYBACK_SPEED": 1.2}}
+            {"title": "'80%'", "globals": {"PLAYBACK_SPEED": 0.8}},
+            {"title": "'90%'", "globals": {"PLAYBACK_SPEED": 0.9}},
+            {"title": "'100%'", "globals": {"PLAYBACK_SPEED": 1}},
+            {"title": "'110%'", "globals": {"PLAYBACK_SPEED": 1.1}},
+            {"title": "'120%'", "globals": {"PLAYBACK_SPEED": 1.2}}
           ]
         }
       },

@@ -18,12 +18,12 @@
       { "call": "add_to_gallery", "literals": { "resource": "textures/pacenotes/$GEAR.png", "instance": "pacenote_r$GEAR", "color_mode": "rgba", "flip_horizontally": true } }
     ]
   },
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "0"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "1"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "2"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "3"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "4"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "5"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "6"}},
-  {"playback": "add_pacenote_picture", "literals": {"GEAR": "7"}}
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'0'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'1'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'2'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'3'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'4'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'5'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'6'"}},
+  {"playback": "add_pacenote_picture", "literals": {"GEAR": "'7'"}}
 ]
