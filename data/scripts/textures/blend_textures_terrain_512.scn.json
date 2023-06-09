@@ -32,7 +32,7 @@
       }
     },
     {
-      "exclude": ["IF_ANDROID"],
+      "exclude": ["%IF_ANDROID"],
       "call": "add_blend_map_texture",
       "literals": {
         "name": "$NAME-_512",

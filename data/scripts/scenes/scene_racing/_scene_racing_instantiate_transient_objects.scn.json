@@ -5,7 +5,7 @@
       "comment": "Car instance"
     },
     {
-      "required": ["IF_CREATE_PC_CAR"],
+      "required": ["%IF_CREATE_PC_CAR"],
       "playback":  "create_$SELECTED_VEHICLE_CLASS",
       "literals": {
         "HUMAN_NAME": "%SELECTED_VEHICLE_SUFFIX",
@@ -28,7 +28,7 @@
         "IF_WITH_GUN": false,
         "IF_STATIC": false,
         "IF_DYNAMIC": true,
-        "IF_MANUAL_DRIVE": "%!IF_PC_PLAYER_PLAYBACK",
+        "IF_MANUAL_DRIVE": "!IF_PC_PLAYER_PLAYBACK",
         "IF_MANUAL_AIM": false,
         "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
         "VELOCITY_ERROR_STD": 0,
@@ -47,7 +47,7 @@
       }
     },
     {
-      "required": ["IF_BURN_IN"],
+      "required": ["%IF_BURN_IN"],
       "call": "burn_in",
       "literals": {
         "seconds": 20
@@ -57,17 +57,17 @@
       "comment": "Recording"
     },
     {
-      "required": ["IF_RECORD_TRACK"],
+      "required": ["%IF_RECORD_TRACK"],
       "call": "record_track",
       "literals": { "node": "car_node", "filename": "/tmp/track.m" }
     },
     {
-      "required": ["IF_RECORD_TRACK"],
+      "required": ["%IF_RECORD_TRACK"],
       "call": "record_track_gpx",
       "literals": { "node": "car_node", "filename": "/tmp/track.gpx" }
     },
     {
-      "required": ["IF_PLAYBACK_CHECKPOINTS"],
+      "required": ["%IF_PLAYBACK_CHECKPOINTS"],
       "playback": "create_playback",
       "literals": {
         "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
@@ -78,7 +78,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_TRACK_1"],
+      "required": ["%IF_PLAYBACK_TRACK_1"],
       "playback": "create_playback",
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
@@ -89,7 +89,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_TRACK_2"],
+      "required": ["%IF_PLAYBACK_TRACK_2"],
       "playback": "create_playback",
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_TRACK_3"],
+      "required": ["%IF_PLAYBACK_TRACK_3"],
       "playback": "create_playback",
       "literals": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
@@ -118,7 +118,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_WINNER_0", "IF_WINNER_RANK0_EXISTS"],
+      "required": ["%IF_PLAYBACK_WINNER_0", "%IF_WINNER_RANK0_EXISTS"],
       "playback": "_create_winner_playback",
       "literals": {
         "RANK": 0,
@@ -130,7 +130,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_WINNER_1", "IF_WINNER_RANK1_EXISTS"],
+      "required": ["%IF_PLAYBACK_WINNER_1", "%IF_WINNER_RANK1_EXISTS"],
       "playback": "_create_winner_playback",
       "literals": {
         "RANK": 1,
@@ -142,7 +142,7 @@
       }
     },
     {
-      "required": ["IF_PLAYBACK_WINNER_2", "IF_WINNER_RANK2_EXISTS"],
+      "required": ["%IF_PLAYBACK_WINNER_2", "%IF_WINNER_RANK2_EXISTS"],
       "playback": "_create_winner_playback",
       "literals": {
         "RANK": 2,
@@ -154,7 +154,7 @@
       }
     },
     {
-      "required": ["IF_CHECKPOINTS"],
+      "required": ["%IF_CHECKPOINTS"],
       "call": "check_points",
       "literals": {
         "moving_asset_id": "%SELECTED_VEHICLE_SUFFIX",
@@ -214,7 +214,7 @@
       "comment": "Cameras"
     },
     {
-      "required": ["IF_CREATE_PC_CAR"],
+      "required": ["%IF_CREATE_PC_CAR"],
       "call": "create_externals",
       "literals": {
         "player": "you",

@@ -42,7 +42,7 @@ macro_begin create_human_box;
 
     damageable node=human_node$SUFFIX health=200 delete_node_when_health_leq_zero=0;
 
-    {"required": ["IF_WITH_PHYSICS"], "call": "create_engine", "literals": {"rigid_body": "human_node$SUFFIX", "name": "legs",   "angular_vels": [-300, -200, -100, 0], "powers": [40, 400, 400, 40], "gear_ratios": [0.5, 1, 2, 3]}},
+    {"required": ["%IF_WITH_PHYSICS"], "call": "create_engine", "literals": {"rigid_body": "human_node$SUFFIX", "name": "legs",   "angular_vels": [-300, -200, -100, 0], "powers": [40, 400, 400, 40], "gear_ratios": [0.5, 1, 2, 3]}},
 
     IF_WITH_PHYSICS wheel rigid_body=human_node$SUFFIX node= position=0 0 0 radius=1 engine=legs brake_force=5000 Ks=1e4 Ka=4e2 musF=4e3 8e3 musC=1.1 0.97 tire_id=0;
 macro_end;

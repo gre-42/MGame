@@ -11,7 +11,7 @@
       }
     },
     {
-      "required": ["IF_HAS_OVERLAY"],
+      "required": ["%IF_HAS_OVERLAY"],
       "playback": "_create_osm_map_resource",
       "literals": {
         "OSM_MAP": "osm_map_overlay",
@@ -42,7 +42,7 @@
       }
     },
     {
-      "required": ["IF_HAS_OVERLAY"],
+      "required": ["%IF_HAS_OVERLAY"],
       "call": "renderable_instance",
       "literals": {
         "name": "osm_overlay_inst",
@@ -51,7 +51,7 @@
       }
     },
     {
-      "required": ["IF_HAS_OVERLAY"],
+      "required": ["%IF_HAS_OVERLAY"],
       "call": "compound_resource",
       "literals": {
         "source_names": [
@@ -64,7 +64,7 @@
       }
     },
     {
-      "exclude": ["IF_HAS_OVERLAY"],
+      "exclude": ["%IF_HAS_OVERLAY"],
       "call": "compound_resource",
       "literals": {
         "source_names": [
@@ -88,7 +88,7 @@
     },
     {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
     {
-      "required": ["IF_WITH_GEOGRAPHIC_MAPPING"],
+      "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
       "call": "register_geographic_mapping",
       "literals": {
         "name": "world",
@@ -98,7 +98,7 @@
     },
     {"comment": "Player"},
     {
-      "required": ["IF_CREATE_PC_PLAYER"],
+      "required": ["%IF_CREATE_PC_PLAYER"],
       "execute": [
         {
           "call": "player_create",
@@ -128,12 +128,12 @@
       ]
     },
     {
-      "required": ["IF_PC_PLAYER_PLAYBACK"],
+      "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_playback_way_points",
       "literals": { "player": "you", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
     },
     {
-      "required": ["IF_PC_PLAYER_PLAYBACK"],
+      "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_can_drive",
       "literals": { "player": "you", "source": "ai", "value": true }
     },
@@ -231,7 +231,7 @@
       "comment": "Dirtmap"
     },
     {
-      "required": ["IF_DIRTMAP"],
+      "required": ["%IF_DIRTMAP"],
       "call": "root_node_instance",
       "literals": {
         "type": "dynamic",
@@ -242,7 +242,7 @@
       }
     },
     {
-      "required": ["IF_DIRTMAP"],
+      "required": ["%IF_DIRTMAP"],
       "call": "ortho_camera",
       "literals": {
         "node": "dirtmap_node",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "required": ["IF_DIRTMAP"],
+      "required": ["%IF_DIRTMAP"],
       "call": "set_dirtmap",
       "literals": {
         "filename": "%DIRTMAP_TEXTURE",
@@ -285,17 +285,17 @@
       }
     },
     {
-      "required": ["IF_DAY"],
+      "required": ["%IF_DAY"],
       "call": "set_background_color",
       "literals": { "color": [0.68, 0.85, 1] }
     },
     {
-      "required": ["IF_NIGHT"],
+      "required": ["%IF_NIGHT"],
       "call": "set_background_color",
       "literals": { "color": [0, 0, 0] }
     },
     {
-      "required": ["IF_SYNTHWAVE"],
+      "required": ["%IF_SYNTHWAVE"],
       "call": "set_background_color",
       "literals": { "color": [0.65, 0.36, 0.91] }
     },
@@ -306,33 +306,33 @@
       "comment": "Light"
     },
     {
-      "required": ["IF_DAY"],
+      "required": ["%IF_DAY"],
       "playback": "add_distant_light_day",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
-      "required": ["IF_NIGHT"],
+      "required": ["%IF_NIGHT"],
       "playback": "add_distant_light_night",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
-      "required": ["IF_SYNTHWAVE"],
+      "required": ["%IF_SYNTHWAVE"],
       "playback": "add_distant_light_night",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
       }
     },
     {
-      "required": ["IF_DAY"],
+      "required": ["%IF_DAY"],
       "playback": "add_local_instances_light",
       "literals": { "LSUFFIX": "_local_instances" }
     },
     {
-      "required": ["IF_NIGHT"],
+      "required": ["%IF_NIGHT"],
       "playback": "add_local_blob_instances_light",
       "literals": { "LSUFFIX": "_blobs" }
     },
     {
-      "required": ["IF_SYNTHWAVE"],
+      "required": ["%IF_SYNTHWAVE"],
       "playback": "add_local_blob_instances_light",
       "literals": { "LSUFFIX": "_blobs" }
     },
@@ -340,7 +340,7 @@
       "comment": "Reflection map"
     },
     {
-      "required": ["IF_DAY"],
+      "required": ["%IF_DAY"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,
@@ -352,7 +352,7 @@
       }
     },
     {
-      "required": ["IF_NIGHT"],
+      "required": ["%IF_NIGHT"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,
@@ -363,7 +363,7 @@
         }
     },
     {
-      "required": ["IF_SYNTHWAVE"],
+      "required": ["%IF_SYNTHWAVE"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,

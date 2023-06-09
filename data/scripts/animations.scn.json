@@ -1,8 +1,6 @@
 [
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "cmu_mocap.walking",
@@ -13,9 +11,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.run_forward",
@@ -26,9 +22,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.run_backward",
@@ -39,9 +33,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.idle",
@@ -52,9 +44,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.strafe_left",
@@ -65,9 +55,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.strafe_right",
@@ -78,9 +66,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "xonotic_pyria.die",
@@ -91,9 +77,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.left",
@@ -104,9 +88,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.right",
@@ -117,9 +99,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.left.jump",
@@ -130,9 +110,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.right.jump",
@@ -143,9 +121,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.left.jump.skateboard",
@@ -156,9 +132,7 @@
     }
   },
   {
-    "exclude": [
-      "IF_ANDROID"
-    ],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
     "literals": {
       "name": "skate.right.jump.skateboard",

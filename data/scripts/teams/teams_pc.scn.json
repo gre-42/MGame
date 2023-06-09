@@ -167,7 +167,7 @@
         }
       },
       {
-        "required": ["IF_SET_WAY_POINTS"],
+        "required": ["%IF_SET_WAY_POINTS"],
         "call": "set_pathfinding_way_points",
         "literals": {
           "player": "%PLAYER_NAME",
@@ -236,7 +236,7 @@
         }
       },
       {
-        "required": ["IF_SET_WAY_POINTS"],
+        "required": ["%IF_SET_WAY_POINTS"],
         "call": "set_pathfinding_way_points",
         "literals": {
           "player": "%PLAYER_NAME",

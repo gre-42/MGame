@@ -130,8 +130,8 @@
       },
       {
         "call": "parameter_setter",
-        "required": ["IF_DEVEL"],
-        "exclude": ["IF_ANDROID"],
+        "required": ["%IF_DEVEL"],
+        "exclude": ["%IF_ANDROID"],
         "literals": {
           "id": "game_mode_selector",
           "title": "Game mode",
@@ -153,7 +153,7 @@
       },
       {
         "call": "parameter_setter",
-        "exclude": ["IF_ANDROID", "IF_DEVEL"],
+        "exclude": ["%IF_ANDROID", "%IF_DEVEL"],
         "literals": {
           "id": "game_mode_selector",
           "title": "Game mode",
@@ -174,7 +174,7 @@
       },
       {
         "call": "constant_parameter",
-        "required": ["IF_ANDROID"],
+        "required": ["%IF_ANDROID"],
         "literals": { "name": "GAME_MODE", "value": "rally" }
       }
     ]
@@ -268,7 +268,7 @@
         }
       },
       {
-        "required": ["IF_ANDROID"],
+        "required": ["%IF_ANDROID"],
         "playback": "create_tap_buttons"
       }
     ]
@@ -332,7 +332,7 @@
           "id": "restrictions_selector",
           "title": "Restrictions",
           "icon": "restrictions_icon",
-          "required": ["GAME_MODE in {'rally'}"],
+          "required": ["%GAME_MODE in {rally}"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -380,7 +380,7 @@
           "id": "car_color_selector",
           "title": "Color",
           "icon": "car_color_selector_icon",
-          "required": ["GAME_MODE in {'rally'}"],
+          "required": ["%GAME_MODE in {rally}"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -414,7 +414,7 @@
           "id": "session_selector",
           "title": "Session",
           "icon": "session_selector_icon",
-          "required": ["GAME_MODE in {'rally'}"],
+          "required": ["%GAME_MODE in {rally}"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -438,7 +438,7 @@
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_selector_icon",
-          "required": ["GAME_MODE in {'rally'}", "IF_RACEWAY_CIRCULAR"],
+          "required": ["%GAME_MODE in {rally}", "%IF_RACEWAY_CIRCULAR"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -458,12 +458,12 @@
       },
       {
         "call": "parameter_setter",
-        "required": ["IF_DEVEL"],
+        "required": ["%IF_DEVEL"],
         "literals": {
           "id": "playback_speed_selector",
           "title": "Playback speed",
           "icon": "missing_icon",
-          "required": ["GAME_MODE in {'rally'}"],
+          "required": ["%GAME_MODE in {rally}"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -483,7 +483,7 @@
       },
       {
         "call": "constant_parameter",
-        "exclude": ["IF_DEVEL"],
+        "exclude": ["%IF_DEVEL"],
         "literals": { "name": "PLAYBACK_SPEED", "value": 1 }
       }
     ]

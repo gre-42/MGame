@@ -14,7 +14,7 @@
       },
       {
         "call": "add_color_style",
-        "required": ["IF_HUMAN_STYLE"],
+        "required": ["%IF_HUMAN_STYLE"],
         "literals": {
           "node": "human_node$SUFFIX",
           "ambience": "%COLOR",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "required": ["IF_HUMAN_STYLE"],
+        "required": ["%IF_HUMAN_STYLE"],
         "call": "set_animation_state",
         "literals": {
           "node": "human_node$SUFFIX",
@@ -53,7 +53,7 @@
         }
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "literals": {
           "asset_id": "%HUMAN_NAME",
@@ -65,7 +65,7 @@
         "comment": "# IF_SHADOW macro_playback add_attached_light_$HUMAN_NAME LSUFFIX:_human$SUFFIX CSUFFIX:SUFFIX;"
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {
@@ -117,7 +117,7 @@
         }
       },
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "playback": "create_human_key_bindings",
         "literals": {
           "SUFFIX": "%SUFFIX",
@@ -126,7 +126,7 @@
         }
       },
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "playback": "create_human_cameras_pc",
         "literals": {
           "SUFFIX": "%SUFFIX",
@@ -135,7 +135,7 @@
       },
       {
         "call": "hud_image",
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "literals": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
@@ -149,7 +149,7 @@
       },
       {
         "call": "visual_player_bullet_count",
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "literals": {
           "player": "%PLAYER_NAME",
           "left": "bullet_count_left",
@@ -161,7 +161,7 @@
           "line_distance": "normal"}
       },
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
         "literals": {
           "ypln_node": "human_node$SUFFIX",

@@ -3,7 +3,7 @@
     "declare_macro": "create_plane_key_bindings",
     "content": [
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_idle_binding",
         "literals": {
           "player": "%PLAYER_NAME",
@@ -11,7 +11,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.roll_left",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.roll_right",
@@ -33,7 +33,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.pitch_up",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.pitch_down",
@@ -66,7 +66,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.forward",
@@ -77,7 +77,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.brake",
@@ -88,7 +88,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.yaw_left",
@@ -99,7 +99,7 @@
         }
       },
       {
-        "required": ["IF_MANUAL_DRIVE"],
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_key_binding",
         "literals": {
           "id": "plane.yaw_right",
@@ -110,7 +110,7 @@
         }
       },
       {
-        "required": ["IF_HAS_GUN"],
+        "required": ["%IF_HAS_GUN"],
         "call": "gun_key_binding",
         "literals": {
           "id": "plane.shoot",
@@ -120,8 +120,8 @@
         }
       },
       {
-        "required": ["IF_HAS_GUN"],
-        "exclude": ["IF_MANUAL_AIM"],
+        "required": ["%IF_HAS_GUN"],
+        "exclude": ["%IF_MANUAL_AIM"],
         "call": "player_key_binding",
         "literals": {
           "id": "plane.select_next_opponent",

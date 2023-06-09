@@ -3,7 +3,7 @@
         "comment": "DallasW"
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_negx",
@@ -18,7 +18,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_negy",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_negz",
@@ -48,7 +48,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_posx",
@@ -63,7 +63,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_posy",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "DallasW_posz",
@@ -96,7 +96,7 @@
         "comment": "MarriottMadisonWest"
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_negx",
@@ -111,7 +111,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_negy",
@@ -126,7 +126,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_negz",
@@ -141,7 +141,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_posx",
@@ -156,7 +156,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_posy",
@@ -171,7 +171,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "MarriottMadisonWest_posz",
@@ -189,7 +189,7 @@
         "comment": "Room"
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "room.left",
@@ -204,7 +204,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "room.right",
@@ -219,7 +219,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "room.floor",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "room.ceiling",
@@ -249,7 +249,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "room.back",

@@ -12,6 +12,6 @@
       "NODE_PREFIXES": ["car_node"],
       "MAX_TIRE_ANGLE": null
     },
-    "required": ["GAME_MODE in {'team_deathmatch'}"]
+    "required": ["%GAME_MODE in {'team_deathmatch'}"]
   }
 }

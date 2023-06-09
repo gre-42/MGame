@@ -9,17 +9,17 @@
   {"include": "vehicle_classes/create_human.scn.json"},
   {"include": "vehicle_classes/create_skater.scn.json"},
   {"include": "billboards/billboards.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "weapons/weapon_instances.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "weapons/weapon_resources.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "models/models_depots.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "weapons/weapon_instances.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "weapons/weapon_resources.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "models/models_depots.scn.json"},
   {"include": "models/models_misc.scn.json"},
   {"include": "models/models_primitive_hitboxes.scn.json"},
   {"include": "models/models_raceway.scn.json"},
   {"include": "models/models_stones.scn.json"},
   {"include": "models/models_street.scn.json"},
   {"include": "models/models_terrain.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "models/models_urban.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "models/models_vegetation.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "models/models_urban.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "models/models_vegetation.scn.json"},
 
   {"include": "lights/lights.scn.json"},
   {"include": "screen_constraints.scn.json"},
@@ -33,7 +33,7 @@
   {"include": "cameras/cameras.scn.json"},
   {"include": "key_bindings/key_bindings.scn.json"},
 
-  {"required": ["IF_ANDROID"], "include": "key_bindings/tap_buttons.scn.json"},
+  {"required": ["%IF_ANDROID"], "include": "key_bindings/tap_buttons.scn.json"},
   {"include": "materials.scn.json"},
   {"include": "assets.scn.json"}
 ]

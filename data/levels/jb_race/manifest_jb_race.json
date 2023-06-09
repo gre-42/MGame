@@ -8,5 +8,5 @@
     "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },
-  "required": ["GAME_MODE in {'rally'}"]
+  "required": ["%GAME_MODE in {rally}"]
 }

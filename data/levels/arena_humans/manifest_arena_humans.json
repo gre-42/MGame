@@ -8,5 +8,5 @@
     "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },
-  "required": ["GAME_MODE in {'team_deathmatch'}"]
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }

@@ -5,7 +5,7 @@
       {"comment": "OSM instance"},
       {"comment": "Must be above instantiation, and should be above transformations"},
       {
-        "required": ["IF_EXTRACT_ALIGNMENT_PLANES"],
+        "required": ["%IF_EXTRACT_ALIGNMENT_PLANES"],
         "call": "modify_physics_material_tags",
         "literals": {
           "resource_name": "%OSM_MAP",
@@ -39,7 +39,7 @@
         }
       },
       {
-        "required": ["IF_GEN_GRIND_LINES"],
+        "required": ["%IF_GEN_GRIND_LINES"],
         "call": "gen_grind_lines",
         "literals": {
           "source_name": "%OSM_MAP",
@@ -52,7 +52,7 @@
         }
       },
       {
-        "exclude": ["IF_GEN_GRIND_LINES"],
+        "exclude": ["%IF_GEN_GRIND_LINES"],
         "call": "obj_resource",
         "literals": {
           "name": "$OSM_MAP-_grind_lines",
@@ -70,7 +70,7 @@
         }
       },
       {
-        "exclude": ["IF_GEN_GRIND_LINES"],
+        "exclude": ["%IF_GEN_GRIND_LINES"],
         "call": "modify_physics_material_tags",
         "literals": {
           "resource_name": "$OSM_MAP-_grind_lines",
@@ -78,7 +78,7 @@
         }
       },
       {
-        "required": ["IF_GEN_INSTANCES"],
+        "required": ["%IF_GEN_INSTANCES"],
         "call": "gen_instances",
         "literals": {
           "name": "%OSM_MAP"

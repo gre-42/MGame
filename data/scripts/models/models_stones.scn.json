@@ -3,7 +3,7 @@
         "declare_macro": "_add_stone_models",
         "content": [
             {
-                "exclude": ["IF_ANDROID"],
+                "exclude": ["%IF_ANDROID"],
                 "call": "obj_resource",
                 "literals": {
                     "name": "Stone_model_tex_small$SUFFIX",
@@ -175,7 +175,7 @@
                 }
             },
             {
-                "exclude": ["IF_ANDROID"],
+                "exclude": ["%IF_ANDROID"],
                 "call": "obj_resource",
                 "literals": {
                     "name": "desert_rock01_small$SUFFIX",

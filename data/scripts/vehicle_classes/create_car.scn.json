@@ -13,7 +13,7 @@
       },
       {
         "call": "add_color_style",
-        "required": ["IF_CAR_BODY_RENDERABLE_STYLE"],
+        "required": ["%IF_CAR_BODY_RENDERABLE_STYLE"],
         "literals": {
           "selector": "body|chassis|turret|main_gun",
           "node": "car_node$SUFFIX",
@@ -38,7 +38,7 @@
         }
       },
       {
-        "required": ["IF_PLAYBACK_TRACK"],
+        "required": ["%IF_PLAYBACK_TRACK"],
         "call": "playback_track",
         "literals": {
           "node": "car_node$SUFFIX",
@@ -47,7 +47,7 @@
         }
       },
       {
-        "required": ["IF_PLAYBACK_WINNER"],
+        "required": ["%IF_PLAYBACK_WINNER"],
         "call": "playback_winner_track",
         "literals": {
           "asset_id": "%CAR_NAME",
@@ -57,7 +57,7 @@
         }
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "literals": {
           "asset_id": "%CAR_NAME",
@@ -69,7 +69,7 @@
         "comment": "IF_SHADOW macro_playback add_attached_light_$CAR_NAME LSUFFIX:_car$SUFFIX CSUFFIX:SUFFIX"
       },
       {
-        "required": ["IF_DAMAGEABLE"],
+        "required": ["%IF_DAMAGEABLE"],
         "call": "damageable",
         "literals": {
           "node": "car_node$SUFFIX",
@@ -78,7 +78,7 @@
         }
       },
       {
-        "required": ["IF_DAMAGEABLE"],
+        "required": ["%IF_DAMAGEABLE"],
         "call": "crash",
         "literals": {
           "node": "car_node$SUFFIX",
@@ -86,7 +86,7 @@
         }
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {
@@ -138,7 +138,7 @@
         }
       },
       {
-        "required": ["IF_PC", "IF_DEVEL"],
+        "required": ["%IF_PC", "%IF_DEVEL"],
         "call": "visual_player_status",
         "literals": {
           "format": "position|speed|acceleration|diameter|diameter2|energy",
@@ -153,7 +153,7 @@
         }
       },
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "call": "visual_player_status",
         "literals": {
           "player": "%PLAYER_NAME",
@@ -178,7 +178,7 @@
         }
       },
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "call": "visual_player_bullet_count",
         "literals": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",

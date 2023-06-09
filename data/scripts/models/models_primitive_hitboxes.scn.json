@@ -24,7 +24,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "50_16_01_hitbox",
@@ -42,7 +42,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "modify_physics_material_tags",
         "literals": {
             "resource_name": "50_16_01_hitbox",
@@ -50,7 +50,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "10_10_10_hitbox",
@@ -68,7 +68,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "modify_physics_material_tags",
         "literals": {
             "resource_name": "10_10_10_hitbox",

@@ -139,7 +139,7 @@
     ]
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture_with_histogram",
     "literals": {
       "NAME": "facade_bricks_red",
@@ -149,7 +149,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture",
     "literals": {
       "NAME": "facade_plaster_orange",
@@ -158,7 +158,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture",
     "literals": {
       "NAME": "facade_plaster_gray",
@@ -167,7 +167,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture",
     "literals": {
       "NAME": "facade_plaster_white",
@@ -176,7 +176,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture",
     "literals": {
       "NAME": "facade_plaster_green",
@@ -185,7 +185,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "add_facade_texture",
     "literals": {
       "NAME": "facade_plaster_blue",
@@ -194,7 +194,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "building_big_office3_window",

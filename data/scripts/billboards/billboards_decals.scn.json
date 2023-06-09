@@ -1,6 +1,6 @@
 [
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "Leaf018_2",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "Leaf018_2_Red",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "Paper",
@@ -32,7 +32,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "square_resource",
         "literals": {
             "name": "Leaf018_2",
@@ -54,7 +54,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "square_resource",
         "literals": {
             "name": "Leaf018_2_Red",
@@ -76,7 +76,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "square_resource",
         "literals": {
             "name": "Paper",

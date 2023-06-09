@@ -3,7 +3,7 @@
     "comment": "Ground003"
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Ground003_2",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Ground003_8",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_256",
     "literals": {
       "NAME": "Ground037_Rock028",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Ground037_dark27_1",
@@ -95,7 +95,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Ground037_dark27_8",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_256",
     "literals": {
       "NAME": "Ground037_Sl",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_512",
     "literals": {
       "NAME": "Rock028_200",
@@ -130,7 +130,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_512",
     "literals": {
       "NAME": "Rock028_029_200",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_512",
     "literals": {
       "NAME": "Rock028_gc2_mountain",
@@ -171,7 +171,7 @@
     "comment": "grass_ground"
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "grass_ground_1",
@@ -186,7 +186,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "grass_ground_8",

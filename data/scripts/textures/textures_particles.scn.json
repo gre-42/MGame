@@ -1,6 +1,6 @@
 [
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "explosion_01",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "explosion_orange_brown_1",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "exclude": ["IF_ANDROID"],
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "explosion_gray",

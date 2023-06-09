@@ -1,6 +1,6 @@
 [
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
             "name": "ocean_uniform",

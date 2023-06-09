@@ -8,6 +8,6 @@
       "VEHICLE_CLASS": "car",
       "NODE_PREFIXES": ["car_node", "car_node_trailer"]
     },
-    "required": ["GAME_MODE in {'rally'}", "RACE_RESTRICTIONS in {'', 'car_with_trailer'}"]
+    "required": ["%GAME_MODE in {rally}", "%RACE_RESTRICTIONS in {'', car_with_trailer}"]
   }
 }

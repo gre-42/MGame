@@ -5,7 +5,7 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0.1, 0.5, 0]}},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX",             "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0  , -0.5]}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX",         "position": [0, 0  ,    0]}},
@@ -49,13 +49,13 @@
         }
       },
       {"call": "create_weapon_cycle", "literals": {"cycle_node": "human_node$SUFFIX"}},
-      {"required": ["IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m4a1_ammo", "capacity": 200}},
-      {"required": ["IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "beretta92_ammo", "capacity": 200}},
-      {"required": ["IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "frag_grenade", "capacity": 10}},
-      {"required": ["IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m72_law_rocket", "capacity": 2}},
-      {"required": ["IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "none_weapon_ammo_type", "capacity": 0}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m4a1_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "beretta92_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "frag_grenade", "capacity": 10}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m72_law_rocket", "capacity": 2}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "none_weapon_ammo_type", "capacity": 0}},
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "literals": {
           "cycle_node": "human_node$SUFFIX",
@@ -86,7 +86,7 @@
         }
       },
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "literals": {
           "cycle_node": "human_node$SUFFIX",
@@ -117,7 +117,7 @@
         }
       },
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "literals": {
           "cycle_node": "human_node$SUFFIX",
@@ -148,7 +148,7 @@
         }
       },
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "literals": {
           "cycle_node": "human_node$SUFFIX",
@@ -179,7 +179,7 @@
         }
       },
       {
-        "required": ["IF_WITH_GUN"],
+        "required": ["%IF_WITH_GUN"],
         "call": "set_desired_weapon",
         "literals": {
           "cycle_node": "human_node$SUFFIX",
@@ -196,9 +196,9 @@
         }
       },
       {"call": "damageable", "literals": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
-      {"required": ["IF_WITH_PHYSICS"], "call": "set_jump_strength", "literals": {"node": "human_node$SUFFIX", "value": 0.3}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_strength", "literals": {"node": "human_node$SUFFIX", "value": 0.3}},
       {
-        "required": ["IF_WITH_PHYSICS"],
+        "required": ["%IF_WITH_PHYSICS"],
         "call": "create_engine",
         "literals": {
           "rigid_body": "human_node$SUFFIX",
@@ -210,7 +210,7 @@
         }
       },
       {
-        "required": ["IF_WITH_PHYSICS"],
+        "required": ["%IF_WITH_PHYSICS"],
         "call": "wheel",
         "literals": {
           "rigid_body": "human_node$SUFFIX",
@@ -223,8 +223,8 @@
           "tire_id": 0
         }
       },
-      {"required": ["IF_WITH_PHYSICS"], "call": "create_human_as_car_controller", "literals": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
-      {"required": ["IF_WITH_PHYSICS"], "call": "create_human_as_avatar_controller", "literals": {"node": "human_node$SUFFIX"}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_car_controller", "literals": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_avatar_controller", "literals": {"node": "human_node$SUFFIX"}},
       {
         "call": "set_avatar_style_updater",
         "literals": {
@@ -244,8 +244,8 @@
         }
       },
       {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1$DECIMATE"}},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "mh1_d1"}}
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1$DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "mh1_d1"}}
     ]
   },
   {

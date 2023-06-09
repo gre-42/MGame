@@ -4,13 +4,13 @@
   {"include": "billboards_grass.scn.json"},
   {"include": "billboards_particles_atlas.scn.json"},
   {"include": "billboards_particles.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "billboards_vegetation0_atlas.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "billboards_vegetation0_atlas.scn.json"},
   {"include": "billboards_vegetation1_atlas.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "billboards_vegetation2_atlas.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "billboards_vegetation3_atlas.scn.json"},
-  {"exclude": ["IF_ANDROID"], "include": "billboards_vegetation4_atlas.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "billboards_vegetation2_atlas.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "billboards_vegetation3_atlas.scn.json"},
+  {"exclude": ["%IF_ANDROID"], "include": "billboards_vegetation4_atlas.scn.json"},
   {"include": "billboards_vegetation5_atlas.scn.json"},
   {"include": "billboards_vegetation6_atlas.scn.json"},
   {"include": "billboards_vegetation7_atlas.scn.json"},
-  {"exclude": ["IF_ANDROID"],"include": "billboards_vegetation8_atlas.scn.json"}
+  {"exclude": ["%IF_ANDROID"],"include": "billboards_vegetation8_atlas.scn.json"}
 ]

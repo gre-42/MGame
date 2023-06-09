@@ -22,11 +22,12 @@
         "WHEEL_LEFT_REAR_POSITION":   [-1, 0.1, 1.6],
         "WHEEL_RIGHT_REAR_POSITION":  [ 1, 0.1, 1.6],
 
-        "ANGULAR_VELS_FRONT": [0],
-        "ANGULAR_VELS_REAR": [0],
-
-        "POWERS_FRONT": [1],
-        "POWERS_REAR": [1],
+        "ANGULAR_VELS_FRONT": null,
+        "ANGULAR_VELS_REAR": null,
+        "POWERS_FRONT": null,
+        "POWERS_REAR": null,
+        "ANGULAR_VELS": [0],
+        "POWERS": [1],
 
         "GEAR_RATIOS": [1, -1]
       }

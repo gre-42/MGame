@@ -9,8 +9,10 @@
       "NODE_PREFIXES": ["car_node"],
       "TRAILER_HITCH_POSITION_FEMALE": [0, 0.3, -4],
       "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 0
+      "MAX_TIRE_ANGLE": 0,
+      "FRONT_ENGINE": "engine",
+      "REAR_ENGINE": "engine"
     },
-    "required": ["GAME_MODE in {}"]
+    "required": ["%GAME_MODE in {}"]
   }
 }

@@ -5,16 +5,16 @@
       {"call": "renderable_instance", "literals": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Left|Right|Hull"}},
       {"call": "renderable_instance", "literals": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Machine_Gun|Main_Turret|Hatch"}},
       {"call": "renderable_instance", "literals": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Main_Gun"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_0_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_0_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_1_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_1_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_2_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_2_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_3_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_3_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_4_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_4_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}}
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_0_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_0_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_1_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_1_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_2_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_2_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_3_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_3_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_4_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_4_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}}
     ]
   },
   {
@@ -164,11 +164,11 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_3_node$SUFFIX", "position": [ 1.8, -0.8,  2.4]}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_4_node$SUFFIX",  "position": [-1.8, -0.0,  4  ]}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_4_node$SUFFIX", "position": [ 1.8, -0.0,  4  ]}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_0_node$SUFFIX", "name": "wheel_right_0_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_1_node$SUFFIX", "name": "wheel_right_1_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_2_node$SUFFIX", "name": "wheel_right_2_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_3_node$SUFFIX", "name": "wheel_right_3_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_4_node$SUFFIX", "name": "wheel_right_4_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_0_node$SUFFIX", "name": "wheel_right_0_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_1_node$SUFFIX", "name": "wheel_right_1_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_2_node$SUFFIX", "name": "wheel_right_2_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_3_node$SUFFIX", "name": "wheel_right_3_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_4_node$SUFFIX", "name": "wheel_right_4_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"comment": [
         {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": [0, -0.5, 1]}},
         "",
@@ -192,9 +192,9 @@
         "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=tiger_tank_hitbox"]
       },
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d3$SUFFIX", "DECIMATE": "_d3"}},
-      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"], "playback": "create_tiger_tank_physics", "literals": {
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d3$SUFFIX", "DECIMATE": "_d3"}},
+      {"required": ["%IF_WITH_PHYSICS", "%IF_STATIC"], "playback": "create_tiger_tank_physics", "literals": {
         "SUFFIX": "%SUFFIX",
         "MASS": "inf",
         "COLLIDABLE_MODE": "static",
@@ -204,7 +204,7 @@
         "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
         "ERROR_ALPHA": "%ERROR_ALPHA"
       }},
-      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_tiger_tank_physics", "literals": {
+      {"required": ["%IF_WITH_PHYSICS", "%IF_DYNAMIC"], "playback": "create_tiger_tank_physics", "literals": {
         "SUFFIX": "%SUFFIX",
         "MASS": 56e3,
         "COLLIDABLE_MODE": "moving",
@@ -219,7 +219,7 @@
   {
     "declare_macro": "create_player_car_externals_tiger_tank",
     "content": [
-      {"required": ["IF_PC"], "playback": "create_car_key_bindings", "literals": {
+      {"required": ["%IF_PC"], "playback": "create_car_key_bindings", "literals": {
         "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
         "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
         "IF_HAS_GUN": true,
@@ -227,11 +227,11 @@
         "PLAYER_NAME": "%PLAYER_NAME",
         "ROLE": "gunner"
       }},
-      {"required": ["IF_PC"], "playback": "create_car_cameras_tank", "literals": {
+      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank", "literals": {
         "SUFFIX": "%SUFFIX",
         "PLAYER_NAME": "%PLAYER_NAME"
       }},
-      {"required": ["IF_PC"], "call": "hud_image", "literals": {
+      {"required": ["%IF_PC"], "call": "hud_image", "literals": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX",
         "camera_node": "main_gun_camera_node$SUFFIX",
@@ -241,7 +241,7 @@
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "center"}},
-      {"required": ["IF_PC"], "call": "hud_image", "literals": {
+      {"required": ["%IF_PC"], "call": "hud_image", "literals": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX",
         "camera_node": "follower_camera",
@@ -255,7 +255,7 @@
         "player": "%PLAYER_NAME",
         "ypln_node": "turret_node$SUFFIX",
         "gun_node": "main_gun_end_node$SUFFIX"}},
-      {"comment": {"exclude": ["IF_ANDROID"], "required": ["IF_PC"], "playback": "create_player_car_engine_rpm_meter", "literals": {
+      {"comment": {"exclude": ["%IF_ANDROID"], "required": ["%IF_PC"], "playback": "create_player_car_engine_rpm_meter", "literals": {
         "PLAYER_NAME": "%PLAYER_NAME",
         "ENGINE_NAME": "left"}}},
       {"call": "player_set_vehicle_control_parameters", "literals": {

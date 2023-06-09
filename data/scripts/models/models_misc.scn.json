@@ -2,7 +2,7 @@
 [
     {
         "comment": {
-            "exclude": ["IF_ANDROID"],
+            "exclude": ["%IF_ANDROID"],
             "call": "obj_resource",
             "literals": {
                 "name": "checkpoint_arrow",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "box",
@@ -58,7 +58,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "box_on_ground",
@@ -76,7 +76,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "topdown_locator",
@@ -95,7 +95,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "flag",
@@ -113,7 +113,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "flag_z",
@@ -131,7 +131,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "beacon",
@@ -149,7 +149,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "sphere",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "beacon1",
@@ -186,7 +186,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "gizmo",
@@ -204,7 +204,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "tank_bullet_renderable",
@@ -222,7 +222,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "tank_bullet_hitbox",
@@ -240,7 +240,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "gen_ray",
         "literals": {
             "name": "tank_bullet_hitbox",
@@ -249,7 +249,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "modify_physics_material_tags",
         "literals": {
             "resource_name": "tank_bullet_hitbox",
@@ -257,7 +257,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
         "literals": {
             "name": "grenade_hitbox",
@@ -275,7 +275,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "modify_physics_material_tags",
         "literals": {
             "resource_name": "grenade_hitbox",

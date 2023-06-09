@@ -14,7 +14,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_cubemap",
         "literals": {
             "alias": "skybox_rgb",
@@ -29,7 +29,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_cubemap",
         "literals": {
             "alias": "skybox_ocean",
@@ -59,7 +59,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_cubemap",
         "literals": {
             "alias": "skybox_night",
@@ -74,7 +74,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_cubemap",
         "literals": {
             "alias": "reflection_map_night",
@@ -89,7 +89,7 @@
         }
     },
     {
-        "exclude": ["IF_ANDROID"],
+        "exclude": ["%IF_ANDROID"],
         "call": "add_cubemap",
         "literals": {
             "alias": "reflection_map_synthwave",

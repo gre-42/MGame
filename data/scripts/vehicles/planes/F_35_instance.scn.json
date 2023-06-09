@@ -257,15 +257,15 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "right_rudder_node$SUFFIX",       "position": [ 1.5, 0,  6]}},
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "right_rudder_node$SUFFIX", "name": "right_rudder_shift_node$SUFFIX", "position": [-1.5, 0, -6]}},
       {"comment": "Graphics"},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_front", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_front"}}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_mid", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_mid"}}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
       {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
       {"comment": [
         "IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node$SUFFIX name=gizmo_node$SUFFIX position=0 0 0 rotation=0 0 0 scale=1",
         "IF_WITH_GRAPHICS renderable_instance name=gizmo node=gizmo_node$SUFFIX resource=gizmo",
@@ -274,15 +274,15 @@
         "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
-      {"required": ["IF_WITH_PHYSICS", "IF_STATIC"],  "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
-      {"required": ["IF_WITH_PHYSICS", "IF_DYNAMIC"], "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {"required": ["%IF_WITH_PHYSICS", "%IF_STATIC"],  "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
+      {"required": ["%IF_WITH_PHYSICS", "%IF_DYNAMIC"], "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
     ]
   },
   {
     "declare_macro": "create_player_car_externals_F_35",
     "content": [
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "playback": "create_plane_key_bindings",
         "literals": {
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
@@ -294,7 +294,7 @@
         }
       },
       {
-        "required": ["IF_PC"],
+        "required": ["%IF_PC"],
         "playback": "create_car_cameras_plane",
         "literals": {
           "SUFFIX": "%SUFFIX",

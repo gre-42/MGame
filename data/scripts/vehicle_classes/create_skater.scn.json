@@ -13,7 +13,7 @@
         }
       },
       {
-        "required": ["IF_SKATER_STYLE"],
+        "required": ["%IF_SKATER_STYLE"],
         "call": "add_color_style",
         "literals": {
           "node": "skater_node$SUFFIX",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "required": ["IF_SKATER_STYLE"],
+        "required": ["%IF_SKATER_STYLE"],
         "call": "set_animation_state",
         "literals": {
           "node": "skater_node$SUFFIX",
@@ -47,7 +47,7 @@
         }
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "literals": {
           "asset_id": "%SKATER_NAME",
@@ -59,7 +59,7 @@
         "comment": "# IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater$SUFFIX CSUFFIX:SUFFIX"
       },
       {
-        "required": ["IF_SPAWNER"],
+        "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "literals": {
           "macro": {

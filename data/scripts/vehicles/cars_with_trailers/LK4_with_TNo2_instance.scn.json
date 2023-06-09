@@ -13,7 +13,7 @@
         }
       },
       {
-        "required": ["IF_WITH_PHYSICS"],
+        "required": ["%IF_WITH_PHYSICS"],
         "call": "create_trailer_node",
         "literals": {
           "car_instance": "car_node$SUFFIX",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "exclude": ["IF_WITH_PHYSICS"],
+        "exclude": ["%IF_WITH_PHYSICS"],
         "call": "root_node_instance",
         "literals": {
           "type": "dynamic",
@@ -42,7 +42,7 @@
         }
       },
       {
-        "required": ["IF_WITH_PHYSICS"],
+        "required": ["%IF_WITH_PHYSICS"],
         "call": "connect_trailer",
         "literals": {
           "car": "car_node$SUFFIX",
