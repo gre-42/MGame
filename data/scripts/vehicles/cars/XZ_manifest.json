@@ -13,6 +13,6 @@
       "FRONT_ENGINE": "engine",
       "REAR_ENGINE": "engine"
     },
-    "required": ["%GAME_MODE in {rally}", "%RACE_RESTRICTIONS in {'', car}"]
+    "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
   }
 }

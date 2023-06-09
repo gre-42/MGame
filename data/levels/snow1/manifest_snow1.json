@@ -8,5 +8,5 @@
     "LEVEL_ICON_FILE": "levels/snow1/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },
-  "required": ["%GAME_MODE in {rally}"]
+  "required": ["%GAME_MODE == 'rally'"]
 }
