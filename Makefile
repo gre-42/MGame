@@ -47,12 +47,14 @@ package:
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
-			Mlib/$(platform_dir)/Bin/libMlib.dll \
 			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
 			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
+			Mlib/$(platform_dir)/Bin/libMlib.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeography.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
+			Mlib/$(platform_dir)/Bin/libMlibIo.dll \
+			Mlib/$(platform_dir)/Bin/libMlibJson.dll \
 			Mlib/$(platform_dir)/Bin/libMlibLayout.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMacroExecutor.dll \
 			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
@@ -63,11 +65,12 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \
+			Mlib/$(platform_dir)/Bin/libMlibRegex.dll \
 			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
 			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
 			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStb.dll \
 			Mlib/$(platform_dir)/Bin/libMlibStbCpp.dll \
+			Mlib/$(platform_dir)/Bin/libMlibStb.dll \
 			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
 			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
 			Mlib/$(platform_dir)/Bin/libMlibTime.dll \
