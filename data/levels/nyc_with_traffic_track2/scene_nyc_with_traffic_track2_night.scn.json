@@ -3,7 +3,7 @@
   {"include": "../nyc/osm_resource_nyc.scn.json"},
   {
     "call": "constant_parameter",
-    "literals": {"name": "LOADED_GAME_LEVEL", "value": "2"}},
+    "literals": {"name": "LOADED_GAME_LEVEL", "value": "'2'"}},
   {
     "call": "constant_parameter",
     "literals": {"name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_nyc_with_traffic_track2.m"}},
