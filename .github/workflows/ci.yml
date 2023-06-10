@@ -114,6 +114,7 @@ jobs:
           Mlib\build_scene_renderer.cmd || exit /b
 
       - name: Package
+        shell: cmd
         run: |
           Mlib\package_scene_renderer.cmd || exit /b
 
