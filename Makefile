@@ -117,3 +117,18 @@ run_dev: build
 		--windowed_width 1500 \
 		--windowed_height 900 \
 		--devel_mode
+
+run_tsan:
+	OMP_NUM_THREADS=1 \
+	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=Mlib/suppressions.txt" \
+		Mlib/TGURelWithDebInfo/Bin/render_scene_file \
+		data \
+		data/levels/main/main.scn \
+		--app_reldir .osm_rally \
+		--print_render_residual_time \
+		--print_physics_residual_time \
+		--nsamples_msaa 2 \
+		--show_mouse_cursor \
+		--windowed_width 1500 \
+		--windowed_height 900 \
+		--devel_mode
