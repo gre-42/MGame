@@ -16,29 +16,26 @@ recastnavigation:
 	make -C Mlib recastnavigation \
 		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
-build:
+build_any:
 	BUILD_PREFIX=$(build_prefix) \
 	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
-		make -C Mlib build \
+		make -C Mlib $(TARGET) \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+
+build:
+	make build_any TARGET=build
 
 build_clang:
-	BUILD_PREFIX=$(build_prefix) \
-	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
-		make -C Mlib build_clang \
-			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+	make build_any TARGET=build_clang
 
 build_asan:
-	BUILD_PREFIX=$(build_prefix) \
-	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
-		make -C Mlib build_asan \
-			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+	make build_any TARGET=build_asan
 
 build_tsan:
-	BUILD_PREFIX=$(build_prefix) \
-	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
-		make -C Mlib build_tsan \
-			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+	make build_any TARGET=build_tsan
+
+build_tsan_clang:
+	make build_any TARGET=build_tsan_clang
 
 package:
 	@echo "OS Type: $(ostype)"
