@@ -24,9 +24,7 @@ macro_playback scene_racing_static
     SUN_TOP:1000
     SOFT_LIGHT_TEXTURE:
     SKYBOX:skybox
-    IF_DAY:
-    IF_NIGHT:#
-    IF_SYNTHWAVE:#;
+    TIME_OF_DAY:day;
 
 macro_begin instantiate_transient_objects;
     macro_playback generic_scene_racing_dynamic

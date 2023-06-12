@@ -285,17 +285,17 @@
       }
     },
     {
-      "required": ["%IF_DAY"],
+      "required": ["%TIME_OF_DAY == 'day'"],
       "call": "set_background_color",
       "literals": { "color": [0.68, 0.85, 1] }
     },
     {
-      "required": ["%IF_NIGHT"],
+      "required": ["%TIME_OF_DAY == 'night'"],
       "call": "set_background_color",
       "literals": { "color": [0, 0, 0] }
     },
     {
-      "required": ["%IF_SYNTHWAVE"],
+      "required": ["%TIME_OF_DAY == 'synthwave'"],
       "call": "set_background_color",
       "literals": { "color": [0.65, 0.36, 0.91] }
     },
@@ -306,33 +306,33 @@
       "comment": "Light"
     },
     {
-      "required": ["%IF_DAY"],
+      "required": ["%TIME_OF_DAY == 'day'"],
       "playback": "add_distant_light_day",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
-      "required": ["%IF_NIGHT"],
+      "required": ["%TIME_OF_DAY == 'night'"],
       "playback": "add_distant_light_night",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
-      "required": ["%IF_SYNTHWAVE"],
+      "required": ["%TIME_OF_DAY == 'synthwave'"],
       "playback": "add_distant_light_night",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
       }
     },
     {
-      "required": ["%IF_DAY"],
+      "required": ["%TIME_OF_DAY == 'day'"],
       "playback": "add_local_instances_light",
       "literals": { "LSUFFIX": "_local_instances" }
     },
     {
-      "required": ["%IF_NIGHT"],
+      "required": ["%TIME_OF_DAY == 'night'"],
       "playback": "add_local_blob_instances_light",
       "literals": { "LSUFFIX": "_blobs" }
     },
     {
-      "required": ["%IF_SYNTHWAVE"],
+      "required": ["%TIME_OF_DAY == 'synthwave'"],
       "playback": "add_local_blob_instances_light",
       "literals": { "LSUFFIX": "_blobs" }
     },
@@ -340,7 +340,7 @@
       "comment": "Reflection map"
     },
     {
-      "required": ["%IF_DAY"],
+      "required": ["%TIME_OF_DAY == 'day'"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,
@@ -352,7 +352,7 @@
       }
     },
     {
-      "required": ["%IF_NIGHT"],
+      "required": ["%TIME_OF_DAY == 'night'"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,
@@ -363,7 +363,7 @@
         }
     },
     {
-      "required": ["%IF_SYNTHWAVE"],
+      "required": ["%TIME_OF_DAY == 'synthwave'"],
       "call": "add_color_style",
       "literals": {
         "reflection_strength": 0.5,

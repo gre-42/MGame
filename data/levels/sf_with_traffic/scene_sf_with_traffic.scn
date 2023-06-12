@@ -23,9 +23,7 @@ macro_playback scene_racing_static
     SUN_TOP:1000
     SOFT_LIGHT_TEXTURE:textures/soft_light.png
     SKYBOX:skybox
-    IF_DAY:
-    IF_NIGHT:#
-    IF_SYNTHWAVE:#
+    TIME_OF_DAY:day
     RACING_LINE_TRACK:__DIR__/racing_line_sf_with_traffic.m
     RACING_LINE_PLAYBACK:__APPDATA__/LEVEL_ID.checkpoints.m;
 
