@@ -1,6 +1,8 @@
+cd /D "%~dp0" || exit /b
+
 GMRelease\render_scene_file.exe ^
     data ^
-    data\levels\main\main.scn ^
+    data\levels\main\main.scn.json ^
     --app_reldir osm_rally ^
     --nsamples_msaa 2 ^
     --show_mouse_cursor ^
