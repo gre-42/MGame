@@ -31,11 +31,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build
+      - name: Build and package
         run: make
-
-      - name: Package
-        run: make package
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
@@ -75,11 +72,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build
+      - name: Build and package
         run: make
-
-      - name: Package
-        run: make package
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
