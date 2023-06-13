@@ -81,7 +81,9 @@
         ]
       },
       {
-        "required": ["%%vehicles/$NAME/FRONT_ENGINE == %%vehicles/$NAME/REAR_ENGINE"],
+        "required": [
+          "%%vehicles/$NAME/FRONT_ENGINE == %%vehicles/$NAME/REAR_ENGINE",
+          "%POWERS != %null"],
         "call": "create_engine",
         "literals": {
           "rigid_body": "car_node$SUFFIX",
@@ -97,6 +99,17 @@
             "p_idle": 90,
             "p_reference": 200
           }
+        }
+      },
+      {
+        "required": [
+          "%%vehicles/$NAME/FRONT_ENGINE == %%vehicles/$NAME/REAR_ENGINE",
+          "%POWERS == %null"],
+        "call": "create_engine",
+        "literals": {
+          "rigid_body": "car_node$SUFFIX",
+          "name": "engine",
+          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
 
