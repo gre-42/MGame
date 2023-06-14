@@ -83,6 +83,18 @@
         "literals": {
           "name": "%OSM_MAP"
         }
+      },
+      {
+        "required": ["%CONVEX_DECOMPOSITION_DEPTH != 0"],
+        "call": "convex_decompose_terrain",
+        "literals": {
+          "resource_name": "%OSM_MAP",
+          "included_names": "",
+          "included_tags": "attr_collide",
+          "excluded_tags": "",
+          "depth": "%CONVEX_DECOMPOSITION_DEPTH",
+          "destination_physics_material": "attr_convex|attr_collide"
+        }
       }
     ]
   }
