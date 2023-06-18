@@ -85,15 +85,15 @@
         }
       },
       {
-        "required": ["%CONVEX_DECOMPOSITION_DEPTH != 0"],
-        "call": "convex_decompose_terrain",
+        "required": ["%BARRIER_DEPTH != 0"],
+        "call": "create_barrier_triangle_hitboxes",
         "literals": {
           "resource_name": "%OSM_MAP",
           "included_names": "",
-          "included_tags": "attr_collide",
+          "included_tags": "attr_collide|attr_two_sided",
           "excluded_tags": "",
-          "depth": "%CONVEX_DECOMPOSITION_DEPTH",
-          "destination_physics_material": "attr_convex|attr_collide"
+          "depth": "%BARRIER_DEPTH",
+          "destination_physics_material": "attr_concave|attr_collide|attr_visible"
         }
       }
     ]
