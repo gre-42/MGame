@@ -17,7 +17,7 @@
     }
   },
 
-  {"call": "gen_triangle_rays", "literals": {"name": "TW_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "TW_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
 
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "TW_hitbox", "add": "obj_chassis|attr_convex"}},
 

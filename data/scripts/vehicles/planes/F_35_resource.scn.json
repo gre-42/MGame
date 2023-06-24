@@ -35,7 +35,7 @@
           "OCCLUDER_PASS": "none"
         }
       },
-      {"call": "gen_triangle_rays", "literals": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+      {"comment": {"call": "gen_triangle_rays", "literals": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
       {"call": "modify_physics_material_tags", "literals": {"resource_name": "%NAME", "add": "obj_chassis|attr_convex"}}  
     ]
   },

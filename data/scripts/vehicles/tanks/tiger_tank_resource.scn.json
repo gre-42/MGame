@@ -36,7 +36,7 @@
       "triangle_tangent_error_behavior": "zero"
     }
   },
-  {"call": "gen_triangle_rays", "literals": {"name": "tiger_tank_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "tiger_tank_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "tiger_tank_hitbox", "add": "obj_chassis|attr_convex"}},
   {
     "call": "obj_resource",

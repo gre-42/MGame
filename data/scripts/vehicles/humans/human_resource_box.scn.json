@@ -34,7 +34,7 @@
             "transformation_mode": "all"
         }
     },
-    {"call": "gen_triangle_rays", "literals": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}},
+    {"comment": {"call": "gen_triangle_rays", "literals": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
     {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_distancebox", "add": "obj_distancebox|attr_convex"}},
     {
         "call": "obj_resource",

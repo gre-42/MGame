@@ -70,7 +70,7 @@ macro_begin _scene_tank_load_resources;
         }
     }
 
-    {"call": "gen_triangle_rays", "literals": {"name": "human-hitbox", "npoints": 5, "lengths": [0.5, 0.7, 0.5], "delete_triangles": false},
+    {"comment": {"call": "gen_triangle_rays", "literals": {"name": "human-hitbox", "npoints": 5, "lengths": [0.5, 0.7, 0.5], "delete_triangles": false}}},
 
     {
         "call": "obj_resource",

@@ -52,7 +52,7 @@
     ]
   },
   {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
-  {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": true}},
+  {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
 
   {
     "call": "obj_resource",

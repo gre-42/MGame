@@ -35,7 +35,7 @@
     }
   },
 
-  {"call": "gen_triangle_rays", "literals": {"name": "CNY71_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}},
+  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "CNY71_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
 
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "CNY71_hitbox", "add": "obj_chassis"}},
   {"call": "modify_physics_material_tags", "literals": {"resource_name": "CNY71_hitbox", "add": "attr_convex"}},
