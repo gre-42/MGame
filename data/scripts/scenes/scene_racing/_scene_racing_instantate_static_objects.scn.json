@@ -36,11 +36,30 @@
       }
     },
     {
+      "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
+      "call": "register_geographic_mapping",
+      "literals": {
+        "name": "world",
+        "node": "osm_map_node",
+        "resource": "osm_map"
+      }
+    },
+    {
       "call": "renderable_instance",
       "literals": {
         "name": "osm_inst",
         "node": "osm_map_node",
         "resource": "osm_map"
+      }
+    },
+    {
+      "comment": {
+        "call": "save_to_obj_file",
+        "literals": {
+          "resource": "osm_map",
+          "node": "osm_map_node",
+          "prefix": "/tmp/osm_map_"
+        }
       }
     },
     {
@@ -89,15 +108,6 @@
       }
     },
     {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
-    {
-      "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
-      "call": "register_geographic_mapping",
-      "literals": {
-        "name": "world",
-        "node": "osm_map_node",
-        "resource": "osm_map"
-      }
-    },
     {"comment": "Player"},
     {
       "required": ["%IF_CREATE_PC_PLAYER"],
