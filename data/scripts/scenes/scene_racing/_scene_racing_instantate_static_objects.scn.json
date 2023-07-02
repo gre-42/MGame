@@ -104,7 +104,8 @@
         "size": [1, 2, 3],
         "collidable_mode": "static",
         "name": "osm_map",
-        "asset_id": "osm_map_no_id"
+        "asset_id": "osm_map_no_id",
+        "collision_ridge_error_behavior": "%OSM_COLLISION_RIDGE_ERROR_BEHAVIOR"
       }
     },
     {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
