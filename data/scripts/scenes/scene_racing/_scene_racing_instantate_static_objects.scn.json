@@ -2,6 +2,14 @@
   "declare_macro": "_scene_racing_instantiate_static_objects",
   "content": [
     {
+      "comment": {
+        "call": "preload_single",
+        "literals": {
+          "resource": "osm_map"
+        }
+      }
+    },
+    {
       "playback": "_create_osm_map_resource",
       "literals": {
         "OSM_MAP": "osm_map",
