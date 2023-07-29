@@ -1,10 +1,10 @@
 {
-  "name": "Grossglockner High Alpine Road",
-  "macro": {
+  "id": "grossglockner_hochalpenstrasse_open",
+  "title": "Grossglockner High Alpine Road",
+  "on_execute": {
     "include": "scene_grossglockner_hochalpenstrasse_open.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "grossglockner_hochalpenstrasse_open",
     "LEVEL_ICON_FILE": "levels/grossglockner_hochalpenstrasse/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

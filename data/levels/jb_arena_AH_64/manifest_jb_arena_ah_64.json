@@ -1,13 +1,13 @@
 {
-  "name": "JB arena AH-64",
-  "macro": {
+  "id": "jb_arena_ah_64",
+  "title": "JB arena AH-64",
+  "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
     "literals": {
       "PLAYERS_JSON": "$__DIR__/players.json"
     }
   },
   "globals": {
-    "LEVEL_ID": "jb_arena_ah_64",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

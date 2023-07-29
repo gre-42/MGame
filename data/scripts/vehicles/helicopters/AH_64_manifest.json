@@ -1,16 +1,14 @@
 {
   "id": "AH_64",
+  "title": "AH-64",
   "on_init": [
     {"include": "AH_64_resource.scn.json"},
     {"include": "AH_64_instance.scn.json"}
   ],
-  "params": {
-    "title": "AH-64",
-    "globals": {
-      "VEHICLE_SUFFIX": "AH_64",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"]
-    },
-    "required": ["%GAME_MODE in {'team_deathmatch'}"]
-  }
+  "database": {
+    "SUFFIX": "AH_64",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"]
+  },
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }

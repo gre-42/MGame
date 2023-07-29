@@ -1,10 +1,10 @@
 {
-  "name": "Snow 1",
-  "macro": {
+  "id": "snow1",
+  "title": "Snow 1",
+  "on_execute": {
     "include": "scene_snow1.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "snow1",
     "LEVEL_ICON_FILE": "levels/snow1/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

@@ -1,10 +1,10 @@
 {
-  "name": "Arena humans",
-  "macro": {
+  "id": "arena_humans",
+  "title": "Arena humans",
+  "on_execute": {
     "include": "scene_arena_humans.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "arena_humans",
     "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

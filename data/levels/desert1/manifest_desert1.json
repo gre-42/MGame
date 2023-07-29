@@ -1,10 +1,10 @@
 {
-  "name": "Desert 1",
-  "macro": {
+  "id": "desert1",
+  "title": "Desert 1",
+  "on_execute": {
     "include": "scene_desert1.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "desert1",
     "LEVEL_ICON_FILE": "levels/desert1/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

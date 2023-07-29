@@ -1,18 +1,16 @@
 {
   "id": "OT",
+  "title": "OT",
   "on_init": {"include": "OT.scn.json"},
-  "params": {
-    "title": "OT",
-    "globals": {
-      "VEHICLE_SUFFIX": "OT",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "TRAILER_HITCH_POSITION_FEMALE": null,
-      "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 30,
-      "FRONT_ENGINE": "engine",
-      "REAR_ENGINE": "engine"
-    },
-    "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
-  }
+  "database": {
+    "SUFFIX": "OT",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "TRAILER_HITCH_POSITION_FEMALE": null,
+    "TRAILER_HITCH_POSITION_MALE": null,
+    "MAX_TIRE_ANGLE": 30,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
+  },
+  "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }

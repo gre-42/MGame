@@ -1,10 +1,10 @@
 {
-  "name": "Skate 0",
-  "macro": {
+  "id": "skate0",
+  "title": "Skate 0",
+  "on_execute": {
     "include": "scene_skate0.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "skate0",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

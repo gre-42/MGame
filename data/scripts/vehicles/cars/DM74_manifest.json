@@ -1,18 +1,16 @@
 {
   "id": "DM74",
+  "title": "Dodge Monaco 1974",
   "on_init": {"include": "DM74.scn.json"},
-  "params": {
-    "title": "Dodge Monaco 1974",
-    "globals": {
-      "VEHICLE_SUFFIX": "DM74",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "TRAILER_HITCH_POSITION_FEMALE": null,
-      "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 30,
-      "FRONT_ENGINE": "engine",
-      "REAR_ENGINE": "engine"
-    },
-    "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
-  }
+  "database": {
+    "SUFFIX": "DM74",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "TRAILER_HITCH_POSITION_FEMALE": null,
+    "TRAILER_HITCH_POSITION_MALE": null,
+    "MAX_TIRE_ANGLE": 30,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
+  },
+  "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }

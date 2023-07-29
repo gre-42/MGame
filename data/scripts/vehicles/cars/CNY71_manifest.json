@@ -1,18 +1,16 @@
 {
   "id": "CNY71",
+  "title": "Chrysler - New Yorker 1971",
   "on_init": {"include": "CNY71.scn.json"},
-  "params": {
-    "title": "Chrysler - New Yorker 1971",
-    "globals": {
-      "VEHICLE_SUFFIX": "CNY71",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "TRAILER_HITCH_POSITION_FEMALE": null,
-      "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 30,
-      "FRONT_ENGINE": "engine",
-      "REAR_ENGINE": "engine"
-    },
-    "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
-  }
+  "database": {
+    "SUFFIX": "CNY71",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "TRAILER_HITCH_POSITION_FEMALE": null,
+    "TRAILER_HITCH_POSITION_MALE": null,
+    "MAX_TIRE_ANGLE": 30,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
+  },
+  "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }

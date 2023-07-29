@@ -1,13 +1,13 @@
 {
-  "name": "JB arena humans",
-  "macro": {
+  "id": "jb_arena_humans",
+  "title": "JB arena humans",
+  "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
     "literals": {
       "PLAYERS_JSON": "$__DIR__/players.json"
     }
   },
   "globals": {
-    "LEVEL_ID": "jb_arena_humans",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

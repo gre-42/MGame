@@ -1,10 +1,10 @@
 {
-  "name": "WIP: San Francisco without traffic",
-  "macro": {
+  "id": "sf_wo_traffic",
+  "title": "WIP: San Francisco without traffic",
+  "on_execute": {
     "include": "scene_sf_wo_traffic.scn"
   },
   "globals": {
-    "LEVEL_ID": "sf_wo_traffic",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

@@ -13,7 +13,6 @@
         "context": "primary_scene",
         "literals": {
           "IF_UPDATE_EXISTING_SCENE": true,
-          "SELECTED_VEHICLE_SUFFIX": "%SELECTED_VEHICLE_SUFFIX",
           "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
           "RACE_SESSION": "%RACE_SESSION",
           "RACE_LAPS": "%RACE_LAPS"
@@ -79,8 +78,8 @@
       {
         "playback": "__change_showroom_vehicle_in_physics_thread",
         "literals": {
-          "VEHICLE_NAME": "%SELECTED_VEHICLE_SUFFIX",
-          "VEHICLE_CLASS": "%SELECTED_VEHICLE_CLASS",
+          "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
+          "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
           "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
           "DECIMATE": "%SELECTED_DECIMATE"
         }
@@ -145,9 +144,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"title": "Skating", "globals": {"GAME_MODE": "skating"}},
-            {"title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
+            {"id": "", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
+            {"id": "", "title": "Skating", "globals": {"GAME_MODE": "skating"}},
+            {"id": "", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
         }
       },
@@ -167,8 +166,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
+            {"id": "", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
+            {"id": "", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
         }
       },
@@ -342,8 +341,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Car", "globals": {"RACE_RESTRICTIONS": "car"}},
-            {"title": "Car with trailer", "globals": {"RACE_RESTRICTIONS": "car_with_trailer"}}
+            {"id": "", "title": "Car", "globals": {"RACE_RESTRICTIONS": "car"}},
+            {"id": "", "title": "Car with trailer", "globals": {"RACE_RESTRICTIONS": "car_with_trailer"}}
           ]
         }
       },
@@ -371,7 +370,7 @@
             }
           ],
           "assets": "vehicles",
-          "asset_prefix": "SELECTED_"
+          "asset_prefix": "SELECTED_VEHICLE_"
         }
       },
       {
@@ -399,12 +398,12 @@
             }
           ],
           "parameters": [
-            {"title": "White", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
-            {"title": "Gray",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
-            {"title": "Red",   "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
-            {"title": "Green", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
-            {"title": "Blue",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
-            {"title": "Black", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
+            {"id": "", "title": "White", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
+            {"id": "", "title": "Gray",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
+            {"id": "", "title": "Red",   "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
+            {"id": "", "title": "Green", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
+            {"id": "", "title": "Blue",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
+            {"id": "", "title": "Black", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
           ]
         }
       },
@@ -424,11 +423,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "Session1", "globals": {"RACE_SESSION": "session1"}},
-            {"title": "Session2", "globals": {"RACE_SESSION": "session2"}},
-            {"title": "Session3", "globals": {"RACE_SESSION": "session3"}},
-            {"title": "Session4", "globals": {"RACE_SESSION": "session4"}},
-            {"title": "Session5", "globals": {"RACE_SESSION": "session5"}}
+            {"id": "", "title": "Session1", "globals": {"RACE_SESSION": "session1"}},
+            {"id": "", "title": "Session2", "globals": {"RACE_SESSION": "session2"}},
+            {"id": "", "title": "Session3", "globals": {"RACE_SESSION": "session3"}},
+            {"id": "", "title": "Session4", "globals": {"RACE_SESSION": "session4"}},
+            {"id": "", "title": "Session5", "globals": {"RACE_SESSION": "session5"}}
           ]
         }
       },
@@ -448,11 +447,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"title": "'1 Lap'",   "globals": {"RACE_LAPS": 1}},
-            {"title": "'2 Laps'",  "globals": {"RACE_LAPS": 2}},
-            {"title": "'4 Laps'",  "globals": {"RACE_LAPS": 4}},
-            {"title": "'8 Laps'",  "globals": {"RACE_LAPS": 8}},
-            {"title": "'16 Laps'", "globals": {"RACE_LAPS": 16}}
+            {"id": "", "title": "'1 Lap'",   "globals": {"RACE_LAPS": 1}},
+            {"id": "", "title": "'2 Laps'",  "globals": {"RACE_LAPS": 2}},
+            {"id": "", "title": "'4 Laps'",  "globals": {"RACE_LAPS": 4}},
+            {"id": "", "title": "'8 Laps'",  "globals": {"RACE_LAPS": 8}},
+            {"id": "", "title": "'16 Laps'", "globals": {"RACE_LAPS": 16}}
           ]
         }
       },
@@ -473,11 +472,11 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"title": "'80%'", "globals": {"PLAYBACK_SPEED": 0.8}},
-            {"title": "'90%'", "globals": {"PLAYBACK_SPEED": 0.9}},
-            {"title": "'100%'", "globals": {"PLAYBACK_SPEED": 1}},
-            {"title": "'110%'", "globals": {"PLAYBACK_SPEED": 1.1}},
-            {"title": "'120%'", "globals": {"PLAYBACK_SPEED": 1.2}}
+            {"id": "", "title": "'80%'", "globals": {"PLAYBACK_SPEED": 0.8}},
+            {"id": "", "title": "'90%'", "globals": {"PLAYBACK_SPEED": 0.9}},
+            {"id": "", "title": "'100%'", "globals": {"PLAYBACK_SPEED": 1}},
+            {"id": "", "title": "'110%'", "globals": {"PLAYBACK_SPEED": 1.1}},
+            {"id": "", "title": "'120%'", "globals": {"PLAYBACK_SPEED": 1.2}}
           ]
         }
       },

@@ -1,18 +1,16 @@
 {
   "id": "M3",
+  "title": "M3",
   "on_init": {"include": "M3.scn.json"},
-  "params": {
-    "title": "M3",
-    "globals": {
-      "VEHICLE_SUFFIX": "M3",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "TRAILER_HITCH_POSITION_FEMALE": null,
-      "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 30,
-      "FRONT_ENGINE": "engine",
-      "REAR_ENGINE": "engine"
-    },
-    "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
-  }
+  "database": {
+    "SUFFIX": "M3",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "TRAILER_HITCH_POSITION_FEMALE": null,
+    "TRAILER_HITCH_POSITION_MALE": null,
+    "MAX_TIRE_ANGLE": 30,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
+  },
+  "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }

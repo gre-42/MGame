@@ -1,10 +1,10 @@
 {
-  "name": "NYC with traffic, track 2, synthwave",
-  "macro": {
+  "id": "nyc_with_traffic_track2_synthwave",
+  "title": "NYC with traffic, track 2, synthwave",
+  "on_execute": {
     "include": "scene_nyc_with_traffic_track2_synthwave.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "nyc_with_traffic_track2_synthwave",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

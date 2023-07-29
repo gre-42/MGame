@@ -6,11 +6,11 @@
     },
     {
       "required": ["%IF_CREATE_PC_CAR"],
-      "playback":  "create_$SELECTED_VEHICLE_CLASS",
+      "playback":  "create_$$vehicles/$SELECTED_VEHICLE_ID/CLASS",
       "literals": {
-        "HUMAN_NAME": "%SELECTED_VEHICLE_SUFFIX",
-        "SKATER_NAME": "%SELECTED_VEHICLE_SUFFIX",
-        "CAR_NAME": "%SELECTED_VEHICLE_SUFFIX",
+        "HUMAN_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
+        "SKATER_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
+        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
         "SKATER_NODE_POSITION": "%SKATER_NODE_POSITION",
         "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
@@ -157,7 +157,7 @@
       "required": ["%IF_CHECKPOINTS"],
       "call": "check_points",
       "literals": {
-        "moving_asset_id": "%SELECTED_VEHICLE_SUFFIX",
+        "moving_asset_id": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "moving_suffix": "",
         "resource": "glow",
         "player": "you",

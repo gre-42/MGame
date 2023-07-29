@@ -1,10 +1,10 @@
 {
-  "name": "Aircraft carrier 0",
-  "macro": {
+  "id": "aircraft_carrier0",
+  "title": "Aircraft carrier 0",
+  "on_execute": {
     "include": "scene_aircraft_carrier0.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "aircraft_carrier0",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

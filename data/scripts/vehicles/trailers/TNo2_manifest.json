@@ -1,18 +1,16 @@
 {
   "id": "TNo2",
+  "title": "Trailer No. 2",
   "on_init": {"include": "TNo2.scn.json"},
-  "params": {
-    "title": "Trailer No. 2",
-    "globals": {
-      "VEHICLE_SUFFIX": "TNo2",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "TRAILER_HITCH_POSITION_FEMALE": [0, 0.3, -4],
-      "TRAILER_HITCH_POSITION_MALE": null,
-      "MAX_TIRE_ANGLE": 0,
-      "FRONT_ENGINE": "engine",
-      "REAR_ENGINE": "engine"
-    },
-    "required": ["%GAME_MODE in {}"]
-  }
+  "database": {
+    "SUFFIX": "TNo2",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "TRAILER_HITCH_POSITION_FEMALE": [0, 0.3, -4],
+    "TRAILER_HITCH_POSITION_MALE": null,
+    "MAX_TIRE_ANGLE": 0,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
+  },
+  "required": ["%GAME_MODE in {}"]
 }

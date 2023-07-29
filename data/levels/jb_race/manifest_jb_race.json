@@ -1,10 +1,10 @@
 {
-  "name": "JB",
-  "macro": {
+  "id": "jb_race",
+  "title": "JB",
+  "on_execute": {
     "include": "scene_jb_race.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "jb_race",
     "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

@@ -1,10 +1,10 @@
 {
-  "name": "NYC with traffic, track 2",
-  "macro": {
+  "id": "nyc_with_traffic_track2",
+  "title": "NYC with traffic, track 2",
+  "on_execute": {
     "include": "scene_nyc_with_traffic_track2.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "nyc_with_traffic_track2",
     "LEVEL_ICON_FILE": "levels/nyc_with_traffic_track2/icon.png",
     "IF_RACEWAY_CIRCULAR": false
   },

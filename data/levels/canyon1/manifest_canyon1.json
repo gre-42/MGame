@@ -1,10 +1,10 @@
 {
-  "name": "WIP: Canyon 1",
-  "macro": {
+  "id": "canyon1",
+  "title": "WIP: Canyon 1",
+  "on_execute": {
     "include": "scene_canyon1.scn"
   },
   "globals": {
-    "LEVEL_ID": "canyon1",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

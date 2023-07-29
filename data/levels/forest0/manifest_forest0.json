@@ -1,10 +1,10 @@
 {
-  "name": "Forest 0",
-  "macro": {
+  "id": "forest0",
+  "title": "Forest 0",
+  "on_execute": {
     "include": "scene_forest0.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "forest0",
     "LEVEL_ICON_FILE": "levels/forest0/icon.png",
     "IF_RACEWAY_CIRCULAR": true
   },

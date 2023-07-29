@@ -1,10 +1,10 @@
 {
-  "name": "Retro race track 1",
-  "macro": {
+  "id": "retro_race_track1",
+  "title": "Retro race track 1",
+  "on_execute": {
     "include": "scene_retro_race_track1.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "retro_race_track1",
     "LEVEL_ICON_FILE": "levels/retro_race_track1/icon.png",
     "IF_RACEWAY_CIRCULAR": true
   },

@@ -1,17 +1,15 @@
 {
   "id": "F_35",
+  "title": "F-35",
   "on_init": [
     {"include": "F_35_resource.scn.json"},
     {"include": "F_35_instance.scn.json"}
   ],
-  "params": {
-    "title": "F-35",
-    "globals": {
-      "VEHICLE_SUFFIX": "F_35",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "MAX_TIRE_ANGLE": null
-    },
-    "required": ["%GAME_MODE in {'team_deathmatch'}"]
-  }
+  "database": {
+    "SUFFIX": "F_35",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "MAX_TIRE_ANGLE": null
+  },
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }

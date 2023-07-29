@@ -1,10 +1,10 @@
 {
-  "name": "Race track 1",
-  "macro": {
+  "id": "race_track1",
+  "title": "Race track 1",
+  "on_execute": {
     "include": "scene_race_track1.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "race_track1",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": true
   },

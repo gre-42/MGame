@@ -1,10 +1,10 @@
 {
-  "name": "Islands 1",
-  "macro": {
+  "id": "islands1",
+  "title": "Islands 1",
+  "on_execute": {
     "include": "scene_islands1.scn.json"
   },
   "globals": {
-    "LEVEL_ID": "islands1",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

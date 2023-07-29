@@ -1,10 +1,10 @@
 {
-  "name": "San Francisco with traffic",
-  "macro": {
+  "id": "sf_with_traffic",
+  "title": "San Francisco with traffic",
+  "on_execute": {
     "include": "scene_sf_with_traffic.scn"
   },
   "globals": {
-    "LEVEL_ID": "sf_with_traffic",
     "LEVEL_ICON_FILE": "#black",
     "IF_RACEWAY_CIRCULAR": false
   },

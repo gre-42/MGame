@@ -1,17 +1,15 @@
 {
   "id": "tiger_tank",
+  "title": "Tiger I",
   "on_init": [
     {"include": "tiger_tank_resource.scn.json"},
     {"include": "tiger_tank_instance.scn.json"}
   ],
-  "params": {
-    "title": "Tiger I",
-    "globals": {
-      "VEHICLE_SUFFIX": "tiger_tank",
-      "VEHICLE_CLASS": "car",
-      "NODE_PREFIXES": ["car_node"],
-      "MAX_TIRE_ANGLE": 45
-    },
-    "required": ["%GAME_MODE in {'team_deathmatch'}"]
-  }
+  "database": {
+    "SUFFIX": "tiger_tank",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "MAX_TIRE_ANGLE": 45
+  },
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }
