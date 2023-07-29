@@ -2,7 +2,9 @@
 # (assimp v4.1.0)
 
 newmtl DefaultMaterial
+Ka 0.5 0.5 0.5
 Kd 0.6 0.6 0.6
-illum 1
+Ks 0.5 0.5 0.5
+illum 2
 map_Kd textures/FN_glass.png
 map_d textures/FN_glass.png
