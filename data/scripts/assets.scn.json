@@ -1,4 +1,6 @@
 [
+  {"call": "add_ac_loader", "literals": {"id": "levels", "script": "scripts/loaders/ac/scene_template.scn.json"}},
+  {"call": "load_asset_manifests", "literals": {"id": "levels", "directory": "."}},
   {"call": "load_replacement_parameters", "literals": {"id": "levels", "directory": "levels"}},
   {"call": "load_replacement_parameters", "literals": {"id": "vehicles", "directory": "scripts/vehicles"}}
 ]
