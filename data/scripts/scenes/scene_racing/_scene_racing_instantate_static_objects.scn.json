@@ -332,6 +332,10 @@
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
+      "required": ["%TIME_OF_DAY == 'day'"],
+      "playback": "add_sky_light_day"
+    },
+    {
       "required": ["%TIME_OF_DAY == 'night'"],
       "playback": "add_distant_light_night",
       "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
