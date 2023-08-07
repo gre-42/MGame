@@ -15,7 +15,11 @@
         "occluded_pass": "none",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "none",
-        "transformation_mode": "all"
+        "transformation_mode": "all",
+        "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+        "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+        "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+        "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
       }
     },
     {

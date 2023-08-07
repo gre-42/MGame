@@ -18,6 +18,23 @@
 
   {
     "call": "constant_parameter",
+    "literals": {"name": "META_HUMAN_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "META_HUMAN_AMBIENCE_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "META_HUMAN_DIFFUSIVITY_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "META_HUMAN_SPECULARITY_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+
+  {
+    "call": "constant_parameter",
     "literals": {"name": "SKETCHFAB_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
   },
   {

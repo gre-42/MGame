@@ -208,7 +208,11 @@
       "# path_surface_central_resource_name": "road_extrudable_central",
       "# path_surface_endpoint0_resource_name": "road_extrudable_endpoint_0",
       "# path_surface_endpoint1_resource_name": "road_extrudable_endpoint_1",
-      "game_level": "%LOADED_GAME_LEVEL"
+      "game_level": "%LOADED_GAME_LEVEL",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
     }
   }
 }

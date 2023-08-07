@@ -100,7 +100,11 @@
       "blend_street": true,
       "street_surface_central_resource_name": "road_ditch_central",
       "street_surface_endpoint0_resource_name": "road_ditch_endpoint_0",
-      "street_surface_endpoint1_resource_name": "road_ditch_endpoint_1"
+      "street_surface_endpoint1_resource_name": "road_ditch_endpoint_1",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
     }
   }
 }

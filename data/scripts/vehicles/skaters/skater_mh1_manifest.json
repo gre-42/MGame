@@ -1,15 +1,15 @@
 {
-    "id": "skating_mh1",
-    "title": "Skating MH1",
-    "on_init": [
-        {"include": "skateboard_resource.scn.json"},
-        {"include": "skater_resource.scn.json"},
-        {"include": "skater_instance_mh1.scn.json"}],
-    "database": {
-        "SUFFIX": "skating_mh1",
-        "CLASS": "skater",
-        "NODE_PREFIXES": ["skater_node"],
-        "MAX_TIRE_ANGLE": null
-    },
-    "required": ["%GAME_MODE in {'skating'}"]
+  "id": "skating_mh1",
+  "title": "Skating MH1",
+  "on_init": [
+    {"include": "skateboard_resource.scn.json"},
+    {"include": "skater_resource.scn.json"},
+    {"include": "skater_instance_mh1.scn.json"}],
+  "database": {
+    "SUFFIX": "skating_mh1",
+    "CLASS": "skater",
+    "NODE_PREFIXES": ["skater_node"],
+    "MAX_TIRE_ANGLE": null
+  },
+  "required": ["%GAME_MODE in {'skating'}"]
 }

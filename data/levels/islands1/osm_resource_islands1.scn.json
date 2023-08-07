@@ -200,7 +200,11 @@
       "uv_scale": 50,
       "period": 0.02,
       "aggregate_mode": "once",
-      "transformation_mode": "all"
+      "transformation_mode": "all",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
     }
   },
   {

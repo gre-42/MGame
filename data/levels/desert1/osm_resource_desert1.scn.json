@@ -121,7 +121,11 @@
       "street_edge_smoothness": 0,
       "terrain_edge_smoothness": 0.1,
       "driving_direction": "right",
-      "blend_street": true
+      "blend_street": true,
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
     }
   }
 }
