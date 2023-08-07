@@ -1,126 +1,142 @@
 [
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "AH_box_64_hitbox",
-            "filename": "models/sketchfab.com/AH-64-apache/hitbox.obj",
-            "position": [0, 0, 0],
-            "rotation": [-5, 180, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "triangle_tangent_error_behavior": "zero"
-        }
-    },
-    {"comment": {"call": "gen_triangle_rays", "literals": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_box_64_hitbox", "add": "obj_chassis|attr_concave"}},
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "AH_64_tirelines",
-            "filename": "models/primitives/empty.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, 501],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
-        }
-    },
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_64_tirelines", "add": "obj_tire_line"}},
-    {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [-1.0,  0.6 , -1.1], "to": [-1.0, -0.2 , -1.1]}}, {"comment": "left  front"},
-    {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 1.0,  0.6 , -1.1], "to": [ 1.0, -0.2 , -1.1]}}, {"comment": "right front"},
-    {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 0.0,  0.65,  9.6], "to": [ 0.0, -0.15,  9.6]}}, {"comment": "central rear"},
+  {
+    "declare_macro": "_load_AH_64_part",
+    "content": {
+      "call": "obj_resource",
+      "literals": {
+        "name": "%NAME",
+        "filename": "models/sketchfab.com/AH-64-apache/$FILENAME",
+        "position": [0, 0, -0.3],
+        "rotation": [-5, 180, 0],
+        "scale": [1, 1, 1],
+        "center_distances": "%CENTER_DISTANCES",
+        "blend_mode": "%BLEND_MODE",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "%OCCLUDER_PASS",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero"
+      }
+    }
+  },
+  {
+    "playback": "_load_AH_64_part",
+    "literals": {
+      "NAME": "AH_box_64_hitbox_front",
+      "FILENAME": "hitbox_front.obj",
+      "CENTER_DISTANCES": [0, "inf"],
+      "BLEND_MODE": "off",
+      "OCCLUDER_PASS": "none"
+    }
+  },
+  {
+    "playback": "_load_AH_64_part",
+    "literals": {
+      "NAME": "AH_box_64_hitbox_rear",
+      "FILENAME": "hitbox_rear.obj",
+      "CENTER_DISTANCES": [0, "inf"],
+      "BLEND_MODE": "off",
+      "OCCLUDER_PASS": "none"
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_box_64_hitbox_front", "add": "obj_chassis|attr_convex"}},
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_box_64_hitbox_rear", "add": "obj_chassis|attr_convex"}},
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "AH_64_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_64_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [-1.0,  0.6 , -1.1], "to": [-1.0, -0.2 , -1.1]}}, {"comment": "left  front"},
+  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 1.0,  0.6 , -1.1], "to": [ 1.0, -0.2 , -1.1]}}, {"comment": "right front"},
+  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 0.0,  0.65,  9.6], "to": [ 0.0, -0.15,  9.6]}}, {"comment": "central rear"},
 
-    {"call": "compound_resource", "literals": {"source_names": ["AH_box_64_hitbox", "AH_64_tirelines"], "dest_name": "AH_box_64_hitboxes"}},
+  {"call": "compound_resource", "literals": {"source_names": ["AH_box_64_hitbox_front", "AH_box_64_hitbox_rear", "AH_64_tirelines"], "dest_name": "AH_box_64_hitboxes"}},
 
-    {
-        "declare_macro": "load_AH_64",
-        "content": [
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "AH_64$DECIMATE",
-                    "filename": "models/sketchfab.com/AH-64-apache/AH_64$DECIMATE.obj",
-                    "position": [0, 0, -0.3],
-                    "rotation": [-5, 180, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": ["%DIST_MIN", "%DIST_MAX"],
-                    "blend_mode": "continuous",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "cull_faces_alpha": false,
-                    "occluded_pass": "lightmap_black_global_static",
-                    "occluder_pass": "%OCCLUDER_PASS",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all",
-                    "triangle_tangent_error_behavior": "zero"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "blades_AH_64$DECIMATE",
-                    "filename": "models/sketchfab.com/AH-64-apache/AH_64$DECIMATE.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": ["%DIST_MIN", "%DIST_MAX"],
-                    "blend_mode": "continuous",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "lightmap_black_global_static",
-                    "occluder_pass": "%OCCLUDER_PASS",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all",
-                    "triangle_tangent_error_behavior": "zero"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "tail_rotor_spinning_AH_64$DECIMATE",
-                    "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$DECIMATE.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": ["%DIST_MIN", "%DIST_MAX"],
-                    "blend_mode": "continuous",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "lightmap_black_global_static",
-                    "occluder_pass": "%OCCLUDER_PASS",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all",
-                    "triangle_tangent_error_behavior": "zero"
-                }
-            }
-        ]
-    },
-    {"playback": "load_AH_64", "literals": {"DIST_MIN":0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                           "DECIMATE": ""}},
-    {"playback": "load_AH_64", "literals": {"DIST_MIN":100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d5"}},
-    {
+  {
+    "declare_macro": "load_AH_64",
+    "content": [
+      {
+        "playback": "_load_AH_64_part",
+        "literals": {
+          "NAME": "AH_64$DECIMATE",
+          "FILENAME": "AH_64$DECIMATE.obj",
+          "CENTER_DISTANCES": "%CENTER_DISTANCES",
+          "BLEND_MODE": "continuous",
+          "OCCLUDER_PASS": "%OCCLUDER_PASS"
+        }
+      },
+      {
         "call": "obj_resource",
         "literals": {
-            "name": "ah64_blades",
-            "filename": "models/primitives/box.obj",
-            "position": [0, 0, -0.1],
-            "rotation": [0, 0, 0],
-            "scale": [5, 5, 0.1],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
+          "name": "blades_AH_64$DECIMATE",
+          "filename": "models/sketchfab.com/AH-64-apache/AH_64$DECIMATE.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": "%CENTER_DISTANCES",
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_global_static",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero"
         }
-    },
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "ah64_blades", "add": "obj_chassis|attr_convex"}}
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "tail_rotor_spinning_AH_64$DECIMATE",
+          "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$DECIMATE.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": "%CENTER_DISTANCES",
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_global_static",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero"
+        }
+      }
+    ]
+  },
+  {"playback": "load_AH_64", "literals": {"CENTER_DISTANCES": [  0,  100], "OCCLUDER_PASS": "none", "DECIMATE": ""}},
+  {"playback": "load_AH_64", "literals": {"CENTER_DISTANCES": [100, 1000], "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d5"}},
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "ah64_blades",
+      "filename": "models/primitives/box.obj",
+      "position": [0, 0, -0.1],
+      "rotation": [0, 0, 0],
+      "scale": [5, 5, 0.1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {"call": "modify_physics_material_tags", "literals": {"resource_name": "ah64_blades", "add": "obj_chassis|attr_convex"}}
 ]
