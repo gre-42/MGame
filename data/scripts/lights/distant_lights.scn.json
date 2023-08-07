@@ -17,7 +17,7 @@
         "literals": {
           "node": "light_node_sky",
           "ambience": [0, 0, 0],
-          "diffusivity": [0.8, 1, 1],
+          "diffusivity": [0.45, 0.5, 0.5],
           "specularity": [0, 0, 0]
         }
       }
@@ -56,9 +56,9 @@
         "call": "light_without_shadow",
         "literals": {
           "node": "light_node0",
-          "ambience": [1.5, 1.5, 1.5],
-          "diffusivity": [1.5, 1.5, 1.5],
-          "specularity": [1.5, 1.5, 1.5]
+          "ambience": [1, 1, 1],
+          "diffusivity": [1, 1, 1],
+          "specularity": [1, 1, 1]
         }
       },
       {

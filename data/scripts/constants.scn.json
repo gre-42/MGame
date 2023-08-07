@@ -1,0 +1,70 @@
+[
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "VANILLA_RALLY_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "VANILLA_RALLY_AMBIENCE_FACTOR", "value": [0.45, 0.45, 0.45]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "VANILLA_RALLY_DIFFUSIVITY_FACTOR", "value": [0.45, 0.45, 0.45]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "VANILLA_RALLY_SPECULARITY_FACTOR", "value": [0.45, 0.45, 0.45]}
+  },
+
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "SKETCHFAB_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "SKETCHFAB_AMBIENCE_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "SKETCHFAB_DIFFUSIVITY_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "SKETCHFAB_SPECULARITY_FACTOR", "value": [0.72, 0.72, 0.72]}
+  },
+
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "STUNT_RALLY_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "STUNT_RALLY_AMBIENCE_FACTOR", "value": [0.52, 0.52, 0.52]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "STUNT_RALLY_DIFFUSIVITY_FACTOR", "value": [0.52, 0.52, 0.52]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "STUNT_RALLY_SPECULARITY_FACTOR", "value": [0.52, 0.52, 0.52]}
+  }
+
+  ,
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "AC_EMISSIVITY_FACTOR", "value": [1, 1, 1]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "AC_AMBIENCE_FACTOR", "value": [1.5, 1.5, 1.5]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "AC_DIFFUSIVITY_FACTOR", "value": [1.5, 1.5, 1.5]}
+  },
+  {
+    "call": "constant_parameter",
+    "literals": {"name": "AC_SPECULARITY_FACTOR", "value": [1.5, 1.5, 1.5]}
+  }
+]

@@ -1,92 +1,112 @@
 [
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "bamboo",
-            "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/bamboo/bamboo.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [0.05, 0.05, 0.05],
-            "center_distances": [0, 100],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, 50, 80],
-            "occluded_pass": "lightmap_black_global_static",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position",
-            "triangle_tangent_error_behavior": "zero"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "palm",
-            "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/palm/palm.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [0.05, 0.05, 0.05],
-            "center_distances": [0, 100],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, 50, 80],
-            "occluded_pass": "lightmap_black_global_static",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position",
-            "triangle_tangent_error_behavior": "zero"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "pine",
-            "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/pine/pine.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [0.05, 0.05, 0.05],
-            "center_distances": [0, 100],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, 50, 80],
-            "occluded_pass": "lightmap_black_global_static",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position",
-            "triangle_tangent_error_behavior": "zero"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "shrub",
-            "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/shrub/shrub.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [0.05, 0.05, 0.05],
-            "center_distances": [0, 100],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, 50, 80],
-            "occluded_pass": "lightmap_black_global_static",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position",
-            "triangle_tangent_error_behavior": "zero"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "spikes",
-            "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/spikes/spikes.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [0.05, 0.05, 0.05],
-            "center_distances": [0, 100],
-            "blend_mode": "semi_continuous_02",
-            "alpha_distances": [0, 0, 50, 80],
-            "occluded_pass": "lightmap_black_global_static",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position",
-            "triangle_tangent_error_behavior": "zero"
-        }
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "bamboo",
+      "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/bamboo/bamboo.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "center_distances": [0, 100],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, 50, 80],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position",
+      "triangle_tangent_error_behavior": "zero",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
     }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "palm",
+      "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/palm/palm.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "center_distances": [0, 100],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, 50, 80],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position",
+      "triangle_tangent_error_behavior": "zero",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "pine",
+      "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/pine/pine.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "center_distances": [0, 100],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, 50, 80],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position",
+      "triangle_tangent_error_behavior": "zero",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "shrub",
+      "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/shrub/shrub.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "center_distances": [0, 100],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, 50, 80],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position",
+      "triangle_tangent_error_behavior": "zero",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "spikes",
+      "filename": "models/deviantart.com/yughues-Free-Houseplants-356618110/spikes/spikes.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [0.05, 0.05, 0.05],
+      "center_distances": [0, 100],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, 50, 80],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position",
+      "triangle_tangent_error_behavior": "zero",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+    }
+  }
 ]

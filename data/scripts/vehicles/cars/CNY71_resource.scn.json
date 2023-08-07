@@ -88,6 +88,10 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "reflection_map": "%REFLECTION_MAP",
+          "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
+          "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
         }
@@ -114,6 +118,10 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "reflection_map": "%REFLECTION_MAP",
+          "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
+          "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
         }

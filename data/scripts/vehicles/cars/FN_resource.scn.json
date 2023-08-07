@@ -65,6 +65,10 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "reflection_map": "%REFLECTION_MAP",
+          "emissivity_factor": "%STUNT_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%STUNT_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%STUNT_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%STUNT_RALLY_SPECULARITY_FACTOR",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
         }
@@ -89,6 +93,10 @@
           "occluder_pass": "%OCCLUDER_PASS",
           "aggregate_mode": "none",
           "transformation_mode": "all",
+          "emissivity_factor": "%STUNT_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%STUNT_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%STUNT_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%STUNT_RALLY_SPECULARITY_FACTOR",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
         }

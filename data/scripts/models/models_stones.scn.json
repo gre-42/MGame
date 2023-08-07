@@ -1,250 +1,294 @@
 [
-    {
-        "declare_macro": "_add_stone_models",
-        "content": [
-            {
-                "exclude": ["%IF_ANDROID"],
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "lightmap_black_local_instances",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small_d1_s3$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.3, 0.3, 0.3],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small_d1_s5$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.5, 0.5, 0.5],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small_d1_s6$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.6, 0.6, 0.6],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small_d1_s10$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "desert_rock01_small_d1_s3$SUFFIX",
-                    "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.3, 0.3, 0.3],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "desert_rock01_small_d1_s5$SUFFIX",
-                    "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.5, 0.5, 0.5],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "desert_rock01_small_d1_s8$SUFFIX",
-                    "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [0.8, 0.8, 0.8],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "Stone_model_tex_small_d4$SUFFIX",
-                    "filename": "models/opengameart/Stone_model_tex/stone_d4.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1.5, 1.5, 1.5],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "lightmap_black_local_instances",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "exclude": ["%IF_ANDROID"],
-                "call": "obj_resource",
-                "literals": {
-                    "name": "desert_rock01_small$SUFFIX",
-                    "filename": "models/opengameart/desert_rock01/rock01_mean.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "lightmap_black_local_instances",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "desert_rock01_small_d2_s15$SUFFIX",
-                    "filename": "models/opengameart/desert_rock01/rock01_mean_d2.obj",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1.5, 1.5, 1.5],
-                    "center_distances": [0, 504],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "lightmap_black_local_instances",
-                    "aggregate_mode": "instances_sorted",
-                    "transformation_mode": "position",
-                    "desaturate": "%DESATURATE",
-                    "histogram": "%HISTOGRAM"
-                }
-            }
-        ]
-    },
-    {
-        "playback": "_add_stone_models",
+  {
+    "declare_macro": "_add_stone_models",
+    "content": [
+      {
+        "exclude": ["%IF_ANDROID"],
+        "call": "obj_resource",
         "literals": {
-            "SUFFIX": "",
-            "DESATURATE": false,
-            "HISTOGRAM": ""
+          "name": "Stone_model_tex_small$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "lightmap_black_local_instances",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
         }
-    },
-    {
-        "playback": "_add_stone_models",
+      },
+      {
+        "call": "obj_resource",
         "literals": {
-            "SUFFIX": "_canyon",
-            "DESATURATE": false,
-            "HISTOGRAM": "textures/histograms/Rock029.png"
+          "name": "Stone_model_tex_small_d1_s3$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.3, 0.3, 0.3],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
         }
-    },
-    {
-        "playback": "_add_stone_models",
+      },
+      {
+        "call": "obj_resource",
         "literals": {
-            "SUFFIX": "_dune",
-            "DESATURATE": false,
-            "HISTOGRAM": "textures/histograms/desert_dune.png"
+          "name": "Stone_model_tex_small_d1_s5$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.5, 0.5, 0.5],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
         }
-    },
-    {
-        "playback": "_add_stone_models",
+      },
+      {
+        "call": "obj_resource",
         "literals": {
-            "SUFFIX": "_snow",
-            "DESATURATE": true,
-            "HISTOGRAM": "textures/histograms/snow_tree.png"
+          "name": "Stone_model_tex_small_d1_s6$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.6, 0.6, 0.6],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
         }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "Stone_model_tex_small_d1_s10$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "desert_rock01_small_d1_s3$SUFFIX",
+          "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.3, 0.3, 0.3],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "desert_rock01_small_d1_s5$SUFFIX",
+          "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.5, 0.5, 0.5],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "desert_rock01_small_d1_s8$SUFFIX",
+          "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.8, 0.8, 0.8],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "Stone_model_tex_small_d4$SUFFIX",
+          "filename": "models/opengameart/Stone_model_tex/stone_d4.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1.5, 1.5, 1.5],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "lightmap_black_local_instances",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "exclude": ["%IF_ANDROID"],
+        "call": "obj_resource",
+        "literals": {
+          "name": "desert_rock01_small$SUFFIX",
+          "filename": "models/opengameart/desert_rock01/rock01_mean.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "lightmap_black_local_instances",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "desert_rock01_small_d2_s15$SUFFIX",
+          "filename": "models/opengameart/desert_rock01/rock01_mean_d2.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1.5, 1.5, 1.5],
+          "center_distances": [0, 504],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "lightmap_black_local_instances",
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position",
+          "desaturate": "%DESATURATE",
+          "histogram": "%HISTOGRAM",
+          "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+          "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        }
+      }
+    ]
+  },
+  {
+    "playback": "_add_stone_models",
+    "literals": {
+      "SUFFIX": "",
+      "DESATURATE": false,
+      "HISTOGRAM": ""
     }
+  },
+  {
+    "playback": "_add_stone_models",
+    "literals": {
+      "SUFFIX": "_canyon",
+      "DESATURATE": false,
+      "HISTOGRAM": "textures/histograms/Rock029.png"
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "literals": {
+      "SUFFIX": "_dune",
+      "DESATURATE": false,
+      "HISTOGRAM": "textures/histograms/desert_dune.png"
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "literals": {
+      "SUFFIX": "_snow",
+      "DESATURATE": true,
+      "HISTOGRAM": "textures/histograms/snow_tree.png"
+    }
+  }
 ]

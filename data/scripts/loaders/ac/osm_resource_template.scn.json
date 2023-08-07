@@ -19,6 +19,10 @@
           "magnifying_interpolation_mode": "linear",
           "aggregate_mode": "sorted",
           "transformation_mode": "all",
+          "emissivity_factor": "%AC_EMISSIVITY_FACTOR",
+          "ambience_factor": "%AC_AMBIENCE_FACTOR",
+          "diffusivity_factor": "%AC_DIFFUSIVITY_FACTOR",
+          "specularity_factor": "%AC_SPECULARITY_FACTOR",
           "physics_material": "attr_visible|attr_concave",
           "triangle_tangent_error_behavior": "zero",
           "double_precision": true
@@ -41,7 +45,7 @@
           "merged_aggregate_mode": "sorted",
           "merged_max_triangle_distance": 800,
           "merged_cull_faces": true,
-          "merged_ambience": [0.67, 0.67, 0.67]
+          "merged_ambience": [1, 1, 1]
         }
       },
       {

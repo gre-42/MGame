@@ -1,246 +1,246 @@
 [
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "pipe",
-            "filename": "models/pipe.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "pipe_box",
-            "filename": "models/pipe_box.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
-        }
-    },
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "pipe_box_boundary",
-            "filename": "models/pipe_box_boundary.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
-        }
-    },
-    {
-        "declare_macro": "load_road",
-        "content": [
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "%CENTRAL_NAME",
-                    "filename": "%CENTRAL",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, "inf"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "%ENDPOINT0_NAME",
-                    "filename": "%ENDPOINT",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, "inf"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "%ENDPOINT1_NAME",
-                    "filename": "%ENDPOINT",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [-1, -1, 1],
-                    "center_distances": [0, "inf"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all"
-                }
-            }
-        ]
-    },
-    {
-        "declare_macro": "load_parking",
-        "content": [
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "%RIGHT_NAME",
-                    "filename": "%MODEL",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [1, 1, 1],
-                    "center_distances": [0, "inf"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all"
-                }
-            },
-            {
-                "call": "obj_resource",
-                "literals": {
-                    "name": "%LEFT_NAME",
-                    "filename": "%MODEL",
-                    "position": [0, 0, 0],
-                    "rotation": [0, 0, 0],
-                    "scale": [-1, -1, 1],
-                    "center_distances": [0, "inf"],
-                    "blend_mode": "off",
-                    "alpha_distances": [0, 0, "inf", "inf"],
-                    "occluded_pass": "none",
-                    "occluder_pass": "none",
-                    "aggregate_mode": "none",
-                    "transformation_mode": "all"
-                }
-            }
-        ]
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_central1",
-            "ENDPOINT0_NAME": "road_endpoint1_0",
-            "ENDPOINT1_NAME": "road_endpoint1_1",
-            "CENTRAL": "models/road/central1.obj",
-            "ENDPOINT": "models/road/endpoint1.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_low_central",
-            "ENDPOINT0_NAME": "road_low_endpoint_0",
-            "ENDPOINT1_NAME": "road_low_endpoint_1",
-            "CENTRAL": "models/road/low_central.obj",
-            "ENDPOINT": "models/road/low_endpoint.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_low_central2",
-            "ENDPOINT0_NAME": "road_low_endpoint2_0",
-            "ENDPOINT1_NAME": "road_low_endpoint2_1",
-            "CENTRAL": "models/road/low_central2.obj",
-            "ENDPOINT": "models/road/low_endpoint2.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_low_central3",
-            "ENDPOINT0_NAME": "road_low_endpoint3_0",
-            "ENDPOINT1_NAME": "road_low_endpoint3_1",
-            "CENTRAL": "models/road/low_central3.obj",
-            "ENDPOINT": "models/road/low_endpoint3.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_ditch_central",
-            "ENDPOINT0_NAME": "road_ditch_endpoint_0",
-            "ENDPOINT1_NAME": "road_ditch_endpoint_1",
-            "CENTRAL": "models/road/ditch_central.obj",
-            "ENDPOINT": "models/road/ditch_endpoint.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_extrudable_central",
-            "ENDPOINT0_NAME": "road_extrudable_endpoint_0",
-            "ENDPOINT1_NAME": "road_extrudable_endpoint_1",
-            "CENTRAL": "models/road/extrudable.curb-curb.obj",
-            "ENDPOINT": "models/road/extrudable.plain-curb.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_cylinder_central",
-            "ENDPOINT0_NAME": "road_cylinder_endpoint_0",
-            "ENDPOINT1_NAME": "road_cylinder_endpoint_1",
-            "CENTRAL": "models/road/cylinder_central.obj",
-            "ENDPOINT": "models/road/cylinder_endpoint.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_cylinder2_central",
-            "ENDPOINT0_NAME": "road_cylinder2_endpoint_0",
-            "ENDPOINT1_NAME": "road_cylinder2_endpoint_1",
-            "CENTRAL": "models/road/cylinder2_central.obj",
-            "ENDPOINT": "models/road/cylinder2_endpoint.obj"
-        }
-    },
-    {
-        "playback": "load_road",
-        "literals": {
-            "CENTRAL_NAME": "road_bumps_central",
-            "ENDPOINT0_NAME": "road_bumps_endpoint_0",
-            "ENDPOINT1_NAME": "road_bumps_endpoint_1",
-            "CENTRAL": "models/road/bumps_central_d.obj",
-            "ENDPOINT": "models/road/bumps_endpoint_d.obj"
-        }
-    },
-    {
-        "playback": "load_parking",
-        "literals": {
-            "LEFT_NAME": "road_parking_edge_left.central-central",
-            "RIGHT_NAME": "road_parking_edge_right.central-central",
-            "MODEL": "models/road/parking_edge.curb-curb.obj"
-        }
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "pipe",
+      "filename": "models/pipe.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
     }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "pipe_box",
+      "filename": "models/pipe_box.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "pipe_box_boundary",
+      "filename": "models/pipe_box_boundary.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {
+    "declare_macro": "load_road",
+    "content": [
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%CENTRAL_NAME",
+          "filename": "%CENTRAL",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%ENDPOINT0_NAME",
+          "filename": "%ENDPOINT",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%ENDPOINT1_NAME",
+          "filename": "%ENDPOINT",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [-1, -1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_parking",
+    "content": [
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%RIGHT_NAME",
+          "filename": "%MODEL",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "literals": {
+          "name": "%LEFT_NAME",
+          "filename": "%MODEL",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [-1, -1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      }
+    ]
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_central1",
+      "ENDPOINT0_NAME": "road_endpoint1_0",
+      "ENDPOINT1_NAME": "road_endpoint1_1",
+      "CENTRAL": "models/road/central1.obj",
+      "ENDPOINT": "models/road/endpoint1.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_low_central",
+      "ENDPOINT0_NAME": "road_low_endpoint_0",
+      "ENDPOINT1_NAME": "road_low_endpoint_1",
+      "CENTRAL": "models/road/low_central.obj",
+      "ENDPOINT": "models/road/low_endpoint.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_low_central2",
+      "ENDPOINT0_NAME": "road_low_endpoint2_0",
+      "ENDPOINT1_NAME": "road_low_endpoint2_1",
+      "CENTRAL": "models/road/low_central2.obj",
+      "ENDPOINT": "models/road/low_endpoint2.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_low_central3",
+      "ENDPOINT0_NAME": "road_low_endpoint3_0",
+      "ENDPOINT1_NAME": "road_low_endpoint3_1",
+      "CENTRAL": "models/road/low_central3.obj",
+      "ENDPOINT": "models/road/low_endpoint3.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_ditch_central",
+      "ENDPOINT0_NAME": "road_ditch_endpoint_0",
+      "ENDPOINT1_NAME": "road_ditch_endpoint_1",
+      "CENTRAL": "models/road/ditch_central.obj",
+      "ENDPOINT": "models/road/ditch_endpoint.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_extrudable_central",
+      "ENDPOINT0_NAME": "road_extrudable_endpoint_0",
+      "ENDPOINT1_NAME": "road_extrudable_endpoint_1",
+      "CENTRAL": "models/road/extrudable.curb-curb.obj",
+      "ENDPOINT": "models/road/extrudable.plain-curb.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_cylinder_central",
+      "ENDPOINT0_NAME": "road_cylinder_endpoint_0",
+      "ENDPOINT1_NAME": "road_cylinder_endpoint_1",
+      "CENTRAL": "models/road/cylinder_central.obj",
+      "ENDPOINT": "models/road/cylinder_endpoint.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_cylinder2_central",
+      "ENDPOINT0_NAME": "road_cylinder2_endpoint_0",
+      "ENDPOINT1_NAME": "road_cylinder2_endpoint_1",
+      "CENTRAL": "models/road/cylinder2_central.obj",
+      "ENDPOINT": "models/road/cylinder2_endpoint.obj"
+    }
+  },
+  {
+    "playback": "load_road",
+    "literals": {
+      "CENTRAL_NAME": "road_bumps_central",
+      "ENDPOINT0_NAME": "road_bumps_endpoint_0",
+      "ENDPOINT1_NAME": "road_bumps_endpoint_1",
+      "CENTRAL": "models/road/bumps_central_d.obj",
+      "ENDPOINT": "models/road/bumps_endpoint_d.obj"
+    }
+  },
+  {
+    "playback": "load_parking",
+    "literals": {
+      "LEFT_NAME": "road_parking_edge_left.central-central",
+      "RIGHT_NAME": "road_parking_edge_right.central-central",
+      "MODEL": "models/road/parking_edge.curb-curb.obj"
+    }
+  }
 ]

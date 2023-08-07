@@ -1,19 +1,23 @@
 [
-    {
-        "call": "obj_resource",
-        "literals": {
-            "name": "shop42_ad",
-            "filename": "models/shop42_ad/shop42_ad.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": [0, 501],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "none",
-            "occluder_pass": "lightmap_black_local_instances",
-            "aggregate_mode": "instances_sorted",
-            "transformation_mode": "position_yangle"
-        }
+  {
+    "call": "obj_resource",
+    "literals": {
+      "name": "shop42_ad",
+      "filename": "models/shop42_ad/shop42_ad.obj",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
+      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
+      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
+      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR",
+      "transformation_mode": "position_yangle"
     }
+  }
 ]
