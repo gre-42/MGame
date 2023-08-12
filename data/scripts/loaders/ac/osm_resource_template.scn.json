@@ -29,7 +29,11 @@
     },
     {
       "call": "cleanup_mesh",
-      "literals": {"resource_name": "%LEVEL_ID"}
+      "literals": {
+        "resource_name": "%LEVEL_ID",
+        "min_distance_material_filter": "attr_collide",
+        "min_vertex_distance": 1e-2
+      }
     },
     {
       "call": "merge_textures",
@@ -39,6 +43,7 @@
         "merged_texture_name": "$LEVEL_ID-_trees",
         "merged_array_name": "$LEVEL_ID-_trees",
         "merged_blend_mode": "semi_continuous_02",
+        "merged_continuous_blending_z_order": 1,
         "merged_occluded_pass": "none",
         "merged_occluder_pass": "lightmap_black_global_and_local",
         "merged_aggregate_mode": "sorted",
