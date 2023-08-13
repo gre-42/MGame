@@ -178,7 +178,7 @@
         }
       },
       {
-        "required": ["%IF_PC", "%MINIMAP_FILENAME != %null"],
+        "required": ["%IF_PC", "%MINIMAP_FILE != %null"],
         "call": "minimap",
         "literals": {
           "player": "%PLAYER_NAME",
@@ -187,7 +187,7 @@
           "bottom": "minimap_widget_bottom",
           "top": "minimap_widget_top",
           "locator_size": "minimap_locator_size",
-          "minimap": "%MINIMAP_FILENAME",
+          "minimap": "%MINIMAP_FILE",
           "locator": "textures/dot.png",
           "pointer_reference_length": 500,
           "pointer_scale": "%MINIMAP_SCALE",
