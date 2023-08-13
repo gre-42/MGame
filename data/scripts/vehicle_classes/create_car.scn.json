@@ -178,6 +178,24 @@
         }
       },
       {
+        "required": ["%IF_PC", "%MINIMAP_FILENAME != %null"],
+        "call": "minimap",
+        "literals": {
+          "player": "%PLAYER_NAME",
+          "left": "minimap_widget_left",
+          "right": "minimap_widget_right",
+          "bottom": "minimap_widget_bottom",
+          "top": "minimap_widget_top",
+          "locator_size": "minimap_locator_size",
+          "minimap": "%MINIMAP_FILENAME",
+          "locator": "textures/dot.png",
+          "pointer_reference_length": 500,
+          "pointer_scale": "%MINIMAP_SCALE",
+          "pointer_size": ["%MINIMAP_SIZE_X", "%MINIMAP_SIZE_Y"],
+          "pointer_offset": ["%MINIMAP_OFFSET_X", "%MINIMAP_OFFSET_Y"]
+        }
+      },
+      {
         "required": ["%IF_PC"],
         "call": "visual_player_bullet_count",
         "literals": {
