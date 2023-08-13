@@ -8,7 +8,8 @@
   "database": {
     "SUFFIX": "AH_64",
     "CLASS": "car",
-    "NODE_PREFIXES": ["car_node"]
+    "NODE_PREFIXES": ["car_node"],
+    "MAX_TIRE_ANGLE": 30
   },
   "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }
