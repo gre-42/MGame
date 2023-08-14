@@ -56,7 +56,8 @@
               "audio": {
                 "name": "car",
                 "p_idle": 90,
-                "p_reference": 200
+                "p_reference": 200,
+                "mute": "%MUTE"
               }
             }
           },
@@ -74,7 +75,8 @@
               "audio": {
                 "name": "car",
                 "p_idle": 90,
-                "p_reference": 200
+                "p_reference": 200,
+                "mute": "%MUTE"
               }
             }
           }
@@ -97,7 +99,8 @@
           "audio": {
             "name": "car",
             "p_idle": 90,
-            "p_reference": 200
+            "p_reference": 200,
+            "mute": "%MUTE"
           }
         }
       },
@@ -244,7 +247,8 @@
         "POWERS_FRONT": "%POWERS_FRONT",
         "POWERS_REAR": "%POWERS_REAR",
         "POWERS": "%POWERS",
-        "GEAR_RATIOS": "%GEAR_RATIOS"
+        "GEAR_RATIOS": "%GEAR_RATIOS",
+        "MUTE": "%MUTE"
         }
       }
     ]
