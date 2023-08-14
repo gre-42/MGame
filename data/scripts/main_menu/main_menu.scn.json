@@ -360,15 +360,13 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "on_change": [
-            {
-              "playback": "_change_showroom_vehicle_in_physics_thread",
-              "context": "showroom",
-              "literals": {
-                "SELECTED_DECIMATE": ""
-              }
+          "on_change": {
+            "playback": "_change_showroom_vehicle_in_physics_thread",
+            "context": "showroom",
+            "literals": {
+              "SELECTED_DECIMATE": ""
             }
-          ],
+          },
           "assets": "vehicles",
           "asset_prefix": "SELECTED_VEHICLE_"
         }
@@ -388,15 +386,13 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "on_change": [
-            {
-              "playback": "_change_showroom_vehicle_in_physics_thread",
-              "context": "showroom",
-              "literals": {
-                "SELECTED_DECIMATE": ""
-              }
+          "on_change": {
+            "playback": "_change_showroom_vehicle_in_physics_thread",
+            "context": "showroom",
+            "literals": {
+              "SELECTED_DECIMATE": ""
             }
-          ],
+          },
           "parameters": [
             {"id": "", "title": "White", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
             {"id": "", "title": "Gray",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
