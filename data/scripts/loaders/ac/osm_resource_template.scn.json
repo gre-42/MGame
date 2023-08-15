@@ -53,6 +53,31 @@
       }
     },
     {
+      "call": "add_foliage",
+      "literals": {
+        "mesh_resource_name": "%LEVEL_ID",
+        "foliage_resource_name": "$LEVEL_ID-_foliage",
+        "near_grass_resource_names": ["vegetation9.0"],
+        "dirty_near_grass_resource_names": ["vegetation9.1"],
+        "near_grass_distance": 3,
+        "near_grass_foliagemap": "textures/foliagemap.png",
+        "near_grass_foliagemap_period": 0.01
+      }
+    },
+    {
+      "call": "replace_terrain_material",
+      "literals": {
+        "resource_name": "%LEVEL_ID",
+        "textures": [
+          "#Ground037_Sl_1",
+          "#Ground037_Sl_8",
+          "#Ground037_Sl_64",
+          "#Ground037_Sl_256"],
+        "uv_scale": 3e-1,
+        "uv_period": 256
+      }
+    },
+    {
       "call": "compound_resource",
       "literals": {
         "source_names": ["%LEVEL_ID"],
