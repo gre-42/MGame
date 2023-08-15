@@ -302,29 +302,27 @@
       "focus_mask=menu",
       "submenus=car_selector car_color_selector;"
     ],
-    "content": [
-      {
-        "call": "scene_to_pixel_region",
-        "literals": {
-          "target_scene": "primary_scene",
-          "z_order": 2,
-          "left": "showroom_left",
-          "right": "showroom_right",
-          "bottom": "showroom_bottom",
-          "top": "showroom_top",
-          "focus_mask": "menu",
-          "submenus": ["car_selector", "car_color_selector"]
-        }
+    "content": {
+      "call": "scene_to_pixel_region",
+      "literals": {
+        "target_scene": "primary_scene",
+        "z_order": 2,
+        "left": "showroom_left",
+        "right": "showroom_right",
+        "bottom": "showroom_bottom",
+        "top": "showroom_top",
+        "focus_mask": "menu",
+        "submenus": ["car_selector", "car_color_selector"]
       }
-    ]
-  },
-  {
-    "call": "constant_parameter",
-    "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 1] }
+    }
   },
   {
     "declare_macro": "parameter_setters",
     "content": [
+      {
+        "call": "constant_parameter",
+        "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
+      },
       {
         "call": "parameter_setter",
         "literals": {
