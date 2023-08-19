@@ -274,8 +274,7 @@
         "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
-      {"required": ["%IF_WITH_PHYSICS", "%IF_STATIC"],  "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": "inf", "COLLIDABLE_MODE": "static", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}},
-      {"required": ["%IF_WITH_PHYSICS", "%IF_DYNAMIC"], "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
     ]
   },
   {

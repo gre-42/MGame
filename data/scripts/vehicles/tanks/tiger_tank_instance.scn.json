@@ -107,7 +107,8 @@
           "audio": {
             "name": "car",
             "p_idle": 1e7,
-            "p_reference": 3.6e8
+            "p_reference": 3.6e8,
+            "mute": "%MUTE"
           }
         }
       },
@@ -184,17 +185,7 @@
       {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d3$SUFFIX", "DECIMATE": "_d3"}},
-      {"required": ["%IF_WITH_PHYSICS", "%IF_STATIC"], "playback": "create_tiger_tank_physics", "literals": {
-        "SUFFIX": "%SUFFIX",
-        "MASS": "inf",
-        "COLLIDABLE_MODE": "static",
-        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-        "YAW_ERROR_STD": "%YAW_ERROR_STD",
-        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-        "ERROR_ALPHA": "%ERROR_ALPHA"
-      }},
-      {"required": ["%IF_WITH_PHYSICS", "%IF_DYNAMIC"], "playback": "create_tiger_tank_physics", "literals": {
+      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_tiger_tank_physics", "literals": {
         "SUFFIX": "%SUFFIX",
         "MASS": 56e3,
         "COLLIDABLE_MODE": "moving",
@@ -202,7 +193,8 @@
         "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
         "YAW_ERROR_STD": "%YAW_ERROR_STD",
         "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-        "ERROR_ALPHA": "%ERROR_ALPHA"
+        "ERROR_ALPHA": "%ERROR_ALPHA",
+        "MUTE": "%MUTE"
       }}
     ]
   },

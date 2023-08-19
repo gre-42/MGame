@@ -105,8 +105,6 @@
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
           "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
           "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "IF_STATIC": "%IF_STATIC",
-          "IF_DYNAMIC": "%IF_DYNAMIC",
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,
@@ -190,9 +188,7 @@
               "COLOR": "%COLOR",
               "DECIMATE": "",
               "HAND_BRAKE_PULLED": true,
-              "MUTE": false,
-              "IF_STATIC": false,
-              "IF_DYNAMIC": true
+              "MUTE": false
             }
           },
           "capture": {
@@ -230,9 +226,7 @@
               "CAR_NAME": "%CAR_NAME",
               "COLOR": "%COLOR",
               "DECIMATE": "",
-              "HAND_BRAKE_PULLED": false,
-              "IF_STATIC": false,
-              "IF_DYNAMIC": true
+              "HAND_BRAKE_PULLED": false
             }
           },
           "capture": {

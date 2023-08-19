@@ -556,7 +556,7 @@
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
-            "name": "grass_tbdpec3r_Ground037",
+            "name": "grass_tbdpec3r_Ground037_dark3",
             "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
             "color_mode": "rgba",
             "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
@@ -570,7 +570,7 @@
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
         "literals": {
-            "name": "grass_tbdpec3r_Ground037_bright",
+            "name": "grass_tbdpec3r_Ground037_dark1",
             "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
             "color_mode": "rgba",
             "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
