@@ -23,7 +23,8 @@
           "COLOR": "%COLOR",
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
-          "IF_SHADOW": true
+          "IF_SHADOW": true,
+          "MUTE": "%MUTE"
         }
       }
     ]
@@ -55,7 +56,8 @@
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
           "COLOR": "%COLOR",
-          "HAND_BRAKE_PULLED": false
+          "HAND_BRAKE_PULLED": false,
+          "MUTE": "%MUTE"
         }
       }
     ]
@@ -88,7 +90,8 @@
               "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
               "YAW_ERROR_STD": "%YAW_ERROR_STD",
               "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-              "ERROR_ALPHA": "%ERROR_ALPHA"
+              "ERROR_ALPHA": "%ERROR_ALPHA",
+              "MUTE": "%MUTE"
             }
           },
           "capture": {
@@ -100,7 +103,8 @@
             "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
             "YAW_ERROR_STD": "%YAW_ERROR_STD",
             "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-            "ERROR_ALPHA": "%ERROR_ALPHA"
+            "ERROR_ALPHA": "%ERROR_ALPHA",
+            "MUTE": "%MUTE"
           }
         }
       }
@@ -133,7 +137,8 @@
               "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
               "YAW_ERROR_STD": "%YAW_ERROR_STD",
               "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-              "ERROR_ALPHA": "%ERROR_ALPHA"
+              "ERROR_ALPHA": "%ERROR_ALPHA",
+              "MUTE": "%MUTE"
             }
           },
           "capture": {
@@ -144,7 +149,8 @@
             "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
             "YAW_ERROR_STD": "%YAW_ERROR_STD",
             "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-            "ERROR_ALPHA": "%ERROR_ALPHA"
+            "ERROR_ALPHA": "%ERROR_ALPHA",
+            "MUTE": "%MUTE"
           }
         }
       }
