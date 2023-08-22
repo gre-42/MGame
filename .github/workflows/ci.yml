@@ -144,3 +144,11 @@ jobs:
         with:
           artifacts: "MGame.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_name:
+        description: "The name of the job to run"
+        required: true
+    needs: [github.event.inputs.job_name]
