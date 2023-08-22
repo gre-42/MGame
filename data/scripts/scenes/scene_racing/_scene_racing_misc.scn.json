@@ -155,7 +155,7 @@
         "call": "light_without_shadow",
         "literals": {
           "node": "light_node",
-          "ambience": [0.5, 0.5, 0.5],
+          "ambience": [1, 1, 1],
           "diffusivity": [1, 1, 1],
           "specularity": [1, 1, 1]
         }
