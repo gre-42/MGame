@@ -17,11 +17,10 @@ on:
 
 jobs:
   build-ubuntu:
+    if: ("${{github.event.inputs.job_name}}" == "") or ("${{github.event.inputs.job_name}}" == build-ubuntu)
     runs-on: ubuntu-latest
 
     steps:
-      - if: ("${{github.event.inputs.job_name}}" == "") or ("${{github.event.inputs.job_name}}" == build-ubuntu)
-
       - name: Install dependencies
         run: |
           sudo apt-get update && \
