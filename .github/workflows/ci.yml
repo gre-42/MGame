@@ -17,7 +17,7 @@ on:
 
 jobs:
   build-ubuntu:
-    if: (${{github.event.inputs.job_name}} == "") or (${{github.event.inputs.job_name}} == build-ubuntu)
+    if: (github.event.inputs.job_name == "") || (github.event.inputs.job_name == build-ubuntu)
     runs-on: ubuntu-latest
 
     steps:
