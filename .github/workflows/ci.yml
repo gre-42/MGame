@@ -50,6 +50,7 @@ jobs:
             osm_racing_game.cmd
 
   build-msys2:
+    if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msys2')
     runs-on: windows-latest
 
     defaults:
@@ -88,6 +89,7 @@ jobs:
             GMRelease
 
   build-msvc:
+    if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msvc')
     runs-on: windows-latest
 
     steps:
