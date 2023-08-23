@@ -34,6 +34,9 @@ build_asan:
 build_tsan:
 	make build_any TARGET=build_tsan
 
+build_asan_clang:
+	make build_any TARGET=build_asan_clang
+
 build_tsan_clang:
 	make build_any TARGET=build_tsan_clang
 
@@ -100,7 +103,7 @@ run:
 	LD_LIBRARY_PATH=$(bin_dir) \
 		$(bin_dir)/render_scene_file \
 		data \
-		data/levels/main/main.scn \
+		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \
 		--print_render_residual_time \
 		--nsamples_msaa 2 \
@@ -111,7 +114,7 @@ run:
 run_dev: build
 	gdb -ex="catch throw" --ex=r --args Mlib/$(platform_dir)/Bin/render_scene_file \
 		data \
-		data/levels/main/main.scn \
+		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \
 		--print_render_residual_time \
 		--print_physics_residual_time \
@@ -126,7 +129,7 @@ run_tsan:
 	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=Mlib/suppressions.txt" \
 		Mlib/TGURelWithDebInfo/Bin/render_scene_file \
 		data \
-		data/levels/main/main.scn \
+		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \
 		--print_render_residual_time \
 		--print_physics_residual_time \
