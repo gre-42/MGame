@@ -14,6 +14,9 @@ on:
       job_name:
         description: "The name of the job to run"
         required: true
+      build_type:
+        description: "The CMake build-type"
+        default: Release
 
 jobs:
   build-ubuntu:
@@ -37,7 +40,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: make
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
@@ -79,7 +82,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: make
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
@@ -112,6 +115,7 @@ jobs:
       - name: Build
         shell: cmd
         run: |
+          set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type }}
           Mlib\build_scene_renderer.cmd || exit /b
 
       - name: Package
