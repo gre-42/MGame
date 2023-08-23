@@ -49,7 +49,7 @@ jobs:
           name: osm-rally-artifact-ubuntu
           path: |
             data
-            GURelease
+            GU${{ github.event.inputs.build_type }}
             osm_racing_game
             osm_racing_game.cmd
 
@@ -90,7 +90,7 @@ jobs:
         with:
           name: osm-rally-artifact-msys2
           path: |
-            GMRelease
+            GM${{ github.event.inputs.build_type }}
 
   build-msvc:
     if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msvc')
@@ -129,7 +129,7 @@ jobs:
         with:
           name: osm-rally-artifact-msvc
           path: |
-            Mlib/GVS/Bin/Release
+            Mlib/GVS/Bin/${{ github.event.inputs.build_type }}
 
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -146,7 +146,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: osm-rally-artifact-msys2
-          path: MGame/GMRelease
+          path: MGame/GM${{ github.event.inputs.build_type }}
 
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
