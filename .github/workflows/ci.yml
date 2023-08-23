@@ -17,6 +17,7 @@ on:
       build_type:
         description: "The CMake build-type"
         default: Release
+        required: true
 
 jobs:
   build-ubuntu:
