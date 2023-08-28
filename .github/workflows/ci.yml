@@ -40,7 +40,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || Release }}
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
@@ -48,7 +48,7 @@ jobs:
           name: osm-rally-artifact-ubuntu
           path: |
             data
-            GU${{ github.event.inputs.build_type || Release }}
+            GU${{ github.event.inputs.build_type || 'Release' }}
             osm_racing_game
             osm_racing_game.cmd
 
@@ -82,14 +82,14 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || Release }}
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
         with:
           name: osm-rally-artifact-msys2
           path: |
-            GM${{ github.event.inputs.build_type || Release }}
+            GM${{ github.event.inputs.build_type || 'Release' }}
 
   build-msvc:
     if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msvc')
@@ -115,7 +115,7 @@ jobs:
       - name: Build
         shell: cmd
         run: |
-          set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || Release }}
+          set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           Mlib\build_scene_renderer.cmd || exit /b
 
       - name: Package
@@ -128,7 +128,7 @@ jobs:
         with:
           name: osm-rally-artifact-msvc
           path: |
-            Mlib/GVS/Bin/${{ github.event.inputs.build_type || Release }}
+            Mlib/GVS/Bin/${{ github.event.inputs.build_type || 'Release' }}
 
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
@@ -145,7 +145,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: osm-rally-artifact-msys2
-          path: MGame/GM${{ github.event.inputs.build_type || Release }}
+          path: MGame/GM${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
