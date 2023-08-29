@@ -121,6 +121,7 @@ jobs:
       - name: Package
         shell: cmd
         run: |
+          set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           Mlib\package_scene_renderer.cmd || exit /b
 
       - name: Archive artifact
