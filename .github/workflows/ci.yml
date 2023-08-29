@@ -110,6 +110,7 @@ jobs:
         shell: cmd
         run: |
           PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1 || exit /b
+          set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           Mlib\build_recastnavigation.cmd || exit /b
 
       - name: Build
