@@ -167,6 +167,7 @@
         "bottom": "highscore_bottom",
         "top": "highscore_top",
         "update": "once",
+        "delay_load_policy": "no_delay",
         "focus_mask": "always"
       }
     },
@@ -214,6 +215,7 @@
         "bottom": "min",
         "top": "max",
         "update": "once",
+        "delay_load_policy": "no_delay",
         "focus_mask": "countdown_any|game_over_countdown_any"
       }
     },

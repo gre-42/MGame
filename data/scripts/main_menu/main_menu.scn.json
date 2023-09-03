@@ -99,6 +99,7 @@
           "bottom": "min",
           "top": "max",
           "update": "once",
+          "delay_load_policy": "no_delay",
           "focus_mask": "menu|loading"
         }
       },
@@ -201,6 +202,7 @@
           "bottom": "scene_icon_bottom",
           "top": "scene_icon_top",
           "update": "once",
+          "delay_load_policy": "delay",
           "focus_mask": "menu|loading",
           "submenus": ["scene_selector"]
         }
@@ -252,6 +254,7 @@
           "right": "controls_right",
           "bottom": "controls_bottom",
           "top": "submenu_top",
+          "delay_load_policy": "no_delay",
           "gamepad_texture": "textures/menu/gamepad.png"
         }
       },
