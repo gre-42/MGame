@@ -1,95 +1,95 @@
 [
-    {
-        "declare_macro": "add_local_instances_light",
-        "content": [
-            {
-                "call": "root_node_instance",
-                "literals": {
-                    "type": "dynamic",
-                    "name": "light_node$LSUFFIX",
-                    "position": [0, 0, 0],
-                    "rotation": [-45, 0, 0],
-                    "scale": 1
-                }
-            },
-            {
-                "call": "keep_offset_from_camera",
-                "literals": {
-                    "follower": "light_node$LSUFFIX",
-                    "offset": [10, 0, 10]
-                }
-            },
-            {
-                "call": "ortho_camera",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "near_plane": -1000,
-                    "far_plane": 1000,
-                    "left_plane": -100,
-                    "right_plane": 100,
-                    "bottom_plane": -100,
-                    "top_plane": 100,
-                    "requires_postprocessing": false
-                }
-            },
-            {
-                "call": "light_only_shadow",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "black_node": "",
-                    "render_pass": "lightmap_black_local_instances"
-                }
-            },
-            {
-                "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;"
-            }
-        ]
-    },
-    {
-        "declare_macro": "add_local_blob_instances_light",
-        "content": [
-            {
-                "call": "root_node_instance",
-                "literals": {
-                    "type": "dynamic",
-                    "name": "light_node$LSUFFIX",
-                    "position": [0, 0, 0],
-                    "rotation": [-90, 0, 0],
-                    "scale": 1
-                }
-            },
-            {
-                "call": "keep_offset_from_camera",
-                "literals": {
-                    "follower": "light_node$LSUFFIX",
-                    "offset": [0, 0, 0]
-                }
-            },
-            {
-                "call": "ortho_camera",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "near_plane": -1000,
-                    "far_plane": 1000,
-                    "left_plane": -100,
-                    "right_plane": 100,
-                    "bottom_plane": -100,
-                    "top_plane": 100,
-                    "requires_postprocessing": false
-                }
-            },
-            {
-                "call": "light_with_shadow",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "black_node": "",
-                    "render_pass": "lightmap_blobs",
-                    "with_depth_texture": false,
-                    "ambience": [1, 1, 1],
-                    "diffusivity": [1, 1, 1],
-                    "specularity": [1, 1, 1]
-                }
-            }
-        ]
-    }
+  {
+    "declare_macro": "add_local_instances_light",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "light_node$LSUFFIX",
+          "position": [0, 0, 0],
+          "rotation": [-45, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "keep_offset_from_camera",
+        "literals": {
+          "follower": "light_node$LSUFFIX",
+          "offset": [10, 0, 10]
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "near_plane": -1000,
+          "far_plane": 1000,
+          "left_plane": -100,
+          "right_plane": 100,
+          "bottom_plane": -100,
+          "top_plane": 100,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "light_only_shadow",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "black_node": "",
+          "render_pass": "lightmap_black_local_instances"
+        }
+      },
+      {
+        "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;"
+      }
+    ]
+  },
+  {
+    "declare_macro": "add_local_blob_instances_light",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "light_node$LSUFFIX",
+          "position": [0, 0, 0],
+          "rotation": [-90, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "keep_offset_from_camera",
+        "literals": {
+          "follower": "light_node$LSUFFIX",
+          "offset": [0, 0, 0]
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "near_plane": -1000,
+          "far_plane": 1000,
+          "left_plane": -100,
+          "right_plane": 100,
+          "bottom_plane": -100,
+          "top_plane": 100,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "light_with_shadow",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "black_node": "",
+          "render_pass": "lightmap_blobs",
+          "with_depth_texture": false,
+          "ambience": [1, 1, 1],
+          "diffusivity": [1, 1, 1],
+          "specularity": [1, 1, 1]
+        }
+      }
+    ]
+  }
 ]

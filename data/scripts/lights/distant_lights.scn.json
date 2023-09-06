@@ -68,6 +68,15 @@
           "black_node": "",
           "render_pass": "lightmap_black_global_static"
         }
+      },
+      {
+        "comment": {
+          "call": "fit_canvas_to_renderables",
+          "literals": {
+            "node": "light_node0",
+            "render_pass": "lightmap_black_global_static"
+          }
+        }
       }
     ]
   },

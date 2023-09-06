@@ -95,27 +95,6 @@
         }
       },
       {
-        "playback": "add_sky_light_day"
-      },
-      {
-        "playback": "add_distant_light_day",
-        "literals": {
-          "LEFT": -400,
-          "RIGHT": 400,
-          "BOTTOM": -200,
-          "TOP": 200
-        }
-      },
-      {
-        "playback": "add_local_instances_light",
-        "literals": {
-          "LSUFFIX": "_local_instances"
-        }
-      },
-      {
-        "comment": "macro_playback add_local_blob_instances_light LSUFFIX:-blobs"
-      },
-      {
         "call": "obj_resource",
         "literals": {
           "name": "showroom_ground",
@@ -193,6 +172,27 @@
           "node": "stage",
           "w": [0, 10, 0]
         }
+      },
+      {
+        "playback": "add_sky_light_day"
+      },
+      {
+        "playback": "add_distant_light_day",
+        "literals": {
+          "LEFT": -400,
+          "RIGHT": 400,
+          "BOTTOM": -200,
+          "TOP": 200
+        }
+      },
+      {
+        "playback": "add_local_instances_light",
+        "literals": {
+          "LSUFFIX": "_local_instances"
+        }
+      },
+      {
+        "comment": "macro_playback add_local_blob_instances_light LSUFFIX:-blobs"
       }
     ]
   }
