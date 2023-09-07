@@ -1,54 +1,54 @@
 [
-    {
-        "declare_macro": "add_attached_light_human",
-        "content": [
-            {
-                "call": "root_node_instance",
-                "literals": {
-                    "type": "dynamic",
-                    "name": "light_node$LSUFFIX",
-                    "position": [0, 0, 0],
-                    "rotation": [-45, 90, 0],
-                    "scale": 1
-                }
-            },
-            {
-                "call": "keep_offset_from_movable",
-                "literals": {
-                    "follower": "light_node$LSUFFIX",
-                    "followed": "human_node$CSUFFIX",
-                    "offset": [10, 10, 0]
-                }
-            },
-            {
-                "call": "ortho_camera",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "near_plane": 1,
-                    "far_plane": 10000,
-                    "left_plane": -2,
-                    "right_plane": 2,
-                    "bottom_plane": -2,
-                    "top_plane": 2,
-                    "requires_postprocessing": false
-                }
-            },
-            {
-                "call": "light",
-                "literals": {
-                    "node": "light_node$LSUFFIX",
-                    "black_node": "human_node$CSUFFIX",
-                    "render_pass": "lightmap_black_node",
-                    "with_depth_texture": false,
-                    "ambience": [0.5, 0.5, 0.5],
-                    "diffusivity": [1, 1, 1],
-                    "specularity": [1, 1, 1],
-                    "shadow": true
-                }
-            },
-            {
-                "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box"
-            }
-        ]
-    }
+  {
+    "declare_macro": "add_attached_light_human",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "name": "light_node$LSUFFIX",
+          "position": [0, 0, 0],
+          "rotation": [-45, 90, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "keep_offset_from_movable",
+        "literals": {
+          "follower": "light_node$LSUFFIX",
+          "followed": "human_node$CSUFFIX",
+          "offset": [10, 10, 0]
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "near_plane": 1,
+          "far_plane": 10000,
+          "left_plane": -2,
+          "right_plane": 2,
+          "bottom_plane": -2,
+          "top_plane": 2,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "light",
+        "literals": {
+          "node": "light_node$LSUFFIX",
+          "black_node": "human_node$CSUFFIX",
+          "render_pass": "lightmap_black_node",
+          "with_depth_texture": false,
+          "ambience": [0.5, 0.5, 0.5],
+          "diffusivity": [1, 1, 1],
+          "specularity": [1, 1, 1],
+          "shadow": true
+        }
+      },
+      {
+        "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box"
+      }
+    ]
+  }
 ]
