@@ -65,7 +65,7 @@
           "blend_mode": "continuous",
           "alpha_distances": [0, 0, "inf", "inf"],
           "cull_faces_alpha": false,
-          "occluded_pass": "lightmap_black_global_static",
+          "occluded_pass": "lightmap_black_global_and_local",
           "occluder_pass": "%OCCLUDER_PASS",
           "aggregate_mode": "none",
           "transformation_mode": "all",
@@ -94,7 +94,7 @@
           "center_distances": ["%DIST_MIN", "%DIST_MAX"],
           "blend_mode": "off",
           "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_global_static",
+          "occluded_pass": "lightmap_black_global_and_local",
           "occluder_pass": "%OCCLUDER_PASS",
           "aggregate_mode": "none",
           "transformation_mode": "all",
@@ -123,5 +123,5 @@
 
   {"playback": "load-LK4", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
   {"playback": "load-LK4", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3", "SUFFIX": "_d3"}},
-  {"playback": "load-LK4", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
+  {"playback": "load-LK4", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
 ]

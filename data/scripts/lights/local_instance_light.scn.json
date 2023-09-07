@@ -20,9 +20,20 @@
         }
       },
       {
+        "comment": "Instances light"
+      },
+      {
+        "call": "child_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "parent": "light_node$LSUFFIX",
+          "name": "light_node_instances$LSUFFIX"
+        }
+      },
+      {
         "call": "ortho_camera",
         "literals": {
-          "node": "light_node$LSUFFIX",
+          "node": "light_node_instances$LSUFFIX",
           "near_plane": -1000,
           "far_plane": 1000,
           "left_plane": -100,
@@ -35,13 +46,45 @@
       {
         "call": "light_only_shadow",
         "literals": {
-          "node": "light_node$LSUFFIX",
+          "node": "light_node_instances$LSUFFIX",
           "black_node": "",
           "render_pass": "lightmap_black_local_instances"
         }
       },
       {
-        "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box;"
+        "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node_instances-LSUFFIX resource=box;"
+      },
+      {
+        "comment": "Movables light"
+      },
+      {
+        "call": "child_node_instance",
+        "literals": {
+          "type": "dynamic",
+          "parent": "light_node$LSUFFIX",
+          "name": "light_node_movables$LSUFFIX"
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "literals": {
+          "node": "light_node_movables$LSUFFIX",
+          "near_plane": -1000,
+          "far_plane": 1000,
+          "left_plane": -100,
+          "right_plane": 100,
+          "bottom_plane": -100,
+          "top_plane": 100,
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "light_only_shadow",
+        "literals": {
+          "node": "light_node_movables$LSUFFIX",
+          "black_node": "",
+          "render_pass": "lightmap_black_movables"
+        }
       }
     ]
   },

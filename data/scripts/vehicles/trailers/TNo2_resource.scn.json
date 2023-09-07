@@ -14,7 +14,7 @@
           "blend_mode": "continuous",
           "alpha_distances": [0, 0, "inf", "inf"],
           "cull_faces_alpha": false,
-          "occluded_pass": "lightmap_black_global_static",
+          "occluded_pass": "lightmap_black_global_and_local",
           "occluder_pass": "%OCCLUDER_PASS",
           "aggregate_mode": "none",
           "transformation_mode": "all",
@@ -115,7 +115,7 @@
           "blend_mode": "continuous",
           "alpha_distances": [0, 0, "inf", "inf"],
           "cull_faces_alpha": false,
-          "occluded_pass": "lightmap_black_global_static",
+          "occluded_pass": "lightmap_black_global_and_local",
           "occluder_pass": "%OCCLUDER_PASS",
           "aggregate_mode": "none",
           "transformation_mode": "all",
@@ -137,5 +137,5 @@
     ]
   },
   {"playback": "load-TNo2", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none", "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load-TNo2", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_local_instances", "DECIMATE": "_d9", "SUFFIX": "_lowres"}}
+  {"playback": "load-TNo2", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d9", "SUFFIX": "_lowres"}}
 ]

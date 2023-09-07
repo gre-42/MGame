@@ -62,21 +62,23 @@
         }
       },
       {
-        "call": "light_only_shadow",
-        "literals": {
-          "node": "light_node0",
-          "black_node": "",
-          "render_pass": "lightmap_black_global_static"
-        }
-      },
-      {
-        "comment": {
-          "call": "fit_canvas_to_renderables",
-          "literals": {
-            "node": "light_node0",
-            "render_pass": "lightmap_black_global_static"
+        "comment": [
+          {
+            "call": "light_only_shadow",
+            "literals": {
+              "node": "light_node0",
+              "black_node": "",
+              "render_pass": "lightmap_black_global_static"
+            }
+          },
+          {
+            "call": "fit_canvas_to_renderables",
+            "literals": {
+              "node": "light_node0",
+              "render_pass": "lightmap_black_global_static"
+            }
           }
-        }
+        ]
       }
     ]
   },
