@@ -38,7 +38,7 @@
       "texture_filename": "#vegetation7",
       "min": [-0.5, -0.05],
       "max": [0.5, 1],
-      "occluded_pass": "lightmap_black_global_static",
+      "occluded_pass": "lightmap_black_global_and_local",
       "occluder_pass": "none",
       "ambience": [1, 1, 1],
       "blend_mode": "semi_continuous_02",
