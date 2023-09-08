@@ -14,7 +14,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
 
 ### Island 0
-![Screenshot-I0-2023-02-25](media/Screenshot-I0-2023-02-25.png)
+![Screenshot-I0-2023-02-25](media/Screenshot-I0-2023-09-08.png)
 
 ### Forest 0
 ![Screenshot-R0-2023-02-25](media/Screenshot-F0-2023-02-25.png)
