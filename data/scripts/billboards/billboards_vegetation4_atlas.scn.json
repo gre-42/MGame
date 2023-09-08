@@ -79,7 +79,9 @@
       "name": "vegetation4",
       "color": "#vegetation4",
       "color_mode": "rgba",
-      "anisotropic_filtering_level": 16
+      "anisotropic_filtering_level": 16,
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge"
     }
   },
   {

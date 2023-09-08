@@ -1,914 +1,936 @@
 [
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Curb_Grass_Asphalt",
-            "color": "textures/curb_grass_asphalt.png",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Gravel010",
-            "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
-            "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Gravel010_Alpha",
-            "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
-            "alpha": "textures/Way_Alpha.png",
-            "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Plaster003",
-            "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Plaster003_Gray",
-            "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "mean_color": [
-                0.5,
-                0.5,
-                0.5
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Plaster003_White",
-            "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "mean_color": [
-                0.7,
-                0.7,
-                0.7
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Plaster003_Green",
-            "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "mean_color": [
-                0.45,
-                0.5,
-                0.45
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Plaster003_Blue",
-            "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "mean_color": [
-                0.45,
-                0.45,
-                0.5
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Concrete020",
-            "color": "textures/cc0textures/Concrete020_2K_Color.jpg",
-            "normal": "textures/cc0textures/Concrete020_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Asphalt015",
-            "color": "textures/cc0textures/Asphalt015_2K_Color.jpg",
-            "normal": "textures/cc0textures/Asphalt015_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Pavement_ConcreteSidewalk3",
-            "color": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_albedo.png",
-            "normal": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_normal.png",
-            "color_mode": "rgb",
-            "desaturate": true,
-            "lighten": [
-                0.2,
-                0.2,
-                0.2
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "PavingStones038",
-            "color": "textures/cc0textures/PavingStones038_2K_Color.jpg",
-            "normal": "textures/cc0textures/PavingStones038_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "PavingStones035",
-            "color": "textures/cc0textures/PavingStones035_2K_Color_da.jpg",
-            "normal": "textures/cc0textures/PavingStones035_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Metal038",
-            "color": "textures/cc0textures/Metal038_2K_Color.jpg",
-            "normal": "textures/cc0textures/Metal038_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_ground",
-            "color": "textures/SR/grass_ground_d.jpg",
-            "normal": "textures/SR/grass_ground_n.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground003",
-            "color": "textures/cc0textures/Ground003_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground003_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029",
-            "color": "textures/cc0textures/Ground029_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground029_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Crossing_Canyon",
-            "color": "textures/cc0textures/Ground029_2K_Color.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/gc2_road.png",
-            "lighten": [
-                -0.2,
-                -0.2,
-                -0.2
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Crossing_Desert",
-            "color": "textures/cc0textures/Ground029_2K_Color.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/desert_road.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Crossing_Snow",
-            "color": "textures/cc0textures/Ground029_2K_Color.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/snow.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground037",
-            "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground037_island",
-            "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/island_ground.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground037_dark27",
-            "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "lighten": [
-                -0.27,
-                -0.27,
-                -0.27
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground037_Sl",
-            "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/Billboard_2K_Albedo_Lower.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground037_Rock028",
-            "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground037_Rock028_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground025",
-            "color": "textures/cc0textures/Ground025_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground025_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground038_gc2",
-            "color": "textures/cc0textures/Ground038_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/gc2_road.png",
-            "lighten": [
-                -0.2,
-                -0.2,
-                -0.2
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Street_Canyon",
-            "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-            "alpha": "textures/Way_Alpha4_Interior.png",
-            "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/gc2_road.png",
-            "lighten": [
-                -0.2,
-                -0.2,
-                -0.2
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Street_Desert_Dry",
-            "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-            "alpha": "textures/Way_Alpha4_Interior.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/desert_road.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Street_Desert_Wet",
-            "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-            "alpha": "textures/Way_Alpha4_Interior.png",
-            "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/desert_road.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground029_Street_Snow",
-            "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-            "alpha": "textures/Way_Alpha4_Interior.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/snow.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground038_Way_Wheels",
-            "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
-            "alpha": "textures/Way_Alpha4.png",
-            "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground038_Way_Wheels_gc2",
-            "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
-            "alpha": "textures/Way_Alpha4.png",
-            "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/gc2_road.png",
-            "lighten": [
-                -0.2,
-                -0.2,
-                -0.2
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground038_Way_Wheels_dark27",
-            "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
-            "alpha": "textures/Way_Alpha4.png",
-            "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "lighten": [
-                -0.27,
-                -0.27,
-                -0.27
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Ground038_dark27",
-            "color": "textures/cc0textures/Ground038_2K_Color.jpg",
-            "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "lighten": [
-                -0.27,
-                -0.27,
-                -0.27
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass12y_Ground037_Sl",
-            "color": "textures/SR/grass12y-.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass2g",
-            "color": "textures/SR/grass2g.png",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_island_bright",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/island_grass_bright.png",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_island_green0",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/island_grass_green0.png",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_island_green1",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/island_grass_green1.png",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_dark27",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "lighten": [-0.27, -0.27, -0.27],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_Ground003",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Ground003_2K_Color.png",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_desert_bush",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/desert_bush.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_Ground037_dark3",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
-            "lighten": [-0.3, -0.3, -0.3],
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_Ground037_dark1",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
-            "lighten": [-0.1, -0.1, -0.1],
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "grass_tbdpec3r_Ground037_Sl",
-            "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
-            "color_mode": "rgba",
-            "histogram": "textures/cc0textures/Ground037_2K_Color_Sl.jpg",
-            "lighten_top": [0.5, 0.5, 0.5],
-            "lighten_bottom": [-0.5, -0.5, -0.5],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock018",
-            "color": "textures/cc0textures/Rock018_2K_Color.jpg",
-            "normal": "textures/cc0textures/Rock018_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock028",
-            "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-            "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
-            "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock028_029",
-            "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-            "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
-            "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/Rock029.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock028_gc2_mountain",
-            "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-            "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
-            "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "histogram": "textures/histograms/gc2_mountain.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock028_Dune",
-            "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/desert_dune.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Rock028_Snow",
-            "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-            "color_mode": "rgb",
-            "histogram": "textures/histograms/snow.png",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Asphalt016_Dirt",
-            "color": "textures/cc0textures/Asphalt016_2K_Dirt.png",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007",
-            "color": "textures/cc0textures/Road007_2K_Color.jpg",
-            "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Alpha3",
-            "color": "textures/cc0textures/Road007_2K_Color.jpg",
-            "alpha": "textures/Way_Alpha3.png",
-            "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Wide_Continuous_2_Lanes",
-            "color": "textures/cc0textures/Road007_2K_Color_Wide_Continuous_2_Lanes.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Bright_No_Lines",
-            "color": "textures/cc0textures/Road007_2K_Color_Bright_No_Lines.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "lighten": [-0.2, -0.2, -0.2],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Alpha",
-            "color": "textures/cc0textures/Road007_2K_Color_Dirt_Sharp2.png",
-            "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_No_Lines",
-            "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Yellow_1x_Lane",
-            "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_1x_Lane.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Yellow_2_Lanes",
-            "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_2_Lanes.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_White_1x_Lane",
-            "color": "textures/cc0textures/Road007_2K_Color_White_Lines_1x_Lane.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Broad_White_1_Lane",
-            "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Broad_White_1_Lane_near",
-            "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Near.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_Broad_White_1_Lane_far",
-            "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Far.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "RoadOld_Yellow",
-            "color": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90.png",
-            "normal": "textures/textures.com/TexturesCom_Pavement_RoadOld_1K_normal_90.png",
-            "color_mode": "rgb",
-            "lighten": [
-                0.1,
-                0.1,
-                0.1
-            ],
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "Road007_White_2_Lanes",
-            "color": "textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg",
-            "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "concrete1_2K_wh_street",
-            "color": "textures/cc0textures/concrete1_2K_wh_street.jpg",
-            "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "concrete1_2K_wh",
-            "color": "textures/cc0textures/concrete1_2K_wh.jpg",
-            "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "concrete1_2K_ye",
-            "color": "textures/cc0textures/concrete1_2K_ye.jpg",
-            "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "PavingStones046",
-            "color": "textures/cc0textures/PavingStones046_2K_Color.jpg",
-            "normal": "textures/cc0textures/PavingStones046_2K_NormalGL.jpg",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "fence1",
-            "color": "textures/barriers/fence1.png",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "barrier_tape",
-            "color": "textures/barriers/tape.png",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "traffic_barrier",
-            "color": "textures/barriers/traffic_barrier.png",
-            "color_mode": "rgba",
-            "anisotropic_filtering_level": 16
-        }
-    },
-    {
-        "exclude": ["%IF_ANDROID"],
-        "call": "add_texture_descriptor",
-        "literals": {
-            "name": "ocean",
-            "color": "textures/altphotos/water/sea-ocean-water-texture-seamless3.png",
-            "color_mode": "rgb",
-            "anisotropic_filtering_level": 16
-        }
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Curb_Grass_Asphalt",
+      "color": "textures/curb_grass_asphalt.png",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
     }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Gravel010",
+      "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
+      "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Gravel010_Alpha",
+      "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
+      "alpha": "textures/Way_Alpha.png",
+      "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Plaster003",
+      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Plaster003_Gray",
+      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "mean_color": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Plaster003_White",
+      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "mean_color": [
+        0.7,
+        0.7,
+        0.7
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Plaster003_Green",
+      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "mean_color": [
+        0.45,
+        0.5,
+        0.45
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Plaster003_Blue",
+      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "mean_color": [
+        0.45,
+        0.45,
+        0.5
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Concrete020",
+      "color": "textures/cc0textures/Concrete020_2K_Color.jpg",
+      "normal": "textures/cc0textures/Concrete020_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Asphalt015",
+      "color": "textures/cc0textures/Asphalt015_2K_Color.jpg",
+      "normal": "textures/cc0textures/Asphalt015_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Pavement_ConcreteSidewalk3",
+      "color": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_albedo.png",
+      "normal": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_normal.png",
+      "color_mode": "rgb",
+      "desaturate": true,
+      "lighten": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "PavingStones038",
+      "color": "textures/cc0textures/PavingStones038_2K_Color.jpg",
+      "normal": "textures/cc0textures/PavingStones038_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "PavingStones035",
+      "color": "textures/cc0textures/PavingStones035_2K_Color_da.jpg",
+      "normal": "textures/cc0textures/PavingStones035_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Metal038",
+      "color": "textures/cc0textures/Metal038_2K_Color.jpg",
+      "normal": "textures/cc0textures/Metal038_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_ground",
+      "color": "textures/SR/grass_ground_d.jpg",
+      "normal": "textures/SR/grass_ground_n.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground003",
+      "color": "textures/cc0textures/Ground003_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground003_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029",
+      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground029_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Crossing_Canyon",
+      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/gc2_road.png",
+      "lighten": [
+        -0.2,
+        -0.2,
+        -0.2
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Crossing_Desert",
+      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/desert_road.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Crossing_Snow",
+      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/snow.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground037",
+      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground037_island",
+      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/island_ground.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground037_dark27",
+      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "lighten": [
+        -0.27,
+        -0.27,
+        -0.27
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground037_Sl",
+      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/Billboard_2K_Albedo_Lower.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground037_Rock028",
+      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground037_Rock028_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground025",
+      "color": "textures/cc0textures/Ground025_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground025_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground038_gc2",
+      "color": "textures/cc0textures/Ground038_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/gc2_road.png",
+      "lighten": [
+        -0.2,
+        -0.2,
+        -0.2
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Canyon",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/gc2_road.png",
+      "lighten": [
+        -0.2,
+        -0.2,
+        -0.2
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Desert_Dry",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/desert_road.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Desert_Wet",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/desert_road.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Snow",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/snow.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground038_Way_Wheels",
+      "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
+      "alpha": "textures/Way_Alpha4.png",
+      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground038_Way_Wheels_gc2",
+      "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
+      "alpha": "textures/Way_Alpha4.png",
+      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/gc2_road.png",
+      "lighten": [
+        -0.2,
+        -0.2,
+        -0.2
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground038_Way_Wheels_dark27",
+      "color": "textures/cc0textures/Ground038_2K_Color_Way_Wheels.png",
+      "alpha": "textures/Way_Alpha4.png",
+      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "lighten": [
+        -0.27,
+        -0.27,
+        -0.27
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground038_dark27",
+      "color": "textures/cc0textures/Ground038_2K_Color.jpg",
+      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "lighten": [
+        -0.27,
+        -0.27,
+        -0.27
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass12y_Ground037_Sl",
+      "color": "textures/SR/grass12y-.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass2g",
+      "color": "textures/SR/grass2g.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_island_bright",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/island_grass_bright.png",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_island_green0",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/island_grass_green0.png",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_island_green1",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/island_grass_green1.png",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_dark27",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "lighten": [-0.27, -0.27, -0.27],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_Ground003",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Ground003_2K_Color.png",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_desert_bush",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/desert_bush.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_Ground037_dark3",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "lighten": [-0.3, -0.3, -0.3],
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_Ground037_dark1",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "lighten": [-0.1, -0.1, -0.1],
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "grass_tbdpec3r_Ground037_Sl",
+      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color_mode": "rgba",
+      "histogram": "textures/cc0textures/Ground037_2K_Color_Sl.jpg",
+      "lighten_top": [0.5, 0.5, 0.5],
+      "lighten_bottom": [-0.5, -0.5, -0.5],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock018",
+      "color": "textures/cc0textures/Rock018_2K_Color.jpg",
+      "normal": "textures/cc0textures/Rock018_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock028",
+      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
+      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock028_029",
+      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
+      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/Rock029.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock028_gc2_mountain",
+      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "alpha": "textures/cc0textures/Rock028_2K_Displacement.png",
+      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/gc2_mountain.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock028_Dune",
+      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/desert_dune.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Rock028_Snow",
+      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "color_mode": "rgb",
+      "histogram": "textures/histograms/snow.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Asphalt016_Dirt",
+      "color": "textures/cc0textures/Asphalt016_2K_Dirt.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007",
+      "color": "textures/cc0textures/Road007_2K_Color.jpg",
+      "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Alpha3",
+      "color": "textures/cc0textures/Road007_2K_Color.jpg",
+      "alpha": "textures/Way_Alpha3.png",
+      "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Concrete_Alpha3",
+      "color": "textures/cc0textures/Road007_512_Color_Concrete.jpg",
+      "alpha": "textures/Way_Alpha3_512.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "required": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Concrete_Alpha3",
+      "color": "textures/cc0textures/Road007_512_Color_Concrete.jpg",
+      "alpha": "textures/Way_Alpha3.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Wide_Continuous_2_Lanes",
+      "color": "textures/cc0textures/Road007_2K_Color_Wide_Continuous_2_Lanes.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Bright_No_Lines",
+      "color": "textures/cc0textures/Road007_2K_Color_Bright_No_Lines.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "lighten": [-0.2, -0.2, -0.2],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Alpha",
+      "color": "textures/cc0textures/Road007_2K_Color_Dirt_Sharp2.png",
+      "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_No_Lines",
+      "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Yellow_1x_Lane",
+      "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_1x_Lane.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Yellow_2_Lanes",
+      "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_2_Lanes.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_White_1x_Lane",
+      "color": "textures/cc0textures/Road007_2K_Color_White_Lines_1x_Lane.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Broad_White_1_Lane",
+      "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Broad_White_1_Lane_near",
+      "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Near.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_Broad_White_1_Lane_far",
+      "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Far.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "RoadOld_Yellow",
+      "color": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90.png",
+      "normal": "textures/textures.com/TexturesCom_Pavement_RoadOld_1K_normal_90.png",
+      "color_mode": "rgb",
+      "lighten": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_White_2_Lanes",
+      "color": "textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "concrete1_2K_wh_street",
+      "color": "textures/cc0textures/concrete1_2K_wh_street.jpg",
+      "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "concrete1_2K_wh",
+      "color": "textures/cc0textures/concrete1_2K_wh.jpg",
+      "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "concrete1_2K_ye",
+      "color": "textures/cc0textures/concrete1_2K_ye.jpg",
+      "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "PavingStones046",
+      "color": "textures/cc0textures/PavingStones046_2K_Color.jpg",
+      "normal": "textures/cc0textures/PavingStones046_2K_NormalGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "fence1",
+      "color": "textures/barriers/fence1.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "barrier_tape",
+      "color": "textures/barriers/tape.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "traffic_barrier",
+      "color": "textures/barriers/traffic_barrier.png",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "ocean",
+      "color": "textures/altphotos/water/sea-ocean-water-texture-seamless3.png",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  }
 ]
