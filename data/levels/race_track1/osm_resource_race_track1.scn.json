@@ -19,9 +19,9 @@
         "grass_dirt_texture": "#Ground029",
         "street_crossing_texture": "#Road007_No_Lines",
         "street_textures": [
-          {"lanes": 1, "texture0": "#Road007_Broad_White_1_Lane_near", "texture1": "#Road007_Broad_White_1_Lane_far"}],
+          {"lanes": 1, "textures": ["#Road007_Broad_White_1_Lane_near", "#Road007_Broad_White_1_Lane_far"]}],
         "wall_textures": [
-          {"lanes": 1, "texture0": "#PavingStones046", "uvx": 0.15}],
+          {"lanes": 1, "textures": ["#PavingStones046"], "uvx": 0.15}],
         "path_crossing_texture": "#Gravel010",
         "path_texture": "#Gravel010",
         "curb_street_texture": "#Curb_Grass_Asphalt",

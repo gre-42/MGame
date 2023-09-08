@@ -32,11 +32,11 @@
         "street_crossing_texture": "#Road007_No_Lines",
         "path_crossing_texture": "#Ground038_dark27",
         "street_textures": [
-          {"lanes": 1, "texture0": "#Road007_Alpha"}],
+          {"lanes": 1, "textures": ["#Road007_Alpha"]}],
         "path_textures": [
-          {"lanes": 1, "texture0": "#Ground038_Way_Wheels"}],
+          {"lanes": 1, "textures": ["#Ground038_Way_Wheels"]}],
         "wall_textures": [
-          {"lanes": 1, "texture0": "#PavingStones046", "uvx": 0.15}],
+          {"lanes": 1, "textures": ["#PavingStones046"], "uvx": 0.15}],
         "socle_textures": [
           "#Bricks058"],
         "facade_textures": [
