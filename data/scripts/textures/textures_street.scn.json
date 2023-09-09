@@ -138,11 +138,7 @@
       "color": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90.png",
       "normal": "textures/textures.com/TexturesCom_Pavement_RoadOld_1K_normal_90.png",
       "color_mode": "rgb",
-      "lighten": [
-        0.1,
-        0.1,
-        0.1
-      ],
+      "lighten": [0.1, 0.1, 0.1],
       "anisotropic_filtering_level": 16
     }
   },
@@ -171,10 +167,85 @@
   {
     "call": "add_texture_descriptor",
     "literals": {
-      "name": "Way_Wheels",
+      "name": "Way_Wheels_7",
       "color": "textures/Way_Wheels_512.png",
       "alpha": "textures/Way_Alpha4.png",
       "lighten": [0.7, 0.7, 0.7],
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Way_Wheels_9",
+      "color": "textures/Way_Wheels_512.png",
+      "alpha": "textures/Way_Alpha4.png",
+      "lighten": [0.9, 0.9, 0.9],
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "comment": "Desert"
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Canyon",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/gc2_road.png",
+      "lighten": [-0.2, -0.2, -0.2],
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Desert_Dry",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/desert_road.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Desert_Wet",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/desert_road.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Ground029_Street_Snow",
+      "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
+      "alpha": "textures/Way_Alpha4_Interior.png",
+      "color_mode": "rgba",
+      "histogram": "textures/histograms/snow.png",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Gravel010_Alpha",
+      "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
+      "alpha": "textures/Way_Alpha.png",
+      "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }

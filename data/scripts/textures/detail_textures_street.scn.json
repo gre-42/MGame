@@ -1,5 +1,35 @@
 [
   {
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Way_Wheels_7_Detail_Base",
+      "texture": "#Way_Wheels_7",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 1,
+      "role": "detail_base"
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Way_Wheels_9_Detail_Base",
+      "texture": "#Way_Wheels_9",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 1,
+      "role": "detail_base"
+    }
+  },
+  {
     "comment": "Road007_Concrete"
   },
   {
@@ -33,28 +63,28 @@
     }
   },
   {
-    "comment": "Way_Wheels_Ground038"
-  },
-  {
     "call": "add_blend_map_texture",
     "literals": {
-      "name": "Way_Wheels_Detail_Base",
-      "texture": "#Way_Wheels",
+      "name": "Gravel010_Detail_Desert",
+      "texture": "#Gravel010_Desert",
       "min_height": "-inf",
       "max_height": "inf",
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
-      "weight": 0.7,
-      "role": "detail_base"
+      "scale": 0.2,
+      "weight": 1,
+      "role": "detail_color_horizontal"
     }
+  },
+  {
+    "comment": "Way_Wheels_Ground038"
   },
   {
     "call": "add_blend_map_texture",
     "literals": {
-      "name": "Ground038_Detail",
-      "texture": "#Ground038",
+      "name": "Ground038_dark27_Detail",
+      "texture": "#Ground038_dark27",
       "min_height": "-inf",
       "max_height": "inf",
       "distances": [0, 0, "inf", "inf"],

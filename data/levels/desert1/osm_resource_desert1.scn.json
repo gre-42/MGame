@@ -20,7 +20,7 @@
       "path_materials": "surface_base_gravel",
       "path_crossing_texture": "#Ground029_Crossing_Desert",
       "path_textures": [
-        {"lanes": 1, "textures": ["#Ground029_Street_Desert_Dry"]}],
+        {"lanes": 1, "textures": ["#Way_Wheels_9_Detail_Base", "#Gravel010_Detail_Desert"]}],
       "racing_line_texture": "",
       "racing_line_track": "$__DIR__/../canyon1/checkpoints2.m",
       "racing_line_playback": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
@@ -66,7 +66,7 @@
         {"name": "tape", "texture": "#barrier_tape", "uv": [0.5, 0.8], "blend_mode": "binary_05", "wrap_mode_t": "clamp_to_edge", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity": 0}],
       "boundary_barrier_style": "tape",
       "boundary_barrier_height": 1.25,
-      "default_street_width": 10,
+      "default_street_width": 7,
       "scale": 1e-3,
       "height_scale": 3e-1,
       "grass_foliagemap_period": 307.2,
