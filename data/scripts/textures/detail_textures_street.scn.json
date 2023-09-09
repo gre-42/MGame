@@ -78,6 +78,21 @@
     }
   },
   {
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Ground029_Detail_Snow",
+      "texture": "#Ground029_Snow",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 0.2,
+      "weight": 1,
+      "role": "detail_color_horizontal"
+    }
+  },
+  {
     "comment": "Way_Wheels_Ground038"
   },
   {
