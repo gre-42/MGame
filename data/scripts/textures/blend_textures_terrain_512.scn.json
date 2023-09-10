@@ -14,7 +14,8 @@
         "cosine": "%COSINE",
         "discreteness": 0,
         "scale": 0.125,
-        "weight": 5
+        "weight": 5,
+        "role": "%ROLE"
       }
     },
     {
@@ -28,7 +29,8 @@
         "normal": "%NORMAL",
         "cosine": "%COSINE",
         "scale": 0.0078125,
-        "weight": 5
+        "weight": 5,
+        "role": "%ROLE"
       }
     },
     {
@@ -43,7 +45,8 @@
         "normal": "%NORMAL",
         "cosine": "%COSINE",
         "scale": 0.001953125,
-        "weight": 5
+        "weight": 5,
+        "role": "%ROLE"
       }
     }
   ]
