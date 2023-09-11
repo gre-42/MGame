@@ -161,7 +161,7 @@
   <node id='-139543' action='modify' visible='true' lat='37.84759471378' lon='-122.50125937727' />
   <node id='-139544' action='modify' visible='true' lat='37.85127396833' lon='-122.50291472264' />
   <node id='-139545' action='modify' visible='true' lat='37.85398488052' lon='-122.50095283183' />
-  <node id='-139546' action='modify' visible='true' lat='37.855098262' lon='-122.49543501392' />
+  <node id='-139546' action='modify' visible='true' lat='37.85533975806' lon='-122.49543501392' />
   <node id='-139547' action='modify' visible='true' lat='37.849434364' lon='-122.48580948712' />
   <node id='-139548' action='modify' visible='true' lat='37.84972483089' lon='-122.48397021449' />
   <node id='-139549' action='modify' visible='true' lat='37.85563074286' lon='-122.4737929059' />
@@ -639,6 +639,12 @@
   <node id='-141206' action='modify' visible='true' lat='37.8434354531' lon='-122.48874745001' />
   <node id='-141215' action='modify' visible='true' lat='37.84375733832' lon='-122.48852180853' />
   <node id='-141222' action='modify' visible='true' lat='37.84314805439' lon='-122.48776481777' />
+  <node id='-141234' action='modify' visible='true' lat='37.84938471036' lon='-122.50224208229' />
+  <node id='-141243' action='modify' visible='true' lat='37.85292886027' lon='-122.50245618432' />
+  <node id='-141253' action='modify' visible='true' lat='37.85510240252' lon='-122.49824301589' />
+  <node id='-141266' action='modify' visible='true' lat='37.85403981053' lon='-122.46397139924' />
+  <node id='-141275' action='modify' visible='true' lat='37.85674456001' lon='-122.46727468759' />
+  <node id='-141297' action='modify' visible='true' lat='37.85459522203' lon='-122.49403739457' />
   <way id='-121530' action='modify' visible='true'>
     <nd ref='-138567' />
     <nd ref='-138639' />
@@ -873,9 +879,13 @@
     <nd ref='-139604' />
     <nd ref='-139542' />
     <nd ref='-139543' />
+    <nd ref='-141234' />
     <nd ref='-139544' />
+    <nd ref='-141243' />
     <nd ref='-139545' />
+    <nd ref='-141253' />
     <nd ref='-139546' />
+    <nd ref='-141297' />
     <nd ref='-139646' />
     <nd ref='-139613' />
     <nd ref='-139623' />
@@ -885,7 +895,9 @@
     <nd ref='-139637' />
     <nd ref='-139549' />
     <nd ref='-139550' />
+    <nd ref='-141275' />
     <nd ref='-139551' />
+    <nd ref='-141266' />
     <nd ref='-139552' />
     <nd ref='-139553' />
     <nd ref='-139554' />
