@@ -4,32 +4,10 @@
   },
   {
     "exclude": ["%IF_ANDROID"],
-    "call": "add_blend_map_texture",
+    "playback": "generate_blend_maps_2_8",
     "literals": {
-      "name": "Ground003_2",
-      "texture": "#Ground003",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 50, 70],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.5,
-      "weight": 1
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "Ground003_8",
-      "texture": "#Ground003",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [50, 70, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 0.125,
-      "weight": 1
+      "NAME": "Ground003",
+      "TEXTURE": "#Ground003"
     }
   },
   {
@@ -54,7 +32,7 @@
     }
   },
   {
-    "playback": "generate_blend_maps_8",
+    "playback": "generate_blend_maps_1_8",
     "literals": {
       "NAME": "Ground037",
       "TEXTURE": "#Ground037"
