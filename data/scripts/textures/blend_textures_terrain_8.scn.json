@@ -1,0 +1,35 @@
+{
+  "declare_macro": "generate_blend_maps_8",
+  "content": [
+    {
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME-_1",
+        "texture": "%TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, 15, 25],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": 1,
+        "weight": 1,
+        "role": "detail_color_vertical"
+      }
+    },
+    {
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME-_8",
+        "texture": "%TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [15, 25, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": 0.125,
+        "weight": 1,
+        "role": "detail_color_vertical"
+      }
+    }
+  ]
+}
