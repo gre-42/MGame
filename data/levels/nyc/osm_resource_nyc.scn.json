@@ -20,7 +20,7 @@
       "path_materials": "surface_base_tarmac",
       "wall_materials": "surface_base_stone",
       "street_dirt_texture": "#Asphalt016_Dirt",
-      "street_crossing_texture": "#Road007_No_Lines",
+      "street_crossing_textures": ["#Road007_No_Lines"],
       "street_textures": [
         {"lanes": 1, "textures": ["#Road007_No_Lines"]},
         {"lanes": 2, "textures": ["#RoadOld_Yellow"]},
@@ -32,7 +32,7 @@
       "terrain_asphalt_reflection_map": "ground",
       "wall_textures": [
         {"lanes": 1, "textures": ["#PavingStones046"], "uvx":0.15}],
-      "path_crossing_texture": "#Road007_No_Lines",
+      "path_crossing_textures": ["#Road007_No_Lines"],
       "path_texture": "#Road007_No_Lines",
       "curb_street_texture": "#Pavement_ConcreteSidewalk3",
       "curb_path_texture": "#PavingStones035",

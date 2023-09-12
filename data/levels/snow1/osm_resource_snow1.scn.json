@@ -17,7 +17,7 @@
       "terrain_undefined_materials": "surface_base_stone",
       "street_materials": "surface_base_snow",
       "path_materials": "surface_base_snow",
-      "path_crossing_texture": "#Ground029_Crossing_Snow",
+      "path_crossing_textures": ["#Ground029_Crossing_Snow"],
       "path_textures": [
         { "lanes": 1, "textures": ["#Way_Wheels_9_Detail_Base", "#Ground029_Detail_Snow"] }],
       "racing_line_texture": "",

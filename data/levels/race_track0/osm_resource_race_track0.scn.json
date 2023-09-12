@@ -16,12 +16,12 @@
       "path_materials": "surface_base_gravel",
       "wall_materials": "surface_base_stone",
       "grass_dirt_texture": "#Ground029",
-      "street_crossing_texture": "#Road007_No_Lines",
+      "street_crossing_textures": ["#Road007_No_Lines"],
       "street_textures": [
         {"lanes": 1, "textures": ["#Road007_Broad_White_1_Lane_near", "#Road007_Broad_White_1_Lane_far"]}],
       "wall_textures": [
         {"lanes": 1, "textures": ["#PavingStones046"], "uvx": 0.15}],
-      "path_crossing_texture": "#Gravel010",
+      "path_crossing_textures": ["#Gravel010"],
       "path_texture": "#Gravel010",
       "curb_street_texture": "#Curb_Grass_Asphalt",
       "curb_path_texture": "#Curb_Grass_Asphalt",

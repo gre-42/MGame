@@ -19,7 +19,7 @@
       "terrain_undefined_materials": "surface_base_stone",
       "street_materials": "surface_base_gravel",
       "path_materials": "surface_base_gravel",
-      "path_crossing_texture": "#Ground029_Crossing_Desert",
+      "path_crossing_textures": ["#Ground029_Crossing_Desert"],
       "path_textures": [
         {"lanes": 1, "textures": ["#Way_Wheels_9_Detail_Base", "#Gravel010_Detail_Desert"]}],
       "racing_line_texture": "",
