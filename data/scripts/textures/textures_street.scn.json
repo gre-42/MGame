@@ -25,6 +25,29 @@
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
+      "name": "Road007_2_Lanes_Alpha3",
+      "color": "textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg",
+      "alpha": "textures/Way_Alpha3.png",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgba",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
+      "name": "Road007_No_Lines_Gravel010",
+      "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
+      "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "literals": {
       "name": "Road007_Wide_Continuous_2_Lanes",
       "color": "textures/cc0textures/Road007_2K_Color_Wide_Continuous_2_Lanes.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",

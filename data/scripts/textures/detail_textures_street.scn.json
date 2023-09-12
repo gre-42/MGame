@@ -48,6 +48,38 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Road007_2_Lanes_Alpha3_Detail_Base",
+      "texture": "#Road007_2_Lanes_Alpha3",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 2,
+      "role": "detail_base"
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Road007_No_Lines_Detail_Base",
+      "texture": "#Road007_No_Lines",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 2,
+      "role": "detail_base"
+    }
+  },
+  {
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Gravel010_Detail",

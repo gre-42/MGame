@@ -9,6 +9,7 @@
       "heightmap": "$__DIR__/heightmap.pgm",
       "terrain_undefined_textures": ["textures/debug/pink.png"],
       "terrain_grass_textures": [
+        "#Gravel010_Base",
         "#Ground037_1",
         "#Ground037_8"],
       "bounding_terrain_type": "grass",
@@ -16,8 +17,9 @@
       "terrain_undefined_materials": "surface_base_stone",
       "path_materials": "surface_base_gravel",
       "grass_dirt_texture": "#Ground025",
-      "path_crossing_texture": "#Gravel010",
-      "path_texture": "#Gravel010_Alpha",
+      "path_crossing_textures": ["#Road007_No_Lines_Detail_Base", "#Gravel010_Detail"],
+      "path_textures": [{
+        "lanes": 1, "textures": ["#Road007_2_Lanes_Alpha3_Detail_Base", "#Gravel010_Detail"]}],
       "socle_textures": [
         "#Bricks058"],
       "facade_textures": [
@@ -152,9 +154,9 @@
         "footway",
         "cycleway",
         "steps"],
-      "path_tags": [
-        "track",
-        "tertiary"],
+      "path_tags": ["track"],
+      "smoothed_highways": ["track"],
+      "max_smooth_highway_length": 2,
       "steiner_point_distances_road": [],
       "steiner_point_distances_steiner": [],
       "curb_alpha": 1,
