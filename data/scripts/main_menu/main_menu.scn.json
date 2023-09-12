@@ -49,42 +49,38 @@
   },
   {
     "declare_macro": "__change_showroom_vehicle_in_physics_thread",
-    "content": [
-      {
-        "call": "execute_in_physics_thread",
-        "literals": {
-          "command": {
-            "playback": "change_showroom_vehicle",
-            "literals": {
-              "VEHICLE_NAME": "%VEHICLE_NAME",
-              "VEHICLE_CLASS": "%VEHICLE_CLASS",
-              "VEHICLE_COLOR": "%VEHICLE_COLOR",
-              "DECIMATE": "%DECIMATE"
-            }
-          },
-          "capture": {
+    "content": {
+      "call": "execute_in_physics_thread",
+      "literals": {
+        "command": {
+          "playback": "change_showroom_vehicle",
+          "literals": {
             "VEHICLE_NAME": "%VEHICLE_NAME",
             "VEHICLE_CLASS": "%VEHICLE_CLASS",
             "VEHICLE_COLOR": "%VEHICLE_COLOR",
             "DECIMATE": "%DECIMATE"
           }
+        },
+        "capture": {
+          "VEHICLE_NAME": "%VEHICLE_NAME",
+          "VEHICLE_CLASS": "%VEHICLE_CLASS",
+          "VEHICLE_COLOR": "%VEHICLE_COLOR",
+          "DECIMATE": "%DECIMATE"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "_change_showroom_vehicle_in_physics_thread",
-    "content": [
-      {
-        "playback": "__change_showroom_vehicle_in_physics_thread",
-        "literals": {
-          "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-          "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
-          "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
-          "DECIMATE": "%SELECTED_DECIMATE"
-        }
+    "content": {
+      "playback": "__change_showroom_vehicle_in_physics_thread",
+      "literals": {
+        "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
+        "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
+        "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
+        "DECIMATE": "%SELECTED_DECIMATE"
       }
-    ]
+    }
   },
   {
     "declare_macro": "_setup_menu_primary_scene_game_mode_selector",
@@ -449,6 +445,29 @@
             {"id": "", "title": "'4 Laps'",  "globals": {"RACE_LAPS": 4}},
             {"id": "", "title": "'8 Laps'",  "globals": {"RACE_LAPS": 8}},
             {"id": "", "title": "'16 Laps'", "globals": {"RACE_LAPS": 16}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "literals": {
+          "id": "playback_ranks_selector",
+          "title": "Playback ranks",
+          "icon": "replay_icon",
+          "required": ["%GAME_MODE == 'rally'"],
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"id": "", "title": "No replay", "globals": {"IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}},
+            {"id": "", "title": "Rank 1", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}},
+            {"id": "", "title": "Ranks 1-2", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": false}},
+            {"id": "", "title": "Ranks 1-3", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": true}}
           ]
         }
       },
