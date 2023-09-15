@@ -54,5 +54,27 @@
         {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [2.5, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
       ]
     }
+  },
+  {
+    "call": "square_resource",
+    "literals": {
+      "name": "vegetation10_close",
+      "texture_filename": "#vegetation10",
+      "min": [-0.5, -0.05],
+      "max": [0.5, 1],
+      "occluded_pass": "lightmap_black_global_and_local",
+      "occluder_pass": "none",
+      "ambience": [1, 1, 1],
+      "blend_mode": "semi_continuous_02",
+      "z_order": 1,
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position_lookat",
+      "billboards": [
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [2.5, 1], "alpha_distances": [0, 0, 150, 300], "max_center_distance": 403, "occluder_pass": "none"},
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [2.5, 1], "alpha_distances": [0, 0, 150, 300], "max_center_distance": 403, "occluder_pass": "none"}
+      ]
+    }
   }
 ]
