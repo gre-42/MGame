@@ -2,10 +2,13 @@
   "declare_macro": "_scene_racing_instantiate_static_objects",
   "content": [
     {
-      "comment": {
-        "call": "preload_single",
-        "literals": {
-          "resource": "osm_map"
+      "call": "execute_in_render_thread",
+      "literals": {
+        "command": {
+          "call": "preload_single",
+          "literals": {
+            "resource": "osm_map"
+          }
         }
       }
     },
