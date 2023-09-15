@@ -472,6 +472,33 @@
         }
       },
       {
+        "exclude": ["%IF_ANDROID"],
+        "call": "parameter_setter",
+        "literals": {
+          "id": "render_fps_selector",
+          "title": "Render FPS",
+          "icon": "render_fps_icon",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 1,
+          "on_change": {
+            "call": "set_render_fps",
+            "literals": {
+              "fps": "%RENDER_FPS"
+            }
+          },
+          "parameters": [
+            {"id": "", "title": "'30'", "globals": {"RENDER_FPS": 30}},
+            {"id": "", "title": "'60'", "globals": {"RENDER_FPS": 60}}
+          ]
+        }
+      },
+      {
         "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
         "literals": {
