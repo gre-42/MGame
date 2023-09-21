@@ -109,7 +109,7 @@ jobs:
       - name: Install dependencies
         shell: cmd
         run: |
-          PowerShell -ExecutionPolicy Bypass Mlib/build_freealut.ps1 || exit /b
+          PowerShell -ExecutionPolicy Bypass Mlib/build_openal_and_freealut.ps1 || exit /b
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           Mlib\build_recastnavigation.cmd || exit /b
 
