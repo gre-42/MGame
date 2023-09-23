@@ -24,20 +24,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {
-              "texture_pos": [
-                0,
-                0
-              ],
-              "texture": "#wall_$NAME"
-            },
-            {
-              "texture_pos": [
-                512,
-                512
-              ],
-              "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
-            }
+            {"texture_pos": [0, 0], "texture": "#wall_$NAME"},
+            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
           ]
         }
       },
@@ -49,14 +37,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {
-              "texture_pos": [0, 0],
-              "texture": "%WALL_NORMAL"
-            },
-            {
-              "texture_pos": [512, 512],
-              "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
-            }
+            {"texture_pos": [0, 0], "texture": "%WALL_NORMAL" },
+            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
           ]
         }
       },
@@ -96,14 +78,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {
-              "texture_pos": [0, 0],
-              "texture": "%WALL_COLOR"
-            },
-            {
-              "texture_pos": [512, 512],
-              "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"
-            }
+            {"texture_pos": [0, 0], "texture": "%WALL_COLOR"},
+            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
           ]
         }
       },
@@ -115,14 +91,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {
-              "texture_pos": [0, 0],
-              "texture": "%WALL_NORMAL"
-            },
-            {
-              "texture_pos": [512, 512],
-              "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"
-            }
+            {"texture_pos": [0, 0], "texture": "%WALL_NORMAL"},
+            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
           ]
         }
       },
@@ -200,11 +170,7 @@
       "name": "building_big_office3_window",
       "color": "textures/city-buildings-asset-pack/building_big_office3_window.png",
       "color_mode": "rgb",
-      "lighten": [
-        -0.3,
-        -0.3,
-        -0.3
-      ],
+      "lighten": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
     }
   }

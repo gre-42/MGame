@@ -81,10 +81,8 @@
   { "playback": "instantiate_transient_objects" },
   { "playback": "create_main_menu" },
   {
-    "call": "preload_many",
+    "call": "preload",
     "context": "primary_scene",
-    "literals": {
-      "json": "$__DIR__/resources.json"
-    }
+    "literals": {"file": "$__DIR__/resources.json"}
   }
 ]

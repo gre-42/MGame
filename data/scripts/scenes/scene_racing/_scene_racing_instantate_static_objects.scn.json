@@ -5,9 +5,10 @@
       "call": "execute_in_render_thread",
       "literals": {
         "command": {
-          "call": "preload_single",
+          "call": "preload",
           "literals": {
-            "resource": "osm_map"
+            "resources": ["osm_map"],
+            "tire_contacts": ["osm_map"]
           }
         }
       }
