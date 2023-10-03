@@ -22,7 +22,8 @@
       "path_materials": "surface_base_gravel",
       "grass_dirt_texture": "#Ground025",
       "street_crossing_textures": ["#Road007_No_Lines"],
-      "street_texture": "#Road007_Alpha3",
+      "street_textures": [
+        {"lanes": 1, "textures": ["#Road007_Base_Alpha3_Detail_Base", "#Gravel010_Detail_Desaturated"]}],
       "path_crossing_textures": ["#Gravel010"],
       "path_texture": "#Gravel010_Alpha",
       "curb_street_texture": "#Rock018",
@@ -147,7 +148,7 @@
       "scale": 1e-3,
       "uv_scale_terrain": 3e-1,
       "uv_period_terrain": 512,
-      "uv_scale_street": 1e-1,
+      "uv_scale_street": 0.0125,
       "uv_scale_path": 1e-1,
       "uv_scale_wall": 1e-1,
       "uv_scale_facade": 2.5e-1,
