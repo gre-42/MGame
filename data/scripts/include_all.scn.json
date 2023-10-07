@@ -34,7 +34,6 @@
   {"include": "cameras/cameras.scn.json"},
   {"include": "key_bindings/key_bindings.scn.json"},
 
-  {"required": ["%IF_ANDROID"], "include": "key_bindings/tap_buttons.scn.json"},
   {"include": "materials.scn.json"},
   {"include": "assets.scn.json"}
 ]

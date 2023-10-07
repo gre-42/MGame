@@ -6,5 +6,9 @@
   {
     "playback": "create_grossglockner_hochalpenstrasse",
     "literals": {"STYLE": "_open"}
+  },
+  {
+    "include": "create_cameras_grossglockner_hochalpenstrasse.scn.json",
+    "context": "primary_scene"
   }
 ]

@@ -1,0 +1,38 @@
+[
+  {
+    "playback": "create_tripod_key_bindings"
+  },
+  {
+    "call": "root_node_instance",
+    "literals": {
+      "type": "dynamic",
+      "name": "tripod_node0",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": 1
+    }
+  },
+  {
+    "call": "perspective_camera",
+    "literals": {
+      "node": "tripod_node0",
+      "y_fov": 60,
+      "near_plane": 1,
+      "far_plane": 10000,
+      "requires_postprocessing": false
+    }
+  },
+  {
+    "call": "relative_transformer",
+    "literals": {
+      "node": "tripod_node0"
+    }
+  },
+  {
+    "call": "set_camera_cycle",
+    "literals": {
+      "name": "tripod",
+      "cameras": ["tripod_node0"]
+    }
+  }
+]
