@@ -2,6 +2,13 @@
   "declare_macro": "create_tripod_key_bindings",
   "content": [
     {
+      "call": "create_print_camera_node_info_key_binding",
+      "literals": {
+        "id": "print_camera_node_info",
+        "role": "default"
+      }
+    },
+    {
       "call": "rel_key_binding_tripod",
       "literals": {
         "id": "tripod.move_left",
