@@ -5,19 +5,8 @@
   {
     "declare_macro": "_reload_transient_objects",
     "content": [
-      {
-        "call": "clear_nodes_not_allowed_to_be_unregistered"
-      },
-      {
-        "playback": "instantiate_transient_objects",
-        "context": "primary_scene",
-        "literals": {
-          "IF_UPDATE_EXISTING_SCENE": true,
-          "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-          "RACE_SESSION": "%RACE_SESSION",
-          "RACE_LAPS": "%RACE_LAPS"
-        }
-      }
+      {"call": "clear_nodes_not_allowed_to_be_unregistered"},
+      {"playback": "instantiate_transient_objects"}
     ]
   },
   {

@@ -1,13 +1,13 @@
 [
   {"include": "scene_grossglockner_hochalpenstrasse.scn.json"},
-  {
-    "call": "constant_parameter",
-    "literals": { "name": "LOADED_GAME_LEVEL", "value": "open"}},
+  {"call": "constant_parameter", "literals": { "name": "LOADED_GAME_LEVEL", "value": "open"}},
+  {"call": "constant_parameter", "literals": { "name": "IF_TRIPOD_MODE", "value": false}},
   {
     "playback": "create_grossglockner_hochalpenstrasse",
     "literals": {"STYLE": "_open"}
   },
   {
+    "required": ["%IF_TRIPOD_MODE"],
     "include": "create_cameras_grossglockner_hochalpenstrasse.scn.json",
     "context": "primary_scene"
   }
