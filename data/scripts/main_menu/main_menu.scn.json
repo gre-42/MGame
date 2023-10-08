@@ -308,6 +308,7 @@
     "declare_macro": "parameter_setters",
     "content": [
       {
+        "#comment": "Some initial color so the code does not crash until the real color is defined",
         "call": "constant_parameter",
         "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
       },
@@ -516,6 +517,32 @@
         "call": "constant_parameter",
         "exclude": ["%IF_DEVEL"],
         "literals": { "name": "PLAYBACK_SPEED", "value": 1 }
+      },
+      {
+        "call": "parameter_setter",
+        "required": ["%IF_DEVEL"],
+        "literals": {
+          "id": "tripod_mode",
+          "title": "Tripod mode",
+          "icon": "missing_icon",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 1,
+          "parameters": [
+            {"id": "", "title": "Enabled", "globals": {"IF_TRIPOD_MODE": true}},
+            {"id": "", "title": "Disabled", "globals": {"IF_TRIPOD_MODE": false}}
+          ]
+        }
+      },
+      {
+        "call": "constant_parameter",
+        "exclude": ["%IF_DEVEL"],
+        "literals": { "name": "IF_TRIPOD_MODE", "value": false}
       }
     ]
   }

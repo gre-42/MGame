@@ -446,6 +446,7 @@
       "literals": {"id": "change_camera.near", "tpe": "near"}
     },
     {
+      "required": ["%IF_TRIPOD_MODE"],
       "call": "camera_key_binding",
       "literals": {"id": "change_camera.tripod", "tpe": "tripod"}
     },
