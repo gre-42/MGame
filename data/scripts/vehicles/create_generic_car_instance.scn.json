@@ -300,14 +300,12 @@
   },
   {
     "declare_macro": "generic_car.add_attached_light",
-    "content": [
-      {
-        "playback": "add_attached_light_sedan",
-        "literals": {
-          "LSUFFIX": "%LSUFFIX",
-          "CSUFFIX": "%CSUFFIX"
-        }
+    "content": {
+      "playback": "add_attached_light_sedan",
+      "literals": {
+        "LSUFFIX": "%LSUFFIX",
+        "CSUFFIX": "%CSUFFIX"
       }
-    ]
+    }
   }
 ]
