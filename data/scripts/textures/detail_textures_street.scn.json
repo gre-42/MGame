@@ -51,6 +51,22 @@
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
+      "name": "Road007_Base_Detail_Base",
+      "texture": "#Road007_Base",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 1.5,
+      "role": "detail_base"
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "literals": {
       "name": "Road007_Base_Alpha3_Detail_Base",
       "texture": "#Road007_Base_Alpha3",
       "min_height": "-inf",
@@ -107,7 +123,8 @@
       "cosine": [-1, -1, 1, 1],
       "scale": 0.2,
       "weight": 1,
-      "role": "detail_color_horizontal"
+      "role": "detail_color",
+      "uv_source": "horizontal"
     }
   },
   {
@@ -122,7 +139,8 @@
       "cosine": [-1, -1, 1, 1],
       "scale": 0.4,
       "weight": 1.1,
-      "role": "detail_color_horizontal"
+      "role": "detail_color",
+      "uv_source": "horizontal"
     }
   },
   {
@@ -137,7 +155,8 @@
       "cosine": [-1, -1, 1, 1],
       "scale": 0.2,
       "weight": 1,
-      "role": "detail_color_horizontal"
+      "role": "detail_color",
+      "uv_source": "horizontal"
     }
   },
   {
@@ -152,7 +171,8 @@
       "cosine": [-1, -1, 1, 1],
       "scale": 0.2,
       "weight": 1,
-      "role": "detail_color_horizontal"
+      "role": "detail_color",
+      "uv_source": "horizontal"
     }
   },
   {
@@ -170,7 +190,8 @@
       "cosine": [-1, -1, 1, 1],
       "scale": 0.2,
       "weight": 1,
-      "role": "detail_color_horizontal"
+      "role": "detail_color",
+      "uv_source": "horizontal"
     }
   }
 ]
