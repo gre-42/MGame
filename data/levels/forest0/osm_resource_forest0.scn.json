@@ -18,6 +18,11 @@
       "street_materials": "surface_base_gravel",
       "grass_dirt_texture": "#Ground025",
       "street_dirt_texture": "#Asphalt016_Dirt",
+      "street_alpha_textures": [
+        "#PlusDetail",
+        "#TimesBlend5",
+        "#Ramp5"
+      ],
       "street_crossing_textures": ["#Road007_No_Lines"],
       "street_textures": [
         {"lanes": 1, "textures": ["#Way_Wheels_7_Detail_Base", "#Ground038_dark27_Detail"]}],
