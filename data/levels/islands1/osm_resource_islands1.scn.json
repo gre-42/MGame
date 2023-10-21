@@ -35,9 +35,14 @@
         "street_materials": "surface_base_tarmac",
         "grass_dirt_texture": "#Ground025",
         "street_dirt_texture": "#Asphalt016_Dirt",
+        "street_alpha_textures": [
+          "#PlusDetail",
+          "#TimesBlend5",
+          "#Ramp5"
+        ],
         "street_crossing_textures": ["#Road007_No_Lines"],
         "street_textures": [
-          {"lanes": 1, "textures": ["#Road007_Alpha3"]}],
+          {"lanes": 1, "textures": ["#Road007"]}],
         "socle_textures": [
           "#Bricks058"],
         "facade_textures": [
