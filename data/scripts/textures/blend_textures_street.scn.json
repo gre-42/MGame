@@ -1,30 +1,30 @@
 [
-    {
-        "call": "add_blend_map_texture",
-        "literals": {
-            "name": "Road007_Broad_White_1_Lane_near",
-            "texture": "#Road007_Broad_White_1_Lane_near",
-            "min_height": "-inf",
-            "max_height": "inf",
-            "distances": [0, 0, 15, 25],
-            "normal": [0, 0, 0],
-            "cosine": [-1, -1, 1, 1],
-            "scale": 1,
-            "weight": 1
-        }
-    },
-    {
-        "call": "add_blend_map_texture",
-        "literals": {
-            "name": "Road007_Broad_White_1_Lane_far",
-            "texture": "#Road007_Broad_White_1_Lane_far",
-            "min_height": "-inf",
-            "max_height": "inf",
-            "distances": [15, 25, "inf", "inf"],
-            "normal": [0, 0, 0],
-            "cosine": [-1, -1, 1, 1],
-            "scale": 1,
-            "weight": 1
-        }
+  {
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Road007_Broad_White_1_Lane_near",
+      "texture": "#Road007_Broad_White_1_Lane_near",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, 15, 25],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 1
     }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "literals": {
+      "name": "Road007_Broad_White_1_Lane_far",
+      "texture": "#Road007_Broad_White_1_Lane_far",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [15, 25, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 1
+    }
+  }
 ]
