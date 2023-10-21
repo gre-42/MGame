@@ -1,8 +1,5 @@
 [
   {
-    "comment": "alpha = (1 - blend) * ramp + blend * detail = (detail - ramp) * blend + r"
-  },
-  {
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Detail",
@@ -12,7 +9,7 @@
       "selected_color_near": 0.2,
       "selected_color_far": 0.275,
       "times": -1,
-      "plus": 0.3,
+      "plus": 1,
       "anisotropic_filtering_level": 16
     }
   },
@@ -44,8 +41,9 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.5,
-      "weight": 1,
+      "scale": 0.25,
+      "weight": 2,
+      "plus": -2,
       "reduction": "plus",
       "uv_source": "horizontal"
     }
@@ -63,21 +61,6 @@
       "scale": 1,
       "weight": 1,
       "reduction": "times"
-    }
-  },
-  {
-    "call": "add_blend_map_texture",
-    "literals": {
-      "name": "MinusRamp5",
-      "texture": "#Ramp5",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": 1,
-      "weight": 1,
-      "reduction": "minus"
     }
   }
 ]
