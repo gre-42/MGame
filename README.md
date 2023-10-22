@@ -17,7 +17,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-I0-2023-10-22](media/Screenshot-I0-2023-10-22.png)
 
 ### Forest 0
-![Screenshot-R0-2023-02-25](media/Screenshot-F0-2023-09-09.png)
+![Screenshot-R0-2023-10-22](media/Screenshot-F0-2023-10-22.png)
 
 ### Desert 1
 ![Screenshot-DS1-2023-09-11](media/Screenshot-DS1-2023-09-11.png)
