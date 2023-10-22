@@ -1,0 +1,31 @@
+{
+  "declare_macro": "create_tripod_camera",
+  "content": [
+    {
+      "call": "root_node_instance",
+      "literals": {
+        "type": "dynamic",
+        "name": "%NODE_NAME",
+        "position": "%POSITION",
+        "rotation": "%ROTATION",
+        "scale": 1
+      }
+    },
+    {
+      "call": "perspective_camera",
+      "literals": {
+        "node": "%NODE_NAME",
+        "y_fov": 60,
+        "near_plane": 1,
+        "far_plane": 10000,
+        "requires_postprocessing": false
+      }
+    },
+    {
+      "call": "relative_transformer",
+      "literals": {
+        "node": "%NODE_NAME"
+      }
+    }
+  ]
+}

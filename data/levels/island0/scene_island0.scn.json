@@ -44,7 +44,7 @@
     "content": {
       "playback": "generic_scene_racing_dynamic",
       "literals": {
-        "IF_CREATE_PC_CAR": true,
+        "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
         "IF_PC_PLAYER_PLAYBACK": false,
         "CAR_NODE_POSITION": [
           "'-1.224895021433151783e+02_deg'",
@@ -72,10 +72,18 @@
         "IF_PLAYBACK_TRACK_1": false,
         "IF_PLAYBACK_TRACK_2": false,
         "IF_PLAYBACK_TRACK_3": false,
-        "IF_CHECKPOINTS": true,
-        "IF_BURN_IN": true
+        "IF_CHECKPOINTS": "!IF_TRIPOD_MODE",
+        "IF_BURN_IN": "!IF_TRIPOD_MODE"
       }
     }
+  },
+  {
+    "required": ["%IF_TRIPOD_MODE"],
+    "context": "primary_scene",
+    "execute": [
+      {"playback": "create_tripod_key_bindings"},
+      {"include": "create_cameras_island0.scn.json"}
+    ]
   },
   {"playback": "instantiate_transient_objects"},
   {"playback": "create_main_menu"}
