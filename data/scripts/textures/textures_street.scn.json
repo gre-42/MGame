@@ -24,7 +24,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Road007_Base",

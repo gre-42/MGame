@@ -33,7 +33,6 @@
     "comment": "Road007_Concrete"
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "Road007_Base_Detail_Base",
