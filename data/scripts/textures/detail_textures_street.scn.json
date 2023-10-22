@@ -51,8 +51,8 @@
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
-      "name": "Road007_2_Lanes_Alpha3_Detail_Base",
-      "texture": "#Road007_2_Lanes_Alpha3",
+      "name": "Road007_2_Lanes_Detail_Base",
+      "texture": "#Road007_2_Lanes",
       "min_height": "-inf",
       "max_height": "inf",
       "distances": [0, 0, "inf", "inf"],
