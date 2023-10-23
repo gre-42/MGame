@@ -53,6 +53,7 @@
       }
     },
     {
+      "exclude": ["%IF_ANDROID"],
       "call": "add_foliage",
       "literals": {
         "mesh_resource_name": "%LEVEL_ID",
