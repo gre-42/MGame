@@ -11,7 +11,6 @@
       "call": "create_scene",
       "literals": {
         "name": "primary_scene",
-        "z_order": 0,
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
         "fly": "%PRIMARY_SCENE_FLY",
@@ -34,7 +33,6 @@
       "call": "create_scene",
       "literals": {
         "name": "weapon_closeup",
-        "z_order": 0,
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
         "fly": false,
