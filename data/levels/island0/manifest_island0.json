@@ -6,7 +6,9 @@
   },
   "globals": {
     "LEVEL_ICON_FILE": "levels/island0/icon.png",
-    "MINIMAP_FILE": null,
+    "MINIMAP_FILE": null
+  },
+  "database": {
     "IF_RACEWAY_CIRCULAR": true
   },
   "required": ["%GAME_MODE == 'rally'"]

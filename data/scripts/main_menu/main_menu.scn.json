@@ -420,7 +420,7 @@
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_selector_icon",
-          "required": ["%GAME_MODE == 'rally'", "%IF_RACEWAY_CIRCULAR"],
+          "required": ["%GAME_MODE == 'rally'", "%%levels/$LEVEL_ID/IF_RACEWAY_CIRCULAR"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",

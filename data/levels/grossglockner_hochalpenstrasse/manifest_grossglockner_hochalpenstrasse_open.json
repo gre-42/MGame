@@ -6,7 +6,9 @@
   },
   "globals": {
     "LEVEL_ICON_FILE": "levels/grossglockner_hochalpenstrasse/icon.png",
-    "MINIMAP_FILE": null,
+    "MINIMAP_FILE": null
+  },
+  "database": {
     "IF_RACEWAY_CIRCULAR": false
   },
   "required": ["%GAME_MODE == 'rally'"]
