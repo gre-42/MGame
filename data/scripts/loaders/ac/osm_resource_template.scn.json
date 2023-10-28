@@ -28,6 +28,15 @@
       }
     },
     {
+      "comment": {
+        "call": "delete_mesh",
+        "literals": {
+          "resource_name": "%LEVEL_ID",
+          "where": "obj_grass"
+        }
+      }
+    },
+    {
       "call": "cleanup_mesh",
       "literals": {
         "resource_name": "%LEVEL_ID",
