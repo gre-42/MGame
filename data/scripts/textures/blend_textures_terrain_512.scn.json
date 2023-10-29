@@ -15,7 +15,8 @@
         "discreteness": 0,
         "scale": 0.125,
         "weight": 5,
-        "role": "%ROLE"
+        "role": "%ROLE",
+        "reweight": "enabled"
       }
     },
     {
@@ -30,7 +31,8 @@
         "cosine": "%COSINE",
         "scale": 0.0078125,
         "weight": 5,
-        "role": "%ROLE"
+        "role": "%ROLE",
+        "reweight": "enabled"
       }
     },
     {
@@ -46,7 +48,8 @@
         "cosine": "%COSINE",
         "scale": 0.001953125,
         "weight": 5,
-        "role": "%ROLE"
+        "role": "%ROLE",
+        "reweight": "enabled"
       }
     }
   ]

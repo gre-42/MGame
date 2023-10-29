@@ -65,23 +65,9 @@
             "texture": "#black",
             "min_height": "-inf",
             "max_height": "inf",
-            "distances": [
-                0,
-                0,
-                "inf",
-                "inf"
-            ],
-            "normal": [
-                0,
-                0,
-                0
-            ],
-            "cosine": [
-                -1,
-                -1,
-                1,
-                1
-            ],
+            "distances": [0, 0, "inf", "inf"],
+            "normal": [0, 0, 0],
+            "cosine": [-1, -1, 1, 1],
             "scale": 1,
             "weight": 0.01
         }
