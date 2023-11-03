@@ -167,7 +167,7 @@
         "height_changed": false,
         "track_filename": "%CHECKPOINTS_FILE",
         "track": "%CHECKPOINTS",
-        "circular": "%IF_RACEWAY_CIRCULAR",
+        "circular": "%%levels/$LEVEL_ID/IF_RACEWAY_CIRCULAR",
         "laps": "%RACE_LAPS",
         "pacenotes_filename": "%PACENOTES_FILE",
         "pacenotes_meters_ahead": 50,
