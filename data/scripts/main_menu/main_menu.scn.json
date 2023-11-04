@@ -170,7 +170,8 @@
       "call": "update_gallery",
       "literals": {
         "instance": "level_icon",
-        "resource": "%LEVEL_ICON_FILE"
+        "resource": "%LEVEL_ICON_FILE",
+        "color_mode": "rgb"
       }
     }
   },
