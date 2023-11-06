@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo apt-get update && \
           sudo apt-get install -y \
-            g++-12 \
+            clang \
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
@@ -40,7 +40,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: CC=gcc-12 CXX=g++-12 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
