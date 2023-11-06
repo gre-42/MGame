@@ -40,7 +40,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: CC=clang CXX=clang++ CMAKE_CXX_FLAGS=-stdlib=libc++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v3
