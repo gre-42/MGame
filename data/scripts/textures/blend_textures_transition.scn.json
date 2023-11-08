@@ -26,8 +26,12 @@
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Blend5",
-      "color": "textures/Way_Blend5_512.png",
+      "color": "textures/Way_Alpha5_512.png",
       "color_mode": "grayscale",
+      "times": 2,
+      "plus": -1,
+      "abs": true,
+      "invert": true,
       "anisotropic_filtering_level": 16
     }
   },
