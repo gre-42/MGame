@@ -2,83 +2,78 @@
   "declare_macro": "generate_blend_maps_256",
   "content": [
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_1",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [0, 0, 15, 25],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 1,
-        "weight": 1,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_1",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [0, 0, 15, 25],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 1,
+        "FEATHER_SCALE": 1,
+        "ROLE": "%ROLE"
       }
     },
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_8",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [15, 25, "inf", "inf"],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.125,
-        "weight": 1,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_8",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [15, 25, "inf", "inf"],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.125,
+        "FEATHER_SCALE": 0.125,
+        "ROLE": "%ROLE"
       }
     },
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_8_1",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [15, 25, 200, 300],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.125,
-        "weight": 1,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_8_1",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [15, 25, 200, 300],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.125,
+        "FEATHER_SCALE": 0.125,
+        "ROLE": "%ROLE"
       }
     },
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_64",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [200, 300, 1000, 1500],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.015625,
-        "weight": 1,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_64",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [200, 300, 1000, 1500],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.015625,
+        "FEATHER_SCALE": 0.015625,
+        "ROLE": "%ROLE"
       }
     },
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_256",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [1000, 1500, "inf", "inf"],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.00390625,
-        "weight": 1,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_256",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [1000, 1500, "inf", "inf"],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.00390625,
+        "FEATHER_SCALE": 0.00390625,
+        "ROLE": "%ROLE"
       }
     }
   ]

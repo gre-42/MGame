@@ -2,54 +2,50 @@
   "declare_macro": "generate_blend_maps_512",
   "content": [
     {
-      
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_8",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [0, 0, 300, 500],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "discreteness": 0,
-        "scale": 0.125,
-        "weight": 5,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_8",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [0, 0, 300, 500],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "DISCRETENESS": 0,
+        "SCALE": 0.125,
+        "FEATHER_SCALE": 0.125,
+        "ROLE": "%ROLE"
       }
     },
     {
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_128",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [300, 500, 1000, 1500],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.0078125,
-        "weight": 5,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_128",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [300, 500, 1000, 1500],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.0078125,
+        "FEATHER_SCALE": 0.0078125,
+        "ROLE": "%ROLE"
       }
     },
     {
       "exclude": ["%IF_ANDROID"],
-      "call": "add_blend_map_texture",
+      "playback": "feathered_blend_textures",
       "literals": {
-        "name": "$NAME-_512",
-        "texture": "%TEXTURE",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [1000, 1500, "inf", "inf"],
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": 0.001953125,
-        "weight": 5,
-        "role": "%ROLE",
-        "reweight": "enabled"
+        "NAME": "$NAME-_512",
+        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
+        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
+        "COLOR_TEXTURE": "%COLOR_TEXTURE",
+        "DISTANCES": [1000, 1500, "inf", "inf"],
+        "NORMAL": "%NORMAL",
+        "COSINE": "%COSINE",
+        "SCALE": 0.001953125,
+        "FEATHER_SCALE": 0.001953125,
+        "ROLE": "%ROLE"
       }
     }
   ]

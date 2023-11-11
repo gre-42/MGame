@@ -1,0 +1,112 @@
+{
+  "declare_macro": "feathered_blend_textures",
+  "content": [
+    {
+      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME-_Weight",
+        "texture": "%WEIGHT_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": "%DISTANCES",
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
+        "scale": "%SCALE",
+        "weight": 1,
+        "role": "detail_mask_r",
+        "reduction": "times"
+      }
+    },
+    {
+      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME-_Feather",
+        "texture": "%FEATHER_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": "%FEATHER_SCALE",
+        "weight": 0,
+        "role": "detail_mask_r",
+        "reduction": "feather",
+        "discreteness": 5,
+        "plus": -0.8
+      }
+    },
+    {
+      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME",
+        "texture": "%COLOR_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": "%SCALE",
+        "weight": 0,
+        "role": "%ROLE",
+        "reduction": "blend"
+      }
+    },
+    {
+      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE == %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME",
+        "texture": "%COLOR_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": "%DISTANCES",
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
+        "scale": "%SCALE",
+        "weight": 1,
+        "role": "%ROLE",
+        "reweight": "disabled"
+      }
+    },
+    {
+      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME-_Feather",
+        "texture": "%FEATHER_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": "%DISTANCES",
+        "normal": "%NORMAL",
+        "cosine": "%COSINE",
+        "scale": "%FEATHER_SCALE",
+        "weight": 1,
+        "role": "detail_mask_r",
+        "reduction": "feather",
+        "reweight": "disabled",
+        "discreteness": 5,
+        "plus": -0.8
+      }
+    },
+    {
+      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
+      "call": "add_blend_map_texture",
+      "literals": {
+        "name": "$NAME",
+        "texture": "%COLOR_TEXTURE",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": "%SCALE",
+        "weight": 0,
+        "role": "%ROLE",
+        "reduction": "blend"
+      }
+    }
+  ]
+}

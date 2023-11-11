@@ -14,6 +14,16 @@
     }
   },
   {
+    "comment": {
+      "call": "save_texture_atlas_png",
+      "literals": {
+        "name": "Detail",
+        "filename": "detail.png",
+        "color_mode": "grayscale"
+      }
+    }
+  },
+  {
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Ramp5",
