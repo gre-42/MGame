@@ -296,6 +296,7 @@
       "comment": "Soft light"
     },
     {
+      "required": ["%SOFT_LIGHT_TEXTURE != %null"],
       "call": "set_soft_light",
       "literals": {
         "filename": "%SOFT_LIGHT_TEXTURE"
