@@ -21,8 +21,9 @@
         "high_pass": "%PRIMARY_SCENE_HIGH_PASS",
         "with_skybox": "%PRIMARY_SCENE_WITH_SKYBOX",
         "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
-        "clear_mode": "%PRIMARY_SCENE_CLEAR_MODE",
+        "clear_mode": "color_and_depth",
         "max_tracks": 5,
+        "save_playback": "%PRIMARY_SCENE_SAVE_PLAYBACK",
         "setup_new_round": {
           "playback": "_setup_new_round",
           "context": "primary_scene"
