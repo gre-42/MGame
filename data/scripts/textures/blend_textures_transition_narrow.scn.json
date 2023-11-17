@@ -1,5 +1,6 @@
 [
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Ramp5_Narrow",
@@ -9,6 +10,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "literals": {
       "name": "Blend5_Narrow",
@@ -22,6 +24,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "literals": {
       "name": "TimesBlend5_Narrow",
