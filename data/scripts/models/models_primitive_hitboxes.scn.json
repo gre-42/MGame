@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "box_02_1_02_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -18,7 +18,7 @@
   },
   {
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "box_02_1_02_hitbox",
       "add": "attr_convex"
     }
@@ -26,7 +26,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "box_50_16_01_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0.8, 0],
@@ -44,7 +44,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "box_50_16_01_hitbox",
       "add": "attr_convex"
     }
@@ -52,7 +52,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "box_10_10_10_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 1, 0],
@@ -70,7 +70,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "box_10_10_10_hitbox",
       "add": "attr_convex"
     }

@@ -2,15 +2,15 @@
   {
     "declare_macro": "create_AH_64_graphics",
     "content": [
-      {"call": "renderable_instance", "literals": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "cockpit|glass|hull"}},
-      {"call": "renderable_instance", "literals": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"call": "renderable_instance", "literals": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"call": "renderable_instance", "literals": {"name": "blades$SUFFIX", "node": "blades_shift_node$NODE_SUFFIX", "resource": "blades_AH_64$DECIMATE", "included_names": "main_rotor"}},
-      {"call": "renderable_instance", "literals": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_node$NODE_SUFFIX", "resource": "tail_rotor_spinning_AH_64$DECIMATE"}},
-      {"call": "renderable_instance", "literals": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_shift_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "tail_rotor"}}
+      {"call": "renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "cockpit|glass|hull"}},
+      {"call": "renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"call": "renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"call": "renderable_instance", "arguments": {"name": "blades$SUFFIX", "node": "blades_shift_node$NODE_SUFFIX", "resource": "blades_AH_64$DECIMATE", "included_names": "main_rotor"}},
+      {"call": "renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_node$NODE_SUFFIX", "resource": "tail_rotor_spinning_AH_64$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_shift_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "tail_rotor"}}
     ]
   },
   {
@@ -18,7 +18,7 @@
     "content": [
       {
         "call": "rigid_cuboid",
-        "literals": {
+        "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "AH_box_64_hitboxes",
           "mass": "%MASS",
@@ -29,10 +29,10 @@
           "asset_id": "AH_64"
         }
       },
-      {"call": "set_rigid_body_target", "literals": {"node": "car_node$SUFFIX", "target": [0, 2.2, 0]}},
+      {"call": "set_rigid_body_target", "arguments": {"node": "car_node$SUFFIX", "target": [0, 2.2, 0]}},
       {
         "call": "rigid_disk",
-        "literals": {
+        "arguments": {
             "node": "blades$SUFFIX",
             "hitboxes": "ah64_blades",
             "mass": 30,
@@ -45,7 +45,7 @@
       },
       {
         "call": "yaw_pitch_look_at_nodes",
-        "literals": {
+        "arguments": {
           "yaw_node": "turret_node$SUFFIX",
           "pitch_node": "main_gun_node$SUFFIX",
           "parent_follower_rigid_body_node": "car_node$SUFFIX",
@@ -67,7 +67,7 @@
       },
       {
         "call": "set_inventory_capacity",
-        "literals": {
+        "arguments": {
           "inventory_node": "car_node$SUFFIX",
           "item_type": "ah_64_ammo",
           "capacity": 2000
@@ -75,7 +75,7 @@
       },
       {
         "call": "add_to_inventory",
-        "literals": {
+        "arguments": {
           "inventory_node": "car_node$SUFFIX",
           "item_type": "ah_64_ammo",
           "amount": 1500
@@ -83,7 +83,7 @@
       },
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "car_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
@@ -105,7 +105,7 @@
       },
       {
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "car_node$SUFFIX",
           "name": "wheels",
           "angular_vels": [-2000, -800, 0],
@@ -118,7 +118,7 @@
       },
       {
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "car_node$SUFFIX",
           "name": "main_rotor",
           "angular_vels": [-2400, -1600, -800, 0],
@@ -137,7 +137,7 @@
       },
       {
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "car_node$SUFFIX",
           "name": "tail_rotor",
           "angular_vels": [-1000, -800, 0],
@@ -148,12 +148,12 @@
           "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-1.0,  0.35, -1.1], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 1.0,  0.35, -1.1], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [ 0.0,  0.4 ,  9.6], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 2}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-1.0,  0.35, -1.1], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 0}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 1.0,  0.35, -1.1], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 1}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [ 0.0,  0.4 ,  9.6], "radius": 0.25, "engine": "wheels", "brake_force": 2.5e5, "Ks": 1.67e5, "Ka": 6.7e3, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 2}},
       {
         "call": "rotor",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "blades": {
             "node": "blades$SUFFIX",
@@ -178,7 +178,7 @@
       },
       {
         "call": "rotor",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "position": [0, 3.4, 9.1],
           "rotation": [0, 90, 0],
@@ -189,7 +189,7 @@
       },
       {
         "call": "create_heli_controller",
-        "literals": {
+        "arguments": {
           "node": "car_node$SUFFIX",
           "tire_ids": [0, 1],
           "tire_angles": [45, 45],
@@ -209,10 +209,10 @@
   {
     "declare_macro": "create_AH_64",
     "content": [
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-1.0,  0.35, -1.1]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 1.0,  0.35, -1.1]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [ 0.0,  0.4 ,  9.6]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-1.0,  0.35, -1.1]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 1.0,  0.35, -1.1]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [ 0.0,  0.4 ,  9.6]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"comment": [
         "car_node$SUFFIX",
         "    turret_node$SUFFIX (0 0 1, yaw_node)",
@@ -220,27 +220,27 @@
         "            main_gun_node$SUFFIX (0 1.2 -0.3, pitch_node)",
         "                main_gun_shift_node$SUFFIX (0 -1.2 0.3, renderable)",
         "                main_gun_end_node$SUFFIX (0 0 -20);"]},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "turret_node$SUFFIX", "position": [0, 0, 1], "rotation": [0, 45, 0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "turret_node$SUFFIX", "name": "turret_shift_node$SUFFIX", "position": [0, 0, -1]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "turret_shift_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0, 1.2, -0.3], "rotation": [30, 0, 0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_punch_angle_node$SUFFIX"}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -1.2, 0.3]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "turret_node$SUFFIX", "position": [0, 0, 1], "rotation": [0, 45, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$SUFFIX", "name": "turret_shift_node$SUFFIX", "position": [0, 0, -1]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0, 1.2, -0.3], "rotation": [30, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_punch_angle_node$SUFFIX"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -1.2, 0.3]}},
       {"comment": [
         "renderable_instance name=flag-inst node=car_node$SUFFIX resource=flag",
         "renderable_instance name=car_box$SUFFIX node=car_node$SUFFIX resource=AH_box_64_hitbox",
         "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=AH_box_64_hitbox"
       ]},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "blades$SUFFIX", "position": [0, 4.2, 0], "rotation": [90, 0, 0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "blades$SUFFIX", "name": "blades_shift_node$SUFFIX", "position": [0, 0, 4.2], "rotation": [-90, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "blades$SUFFIX", "position": [0, 4.2, 0], "rotation": [90, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "blades$SUFFIX", "name": "blades_shift_node$SUFFIX", "position": [0, 0, 4.2], "rotation": [-90, 0, 0]}},
       {"comment": "child_node_instance type=dynamic parent=car_node$SUFFIX name=rear_rotor_node$SUFFIX position=0 3.4 9.1"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "tail_rotor_node$SUFFIX", "position": [0, 3.4, 9.1]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "relative_transformer", "literals": {"node": "tail_rotor_node$SUFFIX", "w": [2000, 0, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "tail_rotor_node$SUFFIX", "name": "tail_rotor_shift_node$SUFFIX", "position": [0, -3.4, -9.1]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d5$SUFFIX", "DECIMATE": "_d5"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "tail_rotor_node$SUFFIX", "position": [0, 3.4, 9.1]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "relative_transformer", "arguments": {"node": "tail_rotor_node$SUFFIX", "w": [2000, 0, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "tail_rotor_node$SUFFIX", "name": "tail_rotor_shift_node$SUFFIX", "position": [0, -3.4, -9.1]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d5$SUFFIX", "DECIMATE": "_d5"}},
       {
-        "required": ["%IF_WITH_PHYSICS"], "playback": "create_AH_64_physics", "literals": {
+        "required": ["%IF_WITH_PHYSICS"], "playback": "create_AH_64_physics", "arguments": {
           "SUFFIX": "%SUFFIX",
           "MASS": 6e3,
           "COLLIDABLE_MODE": "moving",
@@ -258,7 +258,7 @@
     "declare_macro": "create_player_car_externals_AH_64",
     "content": [
       {
-        "required": ["%IF_PC"], "playback": "create_car_key_bindings", "literals": {
+        "required": ["%IF_PC"], "playback": "create_car_key_bindings", "arguments": {
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
           "IF_HAS_GUN": true,
@@ -268,13 +268,13 @@
         }
       },
       {
-        "required": ["%IF_PC"], "playback": "create_car_cameras_heli", "literals": {
+        "required": ["%IF_PC"], "playback": "create_car_cameras_heli", "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME"
         }
       },
       {
-        "required": ["%IF_PC"], "call": "hud_image", "literals": {
+        "required": ["%IF_PC"], "call": "hud_image", "arguments": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "camera_node": "main_gun_camera_node$SUFFIX",
@@ -287,14 +287,14 @@
         }
       },
       {
-        "call": "player_set_aiming_gun", "literals": {
+        "call": "player_set_aiming_gun", "arguments": {
           "player": "%PLAYER_NAME",
           "ypln_node": "turret_node$SUFFIX",
           "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
       {
-        "call": "player_set_vehicle_control_parameters", "literals": {
+        "call": "player_set_vehicle_control_parameters", "arguments": {
           "player": "%PLAYER_NAME",
           "asset_id": "AH_64",
           "surface_power_forward": "inf",
@@ -307,7 +307,7 @@
   {
     "declare_macro": "add_attached_light_AH_64",
     "content": [
-      {"playback": "add_attached_light_heli", "literals": {
+      {"playback": "add_attached_light_heli", "arguments": {
         "LSUFFIX": "%LSUFFIX",
         "CSUFFIX": "%CSUFFIX"
       }}

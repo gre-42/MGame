@@ -4,13 +4,13 @@
   {"include": "osm_resource_jb_wpts1.scn.json"},
   {
     "call": "constant_parameter",
-    "literals": { "name": "LOADED_GAME_LEVEL", "value": "real_heightmap"}},
+    "arguments": { "name": "LOADED_GAME_LEVEL", "value": "real_heightmap"}},
   {
     "call": "constant_parameter",
-    "literals": { "name": "LOADED_HEIGHTMAP", "value": "$__DIR__/real_heightmap.png"}},
+    "arguments": { "name": "LOADED_HEIGHTMAP", "value": "$__DIR__/real_heightmap.png"}},
   {
     "playback": "scene_racing_static",
-    "literals": {
+    "arguments": {
       "IF_CREATE_PC_PLAYER": false,
       "IF_PC_PLAYER_PLAYBACK": false,
       "PC_PLAYER_PLAYBACK": null,
@@ -51,7 +51,7 @@
     "declare_macro": "instantiate_transient_objects",
     "content": {
       "playback": "generic_scene_racing_dynamic",
-      "literals": {
+      "arguments": {
         "IF_CREATE_PC_CAR": false,
         "IF_PC_PLAYER_PLAYBACK": false,
         "CAR_NODE_POSITION": null,
@@ -86,7 +86,7 @@
   {
     "playback": "setup_teams",
     "context": "primary_scene",
-    "literals": {
+    "arguments": {
       "PLAYERS_JSON": "%PLAYERS_JSON",
       "TEAMS_SPAWN_POINTS_RESOURCE": "osm_map_overlay",
       "TEAMS_WAY_POINTS_RESOURCE": "osm_map_overlay",

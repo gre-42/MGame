@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "root_node_instance",
-      "literals": {
+      "arguments": {
         "type": "dynamic",
         "name": "%NODE_NAME",
         "position": "%POSITION",
@@ -13,7 +13,7 @@
     },
     {
       "call": "perspective_camera",
-      "literals": {
+      "arguments": {
         "node": "%NODE_NAME",
         "y_fov": 60,
         "near_plane": 1,
@@ -23,7 +23,7 @@
     },
     {
       "call": "relative_transformer",
-      "literals": {
+      "arguments": {
         "node": "%NODE_NAME"
       }
     }

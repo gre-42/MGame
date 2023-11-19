@@ -3,14 +3,14 @@
   "content": [
     {
       "call": "create_print_camera_node_info_key_binding",
-      "literals": {
+      "arguments": {
         "id": "print_camera_node_info",
         "role": "default"
       }
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_left",
         "role": "default",
         "translation": [-1, 0, 0],
@@ -21,7 +21,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_right",
         "role": "default",
         "translation": [1, 0, 0],
@@ -32,7 +32,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_up",
         "role": "default",
         "translation": [0, 1, 0],
@@ -43,7 +43,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_down",
         "role": "default",
         "translation": [0, -1, 0],
@@ -54,7 +54,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_forward",
         "role": "default",
         "translation": [0, 0, -1],
@@ -65,7 +65,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "tripod.move_backwards",
         "role": "default",
         "translation": [0, 0, 1],
@@ -76,7 +76,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "avatar.rotate_left",
         "role": "default",
         "rotation_axis": [0, 1, 0],
@@ -87,7 +87,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "avatar.rotate_right",
         "role": "default",
         "rotation_axis": [0, 1, 0],
@@ -98,7 +98,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "avatar.rotate_up",
         "role": "default",
         "rotation_axis": [1, 0, 0],
@@ -109,7 +109,7 @@
     },
     {
       "call": "rel_key_binding_tripod",
-      "literals": {
+      "arguments": {
         "id": "avatar.rotate_down",
         "role": "default",
         "rotation_axis": [1, 0, 0],

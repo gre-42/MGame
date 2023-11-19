@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Ramp5_Narrow",
       "color": "textures/Way_Alpha5_Narrow_512.png",
       "color_mode": "grayscale",
@@ -12,7 +12,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Blend5_Narrow",
       "color": "textures/Way_Alpha5_Narrow_512.png",
       "color_mode": "grayscale",
@@ -26,7 +26,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "TimesBlend5_Narrow",
       "texture": "#Blend5_Narrow",
       "min_height": "-inf",

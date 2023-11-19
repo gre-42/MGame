@@ -3,7 +3,7 @@
   "content": [
     {
       "playback": "feathered_blend_textures",
-      "literals": {
+      "arguments": {
         "NAME": "$NAME-_8",
         "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
         "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
@@ -19,7 +19,7 @@
     },
     {
       "playback": "feathered_blend_textures",
-      "literals": {
+      "arguments": {
         "NAME": "$NAME-_128",
         "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
         "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
@@ -35,7 +35,7 @@
     {
       "exclude": ["%IF_ANDROID"],
       "playback": "feathered_blend_textures",
-      "literals": {
+      "arguments": {
         "NAME": "$NAME-_512",
         "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
         "FEATHER_TEXTURE": "%FEATHER_TEXTURE",

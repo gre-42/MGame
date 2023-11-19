@@ -3,23 +3,23 @@
   "content": [
     {
       "call": "constant_parameter",
-      "literals": { "name": "LOADED_GAME_MODE", "value": "%GAME_MODE" }
+      "arguments": { "name": "LOADED_GAME_MODE", "value": "%GAME_MODE" }
     },
     {
       "call": "constant_parameter",
-      "literals": { "name": "LOADED_LEVEL_ID", "value": "%LEVEL_ID" }
+      "arguments": { "name": "LOADED_LEVEL_ID", "value": "%LEVEL_ID" }
     },
     {
       "call": "constant_parameter",
-      "literals": { "name": "LOADED_RACE_RESTRICTIONS", "value": "%RACE_RESTRICTIONS" }
+      "arguments": { "name": "LOADED_RACE_RESTRICTIONS", "value": "%RACE_RESTRICTIONS" }
     },
     {
       "call": "constant_parameter",
-      "literals": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
+      "arguments": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
     },
     {
       "call": "constant_parameter",
-      "literals": { "name": "LOADED_RACE_LAPS", "value": "%RACE_LAPS" }
+      "arguments": { "name": "LOADED_RACE_LAPS", "value": "%RACE_LAPS" }
     },
     {
       "playback": "_setup_new_round",
@@ -28,7 +28,7 @@
     {
       "playback": "_scene_racing_instantiate_transient_objects",
       "context": "primary_scene",
-        "literals": {
+        "arguments": {
         "IF_CREATE_PC_CAR": "%IF_CREATE_PC_CAR",
         "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
         "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",

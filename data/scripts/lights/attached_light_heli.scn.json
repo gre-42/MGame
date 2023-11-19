@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node$LSUFFIX",
           "position": [0, 0, 0],
@@ -14,7 +14,7 @@
       },
       {
         "call": "keep_offset_from_movable",
-        "literals": {
+        "arguments": {
           "follower": "light_node$LSUFFIX",
           "followed": "car_node$CSUFFIX",
           "offset": [10, 10, 0]
@@ -22,7 +22,7 @@
       },
       {
         "call": "ortho_camera",
-        "literals": {
+        "arguments": {
           "node": "light_node$LSUFFIX",
           "near_plane": 1,
           "far_plane": 10000,
@@ -35,7 +35,7 @@
       },
       {
         "call": "light",
-        "literals": {
+        "arguments": {
           "node": "light_node$LSUFFIX",
           "black_node": "car_node$CSUFFIX",
           "render_pass": "lightmap_black_node",

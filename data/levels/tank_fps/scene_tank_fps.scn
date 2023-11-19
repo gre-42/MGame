@@ -54,7 +54,7 @@ macro_begin _scene_tank_load_resources;
     #########;
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "human-hitbox",
             "filename": "models/primitives/box.obj",
             "position": [0, 0.35, 0],
@@ -70,11 +70,11 @@ macro_begin _scene_tank_load_resources;
         }
     }
 
-    {"comment": {"call": "gen_triangle_rays", "literals": {"name": "human-hitbox", "npoints": 5, "lengths": [0.5, 0.7, 0.5], "delete_triangles": false}}},
+    {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "human-hitbox", "npoints": 5, "lengths": [0.5, 0.7, 0.5], "delete_triangles": false}}},
 
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "human_tirelines",
             "filename": "models/primitives/empty.obj",
             "position": [0, 0, 0],
@@ -294,7 +294,7 @@ macro_begin _scene_tank_instantiate;
     # Box #;
     #######;
     macro_begin create-box;
-        {"call": "renderable_instance", "literals": {"name": "box$SUFFIX", "node": "box-node$SUFFIX", "resource": "muscle-cupe-hitbox"}},
+        {"call": "renderable_instance", "arguments": {"name": "box$SUFFIX", "node": "box-node$SUFFIX", "resource": "muscle-cupe-hitbox"}},
         rigid_cuboid
             node=box-node$SUFFIX
             hitboxes=muscle-cupe-hitbox

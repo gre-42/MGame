@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME-_1",
         "texture": "%TEXTURE",
         "min_height": "-inf",
@@ -18,7 +18,7 @@
     },
     {
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME-_8",
         "texture": "%TEXTURE",
         "min_height": "-inf",

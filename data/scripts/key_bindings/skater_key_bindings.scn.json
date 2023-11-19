@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "car_controller_idle_binding",
-      "literals": {
+      "arguments": {
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "surface_power": "inf",
@@ -12,7 +12,7 @@
     },
     {
       "call": "rel_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.rotate_left",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
@@ -25,7 +25,7 @@
     },
     {
       "call": "rel_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.rotate_right",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
@@ -39,7 +39,7 @@
     {
       "comment": {
         "call": "abs_key_binding",
-        "literals": {
+        "arguments": {
           "node": "skater_node$SUFFIX",
           "key": "%LEFT_SHIFT",
           "gamepad_button": "Y",
@@ -49,7 +49,7 @@
     },
     {
       "call": "abs_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.jump",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
@@ -59,7 +59,7 @@
     },
     {
       "call": "abs_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.grind",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
@@ -69,7 +69,7 @@
     },
     {
       "call": "abs_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.forward",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
@@ -79,7 +79,7 @@
     },
     {
       "call": "car_controller_key_binding",
-      "literals": {
+      "arguments": {
         "id": "skater.brake",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",

@@ -1,7 +1,7 @@
 [
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "M4A1",
             "filename": "models/M4A1/m4a1_d36d.obj",
             "position": [0, -0.25, 0.25],
@@ -19,7 +19,7 @@
     },
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "Beretta92",
             "filename": "models/opengameart/textured-pistol/pistol.obj",
             "position": [0, 0, -0.1],
@@ -37,7 +37,7 @@
     },
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "frag_grenade",
             "filename": "models/sketchfab.com/frag_grenade/frag_grenade.obj",
             "position": [0, 0, 0],
@@ -55,7 +55,7 @@
     },
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "m72_law",
             "filename": "models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher.obj",
             "position": [0, 0, -0.5],
@@ -73,7 +73,7 @@
     },
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "m72_law_rocket",
             "filename": "models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher-rocket.obj",
             "position": [0, 0, 0],

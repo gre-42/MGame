@@ -7,7 +7,7 @@
     {
       "required": ["%IF_CREATE_PC_CAR"],
       "playback":  "create_$$vehicles/$SELECTED_VEHICLE_ID/CLASS",
-      "literals": {
+      "arguments": {
         "HUMAN_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "SKATER_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
@@ -48,7 +48,7 @@
     {
       "required": ["%IF_BURN_IN"],
       "call": "burn_in",
-      "literals": {
+      "arguments": {
         "seconds": 20
       }
     },
@@ -58,17 +58,17 @@
     {
       "required": ["%IF_RECORD_TRACK"],
       "call": "record_track",
-      "literals": { "node": "car_node", "filename": "/tmp/track.m" }
+      "arguments": { "node": "car_node", "filename": "/tmp/track.m" }
     },
     {
       "required": ["%IF_RECORD_TRACK"],
       "call": "record_track_gpx",
-      "literals": { "node": "car_node", "filename": "/tmp/track.gpx" }
+      "arguments": { "node": "car_node", "filename": "/tmp/track.gpx" }
     },
     {
       "required": ["%IF_PLAYBACK_CHECKPOINTS"],
       "playback": "create_playback",
-      "literals": {
+      "arguments": {
         "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
@@ -79,7 +79,7 @@
     {
       "required": ["%IF_PLAYBACK_TRACK_1"],
       "playback": "create_playback",
-      "literals": {
+      "arguments": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
@@ -90,7 +90,7 @@
     {
       "required": ["%IF_PLAYBACK_TRACK_2"],
       "playback": "create_playback",
-      "literals": {
+      "arguments": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "XZ",
@@ -101,7 +101,7 @@
     {
       "required": ["%IF_PLAYBACK_TRACK_3"],
       "playback": "create_playback",
-      "literals": {
+      "arguments": {
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "FN",
@@ -111,7 +111,7 @@
     },
     {
       "call": "define_winner_conditionals",
-      "literals": {
+      "arguments": {
         "begin_rank": 0,
         "end_rank": 3
       }
@@ -119,7 +119,7 @@
     {
       "required": ["%IF_PLAYBACK_WINNER_0", "%IF_WINNER_RANK0_EXISTS"],
       "playback": "_create_winner_playback",
-      "literals": {
+      "arguments": {
         "RANK": 0,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER0_VEHICLE",
@@ -131,7 +131,7 @@
     {
       "required": ["%IF_PLAYBACK_WINNER_1", "%IF_WINNER_RANK1_EXISTS"],
       "playback": "_create_winner_playback",
-      "literals": {
+      "arguments": {
         "RANK": 1,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER1_VEHICLE",
@@ -143,7 +143,7 @@
     {
       "required": ["%IF_PLAYBACK_WINNER_2", "%IF_WINNER_RANK2_EXISTS"],
       "playback": "_create_winner_playback",
-      "literals": {
+      "arguments": {
         "RANK": 2,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER2_VEHICLE",
@@ -155,7 +155,7 @@
     {
       "required": ["%IF_CHECKPOINTS"],
       "call": "check_points",
-      "literals": {
+      "arguments": {
         "moving_asset_id": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "moving_suffix": "",
         "resource": "glow",
@@ -207,7 +207,7 @@
         "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
         "on_finish": {
           "call": "set_focuses",
-          "literals": {"focuses": ["menu", "game_over_countdown_pending"]}
+          "arguments": {"focuses": ["menu", "game_over_countdown_pending"]}
         }
       }
     },
@@ -217,7 +217,7 @@
     {
       "required": ["%IF_CREATE_PC_CAR"],
       "call": "create_externals",
-      "literals": {
+      "arguments": {
         "player": "you",
         "mode": "pc"
       }

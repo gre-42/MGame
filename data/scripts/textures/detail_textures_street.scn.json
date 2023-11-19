@@ -1,7 +1,7 @@
 [
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Way_Wheels_7_Detail_Base",
       "texture": "#Way_Wheels_7",
       "min_height": "-inf",
@@ -17,7 +17,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Way_Wheels_9_Detail_Base",
       "texture": "#Way_Wheels_9",
       "min_height": "-inf",
@@ -36,7 +36,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Road007_Base_Detail_Base",
       "texture": "#Road007_Base",
       "min_height": "-inf",
@@ -53,7 +53,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Road007_2_Lanes_Detail_Base",
       "texture": "#Road007_2_Lanes",
       "min_height": "-inf",
@@ -70,7 +70,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Road007_No_Lines_Detail_Base",
       "texture": "#Road007_No_Lines",
       "min_height": "-inf",
@@ -86,7 +86,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Gravel010_Detail",
       "texture": "#Gravel010",
       "min_height": "-inf",
@@ -102,7 +102,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Gravel010_Detail_Desaturated",
       "texture": "#Gravel010_Desaturated",
       "min_height": "-inf",
@@ -118,7 +118,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Gravel010_Detail_Desert",
       "texture": "#Gravel010_Desert",
       "min_height": "-inf",
@@ -134,7 +134,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Ground029_Detail_Snow",
       "texture": "#Ground029_Snow",
       "min_height": "-inf",
@@ -153,7 +153,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Ground038_dark27_Detail",
       "texture": "#Ground038_dark27",
       "min_height": "-inf",

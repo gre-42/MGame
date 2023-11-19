@@ -4,7 +4,7 @@
     {
       "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME-_Weight",
         "texture": "%WEIGHT_TEXTURE",
         "min_height": "-inf",
@@ -21,7 +21,7 @@
     {
       "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME-_Feather",
         "texture": "%FEATHER_TEXTURE",
         "min_height": "-inf",
@@ -40,7 +40,7 @@
     {
       "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME",
         "texture": "%COLOR_TEXTURE",
         "min_height": "-inf",
@@ -57,7 +57,7 @@
     {
       "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE == %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME",
         "texture": "%COLOR_TEXTURE",
         "min_height": "-inf",
@@ -74,7 +74,7 @@
     {
       "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME-_Feather",
         "texture": "%FEATHER_TEXTURE",
         "min_height": "-inf",
@@ -94,7 +94,7 @@
     {
       "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
       "call": "add_blend_map_texture",
-      "literals": {
+      "arguments": {
         "name": "$NAME",
         "texture": "%COLOR_TEXTURE",
         "min_height": "-inf",

@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "player_create",
-        "literals": {
+        "arguments": {
           "name": "%PLAYER_NAME",
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
@@ -13,11 +13,11 @@
           "driving_direction": "center"
         }
       },
-      { "call": "spawner_create", "literals": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "literals": { "name": "%PLAYER_NAME" } },
+      { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME" } },
       {
         "playback": "set_player_skills",
-        "literals": {
+        "arguments": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "USER_DRIVE": "%USER_DRIVE",
           "USER_AIM": "%USER_AIM",
@@ -35,7 +35,7 @@
     "content": [
       {
         "playback": "create_human",
-        "literals": {
+        "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
           "HUMAN_NAME": "%HUMAN_NAME",
@@ -59,7 +59,7 @@
       },
       {
         "call": "create_externals",
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "mode": "pc"
         }
@@ -71,7 +71,7 @@
     "content": [
       {
         "playback": "create_car",
-        "literals": {
+        "arguments": {
           "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
           "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
           "CAR_NAME": "%CAR_NAME",
@@ -100,7 +100,7 @@
       },
       {
         "call": "create_externals",
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "mode": "pc"
         }
@@ -112,7 +112,7 @@
     "content": [
       {
         "playback": "teams.create_player_for_pc",
-        "literals": {
+        "arguments": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "TEAM": "%TEAM",
           "GAME_MODE": "%GAME_MODE",
@@ -127,11 +127,11 @@
       },
       {
         "call": "set_preferred_car_spawner",
-        "literals": {
+        "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_human_for_pc",
-            "literals": {
+            "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
@@ -170,7 +170,7 @@
       {
         "required": ["%IF_SET_WAY_POINTS"],
         "call": "set_pathfinding_way_points",
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "node": "osm_map_node",
           "resource": "%TEAMS_WAY_POINTS_RESOURCE"
@@ -183,7 +183,7 @@
     "content": [
       {
         "playback": "teams.create_player_for_pc",
-        "literals": {
+        "arguments": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "TEAM": "%TEAM",
           "GAME_MODE": "%GAME_MODE",
@@ -199,11 +199,11 @@
       },
       {
         "call": "set_preferred_car_spawner",
-        "literals": {
+        "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_car_for_pc",
-            "literals": {
+            "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
@@ -242,7 +242,7 @@
       {
         "required": ["%IF_SET_WAY_POINTS"],
         "call": "set_pathfinding_way_points",
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "node": "osm_map_node",
           "resource": "%TEAMS_WAY_POINTS_RESOURCE"

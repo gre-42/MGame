@@ -3,13 +3,13 @@
   {"include": "../nyc/osm_resource_nyc.scn.json"},
   {
     "call": "constant_parameter",
-    "literals": {"name": "LOADED_GAME_LEVEL", "value": "'1'"}},
+    "arguments": {"name": "LOADED_GAME_LEVEL", "value": "'1'"}},
   {
     "call": "constant_parameter",
-    "literals": {"name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_nyc_with_traffic.m"}},
+    "arguments": {"name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_nyc_with_traffic.m"}},
   {
     "playback": "scene_racing_static",
-    "literals": {
+    "arguments": {
       "IF_CREATE_PC_PLAYER": true,
       "IF_PC_PLAYER_PLAYBACK": false,
       "PC_PLAYER_PLAYBACK": null,
@@ -50,7 +50,7 @@
     "content": [
       {
         "playback": "generic_scene_racing_dynamic",
-        "literals": {
+        "arguments": {
           "IF_CREATE_PC_CAR": true,
           "IF_PC_PLAYER_PLAYBACK": false,
           "CAR_NODE_POSITION": [-117, -170, 120],

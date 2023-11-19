@@ -1,7 +1,7 @@
 [
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "ad0",
       "color": "textures/barriers/ad0.png",
       "color_mode": "rgb",
@@ -10,7 +10,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "racing_line",
       "color": "textures/racing_lines/racing_line.png",
       "color_mode": "rgba",

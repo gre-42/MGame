@@ -13,7 +13,7 @@
     "content": [
       {
         "call": "clear_selection_ids",
-        "literals": {
+        "arguments": {
           "except": "game_mode_selector"
         }
       },

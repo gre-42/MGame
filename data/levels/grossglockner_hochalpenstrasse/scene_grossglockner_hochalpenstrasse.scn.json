@@ -2,12 +2,12 @@
   "declare_macro": "create_grossglockner_hochalpenstrasse",
   "content": [
     {"include": "../../scripts/include_all.scn.json"},
-    {"call": "constant_parameter", "literals": { "name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m"}},
-    {"call": "constant_parameter", "literals": { "name": "LOADED_RACING_LINE_PLAYBACK", "value": "$__APPDATA__/$LEVEL_ID.checkpoints.m"}},
+    {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m"}},
+    {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_PLAYBACK", "value": "$__APPDATA__/$LEVEL_ID.checkpoints.m"}},
     {"include": "osm_resource_grossglockner_hochalpenstrasse$STYLE.scn.json"},
     {
       "playback": "scene_racing_static",
-      "literals": {
+      "arguments": {
         "IF_CREATE_PC_PLAYER": true,
         "IF_PC_PLAYER_PLAYBACK": false,
         "PC_PLAYER_PLAYBACK": null,
@@ -47,7 +47,7 @@
       "declare_macro": "instantiate_transient_objects",
       "content": {
         "playback": "generic_scene_racing_dynamic",
-        "literals": {
+        "arguments": {
           "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
           "IF_PC_PLAYER_PLAYBACK": false,
           "CAR_NODE_POSITION": [

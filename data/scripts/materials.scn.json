@@ -1,7 +1,7 @@
 [
   {
     "call": "set_surface_contact_info",
-    "literals": {
+    "arguments": {
       "material0": "surface_base_tire",
       "material1": "surface_base_gravel",
       "surface_stiction_factor": 0.9,
@@ -15,7 +15,7 @@
   },
   {
     "call": "set_surface_contact_info",
-    "literals": {
+    "arguments": {
       "material0": "surface_base_tire",
       "material1": "surface_base_grass",
       "surface_stiction_factor": 0.8,
@@ -29,7 +29,7 @@
   },
   {
     "call": "set_surface_contact_info",
-    "literals": {
+    "arguments": {
       "material0": "surface_base_tire",
       "material1": "surface_base_snow",
       "surface_stiction_factor": 0.8,

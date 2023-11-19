@@ -3,7 +3,7 @@
     "declare_macro": "_create_playback",
     "content": {
       "playback": "create_car",
-      "literals": {
+      "arguments": {
         "CAR_NODE_POSITION": [1, 2, 3],
         "CAR_NODE_ANGLES": [4, 5, 6],
         "CAR_NAME": "%PLAYBACK_CAR",
@@ -34,7 +34,7 @@
     "content": [
       {
         "playback": "create_car",
-        "literals": {
+        "arguments": {
           "CAR_NODE_POSITION": [1, 2, 3],
           "CAR_NODE_ANGLES": [4, 5, 6],
           "CAR_NAME": "%PLAYBACK_CAR",
@@ -71,23 +71,23 @@
     "content": [
       {
         "call": "set_focuses",
-        "literals": {"focuses": ["scene", "countdown_pending"]}
+        "arguments": {"focuses": ["scene", "countdown_pending"]}
       },
       {
         "call": "delete_root_nodes",
-        "literals": {
+        "arguments": {
           "regex": "^(car|human|skater)_node(_trailer)?_playback_track\\d+$"
         }
       },
       {
         "call": "delete_root_nodes",
-        "literals": {
+        "arguments": {
           "regex": "^(car|human|skater)_node(_trailer)?_playback_winner\\d+$"
         }
       },
       {
         "call": "delete_root_nodes",
-        "literals": {
+        "arguments": {
           "regex": "^(bullet|trail|particles_\\w+|snow|explosion)___\\d+$"
         }
       },
@@ -97,7 +97,7 @@
       {
         "required": ["%LOADED_GAME_MODE == 'rally'"],
         "call": "set_race_identifier_and_reload_history",
-        "literals": {
+        "arguments": {
           "level_id": "%LOADED_LEVEL_ID",
           "restrictions": "%LOADED_RACE_RESTRICTIONS",
           "session": "%LOADED_RACE_SESSION",
@@ -108,7 +108,7 @@
       {
         "required": ["%LOADED_GAME_MODE == 'rally'"],
         "call": "start_race",
-        "literals": {
+        "arguments": {
           "readonly": false
         }
       },
@@ -128,7 +128,7 @@
     "content": [
       {
         "call": "with_delete_node_mutex",
-        "literals": {
+        "arguments": {
           "command": {
             "playback": "__setup_new_round"
           }
@@ -141,7 +141,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node",
           "position": [-3, 3, 0],
@@ -151,7 +151,7 @@
       },
       {
         "call": "light_without_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node",
           "ambience": [1, 1, 1],
           "diffusivity": [1, 1, 1],
@@ -160,14 +160,14 @@
       },
       {
         "playback": "scene_minimal",
-        "literals": {
+        "arguments": {
           "IF_DIRTMAP": false,
           "IF_SKYBOX": false
         }
       },
       {
         "call": "scene_to_percentage_region",
-        "literals": {
+        "arguments": {
           "target_scene": "primary_scene",
           "z_order": 1,
           "position": [0.1, 0.5],

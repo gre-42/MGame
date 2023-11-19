@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_audio_sequence",
-    "literals": {
+    "arguments": {
       "name": "car0.driving",
       "filename": "sounds/ange-engine-sim/sequence0/meta.json",
       "gain": 1,
@@ -11,7 +11,7 @@
   },
   {
     "call": "add_audio_sequence",
-    "literals": {
+    "arguments": {
       "name": "car1.driving",
       "filename": "sounds/ange-engine-sim/sequence1/meta.json",
       "gain": 1,

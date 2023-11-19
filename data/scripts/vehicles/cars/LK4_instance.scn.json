@@ -3,7 +3,7 @@
     "declare_macro": "create_LK4",
     "content": {
       "playback": "generic_car.create",
-      "literals": {
+      "arguments": {
         "NAME": "LK4",
         "SUFFIX": "%SUFFIX",
         "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -38,7 +38,7 @@
     "declare_macro": "create_player_car_externals_LK4",
     "content": {
       "playback": "generic_car.create_player_car_externals",
-      "literals": {
+      "arguments": {
         "ASSET_ID": "LK4",
         "IF_PC": "%IF_PC",
         "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",

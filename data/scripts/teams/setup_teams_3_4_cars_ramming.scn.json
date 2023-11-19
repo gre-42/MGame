@@ -4,7 +4,7 @@
         "content": [
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc1",
@@ -15,7 +15,7 @@
             },
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc2",
@@ -26,7 +26,7 @@
             },
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "M3",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc3",
@@ -38,7 +38,7 @@
 
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc4",
@@ -49,7 +49,7 @@
             },
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc5",
@@ -60,7 +60,7 @@
             },
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc6",
@@ -71,7 +71,7 @@
             },
             {
                 "playback": "teams.create_player_and_car_for_npc",
-                "literals": {
+                "arguments": {
                     "CAR_NAME": "XZ",
                     "DECIMATE": "",
                     "PLAYER_NAME": "npc7",
@@ -82,7 +82,7 @@
             },
             {
                 "call": "set_preferred_car_spawner",
-                "literals": {
+                "arguments": {
                     "player": "you",
                     "macro": "teams.create_car_for_pc",
                     "parameters": {
@@ -93,7 +93,7 @@
             },
             {
                 "call": "set_spawn_points",
-                "literals": {
+                "arguments": {
                     "node": "osm_map_node",
                     "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
                 }

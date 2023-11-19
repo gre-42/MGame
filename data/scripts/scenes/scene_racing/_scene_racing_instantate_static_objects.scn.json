@@ -3,10 +3,10 @@
   "content": [
     {
       "call": "execute_in_render_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "call": "preload",
-          "literals": {
+          "arguments": {
             "resources": ["osm_map"],
             "tire_contacts": ["osm_map"]
           }
@@ -15,7 +15,7 @@
     },
     {
       "playback": "_create_osm_map_resource",
-      "literals": {
+      "arguments": {
         "OSM_MAP": "osm_map",
         "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
         "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
@@ -26,7 +26,7 @@
     {
       "required": ["%IF_HAS_OVERLAY"],
       "playback": "_create_osm_map_resource",
-      "literals": {
+      "arguments": {
         "OSM_MAP": "osm_map_overlay",
         "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
         "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
@@ -39,7 +39,7 @@
     },
     {
       "call": "root_node_instance",
-      "literals": {
+      "arguments": {
         "type": "static",
         "name": "osm_map_node",
         "position": "%OSM_POSITION",
@@ -50,7 +50,7 @@
     {
       "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
       "call": "register_geographic_mapping",
-      "literals": {
+      "arguments": {
         "name": "world",
         "node": "osm_map_node",
         "resource": "osm_map"
@@ -58,7 +58,7 @@
     },
     {
       "call": "renderable_instance",
-      "literals": {
+      "arguments": {
         "name": "osm_inst",
         "node": "osm_map_node",
         "resource": "osm_map"
@@ -67,7 +67,7 @@
     {
       "comment": {
         "call": "save_to_obj_file",
-        "literals": {
+        "arguments": {
           "resource": "osm_map",
           "node": "osm_map_node",
           "prefix": "/tmp/osm_map_"
@@ -77,7 +77,7 @@
     {
       "required": ["%IF_HAS_OVERLAY"],
       "call": "renderable_instance",
-      "literals": {
+      "arguments": {
         "name": "osm_overlay_inst",
         "node": "osm_map_node",
         "resource": "osm_map_overlay"
@@ -86,7 +86,7 @@
     {
       "required": ["%IF_HAS_OVERLAY"],
       "call": "compound_resource",
-      "literals": {
+      "arguments": {
         "source_names": [
           "osm_map",
           "osm_map_grind_lines",
@@ -99,7 +99,7 @@
     {
       "exclude": ["%IF_HAS_OVERLAY"],
       "call": "compound_resource",
-      "literals": {
+      "arguments": {
         "source_names": [
           "osm_map",
           "osm_map_grind_lines"
@@ -109,7 +109,7 @@
     },
     {
       "call": "rigid_cuboid",
-      "literals": {
+      "arguments": {
         "node": "osm_map_node",
         "hitboxes": "osm_map_hitboxes",
         "mass": "inf",
@@ -126,7 +126,7 @@
       "execute": [
         {
           "call": "player_create",
-          "literals": {
+          "arguments": {
             "name": "you",
             "team": "red",
             "game_mode": "racing",
@@ -135,35 +135,35 @@
             "driving_direction": "center"
           }
         },
-        { "call": "spawner_create", "literals": { "name": "you", "team": "red" } },
-        { "call": "spawner_set_player", "literals": { "name": "you" } },
+        { "call": "spawner_create", "arguments": { "name": "you", "team": "red" } },
+        { "call": "spawner_set_player", "arguments": { "name": "you" } },
         {
           "call": "set_can_drive",
-          "literals": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "you", "source": "user", "value": true }
         },
         {
           "call": "set_can_aim",
-          "literals": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "you", "source": "user", "value": true }
         },
         {
           "call": "set_can_shoot",
-          "literals": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "you", "source": "user", "value": true }
         }
       ]
     },
     {
       "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_playback_way_points",
-      "literals": { "player": "you", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
+      "arguments": { "player": "you", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
     },
     {
       "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_can_drive",
-      "literals": { "player": "you", "source": "ai", "value": true }
+      "arguments": { "player": "you", "source": "ai", "value": true }
     },
     {
       "call": "ui_background",
-      "literals": {
+      "arguments": {
         "z_order": 1,
         "texture": "textures/ui_background.png",
         "left": "highscore_left",
@@ -177,7 +177,7 @@
     },
     {
       "call": "players_stats",
-      "literals": {
+      "arguments": {
         "z_order": 1,
         "ttf_file": "fonts/RobotoMono-Bold.ttf",
         "left": "highscore_left",
@@ -194,7 +194,7 @@
     },
     {
       "call": "visual_global_log",
-      "literals": {
+      "arguments": {
         "ttf_file": "fonts/RobotoMono-Bold.ttf",
         "left": "highscore_left",
         "right": "highscore_right",
@@ -211,7 +211,7 @@
     },
     {
       "call": "ui_background",
-      "literals": {
+      "arguments": {
         "z_order": 1,
         "texture": "textures/ui_background.png",
         "left": "min",
@@ -225,7 +225,7 @@
     },
     {
       "call": "countdown",
-      "literals": {
+      "arguments": {
         "node": "countdown",
         "z_order": 1,
         "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -240,7 +240,7 @@
     },
     {
       "call": "countdown",
-      "literals": {
+      "arguments": {
         "node": "game_over_countdown",
         "z_order": 1,
         "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -259,7 +259,7 @@
     {
       "required": ["%IF_DIRTMAP"],
       "call": "root_node_instance",
-      "literals": {
+      "arguments": {
         "type": "dynamic",
         "name": "dirtmap_node",
         "position": [0, 1000, 0],
@@ -270,7 +270,7 @@
     {
       "required": ["%IF_DIRTMAP"],
       "call": "ortho_camera",
-      "literals": {
+      "arguments": {
         "node": "dirtmap_node",
         "near_plane": 1,
         "far_plane": 10000,
@@ -284,7 +284,7 @@
     {
       "required": ["%IF_DIRTMAP"],
       "call": "set_dirtmap",
-      "literals": {
+      "arguments": {
         "filename": "%DIRTMAP_TEXTURE",
         "offset": "%DIRTMAP_OFFSET",
         "discreteness": "%DIRTMAP_DISCRETENESS",
@@ -298,7 +298,7 @@
     {
       "required": ["%SOFT_LIGHT_TEXTURE != %null"],
       "call": "set_soft_light",
-      "literals": {
+      "arguments": {
         "filename": "%SOFT_LIGHT_TEXTURE"
       }
     },
@@ -307,24 +307,24 @@
     },
     {
       "call": "set_skybox",
-      "literals": {
+      "arguments": {
         "alias": "%SKYBOX"
       }
     },
     {
       "required": ["%TIME_OF_DAY == 'day'"],
       "call": "set_background_color",
-      "literals": { "color": [0.68, 0.85, 1] }
+      "arguments": { "color": [0.68, 0.85, 1] }
     },
     {
       "required": ["%TIME_OF_DAY == 'night'"],
       "call": "set_background_color",
-      "literals": { "color": [0, 0, 0] }
+      "arguments": { "color": [0, 0, 0] }
     },
     {
       "required": ["%TIME_OF_DAY == 'synthwave'"],
       "call": "set_background_color",
-      "literals": { "color": [0.65, 0.36, 0.91] }
+      "arguments": { "color": [0.65, 0.36, 0.91] }
     },
     {
       "comment": "include playback_resource.scn"
@@ -335,7 +335,7 @@
     {
       "required": ["%TIME_OF_DAY == 'day'"],
       "playback": "add_distant_light_day",
-      "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+      "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
       "required": ["%TIME_OF_DAY == 'day'"],
@@ -344,28 +344,28 @@
     {
       "required": ["%TIME_OF_DAY == 'night'"],
       "playback": "add_distant_light_night",
-      "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+      "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
       "required": ["%TIME_OF_DAY == 'synthwave'"],
       "playback": "add_distant_light_night",
-      "literals": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
+      "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
       }
     },
     {
       "required": ["%TIME_OF_DAY == 'day'"],
       "playback": "add_local_instances_light",
-      "literals": { "LSUFFIX": "_local_instances" }
+      "arguments": { "LSUFFIX": "_local_instances" }
     },
     {
       "required": ["%TIME_OF_DAY == 'night'"],
       "playback": "add_local_blob_instances_light",
-      "literals": { "LSUFFIX": "_blobs" }
+      "arguments": { "LSUFFIX": "_blobs" }
     },
     {
       "required": ["%TIME_OF_DAY == 'synthwave'"],
       "playback": "add_local_blob_instances_light",
-      "literals": { "LSUFFIX": "_blobs" }
+      "arguments": { "LSUFFIX": "_blobs" }
     },
     {
       "comment": "Reflection map"
@@ -373,7 +373,7 @@
     {
       "required": ["%TIME_OF_DAY == 'day'"],
       "call": "add_color_style",
-      "literals": {
+      "arguments": {
         "reflection_strength": 0.5,
         "reflection_maps": {
           "car": "reflection_map",
@@ -385,7 +385,7 @@
     {
       "required": ["%TIME_OF_DAY == 'night'"],
       "call": "add_color_style",
-      "literals": {
+      "arguments": {
         "reflection_strength": 0.5,
         "reflection_maps": {
           "car": "reflection_map_night",
@@ -396,7 +396,7 @@
     {
       "required": ["%TIME_OF_DAY == 'synthwave'"],
       "call": "add_color_style",
-      "literals": {
+      "arguments": {
         "reflection_strength": 0.5,
         "reflection_maps": {
           "car": "reflection_map_synthwave",
@@ -409,7 +409,7 @@
     },
     {
       "call": "root_node_instance",
-      "literals": {
+      "arguments": {
         "type": "dynamic",
         "name": "stadium_camera",
         "position": "%STADIUM_CAMERA_POSITION",
@@ -419,7 +419,7 @@
     },
     {
       "call": "perspective_camera",
-      "literals": {
+      "arguments": {
         "node": "stadium_camera",
         "y_fov": 30,
         "near_plane": 1,
@@ -429,31 +429,31 @@
     },
     {
       "call": "set_camera_cycle",
-      "literals": { "name": "far", "cameras": ["stadium_camera"] }
+      "arguments": { "name": "far", "cameras": ["stadium_camera"] }
     },
     {
       "call": "set_camera_cycle",
-      "literals": { "name": "near", "cameras": [] }
+      "arguments": { "name": "near", "cameras": [] }
     },
     {
       "call": "set_camera",
-      "literals": { "name": "stadium_camera" }
+      "arguments": { "name": "stadium_camera" }
     },
     {
       "comment": "Key bindings"
     },
     {
       "call": "camera_key_binding",
-      "literals": {"id": "change_camera.near", "tpe": "near"}
+      "arguments": {"id": "change_camera.near", "tpe": "near"}
     },
     {
       "required": ["%IF_TRIPOD_MODE"],
       "call": "camera_key_binding",
-      "literals": {"id": "change_camera.tripod", "tpe": "tripod"}
+      "arguments": {"id": "change_camera.tripod", "tpe": "tripod"}
     },
     {
       "call": "load_key_configurations",
-      "literals": {
+      "arguments": {
         "filename": "$__APPDATA__/key_configurations.json",
         "fallback_filename": "$__DIR__/key_configurations.json"
       }

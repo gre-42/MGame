@@ -3,7 +3,7 @@
     "comment": {
       "exclude": ["%IF_ANDROID"],
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "checkpoint_arrow",
         "filename": "models/Arrow/arrow.obj",
         "position": [0, 5, 0],
@@ -25,7 +25,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "glow",
       "texture_filename": "textures/opengameart/glowCircle_1024.png",
       "min": [-1, 4],
@@ -45,7 +45,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "box",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -67,7 +67,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "box_on_ground",
       "filename": "models/primitives/box.obj",
       "position": [0, 1, 0],
@@ -89,7 +89,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "topdown_locator",
       "filename": "models/TransparentBox/tbox.obj",
       "position": [0, 0, 0],
@@ -112,7 +112,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "flag",
       "filename": "models/primitives/box.obj",
       "position": [0, 500, 0],
@@ -134,7 +134,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "flag_z",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 500],
@@ -156,7 +156,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "beacon",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -178,7 +178,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "sphere",
       "filename": "models/primitives/sphere.obj",
       "position": [0, 0, 0],
@@ -201,7 +201,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "beacon1",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -223,7 +223,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "gizmo",
       "filename": "models/gizmo.obj",
       "position": [0, 0, 0],
@@ -245,7 +245,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "tank_bullet_renderable",
       "filename": "models/bullet.obj",
       "position": [0, 0, 0],
@@ -267,7 +267,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "tank_bullet_hitbox",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
@@ -285,7 +285,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "gen_ray",
-    "literals": {
+    "arguments": {
       "name": "tank_bullet_hitbox",
       "from": [0, 0, 0],
       "to": [0, 0, -20]
@@ -294,7 +294,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "tank_bullet_hitbox",
       "add": "obj_bullet_line_segment"
     }
@@ -302,7 +302,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "grenade_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -320,7 +320,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "grenade_hitbox",
       "add": "obj_bullet_mesh"
     }

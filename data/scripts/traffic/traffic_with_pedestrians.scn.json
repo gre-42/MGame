@@ -4,19 +4,19 @@
     "content": [
       { 
         "playback": "traffic.create_npc_and_human",
-        "literals": { "PLAYER_NAME": "h_npc1", "HUMAN_NAME": "_mh1" }
+        "arguments": { "PLAYER_NAME": "h_npc1", "HUMAN_NAME": "_mh1" }
       },
       { 
         "playback": "traffic.create_npc_and_human",
-        "literals": { "PLAYER_NAME": "h_npc2", "HUMAN_NAME": "_mh1" }
+        "arguments": { "PLAYER_NAME": "h_npc2", "HUMAN_NAME": "_mh1" }
       },
       { 
         "playback": "traffic.create_npc_and_human",
-        "literals": { "PLAYER_NAME": "h_npc3", "HUMAN_NAME": "_mh1" }
+        "arguments": { "PLAYER_NAME": "h_npc3", "HUMAN_NAME": "_mh1" }
       },
       { 
         "playback": "traffic.create_npc_and_human",
-        "literals": { "PLAYER_NAME": "h_npc4", "HUMAN_NAME": "_mh1" }
+        "arguments": { "PLAYER_NAME": "h_npc4", "HUMAN_NAME": "_mh1" }
       },
 
       {
@@ -24,57 +24,57 @@
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc1", "CAR_NAME": "M3", "COLOR": [0.07, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "pc_npc1", "CAR_NAME": "M3", "COLOR": [0.07, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "M3", "COLOR": [0.95, 0.80, 0.25] }
+        "arguments": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "M3", "COLOR": [0.95, 0.80, 0.25] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "M3", "COLOR": [0.74, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "M3", "COLOR": [0.74, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "XZ", "COLOR": [0.95, 0.80, 0.25] }
+        "arguments": { "PLAYER_NAME": "pc_npc2", "CAR_NAME": "XZ", "COLOR": [0.95, 0.80, 0.25] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "XZ", "COLOR": [0.74, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "pc_npc3", "CAR_NAME": "XZ", "COLOR": [0.74, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "FN", "COLOR": [0.95, 0.80, 0.25] }
+        "arguments": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "FN", "COLOR": [0.95, 0.80, 0.25] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "FN", "COLOR": [0.74, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "FN", "COLOR": [0.74, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "LK4", "COLOR": [0.95, 0.80, 0.25] }
+        "arguments": { "PLAYER_NAME": "pc_npc4", "CAR_NAME": "LK4", "COLOR": [0.95, 0.80, 0.25] }
       },
       {
         "playback": "traffic.create_npc_and_parking_car",
-        "literals": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "LK4", "COLOR": [0.74, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "pc_npc5", "CAR_NAME": "LK4", "COLOR": [0.74, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_driving_car",
-        "literals": { "PLAYER_NAME": "dc_npc1", "CAR_NAME": "XZ", "COLOR": [0.07, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "dc_npc1", "CAR_NAME": "XZ", "COLOR": [0.07, 0.22, 0.24] }
       },
       {
         "playback": "traffic.create_npc_and_driving_car",
-        "literals": { "PLAYER_NAME": "dc_npc2", "CAR_NAME": "FN", "COLOR": [0.95, 0.80, 0.25] }
+        "arguments": { "PLAYER_NAME": "dc_npc2", "CAR_NAME": "FN", "COLOR": [0.95, 0.80, 0.25] }
       },
       {
         "playback": "traffic.create_npc_and_driving_car",
-        "literals": { "PLAYER_NAME": "dc_npc3", "CAR_NAME": "LK4", "COLOR": [0.74, 0.22, 0.24] }
+        "arguments": { "PLAYER_NAME": "dc_npc3", "CAR_NAME": "LK4", "COLOR": [0.74, 0.22, 0.24] }
       },
       {
-        "call": "set_vip", "literals": { "player": "you" }
+        "call": "set_vip", "arguments": { "player": "you" }
       },
       {
-        "call": "set_spawn_points", "literals": { "node": "osm_map_node", "resource": "osm_map" }
+        "call": "set_spawn_points", "arguments": { "node": "osm_map_node", "resource": "osm_map" }
       }
     ]
   }

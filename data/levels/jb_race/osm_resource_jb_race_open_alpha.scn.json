@@ -2,7 +2,7 @@
   "declare_macro": "osm_resource_jb_race",
   "content": {
     "call": "osm_resource",
-    "literals": {
+    "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/../jb/map_jb.osm",
       "cache_filename": "$__APPDATA__/jb_$LOADED_GAME_LEVEL.cereal.binary",

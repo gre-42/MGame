@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "human_node$SUFFIX",
           "scale": 1,
@@ -15,7 +15,7 @@
       {
         "call": "add_color_style",
         "required": ["%IF_HUMAN_STYLE"],
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "ambience": "%COLOR",
           "diffusivity": "%COLOR"
@@ -24,7 +24,7 @@
       {
         "required": ["%IF_HUMAN_STYLE"],
         "call": "set_animation_state",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "animation_loop_name": "xonotic_pyria.idle",
           "animation_loop_begin": 0,
@@ -34,7 +34,7 @@
       },
       {
         "playback": "create_$HUMAN_NAME",
-        "literals": {
+        "arguments": {
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -48,14 +48,14 @@
       },
       {
         "playback": "create_human_cameras_persistent",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX"
         }
       },
       {
         "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
-        "literals": {
+        "arguments": {
           "asset_id": "%HUMAN_NAME",
           "suffix": "%SUFFIX",
           "spawner": "%SPAWNER_NAME"
@@ -67,10 +67,10 @@
       {
         "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
-        "literals": {
+        "arguments": {
           "macro": {
             "playback": "create_player_human_externals",
-            "literals": {
+            "arguments": {
               "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
@@ -108,7 +108,7 @@
     "content": [
       {
         "playback": "create_player_human_externals_$HUMAN_NAME",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GUN": "%IF_WITH_GUN",
           "SPAWNER_NAME": "%SPAWNER_NAME",
@@ -119,7 +119,7 @@
       {
         "required": ["%IF_PC"],
         "playback": "create_human_key_bindings",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
           "ROLE": "driver"
@@ -128,7 +128,7 @@
       {
         "required": ["%IF_PC"],
         "playback": "create_human_cameras_pc",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME"
         }
@@ -136,7 +136,7 @@
       {
         "call": "hud_image",
         "required": ["%IF_PC"],
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "camera_node": "human_head_camera_node$SUFFIX",
@@ -150,7 +150,7 @@
       {
         "call": "visual_player_bullet_count",
         "required": ["%IF_PC"],
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "left": "bullet_count_left",
           "right": "bullet_count_right",
@@ -163,7 +163,7 @@
       {
         "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
-        "literals": {
+        "arguments": {
           "ypln_node": "human_node$SUFFIX",
           "gun_node": "main_gun_end_node$SUFFIX",
           "player": "%PLAYER_NAME"
@@ -171,7 +171,7 @@
       },
       {
         "call": "player_set_vehicle_control_parameters",
-        "literals": {
+        "arguments": {
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "player": "%PLAYER_NAME",

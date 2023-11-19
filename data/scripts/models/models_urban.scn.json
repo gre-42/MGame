@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "basketball_hoop",
       "filename": "models/Basketball/BasketballHoop.obj",
       "position": [0, 0, 0],
@@ -22,7 +22,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "street_light",
       "filename": "models/street_light/street_light.obj",
       "position": [0, 0, 0],
@@ -44,7 +44,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "traffic_cone",
       "filename": "models/traffic_cone/traffic_cone.obj",
       "position": [0, 0, 0],
@@ -65,7 +65,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "corner_sign",
       "filename": "models/corner_sign/corner_sign.obj",
       "position": [0, 0, 0],
@@ -87,7 +87,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "road_bollard",
       "filename": "models/road_bollard/road_bollard.obj",
       "position": [0, 0, 0],
@@ -108,7 +108,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "road_bollard_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -129,14 +129,14 @@
   },
   {
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "road_bollard_hitbox",
       "add": "attr_convex"
     }
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "road_bollard2",
       "filename": "models/road_bollard/road_bollard2.obj",
       "position": [0, 0, 0],
@@ -157,7 +157,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "road_bollard3",
       "filename": "models/road_bollard/road_bollard3.obj",
       "position": [0, 0, 0],
@@ -178,7 +178,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "fence_stick",
       "filename": "models/opengameart/Wood/fence_stick.obj",
       "position": [0, 0, 0],
@@ -199,7 +199,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "street_light_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -220,7 +220,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "dumpster",
       "filename": "models/opengameart/Dumpster/Dumpster.obj",
       "position": [-1.25, -0.15, 0.67],
@@ -241,7 +241,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "trashcan1",
       "filename": "models/opengameart/Trashcan1/trashcan_tri.obj",
       "position": [0, 0, 0],
@@ -263,7 +263,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "trashcan2",
       "filename": "models/opengameart/Trashcan2/Trashcan.obj",
       "position": [0, 0, 0],
@@ -284,7 +284,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "mailbox",
       "filename": "models/opengameart/Mailbox/Mailbox_flat.obj",
       "position": [0, 0, 0],
@@ -305,7 +305,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "bench",
       "filename": "models/opengameart/Bench/bench.obj",
       "position": [0, 0, 0],
@@ -326,7 +326,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "table_and_chairs",
       "filename": "models/opengameart/Table_And_Chairs/table_and_chairs.obj",
       "position": [0, 0, 0],
@@ -348,7 +348,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "ship",
       "filename": "models/ship/ship.obj",
       "position": [0, 0, 0],
@@ -370,7 +370,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "tire_barrier2",
       "filename": "models/tire_barrier2/tire_barrier2.obj",
       "position": [0, 0, 0],
@@ -391,7 +391,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "crate",
       "filename": "models/opengameart/crate-2/Crate.obj",
       "position": [0, 0, 0],
@@ -415,7 +415,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%NAME",
           "filename": "%FILENAME",
           "position": [0, 0, 0],
@@ -442,7 +442,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%NAME",
           "filename": "models/opengameart/Facade/$NAME.obj",
           "position": [0, 0, 0],
@@ -465,42 +465,42 @@
   },
   {
     "playback": "load_hedge",
-    "literals": {
+    "arguments": {
       "NAME": "hedge_long",
       "FILENAME": "models/opengameart/Hedge/Long/HedgeLongExp.obj"
     }
   },
   {
     "playback": "load_hedge",
-    "literals": {
+    "arguments": {
       "NAME": "hedge_small",
       "FILENAME": "models/opengameart/Hedge/Small/HedgeSmallExp.obj"
     }
   },
   {
     "playback": "load_hedge",
-    "literals": {
+    "arguments": {
       "NAME": "hedge_long_round",
       "FILENAME": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj"
     }
   },
   {
     "playback": "load_hedge",
-    "literals": {
+    "arguments": {
       "NAME": "hedge_small_round",
       "FILENAME": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj"
     }
   },
-  { "playback": "load_facade", "literals": { "NAME": "entrance0" } },
-  { "playback": "load_facade", "literals": { "NAME": "entrance1" } },
+  { "playback": "load_facade", "arguments": { "NAME": "entrance0" } },
+  { "playback": "load_facade", "arguments": { "NAME": "entrance1" } },
 
-  { "playback": "load_facade", "literals": { "NAME": "sign0" } },
-  { "playback": "load_facade", "literals": { "NAME": "sign1" } },
-  { "playback": "load_facade", "literals": { "NAME": "sign2" } },
-  { "playback": "load_facade", "literals": { "NAME": "sign3" } },
-  { "playback": "load_facade", "literals": { "NAME": "sign4" } },
-  { "playback": "load_facade", "literals": { "NAME": "sign5" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign0" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign1" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign2" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign3" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign4" } },
+  { "playback": "load_facade", "arguments": { "NAME": "sign5" } },
 
-  { "playback": "load_facade", "literals": { "NAME": "door0" } },
-  { "playback": "load_facade", "literals": { "NAME": "door1" } }
+  { "playback": "load_facade", "arguments": { "NAME": "door0" } },
+  { "playback": "load_facade", "arguments": { "NAME": "door1" } }
 ]

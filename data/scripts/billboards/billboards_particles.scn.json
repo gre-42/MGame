@@ -1,7 +1,7 @@
 [
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "small_explosion",
       "texture_filename": "#explosion_01",
       "min": [-0.5, -0.5],
@@ -20,7 +20,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "large_explosion",
       "texture_filename": "#explosion_01",
       "min": [-5, -5],
@@ -39,7 +39,7 @@
   },
   {
     "call": "blending_x_resource",
-    "literals": {
+    "arguments": {
       "name": "large_explosion_cross",
       "texture_filename": "#explosion_01",
       "min": [-5, -5],
@@ -50,7 +50,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "smoke",
       "texture_filename": "#smoke",
       "min": [-0.1, -0.1],
@@ -69,7 +69,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "particles_gravel",
       "texture_filename": "#particles_gravel",
       "min": [-1, -0.1],
@@ -88,7 +88,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "particles_dirt",
       "texture_filename": "#particles_dirt",
       "min": [-1, -0.1],
@@ -107,7 +107,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "particles_snow",
       "texture_filename": "#particles_snow",
       "min": [-1, -0.1],
@@ -126,7 +126,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "muzzle_flash_0",
       "texture_filename": "#explosion_orange_brown_1",
       "min": [-0.15, -0.15],
@@ -145,7 +145,7 @@
   },
   {
     "call": "blending_x_resource",
-    "literals": {
+    "arguments": {
       "name": "medium_explosion_cross",
       "texture_filename": "#explosion_gray",
       "min": [-0.5, -0.5],

@@ -5,7 +5,7 @@
       {
         "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone.obj",
           "position": [0, 0, 0],
@@ -28,7 +28,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small_d1_s3$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
           "position": [0, 0, 0],
@@ -51,7 +51,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small_d1_s5$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
           "position": [0, 0, 0],
@@ -74,7 +74,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small_d1_s6$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
           "position": [0, 0, 0],
@@ -97,7 +97,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small_d1_s10$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone_d1.obj",
           "position": [0, 0, 0],
@@ -120,7 +120,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "desert_rock01_small_d1_s3$SUFFIX",
           "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
           "position": [0, 0, 0],
@@ -143,7 +143,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "desert_rock01_small_d1_s5$SUFFIX",
           "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
           "position": [0, 0, 0],
@@ -166,7 +166,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "desert_rock01_small_d1_s8$SUFFIX",
           "filename": "models/opengameart/desert_rock01/rock01_mean_d1.obj",
           "position": [0, 0, 0],
@@ -189,7 +189,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "Stone_model_tex_small_d4$SUFFIX",
           "filename": "models/opengameart/Stone_model_tex/stone_d4.obj",
           "position": [0, 0, 0],
@@ -213,7 +213,7 @@
       {
         "exclude": ["%IF_ANDROID"],
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "desert_rock01_small$SUFFIX",
           "filename": "models/opengameart/desert_rock01/rock01_mean.obj",
           "position": [0, 0, 0],
@@ -236,7 +236,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "desert_rock01_small_d2_s15$SUFFIX",
           "filename": "models/opengameart/desert_rock01/rock01_mean_d2.obj",
           "position": [0, 0, 0],
@@ -261,7 +261,7 @@
   },
   {
     "playback": "_add_stone_models",
-    "literals": {
+    "arguments": {
       "SUFFIX": "",
       "DESATURATE": false,
       "HISTOGRAM": ""
@@ -269,7 +269,7 @@
   },
   {
     "playback": "_add_stone_models",
-    "literals": {
+    "arguments": {
       "SUFFIX": "_canyon",
       "DESATURATE": false,
       "HISTOGRAM": "textures/histograms/Rock029.png"
@@ -277,7 +277,7 @@
   },
   {
     "playback": "_add_stone_models",
-    "literals": {
+    "arguments": {
       "SUFFIX": "_dune",
       "DESATURATE": false,
       "HISTOGRAM": "textures/histograms/desert_dune.png"
@@ -285,7 +285,7 @@
   },
   {
     "playback": "_add_stone_models",
-    "literals": {
+    "arguments": {
       "SUFFIX": "_snow",
       "DESATURATE": true,
       "HISTOGRAM": "textures/histograms/snow_tree.png"

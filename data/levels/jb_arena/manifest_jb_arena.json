@@ -3,7 +3,7 @@
   "title": "JB arena",
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
-    "literals": {
+    "arguments": {
       "PLAYERS_JSON": "$__DIR__/players.json"
     }
   },

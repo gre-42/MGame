@@ -2,7 +2,7 @@
   "declare_macro": "osm_resource_jb_wpts1",
   "content": {
     "call": "osm_resource",
-    "literals": {
+    "arguments": {
       "name": "osm_map_overlay",
       "filename": "$__DIR__/map_jb_wpts1.osm",
       "cache_filename": "$__APPDATA__/jb_wpts1$LOADED_GAME_LEVEL.cereal.binary",

@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node_sky",
           "position": [0, 0, 0],
@@ -14,7 +14,7 @@
       },
       {
         "call": "light_without_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node_sky",
           "ambience": [0, 0, 0],
           "diffusivity": [0.45, 0.5, 0.5],
@@ -28,7 +28,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node0",
           "position": [0, 2000, 2400],
@@ -38,7 +38,7 @@
       },
       {
         "call": "ortho_camera",
-        "literals": {
+        "arguments": {
           "node": "light_node0",
           "near_plane": 1,
           "far_plane": 10000,
@@ -54,7 +54,7 @@
       },
       {
         "call": "light_without_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node0",
           "ambience": [1, 1, 1],
           "diffusivity": [1, 1, 1],
@@ -65,7 +65,7 @@
         "comment": [
           {
             "call": "light_only_shadow",
-            "literals": {
+            "arguments": {
               "node": "light_node0",
               "black_node": "",
               "render_pass": "lightmap_black_global_static"
@@ -73,7 +73,7 @@
           },
           {
             "call": "fit_canvas_to_renderables",
-            "literals": {
+            "arguments": {
               "node": "light_node0",
               "render_pass": "lightmap_black_global_static"
             }
@@ -87,7 +87,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node0",
           "position": [0, 2000, 2000],
@@ -97,7 +97,7 @@
       },
       {
         "call": "light_without_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node0",
           "ambience": [0.1, 0.1, 0.1],
           "diffusivity": [0.2, 0.2, 0.2],

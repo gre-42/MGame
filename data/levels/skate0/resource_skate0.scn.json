@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "osm_map",
         "filename": "$__DIR__/skate0.obj",
         "position": [0, 0, 0],
@@ -24,7 +24,7 @@
     },
     {
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "osm_map",
         "add": "attr_concave"
       }

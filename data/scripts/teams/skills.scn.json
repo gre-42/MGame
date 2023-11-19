@@ -2,14 +2,14 @@
     {
         "declare_macro": "set_player_skills",
         "content": [
-            { "call": "set_can_drive", "literals": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_DRIVE"} },
-            { "call": "set_can_aim", "literals": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_AIM"} },
-            { "call": "set_can_shoot", "literals": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_SHOOT"} },
+            { "call": "set_can_drive", "arguments": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_DRIVE"} },
+            { "call": "set_can_aim", "arguments": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_AIM"} },
+            { "call": "set_can_shoot", "arguments": { "player": "%PLAYER_NAME", "source": "user", "value": "%USER_SHOOT"} },
 
-            { "call": "set_can_drive", "literals": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_DRIVE"} },
-            { "call": "set_can_aim", "literals": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_AIM"} },
-            { "call": "set_can_shoot", "literals": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_SHOOT"} },
-            { "call": "set_can_select_best_weapon", "literals": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_SELECT_BEST_WEAPON"} }
+            { "call": "set_can_drive", "arguments": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_DRIVE"} },
+            { "call": "set_can_aim", "arguments": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_AIM"} },
+            { "call": "set_can_shoot", "arguments": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_SHOOT"} },
+            { "call": "set_can_select_best_weapon", "arguments": { "player": "%PLAYER_NAME", "source": "ai", "value": "%AI_SELECT_BEST_WEAPON"} }
         ]
     }
 ]

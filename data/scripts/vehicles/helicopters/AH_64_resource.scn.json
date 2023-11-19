@@ -3,7 +3,7 @@
     "declare_macro": "_load_AH_64_part",
     "content": {
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "%NAME",
         "filename": "models/sketchfab.com/AH-64-apache/$FILENAME",
         "position": [0, 0, -0.3],
@@ -23,7 +23,7 @@
   },
   {
     "playback": "_load_AH_64_part",
-    "literals": {
+    "arguments": {
       "NAME": "AH_box_64_hitbox_front",
       "FILENAME": "hitbox_front.obj",
       "CENTER_DISTANCES": [0, "inf"],
@@ -33,7 +33,7 @@
   },
   {
     "playback": "_load_AH_64_part",
-    "literals": {
+    "arguments": {
       "NAME": "AH_box_64_hitbox_rear",
       "FILENAME": "hitbox_rear.obj",
       "CENTER_DISTANCES": [0, "inf"],
@@ -41,12 +41,12 @@
       "OCCLUDER_PASS": "none"
     }
   },
-  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_box_64_hitbox_front", "add": "obj_chassis|attr_convex"}},
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_box_64_hitbox_rear", "add": "obj_chassis|attr_convex"}},
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "AH_box_64_hitbox_front", "add": "obj_chassis|attr_convex"}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "AH_box_64_hitbox_rear", "add": "obj_chassis|attr_convex"}},
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "AH_64_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
@@ -61,19 +61,19 @@
       "transformation_mode": "all"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "AH_64_tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [-1.0,  0.6 , -1.1], "to": [-1.0, -0.2 , -1.1]}}, {"comment": "left  front"},
-  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 1.0,  0.6 , -1.1], "to": [ 1.0, -0.2 , -1.1]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "AH_64_tirelines", "from": [ 0.0,  0.65,  9.6], "to": [ 0.0, -0.15,  9.6]}}, {"comment": "central rear"},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "AH_64_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "arguments": {"name": "AH_64_tirelines", "from": [-1.0,  0.6 , -1.1], "to": [-1.0, -0.2 , -1.1]}}, {"comment": "left  front"},
+  {"call": "gen_ray", "arguments": {"name": "AH_64_tirelines", "from": [ 1.0,  0.6 , -1.1], "to": [ 1.0, -0.2 , -1.1]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "AH_64_tirelines", "from": [ 0.0,  0.65,  9.6], "to": [ 0.0, -0.15,  9.6]}}, {"comment": "central rear"},
 
-  {"call": "compound_resource", "literals": {"source_names": ["AH_box_64_hitbox_front", "AH_box_64_hitbox_rear", "AH_64_tirelines"], "dest_name": "AH_box_64_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["AH_box_64_hitbox_front", "AH_box_64_hitbox_rear", "AH_64_tirelines"], "dest_name": "AH_box_64_hitboxes"}},
 
   {
     "declare_macro": "load_AH_64",
     "content": [
       {
         "playback": "_load_AH_64_part",
-        "literals": {
+        "arguments": {
           "NAME": "AH_64$DECIMATE",
           "FILENAME": "AH_64$DECIMATE.obj",
           "CENTER_DISTANCES": "%CENTER_DISTANCES",
@@ -83,7 +83,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "blades_AH_64$DECIMATE",
           "filename": "models/sketchfab.com/AH-64-apache/AH_64$DECIMATE.obj",
           "position": [0, 0, 0],
@@ -101,7 +101,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "tail_rotor_spinning_AH_64$DECIMATE",
           "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$DECIMATE.obj",
           "position": [0, 0, 0],
@@ -119,11 +119,11 @@
       }
     ]
   },
-  {"playback": "load_AH_64", "literals": {"CENTER_DISTANCES": [  0,  100], "OCCLUDER_PASS": "none", "DECIMATE": ""}},
-  {"playback": "load_AH_64", "literals": {"CENTER_DISTANCES": [100, 1000], "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d5"}},
+  {"playback": "load_AH_64", "arguments": {"CENTER_DISTANCES": [  0,  100], "OCCLUDER_PASS": "none", "DECIMATE": ""}},
+  {"playback": "load_AH_64", "arguments": {"CENTER_DISTANCES": [100, 1000], "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d5"}},
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "ah64_blades",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, -0.1],
@@ -138,5 +138,5 @@
       "transformation_mode": "all"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "ah64_blades", "add": "obj_chassis|attr_convex"}}
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "ah64_blades", "add": "obj_chassis|attr_convex"}}
 ]

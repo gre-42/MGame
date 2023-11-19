@@ -4,21 +4,21 @@
         "content": [
             {
                 "call": "load_players",
-                "literals": {
+                "arguments": {
                     "json": "%PLAYERS_JSON",
                     "way_points": "%TEAMS_WAY_POINTS_RESOURCE"
                 }
             },
             {
                 "call": "set_spawn_points",
-                "literals": {
+                "arguments": {
                     "node": "osm_map_node",
                     "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
                 }
             },
             {
                 "call": "set_objective",
-                "literals": {
+                "arguments": {
                     "objective": "%OBJECTIVE"
                 }
             }

@@ -3,7 +3,7 @@
   "content": [
     {
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "%LEVEL_ID",
         "filename": "%STAGE_INI_FILENAME",
         "position": [0, 0, 0],
@@ -30,7 +30,7 @@
     {
       "comment": {
         "call": "delete_mesh",
-        "literals": {
+        "arguments": {
           "resource_name": "%LEVEL_ID",
           "where": "obj_grass"
         }
@@ -38,7 +38,7 @@
     },
     {
       "call": "cleanup_mesh",
-      "literals": {
+      "arguments": {
         "resource_name": "%LEVEL_ID",
         "min_distance_material_filter": "attr_collide",
         "min_vertex_distance": 1e-2
@@ -46,7 +46,7 @@
     },
     {
       "call": "merge_textures",
-      "literals": {
+      "arguments": {
         "resource_name": "%LEVEL_ID",
         "merged_resource_name": "$LEVEL_ID-_trees",
         "merged_texture_name": "$LEVEL_ID-_trees",
@@ -64,7 +64,7 @@
     {
       "exclude": ["%IF_ANDROID"],
       "call": "add_foliage",
-      "literals": {
+      "arguments": {
         "mesh_resource_name": "%LEVEL_ID",
         "foliage_resource_name": "$LEVEL_ID-_foliage",
         "near_grass_resource_names": ["vegetation10_close.0"],
@@ -76,7 +76,7 @@
     },
     {
       "call": "replace_terrain_material",
-      "literals": {
+      "arguments": {
         "resource_name": "%LEVEL_ID",
         "textures": [
           "#Ground037_Sl_1",
@@ -89,7 +89,7 @@
     },
     {
       "call": "compound_resource",
-      "literals": {
+      "arguments": {
         "source_names": ["%LEVEL_ID"],
         "dest_name": "osm_map"
       }

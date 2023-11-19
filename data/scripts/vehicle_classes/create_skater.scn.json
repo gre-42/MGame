@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "skater_node$SUFFIX",
           "scale": 1,
@@ -15,7 +15,7 @@
       {
         "required": ["%IF_SKATER_STYLE"],
         "call": "add_color_style",
-        "literals": {
+        "arguments": {
           "node": "skater_node$SUFFIX",
           "ambience": "%COLOR",
           "diffusivity": "%COLOR"
@@ -24,7 +24,7 @@
       {
         "required": ["%IF_SKATER_STYLE"],
         "call": "set_animation_state",
-        "literals": {
+        "arguments": {
           "node": "skater_node$SUFFIX",
           "animation_loop_name": "skate.right",
           "animation_loop_begin": 0,
@@ -34,7 +34,7 @@
       },
       {
         "playback": "create_$SKATER_NAME",
-        "literals": {
+        "arguments": {
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -49,7 +49,7 @@
       {
         "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
-        "literals": {
+        "arguments": {
           "asset_id": "%SKATER_NAME",
           "suffix": "%SUFFIX",
           "spawner": "%SPAWNER_NAME"
@@ -61,10 +61,10 @@
       {
         "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
-        "literals": {
+        "arguments": {
           "macro": {
             "playback": "create_player_skater_externals",
-            "literals": {
+            "arguments": {
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
               "SKATER_NAME": "%SKATER_NAME",
@@ -82,7 +82,7 @@
       {
         "comment": {
           "call": "visual_node_status_3rd",
-          "literals": {
+          "arguments": {
             "node": "skater_node$SUFFIX",
             "format": 8,
             "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -99,7 +99,7 @@
     "content": [
       {
         "playback": "create_player_skater_externals_$SKATER_NAME",
-        "literals": {
+        "arguments": {
           "NAME": "%SKATER_NAME",
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",

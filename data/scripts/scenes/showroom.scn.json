@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "create_scene",
-        "literals": {
+        "arguments": {
           "name": "showroom",
           "focus_mask": "menu",
           "submenus": ["car_selector", "car_color_selector"],
@@ -29,7 +29,7 @@
     "declare_macro": "_create_showroom_vehicle",
     "content": {
       "playback": "create_$VEHICLE_CLASS",
-      "literals": {
+      "arguments": {
         "HUMAN_NAME": "%VEHICLE_NAME",
         "SKATER_NAME": "%VEHICLE_NAME",
         "CAR_NAME": "%VEHICLE_NAME",
@@ -68,13 +68,13 @@
     "content": [
       {
         "call": "delete_root_nodes",
-        "literals": {
+        "arguments": {
           "regex": "^(car|human|skater)_node(_trailer)?$"
         }
       },
       {
         "playback": "_create_showroom_vehicle",
-        "literals": {
+        "arguments": {
           "VEHICLE_NAME": "%VEHICLE_NAME",
           "VEHICLE_CLASS": "%VEHICLE_CLASS",
           "VEHICLE_COLOR": "%VEHICLE_COLOR",
@@ -88,14 +88,14 @@
     "content": [
       {
         "playback": "scene_minimal",
-        "literals": {
+        "arguments": {
           "IF_DIRTMAP": false,
           "IF_SKYBOX": false
         }
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "showroom_ground",
           "filename": "models/metal_cylinder.obj",
           "position": [0, 0, 0],
@@ -112,7 +112,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "showroom_ground_hitbox",
           "filename": "models/cylinder_hitbox.obj",
           "position": [0, 0, 0],
@@ -129,14 +129,14 @@
       },
       {
         "call": "modify_physics_material_tags",
-        "literals": {
+        "arguments": {
           "resource_name": "showroom_ground_hitbox",
           "add": "attr_convex"
         }
       },
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "stage",
           "position": [0, -1.3, -11],
@@ -146,7 +146,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "stage",
           "node": "stage",
           "resource": "showroom_ground"
@@ -154,7 +154,7 @@
       },
       {
         "call": "rigid_cuboid",
-        "literals": {
+        "arguments": {
           "node": "stage",
           "hitboxes": "showroom_ground_hitbox",
           "mass": "inf",
@@ -167,7 +167,7 @@
       },
       {
         "call": "relative_transformer",
-        "literals": {
+        "arguments": {
           "node": "stage",
           "w": [0, 10, 0]
         }
@@ -177,7 +177,7 @@
       },
       {
         "playback": "add_distant_light_day",
-        "literals": {
+        "arguments": {
           "LEFT": -400,
           "RIGHT": 400,
           "BOTTOM": -200,
@@ -186,7 +186,7 @@
       },
       {
         "playback": "add_local_instances_light",
-        "literals": {
+        "arguments": {
           "LSUFFIX": "_local_instances"
         }
       },

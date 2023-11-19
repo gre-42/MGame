@@ -3,7 +3,7 @@
   {"include": "resource_aircraft_carrier0.scn.json"},
   {
     "playback": "scene_racing_static",
-    "literals": {
+    "arguments": {
       "IF_CREATE_PC_PLAYER": true,
       "IF_PC_PLAYER_PLAYBACK": false,
       "PC_PLAYER_PLAYBACK": null,
@@ -34,7 +34,7 @@
       "SUN_RIGHT": 250,
       "SUN_BOTTOM": -125,
       "SUN_TOP": 125,
-      "SOFT_LIGHT_TEXTURE": "",
+      "SOFT_LIGHT_TEXTURE": null,
       "SKYBOX": "skybox_ocean",
       "TIME_OF_DAY": "day"
     }
@@ -43,7 +43,7 @@
     "declare_macro": "instantiate_transient_objects",
     "content": {
       "playback": "generic_scene_racing_dynamic",
-      "literals": {
+      "arguments": {
         "IF_CREATE_PC_CAR": true,
         "IF_PC_PLAYER_PLAYBACK": false,
         "CAR_NODE_POSITION": [0, 5, 10],

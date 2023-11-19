@@ -2,7 +2,7 @@
   "declare_macro": "osm_resource_snow1",
   "content": {
     "call": "osm_resource",
-    "literals": {
+    "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/../canyon1/map_canyon1.osm",
       "cache_filename": "$__APPDATA__/snow1.cereal.binary",

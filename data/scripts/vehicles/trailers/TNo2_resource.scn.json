@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "TNo2_obj/$NAME",
           "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
           "position": [0, 0, 0],
@@ -34,7 +34,7 @@
     "content": [
       {
         "playback": "load_TNo2_part",
-        "literals": {
+        "arguments": {
           "NAME": "%NAME",
           "DIST_MIN": 0,
           "DIST_MAX": "inf",
@@ -45,22 +45,22 @@
       {
         "required": ["%IF_GEN_TRIANGLE_RAYS"],
         "call": "gen_triangle_rays",
-        "literals": {
+        "arguments": {
           "name": "TNo2_obj/$NAME",
           "npoints": 5,
           "lengths": [0.7, 0.7, 0.7],
           "delete_triangles": false
         }
       },
-      {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_obj/$NAME", "add": "obj_chassis|attr_convex"}}  
+      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_obj/$NAME", "add": "obj_chassis|attr_convex"}}  
     ]
   },
-  {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
-  {"playback": "load_TNo2_hitbox_part", "literals": {"NAME": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"NAME": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"NAME": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
 
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "TNo2_massbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 1.3, 0.3],
@@ -78,7 +78,7 @@
 
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "TNo2_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
@@ -95,21 +95,21 @@
     }
   },
 
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
 
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 0.9], "to": [-1, -0.5, 0.9]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 0.9], "to": [ 1, -0.5, 0.9]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1.6], "to": [-1, -0.5, 1.6]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1.6], "to": [ 1, -0.5, 1.6]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [-1, 0.2, 0.9], "to": [-1, -0.5, 0.9]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 0.9], "to": [ 1, -0.5, 0.9]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1.6], "to": [-1, -0.5, 1.6]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1.6], "to": [ 1, -0.5, 1.6]}}, {"comment": "right rear"},
 
-  {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
 
   {
     "declare_macro": "load_TNo2_wheel",
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "TNo2_obj/$NAME",
           "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
           "position": [0, 0, 0],
@@ -137,13 +137,13 @@
   {
     "declare_macro": "load-TNo2",
     "content": [
-      {"playback": "load_TNo2_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
-      {"playback": "load_TNo2_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "wheel$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/chassis$DECIMATE"], "dest_name": "TNo2/chassis$SUFFIX"}},
-      {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_front$SUFFIX"}},
-      {"call": "compound_resource", "literals": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_rear$SUFFIX"}}
+      {"playback": "load_TNo2_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
+      {"playback": "load_TNo2_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "wheel$DECIMATE"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/chassis$DECIMATE"], "dest_name": "TNo2/chassis$SUFFIX"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_front$SUFFIX"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_rear$SUFFIX"}}
     ]
   },
-  {"playback": "load-TNo2", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none", "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load-TNo2", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d9", "SUFFIX": "_lowres"}}
+  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none", "DECIMATE": "", "SUFFIX": ""}},
+  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d9", "SUFFIX": "_lowres"}}
 ]

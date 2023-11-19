@@ -1,7 +1,7 @@
 [
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "human_hitbox",
             "filename": "models/primitives/box.obj",
             "position": [0, 0.35, 0],
@@ -16,10 +16,10 @@
             "transformation_mode": "all"
         }
     },
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_hitbox", "add": "obj_hitbox"}},
+    {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_hitbox", "add": "obj_hitbox"}},
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "human_distancebox",
             "filename": "models/primitives/box.obj",
             "position": [0, 0.35, -0.25],
@@ -34,11 +34,11 @@
             "transformation_mode": "all"
         }
     },
-    {"comment": {"call": "gen_triangle_rays", "literals": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_distancebox", "add": "obj_distancebox|attr_convex"}},
+    {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
+    {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_distancebox", "add": "obj_distancebox|attr_convex"}},
     {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
             "name": "human_tirelines",
             "filename": "models/primitives/empty.obj",
             "position": [0, 0, 0],
@@ -53,7 +53,7 @@
             "transformation_mode": "all"
         }
     },
-    {"call": "gen_ray", "literals": {"name": "human_tirelines", "from": [0, -0.2, 0], "to": [0, -0.8, 0]}},
-    {"call": "modify_physics_material_tags", "literals": {"resource_name": "human_tirelines", "add": "obj_tire_line"}},
-    {"call": "compound_resource", "literals": {"source_names": ["human_hitbox", "human_distancebox", "human_tirelines"], "dest_name": "human_hitboxes"}}
+    {"call": "gen_ray", "arguments": {"name": "human_tirelines", "from": [0, -0.2, 0], "to": [0, -0.8, 0]}},
+    {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_tirelines", "add": "obj_tire_line"}},
+    {"call": "compound_resource", "arguments": {"source_names": ["human_hitbox", "human_distancebox", "human_tirelines"], "dest_name": "human_hitboxes"}}
 ]

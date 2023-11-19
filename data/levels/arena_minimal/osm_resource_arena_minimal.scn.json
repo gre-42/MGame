@@ -2,7 +2,7 @@
   "declare_macro": "osm_resource_arena_minimal",
   "content": {
     "call": "osm_resource",
-    "literals": {
+    "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/map_arena_minimal.osm",
       "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",

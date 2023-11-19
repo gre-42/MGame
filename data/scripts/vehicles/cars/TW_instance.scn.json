@@ -3,7 +3,7 @@
     "declare_macro": "create_TW",
     "content": {
       "playback": "generic_car.create",
-      "literals": {
+      "arguments": {
         "NAME": "TW",
         "SUFFIX": "%SUFFIX",
         "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -38,7 +38,7 @@
     "declare_macro": "create_player_car_externals_TW",
     "content": {
       "playback": "generic_car.create_player_car_externals",
-      "literals": {
+      "arguments": {
         "ASSET_ID": "TW",
         "IF_PC": "%IF_PC",
         "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",

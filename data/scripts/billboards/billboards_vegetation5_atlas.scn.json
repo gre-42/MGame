@@ -11,7 +11,7 @@
     "content": [
       {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "color_mode": "rgba",
           "histogram": "textures/histograms/desert_bush.png",
           "anisotropic_filtering_level": 16,
@@ -26,7 +26,7 @@
     "content": [
       {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "color_mode": "rgba",
           "desaturate": true,
           "histogram": "textures/histograms/snow_tree.png",
@@ -43,35 +43,35 @@
     "content": [
       {
         "playback": "_add_hist_tree5$SUFFIX",
-        "literals": {
+        "arguments": {
           "NAME": "Trees0023$SUFFIX",
           "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0023_masked_S.png"
         }
       },
       {
         "playback": "_add_hist_tree5$SUFFIX",
-        "literals": {
+        "arguments": {
           "NAME": "Trees0024$SUFFIX",
           "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0024_1_masked_S.png"
         }
       },
       {
         "playback": "_add_hist_tree5$SUFFIX",
-        "literals": {
+        "arguments": {
           "NAME": "Trees0029$SUFFIX",
           "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0029_masked_S.png"
         }
       },
       {
         "playback": "_add_hist_tree5$SUFFIX",
-        "literals": {
+        "arguments": {
           "NAME": "Trees0096$SUFFIX",
           "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0096_masked_S.png"
         }
       },
       {
         "call": "add_texture_atlas",
-        "literals": {
+        "arguments": {
           "name": "vegetation5$SUFFIX",
           "width": 2048,
           "height": 2048,
@@ -87,7 +87,7 @@
       {
         "comment": {
           "call": "save_texture_atlas_png",
-          "literals": {
+          "arguments": {
             "name": "vegetation5$SUFFIX",
             "filename": "/tmp/vegetation5$SUFFIX.png",
             "color_mode": "rgba"
@@ -96,7 +96,7 @@
       },
       {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "name": "vegetation5$SUFFIX",
           "color": "#vegetation5$SUFFIX",
           "color_mode": "rgba",
@@ -107,7 +107,7 @@
       },
       {
         "call": "square_resource",
-        "literals": {
+        "arguments": {
           "name": "vegetation5$SUFFIX",
           "texture_filename": "#vegetation5$SUFFIX",
           "min": [-2, -0.5],
@@ -132,13 +132,13 @@
   },
   {
     "playback": "_add_vegetation5",
-    "literals": {
+    "arguments": {
       "SUFFIX": "_desert"
     }
   },
   {
     "playback": "_add_vegetation5",
-    "literals": {
+    "arguments": {
       "SUFFIX": "_snow"
     }
   }

@@ -4,22 +4,22 @@
   {
     "declare_macro": "delete_weapon",
     "content": [
-      { "call": "clear_node", "literals": { "node": "main_gun_end_node$SUFFIX" } },
-      { "call": "clear_node", "literals": { "node": "main_gun_node_visual$SUFFIX" } }
+      { "call": "clear_node", "arguments": { "node": "main_gun_end_node$SUFFIX" } },
+      { "call": "clear_node", "arguments": { "node": "main_gun_node_visual$SUFFIX" } }
     ]
   },
   {
     "declare_macro": "_set_node_hider",
     "content": {
       "call": "set_node_hider",
-      "literals": {
+      "arguments": {
         "node_to_hide": "main_gun_node_visual$SUFFIX",
         "camera_node": "human_head_camera_node$SUFFIX",
         "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
         "on_hide": {
           "playback": "_add_weapon_closeup_scheduler_on_hide",
           "context": "weapon_closeup",
-          "literals": {
+          "arguments": {
             "RESOURCE": "%RESOURCE",
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
@@ -32,7 +32,7 @@
         "on_update": {
           "playback": "_add_weapon_closeup_scheduler_on_update",
           "context": "weapon_closeup",
-          "literals": {
+          "arguments": {
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
@@ -46,11 +46,11 @@
   {
     "declare_macro": "add_weapon_m4a1",
     "content": [
-      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
+      { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
-          "literals": {
+          "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
             "resource": "box"
@@ -59,7 +59,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
           "resource": "M4A1"
@@ -67,7 +67,7 @@
       },
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
@@ -85,7 +85,7 @@
           "muzzle_flash_animation_time": 0.1,
           "generate_muzzle_flash_hider": {
             "playback": "_generate_muzzle_flash_hider",
-            "literals": {
+            "arguments": {
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
               "POSITION": [0, 0.062, -0.66],
@@ -106,7 +106,7 @@
       },
       {
         "call": "ypln_update_bullet_properties",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
@@ -115,7 +115,7 @@
       },
       {
         "playback": "_set_node_hider",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "RESOURCE": "M4A1"
         }
@@ -125,11 +125,11 @@
   {
     "declare_macro": "add_weapon_beretta92",
     "content": [
-      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
+      { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
-          "literals": {
+          "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
             "resource": "box"
@@ -138,7 +138,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
           "resource": "Beretta92"
@@ -146,7 +146,7 @@
       },
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
@@ -164,7 +164,7 @@
           "muzzle_flash_animation_time": 0.1,
           "generate_muzzle_flash_hider": {
             "playback": "_generate_muzzle_flash_hider",
-            "literals": {
+            "arguments": {
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
               "POSITION": [0, 0.086, -0.265],
@@ -185,7 +185,7 @@
       },
       {
         "call": "ypln_update_bullet_properties",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
@@ -194,7 +194,7 @@
       },
       {
         "playback": "_set_node_hider",
-        "literals": {
+        "arguments": {
           "RESOURCE": "Beretta92",
           "SUFFIX": "%SUFFIX"
         }
@@ -204,11 +204,11 @@
   {
     "declare_macro": "add_weapon_frag_grenade",
     "content": [
-      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
+      { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
-          "literals": {
+          "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
             "resource": "box"
@@ -217,7 +217,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
           "resource": "frag_grenade"
@@ -225,7 +225,7 @@
       },
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
@@ -248,7 +248,7 @@
       },
       {
         "call": "ypln_update_bullet_properties",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "dpitch_head": -15,
           "velocity": "%BULLET_VELOCITY",
@@ -257,7 +257,7 @@
       },
       {
         "playback": "_set_node_hider",
-        "literals": {
+        "arguments": {
           "RESOURCE": "frag_grenade",
           "SUFFIX": "%SUFFIX"
         }
@@ -267,11 +267,11 @@
   {
     "declare_macro": "add_weapon_m72_law",
     "content": [
-      { "playback": "delete_weapon", "literals": { "SUFFIX": "%SUFFIX" } },
+      { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
           "call": "renderable_instance",
-          "literals": {
+          "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
             "resource": "box"
@@ -280,7 +280,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
           "resource": "m72_law"
@@ -288,7 +288,7 @@
       },
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
@@ -314,7 +314,7 @@
       },
       {
         "call": "ypln_update_bullet_properties",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
@@ -323,7 +323,7 @@
       },
       {
         "playback": "_set_node_hider",
-        "literals": {
+        "arguments": {
           "RESOURCE": "m72_law",
           "SUFFIX": "%SUFFIX"
         }
@@ -335,7 +335,7 @@
     "content": [
       {
         "call": "gun",
-        "literals": {
+        "arguments": {
           "node": "main_gun_end_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
           "cool_down": "inf",
@@ -358,7 +358,7 @@
       },
       {
         "call": "ypln_update_bullet_properties",
-        "literals": {
+        "arguments": {
           "velocity": 0,
           "rigid_body_flags": "none",
           "dpitch_head": 0,

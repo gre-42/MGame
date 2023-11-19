@@ -2,7 +2,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "ocean_uniform",
             "color": "textures/prococean/ocean_uniform.png",
             "normal": "textures/prococean/NormalMap.png",

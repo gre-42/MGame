@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
       "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
@@ -13,7 +13,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Alpha3",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
       "alpha": "textures/Way_Alpha3.png",
@@ -25,7 +25,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Base",
       "color": "textures/cc0textures/Road007_2K_Base.png",
       "multiply_color": "textures/Way_Horizontal_Gradient_512.png",
@@ -36,7 +36,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_2_Lanes",
       "color": "textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -47,7 +47,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_GH",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -61,7 +61,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Wide_Continuous_2_Lanes",
       "color": "textures/cc0textures/Road007_2K_Color_Wide_Continuous_2_Lanes.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -72,7 +72,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Bright_No_Lines",
       "color": "textures/cc0textures/Road007_2K_Color_Bright_No_Lines.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -84,7 +84,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Alpha",
       "color": "textures/cc0textures/Road007_2K_Color_Dirt_Sharp2.png",
       "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
@@ -95,7 +95,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_No_Lines",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -106,7 +106,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Yellow_1x_Lane",
       "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_1x_Lane.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -117,7 +117,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Yellow_2_Lanes",
       "color": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_2_Lanes.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -128,7 +128,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_White_1x_Lane",
       "color": "textures/cc0textures/Road007_2K_Color_White_Lines_1x_Lane.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -139,7 +139,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Broad_White_1_Lane",
       "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -149,7 +149,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Broad_White_1_Lane_near",
       "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Near.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -159,7 +159,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_Broad_White_1_Lane_far",
       "color": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane_Far.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -170,7 +170,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "RoadOld_Yellow",
       "color": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90.png",
       "normal": "textures/textures.com/TexturesCom_Pavement_RoadOld_1K_normal_90.png",
@@ -182,7 +182,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Road007_White_2_Lanes",
       "color": "textures/cc0textures/Road007_2K_Color_White_Lines_2_Lanes.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
@@ -193,7 +193,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "concrete1_2K_wh_street",
       "color": "textures/cc0textures/concrete1_2K_wh_street.jpg",
       "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
@@ -203,7 +203,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Way_Wheels_7",
       "color": "textures/Way_Wheels_512.png",
       "lighten": [0.7, 0.7, 0.7],
@@ -213,7 +213,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Way_Wheels_9",
       "color": "textures/Way_Wheels_512.png",
       "lighten": [0.9, 0.9, 0.9],
@@ -229,7 +229,7 @@
       {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "name": "Ground029_Street_Canyon",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
           "alpha": "textures/Way_Alpha4_Interior.png",
@@ -242,7 +242,7 @@
       },
       {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "name": "Ground029_Street_Desert_Dry",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
           "alpha": "textures/Way_Alpha4_Interior.png",
@@ -254,7 +254,7 @@
       {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "name": "Ground029_Street_Desert_Wet",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
           "alpha": "textures/Way_Alpha4_Interior.png",
@@ -266,7 +266,7 @@
       },
       {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
           "name": "Ground029_Street_Snow",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
           "alpha": "textures/Way_Alpha4_Interior.png",
@@ -279,7 +279,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Ground029_Snow",
       "color": "textures/cc0textures/Ground029_2K_Color.jpg",
       "color_mode": "rgb",
@@ -290,7 +290,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Gravel010_Alpha",
       "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
       "alpha": "textures/Way_Alpha.png",

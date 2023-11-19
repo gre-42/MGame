@@ -3,7 +3,7 @@
     "declare_macro": "osm_resource_islands1",
     "content": {
       "call": "osm_resource",
-      "literals": {
+      "arguments": {
         "name": "islands1",
         "filename": "$__DIR__/map_islands1.osm",
         "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
@@ -195,7 +195,7 @@
   },
   {
     "call": "grid_resource",
-    "literals": {
+    "arguments": {
       "name": "ocean",
       "texture_filename": "#ocean_uniform",
       "size": [50, 50],
@@ -222,14 +222,14 @@
   },
   {
     "call": "modify_physics_material_tags",
-    "literals": {
+    "arguments": {
       "resource_name": "ocean",
       "add": "attr_concave"
     }
   },
   {
     "call": "compound_resource",
-    "literals": {
+    "arguments": {
       "source_names": ["islands1", "ocean"],
       "dest_name": "osm_map"
     }

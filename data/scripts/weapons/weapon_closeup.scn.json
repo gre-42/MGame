@@ -3,7 +3,7 @@
     "declare_macro": "_delete_weapon_closeup_nodes",
     "content": {
       "call": "try_delete_root_node",
-      "literals": {
+      "arguments": {
         "name": "weapon_closeup_node"
       }
     }
@@ -12,10 +12,10 @@
     "declare_macro": "_add_weapon_closeup_scheduler_on_hide",
     "content": {
       "call": "execute_in_physics_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "playback": "_add_weapon_closeup",
-          "literals": {
+          "arguments": {
             "RESOURCE": "%RESOURCE",
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
@@ -33,7 +33,7 @@
     "declare_macro": "_add_weapon_closeup_scheduler_on_destroy",
     "content": {
       "call": "execute_in_physics_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "playback": "_delete_weapon_closeup_nodes"
         }
@@ -44,10 +44,10 @@
     "declare_macro": "_add_weapon_closeup_scheduler_on_update",
     "content": {
       "call": "execute_in_physics_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "playback": "_update_weapon_closeup",
-          "literals": {
+          "arguments": {
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
@@ -67,7 +67,7 @@
       },
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "weapon_closeup_node",
           "position": [0, 0, -3],
@@ -77,7 +77,7 @@
       },
       {
         "call": "child_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "parent": "weapon_closeup_node",
           "name": "punch_angle_node_closeup",
@@ -88,7 +88,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "closeup-inst",
           "node": "punch_angle_node_closeup",
           "resource": "%RESOURCE"
@@ -100,7 +100,7 @@
     "declare_macro": "_update_weapon_closeup",
     "content": {
       "call": "set_node_rotation",
-      "literals": {
+      "arguments": {
         "name": "punch_angle_node_closeup",
         "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
       }

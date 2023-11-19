@@ -7,7 +7,7 @@
       },
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node_instances$LSUFFIX",
           "position": [0, 0, 0],
@@ -18,7 +18,7 @@
       },
       {
         "call": "ortho_camera",
-        "literals": {
+        "arguments": {
           "node": "light_node_instances$LSUFFIX",
           "near_plane": -1000,
           "far_plane": 1000,
@@ -31,7 +31,7 @@
       },
       {
         "call": "keep_offset_from_camera",
-        "literals": {
+        "arguments": {
           "follower": "light_node_instances$LSUFFIX",
           "offset": [10, 0, 10],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
@@ -40,7 +40,7 @@
       },
       {
         "call": "light_only_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node_instances$LSUFFIX",
           "black_node": "",
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
@@ -56,7 +56,7 @@
       },
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node_movables$LSUFFIX",
           "position": [0, 0, 0],
@@ -66,7 +66,7 @@
       },
       {
         "call": "ortho_camera",
-        "literals": {
+        "arguments": {
           "node": "light_node_movables$LSUFFIX",
           "near_plane": -1000,
           "far_plane": 1000,
@@ -79,7 +79,7 @@
       },
       {
         "call": "keep_offset_from_camera",
-        "literals": {
+        "arguments": {
           "follower": "light_node_movables$LSUFFIX",
           "offset": [10, 0, 10],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
@@ -88,7 +88,7 @@
       },
       {
         "call": "light_only_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node_movables$LSUFFIX",
           "black_node": "",
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
@@ -103,7 +103,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "light_node$LSUFFIX",
           "position": [0, 0, 0],
@@ -113,7 +113,7 @@
       },
       {
         "call": "keep_offset_from_camera",
-        "literals": {
+        "arguments": {
           "follower": "light_node$LSUFFIX",
           "offset": [0, 0, 0],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
@@ -122,7 +122,7 @@
       },
       {
         "call": "ortho_camera",
-        "literals": {
+        "arguments": {
           "node": "light_node$LSUFFIX",
           "near_plane": -1000,
           "far_plane": 1000,
@@ -135,7 +135,7 @@
       },
       {
         "call": "light_with_shadow",
-        "literals": {
+        "arguments": {
           "node": "light_node$LSUFFIX",
           "black_node": "",
           "render_pass": "lightmap_blobs",

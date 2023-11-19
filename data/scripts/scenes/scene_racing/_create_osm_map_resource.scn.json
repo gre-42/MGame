@@ -6,7 +6,7 @@
     {
       "required": ["%IF_EXTRACT_ALIGNMENT_PLANES"],
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "%OSM_MAP",
         "add": "obj_alignment_plane",
         "remove": "attr_visible",
@@ -15,7 +15,7 @@
     },
     {
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "%OSM_MAP",
         "remove": "attr_visible",
         "included_names": "\\bHitbox(?:\\b|_)"
@@ -23,7 +23,7 @@
     },
     {
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "%OSM_MAP",
         "remove": "attr_collide",
         "included_names": "\\bVisual(?:\\b|_)"
@@ -31,7 +31,7 @@
     },
     {
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "%OSM_MAP",
         "add": "attr_align_strict",
         "included_names": "\\bAlignStrict(?:\\b|_)"
@@ -40,7 +40,7 @@
     {
       "required": ["%IF_GEN_GRIND_LINES"],
       "call": "gen_grind_lines",
-      "literals": {
+      "arguments": {
         "source_name": "%OSM_MAP",
         "dest_name": "$OSM_MAP-_grind_lines",
         "edge_angle": 20,
@@ -53,7 +53,7 @@
     {
       "exclude": ["%IF_GEN_GRIND_LINES"],
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "$OSM_MAP-_grind_lines",
         "filename": "models/primitives/empty.obj",
         "position": [0, 0, 0],
@@ -71,7 +71,7 @@
     {
       "exclude": ["%IF_GEN_GRIND_LINES"],
       "call": "modify_physics_material_tags",
-      "literals": {
+      "arguments": {
         "resource_name": "$OSM_MAP-_grind_lines",
         "add": "obj_grind_line"
       }
@@ -79,14 +79,14 @@
     {
       "required": ["%IF_GEN_INSTANCES"],
       "call": "gen_instances",
-      "literals": {
+      "arguments": {
         "name": "%OSM_MAP"
       }
     },
     {
       "required": ["%BARRIER_DEPTH != 0"],
       "call": "create_barrier_triangle_hitboxes",
-      "literals": {
+      "arguments": {
         "resource_name": "%OSM_MAP",
         "included_names": "",
         "included_tags": "attr_collide|attr_two_sided",

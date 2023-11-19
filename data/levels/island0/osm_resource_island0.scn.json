@@ -2,7 +2,7 @@
   "declare_macro": "osm_resource_island0",
   "content": {
     "call": "osm_resource",
-    "literals": {
+    "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/map_island0.osm",
       "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",

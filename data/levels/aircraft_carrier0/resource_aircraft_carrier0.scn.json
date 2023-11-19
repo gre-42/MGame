@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "ofs_kestrel",
           "filename": "models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj",
           "position": [0, 0, 0],
@@ -23,7 +23,7 @@
       },
       {
         "call": "modify_physics_material_tags",
-        "literals": {
+        "arguments": {
           "resource_name": "ofs_kestrel",
           "add": "attr_concave"
         }
@@ -31,7 +31,7 @@
       {
         "comment": {
           "call": "obj_resource",
-          "literals": {
+          "arguments": {
             "name": "ocean",
             "filename": "$__DIR__/ocean.obj",
             "position": [0, 0, 0],
@@ -50,7 +50,7 @@
       },
       {
         "call": "grid_resource",
-        "literals": {
+        "arguments": {
           "name": "ocean",
           "texture_filename": "#ocean_uniform",
           "size": [50, 50],
@@ -73,14 +73,14 @@
       },
       {
         "call": "modify_physics_material_tags",
-        "literals": {
+        "arguments": {
           "resource_name": "ocean",
           "add": "attr_concave"
         }
       },
       {
         "call": "compound_resource",
-        "literals": {
+        "arguments": {
           "source_names": ["ofs_kestrel", "ocean"],
           "dest_name": "osm_map"
         }

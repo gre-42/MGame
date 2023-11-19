@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "playback_box",
       "filename": "models/primitives/box.obj",
       "position": [0, 0, 0],
@@ -18,7 +18,7 @@
   },
   {
     "call": "root_node_instance",
-    "literals": {
+    "arguments": {
       "type": "dynamic",
       "name": "box_playback_node",
       "position": [0, 0, 0],
@@ -28,7 +28,7 @@
   },
   {
     "call": "renderable_instance",
-    "literals": {
+    "arguments": {
       "name": "box_playback",
       "node": "box_playback_node",
       "resource": "playback_box"

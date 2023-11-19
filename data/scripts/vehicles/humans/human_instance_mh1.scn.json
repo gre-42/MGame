@@ -2,19 +2,19 @@
   {
     "declare_macro": "create_mh1",
     "content": [
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0.1, 0.5, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0.1, 0.5, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_node$SUFFIX",             "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0  , -0.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX",         "position": [0, 0  ,    0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "animation_node$SUFFIX",            "name": "human_head_node$SUFFIX",           "position": [0, 1.7,    0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_head_node$SUFFIX",           "name": "human_head_node2$SUFFIX",          "rotation": [0, 180,    0]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "human_head_node2$SUFFIX",          "name": "human_head_camera_node$SUFFIX"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX",             "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0  , -0.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX",         "position": [0, 0  ,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "animation_node$SUFFIX",            "name": "human_head_node$SUFFIX",           "position": [0, 1.7,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node$SUFFIX",           "name": "human_head_node2$SUFFIX",          "rotation": [0, 180,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node2$SUFFIX",          "name": "human_head_camera_node$SUFFIX"}},
       {
         "call": "rigid_cuboid",
-        "literals": {
+        "arguments": {
           "node": "human_node$SUFFIX",
           "hitboxes": "human_hitboxes",
           "mass": 70,
@@ -27,7 +27,7 @@
       },
       {
         "call": "yaw_pitch_look_at_nodes",
-        "literals": {
+        "arguments": {
           "yaw_node": "human_node$SUFFIX",
           "pitch_node": "main_gun_node$SUFFIX",
           "parent_follower_rigid_body_node": "human_node$SUFFIX",
@@ -48,16 +48,16 @@
           "error_alpha": "%ERROR_ALPHA"
         }
       },
-      {"call": "create_weapon_cycle", "literals": {"cycle_node": "human_node$SUFFIX"}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m4a1_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "beretta92_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "frag_grenade", "capacity": 10}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "m72_law_rocket", "capacity": 2}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "literals": {"inventory_node": "human_node$SUFFIX", "item_type": "none_weapon_ammo_type", "capacity": 0}},
+      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$SUFFIX"}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "m4a1_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "beretta92_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "frag_grenade", "capacity": 10}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "m72_law_rocket", "capacity": 2}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "none_weapon_ammo_type", "capacity": 0}},
       {
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
-        "literals": {
+        "arguments": {
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "m4a1",
           "ammo_type": "m4a1_ammo",
@@ -70,7 +70,7 @@
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_m4a1",
-            "literals": {
+            "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
               "BULLET_DAMAGE": "%BULLET_DAMAGE",
@@ -88,7 +88,7 @@
       {
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
-        "literals": {
+        "arguments": {
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "beretta92",
           "ammo_type": "beretta92_ammo",
@@ -101,7 +101,7 @@
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_beretta92",
-            "literals": {
+            "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
               "BULLET_DAMAGE": "%BULLET_DAMAGE",
@@ -119,7 +119,7 @@
       {
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
-        "literals": {
+        "arguments": {
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "frag_grenade",
           "ammo_type": "frag_grenade",
@@ -132,7 +132,7 @@
           "range_max": 20,
           "create": {
             "playback": "add_weapon_frag_grenade",
-            "literals": {
+            "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
               "BULLET_DAMAGE": "%BULLET_DAMAGE",
@@ -150,7 +150,7 @@
       {
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
-        "literals": {
+        "arguments": {
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "m72_law",
           "ammo_type": "m72_law_rocket",
@@ -163,7 +163,7 @@
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_m72_law",
-            "literals": {
+            "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
               "BULLET_DAMAGE": "%BULLET_DAMAGE",
@@ -181,7 +181,7 @@
       {
         "required": ["%IF_WITH_GUN"],
         "call": "set_desired_weapon",
-        "literals": {
+        "arguments": {
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "m4a1",
           "equip_instantly": false
@@ -189,18 +189,18 @@
       },
       {
         "playback": "create_none_weapon",
-        "literals": {
+        "arguments": {
           "PARENT_RIGID_BODY_NODE": "human_node$SUFFIX",
           "AMMO_TYPE": "none_weapon_ammo_type",
           "SUFFIX": "%SUFFIX"
         }
       },
-      {"call": "damageable", "literals": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_strength", "literals": {"node": "human_node$SUFFIX", "value": 0.3}},
+      {"call": "damageable", "arguments": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_strength", "arguments": {"node": "human_node$SUFFIX", "value": 0.3}},
       {
         "required": ["%IF_WITH_PHYSICS"],
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "human_node$SUFFIX",
           "name": "legs",
           "angular_vels": [-4000, -2500, 0],
@@ -212,7 +212,7 @@
       {
         "required": ["%IF_WITH_PHYSICS"],
         "call": "wheel",
-        "literals": {
+        "arguments": {
           "rigid_body": "human_node$SUFFIX",
           "node": "",
           "position": [0, 0, 0],
@@ -223,11 +223,11 @@
           "tire_id": 0
         }
       },
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_car_controller", "literals": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_avatar_controller", "literals": {"node": "human_node$SUFFIX"}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
       {
         "call": "set_avatar_style_updater",
-        "literals": {
+        "arguments": {
           "avatar_node": "human_node$SUFFIX",
           "gun_node": "main_gun_end_node$SUFFIX",
           "resource_wo_gun": "cmu_mocap",
@@ -236,7 +236,7 @@
       },
       {
         "call": "set_node_bone",
-        "literals": {
+        "arguments": {
           "node": "human_head_node$SUFFIX",
           "bone": "head",
           "smoothness": 0.9,
@@ -244,8 +244,8 @@
         }
       },
       {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1$DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "literals": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "mh1_d1"}}
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "mh1$DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "mh1_d1"}}
     ]
   },
   {
@@ -254,6 +254,6 @@
   },
   {
     "declare_macro": "add_attached_light_mh1",
-    "content": [{"playback": "add_attached_light_human", "literals": {"LSUFFIX": "%LSUFFIX", "CSUFFIX": "%CSUFFIX"}}]
+    "content": [{"playback": "add_attached_light_human", "arguments": {"LSUFFIX": "%LSUFFIX", "CSUFFIX": "%CSUFFIX"}}]
   }
 ]

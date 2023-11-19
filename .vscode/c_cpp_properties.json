@@ -15,7 +15,8 @@
             "defines": [],
             "compilerPath": "/usr/bin/g++-12",
             "cppStandard": "c++20",
-            "intelliSenseMode": "gcc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "compilerArgs": ["-Wall", "-Wno-unknown-pragmas", "-Wmismatched-tags", "-Wconversion", "-Werror"]
         },
         {
             "name": "MSYS2",

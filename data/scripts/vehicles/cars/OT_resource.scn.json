@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "OT_hitbox",
       "filename": "models/primitives/box.obj",
       "position": [0, 0.85, 0],
@@ -16,11 +16,11 @@
       "transformation_mode": "all"
     }
   },
-  {"comment": {"call": "gen_triangle_rays", "literals": {"name": "OT_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "OT_hitbox", "add": "obj_chassis|attr_convex"}},
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "OT_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "OT_hitbox", "add": "obj_chassis|attr_convex"}},
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "OT_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
@@ -36,21 +36,21 @@
       "physics_material": "attr_collide"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "OT_tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [-0.8, 0.2, -1.2], "to": [-0.8, -0.7, -1.2]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2, -1.2], "to": [ 0.8, -0.7, -1.2]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [-0.8, 0.2,  2.6], "to": [-0.8, -0.7,  2.6]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "OT_tirelines", "from": [ 0.8, 0.2,  2.6], "to": [ 0.8, -0.7,  2.6]}}, {"comment": "right rear"},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "OT_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [-0.8, 0.2, -1.2], "to": [-0.8, -0.7, -1.2]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [ 0.8, 0.2, -1.2], "to": [ 0.8, -0.7, -1.2]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [-0.8, 0.2,  2.6], "to": [-0.8, -0.7,  2.6]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [ 0.8, 0.2,  2.6], "to": [ 0.8, -0.7,  2.6]}}, {"comment": "right rear"},
 
-  {"call": "compound_resource", "literals": {"source_names": ["OT_hitbox", "OT_tirelines"], "dest_name": "OT_hitboxes"}},
-  {"call": "compound_resource", "literals": {"source_names": ["OT_hitbox"], "dest_name": "OT_massbox"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["OT_hitbox", "OT_tirelines"], "dest_name": "OT_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["OT_hitbox"], "dest_name": "OT_massbox"}},
 
   {
     "declare_macro": "load_OT_part",
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
           "position": [0, "%POSITION_Y", 0],
@@ -78,20 +78,20 @@
   {
     "declare_macro": "load-OT",
     "content": [
-      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_body$DECIMATE", "POSITION_Y": 0.2}},
-      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_glass$DECIMATE", "POSITION_Y": 0.2}},
-      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_interior$DECIMATE", "POSITION_Y": 0.2}},
-      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_front$DECIMATE", "POSITION_Y": 0}},
-      {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_rear$DECIMATE", "POSITION_Y": 0}},
-      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "OT/main$SUFFIX"}},
-      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_body$DECIMATE"}},
-      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_glass$DECIMATE"}},
-      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_interior$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["OT/OT_wheel_front$DECIMATE"], "dest_name": "OT/wheel_front$SUFFIX"}},
-      {"call": "compound_resource", "literals": {"source_names": ["OT/OT_wheel_rear$DECIMATE"], "dest_name": "OT/wheel_rear$SUFFIX"}}
+      {"playback": "load_OT_part", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_body$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "OT/OT_glass$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_interior$DECIMATE", "POSITION_Y": 0.2}},
+      {"playback": "load_OT_part", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_front$DECIMATE", "POSITION_Y": 0}},
+      {"playback": "load_OT_part", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_rear$DECIMATE", "POSITION_Y": 0}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "OT/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_interior$DECIMATE"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["OT/OT_wheel_front$DECIMATE"], "dest_name": "OT/wheel_front$SUFFIX"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["OT/OT_wheel_rear$DECIMATE"], "dest_name": "OT/wheel_rear$SUFFIX"}}
     ]
   },
-  {"playback": "load-OT", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load-OT", "literals": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3", "SUFFIX": "_d3"}},
-  {"playback": "load-OT", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
+  {"playback": "load-OT", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
+  {"playback": "load-OT", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3", "SUFFIX": "_d3"}},
+  {"playback": "load-OT", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "SUFFIX": "_lowres"}}
 ]

@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Leaf018_2",
       "color": "textures/cc0textures/decals/LeafSet018_2K_Color2.png",
       "color_mode": "rgba",
@@ -13,7 +13,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Leaf018_2_Red",
       "color": "textures/cc0textures/decals/LeafSet018_2K_Color2.png",
       "color_mode": "rgba",
@@ -24,7 +24,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Paper",
       "color": "textures/decals/Paper.png",
       "color_mode": "rgba",
@@ -34,7 +34,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "Leaf018_2",
       "texture_filename": "#Leaf018_2",
       "min": [-0.4, -0.4],
@@ -56,7 +56,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "Leaf018_2_Red",
       "texture_filename": "#Leaf018_2_Red",
       "min": [-0.4, -0.4],
@@ -78,7 +78,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "Paper",
       "texture_filename": "#Paper",
       "min": [-0.4, -0.4],

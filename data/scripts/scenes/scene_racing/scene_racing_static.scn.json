@@ -9,7 +9,7 @@
     },
     {
       "call": "create_scene",
-      "literals": {
+      "arguments": {
         "name": "primary_scene",
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
@@ -32,7 +32,7 @@
     },
     {
       "call": "create_scene",
-      "literals": {
+      "arguments": {
         "name": "weapon_closeup",
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
@@ -54,7 +54,7 @@
     {
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
-      "literals": {
+      "arguments": {
         "IF_CREATE_PC_PLAYER": "%IF_CREATE_PC_PLAYER",
         "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
         "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",

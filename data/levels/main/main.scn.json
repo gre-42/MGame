@@ -4,7 +4,7 @@
   },
   {
     "call": "create_scene",
-    "literals": {
+    "arguments": {
       "name": "primary_scene",
       "focus_mask": "scene",
       "submenus": [],
@@ -22,14 +22,14 @@
   {
     "playback": "scene_minimal",
     "context": "primary_scene",
-    "literals": {
+    "arguments": {
       "IF_DIRTMAP": false,
       "IF_SKYBOX": false
     }
   },
   {
     "call": "append_focuses",
-    "literals": { "content": ["menu"] }
+    "arguments": { "content": ["menu"] }
   },
   {
     "playback": "create_main_menu"

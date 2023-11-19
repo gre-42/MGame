@@ -2,19 +2,19 @@
   {
     "declare_macro": "create_F_35_graphics",
     "content": [
-      {"call": "renderable_instance", "literals": {"name": "F_35$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Mesh_*"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Mesh_*"}},
       {"comment": "Ailerons"},
-      {"call": "renderable_instance", "literals": {"name": "F_35_left_front_aileron$SUFFIX", "node": "left_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Front_Aileron"}},
-      {"call": "renderable_instance", "literals": {"name": "F_35_right_front_aileron$SUFFIX", "node": "right_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Front_Aileron"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_left_front_aileron$SUFFIX", "node": "left_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Front_Aileron"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_right_front_aileron$SUFFIX", "node": "right_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Front_Aileron"}},
       {"comment": "Flaps"},
-      {"call": "renderable_instance", "literals": {"name": "F_35_left_flap$SUFFIX", "node": "left_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Flap"}},
-      {"call": "renderable_instance", "literals": {"name": "F_35_right_flap$SUFFIX", "node": "right_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Flap"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_left_flap$SUFFIX", "node": "left_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Flap"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_right_flap$SUFFIX", "node": "right_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Flap"}},
       {"comment": "Rear wings"},
-      {"call": "renderable_instance", "literals": {"name": "F_35_left_rear_wing$SUFFIX", "node": "left_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rear_Wing"}},
-      {"call": "renderable_instance", "literals": {"name": "F_35_right_rear_wing$SUFFIX", "node": "right_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rear_Wing"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_left_rear_wing$SUFFIX", "node": "left_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rear_Wing"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_right_rear_wing$SUFFIX", "node": "right_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rear_Wing"}},
       {"comment": "Rudders"},
-      {"call": "renderable_instance", "literals": {"name": "F_35_left_rudder$SUFFIX", "node": "left_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rudder"}},
-      {"call": "renderable_instance", "literals": {"name": "F_35_right_rudder$SUFFIX", "node": "right_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rudder"}}
+      {"call": "renderable_instance", "arguments": {"name": "F_35_left_rudder$SUFFIX", "node": "left_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rudder"}},
+      {"call": "renderable_instance", "arguments": {"name": "F_35_right_rudder$SUFFIX", "node": "right_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rudder"}}
     ]
   },
   {
@@ -22,7 +22,7 @@
     "content": [
       {
         "call": "rigid_cuboid",
-        "literals": {
+        "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "F_35_hitboxes",
           "mass": "%MASS",
@@ -41,7 +41,7 @@
       },
       {
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "car_node$SUFFIX",
           "name": "wheels",
           "angular_vels": [0],
@@ -53,7 +53,7 @@
       },
       {
         "call": "create_engine",
-        "literals": {
+        "arguments": {
           "rigid_body": "car_node$SUFFIX",
           "name": "turbine",
           "angular_vels": [0],
@@ -63,13 +63,13 @@
           "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
-      {"call": "wheel", "literals": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
+      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
       {
         "call": "rotor",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "position": [0, -0.2, 5.5],
           "rotation": [180, 0, 0],
@@ -81,7 +81,7 @@
       {"comment": "0: front left (roll + pitch)"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "left_front_aileron_node$SUFFIX",
           "brake_angle_node": "left_flap_node$SUFFIX",
@@ -99,7 +99,7 @@
       {"comment": "1: front right (roll + pitch)"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "right_front_aileron_node$SUFFIX",
           "brake_angle_node": "right_flap_node$SUFFIX",
@@ -117,7 +117,7 @@
       {"comment": "2: rear left (roll + pitch)"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "left_rear_wing_node$SUFFIX",
           "position": [-1, -0.2, 6],
@@ -134,7 +134,7 @@
       {"comment": "3: rear right (roll + pitch)"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "right_rear_wing_node$SUFFIX",
           "position": [1, -0.2, 6],
@@ -151,7 +151,7 @@
       {"comment": "4: yaw left"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "left_rudder_node$SUFFIX",
           "position": [-0.5, 0.5, 6],
@@ -168,7 +168,7 @@
       {"comment": "5: yaw right"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "right_rudder_node$SUFFIX",
           "position": [0.5, 0.5, 6],
@@ -185,7 +185,7 @@
       {"comment": "6: front"},
       {
         "call": "wing",
-        "literals": {
+        "arguments": {
           "vehicle": "car_node$SUFFIX",
           "position": [0, -0.2, 2],
           "rotation": [0, 0, 0],
@@ -198,10 +198,10 @@
           "wing_id": 6
         }
       },
-      {"call": "set_rigid_body_door_distance", "literals": {"node": "car_node$SUFFIX", "door_distance": 3}},
+      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$SUFFIX", "door_distance": 3}},
       {
         "call": "create_plane_controller",
-        "literals": {
+        "arguments": {
           "node": "car_node$SUFFIX",
           "left_front_aileron_wing_ids": [0],
           "right_front_aileron_wing_ids": [1],
@@ -219,7 +219,7 @@
       },
       {
         "call": "create_plane_as_car_controller",
-        "literals": {
+        "arguments": {
           "node": "car_node$SUFFIX",
           "tire_ids": [0, 1],
           "tire_angles": [30, 30],
@@ -232,40 +232,40 @@
     "declare_macro": "create_F_35",
     "content": [
       {"comment": "Wheels"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20]}},
       {"comment": "Front ailerons"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX",                 "name": "left_front_aileron_node$SUFFIX",        "position": [0, 0,  3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "left_front_aileron_node$SUFFIX",  "name": "left_front_aileron_shift_node$SUFFIX",  "position": [0, 0, -3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX",                 "name": "right_front_aileron_node$SUFFIX",       "position": [0, 0,  3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "right_front_aileron_node$SUFFIX", "name": "right_front_aileron_shift_node$SUFFIX", "position": [0, 0, -3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX",                 "name": "left_front_aileron_node$SUFFIX",        "position": [0, 0,  3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "left_front_aileron_node$SUFFIX",  "name": "left_front_aileron_shift_node$SUFFIX",  "position": [0, 0, -3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX",                 "name": "right_front_aileron_node$SUFFIX",       "position": [0, 0,  3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_front_aileron_node$SUFFIX", "name": "right_front_aileron_shift_node$SUFFIX", "position": [0, 0, -3.5]}},
       {"comment": "Flaps"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX"       , "name": "left_flap_node$SUFFIX"       , "position": [0, 0,  3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "left_flap_node$SUFFIX" , "name": "left_flap_shift_node$SUFFIX" , "position": [0, 0, -3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX"       , "name": "right_flap_node$SUFFIX"      , "position": [0, 0,  3.5]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "right_flap_node$SUFFIX", "name": "right_flap_shift_node$SUFFIX", "position": [0, 0, -3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"       , "name": "left_flap_node$SUFFIX"       , "position": [0, 0,  3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "left_flap_node$SUFFIX" , "name": "left_flap_shift_node$SUFFIX" , "position": [0, 0, -3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"       , "name": "right_flap_node$SUFFIX"      , "position": [0, 0,  3.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_flap_node$SUFFIX", "name": "right_flap_shift_node$SUFFIX", "position": [0, 0, -3.5]}},
       {"comment": "Rear wings"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX"            , "name": "left_rear_wing_node$SUFFIX",        "position": [0, 0,  6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "left_rear_wing_node$SUFFIX" , "name": "left_rear_wing_shift_node$SUFFIX",  "position": [0, 0, -6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX"            , "name": "right_rear_wing_node$SUFFIX",       "position": [0, 0,  6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "right_rear_wing_node$SUFFIX", "name": "right_rear_wing_shift_node$SUFFIX", "position": [0, 0, -6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"            , "name": "left_rear_wing_node$SUFFIX",        "position": [0, 0,  6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "left_rear_wing_node$SUFFIX" , "name": "left_rear_wing_shift_node$SUFFIX",  "position": [0, 0, -6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"            , "name": "right_rear_wing_node$SUFFIX",       "position": [0, 0,  6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_rear_wing_node$SUFFIX", "name": "right_rear_wing_shift_node$SUFFIX", "position": [0, 0, -6]}},
       {"comment": "Rudders"},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "left_rudder_node$SUFFIX",        "position": [-1.5, 0,  6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "left_rudder_node$SUFFIX",  "name": "left_rudder_shift_node$SUFFIX",  "position": [ 1.5, 0, -6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "right_rudder_node$SUFFIX",       "position": [ 1.5, 0,  6]}},
-      {"call": "child_node_instance", "literals": {"type": "dynamic", "parent": "right_rudder_node$SUFFIX", "name": "right_rudder_shift_node$SUFFIX", "position": [-1.5, 0, -6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "left_rudder_node$SUFFIX",        "position": [-1.5, 0,  6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "left_rudder_node$SUFFIX",  "name": "left_rudder_shift_node$SUFFIX",  "position": [ 1.5, 0, -6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "right_rudder_node$SUFFIX",       "position": [ 1.5, 0,  6]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_rudder_node$SUFFIX", "name": "right_rudder_shift_node$SUFFIX", "position": [-1.5, 0, -6]}},
       {"comment": "Graphics"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "literals": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_front", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_front"}}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_mid", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_mid"}}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
-      {"comment": {"call": "renderable_instance", "literals": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "literals": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "F_35_hitbox_front", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_front"}}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "F_35_hitbox_mid", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_mid"}}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
       {"comment": [
         "IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node$SUFFIX name=gizmo_node$SUFFIX position=0 0 0 rotation=0 0 0 scale=1",
         "IF_WITH_GRAPHICS renderable_instance name=gizmo node=gizmo_node$SUFFIX resource=gizmo",
@@ -274,7 +274,7 @@
         "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
-      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_F_35_physics", "literals": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_F_35_physics", "arguments": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
     ]
   },
   {
@@ -283,7 +283,7 @@
       {
         "required": ["%IF_PC"],
         "playback": "create_plane_key_bindings",
-        "literals": {
+        "arguments": {
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": false,
           "IF_HAS_GUN": false,
@@ -295,7 +295,7 @@
       {
         "required": ["%IF_PC"],
         "playback": "create_car_cameras_plane",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
           "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
@@ -303,7 +303,7 @@
       },
       {
         "call": "player_set_vehicle_control_parameters",
-        "literals": {
+        "arguments": {
           "player": "%PLAYER_NAME",
           "asset_id": "F_35",
           "surface_power_forward": "inf",
@@ -317,7 +317,7 @@
     "declare_macro": "add_attached_light_F_35",
     "content": [
       {
-        "playback": "add_attached_light_sedan", "literals": {
+        "playback": "add_attached_light_sedan", "arguments": {
           "LSUFFIX": "%LSUFFIX",
           "CSUFFIX": "%CSUFFIX"
         }

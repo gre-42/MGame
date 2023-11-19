@@ -3,7 +3,7 @@
     "declare_macro": "create_FN",
     "content": {
       "playback": "generic_car.create",
-      "literals": {
+      "arguments": {
         "NAME": "FN",
         "SUFFIX": "%SUFFIX",
         "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -38,7 +38,7 @@
     "declare_macro": "set_spawner_nodes_FN",
     "content": {
       "call": "spawner_set_nodes",
-      "literals": {
+      "arguments": {
         "nodes": ["car_node$SUFFIX"],
         "spawner": "%SPAWNER_NAME"
       }
@@ -48,7 +48,7 @@
     "declare_macro": "create_player_car_externals_FN",
     "content": {
       "playback": "generic_car.create_player_car_externals",
-      "literals": {
+      "arguments": {
         "ASSET_ID": "FN",
         "IF_PC": "%IF_PC",
         "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",

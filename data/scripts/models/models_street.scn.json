@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "pipe",
       "filename": "models/pipe.obj",
       "position": [0, 0, 0],
@@ -18,7 +18,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "pipe_box",
       "filename": "models/pipe_box.obj",
       "position": [0, 0, 0],
@@ -35,7 +35,7 @@
   },
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "pipe_box_boundary",
       "filename": "models/pipe_box_boundary.obj",
       "position": [0, 0, 0],
@@ -55,7 +55,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%CENTRAL_NAME",
           "filename": "%CENTRAL",
           "position": [0, 0, 0],
@@ -72,7 +72,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%ENDPOINT0_NAME",
           "filename": "%ENDPOINT",
           "position": [0, 0, 0],
@@ -89,7 +89,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%ENDPOINT1_NAME",
           "filename": "%ENDPOINT",
           "position": [0, 0, 0],
@@ -111,7 +111,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%RIGHT_NAME",
           "filename": "%MODEL",
           "position": [0, 0, 0],
@@ -128,7 +128,7 @@
       },
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "%LEFT_NAME",
           "filename": "%MODEL",
           "position": [0, 0, 0],
@@ -147,7 +147,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_central1",
       "ENDPOINT0_NAME": "road_endpoint1_0",
       "ENDPOINT1_NAME": "road_endpoint1_1",
@@ -157,7 +157,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_low_central",
       "ENDPOINT0_NAME": "road_low_endpoint_0",
       "ENDPOINT1_NAME": "road_low_endpoint_1",
@@ -167,7 +167,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_low_central2",
       "ENDPOINT0_NAME": "road_low_endpoint2_0",
       "ENDPOINT1_NAME": "road_low_endpoint2_1",
@@ -177,7 +177,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_low_central3",
       "ENDPOINT0_NAME": "road_low_endpoint3_0",
       "ENDPOINT1_NAME": "road_low_endpoint3_1",
@@ -187,7 +187,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_ditch_central",
       "ENDPOINT0_NAME": "road_ditch_endpoint_0",
       "ENDPOINT1_NAME": "road_ditch_endpoint_1",
@@ -197,7 +197,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_extrudable_central",
       "ENDPOINT0_NAME": "road_extrudable_endpoint_0",
       "ENDPOINT1_NAME": "road_extrudable_endpoint_1",
@@ -207,7 +207,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_cylinder_central",
       "ENDPOINT0_NAME": "road_cylinder_endpoint_0",
       "ENDPOINT1_NAME": "road_cylinder_endpoint_1",
@@ -217,7 +217,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_cylinder2_central",
       "ENDPOINT0_NAME": "road_cylinder2_endpoint_0",
       "ENDPOINT1_NAME": "road_cylinder2_endpoint_1",
@@ -227,7 +227,7 @@
   },
   {
     "playback": "load_road",
-    "literals": {
+    "arguments": {
       "CENTRAL_NAME": "road_bumps_central",
       "ENDPOINT0_NAME": "road_bumps_endpoint_0",
       "ENDPOINT1_NAME": "road_bumps_endpoint_1",
@@ -237,7 +237,7 @@
   },
   {
     "playback": "load_parking",
-    "literals": {
+    "arguments": {
       "LEFT_NAME": "road_parking_edge_left.central-central",
       "RIGHT_NAME": "road_parking_edge_right.central-central",
       "MODEL": "models/road/parking_edge.plain-plain.obj"

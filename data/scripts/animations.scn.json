@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "cmu_mocap.walking",
       "filename": "animations/CMU_mocap/cmu_mocap.walking.bvh",
       "smooth_radius": 20,
@@ -13,7 +13,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.run_forward",
       "filename": "animations/Xonotic/pyria_run_forward_retargeted.bvh",
       "smooth_radius": 0,
@@ -24,7 +24,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.run_backward",
       "filename": "animations/Xonotic/pyria_run_backward_retargeted.bvh",
       "smooth_radius": 0,
@@ -35,7 +35,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.idle",
       "filename": "animations/Xonotic/pyria_idle_retargeted.bvh",
       "smooth_radius": 0,
@@ -46,7 +46,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.strafe_left",
       "filename": "animations/Xonotic/pyria_strafe_left_retargeted.bvh",
       "smooth_radius": 0,
@@ -57,7 +57,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.strafe_right",
       "filename": "animations/Xonotic/pyria_strafe_right_retargeted.bvh",
       "smooth_radius": 0,
@@ -68,7 +68,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "xonotic_pyria.die",
       "filename": "animations/Xonotic/pyria_dietwo.bvh",
       "smooth_radius": 0,
@@ -79,7 +79,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.left",
       "filename": "animations/Skate/skate_left.bvh",
       "smooth_radius": 0,
@@ -90,7 +90,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.right",
       "filename": "animations/Skate/skate_right.bvh",
       "smooth_radius": 0,
@@ -101,7 +101,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.left.jump",
       "filename": "animations/Skate/skate_left_jump.bvh",
       "smooth_radius": 0,
@@ -112,7 +112,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.right.jump",
       "filename": "animations/Skate/skate_right_jump.bvh",
       "smooth_radius": 0,
@@ -123,7 +123,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.left.jump.skateboard",
       "filename": "animations/Skate/skate_left_jump_skateboard.bvh",
       "smooth_radius": 0,
@@ -134,7 +134,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_bvh_resource",
-    "literals": {
+    "arguments": {
       "name": "skate.right.jump.skateboard",
       "filename": "animations/Skate/skate_right_jump_skateboard.bvh",
       "smooth_radius": 0,

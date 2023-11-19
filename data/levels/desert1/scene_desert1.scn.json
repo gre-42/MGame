@@ -3,7 +3,7 @@
   {"include": "osm_resource_desert1.scn.json"},
   {
     "playback": "scene_racing_static",
-    "literals": {
+    "arguments": {
       "IF_CREATE_PC_PLAYER": true,
       "IF_PC_PLAYER_PLAYBACK": false,
       "PC_PLAYER_PLAYBACK": null,
@@ -43,7 +43,7 @@
     "declare_macro": "instantiate_transient_objects",
     "content": {
       "playback": "generic_scene_racing_dynamic",
-      "literals": {
+      "arguments": {
         "IF_CREATE_PC_CAR": true,
         "IF_PC_PLAYER_PLAYBACK": false,
         "CAR_NODE_POSITION": [
@@ -83,6 +83,6 @@
   {
     "call": "preload",
     "context": "primary_scene",
-    "literals": {"file": "$__DIR__/resources.json"}
+    "arguments": {"file": "$__DIR__/resources.json"}
   }
 ]

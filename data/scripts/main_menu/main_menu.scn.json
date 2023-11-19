@@ -19,14 +19,14 @@
       },
       {
         "call": "set_focuses",
-        "literals": {"focuses": []}
+        "arguments": {"focuses": []}
       },
       {
         "call": "execute_in_physics_thread",
-        "literals": {
+        "arguments": {
           "command": {
             "call": "with_delete_node_mutex",
-            "literals": {
+            "arguments": {
               "command": {
                 "playback": "_reload_transient_objects"
               }
@@ -40,10 +40,10 @@
     "declare_macro": "__change_showroom_vehicle_in_physics_thread",
     "content": {
       "call": "execute_in_physics_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "playback": "change_showroom_vehicle",
-          "literals": {
+          "arguments": {
             "VEHICLE_NAME": "%VEHICLE_NAME",
             "VEHICLE_CLASS": "%VEHICLE_CLASS",
             "VEHICLE_COLOR": "%VEHICLE_COLOR",
@@ -63,7 +63,7 @@
     "declare_macro": "_change_showroom_vehicle_in_physics_thread",
     "content": {
       "playback": "__change_showroom_vehicle_in_physics_thread",
-      "literals": {
+      "arguments": {
         "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
         "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
@@ -76,7 +76,7 @@
     "content": [
       {
         "call": "ui_background",
-        "literals": {
+        "arguments": {
           "z_order": 1,
           "texture": "textures/ui_background.png",
           "left": "min",
@@ -90,7 +90,7 @@
       },
       {
         "call": "tab_menu",
-        "literals": {
+        "arguments": {
           "key": "ENTER",
           "gamepad_button": "A",
           "tap_button": "START",
@@ -117,7 +117,7 @@
         "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
         "exclude": ["%IF_ANDROID"],
-        "literals": {
+        "arguments": {
           "id": "game_mode_selector",
           "title": "Game mode",
           "icon": "game_mode_icon",
@@ -139,7 +139,7 @@
       {
         "call": "parameter_setter",
         "exclude": ["%IF_ANDROID", "%IF_DEVEL"],
-        "literals": {
+        "arguments": {
           "id": "game_mode_selector",
           "title": "Game mode",
           "icon": "game_mode_icon",
@@ -160,7 +160,7 @@
       {
         "call": "constant_parameter",
         "required": ["%IF_ANDROID"],
-        "literals": { "name": "GAME_MODE", "value": "rally" }
+        "arguments": { "name": "GAME_MODE", "value": "rally" }
       }
     ]
   },
@@ -168,7 +168,7 @@
     "declare_macro": "_update_scene_icon",
     "content": {
       "call": "update_gallery",
-      "literals": {
+      "arguments": {
         "instance": "level_icon",
         "resource": "%LEVEL_ICON_FILE",
         "color_mode": "rgb"
@@ -180,7 +180,7 @@
     "content": [
       {
         "call": "ui_exhibit",
-        "literals": {
+        "arguments": {
           "z_order": 1,
           "id_in_gallery": "level_icon",
           "left": "scene_icon_left",
@@ -195,7 +195,7 @@
       },
       {
         "call": "scene_selector",
-        "literals": {
+        "arguments": {
           "id": "scene_selector",
           "title": "Scene",
           "icon": "scene_selector_icon",
@@ -214,7 +214,7 @@
       },
       {
         "playback": "parameter_setters",
-        "literals": {
+        "arguments": {
           "IF_DEVEL": "%IF_DEVEL"
         }
       },
@@ -232,7 +232,7 @@
       },
       {
         "call": "controls",
-        "literals": {
+        "arguments": {
           "id": "controls",
           "title": "Controls",
           "icon": "controls_icon",
@@ -246,7 +246,7 @@
       },
       {
         "call": "focused_text",
-        "literals": {
+        "arguments": {
           "position": ["nan", "nan"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_height": "huge",
@@ -293,7 +293,7 @@
     ],
     "content": {
       "call": "scene_to_pixel_region",
-      "literals": {
+      "arguments": {
         "target_scene": "primary_scene",
         "z_order": 2,
         "left": "showroom_left",
@@ -311,11 +311,11 @@
       {
         "#comment": "Some initial color so the code does not crash until the real color is defined",
         "call": "constant_parameter",
-        "literals": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
+        "arguments": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "restrictions_selector",
           "title": "Restrictions",
           "icon": "restrictions_icon",
@@ -336,7 +336,7 @@
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "car_selector",
           "title": "Car",
           "icon": "car_selector_icon",
@@ -351,7 +351,7 @@
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
             "context": "showroom",
-            "literals": {
+            "arguments": {
               "SELECTED_DECIMATE": ""
             }
           },
@@ -361,7 +361,7 @@
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "car_color_selector",
           "title": "Color",
           "icon": "car_color_selector_icon",
@@ -377,7 +377,7 @@
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
             "context": "showroom",
-            "literals": {
+            "arguments": {
               "SELECTED_DECIMATE": ""
             }
           },
@@ -393,7 +393,7 @@
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "session_selector",
           "title": "Session",
           "icon": "session_selector_icon",
@@ -417,7 +417,7 @@
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_selector_icon",
@@ -441,7 +441,7 @@
       },
       {
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "playback_ranks_selector",
           "title": "Playback ranks",
           "icon": "replay_icon",
@@ -465,7 +465,7 @@
       {
         "exclude": ["%IF_ANDROID"],
         "call": "parameter_setter",
-        "literals": {
+        "arguments": {
           "id": "render_fps_selector",
           "title": "Render FPS",
           "icon": "render_fps_icon",
@@ -479,7 +479,7 @@
           "deflt": 1,
           "on_change": {
             "call": "set_render_fps",
-            "literals": {
+            "arguments": {
               "fps": "%RENDER_FPS"
             }
           },
@@ -492,7 +492,7 @@
       {
         "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
-        "literals": {
+        "arguments": {
           "id": "playback_speed_selector",
           "title": "Playback speed",
           "icon": "missing_icon",
@@ -517,12 +517,12 @@
       {
         "call": "constant_parameter",
         "exclude": ["%IF_DEVEL"],
-        "literals": { "name": "PLAYBACK_SPEED", "value": 1 }
+        "arguments": { "name": "PLAYBACK_SPEED", "value": 1 }
       },
       {
         "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
-        "literals": {
+        "arguments": {
           "id": "tripod_mode",
           "title": "Tripod mode",
           "icon": "missing_icon",
@@ -543,7 +543,7 @@
       {
         "call": "constant_parameter",
         "exclude": ["%IF_DEVEL"],
-        "literals": { "name": "IF_TRIPOD_MODE", "value": false}
+        "arguments": { "name": "IF_TRIPOD_MODE", "value": false}
       }
     ]
   }

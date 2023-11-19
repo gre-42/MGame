@@ -1,7 +1,7 @@
 [
   {
     "call": "add_texture_atlas",
-    "literals": {
+    "arguments": {
       "name": "vegetation11",
       "width": 4096,
       "height": 4096,
@@ -24,7 +24,7 @@
   {
     "comment": {
       "call": "save_texture_atlas_png",
-      "literals": {
+      "arguments": {
         "name": "vegetation11",
         "filename": "/tmp/vegetation11.png",
         "color_mode": "rgba"
@@ -33,7 +33,7 @@
   },
   {
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "vegetation11",
       "color": "#vegetation11",
       "color_mode": "rgba",
@@ -44,7 +44,7 @@
   },
   {
     "call": "square_resource",
-    "literals": {
+    "arguments": {
       "name": "vegetation11",
       "texture_filename": "#vegetation11",
       "min": [-0.5, 0],

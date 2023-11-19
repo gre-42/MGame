@@ -4,7 +4,7 @@
     "content": [
       {
         "playback": "create_LK4",
-        "literals": {
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
           "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
@@ -16,7 +16,7 @@
       {
         "required": ["%IF_WITH_PHYSICS"],
         "call": "create_trailer_node",
-        "literals": {
+        "arguments": {
           "car_instance": "car_node$SUFFIX",
           "trailer_asset_id": "TNo2",
           "trailer_node": "car_node_trailer$SUFFIX"
@@ -25,7 +25,7 @@
       {
         "exclude": ["%IF_WITH_PHYSICS"],
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "car_node_trailer$SUFFIX",
           "position": [0, 0, 0],
@@ -34,7 +34,7 @@
       },
       {
         "playback": "create_TNo2",
-        "literals": {
+        "arguments": {
           "SUFFIX": "_trailer$SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
           "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
@@ -46,7 +46,7 @@
       {
         "required": ["%IF_WITH_PHYSICS"],
         "call": "connect_trailer",
-        "literals": {
+        "arguments": {
           "car": "car_node$SUFFIX",
           "trailer": "car_node_trailer$SUFFIX"
         }
@@ -57,7 +57,7 @@
     "declare_macro": "create_player_car_externals_LK4_with_TNo2",
     "content": {
       "playback": "generic_car.create_player_car_externals",
-      "literals": {
+      "arguments": {
         "ASSET_ID": "LK4",
         "IF_PC": "%IF_PC",
         "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",

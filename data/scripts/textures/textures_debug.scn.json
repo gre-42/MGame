@@ -2,7 +2,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "blue",
             "color": "textures/debug/blue.png",
             "color_mode": "rgb",
@@ -12,7 +12,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "green",
             "color": "textures/debug/green.png",
             "color_mode": "rgb",
@@ -22,7 +22,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "pink",
             "color": "textures/debug/pink.png",
             "color_mode": "rgb",
@@ -32,7 +32,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "red",
             "color": "textures/debug/red.png",
             "color_mode": "rgb",
@@ -42,7 +42,7 @@
     {
         "exclude": ["%IF_ANDROID"],
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "yellow",
             "color": "textures/debug/yellow.png",
             "color_mode": "rgb",
@@ -51,7 +51,7 @@
     },
     {
         "call": "add_texture_descriptor",
-        "literals": {
+        "arguments": {
             "name": "black",
             "color": "textures/debug/black.png",
             "color_mode": "rgb",
@@ -60,7 +60,7 @@
     },
     {
         "call": "add_blend_map_texture",
-        "literals": {
+        "arguments": {
             "name": "black_001",
             "texture": "#black",
             "min_height": "-inf",

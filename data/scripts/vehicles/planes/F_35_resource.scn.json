@@ -3,7 +3,7 @@
     "declare_macro": "load_F_35_part",
     "content": {
       "call": "obj_resource",
-      "literals": {
+      "arguments": {
         "name": "%NAME",
         "filename": "models/sketchfab.com/f-35c-lightning-ii/$SUBDIR/$NAME.obj",
         "position": [0, -3, 0],
@@ -31,7 +31,7 @@
     "content": [
       {
         "playback": "load_F_35_part",
-        "literals": {
+        "arguments": {
           "NAME": "%NAME",
           "SUBDIR": "hitbox",
           "DIST_MIN": 0,
@@ -39,18 +39,18 @@
           "OCCLUDER_PASS": "none"
         }
       },
-      {"comment": {"call": "gen_triangle_rays", "literals": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-      {"call": "modify_physics_material_tags", "literals": {"resource_name": "%NAME", "add": "obj_chassis|attr_convex"}}  
+      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%NAME", "add": "obj_chassis|attr_convex"}}  
     ]
   },
-  {"playback": "load_F_35_hitbox_part", "literals": {"NAME": "F_35_hitbox_front"}},
-  {"playback": "load_F_35_hitbox_part", "literals": {"NAME": "F_35_hitbox_mid"}},
-  {"playback": "load_F_35_hitbox_part", "literals": {"NAME": "F_35_hitbox_rear"}},
-  {"playback": "load_F_35_hitbox_part", "literals": {"NAME": "F_35_hitbox_rudder_left"}},
-  {"playback": "load_F_35_hitbox_part", "literals": {"NAME": "F_35_hitbox_rudder_right"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_front"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_mid"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rear"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_left"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_right"}},
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "F_35_tirelines",
       "filename": "models/primitives/empty.obj",
       "position": [0, 0, 0],
@@ -65,14 +65,14 @@
       "transformation_mode": "all"
     }
   },
-  {"call": "modify_physics_material_tags", "literals": {"resource_name": "F_35_tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
-  {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
-  {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "literals": {"name": "F_35_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_tirelines", "add": "obj_tire_line"}},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [-0.7, -0.2, -1.35], "to": [-0.7, -1, -1.35]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [ 0.7, -0.2, -1.35], "to": [ 0.7, -1, -1.35]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [-0.7, -0.2,  1.20], "to": [-0.7, -1,  1.20]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [ 0.7, -0.2,  1.20], "to": [ 0.7, -1,  1.20]}}, {"comment": "right rear"},
   {
     "call": "compound_resource",
-    "literals": {
+    "arguments": {
       "source_names": [
       "F_35_hitbox_front",
       "F_35_hitbox_mid",
@@ -88,7 +88,7 @@
     "declare_macro": "load_F_35",
     "content": {
       "playback": "load_F_35_part",
-      "literals": {
+      "arguments": {
         "NAME": "F_35$DECIMATE",
         "SUBDIR": "obj",
         "DIST_MIN": "%DIST_MIN",
@@ -97,7 +97,7 @@
       }
     }
   },
-  {"playback": "load_F_35", "literals": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":""}},
-  {"playback": "load_F_35", "literals": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":"_d3"}},
-  {"playback": "load_F_35", "literals": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE":"_d1"}}
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":""}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":"_d3"}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE":"_d1"}}
 ]

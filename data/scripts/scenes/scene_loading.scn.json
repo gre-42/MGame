@@ -4,14 +4,14 @@
     "content": [
       {
         "playback": "scene_minimal",
-        "literals": {
+        "arguments": {
           "IF_DIRTMAP": false,
           "IF_SKYBOX": false
         }
       },
       {
         "call": "ui_background",
-        "literals": {
+        "arguments": {
           "z_order": 1,
           "texture": "textures/ui_background.png",
           "left": "min",
@@ -25,7 +25,7 @@
       },
       {
         "call": "focused_text",
-        "literals": {
+        "arguments": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
           "font_height": "huge",
@@ -41,7 +41,7 @@
     "content": [
       {
         "call": "create_scene",
-        "literals": {
+        "arguments": {
           "name": "loading",
           "focus_mask": "scene",
           "submenus": [],

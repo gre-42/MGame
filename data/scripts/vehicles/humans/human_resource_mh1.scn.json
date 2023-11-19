@@ -1,7 +1,7 @@
 [
   {
     "call": "obj_resource",
-    "literals": {
+    "arguments": {
       "name": "mh1",
       "filename": "models/MakeHuman/t_pose_lowpoly.mhx2",
       "position": [0, 0, 0],
@@ -26,7 +26,7 @@
     "content": [
       {
         "call": "obj_resource",
-        "literals": {
+        "arguments": {
           "name": "mh1$DECIMATE",
           "filename": "models/MakeHuman/t_pose_lowpoly$DECIMATE.obj",
           "position": [0, 0, 0],
@@ -46,9 +46,9 @@
           "specularity_factor": "%META_HUMAN_SPECULARITY_FACTOR"
         }
       },
-      {"call": "import_bone_weights", "literals": {"destination": "mh1$DECIMATE", "source": "mh1", "max_distance": 0.1}}
+      {"call": "import_bone_weights", "arguments": {"destination": "mh1$DECIMATE", "source": "mh1", "max_distance": 0.1}}
     ]
   },
-  {"playback": "load_mh1", "literals": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                           "DECIMATE": "_d2"}},
-  {"playback": "load_mh1", "literals": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1"}}
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                           "DECIMATE": "_d2"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1"}}
 ]

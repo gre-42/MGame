@@ -1,7 +1,7 @@
 [
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Road007_Broad_White_1_Lane_near",
       "texture": "#Road007_Broad_White_1_Lane_near",
       "min_height": "-inf",
@@ -16,7 +16,7 @@
   },
   {
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "Road007_Broad_White_1_Lane_far",
       "texture": "#Road007_Broad_White_1_Lane_far",
       "min_height": "-inf",

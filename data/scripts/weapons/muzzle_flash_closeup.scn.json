@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "try_delete_node",
-        "literals": {
+        "arguments": {
           "name": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX"
         }
       }
@@ -14,10 +14,10 @@
     "declare_macro": "_add_muzzle_flash_closeup_scheduler_on_hide",
     "content": {
       "call": "execute_in_physics_thread",
-      "literals": {
+      "arguments": {
         "command": {
           "playback": "_add_muzzle_flash_closeup",
-          "literals": {
+          "arguments": {
             "POSITION": "%POSITION",
             "RESOURCE": "%RESOURCE",
             "ANIMATION_TIME": "%ANIMATION_TIME",
@@ -38,10 +38,10 @@
     "content": [
       {
         "call": "execute_in_physics_thread",
-        "literals": {
+        "arguments": {
           "command": {
             "playback": "_delete_muzzle_flash_closeup_nodes",
-            "literals": {
+            "arguments": {
               "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
           },
@@ -57,7 +57,7 @@
     "content": [
       {
         "call": "child_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "parent": "punch_angle_node_closeup",
           "name": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
@@ -68,7 +68,7 @@
       },
       {
         "call": "set_animation_state",
-        "literals": {
+        "arguments": {
           "node": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
           "aperiodic_animation_begin": 0,
           "aperiodic_animation_end": "%ANIMATION_TIME",
@@ -77,7 +77,7 @@
       },
       {
         "call": "renderable_instance",
-        "literals": {
+        "arguments": {
           "name": "closeup-inst",
           "node": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
           "resource": "%RESOURCE"
@@ -89,13 +89,13 @@
     "declare_macro": "_generate_muzzle_flash_hider",
     "content": {
       "call": "set_node_hider",
-      "literals": {
+      "arguments": {
         "node_to_hide": "muzzle_flash_node$MUZZLE_FLASH_SUFFIX",
         "camera_node": "human_head_camera_node$SUFFIX",
         "on_hide": {
           "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
           "context": "weapon_closeup",
-          "literals": {
+          "arguments": {
             "POSITION": "%POSITION",
             "RESOURCE": "%RESOURCE",
             "ANIMATION_TIME": "%ANIMATION_TIME",
@@ -105,7 +105,7 @@
         "on_destroy": {
           "playback": "_add_muzzle_flash_closeup_scheduler_on_destroy",
           "context": "weapon_closeup",
-          "literals": {
+          "arguments": {
             "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
           }
         },

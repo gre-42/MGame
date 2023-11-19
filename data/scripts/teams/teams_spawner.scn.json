@@ -4,7 +4,7 @@
     "content": [
       {
         "playback": "create_human",
-        "literals": {
+        "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
           "HUMAN_NAME": "%HUMAN_NAME",
@@ -34,7 +34,7 @@
     "content": [
       {
         "playback": "create_car",
-        "literals": {
+        "arguments": {
           "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
           "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
           "CAR_NAME": "%CAR_NAME",
@@ -65,14 +65,14 @@
   {
     "declare_macro": "teams.create_spawner_and_human",
     "content": [
-      { "call": "spawner_create", "literals": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
+      { "call": "spawner_create", "arguments": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
       {
         "call": "set_preferred_car_spawner",
-        "literals": {
+        "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_human_for_pc",
-            "literals": {
+            "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
@@ -113,14 +113,14 @@
   {
     "declare_macro": "teams.create_spawner_and_car",
     "content": [
-      { "call": "spawner_create", "literals": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
+      { "call": "spawner_create", "arguments": { "name": "%SPAWNER_NAME", "team": "%TEAM" } },
       {
         "call": "set_preferred_car_spawner",
-        "literals": {
+        "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_car_for_spawner",
-            "literals": {
+            "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",

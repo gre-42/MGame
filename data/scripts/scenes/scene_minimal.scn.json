@@ -4,7 +4,7 @@
     "content": [
       {
         "call": "root_node_instance",
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "follower_camera",
           "position": [0, 0, 0],
@@ -14,7 +14,7 @@
       },
       {
         "call": "perspective_camera",
-        "literals": {
+        "arguments": {
           "node": "follower_camera",
           "y_fov": 30,
           "near_plane": 1,
@@ -28,7 +28,7 @@
       {
         "call": "root_node_instance",
         "required": ["%IF_DIRTMAP"],
-        "literals": {
+        "arguments": {
           "type": "dynamic",
           "name": "dirtmap_node",
           "position": [0, 1000, 0],
@@ -39,7 +39,7 @@
       {
         "call": "ortho_camera",
         "required": ["%IF_DIRTMAP"],
-        "literals": {
+        "arguments": {
           "node": "dirtmap_node",
           "near_plane": 1,
           "far_plane": 10000,
@@ -53,7 +53,7 @@
       {
         "call": "set_dirtmap",
         "required": ["%IF_DIRTMAP"],
-        "literals": {
+        "arguments": {
           "offset": 0,
           "discreteness": 4,
           "scale": 1,
@@ -63,7 +63,7 @@
       },
       {
         "call": "add_color_style",
-        "literals": {
+        "arguments": {
           "reflection_strength": 0.5,
           "reflection_maps": {
             "car": "reflection_map"
@@ -73,13 +73,13 @@
       {
         "call": "set_skybox",
         "required": ["%IF_SKYBOX"],
-        "literals": {
+        "arguments": {
           "alias": "skybox"
         }
       },
       {
         "call": "set_background_color",
-        "literals": { "color": [0.3, 0.3, 0.3] }
+        "arguments": { "color": [0.3, 0.3, 0.3] }
       }
     ]
   }

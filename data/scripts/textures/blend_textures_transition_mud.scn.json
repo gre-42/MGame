@@ -2,7 +2,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Ramp_Mud",
       "color": "textures/Way_Alpha_Long.png",
       "color_mode": "grayscale",
@@ -12,7 +12,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
-    "literals": {
+    "arguments": {
       "name": "Blend_Mud",
       "color": "textures/Way_Alpha_Long.png",
       "color_mode": "grayscale",
@@ -26,7 +26,7 @@
   {
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
-    "literals": {
+    "arguments": {
       "name": "TimesBlend_Mud",
       "texture": "#Blend_Mud",
       "min_height": "-inf",
