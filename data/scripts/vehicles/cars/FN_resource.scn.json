@@ -110,7 +110,10 @@
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "FN/FN_glass$DECIMATE"}},
       {"playback": "load_FN_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_interior$DECIMATE"}},
       {"playback": "load_FN_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_wheel$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["FN/FN_body$DECIMATE", "FN/FN_glass$DECIMATE", "FN/FN_interior$DECIMATE"], "dest_name": "FN/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "FN/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "FN/main$SUFFIX", "companion_resource": "FN/FN_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "FN/main$SUFFIX", "companion_resource": "FN/FN_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "FN/main$SUFFIX", "companion_resource": "FN/FN_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "literals": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_rear$SUFFIX"}}
     ]

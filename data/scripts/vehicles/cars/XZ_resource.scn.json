@@ -109,7 +109,10 @@
       {"playback": "load_XZ_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "XZ/XZ_glass$DECIMATE"}},
       {"playback": "load_XZ_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "XZ/XZ_interior$DECIMATE"}},
       {"playback": "load_XZ_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "XZ/XZ_wheel$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_body$DECIMATE", "XZ/XZ_glass$DECIMATE", "XZ/XZ_interior$DECIMATE"], "dest_name": "XZ/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "XZ/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "XZ/main$SUFFIX", "companion_resource": "XZ/XZ_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "XZ/main$SUFFIX", "companion_resource": "XZ/XZ_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "XZ/main$SUFFIX", "companion_resource": "XZ/XZ_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "XZ/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "literals": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "XZ/wheel_rear$SUFFIX"}}
     ]

@@ -88,7 +88,10 @@
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_interior$DECIMATE", "POSITION_Y": 0.4}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_wheel_front$DECIMATE", "POSITION_Y": 0}},
       {"playback": "load_TW_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP":""   , "NAME": "TW/TW_wheel_rear$DECIMATE", "POSITION_Y": 0}},
-      {"call": "compound_resource", "literals": {"source_names": ["TW/TW_body$DECIMATE", "TW/TW_glass$DECIMATE", "TW/TW_interior$DECIMATE"], "dest_name": "TW/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "TW/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "TW/main$SUFFIX", "companion_resource": "TW/TW_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "TW/main$SUFFIX", "companion_resource": "TW/TW_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "TW/main$SUFFIX", "companion_resource": "TW/TW_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["TW/TW_wheel_front$DECIMATE"], "dest_name": "TW/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "literals": {"source_names": ["TW/TW_wheel_rear$DECIMATE"], "dest_name": "TW/wheel_rear$SUFFIX"}}
     ]

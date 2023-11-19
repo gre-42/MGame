@@ -83,7 +83,10 @@
       {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_interior$DECIMATE", "POSITION_Y": 0.2}},
       {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_front$DECIMATE", "POSITION_Y": 0}},
       {"playback": "load_OT_part", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": ""   , "NAME": "OT/OT_wheel_rear$DECIMATE", "POSITION_Y": 0}},
-      {"call": "compound_resource", "literals": {"source_names": ["OT/OT_body$DECIMATE", "OT/OT_glass$DECIMATE", "OT/OT_interior$DECIMATE"], "dest_name": "OT/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "OT/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "OT/main$SUFFIX", "companion_resource": "OT/OT_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["OT/OT_wheel_front$DECIMATE"], "dest_name": "OT/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "literals": {"source_names": ["OT/OT_wheel_rear$DECIMATE"], "dest_name": "OT/wheel_rear$SUFFIX"}}
     ]

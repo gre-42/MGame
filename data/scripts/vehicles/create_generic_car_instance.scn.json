@@ -2,7 +2,7 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "renderable_instance", "literals": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/chassis$DECIMATE"}},
+      {"call": "renderable_instance", "literals": {"name": "main$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/main$DECIMATE"}},
 
       {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
       {"call": "renderable_instance", "literals": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},

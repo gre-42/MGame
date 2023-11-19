@@ -110,7 +110,10 @@
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "M3/M3_glass$DECIMATE"}},
       {"playback": "load_M3_part",  "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_interior$DECIMATE"}},
       {"playback": "load_M3_wheel", "literals": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "M3/M3_wheel$DECIMATE"}},
-      {"call": "compound_resource", "literals": {"source_names": ["M3/M3_body$DECIMATE", "M3/M3_glass$DECIMATE", "M3/M3_interior$DECIMATE"], "dest_name": "M3/chassis$SUFFIX"}},
+      {"call": "compound_resource", "literals": {"source_names": [], "dest_name": "M3/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "M3/main$SUFFIX", "companion_resource": "M3/M3_body$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "M3/main$SUFFIX", "companion_resource": "M3/M3_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "literals": {"resource": "M3/main$SUFFIX", "companion_resource": "M3/M3_interior$DECIMATE"}},
       {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "literals": {"source_names": ["M3/M3_wheel$DECIMATE"], "dest_name": "M3/wheel_rear$SUFFIX"}}
     ]
