@@ -16,7 +16,7 @@
     "arguments": {
       "name": "Road007_Alpha3",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
-      "alpha": "textures/Way_Alpha3.png",
+      "alpha": "textures/Way_Alpha/Way_Alpha3.png",
       "normal": "textures/cc0textures/Road007_2K_NormalGL.jpg",
       "alpha_blend": "textures/cc0textures/Road007_2K_Color_Lines.png",
       "color_mode": "rgba",
@@ -28,7 +28,7 @@
     "arguments": {
       "name": "Road007_Base",
       "color": "textures/cc0textures/Road007_2K_Base.png",
-      "multiply_color": "textures/Way_Horizontal_Gradient_512.png",
+      "multiply_color": "textures/Way_Alpha/Way_Horizontal_Gradient_512.png",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -51,7 +51,7 @@
       "name": "Road007_GH",
       "color": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
       "normal": "textures/cc0textures/Road007_2K_Normal_No_LinesGL.jpg",
-      "alpha": "textures/Way_Alpha3.png",
+      "alpha": "textures/Way_Alpha/Way_Alpha3.png",
       "alpha_blend": "textures/cc0textures/Road007_2K_Color_Lines.png",
       "histogram": "textures/histograms/gh_road.png",
       "color_mode": "rgba",
@@ -205,7 +205,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Way_Wheels_7",
-      "color": "textures/Way_Wheels_512.png",
+      "color": "textures/Way_Alpha/Way_Wheels_512.png",
       "lighten": [0.7, 0.7, 0.7],
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
@@ -215,7 +215,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Way_Wheels_9",
-      "color": "textures/Way_Wheels_512.png",
+      "color": "textures/Way_Alpha/Way_Wheels_512.png",
       "lighten": [0.9, 0.9, 0.9],
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
@@ -232,7 +232,7 @@
         "arguments": {
           "name": "Ground029_Street_Canyon",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-          "alpha": "textures/Way_Alpha4_Interior.png",
+          "alpha": "textures/Way_Alpha/Way_Alpha4_Interior.png",
           "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
           "color_mode": "rgba",
           "histogram": "textures/histograms/gc2_road.png",
@@ -245,7 +245,7 @@
         "arguments": {
           "name": "Ground029_Street_Desert_Dry",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-          "alpha": "textures/Way_Alpha4_Interior.png",
+          "alpha": "textures/Way_Alpha/Way_Alpha4_Interior.png",
           "color_mode": "rgba",
           "histogram": "textures/histograms/desert_road.png",
           "anisotropic_filtering_level": 16
@@ -257,7 +257,7 @@
         "arguments": {
           "name": "Ground029_Street_Desert_Wet",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-          "alpha": "textures/Way_Alpha4_Interior.png",
+          "alpha": "textures/Way_Alpha/Way_Alpha4_Interior.png",
           "specular": "textures/cc0textures/Ground029_2K_Specular_Interior.png",
           "color_mode": "rgba",
           "histogram": "textures/histograms/desert_road.png",
@@ -269,7 +269,7 @@
         "arguments": {
           "name": "Ground029_Street_Snow",
           "color": "textures/cc0textures/Ground029_2K_Color_Interior.png",
-          "alpha": "textures/Way_Alpha4_Interior.png",
+          "alpha": "textures/Way_Alpha/Way_Alpha4_Interior.png",
           "color_mode": "rgba",
           "histogram": "textures/histograms/snow.png",
           "anisotropic_filtering_level": 16
@@ -293,7 +293,7 @@
     "arguments": {
       "name": "Gravel010_Alpha",
       "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
-      "alpha": "textures/Way_Alpha.png",
+      "alpha": "textures/Way_Alpha/Way_Alpha.png",
       "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
