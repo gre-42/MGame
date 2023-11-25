@@ -43,6 +43,7 @@
         "#TimesBlend_Mud",
         "#Ramp_Mud"
       ],
+      "path_mudmap": "textures/Way_Alpha/Way_Alpha_Long_Grf.png",
       "street_crossing_textures": ["#Road007_No_Lines"],
       "path_crossing_textures": ["#Gravel010_Detail"],
       "street_textures": [
@@ -117,6 +118,7 @@
         "vegetation1.4(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation1.5(p:1)(hitbox:box_02_1_02_hitbox)"],
 
+      "path_mud_grass_resource_names": ["grass_tbdpec3r_Ground037_Sl_low"],
       "near_grass_resource_names": [
         "bflower2            (p:0.1)",
         "vegetation8.1",
@@ -179,6 +181,7 @@
       "forest_outline_tree_distance": 10,
       "forest_outline_tree_inwards_distance": 1,
       "much_grass_distance": 100,
+      "path_mud_grass_distance": 3,
       "much_near_grass_distance": 3,
       "much_near_flowers_distance": 2.5,
       "much_near_trees_distance": 8,
