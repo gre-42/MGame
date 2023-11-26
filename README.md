@@ -5,7 +5,7 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Track JB
-![Screenshot-JB-2023-11-15.png](media/Screenshot-JB-2023-11-15.png)
+![Screenshot-JB-2023-11-26.png](media/Screenshot-JB-2023-11-26.png)
 
 ### Snow 1
 ![Screenshot-S1-2023-01-06](media/Screenshot-S1-2023-01-06.png)
@@ -14,10 +14,10 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
 
 ### Island 0
-![Screenshot-I0-2023-10-22](media/Screenshot-I0-2023-10-22.png)
+![Screenshot-I0-2023-11-26](media/Screenshot-I0-2023-11-26.png)
 
 ### Forest 0
-![Screenshot-R0-2023-10-22](media/Screenshot-F0-2023-10-22.png)
+![Screenshot-R0-2023-11-26](media/Screenshot-F0-2023-11-26.png)
 
 ### Desert 1
 ![Screenshot-DS1-2023-10-22](media/Screenshot-DS1-2023-10-22.png)
