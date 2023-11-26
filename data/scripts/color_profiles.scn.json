@@ -1,8 +1,8 @@
 [
   {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_EMISSIVITY_FACTOR", "value": [1, 1, 1]}},
-  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_AMBIENCE_FACTOR", "value": [0.45, 0.45, 0.45]}},
-  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_DIFFUSIVITY_FACTOR", "value": [0.45, 0.45, 0.45]}},
-  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_SPECULARITY_FACTOR", "value": [0.45, 0.45, 0.45]}},
+  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_AMBIENCE_FACTOR", "value": [0.6, 0.6, 0.6]}},
+  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_DIFFUSIVITY_FACTOR", "value": [0.6, 0.6, 0.6]}},
+  {"call": "constant_parameter", "arguments": {"name": "VANILLA_RALLY_SPECULARITY_FACTOR", "value": [0.6, 0.6, 0.6]}},
 
   {"call": "constant_parameter", "arguments": {"name": "META_HUMAN_EMISSIVITY_FACTOR", "value": [1, 1, 1]}},
   {"call": "constant_parameter", "arguments": {"name": "META_HUMAN_AMBIENCE_FACTOR", "value": [0.72, 0.72, 0.72]}},
