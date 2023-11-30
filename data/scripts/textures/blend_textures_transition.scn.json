@@ -76,5 +76,38 @@
       "weight": 1,
       "reduction": "times"
     }
+  },
+  {
+    "required": ["!IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Weight_Texture",
+      "color": "textures/lf_heightmap.png",
+      "color_mode": "grayscale",
+      "times": 12,
+      "plus": -3,
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "required": ["!IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Feather_Texture",
+      "color": "textures/hf_heightmap.png",
+      "color_mode": "grayscale",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "required": ["!IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Color_Texture",
+      "color": "textures/debug/white.png",
+      "color_mode": "rgb",
+      "mean_color": [0.85, 0.85, 0.85],
+      "anisotropic_filtering_level": 16
+    }
   }
 ]
