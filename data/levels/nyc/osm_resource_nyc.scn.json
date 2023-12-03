@@ -11,7 +11,9 @@
       "terrain_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_base_textures": ["#Concrete020"],
-      "terrain_stone_textures": ["#Pavement_ConcreteSidewalk3"],
+      "terrain_stone_textures": [
+        "#Pavement_ConcreteSidewalk3_Base",
+        "#concrete1_2K_wh_Detail"],
       "terrain_asphalt_textures": ["#Road007_No_Lines"],
       "bounding_terrain_type": "stone",
       "default_terrain_type": "stone",

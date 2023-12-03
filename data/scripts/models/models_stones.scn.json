@@ -263,7 +263,7 @@
     "playback": "_add_stone_models",
     "arguments": {
       "SUFFIX": "",
-      "DESATURATE": false,
+      "DESATURATE": 0,
       "HISTOGRAM": ""
     }
   },
@@ -271,7 +271,7 @@
     "playback": "_add_stone_models",
     "arguments": {
       "SUFFIX": "_canyon",
-      "DESATURATE": false,
+      "DESATURATE": 0,
       "HISTOGRAM": "textures/histograms/Rock029.png"
     }
   },
@@ -279,7 +279,7 @@
     "playback": "_add_stone_models",
     "arguments": {
       "SUFFIX": "_dune",
-      "DESATURATE": false,
+      "DESATURATE": 0,
       "HISTOGRAM": "textures/histograms/desert_dune.png"
     }
   },
@@ -287,7 +287,7 @@
     "playback": "_add_stone_models",
     "arguments": {
       "SUFFIX": "_snow",
-      "DESATURATE": true,
+      "DESATURATE": 1,
       "HISTOGRAM": "textures/histograms/snow_tree.png"
     }
   }

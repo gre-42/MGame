@@ -1,0 +1,33 @@
+[
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Pavement_ConcreteSidewalk3_Base",
+      "texture": "#Pavement_ConcreteSidewalk3",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 0.5,
+      "weight": 3.5,
+      "role": "detail_base",
+      "reweight": "disabled"
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "concrete1_2K_wh_Detail",
+      "texture": "#concrete1_2K_wh",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 2,
+      "weight": 1,
+      "role": "detail_color"
+    }
+  }
+]
