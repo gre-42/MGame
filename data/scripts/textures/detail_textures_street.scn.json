@@ -85,6 +85,40 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "RoadOld_Yellow_Detail_Base",
+      "texture": "#RoadOld_Yellow",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 2,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Road007_White_1x_Lane_Detail_Base",
+      "texture": "#Road007_White_1x_Lane",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 2,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Gravel010_Detail",
