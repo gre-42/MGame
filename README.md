@@ -26,10 +26,10 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-R0-2023-02-25](media/Screenshot-R0-2023-02-25.png)
 
 ### Großglockner High Alpine Road
-![Screenshot-GH-2023-12-03](media/Screenshot-GH-2023-12-03.png)
+![Screenshot-GH-2023-12-02](media/Screenshot-GH-2023-12-02.png)
 
 ### New York City
-![Screenshot-NYC-2022-04-23](media/Screenshot-NYC-2023-12-03.jpg)
+![Screenshot-NYC-2022-12-03b](media/Screenshot-NYC-2023-12-03b.png)
 
 ### New York City (fly)
 ![Screenshot-NYC-2022-04-14](media/Screenshot-NYC-2022-04-14-fly.jpg)
