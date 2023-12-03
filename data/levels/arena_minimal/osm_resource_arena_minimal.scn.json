@@ -17,12 +17,12 @@
       "path_crossing_textures": ["#Gravel010"],
       "path_texture": "#Gravel010_Alpha",
       "socle_textures": [
-        "#Bricks058"],
+        {"textures": ["Bricks058", "concrete1_2K_wh_Detail"]}],
       "facade_textures": [
-        {"facade": "Plaster003", "max_height": 5},
+        {"facade": ["Plaster003", "concrete1_2K_wh_Detail"], "max_height": 5},
         {
           "selector": "brick",
-          "facade": "wall_facade_bricks_red",
+          "facade": ["wall_facade_bricks_red", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "max_height": 50,
           "interior": {
@@ -37,7 +37,7 @@
           }
         },
         {
-          "facade": "wall_facade_plaster_gray",
+          "facade": ["wall_facade_plaster_gray", "concrete1_2K_wh_Detail"],
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],

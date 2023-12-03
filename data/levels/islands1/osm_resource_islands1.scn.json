@@ -44,13 +44,13 @@
         "street_textures": [
           {"lanes": 1, "textures": ["#Road007"]}],
         "socle_textures": [
-          "#Bricks058"],
+          {"textures": ["Bricks058", "concrete1_2K_wh_Detail"]}],
         "facade_textures": [
-          {"facade": "Plaster003", "max_height": 5},
-          {"facade": "Plaster003_Gray", "max_height": 5},
+          {"facade": ["Plaster003", "concrete1_2K_wh_Detail"], "max_height": 5},
+          {"facade": ["Plaster003_Gray", "concrete1_2K_wh_Detail"], "max_height": 5},
           {
             "selector": "brick",
-            "facade": "wall_facade_bricks_red",
+            "facade": ["wall_facade_bricks_red", "concrete1_2K_wh_Detail"],
             "min_height": 5,
             "max_height": 20,
             "interior": {
@@ -65,7 +65,7 @@
             }
           },
           {
-            "facade": "Concrete020",
+            "facade": ["Concrete020", "concrete1_2K_wh_Detail"],
             "min_height": 5,
             "interior": {
               "facade_edge_size": [1, 1],
@@ -79,7 +79,7 @@
             }
           },
           {
-            "facade": "wall_facade_plaster_white",
+            "facade": ["wall_facade_plaster_white", "concrete1_2K_wh_Detail"],
             "min_height": 5,
             "interior": {
               "facade_edge_size": [1, 1],
