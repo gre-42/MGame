@@ -1,0 +1,66 @@
+[
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Bricks058_Base",
+      "texture": "#Bricks058",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 3,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Plaster003_Base",
+      "texture": "#Plaster003",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 3,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Plaster003_Gray_Base",
+      "texture": "#Plaster003_Gray",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 3,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "MarekWindow00001_512_Base",
+      "texture": "#MarekWindow00001_512",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 3,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  }
+]
