@@ -45,6 +45,34 @@
       "air_support_texture": "#Concrete020",
       "socle_textures": [
         {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+      "entrance_textures": [
+        {
+          "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+          "interior": {
+            "facade_edge_size": [2, 0],
+            "facade_inner_size": [2, 0.7],
+            "interior_size": [7, 4, 0.5],
+            "left": "room.left",
+            "right": "room.right",
+            "floor": "room.floor",
+            "ceiling": "room.ceiling",
+            "back": "TCom_Shops0106_S"
+          }
+        },
+        {
+          "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+          "interior": {
+            "facade_edge_size": [2, 0],
+            "facade_inner_size": [2, 0.7],
+            "interior_size": [7, 4, 0.5],
+            "left": "room.left",
+            "right": "room.right",
+            "floor": "room.floor",
+            "ceiling": "room.ceiling",
+            "back": "TCom_Shops0200_S"
+          }
+        }
+      ],
       "facade_textures": [
         {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
         {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height":5},
@@ -175,6 +203,8 @@
       "building_bottom": 0,
       "default_building_top": 10,
       "default_barrier_top": 3,
+      "default_snap_building_height": true,
+      "default_building_vertical_subdivision": "entrances",
       "remove_backfacing_triangles": true,
       "with_tree_nodes": true,
       "forest_outline_tree_distance": 10,
