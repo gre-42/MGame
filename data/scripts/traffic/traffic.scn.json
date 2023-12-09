@@ -3,12 +3,19 @@
     "declare_macro": "traffic.create_human_npc_player",
     "content": [
       {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%SPAWNER_NAME",
+          "team": "red"
+        }
+      },
+      {
         "call": "player_create",
         "arguments": {
           "name": "%SPAWNER_NAME",
           "team": "red",
           "game_mode": "bystander",
-          "unstuck_mode": "UNSTUCK_MODE",
+          "unstuck_mode": "%UNSTUCK_MODE",
           "driving_mode": "pedestrian",
           "driving_direction": "right"
         }
@@ -76,10 +83,10 @@
           "COLOR": "%COLOR",
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
-          "VELOCITY_ERROR_STD": null,
-          "YAW_ERROR_STD": null,
-          "PITCH_ERROR_STD": null,
-          "ERROR_ALPHA": null
+          "VELOCITY_ERROR_STD": 0.3,
+          "YAW_ERROR_STD": 0.02,
+          "PITCH_ERROR_STD": 0.02,
+          "ERROR_ALPHA": 0.002
         }
       },
       {
@@ -144,10 +151,24 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%SPAWNER_NAME",
-          "macro": "traffic.create_human",
-          "parameters": {
-            "HUMAN_NAME":"%HUMAN_NAME",
-            "DECIMATE":"_d2"
+          "macro": {
+            "playback": "traffic.create_human",
+            "arguments": {
+              "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
+              "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+              "SUFFIX": "%SUFFIX",
+              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
+              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
+
+              "HUMAN_NAME":"%HUMAN_NAME",
+              "COLOR": "%COLOR",
+              "DECIMATE":"_d2"
+            }
+          },
+          "capture": {
+            "HUMAN_NAME": "%HUMAN_NAME",
+            "COLOR": "%COLOR"
           }
         }
       },
@@ -247,6 +268,5 @@
     ]
   },
   { "include": "traffic_with_pedestrians.scn.json" },
-  { "include": "traffic_wo_pedestrians.scn.json" },
-  { "include": "traffic_only_pedestrians.scn.json" }
+  { "include": "traffic_wo_pedestrians.scn.json" }
 ]

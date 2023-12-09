@@ -84,6 +84,6 @@
     ]
   },
   {"playback": "instantiate_transient_objects"},
-  {"playback": "setup_traffic_wo_pedestrians", "context": "primary_scene"},
+  {"playback": "setup_traffic_with_pedestrians", "context": "primary_scene"},
   {"playback": "create_main_menu"}
 ]
