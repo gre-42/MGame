@@ -112,15 +112,6 @@
         }
       },
       {
-        "call": "keep_offset_from_camera",
-        "arguments": {
-          "follower": "light_node$LSUFFIX",
-          "offset": [0, 0, 0],
-          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
-          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
-        }
-      },
-      {
         "call": "ortho_camera",
         "arguments": {
           "node": "light_node$LSUFFIX",
@@ -134,6 +125,15 @@
         }
       },
       {
+        "call": "keep_offset_from_camera",
+        "arguments": {
+          "follower": "light_node$LSUFFIX",
+          "offset": [0, 0, 0],
+          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
+          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
+        }
+      },
+      {
         "call": "light_with_shadow",
         "arguments": {
           "node": "light_node$LSUFFIX",
@@ -143,8 +143,8 @@
           "ambience": [1, 1, 1],
           "diffusivity": [1, 1, 1],
           "specularity": [1, 1, 1],
-          "width": "%SCENE_LIGHTMAP_WIDTH",
-          "height": "%SCENE_LIGHTMAP_HEIGHT"
+          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
+          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
         }
       }
     ]
