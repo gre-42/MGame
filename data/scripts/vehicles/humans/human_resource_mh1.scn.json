@@ -2,8 +2,8 @@
   {
     "call": "obj_resource",
     "arguments": {
-      "name": "mh1",
-      "filename": "models/MakeHuman/t_pose_lowpoly.mhx2",
+      "name": "female_mh_orig",
+      "filename": "models/MakeHuman/female_mh/t_pose_lowpoly.mhx2",
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -27,8 +27,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "mh1$DECIMATE",
-          "filename": "models/MakeHuman/t_pose_lowpoly$DECIMATE.obj",
+          "name": "$DIR$DECIMATE",
+          "filename": "models/MakeHuman/$DIR/t_pose_lowpoly$DECIMATE.obj",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -46,9 +46,11 @@
           "specularity_factor": "%META_HUMAN_SPECULARITY_FACTOR"
         }
       },
-      {"call": "import_bone_weights", "arguments": {"destination": "mh1$DECIMATE", "source": "mh1", "max_distance": 0.1}}
+      {"call": "import_bone_weights", "arguments": {"destination": "$DIR$DECIMATE", "source": "female_mh_orig", "max_distance": 0.1}}
     ]
   },
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                           "DECIMATE": "_d2"}},
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1"}}
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_skirt"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_skirt"}}
 ]

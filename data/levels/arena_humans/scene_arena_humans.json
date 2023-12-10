@@ -41,19 +41,19 @@
           "can_shoot": true
         }
       },
-      "spawned_vehicle": { "type": "mh1" }
+      "spawned_vehicle": { "type": "female_mh" }
     },
     {
       "controller": "npc", "name": "npc1", "team": "red",
-      "spawned_vehicle": { "type": "mh1" }
+      "spawned_vehicle": { "type": "female_mh" }
     },
     {
       "controller": "npc", "name": "npc2", "team": "blue",
-      "spawned_vehicle": { "type": "mh1" }
+      "spawned_vehicle": { "type": "female_mh" }
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
-      "spawned_vehicle": { "type": "mh1" }
+      "spawned_vehicle": { "type": "female_mh" }
     }
   ]
 }

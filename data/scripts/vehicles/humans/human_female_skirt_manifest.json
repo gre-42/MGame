@@ -1,12 +1,12 @@
 {
-  "id": "mh1",
-  "title": "MH1",
+  "id": "female_skirt",
+  "title": "Female skirt",
   "on_init": [
     {"include": "human_resource_box.scn.json"},
     {"include": "human_resource_mh1.scn.json"},
     {"include": "human_instance_mh1.scn.json"}],
   "database": {
-    "SUFFIX": "mh1",
+    "SUFFIX": "female_skirt",
     "CLASS": "human",
     "NODE_PREFIXES": ["human_node"],
     "MAX_TIRE_ANGLE": null
