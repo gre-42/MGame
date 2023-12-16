@@ -162,6 +162,12 @@
         "racing_line_texture": "#racing_line",
         "racing_line_track": "%LOADED_RACING_LINE_TRACK",
         "racing_line_playback": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+        "trashcan_resource_names": [
+          "trashcan2(yangle:90)(hitbox:box_02_1_02_hitbox)"],
+        "trashcan_distances": {
+          "tangential_distance": 120,
+          "normal_distance": 1
+        },
         "tree_resource_names": [
           "vegetation2.0(hitbox:box_02_1_02_hitbox)",
           "vegetation2.1(hitbox:box_02_1_02_hitbox)",
