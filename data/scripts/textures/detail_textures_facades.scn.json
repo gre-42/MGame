@@ -62,5 +62,21 @@
       "role": "detail_base",
       "reweight": "enabled"
     }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "Concrete020_Base",
+      "texture": "#Concrete020",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 3,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
   }
 ]

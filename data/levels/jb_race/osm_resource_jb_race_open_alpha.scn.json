@@ -55,11 +55,11 @@
       "socle_textures": [
         {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
       "facade_textures": [
-        {"facade": ["Plaster003", "concrete1_2K_wh_Detail"], "max_height": 5},
-        {"facade": ["Plaster003_Gray", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
         {
           "selector": "brick",
-          "facade": ["wall_facade_bricks_red", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "max_height": 20,
           "interior": {
@@ -74,7 +74,7 @@
           }
         },
         {
-          "facade": ["Concrete020", "concrete1_2K_wh_Detail"],
+          "facade": ["Concrete020_Base", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "interior": {
             "facade_edge_size": [1, 1],
@@ -88,7 +88,7 @@
           }
         },
         {
-          "facade": ["wall_facade_plaster_white", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "interior": {
             "facade_edge_size": [1, 1],
