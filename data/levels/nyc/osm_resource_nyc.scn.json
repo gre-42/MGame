@@ -163,7 +163,11 @@
         "racing_line_track": "%LOADED_RACING_LINE_TRACK",
         "racing_line_playback": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
         "trashcan_resource_names": [
-          "trashcan2(yangle:90)(hitbox:box_02_1_02_hitbox)"],
+          "dumpster(yangle:0)(p:0.1)(hitbox:box_02_1_02_hitbox)",
+          "trashcan1(yangle:90)(p:0.1)(hitbox:box_02_1_02_hitbox)",
+          "trashcan2(yangle:90)(hitbox:box_02_1_02_hitbox)",
+          "mailbox(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)",
+          "bench(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)"],
         "trashcan_distances": {
           "tangential_distance": 120,
           "normal_distance": 1
