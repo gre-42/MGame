@@ -1,5 +1,6 @@
 [
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Bricks058_Base",
@@ -16,6 +17,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Base",
@@ -32,6 +34,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Gray_Base",
@@ -48,6 +51,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "MarekWindow00001_512_Base",
@@ -64,6 +68,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Concrete020_Base",
