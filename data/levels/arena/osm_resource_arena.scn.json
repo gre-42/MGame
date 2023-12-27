@@ -26,13 +26,13 @@
       "path_textures": [{
         "lanes": 1, "textures": ["#Road007_2_Lanes_Detail_Base", "#Gravel010_Detail"]}],
       "socle_textures": [
-        {"textures": ["Bricks058", "concrete1_2K_wh_Detail"]}],
+        {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
       "facade_textures": [
-        {"facade": ["Plaster003", "concrete1_2K_wh_Detail"], "max_height": 5},
-        {"facade": ["Plaster003_Gray", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
         {
           "selector": "brick",
-          "facade": ["wall_facade_bricks_red", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "max_height": 50,
           "interior": {
@@ -47,7 +47,7 @@
           }
         },
         {
-          "facade": ["wall_facade_plaster_orange", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_orange_Base", "concrete1_2K_wh_Detail"],
           "min_height": 5,
           "max_height": 50,
           "interior": {
@@ -62,7 +62,7 @@
           }
         },
         {
-          "facade": ["wall_facade_plaster_gray", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
@@ -76,7 +76,7 @@
           }
         },
         {
-          "facade": ["wall_facade_plaster_gray", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
@@ -90,7 +90,7 @@
           }
         },
         {
-          "facade": ["wall_facade_plaster_gray", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
