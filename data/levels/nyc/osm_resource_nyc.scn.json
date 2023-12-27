@@ -283,13 +283,15 @@
       }
     },
     {
-      "call": "smoothen_edges",
-      "arguments": {
-        "resource": "osm_map",
-        "target": "physics",
-        "smoothness": 0.00001,
-        "niterations": 5,
-        "decay": 0.97
+      "comment": {
+        "call": "smoothen_edges",
+        "arguments": {
+          "resource": "osm_map",
+          "target": "physics",
+          "smoothness": 0.00001,
+          "niterations": 5,
+          "decay": 0.97
+        }
       }
     }
   ]  
