@@ -24,7 +24,7 @@
   {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_DIFFUSIVITY_FACTOR", "value": [0.7, 0.7, 0.7]}},
   {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_SPECULARITY_FACTOR", "value": [0.7, 0.7, 0.7]}},
   {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_FRESNEL_MIN", "value": 0.5}},
-  {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_FRESNEL_MAX", "value": 1}},
+  {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_FRESNEL_MAX", "value": 0.8}},
   {"call": "constant_parameter", "arguments": {"name": "STUNT_RALLY_FRESNEL_EXPONENT", "value": 4}},
 
   {"call": "constant_parameter", "arguments": {"name": "AC_EMISSIVITY_FACTOR", "value": [1, 1, 1]}},
