@@ -155,7 +155,8 @@
           "node": "light_node",
           "ambience": [1, 1, 1],
           "diffusivity": [1, 1, 1],
-          "specularity": [1, 1, 1]
+          "specularity": [1, 1, 1],
+          "fresnel_ambience": [0.45, 0.5, 0.5]
         }
       },
       {
