@@ -106,7 +106,11 @@
           "occluded_pass": "lightmap_black_node",
           "occluder_pass": "none",
           "aggregate_mode": "none",
-          "transformation_mode": "all"
+          "transformation_mode": "all",
+          "fresnel_min": 0,
+          "fresnel_max": 0.4,
+          "fresnel_exponent": 4,
+          "fresnel_ambience": [1, 1, 1]    
         }
       },
       {
