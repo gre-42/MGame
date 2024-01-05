@@ -107,7 +107,21 @@
       ],
       "ceiling_texture": "#Asphalt015",
       "barrier_styles": [
-        {"name": "fence1", "texture": "#fence1", "uv": [1, 1], "blend_mode": "semi_continuous_02", "wrap_mode_t": "repeat", "reorient_uv0": false, "ambience": 1, "diffusivity": 1, "specularity": 1}],
+        {
+          "name": "fence1",
+          "texture": "#fence1",
+          "uv": [1, 1],
+          "blend_mode": "semi_continuous_02",
+          "wrap_mode_t": "repeat",
+          "reorient_uv0": false,
+          "ambience": [0.7, 0.7, 0.7],
+          "diffusivity": [0.5, 0.5, 0.5],
+          "specularity": [0, 0, 0],
+          "fresnel_min": 0,
+          "fresnel_max": 0.5,
+          "fresnel_exponent": 4,
+          "fresnel_ambience": [1, 1, 1]
+        }],
       "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
       "grass_resource_names": [
         "vegetation2.0(p:1)(hitbox:box_02_1_02_hitbox)",
