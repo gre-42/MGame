@@ -30,5 +30,6 @@
   {"call": "constant_parameter", "arguments": {"name": "AC_EMISSIVITY_FACTOR", "value": [1, 1, 1]}},
   {"call": "constant_parameter", "arguments": {"name": "AC_AMBIENCE_FACTOR", "value": [1.5, 1.5, 1.5]}},
   {"call": "constant_parameter", "arguments": {"name": "AC_DIFFUSIVITY_FACTOR", "value": [1.5, 1.5, 1.5]}},
-  {"call": "constant_parameter", "arguments": {"name": "AC_SPECULARITY_FACTOR", "value": [1.5, 1.5, 1.5]}}
+  {"call": "constant_parameter", "arguments": {"name": "AC_SPECULARITY_FACTOR", "value": [1.5, 1.5, 1.5]}},
+  {"call": "constant_parameter", "arguments": {"name": "AC_FRESNEL_AMBIENCE", "value": [1, 1, 1]}}
 ]
