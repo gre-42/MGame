@@ -9,7 +9,7 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [1, 1, 1],
-        "max_triangle_distance": 800,
+        "max_triangle_distance": 300,
         "blend_mode": "semi_continuous_02",
         "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "none",
@@ -57,7 +57,7 @@
         "merged_occluded_pass": "none",
         "merged_occluder_pass": "lightmap_black_global_and_local",
         "merged_aggregate_mode": "sorted",
-        "merged_max_triangle_distance": 800,
+        "merged_max_triangle_distance": 300,
         "merged_cull_faces": true,
         "merged_mip_level_count": 8
       }
