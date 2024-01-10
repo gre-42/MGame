@@ -193,6 +193,8 @@
           "front_engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "rear_engine": "%%vehicles/$NAME/REAR_ENGINE",
           "front_tire_ids": [0, 1],
+          "tire_angle_velocities": "%%vehicles/$NAME/TIRE_ANGLE_VELOCITIES",
+          "tire_angles": "%%vehicles/$NAME/TIRE_ANGLES",
           "asset_id": "%NAME"
         }
       }

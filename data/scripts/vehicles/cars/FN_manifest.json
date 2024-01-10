@@ -8,7 +8,9 @@
     "NODE_PREFIXES": ["car_node"],
     "TRAILER_HITCH_POSITION_FEMALE": null,
     "TRAILER_HITCH_POSITION_MALE": null,
-    "MAX_TIRE_ANGLE": 30,
+    "MAX_TIRE_ANGLE": 45,
+    "TIRE_ANGLE_VELOCITIES": [10, 80],
+    "TIRE_ANGLES": [45, 20],
     "FRONT_ENGINE": "engine",
     "REAR_ENGINE": "engine"
   },

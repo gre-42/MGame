@@ -17,8 +17,7 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
-        "tire_angle_velocities": [10, 80],
-        "tire_angles": [45, 20]
+        "steer_left_amount": 1
       }
     },
     {
@@ -29,8 +28,7 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
-        "tire_angle_velocities": [10, 80],
-        "tire_angles": [-45, -20]
+        "steer_left_amount": -1
       }
     },
     {
