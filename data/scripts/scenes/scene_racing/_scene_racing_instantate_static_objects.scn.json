@@ -349,8 +349,7 @@
     {
       "required": ["%TIME_OF_DAY == 'synthwave'"],
       "playback": "add_distant_light_night",
-      "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP"
-      }
+      "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
     },
     {
       "required": ["%TIME_OF_DAY == 'day'"],
