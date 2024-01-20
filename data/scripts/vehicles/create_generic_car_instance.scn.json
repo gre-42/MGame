@@ -193,9 +193,9 @@
           "front_engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "rear_engine": "%%vehicles/$NAME/REAR_ENGINE",
           "front_tire_ids": [0, 1],
+          "max_tire_angle": "%%vehicles/$NAME/MAX_TIRE_ANGLE",
           "tire_angle_velocities": "%%vehicles/$NAME/TIRE_ANGLE_VELOCITIES",
-          "tire_angles": "%%vehicles/$NAME/TIRE_ANGLES",
-          "asset_id": "%NAME"
+          "tire_angles": "%%vehicles/$NAME/TIRE_ANGLES"
         }
       }
     ]
@@ -292,9 +292,9 @@
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "asset_id": "%ASSET_ID",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
+          "max_tire_angle": "%%vehicles/$ASSET_ID/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }

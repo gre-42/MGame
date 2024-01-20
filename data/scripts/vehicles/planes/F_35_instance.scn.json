@@ -305,9 +305,9 @@
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "asset_id": "F_35",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
+          "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }

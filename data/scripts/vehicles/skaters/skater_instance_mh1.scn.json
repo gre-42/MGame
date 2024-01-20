@@ -73,9 +73,17 @@
       {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.15, -0.5, -0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
       {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.15, -0.5,  0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
       {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.15, -0.5,  0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
-      {"call": "create_car_controller", "arguments": {"node": "skater_node$SUFFIX", "front_engine": "engine", "rear_engine": "engine", "front_tire_ids": [], "asset_id": "skating_mh1"}},
+      {
+        "call": "create_car_controller",
+        "arguments": {
+          "node": "skater_node$SUFFIX",
+          "front_engine": "engine",
+          "rear_engine": "engine",
+          "front_tire_ids": []
+        }
+      },
       {"required": ["%IF_WITH_PHYSICS"], "call": "set_grind_point", "arguments": {"node": "skater_node$SUFFIX", "position": [0, -0.6, 0]}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_strength", "arguments": {"node": "skater_node$SUFFIX", "value": 0.125}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_dv", "arguments": {"node": "skater_node$SUFFIX", "value": 4}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$SUFFIX", "name": "skateboard_node$SUFFIX", "position": [0, -0.5, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "set_skater_style_updater", "arguments": {"skater_node": "skater_node$SUFFIX", "skateboard_node": "skateboard_node$SUFFIX", "resource": "skate"}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "set_node_bone", "arguments": {"node": "skateboard_node$SUFFIX", "bone": "node", "smoothness": 0, "rotation_strength": 1}},
@@ -91,7 +99,15 @@
     "content": [
       {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
       {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
-      {"call": "player_set_vehicle_control_parameters", "arguments": {"player": "%PLAYER_NAME", "asset_id": "skating_mh1", "surface_power_forward": "inf", "surface_power_backward": "-inf"}}
+      {
+        "call": "player_set_vehicle_control_parameters",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "surface_power_forward": "inf",
+          "surface_power_backward": "-inf",
+          "max_tire_angle": "%%vehicles/skating_mh1/MAX_TIRE_ANGLE"
+        }
+      }
     ]
   },
   {

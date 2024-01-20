@@ -196,7 +196,7 @@
         }
       },
       {"call": "damageable", "arguments": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_strength", "arguments": {"node": "human_node$SUFFIX", "value": 0.3}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_dv", "arguments": {"node": "human_node$SUFFIX", "value": 17}},
       {
         "required": ["%IF_WITH_PHYSICS"],
         "call": "create_engine",

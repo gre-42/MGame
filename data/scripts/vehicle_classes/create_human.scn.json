@@ -175,7 +175,7 @@
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "player": "%PLAYER_NAME",
-          "asset_id": "%HUMAN_NAME"
+          "max_tire_angle": "%%vehicles/$HUMAN_NAME/MAX_TIRE_ANGLE"
         }
       }
     ]
