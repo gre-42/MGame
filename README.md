@@ -14,13 +14,13 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
 
 ### Island 0
-![Screenshot-I0-2023-11-26b](media/Screenshot-I0-2023-11-26b.png)
+![Screenshot-I0-2024-01-20](media/Screenshot-I0-2024-01-20.png)
 
 ### Forest 0
-![Screenshot-R0-2023-11-26](media/Screenshot-F0-2023-11-26.png)
+![Screenshot-F0-2024-01-20](media/Screenshot-F0-2024-01-20.png)
 
 ### Desert 1
-![Screenshot-DS1-2023-10-22](media/Screenshot-DS1-2023-10-22.png)
+![Screenshot-DS1-2024-01-20](media/Screenshot-DS1-2024-01-20.png)
 
 ### Race track 0
 ![Screenshot-R0-2023-02-25](media/Screenshot-R0-2023-02-25.png)
