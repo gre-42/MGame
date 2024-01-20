@@ -215,9 +215,9 @@
         "z_order": 1,
         "texture": "textures/ui_background.png",
         "left": "min",
-        "right": "max",
+        "right": "end",
         "bottom": "min",
-        "top": "max",
+        "top": "end",
         "update": "once",
         "delay_load_policy": "no_delay",
         "focus_mask": "countdown_any|game_over_countdown_any"
