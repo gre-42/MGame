@@ -117,13 +117,13 @@
             "blend_mode": "semi_continuous_02",
             "wrap_mode_t": "repeat",
             "reorient_uv0": false,
-            "ambience": [0.7, 0.7, 0.7],
-            "diffusivity": [0.5, 0.5, 0.5],
-            "specularity": [0, 0, 0],
+            "ambient": [0.7, 0.7, 0.7],
+            "diffuse": [0.5, 0.5, 0.5],
+            "specular": [0, 0, 0],
             "fresnel_min": 0,
             "fresnel_max": 0.5,
             "fresnel_exponent": 4,
-            "fresnel_ambience": [1, 1, 1]
+            "fresnel_ambient": [1, 1, 1]
           }],
         "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
         "near_grass_resource_names": ["vegetation7.0"],
@@ -214,10 +214,10 @@
         "driving_direction": "right",
         "blend_street": true,
         "blend_path": true,
-        "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-        "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-        "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-        "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+        "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+        "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+        "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
       }
     }
   },
@@ -229,9 +229,9 @@
       "size": [50, 50],
       "occluded_pass": "lightmap_black_global_static",
       "occluder_pass": "none",
-      "ambience": [0, 0, 0],
-      "diffusivity": [1, 1, 1],
-      "specularity": [0.5, 0.5, 0.5],
+      "ambient": [0, 0, 0],
+      "diffuse": [1, 1, 1],
+      "specular": [0.5, 0.5, 0.5],
       "blend_mode": "off",
       "alpha_distances": [0, 0, "inf", "inf"],
       "cull_faces": true,
@@ -242,10 +242,10 @@
       "period": 0.02,
       "aggregate_mode": "once",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {

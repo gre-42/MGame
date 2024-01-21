@@ -14,10 +14,10 @@
       "occluder_pass": "lightmap_black_local_instances",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
-      "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR"
+      "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
+      "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
+      "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
+      "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR"
     }
   }
 ]

@@ -16,10 +16,10 @@
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node_sky",
-          "ambience": [0, 0, 0],
-          "diffusivity": [0.45, 0.5, 0.5],
-          "specularity": [0, 0, 0],
-          "fresnel_ambience": [0, 0, 0]
+          "ambient": [0, 0, 0],
+          "diffuse": [0.45, 0.5, 0.5],
+          "specular": [0, 0, 0],
+          "fresnel_ambient": [0, 0, 0]
         }
       }
     ]
@@ -57,10 +57,10 @@
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node0",
-          "ambience": [1, 1, 1],
-          "diffusivity": [1, 1, 1],
-          "specularity": [1, 1, 1],
-          "fresnel_ambience": [1, 1, 1]
+          "ambient": [1, 1, 1],
+          "diffuse": [1, 1, 1],
+          "specular": [1, 1, 1],
+          "fresnel_ambient": [1, 1, 1]
         }
       },
       {
@@ -101,10 +101,10 @@
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node0",
-          "ambience": [0.1, 0.1, 0.1],
-          "diffusivity": [0.2, 0.2, 0.2],
-          "specularity": [0.2, 0.2, 0.2],
-          "fresnel_ambience": [0.2, 0.2, 0.2]
+          "ambient": [0.1, 0.1, 0.1],
+          "diffuse": [0.2, 0.2, 0.2],
+          "specular": [0.2, 0.2, 0.2],
+          "fresnel_ambient": [0.2, 0.2, 0.2]
         }
       }
     ]

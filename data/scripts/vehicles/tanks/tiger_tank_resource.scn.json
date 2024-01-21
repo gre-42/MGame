@@ -86,10 +86,10 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
-          "emissivity_factor": "%FREE3D_EMISSIVITY_FACTOR",
-          "ambience_factor": "%FREE3D_AMBIENCE_FACTOR",
-          "diffusivity_factor": "%FREE3D_DIFFUSIVITY_FACTOR",
-          "specularity_factor": "%FREE3D_SPECULARITY_FACTOR"
+          "emissive_factor": "%FREE3D_EMISSIVE_FACTOR",
+          "ambient_factor": "%FREE3D_AMBIENT_FACTOR",
+          "diffuse_factor": "%FREE3D_DIFFUSE_FACTOR",
+          "specular_factor": "%FREE3D_SPECULAR_FACTOR"
         }
       }
     ]

@@ -17,8 +17,8 @@
         "call": "add_color_style",
         "arguments": {
           "node": "skater_node$SUFFIX",
-          "ambience": "%COLOR",
-          "diffusivity": "%COLOR"
+          "ambient": "%COLOR",
+          "diffuse": "%COLOR"
         }
       },
       {

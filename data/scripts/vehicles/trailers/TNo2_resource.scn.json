@@ -21,10 +21,13 @@
           "reflection_map": "%REFLECTION_MAP",
           "triangle_tangent_error_behavior": "zero",
           "werror": false,
-          "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
-          "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
-          "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
-          "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR"
+          "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
+          "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
+          "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
+          "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR",
+          "fresnel_min": "%SKETCHFAB_FRESNEL_MIN",
+          "fresnel_max": "%SKETCHFAB_FRESNEL_MAX",
+          "fresnel_exponent": "%SKETCHFAB_FRESNEL_EXPONENT"
         }
       }
     ]
@@ -126,10 +129,10 @@
           "reflection_map": "%REFLECTION_MAP",
           "triangle_tangent_error_behavior": "zero",
           "werror": false,
-          "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
-          "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
-          "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
-          "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR"
+          "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
+          "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
+          "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
+          "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR"
         }
       }
     ]

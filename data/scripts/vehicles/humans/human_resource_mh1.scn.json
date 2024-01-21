@@ -15,10 +15,10 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "triangle_tangent_error_behavior": "zero",
-      "emissivity_factor": "%META_HUMAN_EMISSIVITY_FACTOR",
-      "ambience_factor": "%META_HUMAN_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%META_HUMAN_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%META_HUMAN_SPECULARITY_FACTOR"
+      "emissive_factor": "%META_HUMAN_EMISSIVE_FACTOR",
+      "ambient_factor": "%META_HUMAN_AMBIENT_FACTOR",
+      "diffuse_factor": "%META_HUMAN_DIFFUSE_FACTOR",
+      "specular_factor": "%META_HUMAN_SPECULAR_FACTOR"
     }
   },
   {
@@ -40,10 +40,10 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
-          "emissivity_factor": "%META_HUMAN_EMISSIVITY_FACTOR",
-          "ambience_factor": "%META_HUMAN_AMBIENCE_FACTOR",
-          "diffusivity_factor": "%META_HUMAN_DIFFUSIVITY_FACTOR",
-          "specularity_factor": "%META_HUMAN_SPECULARITY_FACTOR"
+          "emissive_factor": "%META_HUMAN_EMISSIVE_FACTOR",
+          "ambient_factor": "%META_HUMAN_AMBIENT_FACTOR",
+          "diffuse_factor": "%META_HUMAN_DIFFUSE_FACTOR",
+          "specular_factor": "%META_HUMAN_SPECULAR_FACTOR"
         }
       },
       {"call": "import_bone_weights", "arguments": {"destination": "$DIR$DECIMATE", "source": "female_mh_orig", "max_distance": 0.1}}

@@ -40,9 +40,9 @@
           "black_node": "car_node$CSUFFIX",
           "render_pass": "lightmap_black_node",
           "with_depth_texture": false,
-          "ambience": [0.5, 0.5, 0.5],
-          "diffusivity": [1, 1, 1],
-          "specularity": [1, 1, 1],
+          "ambient": [0.5, 0.5, 0.5],
+          "diffuse": [1, 1, 1],
+          "specular": [1, 1, 1],
           "shadow": true
         }
       },

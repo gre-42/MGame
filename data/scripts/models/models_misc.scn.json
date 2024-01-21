@@ -16,10 +16,10 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-        "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-        "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-        "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+        "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+        "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+        "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
       }
     }
   },
@@ -33,8 +33,8 @@
       "center_distances": [0, 501],
       "occluded_pass": "none",
       "occluder_pass": "none",
-      "emissivity": [1, 1, 1],
-      "ambience": [0, 0, 0],
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
       "blend_mode": "continuous",
       "alpha_distances": [0, 0, "inf", "inf"],
       "cull_faces": false,
@@ -58,10 +58,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -80,10 +80,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -103,10 +103,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -125,10 +125,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -147,10 +147,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -169,10 +169,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -192,10 +192,10 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "reflection_map": "car",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -214,10 +214,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -236,10 +236,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {
@@ -258,10 +258,10 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-        "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-        "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-        "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-        "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+        "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+        "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+        "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+        "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   },
   {

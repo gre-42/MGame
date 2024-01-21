@@ -17,8 +17,8 @@
         "required": ["%IF_HUMAN_STYLE"],
         "arguments": {
           "node": "human_node$SUFFIX",
-          "ambience": "%COLOR",
-          "diffusivity": "%COLOR"
+          "ambient": "%COLOR",
+          "diffuse": "%COLOR"
         }
       },
       {

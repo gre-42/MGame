@@ -19,14 +19,14 @@
         "transformation_mode": "all",
         "triangle_tangent_error_behavior": "zero",
         "werror": false,
-        "emissivity_factor": "%SKETCHFAB_EMISSIVITY_FACTOR",
-        "ambience_factor": "%SKETCHFAB_AMBIENCE_FACTOR",
-        "diffusivity_factor": "%SKETCHFAB_DIFFUSIVITY_FACTOR",
-        "specularity_factor": "%SKETCHFAB_SPECULARITY_FACTOR",
+        "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
+        "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
+        "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
+        "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR",
         "fresnel_min": 0,
         "fresnel_max": 0.4,
         "fresnel_exponent": 5,
-        "fresnel_ambience": [1, 1, 1],
+        "fresnel_ambient": [1, 1, 1],
         "triangulate": "%TRIANGULATE"
       }
     }

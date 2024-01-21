@@ -49,7 +49,7 @@
       "max": [0.5, 1],
       "occluded_pass": "lightmap_blobs",
       "occluder_pass": "lightmap_black_global_and_local",
-      "ambience": [1, 1, 1],
+      "ambient": [1, 1, 1],
       "blend_mode": "semi_continuous_02",
       "alpha_distances": [0, 0, "inf", "inf"],
       "cull_faces": true,

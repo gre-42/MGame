@@ -140,9 +140,9 @@
           "black_node": "",
           "render_pass": "lightmap_blobs",
           "with_depth_texture": false,
-          "ambience": [1, 1, 1],
-          "diffusivity": [1, 1, 1],
-          "specularity": [1, 1, 1],
+          "ambient": [1, 1, 1],
+          "diffuse": [1, 1, 1],
+          "specular": [1, 1, 1],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
           "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
         }

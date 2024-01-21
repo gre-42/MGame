@@ -17,8 +17,8 @@
         "arguments": {
           "selector": "body|chassis|turret|main_gun",
           "node": "car_node$SUFFIX",
-          "ambience": "%COLOR",
-          "diffusivity": "%COLOR"
+          "ambient": "%COLOR",
+          "diffuse": "%COLOR"
         }
       },
       {

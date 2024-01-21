@@ -60,13 +60,13 @@
           "blend_mode": "semi_continuous_02",
           "wrap_mode_t": "repeat",
           "reorient_uv0": false,
-          "ambience": [0.7, 0.7, 0.7],
-          "diffusivity": [0.5, 0.5, 0.5],
-          "specularity": [0, 0, 0],
+          "ambient": [0.7, 0.7, 0.7],
+          "diffuse": [0.5, 0.5, 0.5],
+          "specular": [0, 0, 0],
           "fresnel_min": 0,
           "fresnel_max": 0.5,
           "fresnel_exponent": 4,
-          "fresnel_ambience": [1, 1, 1]
+          "fresnel_ambient": [1, 1, 1]
         }],
       "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
       "grass_resource_names": [
@@ -132,10 +132,10 @@
       "driving_direction": "right",
       "blend_street": true,
       "blend_path": true,
-      "emissivity_factor": "%VANILLA_RALLY_EMISSIVITY_FACTOR",
-      "ambience_factor": "%VANILLA_RALLY_AMBIENCE_FACTOR",
-      "diffusivity_factor": "%VANILLA_RALLY_DIFFUSIVITY_FACTOR",
-      "specularity_factor": "%VANILLA_RALLY_SPECULARITY_FACTOR"
+      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
     }
   }
 }
