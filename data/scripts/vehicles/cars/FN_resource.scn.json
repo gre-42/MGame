@@ -38,10 +38,10 @@
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "FN_tirelines", "add": "obj_tire_line"}},
-  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [-0.8, -0.2, -1.35], "to": [-0.8, -1, -1.35]}}, {"comment": "left front"},
-  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [ 0.8, -0.2, -1.35], "to": [ 0.8, -1, -1.35]}}, {"comment": "right front"},
-  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [-0.8, -0.2,  1.20], "to": [-0.8, -1,  1.20]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [ 0.8, -0.2,  1.20], "to": [ 0.8, -1,  1.20]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [-0.75, -0.2, -1.35], "to": [-0.75, -1, -1.35]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [ 0.75, -0.2, -1.35], "to": [ 0.75, -1, -1.35]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [-0.75, -0.2,  1.20], "to": [-0.75, -1,  1.20]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [ 0.75, -0.2,  1.20], "to": [ 0.75, -1,  1.20]}}, {"comment": "right rear"},
 
   {"call": "compound_resource", "arguments": {"source_names": ["FN_hitbox", "FN_tirelines"], "dest_name": "FN_hitboxes"}},
   {"call": "compound_resource", "arguments": {"source_names": ["FN_hitbox"], "dest_name": "FN_massbox"}},

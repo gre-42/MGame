@@ -41,10 +41,10 @@
     }
   },
 
-  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [-1.5, 0.2, -2], "to": [-1.5, -0.65, -2]}}, {"comment": "left front"},
-  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [ 1.5, 0.2, -2], "to": [ 1.5, -0.65, -2]}}, {"comment": "right front"},
-  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [-1.5, 0.2,  2], "to": [-1.5, -0.65,  2]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [ 1.5, 0.2,  2], "to": [ 1.5, -0.65,  2]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [-1.4, 0.2, -2], "to": [-1.4, -0.65, -2]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [ 1.4, 0.2, -2], "to": [ 1.4, -0.65, -2]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [-1.4, 0.2,  2], "to": [-1.4, -0.65,  2]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "TW_tirelines", "from": [ 1.4, 0.2,  2], "to": [ 1.4, -0.65,  2]}}, {"comment": "right rear"},
 
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TW_tirelines", "add": "obj_tire_line"}},
 
