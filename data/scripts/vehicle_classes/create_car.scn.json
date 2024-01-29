@@ -140,7 +140,7 @@
         "required": ["%IF_PC", "%IF_DEVEL"],
         "call": "visual_player_status",
         "arguments": {
-          "format": "position|speed|acceleration|diameter|diameter2|energy",
+          "format": "position|speed|diameter|energy",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_status_left",
           "right": "player_status_right",
