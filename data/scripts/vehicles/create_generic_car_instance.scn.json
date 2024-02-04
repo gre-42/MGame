@@ -117,64 +117,131 @@
       },
 
       {
+        "call": "rigid_disk",
+        "arguments": {
+          "node": "wheel_left_front_node$SUFFIX",
+          "hitboxes": null,
+          "mass": 10,
+          "radius": 0.2,
+          "com": [0, 0, 0],
+          "I_rotation": [0, 90, 0],
+          "collidable_mode": "none",
+          "name": "wheel_left_front$NAME$SUFFIX",
+          "asset_id": "wheel_left_front$NAME"
+        }
+      },
+      {
         "call": "wheel",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
-          "node": "wheel_left_front_node$SUFFIX",
-          "position": "%WHEEL_LEFT_FRONT_POSITION",
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_left_front_node$SUFFIX",
+          "vehicle_mount_0": "%WHEEL_LEFT_FRONT_MOUNT_0",
+          "vehicle_mount_1": "%WHEEL_LEFT_FRONT_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
           "engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "brake_force": 50000,
+          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
           "Ks": 1e4,
-          "Ka": 4e2,
+          "Ka": 8e2,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 0
         }
       },
+
+      {
+        "call": "rigid_disk",
+        "arguments": {
+          "node": "wheel_right_front_node$SUFFIX",
+          "hitboxes": null,
+          "mass": 10,
+          "radius": 0.2,
+          "com": [0, 0, 0],
+          "I_rotation": [0, 90, 0],
+          "collidable_mode": "none",
+          "name": "wheel_right_front$NAME$SUFFIX",
+          "asset_id": "wheel_right_front$NAME"
+        }
+      },
       {
         "call": "wheel",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
-          "node": "wheel_right_front_node$SUFFIX",
-          "position": "%WHEEL_RIGHT_FRONT_POSITION",
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_right_front_node$SUFFIX",
+          "vehicle_mount_0": "%WHEEL_RIGHT_FRONT_MOUNT_0",
+          "vehicle_mount_1": "%WHEEL_RIGHT_FRONT_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
           "engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "brake_force": 50000,
+          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
           "Ks": 1e4,
-          "Ka": 4e2,
+          "Ka": 8e2,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 1
         }
       },
+
       {
-        "call": "wheel",
+        "call": "rigid_disk",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
           "node": "wheel_left_rear_node$SUFFIX",
-          "position": "%WHEEL_LEFT_REAR_POSITION",
-          "radius": "%WHEEL_RADIUS",
-          "engine": "%%vehicles/$NAME/REAR_ENGINE",
-          "brake_force": 50000,
-          "Ks": 1e4,
-          "Ka": 4e2,
-          "musF": [4e3, 8e3],
-          "musC": [1.1, 0.97],
-          "tire_id": 2
+          "hitboxes": null,
+          "mass": 10,
+          "radius": 0.2,
+          "com": [0, 0, 0],
+          "I_rotation": [0, 90, 0],
+          "collidable_mode": "none",
+          "name": "wheel_left_rear$NAME$SUFFIX",
+          "asset_id": "wheel_left_rear$NAME"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
-          "node": "wheel_right_rear_node$SUFFIX",
-          "position": "%WHEEL_RIGHT_REAR_POSITION",
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_left_rear_node$SUFFIX",
+          "vehicle_mount_0": "%WHEEL_LEFT_REAR_MOUNT_0",
+          "vehicle_mount_1": "%WHEEL_LEFT_REAR_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
           "engine": "%%vehicles/$NAME/REAR_ENGINE",
           "brake_force": 50000,
+          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
           "Ks": 1e4,
-          "Ka": 4e2,
+          "Ka": 8e2,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 2
+        }
+      },
+
+      {
+        "call": "rigid_disk",
+        "arguments": {
+          "node": "wheel_right_rear_node$SUFFIX",
+          "hitboxes": null,
+          "mass": 10,
+          "radius": 0.2,
+          "com": [0, 0, 0],
+          "I_rotation": [0, 90, 0],
+          "collidable_mode": "none",
+          "name": "wheel_right_rear$NAME$SUFFIX",
+          "asset_id": "wheel_right_rear$NAME"
+        }
+      },
+      {
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_right_rear_node$SUFFIX",
+          "vehicle_mount_0": "%WHEEL_RIGHT_REAR_MOUNT_0",
+          "vehicle_mount_1": "%WHEEL_RIGHT_REAR_MOUNT_1",
+          "radius": "%WHEEL_RADIUS",
+          "engine": "%%vehicles/$NAME/REAR_ENGINE",
+          "brake_force": 50000,
+          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
+          "Ks": 1e4,
+          "Ka": 8e2,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 3
@@ -203,10 +270,10 @@
   {
     "declare_macro": "generic_car.create",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_POSITION"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_POSITION"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_POSITION"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_POSITION"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_MOUNT_0"}},
 
       {"comment": {"call": "renderable_instance", "arguments": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
       {"comment": {"call": "renderable_instance", "arguments": {"name": "generic_car_massbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_massbox"}}},
@@ -239,10 +306,14 @@
         "WHEEL_RADIUS": "%WHEEL_RADIUS",
         "COLLIDABLE_MODE": "moving",
         "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-        "WHEEL_LEFT_FRONT_POSITION": "%WHEEL_LEFT_FRONT_POSITION",
-        "WHEEL_RIGHT_FRONT_POSITION": "%WHEEL_RIGHT_FRONT_POSITION",
-        "WHEEL_LEFT_REAR_POSITION": "%WHEEL_LEFT_REAR_POSITION",
-        "WHEEL_RIGHT_REAR_POSITION": "%WHEEL_RIGHT_REAR_POSITION",
+        "WHEEL_LEFT_FRONT_MOUNT_0": "%WHEEL_LEFT_FRONT_MOUNT_0",
+        "WHEEL_LEFT_FRONT_MOUNT_1": "%WHEEL_LEFT_FRONT_MOUNT_1",
+        "WHEEL_RIGHT_FRONT_MOUNT_0": "%WHEEL_RIGHT_FRONT_MOUNT_0",
+        "WHEEL_RIGHT_FRONT_MOUNT_1": "%WHEEL_RIGHT_FRONT_MOUNT_1",
+        "WHEEL_LEFT_REAR_MOUNT_0": "%WHEEL_LEFT_REAR_MOUNT_0",
+        "WHEEL_LEFT_REAR_MOUNT_1": "%WHEEL_LEFT_REAR_MOUNT_1",
+        "WHEEL_RIGHT_REAR_MOUNT_0": "%WHEEL_RIGHT_REAR_MOUNT_0",
+        "WHEEL_RIGHT_REAR_MOUNT_1": "%WHEEL_RIGHT_REAR_MOUNT_1",
         "ANGULAR_VELS_FRONT": "%ANGULAR_VELS_FRONT",
         "ANGULAR_VELS_REAR": "%ANGULAR_VELS_REAR",
         "ANGULAR_VELS": "%ANGULAR_VELS",
