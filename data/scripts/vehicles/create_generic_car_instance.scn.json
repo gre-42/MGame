@@ -141,8 +141,8 @@
           "engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "brake_force": 50000,
           "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
-          "Ks": 1e4,
-          "Ka": 8e2,
+          "Ks": 2e5,
+          "Ka": 1e4,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 0
@@ -174,8 +174,8 @@
           "engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "brake_force": 50000,
           "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
-          "Ks": 1e4,
-          "Ka": 8e2,
+          "Ks": 2e5,
+          "Ka": 1e4,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 1
@@ -207,8 +207,8 @@
           "engine": "%%vehicles/$NAME/REAR_ENGINE",
           "brake_force": 50000,
           "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
-          "Ks": 1e4,
-          "Ka": 8e2,
+          "Ks": 2e5,
+          "Ka": 1e4,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 2
@@ -240,8 +240,8 @@
           "engine": "%%vehicles/$NAME/REAR_ENGINE",
           "brake_force": 50000,
           "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
-          "Ks": 1e4,
-          "Ka": 8e2,
+          "Ks": 2e5,
+          "Ka": 1e4,
           "musF": [4e3, 8e3],
           "musC": [1.1, 0.97],
           "tire_id": 3
