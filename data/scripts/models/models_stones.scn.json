@@ -20,6 +20,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -47,6 +48,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -74,6 +76,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -101,6 +104,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -128,6 +132,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -155,6 +160,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -182,6 +188,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -209,6 +216,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -236,6 +244,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -264,6 +273,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -291,6 +301,7 @@
           "transformation_mode": "position",
           "desaturate": "%DESATURATE",
           "histogram": "%HISTOGRAM",
+          "lighten": "%LIGHTEN",
           "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
           "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
           "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
@@ -308,7 +319,8 @@
     "arguments": {
       "SUFFIX": "",
       "DESATURATE": 0,
-      "HISTOGRAM": ""
+      "HISTOGRAM": "",
+      "LIGHTEN": [0, 0, 0]
     }
   },
   {
@@ -316,7 +328,8 @@
     "arguments": {
       "SUFFIX": "_canyon",
       "DESATURATE": 0,
-      "HISTOGRAM": "textures/histograms/Rock029.png"
+      "HISTOGRAM": "textures/histograms/Rock029.png",
+      "LIGHTEN": [0, 0, 0]
     }
   },
   {
@@ -324,7 +337,8 @@
     "arguments": {
       "SUFFIX": "_dune",
       "DESATURATE": 0,
-      "HISTOGRAM": "textures/histograms/desert_dune.png"
+      "HISTOGRAM": "textures/histograms/desert_dune.png",
+      "LIGHTEN": [0, 0, 0]
     }
   },
   {
@@ -332,7 +346,8 @@
     "arguments": {
       "SUFFIX": "_snow",
       "DESATURATE": 1,
-      "HISTOGRAM": "textures/histograms/snow_tree.png"
+      "HISTOGRAM": "textures/histograms/snow_tree.png",
+      "LIGHTEN": [-0.3, -0.3, -0.3]
     }
   }
 ]
