@@ -32,15 +32,15 @@
         "bounding_terrain_type": "ocean_ground",
         "default_terrain_type": "grass",
         "terrain_materials": {
-          "grass": "sand",
-          "wayside1_grass": "sand",
-          "wayside2_grass": "sand",
-          "flowers": "sand",
-          "trees": "sand",
-          "elevated_grass": "sand",
-          "elevated_grass_base": "stone",
-          "stone": "stone",
-          "asphalt": "tarmac",
+          "grass": "surface_base_sand",
+          "wayside1_grass": "surface_base_sand",
+          "wayside2_grass": "surface_base_sand",
+          "flowers": "surface_base_sand",
+          "trees": "surface_base_sand",
+          "elevated_grass": "surface_base_sand",
+          "elevated_grass_base": "surface_base_stone",
+          "stone": "surface_base_stone",
+          "asphalt": "surface_base_tarmac",
           "water_floor": "none",
           "water_floor_base": "none",
           "street_hole": "none",
@@ -94,7 +94,7 @@
             }
           },
           {
-            "facade": ["wall_facade_plaster_white", "concrete1_2K_wh_Detail"],
+            "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
             "min_height": 5,
             "interior": {
               "facade_edge_size": [1, 1],

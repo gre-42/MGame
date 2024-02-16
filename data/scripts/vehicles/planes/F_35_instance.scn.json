@@ -63,10 +63,78 @@
           "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
-      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.7, -0.45, -1.35], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
-      {"call": "wheel", "arguments": {"rigid_body": "car_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.7, -0.45,  1.20], "radius": 0.3, "engine": "wheels", "brake_force": 50000, "Ks": 1e5, "Ka": 4e3, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
+      {
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_left_front_node$SUFFIX",
+          "vehicle_mount_0": [-0.7, -0.45, -1.35],
+          "vehicle_mount_1": [-0.7, 0, -1.35],
+          "radius": 0.3,
+          "engine": "wheels",
+          "brake_force": 50000,
+          "brake_torque": 400,
+          "Ks": 1e5,
+          "Ka": 4e3,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 0
+        }
+      },
+      {
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_right_front_node$SUFFIX",
+          "vehicle_mount_0": [ 0.7, -0.45, -1.35],
+          "vehicle_mount_1": [ 0.7, 0, -1.35],
+          "radius": 0.3,
+          "engine": "wheels",
+          "brake_force": 50000,
+          "brake_torque": 400,
+          "Ks": 1e5,
+          "Ka": 4e3,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 1
+        }
+      },
+      {
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_left_rear_node$SUFFIX",
+          "vehicle_mount_0": [-0.7, -0.45,  1.20],
+          "vehicle_mount_1": [-0.7, 0,  1.20],
+          "radius": 0.3,
+          "engine": "wheels",
+          "brake_force": 50000,
+          "brake_torque": 400,
+          "Ks": 1e5,
+          "Ka": 4e3,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 2
+        }
+      },
+      {
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "wheel": "wheel_right_rear_node$SUFFIX",
+          "vehicle_mount_0": [ 0.7, -0.45,  1.20],
+          "vehicle_mount_1": [ 0.7, 0,  1.20],
+          "radius": 0.3,
+          "engine": "wheels",
+          "brake_force": 50000,
+          "brake_torque": 400,
+          "Ks": 1e5,
+          "Ka": 4e3,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 3
+        }
+      },
       {
         "call": "rotor",
         "arguments": {
