@@ -3,14 +3,36 @@
     "call": "set_surface_contact_info",
     "arguments": {
       "material0": "surface_base_tire",
+      "material1": "surface_base_tarmac",
+      "surface_stiction_factor": 1,
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "skidmarks_tarmac",
+          "smoke_particle_instance_prefix": "skidmarks_tarmac",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": "inf"
+        }
+      ]
+    }
+  },
+  {
+    "call": "set_surface_contact_info",
+    "arguments": {
+      "material0": "surface_base_tire",
       "material1": "surface_base_foliage",
       "surface_stiction_factor": 0.9,
-      "minimum_velocity_for_smoke": 5,
-      "smoke_particle_resource_name": "particles_gravel",
-      "smoke_particle_instance_prefix": "particles_gravel",
-      "smoke_particle_generation_velocities": [4, 5, 50],
-      "smoke_particle_generation_frequencies": [0, 2.5, 25],
-      "smoke_particle_animation_duration": 1.5
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "particles_gravel",
+          "smoke_particle_instance_prefix": "particles_gravel",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": 1.5
+        }
+      ]
     }
   },
   {
@@ -19,12 +41,16 @@
       "material0": "surface_base_tire",
       "material1": "surface_base_gravel",
       "surface_stiction_factor": 0.9,
-      "minimum_velocity_for_smoke": 5,
-      "smoke_particle_resource_name": "particles_gravel",
-      "smoke_particle_instance_prefix": "particles_gravel",
-      "smoke_particle_generation_velocities": [4, 5, 50],
-      "smoke_particle_generation_frequencies": [0, 2.5, 25],
-      "smoke_particle_animation_duration": 1.5
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "particles_gravel",
+          "smoke_particle_instance_prefix": "particles_gravel",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": 1.5
+        }
+      ]
     }
   },
   {
@@ -33,12 +59,16 @@
       "material0": "surface_base_tire",
       "material1": "surface_base_sand",
       "surface_stiction_factor": 0.9,
-      "minimum_velocity_for_smoke": 5,
-      "smoke_particle_resource_name": "particles_gravel",
-      "smoke_particle_instance_prefix": "particles_gravel",
-      "smoke_particle_generation_velocities": [4, 5, 50],
-      "smoke_particle_generation_frequencies": [0, 2.5, 25],
-      "smoke_particle_animation_duration": 1.5
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "particles_gravel",
+          "smoke_particle_instance_prefix": "particles_gravel",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": 1.5
+        }
+      ]
     }
   },
   {
@@ -47,12 +77,16 @@
       "material0": "surface_base_tire",
       "material1": "surface_base_grass",
       "surface_stiction_factor": 0.8,
-      "minimum_velocity_for_smoke": 5,
-      "smoke_particle_resource_name": "particles_dirt",
-      "smoke_particle_instance_prefix": "particles_dirt",
-      "smoke_particle_generation_velocities": [4, 5, 50],
-      "smoke_particle_generation_frequencies": [0, 2.5, 25],
-      "smoke_particle_animation_duration": 1.5
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "particles_dirt",
+          "smoke_particle_instance_prefix": "particles_dirt",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": 1.5
+        }
+      ]
     }
   },
   {
@@ -61,12 +95,16 @@
       "material0": "surface_base_tire",
       "material1": "surface_base_snow",
       "surface_stiction_factor": 0.8,
-      "minimum_velocity_for_smoke": 5,
-      "smoke_particle_resource_name": "particles_snow",
-      "smoke_particle_instance_prefix": "particles_snow",
-      "smoke_particle_generation_velocities": [4, 5, 50],
-      "smoke_particle_generation_frequencies": [0, 2.5, 25],
-      "smoke_particle_animation_duration": 1.5
+      "smoke": [
+        {
+          "minimum_velocity_for_smoke": 5,
+          "smoke_particle_resource_name": "particles_snow",
+          "smoke_particle_instance_prefix": "particles_snow",
+          "smoke_particle_generation_velocities": [4, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_animation_duration": 1.5
+        }
+      ]
     }
   }
 ]

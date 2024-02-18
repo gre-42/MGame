@@ -194,6 +194,12 @@
         }
       },
       {
+        "playback": "add_local_skidmarks",
+        "arguments": {
+          "SUFFIX": "_local_skidmarks"
+        }
+      },
+      {
         "comment": "macro_playback add_local_blob_instances_light LSUFFIX:-blobs"
       }
     ]

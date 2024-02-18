@@ -33,9 +33,9 @@
         "call": "keep_offset_from_camera",
         "arguments": {
           "follower": "light_node_instances$LSUFFIX",
-          "offset": [10, 0, 10],
-          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
-          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
+          "offset": [0, 0, 0],
+          "texture_width": "%SCENE_LIGHTMAP_WIDTH",
+          "texture_height": "%SCENE_LIGHTMAP_HEIGHT"
         }
       },
       {
@@ -81,9 +81,9 @@
         "call": "keep_offset_from_camera",
         "arguments": {
           "follower": "light_node_movables$LSUFFIX",
-          "offset": [10, 0, 10],
-          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
-          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
+          "offset": [0, 0, 0],
+          "texture_width": "%SCENE_LIGHTMAP_WIDTH",
+          "texture_height": "%SCENE_LIGHTMAP_HEIGHT"
         }
       },
       {
@@ -129,8 +129,8 @@
         "arguments": {
           "follower": "light_node$LSUFFIX",
           "offset": [0, 0, 0],
-          "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
-          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
+          "texture_width": "%SCENE_LIGHTMAP_WIDTH",
+          "texture_height": "%SCENE_LIGHTMAP_HEIGHT"
         }
       },
       {

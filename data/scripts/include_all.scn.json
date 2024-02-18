@@ -23,6 +23,7 @@
   {"exclude": ["%IF_ANDROID"], "include": "models/models_vegetation.scn.json"},
 
   {"include": "lights/lights.scn.json"},
+  {"include": "local_skidmarks.scn.json"},
   {"include": "screen_constraints.scn.json"},
   {"include": "main_menu/main_menu.scn.json"},
   {"include": "scenes/scene_loading.scn.json"},

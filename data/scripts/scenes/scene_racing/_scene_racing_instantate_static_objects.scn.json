@@ -367,6 +367,12 @@
       "arguments": { "LSUFFIX": "_blobs" }
     },
     {
+      "playback": "add_local_skidmarks",
+      "arguments": {
+        "SUFFIX": "_local_skidmarks"
+      }
+    },
+    {
       "comment": "Reflection map"
     },
     {
