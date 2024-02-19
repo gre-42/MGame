@@ -50,8 +50,8 @@
       "aggregate_mode": "instances_sorted",
       "transformation_mode": "position_lookat",
       "billboards": [
-        {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [2.5, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [2.5, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0  ], "vertex_scale": [2.5, 1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [1, 0.5], "uv_offset": [0, 0.5], "vertex_scale": [2.5, 1, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
       ]
     }
   }

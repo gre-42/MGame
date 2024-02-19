@@ -7,10 +7,10 @@
       "surface_stiction_factor": 1,
       "smoke": [
         {
-          "smoke_particle_resource_name": "skidmarks_tarmac",
-          "smoke_particle_instance_prefix": "skidmarks_tarmac",
+          "smoke_particle_resource_name": "skidmarks_a20_black",
+          "smoke_particle_instance_prefix": "skidmarks_a20_black",
           "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
+          "smoke_particle_generation_frequencies": [0, 20, 200],
           "smoke_particle_animation_duration": "inf"
         }
       ]
@@ -41,10 +41,10 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
-          "smoke_particle_resource_name": "skidmarks_tarmac",
-          "smoke_particle_instance_prefix": "skidmarks_tarmac",
+          "smoke_particle_resource_name": "skidmarks_a20_black",
+          "smoke_particle_instance_prefix": "skidmarks_a20_black",
           "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 5, 50],
+          "smoke_particle_generation_frequencies": [0, 20, 200],
           "smoke_particle_animation_duration": "inf"
         },
         {

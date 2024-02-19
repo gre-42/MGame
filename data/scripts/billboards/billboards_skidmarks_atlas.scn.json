@@ -1,0 +1,74 @@
+[
+  {
+    "call": "add_texture_atlas",
+    "arguments": {
+      "name": "skidmarks0",
+      "width": 512,
+      "height": 512,
+      "color_mode": "rgba",
+      "images": [
+        {"texture_pos": [0,   0], "texture": "#dot256_a100_black"},
+        {"texture_pos": [256, 0], "texture": "#dot256_a20_black"}
+      ]
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_atlas_png",
+      "arguments": {
+        "name": "skidmarks0",
+        "filename": "skidmarks0.png",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "skidmarks0",
+      "texture_filename": "#skidmarks0",
+      "min": [-1, -1],
+      "max": [1, 1],
+      "rotation": [-90, 0, 0],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "ambient": [1, 1, 1],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_yangle",
+      "billboards": [
+        {"uv_scale": [0.5, 0.5], "uv_offset": [0  , 0], "vertex_scale": [0.35, 1, 0.35], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "none"},
+        {"uv_scale": [0.5, 0.5], "uv_offset": [0.5, 0], "vertex_scale": [0.35, 1, 0.35], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "none"}
+      ]
+    }
+  },
+  {
+    "call": "animatable_billboards",
+    "arguments": {
+      "name": "animatable_skidmarks0",
+      "billboards": "skidmarks0",
+      "max_num_instances": 10000,
+      "substrate": "skidmark"
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "skidmarks_a100_black",
+      "animatable": "animatable_skidmarks0",
+      "frames": [0],
+      "duration": "inf"
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "skidmarks_a20_black",
+      "animatable": "animatable_skidmarks0",
+      "frames": [1],
+      "duration": "inf"
+    }
+  }
+]
