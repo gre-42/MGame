@@ -7,11 +7,18 @@
       "surface_stiction_factor": 1,
       "smoke": [
         {
-          "smoke_particle_resource_name": "skidmarks_a20_black",
-          "smoke_particle_instance_prefix": "skidmarks_a20_black",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 20, 200],
-          "smoke_particle_animation_duration": "inf"
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
+        },
+        {
+          "resource_name": "particles_dust",
+          "instance_prefix": "particles_dust",
+          "tire_velocities": [16, 20, 50],
+          "tire_frequencies": [0, 40, 100],
+          "animation_duration": 1.5
         }
       ]
     }
@@ -24,11 +31,11 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
-          "smoke_particle_resource_name": "particles_gravel",
-          "smoke_particle_instance_prefix": "particles_gravel",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
-          "smoke_particle_animation_duration": 1.5
+          "resource_name": "particles_gravel",
+          "instance_prefix": "particles_gravel",
+          "vehicle_velocities": [4, 5, 50],
+          "vehicle_frequencies": [0, 2.5, 25],
+          "animation_duration": 1.5
         }
       ]
     }
@@ -41,18 +48,18 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
-          "smoke_particle_resource_name": "skidmarks_a20_black",
-          "smoke_particle_instance_prefix": "skidmarks_a20_black",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 20, 200],
-          "smoke_particle_animation_duration": "inf"
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
         },
         {
-          "smoke_particle_resource_name": "particles_gravel",
-          "smoke_particle_instance_prefix": "particles_gravel",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
-          "smoke_particle_animation_duration": 1.5
+          "resource_name": "particles_gravel",
+          "instance_prefix": "particles_gravel",
+          "vehicle_velocities": [4, 5, 50],
+          "vehicle_frequencies": [0, 2.5, 25],
+          "animation_duration": 1.5
         }
       ]
     }
@@ -65,11 +72,11 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
-          "smoke_particle_resource_name": "particles_gravel",
-          "smoke_particle_instance_prefix": "particles_gravel",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
-          "smoke_particle_animation_duration": 1.5
+          "resource_name": "particles_gravel",
+          "instance_prefix": "particles_gravel",
+          "vehicle_velocities": [4, 5, 50],
+          "vehicle_frequencies": [0, 2.5, 25],
+          "animation_duration": 1.5
         }
       ]
     }
@@ -82,11 +89,11 @@
       "surface_stiction_factor": 0.8,
       "smoke": [
         {
-          "smoke_particle_resource_name": "particles_dirt",
-          "smoke_particle_instance_prefix": "particles_dirt",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
-          "smoke_particle_animation_duration": 1.5
+          "resource_name": "particles_dirt",
+          "instance_prefix": "particles_dirt",
+          "vehicle_velocities": [4, 5, 50],
+          "vehicle_frequencies": [0, 2.5, 25],
+          "animation_duration": 1.5
         }
       ]
     }
@@ -99,11 +106,11 @@
       "surface_stiction_factor": 0.8,
       "smoke": [
         {
-          "smoke_particle_resource_name": "particles_snow",
-          "smoke_particle_instance_prefix": "particles_snow",
-          "smoke_particle_generation_velocities": [4, 5, 50],
-          "smoke_particle_generation_frequencies": [0, 2.5, 25],
-          "smoke_particle_animation_duration": 1.5
+          "resource_name": "particles_snow",
+          "instance_prefix": "particles_snow",
+          "vehicle_velocities": [4, 5, 50],
+          "vehicle_frequencies": [0, 2.5, 25],
+          "animation_duration": 1.5
         }
       ]
     }
