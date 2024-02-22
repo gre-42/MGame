@@ -33,9 +33,11 @@
         {
           "resource_name": "particles_gravel",
           "instance_prefix": "particles_gravel",
-          "vehicle_velocities": [4, 5, 50],
-          "vehicle_frequencies": [0, 2.5, 25],
-          "animation_duration": 1.5
+          "tire_velocities": [16, 20, 50],
+          "tire_frequencies": [0, 70, 90],
+          "vehicle_velocities": [4, 50],
+          "vehicle_frequencies": [0, 10],
+          "animation_duration": 2
         }
       ]
     }
