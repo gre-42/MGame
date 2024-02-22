@@ -31,6 +31,13 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
+        },
+        {
           "resource_name": "particles_gravel",
           "instance_prefix": "particles_gravel",
           "tire_velocities": [16, 20, 50],
@@ -74,6 +81,13 @@
       "surface_stiction_factor": 0.9,
       "smoke": [
         {
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
+        },
+        {
           "resource_name": "particles_gravel",
           "instance_prefix": "particles_gravel",
           "vehicle_velocities": [4, 5, 50],
@@ -91,6 +105,13 @@
       "surface_stiction_factor": 0.8,
       "smoke": [
         {
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
+        },
+        {
           "resource_name": "particles_dirt",
           "instance_prefix": "particles_dirt",
           "vehicle_velocities": [4, 5, 50],
@@ -107,6 +128,13 @@
       "material1": "surface_base_snow",
       "surface_stiction_factor": 0.8,
       "smoke": [
+        {
+          "resource_name": "skidmarks_a20_black",
+          "instance_prefix": "skidmarks_a20_black",
+          "tire_velocities": [4, 5, 50],
+          "tire_frequencies": [0, 20, 200],
+          "animation_duration": "inf"
+        },
         {
           "resource_name": "particles_snow",
           "instance_prefix": "particles_snow",
