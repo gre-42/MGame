@@ -82,7 +82,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Weight_Texture",
-      "color": "textures/lf_heightmap.png",
+      "color": "textures/noise/lf_heightmap.png",
       "color_mode": "grayscale",
       "times": 12,
       "plus": -3,
@@ -94,7 +94,17 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Feather_Texture",
-      "color": "textures/hf_heightmap.png",
+      "color": "textures/noise/hf_heightmap.png",
+      "color_mode": "grayscale",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "required": ["!IF_ANDROID"],
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "checkerboard",
+      "color": "textures/noise/checkerboard.png",
       "color_mode": "grayscale",
       "anisotropic_filtering_level": 16
     }

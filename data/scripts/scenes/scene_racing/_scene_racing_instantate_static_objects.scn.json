@@ -262,8 +262,8 @@
       "arguments": {
         "type": "dynamic",
         "name": "dirtmap_node",
-        "position": [0, 1000, 0],
-        "rotation": [-90, 0, 0],
+        "position": "%OSM_POSITION",
+        "rotation": "%OSM_ROTATION",
         "scale": 1
       }
     },

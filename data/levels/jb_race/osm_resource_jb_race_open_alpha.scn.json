@@ -7,7 +7,7 @@
       "filename": "$__DIR__/../jb/map_jb.osm",
       "cache_filename": "$__APPDATA__/jb_$LOADED_GAME_LEVEL.cereal.binary",
       "heightmap": "%LOADED_HEIGHTMAP",
-      "grass_foliagemap": "textures/foliagemap.png",
+      "grass_foliagemap": "textures/noise/foliagemap.png",
       "terrain_undefined_textures": ["textures/debug/pink.png"],
       "terrain_grass_textures": [
         "#Gravel010_Base",
@@ -145,7 +145,6 @@
         "vegetation1.3(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation1.4(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation1.5(p:1)(hitbox:box_02_1_02_hitbox)"],
-
       "path_mud_grass_resource_names": [
         "bflower2            (p:0.1)",
         "vegetation8.3",
@@ -168,6 +167,13 @@
         "vegetation1.3(hitbox:box_02_1_02_hitbox)",
         "vegetation1.4(hitbox:box_02_1_02_hitbox)",
         "vegetation1.5(hitbox:box_02_1_02_hitbox)"],
+      "zone_resource_names": [
+        "vegetation1.12",
+        "vegetation1.13",
+        "vegetation1.14",
+        "vegetation1.15",
+        "vegetation1.16",
+        "vegetation1.17"],
       "dirt_decals_resource_names": [
         "Leaf018_2",
         "Leaf018_2_Red",
@@ -256,11 +262,14 @@
       "street_node_smoothing_iterations": 500,
       "street_edge_smoothness": 0.1,
       "terrain_edge_smoothness": 0.1,
-      "displacementmap": "textures/hf_heightmap.png",
+      "displacementmap": "textures/noise/hf_heightmap.png",
       "displacementmap_min": 0,
       "displacementmap_uv_scale": 1e-2,
       "displacementmap_distances": [0, 5],
       "displacementmap_heights": [0, 1],
+      "zonemap": "textures/noise/checkerboard.png",
+      "zonemap_width": 1000,
+      "zonemap_height": 1000,
       "driving_direction": "right",
       "blend_street": true,
       "blend_path": true,

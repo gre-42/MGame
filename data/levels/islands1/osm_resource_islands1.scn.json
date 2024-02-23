@@ -8,7 +8,7 @@
         "filename": "$__DIR__/map_islands1.osm",
         "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
         "heightmap": "$__DIR__/heightmap.pgm",
-        "grass_foliagemap": "textures/foliagemap.png",
+        "grass_foliagemap": "textures/noise/foliagemap.png",
         "terrain_undefined_textures": ["textures/debug/pink.png"],
         "terrain_grass_textures": [
           "#Gravel010_Base",
