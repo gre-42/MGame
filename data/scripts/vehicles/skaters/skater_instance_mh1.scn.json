@@ -69,10 +69,82 @@
             "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
       },
-      {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_left_front_node$SUFFIX",  "position": [-0.15, -0.5, -0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_front_node$SUFFIX", "position": [ 0.15, -0.5, -0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_left_rear_node$SUFFIX",   "position": [-0.15, -0.5,  0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 2}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "wheel", "arguments": {"rigid_body": "skater_node$SUFFIX", "node": "wheel_right_rear_node$SUFFIX",  "position": [ 0.15, -0.5,  0.35], "radius": 0.1, "engine": "engine", "brake_force": 5000, "Ks": 1e4, "Ka": 4e2, "musF": [4e3, 8e3], "musC": [1.1, 0.97], "tire_id": 3}},
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "skater_node$SUFFIX",
+          "wheel": "wheel_left_front_node$SUFFIX",
+          "vehicle_mount_0": [-0.15, -0.5, -0.35],
+          "vehicle_mount_1": [-0.15, 0, -0.35],
+          "radius": 0.1,
+          "engine": "engine",
+          "brake_force": 5000,
+          "brake_torque": "%%vehicles/skating_mh1/BRAKE_TORQUE",
+          "Ks": 1e4,
+          "Ka": 4e2,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 0
+        }
+      },
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "skater_node$SUFFIX",
+          "wheel": "wheel_right_front_node$SUFFIX",
+          "vehicle_mount_0": [0.15, -0.5, -0.35],
+          "vehicle_mount_1": [0.15, 0, -0.35],
+          "radius": 0.1,
+          "engine": "engine",
+          "brake_force": 5000,
+          "brake_torque": "%%vehicles/skating_mh1/BRAKE_TORQUE",
+          "Ks": 1e4,
+          "Ka": 4e2,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 1
+        }
+      },
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "skater_node$SUFFIX",
+          "wheel": "wheel_left_rear_node$SUFFIX",
+          "vehicle_mount_0": [-0.15, -0.5, 0.35],
+          "vehicle_mount_1": [-0.15, 0, 0.35],
+          "radius": 0.1,
+          "engine": "engine",
+          "brake_force": 5000,
+          "brake_torque": "%%vehicles/skating_mh1/BRAKE_TORQUE",
+          "Ks": 1e4,
+          "Ka": 4e2,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 2
+        }
+      },
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "call": "wheel",
+        "arguments": {
+          "vehicle": "skater_node$SUFFIX",
+          "wheel": "wheel_right_rear_node$SUFFIX",
+          "vehicle_mount_0": [0.15, -0.5, 0.35],
+          "vehicle_mount_1": [0.15, 0, 0.35],
+          "radius": 0.1,
+          "engine": "engine",
+          "brake_force": 5000,
+          "brake_torque": "%%vehicles/skating_mh1/BRAKE_TORQUE",
+          "Ks": 1e4,
+          "Ka": 4e2,
+          "musF": [4e3, 8e3],
+          "musC": [1.1, 0.97],
+          "tire_id": 3
+        }
+      },
       {
         "call": "create_car_controller",
         "arguments": {
