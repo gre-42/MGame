@@ -40,8 +40,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {"texture_pos": [0, 0], "texture": "#wall_$NAME"},
-            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
+            {"position": [0, 0], "texture": "#wall_$NAME"},
+            {"position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
           ]
         }
       },
@@ -53,8 +53,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {"texture_pos": [0, 0], "texture": "%WALL_NORMAL" },
-            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
+            {"position": [0, 0], "texture": "%WALL_NORMAL" },
+            {"position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
           ]
         }
       },
@@ -110,8 +110,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {"texture_pos": [0, 0], "texture": "%WALL_COLOR"},
-            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
+            {"position": [0, 0], "texture": "%WALL_COLOR"},
+            {"position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
           ]
         }
       },
@@ -123,8 +123,8 @@
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {"texture_pos": [0, 0], "texture": "%WALL_NORMAL"},
-            {"texture_pos": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
+            {"position": [0, 0], "texture": "%WALL_NORMAL"},
+            {"position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
           ]
         }
       },

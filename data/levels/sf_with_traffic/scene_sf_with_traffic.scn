@@ -8,7 +8,7 @@ macro_playback scene_racing_static
     OSM_MAP_RESOURCE:osm_resource_sf
     IF_HAS_OVERLAY:#
     IF_DIRTMAP:
-    DIRTMAP_TEXTURE:textures/dirtmap_dense.png
+    DIRTMAP_TEXTURE:textures/noise/dirtmap_dense.png
     DIRTMAP_OFFSET:0
     DIRTMAP_DISCRETENESS:1
     DIRT_SCALE:0.5

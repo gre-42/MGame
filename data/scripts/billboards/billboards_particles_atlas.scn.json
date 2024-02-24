@@ -7,11 +7,11 @@
       "height": 1024,
       "color_mode": "rgba",
       "images": [
-        {"texture_pos": [0,   0], "texture": "#smoke"},
-        {"texture_pos": [0, 128], "texture": "#particles_gravel"},
-        {"texture_pos": [0, 256], "texture": "#particles_dirt"},
-        {"texture_pos": [0, 384], "texture": "#particles_snow"},
-        {"texture_pos": [0, 512], "texture": "#particles_dust"}
+        {"position": [0,   0], "texture": "#smoke"},
+        {"position": [0, 128], "texture": "#particles_gravel"},
+        {"position": [0, 256], "texture": "#particles_dirt"},
+        {"position": [0, 384], "texture": "#particles_snow"},
+        {"position": [0, 512], "texture": "#particles_dust"}
       ]
     }
   },

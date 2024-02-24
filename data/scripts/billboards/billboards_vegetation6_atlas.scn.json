@@ -7,18 +7,18 @@
       "height": 4096,
       "color_mode": "rgba",
       "images": [
-        {"texture_pos": [0, 20], "texture": "#tc0"},
-        {"texture_pos": [1024, 20], "texture": "#tc3"},
-        {"texture_pos": [2048, 20], "texture": "#tc4"},
-        {"texture_pos": [0, 2068], "texture": "#tc5"},
-        {"texture_pos": [1024, 2068], "texture": "#tc6"},
-        {"texture_pos": [2048, 2068], "texture": "#Trees0023_desert"},
-        {"texture_pos": [2048, 3092], "texture": "#Trees0024_desert"},
-        {"texture_pos": [3072, 20], "texture": "#grass_tbdpec3r_island_bright"},
-        {"texture_pos": [3072, 532], "texture": "#grass_tbdpec3r_island_green1"},
-        {"texture_pos": [3072, 1044], "texture": "#foliage_gradient"},
-        {"texture_pos": [3072, 2068], "texture": "#Trees0029_desert"},
-        {"texture_pos": [3072, 3092], "texture": "#Trees0096_desert"}
+        {"position": [0, 20], "texture": "#tc0"},
+        {"position": [1024, 20], "texture": "#tc3"},
+        {"position": [2048, 20], "texture": "#tc4"},
+        {"position": [0, 2068], "texture": "#tc5"},
+        {"position": [1024, 2068], "texture": "#tc6"},
+        {"position": [2048, 2068], "texture": "#Trees0023_desert"},
+        {"position": [2048, 3092], "texture": "#Trees0024_desert"},
+        {"position": [3072, 20], "texture": "#grass_tbdpec3r_island_bright"},
+        {"position": [3072, 532], "texture": "#grass_tbdpec3r_island_green1"},
+        {"position": [3072, 1044], "texture": "#foliage_gradient"},
+        {"position": [3072, 2068], "texture": "#Trees0029_desert"},
+        {"position": [3072, 3092], "texture": "#Trees0096_desert"}
       ]
     }
   },
