@@ -83,8 +83,8 @@
         {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.5 ,  0.75 ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
         {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.5  ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
         {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.75 ], "layer": 0, "vertex_scale": [ 3  ,  3   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"}
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"}
       ]
     }
   }
