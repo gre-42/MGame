@@ -48,8 +48,8 @@
           "ocean_ground": "none",
           "undefined": "none"},
         "street_materials": "surface_base_tarmac",
-        "grass_dirt_texture": "#Ground025",
-        "street_dirt_texture": "#Asphalt016_Dirt",
+        "grass_dirt_texture": "#black",
+        "# street_dirt_texture": "#Asphalt016_Dirt",
         "street_alpha_textures": [
           "#PlusDetail",
           "#TimesBlend5",
@@ -216,6 +216,7 @@
         "zonemap": "textures/noise/checkerboard.png",
         "zonemap_width": 1000,
         "zonemap_height": 1000,
+        "zonemap_step_size": 2,
         "agent_radius": 10,
         "driving_direction": "right",
         "blend_street": true,
