@@ -13,12 +13,15 @@
       "occluded_pass": "lightmap_black_global_static",
       "occluder_pass": "none",
       "aggregate_mode": "none",
-      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
-      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
-      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
-      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
       "transformation_mode": "all",
-      "triangle_tangent_error_behavior": "zero"
+      "triangle_tangent_error_behavior": "zero",
+      "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
+      "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
+      "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
+      "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR",
+      "fresnel_min": "%SKETCHFAB_FRESNEL_MIN",
+      "fresnel_max": "%SKETCHFAB_FRESNEL_MAX",
+      "fresnel_exponent": "%SKETCHFAB_FRESNEL_EXPONENT"
     }
   }
 ]
