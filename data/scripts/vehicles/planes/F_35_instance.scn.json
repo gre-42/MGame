@@ -33,10 +33,35 @@
           "asset_id": "F_35"
         }
       },
+      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "capacity": 40}},
+      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "amount": 20}},
+      {
+        "call": "gun",
+        "arguments": {
+          "node": "main_gun_end_node$SUFFIX",
+          "parent_rigid_body_node": "car_node$SUFFIX",
+          "punch_angle_node": null,
+          "cool_down": 0.5,
+          "bullet_renderable": "tank_bullet_renderable",
+          "bullet_hitbox": "tank_bullet_hitbox",
+          "bullet_explosion_resource": "large_explosion",
+          "bullet_explosion_animation_time": 0.6,
+          "bullet_rigid_body_flags": "none",
+          "bullet_mass": 200,
+          "bullet_velocity": 0,
+          "bullet_lifetime": 160,
+          "bullet_damage": 500,
+          "bullet_damage_radius": 20,
+          "bullet_size": [2.4, 2.4, 20],
+          "ammo_type": "F_35_ammo",
+          "punch_angle_idle_std": 0,
+          "punch_angle_shoot_std": 0
+        }
+      },
       {
         "comment": [
-            "28000 pounds = 124550 Newton",
-            "43000 pounds = 191274 Newton"
+          "28000 pounds = 124550 Newton",
+          "43000 pounds = 191274 Newton"
         ]
       },
       {
@@ -324,6 +349,8 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "left_rudder_node$SUFFIX",  "name": "left_rudder_shift_node$SUFFIX",  "position": [ 1.5, 0, -6]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX",          "name": "right_rudder_node$SUFFIX",       "position": [ 1.5, 0,  6]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_rudder_node$SUFFIX", "name": "right_rudder_shift_node$SUFFIX", "position": [-1.5, 0, -6]}},
+      {"comment": "guns"},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, -3, 0]}},
       {"comment": "Graphics"},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
@@ -354,7 +381,7 @@
         "arguments": {
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": false,
-          "IF_HAS_GUN": false,
+          "IF_HAS_GUN": true,
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
           "ROLE": "driver"
@@ -367,6 +394,14 @@
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
           "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
+        }
+      },
+      {
+        "call": "player_set_aiming_gun",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "ypln_node": null,
+          "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
       {
