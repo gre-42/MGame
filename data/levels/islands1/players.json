@@ -31,14 +31,14 @@
       "controller": "pc", "name": "you", "team": "red",
       "skills": {
         "ai": {
-            "can_drive": false,
-            "can_aim": false,
-            "can_shoot": false
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false
         },
         "user": {
-            "can_drive": true,
-            "can_aim": true,
-            "can_shoot": true
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true
         }
       },
       "spawned_vehicle": { "type": "female_mh" }
