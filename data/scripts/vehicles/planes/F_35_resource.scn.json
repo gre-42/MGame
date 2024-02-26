@@ -46,7 +46,7 @@
         }
       },
       {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%NAME", "add": "obj_chassis|attr_convex"}}
+      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%NAME", "add": "obj_hitbox|attr_convex"}}
     ]
   },
   {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_front"}},
@@ -54,6 +54,18 @@
   {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rear"}},
   {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_left"}},
   {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_right"}},
+  {
+    "playback": "load_F_35_part",
+    "arguments": {
+      "NAME": "F_35_distancebox",
+      "SUBDIR": "hitbox",
+      "DIST_MIN": 0,
+      "DIST_MAX": "inf",
+      "OCCLUDER_PASS": "none",
+      "TRIANGULATE": false
+    }
+  },
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_distancebox", "add": "obj_distancebox|attr_convex"}},
   {
     "call": "obj_resource",
     "arguments": {
@@ -85,6 +97,7 @@
         "F_35_hitbox_rear",
         "F_35_hitbox_rudder_left",
         "F_35_hitbox_rudder_right",
+        "F_35_distancebox",
         "F_35_tirelines"
       ],
       "dest_name": "F_35_hitboxes"
