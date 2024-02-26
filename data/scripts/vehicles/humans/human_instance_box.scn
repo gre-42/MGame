@@ -33,8 +33,7 @@ macro_begin create_human_box;
         pitch_min=-10
         pitch_max=45
         dpitch_max=10
-        yaw_locked_on_max=2
-        pitch_locked_on_max=2
+        locked_on_max=2
         velocity_error_std=VELOCITY_ERROR_STD
         yaw_error_std=YAW_ERROR_STD
         pitch_error_std=PITCH_ERROR_STD
@@ -50,6 +49,5 @@ macro_end;
 macro_begin get_into_box;
     player_set_aiming_gun {
         "player": "%PLAYER_NAME",
-        "ypln_node": "human_node$SUFFIX",
         "gun_node": "main_gun_end_node$SUFFIX"};
 macro_end;

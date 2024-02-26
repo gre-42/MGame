@@ -164,7 +164,6 @@
         "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
         "arguments": {
-          "ypln_node": "human_node$SUFFIX",
           "gun_node": "main_gun_end_node$SUFFIX",
           "player": "%PLAYER_NAME"
         }

@@ -33,6 +33,20 @@
           "asset_id": "F_35"
         }
       },
+      {
+        "call": "aim_at",
+        "arguments": {
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "parent_follower_rigid_body_node": "car_node$SUFFIX",
+          "bullet_start_offset": 0,
+          "bullet_velocity": 900,
+          "bullet_feels_gravity": true,
+          "gravity": 9.8,
+          "locked_on_max": 2,
+          "velocity_error_std": "%VELOCITY_ERROR_STD",
+          "error_alpha": "%ERROR_ALPHA"
+        }
+      },
       {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "capacity": 40}},
       {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "amount": 20}},
       {
@@ -369,7 +383,18 @@
         "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
-      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_F_35_physics", "arguments": {"SUFFIX": "%SUFFIX", "MASS": 20000, "COLLIDABLE_MODE": "moving", "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED"}}
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "playback": "create_F_35_physics",
+        "arguments": {
+          "SUFFIX": "%SUFFIX",
+          "MASS": 20000,
+          "COLLIDABLE_MODE": "moving",
+          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+          "ERROR_ALPHA": "%ERROR_ALPHA"
+        }
+      }
     ]
   },
   {
@@ -400,7 +425,6 @@
         "call": "player_set_aiming_gun",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "ypln_node": null,
           "gun_node": "main_gun_end_node$SUFFIX"
         }
       },

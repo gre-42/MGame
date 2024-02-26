@@ -107,7 +107,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
           "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
@@ -186,7 +187,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
           "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
@@ -249,7 +251,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "ypln_node": "human_node$SUFFIX",
           "dpitch_head": -15,
           "velocity": "%BULLET_VELOCITY",
           "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
@@ -315,7 +318,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
           "velocity": "%BULLET_VELOCITY",
           "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
@@ -359,10 +363,11 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "ypln_node": "%PARENT_RIGID_BODY_NODE",
           "velocity": 0,
           "rigid_body_flags": "none",
-          "dpitch_head": 0,
-          "node": "%PARENT_RIGID_BODY_NODE"
+          "dpitch_head": 0
         }
       }
     ]

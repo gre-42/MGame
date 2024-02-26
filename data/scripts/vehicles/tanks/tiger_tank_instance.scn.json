@@ -35,22 +35,29 @@
       },
       {"comment": {"call": "damageable", "arguments": {"node": "car_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": true}}},
       {
+        "call": "aim_at",
+        "arguments": {
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "parent_follower_rigid_body_node": "car_node$SUFFIX",
+          "bullet_start_offset": 0,
+          "bullet_velocity": 900,
+          "bullet_feels_gravity": true,
+          "gravity": 9.8,
+          "locked_on_max": 2,
+          "velocity_error_std": "%VELOCITY_ERROR_STD",
+          "error_alpha": "%ERROR_ALPHA"
+        }
+      },
+      {
         "call": "yaw_pitch_look_at_nodes",
         "arguments": {
           "yaw_node": "turret_node$SUFFIX",
           "pitch_node": "main_gun_node$SUFFIX",
-          "parent_follower_rigid_body_node": "car_node$SUFFIX",
-          "bullet_start_offset": 20,
-          "bullet_velocity": 900,
-          "bullet_feels_gravity": true,
-          "gravity": 9.8,
+          "gun_node": "main_gun_end_node$SUFFIX",
           "dyaw_max": 0.8,
           "pitch_min": -10,
           "pitch_max": 45,
           "dpitch_max": 0.8,
-          "yaw_locked_on_max": 2,
-          "pitch_locked_on_max": 2,
-          "velocity_error_std": "%VELOCITY_ERROR_STD",
           "yaw_error_std": "%YAW_ERROR_STD",
           "pitch_error_std": "%PITCH_ERROR_STD",
           "error_alpha": "%ERROR_ALPHA"
@@ -235,7 +242,6 @@
         "error_behavior": "hide"}},
       {"call": "player_set_aiming_gun", "arguments": {
         "player": "%PLAYER_NAME",
-        "ypln_node": "turret_node$SUFFIX",
         "gun_node": "main_gun_end_node$SUFFIX"}},
       {"comment": {"exclude": ["%IF_ANDROID"], "required": ["%IF_PC"], "playback": "create_player_car_engine_rpm_meter", "arguments": {
         "PLAYER_NAME": "%PLAYER_NAME",
