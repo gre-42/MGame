@@ -200,7 +200,12 @@
           "angle_yz": 1,
           "angle_zz": 1,
           "drag": [7, 60, 7],
-          "wing_id": 0
+          "wing_id": 0,
+          "trail_source": {
+            "storage": "trails_white",
+            "position": [0, 0, 0],
+            "minimum_velocity": 10
+          }
         }
       },
       {"comment": "1: front right (roll + pitch)"},
