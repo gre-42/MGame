@@ -1,11 +1,11 @@
 .PHONY: recastnavigation build package run run_dev
 
 CMAKE_BUILD_TYPE ?= Release
-build_prefix = G
+BUILD_PREFIX ?= G
 platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
-        echo $(build_prefix)M$(CMAKE_BUILD_TYPE); \
+        echo $(BUILD_PREFIX)M$(CMAKE_BUILD_TYPE); \
     else \
-        echo $(build_prefix)U$(CMAKE_BUILD_TYPE); \
+        echo $(BUILD_PREFIX)U$(CMAKE_BUILD_TYPE); \
     fi
 ostype != echo "$$OSTYPE";
 bin_dir = $(platform_dir)
@@ -17,7 +17,7 @@ recastnavigation:
 		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
 build_any:
-	BUILD_PREFIX=$(build_prefix) \
+	BUILD_PREFIX=$(BUILD_PREFIX) \
 	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
 		make -C Mlib $(TARGET) \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
