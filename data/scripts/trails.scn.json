@@ -80,6 +80,8 @@
     "arguments": {
       "name": "trails",
       "texture": "trails",
+      "times": [0, 0.03, 0.05, 3, 10],
+      "w": [0, 0, 0.5, 0.5, 1],
       "max_num_triangles": 10000
     }
   },
@@ -91,8 +93,8 @@
       "model": "trail_segment",
       "u_offset": 0,
       "u_scale": 0.5,
-      "times": [0, 0.05, 3, 10],
-      "w": [0, 0.5, 0.5, 1],
+      "times": [0, 10],
+      "w": [0, 10],
       "minimum_length": 0.5
     }
   }
