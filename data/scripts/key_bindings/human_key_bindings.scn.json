@@ -38,7 +38,8 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
-        "surface_power": 30000,
+        "surface_power": "inf",
+        "drive_relaxation_threshold": 0.01,
         "legs_z": [-1, 0, 0]
       }
     },
@@ -49,7 +50,8 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
-        "surface_power": 30000,
+        "surface_power": "inf",
+        "drive_relaxation_threshold": 0.01,
         "legs_z": [1, 0, 0]
       }
     },
@@ -61,8 +63,9 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
+        "angular_velocity": "inf",
         "speed_cursor": 0.1
       }
     },
@@ -74,8 +77,9 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
+        "angular_velocity": "-inf",
         "speed_cursor": -0.1
       }
     },
@@ -86,7 +90,8 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
-        "surface_power": 30000,
+        "surface_power": "inf",
+        "drive_relaxation_threshold": 0.01,
         "legs_z": [0, 0, -1]
       }
     },
@@ -97,7 +102,8 @@
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
-        "surface_power": 30000,
+        "surface_power": "inf",
+        "drive_relaxation_threshold": 0.01,
         "legs_z": [0, 0, 1]
       }
     },
@@ -109,8 +115,9 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
+        "angular_velocity": "inf",
         "speed_cursor": 0.1
       }
     },
@@ -122,8 +129,9 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
+        "angular_velocity": "-inf",
         "speed_cursor": -0.1
       }
     },
