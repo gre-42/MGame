@@ -52,7 +52,7 @@
     "joystick_digital_axes": {"default": {"axis": "1", "sign": -1}},
     "tap_button": "LEFT",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "car_or_heli",
@@ -61,7 +61,7 @@
     "joystick_digital_axes": {"default": {"axis": "1", "sign": 1}},
     "tap_button": "RIGHT",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "car_or_heli",
@@ -165,19 +165,19 @@
     "unique": "avatar",
     "id": "avatar.strafe_left",
     "key": "A",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "avatar",
     "id": "avatar.strafe_right",
     "key": "D",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "avatar",
     "id": "avatar.rotate_left",
     "key": "LEFT",
-    "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": -1}},
+    "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": -1, "deadzone": 0.01, "exponent": 3}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": -0.03
   },
@@ -185,7 +185,7 @@
     "unique": "avatar",
     "id": "avatar.rotate_right",
     "key": "RIGHT",
-    "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": 1}},
+    "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": 1, "deadzone": 0.01, "exponent": 3}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": 0.03
   },
@@ -193,19 +193,19 @@
     "unique": "avatar",
     "id": "avatar.forward",
     "key": "W",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "avatar",
     "id": "avatar.backwards",
     "key": "S",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "avatar",
     "id": "avatar.rotate_up",
     "key": "UP",
-    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": -1}},
+    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": -1, "deadzone": 0.01, "exponent": 3}},
     "cursor_axis": 1,
     "cursor_sign_and_scale": -0.03
   },
@@ -213,7 +213,7 @@
     "unique": "avatar",
     "id": "avatar.rotate_down",
     "key": "DOWN",
-    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": 1}},
+    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": 1, "deadzone": 0.01, "exponent": 3}},
     "cursor_axis": 1,
     "cursor_sign_and_scale": 0.03
   },
@@ -248,7 +248,7 @@
     "unique": "skater",
     "id": "skater.rotate_left",
     "key": "LEFT",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1}},
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": -0.03
   },
@@ -256,7 +256,7 @@
     "unique": "skater",
     "id": "skater.rotate_right",
     "key": "RIGHT",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1}},
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": 0.03
   },
@@ -276,41 +276,41 @@
     "unique": "skater",
     "id": "skater.forward",
     "key": "UP",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "skater",
     "id": "skater.brake",
     "key": "DOWN",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
     "id": "plane.roll_left",
     "key": "A",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
     "id": "plane.roll_right",
     "key": "D",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
     "id": "plane.pitch_up",
     "key": "UP",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
     "id": "plane.pitch_down",
     "key": "DOWN",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
@@ -318,7 +318,7 @@
     "key": "W",
     "gamepad_button": "X",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": -1}}
+    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
@@ -326,7 +326,7 @@
     "key": "S",
     "gamepad_button": "A",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "4", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
@@ -334,7 +334,7 @@
     "key": "LEFT",
     "gamepad_button": "LEFT_BUMPER",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "5", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "5", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
@@ -342,7 +342,7 @@
     "key": "RIGHT",
     "gamepad_button": "RIGHT_BUMPER",
     "not_gamepad_button": "B",
-    "joystick_analog_axes": {"default": {"axis": "6", "sign_and_scale": 1}}
+    "joystick_analog_axes": {"default": {"axis": "6", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {
     "unique": "plane",
