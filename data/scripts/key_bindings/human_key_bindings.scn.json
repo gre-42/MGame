@@ -39,7 +39,6 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
-        "drive_relaxation_threshold": 0.01,
         "legs_z": [-1, 0, 0]
       }
     },
@@ -51,7 +50,6 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
-        "drive_relaxation_threshold": 0.01,
         "legs_z": [1, 0, 0]
       }
     },
@@ -91,7 +89,6 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
-        "drive_relaxation_threshold": 0.01,
         "legs_z": [0, 0, -1]
       }
     },
@@ -103,7 +100,6 @@
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
-        "drive_relaxation_threshold": 0.01,
         "legs_z": [0, 0, 1]
       }
     },
