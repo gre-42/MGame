@@ -64,9 +64,9 @@
     "arguments": {
       "name": "trail_segment_10x10",
       "filename": "models/trail_segment.obj",
-      "position": [0, 0, 0],
+      "position": [0, 0, -0.5],
       "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
+      "scale": [1, 1, 0.5],
       "center_distances": [0, "inf"],
       "blend_mode": "continuous",
       "alpha_distances": [0, 0, "inf", "inf"],
@@ -81,9 +81,9 @@
     "arguments": {
       "name": "trail_segment_2x2",
       "filename": "models/trail_segment.obj",
-      "position": [0, 0, 0],
+      "position": [0, 0, -0.5],
       "rotation": [0, 0, 0],
-      "scale": [0.2, 0.2, 1],
+      "scale": [0.2, 0.2, 0.5],
       "center_distances": [0, "inf"],
       "blend_mode": "continuous",
       "alpha_distances": [0, 0, "inf", "inf"],
