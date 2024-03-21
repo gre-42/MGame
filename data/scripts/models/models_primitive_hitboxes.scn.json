@@ -72,7 +72,7 @@
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_name": "box_10_10_10_hitbox",
-      "add": "attr_convex"
+      "add": "obj_chassis|attr_convex"
     }
   }
 ]
