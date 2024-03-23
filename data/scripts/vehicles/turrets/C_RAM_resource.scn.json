@@ -1,0 +1,53 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "C_RAM_hitbox",
+      "filename": "models/gre42/C-RAM/C_RAM_hitbox_simple.obj",
+      "position": [0, -2, 0],
+      "rotation": [0, 90, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "triangle_tangent_error_behavior": "zero"
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "C_RAM_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "C_RAM_hitbox", "add": "obj_chassis|attr_convex"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["C_RAM_hitbox"], "dest_name": "C_RAM_hitboxes"}},
+  {
+    "declare_macro": "load_C_RAM",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%NAME",
+          "filename": "models/gre42/C-RAM/$NAME.obj",
+          "position": [0, -2, 0],
+          "rotation": [0, 90, 0],
+          "scale": [1, 1, 1],
+          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero",
+          "emissive_factor": "%BLENDER_EMISSIVE_FACTOR",
+          "ambient_factor": "%BLENDER_AMBIENT_FACTOR",
+          "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
+          "specular_factor": "%BLENDER_SPECULAR_FACTOR",
+          "fresnel_ambient": "%BLENDER_FRESNEL_AMBIENT"
+        }
+      }
+    ]
+  },
+  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "NAME": "C_RAM"}},
+  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "NAME": "C_RAM_d"}}
+]

@@ -1,0 +1,15 @@
+{
+  "id": "C_RAM",
+  "title": "C-RAM",
+  "on_init": [
+    {"include": "C_RAM_resource.scn.json"},
+    {"include": "C_RAM_instance.scn.json"}
+  ],
+  "database": {
+    "SUFFIX": "C_RAM",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "MAX_TIRE_ANGLE": null
+  },
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
+}

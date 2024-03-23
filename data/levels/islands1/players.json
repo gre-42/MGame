@@ -53,6 +53,10 @@
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
+      "spawned_vehicle": { "type": "C_RAM" }
+    },
+    {
+      "controller": "npc", "name": "npc4", "team": "blue",
       "spawned_vehicle": { "type": "tiger_tank" }
     },
     {

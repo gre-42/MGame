@@ -34,5 +34,11 @@
   {"call": "constant_parameter", "arguments": {"name": "AC_AMBIENT_FACTOR", "value": [1.7, 1.7, 1.7]}},
   {"call": "constant_parameter", "arguments": {"name": "AC_DIFFUSE_FACTOR", "value": [1.7, 1.7, 1.7]}},
   {"call": "constant_parameter", "arguments": {"name": "AC_SPECULAR_FACTOR", "value": [1.7, 1.7, 1.7]}},
-  {"call": "constant_parameter", "arguments": {"name": "AC_FRESNEL_AMBIENT", "value": [1, 1, 1]}}
+  {"call": "constant_parameter", "arguments": {"name": "AC_FRESNEL_AMBIENT", "value": [1, 1, 1]}},
+
+  {"call": "constant_parameter", "arguments": {"name": "BLENDER_EMISSIVE_FACTOR", "value": [1, 1, 1]}},
+  {"call": "constant_parameter", "arguments": {"name": "BLENDER_AMBIENT_FACTOR", "value": [0.1, 0.1, 0.1]}},
+  {"call": "constant_parameter", "arguments": {"name": "BLENDER_DIFFUSE_FACTOR", "value": [1, 1, 1]}},
+  {"call": "constant_parameter", "arguments": {"name": "BLENDER_SPECULAR_FACTOR", "value": [0.2, 0.2, 0.2]}},
+  {"call": "constant_parameter", "arguments": {"name": "BLENDER_FRESNEL_AMBIENT", "value": [0.2, 0.2, 0.2]}}
 ]

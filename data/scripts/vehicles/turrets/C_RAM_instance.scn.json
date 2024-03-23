@@ -1,0 +1,132 @@
+[
+  {
+    "declare_macro": "create_C_RAM_graphics",
+    "content": [
+      {"call": "renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "^Base$"}},
+      {"call": "renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Yaw"}},
+      {"call": "renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Gun"}}
+    ]
+  },
+  {
+    "declare_macro": "create_C_RAM_physics",
+    "content": [
+      {
+        "call": "rigid_cuboid",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "hitboxes": "C_RAM_hitboxes",
+          "mass": "%MASS",
+          "size": [2, 5, 2],
+          "com": [0, -2, 0],
+          "collidable_mode": "%COLLIDABLE_MODE",
+          "name": "C_RAM$SUFFIX",
+          "asset_id": "C_RAM"
+        }
+      },
+      {
+        "call": "aim_at",
+        "arguments": {
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "parent_follower_rigid_body_node": "car_node$SUFFIX",
+          "bullet_start_offset": 0,
+          "bullet_velocity": 900,
+          "bullet_feels_gravity": true,
+          "gravity": 9.8,
+          "locked_on_max": 2,
+          "velocity_error_std": "%VELOCITY_ERROR_STD",
+          "error_alpha": "%ERROR_ALPHA"
+        }
+      },
+      {
+        "call": "yaw_pitch_look_at_nodes",
+        "arguments": {
+          "yaw_node": "turret_node$SUFFIX",
+          "pitch_node": "main_gun_node$SUFFIX",
+          "gun_node": "main_gun_end_node$SUFFIX",
+          "dyaw_max": 0.8,
+          "pitch_min": -10,
+          "pitch_max": 45,
+          "dpitch_max": 0.8,
+          "yaw_error_std": "%YAW_ERROR_STD",
+          "pitch_error_std": "%PITCH_ERROR_STD",
+          "error_alpha": "%ERROR_ALPHA"
+        }
+      },
+      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "C_RAM_ammo", "capacity": 20000}},
+      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "C_RAM_ammo", "amount": 20000}},
+      {
+        "call": "gun",
+        "arguments": {
+          "node": "main_gun_end_node$SUFFIX",
+          "parent_rigid_body_node": "car_node$SUFFIX",
+          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "cool_down": 0.1,
+          "bullet_renderable": null,
+          "bullet_hitbox": "tank_bullet_hitbox",
+          "bullet_explosion_resource": "small_explosion",
+          "bullet_explosion_animation_time": 0.3,
+          "bullet_rigid_body_flags": "none",
+          "bullet_mass": 20,
+          "bullet_velocity": 900,
+          "bullet_lifetime": 20,
+          "bullet_damage": 10,
+          "bullet_size": [2.4, 2.4, 20],
+          "bullet_trace_storage": "tracer_c_ram",
+          "ammo_type": "C_RAM_ammo",
+          "punch_angle_idle_std": 0.01,
+          "punch_angle_shoot_std": 0.1
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_C_RAM",
+    "content": [
+      {"comment": [
+        {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": [0, -0.5, 1]}},
+        "",
+        "renderable_instance name=gizmo node=com_node$SUFFIX resource=gizmo;",
+        "",
+        "car_node$SUFFIX;",
+        "    turret_node$SUFFIX (0 0 1, yaw_node);",
+        "        turret_shift_node$SUFFIX (0 0 -1, renderable);",
+        "            main_gun_node$SUFFIX (0 1.2 -0.3, pitch_node);",
+        "                main_gun_shift_node$SUFFIX (0 -1.2 0.3, renderable);",
+        "                main_gun_end_node$SUFFIX (0 0 -20);"]
+      },
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "turret_node$SUFFIX", "position": [0, 0, 0], "rotation": [0, 45, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$SUFFIX", "name": "turret_shift_node$SUFFIX", "position": [0, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0, 0.2, 0], "rotation": [30, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -0.2, 0]}},
+
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -10]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d$SUFFIX", "DECIMATE": "_d"}},
+      {"comment": {"call": "renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
+      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_C_RAM_physics", "arguments": {
+        "SUFFIX": "%SUFFIX",
+        "MASS": 56e3,
+        "COLLIDABLE_MODE": "moving",
+        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
+        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+        "YAW_ERROR_STD": "%YAW_ERROR_STD",
+        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+        "ERROR_ALPHA": "%ERROR_ALPHA",
+        "MUTE": "%MUTE"
+      }}
+    ]
+  },
+  {
+    "declare_macro": "create_player_car_externals_C_RAM",
+    "content": [
+      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank", "arguments": {
+        "SUFFIX": "%SUFFIX",
+        "PLAYER_NAME": "%PLAYER_NAME"
+      }},
+      {"call": "player_set_aiming_gun", "arguments": {
+        "player": "%PLAYER_NAME",
+        "gun_node": "main_gun_end_node$SUFFIX"}}
+    ]
+  }
+]
