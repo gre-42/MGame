@@ -16,8 +16,8 @@
           "node": "car_node$SUFFIX",
           "hitboxes": "C_RAM_hitboxes",
           "mass": "%MASS",
-          "size": [2, 5, 2],
-          "com": [0, -2, 0],
+          "size": [2, 4.5, 2],
+          "com": [0, -1, 0],
           "collidable_mode": "%COLLIDABLE_MODE",
           "name": "C_RAM$SUFFIX",
           "asset_id": "C_RAM"
