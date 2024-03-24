@@ -15,6 +15,7 @@
     ]
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "playback": "_add_hist_tree",
     "arguments": {
       "NAME": "Trees0058_2",
@@ -22,6 +23,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "playback": "_add_hist_tree",
     "arguments": {
       "NAME": "Trees0058_3",
@@ -29,6 +31,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "playback": "_add_hist_tree",
     "arguments": {
       "NAME": "Trees0122_1",
