@@ -72,17 +72,8 @@
           "parent_rigid_body_node": "car_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
           "cool_down": 10,
-          "bullet_renderable": "tank_bullet_renderable",
-          "bullet_hitbox": "tank_bullet_hitbox",
-          "bullet_explosion_resource": "large_explosion",
-          "bullet_explosion_animation_time": 0.6,
-          "bullet_rigid_body_flags": "none",
-          "bullet_mass": 20,
-          "bullet_velocity": 900,
-          "bullet_lifetime": 20,
-          "bullet_damage": 100,
-          "bullet_size": [2.4, 2.4, 20],
           "ammo_type": "tiger_tank_ammo",
+          "bullet_type": "tiger_tank_bullet",
           "punch_angle_idle_std": 0.01,
           "punch_angle_shoot_std": 0.1
         }

@@ -115,5 +115,61 @@
         "size": [2.4, 2.4, 20]
       }
     }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "F_35_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "large_explosion",
+        "explosion_animation_time": 0.6,
+        "rigid_body_flags": "none",
+        "mass": 200,
+        "velocity": 0,
+        "lifetime": 160,
+        "damage": 500,
+        "damage_radius": 20,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "tiger_tank_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "large_explosion",
+        "explosion_animation_time": 0.6,
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 100,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "C_RAM_bullet",
+      "properties": {
+        "renderable": null,
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "small_explosion",
+        "explosion_animation_time": 0.3,
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 10,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_c_ram"
+      }
+    }
   }
 ]
