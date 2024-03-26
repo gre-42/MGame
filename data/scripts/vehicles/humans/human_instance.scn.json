@@ -68,22 +68,16 @@
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "m4a1",
           "ammo_type": "m4a1_ammo",
+          "bullet_type": "m4a1_bullet",
           "cool_down": 0.1,
-          "bullet_damage": 10,
-          "bullet_damage_radius": 0,
-          "bullet_velocity": 900,
-          "bullet_rigid_body_flags": "none",
           "range_min": 0,
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_m4a1",
             "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
+              "BULLET_TYPE": "%BULLET_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
-              "BULLET_DAMAGE": "%BULLET_DAMAGE",
-              "BULLET_DAMAGE_RADIUS": "%BULLET_DAMAGE_RADIUS",
-              "BULLET_VELOCITY": "%BULLET_VELOCITY",
-              "BULLET_RIGID_BODY_FLAGS": "%BULLET_RIGID_BODY_FLAGS",
               "SUFFIX": "%SUFFIX"
             }
           },
@@ -99,22 +93,16 @@
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "beretta92",
           "ammo_type": "beretta92_ammo",
+          "bullet_type": "beretta92_bullet",
           "cool_down": 0.5,
-          "bullet_damage": 10,
-          "bullet_damage_radius": 0,
-          "bullet_velocity": 900,
-          "bullet_rigid_body_flags": "none",
           "range_min": 0,
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_beretta92",
             "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
+              "BULLET_TYPE": "%BULLET_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
-              "BULLET_DAMAGE": "%BULLET_DAMAGE",
-              "BULLET_DAMAGE_RADIUS": "%BULLET_DAMAGE_RADIUS",
-              "BULLET_VELOCITY": "%BULLET_VELOCITY",
-              "BULLET_RIGID_BODY_FLAGS": "%BULLET_RIGID_BODY_FLAGS",
               "SUFFIX": "%SUFFIX"
             }
           },
@@ -130,22 +118,16 @@
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "frag_grenade",
           "ammo_type": "frag_grenade",
+          "bullet_type": "frag_grenade",
           "cool_down": 0.5,
-          "bullet_damage": 100,
-          "bullet_damage_radius": 5,
-          "bullet_velocity": 15,
-          "bullet_rigid_body_flags": "none",
           "range_min": 8,
           "range_max": 20,
           "create": {
             "playback": "add_weapon_frag_grenade",
             "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
+              "BULLET_TYPE": "%BULLET_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
-              "BULLET_DAMAGE": "%BULLET_DAMAGE",
-              "BULLET_DAMAGE_RADIUS": "%BULLET_DAMAGE_RADIUS",
-              "BULLET_VELOCITY": "%BULLET_VELOCITY",
-              "BULLET_RIGID_BODY_FLAGS": "%BULLET_RIGID_BODY_FLAGS",
               "SUFFIX": "%SUFFIX"
             }
           },
@@ -161,22 +143,16 @@
           "cycle_node": "human_node$SUFFIX",
           "entry_name": "m72_law",
           "ammo_type": "m72_law_rocket",
+          "bullet_type": "m72_law_rocket",
           "cool_down": 0.5,
-          "bullet_damage": 100,
-          "bullet_damage_radius": 5,
-          "bullet_velocity": 50,
-          "bullet_rigid_body_flags": "feels_no_gravity",
           "range_min": 8,
           "range_max": 2000,
           "create": {
             "playback": "add_weapon_m72_law",
             "arguments": {
               "AMMO_TYPE": "%AMMO_TYPE",
+              "BULLET_TYPE": "%BULLET_TYPE",
               "COOL_DOWN": "%COOL_DOWN",
-              "BULLET_DAMAGE": "%BULLET_DAMAGE",
-              "BULLET_DAMAGE_RADIUS": "%BULLET_DAMAGE_RADIUS",
-              "BULLET_VELOCITY": "%BULLET_VELOCITY",
-              "BULLET_RIGID_BODY_FLAGS": "%BULLET_RIGID_BODY_FLAGS",
               "SUFFIX": "%SUFFIX"
             }
           },
@@ -199,6 +175,7 @@
         "arguments": {
           "PARENT_RIGID_BODY_NODE": "human_node$SUFFIX",
           "AMMO_TYPE": "none_weapon_ammo_type",
+          "BULLET_TYPE": "none_weapon_bullet_type",
           "SUFFIX": "%SUFFIX"
         }
       },

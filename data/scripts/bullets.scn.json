@@ -1,0 +1,119 @@
+[
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "m4a1_bullet",
+      "properties": {
+        "renderable": "",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "medium_explosion_cross",
+        "explosion_animation_time": 0.1,
+        "mass": 20,
+        "lifetime": 20,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_bullet",
+        "rigid_body_flags": "none",
+        "velocity": 900,
+        "damage": 10,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "beretta92_bullet",
+      "properties": {
+        "renderable": "",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "medium_explosion_cross",
+        "explosion_animation_time": 0.1,
+        "mass": 20,
+        "lifetime": 20,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_bullet",
+        "rigid_body_flags": "none",
+        "velocity": 900,
+        "damage": 10,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "frag_grenade",
+      "properties": {
+        "renderable": "frag_grenade",
+        "hitbox": "grenade_hitbox",
+        "explosion_resource": "large_explosion_cross",
+        "explosion_animation_time": 0.6,
+        "mass": 0.5,
+        "lifetime": 30,
+        "size": [0.1, 0.1, 0.1],
+        "rigid_body_flags": "none",
+        "velocity": 15,
+        "damage": 100,
+        "damage_radius": 5
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "m72_law_rocket",
+      "properties": {
+        "renderable": "m72_law_rocket",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "large_explosion_cross",
+        "explosion_animation_time": 0.6,
+        "mass": 10,
+        "lifetime": 30,
+        "size": [2.4, 2.4, 20],
+        "trail_resource": "smoke",
+        "trail_dt": 0.005,
+        "trail_animation_duration": 0.5,
+        "rigid_body_flags": "feels_no_gravity",
+        "velocity": 50,
+        "damage": 100,
+        "damage_radius": 5
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "ah_64_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "small_explosion",
+        "explosion_animation_time": 0.3,
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 10,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "none_weapon_bullet_type",
+      "properties": {
+        "renderable": "_",
+        "hitbox": "_",
+        "explosion_resource": "_",
+        "explosion_animation_time": 0.3,
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 10,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  }
+]

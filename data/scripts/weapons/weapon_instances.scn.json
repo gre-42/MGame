@@ -71,14 +71,6 @@
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
-          "bullet_renderable": "",
-          "bullet_hitbox": "tank_bullet_hitbox",
-          "bullet_explosion_resource": "medium_explosion_cross",
-          "bullet_explosion_animation_time": 0.1,
-          "bullet_mass": 20,
-          "bullet_lifetime": 20,
-          "bullet_size": [2.4, 2.4, 20],
-          "bullet_trace_storage": "tracer_bullet",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "muzzle_flash_resource": "muzzle_flash_0",
@@ -95,11 +87,8 @@
             }
           },
           "cool_down": "%COOL_DOWN",
-          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
-          "bullet_velocity": "%BULLET_VELOCITY",
-          "bullet_damage": "%BULLET_DAMAGE",
-          "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
           "ammo_type": "%AMMO_TYPE",
+          "bullet_type": "%BULLET_TYPE",
           "capture": {
             "SUFFIX": "%SUFFIX"
           }
@@ -111,8 +100,7 @@
           "gun_node": "main_gun_end_node$SUFFIX",
           "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
-          "velocity": "%BULLET_VELOCITY",
-          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -152,14 +140,6 @@
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
-          "bullet_renderable": "",
-          "bullet_hitbox": "tank_bullet_hitbox",
-          "bullet_explosion_resource": "medium_explosion_cross",
-          "bullet_explosion_animation_time": 0.1,
-          "bullet_mass": 20,
-          "bullet_lifetime": 20,
-          "bullet_size": [2.4, 2.4, 20],
-          "bullet_trace_storage": "tracer_bullet",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "muzzle_flash_resource": "muzzle_flash_0",
@@ -176,11 +156,8 @@
             }
           },
           "cool_down": "%COOL_DOWN",
-          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
-          "bullet_velocity": "%BULLET_VELOCITY",
-          "bullet_damage": "%BULLET_DAMAGE",
-          "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
           "ammo_type": "%AMMO_TYPE",
+          "bullet_type": "%BULLET_TYPE",
           "capture": {
             "SUFFIX": "%SUFFIX"
           }
@@ -192,8 +169,7 @@
           "gun_node": "main_gun_end_node$SUFFIX",
           "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
-          "velocity": "%BULLET_VELOCITY",
-          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -233,21 +209,11 @@
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
-          "bullet_renderable": "frag_grenade",
-          "bullet_hitbox": "grenade_hitbox",
-          "bullet_explosion_resource": "large_explosion_cross",
-          "bullet_explosion_animation_time": 0.6,
-          "bullet_mass": 0.5,
-          "bullet_lifetime": 30,
-          "bullet_size": [0.1, 0.1, 0.1],
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
-          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
-          "bullet_velocity": "%BULLET_VELOCITY",
-          "bullet_damage": "%BULLET_DAMAGE",
-          "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
-          "ammo_type": "%AMMO_TYPE"
+          "ammo_type": "%AMMO_TYPE",
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -256,8 +222,7 @@
           "gun_node": "main_gun_end_node$SUFFIX",
           "ypln_node": "human_node$SUFFIX",
           "dpitch_head": -15,
-          "velocity": "%BULLET_VELOCITY",
-          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -297,24 +262,11 @@
           "node": "main_gun_end_node$SUFFIX",
           "parent_rigid_body_node": "human_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
-          "bullet_renderable": "m72_law_rocket",
-          "bullet_hitbox": "tank_bullet_hitbox",
-          "bullet_explosion_resource": "large_explosion_cross",
-          "bullet_explosion_animation_time": 0.6,
-          "bullet_mass": 10,
-          "bullet_lifetime": 30,
-          "bullet_size": [2.4, 2.4, 20],
-          "bullet_trail_resource": "smoke",
-          "bullet_trail_dt": 0.005,
-          "bullet_trail_animation_time": 0.5,
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
-          "bullet_rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS",
-          "bullet_velocity": "%BULLET_VELOCITY",
-          "bullet_damage": "%BULLET_DAMAGE",
-          "bullet_damage_radius": "%BULLET_DAMAGE_RADIUS",
-          "ammo_type": "%AMMO_TYPE"
+          "ammo_type": "%AMMO_TYPE",
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -323,8 +275,7 @@
           "gun_node": "main_gun_end_node$SUFFIX",
           "ypln_node": "human_node$SUFFIX",
           "dpitch_head": 0,
-          "velocity": "%BULLET_VELOCITY",
-          "rigid_body_flags": "%BULLET_RIGID_BODY_FLAGS"
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -345,21 +296,11 @@
           "node": "main_gun_end_node$SUFFIX",
           "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
           "cool_down": "inf",
-          "bullet_renderable": "_",
-          "bullet_hitbox": "_",
-          "bullet_explosion_resource": "_",
-          "bullet_explosion_animation_time": "nan",
-          "bullet_rigid_body_flags": "none",
-          "bullet_mass": 20,
-          "bullet_velocity": 0,
-          "bullet_lifetime": 0,
-          "bullet_damage": 0,
-          "bullet_damage_radius": 0,
-          "bullet_size": [2.4, 2.4, 20],
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
           "parent_rigid_body_node": "%PARENT_RIGID_BODY_NODE",
-          "ammo_type": "%AMMO_TYPE"
+          "ammo_type": "%AMMO_TYPE",
+          "bullet_type": "%BULLET_TYPE"
         }
       },
       {
@@ -367,9 +308,8 @@
         "arguments": {
           "gun_node": "main_gun_end_node$SUFFIX",
           "ypln_node": "%PARENT_RIGID_BODY_NODE",
-          "velocity": 0,
-          "rigid_body_flags": "none",
-          "dpitch_head": 0
+          "dpitch_head": 0,
+          "bullet_type": "%BULLET_TYPE"
         }
       }
     ]
