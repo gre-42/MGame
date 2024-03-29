@@ -27,7 +27,8 @@
         "fresnel_max": 0.4,
         "fresnel_exponent": 5,
         "fresnel_ambient": [1, 1, 1],
-        "triangulate": "%TRIANGULATE"
+        "triangulate": "%TRIANGULATE",
+        "dynamically_lighted": true
       }
     }
   },

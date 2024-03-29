@@ -1,0 +1,24 @@
+[
+  {
+    "call": "set_constant_dynamic_light_properties",
+    "arguments": {
+      "name": "tracer_bullet_light_before_impact",
+      "properties": {
+        "color": [1, 0.5, 0.5],
+        "distances": [1, 10],
+        "intensities": [1, 0]
+      }
+    }
+  },
+  {
+    "call": "set_constant_dynamic_light_properties",
+    "arguments": {
+      "name": "tracer_c_ram_light_before_impact",
+      "properties": {
+        "color": [1, 0.5, 0.5],
+        "distances": [1, 20],
+        "intensities": [1, 0]
+      }
+    }
+  }
+]
