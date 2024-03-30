@@ -18,7 +18,8 @@
         "velocity_error_std": 1,
         "yaw_error_std": 0,
         "pitch_error_std": 0,
-        "error_alpha": 0.002
+        "error_alpha": 0.002,
+        "respawn_cooldown_time": 0
       },
       "user": {
         "can_drive": false,
@@ -54,6 +55,7 @@
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
+      "skills": { "ai": { "respawn_cooldown_time": 60 } },
       "spawned_vehicle": { "type": "C_RAM" }
     },
     {

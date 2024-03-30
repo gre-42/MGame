@@ -40,16 +40,6 @@
     }
   },
   {
-    "declare_macro": "set_spawner_nodes_FN",
-    "content": {
-      "call": "spawner_set_nodes",
-      "arguments": {
-        "nodes": ["car_node$SUFFIX"],
-        "spawner": "%SPAWNER_NAME"
-      }
-    }
-  },
-  {
     "declare_macro": "create_player_car_externals_FN",
     "content": {
       "playback": "generic_car.create_player_car_externals",

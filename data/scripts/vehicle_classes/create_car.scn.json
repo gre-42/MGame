@@ -33,7 +33,8 @@
           "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
           "YAW_ERROR_STD": "%YAW_ERROR_STD",
           "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA"
+          "ERROR_ALPHA": "%ERROR_ALPHA",
+          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
         }
       },
       {
@@ -62,6 +63,14 @@
           "asset_id": "%CAR_NAME",
           "suffix": "%SUFFIX",
           "spawner": "%SPAWNER_NAME"
+        }
+      },
+      {
+        "required": ["%IF_SPAWNER"],
+        "call": "set_respawn_cooldown_time",
+        "arguments": {
+          "spawner": "%SPAWNER_NAME",
+          "time": "%RESPAWN_COOLDOWN_TIME"
         }
       },
       {

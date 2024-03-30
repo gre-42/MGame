@@ -18,7 +18,8 @@
         "velocity_error_std": 0.3,
         "yaw_error_std": 0.02,
         "pitch_error_std": 0.02,
-        "error_alpha": 0.002
+        "error_alpha": 0.002,
+        "respawn_cooldown_time": 0
       },
       "user": {
         "can_drive": false,
