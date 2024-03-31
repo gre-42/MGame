@@ -33,7 +33,7 @@ macro_begin create_human_box;
         pitch_min=-10
         pitch_max=45
         dpitch_max=10
-        locked_on_max=2
+        locked_on_angle=2
         velocity_error_std=VELOCITY_ERROR_STD
         yaw_error_std=YAW_ERROR_STD
         pitch_error_std=PITCH_ERROR_STD
