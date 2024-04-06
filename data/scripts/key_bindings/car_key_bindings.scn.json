@@ -158,7 +158,7 @@
       "arguments": {
         "id": "car_or_heli.select_next_opponent",
         "role": "%ROLE",
-        "node": "car_node$SUFFIX",
+        "player": "%PLAYER_NAME",
         "select_next_opponent": true
       }
     },
@@ -167,7 +167,7 @@
       "arguments": {
         "id": "car_or_heli.select_next_vehicle",
         "role": "%ROLE",
-        "node": "car_node$SUFFIX",
+        "player": "%PLAYER_NAME",
         "select_next_vehicle": true
       }
     }

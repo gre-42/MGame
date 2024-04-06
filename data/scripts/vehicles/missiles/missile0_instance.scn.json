@@ -41,9 +41,9 @@
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$SUFFIX",
-          "name": "turbine",
+          "name": "rocket_engine",
           "angular_vels": [0],
-          "powers": [260],
+          "powers": [10],
           "gear_ratios": [0],
           "w_clutch": 0
         }
@@ -54,7 +54,7 @@
           "vehicle": "car_node$SUFFIX",
           "position": [0, 0, 1.2],
           "rotation": [180, 0, 0],
-          "engine": "turbine",
+          "engine": "rocket_engine",
           "power2lift": 1,
           "rpm": 0,
           "rotor_id": 0}
@@ -193,6 +193,20 @@
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 7
+        }
+      },
+      {
+        "call": "create_missile_controller",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "left_front": {"i": 0, "gain": 1},
+          "right_front": {"i": 1, "gain": 1},
+          "down_front": {"i": 2, "gain": 1},
+          "up_front": {"i": 3, "gain": 1},
+          "left_rear": {"i": 4, "gain": 1},
+          "right_rear": {"i": 5, "gain": 1},
+          "down_rear": {"i": 6, "gain": 1},
+          "up_rear": {"i": 7, "gain": 1}
         }
       }
     ]

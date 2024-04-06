@@ -164,7 +164,7 @@
       "arguments": {
         "id": "avatar.select_next_vehicle",
         "role": "%ROLE",
-        "node": "human_node$SUFFIX",
+        "player": "%PLAYER_NAME",
         "select_next_vehicle": true
       }
     }

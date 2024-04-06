@@ -105,16 +105,30 @@
           "bullet_type": "missile0_bullet",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
-          "generate_smart_bullet": {
-            "playback": "create_missile0",
-            "arguments": {
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "SUFFIX": "%SUFFIX",
-              "VELOCITY": "%VELOCITY",
-              "IF_WITH_GRAPHICS": true,
-              "IF_WITH_PHYSICS": true
+          "generate_smart_bullet": [
+            {
+              "playback": "create_missile0",
+              "arguments": {
+                "PLAYER_NAME": "%PLAYER_NAME",
+                "SUFFIX": "%BULLET_SUFFIX",
+                "VELOCITY": "%BULLET_VELOCITY",
+                "IF_WITH_GRAPHICS": true,
+                "IF_WITH_PHYSICS": true
+              }
+            },
+            {
+              "call": "create_missile_ai",
+              "arguments": {
+                "missile": "car_node$BULLET_SUFFIX",
+                "target": "%TARGET",
+                "pid": {
+                  "pid": [1, 0, 0],
+                  "alpha": 0.2
+                },
+                "destination_reached_radius": 2
+              }
             }
-          }
+          ]
         }
       },
       {
