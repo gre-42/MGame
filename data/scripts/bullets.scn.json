@@ -182,13 +182,14 @@
       "properties": {
         "renderable": null,
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "small_explosion",
-        "explosion_animation_time": 0.3,
+        "explosion_resource": "large_explosion",
+        "explosion_animation_time": 0.6,
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 0,
         "lifetime": 20,
-        "damage": 10,
+        "damage": 50,
+        "damage_radius": 5,
         "size": [2.4, 2.4, 20],
         "trace_storage": "tracer_c_ram",
         "light_before_impact": "tracer_c_ram_light_before_impact"
