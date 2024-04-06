@@ -35,7 +35,9 @@
         "ai": {
           "can_drive": false,
           "can_aim": false,
-          "can_shoot": false
+          "can_shoot": false,
+          "can_select_opponent": false,
+          "can_select_weapon": false
         },
         "user": {
           "can_drive": true,

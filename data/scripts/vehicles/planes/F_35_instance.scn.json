@@ -122,7 +122,7 @@
                 "missile": "car_node$BULLET_SUFFIX",
                 "target": "%TARGET",
                 "pid": {
-                  "pid": [1, 0, 0],
+                  "pid": [0.5, 10, 0.1],
                   "alpha": 0.2
                 },
                 "destination_reached_radius": 2

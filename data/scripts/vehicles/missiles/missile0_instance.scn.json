@@ -43,7 +43,7 @@
           "rigid_body": "car_node$SUFFIX",
           "name": "rocket_engine",
           "angular_vels": [0],
-          "powers": [10],
+          "powers": [20],
           "gear_ratios": [0],
           "w_clutch": 0
         }
@@ -70,7 +70,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 0
@@ -87,7 +87,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 1
@@ -100,11 +100,11 @@
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "wing_front_bottom_node$SUFFIX",
           "position": [0, -0.2, -1.2],
-          "rotation": [0, 0, 90],
+          "rotation": [0, 0, -90],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 2
@@ -117,11 +117,11 @@
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "wing_front_top_node$SUFFIX",
           "position": [0, 0.2, -1.2],
-          "rotation": [0, 0, 90],
+          "rotation": [0, 0, -90],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 3
@@ -138,7 +138,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 4
@@ -155,7 +155,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 5
@@ -168,11 +168,11 @@
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "wing_rear_bottom_node$SUFFIX",
           "position": [0, -0.2, 1.2],
-          "rotation": [0, 0, 90],
+          "rotation": [0, 0, -90],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 6
@@ -185,11 +185,11 @@
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "wing_rear_top_node$SUFFIX",
           "position": [0, 0.2, 1.2],
-          "rotation": [0, 0, 90],
+          "rotation": [0, 0, -90],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0,
+          "angle_yz": 0.01,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 7
@@ -199,14 +199,14 @@
         "call": "create_missile_controller",
         "arguments": {
           "node": "car_node$SUFFIX",
-          "left_front": {"i": 0, "gain": 1},
-          "right_front": {"i": 1, "gain": 1},
-          "down_front": {"i": 2, "gain": 1},
-          "up_front": {"i": 3, "gain": 1},
-          "left_rear": {"i": 4, "gain": 1},
-          "right_rear": {"i": 5, "gain": 1},
-          "down_rear": {"i": 6, "gain": 1},
-          "up_rear": {"i": 7, "gain": 1}
+          "left_front": {"i": 0, "gain": 0.1},
+          "right_front": {"i": 1, "gain": 0.1},
+          "down_front": {"i": 2, "gain": 0.1},
+          "up_front": {"i": 3, "gain": 0.1},
+          "left_rear": {"i": 4, "gain": -0.1},
+          "right_rear": {"i": 5, "gain": -0.1},
+          "down_rear": {"i": 6, "gain": -0.1},
+          "up_rear": {"i": 7, "gain": -0.1}
         }
       }
     ]
