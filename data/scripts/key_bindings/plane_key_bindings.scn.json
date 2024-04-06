@@ -110,13 +110,32 @@
         }
       },
       {
+        "call": "weapon_cycle_key_binding",
+        "arguments": {
+          "id": "plane.next_weapon",
+          "role": "%ROLE",
+          "player": "%PLAYER_NAME",
+          "node": "car_node$SUFFIX",
+          "weapon_increment": 1
+        }
+      },
+      {
+        "call": "weapon_cycle_key_binding",
+        "arguments": {
+          "id": "plane.previous_weapon",
+          "role": "%ROLE",
+          "player": "%PLAYER_NAME",
+          "node": "car_node$SUFFIX",
+          "weapon_increment": -1
+        }
+      },
+      {
         "required": ["%IF_HAS_GUN"],
         "call": "gun_key_binding",
         "arguments": {
           "id": "plane.shoot",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
-          "node": "main_gun_end_node$SUFFIX"
+          "player": "%PLAYER_NAME"
         }
       },
       {

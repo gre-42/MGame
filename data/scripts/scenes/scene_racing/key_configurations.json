@@ -346,6 +346,20 @@
   },
   {
     "unique": "plane",
+    "id": "plane.next_weapon",
+    "key": "R",
+    "scroll_wheel_axis": 1,
+    "scroll_wheel_sign_and_scale": 1
+  },
+  {
+    "unique": "plane",
+    "id": "plane.previous_weapon",
+    "key": "E",
+    "scroll_wheel_axis": 1,
+    "scroll_wheel_sign_and_scale": -1
+  },
+  {
+    "unique": "plane",
     "id": "plane.shoot",
     "key": "SPACE",
     "mouse_button": "LEFT",

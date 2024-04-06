@@ -48,8 +48,39 @@
           "error_alpha": "%ERROR_ALPHA"
         }
       },
-      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "capacity": 40}},
-      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "F_35_ammo", "amount": 20}},
+      {
+        "call": "set_inventory_capacity",
+        "arguments": {
+          "inventory_node": "car_node$SUFFIX",
+          "item_type": "dumb_bomb_ammo",
+          "capacity": 40
+        }
+      },
+      {
+        "call": "set_inventory_capacity",
+        "arguments": {
+          "inventory_node": "car_node$SUFFIX",
+          "item_type": "missile0_ammo",
+          "capacity": 40
+        }
+      },
+      {
+        "call": "add_to_inventory",
+        "arguments": {
+          "inventory_node": "car_node$SUFFIX",
+          "item_type": "dumb_bomb_ammo",
+          "amount": 20
+        }
+      },
+      {
+        "call": "add_to_inventory",
+        "arguments": {
+          "inventory_node": "car_node$SUFFIX",
+          "item_type": "missile0_ammo",
+          "amount": 20
+        }
+      },
+      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "car_node$SUFFIX"}},
       {
         "call": "gun",
         "arguments": {
@@ -57,10 +88,77 @@
           "parent_rigid_body_node": "car_node$SUFFIX",
           "punch_angle_node": null,
           "cool_down": 0.5,
-          "ammo_type": "F_35_ammo",
-          "bullet_type": "F_35_bullet",
+          "ammo_type": "dumb_bomb_ammo",
+          "bullet_type": "dumb_bomb_bullet",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0
+        }
+      },
+      {
+        "call": "gun",
+        "arguments": {
+          "node": "missile0_launcher_node$SUFFIX",
+          "parent_rigid_body_node": "car_node$SUFFIX",
+          "punch_angle_node": null,
+          "cool_down": 0.5,
+          "ammo_type": "missile0_ammo",
+          "bullet_type": "missile0_bullet",
+          "punch_angle_idle_std": 0,
+          "punch_angle_shoot_std": 0,
+          "generate_smart_bullet": {
+            "playback": "create_missile0",
+            "arguments": {
+              "PLAYER_NAME": "%PLAYER_NAME",
+              "SUFFIX": "%SUFFIX",
+              "VELOCITY": "%VELOCITY",
+              "IF_WITH_GRAPHICS": true,
+              "IF_WITH_PHYSICS": true
+            }
+          }
+        }
+      },
+      {
+        "call": "add_weapon_to_cycle",
+        "arguments": {
+          "cycle_node": "car_node$SUFFIX",
+          "entry_name": "dumb_bomb",
+          "ammo_type": "dumb_bomb_ammo",
+          "bullet_type": "dumb_bomb_bullet",
+          "cool_down": 0.5,
+          "range_min": 0,
+          "range_max": 2000,
+          "create": {
+            "call": "player_change_aiming_gun",
+            "arguments": {
+              "player": "%PLAYER_NAME",
+              "gun_node": "main_gun_end_node$SUFFIX"
+            }
+          },
+          "capture": {
+            "SUFFIX": "%SUFFIX"
+          }
+        }
+      },
+      {
+        "call": "add_weapon_to_cycle",
+        "arguments": {
+          "cycle_node": "car_node$SUFFIX",
+          "entry_name": "missile0",
+          "ammo_type": "missile0_ammo",
+          "bullet_type": "missile0_bullet",
+          "cool_down": 0.5,
+          "range_min": 0,
+          "range_max": 2000,
+          "create": {
+            "call": "player_change_aiming_gun",
+            "arguments": {
+              "player": "%PLAYER_NAME",
+              "gun_node": "missile0_launcher_node$SUFFIX"
+            }
+          },
+          "capture": {
+            "SUFFIX": "%SUFFIX"
+          }
         }
       },
       {
@@ -366,6 +464,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "right_rudder_node$SUFFIX", "name": "right_rudder_shift_node$SUFFIX", "position": [-1.5, 0, -6]}},
       {"comment": "guns"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, -3, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "missile0_launcher_node$SUFFIX", "position": [1, -3, 0]}},
       {"comment": "Graphics"},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},

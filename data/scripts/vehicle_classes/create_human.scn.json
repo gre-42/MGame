@@ -173,8 +173,8 @@
         "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
       {

@@ -121,7 +121,7 @@
   {
     "call": "set_bullet_properties",
     "arguments": {
-      "name": "F_35_bullet",
+      "name": "dumb_bomb_bullet",
       "properties": {
         "renderable": "tank_bullet_renderable",
         "hitbox": "tank_bullet_hitbox",
@@ -167,6 +167,26 @@
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 900,
+        "lifetime": 20,
+        "damage": 10,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_c_ram",
+        "light_before_impact": "tracer_c_ram_light_before_impact"
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "missile0_bullet",
+      "properties": {
+        "renderable": null,
+        "hitbox": "tank_bullet_hitbox",
+        "explosion_resource": "small_explosion",
+        "explosion_animation_time": 0.3,
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 0,
         "lifetime": 20,
         "damage": 10,
         "size": [2.4, 2.4, 20],

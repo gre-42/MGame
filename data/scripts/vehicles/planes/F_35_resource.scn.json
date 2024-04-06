@@ -27,7 +27,7 @@
         "fresnel_max": 0.4,
         "fresnel_exponent": 5,
         "fresnel_ambient": [1, 1, 1],
-        "triangulate": "%TRIANGULATE",
+        "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE",
         "dynamically_lighted": true
       }
     }
@@ -43,7 +43,7 @@
           "DIST_MIN": 0,
           "DIST_MAX": "inf",
           "OCCLUDER_PASS": "none",
-          "TRIANGULATE": false
+          "RECTANGLE_TRIANGULATION_MODE": "disabled"
         }
       },
       {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -63,7 +63,7 @@
       "DIST_MIN": 0,
       "DIST_MAX": "inf",
       "OCCLUDER_PASS": "none",
-      "TRIANGULATE": false
+      "RECTANGLE_TRIANGULATION_MODE": "disabled"
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_distancebox", "add": "obj_distancebox|attr_convex"}},
@@ -114,7 +114,7 @@
         "DIST_MIN": "%DIST_MIN",
         "DIST_MAX": "%DIST_MAX",
         "OCCLUDER_PASS": "%OCCLUDER_PASS",
-        "TRIANGULATE": true
+        "RECTANGLE_TRIANGULATION_MODE": "delaunay"
       }
     }
   },

@@ -1,0 +1,58 @@
+[
+  {
+    "declare_macro": "load_missile0_part",
+    "content": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "%NAME",
+        "filename": "models/missiles/missile0/$NAME.obj",
+        "position": [0, 0, 0],
+        "rotation": [-90, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "lightmap_black_global_and_local",
+        "occluder_pass": "%OCCLUDER_PASS",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero",
+        "werror": false,
+        "emissive_factor": "%BLENDER_EMISSIVE_FACTOR",
+        "ambient_factor": "%BLENDER_AMBIENT_FACTOR",
+        "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
+        "specular_factor": "%BLENDER_SPECULAR_FACTOR",
+        "fresnel_min": 0,
+        "fresnel_max": 0.4,
+        "fresnel_exponent": 5,
+        "fresnel_ambient": [1, 1, 1],
+        "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE",
+        "dynamically_lighted": true
+      }
+    }
+  },
+  {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": ["tank_bullet_hitbox"],
+      "dest_name": "missile0_hitboxes"
+    }
+  },
+  {
+    "declare_macro": "load_missile0_center",
+    "content": {
+      "playback": "load_missile0_part",
+      "arguments": {
+        "NAME": "missile0_center$DECIMATE",
+        "DIST_MIN": "%DIST_MIN",
+        "DIST_MAX": "%DIST_MAX",
+        "OCCLUDER_PASS": "%OCCLUDER_PASS",
+        "RECTANGLE_TRIANGULATION_MODE": "delaunay"
+      }
+    }
+  },
+  {"playback": "load_missile0_center", "arguments": {"DIST_MIN": 0, "DIST_MAX": 1000, "OCCLUDER_PASS": "none", "DECIMATE":""}},
+  {"playback": "load_missile0_part", "arguments": { "NAME": "missile0_wing_front_left", "DIST_MIN": 0, "DIST_MAX": 300, "OCCLUDER_PASS": "none", "RECTANGLE_TRIANGULATION_MODE": "delaunay"}},
+  {"playback": "load_missile0_part", "arguments": { "NAME": "missile0_wing_rear_left", "DIST_MIN": 0, "DIST_MAX": 300, "OCCLUDER_PASS": "none", "RECTANGLE_TRIANGULATION_MODE": "delaunay"}}
+]

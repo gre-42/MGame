@@ -1,0 +1,236 @@
+[
+  {
+    "declare_macro": "create_missile0_graphics",
+    "content": [
+      {"call": "renderable_instance", "arguments": {"name": "missile0_center$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "missile0_center$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_left$SUFFIX", "node": "wing_front_left_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_right$SUFFIX", "node": "wing_front_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_bottom$SUFFIX", "node": "wing_front_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_top$SUFFIX", "node": "wing_front_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_left$SUFFIX", "node": "wing_rear_left_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_right$SUFFIX", "node": "wing_rear_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_bottom$SUFFIX", "node": "wing_rear_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_top$SUFFIX", "node": "wing_rear_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}}
+    ]
+  },
+  {
+    "declare_macro": "create_missile0_physics",
+    "content": [
+      {
+        "call": "rigid_cuboid",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "hitboxes": "missile0_hitboxes",
+          "mass": "%MASS",
+          "v": "%VELOCITY",
+          "size": [0.06, 0.06, 3],
+          "com": [0, 0, 0],
+          "collidable_mode": "%COLLIDABLE_MODE",
+          "name": "missile0$SUFFIX",
+          "domain": "air",
+          "asset_id": "missile0"
+        }
+      },
+      {
+        "comment": [
+          "28000 pounds = 124550 Newton",
+          "43000 pounds = 191274 Newton"
+        ]
+      },
+      {
+        "call": "create_engine",
+        "arguments": {
+          "rigid_body": "car_node$SUFFIX",
+          "name": "turbine",
+          "angular_vels": [0],
+          "powers": [260],
+          "gear_ratios": [0],
+          "w_clutch": 0
+        }
+      },
+      {
+        "call": "rotor",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "position": [0, 0, 1.2],
+          "rotation": [180, 0, 0],
+          "engine": "turbine",
+          "power2lift": 1,
+          "rpm": 0,
+          "rotor_id": 0}
+      },
+      {"comment": "0: front left"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_front_left_node$SUFFIX",
+          "position": [-0.2, 0, -1.2],
+          "rotation": [0, 0, 0],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 0
+        }
+      },
+      {"comment": "1: front right"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_front_right_node$SUFFIX",
+          "position": [0.2, 0, -1.2],
+          "rotation": [0, 0, 0],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 1
+        }
+      },
+      {"comment": "2: front bottom"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_front_bottom_node$SUFFIX",
+          "position": [0, -0.2, -1.2],
+          "rotation": [0, 0, 90],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 2
+        }
+      },
+      {"comment": "3: front top"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_front_top_node$SUFFIX",
+          "position": [0, 0.2, -1.2],
+          "rotation": [0, 0, 90],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 3
+        }
+      },
+      {"comment": "4: rear left"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_rear_left_node$SUFFIX",
+          "position": [-0.2, 0, 1.2],
+          "rotation": [0, 0, 0],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 4
+        }
+      },
+      {"comment": "5: rear right"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_rear_right_node$SUFFIX",
+          "position": [0.2, 0, 1.2],
+          "rotation": [0, 0, 0],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 5
+        }
+      },
+      {"comment": "6: rear bottom"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_rear_bottom_node$SUFFIX",
+          "position": [0, -0.2, 1.2],
+          "rotation": [0, 0, 90],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 6
+        }
+      },
+      {"comment": "7: rear top"},
+      {
+        "call": "wing",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "angle_of_attack_node": "wing_rear_top_node$SUFFIX",
+          "position": [0, 0.2, 1.2],
+          "rotation": [0, 0, 90],
+          "fac_v": [0, 300, 600, 850],
+          "fac_c": [1, 1, 0.25, 0.125],
+          "lift_c": 0,
+          "angle_yz": 1,
+          "angle_zz": 1,
+          "drag": [0.7, 6, 0.7],
+          "wing_id": 7
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_missile0",
+    "content": [
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_front_left_node$SUFFIX",         "position": [-0.1, 0, -1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_front_right_node$SUFFIX",        "position": [0.1, 0, -1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_front_right_node$SUFFIX" , "name": "wing_front_right_visual_node$SUFFIX", "rotation": [0, 0, 180]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_front_bottom_node$SUFFIX",       "position": [0, -0.1, -1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_front_bottom_node$SUFFIX", "name": "wing_front_bottom_visual_node$SUFFIX","rotation": [0, 0, 90]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_front_top_node$SUFFIX",          "position": [0, 0.1, -1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_front_top_node$SUFFIX"   , "name": "wing_front_top_visual_node$SUFFIX",   "rotation": [0, 0, -90]}},
+
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_rear_left_node$SUFFIX",         "position": [-0.1, 0, 1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_rear_right_node$SUFFIX",        "position": [0.1, 0, 1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_rear_right_node$SUFFIX"  , "name": "wing_rear_right_visual_node$SUFFIX", "rotation": [0, 0, 180]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_rear_bottom_node$SUFFIX",       "position": [0, -0.1, 1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_rear_bottom_node$SUFFIX" , "name": "wing_rear_bottom_visual_node$SUFFIX","rotation": [0, 0, 90]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX"              , "name": "wing_rear_top_node$SUFFIX",          "position": [0, 0.1, 1.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_rear_top_node$SUFFIX"    , "name": "wing_rear_top_visual_node$SUFFIX",   "rotation": [0, 0, -90]}},
+
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_missile0_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": ""}},
+      {
+        "required": ["%IF_WITH_PHYSICS"],
+        "playback": "create_missile0_physics",
+        "arguments": {
+          "SUFFIX": "%SUFFIX",
+          "MASS": 80,
+          "VELOCITY": "%VELOCITY",
+          "COLLIDABLE_MODE": "moving"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "add_attached_light_missile0",
+    "content": []
+  }
+]

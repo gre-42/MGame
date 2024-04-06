@@ -1,0 +1,15 @@
+{
+  "id": "missile0",
+  "title": "missile0",
+  "on_init": [
+    {"include": "missile0_resource.scn.json"},
+    {"include": "missile0_instance.scn.json"}
+  ],
+  "database": {
+    "SUFFIX": "missile0",
+    "CLASS": "car",
+    "NODE_PREFIXES": ["car_node"],
+    "MAX_TIRE_ANGLE": null
+  },
+  "required": ["%GAME_MODE in {'team_deathmatch'}"]
+}

@@ -166,8 +166,9 @@
         "required": ["%IF_WITH_GUN"],
         "call": "set_desired_weapon",
         "arguments": {
+          "player": null,
           "cycle_node": "human_node$SUFFIX",
-          "entry_name": "m4a1",
+          "weapon": "m4a1",
           "equip_instantly": false
         }
       },

@@ -14,7 +14,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "triangulate": false
+      "rectangle_triangulation_mode": "disabled"
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "M3_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
