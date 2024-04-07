@@ -557,6 +557,18 @@
           "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
+      },
+      {
+        "call": "hud_opponent_tracker",
+        "required": ["%IF_PC"],
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "exclusive_node": null,
+          "update": "once",
+          "center": [0, 0],
+          "size": [0.05, 0.05],
+          "error_behavior": "hide",
+          "filename": "textures/hud/crosshair.png"}
       }
     ]
   },

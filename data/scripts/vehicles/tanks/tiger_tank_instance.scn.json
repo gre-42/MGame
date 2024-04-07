@@ -213,20 +213,20 @@
         "SUFFIX": "%SUFFIX",
         "PLAYER_NAME": "%PLAYER_NAME"
       }},
-      {"required": ["%IF_PC"], "call": "hud_image", "arguments": {
+      {"required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX",
-        "camera_node": "main_gun_camera_node$SUFFIX",
+        "exclusive_node": "main_gun_camera_node$SUFFIX",
         "ypln_node": "turret_node$SUFFIX",
         "filename": "textures/hud/crosshair.png",
         "update": "once",
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "center"}},
-      {"required": ["%IF_PC"], "call": "hud_image", "arguments": {
+      {"required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX",
-        "camera_node": "follower_camera",
+        "exclusive_node": "follower_camera",
         "ypln_node": "turret_node$SUFFIX",
         "filename": "textures/hud/crosshair.png",
         "update": "once",

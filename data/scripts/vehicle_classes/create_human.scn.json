@@ -143,12 +143,12 @@
         }
       },
       {
-        "call": "hud_image",
+        "call": "hud_target_point",
         "required": ["%IF_PC"],
         "arguments": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
-          "camera_node": "human_head_camera_node$SUFFIX",
+          "exclusive_node": null,
           "ypln_node": "human_node$SUFFIX",
           "update": "once",
           "center": [0, 0],
