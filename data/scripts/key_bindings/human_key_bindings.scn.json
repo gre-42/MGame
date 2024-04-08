@@ -137,7 +137,6 @@
         "id": "avatar.next_weapon",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
-        "node": "human_node$SUFFIX",
         "weapon_increment": 1
       }
     },
@@ -147,7 +146,6 @@
         "id": "avatar.previous_weapon",
         "role": "%ROLE",
         "player": "%PLAYER_NAME",
-        "node": "human_node$SUFFIX",
         "weapon_increment": -1
       }
     },

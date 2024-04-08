@@ -115,7 +115,6 @@
           "id": "plane.next_weapon",
           "role": "%ROLE",
           "player": "%PLAYER_NAME",
-          "node": "car_node$SUFFIX",
           "weapon_increment": 1
         }
       },
@@ -125,7 +124,6 @@
           "id": "plane.previous_weapon",
           "role": "%ROLE",
           "player": "%PLAYER_NAME",
-          "node": "car_node$SUFFIX",
           "weapon_increment": -1
         }
       },
