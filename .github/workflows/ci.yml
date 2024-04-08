@@ -139,7 +139,7 @@ jobs:
     needs: [build-ubuntu, build-msys2]
     steps:
       - name: Download Ubuntu artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: osm-rally-artifact-ubuntu
           path: MGame
