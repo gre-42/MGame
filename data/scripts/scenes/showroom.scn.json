@@ -39,6 +39,7 @@
         "SKATER_NODE_ANGLE_Y": 135,
         "CAR_NODE_ANGLES": [0, 135, 0],
         "VELOCITY": [0, 0, 0],
+        "ANGULAR_VELOCITY": [0, 0, 0],
         "IF_HUMAN_STYLE": true,
         "IF_SKATER_STYLE": true,
         "IF_CAR_BODY_RENDERABLE_STYLE": true,
@@ -164,7 +165,7 @@
           "hitboxes": "showroom_ground_hitbox",
           "mass": "inf",
           "size": [1, 2, 3],
-          "w": [0, 10, 0],
+          "w": [0, 1.5, 0],
           "collidable_mode": "static",
           "name": "stage",
           "asset_id": "state_no_id"
@@ -174,7 +175,7 @@
         "call": "relative_transformer",
         "arguments": {
           "node": "stage",
-          "w": [0, 10, 0]
+          "w": [0, 1.5, 0]
         }
       },
       {
