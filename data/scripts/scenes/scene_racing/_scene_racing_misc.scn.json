@@ -96,9 +96,6 @@
         }
       },
       {
-        "call": "delete_scheduled_advance_times"
-      },
-      {
         "required": ["%LOADED_GAME_MODE == 'rally'"],
         "call": "set_race_identifier_and_reload_history",
         "arguments": {

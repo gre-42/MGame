@@ -334,7 +334,6 @@
     "unique": "plane",
     "id": "plane.yaw_left",
     "key": "LEFT",
-    "gamepad_button": "LEFT_BUMPER",
     "not_gamepad_button": "B",
     "joystick_analog_axes": {"default": {"axis": "5", "sign_and_scale": 1, "deadzone": 0.01}}
   },
@@ -342,7 +341,6 @@
     "unique": "plane",
     "id": "plane.yaw_right",
     "key": "RIGHT",
-    "gamepad_button": "RIGHT_BUMPER",
     "not_gamepad_button": "B",
     "joystick_analog_axes": {"default": {"axis": "6", "sign_and_scale": 1, "deadzone": 0.01}}
   },
@@ -350,6 +348,7 @@
     "unique": "plane",
     "id": "plane.next_weapon",
     "key": "R",
+    "gamepad_button": "RIGHT_BUMPER",
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": 1
   },
@@ -357,6 +356,7 @@
     "unique": "plane",
     "id": "plane.previous_weapon",
     "key": "E",
+    "gamepad_button": "LEFT_BUMPER",
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": -1
   },
