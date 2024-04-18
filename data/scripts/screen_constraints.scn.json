@@ -100,5 +100,10 @@
   { "call": "additive_screen_constraint", "arguments": {"name": "pacenotes_picture_left",   "value": -0.25, "anchor": "center", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "pacenotes_picture_right",  "value": 0.25 , "anchor": "center", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "pacenotes_picture_bottom", "value": 0.25 , "anchor": "center", "units": "inches"} },
-  { "call": "additive_screen_constraint", "arguments": {"name": "pacenotes_picture_top",    "value": 0.75 , "anchor": "center", "units": "inches"} }
+  { "call": "additive_screen_constraint", "arguments": {"name": "pacenotes_picture_top",    "value": 0.75 , "anchor": "center", "units": "inches"} },
+  { "comment": "Opponent zoom" },
+  { "call": "additive_screen_constraint", "arguments": {"name": "opponent_zoom_left",   "value": -0.55, "anchor": "end", "units": "inches"} },
+  { "call": "additive_screen_constraint", "arguments": {"name": "opponent_zoom_right",  "value": -0.05, "anchor": "end", "units": "inches"} },
+  { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_bottom", "value": 0.05, "units": "inches"} },
+  { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_top",    "value": 0.55, "units": "inches"} }
 ]
