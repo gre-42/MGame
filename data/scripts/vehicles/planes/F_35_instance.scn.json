@@ -581,8 +581,9 @@
           "right": "opponent_zoom_right",
           "bottom": "opponent_zoom_bottom",
           "top": "opponent_zoom_top",
-          "fov": 10,
-          "background_color": [0.5, 0.5, 0.5]
+          "fov": 30,
+          "zoom": 1.5,
+          "background_color": ["nan", "nan", "nan"]
         }
       }
     ]
