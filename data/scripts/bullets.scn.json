@@ -108,13 +108,13 @@
         "renderable": "_",
         "hitbox": "_",
         "explosion_resource": "_",
-        "explosion_animation_time": 0.3,
+        "explosion_animation_time": 0,
         "rigid_body_flags": "none",
-        "mass": 20,
-        "velocity": 900,
-        "lifetime": 20,
-        "damage": 10,
-        "size": [2.4, 2.4, 20]
+        "mass": 0,
+        "velocity": 0,
+        "lifetime": 0,
+        "damage": 0,
+        "size": [0, 0, 0]
       }
     }
   },
