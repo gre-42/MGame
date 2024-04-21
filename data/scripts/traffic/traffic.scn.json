@@ -71,6 +71,8 @@
         "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+          "VELOCITY": "%VELOCITY",
+          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
           "HUMAN_NAME": "%HUMAN_NAME",
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
@@ -86,7 +88,8 @@
           "VELOCITY_ERROR_STD": 0.3,
           "YAW_ERROR_STD": 0.02,
           "PITCH_ERROR_STD": 0.02,
-          "ERROR_ALPHA": 0.002
+          "ERROR_ALPHA": 0.002,
+          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
         }
       },
       {
@@ -107,7 +110,7 @@
           "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
           "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
           "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "ANGULAR_VELOCITY",
+          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
           "CAR_NAME": "%CAR_NAME",
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
@@ -127,7 +130,7 @@
           "YAW_ERROR_STD": null,
           "PITCH_ERROR_STD": null,
           "ERROR_ALPHA": null,
-          "RESPAWN_COOLDOWN_TIME": null,
+          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
           "MUTE": false
         }
       },
@@ -159,6 +162,8 @@
             "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+              "VELOCITY": "%VELOCITY",
+              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
               "SUFFIX": "%SUFFIX",
               "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
@@ -166,7 +171,8 @@
 
               "HUMAN_NAME":"%HUMAN_NAME",
               "COLOR": "%COLOR",
-              "DECIMATE":"_d2"
+              "DECIMATE":"_d2",
+              "RESPAWN_COOLDOWN_TIME": 0
             }
           },
           "capture": {
@@ -204,6 +210,8 @@
             "arguments": {
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
               "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+              "VELOCITY": "%VELOCITY",
+              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
               "SUFFIX": "%SUFFIX",
               "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
@@ -213,7 +221,8 @@
               "COLOR": "%COLOR",
               "DECIMATE": "",
               "HAND_BRAKE_PULLED": true,
-              "MUTE": false
+              "MUTE": false,
+              "RESPAWN_COOLDOWN_TIME": 0
             }
           },
           "capture": {
@@ -243,6 +252,8 @@
             "arguments": {
               "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
               "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+              "VELOCITY": "%VELOCITY",
+              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
               "SUFFIX": "%SUFFIX",
               "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
@@ -251,7 +262,8 @@
               "CAR_NAME": "%CAR_NAME",
               "COLOR": "%COLOR",
               "DECIMATE": "",
-              "HAND_BRAKE_PULLED": false
+              "HAND_BRAKE_PULLED": false,
+              "RESPAWN_COOLDOWN_TIME": 0
             }
           },
           "capture": {
