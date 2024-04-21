@@ -46,6 +46,13 @@
       }
     },
     {
+      "call": "make_triangles_with_opposing_normals_two_sided",
+      "arguments": {
+        "resource_name": "%LEVEL_ID",
+        "material_filter": "attr_collide"
+      }
+    },
+    {
       "call": "merge_textures",
       "arguments": {
         "resource_name": "%LEVEL_ID",
