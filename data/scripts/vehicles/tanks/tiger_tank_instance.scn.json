@@ -30,7 +30,7 @@
           "com": [0, -0.5, 1],
           "collidable_mode": "%COLLIDABLE_MODE",
           "name": "tiger_tank$SUFFIX",
-          "domain": "ground",
+          "vehicle_type": "%%vehicles/tiger_tank/CLASS",
           "asset_id": "tiger_tank"
         }
       },

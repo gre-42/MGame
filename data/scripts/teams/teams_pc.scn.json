@@ -32,7 +32,7 @@
     ]
   },
   {
-    "declare_macro": "teams.create_human_for_pc",
+    "declare_macro": "teams.create_avatar_for_pc",
     "content": [
       {
         "playback": "create_human",
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "declare_macro": "teams.create_player_and_human_for_pc",
+    "declare_macro": "teams.create_player_and_avatar_for_pc",
     "content": [
       {
         "playback": "teams.create_player_for_pc",
@@ -136,7 +136,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_human_for_pc",
+            "playback": "teams.create_avatar_for_pc",
             "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",

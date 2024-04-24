@@ -27,7 +27,7 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "$NAME-_hitboxes",
-          "domain": "ground",
+          "vehicle_type": "%%vehicles/$NAME/CLASS",
           "v": "%VELOCITY",
           "w": "%ANGULAR_VELOCITY",
           "mass": "%MASS",
