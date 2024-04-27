@@ -30,7 +30,6 @@
           "com": [0, -0.5, 1],
           "collidable_mode": "%COLLIDABLE_MODE",
           "name": "tiger_tank$SUFFIX",
-          "vehicle_type": "%%vehicles/tiger_tank/CLASS",
           "asset_id": "tiger_tank"
         }
       },
@@ -247,6 +246,13 @@
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/tiger_tank/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 0, 50], "alpha": 0}
+        }
+      },
+      {
+        "call": "create_drive_or_walk_ai",
+        "arguments": {
+          "ai_name": "default",
+          "player": "%PLAYER_NAME"
         }
       }
     ]

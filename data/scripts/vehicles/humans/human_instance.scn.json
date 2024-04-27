@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "create_human_instance",
+    "declare_macro": "generic_avatar.create",
     "content": [
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
@@ -22,7 +22,6 @@
           "collidable_mode": "moving",
           "name": "human$SUFFIX",
           "flags": "is_avatar",
-          "vehicle_type": "%%vehicles/$ASSET_ID/CLASS",
           "asset_id": "%ASSET_ID"
         }
       },
@@ -234,5 +233,15 @@
       {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}}
     ]
+  },
+  {
+    "declare_macro": "generic_avatar.create_player_externals",
+    "content": {
+      "call": "create_drive_or_walk_ai",
+      "arguments": {
+        "ai_name": "default",
+        "player": "%PLAYER_NAME"
+      }
+    }
   }
 ]

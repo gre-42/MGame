@@ -3,7 +3,7 @@
   {
     "declare_macro": "create_female_mh",
     "content": {
-      "playback": "create_human_instance",
+      "playback": "generic_avatar.create",
       "arguments": {
         "ASSET_ID": "female_mh",
         "DECIMATE": "_d2",
@@ -22,7 +22,7 @@
   {
     "declare_macro": "create_female_skirt",
     "content": {
-      "playback": "create_human_instance",
+      "playback": "generic_avatar.create",
       "arguments": {
         "ASSET_ID": "female_skirt",
         "DECIMATE": "_d2",
@@ -40,11 +40,21 @@
   },
   {
     "declare_macro": "create_player_human_externals_female_mh",
-    "content": {"comment": "Do nothing"}
+    "content": {
+      "playback": "generic_avatar.create_player_externals",
+      "arguments": {
+        "PLAYER_NAME": "%PLAYER_NAME"
+      }
+    }
   },
   {
     "declare_macro": "create_player_human_externals_female_skirt",
-    "content": {"comment": "Do nothing"}
+    "content": {
+      "playback": "generic_avatar.create_player_externals",
+      "arguments": {
+        "PLAYER_NAME": "%PLAYER_NAME"
+      }
+    }
   },
   {
     "comment": {

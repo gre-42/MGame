@@ -30,7 +30,6 @@
           "com": [0, -0.2, -0.2],
           "collidable_mode": "%COLLIDABLE_MODE",
           "name": "F_35$SUFFIX",
-          "vehicle_type": "%%vehicles/F_35/CLASS",
           "asset_id": "F_35"
         }
       },
@@ -120,10 +119,10 @@
             {
               "call": "create_missile_ai",
               "arguments": {
+                "ai_name": "default",
                 "missile": "car_node$BULLET_SUFFIX",
-                "target": "%TARGET",
                 "pid": {
-                  "pid": [0.5, 10, 0.1],
+                  "pid": [0.5, 0.16, 6],
                   "alpha": 0.2
                 },
                 "dy": {
@@ -132,6 +131,13 @@
                 },
                 "eta_max": 20,
                 "destination_reached_radius": 2
+              }
+            },
+            {
+              "call": "create_vehicle_follower_ai",
+              "arguments": {
+                "missile": "car_node$BULLET_SUFFIX",
+                "target": "%TARGET"
               }
             }
           ]

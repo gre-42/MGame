@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "teams.create_player_for_human_and_npc",
+    "declare_macro": "teams.create_player_for_avatar_and_npc",
     "content": [
       {
         "call": "player_create",
@@ -158,10 +158,10 @@
     ]
   },
   {
-    "declare_macro": "teams.create_player_and_human_for_npc",
+    "declare_macro": "teams.create_player_and_avatar_for_npc",
     "content": [
       {
-        "playback": "teams.create_player_for_human_and_npc",
+        "playback": "teams.create_player_for_avatar_and_npc",
         "arguments": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "TEAM": "%TEAM",

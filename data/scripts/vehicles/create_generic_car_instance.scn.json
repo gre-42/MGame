@@ -27,7 +27,6 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "$NAME-_hitboxes",
-          "vehicle_type": "%%vehicles/$NAME/CLASS",
           "v": "%VELOCITY",
           "w": "%ANGULAR_VELOCITY",
           "mass": "%MASS",
@@ -332,7 +331,7 @@
     ]
   },
   {
-    "declare_macro": "generic_car.create_player_car_externals",
+    "declare_macro": "generic_car.create_player_externals",
     "content": [
       {
         "required": ["%IF_PC"],
@@ -372,6 +371,13 @@
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/$ASSET_ID/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
+        }
+      },
+      {
+        "call": "create_drive_or_walk_ai",
+        "arguments": {
+          "ai_name": "default",
+          "player": "%PLAYER_NAME"
         }
       }
     ]
