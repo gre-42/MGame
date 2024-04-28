@@ -1,0 +1,17 @@
+[
+  {
+    "playback": "create_tripod_camera",
+    "arguments": {
+      "NODE_NAME": "tripod_node0",
+      "POSITION": [0, 0, 0],
+      "ROTATION": [0, 0, 0]
+    }
+  },
+  {
+    "call": "set_camera_cycle",
+    "arguments": {
+      "name": "tripod",
+      "cameras": ["tripod_node0"]
+    }
+  }
+]
