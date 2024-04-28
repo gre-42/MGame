@@ -376,8 +376,15 @@
       {
         "call": "create_drive_or_walk_ai",
         "arguments": {
-          "ai_name": "default",
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "ai_name": "default"
+        }
+      },
+      {
+        "call": "set_way_points_filter",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "filter": "explicit_ground|street"
         }
       }
     ]

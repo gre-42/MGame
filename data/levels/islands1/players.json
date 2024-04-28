@@ -33,7 +33,7 @@
       "controller": "pc", "name": "you", "team": "red",
       "skills": {
         "ai": {
-          "can_drive": false,
+          "can_drive": true,
           "can_aim": false,
           "can_shoot": false,
           "can_select_opponent": false,
@@ -45,7 +45,7 @@
           "can_shoot": true
         }
       },
-      "spawned_vehicle": { "type": "female_mh" }
+      "spawned_vehicle": { "type": "F_35" }
     },
     {
       "controller": "npc", "name": "npc1", "team": "red",

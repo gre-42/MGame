@@ -430,7 +430,7 @@
           "wing_id": 6
         }
       },
-      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$SUFFIX", "door_distance": 3}},
+      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$SUFFIX", "door_distance": 5}},
       {
         "call": "create_plane_controller",
         "arguments": {
@@ -456,6 +456,20 @@
           "tire_ids": [0, 1],
           "tire_angles": [30, 30],
           "vehicle_domain": "air"
+        }
+      },
+      {
+        "call": "create_missile_controller",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "wing_controllers": [
+            {"i": 0, "gain": 0.1, "angle": 90},
+            {"i": 1, "gain": 0.1, "angle": 90},
+            {"i": 2, "gain": -0.1, "angle": 90},
+            {"i": 3, "gain": -0.1, "angle": 90},
+            {"i": 4, "gain": -0.1, "angle": 0},
+            {"i": 5, "gain": -0.1, "angle": 0}
+          ]
         }
       }
     ]
@@ -520,6 +534,23 @@
           "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
           "ERROR_ALPHA": "%ERROR_ALPHA",
           "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
+        }
+      },
+      {
+        "call": "create_missile_ai",
+        "arguments": {
+          "ai_name": "fly",
+          "missile": "car_node$SUFFIX",
+          "pid": {
+            "pid": [0.5, 0.16, 6],
+            "alpha": 0.2
+          },
+          "dy": {
+            "velocity": [0, 400],
+            "dy": [0.1, 0.02]
+          },
+          "eta_max": 20,
+          "destination_reached_radius": 5
         }
       }
     ]
@@ -590,6 +621,29 @@
           "fov": 30,
           "zoom": 1.5,
           "background_color": ["nan", "nan", "nan"]
+        }
+      },
+      {
+        "call": "create_drive_or_walk_ai",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "ai_name": "taxi"
+        }
+      },
+      {
+        "call": "create_plane_ai",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "ai_name": "default",
+          "taxi": "taxi",
+          "fly": "fly"
+        }
+      },
+      {
+        "call": "set_way_points_filter",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "filter": "runway_or_taxiway_or_airway"
         }
       }
     ]

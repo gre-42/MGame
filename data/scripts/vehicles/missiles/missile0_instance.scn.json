@@ -198,14 +198,16 @@
         "call": "create_missile_controller",
         "arguments": {
           "node": "car_node$SUFFIX",
-          "left_front": {"i": 0, "gain": 0.1},
-          "right_front": {"i": 1, "gain": 0.1},
-          "down_front": {"i": 2, "gain": 0.1},
-          "up_front": {"i": 3, "gain": 0.1},
-          "left_rear": {"i": 4, "gain": -0.1},
-          "right_rear": {"i": 5, "gain": -0.1},
-          "down_rear": {"i": 6, "gain": -0.1},
-          "up_rear": {"i": 7, "gain": -0.1}
+          "wing_controllers": [
+            {"i": 0, "gain": 0.1, "angle": 90},
+            {"i": 1, "gain": 0.1, "angle": 90},
+            {"i": 2, "gain": 0.1, "angle": 0},
+            {"i": 3, "gain": 0.1, "angle": 0},
+            {"i": 4, "gain": -0.1, "angle": 90},
+            {"i": 5, "gain": -0.1, "angle": 90},
+            {"i": 6, "gain": -0.1, "angle": 0},
+            {"i": 7, "gain": -0.1, "angle": 0}
+          ]
         }
       }
     ]

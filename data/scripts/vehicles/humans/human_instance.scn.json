@@ -236,12 +236,21 @@
   },
   {
     "declare_macro": "generic_avatar.create_player_externals",
-    "content": {
-      "call": "create_drive_or_walk_ai",
-      "arguments": {
-        "ai_name": "default",
-        "player": "%PLAYER_NAME"
+    "content": [
+      {
+        "call": "create_drive_or_walk_ai",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "ai_name": "default"
+        }
+      },
+      {
+        "call": "set_way_points_filter",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "filter": "explicit_ground|sidewalk"
+        }
       }
-    }
+    ]
   }
 ]

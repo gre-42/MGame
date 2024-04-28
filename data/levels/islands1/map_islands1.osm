@@ -733,6 +733,54 @@
     <tag k='supplies:m72_law_rocket' v='10' />
     <tag k='supplies:meta:cooldown_seconds' v='0.5' />
   </node>
+  <node id='-141450' action='modify' visible='true' lat='37.83563672059' lon='-122.49878084246' />
+  <node id='-141451' action='modify' visible='true' lat='37.83826615844' lon='-122.4930082053' />
+  <node id='-141467' action='modify' visible='true' lat='37.83984534353' lon='-122.48942100342' />
+  <node id='-141468' action='modify' visible='true' lat='37.84125706969' lon='-122.4844642173'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141470' action='modify' visible='true' lat='37.8386116007' lon='-122.47655527353'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141471' action='modify' visible='true' lat='37.85547060637' lon='-122.48050280948'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141472' action='modify' visible='true' lat='37.85560230201' lon='-122.50257549586'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141473' action='modify' visible='true' lat='37.84941235279' lon='-122.50413225963'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141474' action='modify' visible='true' lat='37.84559276317' lon='-122.50051834373'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141475' action='modify' visible='true' lat='37.84866601175' lon='-122.49170594879'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141476' action='modify' visible='true' lat='37.85244154181' lon='-122.48244876419'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141477' action='modify' visible='true' lat='37.84067529902' lon='-122.46988345658'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141478' action='modify' visible='true' lat='37.83751389893' lon='-122.4727189906'>
+    <tag k='height' v='150m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-141520' action='modify' visible='true' lat='37.8403679137' lon='-122.4882587873' />
+  <node id='-141720' action='modify' visible='true' lat='37.83550087063' lon='-122.50099946314' />
+  <node id='-141723' action='modify' visible='true' lat='37.83509264769' lon='-122.50108681949' />
+  <node id='-141724' action='modify' visible='true' lat='37.83493165887' lon='-122.5008684195' />
+  <node id='-141725' action='modify' visible='true' lat='37.83460968019' lon='-122.50069005951' />
   <way id='-121530' action='modify' visible='true'>
     <nd ref='-138567' />
     <nd ref='-138639' />
@@ -1412,5 +1460,59 @@
     <nd ref='-141430' />
     <nd ref='-141431' />
     <nd ref='-141429' />
+  </way>
+  <way id='-124544' action='modify' visible='true'>
+    <nd ref='-141467' />
+    <nd ref='-141468' />
+    <nd ref='-141470' />
+    <nd ref='-141471' />
+    <nd ref='-141472' />
+    <nd ref='-141473' />
+    <nd ref='-141474' />
+    <nd ref='-141475' />
+    <nd ref='-141476' />
+    <nd ref='-141477' />
+    <nd ref='-141478' />
+    <nd ref='-141470' />
+    <tag k='way_points' v='unidirectional' />
+    <tag k='way_points_class' v='airway' />
+  </way>
+  <way id='-124619' action='modify' visible='true'>
+    <nd ref='-141450' />
+    <nd ref='-141451' />
+    <nd ref='-141467' />
+    <tag k='aeroway' v='runway' />
+    <tag k='width' v='8m' />
+  </way>
+  <way id='-124735' action='modify' visible='true'>
+    <nd ref='-141467' />
+    <nd ref='-141520' />
+    <tag k='aeroway' v='runway' />
+    <tag k='runway' v='displaced_threshold' />
+    <tag k='width' v='8m' />
+  </way>
+  <way id='-124954' action='modify' visible='true'>
+    <nd ref='-141720' />
+    <nd ref='-141450' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='8m' />
+  </way>
+  <way id='-124961' action='modify' visible='true'>
+    <nd ref='-141723' />
+    <nd ref='-141450' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='8m' />
+  </way>
+  <way id='-124975' action='modify' visible='true'>
+    <nd ref='-141724' />
+    <nd ref='-141450' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='8m' />
+  </way>
+  <way id='-124976' action='modify' visible='true'>
+    <nd ref='-141725' />
+    <nd ref='-141450' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='8m' />
   </way>
 </osm>
