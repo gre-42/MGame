@@ -119,7 +119,6 @@
             {
               "call": "create_missile_ai",
               "arguments": {
-                "ai_name": "default",
                 "missile": "car_node$BULLET_SUFFIX",
                 "pid": {
                   "pid": [0.5, 0.16, 6],
@@ -442,11 +441,7 @@
           "left_rudder_wing_ids": [4],
           "right_rudder_wing_ids": [5],
           "left_flap_wing_ids": [0],
-          "right_flap_wing_ids": [1],
-          "tire_ids": [0, 1],
-          "tire_angles": [30, 30],
-          "yaw_amount_to_tire_angle": 10,
-          "vehicle_domain": "air"
+          "right_flap_wing_ids": [1]
         }
       },
       {
@@ -454,8 +449,7 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "tire_ids": [0, 1],
-          "tire_angles": [30, 30],
-          "vehicle_domain": "air"
+          "tire_angles": [30, 30]
         }
       },
       {
@@ -539,7 +533,6 @@
       {
         "call": "create_missile_ai",
         "arguments": {
-          "ai_name": "fly",
           "missile": "car_node$SUFFIX",
           "pid": {
             "pid": [0.5, 0.16, 6],
@@ -626,17 +619,7 @@
       {
         "call": "create_drive_or_walk_ai",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "ai_name": "taxi"
-        }
-      },
-      {
-        "call": "create_plane_ai",
-        "arguments": {
-          "player": "%PLAYER_NAME",
-          "ai_name": "default",
-          "taxi": "taxi",
-          "fly": "fly"
+          "player": "%PLAYER_NAME"
         }
       },
       {
