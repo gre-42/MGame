@@ -58,6 +58,21 @@
           "#TimesBlend5",
           "#Ramp5"
         ],
+        "taxiway_alpha_textures": [
+          "#PlusDetail",
+          "#TimesBlend5",
+          "#Ramp5"
+        ],
+        "runway_alpha_textures": [
+          "#PlusDetail",
+          "#TimesBlend5",
+          "#Ramp5"
+        ],
+        "runway_displacement_threshold_alpha_textures": [
+          "#PlusDetail",
+          "#TimesBlend5",
+          "#Ramp5"
+        ],
         "street_crossing_textures": ["#Road007_No_Lines"],
         "taxiway_crossing_textures": ["#Road007_No_Lines"],
         "runway_crossing_textures": ["#Road007_No_Lines"],
@@ -237,6 +252,9 @@
         "driving_direction": "right",
         "blend_street": true,
         "blend_path": true,
+        "blend_taxiway": true,
+        "blend_runway": true,
+        "blend_runway_displacement_threshold": true,
         "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
         "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
         "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
