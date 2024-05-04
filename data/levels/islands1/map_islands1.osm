@@ -393,11 +393,11 @@
   <node id='-140883' action='modify' visible='true' lat='37.83623537246' lon='-122.50085854895' />
   <node id='-140884' action='modify' visible='true' lat='37.83585476665' lon='-122.50067550905' />
   <node id='-140885' action='modify' visible='true' lat='37.83556360351' lon='-122.50164616114' />
-  <node id='-140896' action='modify' visible='true' lat='37.83436003483' lon='-122.49884791467' />
-  <node id='-140897' action='modify' visible='true' lat='37.83460085759' lon='-122.49809418021' />
-  <node id='-140898' action='modify' visible='true' lat='37.83496323535' lon='-122.49830706825' />
-  <node id='-140899' action='modify' visible='true' lat='37.83503526221' lon='-122.49863226622' />
-  <node id='-140900' action='modify' visible='true' lat='37.834862164' lon='-122.49911602298' />
+  <node id='-140896' action='modify' visible='true' lat='37.83419617831' lon='-122.49881879622' />
+  <node id='-140897' action='modify' visible='true' lat='37.8344370016' lon='-122.49806506176' />
+  <node id='-140898' action='modify' visible='true' lat='37.83479938017' lon='-122.4982779498' />
+  <node id='-140899' action='modify' visible='true' lat='37.83487140719' lon='-122.49860314777' />
+  <node id='-140900' action='modify' visible='true' lat='37.83469830859' lon='-122.49908690453' />
   <node id='-140956' action='modify' visible='true' lat='37.84216514235' lon='-122.48377605877' />
   <node id='-140958' action='modify' visible='true' lat='37.8512665369' lon='-122.47208532202' />
   <node id='-140959' action='modify' visible='true' lat='37.85180975671' lon='-122.47259588385' />
@@ -778,8 +778,8 @@
   </node>
   <node id='-141520' action='modify' visible='true' lat='37.8403679137' lon='-122.4882587873' />
   <node id='-141720' action='modify' visible='true' lat='37.83550087063' lon='-122.50099946314' />
-  <node id='-141723' action='modify' visible='true' lat='37.83509264769' lon='-122.50108681949' />
-  <node id='-141724' action='modify' visible='true' lat='37.83493165887' lon='-122.5008684195' />
+  <node id='-141723' action='modify' visible='true' lat='37.83517313768' lon='-122.50110137872' />
+  <node id='-141724' action='modify' visible='true' lat='37.83489716306' lon='-122.50086113989' />
   <node id='-141725' action='modify' visible='true' lat='37.83460968019' lon='-122.50069005951' />
   <node id='-141738' action='modify' visible='true' lat='37.83615270363' lon='-122.49914506383' />
   <node id='-141740' action='modify' visible='true' lat='37.83519473926' lon='-122.49847158636' />
@@ -1492,23 +1492,20 @@
     <tag k='way_points_class' v='airway' />
   </way>
   <way id='-124619' action='modify' visible='true'>
-    <nd ref='-141450' />
-    <nd ref='-141813' />
-    <nd ref='-141749' />
     <nd ref='-141811' />
     <nd ref='-141763' />
     <nd ref='-141810' />
     <nd ref='-141451' />
     <nd ref='-141467' />
     <tag k='aeroway' v='runway' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='15m' />
   </way>
   <way id='-124735' action='modify' visible='true'>
     <nd ref='-141467' />
     <nd ref='-141520' />
     <tag k='aeroway' v='runway' />
     <tag k='runway' v='displaced_threshold' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='15m' />
   </way>
   <way id='-124954' action='modify' visible='true'>
     <nd ref='-141720' />
@@ -1516,7 +1513,7 @@
     <nd ref='-141812' />
     <nd ref='-141749' />
     <tag k='aeroway' v='taxiway' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='12m' />
   </way>
   <way id='-124961' action='modify' visible='true'>
     <nd ref='-141723' />
@@ -1524,7 +1521,7 @@
     <nd ref='-141815' />
     <nd ref='-141450' />
     <tag k='aeroway' v='taxiway' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='12m' />
   </way>
   <way id='-124975' action='modify' visible='true'>
     <nd ref='-141724' />
@@ -1532,7 +1529,7 @@
     <nd ref='-141816' />
     <nd ref='-141450' />
     <tag k='aeroway' v='taxiway' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='12m' />
   </way>
   <way id='-125022' action='modify' visible='true'>
     <nd ref='-141725' />
@@ -1540,12 +1537,26 @@
     <nd ref='-141814' />
     <nd ref='-141749' />
     <tag k='aeroway' v='taxiway' />
-    <tag k='width' v='8m' />
+    <tag k='width' v='12m' />
   </way>
   <way id='-125062' action='modify' visible='true'>
     <nd ref='-139364' />
     <nd ref='-141763' />
     <nd ref='-141766' />
+    <tag k='access' v='discouraged' />
     <tag k='aeroway' v='runway' />
+  </way>
+  <way id='-125215' action='modify' visible='true'>
+    <nd ref='-141450' />
+    <nd ref='-141813' />
+    <nd ref='-141749' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='12m' />
+  </way>
+  <way id='-125224' action='modify' visible='true'>
+    <nd ref='-141749' />
+    <nd ref='-141811' />
+    <tag k='aeroway' v='taxiway' />
+    <tag k='width' v='15m' />
   </way>
 </osm>
