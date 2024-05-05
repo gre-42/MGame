@@ -288,6 +288,16 @@
   },
   {
     "unique": "plane",
+    "id": "plane.steer_left",
+    "key": "LEFT"
+  },
+  {
+    "unique": "plane",
+    "id": "plane.steer_right",
+    "key": "RIGHT"
+  },
+  {
+    "unique": "plane",
     "id": "plane.roll_left",
     "key": "A",
     "not_gamepad_button": "B",

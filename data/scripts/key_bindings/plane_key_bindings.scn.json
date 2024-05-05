@@ -4,6 +4,36 @@
     "content": [
       {
         "required": ["%IF_MANUAL_DRIVE"],
+        "call": "car_controller_idle_binding",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "node": "car_node$SUFFIX"
+        }
+      },
+      {
+        "required": ["%IF_MANUAL_DRIVE"],
+        "call": "car_controller_key_binding",
+        "arguments": {
+          "id": "plane.steer_left",
+          "role": "%ROLE",
+          "player": "%PLAYER_NAME",
+          "node": "car_node$SUFFIX",
+          "steer_left_amount": 1
+        }
+      },
+      {
+        "required": ["%IF_MANUAL_DRIVE"],
+        "call": "car_controller_key_binding",
+        "arguments": {
+          "id": "plane.steer_right",
+          "role": "%ROLE",
+          "player": "%PLAYER_NAME",
+          "node": "car_node$SUFFIX",
+          "steer_left_amount": -1
+        }
+      },
+      {
+        "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_idle_binding",
         "arguments": {
           "player": "%PLAYER_NAME",

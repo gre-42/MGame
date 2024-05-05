@@ -545,6 +545,14 @@
           "eta_max": 20,
           "destination_reached_radius": 5
         }
+      },
+      {
+        "call": "create_destination_reached_ai",
+        "arguments": {
+          "vehicle": "car_node$SUFFIX",
+          "destination_reached_radius": 5,
+          "control_source": "user"
+        }
       }
     ]
   },
