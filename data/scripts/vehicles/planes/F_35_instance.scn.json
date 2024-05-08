@@ -129,7 +129,8 @@
                   "dy": [0.1, 0.02]
                 },
                 "eta_max": 20,
-                "destination_reached_radius": 2
+                "destination_reached_radius": 2,
+                "maximum_velocity": 300
               }
             },
             {
@@ -457,12 +458,12 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "wing_controllers": [
-            {"i": 0, "gain": 0.1, "angle": 90},
-            {"i": 1, "gain": 0.1, "angle": 90},
-            {"i": 2, "gain": -0.1, "angle": 90},
-            {"i": 3, "gain": -0.1, "angle": 90},
-            {"i": 4, "gain": -0.1, "angle": 0},
-            {"i": 5, "gain": -0.1, "angle": 0}
+            {"i": 0, "angle_of_attack":  40, "normal_angle":  80, "antiroll_angle":  5},
+            {"i": 1, "angle_of_attack":  40, "normal_angle": 100, "antiroll_angle": -5},
+            {"i": 2, "angle_of_attack": -40, "normal_angle":  80, "antiroll_angle":  5},
+            {"i": 3, "angle_of_attack": -40, "normal_angle": 100, "antiroll_angle": -5},
+            {"i": 4, "angle_of_attack": -20, "normal_angle":   0, "antiroll_angle":  0},
+            {"i": 5, "angle_of_attack": -20, "normal_angle":   0, "antiroll_angle":  0}
           ]
         }
       }
@@ -535,7 +536,7 @@
         "arguments": {
           "missile": "car_node$SUFFIX",
           "pid": {
-            "pid": [0.5, 0.16, 6],
+            "pid": [0.5, 0.16, 4],
             "alpha": 0.2
           },
           "dy": {
@@ -543,14 +544,15 @@
             "dy": [0.1, 0.02]
           },
           "eta_max": 20,
-          "destination_reached_radius": 5
+          "destination_reached_radius": 5,
+          "maximum_velocity": 200
         }
       },
       {
         "call": "create_destination_reached_ai",
         "arguments": {
           "vehicle": "car_node$SUFFIX",
-          "destination_reached_radius": 5,
+          "destination_reached_radius": 200,
           "control_source": "user"
         }
       }
