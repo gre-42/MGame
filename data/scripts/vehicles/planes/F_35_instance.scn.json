@@ -129,7 +129,8 @@
                   "dy": [0.1, 0.02]
                 },
                 "eta_max": 20,
-                "destination_reached_radius": 2,
+                "waypoint_reached_radius": 2,
+                "resting_position_reached_radius": 2,
                 "maximum_velocity": 300
               }
             },
@@ -544,16 +545,19 @@
             "dy": [0.1, 0.02]
           },
           "eta_max": 20,
-          "destination_reached_radius": 5,
+          "waypoint_reached_radius": 200,
+          "resting_position_reached_radius": 50,
           "maximum_velocity": 200
         }
       },
       {
-        "call": "create_destination_reached_ai",
-        "arguments": {
-          "vehicle": "car_node$SUFFIX",
-          "destination_reached_radius": 200,
-          "control_source": "user"
+        "comment": {
+          "call": "create_destination_reached_ai",
+          "arguments": {
+            "vehicle": "car_node$SUFFIX",
+            "destination_reached_radius": 200,
+            "control_source": "user"
+          }
         }
       }
     ]
