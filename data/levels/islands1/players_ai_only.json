@@ -30,24 +30,6 @@
   },
   "players": [
     {
-      "controller": "pc", "name": "you", "team": "red",
-      "skills": {
-        "ai": {
-          "can_drive": false,
-          "can_aim": false,
-          "can_shoot": false,
-          "can_select_opponent": false,
-          "can_select_weapon": false
-        },
-        "user": {
-          "can_drive": true,
-          "can_aim": true,
-          "can_shoot": true
-        }
-      },
-      "spawned_vehicle": { "type": "F_35" }
-    },
-    {
       "controller": "npc", "name": "npc1", "team": "red",
       "spawned_vehicle": { "type": "tiger_tank" }
     },
@@ -69,7 +51,7 @@
       "spawned_vehicle": { "type": "tiger_tank" }
     },
     {
-      "name": "extra_F_35", "team": "red",
+      "controller": "npc", "name": "npc5", "team": "red",
       "spawned_vehicle": { "type": "F_35" }
     }
   ]

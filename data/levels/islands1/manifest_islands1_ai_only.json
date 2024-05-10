@@ -1,13 +1,13 @@
 {
-  "id": "islands1",
-  "title": "Islands 1",
+  "id": "islands1_ai_only",
+  "title": "Islands 1 (AI only)",
   "on_execute": {
     "include": "scene_islands1.scn.json"
   },
   "globals": {
     "LEVEL_ICON_FILE": "#black",
     "MINIMAP_FILE": null,
-    "PLAYERS_JSON_BASENAME": "players.json"
+    "PLAYERS_JSON_BASENAME": "players_ai_only.json"
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false
