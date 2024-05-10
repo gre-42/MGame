@@ -131,9 +131,9 @@
       "animatable": "trails",
       "model": "trail_segment_20x20",
       "u_offset": 0,
-      "u_scale": 0.5,
-      "times": [-5, 10],
-      "w": [-5, 10],
+      "u_scale": 0.25,
+      "times": [-5, 2],
+      "w": [-25, 10],
       "minimum_length": 0.5
     }
   },
@@ -144,7 +144,7 @@
       "animatable": "trails",
       "model": "trail_segment_5x5",
       "u_offset": 0.5,
-      "u_scale": 0.5,
+      "u_scale": 0.25,
       "times": [-5, 0.2],
       "w": [-250, 10],
       "minimum_length": 0.5
@@ -157,7 +157,7 @@
       "animatable": "trails",
       "model": "trail_segment_2x2",
       "u_offset": 0.5,
-      "u_scale": 0.5,
+      "u_scale": 0.25,
       "times": [-5, 0.2],
       "w": [-250, 10],
       "minimum_length": 0.5
