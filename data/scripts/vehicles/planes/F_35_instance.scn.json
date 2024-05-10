@@ -405,7 +405,7 @@
           "vehicle": "car_node$SUFFIX",
           "angle_of_attack_node": "right_rudder_node$SUFFIX",
           "position": [0.5, 0.5, 6],
-          "rotation": [0, 20, -110],
+          "rotation": [0, -20, 70],
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
@@ -463,8 +463,8 @@
             {"i": 1, "angle_of_attack":  40, "normal_angle": 100, "antiroll_angle": -5},
             {"i": 2, "angle_of_attack": -40, "normal_angle":  80, "antiroll_angle":  5},
             {"i": 3, "angle_of_attack": -40, "normal_angle": 100, "antiroll_angle": -5},
-            {"i": 4, "angle_of_attack": -20, "normal_angle":   0, "antiroll_angle":  0},
-            {"i": 5, "angle_of_attack": -20, "normal_angle":   0, "antiroll_angle":  0}
+            {"i": 4, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0},
+            {"i": 5, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0}
           ]
         }
       }
