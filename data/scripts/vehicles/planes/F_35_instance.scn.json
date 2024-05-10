@@ -117,6 +117,13 @@
               }
             },
             {
+              "call": "set_actor_task",
+              "arguments": {
+                "vehicle": "car_node$BULLET_SUFFIX",
+                "task": "air_cruise"
+              }
+            },
+            {
               "call": "create_missile_ai",
               "arguments": {
                 "missile": "car_node$BULLET_SUFFIX",
@@ -131,7 +138,7 @@
                 "eta_max": 20,
                 "waypoint_reached_radius": 2,
                 "resting_position_reached_radius": 2,
-                "maximum_velocity": 300
+                "maximum_velocity": 500
               }
             },
             {
@@ -465,7 +472,8 @@
             {"i": 3, "angle_of_attack": -40, "normal_angle": 100, "antiroll_angle": -5},
             {"i": 4, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0},
             {"i": 5, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0}
-          ]
+          ],
+          "engine": "turbine"
         }
       }
     ]

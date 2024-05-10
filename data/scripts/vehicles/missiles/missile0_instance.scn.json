@@ -199,15 +199,16 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "wing_controllers": [
-            {"i": 0, "gain": 0.1, "angle": 90},
-            {"i": 1, "gain": 0.1, "angle": 90},
-            {"i": 2, "gain": 0.1, "angle": 0},
-            {"i": 3, "gain": 0.1, "angle": 0},
-            {"i": 4, "gain": -0.1, "angle": 90},
-            {"i": 5, "gain": -0.1, "angle": 90},
-            {"i": 6, "gain": -0.1, "angle": 0},
-            {"i": 7, "gain": -0.1, "angle": 0}
-          ]
+            {"i": 0, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0},
+            {"i": 1, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0},
+            {"i": 2, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0},
+            {"i": 3, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0},
+            {"i": 4, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0},
+            {"i": 5, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0},
+            {"i": 6, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0},
+            {"i": 7, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0}
+          ],
+          "engine": "rocket_engine"
         }
       }
     ]
