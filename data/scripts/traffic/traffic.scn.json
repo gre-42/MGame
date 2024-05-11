@@ -16,7 +16,7 @@
           "team": "red",
           "game_mode": "bystander",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "driving_mode": "pedestrian",
+          "behavior": "pedestrian",
           "driving_direction": "right"
         }
       },
@@ -48,7 +48,7 @@
           "team": "red",
           "game_mode": "bystander",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "driving_mode": "car_city",
+          "behavior": "car_city",
           "driving_direction": "right"
         }
       },

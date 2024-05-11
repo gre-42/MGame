@@ -55,11 +55,11 @@
       "color_mode": "rgba",
       "images": [
         {"position": [0,   0], "layer": 0, "texture": "#simple_trails_a1_white"},
-        {"position": [256, 0], "layer": 0, "texture": "#simple_trails_a1_red"},
+        {"position": [128, 0], "layer": 0, "texture": "#simple_trails_a1_red"},
         {"position": [0,   0], "layer": 1, "texture": "#simple_trails_a100_white"},
-        {"position": [256, 0], "layer": 1, "texture": "#simple_trails_a40_red"},
+        {"position": [128, 0], "layer": 1, "texture": "#simple_trails_a40_red"},
         {"position": [0,   0], "layer": 2, "texture": "#simple_trails_a1_white"},
-        {"position": [256, 0], "layer": 2, "texture": "#simple_trails_a1_red"}
+        {"position": [128, 0], "layer": 2, "texture": "#simple_trails_a1_red"}
       ]
     }
   },
@@ -143,7 +143,7 @@
       "name": "tracer_c_ram",
       "animatable": "trails",
       "model": "trail_segment_5x5",
-      "u_offset": 0.5,
+      "u_offset": 0.25,
       "u_scale": 0.25,
       "times": [-5, 0.2],
       "w": [-250, 10],

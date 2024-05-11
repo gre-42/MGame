@@ -43,7 +43,8 @@
     "content": {
       "playback": "generic_avatar.create_player_externals",
       "arguments": {
-        "PLAYER_NAME": "%PLAYER_NAME"
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "behavior": "%behavior"
       }
     }
   },
@@ -52,7 +53,8 @@
     "content": {
       "playback": "generic_avatar.create_player_externals",
       "arguments": {
-        "PLAYER_NAME": "%PLAYER_NAME"
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "behavior": "%behavior"
       }
     }
   },

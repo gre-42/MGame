@@ -736,7 +736,7 @@
   <node id='-141450' action='modify' visible='true' lat='37.8360679355' lon='-122.49907204229' />
   <node id='-141451' action='modify' visible='true' lat='37.84132531155' lon='-122.49537787933' />
   <node id='-141467' action='modify' visible='true' lat='37.84254362989' lon='-122.4942194638' />
-  <node id='-141468' action='modify' visible='true' lat='37.86189593341' lon='-122.492223573'>
+  <node id='-141468' action='modify' visible='true' lat='37.86424103726' lon='-122.49152464557'>
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
@@ -833,7 +833,7 @@
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
-  <node id='-142440' action='modify' visible='true' lat='37.85922555305' lon='-122.48770133034'>
+  <node id='-142440' action='modify' visible='true' lat='37.85881168845' lon='-122.47581956398'>
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
@@ -857,7 +857,7 @@
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
-  <node id='-142511' action='modify' visible='true' lat='37.85437996063' lon='-122.48551833119'>
+  <node id='-142511' action='modify' visible='true' lat='37.85203454302' lon='-122.47800486129'>
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
@@ -882,6 +882,10 @@
     <tag k='height_reference' v='water' />
   </node>
   <node id='-142813' action='modify' visible='true' lat='37.8289672728' lon='-122.47692731904'>
+    <tag k='height' v='200m' />
+    <tag k='height_reference' v='water' />
+  </node>
+  <node id='-142854' action='modify' visible='true' lat='37.86357695667' lon='-122.48237315775'>
     <tag k='height' v='200m' />
     <tag k='height_reference' v='water' />
   </node>
@@ -1573,6 +1577,7 @@
     <nd ref='-142705' />
     <nd ref='-142511' />
     <nd ref='-142440' />
+    <nd ref='-142854' />
     <nd ref='-141468' />
     <nd ref='-142453' />
     <nd ref='-142488' />

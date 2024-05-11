@@ -1,0 +1,20 @@
+{
+  "id": "car_city",
+  "title": "Car city",
+  "database": {
+    "waypoint_reached_radius": 5,
+    "rest_radius": 4,
+    "lookahead_velocity": 70,
+    "takeoff_velocity": 200,
+    "max_velocity": 30,
+    "max_delta_velocity_brake": 7,
+    "collision_avoidance_radius_brake": 0,
+    "collision_avoidance_radius_correct": 0,
+    "collision_avoidance_cos": 0.6,
+    "collision_avoidance_delta": 5,
+    "stuck_velocity": 2,
+    "stuck_duration": 6,
+    "unstuck_duration": 5,
+    "player_way_points_filter": "street"
+  }
+}

@@ -2,5 +2,6 @@
   {"call": "add_ac_loader", "arguments": {"id": "levels", "script": "scripts/loaders/ac/scene_template.scn.json"}},
   {"call": "load_asset_manifests", "arguments": {"id": "levels", "directory": "."}},
   {"call": "load_replacement_parameters", "arguments": {"id": "levels", "directory": "levels"}},
-  {"call": "load_replacement_parameters", "arguments": {"id": "vehicles", "directory": "scripts/vehicles"}}
+  {"call": "load_replacement_parameters", "arguments": {"id": "vehicles", "directory": "scripts/vehicles"}},
+  {"call": "load_replacement_parameters", "arguments": {"id": "driving_modes", "directory": "scripts/driving_modes"}}
 ]

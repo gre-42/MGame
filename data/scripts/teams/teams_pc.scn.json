@@ -9,7 +9,7 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "off",
-          "driving_mode": "car_arena",
+          "behavior": "%behavior",
           "driving_direction": "center"
         }
       },
@@ -128,7 +128,8 @@
           "AI_AIM": "%AI_AIM",
           "AI_SHOOT": "%AI_SHOOT",
           "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON"
+          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
+          "behavior": "%behavior"
         }
       },
       {

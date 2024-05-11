@@ -8,8 +8,8 @@
           "name": "%PLAYER_NAME",
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
-          "unstuck_mode": "off",
-          "driving_mode": "human_arena",
+          "unstuck_mode": "%UNSTUCK_MODE",
+          "behavior": "%behavior",
           "driving_direction": "center"
         }
       },
@@ -41,7 +41,7 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "driving_mode": "car_arena",
+          "behavior": "%behavior",
           "driving_direction": "center"
         }
       },
@@ -166,6 +166,7 @@
           "PLAYER_NAME": "%PLAYER_NAME",
           "TEAM": "%TEAM",
           "GAME_MODE": "%GAME_MODE",
+          "UNSTUCK_MODE": "%UNSTUCK_MODE",
           "USER_DRIVE": "%USER_DRIVE",
           "USER_AIM": "%USER_AIM",
           "USER_SHOOT": "%USER_SHOOT",
@@ -173,7 +174,8 @@
           "AI_AIM": "%AI_AIM",
           "AI_SHOOT": "%AI_SHOOT",
           "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON"
+          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
+          "behavior": "%behavior"
         }
       },
       {
@@ -252,7 +254,8 @@
           "AI_AIM": "%AI_AIM",
           "AI_SHOOT": "%AI_SHOOT",
           "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON"
+          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
+          "behavior": "%behavior"
         }
       },
       {

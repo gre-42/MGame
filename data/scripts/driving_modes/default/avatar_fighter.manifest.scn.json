@@ -1,0 +1,20 @@
+{
+  "id": "avatar_fighter",
+  "title": "Avatar fighter",
+  "database": {
+    "waypoint_reached_radius": 0.5,
+    "rest_radius": 0.25,
+    "lookahead_velocity": "inf",
+    "takeoff_velocity": "nan",
+    "max_velocity": 30,
+    "max_delta_velocity_brake": 3,
+    "collision_avoidance_radius_brake": 3,
+    "collision_avoidance_radius_correct": 4,
+    "collision_avoidance_cos": 0.6,
+    "collision_avoidance_delta": 3,
+    "stuck_velocity": 2,
+    "stuck_duration": 3,
+    "unstuck_duration": 5,
+    "player_way_points_filter": "explicit_ground"
+  }
+}
