@@ -29,7 +29,7 @@
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
           "collidable_mode": "%COLLIDABLE_MODE",
-          "waypoint_dy": 0.7,
+          "waypoint_dy": 1.5,
           "name": "tiger_tank$SUFFIX",
           "asset_id": "tiger_tank"
         }
@@ -253,16 +253,18 @@
         "call": "create_drive_or_walk_ai",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "waypoint_reached_radius":            "%%driving_modes/car_$behavior/waypoint_reached_radius",
-          "rest_radius":                        "%%driving_modes/car_$behavior/rest_radius",
-          "lookahead_velocity":                 "%%driving_modes/car_$behavior/lookahead_velocity",
-          "takeoff_velocity":                   "%%driving_modes/car_$behavior/takeoff_velocity",
-          "max_velocity":                       "%%driving_modes/car_$behavior/max_velocity",
-          "max_delta_velocity_brake":           "%%driving_modes/car_$behavior/max_delta_velocity_brake",
-          "collision_avoidance_radius_brake":   "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
-          "collision_avoidance_radius_correct": "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
-          "collision_avoidance_cos":            "%%driving_modes/car_$behavior/collision_avoidance_cos",
-          "collision_avoidance_delta":          "%%driving_modes/car_$behavior/collision_avoidance_delta"
+          "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
+          "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
+          "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
+          "takeoff_velocity":                        "%%driving_modes/car_$behavior/takeoff_velocity",
+          "takeoff_velocity_delta":                  "%%driving_modes/car_$behavior/takeoff_velocity_delta",
+          "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
+          "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
+          "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
+          "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
+          "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
+          "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
+          "collision_avoidance_step_aside_distance": "%%driving_modes/car_$behavior/collision_avoidance_step_aside_distance"
         }
       },
       {
