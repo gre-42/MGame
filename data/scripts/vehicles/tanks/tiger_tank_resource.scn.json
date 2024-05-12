@@ -95,6 +95,6 @@
       }
     ]
   },
-  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "NAME": "Tiger"}},
-  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "NAME": "Tiger_d3"}}
+  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 0  , "DIST_MAX":   100, "OCCLUDER_PASS": "none",                    "NAME": "Tiger"}},
+  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "OCCLUDER_PASS": "lightmap_black_movables", "NAME": "Tiger_d3"}}
 ]

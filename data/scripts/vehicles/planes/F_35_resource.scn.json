@@ -118,7 +118,7 @@
       }
     }
   },
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":""}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",               "DECIMATE":"_d3"}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE":"_d1"}}
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                     "DECIMATE":""}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                     "DECIMATE":"_d3"}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE":"_d1"}}
 ]

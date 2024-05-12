@@ -64,6 +64,16 @@
     }
   },
   {
+    "comment": {
+      "call": "save_texture_array_png",
+      "arguments": {
+        "name": "trails",
+        "filename_prefix": "/tmp/trails_",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
     "call": "obj_resource",
     "arguments": {
       "name": "trail_segment_20x20",
