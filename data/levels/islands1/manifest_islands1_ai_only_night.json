@@ -1,15 +1,15 @@
 {
-  "id": "islands1",
-  "title": "Islands 1",
+  "id": "islands1_ai_only_night",
+  "title": "Islands 1 (AI only, at night)",
   "on_execute": {
     "include": "scene_islands1.scn.json"
   },
   "globals": {
     "LEVEL_ICON_FILE": "#black",
     "MINIMAP_FILE": null,
-    "PLAYERS_JSON_BASENAME": "players.json",
-    "SKYBOX": "skybox",
-    "TIME_OF_DAY": "day"
+    "PLAYERS_JSON_BASENAME": "players_ai_only.json",
+    "SKYBOX": "skybox_night",
+    "TIME_OF_DAY": "night"
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false

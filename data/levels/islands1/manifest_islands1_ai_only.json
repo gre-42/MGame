@@ -7,7 +7,9 @@
   "globals": {
     "LEVEL_ICON_FILE": "#black",
     "MINIMAP_FILE": null,
-    "PLAYERS_JSON_BASENAME": "players_ai_only.json"
+    "PLAYERS_JSON_BASENAME": "players_ai_only.json",
+    "SKYBOX": "skybox",
+    "TIME_OF_DAY": "day"
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false
