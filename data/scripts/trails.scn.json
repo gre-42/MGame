@@ -47,19 +47,32 @@
   {
     "call": "add_texture_atlas",
     "arguments": {
-      "name": "trails",
-      "width": 512,
+      "name": "trails_white",
+      "width": 128,
       "height": 512,
       "layers": 3,
       "depth_interpolation": "linear",
       "color_mode": "rgba",
       "images": [
         {"position": [0,   0], "layer": 0, "texture": "#simple_trails_a1_white"},
-        {"position": [128, 0], "layer": 0, "texture": "#simple_trails_a1_red"},
         {"position": [0,   0], "layer": 1, "texture": "#simple_trails_a100_white"},
-        {"position": [128, 0], "layer": 1, "texture": "#simple_trails_a40_red"},
-        {"position": [0,   0], "layer": 2, "texture": "#simple_trails_a1_white"},
-        {"position": [128, 0], "layer": 2, "texture": "#simple_trails_a1_red"}
+        {"position": [0,   0], "layer": 2, "texture": "#simple_trails_a1_white"}
+      ]
+    }
+  },
+  {
+    "call": "add_texture_atlas",
+    "arguments": {
+      "name": "trails_red",
+      "width": 128,
+      "height": 512,
+      "layers": 3,
+      "depth_interpolation": "linear",
+      "color_mode": "rgba",
+      "images": [
+        {"position": [0, 0], "layer": 0, "texture": "#simple_trails_a1_red"},
+        {"position": [0, 0], "layer": 1, "texture": "#simple_trails_a40_red"},
+        {"position": [0, 0], "layer": 2, "texture": "#simple_trails_a1_red"}
       ]
     }
   },
@@ -127,8 +140,18 @@
   {
     "call": "animatable_trails",
     "arguments": {
-      "name": "trails",
-      "texture": "trails",
+      "name": "trails_white",
+      "texture": "trails_white",
+      "times": [0, 0.03, 0.05, 3, 9.95, 10],
+      "w": [0, 0, 0.5, 0.5, 1, 1],
+      "max_num_triangles": 10000
+    }
+  },
+  {
+    "call": "animatable_trails",
+    "arguments": {
+      "name": "trails_red",
+      "texture": "trails_red",
       "times": [0, 0.03, 0.05, 3, 9.95, 10],
       "w": [0, 0, 0.5, 0.5, 1, 1],
       "max_num_triangles": 10000
@@ -138,10 +161,10 @@
     "call": "animated_trails",
     "arguments": {
       "name": "trails_white",
-      "animatable": "trails",
+      "animatable": "trails_white",
       "model": "trail_segment_20x20",
       "u_offset": 0,
-      "u_scale": 0.25,
+      "u_scale": 1,
       "times": [-5, 2],
       "w": [-25, 10],
       "minimum_length": 0.5
@@ -151,10 +174,10 @@
     "call": "animated_trails",
     "arguments": {
       "name": "tracer_c_ram",
-      "animatable": "trails",
+      "animatable": "trails_red",
       "model": "trail_segment_5x5",
-      "u_offset": 0.25,
-      "u_scale": 0.25,
+      "u_offset": 0,
+      "u_scale": 1,
       "times": [-5, 0.2],
       "w": [-250, 10],
       "minimum_length": 0.5
@@ -164,10 +187,10 @@
     "call": "animated_trails",
     "arguments": {
       "name": "tracer_bullet",
-      "animatable": "trails",
+      "animatable": "trails_red",
       "model": "trail_segment_2x2",
-      "u_offset": 0.25,
-      "u_scale": 0.25,
+      "u_offset": 0,
+      "u_scale": 1,
       "times": [-5, 0.2],
       "w": [-250, 10],
       "minimum_length": 0.5
