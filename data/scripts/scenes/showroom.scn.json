@@ -203,7 +203,10 @@
         }
       },
       {
-        "comment": "macro_playback add_local_blob_instances_light LSUFFIX:-blobs"
+        "comment": {
+          "playback": "add_local_blob_instances_light",
+          "arguments": { "LSUFFIX": "_blobs" }
+        }
       }
     ]
   }
