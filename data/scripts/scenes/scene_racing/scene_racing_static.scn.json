@@ -47,7 +47,10 @@
     },
     {
       "playback": "_setup_weapon_closeup",
-      "context": "weapon_closeup"
+      "context": "weapon_closeup",
+      "arguments": {
+        "TIME_OF_DAY": "%TIME_OF_DAY"
+      }
     },
     {
       "playback": "_scene_racing_instantiate_static_objects",

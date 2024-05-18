@@ -151,6 +151,7 @@
         }
       },
       {
+        "required": ["%TIME_OF_DAY == 'day'"],
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node",
@@ -158,6 +159,17 @@
           "diffuse": [1, 1, 1],
           "specular": [1, 1, 1],
           "fresnel_ambient": [0.45, 0.5, 0.5]
+        }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "call": "light_without_shadow",
+        "arguments": {
+          "node": "light_node",
+          "ambient": [0.2, 0.2, 0.2],
+          "diffuse": [0.2, 0.2, 0.2],
+          "specular": [0.2, 0.2, 0.2],
+          "fresnel_ambient": [0.2, 0.2, 0.2]
         }
       },
       {
