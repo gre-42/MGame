@@ -459,7 +459,9 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "tire_ids": [0, 1],
-          "tire_angles": [30, 30]
+          "tire_angles": [
+            "%%vehicles/F_35/MAX_TIRE_ANGLE",
+            "%%vehicles/F_35/MAX_TIRE_ANGLE"]
         }
       },
       {
@@ -654,6 +656,7 @@
               "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
               "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
               "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/car_$behavior/collision_avoidance_radius_wait",
               "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
               "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
               "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
