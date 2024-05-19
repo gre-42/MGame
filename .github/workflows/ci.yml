@@ -21,14 +21,14 @@ on:
 jobs:
   build-ubuntu:
     if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-ubuntu')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Install dependencies
         run: |
           sudo apt-get update && \
           sudo apt-get install -y \
-            g++-13 \
+            g++ \
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
@@ -41,7 +41,7 @@ jobs:
 
       - name: Build and package
         # run: CC=clang CXX=clang++ CXXFLAGS=-stdlib=libc++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        run: CC=gcc-13 CXX=g++-13 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
