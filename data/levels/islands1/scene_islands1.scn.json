@@ -1,6 +1,10 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "osm_resource_islands1.scn.json"},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_LEFT",    "value": -2000 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_RIGHT",   "value": 2000 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_BOTTOM",  "value": -2000 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_TOP",     "value": 2000 }},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -30,10 +34,6 @@
       "DIRTMAP_RIGHT": 1000,
       "DIRTMAP_BOTTOM": 0,
       "DIRTMAP_TOP": 1000,
-      "SUN_LEFT": -2000,
-      "SUN_RIGHT": 2000,
-      "SUN_BOTTOM": -2000,
-      "SUN_TOP": 2000,
       "SOFT_LIGHT_TEXTURE": null
     }
   },
