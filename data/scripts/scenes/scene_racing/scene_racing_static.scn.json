@@ -47,10 +47,7 @@
     },
     {
       "playback": "_setup_weapon_closeup",
-      "context": "weapon_closeup",
-      "arguments": {
-        "TIME_OF_DAY": "%TIME_OF_DAY"
-      }
+      "context": "weapon_closeup"
     },
     {
       "playback": "_scene_racing_instantiate_static_objects",
@@ -69,8 +66,6 @@
         "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
         "BARRIER_DEPTH": "%BARRIER_DEPTH",
         "IF_WITH_GEOGRAPHIC_MAPPING": "%IF_WITH_GEOGRAPHIC_MAPPING",
-        "SKYBOX": "%SKYBOX",
-        "TIME_OF_DAY": "%TIME_OF_DAY",
         "STADIUM_CAMERA_POSITION": "%STADIUM_CAMERA_POSITION",
         "IF_HAS_OVERLAY": "%IF_HAS_OVERLAY",
         "DIRTMAP_LEFT": "%DIRTMAP_LEFT",

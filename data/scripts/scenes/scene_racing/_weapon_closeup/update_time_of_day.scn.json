@@ -1,0 +1,60 @@
+[
+  {
+    "declare_macro": "_create_weapon_closeup_lights",
+    "content": [
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "type": "dynamic",
+            "name": "light_node",
+            "position": [-3, 3, 0],
+            "rotation": [-45, 0, 0],
+            "scale": 1
+          }
+        },
+        {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "call": "light_without_shadow",
+        "arguments": {
+          "node": "light_node",
+          "ambient": [1, 1, 1],
+          "diffuse": [1, 1, 1],
+          "specular": [1, 1, 1],
+          "fresnel_ambient": [0.45, 0.5, 0.5]
+        }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "call": "light_without_shadow",
+        "arguments": {
+          "node": "light_node",
+          "ambient": [0.2, 0.2, 0.2],
+          "diffuse": [0.2, 0.2, 0.2],
+          "specular": [0.2, 0.2, 0.2],
+          "fresnel_ambient": [0.2, 0.2, 0.2]
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_delete_weapon_closeup_lights",
+    "content": {
+      "call": "delete_root_nodes",
+      "arguments": {
+        "regex": "^light_node.*$"
+      }
+    }
+  },
+  {
+    "declare_macro": "update_weapon_closeup_lights",
+    "content": {
+      "call": "execute_in_physics_thread",
+      "arguments": {
+        "command": [
+          { "playback": "_delete_weapon_closeup_lights" },
+          { "playback": "_create_weapon_closeup_lights" }
+        ]
+      }
+    }
+  }
+]

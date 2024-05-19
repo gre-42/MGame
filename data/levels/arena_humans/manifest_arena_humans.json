@@ -6,7 +6,11 @@
   },
   "globals": {
     "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
-    "MINIMAP_FILE": null
+    "MINIMAP_FILE": null,
+    "SUN_LEFT": -500,
+    "SUN_RIGHT": 500,
+    "SUN_BOTTOM": -250,
+    "SUN_TOP": 250
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false

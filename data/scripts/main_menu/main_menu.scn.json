@@ -316,6 +316,27 @@
       {
         "call": "parameter_setter",
         "arguments": {
+          "id": "time_of_day_selector",
+          "title": "Time of day",
+          "icon": "time_of_day_icon",
+          "required": [],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"id": "", "title": "Day", "globals": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}},
+            {"id": "", "title": "Night", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "arguments": {
           "id": "restrictions_selector",
           "title": "Restrictions",
           "icon": "restrictions_icon",

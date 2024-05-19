@@ -1,0 +1,118 @@
+[
+  {
+    "declare_macro": "_create_lights_for_time_of_day",
+    "content": [
+      {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "call": "set_background_color",
+        "arguments": { "color": [0.68, 0.85, 1] }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "call": "set_background_color",
+        "arguments": { "color": [0, 0, 0] }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "call": "set_background_color",
+        "arguments": { "color": [0.65, 0.36, 0.91] }
+      },
+      {
+        "comment": "include playback_resource.scn"
+      },
+      {
+        "comment": "Light"
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "playback": "add_distant_light_day",
+        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "playback": "add_sky_light_day"
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "playback": "add_distant_light_night",
+        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "playback": "add_distant_light_night",
+        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "playback": "add_local_instances_light",
+        "arguments": { "LSUFFIX": "_local_instances" }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "playback": "add_local_blob_instances_light",
+        "arguments": { "LSUFFIX": "_blobs" }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "playback": "add_local_blob_instances_light",
+        "arguments": { "LSUFFIX": "_blobs" }
+      },
+      {
+        "comment": "Reflection map"
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'day'"],
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_strength": 0.7,
+          "reflection_maps": {
+            "car": "reflection_map",
+            "wet_street": "reflection_map",
+            "ground": ""
+          }
+        }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'night'"],
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_strength": 0.7,
+          "reflection_maps": {
+            "car": "reflection_map_night",
+            "wet_street":  "reflection_map_night",
+            "ground": ""}
+          }
+      },
+      {
+        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_strength": 0.7,
+          "reflection_maps": {
+            "car": "reflection_map_synthwave",
+            "ground": "reflection_map_synthwave"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_delete_lights_for_time_of_day",
+    "content": {
+      "call": "delete_root_nodes",
+      "arguments": {
+        "regex": "^light_node.*$"
+      }
+    }
+  },
+  {
+    "declare_macro": "_update_time_of_day",
+    "content": [
+      { "playback": "_delete_lights_for_time_of_day" },
+      { "playback": "_create_lights_for_time_of_day" },
+      { "call": "clear_skybox" },
+      { "call": "set_skybox", "arguments": { "alias": "%SKYBOX"} },
+      { "playback": "update_weapon_closeup_lights", "context": "weapon_closeup" }
+    ]
+  }
+]
