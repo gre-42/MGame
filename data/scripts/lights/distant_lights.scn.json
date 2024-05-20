@@ -38,16 +38,18 @@
         }
       },
       {
-        "call": "ortho_camera",
-        "arguments": {
-          "node": "light_node0",
-          "near_plane": 1,
-          "far_plane": 10000,
-          "left_plane": "%LEFT",
-          "right_plane": "%RIGHT",
-          "bottom_plane": "%BOTTOM",
-          "top_plane": "%TOP",
-          "requires_postprocessing": false
+        "comment": {
+          "call": "ortho_camera",
+          "arguments": {
+            "node": "light_node0",
+            "near_plane": 1,
+            "far_plane": 10000,
+            "left_plane": "%LEFT",
+            "right_plane": "%RIGHT",
+            "bottom_plane": "%BOTTOM",
+            "top_plane": "%TOP",
+            "requires_postprocessing": false
+          }
         }
       },
       {

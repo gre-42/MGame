@@ -1,10 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "osm_resource_forest0.scn.json"},
-  {"call": "constant_parameter", "arguments": {"name": "SUN_LEFT",    "value": -500 }},
-  {"call": "constant_parameter", "arguments": {"name": "SUN_RIGHT",   "value": 500 }},
-  {"call": "constant_parameter", "arguments": {"name": "SUN_BOTTOM",  "value": -500 }},
-  {"call": "constant_parameter", "arguments": {"name": "SUN_TOP",     "value": 500 }},
   {
     "playback": "scene_racing_static",
     "arguments": {

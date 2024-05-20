@@ -25,8 +25,7 @@
       },
       {
         "required": ["%TIME_OF_DAY == 'day'"],
-        "playback": "add_distant_light_day",
-        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+        "playback": "add_distant_light_day"
       },
       {
         "required": ["%TIME_OF_DAY == 'day'"],
@@ -34,13 +33,11 @@
       },
       {
         "required": ["%TIME_OF_DAY == 'night'"],
-        "playback": "add_distant_light_night",
-        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+        "playback": "add_distant_light_night"
       },
       {
         "required": ["%TIME_OF_DAY == 'synthwave'"],
-        "playback": "add_distant_light_night",
-        "arguments": { "LEFT": "%SUN_LEFT", "RIGHT": "%SUN_RIGHT", "BOTTOM": "%SUN_BOTTOM", "TOP": "%SUN_TOP" }
+        "playback": "add_distant_light_night"
       },
       {
         "required": ["%TIME_OF_DAY == 'day'"],

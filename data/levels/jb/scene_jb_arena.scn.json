@@ -8,10 +8,6 @@
   {
     "call": "constant_parameter",
     "arguments": { "name": "LOADED_HEIGHTMAP", "value": "$__DIR__/real_heightmap.png" }},
-  { "call": "constant_parameter", "arguments": { "name": "SUN_LEFT",    "value": -2000 }},
-  { "call": "constant_parameter", "arguments": { "name": "SUN_RIGHT",   "value": 2000 }},
-  { "call": "constant_parameter", "arguments": { "name": "SUN_BOTTOM",  "value": -1400 }},
-  { "call": "constant_parameter", "arguments": { "name": "SUN_TOP",     "value": 1000 }},
   {
     "playback": "scene_racing_static",
     "arguments": {

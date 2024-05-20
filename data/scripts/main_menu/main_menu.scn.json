@@ -330,7 +330,8 @@
           "deflt": 0,
           "parameters": [
             {"id": "", "title": "Day", "globals": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}},
-            {"id": "", "title": "Night", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}
+            {"id": "", "title": "Night", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}},
+            {"id": "", "title": "Synthwave", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "synthwave"}}
           ]
         }
       },
