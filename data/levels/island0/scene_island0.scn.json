@@ -1,6 +1,10 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "osm_resource_island0.scn.json"},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_LEFT",    "value": -500 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_RIGHT",   "value": 500 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_BOTTOM",  "value": -500 }},
+  {"call": "constant_parameter", "arguments": {"name": "SUN_TOP",     "value": 500 }},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -30,10 +34,6 @@
       "DIRTMAP_RIGHT": 500,
       "DIRTMAP_BOTTOM": -500,
       "DIRTMAP_TOP": 500,
-      "SUN_LEFT": -500,
-      "SUN_RIGHT": 500,
-      "SUN_BOTTOM": -500,
-      "SUN_TOP": 500,
       "SOFT_LIGHT_TEXTURE": null,
       "SKYBOX": "skybox",
       "TIME_OF_DAY": "day"
