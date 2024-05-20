@@ -9,7 +9,6 @@
     "required": ["%IF_TRIPOD_MODE"],
     "context": "primary_scene",
     "execute": [
-      {"playback": "create_tripod_key_bindings"},
       {"include": "create_cameras_grossglockner_hochalpenstrasse.scn.json"}
     ]
   }

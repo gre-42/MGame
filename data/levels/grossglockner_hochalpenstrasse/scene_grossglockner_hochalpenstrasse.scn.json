@@ -5,6 +5,7 @@
     {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m"}},
     {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_PLAYBACK", "value": "$__APPDATA__/$LEVEL_ID.checkpoints.m"}},
     {"include": "osm_resource_grossglockner_hochalpenstrasse$STYLE.scn.json"},
+    {"include": "create_tripod_cameras_grossglockner_hochalpenstrasse.scn.json"},
     {
       "playback": "scene_racing_static",
       "arguments": {

@@ -1,6 +1,7 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "osm_resource_island0.scn.json"},
+  {"include": "create_tripod_cameras_island0.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -73,14 +74,6 @@
         "IF_BURN_IN": "!IF_TRIPOD_MODE"
       }
     }
-  },
-  {
-    "required": ["%IF_TRIPOD_MODE"],
-    "context": "primary_scene",
-    "execute": [
-      {"playback": "create_tripod_key_bindings"},
-      {"include": "create_cameras_island0.scn.json"}
-    ]
   },
   {"playback": "instantiate_transient_objects"},
   {"playback": "create_main_menu"}

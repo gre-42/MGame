@@ -63,6 +63,25 @@
         "TEAMS_SPAWN_POINTS_RESOURCE": "%TEAMS_SPAWN_POINTS_RESOURCE",
         "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
       }
+    },
+    {
+      "exclude": ["%IF_TRIPOD_MODE", "%IF_TRIPOD_MODE_OLD"],
+      "context": "primary_scene",
+      "execute": [
+        {"call": "set_camera_cycle", "arguments": {"name": "tripod", "cameras": []}},
+        {"call": "delete_root_nodes", "arguments": {"regex": "^tripod_node.*$"}},
+        {
+          "required": ["%IF_TRIPOD_MODE"],
+          "playback": "create_tripod_cameras"
+        },
+        {
+          "call": "constant_parameter",
+          "arguments": {
+            "name": "IF_TRIPOD_MODE_OLD",
+            "value": "%IF_TRIPOD_MODE"
+          }
+        }
+      ]
     }
   ]
 }

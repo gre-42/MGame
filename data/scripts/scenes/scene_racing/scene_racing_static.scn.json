@@ -80,6 +80,22 @@
         "DIRTMAP_WRAP_MODE": "%DIRTMAP_WRAP_MODE",
         "SOFT_LIGHT_TEXTURE": "%SOFT_LIGHT_TEXTURE"
       }
+    },
+    {
+      "required": ["%IF_DEVEL"],
+      "execute": [
+        {
+          "playback": "create_tripod_key_bindings",
+          "context": "primary_scene"
+        },
+        {
+          "call": "constant_parameter",
+          "arguments": {
+            "name": "IF_TRIPOD_MODE_OLD",
+            "value": false
+          }
+        }
+      ]
     }
   ]
 }
