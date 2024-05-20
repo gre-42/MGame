@@ -88,6 +88,23 @@
     "exclude": ["%IF_ANDROID"],
     "call": "add_blend_map_texture",
     "arguments": {
+      "name": "Road007_Yellow_2_Lanes_Base",
+      "texture": "#Road007_Yellow_2_Lanes",
+      "min_height": "-inf",
+      "max_height": "inf",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "scale": 1,
+      "weight": 2,
+      "role": "detail_base",
+      "reweight": "enabled"
+    }
+  },
+  {
+    "exclude": ["%IF_ANDROID"],
+    "call": "add_blend_map_texture",
+    "arguments": {
       "name": "RoadOld_Yellow_Detail_Base",
       "texture": "#RoadOld_Yellow",
       "min_height": "-inf",
