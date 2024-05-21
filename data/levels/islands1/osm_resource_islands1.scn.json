@@ -1,306 +1,314 @@
-[
-  {
-    "declare_macro": "osm_resource_islands1",
-    "content": {
-      "call": "osm_resource",
+{
+  "let": {
+    "water_height": 70,
+    "scale": 1e-3
+  },
+  "execute": [
+    {
+      "declare_macro": "osm_resource_islands1",
+      "content": {
+        "call": "osm_resource",
+        "arguments": {
+          "name": "islands1",
+          "filename": "$__DIR__/map_islands1.osm",
+          "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
+          "heightmap": "$__DIR__/heightmap.pgm",
+          "grass_foliagemap": "textures/noise/foliagemap.png",
+          "terrain_undefined_textures": ["textures/debug/pink.png"],
+          "terrain_grass_textures": [
+            "#Gravel010_Base",
+            "#Ground037_island_1",
+            "#Ground037_island_8_1",
+            "#Ground037_island_64",
+            "#Ground037_island_256"],
+          "terrain_flowers_textures": [
+            "#Gravel010_Base",
+            "#Ground037_island_1",
+            "#Ground037_island_8_1",
+            "#Ground037_island_64",
+            "#Ground037_island_256"],
+          "terrain_trees_textures": [
+            "#Gravel010_Base",
+            "#Ground037_island_1",
+            "#Ground037_island_8_1",
+            "#Ground037_island_64",
+            "#Ground037_island_256"],
+          "terrain_stone_textures": ["#black"],
+          "bounding_terrain_type": "ocean_ground",
+          "default_terrain_type": "grass",
+          "terrain_materials": {
+            "grass": "surface_base_sand",
+            "wayside1_grass": "surface_base_sand",
+            "wayside2_grass": "surface_base_sand",
+            "flowers": "surface_base_sand",
+            "trees": "surface_base_sand",
+            "elevated_grass": "surface_base_sand",
+            "elevated_grass_base": "surface_base_stone",
+            "stone": "surface_base_stone",
+            "asphalt": "surface_base_tarmac",
+            "water_floor": "none",
+            "water_floor_base": "none",
+            "street_hole": "none",
+            "building_hole": "none",
+            "ocean_ground": "none",
+            "undefined": "none"},
+          "street_materials": "surface_base_tarmac",
+          "taxiway_materials": "surface_base_tarmac",
+          "runway_materials": "surface_base_tarmac",
+          "runway_displacement_threshold_materials": "surface_base_tarmac",
+          "grass_dirt_texture": "#black",
+          "# street_dirt_texture": "#Asphalt016_Dirt",
+          "street_alpha_textures": [
+            "#PlusDetail",
+            "#TimesBlend5",
+            "#Ramp5"
+          ],
+          "taxiway_alpha_textures": [
+            "#PlusDetail",
+            "#TimesBlend5",
+            "#Ramp5"
+          ],
+          "runway_alpha_textures": [
+            "#PlusDetail",
+            "#TimesBlend5",
+            "#Ramp5"
+          ],
+          "runway_displacement_threshold_alpha_textures": [
+            "#PlusDetail",
+            "#TimesBlend5",
+            "#Ramp5"
+          ],
+          "street_crossing_textures": ["#Road007_No_Lines"],
+          "taxiway_crossing_textures": ["#Road007_No_Lines"],
+          "runway_crossing_textures": ["#Road007_No_Lines"],
+          "runway_displacement_threshold_crossing_textures": ["#Road007_No_Lines"],
+          "street_textures": [
+            {"lanes": 1, "textures": ["#Road007"]}],
+          "taxiway_textures": [
+            {"lanes": 1, "textures": ["#Road007"]}],
+          "runway_textures": [
+            {"lanes": 1, "textures": ["#Road007"]}],
+          "runway_displacement_threshold_textures": [
+            {"lanes": 1, "textures": ["#Road007"]}],
+          "socle_textures": [
+            {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+          "facade_textures": [
+            {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+            {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+            {
+              "selector": "brick",
+              "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+              "min_height": 5,
+              "max_height": 20,
+              "interior": {
+                "facade_edge_size": [1, 1],
+                "facade_inner_size": [2, 1.5],
+                "interior_size": [2, 2.5, 0.2],
+                "left": "DE21F2_industryWindow00001_left",
+                "right": "DE21F2_industryWindow00001_right",
+                "floor": "DE21F2_industryWindow00001_bottom",
+                "ceiling": "DE21F2_industryWindow00001_top",
+                "back": "DE21F2_industryWindow00001_1k"
+              }
+            },
+            {
+              "facade": ["Concrete020_Base", "concrete1_2K_wh_Detail"],
+              "min_height": 5,
+              "interior": {
+                "facade_edge_size": [1, 1],
+                "facade_inner_size": [2, 1.5],
+                "interior_size": [2, 2.5, 0.2],
+                "left": "DE21F2_industryWindow00001_left",
+                "right": "DE21F2_industryWindow00001_right",
+                "floor": "DE21F2_industryWindow00001_bottom",
+                "ceiling": "DE21F2_industryWindow00001_top",
+                "back": "building_big_office3_window"
+              }
+            },
+            {
+              "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
+              "min_height": 5,
+              "interior": {
+                "facade_edge_size": [1, 1],
+                "facade_inner_size": [2, 1.5],
+                "interior_size": [2, 2.5, 0.2],
+                "left": "DE21F2_industryWindow00001_left",
+                "right": "DE21F2_industryWindow00001_right",
+                "floor": "DE21F2_industryWindow00001_bottom",
+                "ceiling": "DE21F2_industryWindow00001_top",
+                "back": "building_big_office3_window"
+              }
+            }
+          ],
+          "ceiling_texture": "#Asphalt015",
+          "barrier_styles": [
+            {
+              "name": "fence1",
+              "texture": "#fence1",
+              "uv": [1, 1],
+              "blend_mode": "semi_continuous_02",
+              "wrap_mode_t": "repeat",
+              "reorient_uv0": false,
+              "ambient": [0.7, 0.7, 0.7],
+              "diffuse": [0.5, 0.5, 0.5],
+              "specular": [0, 0, 0],
+              "fresnel_min": 0,
+              "fresnel_max": 0.5,
+              "fresnel_exponent": 4,
+              "fresnel_ambient": [1, 1, 1]
+            }],
+          "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+          "near_grass_resource_names": ["vegetation7.0"],
+          "near_dirty_grass_resource_names": ["vegetation7.1"],
+          "far_grass_resource_names": ["vegetation7.2"],
+          "far_dirty_grass_resource_names": ["vegetation7.3"],
+          "far_flowers_resource_names": [
+            "vegetation6.17(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.18(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.19(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.20(hitbox:box_02_1_02_hitbox)"],
+          "far_trees_resource_names": [
+            "vegetation6.12(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.13(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.14(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.15(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.16(hitbox:box_02_1_02_hitbox)"],
+          "tree_resource_names": [
+            "vegetation6.12(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.13(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.14(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.15(hitbox:box_02_1_02_hitbox)",
+            "vegetation6.16(hitbox:box_02_1_02_hitbox)"],
+          "zone_resource_names": [
+            "vegetation6.21",
+            "vegetation6.22"],
+          "dirt_decals_resource_names": [
+            "Leaf018_2",
+            "Leaf018_2_Red",
+            "Paper(p:0.1)"],
+          "default_street_width": 14,
+          "wayside_resource_names": [
+            {
+              "min_dist": 1.5,
+              "max_dist": 3,
+              "resource_names": [
+                "Stone_model_tex_small(p:0.2)(hitbox:box_02_1_02_hitbox)",
+                "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"]}],
+          "water_height": "%water_height",
+          "scale": "%scale",
+          "height_scale": 2e-1,
+          "grass_foliagemap_period": 38.4,
+          "uv_scale_terrain": 3e-1,
+          "uv_period_terrain": 128,
+          "uv_scale_street": 1e-1,
+          "uv_scale_taxiway": 1e-1,
+          "uv_scale_runway": 1e-1,
+          "uv_scale_runway_displacement_threshold": 1e-1,
+          "uv_scale_facade": 2.5e-1,
+          "uv_scale_ceiling": 1e-1,
+          "uv_scale_barrier_wall": 1e0,
+          "uv_scale_highway_wall": 3e-1,
+          "with_roofs": true,
+          "with_ceilings": true,
+          "building_bottom": 0,
+          "default_building_top": 10,
+          "default_barrier_top": 2,
+          "remove_backfacing_triangles": true,
+          "with_tree_nodes": true,
+          "forest_outline_tree_distance": "inf",
+          "forest_outline_tree_inwards_distance": 1,
+          "much_grass_distance": "inf",
+          "much_near_grass_distance": 3,
+          "much_far_grass_distance": 16,
+          "much_near_flowers_distance": 5,
+          "much_far_flowers_distance": 10,
+          "much_far_trees_distance": 10,
+          "raceway_beacon_distance": "inf",
+          "with_terrain": true,
+          "with_buildings": true,
+          "only_raceways_and_walls": false,
+          "highway_name_pattern": "",
+          "excluded_highways": [],
+          "path_tags": [],
+          "smoothed_highways": ["primary"],
+          "smoothed_aeroways": ["taxiway", "runway"],
+          "max_smooth_highway_length": 4,
+          "steiner_point_distances_road": [0, 2, 100],
+          "steiner_point_distances_steiner": ["inf", 7, 100],
+          "curb_alpha": 1,
+          "curb2_alpha": 1,
+          "curb_uv_x": "nan",
+          "curb2_uv_x": "nan",
+          "raise_streets_amount": 0,
+          "extrude_curb_amount": 0,
+          "extrude_street_amount": 0,
+          "extrude_wall_amount": 0,
+          "street_light_resource_names": [],
+          "max_wall_width": 10,
+          "with_height_bindings": true,
+          "street_node_smoothness": 0.7,
+          "street_node_smoothing_iterations": 500,
+          "street_edge_smoothness": 0,
+          "terrain_edge_smoothness": 0.1,
+          "zonemap": "textures/noise/checkerboard.png",
+          "zonemap_width": 1000,
+          "zonemap_height": 1000,
+          "zonemap_step_size": 2,
+          "agent_radius": 10,
+          "driving_direction": "right",
+          "blend_street": true,
+          "blend_path": true,
+          "blend_taxiway": true,
+          "blend_runway": true,
+          "blend_runway_displacement_threshold": true,
+          "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+          "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+          "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+          "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+        }
+      }
+    },
+    {
+      "call": "grid_resource",
       "arguments": {
-        "name": "islands1",
-        "filename": "$__DIR__/map_islands1.osm",
-        "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
-        "heightmap": "$__DIR__/heightmap.pgm",
-        "grass_foliagemap": "textures/noise/foliagemap.png",
-        "terrain_undefined_textures": ["textures/debug/pink.png"],
-        "terrain_grass_textures": [
-          "#Gravel010_Base",
-          "#Ground037_island_1",
-          "#Ground037_island_8_1",
-          "#Ground037_island_64",
-          "#Ground037_island_256"],
-        "terrain_flowers_textures": [
-          "#Gravel010_Base",
-          "#Ground037_island_1",
-          "#Ground037_island_8_1",
-          "#Ground037_island_64",
-          "#Ground037_island_256"],
-        "terrain_trees_textures": [
-          "#Gravel010_Base",
-          "#Ground037_island_1",
-          "#Ground037_island_8_1",
-          "#Ground037_island_64",
-          "#Ground037_island_256"],
-        "terrain_stone_textures": ["#black"],
-        "bounding_terrain_type": "ocean_ground",
-        "default_terrain_type": "grass",
-        "terrain_materials": {
-          "grass": "surface_base_sand",
-          "wayside1_grass": "surface_base_sand",
-          "wayside2_grass": "surface_base_sand",
-          "flowers": "surface_base_sand",
-          "trees": "surface_base_sand",
-          "elevated_grass": "surface_base_sand",
-          "elevated_grass_base": "surface_base_stone",
-          "stone": "surface_base_stone",
-          "asphalt": "surface_base_tarmac",
-          "water_floor": "none",
-          "water_floor_base": "none",
-          "street_hole": "none",
-          "building_hole": "none",
-          "ocean_ground": "none",
-          "undefined": "none"},
-        "street_materials": "surface_base_tarmac",
-        "taxiway_materials": "surface_base_tarmac",
-        "runway_materials": "surface_base_tarmac",
-        "runway_displacement_threshold_materials": "surface_base_tarmac",
-        "grass_dirt_texture": "#black",
-        "# street_dirt_texture": "#Asphalt016_Dirt",
-        "street_alpha_textures": [
-          "#PlusDetail",
-          "#TimesBlend5",
-          "#Ramp5"
-        ],
-        "taxiway_alpha_textures": [
-          "#PlusDetail",
-          "#TimesBlend5",
-          "#Ramp5"
-        ],
-        "runway_alpha_textures": [
-          "#PlusDetail",
-          "#TimesBlend5",
-          "#Ramp5"
-        ],
-        "runway_displacement_threshold_alpha_textures": [
-          "#PlusDetail",
-          "#TimesBlend5",
-          "#Ramp5"
-        ],
-        "street_crossing_textures": ["#Road007_No_Lines"],
-        "taxiway_crossing_textures": ["#Road007_No_Lines"],
-        "runway_crossing_textures": ["#Road007_No_Lines"],
-        "runway_displacement_threshold_crossing_textures": ["#Road007_No_Lines"],
-        "street_textures": [
-          {"lanes": 1, "textures": ["#Road007"]}],
-        "taxiway_textures": [
-          {"lanes": 1, "textures": ["#Road007"]}],
-        "runway_textures": [
-          {"lanes": 1, "textures": ["#Road007"]}],
-        "runway_displacement_threshold_textures": [
-          {"lanes": 1, "textures": ["#Road007"]}],
-        "socle_textures": [
-          {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
-        "facade_textures": [
-          {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
-          {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
-          {
-            "selector": "brick",
-            "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
-            "min_height": 5,
-            "max_height": 20,
-            "interior": {
-              "facade_edge_size": [1, 1],
-              "facade_inner_size": [2, 1.5],
-              "interior_size": [2, 2.5, 0.2],
-              "left": "DE21F2_industryWindow00001_left",
-              "right": "DE21F2_industryWindow00001_right",
-              "floor": "DE21F2_industryWindow00001_bottom",
-              "ceiling": "DE21F2_industryWindow00001_top",
-              "back": "DE21F2_industryWindow00001_1k"
-            }
-          },
-          {
-            "facade": ["Concrete020_Base", "concrete1_2K_wh_Detail"],
-            "min_height": 5,
-            "interior": {
-              "facade_edge_size": [1, 1],
-              "facade_inner_size": [2, 1.5],
-              "interior_size": [2, 2.5, 0.2],
-              "left": "DE21F2_industryWindow00001_left",
-              "right": "DE21F2_industryWindow00001_right",
-              "floor": "DE21F2_industryWindow00001_bottom",
-              "ceiling": "DE21F2_industryWindow00001_top",
-              "back": "building_big_office3_window"
-            }
-          },
-          {
-            "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
-            "min_height": 5,
-            "interior": {
-              "facade_edge_size": [1, 1],
-              "facade_inner_size": [2, 1.5],
-              "interior_size": [2, 2.5, 0.2],
-              "left": "DE21F2_industryWindow00001_left",
-              "right": "DE21F2_industryWindow00001_right",
-              "floor": "DE21F2_industryWindow00001_bottom",
-              "ceiling": "DE21F2_industryWindow00001_top",
-              "back": "building_big_office3_window"
-            }
-          }
-        ],
-        "ceiling_texture": "#Asphalt015",
-        "barrier_styles": [
-          {
-            "name": "fence1",
-            "texture": "#fence1",
-            "uv": [1, 1],
-            "blend_mode": "semi_continuous_02",
-            "wrap_mode_t": "repeat",
-            "reorient_uv0": false,
-            "ambient": [0.7, 0.7, 0.7],
-            "diffuse": [0.5, 0.5, 0.5],
-            "specular": [0, 0, 0],
-            "fresnel_min": 0,
-            "fresnel_max": 0.5,
-            "fresnel_exponent": 4,
-            "fresnel_ambient": [1, 1, 1]
-          }],
-        "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
-        "near_grass_resource_names": ["vegetation7.0"],
-        "near_dirty_grass_resource_names": ["vegetation7.1"],
-        "far_grass_resource_names": ["vegetation7.2"],
-        "far_dirty_grass_resource_names": ["vegetation7.3"],
-        "far_flowers_resource_names": [
-          "vegetation6.17(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.18(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.19(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.20(hitbox:box_02_1_02_hitbox)"],
-        "far_trees_resource_names": [
-          "vegetation6.12(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.13(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.14(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.15(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.16(hitbox:box_02_1_02_hitbox)"],
-        "tree_resource_names": [
-          "vegetation6.12(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.13(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.14(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.15(hitbox:box_02_1_02_hitbox)",
-          "vegetation6.16(hitbox:box_02_1_02_hitbox)"],
-        "zone_resource_names": [
-          "vegetation6.21",
-          "vegetation6.22"],
-        "dirt_decals_resource_names": [
-          "Leaf018_2",
-          "Leaf018_2_Red",
-          "Paper(p:0.1)"],
-        "default_street_width": 14,
-        "wayside_resource_names": [
-          {
-            "min_dist": 1.5,
-            "max_dist": 3,
-            "resource_names": [
-              "Stone_model_tex_small(p:0.2)(hitbox:box_02_1_02_hitbox)",
-              "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"]}],
-        "scale": 1e-3,
-        "height_scale": 2e-1,
-        "grass_foliagemap_period": 38.4,
-        "uv_scale_terrain": 3e-1,
-        "uv_period_terrain": 128,
-        "uv_scale_street": 1e-1,
-        "uv_scale_taxiway": 1e-1,
-        "uv_scale_runway": 1e-1,
-        "uv_scale_runway_displacement_threshold": 1e-1,
-        "uv_scale_facade": 2.5e-1,
-        "uv_scale_ceiling": 1e-1,
-        "uv_scale_barrier_wall": 1e0,
-        "uv_scale_highway_wall": 3e-1,
-        "with_roofs": true,
-        "with_ceilings": true,
-        "building_bottom": 0,
-        "default_building_top": 10,
-        "default_barrier_top": 2,
-        "remove_backfacing_triangles": true,
-        "with_tree_nodes": true,
-        "forest_outline_tree_distance": "inf",
-        "forest_outline_tree_inwards_distance": 1,
-        "much_grass_distance": "inf",
-        "much_near_grass_distance": 3,
-        "much_far_grass_distance": 16,
-        "much_near_flowers_distance": 5,
-        "much_far_flowers_distance": 10,
-        "much_far_trees_distance": 10,
-        "raceway_beacon_distance": "inf",
-        "with_terrain": true,
-        "with_buildings": true,
-        "only_raceways_and_walls": false,
-        "highway_name_pattern": "",
-        "excluded_highways": [],
-        "path_tags": [],
-        "smoothed_highways": ["primary"],
-        "smoothed_aeroways": ["taxiway", "runway"],
-        "max_smooth_highway_length": 4,
-        "steiner_point_distances_road": [0, 2, 100],
-        "steiner_point_distances_steiner": ["inf", 7, 100],
-        "curb_alpha": 1,
-        "curb2_alpha": 1,
-        "curb_uv_x": "nan",
-        "curb2_uv_x": "nan",
-        "raise_streets_amount": 0,
-        "extrude_curb_amount": 0,
-        "extrude_street_amount": 0,
-        "extrude_wall_amount": 0,
-        "street_light_resource_names": [],
-        "max_wall_width": 10,
-        "with_height_bindings": true,
-        "street_node_smoothness": 0.7,
-        "street_node_smoothing_iterations": 500,
-        "street_edge_smoothness": 0,
-        "terrain_edge_smoothness": 0.1,
-        "zonemap": "textures/noise/checkerboard.png",
-        "zonemap_width": 1000,
-        "zonemap_height": 1000,
-        "zonemap_step_size": 2,
-        "agent_radius": 10,
-        "driving_direction": "right",
-        "blend_street": true,
-        "blend_path": true,
-        "blend_taxiway": true,
-        "blend_runway": true,
-        "blend_runway_displacement_threshold": true,
+        "name": "ocean",
+        "texture_filename": "#ocean_uniform",
+        "size": [50, 50],
+        "tile_length": 1e3,
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "ambient": [0, 0, 0],
+        "diffuse": [1, 1, 1],
+        "specular": [0.5, 0.5, 0.5],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces": true,
+        "rotation": [0, 0, 0],
+        "translation": [-25e3, -25e3, "%water_height"],
+        "scale": "%scale",
+        "uv_scale": 50,
+        "period": 0.02,
+        "aggregate_mode": "once",
+        "transformation_mode": "all",
         "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
         "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
         "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
         "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
       }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "ocean",
+        "add": "attr_concave"
+      }
+    },
+    {
+      "call": "compound_resource",
+      "arguments": {
+        "source_names": ["islands1", "ocean"],
+        "dest_name": "osm_map"
+      }
     }
-  },
-  {
-    "call": "grid_resource",
-    "arguments": {
-      "name": "ocean",
-      "texture_filename": "#ocean_uniform",
-      "size": [50, 50],
-      "occluded_pass": "lightmap_black_global_static",
-      "occluder_pass": "none",
-      "ambient": [0, 0, 0],
-      "diffuse": [1, 1, 1],
-      "specular": [0.5, 0.5, 0.5],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "cull_faces": true,
-      "rotation": [0, 0, 0],
-      "translation": [-25, -25, 0.07],
-      "scale": 1,
-      "uv_scale": 50,
-      "period": 0.02,
-      "aggregate_mode": "once",
-      "transformation_mode": "all",
-      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
-      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
-      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
-      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
-    }
-  },
-  {
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "ocean",
-      "add": "attr_concave"
-    }
-  },
-  {
-    "call": "compound_resource",
-    "arguments": {
-      "source_names": ["islands1", "ocean"],
-      "dest_name": "osm_map"
-    }
-  }
-]
+  ]
+}
