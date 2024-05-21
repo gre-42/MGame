@@ -41,7 +41,7 @@
     {
       "declare_macro": "instantiate_transient_objects",
       "content": {
-        "playback": "generic_scene_racing_dynamic",
+        "playback": "scene_racing_setup_new_round",
         "arguments": {
           "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
           "IF_PC_PLAYER_PLAYBACK": false,
@@ -80,7 +80,10 @@
         }
       }
     },
-    {"playback": "instantiate_transient_objects"},
+    {
+    "playback": "instantiate_transient_objects",
+    "context": "primary_scene"
+  },
     {"playback": "create_main_menu"}
   ]
 }

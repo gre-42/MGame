@@ -35,42 +35,48 @@
   },
   {
     "declare_macro": "instantiate_transient_objects",
-    "content": {
-      "playback": "generic_scene_racing_dynamic",
-      "arguments": {
-        "IF_CREATE_PC_CAR": true,
-        "IF_PC_PLAYER_PLAYBACK": false,
-        "CAR_NODE_POSITION": [0, 5, 10],
-        "CAR_NODE_ANGLES": [0, 0, 0],
-        "SELECTED_VEHICLE_SUFFIX": "_F_35",
-        "SELECTED_PLAYER_VEHICLE_COLOR": [-1, -1, -1],
-        "RECORDINGS_DIR": null,
-        "CHECKPOINTS_FILE": null,
-        "CHECKPOINTS": null,
-        "PACENOTES_FILE": null,
-        "CHECK_POINTS_ACTIVE_COLOR": null,
-        "CHECK_POINTS_INACTIVE_COLOR": null,
-        "ERROR_ALPHA": null,
-        "RESPAWN_COOLDOWN_TIME": null,
-        "VELOCITY_ERROR_STD": null,
-        "YAW_ERROR_STD": null,
-        "HUMAN_NODE_ANGLE_Y": null,
-        "HUMAN_NODE_POSITION": null,
-        "IF_MANUAL_AIM": null,
-        "PITCH_ERROR_STD": null,
-        "SKATER_NODE_POSITION": null,
-        "SKATER_NODE_ANGLE_Y": null,
-        "TEAMS_SPAWN_POINTS_RESOURCE": null,
-        "TEAMS_WAY_POINTS_RESOURCE": null,
-        "IF_PLAYBACK_CHECKPOINTS": false,
-        "IF_PLAYBACK_TRACK_1": false,
-        "IF_PLAYBACK_TRACK_2": false,
-        "IF_PLAYBACK_TRACK_3": false,
-        "IF_CHECKPOINTS": false,
-        "IF_BURN_IN": false
+    "content": [
+      { "playback": "scene_racing_setup_new_round" },
+      {
+        "playback": "scene_racing_instantiate_transient_objects",
+        "arguments": {
+          "IF_CREATE_PC_CAR": true,
+          "IF_PC_PLAYER_PLAYBACK": false,
+          "CAR_NODE_POSITION": [0, 5, 10],
+          "CAR_NODE_ANGLES": [0, 0, 0],
+          "SELECTED_VEHICLE_SUFFIX": "_F_35",
+          "SELECTED_PLAYER_VEHICLE_COLOR": [-1, -1, -1],
+          "RECORDINGS_DIR": null,
+          "CHECKPOINTS_FILE": null,
+          "CHECKPOINTS": null,
+          "PACENOTES_FILE": null,
+          "CHECK_POINTS_ACTIVE_COLOR": null,
+          "CHECK_POINTS_INACTIVE_COLOR": null,
+          "ERROR_ALPHA": null,
+          "RESPAWN_COOLDOWN_TIME": null,
+          "VELOCITY_ERROR_STD": null,
+          "YAW_ERROR_STD": null,
+          "HUMAN_NODE_ANGLE_Y": null,
+          "HUMAN_NODE_POSITION": null,
+          "IF_MANUAL_AIM": null,
+          "PITCH_ERROR_STD": null,
+          "SKATER_NODE_POSITION": null,
+          "SKATER_NODE_ANGLE_Y": null,
+          "TEAMS_SPAWN_POINTS_RESOURCE": null,
+          "TEAMS_WAY_POINTS_RESOURCE": null,
+          "IF_PLAYBACK_CHECKPOINTS": false,
+          "IF_PLAYBACK_TRACK_1": false,
+          "IF_PLAYBACK_TRACK_2": false,
+          "IF_PLAYBACK_TRACK_3": false,
+          "IF_CHECKPOINTS": false,
+          "IF_BURN_IN": false
+        }
       }
-    }
+    ]
   },
-  {"playback": "instantiate_transient_objects"},
+  {
+    "playback": "instantiate_transient_objects",
+    "context": "primary_scene"
+  },
   {"playback": "create_main_menu"}
 ]

@@ -1,0 +1,48 @@
+{
+  "declare_macro": "scene_racing_setup_new_round",
+  "content": [
+    {
+      "call": "constant_parameter",
+      "arguments": { "name": "LOADED_GAME_MODE", "value": "%GAME_MODE" }
+    },
+    {
+      "call": "constant_parameter",
+      "arguments": { "name": "LOADED_LEVEL_ID", "value": "%LEVEL_ID" }
+    },
+    {
+      "call": "constant_parameter",
+      "arguments": { "name": "LOADED_RACE_RESTRICTIONS", "value": "%RACE_RESTRICTIONS" }
+    },
+    {
+      "call": "constant_parameter",
+      "arguments": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
+    },
+    {
+      "call": "constant_parameter",
+      "arguments": { "name": "LOADED_RACE_LAPS", "value": "%RACE_LAPS" }
+    },
+    {
+      "playback": "_setup_new_round",
+      "context": "primary_scene"
+    },
+    {
+      "exclude": ["%IF_TRIPOD_MODE", "%IF_TRIPOD_MODE_OLD"],
+      "context": "primary_scene",
+      "execute": [
+        {"call": "set_camera_cycle", "arguments": {"name": "tripod", "cameras": []}},
+        {"call": "delete_root_nodes", "arguments": {"regex": "^tripod_node.*$"}},
+        {
+          "required": ["%IF_TRIPOD_MODE"],
+          "playback": "create_tripod_cameras"
+        },
+        {
+          "call": "constant_parameter",
+          "arguments": {
+            "name": "IF_TRIPOD_MODE_OLD",
+            "value": "%IF_TRIPOD_MODE"
+          }
+        }
+      ]
+    }
+  ]
+}
