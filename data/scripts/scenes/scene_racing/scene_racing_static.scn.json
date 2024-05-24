@@ -82,7 +82,6 @@
       }
     },
     {
-      "required": ["%IF_DEVEL"],
       "execute": [
         {
           "playback": "create_tripod_key_bindings",

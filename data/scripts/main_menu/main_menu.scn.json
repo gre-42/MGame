@@ -291,6 +291,7 @@
         "arguments": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
       },
       {
+        "exclude": ["%IF_ANDROID"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -311,6 +312,13 @@
             {"id": "", "title": "Synthwave", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "synthwave"}}
           ]
         }
+      },
+      {
+        "required": ["%IF_ANDROID"],
+        "execute": [
+          { "call": "constant_parameter", "arguments": { "name": "SKYBOX", "value": "skybox" } },
+          { "call": "constant_parameter", "arguments": { "name": "TIME_OF_DAY", "value": "day" } }
+        ]
       },
       {
         "call": "parameter_setter",
