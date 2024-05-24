@@ -9,7 +9,8 @@
     "MINIMAP_FILE": null
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": false
+    "IF_RACEWAY_CIRCULAR": false,
+    "game_modes": ["skating"]
   },
-  "required": ["%GAME_MODE in {'skating'}"]
+  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
 }

@@ -9,7 +9,8 @@
     "MINIMAP_FILE": null
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": true
+    "IF_RACEWAY_CIRCULAR": true,
+    "game_modes": ["rally"]
   },
-  "required": ["%GAME_MODE == 'rally'"]
+  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
 }

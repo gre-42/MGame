@@ -115,8 +115,6 @@
       },
       {
         "call": "parameter_setter",
-        "required": ["%IF_DEVEL"],
-        "exclude": ["%IF_ANDROID"],
         "arguments": {
           "id": "game_mode_selector",
           "title": "Game mode",
@@ -129,38 +127,17 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
+          "database_filter": {
+            "database": "levels",
+            "variable": "game_modes"
+          },
+          "hide_if_trivial": true,
           "parameters": [
-            {"id": "", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"id": "", "title": "Skating", "globals": {"GAME_MODE": "skating"}},
-            {"id": "", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
+            {"id": "rally", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
+            {"id": "skating", "title": "Skating", "globals": {"GAME_MODE": "skating"}},
+            {"id": "team_deathmatch", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
           ]
         }
-      },
-      {
-        "call": "parameter_setter",
-        "required": ["!IF_ANDROID", "!IF_DEVEL"],
-        "arguments": {
-          "id": "game_mode_selector",
-          "title": "Game mode",
-          "icon": "game_mode_icon",
-          "left": "submenu_left",
-          "right": "submenu_right",
-          "bottom": "submenu_bottom",
-          "top": "submenu_top",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "deflt": 0,
-          "parameters": [
-            {"id": "", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"id": "", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
-          ]
-        }
-      },
-      {
-        "call": "constant_parameter",
-        "required": ["%IF_ANDROID"],
-        "arguments": { "name": "GAME_MODE", "value": "rally" }
       }
     ]
   },
