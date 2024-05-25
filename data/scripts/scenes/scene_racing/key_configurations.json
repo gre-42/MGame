@@ -179,6 +179,7 @@
     "unique": "avatar",
     "id": "avatar.rotate_left",
     "key": "LEFT",
+    "tap_button": "LEFT",
     "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": -0.03
@@ -187,6 +188,7 @@
     "unique": "avatar",
     "id": "avatar.rotate_right",
     "key": "RIGHT",
+    "tap_button": "RIGHT",
     "joystick_analog_axes": {"default": {"axis": "3", "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": 0.03
@@ -195,12 +197,14 @@
     "unique": "avatar",
     "id": "avatar.forward",
     "key": "W",
+    "tap_button": "UP",
     "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": -1, "deadzone": 0.01}}
   },
   {
     "unique": "avatar",
     "id": "avatar.backwards",
     "key": "S",
+    "tap_button": "DOWN",
     "joystick_analog_axes": {"default": {"axis": "2", "sign_and_scale": 1, "deadzone": 0.01}}
   },
   {

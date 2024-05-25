@@ -11,7 +11,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_forward",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_backward",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_left",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_right",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.die",
