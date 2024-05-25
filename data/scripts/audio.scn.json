@@ -1,6 +1,6 @@
 [
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_audio_sequence",
     "arguments": {
       "name": "car0.driving",

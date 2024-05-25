@@ -265,64 +265,64 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
-    "call": "obj_resource",
-    "arguments": {
-      "name": "tank_bullet_hitbox",
-      "filename": "models/primitives/empty.obj",
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "gen_ray",
-    "arguments": {
-      "name": "tank_bullet_hitbox",
-      "from": [0, 0, 0],
-      "to": [0, 0, -20]
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "tank_bullet_hitbox",
-      "add": "obj_bullet_line_segment"
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "obj_resource",
-    "arguments": {
-      "name": "grenade_hitbox",
-      "filename": "models/primitives/box.obj",
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.1, 0.1, 0.1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "grenade_hitbox",
-      "add": "obj_bullet_mesh"
-    }
+    "required": ["%flavor == 'extended'"],
+    "execute": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "tank_bullet_hitbox",
+          "filename": "models/primitives/empty.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "gen_ray",
+        "arguments": {
+          "name": "tank_bullet_hitbox",
+          "from": [0, 0, 0],
+          "to": [0, 0, -20]
+        }
+      },
+      {
+        "call": "modify_physics_material_tags",
+        "arguments": {
+          "resource_name": "tank_bullet_hitbox",
+          "add": "obj_bullet_line_segment"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "grenade_hitbox",
+          "filename": "models/primitives/box.obj",
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.1, 0.1, 0.1],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all"
+        }
+      },
+      {
+        "call": "modify_physics_material_tags",
+        "arguments": {
+          "resource_name": "grenade_hitbox",
+          "add": "obj_bullet_mesh"
+        }
+      }
+    ]
   }
 ]

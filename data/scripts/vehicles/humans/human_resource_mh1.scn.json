@@ -51,6 +51,11 @@
   },
   {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_mh"}},
   {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_mh"}},
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_skirt"}},
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_skirt"}}
+  {
+    "exclude": ["%IF_ANDROID"],
+    "execute": [
+      {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_skirt"}},
+      {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_skirt"}}
+    ]
+  }
 ]

@@ -33,7 +33,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.idle",

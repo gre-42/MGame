@@ -23,7 +23,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "playback": "_add_hist_tree",
     "arguments": {
       "NAME": "Trees0058_3",
@@ -31,7 +31,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "playback": "_add_hist_tree",
     "arguments": {
       "NAME": "Trees0122_1",
