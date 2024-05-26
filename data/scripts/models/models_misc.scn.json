@@ -243,7 +243,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "required": ["%flavor == 'extended'"],
     "call": "obj_resource",
     "arguments": {
       "name": "tank_bullet_renderable",
