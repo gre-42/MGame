@@ -2,49 +2,79 @@
   "declare_macro": "create_tap_buttons",
   "content": [
     {
-      "call": "create_tap_button",
-      "arguments": {
-        "key": "LEFT",
-        "left": "left_button_left",
-        "right": "left_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top"
-      }
-    },
-    {
-      "call": "ui_background",
-      "arguments": {
-        "z_order": 2,
-        "texture": "textures/ui/left.png",
-        "left": "left_button_left",
-        "right": "left_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top",
-        "update": "once",
-        "delay_load_policy": "no_delay",
-        "focus_mask": "always"
-      }
+      "comment": [
+        {
+          "call": "create_tap_button",
+          "arguments": {
+            "key": "LEFT",
+            "left": "left_button_left",
+            "right": "left_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top"
+          }
+        },
+        {
+          "call": "ui_background",
+          "arguments": {
+            "z_order": 2,
+            "texture": "textures/ui/left.png",
+            "left": "left_button_left",
+            "right": "left_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top",
+            "update": "once",
+            "delay_load_policy": "no_delay",
+            "focus_mask": "always"
+          }
+        },
+
+        {
+          "call": "create_tap_button",
+          "arguments": {
+            "key": "RIGHT",
+            "left": "right_button_left",
+            "right": "right_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top"
+          }
+        },
+        {
+          "call": "ui_background",
+          "arguments": {
+            "z_order": 2,
+            "texture": "textures/ui/right.png",
+            "left": "right_button_left",
+            "right": "right_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top",
+            "update": "once",
+            "delay_load_policy": "no_delay",
+            "focus_mask": "always"
+          }
+        }
+      ]
     },
 
     {
       "call": "create_tap_button",
       "arguments": {
-        "key": "RIGHT",
-        "left": "right_button_left",
-        "right": "right_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top"
+        "x_axis": 0,
+        "y_axis": 1,
+        "left": "left_analog_left",
+        "right": "left_analog_right",
+        "bottom": "lower_analog_bottom",
+        "top": "lower_analog_top"
       }
     },
     {
       "call": "ui_background",
       "arguments": {
         "z_order": 2,
-        "texture": "textures/ui/right.png",
-        "left": "right_button_left",
-        "right": "right_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top",
+        "texture": "textures/ui/joystick.png",
+        "left": "left_analog_left",
+        "right": "left_analog_right",
+        "bottom": "lower_analog_bottom",
+        "top": "lower_analog_top",
         "update": "once",
         "delay_load_policy": "no_delay",
         "focus_mask": "always"
