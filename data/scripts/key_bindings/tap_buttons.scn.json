@@ -51,7 +51,55 @@
             "delay_load_policy": "no_delay",
             "focus_mask": "always"
           }
-        }
+        },
+        {
+          "call": "create_tap_button",
+          "arguments": {
+            "key": "DOWN",
+            "left": "down_button_left",
+            "right": "down_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top"
+          }
+        },
+        {
+          "call": "ui_background",
+          "arguments": {
+            "z_order": 2,
+            "texture": "textures/ui/down.png",
+            "left": "down_button_left",
+            "right": "down_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top",
+            "update": "once",
+            "delay_load_policy": "no_delay",
+            "focus_mask": "always"
+          }
+        },
+        {
+          "call": "create_tap_button",
+          "arguments": {
+            "key": "UP",
+            "left": "up_button_left",
+            "right": "up_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top"
+          }
+        },
+        {
+          "call": "ui_background",
+          "arguments": {
+            "z_order": 2,
+            "texture": "textures/ui/up.png",
+            "left": "up_button_left",
+            "right": "up_button_right",
+            "bottom": "lower_buttons_bottom",
+            "top": "lower_buttons_top",
+            "update": "once",
+            "delay_load_policy": "no_delay",
+            "focus_mask": "always"
+          }
+        }    
       ]
     },
 
@@ -73,6 +121,32 @@
         "texture": "textures/ui/joystick.png",
         "left": "left_analog_left",
         "right": "left_analog_right",
+        "bottom": "lower_analog_bottom",
+        "top": "lower_analog_top",
+        "update": "once",
+        "delay_load_policy": "no_delay",
+        "focus_mask": "always"
+      }
+    },
+
+    {
+      "call": "create_tap_button",
+      "arguments": {
+        "x_axis": 2,
+        "y_axis": 3,
+        "left": "right_analog_left",
+        "right": "right_analog_right",
+        "bottom": "lower_analog_bottom",
+        "top": "lower_analog_top"
+      }
+    },
+    {
+      "call": "ui_background",
+      "arguments": {
+        "z_order": 2,
+        "texture": "textures/ui/joystick.png",
+        "left": "right_analog_left",
+        "right": "right_analog_right",
         "bottom": "lower_analog_bottom",
         "top": "lower_analog_top",
         "update": "once",
@@ -125,56 +199,6 @@
         "right": "start_button_right",
         "bottom": "upper_buttons_bottom",
         "top": "upper_buttons_top",
-        "update": "once",
-        "delay_load_policy": "no_delay",
-        "focus_mask": "always"
-      }
-    },
-
-    {
-      "call": "create_tap_button",
-      "arguments": {
-        "key": "DOWN",
-        "left": "down_button_left",
-        "right": "down_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top"
-      }
-    },
-    {
-      "call": "ui_background",
-      "arguments": {
-        "z_order": 2,
-        "texture": "textures/ui/down.png",
-        "left": "down_button_left",
-        "right": "down_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top",
-        "update": "once",
-        "delay_load_policy": "no_delay",
-        "focus_mask": "always"
-      }
-    },
-
-    {
-      "call": "create_tap_button",
-      "arguments": {
-        "key": "UP",
-        "left": "up_button_left",
-        "right": "up_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top"
-      }
-    },
-    {
-      "call": "ui_background",
-      "arguments": {
-        "z_order": 2,
-        "texture": "textures/ui/up.png",
-        "left": "up_button_left",
-        "right": "up_button_right",
-        "bottom": "lower_buttons_bottom",
-        "top": "lower_buttons_top",
         "update": "once",
         "delay_load_policy": "no_delay",
         "focus_mask": "always"
