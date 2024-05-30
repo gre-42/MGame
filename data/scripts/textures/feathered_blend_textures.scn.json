@@ -50,7 +50,7 @@
         "cosine": [-1, -1, 1, 1],
         "scale": "%SCALE",
         "weight": 0,
-        "role": "%ROLE",
+        "role": "%role",
         "reduction": "blend"
       }
     },
@@ -67,7 +67,7 @@
         "cosine": "%COSINE",
         "scale": "%SCALE",
         "weight": 1,
-        "role": "%ROLE",
+        "role": "%role",
         "reweight": "disabled"
       }
     },
@@ -104,7 +104,7 @@
         "cosine": [-1, -1, 1, 1],
         "scale": "%SCALE",
         "weight": 0,
-        "role": "%ROLE",
+        "role": "%role",
         "reduction": "blend"
       }
     }

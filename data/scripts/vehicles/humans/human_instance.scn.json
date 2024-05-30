@@ -20,7 +20,7 @@
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "collidable_mode": "moving",
-          "flags": "is_avatar",
+          "flags": "is_activated_avatar",
           "waypoint_dy": 0.7,
           "name": "human$SUFFIX",
           "asset_id": "%ASSET_ID"
@@ -232,11 +232,18 @@
       },
       {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}}
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
+      {
+        "call": "set_available_roles",
+        "arguments": {
+          "node": "human_node$SUFFIX",
+          "value": ["driver"]
+        }
+      }
     ]
   },
   {
-    "declare_macro": "generic_avatar.create_player_externals",
+    "declare_macro": "generic_avatar.create_player_internals",
     "content": [
       {
         "required": ["%behavior != 'none'"],
@@ -253,7 +260,7 @@
               "max_velocity":                            "%%driving_modes/avatar_$behavior/max_velocity",
               "max_delta_velocity_brake":                "%%driving_modes/avatar_$behavior/max_delta_velocity_brake",
               "collision_avoidance_radius_brake":        "%%driving_modes/avatar_$behavior/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":        "%%driving_modes/avatar_$behavior/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_wait":         "%%driving_modes/avatar_$behavior/collision_avoidance_radius_wait",
               "collision_avoidance_radius_correct":      "%%driving_modes/avatar_$behavior/collision_avoidance_radius_correct",
               "collision_avoidance_intersect_angle":     "%%driving_modes/avatar_$behavior/collision_avoidance_intersect_angle",
               "collision_avoidance_step_aside_angle":    "%%driving_modes/avatar_$behavior/collision_avoidance_step_aside_angle",

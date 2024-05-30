@@ -28,7 +28,7 @@
           "value": true
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME" } }
+      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME", "role": "driver" } }
     ]
   },
   {
@@ -52,7 +52,7 @@
           "driving_direction": "right"
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME", "role": "driver" } },
       {
         "call": "set_can_drive",
         "arguments": {
@@ -98,6 +98,13 @@
           "player": "%SPAWNER_NAME",
           "mode": "npc"
         }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%SPAWNER_NAME",
+          "role": "%role"
+        }
       }
     ]
   },
@@ -139,6 +146,13 @@
         "arguments": {
           "player": "%SPAWNER_NAME",
           "mode": "npc"
+        }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%SPAWNER_NAME",
+          "role": "%role"
         }
       }
     ]

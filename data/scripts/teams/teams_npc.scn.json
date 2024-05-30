@@ -14,7 +14,7 @@
         }
       },
       { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%role" } },
       {
         "playback": "set_player_skills",
         "arguments": {
@@ -46,7 +46,7 @@
         }
       },
       { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%role" } },
       {
         "playback": "set_player_skills",
         "arguments": {
@@ -98,6 +98,13 @@
         "arguments": {
           "player": "%PLAYER_NAME",
           "mode": "npc"
+        }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "role": "%role"
         }
       }
     ]
@@ -154,6 +161,13 @@
           "player": "%PLAYER_NAME",
           "mode": "npc"
         }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "role": "%role"
+        }
       }
     ]
   },
@@ -175,7 +189,8 @@
           "AI_SHOOT": "%AI_SHOOT",
           "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
           "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
-          "behavior": "%behavior"
+          "behavior": "%behavior",
+          "role": "%role"
         }
       },
       {
@@ -198,6 +213,7 @@
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
+              "role": "%role",
 
               "HUMAN_NAME": "%HUMAN_NAME",
               "DECIMATE": "%DECIMATE",
@@ -255,7 +271,8 @@
           "AI_SHOOT": "%AI_SHOOT",
           "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
           "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
-          "behavior": "%behavior"
+          "behavior": "%behavior",
+          "role": "%role"
         }
       },
       {
@@ -274,6 +291,7 @@
               "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
+              "role": "%role",
 
               "CAR_NAME": "%CAR_NAME",
               "DECIMATE": "%DECIMATE",

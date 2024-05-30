@@ -14,7 +14,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_left",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
@@ -27,7 +27,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_right",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
@@ -51,7 +51,7 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.jump",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_jump": true
@@ -61,7 +61,7 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.grind",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_grind": true
@@ -71,7 +71,7 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.forward",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "fly_forward_factor": 100
@@ -81,7 +81,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "skater.brake",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "surface_power": "nan"

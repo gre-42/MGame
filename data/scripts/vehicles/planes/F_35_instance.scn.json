@@ -478,6 +478,13 @@
           ],
           "engine": "turbine"
         }
+      },
+      {
+        "call": "set_available_roles",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "value": ["driver"]
+        }
       }
     ]
   },
@@ -574,7 +581,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_externals_F_35",
+    "declare_macro": "create_player_car_internals_F_35",
     "content": [
       {
         "required": ["%IF_PC"],
@@ -585,33 +592,7 @@
           "IF_HAS_GUN": true,
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
-          "ROLE": "driver"
-        }
-      },
-      {
-        "required": ["%IF_PC"],
-        "playback": "create_car_cameras_plane",
-        "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
-        }
-      },
-      {
-        "call": "player_set_aiming_gun",
-        "arguments": {
-          "player": "%PLAYER_NAME",
-          "gun_node": "main_gun_end_node$SUFFIX"
-        }
-      },
-      {
-        "call": "player_set_vehicle_control_parameters",
-        "arguments": {
-          "player": "%PLAYER_NAME",
-          "surface_power_forward": "inf",
-          "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",
-          "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
+          "role": "%role"
         }
       },
       {
@@ -678,6 +659,37 @@
         "arguments": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "behavior": "%behavior"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_car_externals_F_35",
+    "content": [
+      {
+        "required": ["%IF_PC"],
+        "playback": "create_car_cameras_plane",
+        "arguments": {
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
+        }
+      },
+      {
+        "call": "player_set_aiming_gun",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "gun_node": "main_gun_end_node$SUFFIX"
+        }
+      },
+      {
+        "call": "player_set_vehicle_control_parameters",
+        "arguments": {
+          "player": "%PLAYER_NAME",
+          "surface_power_forward": "inf",
+          "surface_power_backward": "-inf",
+          "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",
+          "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }
     ]

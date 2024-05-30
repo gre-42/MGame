@@ -99,8 +99,19 @@
         "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "arguments": {
-          "macro": {
+          "externals": {
             "playback": "create_player_car_externals",
+            "arguments": {
+              "SUFFIX": "%SUFFIX",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
+              "PLAYER_NAME": "%PLAYER_NAME",
+              "CAR_NAME": "%CAR_NAME",
+              "IF_PC": "%IF_PC",
+              "behavior": "%behavior"
+            }
+          },
+          "internals": {
+            "playback": "create_player_car_internals",
             "arguments": {
               "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
@@ -109,7 +120,8 @@
               "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
               "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
               "IF_PC": "%IF_PC",
-              "behavior": "%behavior"
+              "behavior": "%behavior",
+              "role": "%role"
             }
           },
           "spawner": "%SPAWNER_NAME",
@@ -141,12 +153,28 @@
         "playback": "create_player_car_externals_$CAR_NAME",
         "arguments": {
           "SUFFIX": "%SUFFIX",
+          "SPAWNER_NAME": "%SPAWNER_NAME",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "IF_PC": "%IF_PC",
+          "behavior": "%behavior"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_car_internals",
+    "content": [
+      {
+        "playback": "create_player_car_internals_$CAR_NAME",
+        "arguments": {
+          "SUFFIX": "%SUFFIX",
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
           "SPAWNER_NAME": "%SPAWNER_NAME",
           "PLAYER_NAME": "%PLAYER_NAME",
           "IF_PC": "%IF_PC",
-          "behavior": "%behavior"
+          "behavior": "%behavior",
+          "role": "%role"
         }
       },
       {

@@ -343,7 +343,7 @@
           "IF_HAS_GUN": false,
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
-          "ROLE": "driver"
+          "role": "driver"
         }
       },
       {
@@ -373,7 +373,12 @@
           "max_tire_angle": "%%vehicles/$ASSET_ID/MAX_TIRE_ANGLE",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
-      },
+      }
+    ]
+  },
+  {
+    "declare_macro": "generic_car.create_player_internals",
+    "content": [
       {
         "required": ["%behavior != 'none'"],
         "execute": [

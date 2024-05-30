@@ -77,8 +77,20 @@
         "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "arguments": {
-          "macro": {
+          "externals": {
             "playback": "create_player_human_externals",
+            "arguments": {
+              "SUFFIX": "%SUFFIX",
+              "SPAWNER_NAME": "%SPAWNER_NAME",
+              "PLAYER_NAME": "%PLAYER_NAME",
+              "HUMAN_NAME": "%HUMAN_NAME",
+              "IF_PC": "%IF_PC",
+              "IF_WITH_GUN": "%IF_WITH_GUN",
+              "behavior": "%behavior"
+            }
+          },
+          "internals": {
+            "playback": "create_player_human_internals",
             "arguments": {
               "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
@@ -117,31 +129,25 @@
     "declare_macro": "create_player_human_externals",
     "content": [
       {
-        "playback": "create_player_human_externals_$HUMAN_NAME",
+        "required": ["%IF_PC"],
+        "playback": "create_human_cameras_pc",
         "arguments": {
           "SUFFIX": "%SUFFIX",
-          "IF_WITH_GUN": "%IF_WITH_GUN",
-          "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "IF_PC": "%IF_PC",
-          "behavior": "%behavior"
+          "PLAYER_NAME": "%PLAYER_NAME"
         }
-      },
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_human_internals",
+    "content": [
       {
         "required": ["%IF_PC"],
         "playback": "create_human_key_bindings",
         "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
-          "ROLE": "driver"
-        }
-      },
-      {
-        "required": ["%IF_PC"],
-        "playback": "create_human_cameras_pc",
-        "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME"
+          "role": "driver"
         }
       },
       {

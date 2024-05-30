@@ -225,7 +225,7 @@
             "pid": [0.2, 0, 40],
             "alpha": 0.1},
           "drift_reduction_factor": 1,
-          "drift_reduction_reference_velocity": 10,
+          "drift_reduction_reference_velocity": 35,
           "rotor_id": 3}
       },
       {
@@ -319,7 +319,7 @@
           "IF_HAS_GUN": true,
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
-          "ROLE": "gunner"
+          "role": "%role"
         }
       },
       {

@@ -14,7 +14,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.steer_left",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "steer_left_amount": 1
@@ -25,7 +25,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.steer_right",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "steer_left_amount": -1
@@ -47,7 +47,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.forward",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "surface_power": "inf"
@@ -58,7 +58,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.backwards",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "surface_power": "-inf"
@@ -69,7 +69,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.ascend",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "ascend_velocity": 10
@@ -80,7 +80,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "car_or_heli.descend",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "car_node$SUFFIX",
         "ascend_velocity": -10
@@ -91,7 +91,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "car_or_heli.rotate_gun_left",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "turret_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
@@ -105,7 +105,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "car_or_heli.rotate_gun_right",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "turret_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
@@ -119,7 +119,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "car_or_heli.rotate_gun_up",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "turret_node$SUFFIX",
         "rotation_axis": [1, 0, 0],
@@ -133,7 +133,7 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "car_or_heli.rotate_gun_down",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "node": "turret_node$SUFFIX",
         "rotation_axis": [1, 0, 0],
@@ -147,7 +147,7 @@
       "call": "gun_key_binding",
       "arguments": {
         "id": "car_or_heli.shoot",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME"
       }
     },
@@ -157,7 +157,7 @@
       "call": "player_key_binding",
       "arguments": {
         "id": "car_or_heli.select_next_opponent",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "select_next_opponent": true
       }
@@ -166,7 +166,7 @@
       "call": "player_key_binding",
       "arguments": {
         "id": "car_or_heli.select_next_vehicle",
-        "role": "%ROLE",
+        "role": "%role",
         "player": "%PLAYER_NAME",
         "select_next_vehicle": true
       }

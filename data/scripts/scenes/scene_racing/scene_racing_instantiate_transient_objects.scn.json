@@ -219,11 +219,22 @@
     },
     {
       "required": ["%IF_CREATE_PC_CAR"],
-      "call": "create_externals",
-      "arguments": {
-        "player": "you",
-        "mode": "pc"
-      }
+      "execute": [
+        {
+          "call": "create_externals",
+          "arguments": {
+            "player": "you",
+            "mode": "pc"
+          }
+        },
+        {
+          "call": "create_internals",
+          "arguments": {
+            "player": "you",
+            "role": "%role"
+          }
+        }
+      ]
     }
   ]
 }

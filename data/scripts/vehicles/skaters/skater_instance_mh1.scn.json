@@ -178,8 +178,8 @@
   {
     "declare_macro": "create_player_skater_externals_skating_mh1",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
-      {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "ROLE": "driver"}},
+      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "role": "driver"}},
+      {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "role": "driver"}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {

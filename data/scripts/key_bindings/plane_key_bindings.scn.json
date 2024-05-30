@@ -15,7 +15,7 @@
         "call": "car_controller_key_binding",
         "arguments": {
           "id": "plane.steer_left",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "steer_left_amount": 1
@@ -26,7 +26,7 @@
         "call": "car_controller_key_binding",
         "arguments": {
           "id": "plane.steer_right",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "steer_left_amount": -1
@@ -45,7 +45,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.roll_left",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "roll": -5
@@ -56,7 +56,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.roll_right",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "roll": 5
@@ -67,7 +67,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.pitch_up",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "pitch": 10
@@ -78,7 +78,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.pitch_down",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "pitch": -10
@@ -100,7 +100,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.forward",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "turbine_power": "inf"
@@ -111,7 +111,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.brake",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "brake": 20
@@ -122,7 +122,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.yaw_left",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "yaw": -20
@@ -133,7 +133,7 @@
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.yaw_right",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "yaw": 20
@@ -143,7 +143,7 @@
         "call": "weapon_cycle_key_binding",
         "arguments": {
           "id": "plane.next_weapon",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "weapon_increment": 1
         }
@@ -152,7 +152,7 @@
         "call": "weapon_cycle_key_binding",
         "arguments": {
           "id": "plane.previous_weapon",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "weapon_increment": -1
         }
@@ -162,7 +162,7 @@
         "call": "gun_key_binding",
         "arguments": {
           "id": "plane.shoot",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME"
         }
       },
@@ -172,7 +172,7 @@
         "call": "player_key_binding",
         "arguments": {
           "id": "plane.select_next_opponent",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "select_next_opponent": true
         }
@@ -181,7 +181,7 @@
         "call": "player_key_binding",
         "arguments": {
           "id": "plane.select_next_vehicle",
-          "role": "%ROLE",
+          "role": "%role",
           "player": "%PLAYER_NAME",
           "select_next_vehicle": true
         }
