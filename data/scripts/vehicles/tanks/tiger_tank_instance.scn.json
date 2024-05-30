@@ -208,6 +208,14 @@
   {
     "declare_macro": "create_player_car_internals_tiger_tank",
     "content": [
+      {"required": ["%IF_PC"], "playback": "create_car_key_bindings", "arguments": {
+        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+        "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
+        "IF_HAS_GUN": true,
+        "SUFFIX": "%SUFFIX",
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "role": "%role"
+      }},
       {"required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX",
@@ -272,14 +280,6 @@
   {
     "declare_macro": "create_player_car_externals_tiger_tank",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_car_key_bindings", "arguments": {
-        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-        "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-        "IF_HAS_GUN": true,
-        "SUFFIX": "%SUFFIX",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "role": "%role"
-      }},
       {"required": ["%IF_PC"], "playback": "create_car_cameras_tank", "arguments": {
         "SUFFIX": "%SUFFIX",
         "PLAYER_NAME": "%PLAYER_NAME"
