@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "create_human",
+    "declare_macro": "create_avatar",
     "content": [
       {
         "call": "root_node_instance",
@@ -48,7 +48,7 @@
         }
       },
       {
-        "playback": "create_human_cameras_persistent",
+        "playback": "create_avatar_cameras_persistent",
         "arguments": {
           "SUFFIX": "%SUFFIX"
         }
@@ -130,7 +130,7 @@
     "content": [
       {
         "required": ["%IF_PC"],
-        "playback": "create_human_cameras_pc",
+        "playback": "create_avatar_cameras_pc",
         "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME"
@@ -143,7 +143,7 @@
     "content": [
       {
         "required": ["%IF_PC"],
-        "playback": "create_human_key_bindings",
+        "playback": "create_avatar_key_bindings",
         "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",

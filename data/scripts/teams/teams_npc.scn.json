@@ -64,10 +64,10 @@
     ]
   },
   {
-    "declare_macro": "teams.create_human_for_npc",
+    "declare_macro": "teams.create_avatar_for_npc",
     "content": [
       {
-        "playback": "create_human",
+        "playback": "create_avatar",
         "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
@@ -198,7 +198,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_human_for_npc",
+            "playback": "teams.create_avatar_for_npc",
             "arguments": {
               "IF_MANUAL_AIM": null,
 

@@ -1,13 +1,13 @@
 [
   {
-    "declare_macro": "create_human_cameras_persistent",
+    "declare_macro": "create_avatar_cameras_persistent",
     "content": [
       {"call": "perspective_camera", "arguments": {"node": "human_head_camera_node$SUFFIX", "y_fov": 60, "near_plane": 0.1, "far_plane": "%FAR_PLANE", "requires_postprocessing": true}},
       {"call": "set_node_hider", "arguments": {"node_to_hide": "human_node$SUFFIX", "camera_node": "human_head_camera_node$SUFFIX"}}
     ]
   },
   {
-    "declare_macro": "create_human_cameras_pc",
+    "declare_macro": "create_avatar_cameras_pc",
     "content": [
       {"call": "root_node_instance", "arguments": {"type": "dynamic", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "follower_camera", "position": [0, 10, 10]}},

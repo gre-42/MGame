@@ -208,7 +208,7 @@ macro_begin _scene_tank_instantiate;
         CAR_NODE_ANGLE_X:10
         CAR_NODE_ANGLE_Y:90
         CAR_NODE_ANGLE_Z:10;
-    IF_PLAYER_HUMAN macro_playback create_human
+    IF_PLAYER_HUMAN macro_playback create_avatar
         PLAYER_NAME:you
         TEAM:red
         SUFFIX:
@@ -345,7 +345,7 @@ macro_begin _scene_tank_instantiate;
     include create_cameras.scn;
 
     IF_PLAYER_TANK macro_playback create_tiger_tank_cameras;
-    IF_PLAYER_HUMAN macro_playback create_human_cameras;
+    IF_PLAYER_HUMAN macro_playback create_avatar_cameras;
 
     # abs_key_binding node=car_node key=UP force=0 0 -100 position=0 0 0 surface_power=0;
     # abs_key_binding node=car_node key=DOWN force=0 0 100 position=0 0 0 surface_power=0;
@@ -462,7 +462,7 @@ macro_begin _scene_tank_instantiate;
             key=SPACE
             gamepad_button=RIGHT_BUMPER;
     macro_end;
-    macro_begin create_human_key_bindings;
+    macro_begin create_avatar_key_bindings;
         abs_idle_binding
             node=human_node
             tires_z=0 0 0;
@@ -554,7 +554,7 @@ macro_begin _scene_tank_instantiate;
     macro_end;
 
     IF_PLAYER_TANK macro_playback create_car_key_bindings;
-    IF_PLAYER_HUMAN macro_playback create_human_key_bindings;
+    IF_PLAYER_HUMAN macro_playback create_avatar_key_bindings;
 
     # console_log node=car_node format=10;
     IF_PLAYER_TANK visual_node_status node=car_node format=14 ttf_file=fonts/RobotoMono-Bold.ttf position=50 40 font_height=32 line_distance=32;

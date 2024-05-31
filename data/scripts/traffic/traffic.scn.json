@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "traffic.create_human_npc_player",
+    "declare_macro": "traffic.create_avatar_npc_player",
     "content": [
       {
         "call": "spawner_create",
@@ -64,10 +64,10 @@
     ]
   },
   {
-    "declare_macro": "traffic.create_human",
+    "declare_macro": "traffic.create_avatar",
     "content": [
       {
-        "playback": "create_human",
+        "playback": "create_avatar",
         "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
@@ -161,7 +161,7 @@
     "declare_macro": "traffic.create_npc_and_human",
     "content": [
       {
-        "playback": "traffic.create_human_npc_player",
+        "playback": "traffic.create_avatar_npc_player",
         "arguments": {
           "SPAWNER_NAME": "%SPAWNER_NAME",
           "UNSTUCK_MODE": "delete"
@@ -180,7 +180,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "traffic.create_human",
+            "playback": "traffic.create_avatar",
             "arguments": {
               "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
               "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",

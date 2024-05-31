@@ -7,7 +7,7 @@
   
   {"include": "animations.scn.json"},
   {"include": "vehicle_classes/create_car.scn.json"},
-  {"include": "vehicle_classes/create_human.scn.json"},
+  {"include": "vehicle_classes/create_avatar.scn.json"},
   {"include": "vehicle_classes/create_skater.scn.json"},
   {"include": "billboards/billboards.scn.json"},
   {"required": ["%flavor == 'extended'"], "include": "weapons/weapon_instances.scn.json"},

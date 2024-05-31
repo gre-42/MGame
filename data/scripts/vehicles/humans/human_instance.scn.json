@@ -210,8 +210,8 @@
           "tire_id": 0
         }
       },
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_human_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
+      {"required": ["%IF_WITH_PHYSICS"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
       {
         "call": "set_avatar_style_updater",
         "arguments": {
