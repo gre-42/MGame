@@ -367,7 +367,7 @@
     "id": "plane.steer_left",
     "key": "LEFT",
     "analog_axes": {"default": {
-      "tap"     : {"axis": "3", "sign_and_scale": -1, "deadzone": 0.2}
+      "tap"     : {"axis": "3", "sign_and_scale": -1, "deadzone": 0.01}
     }}
   },
   {
@@ -375,7 +375,7 @@
     "id": "plane.steer_right",
     "key": "RIGHT",
     "analog_axes": {"default": {
-      "tap"     : {"axis": "3", "sign_and_scale": 1, "deadzone": 0.2}
+      "tap"     : {"axis": "3", "sign_and_scale": 1, "deadzone": 0.01}
     }}
   },
   {
