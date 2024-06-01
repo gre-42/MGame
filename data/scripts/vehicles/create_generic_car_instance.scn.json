@@ -267,6 +267,14 @@
           "tire_angle_velocities": "%%vehicles/$NAME/TIRE_ANGLE_VELOCITIES",
           "tire_angles": "%%vehicles/$NAME/TIRE_ANGLES"
         }
+      },
+
+      {
+        "call": "set_available_roles",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "value": ["driver"]
+        }
       }
     ]
   },
@@ -336,32 +344,11 @@
     "content": [
       {
         "required": ["%IF_PC"],
-        "playback": "create_car_key_bindings",
-        "arguments": {
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-          "IF_MANUAL_AIM": false,
-          "IF_HAS_GUN": false,
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "role": "driver"
-        }
-      },
-      {
-        "required": ["%IF_PC"],
         "playback": "create_car_cameras_$CAMERA_CLASS",
         "arguments": {
           "SUFFIX": "%SUFFIX",
           "PLAYER_NAME": "%PLAYER_NAME",
           "COCKPIT_CAMERA_POSITION": "%COCKPIT_CAMERA_POSITION"
-        }
-      },
-      {
-        "required": ["%IF_PC"],
-        "exclude": ["%IF_ANDROID"],
-        "playback": "create_player_car_engine_rpm_meter",
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "ENGINE_NAME": "%%vehicles/$ASSET_ID/FRONT_ENGINE"
         }
       },
       {
@@ -379,6 +366,27 @@
   {
     "declare_macro": "generic_car.create_player_internals",
     "content": [
+      {
+        "required": ["%IF_PC"],
+        "playback": "create_car_key_bindings",
+        "arguments": {
+          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+          "IF_MANUAL_AIM": false,
+          "IF_HAS_GUN": false,
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "role": "%role"
+        }
+      },
+      {
+        "required": ["%IF_PC"],
+        "exclude": ["%IF_ANDROID"],
+        "playback": "create_player_car_engine_rpm_meter",
+        "arguments": {
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "ENGINE_NAME": "%%vehicles/$ASSET_ID/FRONT_ENGINE"
+        }
+      },
       {
         "required": ["%behavior != 'none'"],
         "execute": [

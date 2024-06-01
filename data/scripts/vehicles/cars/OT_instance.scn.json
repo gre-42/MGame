@@ -42,13 +42,27 @@
     }
   },
   {
+    "declare_macro": "create_player_car_internals_OT",
+    "content": {
+      "playback": "generic_car.create_player_internals",
+      "arguments": {
+        "ASSET_ID": "OT",
+        "IF_PC": "%IF_PC",
+        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
+        "PLAYER_NAME": "%PLAYER_NAME",
+        "SUFFIX": "%SUFFIX",
+        "behavior": "%behavior",
+        "role": "%role"
+      }
+    }
+  },
+  {
     "declare_macro": "create_player_car_externals_OT",
     "content": {
       "playback": "generic_car.create_player_externals",
       "arguments": {
         "ASSET_ID": "OT",
         "IF_PC": "%IF_PC",
-        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
         "PLAYER_NAME": "%PLAYER_NAME",
         "SUFFIX": "%SUFFIX",
         "behavior": "%behavior",
