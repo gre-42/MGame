@@ -14,7 +14,8 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "triangle_tangent_error_behavior": "zero"
+      "triangle_tangent_error_behavior": "zero",
+      "rectangle_triangulation_mode": "disabled"
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "C_RAM_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
