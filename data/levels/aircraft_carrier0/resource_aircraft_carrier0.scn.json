@@ -1,90 +1,93 @@
-[
-  {
-    "declare_macro": "osm_resource_aircraft_carrier0",
-    "content": [
-      {
+{
+  "declare_macro": "osm_resource_aircraft_carrier0",
+  "content": [
+    {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "ofs_kestrel",
+        "filename": "models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj",
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [200, 200, 200],
+        "center_distances": [0, "inf"],
+        "blend_mode": "binary_05",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "none",
+        "occluder_pass": "lightmap_black_global_static",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero"
+      }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "ofs_kestrel",
+        "add": "attr_concave"
+      }
+    },
+    {
+      "comment": {
         "call": "obj_resource",
         "arguments": {
-          "name": "ofs_kestrel",
-          "filename": "models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj",
+          "name": "ocean",
+          "filename": "$__DIR__/ocean.obj",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
-          "scale": [200, 200, 200],
+          "scale": [100, 200, 100],
           "center_distances": [0, "inf"],
           "blend_mode": "binary_05",
           "alpha_distances": [0, 0, "inf", "inf"],
-          "cull_faces_alpha": false,
-          "occluded_pass": "none",
-          "occluder_pass": "lightmap_black_global_static",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "triangle_tangent_error_behavior": "zero"
-        }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "ofs_kestrel",
-          "add": "attr_concave"
-        }
-      },
-      {
-        "comment": {
-          "call": "obj_resource",
-          "arguments": {
-            "name": "ocean",
-            "filename": "$__DIR__/ocean.obj",
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [100, 200, 100],
-            "center_distances": [0, "inf"],
-            "blend_mode": "binary_05",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "cull_faces_alpha": 0,
-            "occluded_pass": "lightmap_black_local_instances",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all"
-          }
-        }
-      },
-      {
-        "call": "grid_resource",
-        "arguments": {
-          "name": "ocean",
-          "texture_filename": "#ocean_uniform",
-          "size": [50, 50],
-          "occluded_pass": "lightmap_black_global_static",
+          "cull_faces_alpha": 0,
+          "occluded_pass": "lightmap_black_local_instances",
           "occluder_pass": "none",
-          "ambient": [0, 0, 0],
-          "diffuse": [1, 1, 1],
-          "specular": [0.5, 0.5, 0.5],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "cull_faces": true,
-          "rotation": [-90, 0, 0],
-          "translation": [-25000, -38.4, 25000],
-          "scale": 1000,
-          "uv_scale": 0.05,
-          "period": 20,
-          "aggregate_mode": "once",
+          "aggregate_mode": "none",
           "transformation_mode": "all"
         }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "ocean",
-          "add": "attr_concave"
-        }
-      },
-      {
-        "call": "compound_resource",
-        "arguments": {
-          "source_names": ["ofs_kestrel", "ocean"],
-          "dest_name": "osm_map"
-        }
       }
-    ]
-  }
-]
+    },
+    {
+      "call": "grid_resource",
+      "arguments": {
+        "name": "ocean",
+        "texture_filename": "#ocean_uniform",
+        "size": [50, 50],
+        "tile_length": 1e3,
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "ambient": [0, 0, 0],
+        "diffuse": [1, 1, 1],
+        "specular": [0.5, 0.5, 0.5],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces": true,
+        "rotation": [-90, 0, 0],
+        "translation": [-25e3, -30, 25e3],
+        "scale": 1,
+        "uv_scale": 50,
+        "period": 0.02,
+        "aggregate_mode": "once",
+        "transformation_mode": "all",
+        "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+        "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+        "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+        "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "ocean",
+        "add": "attr_concave"
+      }
+    },
+    {
+      "call": "compound_resource",
+      "arguments": {
+        "source_names": ["ofs_kestrel", "ocean"],
+        "dest_name": "osm_map"
+      }
+    }
+  ]
+}

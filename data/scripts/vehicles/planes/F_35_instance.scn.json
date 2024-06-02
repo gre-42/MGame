@@ -596,8 +596,8 @@
         }
       },
       {
-        "call": "hud_opponent_tracker",
         "required": ["%IF_PC"],
+        "call": "hud_opponent_tracker",
         "arguments": {
           "player": "%PLAYER_NAME",
           "exclusive_node": null,
@@ -696,13 +696,12 @@
   },
   {
     "declare_macro": "add_attached_light_F_35",
-    "content": [
-      {
-        "playback": "add_attached_light_sedan", "arguments": {
-          "LSUFFIX": "%LSUFFIX",
-          "CSUFFIX": "%CSUFFIX"
-        }
+    "content": {
+      "playback": "add_attached_light_sedan",
+      "arguments": {
+        "LSUFFIX": "%LSUFFIX",
+        "CSUFFIX": "%CSUFFIX"
       }
-    ]
+    }
   }
 ]

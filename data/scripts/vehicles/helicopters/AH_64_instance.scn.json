@@ -255,6 +255,13 @@
           "ascend_a": 0.1,
           "vehicle_domain": "air"
         }
+      },
+      {
+        "call": "set_available_roles",
+        "arguments": {
+          "node": "car_node$SUFFIX",
+          "value": ["driver"]
+        }
       }
     ]
   },
@@ -292,7 +299,9 @@
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d5$SUFFIX", "DECIMATE": "_d5"}},
       {
-        "required": ["%IF_WITH_PHYSICS"], "playback": "create_AH_64_physics", "arguments": {
+        "required": ["%IF_WITH_PHYSICS"],
+        "playback": "create_AH_64_physics",
+        "arguments": {
           "SUFFIX": "%SUFFIX",
           "VELOCITY": "%VELOCITY",
           "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
@@ -310,10 +319,12 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_externals_AH_64",
+    "declare_macro": "create_player_car_internals_AH_64",
     "content": [
       {
-        "required": ["%IF_PC"], "playback": "create_car_key_bindings", "arguments": {
+        "required": ["%IF_PC"],
+        "playback": "create_car_key_bindings",
+        "arguments": {
           "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
           "IF_HAS_GUN": true,
@@ -323,13 +334,9 @@
         }
       },
       {
-        "required": ["%IF_PC"], "playback": "create_car_cameras_heli", "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME"
-        }
-      },
-      {
-        "required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
+        "required": ["%IF_PC"],
+        "call": "hud_target_point",
+        "arguments": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "exclusive_node": "main_gun_camera_node$SUFFIX",
@@ -340,9 +347,23 @@
           "size": [0.05, 0.05],
           "error_behavior": "center"
         }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_car_externals_AH_64",
+    "content": [
+      {
+        "required": ["%IF_PC"],
+        "playback": "create_car_cameras_heli",
+        "arguments": {
+          "SUFFIX": "%SUFFIX",
+          "PLAYER_NAME": "%PLAYER_NAME"
+        }
       },
       {
-        "call": "player_set_aiming_gun", "arguments": {
+        "call": "player_set_aiming_gun",
+        "arguments": {
           "player": "%PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX"
         }
@@ -361,11 +382,12 @@
   },
   {
     "declare_macro": "add_attached_light_AH_64",
-    "content": [
-      {"playback": "add_attached_light_heli", "arguments": {
+    "content": {
+      "playback": "add_attached_light_heli",
+      "arguments": {
         "LSUFFIX": "%LSUFFIX",
         "CSUFFIX": "%CSUFFIX"
-      }}
-    ]
+      }
+    }
   }
 ]
