@@ -169,7 +169,9 @@
       "u_scale": 1,
       "times": [-5, 2],
       "w": [-25, 10],
-      "minimum_length": 0.5
+      "minimum_length": 0.01,
+      "maximum_length": "inf",
+      "maximum_duration": 0.01
     }
   },
   {
@@ -182,7 +184,9 @@
       "u_scale": 1,
       "times": [-5, 0.2],
       "w": [-250, 10],
-      "minimum_length": 0.5
+      "minimum_length": 0.1,
+      "maximum_length": "inf",
+      "maximum_duration": 0.1
     }
   },
   {
@@ -195,7 +199,9 @@
       "u_scale": 1,
       "times": [-5, 0.2],
       "w": [-250, 10],
-      "minimum_length": 0.5
+      "minimum_length": 0.1,
+      "maximum_length": "inf",
+      "maximum_duration": 0.1
     }
   }
 ]
