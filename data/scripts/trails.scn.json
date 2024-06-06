@@ -143,7 +143,7 @@
       "name": "trails_white",
       "texture": "trails_white",
       "ambient": [1, 1, 1],
-      "times": [0, 0.1, 0.2, 3, 9.95, 10],
+      "times": [0, 0.02, 0.05, 0.6, 2, 2.05],
       "w": [0, 0, 0.5, 0.5, 1, 1],
       "max_num_triangles": 10000
     }
@@ -154,7 +154,7 @@
       "name": "trails_red",
       "texture": "trails_red",
       "emissive": [0.8, 0, 0],
-      "times": [0, 0.03, 0.05, 3, 9.95, 10],
+      "times": [0, 0.1, 0.125, 0.15, 0.2, 0.25],
       "w": [0, 0, 0.5, 0.5, 1, 1],
       "max_num_triangles": 10000
     }
@@ -167,11 +167,10 @@
       "model": "trail_segment_20x20",
       "u_offset": 0,
       "u_scale": 1,
-      "times": [-5, 2],
-      "w": [-25, 10],
-      "minimum_length": 0.01,
-      "maximum_length": "inf",
-      "maximum_duration": 0.03
+      "duration": 2,
+      "min_spawn_length": 0.01,
+      "max_spawn_length": "inf",
+      "spawn_duration": 0.02
     }
   },
   {
@@ -182,11 +181,10 @@
       "model": "trail_segment_5x5",
       "u_offset": 0,
       "u_scale": 1,
-      "times": [-5, 0.2],
-      "w": [-250, 10],
-      "minimum_length": 0.1,
-      "maximum_length": "inf",
-      "maximum_duration": 0.1
+      "duration": 0.2,
+      "min_spawn_length": 0.1,
+      "max_spawn_length": "inf",
+      "spawn_duration": 0.1
     }
   },
   {
@@ -197,11 +195,10 @@
       "model": "trail_segment_2x2",
       "u_offset": 0,
       "u_scale": 1,
-      "times": [-5, 0.2],
-      "w": [-250, 10],
-      "minimum_length": 0.1,
-      "maximum_length": "inf",
-      "maximum_duration": 0.1
+      "duration": 0.2,
+      "min_spawn_length": 0.1,
+      "max_spawn_length": "inf",
+      "spawn_duration": 0.1
     }
   }
 ]
