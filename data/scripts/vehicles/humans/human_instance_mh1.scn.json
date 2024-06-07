@@ -40,7 +40,7 @@
     }
   },
   {
-    "declare_macro": "create_player_human_internals_female_mh",
+    "declare_macro": "create_player_avatar_internals_female_mh",
     "content": {
       "playback": "generic_avatar.create_player_internals",
       "arguments": {
@@ -51,7 +51,7 @@
   },
   {
     "exclude": ["%IF_ANDROID"],
-    "declare_macro": "create_player_human_internals_female_skirt",
+    "declare_macro": "create_player_avatar_internals_female_skirt",
     "content": {
       "playback": "generic_avatar.create_player_internals",
       "arguments": {

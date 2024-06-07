@@ -78,7 +78,7 @@
         "call": "set_externals_creator",
         "arguments": {
           "externals": {
-            "playback": "create_player_human_externals",
+            "playback": "create_player_avatar_externals",
             "arguments": {
               "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
@@ -90,7 +90,7 @@
             }
           },
           "internals": {
-            "playback": "create_player_human_internals",
+            "playback": "create_player_avatar_internals",
             "arguments": {
               "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_human_externals",
+    "declare_macro": "create_player_avatar_externals",
     "content": [
       {
         "required": ["%IF_PC"],
@@ -139,8 +139,15 @@
     ]
   },
   {
-    "declare_macro": "create_player_human_internals",
+    "declare_macro": "create_player_avatar_internals",
     "content": [
+      {
+        "playback": "create_player_avatar_internals_$HUMAN_NAME",
+        "arguments": {
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "behavior": "%behavior"
+        }
+      },
       {
         "required": ["%IF_PC"],
         "playback": "create_avatar_key_bindings",
