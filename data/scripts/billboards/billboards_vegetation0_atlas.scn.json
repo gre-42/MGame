@@ -7,15 +7,15 @@
       "height": 2048,
       "color_mode": "rgba",
       "images": [
-        {"position":[0, 0], "texture": "textures/proctree/one_24/out-1-5.png"},
-        {"position":[1024, 0], "texture": "textures/proctree/one_24/out-2-5.png"},
-        {"position":[2048, 0], "texture": "textures/proctree/one/out-3-5.png"},
-        {"position":[0, 1024], "texture": "textures/proctree/one/out-4-5.png"},
-        {"position":[1024, 1024], "texture": "textures/proctree/one_large/out-1-10.png"},
-        {"position":[2048, 1024], "texture": "textures/proctree/one_large/out-2-10.png"},
-        {"position":[3072, 0], "texture": "textures/SR/grass2g.png"},
-        {"position":[3584, 0], "texture": "textures/SR/grass9r.png"},
-        {"position":[3072, 1024], "texture": "textures/cc0textures/Foliage002_2K_Color_Dense_1k.png"}
+        {"target_position":[0, 0], "texture": "textures/proctree/one_24/out-1-5.png"},
+        {"target_position":[1024, 0], "texture": "textures/proctree/one_24/out-2-5.png"},
+        {"target_position":[2048, 0], "texture": "textures/proctree/one/out-3-5.png"},
+        {"target_position":[0, 1024], "texture": "textures/proctree/one/out-4-5.png"},
+        {"target_position":[1024, 1024], "texture": "textures/proctree/one_large/out-1-10.png"},
+        {"target_position":[2048, 1024], "texture": "textures/proctree/one_large/out-2-10.png"},
+        {"target_position":[3072, 0], "texture": "textures/SR/grass2g.png"},
+        {"target_position":[3584, 0], "texture": "textures/SR/grass9r.png"},
+        {"target_position":[3072, 1024], "texture": "textures/cc0textures/Foliage002_2K_Color_Dense_1k.png"}
       ]
     }
   },

@@ -54,9 +54,9 @@
       "depth_interpolation": "linear",
       "color_mode": "rgba",
       "images": [
-        {"position": [0,   0], "layer": 0, "texture": "#simple_trails_a1_white"},
-        {"position": [0,   0], "layer": 1, "texture": "#simple_trails_a100_white"},
-        {"position": [0,   0], "layer": 2, "texture": "#simple_trails_a1_white"}
+        {"target_position": [0,   0], "target_layer": 0, "texture": "#simple_trails_a1_white"},
+        {"target_position": [0,   0], "target_layer": 1, "texture": "#simple_trails_a100_white"},
+        {"target_position": [0,   0], "target_layer": 2, "texture": "#simple_trails_a1_white"}
       ]
     }
   },
@@ -70,9 +70,9 @@
       "depth_interpolation": "linear",
       "color_mode": "rgba",
       "images": [
-        {"position": [0, 0], "layer": 0, "texture": "#simple_trails_a1_red"},
-        {"position": [0, 0], "layer": 1, "texture": "#simple_trails_a40_red"},
-        {"position": [0, 0], "layer": 2, "texture": "#simple_trails_a1_red"}
+        {"target_position": [0, 0], "target_layer": 0, "texture": "#simple_trails_a1_red"},
+        {"target_position": [0, 0], "target_layer": 1, "texture": "#simple_trails_a40_red"},
+        {"target_position": [0, 0], "target_layer": 2, "texture": "#simple_trails_a1_red"}
       ]
     }
   },

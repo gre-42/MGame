@@ -14,7 +14,7 @@
           "animation_duration": "inf"
         },
         {
-          "resource_name": "particles_dust",
+          "resource_name": "particles_dust_3d",
           "instance_prefix": "particles_dust",
           "tire_velocities": [16, 20, 50],
           "tire_frequencies": [0, 80, 100],
@@ -112,7 +112,7 @@
           "animation_duration": "inf"
         },
         {
-          "resource_name": "particles_dirt",
+          "resource_name": "particles_dirt_3d",
           "instance_prefix": "particles_dirt",
           "vehicle_velocities": [4, 5, 50],
           "vehicle_frequencies": [0, 2.5, 25],
@@ -136,7 +136,7 @@
           "animation_duration": "inf"
         },
         {
-          "resource_name": "particles_snow",
+          "resource_name": "particles_snow_3d",
           "instance_prefix": "particles_snow",
           "vehicle_velocities": [4, 5, 50],
           "vehicle_frequencies": [0, 2.5, 25],

@@ -56,10 +56,10 @@
       "height": 2048,
       "color_mode": "rgba",
       "images": [
-        {"position": [   0,    0], "texture": "#Trees0023"},
-        {"position": [1024,    0], "texture": "#Trees0024"},
-        {"position": [   0, 1024], "texture": "#Trees0029"},
-        {"position": [1024, 1024], "texture": "#Trees0096"}
+        {"target_position": [   0,    0], "texture": "#Trees0023"},
+        {"target_position": [1024,    0], "texture": "#Trees0024"},
+        {"target_position": [   0, 1024], "texture": "#Trees0029"},
+        {"target_position": [1024, 1024], "texture": "#Trees0096"}
       ]
     }
   },

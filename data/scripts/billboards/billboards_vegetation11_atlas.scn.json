@@ -7,17 +7,17 @@
       "height": 4096,
       "color_mode": "rgba",
       "images": [
-        {"position": [0, 0], "texture": "#tc0"},
-        {"position": [1024, 0], "texture": "#tc3"},
-        {"position": [2048, 0], "texture": "#tc4"},
-        {"position": [0, 2048], "texture": "#tc5"},
-        {"position": [1024, 2048], "texture": "#tc6"},
-        {"position": [2048, 2048], "texture": "#tcd0"},
-        {"position": [3072, 10], "texture": "#grass_tbdpec3r_island_bright"},
-        {"position": [3072, 522], "texture": "#grass_tbdpec3r_island_green1"},
-        {"position": [3072, 1034], "texture": "#Trees0023"},
-        {"position": [3072, 2048], "texture": "#Trees0029"},
-        {"position": [3072, 3072], "texture": "#Trees0096"}
+        {"target_position": [0, 0], "texture": "#tc0"},
+        {"target_position": [1024, 0], "texture": "#tc3"},
+        {"target_position": [2048, 0], "texture": "#tc4"},
+        {"target_position": [0, 2048], "texture": "#tc5"},
+        {"target_position": [1024, 2048], "texture": "#tc6"},
+        {"target_position": [2048, 2048], "texture": "#tcd0"},
+        {"target_position": [3072, 10], "texture": "#grass_tbdpec3r_island_bright"},
+        {"target_position": [3072, 522], "texture": "#grass_tbdpec3r_island_green1"},
+        {"target_position": [3072, 1034], "texture": "#Trees0023"},
+        {"target_position": [3072, 2048], "texture": "#Trees0029"},
+        {"target_position": [3072, 3072], "texture": "#Trees0096"}
       ]
     }
   },

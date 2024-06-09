@@ -125,19 +125,19 @@
       "layers": 2,
       "color_mode": "rgba",
       "images": [
-        {"position": [   0,    0], "layer": 0, "texture": "#tc0"},
-        {"position": [1024,    0], "layer": 0, "texture": "#tc3"},
-        {"position": [2048,    0], "layer": 0, "texture": "#tc4"},
-        {"position": [   0, 2048], "layer": 0, "texture": "#tc5"},
-        {"position": [1024, 2048], "layer": 0, "texture": "#tc6"},
-        {"position": [2048, 2048], "layer": 0, "texture": "#tcd0"},
-        {"position": [3072,   10], "layer": 0, "texture": "#grass_tbdpec3r_island_bright"},
-        {"position": [3072,  522], "layer": 0, "texture": "#grass_tbdpec3r_island_green1"},
-        {"position": [3072, 1034], "layer": 0, "texture": "#foliage_gradient"},
-        {"position": [3072, 2048], "layer": 0, "texture": "#tb"},
-        {"position": [3072, 3072], "layer": 0, "texture": "textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"},
-        {"position": [   0,    0], "layer": 1, "texture": "#Trees0058_3"},
-        {"position": [1024,    0], "layer": 1, "texture": "#Trees0122_1"}
+        {"target_position": [   0,    0], "target_layer": 0, "texture": "#tc0"},
+        {"target_position": [1024,    0], "target_layer": 0, "texture": "#tc3"},
+        {"target_position": [2048,    0], "target_layer": 0, "texture": "#tc4"},
+        {"target_position": [   0, 2048], "target_layer": 0, "texture": "#tc5"},
+        {"target_position": [1024, 2048], "target_layer": 0, "texture": "#tc6"},
+        {"target_position": [2048, 2048], "target_layer": 0, "texture": "#tcd0"},
+        {"target_position": [3072,   10], "target_layer": 0, "texture": "#grass_tbdpec3r_island_bright"},
+        {"target_position": [3072,  522], "target_layer": 0, "texture": "#grass_tbdpec3r_island_green1"},
+        {"target_position": [3072, 1034], "target_layer": 0, "texture": "#foliage_gradient"},
+        {"target_position": [3072, 2048], "target_layer": 0, "texture": "#tb"},
+        {"target_position": [3072, 3072], "target_layer": 0, "texture": "textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"},
+        {"target_position": [   0,    0], "target_layer": 1, "texture": "#Trees0058_3"},
+        {"target_position": [1024,    0], "target_layer": 1, "texture": "#Trees0122_1"}
       ]
     }
   },

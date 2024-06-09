@@ -7,16 +7,16 @@
       "height": 2048,
       "color_mode": "rgba",
       "images": [
-        {"position": [0, 0], "texture": "textures/textures.com/TexturesCom_Trees0129_1_masked_S_5x1k.png"},
-        {"position": [512, 0], "texture": "textures/textures.com/TexturesCom_Trees0130_1_masked_S_5x1k.png"},
-        {"position": [1024, 0], "texture": "textures/textures.com/TexturesCom_Trees0131_1_masked_S_5x1k.png"},
-        {"position": [1536, 0], "texture": "#Trees0058_2"},
-        {"position": [0, 1024], "texture": "#Trees0058_3"},
-        {"position": [1024, 1024], "texture": "#Trees0122_1"},
-        {"position": [3072, 0], "texture": "#hedge_long_0"},
-        {"position": [3584, 0], "texture": "#hedge_long_round_0"},
-        {"position": [3072, 1024], "texture": "#hedge_small_0"},
-        {"position": [3584, 1024], "texture": "#hedge_small_round_0"}
+        {"target_position": [0, 0], "texture": "textures/textures.com/TexturesCom_Trees0129_1_masked_S_5x1k.png"},
+        {"target_position": [512, 0], "texture": "textures/textures.com/TexturesCom_Trees0130_1_masked_S_5x1k.png"},
+        {"target_position": [1024, 0], "texture": "textures/textures.com/TexturesCom_Trees0131_1_masked_S_5x1k.png"},
+        {"target_position": [1536, 0], "texture": "#Trees0058_2"},
+        {"target_position": [0, 1024], "texture": "#Trees0058_3"},
+        {"target_position": [1024, 1024], "texture": "#Trees0122_1"},
+        {"target_position": [3072, 0], "texture": "#hedge_long_0"},
+        {"target_position": [3584, 0], "texture": "#hedge_long_round_0"},
+        {"target_position": [3072, 1024], "texture": "#hedge_small_0"},
+        {"target_position": [3584, 1024], "texture": "#hedge_small_round_0"}
       ]
     }
   },

@@ -7,16 +7,16 @@
       "height": 2048,
       "color_mode": "rgba",
       "images": [
-        {"position": [0, 0], "texture": "textures/proctree/one_24/out-1-5.png"},
-        {"position": [1024, 0], "texture": "textures/proctree/one_24/out-2-5.png"},
-        {"position": [2048, 0], "texture": "textures/proctree/one/out-3-5.png"},
-        {"position": [0, 1024], "texture": "textures/proctree/one/out-4-5.png"},
-        {"position": [1024, 1024], "texture": "textures/proctree/one_large/out-1-10.png"},
-        {"position": [2048, 1024], "texture": "textures/proctree/one_large/out-2-10.png"},
-        {"position": [3072, 0], "texture": "models/opengameart/Hedge/Long/HedgeLong.png"},
-        {"position": [3584, 0], "texture": "models/opengameart/Hedge/LongRound/HedgeLongRound.png"},
-        {"position": [3072, 1024], "texture": "models/opengameart/Hedge/Small/HedgeSmall.png"},
-        {"position": [3584, 1024], "texture": "models/opengameart/Hedge/SmallRound/HedgeSmallRound.png"}
+        {"target_position": [0, 0], "texture": "textures/proctree/one_24/out-1-5.png"},
+        {"target_position": [1024, 0], "texture": "textures/proctree/one_24/out-2-5.png"},
+        {"target_position": [2048, 0], "texture": "textures/proctree/one/out-3-5.png"},
+        {"target_position": [0, 1024], "texture": "textures/proctree/one/out-4-5.png"},
+        {"target_position": [1024, 1024], "texture": "textures/proctree/one_large/out-1-10.png"},
+        {"target_position": [2048, 1024], "texture": "textures/proctree/one_large/out-2-10.png"},
+        {"target_position": [3072, 0], "texture": "models/opengameart/Hedge/Long/HedgeLong.png"},
+        {"target_position": [3584, 0], "texture": "models/opengameart/Hedge/LongRound/HedgeLongRound.png"},
+        {"target_position": [3072, 1024], "texture": "models/opengameart/Hedge/Small/HedgeSmall.png"},
+        {"target_position": [3584, 1024], "texture": "models/opengameart/Hedge/SmallRound/HedgeSmallRound.png"}
       ]
     }
   },
