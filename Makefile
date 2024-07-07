@@ -47,6 +47,7 @@ package:
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
+			Mlib/$(platform_dir)/Bin/libMlibArray.dll \
 			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
 			Mlib/$(platform_dir)/Bin/libMlibComponents.dll \
 			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
