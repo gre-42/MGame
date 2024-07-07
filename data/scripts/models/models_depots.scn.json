@@ -4,6 +4,7 @@
     "arguments": {
       "name": "frag_grenade_depot",
       "filename": "models/sketchfab.com/frag_grenade/frag_grenade.obj",
+      "config": {
       "position": [0, 1, 0],
       "rotation": [0, 0, 45],
       "scale": [20, 20, 20],
@@ -22,6 +23,7 @@
       "fresnel_min": "%SKETCHFAB_FRESNEL_MIN",
       "fresnel_max": "%SKETCHFAB_FRESNEL_MAX",
       "fresnel_exponent": "%SKETCHFAB_FRESNEL_EXPONENT"
+      }
     }
   }
 ]

@@ -6,6 +6,7 @@
       "arguments": {
         "name": "osm_map",
         "filename": "$__DIR__/skate0.obj",
+        "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [1, 1, 1],
@@ -20,6 +21,7 @@
         "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
         "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
         "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+        }
       }
     },
     {

@@ -6,6 +6,7 @@
       "arguments": {
         "name": "ofs_kestrel",
         "filename": "models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj",
+        "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [200, 200, 200],
@@ -18,6 +19,7 @@
         "aggregate_mode": "none",
         "transformation_mode": "all",
         "triangle_tangent_error_behavior": "zero"
+        }
       }
     },
     {
@@ -33,6 +35,7 @@
         "arguments": {
           "name": "ocean",
           "filename": "$__DIR__/ocean.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [100, 200, 100],
@@ -44,6 +47,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       }
     },

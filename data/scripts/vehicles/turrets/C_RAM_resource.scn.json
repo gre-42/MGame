@@ -4,6 +4,7 @@
     "arguments": {
       "name": "C_RAM_hitbox",
       "filename": "models/gre42/C-RAM/C_RAM_hitbox_simple.obj",
+      "config": {
       "position": [0, -1, 0],
       "rotation": [0, 90, 0],
       "scale": [1, 1, 1],
@@ -16,6 +17,7 @@
       "transformation_mode": "all",
       "triangle_tangent_error_behavior": "zero",
       "rectangle_triangulation_mode": "disabled"
+      }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "C_RAM_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -29,6 +31,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/gre42/C-RAM/$NAME.obj",
+          "config": {
           "position": [0, -1, 0],
           "rotation": [0, 90, 0],
           "scale": [1, 1, 1],
@@ -45,6 +48,7 @@
           "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
           "specular_factor": "%BLENDER_SPECULAR_FACTOR",
           "fresnel_ambient": "%BLENDER_FRESNEL_AMBIENT"
+          }
         }
       }
     ]

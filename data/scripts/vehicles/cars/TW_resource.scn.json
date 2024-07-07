@@ -4,6 +4,7 @@
     "arguments": {
       "name": "TW_hitbox",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0.85, 0],
       "rotation": [0, 0, 0],
       "scale": [1.5, 1.0, 3.4],
@@ -15,6 +16,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "rectangle_triangulation_mode": "disabled"
+      }
     }
   },
 
@@ -27,6 +29,7 @@
     "arguments": {
       "name": "TW_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -38,6 +41,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "physics_material": "attr_collide"
+      }
     }
   },
 
@@ -59,6 +63,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
+          "config": {
           "position": [0, "%POSITION_Y", 0],
           "rotation": [0, 180, 0],
           "scale": [1, 1, 1],
@@ -80,6 +85,7 @@
           "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
+          }
         }
       }
     ]

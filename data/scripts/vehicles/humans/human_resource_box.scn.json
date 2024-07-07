@@ -4,6 +4,7 @@
     "arguments": {
       "name": "human_hitbox",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0.35, 0],
       "rotation": [0, 0, 0],
       "scale": [0.25, 0.7, 0.25],
@@ -14,6 +15,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_hitbox", "add": "obj_hitbox"}},
@@ -22,6 +24,7 @@
     "arguments": {
       "name": "human_distancebox",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0.35, -0.25],
       "rotation": [0, 0, 0],
       "scale": [0.25, 0.7, 0.5],
@@ -32,6 +35,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
@@ -41,6 +45,7 @@
     "arguments": {
       "name": "human_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -51,6 +56,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {"call": "gen_ray", "arguments": {"name": "human_tirelines", "from": [0, -0.2, 0], "to": [0, -0.8, 0]}},

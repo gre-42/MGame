@@ -4,6 +4,7 @@
     "arguments": {
       "name": "M3_hitbox",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [0.85, 0.6, 2.15],
@@ -15,6 +16,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "rectangle_triangulation_mode": "disabled"
+      }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "M3_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -24,6 +26,7 @@
     "arguments": {
       "name": "M3_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -35,6 +38,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "physics_material": "attr_collide"
+      }
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "M3_tirelines", "add": "obj_tire_line"}},
@@ -54,6 +58,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
+          "config": {
           "position": [0, -0.05, -0.05],
           "rotation": [180, -90, 0],
           "scale": [1, 1, 1],
@@ -75,6 +80,7 @@
           "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
+          }
         }
       }
     ]
@@ -87,6 +93,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -103,6 +110,7 @@
           "specular_factor": "%STUNT_RALLY_SPECULAR_FACTOR",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
+          }
         }
       }
     ]

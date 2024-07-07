@@ -6,6 +6,7 @@
       "arguments": {
         "name": "%NAME",
         "filename": "models/missiles/missile0/$NAME.obj",
+        "config": {
         "position": [0, 0, 0],
         "rotation": [-90, 0, 0],
         "scale": [1, 1, 1],
@@ -29,6 +30,7 @@
         "fresnel_ambient": [1, 1, 1],
         "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE",
         "dynamically_lighted": true
+        }
       }
     }
   },

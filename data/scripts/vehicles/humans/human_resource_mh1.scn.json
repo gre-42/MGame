@@ -4,6 +4,7 @@
     "arguments": {
       "name": "female_mh_orig",
       "filename": "models/MakeHuman/female_mh/t_pose_lowpoly.mhx2",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -19,6 +20,7 @@
       "ambient_factor": "%META_HUMAN_AMBIENT_FACTOR",
       "diffuse_factor": "%META_HUMAN_DIFFUSE_FACTOR",
       "specular_factor": "%META_HUMAN_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -29,6 +31,7 @@
         "arguments": {
           "name": "$DIR$DECIMATE",
           "filename": "models/MakeHuman/$DIR/t_pose_lowpoly$DECIMATE.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -44,6 +47,7 @@
           "ambient_factor": "%META_HUMAN_AMBIENT_FACTOR",
           "diffuse_factor": "%META_HUMAN_DIFFUSE_FACTOR",
           "specular_factor": "%META_HUMAN_SPECULAR_FACTOR"
+          }
         }
       },
       {"call": "import_bone_weights", "arguments": {"destination": "$DIR$DECIMATE", "source": "female_mh_orig", "max_distance": 0.1}},

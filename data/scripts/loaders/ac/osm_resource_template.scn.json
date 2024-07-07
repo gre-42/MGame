@@ -6,6 +6,7 @@
       "arguments": {
         "name": "%LEVEL_ID",
         "filename": "%STAGE_INI_FILENAME",
+        "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [1, 1, 1],
@@ -26,6 +27,7 @@
         "physics_material": "attr_visible|attr_concave",
         "triangle_tangent_error_behavior": "zero",
         "double_precision": true
+        }
       }
     },
     {

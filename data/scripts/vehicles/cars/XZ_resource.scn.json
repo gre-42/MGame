@@ -4,6 +4,7 @@
     "arguments": {
       "name": "XZ_hitbox",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [0.9, 0.5, 2.3],
@@ -15,6 +16,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "rectangle_triangulation_mode": "disabled"
+      }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "XZ_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -24,6 +26,7 @@
     "arguments": {
       "name": "XZ_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -35,6 +38,7 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "physics_material": "attr_collide"
+      }
     }
   },
   {"call": "gen_ray", "arguments": {"name": "XZ_tirelines", "from": [-0.8, -0.1, -1.35], "to": [-0.8, -0.9, -1.35]}}, {"comment": "left front"},
@@ -54,6 +58,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
+          "config": {
           "position": [0, 0.1, 0.2],
           "rotation": [0, 180, 0],
           "scale": [1, 1, 1],
@@ -75,6 +80,7 @@
           "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
           "triangle_tangent_error_behavior": "zero",
           "werror": false
+          }
         }
       }
     ]
@@ -87,6 +93,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -102,6 +109,7 @@
           "diffuse_factor": "%STUNT_RALLY_DIFFUSE_FACTOR",
           "specular_factor": "%STUNT_RALLY_SPECULAR_FACTOR",
           "werror": false
+          }
         }
       }
     ]

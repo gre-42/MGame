@@ -6,6 +6,7 @@
       "arguments": {
         "name": "%NAME",
         "filename": "models/sketchfab.com/f-35c-lightning-ii/$SUBDIR/$NAME.obj",
+        "config": {
         "position": [0, -3, 0],
         "rotation": [0, 180, 0],
         "scale": [10, 10, 10],
@@ -29,6 +30,7 @@
         "fresnel_ambient": [1, 1, 1],
         "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE",
         "dynamically_lighted": true
+        }
       }
     }
   },
@@ -72,6 +74,7 @@
     "arguments": {
       "name": "F_35_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -82,6 +85,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_tirelines", "add": "obj_tire_line"}},

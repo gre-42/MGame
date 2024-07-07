@@ -6,6 +6,7 @@
       "arguments": {
         "name": "checkpoint_arrow",
         "filename": "models/Arrow/arrow.obj",
+        "config": {
         "position": [0, 5, 0],
         "rotation": [0, 90, 0],
         "scale": [1, 1, 1],
@@ -20,6 +21,7 @@
         "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
         "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
         "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+        }
       }
     }
   },
@@ -48,6 +50,7 @@
     "arguments": {
       "name": "box",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -62,6 +65,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -70,6 +74,7 @@
     "arguments": {
       "name": "box_on_ground",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 1, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -84,6 +89,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -92,6 +98,7 @@
     "arguments": {
       "name": "topdown_locator",
       "filename": "models/TransparentBox/tbox.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [4, 1, 8],
@@ -107,6 +114,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -115,6 +123,7 @@
     "arguments": {
       "name": "flag",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 500, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 500, 1],
@@ -129,6 +138,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -137,6 +147,7 @@
     "arguments": {
       "name": "flag_z",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 500],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 500],
@@ -151,6 +162,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -159,6 +171,7 @@
     "arguments": {
       "name": "beacon",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [0.1, 0.1, 0.1],
@@ -173,6 +186,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -181,6 +195,7 @@
     "arguments": {
       "name": "sphere",
       "filename": "models/primitives/sphere.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -196,6 +211,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -204,6 +220,7 @@
     "arguments": {
       "name": "beacon1",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [0.1, 0.1, 0.1],
@@ -218,6 +235,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -226,6 +244,7 @@
     "arguments": {
       "name": "gizmo",
       "filename": "models/gizmo.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -240,6 +259,7 @@
       "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
       "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
       "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -248,6 +268,7 @@
     "arguments": {
       "name": "tank_bullet_renderable",
       "filename": "models/bullet.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [-90, 0, 0],
       "scale": [0.2, 0.4, 0.2],
@@ -262,6 +283,7 @@
         "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
         "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
         "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR"
+      }
     }
   },
   {
@@ -272,6 +294,7 @@
         "arguments": {
           "name": "tank_bullet_hitbox",
           "filename": "models/primitives/empty.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -282,6 +305,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {
@@ -304,6 +328,7 @@
         "arguments": {
           "name": "grenade_hitbox",
           "filename": "models/primitives/box.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [0.1, 0.1, 0.1],
@@ -314,6 +339,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {

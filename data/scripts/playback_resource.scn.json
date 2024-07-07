@@ -4,6 +4,7 @@
     "arguments": {
       "name": "playback_box",
       "filename": "models/primitives/box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -14,6 +15,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {

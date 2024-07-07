@@ -4,6 +4,7 @@
     "arguments": {
       "name": "pipe",
       "filename": "models/pipe.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -14,6 +15,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {
@@ -21,6 +23,7 @@
     "arguments": {
       "name": "pipe_box",
       "filename": "models/pipe_box.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -31,6 +34,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {
@@ -38,6 +42,7 @@
     "arguments": {
       "name": "pipe_box_boundary",
       "filename": "models/pipe_box_boundary.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -48,6 +53,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {
@@ -58,6 +64,7 @@
         "arguments": {
           "name": "%CENTRAL_NAME",
           "filename": "%CENTRAL",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -68,6 +75,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {
@@ -75,6 +83,7 @@
         "arguments": {
           "name": "%ENDPOINT0_NAME",
           "filename": "%ENDPOINT",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -85,6 +94,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {
@@ -92,6 +102,7 @@
         "arguments": {
           "name": "%ENDPOINT1_NAME",
           "filename": "%ENDPOINT",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [-1, -1, 1],
@@ -102,6 +113,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       }
     ]
@@ -114,6 +126,7 @@
         "arguments": {
           "name": "%RIGHT_NAME",
           "filename": "%MODEL",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
@@ -124,6 +137,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {
@@ -131,6 +145,7 @@
         "arguments": {
           "name": "%LEFT_NAME",
           "filename": "%MODEL",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [-1, -1, 1],
@@ -141,6 +156,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       }
     ]

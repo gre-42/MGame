@@ -100,6 +100,7 @@
         "arguments": {
           "name": "showroom_ground",
           "filename": "models/metal_cylinder.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [10, 0.1, 10],
@@ -114,6 +115,7 @@
           "fresnel_max": 0.4,
           "fresnel_exponent": 4,
           "fresnel_ambient": [1, 1, 1]    
+          }
         }
       },
       {
@@ -121,6 +123,7 @@
         "arguments": {
           "name": "showroom_ground_hitbox",
           "filename": "models/cylinder_hitbox.obj",
+          "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [10, 0.1, 10],
@@ -131,6 +134,7 @@
           "occluder_pass": "none",
           "aggregate_mode": "none",
           "transformation_mode": "all"
+          }
         }
       },
       {

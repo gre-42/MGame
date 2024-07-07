@@ -4,6 +4,7 @@
     "arguments": {
       "name": "skateboard",
       "filename": "models/sketchfab.com/Skate/source/skate_low.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [3.6, 3.6, 3.6],
@@ -18,6 +19,7 @@
       "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
       "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
       "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR"
+      }
     }
   }
 ]

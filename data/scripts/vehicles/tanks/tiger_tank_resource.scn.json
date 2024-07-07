@@ -5,6 +5,7 @@
       "arguments": {
         "name": "tiger_tank_hitbox",
         "filename": "models/primitives/box.obj",
+        "config": {
         "position": [0, 0.55, 0],
         "rotation": [0, 0, 0],
         "scale": [1.8, 1.3, 4],
@@ -15,6 +16,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all"
+        }
       }
     }
   },
@@ -23,6 +25,7 @@
     "arguments": {
       "name": "tiger_tank_hitbox",
       "filename": "models/free3d.com/tiger_tank/Tiger_Hitbox.obj",
+      "config": {
       "position": [0, -1, 0],
       "rotation": [0, 90, 0],
       "scale": [0.6, 0.6, 0.6],
@@ -35,6 +38,7 @@
       "transformation_mode": "all",
       "triangle_tangent_error_behavior": "zero",
       "rectangle_triangulation_mode": "disabled"
+      }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "tiger_tank_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -44,6 +48,7 @@
     "arguments": {
       "name": "tiger_tank_tirelines",
       "filename": "models/primitives/empty.obj",
+      "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
       "scale": [1, 1, 1],
@@ -54,6 +59,7 @@
       "occluder_pass": "none",
       "aggregate_mode": "none",
       "transformation_mode": "all"
+      }
     }
   },
   {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8,  0.3, -2.4], "to": [-1.8, -0.5, -2.4]}}, {"comment": "left  front"},
@@ -76,6 +82,7 @@
         "arguments": {
           "name": "%NAME",
           "filename": "models/free3d.com/tiger_tank/$NAME.obj",
+          "config": {
           "position": [0, -1, 0],
           "rotation": [0, 92, 0],
           "scale": [0.0025, 0.0025, 0.0025],
@@ -92,6 +99,7 @@
           "diffuse_factor": "%FREE3D_DIFFUSE_FACTOR",
           "specular_factor": "%FREE3D_SPECULAR_FACTOR",
           "dynamically_lighted": true
+          }
         }
       }
     ]
