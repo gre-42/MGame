@@ -2,7 +2,10 @@
   "declare_macro": "scene_racing_static",
   "content": [
     {"playback": "create_scene_loading"},
-    {"playback": "%OSM_MAP_RESOURCE"},
+    {
+      "required": ["%OSM_MAP_RESOURCE != %null"],
+      "playback": "%OSM_MAP_RESOURCE"
+    },
     {
       "required": ["%IF_HAS_OVERLAY"],
       "playback": "%OSM_MAP_OVERLAY_RESOURCE"
@@ -59,6 +62,7 @@
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
       "arguments": {
+        "IF_INSTANTIATE_OSM_MAP": "%OSM_MAP_RESOURCE != %null",
         "IF_CREATE_PC_PLAYER": "%IF_CREATE_PC_PLAYER",
         "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
         "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",

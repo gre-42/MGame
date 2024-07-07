@@ -2,122 +2,127 @@
   "declare_macro": "_scene_racing_instantiate_static_objects",
   "content": [
     {
-      "call": "execute_in_render_thread",
-      "arguments": {
-        "command": {
-          "call": "preload",
+      "required": ["%IF_INSTANTIATE_OSM_MAP"],
+      "execute": [
+        {
+          "call": "execute_in_render_thread",
           "arguments": {
-            "resources": ["osm_map"],
-            "tire_contacts": ["osm_map"]
+            "command": {
+              "call": "preload",
+              "arguments": {
+                "resources": ["osm_map"],
+                "tire_contacts": ["osm_map"]
+              }
+            }
+          }
+        },
+        {
+          "playback": "_create_osm_map_resource",
+          "arguments": {
+            "OSM_MAP": "osm_map",
+            "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
+            "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
+            "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
+            "BARRIER_DEPTH": "%BARRIER_DEPTH"
+          }
+        },
+        {
+          "required": ["%IF_HAS_OVERLAY"],
+          "playback": "_create_osm_map_resource",
+          "arguments": {
+            "OSM_MAP": "osm_map_overlay",
+            "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
+            "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
+            "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
+            "BARRIER_DEPTH": "%BARRIER_DEPTH"
+          }
+        },
+        {
+          "comment": "Must be below extractions"
+        },
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "type": "static",
+            "name": "osm_map_node",
+            "position": "%OSM_POSITION",
+            "rotation": "%OSM_ROTATION",
+            "scale": "%OSM_SCALE"
+          }
+        },
+        {
+          "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
+          "call": "register_geographic_mapping",
+          "arguments": {
+            "name": "world",
+            "node": "osm_map_node",
+            "resource": "osm_map"
+          }
+        },
+        {
+          "call": "renderable_instance",
+          "arguments": {
+            "name": "osm_inst",
+            "node": "osm_map_node",
+            "resource": "osm_map"
+          }
+        },
+        {
+          "comment": {
+            "call": "save_to_obj_file",
+            "arguments": {
+              "resource": "osm_map",
+              "node": "osm_map_node",
+              "prefix": "/tmp/osm_map_"
+            }
+          }
+        },
+        {
+          "required": ["%IF_HAS_OVERLAY"],
+          "call": "renderable_instance",
+          "arguments": {
+            "name": "osm_overlay_inst",
+            "node": "osm_map_node",
+            "resource": "osm_map_overlay"
+          }
+        },
+        {
+          "required": ["%IF_HAS_OVERLAY"],
+          "call": "compound_resource",
+          "arguments": {
+            "source_names": [
+              "osm_map",
+              "osm_map_grind_lines",
+              "osm_map_overlay",
+              "osm_map_overlay_grind_lines"
+            ],
+            "dest_name": "osm_map_hitboxes"
+          }
+        },
+        {
+          "exclude": ["%IF_HAS_OVERLAY"],
+          "call": "compound_resource",
+          "arguments": {
+            "source_names": [
+              "osm_map",
+              "osm_map_grind_lines"
+            ],
+            "dest_name": "osm_map_hitboxes"
+          }
+        },
+        {
+          "call": "rigid_cuboid",
+          "arguments": {
+            "node": "osm_map_node",
+            "hitboxes": "osm_map_hitboxes",
+            "mass": "inf",
+            "size": [1, 2, 3],
+            "collidable_mode": "static",
+            "name": "osm_map",
+            "asset_id": "osm_map_no_id"
           }
         }
-      }
-    },
-    {
-      "playback": "_create_osm_map_resource",
-      "arguments": {
-        "OSM_MAP": "osm_map",
-        "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
-        "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
-        "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
-        "BARRIER_DEPTH": "%BARRIER_DEPTH"
-      }
-    },
-    {
-      "required": ["%IF_HAS_OVERLAY"],
-      "playback": "_create_osm_map_resource",
-      "arguments": {
-        "OSM_MAP": "osm_map_overlay",
-        "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
-        "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
-        "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
-        "BARRIER_DEPTH": "%BARRIER_DEPTH"
-      }
-    },
-    {
-      "comment": "Must be below extractions"
-    },
-    {
-      "call": "root_node_instance",
-      "arguments": {
-        "type": "static",
-        "name": "osm_map_node",
-        "position": "%OSM_POSITION",
-        "rotation": "%OSM_ROTATION",
-        "scale": "%OSM_SCALE"
-      }
-    },
-    {
-      "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
-      "call": "register_geographic_mapping",
-      "arguments": {
-        "name": "world",
-        "node": "osm_map_node",
-        "resource": "osm_map"
-      }
-    },
-    {
-      "call": "renderable_instance",
-      "arguments": {
-        "name": "osm_inst",
-        "node": "osm_map_node",
-        "resource": "osm_map"
-      }
-    },
-    {
-      "comment": {
-        "call": "save_to_obj_file",
-        "arguments": {
-          "resource": "osm_map",
-          "node": "osm_map_node",
-          "prefix": "/tmp/osm_map_"
-        }
-      }
-    },
-    {
-      "required": ["%IF_HAS_OVERLAY"],
-      "call": "renderable_instance",
-      "arguments": {
-        "name": "osm_overlay_inst",
-        "node": "osm_map_node",
-        "resource": "osm_map_overlay"
-      }
-    },
-    {
-      "required": ["%IF_HAS_OVERLAY"],
-      "call": "compound_resource",
-      "arguments": {
-        "source_names": [
-          "osm_map",
-          "osm_map_grind_lines",
-          "osm_map_overlay",
-          "osm_map_overlay_grind_lines"
-        ],
-        "dest_name": "osm_map_hitboxes"
-      }
-    },
-    {
-      "exclude": ["%IF_HAS_OVERLAY"],
-      "call": "compound_resource",
-      "arguments": {
-        "source_names": [
-          "osm_map",
-          "osm_map_grind_lines"
-        ],
-        "dest_name": "osm_map_hitboxes"
-      }
-    },
-    {
-      "call": "rigid_cuboid",
-      "arguments": {
-        "node": "osm_map_node",
-        "hitboxes": "osm_map_hitboxes",
-        "mass": "inf",
-        "size": [1, 2, 3],
-        "collidable_mode": "static",
-        "name": "osm_map",
-        "asset_id": "osm_map_no_id"
-      }
+      ]
     },
     {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
     {"comment": "Player"},
