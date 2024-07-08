@@ -62,7 +62,8 @@
     "call": "ipl_instances",
     "context": "primary_scene",
     "arguments": {
-      "files": "%ipl_files"
+      "files": "%ipl_files",
+      "exclude": "%ipl_exclude"
     }
   },
   {
