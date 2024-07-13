@@ -3,13 +3,14 @@
   {
     "call": "resource_locations",
     "arguments": {
-      "files": "%resource_files",
+      "resource_files": "%resource_files",
+      "ide_files": "%ide_files",
       "double_precision": true,
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [1, 1, 1],
-        "max_triangle_distance": 300,
+        "max_triangle_distance": 1000,
         "blend_mode": "semi_continuous_02",
         "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "none",
