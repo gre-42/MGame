@@ -46,6 +46,7 @@
   {"call": "constant_parameter", "arguments": {"name": "RW_AMBIENT_FACTOR", "value": [0.6, 0.6, 0.6]}},
   {"call": "constant_parameter", "arguments": {"name": "RW_DIFFUSE_FACTOR", "value": [0.6, 0.6, 0.6]}},
   {"call": "constant_parameter", "arguments": {"name": "RW_SPECULAR_FACTOR", "value": [0.6, 0.6, 0.6]}},
+  {"call": "constant_parameter", "arguments": {"name": "RW_FRESNEL_AMBIENT", "value": [1, 1, 1]}},
   {"call": "constant_parameter", "arguments": {"name": "RW_FRESNEL_MIN", "value": 0.5}},
   {"call": "constant_parameter", "arguments": {"name": "RW_FRESNEL_MAX", "value": 0.8}},
   {"call": "constant_parameter", "arguments": {"name": "RW_FRESNEL_EXPONENT", "value": 4}}
