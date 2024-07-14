@@ -5,7 +5,7 @@
     "arguments": {
       "resource_files": "%resource_files",
       "ide_files": "%ide_files",
-      "double_precision": true,
+      "double_precision": false,
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -17,7 +17,7 @@
         "occluder_pass": "none",
         "anisotropic_filtering_level": 16,
         "magnifying_interpolation_mode": "linear",
-        "aggregate_mode": "sorted",
+        "aggregate_mode": "none",
         "transformation_mode": "all",
         "emissive_factor": "%RW_EMISSIVE_FACTOR",
         "ambient_factor": "%RW_AMBIENT_FACTOR",
