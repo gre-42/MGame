@@ -33,6 +33,13 @@
     }
   },
   {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_names": "%invisible_resources",
+      "remove": "attr_visible"
+    }
+  },
+  {
     "playback": "scene_racing_static",
     "arguments": {
       "IF_CREATE_PC_PLAYER": true,
