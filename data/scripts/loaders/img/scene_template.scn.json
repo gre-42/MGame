@@ -76,7 +76,8 @@
     "context": "primary_scene",
     "arguments": {
       "files": "%ipl_files",
-      "except": "%ipl_exclude"
+      "except": "%ipl_exclude",
+      "dynamics": "static"
     }
   },
   {

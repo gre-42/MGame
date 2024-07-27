@@ -2,7 +2,7 @@
   {
     "declare_macro": "create_car_cameras_car_with_trailer",
     "content": [
-      {"call": "root_node_instance", "arguments": {"type": "dynamic", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
+      {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "follower_camera", "position": [0, 10, 10]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "cockpit_camera", "position": "%COCKPIT_CAMERA_POSITION"}},
       {"comment": {"call": "renderable_instance", "arguments": {"name": "gizmo", "node": "cockpit_camera", "resource": "gizmo"}}},

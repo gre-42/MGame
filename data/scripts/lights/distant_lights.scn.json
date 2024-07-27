@@ -5,7 +5,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node_sky",
           "position": [0, 0, 0],
           "rotation": [-90, 0, 0],
@@ -30,7 +30,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node0",
           "position": [0, 2000, 2400],
           "rotation": [-45, 0, 0],
@@ -92,7 +92,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node0",
           "position": [0, 2000, 2000],
           "rotation": [-45, 0, 0],

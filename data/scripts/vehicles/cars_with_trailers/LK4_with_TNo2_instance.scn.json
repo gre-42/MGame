@@ -28,7 +28,7 @@
         "exclude": ["%IF_WITH_PHYSICS"],
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "car_node_trailer$SUFFIX",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0]

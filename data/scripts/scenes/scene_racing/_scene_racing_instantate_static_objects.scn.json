@@ -265,7 +265,7 @@
       "required": ["%IF_DIRTMAP"],
       "call": "root_node_instance",
       "arguments": {
-        "type": "dynamic",
+        "dynamics": "moving",
         "name": "dirtmap_node",
         "position": "%OSM_POSITION",
         "rotation": "%OSM_ROTATION",
@@ -319,7 +319,7 @@
     {
       "call": "root_node_instance",
       "arguments": {
-        "type": "dynamic",
+        "dynamics": "moving",
         "name": "stadium_camera",
         "position": "%STADIUM_CAMERA_POSITION",
         "rotation": [-45, 0, 0],

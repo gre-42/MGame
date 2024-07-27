@@ -8,7 +8,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node_instances$LSUFFIX",
           "position": [0, 0, 0],
           "rotation": [-45, 0, 0],
@@ -57,7 +57,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node_movables$LSUFFIX",
           "position": [0, 0, 0],
           "rotation": [-45, 0, 0],
@@ -104,7 +104,7 @@
       {
         "call": "root_node_instance",
         "arguments": {
-          "type": "dynamic",
+          "dynamics": "moving",
           "name": "light_node$LSUFFIX",
           "position": [0, 0, 0],
           "rotation": [-90, 0, 0],

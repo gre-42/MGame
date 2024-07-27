@@ -9,7 +9,7 @@
   {
     "declare_macro": "create_avatar_cameras_pc",
     "content": [
-      {"call": "root_node_instance", "arguments": {"type": "dynamic", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
+      {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "follower_camera", "position": [0, 10, 10]}},
       {"call": "perspective_camera", "arguments": {"node": "'45_deg_camera'", "y_fov": 30, "near_plane": 1, "far_plane": 10000, "requires_postprocessing": false}},
       {"call": "perspective_camera", "arguments": {"node": "follower_camera", "y_fov": 60, "near_plane": 1, "far_plane": "%FAR_PLANE", "requires_postprocessing": true}},
