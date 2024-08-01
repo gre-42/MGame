@@ -40,19 +40,35 @@
         "playback": "add_distant_light_night"
       },
       {
-        "required": ["%TIME_OF_DAY == 'day'"],
-        "playback": "add_local_instances_light",
-        "arguments": { "LSUFFIX": "_local_instances" }
+        "required": ["%aggregate_mode == 'instances_sorted'"],
+        "execute": [
+          {
+            "required": ["%TIME_OF_DAY == 'day'"],
+            "execute": [
+              {"playback": "add_local_instances_light"},
+              {"playback": "add_movables_light"}
+            ]
+          },
+          {
+            "required": ["%TIME_OF_DAY == 'night'"],
+            "playback": "add_local_blob_instances_light"
+          },
+          {
+            "required": ["%TIME_OF_DAY == 'synthwave'"],
+            "playback": "add_local_blob_instances_light"
+          }
+        ]
       },
       {
-        "required": ["%TIME_OF_DAY == 'night'"],
-        "playback": "add_local_blob_instances_light",
-        "arguments": { "LSUFFIX": "_blobs" }
-      },
-      {
-        "required": ["%TIME_OF_DAY == 'synthwave'"],
-        "playback": "add_local_blob_instances_light",
-        "arguments": { "LSUFFIX": "_blobs" }
+        "required": ["%aggregate_mode == 'none'"],
+        "execute": [
+          {
+            "required": ["%TIME_OF_DAY == 'day'"],
+            "execute": [
+              {"playback": "add_movables_light"}
+            ]
+          }
+        ]
       },
       {
         "comment": "Reflection map"

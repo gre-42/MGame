@@ -17,7 +17,7 @@
         "occluder_pass": "none",
         "anisotropic_filtering_level": 16,
         "magnifying_interpolation_mode": "linear",
-        "aggregate_mode": "none",
+        "aggregate_mode": "%aggregate_mode",
         "transformation_mode": "all",
         "emissive_factor": "%RW_EMISSIVE_FACTOR",
         "ambient_factor": "%RW_AMBIENT_FACTOR",

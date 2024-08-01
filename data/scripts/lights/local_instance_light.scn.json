@@ -1,6 +1,7 @@
 [
   {
     "declare_macro": "add_local_instances_light",
+    "let": { "LSUFFIX": "_local_instances" },
     "content": [
       {
         "comment": "Instances light"
@@ -50,7 +51,13 @@
       },
       {
         "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node_instances-LSUFFIX resource=box;"
-      },
+      }
+    ]
+  },
+  {
+    "declare_macro": "add_movables_light",
+    "let": { "LSUFFIX": "_movables" },
+    "content": [
       {
         "comment": "Movables light"
       },
@@ -100,6 +107,7 @@
   },
   {
     "declare_macro": "add_local_blob_instances_light",
+    "let": { "LSUFFIX": "_blobs" },
     "content": [
       {
         "call": "root_node_instance",
