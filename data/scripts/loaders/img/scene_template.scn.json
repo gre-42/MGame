@@ -24,7 +24,7 @@
         "diffuse_factor": "%RW_DIFFUSE_FACTOR",
         "specular_factor": "%RW_SPECULAR_FACTOR",
         "fresnel_ambient": "%RW_FRESNEL_AMBIENT",
-        "physics_material": "attr_visible|attr_concave",
+        "physics_material": "obj_chassis|attr_visible|attr_collide|attr_concave",
         "fresnel_min": "%RW_FRESNEL_MIN",
         "fresnel_max": "%RW_FRESNEL_MAX",
         "fresnel_exponent": "%RW_FRESNEL_EXPONENT"  ,
@@ -77,7 +77,8 @@
     "arguments": {
       "files": "%ipl_files",
       "except": "%ipl_exclude",
-      "dynamics": "static"
+      "dynamics": "static",
+      "min_vertex_distance": 0.05
     }
   },
   {
