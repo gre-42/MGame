@@ -68,7 +68,7 @@ jobs:
           pacman --noconfirm -S \
             mingw-w64-x86_64-glfw \
             mingw-w64-x86_64-vulkan-devel \
-            mingw-w64-x86_64-gcc \
+            mingw-w64-x86_64-clang \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-cmake \
             mingw-w64-x86_64-openal \
@@ -82,7 +82,7 @@ jobs:
           submodules: recursive
 
       - name: Build and package
-        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
