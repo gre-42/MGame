@@ -13,7 +13,7 @@
         "max_triangle_distance": 1000,
         "blend_mode": "semi_continuous_02",
         "alpha_distances": [0, 0, "inf", "inf"],
-        "occluded_pass": "none",
+        "occluded_pass": "lightmap_black_movables",
         "occluder_pass": "none",
         "anisotropic_filtering_level": 16,
         "magnifying_interpolation_mode": "linear",
