@@ -36,7 +36,7 @@
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_names": "%invisible_resources",
-      "remove": "attr_visible"
+      "remove": "attr_visible|attr_collide"
     }
   },
   {
