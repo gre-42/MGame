@@ -7,6 +7,7 @@
       "ide_files": "%ide_files",
       "double_precision": false,
       "resource_variable": "resources",
+      "# texture": "grid",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -38,6 +39,14 @@
     "arguments": {
       "resource_names": "%invisible_resources",
       "remove": "attr_visible|attr_collide"
+    }
+  },
+  {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_variable": "resources",
+      "included_names": "%no_collide_included_names",
+      "remove": "attr_collide"
     }
   },
   {
