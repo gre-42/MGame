@@ -48,14 +48,6 @@
               {"playback": "add_local_instances_light"},
               {"playback": "add_movables_light"}
             ]
-          },
-          {
-            "required": ["%TIME_OF_DAY == 'night'"],
-            "playback": "add_local_blob_instances_light"
-          },
-          {
-            "required": ["%TIME_OF_DAY == 'synthwave'"],
-            "playback": "add_local_blob_instances_light"
           }
         ]
       },
@@ -69,6 +61,10 @@
             ]
           }
         ]
+      },
+      {
+        "required": ["%TIME_OF_DAY in {'night', 'synthwave'}"],
+        "playback": "add_local_blob_instances_light"
       },
       {
         "comment": "Reflection map"

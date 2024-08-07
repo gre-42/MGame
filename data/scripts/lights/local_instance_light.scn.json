@@ -152,6 +152,7 @@
           "diffuse": [1, 1, 1],
           "specular": [1, 1, 1],
           "fresnel_ambient": [0, 0, 0],
+          "fog_ambient": [0, 0, 0],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
           "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
         }

@@ -20,7 +20,8 @@
           "ambient": [1, 1, 1],
           "diffuse": [1, 1, 1],
           "specular": [1, 1, 1],
-          "fresnel_ambient": [0.45, 0.5, 0.5]
+          "fresnel_ambient": [0.45, 0.5, 0.5],
+          "fog_ambient": [1, 1, 1]
         }
       },
       {
@@ -31,7 +32,8 @@
           "ambient": [0.2, 0.2, 0.2],
           "diffuse": [0.2, 0.2, 0.2],
           "specular": [0.2, 0.2, 0.2],
-          "fresnel_ambient": [0.2, 0.2, 0.2]
+          "fresnel_ambient": [0.2, 0.2, 0.2],
+          "fog_ambient": [0.2, 0.2, 0.2]
         }
       }
     ]
