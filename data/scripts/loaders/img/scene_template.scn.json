@@ -7,7 +7,7 @@
       "ide_files": "%ide_files",
       "double_precision": false,
       "resource_variable": "resources",
-      "# texture": "grid",
+      "# texture": "grid4",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -29,7 +29,9 @@
         "physics_material": "obj_chassis|attr_visible|attr_collide|attr_concave",
         "fresnel_min": "%RW_FRESNEL_MIN",
         "fresnel_max": "%RW_FRESNEL_MAX",
-        "fresnel_exponent": "%RW_FRESNEL_EXPONENT"  ,
+        "fresnel_exponent": "%RW_FRESNEL_EXPONENT",
+        "fog_distances": [500, 3000],
+        "fog_ambient": [0.7, 0.7, 1],
         "triangle_tangent_error_behavior": "zero"
       }
     }
