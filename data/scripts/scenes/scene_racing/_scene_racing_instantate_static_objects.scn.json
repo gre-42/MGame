@@ -43,7 +43,7 @@
         {
           "call": "root_node_instance",
           "arguments": {
-            "type": "static",
+            "dynamics": "static",
             "name": "osm_map_node",
             "position": "%OSM_POSITION",
             "rotation": "%OSM_ROTATION",

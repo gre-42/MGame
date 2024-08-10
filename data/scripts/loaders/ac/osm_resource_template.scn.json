@@ -18,7 +18,7 @@
           "occluder_pass": "none",
           "anisotropic_filtering_level": 16,
           "magnifying_interpolation_mode": "linear",
-          "aggregate_mode": "sorted",
+          "aggregate_mode": "%aggregate_mode",
           "transformation_mode": "all",
           "emissive_factor": "%AC_EMISSIVE_FACTOR",
           "ambient_factor": "%AC_AMBIENT_FACTOR",
@@ -68,7 +68,8 @@
         "merged_aggregate_mode": "sorted",
         "merged_max_triangle_distance": 300,
         "merged_cull_faces": true,
-        "merged_mip_level_count": 8
+        "merged_mip_level_count": 8,
+        "merged_anisotropic_filtering_level": 0
       }
     },
     {
