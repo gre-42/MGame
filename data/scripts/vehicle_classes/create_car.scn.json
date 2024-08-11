@@ -124,11 +124,11 @@
               "role": "%role"
             }
           },
-          "spawner": "%SPAWNER_NAME",
-          "capture": {
-            "SUFFIX": "%SUFFIX",
-            "CAR_NAME": "%CAR_NAME"
-          }
+          "spawner": "%SPAWNER_NAME"
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX",
+          "CAR_NAME": "%CAR_NAME"
         }
       },
       {

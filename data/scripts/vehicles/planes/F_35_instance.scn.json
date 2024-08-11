@@ -168,10 +168,10 @@
               "player": "%PLAYER_NAME",
               "gun_node": "main_gun_end_node$SUFFIX"
             }
-          },
-          "capture": {
-            "SUFFIX": "%SUFFIX"
           }
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -190,10 +190,10 @@
               "player": "%PLAYER_NAME",
               "gun_node": "missile0_launcher_node$SUFFIX"
             }
-          },
-          "capture": {
-            "SUFFIX": "%SUFFIX"
           }
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX"
         }
       },
       {

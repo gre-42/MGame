@@ -23,13 +23,13 @@
             "ANIMATION_TIME": "%ANIMATION_TIME",
             "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
           }
-        },
-        "capture": {
-          "POSITION": "%POSITION",
-          "RESOURCE": "%RESOURCE",
-          "ANIMATION_TIME": "%ANIMATION_TIME",
-          "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
         }
+      },
+      "let": {
+        "POSITION": "%POSITION",
+        "RESOURCE": "%RESOURCE",
+        "ANIMATION_TIME": "%ANIMATION_TIME",
+        "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
       }
     }
   },
@@ -44,10 +44,10 @@
             "arguments": {
               "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
-          },
-          "capture": {
-            "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
           }
+        },
+        "let": {
+          "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
         }
       }
     ]
@@ -108,13 +108,13 @@
           "arguments": {
             "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
           }
-        },
-        "capture": {
-          "POSITION": "%POSITION",
-          "RESOURCE": "%RESOURCE",
-          "ANIMATION_TIME": "%ANIMATION_TIME",
-          "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
         }
+      },
+      "let": {
+        "POSITION": "%POSITION",
+        "RESOURCE": "%RESOURCE",
+        "ANIMATION_TIME": "%ANIMATION_TIME",
+        "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
       }
     }
   }

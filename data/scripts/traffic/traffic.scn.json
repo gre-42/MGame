@@ -197,11 +197,11 @@
               "DECIMATE":"_d2",
               "RESPAWN_COOLDOWN_TIME": 0
             }
-          },
-          "capture": {
-            "HUMAN_NAME": "%HUMAN_NAME",
-            "COLOR": "%COLOR"
           }
+        },
+        "let": {
+          "HUMAN_NAME": "%HUMAN_NAME",
+          "COLOR": "%COLOR"
         }
       }
     ]
@@ -241,11 +241,11 @@
               "MUTE": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
-          },
-          "capture": {
-            "CAR_NAME": "%CAR_NAME",
-            "COLOR": "%COLOR"
           }
+        },
+        "let": {
+          "CAR_NAME": "%CAR_NAME",
+          "COLOR": "%COLOR"
         }
       }
     ]
@@ -292,11 +292,11 @@
               "HAND_BRAKE_PULLED": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
-          },
-          "capture": {
-            "CAR_NAME": "%CAR_NAME",
-            "COLOR": "%COLOR"
           }
+        },
+        "let": {
+          "CAR_NAME": "%CAR_NAME",
+          "COLOR": "%COLOR"
         }
       }
     ]

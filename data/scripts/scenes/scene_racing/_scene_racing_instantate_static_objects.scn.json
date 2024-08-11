@@ -5,7 +5,7 @@
       "required": ["%IF_INSTANTIATE_OSM_MAP"],
       "execute": [
         {
-          "call": "execute_in_render_thread",
+          "call": "set_textures_lazy",
           "arguments": {
             "command": {
               "call": "preload",
@@ -44,6 +44,7 @@
           "call": "root_node_instance",
           "arguments": {
             "dynamics": "static",
+            "strategy": "%rendering_strategy",
             "name": "osm_map_node",
             "position": "%OSM_POSITION",
             "rotation": "%OSM_ROTATION",
@@ -84,6 +85,12 @@
             "name": "osm_overlay_inst",
             "node": "osm_map_node",
             "resource": "osm_map_overlay"
+          }
+        },
+        {
+          "call": "move_node_to_bvh",
+          "arguments": {
+            "node": "osm_map_node"
           }
         },
         {

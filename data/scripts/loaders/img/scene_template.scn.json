@@ -6,7 +6,7 @@
       "resource_files": "%resource_files",
       "ide_files": "%ide_files",
       "double_precision": false,
-      "resource_variable": "resources",
+      "resource_variable": "available_resources",
       "# texture": "grid4",
       "config": {
         "position": [0, 0, 0],
@@ -46,7 +46,7 @@
   {
     "call": "modify_physics_material_tags",
     "arguments": {
-      "resource_variable": "resources",
+      "resource_names": "%available_resources",
       "included_names": "%no_collide_included_names",
       "remove": "attr_collide"
     }
@@ -54,7 +54,7 @@
   {
     "call": "modify_physics_material_tags",
     "arguments": {
-      "resource_variable": "resources",
+      "resource_names": "%available_resources",
       "included_names": "%tarmac_included_names",
       "add": "surface_base_tarmac|surface_contains_skidmarks"
     }
@@ -91,16 +91,35 @@
       "SOFT_LIGHT_TEXTURE": null
     }
   },
-  {
-    "call": "ipl_instances",
-    "context": "primary_scene",
-    "arguments": {
-      "files": "%ipl_files",
-      "except": "%ipl_exclude",
-      "dynamics": "static",
-      "min_vertex_distance": 0.05
+  [
+    {
+      "call": "ipl_instances",
+      "context": "primary_scene",
+      "arguments": {
+        "files": "%ipl_files",
+        "except": "%ipl_exclude",
+        "dynamics": "static",
+        "min_vertex_distance": 0.05,
+        "instantiated_resources": "instantiated_resources"
+      }
+    },
+    {
+      "call": "set_textures_lazy",
+      "context": "primary_scene",
+      "let": {
+        "resources": "%instantiated_resources"
+      },
+      "arguments": {
+        "command": {
+          "call": "preload",
+          "arguments": {
+            "resources": "%resources",
+            "tire_contacts": "%resources"
+          }
+        }
+      }
     }
-  },
+  ],
   {
     "declare_macro": "instantiate_transient_objects",
     "content": [

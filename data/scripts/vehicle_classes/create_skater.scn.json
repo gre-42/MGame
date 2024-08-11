@@ -81,11 +81,11 @@
               "IF_PC": "%IF_PC"
             }
           },
-          "spawner": "%SPAWNER_NAME",
-          "capture": {
-            "SKATER_NAME": "%SKATER_NAME",
-            "SUFFIX": "%SUFFIX"
-          }
+          "spawner": "%SPAWNER_NAME"
+        },
+        "let": {
+          "SKATER_NAME": "%SKATER_NAME",
+          "SUFFIX": "%SUFFIX"
         }
       },
       {

@@ -36,10 +36,10 @@
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
-        },
-        "capture": {
-          "RESOURCE": "%RESOURCE"
         }
+      },
+      "let": {
+        "RESOURCE": "%RESOURCE"
       }
     }
   },
@@ -88,10 +88,10 @@
           },
           "cool_down": "%COOL_DOWN",
           "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE",
-          "capture": {
-            "SUFFIX": "%SUFFIX"
-          }
+          "bullet_type": "%BULLET_TYPE"
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -157,10 +157,10 @@
           },
           "cool_down": "%COOL_DOWN",
           "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE",
-          "capture": {
-            "SUFFIX": "%SUFFIX"
-          }
+          "bullet_type": "%BULLET_TYPE"
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX"
         }
       },
       {

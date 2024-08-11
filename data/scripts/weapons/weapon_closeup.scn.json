@@ -20,12 +20,12 @@
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
-        },
-        "capture": {
-          "RESOURCE": "%RESOURCE",
-          "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-          "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
         }
+      },
+      "let": {
+        "RESOURCE": "%RESOURCE",
+        "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+        "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
       }
     }
   },
@@ -51,11 +51,11 @@
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
-        },
-        "capture": {
-          "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-          "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
         }
+      },
+      "let": {
+        "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
+        "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
       }
     }
   },

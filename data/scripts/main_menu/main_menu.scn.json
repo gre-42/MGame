@@ -49,13 +49,13 @@
             "VEHICLE_COLOR": "%VEHICLE_COLOR",
             "DECIMATE": "%DECIMATE"
           }
-        },
-        "capture": {
-          "VEHICLE_NAME": "%VEHICLE_NAME",
-          "VEHICLE_CLASS": "%VEHICLE_CLASS",
-          "VEHICLE_COLOR": "%VEHICLE_COLOR",
-          "DECIMATE": "%DECIMATE"
         }
+      },
+      "let": {
+        "VEHICLE_NAME": "%VEHICLE_NAME",
+        "VEHICLE_CLASS": "%VEHICLE_CLASS",
+        "VEHICLE_COLOR": "%VEHICLE_COLOR",
+        "DECIMATE": "%DECIMATE"
       }
     }
   },

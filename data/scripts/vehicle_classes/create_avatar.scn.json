@@ -104,12 +104,12 @@
               "behavior": "%behavior"
             }
           },
-          "spawner": "%SPAWNER_NAME",
-          "capture": {
-            "SUFFIX": "%SUFFIX",
-            "HUMAN_NAME": "%HUMAN_NAME",
-            "IF_WITH_GUN": "%IF_WITH_GUN"
-          }
+          "spawner": "%SPAWNER_NAME"
+        },
+        "let": {
+          "SUFFIX": "%SUFFIX",
+          "HUMAN_NAME": "%HUMAN_NAME",
+          "IF_WITH_GUN": "%IF_WITH_GUN"
         }
       },
       {

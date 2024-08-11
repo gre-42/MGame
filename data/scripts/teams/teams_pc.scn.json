@@ -178,20 +178,20 @@
               "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
               "MUTE": "%MUTE"
             }
-          },
-          "capture": {
-            "PLAYER_NAME": "%PLAYER_NAME",
-            "HUMAN_NAME": "%HUMAN_NAME",
-            "DECIMATE": "",
-            "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
-            "COLOR": "%COLOR",
-            "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-            "YAW_ERROR_STD": "%YAW_ERROR_STD",
-            "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-            "ERROR_ALPHA": "%ERROR_ALPHA",
-            "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-            "MUTE": "%MUTE"
           }
+        },
+        "let": {
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "HUMAN_NAME": "%HUMAN_NAME",
+          "DECIMATE": "",
+          "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
+          "COLOR": "%COLOR",
+          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+          "YAW_ERROR_STD": "%YAW_ERROR_STD",
+          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+          "ERROR_ALPHA": "%ERROR_ALPHA",
+          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
+          "MUTE": "%MUTE"
         }
       },
       {
@@ -258,20 +258,20 @@
               "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
               "MUTE": "%MUTE"
             }
-          },
-          "capture": {
-            "PLAYER_NAME": "%PLAYER_NAME",
-            "CAR_NAME": "%CAR_NAME",
-            "DECIMATE": "",
-            "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
-            "COLOR": "%COLOR",
-            "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-            "YAW_ERROR_STD": "%YAW_ERROR_STD",
-            "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-            "ERROR_ALPHA": "%ERROR_ALPHA",
-            "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-            "MUTE": "%MUTE"
           }
+        },
+        "let": {
+          "PLAYER_NAME": "%PLAYER_NAME",
+          "CAR_NAME": "%CAR_NAME",
+          "DECIMATE": "",
+          "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
+          "COLOR": "%COLOR",
+          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
+          "YAW_ERROR_STD": "%YAW_ERROR_STD",
+          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
+          "ERROR_ALPHA": "%ERROR_ALPHA",
+          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
+          "MUTE": "%MUTE"
         }
       },
       {
