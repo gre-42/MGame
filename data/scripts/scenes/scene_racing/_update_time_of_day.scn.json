@@ -40,7 +40,7 @@
         "playback": "add_distant_light_night"
       },
       {
-        "required": ["%aggregate_mode == 'instances_sorted'"],
+        "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
         "execute": [
           {
             "required": ["%TIME_OF_DAY == 'day'"],
