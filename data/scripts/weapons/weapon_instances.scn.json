@@ -49,7 +49,7 @@
       { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
-          "call": "renderable_instance",
+          "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
@@ -58,7 +58,7 @@
         }
       },
       {
-        "call": "renderable_instance",
+        "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
@@ -118,7 +118,7 @@
       { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
-          "call": "renderable_instance",
+          "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
@@ -127,7 +127,7 @@
         }
       },
       {
-        "call": "renderable_instance",
+        "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
@@ -187,7 +187,7 @@
       { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
-          "call": "renderable_instance",
+          "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
@@ -196,7 +196,7 @@
         }
       },
       {
-        "call": "renderable_instance",
+        "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",
@@ -240,7 +240,7 @@
       { "playback": "delete_weapon", "arguments": { "SUFFIX": "%SUFFIX" } },
       {
         "comment": {
-          "call": "renderable_instance",
+          "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
             "node": "main_gun_node_visual$SUFFIX",
@@ -249,7 +249,7 @@
         }
       },
       {
-        "call": "renderable_instance",
+        "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
           "node": "main_gun_node_visual$SUFFIX",

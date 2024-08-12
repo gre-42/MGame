@@ -41,30 +41,23 @@
           "comment": "Must be below extractions"
         },
         {
-          "call": "root_node_instance",
-          "arguments": {
-            "dynamics": "static",
-            "strategy": "%rendering_strategy",
-            "name": "osm_map_node",
-            "position": "%OSM_POSITION",
-            "rotation": "%OSM_ROTATION",
-            "scale": "%OSM_SCALE"
-          }
-        },
-        {
           "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
           "call": "register_geographic_mapping",
           "arguments": {
             "name": "world",
-            "node": "osm_map_node",
+            "position": "%OSM_POSITION",
+            "rotation": "%OSM_ROTATION",
+            "scale": "%OSM_SCALE",
             "resource": "osm_map"
           }
         },
         {
-          "call": "renderable_instance",
+          "call": "root_renderable_instances",
           "arguments": {
             "name": "osm_inst",
-            "node": "osm_map_node",
+            "position": "%OSM_POSITION",
+            "rotation": "%OSM_ROTATION",
+            "scale": "%OSM_SCALE",
             "resource": "osm_map"
           }
         },
@@ -80,17 +73,13 @@
         },
         {
           "required": ["%IF_HAS_OVERLAY"],
-          "call": "renderable_instance",
+          "call": "root_renderable_instances",
           "arguments": {
             "name": "osm_overlay_inst",
-            "node": "osm_map_node",
+            "position": "%OSM_POSITION",
+            "rotation": "%OSM_ROTATION",
+            "scale": "%OSM_SCALE",
             "resource": "osm_map_overlay"
-          }
-        },
-        {
-          "call": "move_node_to_bvh",
-          "arguments": {
-            "node": "osm_map_node"
           }
         },
         {
@@ -118,13 +107,12 @@
           }
         },
         {
-          "call": "rigid_cuboid",
+          "call": "rigid_statics",
           "arguments": {
-            "node": "osm_map_node",
+            "position": "%OSM_POSITION",
+            "rotation": "%OSM_ROTATION",
+            "scale": "%OSM_SCALE",
             "hitboxes": "osm_map_hitboxes",
-            "mass": "inf",
-            "size": [1, 2, 3],
-            "collidable_mode": "static",
             "name": "osm_map",
             "asset_id": "osm_map_no_id"
           }

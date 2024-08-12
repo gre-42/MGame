@@ -294,7 +294,7 @@ macro_begin _scene_tank_instantiate;
     # Box #;
     #######;
     macro_begin create-box;
-        {"call": "renderable_instance", "arguments": {"name": "box$SUFFIX", "node": "box-node$SUFFIX", "resource": "muscle-cupe-hitbox"}},
+        {"call": "child_renderable_instance", "arguments": {"name": "box$SUFFIX", "node": "box-node$SUFFIX", "resource": "muscle-cupe-hitbox"}},
         rigid_cuboid
             node=box-node$SUFFIX
             hitboxes=muscle-cupe-hitbox

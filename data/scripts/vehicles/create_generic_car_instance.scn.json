@@ -2,12 +2,12 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "renderable_instance", "arguments": {"name": "main$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/main$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/main$DECIMATE"}},
 
-      {"call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}}
     ]
   },
   {
@@ -15,8 +15,8 @@
     "content": [
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_left_front$SUFFIX",  "position": [-0.5, 0, -22]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_right_front$SUFFIX", "position": [ 0.5, 0, -22]}},
-      {"call": "renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_left_front$SUFFIX",  "resource": "car_light_beam"}},
-      {"call": "renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_right_front$SUFFIX", "resource": "car_light_beam"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_left_front$SUFFIX",  "resource": "car_light_beam"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_right_front$SUFFIX", "resource": "car_light_beam"}}
     ]
   },
   {
@@ -40,7 +40,7 @@
       },
 
       {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": "%COM"}}},
-      {"comment": {"call": "renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
 
       {
         "required": ["%%vehicles/$NAME/FRONT_ENGINE != %%vehicles/$NAME/REAR_ENGINE"],
@@ -286,8 +286,8 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_MOUNT_0"}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_MOUNT_0"}},
 
-      {"comment": {"call": "renderable_instance", "arguments": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
-      {"comment": {"call": "renderable_instance", "arguments": {"name": "generic_car_massbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_massbox"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_massbox"}}},
       {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$NODE_SUFFIX resource=topdown_locator"},
 
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},

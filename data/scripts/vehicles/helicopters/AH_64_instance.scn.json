@@ -2,15 +2,15 @@
   {
     "declare_macro": "create_AH_64_graphics",
     "content": [
-      {"call": "renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "cockpit|glass|hull"}},
-      {"call": "renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"call": "renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
-      {"call": "renderable_instance", "arguments": {"name": "blades$SUFFIX", "node": "blades_shift_node$NODE_SUFFIX", "resource": "blades_AH_64$DECIMATE", "included_names": "main_rotor"}},
-      {"call": "renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_node$NODE_SUFFIX", "resource": "tail_rotor_spinning_AH_64$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_shift_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "tail_rotor"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "cockpit|glass|hull"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "M3/M3_wheel_d3"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "blades$SUFFIX", "node": "blades_shift_node$NODE_SUFFIX", "resource": "blades_AH_64$DECIMATE", "included_names": "main_rotor"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_node$NODE_SUFFIX", "resource": "tail_rotor_spinning_AH_64$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "tail_rotor$SUFFIX", "node": "tail_rotor_shift_node$NODE_SUFFIX", "resource": "AH_64$DECIMATE", "included_names": "tail_rotor"}}
     ]
   },
   {

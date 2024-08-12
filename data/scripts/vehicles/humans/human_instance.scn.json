@@ -231,8 +231,8 @@
         }
       },
       {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
       {
         "call": "set_available_roles",
         "arguments": {

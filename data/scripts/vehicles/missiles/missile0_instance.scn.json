@@ -2,15 +2,15 @@
   {
     "declare_macro": "create_missile0_graphics",
     "content": [
-      {"call": "renderable_instance", "arguments": {"name": "missile0_center$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "missile0_center$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_left$SUFFIX", "node": "wing_front_left_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_right$SUFFIX", "node": "wing_front_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_bottom$SUFFIX", "node": "wing_front_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_front_top$SUFFIX", "node": "wing_front_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_left$SUFFIX", "node": "wing_rear_left_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_right$SUFFIX", "node": "wing_rear_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_bottom$SUFFIX", "node": "wing_rear_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
-      {"call": "renderable_instance", "arguments": {"name": "missile0_wing_rear_top$SUFFIX", "node": "wing_rear_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_center$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "missile0_center$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_left$SUFFIX", "node": "wing_front_left_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_right$SUFFIX", "node": "wing_front_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_bottom$SUFFIX", "node": "wing_front_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_top$SUFFIX", "node": "wing_front_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_front_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_left$SUFFIX", "node": "wing_rear_left_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_right$SUFFIX", "node": "wing_rear_right_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_bottom$SUFFIX", "node": "wing_rear_bottom_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_top$SUFFIX", "node": "wing_rear_top_visual_node$NODE_SUFFIX", "resource": "missile0_wing_rear_left$DECIMATE"}}
     ]
   },
   {

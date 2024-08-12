@@ -2,9 +2,9 @@
   {
     "declare_macro": "create_C_RAM_graphics",
     "content": [
-      {"call": "renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "^Base$"}},
-      {"call": "renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Yaw"}},
-      {"call": "renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Gun"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "^Base$"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Yaw"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "C_RAM$DECIMATE", "included_names": "Gun"}}
     ]
   },
   {
@@ -101,7 +101,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -10]}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d$SUFFIX", "DECIMATE": "_d"}},
-      {"comment": {"call": "renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
       {"required": ["%IF_WITH_PHYSICS"], "playback": "create_C_RAM_physics", "arguments": {
         "SUFFIX": "%SUFFIX",
         "MASS": 56e3,

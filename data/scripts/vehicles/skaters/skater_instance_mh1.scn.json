@@ -168,11 +168,11 @@
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$SUFFIX", "name": "skateboard_node$SUFFIX", "position": [0, -0.5, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "set_skater_style_updater", "arguments": {"skater_node": "skater_node$SUFFIX", "skateboard_node": "skateboard_node$SUFFIX", "resource": "skate"}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "set_node_bone", "arguments": {"node": "skateboard_node$SUFFIX", "bone": "node", "smoothness": 0, "rotation_strength": 1}},
-      {"comment": {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "skater_hitbox", "node": "skater_node$SUFFIX", "resource": "skater_hitbox"}}},
-      {"comment": {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "skater_grind_contact", "node": "skater_node$SUFFIX", "resource": "skater_grind_contacts"}}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "skater-inst", "node": "animation_node$SUFFIX", "resource": "female_mh_d2"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$SUFFIX", "resource": "female_mh_d1"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$SUFFIX", "resource": "skateboard"}}
+      {"comment": {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_hitbox", "node": "skater_node$SUFFIX", "resource": "skater_hitbox"}}},
+      {"comment": {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_grind_contact", "node": "skater_node$SUFFIX", "resource": "skater_grind_contacts"}}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst", "node": "animation_node$SUFFIX", "resource": "female_mh_d2"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$SUFFIX", "resource": "female_mh_d1"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$SUFFIX", "resource": "skateboard"}}
     ]
   },
   {
