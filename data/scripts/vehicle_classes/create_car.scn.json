@@ -102,10 +102,8 @@
           "externals": {
             "playback": "create_player_car_externals",
             "arguments": {
-              "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
-              "CAR_NAME": "%CAR_NAME",
               "IF_PC": "%IF_PC",
               "behavior": "%behavior"
             }
@@ -113,10 +111,8 @@
           "internals": {
             "playback": "create_player_car_internals",
             "arguments": {
-              "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
-              "CAR_NAME": "%CAR_NAME",
               "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
               "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
               "IF_PC": "%IF_PC",
@@ -127,8 +123,7 @@
           "spawner": "%SPAWNER_NAME"
         },
         "let": {
-          "SUFFIX": "%SUFFIX",
-          "CAR_NAME": "%CAR_NAME"
+          "SUFFIX": "%SUFFIX"
         }
       },
       {

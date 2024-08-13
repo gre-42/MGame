@@ -76,15 +76,12 @@
             "arguments": {
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
-              "SKATER_NAME": "%SKATER_NAME",
-              "SUFFIX": "%SUFFIX",
               "IF_PC": "%IF_PC"
             }
           },
           "spawner": "%SPAWNER_NAME"
         },
         "let": {
-          "SKATER_NAME": "%SKATER_NAME",
           "SUFFIX": "%SUFFIX"
         }
       },

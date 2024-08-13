@@ -2,11 +2,12 @@
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "../nyc/osm_resource_nyc.scn.json"},
   {
-    "call": "constant_parameter",
-    "arguments": {"name": "LOADED_GAME_LEVEL", "value": "'2'"}},
-  {
-    "call": "constant_parameter",
-    "arguments": {"name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_nyc_with_traffic_track2.m"}},
+    "call": "globals",
+    "arguments": {
+      "LOADED_GAME_LEVEL": "'2'",
+      "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_nyc_with_traffic_track2.m"
+    }
+  },
   {
     "playback": "scene_racing_static",
     "arguments": {

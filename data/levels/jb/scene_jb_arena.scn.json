@@ -3,11 +3,17 @@
   {"include": "../jb_race/osm_resource_jb_race_open_alpha.scn.json"},
   {"include": "osm_resource_jb_wpts1.scn.json"},
   {
-    "call": "constant_parameter",
-    "arguments": { "name": "LOADED_GAME_LEVEL", "value": "real_heightmap" }},
-  {
-    "call": "constant_parameter",
-    "arguments": { "name": "LOADED_HEIGHTMAP", "value": "$__DIR__/real_heightmap.png" }},
+    "call": "globals",
+    "arguments": {
+      "LOADED_GAME_LEVEL": "real_heightmap",
+      "LOADED_HEIGHTMAP": "$__DIR__/real_heightmap.png",
+      "OSM_LOCATION": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1e3
+      }
+    }
+  },
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -18,9 +24,6 @@
       "STADIUM_CAMERA_POSITION": [0, 500, 500],
       "SCORE_BOARD": "team|car_hp|nkills",
       "OSM_MAP_RESOURCE": "osm_resource_jb_race",
-      "OSM_POSITION": [0, -220, 0],
-      "OSM_ROTATION": [-90, 0, 0],
-      "OSM_SCALE": 1e3,
       "IF_HAS_OVERLAY": true,
       "OSM_MAP_OVERLAY_RESOURCE": "osm_resource_jb_wpts1",
       "IF_DIRTMAP": true,

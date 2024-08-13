@@ -2,8 +2,18 @@
   "declare_macro": "create_grossglockner_hochalpenstrasse",
   "content": [
     {"include": "../../scripts/include_all.scn.json"},
-    {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_TRACK", "value": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m"}},
-    {"call": "constant_parameter", "arguments": { "name": "LOADED_RACING_LINE_PLAYBACK", "value": "$__APPDATA__/$LEVEL_ID.checkpoints.m"}},
+    {
+      "call": "globals",
+      "arguments": {
+        "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
+        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+        "OSM_LOCATION": {
+          "position": [-90, -2000, 0],
+          "rotation": [-90, 0, 0],
+          "scale": 1e3
+        }
+      }
+    },
     {"include": "osm_resource_grossglockner_hochalpenstrasse$STYLE.scn.json"},
     {"include": "create_tripod_cameras_grossglockner_hochalpenstrasse.scn.json"},
     {
@@ -16,9 +26,6 @@
         "STADIUM_CAMERA_POSITION": [0, 500, 500],
         "SCORE_BOARD": "history|laps|rank|race_time",
         "OSM_MAP_RESOURCE": "osm_resource_grossglockner_hochalpenstrasse$STYLE",
-        "OSM_POSITION": [-90, -2000, 0],
-        "OSM_ROTATION": [-90, 0, 0],
-        "OSM_SCALE": 1e3,
         "IF_HAS_OVERLAY": false,
         "IF_DIRTMAP": true,
         "IF_EXTRACT_ALIGNMENT_PLANES": false,

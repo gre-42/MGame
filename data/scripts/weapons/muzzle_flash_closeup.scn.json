@@ -16,20 +16,8 @@
       "call": "execute_in_physics_thread",
       "arguments": {
         "command": {
-          "playback": "_add_muzzle_flash_closeup",
-          "arguments": {
-            "POSITION": "%POSITION",
-            "RESOURCE": "%RESOURCE",
-            "ANIMATION_TIME": "%ANIMATION_TIME",
-            "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
-          }
+          "playback": "_add_muzzle_flash_closeup"
         }
-      },
-      "let": {
-        "POSITION": "%POSITION",
-        "RESOURCE": "%RESOURCE",
-        "ANIMATION_TIME": "%ANIMATION_TIME",
-        "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
       }
     }
   },
@@ -40,14 +28,8 @@
         "call": "execute_in_physics_thread",
         "arguments": {
           "command": {
-            "playback": "_delete_muzzle_flash_closeup_nodes",
-            "arguments": {
-              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
-            }
+            "playback": "_delete_muzzle_flash_closeup_nodes"
           }
-        },
-        "let": {
-          "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
         }
       }
     ]
@@ -94,20 +76,11 @@
         "camera_node": "human_head_camera_node$SUFFIX",
         "on_hide": {
           "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
-          "context": "weapon_closeup",
-          "arguments": {
-            "POSITION": "%POSITION",
-            "RESOURCE": "%RESOURCE",
-            "ANIMATION_TIME": "%ANIMATION_TIME",
-            "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
-          }
+          "context": "weapon_closeup"
         },
         "on_destroy": {
           "playback": "_add_muzzle_flash_closeup_scheduler_on_destroy",
-          "context": "weapon_closeup",
-          "arguments": {
-            "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
-          }
+          "context": "weapon_closeup"
         }
       },
       "let": {

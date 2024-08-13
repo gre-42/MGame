@@ -68,9 +68,6 @@
         "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",
         "PC_PLAYER_PLAYBACK_SPEEDUP": "%PC_PLAYER_PLAYBACK_SPEEDUP",
         "SCORE_BOARD": "%SCORE_BOARD",
-        "OSM_POSITION": "%OSM_POSITION",
-        "OSM_ROTATION": "%OSM_ROTATION",
-        "OSM_SCALE": "%OSM_SCALE",
         "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
         "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
         "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
@@ -98,11 +95,8 @@
           "context": "primary_scene"
         },
         {
-          "call": "constant_parameter",
-          "arguments": {
-            "name": "IF_TRIPOD_MODE_OLD",
-            "value": false
-          }
+          "call": "globals",
+          "arguments": { "IF_TRIPOD_MODE_OLD": false }
         }
       ]
     }

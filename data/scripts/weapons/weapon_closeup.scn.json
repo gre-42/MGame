@@ -14,16 +14,10 @@
       "call": "execute_in_physics_thread",
       "arguments": {
         "command": {
-          "playback": "_add_weapon_closeup",
-          "arguments": {
-            "RESOURCE": "%RESOURCE",
-            "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-            "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-          }
+          "playback": "_add_weapon_closeup"
         }
       },
       "let": {
-        "RESOURCE": "%RESOURCE",
         "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
         "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
       }

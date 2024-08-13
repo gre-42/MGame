@@ -80,27 +80,21 @@
           "externals": {
             "playback": "create_player_avatar_externals",
             "arguments": {
-              "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
-              "HUMAN_NAME": "%HUMAN_NAME",
               "IF_PC": "%IF_PC",
-              "IF_WITH_GUN": "%IF_WITH_GUN",
               "behavior": "%behavior"
             }
           },
           "internals": {
             "playback": "create_player_avatar_internals",
             "arguments": {
-              "SUFFIX": "%SUFFIX",
               "SPAWNER_NAME": "%SPAWNER_NAME",
               "PLAYER_NAME": "%PLAYER_NAME",
-              "HUMAN_NAME": "%HUMAN_NAME",
               "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
               "IF_MANUAL_SHOOT": "%IF_MANUAL_SHOOT",
               "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
               "IF_PC": "%IF_PC",
-              "IF_WITH_GUN": "%IF_WITH_GUN",
               "behavior": "%behavior"
             }
           },
@@ -108,7 +102,6 @@
         },
         "let": {
           "SUFFIX": "%SUFFIX",
-          "HUMAN_NAME": "%HUMAN_NAME",
           "IF_WITH_GUN": "%IF_WITH_GUN"
         }
       },

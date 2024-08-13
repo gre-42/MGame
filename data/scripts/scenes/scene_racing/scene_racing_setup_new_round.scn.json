@@ -2,24 +2,14 @@
   "declare_macro": "scene_racing_setup_new_round",
   "content": [
     {
-      "call": "constant_parameter",
-      "arguments": { "name": "LOADED_GAME_MODE", "value": "%GAME_MODE" }
-    },
-    {
-      "call": "constant_parameter",
-      "arguments": { "name": "LOADED_LEVEL_ID", "value": "%LEVEL_ID" }
-    },
-    {
-      "call": "constant_parameter",
-      "arguments": { "name": "LOADED_RACE_RESTRICTIONS", "value": "%RACE_RESTRICTIONS" }
-    },
-    {
-      "call": "constant_parameter",
-      "arguments": { "name": "LOADED_RACE_SESSION", "value": "%RACE_SESSION" }
-    },
-    {
-      "call": "constant_parameter",
-      "arguments": { "name": "LOADED_RACE_LAPS", "value": "%RACE_LAPS" }
+      "call": "globals",
+      "arguments": {
+        "LOADED_GAME_MODE": "%GAME_MODE",
+        "LOADED_LEVEL_ID": "%LEVEL_ID",
+        "LOADED_RACE_RESTRICTIONS": "%RACE_RESTRICTIONS",
+        "LOADED_RACE_SESSION": "%RACE_SESSION",
+        "LOADED_RACE_LAPS": "%RACE_LAPS"
+      }
     },
     {
       "playback": "_setup_new_round",
@@ -36,11 +26,8 @@
           "playback": "create_tripod_cameras"
         },
         {
-          "call": "constant_parameter",
-          "arguments": {
-            "name": "IF_TRIPOD_MODE_OLD",
-            "value": "%IF_TRIPOD_MODE"
-          }
+          "call": "globals",
+          "arguments": { "IF_TRIPOD_MODE_OLD": "%IF_TRIPOD_MODE" }
         }
       ]
     }

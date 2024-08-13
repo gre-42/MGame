@@ -45,9 +45,7 @@
           "call": "register_geographic_mapping",
           "arguments": {
             "name": "world",
-            "position": "%OSM_POSITION",
-            "rotation": "%OSM_ROTATION",
-            "scale": "%OSM_SCALE",
+            "transformation": "%OSM_LOCATION",
             "resource": "osm_map"
           }
         },
@@ -55,9 +53,7 @@
           "call": "root_renderable_instances",
           "arguments": {
             "name": "osm_inst",
-            "position": "%OSM_POSITION",
-            "rotation": "%OSM_ROTATION",
-            "scale": "%OSM_SCALE",
+            "transformation": "%OSM_LOCATION",
             "resource": "osm_map"
           }
         },
@@ -76,9 +72,7 @@
           "call": "root_renderable_instances",
           "arguments": {
             "name": "osm_overlay_inst",
-            "position": "%OSM_POSITION",
-            "rotation": "%OSM_ROTATION",
-            "scale": "%OSM_SCALE",
+            "transformation": "%OSM_LOCATION",
             "resource": "osm_map_overlay"
           }
         },
@@ -109,9 +103,7 @@
         {
           "call": "rigid_statics",
           "arguments": {
-            "position": "%OSM_POSITION",
-            "rotation": "%OSM_ROTATION",
-            "scale": "%OSM_SCALE",
+            "transformation": "%OSM_LOCATION",
             "hitboxes": "osm_map_hitboxes",
             "name": "osm_map",
             "asset_id": "osm_map_no_id"
@@ -262,8 +254,8 @@
       "arguments": {
         "dynamics": "moving",
         "name": "dirtmap_node",
-        "position": "%OSM_POSITION",
-        "rotation": "%OSM_ROTATION",
+        "position": "%/OSM_LOCATION/position",
+        "rotation": "%/OSM_LOCATION/rotation",
         "scale": 1
       }
     },

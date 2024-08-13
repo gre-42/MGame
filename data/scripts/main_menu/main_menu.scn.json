@@ -287,8 +287,8 @@
     "content": [
       {
         "#comment": "Some initial color so the code does not crash until the real color is defined",
-        "call": "constant_parameter",
-        "arguments": { "name": "SELECTED_PLAYER_VEHICLE_COLOR", "value": [1, 1, 0] }
+        "call": "globals",
+        "arguments": { "SELECTED_PLAYER_VEHICLE_COLOR": [1, 1, 0] }
       },
       {
         "exclude": ["%IF_ANDROID"],
@@ -315,10 +315,13 @@
       },
       {
         "required": ["%IF_ANDROID"],
-        "execute": [
-          { "call": "constant_parameter", "arguments": { "name": "SKYBOX", "value": "skybox" } },
-          { "call": "constant_parameter", "arguments": { "name": "TIME_OF_DAY", "value": "day" } }
-        ]
+        "execute": {
+          "call": "globals",
+          "arguments": {
+            "SKYBOX": "skybox",
+            "TIME_OF_DAY": "day"
+          }
+        }
       },
       {
         "call": "parameter_setter",
@@ -522,9 +525,9 @@
         }
       },
       {
-        "call": "constant_parameter",
+        "call": "globals",
         "exclude": ["%IF_DEVEL"],
-        "arguments": { "name": "PLAYBACK_SPEED", "value": 1 }
+        "arguments": { "PLAYBACK_SPEED": 1 }
       },
       {
         "call": "parameter_setter",
@@ -548,9 +551,9 @@
         }
       },
       {
-        "call": "constant_parameter",
+        "call": "globals",
         "exclude": ["%IF_DEVEL"],
-        "arguments": { "name": "IF_TRIPOD_MODE", "value": false}
+        "arguments": { "IF_TRIPOD_MODE": false }
       }
     ]
   }

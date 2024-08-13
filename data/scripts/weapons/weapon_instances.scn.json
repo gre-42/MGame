@@ -20,7 +20,6 @@
           "playback": "_add_weapon_closeup_scheduler_on_hide",
           "context": "weapon_closeup",
           "arguments": {
-            "RESOURCE": "%RESOURCE",
             "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
             "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
           }
@@ -82,16 +81,12 @@
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
               "POSITION": [0, 0.062, -0.66],
-              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX",
-              "SUFFIX": "%SUFFIX"
+              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
           },
           "cool_down": "%COOL_DOWN",
           "ammo_type": "%AMMO_TYPE",
           "bullet_type": "%BULLET_TYPE"
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -151,16 +146,12 @@
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
               "POSITION": [0, 0.086, -0.265],
-              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX",
-              "SUFFIX": "%SUFFIX"
+              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
           },
           "cool_down": "%COOL_DOWN",
           "ammo_type": "%AMMO_TYPE",
           "bullet_type": "%BULLET_TYPE"
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {

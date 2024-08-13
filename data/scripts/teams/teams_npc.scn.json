@@ -228,7 +228,7 @@
             }
           }
         },
-        "set": {
+        "let": {
           "PLAYER_NAME": "%PLAYER_NAME",
           "HUMAN_NAME": "%HUMAN_NAME",
           "DECIMATE": "%DECIMATE",
@@ -247,7 +247,7 @@
         "call": "set_pathfinding_way_points",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "node": "osm_map_node",
+          "transformation": "%OSM_LOCATION",
           "resource": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       }
@@ -325,7 +325,7 @@
         "call": "set_pathfinding_way_points",
         "arguments": {
           "player": "%PLAYER_NAME",
-          "node": "osm_map_node",
+          "transformation": "%OSM_LOCATION",
           "resource": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       }

@@ -94,7 +94,7 @@
       {
         "call": "set_spawn_points",
         "arguments": {
-          "node": "osm_map_node",
+          "location": "%OSM_LOCATION",
           "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
         }
       }

@@ -26,6 +26,6 @@
     {"playback": "traffic.create_npc_and_driving_car", "arguments": {"SPAWNER_NAME": "dc_npc2", "CAR_NAME": "FN", "COLOR": [0.95, 0.80, 0.25]}},
     {"playback": "traffic.create_npc_and_driving_car", "arguments": {"SPAWNER_NAME": "dc_npc3", "CAR_NAME": "LK4", "COLOR": [0.74, 0.22, 0.24]}},
     {"call": "set_vip", "arguments": {"player": "you"}},
-    {"call": "set_spawn_points", "arguments": {"node": "osm_map_node", "resource": "osm_map"}}
+    {"call": "set_spawn_points", "arguments": {"location": "%OSM_LOCATION", "resource": "osm_map"}}
   ]
 }
