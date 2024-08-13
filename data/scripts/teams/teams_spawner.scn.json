@@ -40,7 +40,6 @@
           "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
           "VELOCITY": "%VELOCITY",
           "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "CAR_NAME": "%CAR_NAME",
           "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
@@ -62,6 +61,9 @@
           "COLOR": "%COLOR",
           "HAND_BRAKE_PULLED": false,
           "MUTE": "%MUTE"
+        },
+        "let": {
+          "CAR_NAME": "%CAR_NAME"
         }
       }
     ]

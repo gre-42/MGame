@@ -10,7 +10,6 @@
       "arguments": {
         "HUMAN_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "SKATER_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
         "SKATER_NODE_POSITION": "%SKATER_NODE_POSITION",
         "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
@@ -46,6 +45,9 @@
         "SPAWNER_NAME": "you",
         "PLAYER_NAME": "you",
         "IF_PC": true
+      },
+      "let": {
+        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX"
       }
     },
     {

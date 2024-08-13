@@ -118,7 +118,6 @@
           "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
           "VELOCITY": "%VELOCITY",
           "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "CAR_NAME": "%CAR_NAME",
           "DECIMATE": "%DECIMATE",
           "SUFFIX": "%SUFFIX",
           "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
@@ -139,6 +138,9 @@
           "ERROR_ALPHA": null,
           "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
           "MUTE": false
+        },
+        "let": {
+          "CAR_NAME": "%CAR_NAME"
         }
       },
       {
