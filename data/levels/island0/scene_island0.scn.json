@@ -3,6 +3,16 @@
   {"include": "osm_resource_island0.scn.json"},
   {"include": "create_tripod_cameras_island0.scn.json"},
   {
+    "call": "globals",
+    "arguments": {
+      "OSM_LOCATION": {
+        "position": [-90, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1e3
+      }
+    }
+  },
+  {
     "playback": "scene_racing_static",
     "arguments": {
       "IF_CREATE_PC_PLAYER": true,
@@ -12,9 +22,6 @@
       "STADIUM_CAMERA_POSITION": [0, 500, 500],
       "SCORE_BOARD": "history|laps|rank|race_time",
       "OSM_MAP_RESOURCE": "osm_resource_island0",
-      "OSM_POSITION": [-90, -220, 0],
-      "OSM_ROTATION": [-90, 0, 0],
-      "OSM_SCALE": 1e3,
       "IF_HAS_OVERLAY": false,
       "IF_DIRTMAP": true,
       "IF_EXTRACT_ALIGNMENT_PLANES": false,
