@@ -283,8 +283,11 @@
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces": true,
-        "rotation": [0, 0, 0],
-        "translation": [-25e3, -25e3, "%water_height"],
+        "location": {
+          "position": [-25e3, -25e3, "%water_height"],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
         "scale": "%scale",
         "uv_scale": 50,
         "period": 0.02,
