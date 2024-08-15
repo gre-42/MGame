@@ -1,11 +1,10 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
-  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
-  {"include": "osm_resource_island0.scn.json"},
-  {"include": "create_tripod_cameras_island0.scn.json"},
   {
     "call": "globals",
     "arguments": {
+      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
+      "aggregate_mode": "instances_sorted",
       "OSM_LOCATION": {
         "position": [-90, -220, 0],
         "rotation": [-90, 0, 0],
@@ -13,6 +12,8 @@
       }
     }
   },
+  {"include": "osm_resource_island0.scn.json"},
+  {"include": "create_tripod_cameras_island0.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {

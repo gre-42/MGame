@@ -1,6 +1,17 @@
 [
+  {
+    "call": "globals",
+    "arguments": {
+      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
+      "aggregate_mode": "instances_sorted",
+      "OSM_LOCATION": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1e3
+      }
+    }
+  },
   {"include": "../../scripts/include_all.scn.json"},
-  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "osm_resource_snow1.scn.json"},
   {
     "playback": "scene_racing_static",
@@ -12,9 +23,6 @@
       "STADIUM_CAMERA_POSITION": [0, 500, 500],
       "SCORE_BOARD": "history|laps|rank|race_time",
       "OSM_MAP_RESOURCE": "osm_resource_snow1",
-      "OSM_POSITION": [-90, -2000, 0],
-      "OSM_ROTATION": [-90, 0, 0],
-      "OSM_SCALE": 1e3,
       "IF_HAS_OVERLAY": false,
       "IF_DIRTMAP": true,
       "IF_EXTRACT_ALIGNMENT_PLANES": false,

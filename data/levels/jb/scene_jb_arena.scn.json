@@ -1,6 +1,17 @@
 [
+  {
+    "call": "globals",
+    "arguments": {
+      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
+      "aggregate_mode": "instances_sorted",
+      "OSM_LOCATION": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1e3
+      }
+    }
+  },
   {"include": "../../scripts/include_all.scn.json"},
-  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "../jb_race/osm_resource_jb_race_open_alpha.scn.json"},
   {"include": "osm_resource_jb_wpts1.scn.json"},
   {
