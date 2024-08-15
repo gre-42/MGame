@@ -5,7 +5,7 @@
     "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/map_grossglockner_hochalpenstrasse.osm",
-      "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
+      "cache_filename": "$__APPDATA__/$LOADED_LEVEL_ID.cereal.binary",
       "heightmap": "$__DIR__/heightmap_large.png",
       "terrain_grass_textures": [
         "#Ground037_Rock028_1",

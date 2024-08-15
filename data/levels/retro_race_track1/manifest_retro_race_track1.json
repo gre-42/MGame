@@ -1,16 +1,20 @@
 {
   "id": "retro_race_track1",
   "title": "Retro race track 1",
+  "required": ["%GAME_MODE in %%levels/retro_race_track1/game_modes"],
   "on_execute": {
     "include": "scene_retro_race_track1.scn.json"
   },
-  "globals": {
-    "LEVEL_ICON_FILE": "levels/retro_race_track1/icon.png",
-    "MINIMAP_FILE": null
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_LEVEL_ID": "retro_race_track1",
+      "LEVEL_ICON_FILE": "levels/retro_race_track1/icon.png",
+      "MINIMAP_FILE": null
+    }
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": true,
     "game_modes": ["rally"]
-  },
-  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
+  }
 }

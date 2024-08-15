@@ -1,5 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
+  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "osm_resource_islands1.scn.json"},
   {"include": "create_tripod_cameras_islands1.scn.json"},
   {

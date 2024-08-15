@@ -1,5 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
+  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "resource_aircraft_carrier0.scn.json"},
   {
     "playback": "scene_racing_static",

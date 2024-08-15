@@ -133,9 +133,9 @@
           },
           "hide_if_trivial": true,
           "parameters": [
-            {"id": "rally", "title": "Rally", "globals": {"GAME_MODE": "rally"}},
-            {"id": "skating", "title": "Skating", "globals": {"GAME_MODE": "skating"}},
-            {"id": "team_deathmatch", "title": "Team deathmatch", "globals": {"GAME_MODE": "team_deathmatch"}}
+            {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "rally"}}},
+            {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "skating"}}},
+            {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "team_deathmatch"}}}
           ]
         }
       }
@@ -307,9 +307,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Day", "globals": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}},
-            {"id": "", "title": "Night", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}},
-            {"id": "", "title": "Synthwave", "globals": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "synthwave"}}
+            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}}},
+            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}},
+            {"id": "", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "synthwave"}}}
           ]
         }
       },
@@ -339,8 +339,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Car", "globals": {"RACE_RESTRICTIONS": "car"}},
-            {"id": "", "title": "Car with trailer", "globals": {"RACE_RESTRICTIONS": "car_with_trailer"}}
+            {"id": "", "title": "Car", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
+            {"id": "", "title": "Car with trailer", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
           ]
         }
       },
@@ -365,8 +365,7 @@
               "SELECTED_DECIMATE": ""
             }
           },
-          "assets": "vehicles",
-          "asset_prefix": "SELECTED_VEHICLE_"
+          "assets": "vehicles"
         }
       },
       {
@@ -392,12 +391,12 @@
             }
           },
           "parameters": [
-            {"id": "", "title": "White", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}},
-            {"id": "", "title": "Gray",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}},
-            {"id": "", "title": "Red",   "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}},
-            {"id": "", "title": "Green", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}},
-            {"id": "", "title": "Blue",  "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}},
-            {"id": "", "title": "Black", "globals": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}
+            {"id": "", "title": "White", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
+            {"id": "", "title": "Gray",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
+            {"id": "", "title": "Red",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
+            {"id": "", "title": "Green", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
+            {"id": "", "title": "Blue",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
+            {"id": "", "title": "Black", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
           ]
         }
       },
@@ -417,11 +416,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Session1", "globals": {"RACE_SESSION": "session1"}},
-            {"id": "", "title": "Session2", "globals": {"RACE_SESSION": "session2"}},
-            {"id": "", "title": "Session3", "globals": {"RACE_SESSION": "session3"}},
-            {"id": "", "title": "Session4", "globals": {"RACE_SESSION": "session4"}},
-            {"id": "", "title": "Session5", "globals": {"RACE_SESSION": "session5"}}
+            {"id": "", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session1"}}},
+            {"id": "", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session2"}}},
+            {"id": "", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session3"}}},
+            {"id": "", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session4"}}},
+            {"id": "", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session5"}}}
           ]
         }
       },
@@ -431,7 +430,7 @@
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_selector_icon",
-          "required": ["%GAME_MODE == 'rally'", "%%levels/$LEVEL_ID/IF_RACEWAY_CIRCULAR"],
+          "required": ["%GAME_MODE == 'rally'", "%%levels/$SELECTED_LEVEL_ID/IF_RACEWAY_CIRCULAR"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -441,11 +440,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "'1 Lap'",   "globals": {"RACE_LAPS": 1}},
-            {"id": "", "title": "'2 Laps'",  "globals": {"RACE_LAPS": 2}},
-            {"id": "", "title": "'4 Laps'",  "globals": {"RACE_LAPS": 4}},
-            {"id": "", "title": "'8 Laps'",  "globals": {"RACE_LAPS": 8}},
-            {"id": "", "title": "'16 Laps'", "globals": {"RACE_LAPS": 16}}
+            {"id": "", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 1}}},
+            {"id": "", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 2}}},
+            {"id": "", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 4}}},
+            {"id": "", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 8}}},
+            {"id": "", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 16}}}
           ]
         }
       },
@@ -465,10 +464,10 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "No replay", "globals": {"IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}},
-            {"id": "", "title": "Rank 1", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}},
-            {"id": "", "title": "Ranks 1-2", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": false}},
-            {"id": "", "title": "Ranks 1-3", "globals": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": true}}
+            {"id": "", "title": "No replay", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "", "title": "Rank 1", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "", "title": "Ranks 1-2", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "", "title": "Ranks 1-3", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": true}}}
           ]
         }
       },
@@ -494,8 +493,8 @@
             }
           },
           "parameters": [
-            {"id": "", "title": "'30'", "globals": {"RENDER_FPS": 30}},
-            {"id": "", "title": "'60'", "globals": {"RENDER_FPS": 60}}
+            {"id": "", "title": "'30'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 30}}},
+            {"id": "", "title": "'60'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 60}}}
           ]
         }
       },
@@ -516,11 +515,11 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"id": "", "title": "'80%'", "globals": {"PLAYBACK_SPEED": 0.8}},
-            {"id": "", "title": "'90%'", "globals": {"PLAYBACK_SPEED": 0.9}},
-            {"id": "", "title": "'100%'", "globals": {"PLAYBACK_SPEED": 1}},
-            {"id": "", "title": "'110%'", "globals": {"PLAYBACK_SPEED": 1.1}},
-            {"id": "", "title": "'120%'", "globals": {"PLAYBACK_SPEED": 1.2}}
+            {"id": "", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.8}}},
+            {"id": "", "title": "'90%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.9}}},
+            {"id": "", "title": "'100%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1}}},
+            {"id": "", "title": "'110%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.1}}},
+            {"id": "", "title": "'120%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.2}}}
           ]
         }
       },
@@ -545,8 +544,8 @@
           "line_distance": "normal",
           "deflt": 1,
           "parameters": [
-            {"id": "", "title": "Enabled", "globals": {"IF_TRIPOD_MODE": true}},
-            {"id": "", "title": "Disabled", "globals": {"IF_TRIPOD_MODE": false}}
+            {"id": "", "title": "Enabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": true}}},
+            {"id": "", "title": "Disabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": false}}}
           ]
         }
       },

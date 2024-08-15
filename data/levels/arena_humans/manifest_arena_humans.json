@@ -1,16 +1,20 @@
 {
   "id": "arena_humans",
   "title": "Arena humans",
+  "required": ["%GAME_MODE in %%levels/arena_humans/game_modes"],
   "on_execute": {
     "include": "scene_arena_humans.scn.json"
   },
-  "globals": {
-    "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
-    "MINIMAP_FILE": null
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_LEVEL_ID": "arena_humans",
+      "LEVEL_ICON_FILE": "levels/arena_humans/icon.png",
+      "MINIMAP_FILE": null
+    }
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false,
     "game_modes": ["team_deathmatch"]
-  },
-  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
+  }
 }

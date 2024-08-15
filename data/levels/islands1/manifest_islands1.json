@@ -1,17 +1,21 @@
 {
   "id": "islands1",
   "title": "Islands 1",
+  "required": ["%GAME_MODE in %%levels/islands1/game_modes"],
   "on_execute": {
     "include": "scene_islands1.scn.json"
   },
-  "globals": {
-    "LEVEL_ICON_FILE": "#black",
-    "MINIMAP_FILE": null,
-    "PLAYERS_JSON_BASENAME": "players.json"
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_LEVEL_ID": "islands1",
+      "LEVEL_ICON_FILE": "#black",
+      "MINIMAP_FILE": null,
+      "PLAYERS_JSON_BASENAME": "players.json"
+    }
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false,
     "game_modes": ["team_deathmatch"]
-  },
-  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
+  }
 }

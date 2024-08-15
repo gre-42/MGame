@@ -2,6 +2,7 @@
   "id": "LK4_with_TNo2",
   "title": "LK4 with trailer No. 2",
   "on_init": {"include": "LK4_with_TNo2.scn.json"},
+  "on_before_select": {"call": "globals", "arguments": {"SELECTED_VEHICLE_ID": "LK4_with_TNo2"}},
   "database": {
     "SUFFIX": "LK4_with_TNo2",
     "CLASS": "car",

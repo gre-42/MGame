@@ -1,5 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
+  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "osm_resource_island0.scn.json"},
   {"include": "create_tripod_cameras_island0.scn.json"},
   {
@@ -58,7 +59,7 @@
           "VEHICLE_VELOCITY": [0, 0, 0],
           "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
           "RECORDINGS_DIR": "%__DIR__",
-          "CHECKPOINTS_FILE": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+          "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
           "CHECKPOINTS": null,
           "PACENOTES_FILE": "$__DIR__/pacenotes.json",
           "CHECK_POINTS_ACTIVE_COLOR": [-1, -1, -1],

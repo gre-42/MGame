@@ -11,7 +11,7 @@
         "arguments": {
           "name": "islands1",
           "filename": "$__DIR__/map_islands1.osm",
-          "cache_filename": "$__APPDATA__/$LEVEL_ID.cereal.binary",
+          "cache_filename": "$__APPDATA__/$LOADED_LEVEL_ID.cereal.binary",
           "heightmap": "$__DIR__/heightmap.pgm",
           "grass_foliagemap": "textures/noise/foliagemap.png",
           "terrain_undefined_textures": ["textures/debug/pink.png"],

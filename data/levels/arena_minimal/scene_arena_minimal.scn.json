@@ -1,5 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
+  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "../arena_minimal/osm_resource_arena_minimal.scn.json"},
   {
     "playback": "scene_racing_static",

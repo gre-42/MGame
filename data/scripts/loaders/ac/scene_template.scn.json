@@ -1,16 +1,19 @@
 [
   {"include": "scripts/include_all.scn.json"},
-  {"include": "osm_resource_template.scn.json"},
   {
     "call": "globals",
     "arguments": {
+      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
       "OSM_LOCATION": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": 1
-      }
+      },
+      "aggregate_mode": "sorted",
+      "rendering_strategy": "mesh_sorted_continuously"
     }
   },
+  {"include": "osm_resource_template.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -49,13 +52,13 @@
         "arguments": {
           "IF_CREATE_PC_CAR": true,
           "IF_PC_PLAYER_PLAYBACK": false,
-          "CAR_NODE_POSITION": "%%levels/$LEVEL_ID/CAR_NODE_POSITION",
-          "CAR_NODE_ANGLES": "%%levels/$LEVEL_ID/CAR_NODE_ANGLES",
-          "VEHICLE_VELOCITY": "%%levels/$LEVEL_ID/VEHICLE_VELOCITY",
-          "VEHICLE_ANGULAR_VELOCITY": "%%levels/$LEVEL_ID/VEHICLE_ANGULAR_VELOCITY",
+          "CAR_NODE_POSITION": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_POSITION",
+          "CAR_NODE_ANGLES": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_ANGLES",
+          "VEHICLE_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_VELOCITY",
+          "VEHICLE_ANGULAR_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_ANGULAR_VELOCITY",
           "RECORDINGS_DIR": "%__DIR__",
           "CHECKPOINTS_FILE": null,
-          "CHECKPOINTS": "%%levels/$LEVEL_ID/CHECKPOINTS",
+          "CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS",
           "PACENOTES_FILE": null,
           "CHECK_POINTS_ACTIVE_COLOR": [-1, -1, -1],
           "CHECK_POINTS_INACTIVE_COLOR": [0.7, 0.7, 0.7],
@@ -75,7 +78,7 @@
           "IF_PLAYBACK_TRACK_1": false,
           "IF_PLAYBACK_TRACK_2": false,
           "IF_PLAYBACK_TRACK_3": false,
-          "IF_CHECKPOINTS": "%%levels/$LEVEL_ID/CHECKPOINTS != %null",
+          "IF_CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS != %null",
           "IF_BURN_IN": false
         }
       }

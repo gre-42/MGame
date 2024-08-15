@@ -4,7 +4,7 @@
     {
       "call": "obj_resource",
       "arguments": {
-        "name": "%LEVEL_ID",
+        "name": "%LOADED_LEVEL_ID",
         "filename": "%STAGE_INI_FILENAME",
         "double_precision": true,
         "config": {
@@ -34,7 +34,7 @@
       "comment": {
         "call": "delete_mesh",
         "arguments": {
-          "resource_name": "%LEVEL_ID",
+          "resource_name": "%LOADED_LEVEL_ID",
           "where": "obj_grass"
         }
       }
@@ -42,7 +42,7 @@
     {
       "call": "cleanup_mesh",
       "arguments": {
-        "resource_name": "%LEVEL_ID",
+        "resource_name": "%LOADED_LEVEL_ID",
         "min_distance_material_filter": "attr_collide",
         "min_vertex_distance": 1e-2
       }
@@ -50,17 +50,17 @@
     {
       "call": "make_triangles_with_opposing_normals_two_sided",
       "arguments": {
-        "resource_name": "%LEVEL_ID",
+        "resource_name": "%LOADED_LEVEL_ID",
         "material_filter": "attr_collide"
       }
     },
     {
       "call": "merge_textures",
       "arguments": {
-        "resource_name": "%LEVEL_ID",
-        "merged_resource_name": "$LEVEL_ID-_trees",
-        "merged_texture_name": "$LEVEL_ID-_trees",
-        "merged_array_name": "$LEVEL_ID-_trees",
+        "resource_name": "%LOADED_LEVEL_ID",
+        "merged_resource_name": "$LOADED_LEVEL_ID-_trees",
+        "merged_texture_name": "$LOADED_LEVEL_ID-_trees",
+        "merged_array_name": "$LOADED_LEVEL_ID-_trees",
         "merged_blend_mode": "semi_continuous_02",
         "merged_continuous_blending_z_order": 1,
         "merged_occluded_pass": "none",
@@ -76,8 +76,8 @@
       "exclude": ["%IF_ANDROID"],
       "call": "add_foliage",
       "arguments": {
-        "mesh_resource_name": "%LEVEL_ID",
-        "foliage_resource_name": "$LEVEL_ID-_foliage",
+        "mesh_resource_name": "%LOADED_LEVEL_ID",
+        "foliage_resource_name": "$LOADED_LEVEL_ID-_foliage",
         "near_grass_resource_names": ["vegetation10_close.0"],
         "dirty_near_grass_resource_names": ["vegetation10_close.1"],
         "near_grass_distance": 3,
@@ -88,7 +88,7 @@
     {
       "call": "replace_terrain_material",
       "arguments": {
-        "resource_name": "%LEVEL_ID",
+        "resource_name": "%LOADED_LEVEL_ID",
         "textures": [
           "#Ground037_Sl_1",
           "#Ground037_Sl_8_1",
@@ -101,7 +101,7 @@
     {
       "call": "compound_resource",
       "arguments": {
-        "source_names": ["%LEVEL_ID"],
+        "source_names": ["%LOADED_LEVEL_ID"],
         "dest_name": "osm_map"
       }
     }

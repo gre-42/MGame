@@ -1,16 +1,20 @@
 {
   "id": "aircraft_carrier0",
   "title": "Aircraft carrier 0",
+  "required": ["%GAME_MODE in %%levels/aircraft_carrier0/game_modes"],
   "on_execute": {
     "include": "scene_aircraft_carrier0.scn.json"
   },
-  "globals": {
-    "LEVEL_ICON_FILE": "#black",
-    "MINIMAP_FILE": null
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_LEVEL_ID": "aircraft_carrier0",
+      "LEVEL_ICON_FILE": "#black",
+      "MINIMAP_FILE": null
+    }
   },
   "database": {
     "IF_RACEWAY_CIRCULAR": false,
     "game_modes": ["team_deathmatch"]
-  },
-  "required": ["%GAME_MODE in %%levels/$id/game_modes"]
+  }
 }

@@ -1,5 +1,6 @@
 [
   {"include": "../../scripts/include_all.scn.json"},
+  {"call": "globals", "arguments": { "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID" }},
   {"include": "../jb_race/osm_resource_jb_race_open_alpha.scn.json"},
   {"include": "osm_resource_jb_wpts1.scn.json"},
   {

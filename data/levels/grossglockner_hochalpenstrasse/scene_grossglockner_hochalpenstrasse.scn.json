@@ -6,7 +6,7 @@
       "call": "globals",
       "arguments": {
         "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
-        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
         "OSM_LOCATION": {
           "position": [-90, -2000, 0],
           "rotation": [-90, 0, 0],
@@ -62,7 +62,7 @@
             "VEHICLE_VELOCITY": [0, 0, 0],
             "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
             "RECORDINGS_DIR": "%__DIR__",
-            "CHECKPOINTS_FILE": "$__APPDATA__/$LEVEL_ID.checkpoints.m",
+            "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
             "CHECKPOINTS": null,
             "PACENOTES_FILE": "$__DIR__/pacenotes.json",
             "CHECK_POINTS_ACTIVE_COLOR": [-1, -1, -1],
