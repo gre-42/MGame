@@ -13,8 +13,8 @@
                 "/usr/include/SDL2"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/g++-12",
-            "cppStandard": "c++20",
+            "compilerPath": "/usr/bin/clang++",
+            "cppStandard": "c++23",
             "intelliSenseMode": "gcc-x64",
             "compilerArgs": ["-Wall", "-Wno-unknown-pragmas", "-Wmismatched-tags", "-Wconversion", "-Werror"]
         },
@@ -27,7 +27,7 @@
             ],
             "defines": ["_USE_MATH_DEFINES"],
             "compilerPath": "D:\\Programs\\msys64\\mingw64\\bin\\g++.exe",
-            "cppStandard": "c++20",
+            "cppStandard": "c++23",
             "intelliSenseMode": "gcc-x64"
         }
     ],
