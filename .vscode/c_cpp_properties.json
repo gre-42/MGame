@@ -4,6 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/Mlib",
+                "${workspaceFolder}/Mlib/cereal/include",
                 "${workspaceFolder}/Mlib/recastnavigation/Recast/Include",
                 "${workspaceFolder}/Mlib/recastnavigation/Detour/Include",
                 "${workspaceFolder}/Mlib/recastnavigation/DetourCrowd/Include",
@@ -13,9 +14,9 @@
                 "/usr/include/SDL2"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/clang++",
+            "compilerPath": "/usr/bin/g++",
             "cppStandard": "c++23",
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "linux-gcc-x64",
             "compilerArgs": ["-Wall", "-Wno-unknown-pragmas", "-Wmismatched-tags", "-Wconversion", "-Werror"]
         },
         {
