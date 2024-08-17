@@ -40,7 +40,7 @@
           "gun_node": "main_gun_end_node$SUFFIX",
           "parent_follower_rigid_body_node": "car_node$SUFFIX",
           "bullet_start_offset": 0,
-          "bullet_velocity": 0,
+          "bullet_velocity": "nan",
           "bullet_feels_gravity": true,
           "gravity": 9.8,
           "locked_on_angle": 20,
