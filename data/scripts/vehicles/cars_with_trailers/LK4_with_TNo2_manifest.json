@@ -6,7 +6,10 @@
   "database": {
     "SUFFIX": "LK4_with_TNo2",
     "CLASS": "car",
-    "NODE_PREFIXES": ["car_node", "car_node_trailer"]
+    "NODE_PREFIXES": ["car_node", "car_node_trailer"],
+    "MAX_TIRE_ANGLE": 45,
+    "FRONT_ENGINE": "engine",
+    "REAR_ENGINE": "engine"
   },
   "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car_with_trailer'}"]
 }
