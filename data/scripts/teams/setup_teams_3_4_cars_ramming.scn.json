@@ -83,7 +83,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "player": "you",
+          "player": "%VIP_NAME",
           "macro": "teams.create_car_for_pc",
           "parameters": {
             "CAR_NAME": "M3",

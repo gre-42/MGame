@@ -9,7 +9,7 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%BEHAVIOR",
+          "behavior": "%INITIAL_BEHAVIOR",
           "driving_direction": "center"
         }
       },
@@ -30,7 +30,7 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%BEHAVIOR",
+          "behavior": "%INITIAL_BEHAVIOR",
           "driving_direction": "center"
         }
       },
@@ -63,7 +63,8 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "role": "%ROLE"
         }
       }
     ]
@@ -104,7 +105,8 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "role": "%ROLE"
         }
       }
     ]
@@ -120,10 +122,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_avatar_for_npc",
-            "let": {
-              "IF_MANUAL_AIM": null
-            }
+            "playback": "teams.create_avatar_for_npc"
           }
         }
       },

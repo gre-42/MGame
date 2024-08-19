@@ -9,8 +9,10 @@
         "rotation": [0, 0, 0],
         "scale": 1
       },
-      "aggregate_mode": "sorted",
-      "rendering_strategy": "mesh_sorted_continuously"
+      "AGGREGATE_MODE": "sorted",
+      "RENDERING_STRATEGY": "mesh_sorted_continuously",
+      "VIP_NAME": "you",
+      "ROLE": "driver"
     }
   },
   {"include": "osm_resource_template.scn.json"},

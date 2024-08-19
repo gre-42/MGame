@@ -53,7 +53,7 @@
       },
       {
         "playback": "create_none_weapon",
-        "arguments": {
+        "let": {
           "PARENT_RIGID_BODY_NODE": "skater_node$SUFFIX",
           "AMMO_TYPE": "none_weapon_ammo_type",
           "BULLET_TYPE": "none_weapon_bullet_type"

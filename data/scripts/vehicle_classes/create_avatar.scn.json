@@ -63,9 +63,7 @@
         "call": "set_externals_creator",
         "arguments": {
           "externals": {
-            "playback": "create_player_avatar_externals",
-            "arguments": {
-            }
+            "playback": "create_player_avatar_externals"
           },
           "internals": {
             "playback": "create_player_avatar_internals"

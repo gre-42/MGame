@@ -16,10 +16,6 @@
         "command": {
           "playback": "_add_weapon_closeup"
         }
-      },
-      "let": {
-        "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-        "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
       }
     }
   },
@@ -40,16 +36,8 @@
       "call": "execute_in_physics_thread",
       "arguments": {
         "command": {
-          "playback": "_update_weapon_closeup",
-          "arguments": {
-            "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-            "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
-          }
+          "playback": "_update_weapon_closeup"
         }
-      },
-      "let": {
-        "PUNCH_ANGLE_PITCH": "%PUNCH_ANGLE_PITCH",
-        "PUNCH_ANGLE_YAW": "%PUNCH_ANGLE_YAW"
       }
     }
   },

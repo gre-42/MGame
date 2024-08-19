@@ -9,7 +9,7 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "off",
-          "behavior": "%BEHAVIOR",
+          "behavior": "%INITIAL_BEHAVIOR",
           "driving_direction": "center"
         }
       },
@@ -25,9 +25,7 @@
     "content": [
       {
         "playback": "create_avatar",
-        "arguments": {
-          "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-          "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
+        "let": {
           "IF_WITH_GUN": true,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
@@ -44,7 +42,8 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "role": "%ROLE"
         }
       }
     ]
@@ -53,7 +52,7 @@
     "declare_macro": "teams.create_car_for_pc",
     "content": [
       {
-        "playback": "create_car",
+        "let": "create_car",
         "arguments": {
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
@@ -62,9 +61,6 @@
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
           "HAND_BRAKE_PULLED": false
-        },
-        "let": {
-          "CAR_NAME": "%CAR_NAME"
         }
       },
       {
@@ -77,7 +73,8 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME"
+          "player": "%PLAYER_NAME",
+          "role": "%ROLE"
         }
       }
     ]
@@ -93,10 +90,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_avatar_for_pc",
-            "let": {
-              "DECIMATE": ""
-            }
+            "playback": "teams.create_avatar_for_pc"
           }
         }
       },
@@ -122,10 +116,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_car_for_pc",
-            "let": {       
-              "DECIMATE": ""
-            }
+            "playback": "teams.create_car_for_pc"
           }
         }
       },

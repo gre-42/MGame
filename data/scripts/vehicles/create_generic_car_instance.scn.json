@@ -313,10 +313,7 @@
     "content": [
       {
         "required": ["%IF_PC"],
-        "playback": "create_car_cameras_$CAMERA_CLASS",
-        "arguments": {
-          "COCKPIT_CAMERA_POSITION": "%COCKPIT_CAMERA_POSITION"
-        }
+        "playback": "create_car_cameras_$CAMERA_CLASS"
       },
       {
         "call": "player_set_vehicle_control_parameters",

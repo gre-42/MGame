@@ -119,7 +119,7 @@
         {
           "call": "player_create",
           "arguments": {
-            "name": "you",
+            "name": "%VIP_NAME",
             "team": "red",
             "game_mode": "racing",
             "unstuck_mode": "off",
@@ -127,31 +127,31 @@
             "driving_direction": "center"
           }
         },
-        { "call": "spawner_create", "arguments": { "name": "you", "team": "red" } },
-        { "call": "spawner_set_player", "arguments": { "name": "you", "role": "driver" } },
+        { "call": "spawner_create", "arguments": { "name": "%VIP_NAME", "team": "red" } },
+        { "call": "spawner_set_player", "arguments": { "name": "%VIP_NAME", "role": "driver" } },
         {
           "call": "set_can_drive",
-          "arguments": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
         },
         {
           "call": "set_can_aim",
-          "arguments": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
         },
         {
           "call": "set_can_shoot",
-          "arguments": { "player": "you", "source": "user", "value": true }
+          "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
         }
       ]
     },
     {
       "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_playback_way_points",
-      "arguments": { "player": "you", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
+      "arguments": { "player": "%VIP_NAME", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
     },
     {
       "required": ["%IF_PC_PLAYER_PLAYBACK"],
       "call": "set_can_drive",
-      "arguments": { "player": "you", "source": "ai", "value": true }
+      "arguments": { "player": "%VIP_NAME", "source": "ai", "value": true }
     },
     {
       "call": "ui_background",

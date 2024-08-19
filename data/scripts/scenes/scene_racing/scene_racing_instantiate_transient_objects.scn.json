@@ -33,7 +33,7 @@
         "IF_PLAYBACK_WINNER": false,
         "IF_SPAWNER": true,
         "IF_DAMAGEABLE": false,
-        "SPAWNER_NAME": "you"
+        "SPAWNER_NAME": "%VIP_NAME"
       }
     },
     {
@@ -150,7 +150,7 @@
         "moving_asset_id": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "moving_suffix": "",
         "resource": "glow",
-        "player": "you",
+        "player": "%VIP_NAME",
         "nbeacons": 40,
         "distance": 30,
         "nahead": 30,
@@ -211,14 +211,14 @@
         {
           "call": "create_externals",
           "arguments": {
-            "player": "you",
+            "player": "%VIP_NAME",
             "mode": "pc"
           }
         },
         {
           "call": "create_internals",
           "arguments": {
-            "player": "you",
+            "player": "%VIP_NAME",
             "role": "driver"
           }
         }
