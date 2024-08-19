@@ -237,10 +237,7 @@
         "required": ["%IF_WITH_PHYSICS"],
         "playback": "create_missile0_physics",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
           "MASS": 80,
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
           "COLLIDABLE_MODE": "moving"
         }
       }

@@ -74,17 +74,8 @@
           "range_min": 0,
           "range_max": 2000,
           "create": {
-            "playback": "add_weapon_m4a1",
-            "arguments": {
-              "AMMO_TYPE": "%AMMO_TYPE",
-              "BULLET_TYPE": "%BULLET_TYPE",
-              "COOL_DOWN": "%COOL_DOWN",
-              "SUFFIX": "%SUFFIX"
-            }
+            "playback": "add_weapon_m4a1"
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -99,17 +90,8 @@
           "range_min": 0,
           "range_max": 2000,
           "create": {
-            "playback": "add_weapon_beretta92",
-            "arguments": {
-              "AMMO_TYPE": "%AMMO_TYPE",
-              "BULLET_TYPE": "%BULLET_TYPE",
-              "COOL_DOWN": "%COOL_DOWN",
-              "SUFFIX": "%SUFFIX"
-            }
+            "playback": "add_weapon_beretta92"
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -124,17 +106,8 @@
           "range_min": 8,
           "range_max": 20,
           "create": {
-            "playback": "add_weapon_frag_grenade",
-            "arguments": {
-              "AMMO_TYPE": "%AMMO_TYPE",
-              "BULLET_TYPE": "%BULLET_TYPE",
-              "COOL_DOWN": "%COOL_DOWN",
-              "SUFFIX": "%SUFFIX"
-            }
+            "playback": "add_weapon_frag_grenade"
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -149,17 +122,8 @@
           "range_min": 8,
           "range_max": 2000,
           "create": {
-            "playback": "add_weapon_m72_law",
-            "arguments": {
-              "AMMO_TYPE": "%AMMO_TYPE",
-              "BULLET_TYPE": "%BULLET_TYPE",
-              "COOL_DOWN": "%COOL_DOWN",
-              "SUFFIX": "%SUFFIX"
-            }
+            "playback": "add_weapon_m72_law"
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -177,8 +141,7 @@
         "arguments": {
           "PARENT_RIGID_BODY_NODE": "human_node$SUFFIX",
           "AMMO_TYPE": "none_weapon_ammo_type",
-          "BULLET_TYPE": "none_weapon_bullet_type",
-          "SUFFIX": "%SUFFIX"
+          "BULLET_TYPE": "none_weapon_bullet_type"
         }
       },
       {"call": "damageable", "arguments": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
@@ -246,43 +209,39 @@
     "declare_macro": "generic_avatar.create_player_internals",
     "content": [
       {
-        "required": ["%behavior != 'none'"],
+        "required": ["%BEHAVIOR != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/avatar_$behavior/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/avatar_$behavior/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/avatar_$behavior/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/avatar_$behavior/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/avatar_$behavior/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/avatar_$behavior/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/avatar_$behavior/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/avatar_$behavior/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/avatar_$behavior/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/avatar_$behavior/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/avatar_$behavior/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/avatar_$behavior/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/avatar_$behavior/collision_avoidance_step_aside_distance"
+              "waypoint_reached_radius":                 "%%driving_modes/avatar_$BEHAVIOR/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/avatar_$BEHAVIOR/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/avatar_$BEHAVIOR/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/avatar_$BEHAVIOR/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/avatar_$BEHAVIOR/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/avatar_$BEHAVIOR/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/avatar_$BEHAVIOR/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/avatar_$behavior/stuck_velocity",
-              "stuck_duration": "%%driving_modes/avatar_$behavior/stuck_duration",
-              "unstuck_duration": "%%driving_modes/avatar_$behavior/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/avatar_$behavior/player_way_points_filter",
+              "stuck_velocity": "%%driving_modes/avatar_$BEHAVIOR/stuck_velocity",
+              "stuck_duration": "%%driving_modes/avatar_$BEHAVIOR/stuck_duration",
+              "unstuck_duration": "%%driving_modes/avatar_$BEHAVIOR/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/avatar_$BEHAVIOR/player_way_points_filter",
               "vehicle_way_points_filter": "explicit_ground|sidewalk"
             }
           }
-        ],
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "behavior": "%behavior"
-        }
+        ]
       }
     ]
   }

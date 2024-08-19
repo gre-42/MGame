@@ -3,12 +3,12 @@
     "declare_macro": "_create_playback",
     "content": {
       "playback": "create_car",
-      "arguments": {
+      "let": {
+        "CAR_NAME": "%PLAYBACK_CAR",
         "CAR_NODE_POSITION": [1, 2, 3],
         "CAR_NODE_ANGLES": [4, 5, 6],
         "VELOCITY": null,
         "ANGULAR_VELOCITY": null,
-        "DECIMATE": "%DECIMATE",
         "SUFFIX": "_playback_track$PSUFFIX",
         "IF_WITH_GRAPHICS": true,
         "IF_WITH_PHYSICS": false,
@@ -24,12 +24,7 @@
         "IF_CAR_BODY_RENDERABLE_STYLE": false,
         "VELOCITY_ERROR_STD": 0,
         "YAW_ERROR_STD": 0,
-        "PITCH_ERROR_STD": 0,
-        "ERROR_ALPHA": 1,
-        "IF_PC": false
-      },
-      "let": {
-        "CAR_NAME": "%PLAYBACK_CAR"
+        "PITCH_ERROR_STD": 0
       }
     }
   },
@@ -38,12 +33,12 @@
     "content": [
       {
         "playback": "create_car",
-        "arguments": {
+        "let": {
+          "CAR_NAME": "%PLAYBACK_CAR",
           "CAR_NODE_POSITION": [1, 2, 3],
           "CAR_NODE_ANGLES": [4, 5, 6],
           "VELOCITY": null,
           "ANGULAR_VELOCITY": null,
-          "DECIMATE": "%DECIMATE",
           "SUFFIX": "_playback_winner$PSUFFIX",
           "HAND_BRAKE_PULLED": null,
           "MUTE": null,
@@ -58,15 +53,9 @@
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": false,
           "IF_CAR_BODY_RENDERABLE_STYLE": true,
-          "COLOR": "%COLOR",
           "VELOCITY_ERROR_STD": 0,
           "YAW_ERROR_STD": 0,
-          "PITCH_ERROR_STD": 0,
-          "ERROR_ALPHA": 1,
-          "IF_PC": false
-        },
-        "let": {
-          "CAR_NAME": "%PLAYBACK_CAR"
+          "PITCH_ERROR_STD": 0
         }
       },
       {

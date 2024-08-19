@@ -1,5 +1,8 @@
 {
   "declare_macro": "add_local_skidmarks",
+  "let": {
+    "SUFFIX": "_local_skidmarks"
+  },
   "content": [
     {
       "call": "root_node_instance",

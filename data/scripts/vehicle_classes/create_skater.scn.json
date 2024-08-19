@@ -33,19 +33,7 @@
         }
       },
       {
-        "playback": "create_$SKATER_NAME",
-        "arguments": {
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
-        }
+        "playback": "create_$SKATER_NAME"
       },
       {
         "required": ["%IF_SPAWNER"],
@@ -72,17 +60,9 @@
         "call": "set_externals_creator",
         "arguments": {
           "macro": {
-            "playback": "create_player_skater_externals",
-            "arguments": {
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "IF_PC": "%IF_PC"
-            }
+            "playback": "create_player_skater_externals"
           },
           "spawner": "%SPAWNER_NAME"
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -106,10 +86,7 @@
       {
         "playback": "create_player_skater_externals_$SKATER_NAME",
         "arguments": {
-          "NAME": "%SKATER_NAME",
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "IF_PC": "%IF_PC"
+          "NAME": "%SKATER_NAME"
         }
       }
     ]

@@ -2,12 +2,12 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "main$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "$NAME/main$DECIMATE"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main$suffix", "node": "car_node$node_suffix", "resource": "$NAME/main$decimate"}},
 
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_front_node$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_front_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_front$DECIMATE"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_rear_node$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_rear_node_visual$NODE_SUFFIX", "resource": "$NAME/wheel_rear$DECIMATE"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$NAME/wheel_front$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$NAME/wheel_front$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$NAME/wheel_rear$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$NAME/wheel_rear$decimate"}}
     ]
   },
   {
@@ -32,7 +32,7 @@
           "mass": "%MASS",
           "size": "%SIZE",
           "com": "%COM",
-          "collidable_mode": "%COLLIDABLE_MODE",
+          "collidable_mode": "moving",
           "name": "generic_car_$NAME$SUFFIX",
           "waypoint_dy": 1.2,
           "asset_id": "$NAME"
@@ -288,55 +288,24 @@
 
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_massbox"}}},
-      {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$NODE_SUFFIX resource=topdown_locator"},
+      {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$node_suffix resource=topdown_locator"},
 
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX", "name": "wheel_right_rear_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
-        "NAME": "%NAME",
-        "NODE_SUFFIX": "%SUFFIX",
-        "SUFFIX": "%SUFFIX",
-        "DECIMATE": "%DECIMATE"
+        "node_suffix": "%SUFFIX",
+        "suffix": "%SUFFIX",
+        "decimate": "%DECIMATE"
         }
       },
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
-        "NAME": "%NAME",
-        "NODE_SUFFIX": "%SUFFIX",
-        "SUFFIX": "_lowres$SUFFIX",
-        "DECIMATE": "_lowres"
+        "node_suffix": "%SUFFIX",
+        "suffix": "_lowres$SUFFIX",
+        "decimate": "_lowres"
         }
       },
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights", "arguments": {"NAME": "%NAME", "SUFFIX": "%SUFFIX"}},
-
-      {"required": ["%IF_WITH_PHYSICS"], "playback": "generic_car.create_physics", "arguments": {
-        "NAME": "%NAME",
-        "SUFFIX": "%SUFFIX",
-        "SIZE": "%SIZE",
-        "COM": "%COM",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-        "MASS": "%MASS",
-        "WHEEL_RADIUS": "%WHEEL_RADIUS",
-        "COLLIDABLE_MODE": "moving",
-        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-        "WHEEL_LEFT_FRONT_MOUNT_0": "%WHEEL_LEFT_FRONT_MOUNT_0",
-        "WHEEL_LEFT_FRONT_MOUNT_1": "%WHEEL_LEFT_FRONT_MOUNT_1",
-        "WHEEL_RIGHT_FRONT_MOUNT_0": "%WHEEL_RIGHT_FRONT_MOUNT_0",
-        "WHEEL_RIGHT_FRONT_MOUNT_1": "%WHEEL_RIGHT_FRONT_MOUNT_1",
-        "WHEEL_LEFT_REAR_MOUNT_0": "%WHEEL_LEFT_REAR_MOUNT_0",
-        "WHEEL_LEFT_REAR_MOUNT_1": "%WHEEL_LEFT_REAR_MOUNT_1",
-        "WHEEL_RIGHT_REAR_MOUNT_0": "%WHEEL_RIGHT_REAR_MOUNT_0",
-        "WHEEL_RIGHT_REAR_MOUNT_1": "%WHEEL_RIGHT_REAR_MOUNT_1",
-        "ANGULAR_VELS_FRONT": "%ANGULAR_VELS_FRONT",
-        "ANGULAR_VELS_REAR": "%ANGULAR_VELS_REAR",
-        "ANGULAR_VELS": "%ANGULAR_VELS",
-        "POWERS_FRONT": "%POWERS_FRONT",
-        "POWERS_REAR": "%POWERS_REAR",
-        "POWERS": "%POWERS",
-        "GEAR_RATIOS": "%GEAR_RATIOS",
-        "MUTE": "%MUTE"
-        }
-      }
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights"},
+      {"required": ["%IF_WITH_PHYSICS"], "playback": "generic_car.create_physics"}
     ]
   },
   {
@@ -346,8 +315,6 @@
         "required": ["%IF_PC"],
         "playback": "create_car_cameras_$CAMERA_CLASS",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
           "COCKPIT_CAMERA_POSITION": "%COCKPIT_CAMERA_POSITION"
         }
       },
@@ -370,12 +337,7 @@
         "required": ["%IF_PC"],
         "playback": "create_car_key_bindings",
         "arguments": {
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-          "IF_MANUAL_AIM": false,
-          "IF_HAS_GUN": false,
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "role": "%role"
+          "IF_HAS_GUN": false
         }
       },
       {
@@ -383,48 +345,43 @@
         "exclude": ["%IF_ANDROID"],
         "playback": "create_player_car_engine_rpm_meter",
         "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
           "ENGINE_NAME": "%%vehicles/$ASSET_ID/FRONT_ENGINE"
         }
       },
       {
-        "required": ["%behavior != 'none'"],
+        "required": ["%BEHAVIOR != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/car_$behavior/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/car_$behavior/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/car_$behavior/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$behavior/collision_avoidance_step_aside_distance"
+              "waypoint_reached_radius":                 "%%driving_modes/car_$BEHAVIOR/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/car_$BEHAVIOR/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/car_$BEHAVIOR/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/car_$BEHAVIOR/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/car_$BEHAVIOR/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/car_$BEHAVIOR/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/car_$BEHAVIOR/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$BEHAVIOR/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
-              "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
-              "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/car_$behavior/player_way_points_filter",
+              "stuck_velocity": "%%driving_modes/car_$BEHAVIOR/stuck_velocity",
+              "stuck_duration": "%%driving_modes/car_$BEHAVIOR/stuck_duration",
+              "unstuck_duration": "%%driving_modes/car_$BEHAVIOR/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/car_$BEHAVIOR/player_way_points_filter",
               "vehicle_way_points_filter": "explicit_ground|street"
             }
           }
-        ],
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "behavior": "%behavior"
-        }
+        ]
       }
     ]
   },

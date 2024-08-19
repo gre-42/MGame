@@ -25,7 +25,7 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "avatar.jump",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "wants_to_jump": true
@@ -35,7 +35,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_left",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
@@ -46,7 +46,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_right",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
@@ -57,7 +57,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_left",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
@@ -71,7 +71,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_right",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
@@ -85,7 +85,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.forward",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
@@ -96,7 +96,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.backwards",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
@@ -107,7 +107,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_up",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
@@ -121,7 +121,7 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_down",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
@@ -135,7 +135,7 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.next_weapon",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "weapon_increment": 1
       }
@@ -144,7 +144,7 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.previous_weapon",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "weapon_increment": -1
       }
@@ -153,7 +153,7 @@
       "call": "gun_key_binding",
       "arguments": {
         "id": "avatar.shoot",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME"
       }
     },
@@ -161,7 +161,7 @@
       "call": "player_key_binding",
       "arguments": {
         "id": "avatar.select_next_vehicle",
-        "role": "%role",
+        "role": "%ROLE",
         "player": "%PLAYER_NAME",
         "select_next_vehicle": true
       }

@@ -5,13 +5,6 @@
       {
         "playback": "create_LK4",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "DECIMATE": "%DECIMATE",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "MUTE": "%MUTE",
-          "VELOCITY": "%VELOCITY",
           "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY"
         }
       },
@@ -38,12 +31,6 @@
         "playback": "create_TNo2",
         "arguments": {
           "SUFFIX": "_trailer$SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "DECIMATE": "%DECIMATE",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "MUTE": "%MUTE",
-          "VELOCITY": "%VELOCITY",
           "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY"
         }
       },
@@ -62,13 +49,7 @@
     "content": {
       "playback": "generic_car.create_player_internals",
       "arguments": {
-        "ASSET_ID": "LK4_with_TNo2",
-        "IF_PC": "%IF_PC",
-        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
-        "role": "%role"
+        "ASSET_ID": "LK4_with_TNo2"
       }
     }
   },
@@ -78,10 +59,6 @@
       "playback": "generic_car.create_player_externals",
       "arguments": {
         "ASSET_ID": "LK4_with_TNo2",
-        "IF_PC": "%IF_PC",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
 
         "CAMERA_CLASS": "car_with_trailer",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.5, -0.1]

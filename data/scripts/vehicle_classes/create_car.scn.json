@@ -22,22 +22,7 @@
         }
       },
       {
-        "playback": "create_$CAR_NAME",
-        "arguments": {
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "MUTE": "%MUTE",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
-        }
+        "playback": "create_$CAR_NAME"
       },
       {
         "required": ["%IF_PLAYBACK_TRACK"],
@@ -100,30 +85,12 @@
         "call": "set_externals_creator",
         "arguments": {
           "externals": {
-            "playback": "create_player_car_externals",
-            "arguments": {
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "IF_PC": "%IF_PC",
-              "behavior": "%behavior"
-            }
+            "playback": "create_player_car_externals"
           },
           "internals": {
-            "playback": "create_player_car_internals",
-            "arguments": {
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-              "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-              "IF_PC": "%IF_PC",
-              "behavior": "%behavior",
-              "role": "%role"
-            }
+            "playback": "create_player_car_internals"
           },
           "spawner": "%SPAWNER_NAME"
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -145,14 +112,7 @@
     "declare_macro": "create_player_car_externals",
     "content": [
       {
-        "playback": "create_player_car_externals_$CAR_NAME",
-        "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "IF_PC": "%IF_PC",
-          "behavior": "%behavior"
-        }
+        "playback": "create_player_car_externals_$CAR_NAME"
       }
     ]
   },
@@ -160,17 +120,7 @@
     "declare_macro": "create_player_car_internals",
     "content": [
       {
-        "playback": "create_player_car_internals_$CAR_NAME",
-        "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-          "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-          "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "IF_PC": "%IF_PC",
-          "behavior": "%behavior",
-          "role": "%role"
-        }
+        "playback": "create_player_car_internals_$CAR_NAME"
       },
       {
         "required": ["%IF_PC", "%IF_DEVEL"],

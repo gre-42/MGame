@@ -48,7 +48,7 @@
           "team": "red",
           "game_mode": "bystander",
           "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%behavior",
+          "behavior": "%BEHAVIOR",
           "driving_direction": "right"
         }
       },
@@ -68,28 +68,16 @@
     "content": [
       {
         "playback": "create_avatar",
-        "arguments": {
-          "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-          "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "HUMAN_NAME": "%HUMAN_NAME",
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
+        "let": {
           "IF_WITH_GUN": false,
-          "SPAWNER_NAME": "%SPAWNER_NAME",
           "IF_SHADOW": false,
           "IF_HUMAN_STYLE": true,
-          "COLOR": "%COLOR",
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
           "VELOCITY_ERROR_STD": 0.3,
           "YAW_ERROR_STD": 0.02,
           "PITCH_ERROR_STD": 0.02,
-          "ERROR_ALPHA": 0.002,
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
+          "ERROR_ALPHA": 0.002
         }
       },
       {
@@ -102,8 +90,7 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
-          "role": "%role"
+          "player": "%SPAWNER_NAME"
         }
       }
     ]
@@ -114,29 +101,17 @@
       {
         "playback": "create_car",
         "arguments": {
-          "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-          "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
-          "SPAWNER_NAME": "%SPAWNER_NAME",
           "IF_SHADOW": false,
           "IF_DAMAGEABLE": false,
           "IF_CAR_BODY_RENDERABLE_STYLE": true,
-          "COLOR": "%COLOR",
           "VELOCITY_ERROR_STD": null,
           "YAW_ERROR_STD": null,
           "PITCH_ERROR_STD": null,
           "ERROR_ALPHA": null,
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
           "MUTE": false
         },
         "let": {
@@ -153,8 +128,7 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
-          "role": "%role"
+          "player": "%SPAWNER_NAME"
         }
       }
     ]
@@ -165,7 +139,6 @@
       {
         "playback": "traffic.create_avatar_npc_player",
         "arguments": {
-          "SPAWNER_NAME": "%SPAWNER_NAME",
           "UNSTUCK_MODE": "delete"
         }
       },
@@ -184,25 +157,14 @@
           "macro": {
             "playback": "traffic.create_avatar",
             "arguments": {
-              "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-              "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-              "VELOCITY": "%VELOCITY",
-              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-              "SUFFIX": "%SUFFIX",
-              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "role": "%role",
-
+                        
               "HUMAN_NAME":"%HUMAN_NAME",
-              "COLOR": "%COLOR",
-              "DECIMATE":"_d2",
+                  "DECIMATE":"_d2",
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
         },
         "let": {
-          "HUMAN_NAME": "%HUMAN_NAME",
           "COLOR": "%COLOR"
         }
       }
@@ -214,7 +176,6 @@
       {
         "playback": "traffic.create_car_npc_player",
         "arguments": {
-          "SPAWNER_NAME": "%SPAWNER_NAME",
           "UNSTUCK_MODE": "off",
           "behavior": "none"
         }
@@ -226,19 +187,8 @@
           "macro": {
             "playback": "traffic.create_car",
             "arguments": {
-              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-              "VELOCITY": "%VELOCITY",
-              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-              "SUFFIX": "%SUFFIX",
-              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "role": "%role",
-
-              "CAR_NAME": "%CAR_NAME",
-              "COLOR": "%COLOR",
-              "DECIMATE": "",
+                                
+                  "DECIMATE": "",
               "HAND_BRAKE_PULLED": true,
               "MUTE": false,
               "RESPAWN_COOLDOWN_TIME": 0
@@ -246,7 +196,6 @@
           }
         },
         "let": {
-          "CAR_NAME": "%CAR_NAME",
           "COLOR": "%COLOR"
         }
       }
@@ -258,7 +207,6 @@
       {
         "playback": "traffic.create_car_npc_player",
         "arguments": {
-          "SPAWNER_NAME": "%SPAWNER_NAME",
           "UNSTUCK_MODE": "delete",
           "behavior": "city"
         }
@@ -278,26 +226,14 @@
           "macro": {
             "playback": "traffic.create_car",
             "arguments": {
-              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-              "VELOCITY": "%VELOCITY",
-              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-              "SUFFIX": "%SUFFIX",
-              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "role": "%role",
-
-              "CAR_NAME": "%CAR_NAME",
-              "COLOR": "%COLOR",
-              "DECIMATE": "",
+                                
+                  "DECIMATE": "",
               "HAND_BRAKE_PULLED": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
         },
         "let": {
-          "CAR_NAME": "%CAR_NAME",
           "COLOR": "%COLOR"
         }
       }

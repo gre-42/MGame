@@ -3,16 +3,8 @@
     "declare_macro": "create_FN",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "FN",
-        "SUFFIX": "%SUFFIX",
-        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-        "DECIMATE": "%DECIMATE",
-        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [1.7, 1.2, 4.1],
         "COM": [0, -0.2, -0.15],
@@ -45,15 +37,7 @@
     "declare_macro": "create_player_car_internals_FN",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
-        "ASSET_ID": "FN",
-        "IF_PC": "%IF_PC",
-        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
-        "role": "%role"
-      }
+      "arguments": { "ASSET_ID": "FN" }
     }
   },
   {
@@ -62,10 +46,6 @@
       "playback": "generic_car.create_player_externals",
       "arguments": {
         "ASSET_ID": "FN",
-        "IF_PC": "%IF_PC",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
 
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]

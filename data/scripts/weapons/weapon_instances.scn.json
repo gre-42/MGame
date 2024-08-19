@@ -101,7 +101,6 @@
       {
         "playback": "_set_node_hider",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
           "RESOURCE": "M4A1"
         }
       }
@@ -166,8 +165,7 @@
       {
         "playback": "_set_node_hider",
         "arguments": {
-          "RESOURCE": "Beretta92",
-          "SUFFIX": "%SUFFIX"
+          "RESOURCE": "Beretta92"
         }
       }
     ]
@@ -219,8 +217,7 @@
       {
         "playback": "_set_node_hider",
         "arguments": {
-          "RESOURCE": "frag_grenade",
-          "SUFFIX": "%SUFFIX"
+          "RESOURCE": "frag_grenade"
         }
       }
     ]
@@ -272,8 +269,7 @@
       {
         "playback": "_set_node_hider",
         "arguments": {
-          "RESOURCE": "m72_law",
-          "SUFFIX": "%SUFFIX"
+          "RESOURCE": "m72_law"
         }
       }
     ]

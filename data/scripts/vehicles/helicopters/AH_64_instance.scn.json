@@ -302,18 +302,8 @@
         "required": ["%IF_WITH_PHYSICS"],
         "playback": "create_AH_64_physics",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
           "MASS": 6e3,
-          "COLLIDABLE_MODE": "moving",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-          "MUTE": "%MUTE"
+          "COLLIDABLE_MODE": "moving"
         }
       }
     ]
@@ -325,12 +315,7 @@
         "required": ["%IF_PC"],
         "playback": "create_car_key_bindings",
         "arguments": {
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-          "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-          "IF_HAS_GUN": true,
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "role": "%role"
+          "IF_HAS_GUN": true
         }
       },
       {
@@ -357,9 +342,7 @@
         "required": ["%IF_PC"],
         "playback": "create_car_cameras_heli",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME"
-        }
+          }
       },
       {
         "call": "player_set_aiming_gun",

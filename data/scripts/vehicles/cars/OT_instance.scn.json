@@ -5,11 +5,6 @@
       "playback": "generic_car.create",
       "arguments": {
         "NAME": "OT",
-        "SUFFIX": "%SUFFIX",
-        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-        "DECIMATE": "%DECIMATE",
-        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
         "MUTE": "%MUTE",
         "VELOCITY": "%VELOCITY",
         "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
@@ -46,13 +41,7 @@
     "content": {
       "playback": "generic_car.create_player_internals",
       "arguments": {
-        "ASSET_ID": "OT",
-        "IF_PC": "%IF_PC",
-        "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
-        "role": "%role"
+        "ASSET_ID": "OT"
       }
     }
   },
@@ -62,10 +51,6 @@
       "playback": "generic_car.create_player_externals",
       "arguments": {
         "ASSET_ID": "OT",
-        "IF_PC": "%IF_PC",
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "SUFFIX": "%SUFFIX",
-        "behavior": "%behavior",
 
         "CAMERA_CLASS": "truck",
         "COCKPIT_CAMERA_POSITION": [-0.4, 1.5, -0.1]

@@ -56,8 +56,7 @@
         "arguments": {
           "PARENT_RIGID_BODY_NODE": "skater_node$SUFFIX",
           "AMMO_TYPE": "none_weapon_ammo_type",
-          "BULLET_TYPE": "none_weapon_bullet_type",
-          "SUFFIX": "%SUFFIX"
+          "BULLET_TYPE": "none_weapon_bullet_type"
         }
       },
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-0.15, -0.5, -0.35]}},
@@ -178,8 +177,8 @@
   {
     "declare_macro": "create_player_skater_externals_skating_mh1",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "role": "driver"}},
-      {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"SUFFIX": "%SUFFIX", "PLAYER_NAME": "%PLAYER_NAME", "role": "driver"}},
+      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"role": "driver"}},
+      {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"role": "driver"}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {

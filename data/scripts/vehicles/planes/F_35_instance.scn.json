@@ -109,7 +109,6 @@
             {
               "playback": "create_missile0",
               "arguments": {
-                "PLAYER_NAME": "%PLAYER_NAME",
                 "SUFFIX": "%BULLET_SUFFIX",
                 "VELOCITY": "%BULLET_VELOCITY",
                 "ANGULAR_VELOCITY": "%BULLET_ANGULAR_VELOCITY",
@@ -169,9 +168,6 @@
               "gun_node": "main_gun_end_node$SUFFIX"
             }
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -191,9 +187,6 @@
               "gun_node": "missile0_launcher_node$SUFFIX"
             }
           }
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX"
         }
       },
       {
@@ -541,13 +534,8 @@
         "required": ["%IF_WITH_PHYSICS"],
         "playback": "create_F_35_physics",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "MASS": 20000,
-          "COLLIDABLE_MODE": "moving",
-          "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
+            "MASS": 20000,
+          "COLLIDABLE_MODE": "moving"
         }
       },
       {
@@ -587,12 +575,8 @@
         "required": ["%IF_PC"],
         "playback": "create_plane_key_bindings",
         "arguments": {
-          "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
           "IF_MANUAL_AIM": false,
-          "IF_HAS_GUN": true,
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "role": "%role"
+          "IF_HAS_GUN": true
         }
       },
       {
@@ -623,43 +607,41 @@
         }
       },
       {
-        "required": ["%behavior != 'none'"],
+        "required": ["%BEHAVIOR != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/car_$behavior/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/car_$behavior/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/car_$behavior/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$behavior/collision_avoidance_step_aside_distance"
+              "waypoint_reached_radius":                 "%%driving_modes/car_$BEHAVIOR/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/car_$BEHAVIOR/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/car_$BEHAVIOR/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/car_$BEHAVIOR/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/car_$BEHAVIOR/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/car_$BEHAVIOR/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/car_$BEHAVIOR/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$BEHAVIOR/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
               "player": "%PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
-              "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
-              "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/car_$behavior/player_way_points_filter",
+              "stuck_velocity": "%%driving_modes/car_$BEHAVIOR/stuck_velocity",
+              "stuck_duration": "%%driving_modes/car_$BEHAVIOR/stuck_duration",
+              "unstuck_duration": "%%driving_modes/car_$BEHAVIOR/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/car_$BEHAVIOR/player_way_points_filter",
               "vehicle_way_points_filter": "runway_or_taxiway_or_airway"
             }
           }
         ],
         "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "behavior": "%behavior"
-        }
+            }
       }
     ]
   },
@@ -670,9 +652,7 @@
         "required": ["%IF_PC"],
         "playback": "create_car_cameras_plane",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
+              "COCKPIT_CAMERA_POSITION": [-0.4, 0.3, -0.3]
         }
       },
       {

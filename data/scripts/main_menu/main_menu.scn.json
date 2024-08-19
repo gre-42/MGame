@@ -42,20 +42,8 @@
       "call": "execute_in_physics_thread",
       "arguments": {
         "command": {
-          "playback": "change_showroom_vehicle",
-          "arguments": {
-            "VEHICLE_NAME": "%VEHICLE_NAME",
-            "VEHICLE_CLASS": "%VEHICLE_CLASS",
-            "VEHICLE_COLOR": "%VEHICLE_COLOR",
-            "DECIMATE": "%DECIMATE"
-          }
+          "playback": "change_showroom_vehicle"
         }
-      },
-      "let": {
-        "VEHICLE_NAME": "%VEHICLE_NAME",
-        "VEHICLE_CLASS": "%VEHICLE_CLASS",
-        "VEHICLE_COLOR": "%VEHICLE_COLOR",
-        "DECIMATE": "%DECIMATE"
       }
     }
   },
@@ -63,7 +51,7 @@
     "declare_macro": "_change_showroom_vehicle_in_physics_thread",
     "content": {
       "playback": "__change_showroom_vehicle_in_physics_thread",
-      "arguments": {
+      "let": {
         "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
         "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",

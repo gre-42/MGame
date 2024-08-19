@@ -28,7 +28,7 @@
     "declare_macro": "_create_showroom_vehicle",
     "content": {
       "playback": "create_$VEHICLE_CLASS",
-      "arguments": {
+      "let": {
         "HUMAN_NAME": "%VEHICLE_NAME",
         "SKATER_NAME": "%VEHICLE_NAME",
         "CAR_NAME": "%VEHICLE_NAME",
@@ -44,7 +44,6 @@
         "IF_SKATER_STYLE": true,
         "IF_CAR_BODY_RENDERABLE_STYLE": true,
         "COLOR": "%VEHICLE_COLOR",
-        "DECIMATE": "%DECIMATE",
         "SUFFIX": "",
         "IF_WITH_GRAPHICS": true,
         "IF_WITH_PHYSICS": true,
@@ -75,13 +74,7 @@
         }
       },
       {
-        "playback": "_create_showroom_vehicle",
-        "arguments": {
-          "VEHICLE_NAME": "%VEHICLE_NAME",
-          "VEHICLE_CLASS": "%VEHICLE_CLASS",
-          "VEHICLE_COLOR": "%VEHICLE_COLOR",
-          "DECIMATE": "%DECIMATE"
-        }
+        "playback": "_create_showroom_vehicle"
       }
     ]
   },
@@ -195,16 +188,10 @@
         }
       },
       {
-        "playback": "add_movables_light",
-        "arguments": {
-          "LSUFFIX": "_movables"
-        }
+        "playback": "add_movables_light"
       },
       {
-        "playback": "add_local_skidmarks",
-        "arguments": {
-          "SUFFIX": "_local_skidmarks"
-        }
+        "playback": "add_local_skidmarks"
       },
       {
         "comment": {

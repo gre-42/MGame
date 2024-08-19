@@ -9,25 +9,14 @@
           "team": "%TEAM",
           "game_mode": "%GAME_MODE",
           "unstuck_mode": "off",
-          "behavior": "%behavior",
+          "behavior": "%BEHAVIOR",
           "driving_direction": "center"
         }
       },
       { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%role" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%ROLE" } },
       {
-        "playback": "set_player_skills",
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON"
-        }
+        "playback": "set_player_skills"
       }
     ]
   },
@@ -39,21 +28,7 @@
         "arguments": {
           "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
           "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-          "HUMAN_NAME": "%HUMAN_NAME",
-          "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
           "IF_WITH_GUN": true,
-          "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "COLOR": "%COLOR",
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
           "IF_SHADOW": true
@@ -69,8 +44,7 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%role"
+          "player": "%PLAYER_NAME"
         }
       }
     ]
@@ -81,33 +55,13 @@
       {
         "playback": "create_car",
         "arguments": {
-          "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-          "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-          "VELOCITY": "%VELOCITY",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-          "CAR_NAME": "%CAR_NAME",
-          "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
-          "SPAWNER_NAME": "%SPAWNER_NAME",
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "IF_PC": true,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,
-          "COLOR": "%COLOR",
-          "HAND_BRAKE_PULLED": false,
-          "MUTE": "%MUTE"
+          "HAND_BRAKE_PULLED": false
         },
         "let": {
           "CAR_NAME": "%CAR_NAME"
@@ -123,8 +77,7 @@
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%role"
+          "player": "%PLAYER_NAME"
         }
       }
     ]
@@ -133,22 +86,7 @@
     "declare_macro": "teams.create_player_and_avatar_for_pc",
     "content": [
       {
-        "playback": "teams.create_player_for_pc",
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "TEAM": "%TEAM",
-          "GAME_MODE": "%GAME_MODE",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
-          "behavior": "%behavior",
-          "role": "%role"
-        }
+        "playback": "teams.create_player_for_pc"
       },
       {
         "call": "set_preferred_car_spawner",
@@ -156,45 +94,10 @@
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_avatar_for_pc",
-            "arguments": {
-              "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-              "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-              "VELOCITY": "%VELOCITY",
-              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-              "SUFFIX": "%SUFFIX",
-              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "role": "%role",
-
-              "HUMAN_NAME": "%HUMAN_NAME",
-              "DECIMATE": "%DECIMATE",
-              "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
-              "COLOR": "%COLOR",
-              "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-              "YAW_ERROR_STD": "%YAW_ERROR_STD",
-              "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-              "ERROR_ALPHA": "%ERROR_ALPHA",
-              "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-              "MUTE": "%MUTE"
+            "let": {
+              "DECIMATE": ""
             }
           }
-        },
-        "let": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "HUMAN_NAME": "%HUMAN_NAME",
-          "DECIMATE": "",
-          "IF_HUMAN_STYLE": "%IF_HUMAN_STYLE",
-          "COLOR": "%COLOR",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-          "MUTE": "%MUTE"
         }
       },
       {
@@ -212,23 +115,7 @@
     "declare_macro": "teams.create_player_and_car_for_pc",
     "content": [
       {
-        "playback": "teams.create_player_for_pc",
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "TEAM": "%TEAM",
-          "GAME_MODE": "%GAME_MODE",
-          "USER_DRIVE": "%USER_DRIVE",
-          "USER_AIM": "%USER_AIM",
-          "USER_SHOOT": "%USER_SHOOT",
-          "AI_DRIVE": "%AI_DRIVE",
-          "AI_AIM": "%AI_AIM",
-          "AI_SHOOT": "%AI_SHOOT",
-          "AI_SELECT_OPPONENT": "%AI_SELECT_OPPONENT",
-          "AI_SELECT_WEAPON": "%AI_SELECT_WEAPON",
-          "MUTE": "%MUTE",
-          "behavior": "%behavior",
-          "role": "%role"
-        }
+        "playback": "teams.create_player_for_pc"
       },
       {
         "call": "set_preferred_car_spawner",
@@ -236,45 +123,10 @@
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "teams.create_car_for_pc",
-            "arguments": {
-              "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-              "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-              "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-              "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
-              "VELOCITY": "%VELOCITY",
-              "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
-              "SUFFIX": "%SUFFIX",
-              "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-              "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "role": "%role",
-
-              "CAR_NAME": "%CAR_NAME",
-              "DECIMATE": "",
-              "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
-              "COLOR": "%COLOR",
-              "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-              "YAW_ERROR_STD": "%YAW_ERROR_STD",
-              "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-              "ERROR_ALPHA": "%ERROR_ALPHA",
-              "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-              "MUTE": "%MUTE"
+            "let": {       
+              "DECIMATE": ""
             }
           }
-        },
-        "let": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "CAR_NAME": "%CAR_NAME",
-          "DECIMATE": "",
-          "IF_CAR_BODY_RENDERABLE_STYLE": "%IF_CAR_BODY_RENDERABLE_STYLE",
-          "COLOR": "%COLOR",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-          "MUTE": "%MUTE"
         }
       },
       {

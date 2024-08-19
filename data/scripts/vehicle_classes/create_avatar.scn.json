@@ -33,25 +33,10 @@
         }
       },
       {
-        "playback": "create_$HUMAN_NAME",
-        "arguments": {
-          "DECIMATE": "%DECIMATE",
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-          "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-          "IF_WITH_GUN": "%IF_WITH_GUN",
-          "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-          "YAW_ERROR_STD": "%YAW_ERROR_STD",
-          "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-          "ERROR_ALPHA": "%ERROR_ALPHA",
-          "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME"
-        }
+        "playback": "create_$HUMAN_NAME"
       },
       {
-        "playback": "create_avatar_cameras_persistent",
-        "arguments": {
-          "SUFFIX": "%SUFFIX"
-        }
+        "playback": "create_avatar_cameras_persistent"
       },
       {
         "required": ["%IF_SPAWNER"],
@@ -80,29 +65,12 @@
           "externals": {
             "playback": "create_player_avatar_externals",
             "arguments": {
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "IF_PC": "%IF_PC",
-              "behavior": "%behavior"
             }
           },
           "internals": {
-            "playback": "create_player_avatar_internals",
-            "arguments": {
-              "SPAWNER_NAME": "%SPAWNER_NAME",
-              "PLAYER_NAME": "%PLAYER_NAME",
-              "IF_MANUAL_AIM": "%IF_MANUAL_AIM",
-              "IF_MANUAL_SHOOT": "%IF_MANUAL_SHOOT",
-              "IF_MANUAL_DRIVE": "%IF_MANUAL_DRIVE",
-              "IF_PC": "%IF_PC",
-              "behavior": "%behavior"
-            }
+            "playback": "create_player_avatar_internals"
           },
           "spawner": "%SPAWNER_NAME"
-        },
-        "let": {
-          "SUFFIX": "%SUFFIX",
-          "IF_WITH_GUN": "%IF_WITH_GUN"
         }
       },
       {
@@ -123,11 +91,7 @@
     "content": [
       {
         "required": ["%IF_PC"],
-        "playback": "create_avatar_cameras_pc",
-        "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME"
-        }
+        "playback": "create_avatar_cameras_pc"
       }
     ]
   },
@@ -135,18 +99,12 @@
     "declare_macro": "create_player_avatar_internals",
     "content": [
       {
-        "playback": "create_player_avatar_internals_$HUMAN_NAME",
-        "arguments": {
-          "PLAYER_NAME": "%PLAYER_NAME",
-          "behavior": "%behavior"
-        }
+        "playback": "create_player_avatar_internals_$HUMAN_NAME"
       },
       {
         "required": ["%IF_PC"],
         "playback": "create_avatar_key_bindings",
         "arguments": {
-          "SUFFIX": "%SUFFIX",
-          "PLAYER_NAME": "%PLAYER_NAME",
           "role": "driver"
         }
       },

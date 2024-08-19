@@ -103,16 +103,8 @@
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d$SUFFIX", "DECIMATE": "_d"}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
       {"required": ["%IF_WITH_PHYSICS"], "playback": "create_C_RAM_physics", "arguments": {
-        "SUFFIX": "%SUFFIX",
         "MASS": 56e3,
-        "COLLIDABLE_MODE": "moving",
-        "HAND_BRAKE_PULLED": "%HAND_BRAKE_PULLED",
-        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-        "YAW_ERROR_STD": "%YAW_ERROR_STD",
-        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-        "ERROR_ALPHA": "%ERROR_ALPHA",
-        "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-        "MUTE": "%MUTE"
+        "COLLIDABLE_MODE": "moving"
       }}
     ]
   },
@@ -123,10 +115,7 @@
   {
     "declare_macro": "create_player_car_externals_C_RAM",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank", "arguments": {
-        "SUFFIX": "%SUFFIX",
-        "PLAYER_NAME": "%PLAYER_NAME"
-      }},
+      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank"},
       {"call": "player_set_aiming_gun", "arguments": {
         "player": "%PLAYER_NAME",
         "gun_node": "main_gun_end_node$SUFFIX"}}

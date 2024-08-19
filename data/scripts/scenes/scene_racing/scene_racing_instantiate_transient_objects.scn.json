@@ -7,15 +7,10 @@
     {
       "required": ["%IF_CREATE_PC_CAR"],
       "playback":  "create_$$vehicles/$SELECTED_VEHICLE_ID/CLASS",
-      "arguments": {
+      "let": {
         "HUMAN_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "SKATER_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-        "SKATER_NODE_POSITION": "%SKATER_NODE_POSITION",
-        "CAR_NODE_POSITION": "%CAR_NODE_POSITION",
-        "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
-        "SKATER_NODE_ANGLE_Y": "%SKATER_NODE_ANGLE_Y",
-        "CAR_NODE_ANGLES": "%CAR_NODE_ANGLES",
+        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
         "VELOCITY": "%VEHICLE_VELOCITY",
         "ANGULAR_VELOCITY": "%VEHICLE_ANGULAR_VELOCITY",
         "IF_HUMAN_STYLE": true,
@@ -27,27 +22,18 @@
         "IF_WITH_GRAPHICS": true,
         "IF_WITH_PHYSICS": true,
         "IF_WITH_GUN": false,
-        "IF_MANUAL_DRIVE": "!IF_PC_PLAYER_PLAYBACK",
-        "IF_MANUAL_AIM": false,
         "HAND_BRAKE_PULLED": false,
         "MUTE": false,
         "VELOCITY_ERROR_STD": 0,
         "YAW_ERROR_STD": 0,
         "PITCH_ERROR_STD": 0,
-        "ERROR_ALPHA": 1,
         "RESPAWN_COOLDOWN_TIME": 0,
         "IF_SHADOW": true,
         "IF_PLAYBACK_TRACK": false,
         "IF_PLAYBACK_WINNER": false,
         "IF_SPAWNER": true,
-        "IF_PLAYER": true,
         "IF_DAMAGEABLE": false,
-        "SPAWNER_NAME": "you",
-        "PLAYER_NAME": "you",
-        "IF_PC": true
-      },
-      "let": {
-        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX"
+        "SPAWNER_NAME": "you"
       }
     },
     {

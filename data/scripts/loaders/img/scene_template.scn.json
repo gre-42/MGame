@@ -133,7 +133,7 @@
       { "playback": "scene_racing_setup_new_round" },
       {
         "playback": "scene_racing_instantiate_transient_objects",
-        "arguments": {
+        "let": {
           "IF_CREATE_PC_CAR": true,
           "IF_PC_PLAYER_PLAYBACK": false,
           "CAR_NODE_POSITION": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_POSITION",

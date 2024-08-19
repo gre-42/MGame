@@ -4,18 +4,9 @@
     "declare_macro": "create_female_mh",
     "content": {
       "playback": "generic_avatar.create",
-      "arguments": {
+      "let": {
         "ASSET_ID": "female_mh",
-        "DECIMATE": "_d2",
-        "SUFFIX": "%SUFFIX",
-        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-        "YAW_ERROR_STD": "%YAW_ERROR_STD",
-        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-        "ERROR_ALPHA": "%ERROR_ALPHA",
-        "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-        "IF_WITH_GUN": "%IF_WITH_GUN"
+        "DECIMATE": "_d2"
       }
     }
   },
@@ -24,40 +15,23 @@
     "declare_macro": "create_female_skirt",
     "content": {
       "playback": "generic_avatar.create",
-      "arguments": {
+      "let": {
         "ASSET_ID": "female_skirt",
-        "DECIMATE": "_d2",
-        "SUFFIX": "%SUFFIX",
-        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-        "VELOCITY_ERROR_STD": "%VELOCITY_ERROR_STD",
-        "YAW_ERROR_STD": "%YAW_ERROR_STD",
-        "PITCH_ERROR_STD": "%PITCH_ERROR_STD",
-        "ERROR_ALPHA": "%ERROR_ALPHA",
-        "RESPAWN_COOLDOWN_TIME": "%RESPAWN_COOLDOWN_TIME",
-        "IF_WITH_GUN": "%IF_WITH_GUN"
+        "DECIMATE": "_d2"
       }
     }
   },
   {
     "declare_macro": "create_player_avatar_internals_female_mh",
     "content": {
-      "playback": "generic_avatar.create_player_internals",
-      "arguments": {
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "behavior": "%behavior"
-      }
+      "playback": "generic_avatar.create_player_internals"
     }
   },
   {
     "exclude": ["%IF_ANDROID"],
     "declare_macro": "create_player_avatar_internals_female_skirt",
     "content": {
-      "playback": "generic_avatar.create_player_internals",
-      "arguments": {
-        "PLAYER_NAME": "%PLAYER_NAME",
-        "behavior": "%behavior"
-      }
+      "playback": "generic_avatar.create_player_internals"
     }
   },
   {
