@@ -73,8 +73,8 @@
     "declare_macro": "teams.create_car_for_npc",
     "content": [
       {
-        "let": "create_car",
-        "arguments": {
+        "playback": "create_car",
+        "let": {
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,

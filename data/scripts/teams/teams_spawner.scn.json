@@ -4,7 +4,7 @@
     "content": [
       {
         "playback": "create_avatar",
-        "arguments": {
+        "let": {
           "IF_WITH_GUN": true,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
@@ -18,7 +18,7 @@
     "content": [
       {
         "playback": "create_car",
-        "arguments": {
+        "let": {
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,

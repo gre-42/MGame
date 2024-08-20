@@ -2,19 +2,19 @@
   {
     "declare_macro": "create_tiger_tank_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Left|Right|Hull"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Machine_Gun|Main_Turret|Hatch"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "Tiger$DECIMATE", "included_names": "Main_Gun"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_0_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_0_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_1_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_1_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_2_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_2_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_3_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_3_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_left_4_node$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$SUFFIX", "node": "wheel_right_4_node_visual$NODE_SUFFIX", "resource": "M3/M3_wheel-DECIMATE"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$suffix", "node": "car_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Left|Right|Hull"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Machine_Gun|Main_Turret|Hatch"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Main_Gun"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_0_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_0_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_1_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_1_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_2_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_2_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_3_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_3_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_4_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_4_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}}
     ]
   },
   {
@@ -150,6 +150,9 @@
   },
   {
     "declare_macro": "create_tiger_tank",
+    "let": {
+      "DECIMATE": ""
+    },
     "content": [
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_0_node$SUFFIX",  "position": [-1.8, -0.0, -2.4]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_0_node$SUFFIX", "position": [ 1.8, -0.0, -2.4]}},
@@ -189,8 +192,8 @@
         "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=tiger_tank_hitbox"]
       },
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d3$SUFFIX", "DECIMATE": "_d3"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d3$SUFFIX", "decimate": "_d3"}},
       {"required": ["%IF_WITH_PHYSICS"], "playback": "create_tiger_tank_physics", "arguments": {
         "MASS": 56e3,
         "COLLIDABLE_MODE": "moving"

@@ -101,7 +101,7 @@
     "content": [
       {
         "playback": "create_car",
-        "arguments": {
+        "let": {
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
           "IF_SPAWNER": true,
@@ -159,9 +159,8 @@
           "macro": {
             "playback": "traffic.create_avatar",
             "arguments": {
-                        
               "HUMAN_NAME":"%HUMAN_NAME",
-                  "DECIMATE":"_d2",
+              "DECIMATE":"_d2",
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
@@ -189,8 +188,7 @@
           "macro": {
             "playback": "traffic.create_car",
             "arguments": {
-                                
-                  "DECIMATE": "",
+              "DECIMATE": "",
               "HAND_BRAKE_PULLED": true,
               "MUTE": false,
               "RESPAWN_COOLDOWN_TIME": 0
@@ -228,8 +226,7 @@
           "macro": {
             "playback": "traffic.create_car",
             "arguments": {
-                                
-                  "DECIMATE": "",
+              "DECIMATE": "",
               "HAND_BRAKE_PULLED": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
