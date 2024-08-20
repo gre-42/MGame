@@ -5,8 +5,6 @@
       {
         "playback": "create_avatar",
         "arguments": {
-          "HUMAN_NODE_POSITION": "%HUMAN_NODE_POSITION",
-          "HUMAN_NODE_ANGLE_Y": "%HUMAN_NODE_ANGLE_Y",
           "IF_WITH_GUN": true,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
@@ -41,11 +39,8 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_avatar_for_pc"
+            "playback": "teams.create_avatar_for_spawner"
           }
-        },
-        "let": {
-          "DECIMATE": ""
         }
       }
     ]
@@ -59,10 +54,7 @@
         "arguments": {
           "spawner": "%SPAWNER_NAME",
           "macro": {
-            "playback": "teams.create_car_for_spawner",
-            "let": {
-              "DECIMATE": ""
-            }
+            "playback": "teams.create_car_for_spawner"
           }
         }
       }
