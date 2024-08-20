@@ -2,19 +2,19 @@
   {
     "declare_macro": "create_F_35_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Mesh_*"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35$suffix", "node": "car_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Mesh_*"}},
       {"comment": "Ailerons"},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_front_aileron$SUFFIX", "node": "left_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Front_Aileron"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_front_aileron$SUFFIX", "node": "right_front_aileron_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Front_Aileron"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_front_aileron$suffix", "node": "left_front_aileron_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Left_Front_Aileron"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_front_aileron$suffix", "node": "right_front_aileron_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Right_Front_Aileron"}},
       {"comment": "Flaps"},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_flap$SUFFIX", "node": "left_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Flap"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_flap$SUFFIX", "node": "right_flap_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Flap"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_flap$suffix", "node": "left_flap_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Left_Flap"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_flap$suffix", "node": "right_flap_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Right_Flap"}},
       {"comment": "Rear wings"},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_rear_wing$SUFFIX", "node": "left_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rear_Wing"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_rear_wing$SUFFIX", "node": "right_rear_wing_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rear_Wing"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_rear_wing$suffix", "node": "left_rear_wing_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Left_Rear_Wing"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_rear_wing$suffix", "node": "right_rear_wing_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Right_Rear_Wing"}},
       {"comment": "Rudders"},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_rudder$SUFFIX", "node": "left_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Left_Rudder"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_rudder$SUFFIX", "node": "right_rudder_shift_node$NODE_SUFFIX", "resource": "F_35$DECIMATE", "included_names": "^Right_Rudder"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_left_rudder$suffix", "node": "left_rudder_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Left_Rudder"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "F_35_right_rudder$suffix", "node": "right_rudder_shift_node$node_suffix", "resource": "F_35$decimate", "included_names": "^Right_Rudder"}}
     ]
   },
   {
@@ -483,6 +483,9 @@
   },
   {
     "declare_macro": "create_F_35",
+    "let": {
+      "DECIMATE": ""
+    },
     "content": [
       {"comment": "Wheels"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-0.7, -0.45, -1.35]}},
@@ -520,8 +523,8 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "DECIMATE": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d1$SUFFIX", "DECIMATE": "_d1"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d1$SUFFIX", "decimate": "_d1"}},
       {"comment": [
         "IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node$SUFFIX name=gizmo_node$SUFFIX position=0 0 0 rotation=0 0 0 scale=1",
         "IF_WITH_GRAPHICS renderable_instance name=gizmo node=gizmo_node$SUFFIX resource=gizmo",

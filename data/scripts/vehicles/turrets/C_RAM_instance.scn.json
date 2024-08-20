@@ -2,9 +2,9 @@
   {
     "declare_macro": "create_C_RAM_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "chassis$SUFFIX", "node": "car_node$NODE_SUFFIX", "resource": "C_RAM$decimate", "included_names": "^Base$"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$SUFFIX", "node": "turret_shift_node$NODE_SUFFIX", "resource": "C_RAM$decimate", "included_names": "Yaw"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$SUFFIX", "node": "main_gun_shift_node$NODE_SUFFIX", "resource": "C_RAM$decimate", "included_names": "Gun"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$suffix", "node": "car_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "^Base$"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "Yaw"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "Gun"}}
     ]
   },
   {
@@ -102,8 +102,8 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -0.2, 0]}},
 
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -10]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"NODE_SUFFIX": "%SUFFIX", "SUFFIX": "_d$SUFFIX", "decimate": "_d"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d$SUFFIX", "decimate": "_d"}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
       {"required": ["%IF_WITH_PHYSICS"], "playback": "create_C_RAM_physics", "arguments": {
         "MASS": 56e3,
