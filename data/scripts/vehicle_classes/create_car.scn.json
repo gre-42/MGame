@@ -134,14 +134,14 @@
           "top": "player_status_top",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME"
         }
       },
       {
         "required": ["%IF_PC"],
         "call": "visual_player_status",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "format": "speed",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_speed_left",
@@ -166,7 +166,7 @@
         "required": ["%IF_PC", "%MINIMAP_FILE != %null"],
         "call": "minimap",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "left": "minimap_widget_left",
           "right": "minimap_widget_right",
           "bottom": "minimap_widget_bottom",
@@ -191,7 +191,7 @@
           "top": "bullet_count_top",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME"
         }
       }
     ]
@@ -221,7 +221,7 @@
             "blank_angle": 60,
             "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
           },
-          "player": "%PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME"
         }
       }
     ]

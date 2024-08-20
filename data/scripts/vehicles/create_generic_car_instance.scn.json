@@ -318,7 +318,7 @@
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/$ASSET_ID/MAX_TIRE_ANGLE",

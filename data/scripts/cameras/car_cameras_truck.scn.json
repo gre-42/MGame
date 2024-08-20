@@ -25,9 +25,9 @@
     {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["'45_deg_camera'", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
     {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["follower_camera", "cockpit_camera"]}},
     {"call": "set_camera", "arguments": {"name": "follower_camera"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%PLAYER_NAME", "node": "'45_deg_camera'"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%PLAYER_NAME", "node": "follower_camera"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%PLAYER_NAME", "node": "cockpit_camera"}},
+    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "'45_deg_camera'"}},
+    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "follower_camera"}},
+    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "cockpit_camera"}},
     {"call": "set_node_hider", "arguments": {"node_to_hide": "car_node$SUFFIX", "camera_node": "cockpit_camera"}}
   ]
 }

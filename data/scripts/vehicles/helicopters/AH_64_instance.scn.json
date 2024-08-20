@@ -322,7 +322,7 @@
         "required": ["%IF_PC"],
         "call": "hud_target_point",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "exclusive_node": "main_gun_camera_node$SUFFIX",
           "ypln_node": "turret_node$SUFFIX",
@@ -347,14 +347,14 @@
       {
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/AH_64/MAX_TIRE_ANGLE",

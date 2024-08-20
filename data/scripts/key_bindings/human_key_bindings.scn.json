@@ -4,7 +4,7 @@
     {
       "call": "avatar_controller_idle_binding",
       "arguments": {
-        "player": "%PLAYER_NAME",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX"
       }
     },
@@ -25,8 +25,8 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "avatar.jump",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "wants_to_jump": true
       }
@@ -35,8 +35,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_left",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
         "legs_z": [-1, 0, 0]
@@ -46,8 +46,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_right",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
         "legs_z": [1, 0, 0]
@@ -57,8 +57,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_left",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
         "press_factor": 0.1,
@@ -71,8 +71,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_right",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "yaw": true,
         "press_factor": 0.1,
@@ -85,8 +85,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.forward",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
         "legs_z": [0, 0, -1]
@@ -96,8 +96,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.backwards",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "surface_power": "inf",
         "legs_z": [0, 0, 1]
@@ -107,8 +107,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_up",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
         "press_factor": 0.1,
@@ -121,8 +121,8 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_down",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "human_node$SUFFIX",
         "pitch": true,
         "press_factor": 0.1,
@@ -135,8 +135,8 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.next_weapon",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "weapon_increment": 1
       }
     },
@@ -144,8 +144,8 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.previous_weapon",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "weapon_increment": -1
       }
     },
@@ -153,16 +153,16 @@
       "call": "gun_key_binding",
       "arguments": {
         "id": "avatar.shoot",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME"
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME"
       }
     },
     {
       "call": "player_key_binding",
       "arguments": {
         "id": "avatar.select_next_vehicle",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "select_next_vehicle": true
       }
     }

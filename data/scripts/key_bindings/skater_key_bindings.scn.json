@@ -14,8 +14,8 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_left",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": 3,
@@ -27,8 +27,8 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_right",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": -3,
@@ -51,8 +51,8 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.jump",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_jump": true
       }
@@ -61,8 +61,8 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.grind",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "wants_to_grind": true
       }
@@ -71,8 +71,8 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.forward",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "fly_forward_factor": 100
       }
@@ -81,8 +81,8 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "skater.brake",
-        "role": "%ROLE",
-        "player": "%PLAYER_NAME",
+        "role": "%EXTERNALS_ROLE",
+        "player": "%EXTERNALS_PLAYER_NAME",
         "node": "skater_node$SUFFIX",
         "surface_power": "nan"
       }

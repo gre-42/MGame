@@ -158,9 +158,7 @@
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "traffic.create_avatar",
-            "arguments": {
-              "HUMAN_NAME":"%HUMAN_NAME",
-              "DECIMATE":"_d2",
+            "let": {
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
@@ -187,8 +185,7 @@
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "traffic.create_car",
-            "arguments": {
-              "DECIMATE": "",
+            "let": {
               "HAND_BRAKE_PULLED": true,
               "MUTE": false,
               "RESPAWN_COOLDOWN_TIME": 0
@@ -226,7 +223,6 @@
           "macro": {
             "playback": "traffic.create_car",
             "arguments": {
-              "DECIMATE": "",
               "HAND_BRAKE_PULLED": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }

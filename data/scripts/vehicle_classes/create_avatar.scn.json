@@ -110,7 +110,7 @@
         "call": "hud_target_point",
         "required": ["%IF_PC"],
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX",
           "exclusive_node": null,
           "ypln_node": "human_node$SUFFIX",
@@ -124,7 +124,7 @@
         "call": "visual_player_bullet_count",
         "required": ["%IF_PC"],
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "left": "bullet_count_left",
           "right": "bullet_count_right",
           "bottom": "bullet_count_bottom",
@@ -137,7 +137,7 @@
         "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
@@ -146,7 +146,7 @@
         "arguments": {
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "max_tire_angle": "%%vehicles/$HUMAN_NAME/MAX_TIRE_ANGLE"
         }
       }
