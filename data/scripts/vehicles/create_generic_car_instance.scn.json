@@ -370,7 +370,7 @@
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%PLAYER_NAME",
+              "player": "%EXTERNALS_PLAYER_NAME",
               "stuck_velocity": "%%driving_modes/car_$BEHAVIOR/stuck_velocity",
               "stuck_duration": "%%driving_modes/car_$BEHAVIOR/stuck_duration",
               "unstuck_duration": "%%driving_modes/car_$BEHAVIOR/unstuck_duration",
