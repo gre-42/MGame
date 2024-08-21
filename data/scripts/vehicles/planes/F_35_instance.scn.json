@@ -164,7 +164,7 @@
           "create": {
             "call": "player_change_aiming_gun",
             "arguments": {
-              "player": "%PLAYER_NAME",
+              "player": "%WEAPON_DEMANDER",
               "gun_node": "main_gun_end_node$SUFFIX"
             }
           }
@@ -183,7 +183,7 @@
           "create": {
             "call": "player_change_aiming_gun",
             "arguments": {
-              "player": "%PLAYER_NAME",
+              "player": "%WEAPON_DEMANDER",
               "gun_node": "missile0_launcher_node$SUFFIX"
             }
           }
@@ -578,7 +578,6 @@
         "required": ["%IF_PC"],
         "playback": "create_plane_key_bindings",
         "arguments": {
-          "IF_MANUAL_AIM": false,
           "IF_HAS_GUN": true
         }
       },
@@ -586,7 +585,7 @@
         "required": ["%IF_PC"],
         "call": "hud_opponent_tracker",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "exclusive_node": null,
           "update": "once",
           "center": [0, 0],
@@ -598,7 +597,7 @@
         "call": "hud_opponent_zoom",
         "required": ["%IF_PC"],
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "exclusive_node": null,
           "left": "opponent_zoom_left",
           "right": "opponent_zoom_right",
@@ -615,7 +614,7 @@
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%PLAYER_NAME",
+              "player": "%EXTERNALS_PLAYER_NAME",
               "waypoint_reached_radius":                 "%%driving_modes/car_$BEHAVIOR/waypoint_reached_radius",
               "rest_radius":                             "%%driving_modes/car_$BEHAVIOR/rest_radius",
               "lookahead_velocity":                      "%%driving_modes/car_$BEHAVIOR/lookahead_velocity",
@@ -661,14 +660,14 @@
       {
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "gun_node": "main_gun_end_node$SUFFIX"
         }
       },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",

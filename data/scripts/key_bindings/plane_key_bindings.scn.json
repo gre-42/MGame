@@ -6,7 +6,7 @@
         "required": ["%IF_MANUAL_DRIVE"],
         "call": "car_controller_idle_binding",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX"
         }
       },
@@ -16,7 +16,7 @@
         "arguments": {
           "id": "plane.steer_left",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "steer_left_amount": 1
         }
@@ -27,7 +27,7 @@
         "arguments": {
           "id": "plane.steer_right",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "steer_left_amount": -1
         }
@@ -36,7 +36,7 @@
         "required": ["%IF_MANUAL_DRIVE"],
         "call": "plane_controller_idle_binding",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX"
         }
       },
@@ -46,7 +46,7 @@
         "arguments": {
           "id": "plane.roll_left",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "roll": -5
         }
@@ -57,7 +57,7 @@
         "arguments": {
           "id": "plane.roll_right",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "roll": 5
         }
@@ -68,7 +68,7 @@
         "arguments": {
           "id": "plane.pitch_up",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "pitch": 10
         }
@@ -79,7 +79,7 @@
         "arguments": {
           "id": "plane.pitch_down",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "pitch": -10
         }
@@ -101,7 +101,7 @@
         "arguments": {
           "id": "plane.forward",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "turbine_power": "inf"
         }
@@ -112,7 +112,7 @@
         "arguments": {
           "id": "plane.brake",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "brake": 20
         }
@@ -123,7 +123,7 @@
         "arguments": {
           "id": "plane.yaw_left",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "yaw": -20
         }
@@ -134,7 +134,7 @@
         "arguments": {
           "id": "plane.yaw_right",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "node": "car_node$SUFFIX",
           "yaw": 20
         }
@@ -144,7 +144,7 @@
         "arguments": {
           "id": "plane.next_weapon",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "weapon_increment": 1
         }
       },
@@ -153,7 +153,7 @@
         "arguments": {
           "id": "plane.previous_weapon",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "weapon_increment": -1
         }
       },
@@ -163,7 +163,7 @@
         "arguments": {
           "id": "plane.shoot",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME"
         }
       },
       {
@@ -173,7 +173,7 @@
         "arguments": {
           "id": "plane.select_next_opponent",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "select_next_opponent": true
         }
       },
@@ -182,7 +182,7 @@
         "arguments": {
           "id": "plane.select_next_vehicle",
           "role": "%ROLE",
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "select_next_vehicle": true
         }
       }
