@@ -108,12 +108,9 @@
           "generate_smart_bullet": [
             {
               "playback": "create_missile0",
-              "arguments": {
-                "SUFFIX": "%BULLET_SUFFIX",
-                "VELOCITY": "%BULLET_VELOCITY",
-                "ANGULAR_VELOCITY": "%BULLET_ANGULAR_VELOCITY",
-                "IF_WITH_GRAPHICS": true,
-                "IF_WITH_PHYSICS": true
+              "let": {
+                "IF_WITH_GRAPHICS_BULLET": true,
+                "IF_WITH_PHYSICS_BULLET": true
               }
             },
             {
@@ -145,7 +142,7 @@
               "call": "create_vehicle_follower_ai",
               "arguments": {
                 "missile": "car_node$BULLET_SUFFIX",
-                "target": "%TARGET"
+                "target": "%BULLET_TARGET"
               }
             }
           ]

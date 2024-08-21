@@ -168,7 +168,6 @@
       },
       {
         "required": ["%IF_HAS_GUN"],
-        "exclude": ["%IF_MANUAL_AIM"],
         "call": "player_key_binding",
         "arguments": {
           "id": "plane.select_next_opponent",
