@@ -3,11 +3,8 @@
     "declare_macro": "create_TNo2",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "TNo2",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [2.2, 2.6, 7],
         "COM": [0, 1.3, 0],
@@ -40,7 +37,7 @@
     "declare_macro": "create_player_car_internals_TNo2",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "TNo2"
       }
     }
@@ -49,9 +46,8 @@
     "declare_macro": "create_player_car_externals_TNo2",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "TNo2",
-
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
       }

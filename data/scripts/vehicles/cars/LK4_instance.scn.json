@@ -3,11 +3,8 @@
     "declare_macro": "create_LK4",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "LK4",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [1.7, 1.2, 4.1],
         "COM": [0, -0.2, -0.2],
@@ -40,7 +37,7 @@
     "declare_macro": "create_player_car_internals_LK4",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "LK4"
       }
     }
@@ -49,9 +46,8 @@
     "declare_macro": "create_player_car_externals_LK4",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "LK4",
-
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.5, -0.1]
       }

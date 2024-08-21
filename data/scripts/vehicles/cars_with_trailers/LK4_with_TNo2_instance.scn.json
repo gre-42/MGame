@@ -48,7 +48,7 @@
     "declare_macro": "create_player_car_internals_LK4_with_TNo2",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "LK4_with_TNo2"
       }
     }
@@ -57,9 +57,8 @@
     "declare_macro": "create_player_car_externals_LK4_with_TNo2",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "LK4_with_TNo2",
-
         "CAMERA_CLASS": "car_with_trailer",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.5, -0.1]
       }

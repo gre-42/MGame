@@ -3,11 +3,8 @@
     "declare_macro": "create_XZ",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "XZ",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [1.8, 1, 4.6],
         "COM": [0, -0.2, 0.2],
@@ -40,7 +37,7 @@
     "declare_macro": "create_player_car_internals_XZ",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "XZ"
       }
     }
@@ -49,9 +46,8 @@
     "declare_macro": "create_player_car_externals_XZ",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "XZ",
-
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.45, 0.45, 0.1]
       }

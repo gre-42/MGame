@@ -3,11 +3,8 @@
     "declare_macro": "create_TW",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "TW",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [3, 2, 6.8],
         "COM": [0, 0, 0],
@@ -40,7 +37,7 @@
     "declare_macro": "create_player_car_internals_TW",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "TW"
       }
     }
@@ -49,9 +46,8 @@
     "declare_macro": "create_player_car_externals_TW",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "TW",
-
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.5, 0.55, 0.2]
       }

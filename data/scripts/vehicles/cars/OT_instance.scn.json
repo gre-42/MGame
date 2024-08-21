@@ -3,11 +3,8 @@
     "declare_macro": "create_OT",
     "content": {
       "playback": "generic_car.create",
-      "arguments": {
+      "let": {
         "NAME": "OT",
-        "MUTE": "%MUTE",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY",
 
         "SIZE": [1.8, 1.5, 4.5],
         "COM": [0, 0, 0],
@@ -40,7 +37,7 @@
     "declare_macro": "create_player_car_internals_OT",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "OT"
       }
     }
@@ -49,9 +46,8 @@
     "declare_macro": "create_player_car_externals_OT",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "OT",
-
         "CAMERA_CLASS": "truck",
         "COCKPIT_CAMERA_POSITION": [-0.4, 1.5, -0.1]
       }

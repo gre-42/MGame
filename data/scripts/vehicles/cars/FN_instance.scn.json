@@ -44,9 +44,8 @@
     "declare_macro": "create_player_car_externals_FN",
     "content": {
       "playback": "generic_car.create_player_externals",
-      "arguments": {
+      "let": {
         "ASSET_ID": "FN",
-
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
       }
