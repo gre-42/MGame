@@ -1,6 +1,6 @@
 [
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_audio_sequence",
     "arguments": {
       "name": "car0.driving",

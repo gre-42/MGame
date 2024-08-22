@@ -1,6 +1,6 @@
 [
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007",
@@ -93,7 +93,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_No_Lines",

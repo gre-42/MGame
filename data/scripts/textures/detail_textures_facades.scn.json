@@ -1,6 +1,6 @@
 [
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Bricks058_Base",
@@ -17,7 +17,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Base",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Gray_Base",
@@ -68,7 +68,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Concrete020_Base",

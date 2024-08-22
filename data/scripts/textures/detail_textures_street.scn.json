@@ -68,7 +68,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_No_Lines_Detail_Base",

@@ -41,7 +41,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003",
@@ -52,7 +52,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_Gray",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_White",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Concrete020",
@@ -111,7 +111,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Asphalt015",
@@ -572,7 +572,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "concrete1_2K_wh",
@@ -607,7 +607,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "fence1",
