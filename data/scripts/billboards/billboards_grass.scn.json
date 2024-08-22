@@ -298,7 +298,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_Sl_low",
@@ -418,7 +417,6 @@
     ]
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
     "arguments": {
       "name": "bflower",
@@ -437,7 +435,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
     "arguments": {
       "name": "bflower2",

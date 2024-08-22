@@ -5,9 +5,8 @@ cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 seed=1
 for i in {0..3}; do
     for steps in 5; do
-        make -C /home/kl/MySrc/mlib release
-        mSeed=$seed mTreeSteps=$steps mTrunkLength=1.5 mLevels=5 mTwigScale=0.25 mDropAmount=0 mMaxRadius=0.1 /home/kl/MySrc/mlib/URelease/Apps/Proc_Tree/proc_tree
-        /home/kl/MySrc/mlib/URelease/Apps/Render_Obj_File/render_obj_file \
+        mSeed=$seed mTreeSteps=$steps mTrunkLength=1.5 mLevels=5 mTwigScale=0.25 mDropAmount=0 mMaxRadius=0.1 proc_tree
+        render_obj_file \
             tree.obj \
             --nsamples_msaa 0 \
             --blend_mode binary \
