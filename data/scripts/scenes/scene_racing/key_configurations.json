@@ -49,30 +49,22 @@
     "unique": "car_or_heli",
     "id": "car_or_heli.steer_left",
     "key": "A",
-    "analog_digital_axes": {"default": {
-      "joystick": {"axis": "1", "sign_and_threshold": -0.5},
-      "tap"     : {"axis": "1", "sign_and_threshold": -0.5}
-    }},
     "tap_button": "LEFT",
     "not_gamepad_button": "B",
     "analog_axes": {"default": {
       "joystick": {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01},
-      "tap"     : {"axis": "1", "sign_and_scale": -1, "deadzone": 0.01}
+      "tap"     : {"axis": "1", "sign_and_scale": -1.2}
     }}
   },
   {
     "unique": "car_or_heli",
     "id": "car_or_heli.steer_right",
     "key": "D",
-    "analog_digital_axes": {"default": {
-      "joystick": {"axis": "1", "sign_and_threshold": 0.5},
-      "tap"     : {"axis": "1", "sign_and_threshold": 0.5}
-    }},
     "tap_button": "RIGHT",
     "not_gamepad_button": "B",
     "analog_axes": {"default": {
       "joystick": {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01},
-      "tap"     : {"axis": "1", "sign_and_scale": 1, "deadzone": 0.01}
+      "tap"     : {"axis": "1", "sign_and_scale": 1.2}
     }}
   },
   {
@@ -80,15 +72,11 @@
     "id": "car_or_heli.forward",
     "key": "W",
     "gamepad_button": "X",
-    "analog_digital_axes": {"default": {
-      "joystick": {"axis": "4", "sign_and_threshold": -0.5},
-      "tap"     : {"axis": "4", "sign_and_threshold": -0.5}
-    }},
     "tap_button": "UP",
     "not_gamepad_button": "B",
     "analog_axes": {"driver": {
       "joystick": {"axis": "6", "sign_and_scale": 0},
-      "tap"     : {"axis": "6", "sign_and_scale": 0}
+      "tap"     : {"axis": "4", "sign_and_scale": -1.2}
     }}
   },
   {
@@ -96,15 +84,11 @@
     "id": "car_or_heli.backwards",
     "key": "S",
     "gamepad_button": "A",
-    "analog_digital_axes": {"default": {
-      "joystick": {"axis": "4", "sign_and_threshold": 0.5},
-      "tap"     : {"axis": "4", "sign_and_threshold": 0.5}
-    }},
     "tap_button": "DOWN",
     "not_gamepad_button": "B",
     "analog_axes": {"driver": {
       "joystick": {"axis": "5", "sign_and_scale": 0},
-      "tap"     : {"axis": "5", "sign_and_scale": 0}
+      "tap"     : {"axis": "4", "sign_and_scale": 1.2}
     }}
   },
   {
