@@ -3,10 +3,7 @@
     "declare_macro": "create_LK4_with_TNo2",
     "content": [
       {
-        "playback": "create_LK4",
-        "arguments": {
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY"
-        }
+        "playback": "create_LK4"
       },
       {
         "required": ["%IF_WITH_PHYSICS"],
@@ -29,9 +26,8 @@
       },
       {
         "playback": "create_TNo2",
-        "arguments": {
-          "SUFFIX": "_trailer$SUFFIX",
-          "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY"
+        "let": {
+          "TRAILER_SUFFIX": "_trailer$SUFFIX"
         }
       },
       {

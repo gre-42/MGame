@@ -13,10 +13,10 @@
   {
     "declare_macro": "generic_car.create_lights",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_left_front$SUFFIX",  "position": [-0.5, 0, -22]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "light_right_front$SUFFIX", "position": [ 0.5, 0, -22]}},
-      {"call": "child_renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_left_front$SUFFIX",  "resource": "car_light_beam"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "blob$SUFFIX", "node": "light_right_front$SUFFIX", "resource": "car_light_beam"}}
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_left_front$TESUFFIX",  "position": [-0.5, 0, -22]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_right_front$TESUFFIX", "position": [ 0.5, 0, -22]}},
+      {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_left_front$TESUFFIX",  "resource": "car_light_beam"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_right_front$TESUFFIX", "resource": "car_light_beam"}}
     ]
   },
   {
@@ -25,7 +25,7 @@
       {
         "call": "rigid_cuboid",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$TESUFFIX",
           "hitboxes": "$NAME-_hitboxes",
           "v": "%VELOCITY",
           "w": "%ANGULAR_VELOCITY",
@@ -33,14 +33,14 @@
           "size": "%SIZE",
           "com": "%COM",
           "collidable_mode": "moving",
-          "name": "generic_car_$NAME$SUFFIX",
+          "name": "generic_car_$NAME$TESUFFIX",
           "waypoint_dy": 1.2,
           "asset_id": "$NAME"
         }
       },
 
-      {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": "%COM"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$SUFFIX", "resource": "gizmo"}}},
+      {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "com_node$TESUFFIX", "position": "%COM"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$TESUFFIX", "resource": "gizmo"}}},
 
       {
         "required": ["%%vehicles/$NAME/FRONT_ENGINE != %%vehicles/$NAME/REAR_ENGINE"],
@@ -48,7 +48,7 @@
           {
             "call": "create_engine",
             "arguments": {
-              "rigid_body": "car_node$SUFFIX",
+              "rigid_body": "car_node$TESUFFIX",
               "name": "front",
               "angular_vels": "%ANGULAR_VELS_FRONT",
               "powers": "%POWERS_FRONT",
@@ -67,7 +67,7 @@
           {
             "call": "create_engine",
             "arguments": {
-              "rigid_body": "car_node$SUFFIX",
+              "rigid_body": "car_node$TESUFFIX",
               "name": "rear",
               "angular_vels": "%ANGULAR_VELS_REAR",
               "powers": "%POWERS_REAR",
@@ -91,7 +91,7 @@
           "%POWERS != %null"],
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
+          "rigid_body": "car_node$TESUFFIX",
           "name": "engine",
           "angular_vels": "%ANGULAR_VELS",
           "powers": "%POWERS",
@@ -113,7 +113,7 @@
           "%POWERS == %null"],
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
+          "rigid_body": "car_node$TESUFFIX",
           "name": "engine",
           "hand_brake_pulled": "%HAND_BRAKE_PULLED"
         }
@@ -122,22 +122,22 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_left_front_node$SUFFIX",
+          "node": "wheel_left_front_node$TESUFFIX",
           "hitboxes": null,
           "mass": 10,
           "radius": 0.2,
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_front$NAME$SUFFIX",
+          "name": "wheel_left_front$NAME$TESUFFIX",
           "asset_id": "wheel_left_front$NAME"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$SUFFIX",
-          "wheel": "wheel_left_front_node$SUFFIX",
+          "vehicle": "car_node$TESUFFIX",
+          "wheel": "wheel_left_front_node$TESUFFIX",
           "vehicle_mount_0": "%WHEEL_LEFT_FRONT_MOUNT_0",
           "vehicle_mount_1": "%WHEEL_LEFT_FRONT_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
@@ -155,22 +155,22 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_right_front_node$SUFFIX",
+          "node": "wheel_right_front_node$TESUFFIX",
           "hitboxes": null,
           "mass": 10,
           "radius": 0.2,
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_front$NAME$SUFFIX",
+          "name": "wheel_right_front$NAME$TESUFFIX",
           "asset_id": "wheel_right_front$NAME"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$SUFFIX",
-          "wheel": "wheel_right_front_node$SUFFIX",
+          "vehicle": "car_node$TESUFFIX",
+          "wheel": "wheel_right_front_node$TESUFFIX",
           "vehicle_mount_0": "%WHEEL_RIGHT_FRONT_MOUNT_0",
           "vehicle_mount_1": "%WHEEL_RIGHT_FRONT_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
@@ -188,22 +188,22 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_left_rear_node$SUFFIX",
+          "node": "wheel_left_rear_node$TESUFFIX",
           "hitboxes": null,
           "mass": 10,
           "radius": 0.2,
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_rear$NAME$SUFFIX",
+          "name": "wheel_left_rear$NAME$TESUFFIX",
           "asset_id": "wheel_left_rear$NAME"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$SUFFIX",
-          "wheel": "wheel_left_rear_node$SUFFIX",
+          "vehicle": "car_node$TESUFFIX",
+          "wheel": "wheel_left_rear_node$TESUFFIX",
           "vehicle_mount_0": "%WHEEL_LEFT_REAR_MOUNT_0",
           "vehicle_mount_1": "%WHEEL_LEFT_REAR_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
@@ -221,22 +221,22 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_right_rear_node$SUFFIX",
+          "node": "wheel_right_rear_node$TESUFFIX",
           "hitboxes": null,
           "mass": 10,
           "radius": 0.2,
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_rear$NAME$SUFFIX",
+          "name": "wheel_right_rear$NAME$TESUFFIX",
           "asset_id": "wheel_right_rear$NAME"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$SUFFIX",
-          "wheel": "wheel_right_rear_node$SUFFIX",
+          "vehicle": "car_node$TESUFFIX",
+          "wheel": "wheel_right_rear_node$TESUFFIX",
           "vehicle_mount_0": "%WHEEL_RIGHT_REAR_MOUNT_0",
           "vehicle_mount_1": "%WHEEL_RIGHT_REAR_MOUNT_1",
           "radius": "%WHEEL_RADIUS",
@@ -253,13 +253,13 @@
 
       {
         "call": "set_trailer_hitch_positions",
-        "arguments": {"rigid_body": "car_node$SUFFIX", "asset_id": "%NAME"}
+        "arguments": {"rigid_body": "car_node$TESUFFIX", "asset_id": "%NAME"}
       },
 
       {
         "call": "create_car_controller",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$TESUFFIX",
           "front_engine": "%%vehicles/$NAME/FRONT_ENGINE",
           "rear_engine": "%%vehicles/$NAME/REAR_ENGINE",
           "front_tire_ids": [0, 1],
@@ -272,7 +272,7 @@
       {
         "call": "set_available_roles",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$TESUFFIX",
           "value": ["driver"]
         }
       }
@@ -281,26 +281,26 @@
   {
     "declare_macro": "generic_car.create",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": "%WHEEL_LEFT_FRONT_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": "%WHEEL_RIGHT_FRONT_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": "%WHEEL_LEFT_REAR_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_rear_node$SUFFIX",  "position": "%WHEEL_RIGHT_REAR_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_front_node$TESUFFIX",  "position": "%WHEEL_LEFT_FRONT_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_front_node$TESUFFIX", "position": "%WHEEL_RIGHT_FRONT_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_rear_node$TESUFFIX",   "position": "%WHEEL_LEFT_REAR_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_rear_node$TESUFFIX",  "position": "%WHEEL_RIGHT_REAR_MOUNT_0"}},
 
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_hitboxes"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$SUFFIX", "node": "car_node$SUFFIX", "resource": "$NAME-_massbox"}}},
-      {"comment": "renderable_instance name=generic_car_topdown_locator$SUFFIX node=car_node$node_suffix resource=topdown_locator"},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_hitboxes"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_massbox"}}},
+      {"comment": "renderable_instance name=generic_car_topdown_locator$TESUFFIX node=car_node$node_suffix resource=topdown_locator"},
 
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX", "name": "wheel_right_rear_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$TESUFFIX", "name": "wheel_right_front_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$TESUFFIX", "name": "wheel_right_rear_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
-        "node_suffix": "%SUFFIX",
-        "suffix": "%SUFFIX",
+        "node_suffix": "%TESUFFIX",
+        "suffix": "%TESUFFIX",
         "decimate": "%DECIMATE"
         }
       },
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
-        "node_suffix": "%SUFFIX",
-        "suffix": "_lowres$SUFFIX",
+        "node_suffix": "%TESUFFIX",
+        "suffix": "_lowres$TESUFFIX",
         "decimate": "_lowres"
         }
       },
