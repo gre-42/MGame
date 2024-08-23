@@ -135,7 +135,7 @@ jobs:
   create-release:
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
-    needs: [build-ubuntu, build-msys2]
+    needs: [build-ubuntu, build-msvc]
     steps:
       - name: Download Ubuntu artifact
         uses: actions/download-artifact@v4
@@ -143,11 +143,11 @@ jobs:
           name: osm-rally-artifact-ubuntu
           path: MGame
 
-      - name: Download MSYS2 artifact
+      - name: Download MSVC artifact
         uses: actions/download-artifact@v4
         with:
-          name: osm-rally-artifact-msys2
-          path: MGame/GM${{ github.event.inputs.build_type || 'Release' }}
+          name: osm-rally-artifact-msvc
+          path: MGame/GVS${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Create ZIP archive
         run: zip -r MGame.zip MGame
