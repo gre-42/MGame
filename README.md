@@ -8,7 +8,7 @@ A rally game based on OpenStreetMap data.
 ![Screenshot-JB-2023-11-26b.png](media/Screenshot-JB-2024-01-20.png)
 
 ### Snow 1
-![Screenshot-S1-2023-01-06](media/Screenshot-S1-2023-01-06.png)
+![Screenshot-S1-2023-01-06](media/Screenshot-S1-2024-08-23.png)
 
 ### Retro race track 1
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
