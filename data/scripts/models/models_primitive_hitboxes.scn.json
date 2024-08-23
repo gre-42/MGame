@@ -26,7 +26,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "box_50_16_01_hitbox",
@@ -46,7 +45,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_name": "box_50_16_01_hitbox",

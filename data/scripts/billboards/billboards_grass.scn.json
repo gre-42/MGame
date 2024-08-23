@@ -719,7 +719,6 @@
     "comment": "Hedge textures"
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
       "NAME": "hedge_small",
@@ -737,7 +736,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
       "NAME": "hedge_long",
@@ -758,7 +756,6 @@
     "comment": "Hedge billboards"
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "create_hedge_billboard",
     "arguments": {
       "min": [-1.5, 0],
@@ -769,7 +766,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "create_hedge_billboard",
     "arguments": {
       "min": [-1.5, 0],
@@ -780,7 +776,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "create_hedge_billboard",
     "arguments": {
       "min": [-1.5, 0],
@@ -791,7 +786,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "create_hedge_billboard",
     "arguments": {
       "min": [-1.5, 0],

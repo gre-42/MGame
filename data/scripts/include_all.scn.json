@@ -19,7 +19,7 @@
   {"include": "models/models_stones.scn.json"},
   {"include": "models/models_street.scn.json"},
   {"include": "models/models_terrain.scn.json"},
-  {"exclude": ["%IF_ANDROID"], "include": "models/models_urban.scn.json"},
+  {"include": "models/models_urban.scn.json"},
   {"exclude": ["%IF_ANDROID"], "include": "models/models_vegetation.scn.json"},
   {"required": ["%FLAVOR == 'extended'"], "include": "trails.scn.json"},
 

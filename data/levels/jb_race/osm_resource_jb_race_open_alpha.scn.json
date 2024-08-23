@@ -11,16 +11,16 @@
       "terrain_undefined_textures": ["textures/debug/pink.png"],
       "terrain_grass_textures": [
         "#Gravel010_Base",
-        "#Ground003_2",
-        "#Ground003_8"],
+        "#Ground037_1",
+        "#Ground037_8"],
       "terrain_flowers_textures": [
         "#Gravel010_Base",
-        "#Ground003_2",
-        "#Ground003_8"],
+        "#Ground037_1",
+        "#Ground037_8"],
       "terrain_trees_textures": [
         "#Gravel010_Base",
-        "#Ground003_2",
-        "#Ground003_8"],
+        "#Ground037_1",
+        "#Ground037_8"],
       "bounding_terrain_type": "grass",
       "default_terrain_type": "grass",
       "terrain_materials": {
@@ -146,8 +146,12 @@
         "vegetation1.4(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation1.5(p:1)(hitbox:box_02_1_02_hitbox)"],
       "path_mud_grass_resource_names": [
-        "bflower2            (p:0.1)",
+        "bflower2            (p:0.3)",
         "vegetation8.3",
+        "bflower             (p:0.3)"],
+      "path_mud_dirty_grass_resource_names": [
+        "bflower2            (p:0.1)",
+        "vegetation8.0",
         "bflower             (p:0.1)"],
       "near_grass_resource_names": [
         "bflower2            (p:0.1)",
@@ -214,7 +218,7 @@
       "forest_outline_tree_distance": 10,
       "forest_outline_tree_inwards_distance": 1,
       "much_grass_distance": 100,
-      "path_mud_grass_distance": 1.5,
+      "path_mud_grass_distance": 1,
       "much_near_grass_distance": 3.5,
       "much_near_flowers_distance": 2.5,
       "much_near_trees_distance": 8,

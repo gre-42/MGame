@@ -1,5 +1,6 @@
 [
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "basketball_hoop",
@@ -27,6 +28,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light",
@@ -55,6 +57,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "traffic_cone",
@@ -110,6 +113,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard",
@@ -167,6 +171,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard2",
@@ -248,6 +253,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light_hitbox",
@@ -271,6 +277,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "dumpster",
@@ -298,6 +305,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan1",
@@ -326,6 +334,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan2",
@@ -353,6 +362,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "mailbox",
@@ -380,6 +390,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "bench",
@@ -407,6 +418,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "table_and_chairs",
@@ -435,6 +447,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "ship",
@@ -463,6 +476,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "tire_barrier2",
@@ -490,6 +504,7 @@
     }
   },
   {
+    "exclude": ["%IF_ANDROID"],
     "call": "obj_resource",
     "arguments": {
       "name": "crate",
@@ -574,43 +589,48 @@
     ]
   },
   {
-    "playback": "load_hedge",
-    "arguments": {
-      "NAME": "hedge_long",
-      "FILENAME": "models/opengameart/Hedge/Long/HedgeLongExp.obj"
-    }
-  },
-  {
-    "playback": "load_hedge",
-    "arguments": {
-      "NAME": "hedge_small",
-      "FILENAME": "models/opengameart/Hedge/Small/HedgeSmallExp.obj"
-    }
-  },
-  {
-    "playback": "load_hedge",
-    "arguments": {
-      "NAME": "hedge_long_round",
-      "FILENAME": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj"
-    }
-  },
-  {
-    "playback": "load_hedge",
-    "arguments": {
-      "NAME": "hedge_small_round",
-      "FILENAME": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj"
-    }
-  },
-  { "playback": "load_facade", "arguments": { "NAME": "entrance0" } },
-  { "playback": "load_facade", "arguments": { "NAME": "entrance1" } },
+    "exclude": ["%IF_ANDROID"],
+    "execute": [
+      {
+        "playback": "load_hedge",
+        "arguments": {
+          "NAME": "hedge_long",
+          "FILENAME": "models/opengameart/Hedge/Long/HedgeLongExp.obj"
+        }
+      },
+      {
+        "playback": "load_hedge",
+        "arguments": {
+          "NAME": "hedge_small",
+          "FILENAME": "models/opengameart/Hedge/Small/HedgeSmallExp.obj"
+        }
+      },
+      {
+        "playback": "load_hedge",
+        "arguments": {
+          "NAME": "hedge_long_round",
+          "FILENAME": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj"
+        }
+      },
+      {
+        "playback": "load_hedge",
+        "arguments": {
+          "NAME": "hedge_small_round",
+          "FILENAME": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj"
+        }
+      },
+      { "playback": "load_facade", "arguments": { "NAME": "entrance0" } },
+      { "playback": "load_facade", "arguments": { "NAME": "entrance1" } },
 
-  { "playback": "load_facade", "arguments": { "NAME": "sign0" } },
-  { "playback": "load_facade", "arguments": { "NAME": "sign1" } },
-  { "playback": "load_facade", "arguments": { "NAME": "sign2" } },
-  { "playback": "load_facade", "arguments": { "NAME": "sign3" } },
-  { "playback": "load_facade", "arguments": { "NAME": "sign4" } },
-  { "playback": "load_facade", "arguments": { "NAME": "sign5" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign0" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign1" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign2" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign3" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign4" } },
+      { "playback": "load_facade", "arguments": { "NAME": "sign5" } },
 
-  { "playback": "load_facade", "arguments": { "NAME": "door0" } },
-  { "playback": "load_facade", "arguments": { "NAME": "door1" } }
+      { "playback": "load_facade", "arguments": { "NAME": "door0" } },
+      { "playback": "load_facade", "arguments": { "NAME": "door1" } }
+    ]
+  }
 ]

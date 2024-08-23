@@ -11,7 +11,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grf_2048",

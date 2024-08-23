@@ -385,7 +385,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_island_green0",
@@ -562,7 +561,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Asphalt016_Dirt",
