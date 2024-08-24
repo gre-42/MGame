@@ -17,5 +17,14 @@
       "gain": 1,
       "hysteresis_step": 0.2
     }
+  },
+  {
+    "call": "add_audio_sequence",
+    "arguments": {
+      "name": "car2.driving",
+      "filename": "sounds/ange-engine-sim/sequence2/meta.json",
+      "gain": 1,
+      "hysteresis_step": 0.2
+    }
   }
 ]
