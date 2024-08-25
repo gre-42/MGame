@@ -17,7 +17,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "concrete1_2K_wh_Detail",
