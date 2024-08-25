@@ -1,6 +1,5 @@
 [
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00001_1k",
@@ -10,7 +9,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00001_top",
@@ -21,7 +19,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00001_bottom",
@@ -33,7 +30,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00001_left",
@@ -43,7 +39,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00001_right",

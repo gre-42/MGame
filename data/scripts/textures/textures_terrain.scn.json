@@ -64,7 +64,6 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_White",
