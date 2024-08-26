@@ -2,6 +2,8 @@
   {
     "call": "globals",
     "arguments": {
+      "LOADED_GAME_LEVEL": "",
+      "LOADED_HEIGHTMAP": "$__DIR__/../jb/heightmap.pgm",
       "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
       "AGGREGATE_MODE": "instances_sorted",
       "VIP_NAME": "you",
@@ -14,19 +16,6 @@
     }
   },
   {"include": "../../scripts/include_all.scn.json"},
-  {"include": "osm_resource_jb_race_open_alpha.scn.json"},
-  {
-    "call": "globals",
-    "arguments": {
-      "LOADED_GAME_LEVEL": "",
-      "LOADED_HEIGHTMAP": "$__DIR__/../jb/heightmap.pgm",
-      "OSM_LOCATION": {
-        "position": [-90, -220, 0],
-        "rotation": [-90, 0, 0],
-        "scale": 1e3
-      }
-    }
-  },
   {
     "playback": "scene_racing_static",
     "arguments": {

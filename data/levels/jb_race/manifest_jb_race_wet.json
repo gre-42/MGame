@@ -1,15 +1,15 @@
 {
-  "id": "jb_race",
-  "title": "JB",
-  "required": ["%GAME_MODE in %%levels/jb_race/game_modes"],
+  "id": "jb_race_wet",
+  "title": "JB wet",
+  "required": ["%GAME_MODE in %%levels/jb_race_wet/game_modes"],
   "on_execute": [
-    {"include": "osm_resource_jb_race_open_alpha.scn.json"},
+    {"include": "osm_resource_jb_race_open_alpha_wet.scn.json"},
     {"include": "scene_jb_race.scn.json"}
   ],
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_LEVEL_ID": "jb_race",
+      "SELECTED_LEVEL_ID": "jb_race_wet",
       "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
       "MINIMAP_FILE": null
     }
