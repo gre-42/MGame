@@ -73,7 +73,6 @@
         "required": ["%TIME_OF_DAY == 'day'"],
         "call": "add_color_style",
         "arguments": {
-          "reflection_strength": 0.7,
           "reflection_maps": {
             "car": "reflection_map",
             "wet_street": "reflection_map",
@@ -85,7 +84,6 @@
         "required": ["%TIME_OF_DAY == 'night'"],
         "call": "add_color_style",
         "arguments": {
-          "reflection_strength": 0.7,
           "reflection_maps": {
             "car": "reflection_map_night",
             "wet_street":  "reflection_map_night",
@@ -96,7 +94,6 @@
         "required": ["%TIME_OF_DAY == 'synthwave'"],
         "call": "add_color_style",
         "arguments": {
-          "reflection_strength": 0.7,
           "reflection_maps": {
             "car": "reflection_map_synthwave",
             "ground": "reflection_map_synthwave"

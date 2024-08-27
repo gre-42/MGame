@@ -202,8 +202,31 @@
   {
     "call": "add_texture_descriptor",
     "arguments": {
+      "name": "Way_Wheels_Normal_512",
+      "color": "textures/Way_Alpha/Way_Wheels_512.png",
+      "times": 0.2,
+      "height_to_normals": true,
+      "color_mode": "rgb",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_png",
+      "arguments": {
+        "name": "Way_Wheels_Normal_512",
+        "filename": "normalmap.png",
+        "color_mode": "rgb"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
       "name": "Way_Wheels_7",
       "color": "textures/Way_Alpha/Way_Wheels_512.png",
+      "normal": "#Way_Wheels_Normal_512",
+      "saturate": true,
       "lighten": [0.7, 0.7, 0.7],
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
