@@ -43,6 +43,7 @@
         "call": "create_scene",
         "arguments": {
           "name": "loading",
+          "world": "common",
           "focus_mask": "loading",
           "submenus": [],
           "fly": false,

@@ -1,0 +1,16 @@
+[
+  {
+    "call": "register_gravity",
+    "arguments": {
+      "world": "common",
+      "acceleration": [0, -9.8, 0]
+    }
+  },
+  {
+    "call": "register_wind",
+    "arguments": {
+      "world": "common",
+      "velocity": [5, 0, 0]
+    }
+  }
+]

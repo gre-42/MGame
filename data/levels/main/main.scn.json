@@ -6,6 +6,7 @@
     "call": "create_scene",
     "arguments": {
       "name": "primary_scene",
+      "world": "common",
       "focus_mask": "scene",
       "submenus": [],
       "fly": false,

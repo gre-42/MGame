@@ -6,6 +6,7 @@
         "call": "create_scene",
         "arguments": {
           "name": "showroom",
+          "world": "common",
           "focus_mask": "menu",
           "submenus": ["car_selector", "car_color_selector"],
           "fly": false,

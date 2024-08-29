@@ -14,6 +14,7 @@
       "call": "create_scene",
       "arguments": {
         "name": "primary_scene",
+        "world": "common",
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
         "fly": "%PRIMARY_SCENE_FLY",
@@ -42,6 +43,7 @@
       "call": "create_scene",
       "arguments": {
         "name": "weapon_closeup",
+        "world": "common",
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
         "fly": false,
