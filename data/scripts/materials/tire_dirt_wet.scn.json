@@ -1,0 +1,30 @@
+{
+  "call": "set_surface_contact_info",
+  "arguments": {
+    "material0": "surface_base_tire",
+    "material1": "surface_base_dirt|surface_wet",
+    "surface_stiction_factor": 0.8,
+    "smoke": [
+      {
+        "resource_name": "skidmarks_a20_black",
+        "instance_prefix": "skidmarks_a20_black",
+        "tire": {
+          "vehicle_velocities": [4, 5, 50],
+          "particle_frequencies": [0, 20, 200]
+        },
+        "animation_duration": "inf"
+      },
+      {
+        "resource_name": "particles_dirt_3d",
+        "instance_prefix": "particles_dirt",
+        "vehicle": {
+          "vehicle_velocities": [4, 5, 50],
+          "particle_frequencies": [0, 2.5, 25],
+          "particle_velocities": [2, 5, 25]
+        },
+        "air_resistance": 0.01,
+        "animation_duration": 1.5
+      }
+    ]
+  }
+}
