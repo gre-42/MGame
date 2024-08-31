@@ -51,6 +51,9 @@
     "RW_FRESNEL_AMBIENT": [0.7, 0.7, 0.7],
     "RW_FRESNEL_MIN": 0.2,
     "RW_FRESNEL_MAX": 0.5,
-    "RW_FRESNEL_EXPONENT" : 4
+    "RW_FRESNEL_EXPONENT" : 4,
+
+    "FOG_DISTANCES": [500, 10000],
+    "FOG_AMBIENT": [0.8, 0.8, 0.9]
   }
 }
