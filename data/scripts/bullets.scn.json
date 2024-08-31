@@ -72,9 +72,12 @@
         "mass": 10,
         "lifetime": 30,
         "size": [2.4, 2.4, 20],
-        "trail_resource": "smoke_3d",
-        "trail_dt": 0.005,
-        "trail_animation_duration": 0.5,
+        "trail": {
+          "resource": "smoke_3d",
+          "dt": 0.005,
+          "air_resistance": 0.01,
+          "animation_duration": 0.5
+        },
         "rigid_body_flags": "feels_no_gravity",
         "velocity": 50,
         "damage": 100,
