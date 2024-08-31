@@ -55,7 +55,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.2,
+      "scale": [0.2, 0.2],
       "weight": 2.5,
       "plus": -2,
       "reduction": "plus",
@@ -72,7 +72,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 1,
       "reduction": "times"
     }

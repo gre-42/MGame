@@ -63,10 +63,16 @@
         "#Ramp_Mud"
       ],
       "path_mudmap": "textures/Way_Alpha/Way_Alpha_Long_Grf.png",
+      "street_alpha_textures": [
+        "#PlusDetail",
+        "#TimesBlend_Narrow_Wet",
+        "#Ramp_Narrow_Wet"
+      ],
+      "street_mud_textures": ["#Road007_Alpha_ScaledY8"],
       "street_crossing_textures": ["#Road007_No_Lines"],
       "path_crossing_textures": ["#Gravel010_Detail"],
       "street_textures": [
-        {"lanes": 1, "textures": ["#Road007_Alpha"]}],
+        {"lanes": 1, "textures": ["#Way_Wheels_7_Detail_Base", "#Gravel010_Detail"]}],
       "path_textures": [
         {"lanes": 1, "textures": ["#Way_Wheels_7_Detail_Base", "#Gravel010_Detail"]}],
       "wall_textures": [
@@ -204,7 +210,7 @@
       "grass_foliagemap_period": 38.4,
       "uv_scale_terrain": 3e-1,
       "uv_period_terrain": 512,
-      "uv_scale_street": 1e-1,
+      "uv_scale_street": 0.00625,
       "uv_scale_path": 0.00625,
       "uv_scale_wall": 1e-1,
       "uv_scale_facade": 2.5e-1,

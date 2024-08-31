@@ -9,7 +9,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 1,
       "role": "detail_base",
       "reweight": "enabled"
@@ -25,7 +25,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 1,
       "role": "detail_base",
       "reweight": "enabled"
@@ -44,7 +44,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 1.5,
       "role": "detail_base",
       "reweight": "enabled"
@@ -61,7 +61,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 2,
       "role": "detail_base",
       "reweight": "enabled"
@@ -78,7 +78,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 2,
       "role": "detail_base",
       "reweight": "enabled"
@@ -95,7 +95,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 2,
       "role": "detail_base",
       "reweight": "enabled"
@@ -112,7 +112,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 2,
       "role": "detail_base",
       "reweight": "enabled"
@@ -129,7 +129,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 1,
+      "scale": [1, 1],
       "weight": 2,
       "role": "detail_base",
       "reweight": "enabled"
@@ -145,7 +145,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.2,
+      "scale": [0.2, 0.2],
       "weight": 1,
       "role": "detail_color",
       "uv_source": "horizontal"
@@ -161,7 +161,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.4,
+      "scale": [0.4, 0.4],
       "weight": 1.1,
       "role": "detail_color",
       "uv_source": "horizontal"
@@ -177,7 +177,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.2,
+      "scale": [0.2, 0.2],
       "weight": 1,
       "role": "detail_color",
       "uv_source": "horizontal"
@@ -193,7 +193,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.2,
+      "scale": [0.2, 0.2],
       "weight": 1,
       "role": "detail_color",
       "uv_source": "horizontal"
@@ -212,7 +212,7 @@
       "distances": [0, 0, "inf", "inf"],
       "normal": [0, 0, 0],
       "cosine": [-1, -1, 1, 1],
-      "scale": 0.2,
+      "scale": [0.2, 0.2],
       "weight": 1,
       "role": "detail_color",
       "uv_source": "horizontal"

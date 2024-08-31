@@ -12,7 +12,7 @@
         "distances": "%DISTANCES",
         "normal": "%NORMAL",
         "cosine": "%COSINE",
-        "scale": "%SCALE",
+        "scale": ["%SCALE", "%SCALE"],
         "weight": 1,
         "role": "detail_mask_r",
         "reduction": "times"
@@ -29,7 +29,7 @@
         "distances": [0, 0, "inf", "inf"],
         "normal": [0, 0, 0],
         "cosine": [-1, -1, 1, 1],
-        "scale": "%FEATHER_SCALE",
+        "scale": ["%FEATHER_SCALE", "%FEATHER_SCALE"],
         "weight": 0,
         "role": "detail_mask_r",
         "reduction": "feather",
@@ -48,7 +48,7 @@
         "distances": [0, 0, "inf", "inf"],
         "normal": [0, 0, 0],
         "cosine": [-1, -1, 1, 1],
-        "scale": "%SCALE",
+        "scale": ["%SCALE", "%SCALE"],
         "weight": 0,
         "role": "%role",
         "reduction": "blend"
@@ -65,7 +65,7 @@
         "distances": "%DISTANCES",
         "normal": "%NORMAL",
         "cosine": "%COSINE",
-        "scale": "%SCALE",
+        "scale": ["%SCALE", "%SCALE"],
         "weight": 1,
         "role": "%role",
         "reweight": "disabled"
@@ -82,7 +82,7 @@
         "distances": "%DISTANCES",
         "normal": "%NORMAL",
         "cosine": "%COSINE",
-        "scale": "%FEATHER_SCALE",
+        "scale": ["%FEATHER_SCALE", "%FEATHER_SCALE"],
         "weight": 1,
         "role": "detail_mask_r",
         "reduction": "feather",
@@ -102,7 +102,7 @@
         "distances": [0, 0, "inf", "inf"],
         "normal": [0, 0, 0],
         "cosine": [-1, -1, 1, 1],
-        "scale": "%SCALE",
+        "scale": ["%SCALE", "%SCALE"],
         "weight": 0,
         "role": "%role",
         "reduction": "blend"
