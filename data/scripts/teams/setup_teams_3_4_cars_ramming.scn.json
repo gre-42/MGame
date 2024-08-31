@@ -6,7 +6,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "M3",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc1",
           "TEAM": "red",
           "GAME_MODE": "ramming",
@@ -17,7 +16,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "M3",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc2",
           "TEAM": "red",
           "GAME_MODE": "ramming",
@@ -28,7 +26,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "M3",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc3",
           "TEAM": "red",
           "GAME_MODE": "ramming",
@@ -40,7 +37,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "XZ",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc4",
           "TEAM": "blue",
           "GAME_MODE": "ramming",
@@ -51,7 +47,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "XZ",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc5",
           "TEAM": "blue",
           "GAME_MODE": "ramming",
@@ -62,7 +57,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "XZ",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc6",
           "TEAM": "blue",
           "GAME_MODE": "ramming",
@@ -73,7 +67,6 @@
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
           "CAR_NAME": "XZ",
-          "DECIMATE": "",
           "PLAYER_NAME": "npc7",
           "TEAM": "blue",
           "GAME_MODE": "ramming",
@@ -86,8 +79,7 @@
           "player": "%VIP_NAME",
           "macro": "teams.create_car_for_pc",
           "parameters": {
-            "CAR_NAME": "M3",
-            "DECIMATE": ""
+            "CAR_NAME": "M3"
           }
         }
       },

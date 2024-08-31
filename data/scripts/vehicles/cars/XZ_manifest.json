@@ -2,7 +2,12 @@
   "id": "XZ",
   "title": "XZ",
   "on_init": {"include": "XZ.scn.json"},
-  "on_before_select": {"call": "globals", "arguments": {"SELECTED_VEHICLE_ID": "XZ"}},
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_VEHICLE_ID": "XZ"
+    }
+  },
   "database": {
     "SUFFIX": "XZ",
     "CLASS": "car",

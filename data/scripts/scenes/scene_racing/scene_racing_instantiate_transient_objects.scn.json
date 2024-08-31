@@ -17,7 +17,6 @@
         "IF_SKATER_STYLE": true,
         "IF_CAR_BODY_RENDERABLE_STYLE": true,
         "COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
-        "DECIMATE": "",
         "SUFFIX": "",
         "IF_WITH_GRAPHICS": true,
         "IF_WITH_PHYSICS": true,
@@ -63,7 +62,6 @@
         "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
-        "DECIMATE": "",
         "PSUFFIX": "checkpoints"
       }
     },
@@ -74,7 +72,6 @@
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
-        "DECIMATE": "",
         "PSUFFIX": "track1"
       }
     },
@@ -85,7 +82,6 @@
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "XZ",
-        "DECIMATE": "",
         "PSUFFIX": "track2"
       }
     },
@@ -96,7 +92,6 @@
         "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "FN",
-        "DECIMATE": "",
         "PSUFFIX": "track3"
       }
     },
@@ -115,7 +110,6 @@
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER0_VEHICLE",
         "COLOR": "%WINNER0_COLOR",
-        "DECIMATE": "",
         "PSUFFIX": "'1'"
       }
     },
@@ -127,7 +121,6 @@
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER1_VEHICLE",
         "COLOR": "%WINNER1_COLOR",
-        "DECIMATE": "",
         "PSUFFIX": "'2'"
       }
     },
@@ -139,7 +132,6 @@
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER2_VEHICLE",
         "COLOR": "%WINNER2_COLOR",
-        "DECIMATE": "",
         "PSUFFIX": "'3'"
       }
     },

@@ -5,6 +5,12 @@
     {"include": "tiger_tank_resource.scn.json"},
     {"include": "tiger_tank_instance.scn.json"}
   ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "SELECTED_VEHICLE_ID": "tiger_tank"
+    }
+  },
   "database": {
     "SUFFIX": "tiger_tank",
     "CLASS": "car",
