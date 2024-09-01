@@ -22,6 +22,7 @@
         "depth_fog": "%PRIMARY_SCENE_DEPTH_FOG",
         "low_pass": "%PRIMARY_SCENE_LOW_PASS",
         "high_pass": "%PRIMARY_SCENE_HIGH_PASS",
+        "bloom": "%PRIMARY_SCENE_BLOOM",
         "with_skybox": "%PRIMARY_SCENE_WITH_SKYBOX",
         "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
         "clear_mode": "color_and_depth",
@@ -51,6 +52,7 @@
         "depth_fog": false,
         "low_pass": false,
         "high_pass": false,
+        "bloom": [0, 0],
         "with_skybox": false,
         "with_flying_logic": false,
         "clear_mode": "depth"
