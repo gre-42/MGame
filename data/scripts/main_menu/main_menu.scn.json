@@ -247,14 +247,16 @@
   },
   {
     "declare_macro": "_setup_menu_showroom",
-    "#comment": [
-      "# scene_to_texture",
-      "texture_name=scene",
-      "update=always",
-      "size=500 300",
-      "focus_mask=menu",
-      "submenus=car_selector car_color_selector;"
-    ],
+    "#content": {
+      "call": "scene_to_texture",
+      "arguments": {
+        "texture_name": "scene",
+        "update": "always",
+        "size": [500, 300],
+        "focus_mask": "menu",
+        "submenus": ["car_selector", "car_color_selector"]
+      }
+    },
     "content": {
       "call": "scene_to_pixel_region",
       "arguments": {

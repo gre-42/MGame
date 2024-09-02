@@ -14,7 +14,7 @@
       "depth_fog": false,
       "low_pass": false,
       "high_pass": false,
-      "bloom": [0, 0],
+      "bloom": "%PRIMARY_SCENE_BLOOM",
       "with_skybox": false,
       "with_flying_logic": true,
       "clear_mode": "color_and_depth"
