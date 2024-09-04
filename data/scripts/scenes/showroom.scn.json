@@ -98,24 +98,37 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "showroom_ground",
-          "filename": "models/metal_cylinder.obj",
+          "name": "showroom_garage",
+          "filename": "models/garage/garage.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [10, 0.1, 10],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_node",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "fresnel_min": 0,
-          "fresnel_max": 0.4,
-          "fresnel_exponent": 4,
-          "fresnel_ambient": [1, 1, 1]    
+            "position": [0, 0, 0],
+            "rotation": [0, 180, 0],
+            "scale": [5, 5, 5],
+            "center_distances": [0, "inf"],
+            "blend_mode": "binary_05",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+            "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+            "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+            "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",    
+            "fresnel_min": 0,
+            "fresnel_max": 0.4,
+            "fresnel_exponent": 4,
+            "fresnel_ambient": [1, 1, 1]
           }
+        }
+      },
+      {
+        "call": "modify_rendering_material",
+        "arguments": {
+          "resource_name": "showroom_garage",
+          "blend_mode": "off",
+          "occluded_pass": "lightmap_black_node",
+          "included_names": "^Platform$"
         }
       },
       {
@@ -124,16 +137,16 @@
           "name": "showroom_ground_hitbox",
           "filename": "models/cylinder_hitbox.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [10, 0.1, 10],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_node",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all"
+            "position": [0, -0.05, 0],
+            "rotation": [0, 0, 0],
+            "scale": [10, 0.1, 10],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_node",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
           }
         }
       },
@@ -142,6 +155,25 @@
         "arguments": {
           "resource_name": "showroom_ground_hitbox",
           "add": "attr_convex"
+        }
+      },
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "static_garage",
+          "position": [0, -1.3, -11],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "static_garage",
+          "node": "static_garage",
+          "resource": "showroom_garage",
+          "excluded_names": "^Platform$"
         }
       },
       {
@@ -159,7 +191,8 @@
         "arguments": {
           "name": "stage",
           "node": "stage",
-          "resource": "showroom_ground"
+          "resource": "showroom_garage",
+          "included_names": "^Platform$"
         }
       },
       {
