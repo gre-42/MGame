@@ -132,6 +132,14 @@
         }
       },
       {
+        "call": "modify_rendering_material",
+        "arguments": {
+          "resource_name": "showroom_garage",
+          "histogram": "textures/histograms/google_maps/bricks.png",
+          "included_names": "^Walls$"
+        }
+      },
+      {
         "call": "obj_resource",
         "arguments": {
           "name": "showroom_ground_hitbox",
