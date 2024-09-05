@@ -102,8 +102,8 @@
           "filename": "models/garage/garage.obj",
           "config": {
             "position": [0, 0, 0],
-            "rotation": [0, 180, 0],
-            "scale": [5, 5, 5],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
             "center_distances": [0, "inf"],
             "blend_mode": "binary_05",
             "alpha_distances": [0, 0, "inf", "inf"],
@@ -140,12 +140,30 @@
         }
       },
       {
+        "comment": [
+          {
+            "call": "shade_auto",
+            "arguments": {
+              "resource_name": "showroom_garage",
+              "seam_angle": 45
+            }
+          },
+          {
+            "call": "save_to_obj_file",
+            "arguments": {
+              "resource": "showroom_garage",
+              "prefix": "C:\\Users\\Acer\\Desktop\\tmp"
+            }
+          }
+        ]
+      },
+      {
         "call": "obj_resource",
         "arguments": {
           "name": "showroom_ground_hitbox",
           "filename": "models/cylinder_hitbox.obj",
           "config": {
-            "position": [0, -0.05, 0],
+            "position": [0, -0.03, 0],
             "rotation": [0, 0, 0],
             "scale": [10, 0.1, 10],
             "center_distances": [0, "inf"],

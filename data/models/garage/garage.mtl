@@ -11,7 +11,7 @@ illum 2
 map_Kd ../corner_sign/rect1394.png
 map_d ../corner_sign/rect1394.png
 
-newmtl Bricks059
+newmtl Walls
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -22,7 +22,7 @@ illum 2
 map_Kd ../../textures/cc0textures/Bricks059_2K_Color.jpg
 map_Bump -bm 1.000000 ../../textures/cc0textures/Bricks059_2K_NormalGL.jpg
 
-newmtl TrafficCone
+newmtl Traffic_cone
 Ns 224.999985
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -42,7 +42,7 @@ Ni 1.450000
 d 1.000000
 illum 2
 
-newmtl metal
+newmtl Platform
 Ns 499.999969
 Ka 1.000000 1.000000 1.000000
 Ks 0.800000 0.800000 0.800000
@@ -53,7 +53,7 @@ illum 2
 map_Kd ../../textures/cc0textures/Metal038_2K_Color.jpg
 map_Bump ../../textures/cc0textures/Metal038_2K_NormalGL.jpg
 
-newmtl poster0
+newmtl Poster0
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
@@ -63,7 +63,7 @@ d 1.000000
 illum 2
 map_Kd ../../textures/barriers/ad0.png
 
-newmtl tape
+newmtl Tape
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
