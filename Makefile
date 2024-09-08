@@ -28,6 +28,9 @@ build:
 build_clang:
 	make build_any TARGET=build_clang
 
+build_clang_libcpp:
+	make build_any TARGET=build_clang_libcpp
+
 build_asan:
 	make build_any TARGET=build_asan
 
