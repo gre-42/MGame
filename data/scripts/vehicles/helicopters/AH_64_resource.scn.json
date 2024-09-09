@@ -7,18 +7,19 @@
         "name": "%NAME",
         "filename": "models/sketchfab.com/AH-64-apache/$FILENAME",
         "config": {
-        "position": [0, 0, -0.3],
-        "rotation": [-5, 180, 0],
-        "scale": [1, 1, 1],
-        "center_distances": "%CENTER_DISTANCES",
-        "blend_mode": "%BLEND_MODE",
-        "alpha_distances": [0, 0, "inf", "inf"],
-        "cull_faces_alpha": false,
-        "occluded_pass": "lightmap_black_global_and_local",
-        "occluder_pass": "%OCCLUDER_PASS",
-        "aggregate_mode": "none",
-        "transformation_mode": "all",
-        "triangle_tangent_error_behavior": "zero"
+          "position": [0, 0, -0.3],
+          "rotation": [-5, 180, 0],
+          "scale": [1, 1, 1],
+          "center_distances": "%CENTER_DISTANCES",
+          "blend_mode": "%BLEND_MODE",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": false,
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%OCCLUDER_PASS",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero",
+          "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE"
         }
       }
     }
@@ -30,7 +31,8 @@
       "FILENAME": "hitbox_front.obj",
       "CENTER_DISTANCES": [0, "inf"],
       "BLEND_MODE": "off",
-      "OCCLUDER_PASS": "none"
+      "OCCLUDER_PASS": "none",
+      "RECTANGLE_TRIANGULATION_MODE": "disabled"
     }
   },
   {
@@ -40,7 +42,8 @@
       "FILENAME": "hitbox_rear.obj",
       "CENTER_DISTANCES": [0, "inf"],
       "BLEND_MODE": "off",
-      "OCCLUDER_PASS": "none"
+      "OCCLUDER_PASS": "none",
+      "RECTANGLE_TRIANGULATION_MODE": "disabled"
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -82,7 +85,8 @@
           "FILENAME": "AH_64$DECIMATE.obj",
           "CENTER_DISTANCES": "%CENTER_DISTANCES",
           "BLEND_MODE": "continuous",
-          "OCCLUDER_PASS": "%OCCLUDER_PASS"
+          "OCCLUDER_PASS": "%OCCLUDER_PASS",
+          "RECTANGLE_TRIANGULATION_MODE": "delaunay"
         }
       },
       {

@@ -5,18 +5,18 @@
       "name": "C_RAM_hitbox",
       "filename": "models/gre42/C-RAM/C_RAM_hitbox_simple.obj",
       "config": {
-      "position": [0, -1, 0],
-      "rotation": [0, 90, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "triangle_tangent_error_behavior": "zero",
-      "rectangle_triangulation_mode": "disabled"
+        "position": [0, -1, 0],
+        "rotation": [0, 90, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero",
+        "rectangle_triangulation_mode": "disabled"
       }
     }
   },

@@ -5,16 +5,17 @@
       "name": "box_02_1_02_hitbox",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.2, 1, 0.2],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "position"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.2, 1, 0.2],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position",
+        "rectangle_triangulation_mode": "disabled"
       }
     }
   },
@@ -31,16 +32,17 @@
       "name": "box_50_16_01_hitbox",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0.8, 0],
-      "rotation": [0, 0, 0],
-      "scale": [5, 1.6, 0.1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "position_yangle"
+        "position": [0, 0.8, 0],
+        "rotation": [0, 0, 0],
+        "scale": [5, 1.6, 0.1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position_yangle",
+        "rectangle_triangulation_mode": "disabled"
       }
     }
   },
@@ -58,16 +60,17 @@
       "name": "box_10_10_10_hitbox",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 1, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "position_yangle"
+        "position": [0, 1, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position_yangle",
+        "rectangle_triangulation_mode": "disabled"
       }
     }
   },

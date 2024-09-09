@@ -317,16 +317,17 @@
           "name": "tank_bullet_hitbox",
           "filename": "models/primitives/empty.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [1, 1, 1],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "none",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all"
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled"
           }
         }
       },
@@ -351,16 +352,17 @@
           "name": "grenade_hitbox",
           "filename": "models/primitives/box.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [0.1, 0.1, 0.1],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "none",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all"
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.1, 0.1, 0.1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled"
           }
         }
       },
