@@ -172,7 +172,8 @@
             "occluded_pass": "lightmap_black_node",
             "occluder_pass": "none",
             "aggregate_mode": "none",
-            "transformation_mode": "all"
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled"
           }
         }
       },
