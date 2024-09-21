@@ -24,14 +24,7 @@
       {
         "call": "execute_in_physics_thread",
         "arguments": {
-          "command": {
-            "call": "with_delete_node_mutex",
-            "arguments": {
-              "command": {
-                "playback": "_reload_transient_objects"
-              }
-            }
-          }
+          "command": { "playback": "_reload_transient_objects" }
         }
       }
     ]

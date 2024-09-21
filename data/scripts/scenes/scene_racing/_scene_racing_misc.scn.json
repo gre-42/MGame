@@ -64,7 +64,7 @@
     ]
   },
   {
-    "declare_macro": "__setup_new_round",
+    "declare_macro": "_setup_new_round",
     "content": [
       {
         "call": "set_focuses",
@@ -117,19 +117,6 @@
       },
       {
         "call": "invalidate_aggregate_renderers"
-      }
-    ]
-  },
-  {
-    "declare_macro": "_setup_new_round",
-    "content": [
-      {
-        "call": "with_delete_node_mutex",
-        "arguments": {
-          "command": {
-            "playback": "__setup_new_round"
-          }
-        }
       }
     ]
   }
