@@ -3,13 +3,6 @@
     "include": "reload.scn.json"
   },
   {
-    "declare_macro": "_reload_transient_objects",
-    "content": [
-      {"call": "clear_nodes_not_allowed_to_be_unregistered"},
-      {"playback": "instantiate_transient_objects"}
-    ]
-  },
-  {
     "declare_macro": "_reload_transient_objects_in_physics_thread",
     "content":  [
       {
@@ -24,7 +17,7 @@
       {
         "call": "execute_in_physics_thread",
         "arguments": {
-          "command": { "playback": "_reload_transient_objects" }
+          "command": { "playback": "instantiate_transient_objects" }
         }
       }
     ]
