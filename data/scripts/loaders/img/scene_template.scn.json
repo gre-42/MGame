@@ -64,7 +64,7 @@
     "arguments": {
       "resource_names": "%available_resources",
       "included_names": "%%levels/$LOADED_LEVEL_ID/tarmac_included_names",
-      "add": "surface_base_tarmac|surface_contains_skidmarks"
+      "add": "attr_contains_skidmarks|surface_base_tarmac"
     }
   },
   {
