@@ -171,18 +171,30 @@
       {"comment": {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_grind_contact", "node": "skater_node$SUFFIX", "resource": "skater_grind_contacts"}}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst", "node": "animation_node$SUFFIX", "resource": "female_mh_d2"}},
       {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$SUFFIX", "resource": "female_mh_d1"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$SUFFIX", "resource": "skateboard"}}
+      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$SUFFIX", "resource": "skateboard"}},
+      {
+        "call": "set_available_roles",
+        "arguments": {
+          "node": "skater_node$SUFFIX",
+          "value": ["driver"]
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_skater_internals_skating_mh1",
+    "content": [
+      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"role": "driver"}}
     ]
   },
   {
     "declare_macro": "create_player_skater_externals_skating_mh1",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_skater_key_bindings", "arguments": {"role": "driver"}},
       {"required": ["%IF_PC"], "playback": "create_skater_cameras", "arguments": {"role": "driver"}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/skating_mh1/MAX_TIRE_ANGLE"

@@ -59,8 +59,11 @@
         "required": ["%IF_SPAWNER"],
         "call": "set_externals_creator",
         "arguments": {
-          "macro": {
+          "externals": {
             "playback": "create_player_skater_externals"
+          },
+          "internals": {
+            "playback": "create_player_skater_internals"
           },
           "spawner": "%SPAWNER_NAME"
         }
@@ -85,6 +88,17 @@
     "content": [
       {
         "playback": "create_player_skater_externals_$SKATER_NAME",
+        "arguments": {
+          "NAME": "%SKATER_NAME"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_skater_internals",
+    "content": [
+      {
+        "playback": "create_player_skater_internals_$SKATER_NAME",
         "arguments": {
           "NAME": "%SKATER_NAME"
         }
