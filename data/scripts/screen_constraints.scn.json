@@ -111,5 +111,10 @@
   { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_left",   "value": 0.05, "units": "inches"} },
   { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_right",  "value": 1.05, "units": "inches"} },
   { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_bottom", "value": 0.05, "units": "inches"} },
-  { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_top",    "value": 1.05, "units": "inches"} }
+  { "call": "constant_screen_constraint", "arguments": {"name": "opponent_zoom_top",    "value": 1.05, "units": "inches"} },
+  { "comment": "Weapon closeup" },
+  { "call": "fractional_screen_constraint", "arguments": {"name": "weapon_closeup_left",   "value":  0.5, "anchor_a": "min", "anchor_b": "end"} },
+  { "call": "fractional_screen_constraint", "arguments": {"name": "weapon_closeup_right",  "value":  1.0, "anchor_a": "min", "anchor_b": "end"} },
+  { "call": "fractional_screen_constraint", "arguments": {"name": "weapon_closeup_bottom", "value": -0.5, "anchor_a": "min", "anchor_b": "end"} },
+  { "call": "fractional_screen_constraint", "arguments": {"name": "weapon_closeup_top",    "value":  0.5, "anchor_a": "min", "anchor_b": "end"} }
 ]

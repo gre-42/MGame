@@ -9,12 +9,14 @@
       }
     },
     {
-      "call": "scene_to_percentage_region",
+      "call": "scene_to_pixel_region",
       "arguments": {
         "target_scene": "primary_scene",
         "z_order": 1,
-        "position": [0.1, 0.5],
-        "size": [1, 1],
+        "left": "weapon_closeup_left",
+        "right": "weapon_closeup_right",
+        "bottom": "weapon_closeup_bottom",
+        "top": "weapon_closeup_top",
         "focus_mask": "always",
         "submenus": []
       }
