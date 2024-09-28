@@ -56,7 +56,6 @@
           "right": "end",
           "bottom": "min",
           "top": "end",
-          "update": "once",
           "delay_load_policy": "no_delay",
           "focus_mask": "menu|loading"
         }
@@ -137,7 +136,6 @@
           "right": "scene_icon_right",
           "bottom": "scene_icon_bottom",
           "top": "scene_icon_top",
-          "update": "once",
           "delay_load_policy": "delay",
           "focus_mask": "menu|loading",
           "submenus": ["scene_selector"]
@@ -237,7 +235,6 @@
       "call": "scene_to_texture",
       "arguments": {
         "texture_name": "scene",
-        "update": "always",
         "size": [500, 300],
         "focus_mask": "menu",
         "submenus": ["car_selector", "car_color_selector"]

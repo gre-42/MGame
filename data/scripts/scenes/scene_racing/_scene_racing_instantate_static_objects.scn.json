@@ -162,7 +162,6 @@
         "right": "highscore_right",
         "bottom": "highscore_bottom",
         "top": "highscore_top",
-        "update": "once",
         "delay_load_policy": "no_delay",
         "focus_mask": "always"
       }
@@ -210,7 +209,6 @@
         "right": "end",
         "bottom": "min",
         "top": "end",
-        "update": "once",
         "delay_load_policy": "no_delay",
         "focus_mask": "countdown_any|game_over_countdown_any"
       }

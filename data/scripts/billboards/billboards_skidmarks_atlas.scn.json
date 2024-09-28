@@ -35,7 +35,8 @@
       "ambient": [1, 1, 1],
       "blend_mode": "continuous",
       "alpha_distances": [0, 0, "inf", "inf"],
-      "cull_faces": true,
+      "depth_test": false,
+      "cull_faces": false,
       "aggregate_mode": "none",
       "transformation_mode": "position_yangle",
       "billboards": [
