@@ -38,6 +38,31 @@
           "asset_id": "$NAME"
         }
       },
+      {
+        "comment": {
+          "required": ["%CAPSULE_POSITION != %null", "%CAPSULE_ROTATION != %null"],
+          "call": "set_capsule_surface_normal",
+          "arguments": {
+            "node": "car_node$TESUFFIX",
+            "position": "%CAPSULE_POSITION",
+            "rotation": "%CAPSULE_ROTATION"
+          }
+        }
+      },
+      {
+        "call": "set_round_mesh_surface_normal",
+        "arguments": {
+          "node": "car_node$TESUFFIX"
+        }
+      },
+      {
+        "call": "set_sliding_normal_modifier",
+        "arguments": {
+          "node": "car_node$TESUFFIX",
+          "fac": 0.8,
+          "max_overlap": 0.05
+        }
+      },
 
       {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "com_node$TESUFFIX", "position": "%COM"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$TESUFFIX", "resource": "gizmo"}}},
