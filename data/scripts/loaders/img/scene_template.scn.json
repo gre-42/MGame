@@ -68,6 +68,14 @@
     }
   },
   {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_names": "%available_resources",
+      "excluded_names": "%%levels/$LOADED_LEVEL_ID/tarmac_included_names",
+      "add": "attr_slippery|surface_base_concrete"
+    }
+  },
+  {
     "playback": "scene_racing_static",
     "arguments": {
       "IF_CREATE_PC_PLAYER": true,

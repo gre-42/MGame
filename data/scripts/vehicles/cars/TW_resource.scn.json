@@ -22,7 +22,7 @@
 
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "TW_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
 
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TW_hitbox", "add": "obj_chassis|attr_convex"}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TW_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}},
 
   {
     "call": "obj_resource",

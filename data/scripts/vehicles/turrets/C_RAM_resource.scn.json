@@ -21,7 +21,7 @@
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "C_RAM_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "C_RAM_hitbox", "add": "obj_chassis|attr_convex"}},
+  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "C_RAM_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}},
   {"call": "compound_resource", "arguments": {"source_names": ["C_RAM_hitbox"], "dest_name": "C_RAM_hitboxes"}},
   {
     "declare_macro": "load_C_RAM",
