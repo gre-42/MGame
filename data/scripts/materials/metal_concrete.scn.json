@@ -3,7 +3,9 @@
   "arguments": {
     "material0": "surface_base_metal",
     "material1": "surface_base_concrete",
-    "surface_stiction_factor": 0.2,
+    "stiction_factor": "nan",
+    "stiction_coefficient": 0.2,
+    "friction_coefficient": 0.2,
     "smoke": []
   }
 }

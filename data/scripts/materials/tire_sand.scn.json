@@ -3,7 +3,9 @@
   "arguments": {
     "material0": "surface_base_tire",
     "material1": "surface_base_sand",
-    "surface_stiction_factor": 0.9,
+    "stiction_factor": 0.9,
+    "stiction_coefficient": "nan",
+    "friction_coefficient": "nan",
     "smoke": [
       {
         "resource_name": "skidmarks_a20_black",
