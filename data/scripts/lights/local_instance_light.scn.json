@@ -46,6 +46,7 @@
           "black_node": "",
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
           "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT",
+          "smooth_niterations": [2, 2],
           "render_pass": "lightmap_black_local_instances"
         }
       },
@@ -100,6 +101,7 @@
           "black_node": "",
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
           "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT",
+          "smooth_niterations": [2, 2],
           "render_pass": "lightmap_black_movables"
         }
       }
@@ -138,7 +140,8 @@
           "follower": "light_node$LSUFFIX",
           "offset": [0, 0, 0],
           "texture_width": "%SCENE_LIGHTMAP_WIDTH",
-          "texture_height": "%SCENE_LIGHTMAP_HEIGHT"
+          "texture_height": "%SCENE_LIGHTMAP_HEIGHT",
+          "smooth_niterations": [2, 2]
         }
       },
       {
