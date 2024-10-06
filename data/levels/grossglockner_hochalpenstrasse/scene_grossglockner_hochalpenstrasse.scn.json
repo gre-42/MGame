@@ -6,7 +6,11 @@
       "call": "globals",
       "arguments": {
         "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
-        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
+        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$SELECTED_LEVEL_ID.checkpoints.m",
+        "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
+        "AGGREGATE_MODE": "instances_sorted",
+        "VIP_NAME": "you",
+        "ROLE": "driver",
         "OSM_LOCATION": {
           "position": [-90, -2000, 0],
           "rotation": [-90, 0, 0],
@@ -51,7 +55,7 @@
         { "playback": "scene_racing_setup_new_round" },
         {
           "playback": "scene_racing_instantiate_transient_objects",
-          "arguments": {
+          "let": {
             "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
             "IF_PC_PLAYER_PLAYBACK": false,
             "CAR_NODE_POSITION": [
