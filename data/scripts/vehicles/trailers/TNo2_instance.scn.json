@@ -6,6 +6,7 @@
       "let": {
         "NAME": "TNo2",
         "TESUFFIX": "%TRAILER_SUFFIX",
+        "DECIMATE": "",
 
         "SIZE": [2.2, 2.6, 7],
         "COM": [0, 1.3, 0],
@@ -38,9 +39,7 @@
     "declare_macro": "create_player_car_internals_TNo2",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "let": {
-        "ASSET_ID": "TNo2"
-      }
+      "arguments": { "ASSET_ID": "TNo2" }
     }
   },
   {
