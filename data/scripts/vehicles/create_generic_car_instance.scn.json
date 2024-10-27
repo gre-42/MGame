@@ -50,20 +50,34 @@
         }
       },
       {
-        "call": "set_round_mesh_surface_normal",
-        "arguments": {
-          "node": "car_node$TESUFFIX",
-          "t": 0.8,
-          "k": 2
-        }
-      },
-      {
-        "call": "set_sliding_normal_modifier",
-        "arguments": {
-          "node": "car_node$TESUFFIX",
-          "fac": 0.8,
-          "max_overlap": 0.05
-        }
+        "comment": [
+          {
+            "required": ["%BEVEL_BOX_MIN != %null", "%BEVEL_BOX_MAX != %null"],
+            "call": "set_bevel_box_surface_normal",
+            "arguments": {
+              "node": "car_node$TESUFFIX",
+              "min": "%BEVEL_BOX_MIN",
+              "max": "%BEVEL_BOX_MAX",
+              "radius": "%BEVEL_BOX_RADIUS"
+            }
+          },
+          {
+            "call": "set_round_mesh_surface_normal",
+            "arguments": {
+              "node": "car_node$TESUFFIX",
+              "t": 0.8,
+              "k": 2
+            }
+          },
+          {
+            "call": "set_sliding_normal_modifier",
+            "arguments": {
+              "node": "car_node$TESUFFIX",
+              "fac": 0.5,
+              "max_overlap": 0.2
+            }
+          }    
+        ]
       },
 
       {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "com_node$TESUFFIX", "position": "%COM"}}},
