@@ -1,38 +1,36 @@
 [
   {
-    "comment": {
-      "call": "obj_resource",
-      "arguments": {
-        "name": "OT_hitbox",
-        "filename": "models/primitives/box.obj",
-        "config": {
-          "position": [0, 0.85, 0],
-          "rotation": [0, 0, 0],
-          "scale": [1.2, 1.0, 3.4],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "none",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "rectangle_triangulation_mode": "disabled"
-        }
+    "call": "obj_resource",
+    "arguments": {
+      "name": "OT_hitbox",
+      "filename": "models/primitives/box.obj",
+      "config": {
+        "position": [0, 0.85, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1.2, 1.0, 3.4],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
       }
     }
   },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "OT_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
   {
     "call": "add_swept_sphere_aabb",
     "arguments": {
-      "name": "OT_ssaabb",
+      "name": "OT_distancebox",
       "min": [-1.2, -0.15, -3.4],
       "max": [1.2, 1.85, 3.4],
       "radius": 0.5,
-      "physics_material": "obj_chassis|attr_convex|surface_base_metal"
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
     }
   },
-  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "OT_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"comment": {"call": "modify_physics_material_tags", "arguments": {"resource_name": "OT_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}}},
   {
     "call": "obj_resource",
     "arguments": {
@@ -49,17 +47,16 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "physics_material": "attr_collide"
+        "physics_material": "attr_visible|attr_collide|obj_tire_line"
       }
     }
   },
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "OT_tirelines", "add": "obj_tire_line"}},
   {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [-0.8, 0.2, -1.2], "to": [-0.8, -0.7, -1.2]}}, {"comment": "left front"},
   {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [ 0.8, 0.2, -1.2], "to": [ 0.8, -0.7, -1.2]}}, {"comment": "right front"},
   {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [-0.8, 0.2,  2.6], "to": [-0.8, -0.7,  2.6]}}, {"comment": "left rear"},
   {"call": "gen_ray", "arguments": {"name": "OT_tirelines", "from": [ 0.8, 0.2,  2.6], "to": [ 0.8, -0.7,  2.6]}}, {"comment": "right rear"},
 
-  {"call": "compound_resource", "arguments": {"source_names": ["OT_ssaabb", "OT_tirelines"], "dest_name": "OT_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["OT_hitbox", "OT_distancebox", "OT_tirelines"], "dest_name": "OT_hitboxes"}},
   {"call": "compound_resource", "arguments": {"source_names": ["OT_hitbox"], "dest_name": "OT_massbox"}},
 
   {
