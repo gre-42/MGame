@@ -1,46 +1,55 @@
 [
   {
-    "call": "obj_resource",
-    "arguments": {
-      "name": "LK4_hitbox",
-      "filename": "models/primitives/box.obj",
-      "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.85, 0.6, 2.15],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "rectangle_triangulation_mode": "disabled"
+    "comment": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "LK4_hitbox",
+        "filename": "models/primitives/box.obj",
+        "config": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.85, 0.6, 2.15],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "rectangle_triangulation_mode": "disabled"
+        }
       }
     }
   },
-
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "LK4_ssaabb",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_chassis|attr_convex|surface_base_metal"
+    }
+  },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "LK4_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "LK4_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}},
-
+  {"comment": {"call": "modify_physics_material_tags", "arguments": {"resource_name": "LK4_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}}},
   {
     "call": "obj_resource",
     "arguments": {
       "name": "LK4_tirelines",
       "filename": "models/primitives/empty.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "physics_material": "attr_collide"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_collide"
       }
     }
   },
@@ -52,7 +61,7 @@
 
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "LK4_tirelines", "add": "obj_tire_line"}},
 
-  {"call": "compound_resource", "arguments": {"source_names": ["LK4_hitbox", "LK4_tirelines"], "dest_name": "LK4_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["LK4_ssaabb", "LK4_tirelines"], "dest_name": "LK4_hitboxes"}},
   {"call": "compound_resource", "arguments": {"source_names": ["LK4_hitbox"], "dest_name": "LK4_massbox"}},
 
   {
@@ -64,27 +73,27 @@
           "name": "%NAME",
           "filename": "models/SR/$NAME.obj",
           "config": {
-          "position": [0, -0.05, -0.05],
-          "rotation": [0, 180, 0],
-          "scale": [1, 1, 1],
-          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
-          "blend_mode": "continuous",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "cull_faces_alpha": false,
-          "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "reflection_map": "%REFLECTION_MAP",
-          "emissive_factor": "%STUNT_RALLY_EMISSIVE_FACTOR",
-          "ambient_factor": "%STUNT_RALLY_AMBIENT_FACTOR",
-          "diffuse_factor": "%STUNT_RALLY_DIFFUSE_FACTOR",
-          "specular_factor": "%STUNT_RALLY_SPECULAR_FACTOR",
-          "fresnel_min": "%STUNT_RALLY_FRESNEL_MIN",
-          "fresnel_max": "%STUNT_RALLY_FRESNEL_MAX",
-          "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
-          "triangle_tangent_error_behavior": "zero",
-          "werror": false
+            "position": [0, -0.05, -0.05],
+            "rotation": [0, 180, 0],
+            "scale": [1, 1, 1],
+            "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": false,
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%OCCLUDER_PASS",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "%REFLECTION_MAP",
+            "emissive_factor": "%STUNT_RALLY_EMISSIVE_FACTOR",
+            "ambient_factor": "%STUNT_RALLY_AMBIENT_FACTOR",
+            "diffuse_factor": "%STUNT_RALLY_DIFFUSE_FACTOR",
+            "specular_factor": "%STUNT_RALLY_SPECULAR_FACTOR",
+            "fresnel_min": "%STUNT_RALLY_FRESNEL_MIN",
+            "fresnel_max": "%STUNT_RALLY_FRESNEL_MAX",
+            "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
           }
         }
       }

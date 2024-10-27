@@ -1,26 +1,38 @@
 [
   {
-    "call": "obj_resource",
-    "arguments": {
-      "name": "FN_hitbox",
-      "filename": "models/primitives/box.obj",
-      "config": {
-        "position": [0, 0, 0],
-        "rotation": [0, 0, 0],
-        "scale": [0.85, 0.6, 2.15],
-        "center_distances": [0, "inf"],
-        "blend_mode": "off",
-        "alpha_distances": [0, 0, "inf", "inf"],
-        "occluded_pass": "none",
-        "occluder_pass": "none",
-        "aggregate_mode": "none",
-        "transformation_mode": "all",
-        "rectangle_triangulation_mode": "disabled"
+    "comment": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "FN_hitbox",
+        "filename": "models/primitives/box.obj",
+        "config": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [0.85, 0.6, 2.15],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "rectangle_triangulation_mode": "disabled"
+        }
       }
     }
   },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "FN_ssaabb",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_chassis|attr_convex|surface_base_metal"
+    }
+  },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "FN_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "FN_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}},
+  {"comment": {"call": "modify_physics_material_tags", "arguments": {"resource_name": "FN_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}}},
   {
     "call": "obj_resource",
     "arguments": {
@@ -47,7 +59,7 @@
   {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [-0.75, -0.2,  1.15], "to": [-0.75, -1,  1.15]}}, {"comment": "left rear"},
   {"call": "gen_ray", "arguments": {"name": "FN_tirelines", "from": [ 0.75, -0.2,  1.15], "to": [ 0.75, -1,  1.15]}}, {"comment": "right rear"},
 
-  {"call": "compound_resource", "arguments": {"source_names": ["FN_hitbox", "FN_tirelines"], "dest_name": "FN_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["FN_ssaabb", "FN_tirelines"], "dest_name": "FN_hitboxes"}},
   {"call": "compound_resource", "arguments": {"source_names": ["FN_hitbox"], "dest_name": "FN_massbox"}},
 
   {
