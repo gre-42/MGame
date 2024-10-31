@@ -39,18 +39,16 @@
         }
       },
       {
-        "comment": {
-          "required": ["%CAPSULE_POSITION != %null", "%CAPSULE_ROTATION != %null"],
-          "call": "set_capsule_surface_normal",
-          "arguments": {
-            "node": "car_node$TESUFFIX",
-            "position": "%CAPSULE_POSITION",
-            "rotation": "%CAPSULE_ROTATION"
-          }
-        }
-      },
-      {
         "comment": [
+          {
+            "required": ["%CAPSULE_POSITION != %null", "%CAPSULE_ROTATION != %null"],
+            "call": "set_capsule_surface_normal",
+            "arguments": {
+              "node": "car_node$TESUFFIX",
+              "position": "%CAPSULE_POSITION",
+              "rotation": "%CAPSULE_ROTATION"
+            }
+          },
           {
             "required": ["%BEVEL_BOX_MIN != %null", "%BEVEL_BOX_MAX != %null"],
             "call": "set_bevel_box_surface_normal",
