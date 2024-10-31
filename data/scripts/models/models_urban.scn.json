@@ -96,27 +96,27 @@
       "name": "corner_sign",
       "filename": "models/corner_sign/corner_sign.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [2, 2, 2],
-      "center_distances": [0, 501],
-      "blend_mode": "binary_05",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "cull_faces_alpha": false,
-      "occluded_pass": "lightmap_black_global_static",
-      "occluder_pass": "lightmap_black_local_instances",
-      "aggregate_mode": "instances_sorted",
-      "transformation_mode": "position_yangle",
-      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
-      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
-      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
-      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
-      "fog_distances": "%FOG_DISTANCES",
-      "fog_ambient": "%FOG_AMBIENT",
-      "fresnel_min": 0,
-      "fresnel_max": 0.4,
-      "fresnel_exponent": 4,
-      "fresnel_ambient": [1, 1, 1]
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [2, 2, 2],
+        "center_distances": [0, 501],
+        "blend_mode": "binary_05",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "lightmap_black_local_instances",
+        "aggregate_mode": "instances_sorted",
+        "transformation_mode": "position_yangle",
+        "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
+        "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
+        "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
+        "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
+        "fog_distances": "%FOG_DISTANCES",
+        "fog_ambient": "%FOG_AMBIENT",
+        "fresnel_min": 0,
+        "fresnel_max": 0.4,
+        "fresnel_exponent": 4,
+        "fresnel_ambient": [1, 1, 1]
       }
     }
   },
@@ -172,15 +172,9 @@
         "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
         "fog_distances": "%FOG_DISTANCES",
         "fog_ambient": "%FOG_AMBIENT",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|attr_convex"
       }
-    }
-  },
-  {
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "road_bollard_hitbox",
-      "add": "attr_convex"
     }
   },
   {

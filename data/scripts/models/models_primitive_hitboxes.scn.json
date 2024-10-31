@@ -15,15 +15,9 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "position",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|attr_convex"
       }
-    }
-  },
-  {
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "box_02_1_02_hitbox",
-      "add": "attr_convex"
     }
   },
   {
@@ -42,15 +36,9 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "position_yangle",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|attr_convex"
       }
-    }
-  },
-  {
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "box_50_16_01_hitbox",
-      "add": "attr_convex"
     }
   },
   {
@@ -70,16 +58,9 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "position_yangle",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|attr_convex"
       }
-    }
-  },
-  {
-    "exclude": ["%IF_ANDROID"],
-    "call": "modify_physics_material_tags",
-    "arguments": {
-      "resource_name": "box_10_10_10_hitbox",
-      "add": "obj_chassis|attr_convex"
     }
   }
 ]
