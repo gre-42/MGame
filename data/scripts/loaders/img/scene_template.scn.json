@@ -114,7 +114,8 @@
     "context": "primary_scene",
     "arguments": {
       "ipl_files": "%%levels/$LOADED_LEVEL_ID/ipl_files",
-      "except": "%%levels/$LOADED_LEVEL_ID/ipl_exclude",
+      "required_prefix": "%%levels/$LOADED_LEVEL_ID/instantiated_required_prefix",
+      "except": "%%levels/$LOADED_LEVEL_ID/instantiated_exclude",
       "instantiables": "%available_instantiables",
       "dynamics": "static",
       "min_vertex_distance": 0.05,
