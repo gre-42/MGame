@@ -114,12 +114,26 @@
     "context": "primary_scene",
     "arguments": {
       "ipl_files": "%%levels/$LOADED_LEVEL_ID/ipl_files",
+      "instantiables": "%available_instantiables",
       "required_prefix": "%%levels/$LOADED_LEVEL_ID/instantiated_required_prefix",
       "except": "%%levels/$LOADED_LEVEL_ID/instantiated_exclude",
-      "instantiables": "%available_instantiables",
       "dynamics": "static",
       "min_vertex_distance": 0.05,
       "instantiated_resources": "instantiated_resources"
+    }
+  },
+  {
+    "required": ["%%levels/$LOADED_LEVEL_ID/grass_files != %null"],
+    "call": "instantiate_grass",
+    "context": "primary_scene",
+    "arguments": {
+      "filenames": "%%levels/$LOADED_LEVEL_ID/grass_files",
+      "resources": [
+        "bflower2            (p:0.1)",
+        "vegetation8.1",
+        "bflower             (p:0.1)",
+        "vegetation1.9       (p:0.002)",
+        "vegetation1.10      (p:0.002)"]
     }
   },
   {
