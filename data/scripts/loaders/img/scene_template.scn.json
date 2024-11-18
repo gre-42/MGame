@@ -115,7 +115,7 @@
     "arguments": {
       "ipl_files": "%%levels/$LOADED_LEVEL_ID/ipl_files",
       "instantiables": "%available_instantiables",
-      "required_prefix": "%%levels/$LOADED_LEVEL_ID/instantiated_required_prefix",
+      "required_prefixes": "%%levels/$LOADED_LEVEL_ID/instantiated_required_prefixes",
       "except": "%%levels/$LOADED_LEVEL_ID/instantiated_exclude",
       "dynamics": "static",
       "min_vertex_distance": 0.05,
