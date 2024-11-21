@@ -128,12 +128,7 @@
     "context": "primary_scene",
     "arguments": {
       "filenames": "%%levels/$LOADED_LEVEL_ID/grass_files",
-      "resources": [
-        "bflower2            (p:0.1)",
-        "vegetation8.1",
-        "bflower             (p:0.1)",
-        "vegetation1.9       (p:0.002)",
-        "vegetation1.10      (p:0.002)"],
+      "resources": "%%levels/$LOADED_LEVEL_ID/grass_resources",
       "height_tolerance": 1.5
     }
   },
