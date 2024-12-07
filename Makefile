@@ -37,6 +37,9 @@ build_asan:
 build_tsan:
 	make build_any TARGET=build_tsan
 
+build_ubsan:
+	make build_any TARGET=build_ubsan
+
 build_asan_clang:
 	make build_any TARGET=build_asan_clang
 
