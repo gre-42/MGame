@@ -114,20 +114,20 @@ jobs:
         run: |
           PowerShell -ExecutionPolicy Bypass Mlib/build_openal_soft_and_freealut.ps1 || exit /b
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-          Mlib\build_recastnavigation.cmd || exit /b
-          Mlib\build_zlib.cmd || exit /b
+          cmd /C Mlib\build_recastnavigation.cmd || exit /b
+          cmd /C Mlib\build_zlib.cmd || exit /b
 
       - name: Build
         shell: cmd
         run: |
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-          Mlib\build_scene_renderer.cmd || exit /b
+          cmd /C Mlib\build_scene_renderer.cmd || exit /b
 
       - name: Package
         shell: cmd
         run: |
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-          Mlib\package_scene_renderer.cmd || exit /b
+          cmd /C Mlib\package_scene_renderer.cmd || exit /b
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
