@@ -256,6 +256,8 @@
       "street_node_smoothing_iterations": 500,
       "street_edge_smoothness": 0.1,
       "terrain_edge_smoothness": 0.1,
+      "terrain_edge_bias": [1, 0],
+      "terrain_edge_bias_street_distances": [0, 5],
       "displacementmap": "textures/noise/hf_heightmap.png",
       "displacementmap_min": 0,
       "displacementmap_uv_scale": 1e-2,
