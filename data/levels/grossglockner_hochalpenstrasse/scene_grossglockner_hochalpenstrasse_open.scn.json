@@ -4,12 +4,5 @@
   {
     "playback": "create_grossglockner_hochalpenstrasse",
     "arguments": {"STYLE": "_open"}
-  },
-  {
-    "required": ["%IF_TRIPOD_MODE"],
-    "context": "primary_scene",
-    "execute": [
-      {"include": "create_cameras_grossglockner_hochalpenstrasse.scn.json"}
-    ]
   }
 ]
