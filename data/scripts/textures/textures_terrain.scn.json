@@ -279,7 +279,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037_Rock028",
@@ -291,7 +290,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground025",
@@ -492,7 +490,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock018",
@@ -503,7 +500,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_Displacement",
@@ -513,7 +509,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028",

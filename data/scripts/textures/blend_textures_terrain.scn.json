@@ -11,7 +11,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_256",
     "arguments": {
       "NAME": "Ground037_Rock028",
@@ -86,7 +85,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "playback": "generate_blend_maps_512",
     "arguments": {
       "NAME": "Rock028_200",

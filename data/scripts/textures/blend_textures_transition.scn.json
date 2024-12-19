@@ -78,7 +78,6 @@
     }
   },
   {
-    "required": ["!IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Weight_Texture",
@@ -90,7 +89,6 @@
     }
   },
   {
-    "required": ["!IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Feather_Texture",
@@ -110,7 +108,6 @@
     }
   },
   {
-    "required": ["!IF_ANDROID"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Color_Texture",

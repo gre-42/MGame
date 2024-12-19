@@ -52,14 +52,14 @@
     "call": "add_texture_atlas",
     "arguments": {
       "name": "vegetation4",
-      "width": 2048,
-      "height": 2048,
+      "width": 512,
+      "height": 512,
       "color_mode": "rgba",
       "images": [
-        {"target_position": [   0,    0], "texture": "#Trees0023"},
-        {"target_position": [1024,    0], "texture": "#Trees0024"},
-        {"target_position": [   0, 1024], "texture": "#Trees0029"},
-        {"target_position": [1024, 1024], "texture": "#Trees0096"}
+        {"target_position": [  0,   0], "texture": "#Trees0023"},
+        {"target_position": [256,   0], "texture": "#Trees0024"},
+        {"target_position": [  0, 256], "texture": "#Trees0029"},
+        {"target_position": [256, 256], "texture": "#Trees0096"}
       ]
     }
   },
