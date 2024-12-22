@@ -1,0 +1,111 @@
+[
+  {"include": "scripts/wheels/FN_wheel_resource.scn.json"},
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "sedan0_hitbox",
+      "filename": "models/primitives/box.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.85, 0.6, 2.15],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      }
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "sedan0_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "sedan0_distancebox",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "sedan0_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "sedan0_tirelines", "from": [-0.87, -0.2, -1.42], "to": [-0.87, -1, -1.42]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "sedan0_tirelines", "from": [ 0.87, -0.2, -1.42], "to": [ 0.87, -1, -1.42]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "sedan0_tirelines", "from": [-0.87, -0.2,  1.42], "to": [-0.87, -1,  1.42]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "sedan0_tirelines", "from": [ 0.87, -0.2,  1.42], "to": [ 0.87, -1,  1.42]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "arguments": {"source_names": ["sedan0_hitbox", "sedan0_distancebox", "sedan0_tirelines"], "dest_name": "sedan0_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["sedan0_hitbox"], "dest_name": "sedan0_massbox"}},
+
+  {
+    "declare_macro": "load_sedan0_part",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%NAME",
+          "filename": "models/gre42/$NAME.obj",
+          "config": {
+            "position": [0, -0.8, -0.4],
+            "rotation": [0, -90, 0],
+            "scale": [1, 1, 1],
+            "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": true,
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%OCCLUDER_PASS",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "%REFLECTION_MAP",
+            "emissive_factor": "%BLENDER_EMISSIVE_FACTOR",
+            "ambient_factor": "%BLENDER_AMBIENT_FACTOR",
+            "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
+            "specular_factor": "%BLENDER_SPECULAR_FACTOR",
+            "fresnel_min": "%STUNT_RALLY_FRESNEL_MIN",
+            "fresnel_max": "%STUNT_RALLY_FRESNEL_MAX",
+            "fresnel_exponent": "%STUNT_RALLY_FRESNEL_EXPONENT",
+            "fresnel_ambient": "%BLENDER_FRESNEL_AMBIENT",
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_sedan0",
+    "content": [
+      {"playback": "load_sedan0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "sedan0/sedan0$DECIMATE"}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "sedan0/main$SUFFIX"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "sedan0/main$SUFFIX", "companion_resource": "sedan0/sedan0$DECIMATE"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "sedan0/wheel_front$SUFFIX"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "sedan0/wheel_rear$SUFFIX"}}
+    ]
+  },
+  {"playback": "load_sedan0", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
+  {"playback": "load_sedan0", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d3", "SUFFIX": "_lowres"}}
+]
