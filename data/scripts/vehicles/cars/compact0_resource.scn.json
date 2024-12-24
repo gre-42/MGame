@@ -99,9 +99,13 @@
   {
     "declare_macro": "load_compact0",
     "content": [
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0_chassis$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0_glass$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0_misc$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "compact0/main$SUFFIX"}},
-      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0$DECIMATE"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_chassis$DECIMATE"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_glass$DECIMATE"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_misc$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "compact0/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "compact0/wheel_rear$SUFFIX"}}
     ]
