@@ -1,15 +1,15 @@
 {
-  "id": "XZ",
-  "title": "XZ",
-  "on_init": {"include": "XZ.scn.json"},
+  "id": "compact0",
+  "title": "Compact 0",
+  "on_init": {"include": "compact0.scn.json"},
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "XZ"
+      "SELECTED_VEHICLE_ID": "compact0"
     }
   },
   "database": {
-    "SUFFIX": "XZ",
+    "SUFFIX": "compact0",
     "CLASS": "car",
     "NODE_PREFIXES": ["car_node"],
     "TRAILER_HITCH_POSITION_FEMALE": null,

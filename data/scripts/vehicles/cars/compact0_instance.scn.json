@@ -1,10 +1,10 @@
 [
   {
-    "declare_macro": "create_sedan0",
+    "declare_macro": "create_compact0",
     "content": {
       "playback": "generic_car.create",
       "let": {
-        "NAME": "sedan0",
+        "NAME": "compact0",
         "TESUFFIX": "%SUFFIX",
         "DECIMATE": "",
 
@@ -16,13 +16,13 @@
 
         "WHEEL_LEFT_FRONT_MOUNT_0":  [-0.83, -0.49, -1.42],
         "WHEEL_RIGHT_FRONT_MOUNT_0": [ 0.83, -0.49, -1.42],
-        "WHEEL_LEFT_REAR_MOUNT_0":   [-0.83, -0.49,  1.42],
-        "WHEEL_RIGHT_REAR_MOUNT_0":  [ 0.83, -0.49,  1.42],
+        "WHEEL_LEFT_REAR_MOUNT_0":   [-0.83, -0.49,  1.26],
+        "WHEEL_RIGHT_REAR_MOUNT_0":  [ 0.83, -0.49,  1.26],
 
         "WHEEL_LEFT_FRONT_MOUNT_1":  [-0.83, 0, -1.42],
         "WHEEL_RIGHT_FRONT_MOUNT_1": [ 0.83, 0, -1.42],
-        "WHEEL_LEFT_REAR_MOUNT_1":   [-0.83, 0,  1.42],
-        "WHEEL_RIGHT_REAR_MOUNT_1":  [ 0.83, 0,  1.42],
+        "WHEEL_LEFT_REAR_MOUNT_1":   [-0.83, 0,  1.26],
+        "WHEEL_RIGHT_REAR_MOUNT_1":  [ 0.83, 0,  1.26],
 
         "ANGULAR_VELS_FRONT": null,
         "ANGULAR_VELS_REAR": null,
@@ -36,18 +36,18 @@
     }
   },
   {
-    "declare_macro": "create_player_car_internals_sedan0",
+    "declare_macro": "create_player_car_internals_compact0",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": { "ASSET_ID": "sedan0" }
+      "arguments": { "ASSET_ID": "compact0" }
     }
   },
   {
-    "declare_macro": "create_player_car_externals_sedan0",
+    "declare_macro": "create_player_car_externals_compact0",
     "content": {
       "playback": "generic_car.create_player_externals",
       "let": {
-        "ASSET_ID": "sedan0",
+        "ASSET_ID": "compact0",
         "CAMERA_CLASS": "sedan",
         "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
       }
