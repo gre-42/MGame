@@ -52,10 +52,10 @@
       }
     }
   },
-  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [-0.83, -0.2, -1.42], "to": [-0.83, -1, -1.42]}}, {"comment": "left front"},
-  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [ 0.83, -0.2, -1.42], "to": [ 0.83, -1, -1.42]}}, {"comment": "right front"},
-  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [-0.83, -0.2,  1.26], "to": [-0.83, -1,  1.26]}}, {"comment": "left rear"},
-  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [ 0.83, -0.2,  1.26], "to": [ 0.83, -1,  1.26]}}, {"comment": "right rear"},
+  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [-0.77, -0.2, -1.37], "to": [-0.77, -1, -1.37]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [ 0.77, -0.2, -1.37], "to": [ 0.77, -1, -1.37]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [-0.77, -0.2,  1.26], "to": [-0.77, -1,  1.26]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "compact0_tirelines", "from": [ 0.77, -0.2,  1.26], "to": [ 0.77, -1,  1.26]}}, {"comment": "right rear"},
 
   {"call": "compound_resource", "arguments": {"source_names": ["compact0_hitbox", "compact0_distancebox", "compact0_tirelines"], "dest_name": "compact0_hitboxes"}},
   {"call": "compound_resource", "arguments": {"source_names": ["compact0_hitbox"], "dest_name": "compact0_massbox"}},
