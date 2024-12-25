@@ -15,6 +15,7 @@
   },
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "osm_resource_snow1.scn.json"},
+  {"include": "create_tripod_cameras_snow1.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -54,8 +55,8 @@
           "IF_CREATE_PC_CAR": true,
           "IF_PC_PLAYER_PLAYBACK": false,
           "CAR_NODE_POSITION": [
-            "'-113.3258598_deg'",
-            "'35.7393636_deg'",
+            "'-113.325689622154286_deg'",
+            "'35.7395099330733927_deg'",
             "'142'"],
           "CAR_NODE_ANGLES": [0, 140, 0],
           "VEHICLE_VELOCITY": [0, 0, 0],
