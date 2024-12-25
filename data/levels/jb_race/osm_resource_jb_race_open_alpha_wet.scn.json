@@ -5,7 +5,7 @@
     "arguments": {
       "name": "osm_map",
       "filename": "$__DIR__/../jb/map_jb.osm",
-      "cache_filename": "$__APPDATA__/jb_$LOADED_GAME_LEVEL.cereal.binary",
+      "cache_filename": "$__APPDATA__/$LOADED_LEVEL_ID.cereal.binary",
       "heightmap": "%LOADED_HEIGHTMAP",
       "grass_foliagemap": "textures/noise/foliagemap.png",
       "terrain_undefined_textures": ["textures/debug/pink.png"],
