@@ -101,7 +101,7 @@
     "content": [
       {"playback": "load_sedan0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "sedan0/sedan0_chassis$DECIMATE"}},
       {"playback": "load_sedan0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "sedan0/sedan0_glass$DECIMATE"}},
-      {"playback": "load_sedan0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "sedan0/sedan0_misc$DECIMATE"}},
+      {"playback": "load_sedan0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": null, "NAME": "sedan0/sedan0_misc$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "sedan0/main$SUFFIX"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "sedan0/main$SUFFIX", "companion_resource": "sedan0/sedan0_chassis$DECIMATE"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "sedan0/main$SUFFIX", "companion_resource": "sedan0/sedan0_glass$DECIMATE"}},
