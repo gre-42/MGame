@@ -5,25 +5,25 @@ A rally game based on OpenStreetMap data.
 ## Screenshots
 
 ### Track JB
-![Screenshot-JB-2024-08-24](media/Screenshot-JB-2024-08-24.png)
+![Screenshot-JB-2024-12-26](media/Screenshot-JB-2024-12-26.png)
 
 ### Snow 1
-![Screenshot-S1-2023-01-06](media/Screenshot-S1-2024-08-23.png)
+![Screenshot-S1-2024-12-26](media/Screenshot-S1-2024-12-26.png)
 
 ### Retro race track 1
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
 
 ### Island 0
-![Screenshot-I0-2024-01-20](media/Screenshot-I0-2024-01-20.png)
+![Screenshot-I0-2024-12-26](media/Screenshot-I0-2024-12-26.png)
 
 ### Forest 0
-![Screenshot-F0-2024-01-20](media/Screenshot-F0-2024-01-20.png)
+![Screenshot-F0-2024-12-26](media/Screenshot-F0-2024-12-26.png)
 
 ### Desert 1
-![Screenshot-DS1-2024-01-20](media/Screenshot-DS1-2024-01-20.png)
+![Screenshot-DS1-2024-12-26](media/Screenshot-DS1-2024-12-26.png)
 
 ### Race track 0
-![Screenshot-R0-2023-02-25](media/Screenshot-R0-2024-12-26.png)
+![Screenshot-R0-2023-12-26](media/Screenshot-R0-2024-12-26.png)
 
 ### Großglockner High Alpine Road
 ![Screenshot-GH-2024-01-27](media/Screenshot-GH-2024-12-26.png)
