@@ -10,7 +10,7 @@ import re
 decimate_ratio = 0.3
 # decimate_ratio = 0
 
-for obj_filename in glob.glob('*/*.obj'):
+for obj_filename in glob.glob('/*.obj'):
     if re.search('_(?:d[.\\d]*|hitbox.*)\.obj', obj_filename):
         print('Skipping file "%s"' % obj_filename)
         continue
