@@ -44,7 +44,7 @@
           "DIST_MIN": 0,
           "DIST_MAX": "inf",
           "OCCLUDER_PASS": "none",
-          "REFLECTION_MAP": ""
+          "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null
         }
       },
       {
@@ -151,8 +151,8 @@
   {
     "declare_macro": "load-TNo2",
     "content": [
-      {"playback": "load_TNo2_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
-      {"playback": "load_TNo2_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "wheel$DECIMATE"}},
+      {"playback": "load_TNo2_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
+      {"playback": "load_TNo2_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "NAME": "wheel$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/chassis$DECIMATE"], "dest_name": "TNo2/main$SUFFIX"}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_rear$SUFFIX"}}

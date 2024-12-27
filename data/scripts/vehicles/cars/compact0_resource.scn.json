@@ -81,6 +81,7 @@
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "reflection_map": "%REFLECTION_MAP",
+            "reflectance": "%REFLECTANCE",
             "emissive_factor": "%BLENDER_EMISSIVE_FACTOR",
             "ambient_factor": "%BLENDER_AMBIENT_FACTOR",
             "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
@@ -99,9 +100,9 @@
   {
     "declare_macro": "load_compact0",
     "content": [
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0_chassis$DECIMATE"}},
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "car", "NAME": "compact0/compact0_glass$DECIMATE"}},
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": null, "NAME": "compact0/compact0_misc$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "compact0/compact0_chassis$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "compact0/compact0_glass$DECIMATE"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null, "NAME": "compact0/compact0_misc$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "compact0/main$SUFFIX"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_chassis$DECIMATE"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_glass$DECIMATE"}},

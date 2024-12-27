@@ -32,7 +32,7 @@
   {
     "declare_macro": "load_FN_wheels",
     "content": [
-      {"playback": "load_FN_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTION_MAP": "",  "NAME": "FN/FN_wheel$DECIMATE"}},
+      {"playback": "load_FN_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "NAME": "FN/FN_wheel$DECIMATE"}},
       {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_front$SUFFIX"}},
       {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_rear$SUFFIX"}}
     ]
