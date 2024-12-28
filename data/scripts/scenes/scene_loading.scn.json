@@ -23,6 +23,17 @@
         }
       },
       {
+        "call": "thread_top",
+        "arguments": {
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "position": ["nan", 0],
+          "font_height": "normal",
+          "line_distance": "normal",
+          "focus_mask": "always",
+          "update_interval_ms": 1000
+        }
+      },
+      {
         "call": "focused_text",
         "arguments": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
