@@ -113,6 +113,9 @@
         "call": "respawn_all_players"
       },
       {
+        "playback": "instantiate_transient_objects"
+      },
+      {
         "call": "reset_supply_depot_cooldowns"
       },
       {

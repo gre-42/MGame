@@ -17,7 +17,7 @@
       {
         "call": "execute_in_physics_thread",
         "arguments": {
-          "command": { "playback": "instantiate_transient_objects" }
+          "command": { "playback": "scene_racing_setup_new_round" }
         }
       }
     ]

@@ -46,23 +46,20 @@
   },
   {
     "declare_macro": "instantiate_transient_objects",
-    "content": [
-      { "playback": "scene_racing_setup_new_round" },
-      {
-        "playback": "scene_racing_instantiate_transient_objects",
-        "let": {
-          "IF_CREATE_PC_CAR": false,
-          "IF_PC_PLAYER_PLAYBACK": false,
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "IF_CREATE_PC_CAR": false,
+        "IF_PC_PLAYER_PLAYBACK": false,
 
-          "IF_PLAYBACK_CHECKPOINTS": false,
-          "IF_PLAYBACK_TRACK_1": false,
-          "IF_PLAYBACK_TRACK_2": false,
-          "IF_PLAYBACK_TRACK_3": false,
-          "IF_CHECKPOINTS": false,
-          "IF_BURN_IN": false
-        }
+        "IF_PLAYBACK_CHECKPOINTS": false,
+        "IF_PLAYBACK_TRACK_1": false,
+        "IF_PLAYBACK_TRACK_2": false,
+        "IF_PLAYBACK_TRACK_3": false,
+        "IF_CHECKPOINTS": false,
+        "IF_BURN_IN": false
       }
-    ]
+    }
   },
   {
     "playback": "setup_teams",
@@ -75,7 +72,7 @@
     }
   },
   {
-    "playback": "instantiate_transient_objects",
+    "playback": "scene_racing_setup_new_round",
     "context": "primary_scene"
   },
   {"playback": "create_main_menu"}

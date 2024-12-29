@@ -47,9 +47,7 @@
   },
   {
     "declare_macro": "instantiate_transient_objects",
-    "content": {
-      "playback": "scene_racing_setup_new_round"
-    }
+    "content": []
   },
   {
     "required": ["%PLAYERS_JSON_BASENAME != %null"],
@@ -63,7 +61,7 @@
     }
   },
   {
-    "playback": "instantiate_transient_objects",
+    "playback": "scene_racing_setup_new_round",
     "context": "primary_scene"
   },
   {"playback": "create_main_menu"}
