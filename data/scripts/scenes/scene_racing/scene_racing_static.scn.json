@@ -1,7 +1,6 @@
 {
   "declare_macro": "scene_racing_static",
   "content": [
-    {"playback": "create_scene_loading"},
     {
       "required": ["%OSM_MAP_RESOURCE != %null"],
       "playback": "%OSM_MAP_RESOURCE"
