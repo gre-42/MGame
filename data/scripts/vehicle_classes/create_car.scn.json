@@ -132,9 +132,11 @@
           "right": "player_status_right",
           "bottom": "player_status_bottom",
           "top": "player_status_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%EXTERNALS_PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME",
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       },
       {
@@ -148,6 +150,7 @@
           "right": "player_speed_right",
           "bottom": "player_speed_bottom",
           "top": "player_speed_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "circular": {
@@ -159,7 +162,8 @@
             "maximum_value": 250,
             "blank_angle": 60,
             "ticks": ["'0'", "'30'", "'60'", "'90'", "'120'", "'150'", "'180'", "'210'", "'240'"]
-          }
+          },
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       },
       {
@@ -189,9 +193,11 @@
           "right": "bullet_count_right",
           "bottom": "bullet_count_bottom",
           "top": "bullet_count_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%EXTERNALS_PLAYER_NAME"
+          "player": "%EXTERNALS_PLAYER_NAME",
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       }
     ]
@@ -209,6 +215,7 @@
           "right": "player_engine_rpm_right",
           "bottom": "player_engine_rpm_bottom",
           "top": "player_engine_rpm_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "circular": {
@@ -221,6 +228,7 @@
             "blank_angle": 60,
             "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
           },
+          "focus_mask": "scene|countdown_any|game_over_countdown_any",
           "player": "%EXTERNALS_PLAYER_NAME"
         }
       }

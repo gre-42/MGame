@@ -13,7 +13,7 @@
         "call": "ui_background",
         "arguments": {
           "z_order": 1,
-          "texture": "textures/ui_background.png",
+          "texture": "#ui_background_cars",
           "left": "min",
           "right": "end",
           "bottom": "min",
@@ -27,6 +27,7 @@
         "arguments": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", 0],
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "focus_mask": "always",
@@ -38,6 +39,7 @@
         "arguments": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "huge",
           "line_distance": "huge",
           "focus_mask": "always",

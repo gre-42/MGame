@@ -51,7 +51,7 @@
         "call": "ui_background",
         "arguments": {
           "z_order": 1,
-          "texture": "textures/ui_background.png",
+          "texture": "#ui_background_cars",
           "left": "min",
           "right": "end",
           "bottom": "min",
@@ -77,12 +77,14 @@
           "right": "tabmenu_right",
           "bottom": "tabmenu_bottom",
           "top": "tabmenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
           "reload_transient_objects": {
             "playback": "_reload_transient_objects_in_physics_thread"
-          }
+          },
+          "z_order": 2
         }
       },
       {
@@ -96,6 +98,7 @@
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -152,6 +155,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "on_change": {
@@ -179,6 +183,7 @@
         ]
       },
       {
+        "exclude": ["%IF_ANDROID"],
         "call": "controls",
         "arguments": {
           "id": "controls",
@@ -189,7 +194,7 @@
           "bottom": "controls_bottom",
           "top": "submenu_top",
           "delay_load_policy": "no_delay",
-          "gamepad_texture": "textures/menu/gamepad.png"
+          "gamepad_texture": "textures/ui/menu/gamepad.png"
         }
       },
       {
@@ -197,6 +202,7 @@
         "arguments": {
           "position": ["nan", "nan"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "huge",
           "line_distance": "huge",
           "focus_mask": "game_over",
@@ -275,6 +281,7 @@
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -307,6 +314,7 @@
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -321,12 +329,13 @@
         "arguments": {
           "id": "car_selector",
           "title": "Car",
-          "icon": "car_selector_icon",
+          "icon": "car_icon",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -342,13 +351,14 @@
         "arguments": {
           "id": "car_color_selector",
           "title": "Color",
-          "icon": "car_color_selector_icon",
+          "icon": "color_icon",
           "required": ["%GAME_MODE == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -367,17 +377,19 @@
         }
       },
       {
+        "required": ["%IF_DEVEL"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
           "title": "Session",
-          "icon": "session_selector_icon",
+          "icon": "session_icon",
           "required": ["%GAME_MODE == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -391,17 +403,23 @@
         }
       },
       {
+        "call": "globals",
+        "exclude": ["%IF_DEVEL"],
+        "arguments": { "RACE_SESSION": "session1" }
+      },
+      {
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
           "title": "Laps",
-          "icon": "laps_selector_icon",
+          "icon": "laps_icon",
           "required": ["%GAME_MODE == 'rally'", "%%levels/$SELECTED_LEVEL_ID/IF_RACEWAY_CIRCULAR"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -415,6 +433,7 @@
         }
       },
       {
+        "required": ["%IF_DEVEL"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
@@ -426,6 +445,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
@@ -438,6 +458,12 @@
         }
       },
       {
+        "call": "globals",
+        "exclude": ["%IF_DEVEL"],
+        "arguments": { "IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false }
+      },
+      {
+        "required": ["%IF_DEVEL"],
         "exclude": ["%IF_ANDROID"],
         "call": "parameter_setter",
         "arguments": {
@@ -449,6 +475,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 1,
@@ -465,8 +492,8 @@
         }
       },
       {
-        "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
+        "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
           "title": "Playback speed",
@@ -477,6 +504,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 2,
@@ -495,8 +523,8 @@
         "arguments": { "PLAYBACK_SPEED": 1 }
       },
       {
-        "call": "parameter_setter",
         "required": ["%IF_DEVEL"],
+        "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
           "title": "Tripod mode",
@@ -506,6 +534,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 1,

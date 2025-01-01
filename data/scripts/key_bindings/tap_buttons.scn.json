@@ -2,6 +2,25 @@
   "declare_macro": "create_tap_buttons",
   "content": [
     {
+      "call": "add_texture_descriptor",
+      "arguments": {
+        "name": "escape",
+        "color": "textures/ui/buttons/escape.png",
+        "color_mode": "rgba",
+        "anisotropic_filtering_level": 0
+      }
+    },
+    {
+      "call": "add_texture_descriptor",
+      "arguments": {
+        "name": "start",
+        "color": "textures/ui/buttons/start.png",
+        "color_mode": "rgba",
+        "anisotropic_filtering_level": 0
+      }
+    },
+
+    {
       "comment": [
         {
           "call": "create_tap_button",
@@ -17,7 +36,7 @@
           "call": "ui_background",
           "arguments": {
             "z_order": 2,
-            "texture": "textures/ui/left.png",
+            "texture": "textures/ui/buttons/left.png",
             "left": "left_button_left",
             "right": "left_button_right",
             "bottom": "lower_buttons_bottom",
@@ -41,7 +60,7 @@
           "call": "ui_background",
           "arguments": {
             "z_order": 2,
-            "texture": "textures/ui/right.png",
+            "texture": "textures/ui/buttons/right.png",
             "left": "right_button_left",
             "right": "right_button_right",
             "bottom": "lower_buttons_bottom",
@@ -64,7 +83,7 @@
           "call": "ui_background",
           "arguments": {
             "z_order": 2,
-            "texture": "textures/ui/down.png",
+            "texture": "textures/ui/buttons/down.png",
             "left": "down_button_left",
             "right": "down_button_right",
             "bottom": "lower_buttons_bottom",
@@ -87,7 +106,7 @@
           "call": "ui_background",
           "arguments": {
             "z_order": 2,
-            "texture": "textures/ui/up.png",
+            "texture": "textures/ui/buttons/up.png",
             "left": "up_button_left",
             "right": "up_button_right",
             "bottom": "lower_buttons_bottom",
@@ -114,7 +133,7 @@
       "call": "ui_background",
       "arguments": {
         "z_order": 2,
-        "texture": "textures/ui/joystick.png",
+        "texture": "textures/ui/buttons/joystick.png",
         "left": "left_analog_left",
         "right": "left_analog_right",
         "bottom": "lower_analog_bottom",
@@ -139,7 +158,7 @@
       "call": "ui_background",
       "arguments": {
         "z_order": 2,
-        "texture": "textures/ui/joystick.png",
+        "texture": "textures/ui/buttons/joystick.png",
         "left": "right_analog_left",
         "right": "right_analog_right",
         "bottom": "lower_analog_bottom",
@@ -163,7 +182,20 @@
       "call": "ui_background",
       "arguments": {
         "z_order": 2,
-        "texture": "textures/ui/escape.png",
+        "texture": "#ui_gray_fade",
+        "left": "escape_button_left",
+        "right": "escape_button_right",
+        "bottom": "upper_buttons_bottom",
+        "top": "upper_buttons_top",
+        "delay_load_policy": "no_delay",
+        "focus_mask": "always"
+      }
+    },
+    {
+      "call": "ui_background",
+      "arguments": {
+        "z_order": 2,
+        "texture": "#escape",
         "left": "escape_button_left",
         "right": "escape_button_right",
         "bottom": "upper_buttons_bottom",
@@ -187,7 +219,20 @@
       "call": "ui_background",
       "arguments": {
         "z_order": 2,
-        "texture": "textures/ui/start.png",
+        "texture": "#ui_gray_fade",
+        "left": "start_button_left",
+        "right": "start_button_right",
+        "bottom": "upper_buttons_bottom",
+        "top": "upper_buttons_top",
+        "delay_load_policy": "no_delay",
+        "focus_mask": "always"
+      }
+    },
+    {
+      "call": "ui_background",
+      "arguments": {
+        "z_order": 2,
+        "texture": "#start",
         "left": "start_button_left",
         "right": "start_button_right",
         "bottom": "upper_buttons_bottom",

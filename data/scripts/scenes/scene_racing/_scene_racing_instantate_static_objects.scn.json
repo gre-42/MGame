@@ -166,8 +166,8 @@
       {
         "call": "ui_background",
         "arguments": {
-          "z_order": 1,
-          "texture": "textures/ui_background.png",
+          "z_order": 2,
+          "texture": "#ui_gray_fade",
           "left": "highscore_left",
           "right": "highscore_right",
           "bottom": "highscore_bottom",
@@ -179,15 +179,17 @@
       {
         "call": "players_stats",
         "arguments": {
-          "z_order": 1,
+          "z_order": 2,
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "highscore_left",
           "right": "highscore_right",
           "bottom": "highscore_bottom",
           "top": "highscore_top",
+          "font_color": [1, 1, 1],
           "font_height": "normal",
           "line_distance": "normal",
-          "score_board": "%SCORE_BOARD"
+          "score_board": "%SCORE_BOARD",
+          "focus_mask": "always"
         }
       },
       {
@@ -201,6 +203,7 @@
           "right": "highscore_right",
           "bottom": "highscore_bottom",
           "top": "highscore_top",
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "nentries": 10,
@@ -214,7 +217,7 @@
         "call": "ui_background",
         "arguments": {
           "z_order": 1,
-          "texture": "textures/ui_background.png",
+          "texture": "textures/ui/background/gray.png",
           "left": "min",
           "right": "end",
           "bottom": "min",
@@ -230,6 +233,7 @@
           "z_order": 1,
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
+          "font_color": [1, 1, 1],
           "font_height": "huge",
           "line_distance": "huge",
           "nseconds": 5,
@@ -245,6 +249,7 @@
           "z_order": 1,
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
+          "font_color": "%UI_FONT_COLOR",
           "font_height": "huge",
           "line_distance": "huge",
           "nseconds": 3,

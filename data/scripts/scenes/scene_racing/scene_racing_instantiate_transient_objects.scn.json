@@ -175,7 +175,8 @@
           "pacenote_r6",
           "pacenote_r7"],
         "pacenotes_ttf": "fonts/RobotoMono-Bold.ttf",
-        "pacenotes_color": [0, 0, 0],
+        "pacenotes_font_color": [0, 0, 0],
+        "pacenotes_font_height": "huge",
         "pacenotes_widget_distance": "pacenotes_widget_distance",
         "pacenotes_text_left": "pacenotes_text_left",
         "pacenotes_text_right": "pacenotes_text_right",
@@ -185,13 +186,13 @@
         "pacenotes_picture_right": "pacenotes_picture_right",
         "pacenotes_picture_bottom": "pacenotes_picture_bottom",
         "pacenotes_picture_top": "pacenotes_picture_top",
-        "pacenotes_font_height": "huge",
         "selection_emissivity": "%CHECK_POINTS_ACTIVE_COLOR",
         "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
         "on_finish": {
           "call": "set_focuses",
           "arguments": {"focuses": ["menu", "game_over_countdown_pending"]}
-        }
+        },
+        "focus_mask": "scene|countdown_any|game_over_countdown_any"
       }
     },
     {
