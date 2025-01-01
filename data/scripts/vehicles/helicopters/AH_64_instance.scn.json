@@ -1,13 +1,14 @@
 [
+  {"include": "scripts/wheels/FN_wheel_resource.scn.json"},
   {
     "declare_macro": "create_AH_64_graphics",
     "content": [
       {"call": "child_renderable_instance", "arguments": {"name": "chassis$suffix", "node": "car_node$node_suffix", "resource": "AH_64$decimate", "included_names": "cockpit|glass|hull"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "M3/M3_wheel_d3"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "M3/M3_wheel_d3"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "M3/M3_wheel_d3"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "FN/FN_wheel_d0.5"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "FN/FN_wheel_d0.5"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "FN/FN_wheel_d0.5"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "FN/FN_wheel_d0.5"}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "FN/FN_wheel_d0.5"}},
       {"call": "child_renderable_instance", "arguments": {"name": "blades$suffix", "node": "blades_shift_node$node_suffix", "resource": "blades_AH_64$decimate", "included_names": "main_rotor"}},
       {"call": "child_renderable_instance", "arguments": {"name": "tail_rotor$suffix", "node": "tail_rotor_node$node_suffix", "resource": "tail_rotor_spinning_AH_64$decimate"}},
       {"call": "child_renderable_instance", "arguments": {"name": "tail_rotor$suffix", "node": "tail_rotor_shift_node$node_suffix", "resource": "AH_64$decimate", "included_names": "tail_rotor"}}
