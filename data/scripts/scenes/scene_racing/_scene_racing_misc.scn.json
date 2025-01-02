@@ -96,6 +96,7 @@
         "call": "set_race_identifier_and_reload_history",
         "arguments": {
           "level_id": "%LOADED_LEVEL_ID",
+          "time_of_day": "%LOADED_TIME_OF_DAY",
           "restrictions": "%LOADED_RACE_RESTRICTIONS",
           "session": "%LOADED_RACE_SESSION",
           "laps": "%LOADED_RACE_LAPS",

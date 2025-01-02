@@ -105,11 +105,11 @@
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node0",
-          "ambient": [0.1, 0.1, 0.1],
-          "diffuse": [0.2, 0.2, 0.2],
-          "specular": [0.2, 0.2, 0.2],
-          "fresnel_ambient": [0.2, 0.2, 0.2],
-          "fog_ambient": [0.2, 0.2, 0.2]
+          "ambient": [0.3, 0.3, 0.3],
+          "diffuse": [0.6, 0.6, 0.6],
+          "specular": [0.6, 0.6, 0.6],
+          "fresnel_ambient": [0.6, 0.6, 0.6],
+          "fog_ambient": [0.6, 0.6, 0.6]
         }
       }
     ]
