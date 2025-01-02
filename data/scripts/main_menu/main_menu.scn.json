@@ -270,7 +270,7 @@
         "arguments": { "SELECTED_PLAYER_VEHICLE_COLOR": [1, 1, 0] }
       },
       {
-        "exclude": ["%IF_ANDROID"],
+        "required": ["%IF_DEVEL"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -294,13 +294,26 @@
         }
       },
       {
-        "required": ["%IF_ANDROID"],
-        "execute": {
-          "call": "globals",
-          "arguments": {
-            "SKYBOX": "skybox",
-            "TIME_OF_DAY": "day"
-          }
+        "exclude": ["%IF_DEVEL"],
+        "call": "parameter_setter",
+        "arguments": {
+          "id": "time_of_day_selector",
+          "title": "Time of day",
+          "icon": "time_of_day_icon",
+          "required": [],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%UI_FONT_COLOR",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}}},
+            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}}
+          ]
         }
       },
       {

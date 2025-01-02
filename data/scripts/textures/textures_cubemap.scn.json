@@ -96,7 +96,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_cubemap",
     "arguments": {
       "alias": "skybox_night",
@@ -111,7 +110,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "add_cubemap",
     "arguments": {
       "alias": "reflection_map_night",
