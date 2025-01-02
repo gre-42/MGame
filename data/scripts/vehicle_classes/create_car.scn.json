@@ -150,7 +150,7 @@
           "right": "player_speed_right",
           "bottom": "player_speed_bottom",
           "top": "player_speed_top",
-          "font_color": [1, 1, 1],
+          "font_color": "%SCENE_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "circular": {
@@ -215,7 +215,7 @@
           "right": "player_engine_rpm_right",
           "bottom": "player_engine_rpm_bottom",
           "top": "player_engine_rpm_top",
-          "font_color": [1, 1, 1],
+          "font_color": "%SCENE_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
           "circular": {

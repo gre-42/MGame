@@ -140,8 +140,7 @@
           "follower": "light_node$LSUFFIX",
           "offset": [0, 0, 0],
           "texture_width": "%SCENE_LIGHTMAP_WIDTH",
-          "texture_height": "%SCENE_LIGHTMAP_HEIGHT",
-          "smooth_niterations": [2, 2]
+          "texture_height": "%SCENE_LIGHTMAP_HEIGHT"
         }
       },
       {
@@ -157,7 +156,8 @@
           "fresnel_ambient": [0, 0, 0],
           "fog_ambient": [0, 0, 0],
           "lightmap_width": "%SCENE_LIGHTMAP_WIDTH",
-          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT"
+          "lightmap_height": "%SCENE_LIGHTMAP_HEIGHT",
+          "smooth_niterations": [0, 0]
         }
       }
     ]
