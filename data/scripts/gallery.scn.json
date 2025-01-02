@@ -26,7 +26,7 @@
   { "playback": "_add_menu_icon", "arguments": { "name": "game_mode" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "controls" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "scene_selector" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "time_of_day" } },
+  { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/time_of_day.png", "instance": "time_of_day_icon", "color_mode": "rgba" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "session" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "laps" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "replay" } },
@@ -37,7 +37,7 @@
       { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/tripod.png", "instance": "tripod_icon", "color_mode": "rgba" } }
     ]
   },
-  { "playback": "_add_menu_icon", "arguments": { "name": "missing" } },
+  { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "missing_icon", "color_mode": "rgba" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "dots" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/selection_marker.png", "instance": "selection_marker", "color_mode": "rgba" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "level_icon", "color_mode": "rgb" } },
