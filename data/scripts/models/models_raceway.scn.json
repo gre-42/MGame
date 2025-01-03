@@ -11,7 +11,7 @@
       "center_distances": [0, 501],
       "blend_mode": "off",
       "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
+      "occluded_pass": "lightmap_blobs",
       "occluder_pass": "lightmap_black_local_instances",
       "aggregate_mode": "instances_sorted",
       "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
