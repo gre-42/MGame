@@ -129,9 +129,11 @@
           "bottom": "bullet_count_bottom",
           "top": "bullet_count_top",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": "%UI_FONT_COLOR",
+          "font_color": [1, 1, 1],
           "font_height": "normal",
-          "line_distance": "normal"}
+          "line_distance": "normal",
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
+        }
       },
       {
         "required": ["%IF_WITH_GUN"],
