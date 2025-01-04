@@ -1,6 +1,6 @@
 cd /D "%~dp0" || exit /b
 
-GMRelease\render_scene_file.exe ^
+GVSRelease\render_scene_file.exe ^
     data ^
     data\levels\main\main.scn.json ^
     --app_reldir osm_rally ^
