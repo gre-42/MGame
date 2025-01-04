@@ -2,6 +2,8 @@
 
 A rally game based on OpenStreetMap data.
 
+The [release section on GitHub](https://github.com/gre-42/MGame/releases) contains executables of the PC version (Linux and Windows), while the Android build can be downloaded [from Google Play](https://play.google.com/store/apps/details?id=com.hallo2hallo.vanillarally).
+
 ## Screenshots
 
 ### Track JB
