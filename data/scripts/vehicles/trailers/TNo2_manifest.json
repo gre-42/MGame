@@ -19,7 +19,9 @@
     "TIRE_ANGLES": [],
     "BRAKE_TORQUE": 400,
     "FRONT_ENGINE": "engine",
-    "REAR_ENGINE": "engine"
+    "REAR_ENGINE": "engine",
+    "light_left_front_position": null,
+    "light_right_front_position": null
   },
   "required": ["%GAME_MODE in {}"]
 }

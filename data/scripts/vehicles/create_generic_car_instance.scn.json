@@ -13,10 +13,20 @@
   {
     "declare_macro": "generic_car.create_lights",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_left_front$TESUFFIX",  "position": [-0.5, 0, -22]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_right_front$TESUFFIX", "position": [ 0.5, 0, -22]}},
-      {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_left_front$TESUFFIX",  "resource": "car_light_beam"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_right_front$TESUFFIX", "resource": "car_light_beam"}}
+      {
+        "required": ["%%vehicles/$NAME/light_left_front_position != %null"],
+        "execute": [
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_left_front$TESUFFIX",  "position": "%%vehicles/$NAME/light_left_front_position"}},
+          {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_left_front$TESUFFIX",  "resource": "car_light_beam"}}
+        ]
+      },
+      {
+        "required": ["%%vehicles/$NAME/light_right_front_position != %null"],
+        "execute": [
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_right_front$TESUFFIX", "position": "%%vehicles/$NAME/light_right_front_position"}},
+          {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_right_front$TESUFFIX", "resource": "car_light_beam"}}
+        ]
+      }
     ]
   },
   {

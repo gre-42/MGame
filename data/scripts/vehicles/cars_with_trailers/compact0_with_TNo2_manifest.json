@@ -14,7 +14,9 @@
     "NODE_PREFIXES": ["car_node", "car_node_trailer"],
     "MAX_TIRE_ANGLE": 45,
     "FRONT_ENGINE": "engine",
-    "REAR_ENGINE": "engine"
+    "REAR_ENGINE": "engine",
+    "light_left_front_position": [-0.5, 0, -22],
+    "light_right_front_position": [0.5, 0, -22]
   },
   "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car_with_trailer'}"]
 }

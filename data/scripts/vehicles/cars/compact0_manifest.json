@@ -19,7 +19,9 @@
     "TIRE_ANGLES": [45, 20],
     "BRAKE_TORQUE": 400,
     "FRONT_ENGINE": "engine",
-    "REAR_ENGINE": "engine"
+    "REAR_ENGINE": "engine",
+    "light_left_front_position": [-0.5, 0, -22],
+    "light_right_front_position": [0.5, 0, -22]
   },
   "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }
