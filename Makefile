@@ -61,6 +61,7 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibGeography.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
 			Mlib/$(platform_dir)/Bin/libMlibGlad.dll \
+			Mlib/$(platform_dir)/Bin/libMlibHalf.dll \
 			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
 			Mlib/$(platform_dir)/Bin/libMlibIo.dll \
 			Mlib/$(platform_dir)/Bin/libMlibJson.dll \
