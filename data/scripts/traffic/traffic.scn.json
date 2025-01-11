@@ -112,8 +112,7 @@
           "VELOCITY_ERROR_STD": null,
           "YAW_ERROR_STD": null,
           "PITCH_ERROR_STD": null,
-          "ERROR_ALPHA": null,
-          "MUTE": false
+          "ERROR_ALPHA": null
         }
       },
       {
@@ -159,9 +158,6 @@
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
-        },
-        "let": {
-          "COLOR": "%COLOR"
         }
       }
     ]
@@ -173,7 +169,7 @@
         "playback": "traffic.create_car_npc_player",
         "arguments": {
           "UNSTUCK_MODE": "off",
-          "behavior": "none"
+          "INITIAL_BEHAVIOR": "none"
         }
       },
       {
@@ -188,9 +184,6 @@
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
-        },
-        "let": {
-          "COLOR": "%COLOR"
         }
       }
     ]
@@ -202,7 +195,7 @@
         "playback": "traffic.create_car_npc_player",
         "arguments": {
           "UNSTUCK_MODE": "delete",
-          "behavior": "city"
+          "INITIAL_BEHAVIOR": "city"
         }
       },
       {
@@ -219,14 +212,12 @@
           "spawner": "%SPAWNER_NAME",
           "macro": {
             "playback": "traffic.create_car",
-            "arguments": {
+            "let": {
               "HAND_BRAKE_PULLED": false,
+              "MUTE": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
-        },
-        "let": {
-          "COLOR": "%COLOR"
         }
       }
     ]

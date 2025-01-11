@@ -79,6 +79,8 @@
   {
     "call": "preload",
     "context": "primary_scene",
-    "arguments": {"file": "$__DIR__/resources.json"}
+    "arguments": {
+      "file": "$__DIR__/resources.json"
+    }
   }
 ]

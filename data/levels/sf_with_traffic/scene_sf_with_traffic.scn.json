@@ -1,0 +1,89 @@
+[
+  {
+    "call": "globals",
+    "arguments": {
+      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
+      "AGGREGATE_MODE": "instances_sorted",
+      "VIP_NAME": "you",
+      "ROLE": "driver",
+      "OSM_LOCATION": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1
+      },
+      "RACING_LINE_TRACK": "$__DIR__/racing_line_sf_with_traffic.m"
+    }
+  },
+  {"include": "scripts/include_all.scn.json"},
+  {"include": "../sf/osm_resource_sf.scn.json"},
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "IF_CREATE_PC_PLAYER": true,
+      "IF_PC_PLAYER_PLAYBACK": false,
+      "PC_PLAYER_PLAYBACK": null,
+      "PC_PLAYER_PLAYBACK_SPEEDUP": 1,
+      "STADIUM_CAMERA_POSITION": [0, 500, 500],
+      "SCORE_BOARD": "player|history|laps|rank|race_time",
+      "OSM_MAP_RESOURCE": "osm_resource_sf",
+      "IF_HAS_OVERLAY": false,
+      "IF_DIRTMAP": true,
+      "IF_EXTRACT_ALIGNMENT_PLANES": false,
+      "IF_GEN_GRIND_LINES": false,
+      "IF_GEN_INSTANCES": false,
+      "BARRIER_DEPTH": 0,
+      "IF_WITH_GEOGRAPHIC_MAPPING": true,
+      "DIRTMAP_TEXTURE": "textures/noise/dirtmap_dense.png",
+      "DIRTMAP_OFFSET": 0,
+      "DIRTMAP_DISCRETENESS": 1,
+      "DIRT_SCALE": 0.5,
+      "DIRTMAP_WRAP_MODE": "repeat",
+      "DIRTMAP_LEFT": -500,
+      "DIRTMAP_RIGHT": 500,
+      "DIRTMAP_BOTTOM": -500,
+      "DIRTMAP_TOP": 500,
+      "SOFT_LIGHT_TEXTURE": null
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "IF_CREATE_PC_CAR": true,
+        "IF_PC_PLAYER_PLAYBACK": false,
+        "CAR_NODE_POSITION": [-618, -174, -689],
+        "CAR_NODE_ANGLES": [0, -90, 0],
+        "VEHICLE_VELOCITY": [0, 0, 0],
+        "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
+        "RECORDINGS_DIR": "%__DIR__",
+        "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
+        "CHECKPOINTS": null,
+        "PACENOTES_FILE": null,
+        "IF_PLAYBACK_CHECKPOINTS": false,
+        "IF_PLAYBACK_TRACK_1": false,
+        "IF_PLAYBACK_TRACK_2": false,
+        "IF_PLAYBACK_TRACK_3": false,
+        "IF_CHECKPOINTS": true,
+        "IF_BURN_IN": true
+      }
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
+  },
+  {"comment": { "# playback": "setup_traffic_wo_pedestrians", "context": "primary_scene" }},
+  { "playback": "setup_traffic_with_pedestrians", "context": "primary_scene" },
+  {"comment": { "# playback": "setup_traffic_only_pedestrians", "context": "primary_scene" }},
+  { "playback": "create_main_menu" },
+  {
+    "comment": {
+      "call": "preload",
+      "context": "primary_scene",
+      "arguments": {
+        "file": "$__DIR__/resources.json"
+      }
+    }
+  }
+]
