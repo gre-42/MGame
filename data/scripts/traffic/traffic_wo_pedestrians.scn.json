@@ -1,6 +1,8 @@
 {
   "declare_macro": "setup_traffic_wo_pedestrians",
   "content": [
+    {"call": "set_spawn_points", "arguments": {"location": "%OSM_LOCATION", "resource": "osm_map"}},
+    {"call": "set_way_points", "arguments": {"location": "%OSM_LOCATION", "resource": "osm_map"}},
     {"comment": "From: https://wiki.rage.mp/index.php?title=Vehicle_Colors"},
     {"playback": "traffic.create_npc_and_driving_car", "arguments": {"SPAWNER_NAME": "npc1",  "CAR_NAME": "M3",  "COLOR": [0.85, 0.10, 0.09]}},
     {"playback": "traffic.create_npc_and_parking_car", "arguments": {"SPAWNER_NAME": "npc2",  "CAR_NAME": "M3",  "COLOR": [0.07, 0.22, 0.24]}},
@@ -18,7 +20,6 @@
     {"playback": "traffic.create_npc_and_parking_car", "arguments": {"SPAWNER_NAME": "npc14", "CAR_NAME": "LK4", "COLOR": [0.95, 0.80, 0.25]}},
     {"playback": "traffic.create_npc_and_parking_car", "arguments": {"SPAWNER_NAME": "npc15", "CAR_NAME": "LK4", "COLOR": [0.74, 0.67, 0.56]}},
     {"playback": "traffic.create_npc_and_parking_car", "arguments": {"SPAWNER_NAME": "npc16", "CAR_NAME": "LK4", "COLOR": [0.85, 0.10, 0.09]}},
-    {"call": "set_vip", "arguments": {"player": "%VIP_NAME"}},
-    {"call": "set_spawn_points", "arguments": {"location": "%OSM_LOCATION", "resource": "osm_map"}}
+    {"call": "set_vip", "arguments": {"player": "%VIP_NAME"}}
   ]
 }

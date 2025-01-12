@@ -141,14 +141,6 @@
         }
       },
       {
-        "call": "set_pathfinding_way_points",
-        "arguments": {
-          "player": "%SPAWNER_NAME",
-          "transformation": "%OSM_LOCATION",
-          "resource": "osm_map"
-        }
-      },
-      {
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%SPAWNER_NAME",
@@ -196,14 +188,6 @@
         "arguments": {
           "UNSTUCK_MODE": "delete",
           "INITIAL_BEHAVIOR": "city"
-        }
-      },
-      {
-        "call": "set_pathfinding_way_points",
-        "arguments": {
-          "player": "%SPAWNER_NAME",
-          "transformation": "%OSM_LOCATION",
-          "resource": "osm_map"
         }
       },
       {

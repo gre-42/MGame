@@ -93,15 +93,6 @@
             "playback": "teams.create_avatar_for_pc"
           }
         }
-      },
-      {
-        "required": ["%IF_SET_WAY_POINTS"],
-        "call": "set_pathfinding_way_points",
-        "arguments": {
-          "player": "%PLAYER_NAME",
-          "transformation": "%OSM_LOCATION",
-          "resource": "%TEAMS_WAY_POINTS_RESOURCE"
-        }
       }
     ]
   },
@@ -118,15 +109,6 @@
           "macro": {
             "playback": "teams.create_car_for_pc"
           }
-        }
-      },
-      {
-        "required": ["%IF_SET_WAY_POINTS"],
-        "call": "set_pathfinding_way_points",
-        "arguments": {
-          "player": "%PLAYER_NAME",
-          "transformation": "%OSM_LOCATION",
-          "resource": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       }
     ]
