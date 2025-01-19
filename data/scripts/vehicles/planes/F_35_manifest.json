@@ -15,7 +15,7 @@
     "SUFFIX": "F_35",
     "CLASS": "car",
     "NODE_PREFIXES": ["car_node"],
-    "MAX_TIRE_ANGLE": 60
+    "max_tire_angle": 60
   },
   "required": ["%GAME_MODE in {'team_deathmatch'}"]
 }

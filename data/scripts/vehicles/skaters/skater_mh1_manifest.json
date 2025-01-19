@@ -15,8 +15,8 @@
     "SUFFIX": "skating_mh1",
     "CLASS": "skater",
     "NODE_PREFIXES": ["skater_node"],
-    "MAX_TIRE_ANGLE": null,
-    "BRAKE_TORQUE": 400
+    "max_tire_angle": null,
+    "brake_torque": 400
   },
   "required": ["%GAME_MODE in {'skating'}"]
 }

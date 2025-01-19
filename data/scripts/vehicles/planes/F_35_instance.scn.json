@@ -450,8 +450,8 @@
           "node": "car_node$SUFFIX",
           "tire_ids": [0, 1],
           "tire_angles": [
-            "%%vehicles/F_35/MAX_TIRE_ANGLE",
-            "%%vehicles/F_35/MAX_TIRE_ANGLE"]
+            "%%vehicles/F_35/max_tire_angle",
+            "%%vehicles/F_35/max_tire_angle"]
         }
       },
       {
@@ -534,7 +534,7 @@
         "required": ["%IF_WITH_PHYSICS"],
         "playback": "create_F_35_physics",
         "arguments": {
-            "MASS": 20000,
+            "mass": 20000,
           "COLLIDABLE_MODE": "moving"
         }
       },
@@ -666,7 +666,7 @@
           "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/F_35/MAX_TIRE_ANGLE",
+          "max_tire_angle": "%%vehicles/F_35/max_tire_angle",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }

@@ -39,13 +39,13 @@
           "hitboxes": "$NAME-_hitboxes",
           "v": "%VELOCITY",
           "w": "%ANGULAR_VELOCITY",
-          "mass": "%MASS",
-          "size": "%SIZE",
-          "com": "%COM",
+          "mass": "%%vehicles/$NAME/mass",
+          "size": "%%vehicles/$NAME/size",
+          "com": "%%vehicles/$NAME/com",
           "collidable_mode": "moving",
           "name": "generic_car_$NAME$TESUFFIX",
           "waypoint_dy": 1.2,
-          "asset_id": "$NAME"
+          "asset_id": "%NAME"
         }
       },
       {
@@ -84,23 +84,23 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$TESUFFIX", "resource": "gizmo"}}},
 
       {
-        "required": ["%%vehicles/$NAME/FRONT_ENGINE != %%vehicles/$NAME/REAR_ENGINE"],
+        "required": ["%%vehicles/$NAME/front_engine != %%vehicles/$NAME/rear_engine"],
         "execute": [
           {
             "call": "create_engine",
             "arguments": {
               "rigid_body": "car_node$TESUFFIX",
               "name": "front",
-              "angular_vels": "%ANGULAR_VELS_FRONT",
-              "powers": "%POWERS_FRONT",
-              "gear_ratios": "%GEAR_RATIOS",
-              "w_clutch": 800,
-              "max_dw": 2000,
+              "angular_vels": "%%vehicles/$NAME/angular_vels_front",
+              "powers": "%%vehicles/$NAME/powers_front",
+              "gear_ratios": "%%vehicles/$NAME/gear_ratios",
+              "w_clutch": "%%vehicles/$NAME/w_clutch",
+              "max_dw": "%%vehicles/$NAME/max_dw",
               "hand_brake_pulled": "%HAND_BRAKE_PULLED",
               "audio": {
-                "name": "car2",
-                "p_idle": 90,
-                "p_reference": 200,
+                "name": "%%engine_audio/$engine_audio/name",
+                "p_idle": "%%engine_audio/$engine_audio/p_idle",
+                "p_reference": "%%engine_audio/$engine_audio/p_reference",
                 "mute": "%MUTE"
               }
             }
@@ -110,16 +110,16 @@
             "arguments": {
               "rigid_body": "car_node$TESUFFIX",
               "name": "rear",
-              "angular_vels": "%ANGULAR_VELS_REAR",
-              "powers": "%POWERS_REAR",
-              "gear_ratios": "%GEAR_RATIOS",
-              "w_clutch": 800,
-              "max_dw": 2000,
+              "angular_vels": "%%vehicles/$NAME/angular_vels_rear",
+              "powers": "%%vehicles/$NAME/powers_rear",
+              "gear_ratios": "%%vehicles/$NAME/gear_ratios",
+              "w_clutch": "%%vehicles/$NAME/w_clutch",
+              "max_dw": "%%vehicles/$NAME/max_dw",
               "hand_brake_pulled": "%HAND_BRAKE_PULLED",
               "audio": {
-                "name": "car2",
-                "p_idle": 90,
-                "p_reference": 200,
+                "name": "%%engine_audio/$engine_audio/name",
+                "p_idle": "%%engine_audio/$engine_audio/p_idle",
+                "p_reference": "%%engine_audio/$engine_audio/p_reference",
                 "mute": "%MUTE"
               }
             }
@@ -128,30 +128,30 @@
       },
       {
         "required": [
-          "%%vehicles/$NAME/FRONT_ENGINE == %%vehicles/$NAME/REAR_ENGINE",
-          "%POWERS != %null"],
+          "%%vehicles/$NAME/front_engine == %%vehicles/$NAME/rear_engine",
+          "%%vehicles/$NAME/powers != %null"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$TESUFFIX",
           "name": "engine",
-          "angular_vels": "%ANGULAR_VELS",
-          "powers": "%POWERS",
-          "gear_ratios": "%GEAR_RATIOS",
-          "w_clutch": 800,
-          "max_dw": 2000,
+          "angular_vels": "%%vehicles/$NAME/angular_vels",
+          "powers": "%%vehicles/$NAME/powers",
+          "gear_ratios": "%%vehicles/$NAME/gear_ratios",
+          "w_clutch": "%%vehicles/$NAME/w_clutch",
+          "max_dw": "%%vehicles/$NAME/max_dw",
           "hand_brake_pulled": "%HAND_BRAKE_PULLED",
           "audio": {
-            "name": "car2",
-            "p_idle": 90,
-            "p_reference": 200,
+            "name": "%%engine_audio/$engine_audio/name",
+            "p_idle": "%%engine_audio/$engine_audio/p_idle",
+            "p_reference": "%%engine_audio/$engine_audio/p_reference",
             "mute": "%MUTE"
           }
         }
       },
       {
         "required": [
-          "%%vehicles/$NAME/FRONT_ENGINE == %%vehicles/$NAME/REAR_ENGINE",
-          "%POWERS == %null"],
+          "%%vehicles/$NAME/front_engine == %%vehicles/$NAME/rear_engine",
+          "%%vehicles/$NAME/powers == %null"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$TESUFFIX",
@@ -165,8 +165,8 @@
         "arguments": {
           "node": "wheel_left_front_node$TESUFFIX",
           "hitboxes": null,
-          "mass": 10,
-          "radius": 0.2,
+          "mass": "%%wheels/$wheels/mass",
+          "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
@@ -179,12 +179,12 @@
         "arguments": {
           "vehicle": "car_node$TESUFFIX",
           "wheel": "wheel_left_front_node$TESUFFIX",
-          "vehicle_mount_0": "%WHEEL_LEFT_FRONT_MOUNT_0",
-          "vehicle_mount_1": "%WHEEL_LEFT_FRONT_MOUNT_1",
-          "radius": "%WHEEL_RADIUS",
-          "engine": "%%vehicles/$NAME/FRONT_ENGINE",
+          "vehicle_mount_0": "%%vehicles/$NAME/wheel_left_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$NAME/wheel_left_front_mount_1",
+          "radius": "%%wheels/$wheels/radius",
+          "engine": "%%vehicles/$NAME/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
+          "brake_torque": "%%vehicles/$NAME/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -198,8 +198,8 @@
         "arguments": {
           "node": "wheel_right_front_node$TESUFFIX",
           "hitboxes": null,
-          "mass": 10,
-          "radius": 0.2,
+          "mass": "%%wheels/$wheels/mass",
+          "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
@@ -212,12 +212,12 @@
         "arguments": {
           "vehicle": "car_node$TESUFFIX",
           "wheel": "wheel_right_front_node$TESUFFIX",
-          "vehicle_mount_0": "%WHEEL_RIGHT_FRONT_MOUNT_0",
-          "vehicle_mount_1": "%WHEEL_RIGHT_FRONT_MOUNT_1",
-          "radius": "%WHEEL_RADIUS",
-          "engine": "%%vehicles/$NAME/FRONT_ENGINE",
+          "vehicle_mount_0": "%%vehicles/$NAME/wheel_right_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$NAME/wheel_right_front_mount_1",
+          "radius": "%%wheels/$wheels/radius",
+          "engine": "%%vehicles/$NAME/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
+          "brake_torque": "%%vehicles/$NAME/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -231,8 +231,8 @@
         "arguments": {
           "node": "wheel_left_rear_node$TESUFFIX",
           "hitboxes": null,
-          "mass": 10,
-          "radius": 0.2,
+          "mass": "%%wheels/$wheels/mass",
+          "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
@@ -245,12 +245,12 @@
         "arguments": {
           "vehicle": "car_node$TESUFFIX",
           "wheel": "wheel_left_rear_node$TESUFFIX",
-          "vehicle_mount_0": "%WHEEL_LEFT_REAR_MOUNT_0",
-          "vehicle_mount_1": "%WHEEL_LEFT_REAR_MOUNT_1",
-          "radius": "%WHEEL_RADIUS",
-          "engine": "%%vehicles/$NAME/REAR_ENGINE",
+          "vehicle_mount_0": "%%vehicles/$NAME/wheel_left_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$NAME/wheel_left_rear_mount_1",
+          "radius": "%%wheels/$wheels/radius",
+          "engine": "%%vehicles/$NAME/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
+          "brake_torque": "%%vehicles/$NAME/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -264,8 +264,8 @@
         "arguments": {
           "node": "wheel_right_rear_node$TESUFFIX",
           "hitboxes": null,
-          "mass": 10,
-          "radius": 0.2,
+          "mass": "%%wheels/$wheels/mass",
+          "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
@@ -278,12 +278,12 @@
         "arguments": {
           "vehicle": "car_node$TESUFFIX",
           "wheel": "wheel_right_rear_node$TESUFFIX",
-          "vehicle_mount_0": "%WHEEL_RIGHT_REAR_MOUNT_0",
-          "vehicle_mount_1": "%WHEEL_RIGHT_REAR_MOUNT_1",
-          "radius": "%WHEEL_RADIUS",
-          "engine": "%%vehicles/$NAME/REAR_ENGINE",
+          "vehicle_mount_0": "%%vehicles/$NAME/wheel_right_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$NAME/wheel_right_rear_mount_1",
+          "radius": "%%wheels/$wheels/radius",
+          "engine": "%%vehicles/$NAME/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/BRAKE_TORQUE",
+          "brake_torque": "%%vehicles/$NAME/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -301,12 +301,12 @@
         "call": "create_car_controller",
         "arguments": {
           "node": "car_node$TESUFFIX",
-          "front_engine": "%%vehicles/$NAME/FRONT_ENGINE",
-          "rear_engine": "%%vehicles/$NAME/REAR_ENGINE",
+          "front_engine": "%%vehicles/$NAME/front_engine",
+          "rear_engine": "%%vehicles/$NAME/rear_engine",
           "front_tire_ids": [0, 1],
-          "max_tire_angle": "%%vehicles/$NAME/MAX_TIRE_ANGLE",
-          "tire_angle_velocities": "%%vehicles/$NAME/TIRE_ANGLE_VELOCITIES",
-          "tire_angles": "%%vehicles/$NAME/TIRE_ANGLES"
+          "max_tire_angle": "%%vehicles/$NAME/max_tire_angle",
+          "tire_angle_velocities": "%%vehicles/$NAME/tire_angle_velocities",
+          "tire_angles": "%%vehicles/$NAME/tire_angles"
         }
       },
 
@@ -322,10 +322,10 @@
   {
     "declare_macro": "generic_car.create",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_front_node$TESUFFIX",  "position": "%WHEEL_LEFT_FRONT_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_front_node$TESUFFIX", "position": "%WHEEL_RIGHT_FRONT_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_rear_node$TESUFFIX",   "position": "%WHEEL_LEFT_REAR_MOUNT_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_rear_node$TESUFFIX",  "position": "%WHEEL_RIGHT_REAR_MOUNT_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_front_node$TESUFFIX",  "position": "%%vehicles/$NAME/wheel_left_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_front_node$TESUFFIX", "position": "%%vehicles/$NAME/wheel_right_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_rear_node$TESUFFIX",   "position": "%%vehicles/$NAME/wheel_left_rear_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_rear_node$TESUFFIX",  "position": "%%vehicles/$NAME/wheel_right_rear_mount_0"}},
 
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_hitboxes"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_massbox"}}},
@@ -362,7 +362,7 @@
           "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/$ASSET_ID/MAX_TIRE_ANGLE",
+          "max_tire_angle": "%%vehicles/$ASSET_ID/max_tire_angle",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }
@@ -383,7 +383,7 @@
         "exclude": ["%IF_ANDROID"],
         "playback": "create_player_car_engine_rpm_meter",
         "arguments": {
-          "ENGINE_NAME": "%%vehicles/$ASSET_ID/FRONT_ENGINE"
+          "ENGINE_NAME": "%%vehicles/$ASSET_ID/front_engine"
         }
       },
       {

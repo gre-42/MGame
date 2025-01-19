@@ -306,7 +306,7 @@
         "required": ["%IF_WITH_PHYSICS"],
         "playback": "create_AH_64_physics",
         "arguments": {
-          "MASS": 6e3,
+          "mass": 6e3,
           "COLLIDABLE_MODE": "moving"
         }
       }
@@ -360,7 +360,7 @@
           "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/AH_64/MAX_TIRE_ANGLE",
+          "max_tire_angle": "%%vehicles/AH_64/max_tire_angle",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }

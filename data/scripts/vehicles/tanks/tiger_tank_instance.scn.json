@@ -195,7 +195,7 @@
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
       {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d3$SUFFIX", "decimate": "_d3"}},
       {"required": ["%IF_WITH_PHYSICS"], "playback": "create_tiger_tank_physics", "arguments": {
-        "MASS": 56e3,
+        "mass": 56e3,
         "COLLIDABLE_MODE": "moving"
       }}
     ]
@@ -276,7 +276,7 @@
           "player": "%EXTERNALS_PLAYER_NAME",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/tiger_tank/MAX_TIRE_ANGLE",
+          "max_tire_angle": "%%vehicles/tiger_tank/max_tire_angle",
           "tire_angle_pid": {"pid": [1, 0, 50], "alpha": 0}
         }
       }

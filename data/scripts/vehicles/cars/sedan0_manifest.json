@@ -12,16 +12,43 @@
     "SUFFIX": "sedan0",
     "CLASS": "car",
     "NODE_PREFIXES": ["car_node"],
-    "TRAILER_HITCH_POSITION_FEMALE": null,
-    "TRAILER_HITCH_POSITION_MALE": null,
-    "MAX_TIRE_ANGLE": 45,
-    "TIRE_ANGLE_VELOCITIES": [10, 80],
-    "TIRE_ANGLES": [45, 20],
-    "BRAKE_TORQUE": 400,
-    "FRONT_ENGINE": "engine",
-    "REAR_ENGINE": "engine",
+    "trailer_hitch_position_female": null,
+    "trailer_hitch_position_male": null,
+    "max_tire_angle": 45,
+    "tire_angle_velocities": [10, 80],
+    "tire_angles": [45, 20],
+    "brake_torque": 400,
+    "front_engine": "engine",
+    "rear_engine": "engine",
     "light_left_front_position": [-0.5, 0, -22],
-    "light_right_front_position": [0.5, 0, -22]
+    "light_right_front_position": [0.5, 0, -22],
+    "wheel_left_front_mount_0":  [-0.83, -0.49, -1.42],
+    "wheel_right_front_mount_0": [ 0.83, -0.49, -1.42],
+    "wheel_left_rear_mount_0":   [-0.83, -0.49,  1.42],
+    "wheel_right_rear_mount_0":  [ 0.83, -0.49,  1.42],
+
+    "wheel_left_front_mount_1":  [-0.83, 0, -1.42],
+    "wheel_right_front_mount_1": [ 0.83, 0, -1.42],
+    "wheel_left_rear_mount_1":   [-0.83, 0,  1.42],
+    "wheel_right_rear_mount_1":  [ 0.83, 0,  1.42],
+
+    "size": [1.8, 1, 4.6],
+    "com": [0, -0.2, 0.2],
+
+    "mass": 2000,
+
+    "angular_vels_front": null,
+    "angular_vels_rear": null,
+    "powers_front": null,
+    "powers_rear": null,
+    "angular_vels": [-6000, -4200, -3000, 0],
+    "powers": [40, 400, 400, 40],
+    "w_clutch": 800,
+    "max_dw": 2000,
+    "gear_ratios": [0.75, 1.5, 3, 6, 9, -9],
+
+    "wheels": "R33_wheel",
+    "engine_audio": "car2"
   },
   "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
 }

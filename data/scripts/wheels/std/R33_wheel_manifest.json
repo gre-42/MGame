@@ -1,0 +1,14 @@
+{
+  "id": "R33_wheel",
+  "title": "R33 wheel",
+  "database": {
+    "radius": 0.33,
+    "mass": 10,
+    "brake_force": 50000,
+    "brake_torque": 400,
+    "Ks": 1e5,
+    "Ka": 1.5e4,
+    "musF": [4e3, 8e3],
+    "musC": [1.1, 0.97]
+  }
+}
