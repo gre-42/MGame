@@ -453,7 +453,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
     "arguments": {
       "name": "bflowers",
@@ -472,7 +471,6 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
     "call": "square_resource",
     "arguments": {
       "name": "bflowers2",

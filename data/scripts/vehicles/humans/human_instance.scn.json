@@ -5,7 +5,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0.1, 0.5, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX",             "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0  , -0.5]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX",         "position": [0, 0  ,    0]}},
@@ -145,9 +145,9 @@
         }
       },
       {"call": "damageable", "arguments": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "set_jump_dv", "arguments": {"node": "human_node$SUFFIX", "value": 17}},
+      {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "human_node$SUFFIX", "value": 17}},
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "human_node$SUFFIX",
@@ -159,7 +159,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "call": "wheel",
         "arguments": {
           "vehicle": "human_node$SUFFIX",
@@ -173,8 +173,8 @@
           "tire_id": 0
         }
       },
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
-      {"required": ["%IF_WITH_PHYSICS"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
+      {"required": ["%if_with_physics"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
+      {"required": ["%if_with_physics"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
       {
         "call": "set_avatar_style_updater",
         "arguments": {
@@ -193,9 +193,9 @@
           "rotation_strength": 0.2
         }
       },
-      {"comment": "IF_WITH_GRAPHICS renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
+      {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
+      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
+      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
       {
         "call": "set_available_roles",
         "arguments": {

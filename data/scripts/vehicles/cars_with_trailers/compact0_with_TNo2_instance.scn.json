@@ -6,7 +6,7 @@
         "playback": "create_compact0"
       },
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "call": "create_trailer_node",
         "arguments": {
           "car_instance": "car_node$SUFFIX",
@@ -15,7 +15,7 @@
         }
       },
       {
-        "exclude": ["%IF_WITH_PHYSICS"],
+        "exclude": ["%if_with_physics"],
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
@@ -31,7 +31,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "call": "connect_trailer",
         "arguments": {
           "car": "car_node$SUFFIX",

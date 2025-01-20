@@ -171,8 +171,8 @@
           "macro": {
             "playback": "traffic.create_car",
             "let": {
-              "HAND_BRAKE_PULLED": true,
-              "MUTE": false,
+              "hand_brake_pulled": true,
+              "mute": true,
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }
@@ -197,8 +197,8 @@
           "macro": {
             "playback": "traffic.create_car",
             "let": {
-              "HAND_BRAKE_PULLED": false,
-              "MUTE": false,
+              "hand_brake_pulled": false,
+              "mute": false,
               "RESPAWN_COOLDOWN_TIME": 0
             }
           }

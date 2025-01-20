@@ -22,8 +22,8 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "AH_box_64_hitboxes",
-          "v": "%VELOCITY",
-          "w": "%ANGULAR_VELOCITY",
+          "v": "%velocity",
+          "w": "%angular_velocity",
           "mass": "%MASS",
           "size": [2, 2, 9],
           "com": [0, 2.2, 0],
@@ -115,7 +115,7 @@
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
           "max_dw": 2000,
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
+          "hand_brake_pulled": "%hand_brake_pulled"
         }
       },
       {
@@ -128,12 +128,12 @@
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
           "max_dw": 2000,
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED",
+          "hand_brake_pulled": "%hand_brake_pulled",
           "audio": {
             "name": "car0",
             "p_idle": 4e3,
             "p_reference": 4e3,
-            "mute": "%MUTE"
+            "mute": "%mute"
           }
         }
       },
@@ -147,7 +147,7 @@
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
           "max_dw": 2000,
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
+          "hand_brake_pulled": "%hand_brake_pulled"
         }
       },
       {
@@ -275,7 +275,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_front_node$SUFFIX",  "position": [-1.0,  0.35, -1.1]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_front_node$SUFFIX", "position": [ 1.0,  0.35, -1.1]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_rear_node$SUFFIX",   "position": [ 0.0,  0.4 ,  9.6]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
       {"comment": [
         "car_node$SUFFIX",
         "    turret_node$SUFFIX (0 0 1, yaw_node)",
@@ -297,13 +297,13 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "blades$SUFFIX", "position": [0, 4.2, 0], "rotation": [90, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "blades$SUFFIX", "name": "blades_shift_node$SUFFIX", "position": [0, 0, 4.2], "rotation": [-90, 0, 0]}},
       {"comment": "child_node_instance type=dynamic parent=car_node$SUFFIX name=rear_rotor_node$SUFFIX position=0 3.4 9.1"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "tail_rotor_node$SUFFIX", "position": [0, 3.4, 9.1]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "relative_transformer", "arguments": {"node": "tail_rotor_node$SUFFIX", "w": [300, 0, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "tail_rotor_node$SUFFIX", "name": "tail_rotor_shift_node$SUFFIX", "position": [0, -3.4, -9.1]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d5$SUFFIX", "decimate": "_d5"}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "tail_rotor_node$SUFFIX", "position": [0, 3.4, 9.1]}},
+      {"required": ["%if_with_graphics"], "call": "relative_transformer", "arguments": {"node": "tail_rotor_node$SUFFIX", "w": [300, 0, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "tail_rotor_node$SUFFIX", "name": "tail_rotor_shift_node$SUFFIX", "position": [0, -3.4, -9.1]}},
+      {"required": ["%if_with_graphics"], "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%if_with_graphics"], "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d5$SUFFIX", "decimate": "_d5"}},
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "playback": "create_AH_64_physics",
         "arguments": {
           "mass": 6e3,

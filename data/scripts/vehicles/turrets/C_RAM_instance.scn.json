@@ -102,10 +102,10 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -0.2, 0]}},
 
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -10]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d$SUFFIX", "decimate": "_d"}},
+      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d$SUFFIX", "decimate": "_d"}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
-      {"required": ["%IF_WITH_PHYSICS"], "playback": "create_C_RAM_physics", "arguments": {
+      {"required": ["%if_with_physics"], "playback": "create_C_RAM_physics", "arguments": {
         "mass": 56e3,
         "COLLIDABLE_MODE": "moving"
       }}

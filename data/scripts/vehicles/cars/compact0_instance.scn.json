@@ -17,10 +17,12 @@
         "NAME": "compact0",
         "TESUFFIX": "%SUFFIX",
         "DECIMATE": "",
-        "IF_WITH_GRAPHICS": "%IF_WITH_GRAPHICS",
-        "IF_WITH_PHYSICS": "%IF_WITH_PHYSICS",
-        "VELOCITY": "%VELOCITY",
-        "ANGULAR_VELOCITY": "%ANGULAR_VELOCITY"
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "mute": "%mute",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "hand_brake_pulled": "%hand_brake_pulled"
       }
     }
   },

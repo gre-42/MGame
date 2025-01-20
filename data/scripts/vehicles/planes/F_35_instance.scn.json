@@ -201,7 +201,7 @@
           "powers": [0],
           "gear_ratios": [0],
           "w_clutch": 0,
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
+          "hand_brake_pulled": "%hand_brake_pulled"
         }
       },
       {
@@ -213,7 +213,7 @@
           "powers": [260],
           "gear_ratios": [0],
           "w_clutch": 0,
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
+          "hand_brake_pulled": "%hand_brake_pulled"
         }
       },
       {
@@ -513,25 +513,25 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, -3, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "missile0_launcher_node$SUFFIX", "position": [1, -3, 0]}},
       {"comment": "Graphics"},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$SUFFIX", "name": "wheel_right_front_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$SUFFIX",  "name": "wheel_right_rear_node_visual$SUFFIX",  "rotation": [0, 180, 0]}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_front", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_front"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_mid", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_mid"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rear", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rear"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_left", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_left"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_right", "node": "car_node$SUFFIX", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d1$SUFFIX", "decimate": "_d1"}},
+      {"required": ["%if_with_graphics"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
+      {"required": ["%if_with_graphics"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d1$SUFFIX", "decimate": "_d1"}},
       {"comment": [
-        "IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node$SUFFIX name=gizmo_node$SUFFIX position=0 0 0 rotation=0 0 0 scale=1",
-        "IF_WITH_GRAPHICS renderable_instance name=gizmo node=gizmo_node$SUFFIX resource=gizmo",
+        "if_with_graphics child_node_instance type=dynamic parent=car_node$SUFFIX name=gizmo_node$SUFFIX position=0 0 0 rotation=0 0 0 scale=1",
+        "if_with_graphics renderable_instance name=gizmo node=gizmo_node$SUFFIX resource=gizmo",
 
-        "IF_WITH_GRAPHICS child_node_instance type=dynamic parent=car_node$SUFFIX name=turbine_node$SUFFIX position=0 -0.2 5.5 rotation=0 0 0 scale=1",
-        "IF_WITH_GRAPHICS renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
+        "if_with_graphics child_node_instance type=dynamic parent=car_node$SUFFIX name=turbine_node$SUFFIX position=0 -0.2 5.5 rotation=0 0 0 scale=1",
+        "if_with_graphics renderable_instance name=box node=turbine_node$SUFFIX resource=flag_z"
       ]},
       {"comment": "Physics"},
       {
-        "required": ["%IF_WITH_PHYSICS"],
+        "required": ["%if_with_physics"],
         "playback": "create_F_35_physics",
         "arguments": {
             "mass": 20000,

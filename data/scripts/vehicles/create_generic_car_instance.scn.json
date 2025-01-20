@@ -37,8 +37,8 @@
         "arguments": {
           "node": "car_node$TESUFFIX",
           "hitboxes": "$NAME-_hitboxes",
-          "v": "%VELOCITY",
-          "w": "%ANGULAR_VELOCITY",
+          "v": "%velocity",
+          "w": "%angular_velocity",
           "mass": "%%vehicles/$NAME/mass",
           "size": "%%vehicles/$NAME/size",
           "com": "%%vehicles/$NAME/com",
@@ -96,12 +96,12 @@
               "gear_ratios": "%%vehicles/$NAME/gear_ratios",
               "w_clutch": "%%vehicles/$NAME/w_clutch",
               "max_dw": "%%vehicles/$NAME/max_dw",
-              "hand_brake_pulled": "%HAND_BRAKE_PULLED",
+              "hand_brake_pulled": "%hand_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
                 "p_idle": "%%engine_audio/$engine_audio/p_idle",
                 "p_reference": "%%engine_audio/$engine_audio/p_reference",
-                "mute": "%MUTE"
+                "mute": "%mute"
               }
             }
           },
@@ -115,12 +115,12 @@
               "gear_ratios": "%%vehicles/$NAME/gear_ratios",
               "w_clutch": "%%vehicles/$NAME/w_clutch",
               "max_dw": "%%vehicles/$NAME/max_dw",
-              "hand_brake_pulled": "%HAND_BRAKE_PULLED",
+              "hand_brake_pulled": "%hand_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
                 "p_idle": "%%engine_audio/$engine_audio/p_idle",
                 "p_reference": "%%engine_audio/$engine_audio/p_reference",
-                "mute": "%MUTE"
+                "mute": "%mute"
               }
             }
           }
@@ -139,12 +139,12 @@
           "gear_ratios": "%%vehicles/$NAME/gear_ratios",
           "w_clutch": "%%vehicles/$NAME/w_clutch",
           "max_dw": "%%vehicles/$NAME/max_dw",
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED",
+          "hand_brake_pulled": "%hand_brake_pulled",
           "audio": {
             "name": "%%engine_audio/$engine_audio/name",
             "p_idle": "%%engine_audio/$engine_audio/p_idle",
             "p_reference": "%%engine_audio/$engine_audio/p_reference",
-            "mute": "%MUTE"
+            "mute": "%mute"
           }
         }
       },
@@ -156,7 +156,7 @@
         "arguments": {
           "rigid_body": "car_node$TESUFFIX",
           "name": "engine",
-          "hand_brake_pulled": "%HAND_BRAKE_PULLED"
+          "hand_brake_pulled": "%hand_brake_pulled"
         }
       },
 
@@ -331,22 +331,22 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_massbox"}}},
       {"comment": "renderable_instance name=generic_car_topdown_locator$TESUFFIX node=car_node$node_suffix resource=topdown_locator"},
 
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$TESUFFIX", "name": "wheel_right_front_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$TESUFFIX", "name": "wheel_right_rear_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$TESUFFIX", "name": "wheel_right_front_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$TESUFFIX", "name": "wheel_right_rear_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%TESUFFIX",
         "suffix": "%TESUFFIX",
         "decimate": "%DECIMATE"
         }
       },
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_graphics", "arguments": {
+      {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%TESUFFIX",
         "suffix": "_lowres$TESUFFIX",
         "decimate": "_lowres"
         }
       },
-      {"required": ["%IF_WITH_GRAPHICS"], "playback": "generic_car.create_lights"},
-      {"required": ["%IF_WITH_PHYSICS"], "playback": "generic_car.create_physics"}
+      {"required": ["%if_with_graphics"], "playback": "generic_car.create_lights"},
+      {"required": ["%if_with_physics"], "playback": "generic_car.create_physics"}
     ]
   },
   {
