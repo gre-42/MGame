@@ -99,8 +99,9 @@ package:
 			$(bin_dir)/; \
 	else \
 		rsync -avh --checksum \
-			/usr/lib/x86_64-linux-gnu/libglfw.so.3 \
-			/usr/lib/x86_64-linux-gnu/libglfw.so.3.3 \
+			/usr/lib/x86_64-linux-gnu/libalut.so* \
+			/usr/lib/x86_64-linux-gnu/libglfw.so* \
+			/usr/lib/x86_64-linux-gnu/libopenal.so* \
 			Mlib/$(platform_dir)/Bin/render_scene_file \
 			Mlib/$(platform_dir)/Lib/ \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \

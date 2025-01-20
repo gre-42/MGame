@@ -153,11 +153,15 @@ jobs:
           name: osm-rally-artifact-msvc
           path: MGame/GVS${{ github.event.inputs.build_type || 'Release' }}
 
+      # Restore execute permissions, they are lost during artifact upload:
+      # https://github.com/actions/upload-artifact?tab=readme-ov-file#permission-loss
       - name: Create ZIP archive
-        run: zip -r MGame.zip MGame
+        run: |
+          chmod +x MGame/osm_racing_game MGame/GURelease/render_scene_file
+          zip -r MGame.zip MGame
 
       - name: Create release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "MGame.zip"
+          artifacts: MGame.zip
           token: ${{ secrets.GITHUB_TOKEN }}
