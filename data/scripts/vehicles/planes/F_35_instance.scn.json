@@ -25,7 +25,7 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "F_35_hitboxes",
-          "mass": "%MASS",
+          "mass": "%mass",
           "size": [1.5, 1.5, 12],
           "com": [0, -0.2, -0.2],
           "collidable_mode": "%COLLIDABLE_MODE",

@@ -25,7 +25,7 @@
         "arguments": {
           "node": "car_node$SUFFIX",
           "hitboxes": "tiger_tank_hitboxes",
-          "mass": "%MASS",
+          "mass": "%mass",
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
           "collidable_mode": "%COLLIDABLE_MODE",
