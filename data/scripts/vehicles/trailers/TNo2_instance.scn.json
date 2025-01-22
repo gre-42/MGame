@@ -1,37 +1,28 @@
 [
   {
     "declare_macro": "create_TNo2",
-    "content": {
+    "# content": {
       "playback": "generic_car.create",
       "let": {
         "NAME": "TNo2",
         "TESUFFIX": "%TRAILER_SUFFIX",
         "DECIMATE": "",
-
-        "size": [2.2, 2.6, 7],
-        "com": [0, 1.3, 0],
-
-        "mass": 2000,
-        "WHEEL_RADIUS": 0.3,
-
-        "wheel_left_front_mount_0":  [-1, 0.1, 0.9],
-        "wheel_right_front_mount_0": [ 1, 0.1, 0.9],
-        "wheel_left_rear_mount_0":   [-1, 0.1, 1.6],
-        "wheel_right_rear_mount_0":  [ 1, 0.1, 1.6],
-
-        "wheel_left_front_mount_1":  [-1, 0.5, 0.9],
-        "wheel_right_front_mount_1": [ 1, 0.5, 0.9],
-        "wheel_left_rear_mount_1":   [-1, 0.5, 1.6],
-        "wheel_right_rear_mount_1":  [ 1, 0.5, 1.6],
-
-        "angular_vels_front": null,
-        "angular_vels_rear": null,
-        "powers_front": null,
-        "powers_rear": null,
-        "angular_vels": null,
-        "powers": null,
-
-        "gear_ratios": null
+        "wheels": "%%vehicles/TNo2/wheels",
+        "engine_audio": "%%vehicles/TNo2/engine_audio"
+      }
+    },
+    "content": {
+      "call": "create_generic_car",
+      "arguments": {
+        "NAME": "TNo2",
+        "TESUFFIX": "%TRAILER_SUFFIX",
+        "DECIMATE": "",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "mute": "%mute",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "hand_brake_pulled": "%hand_brake_pulled"
       }
     }
   },
