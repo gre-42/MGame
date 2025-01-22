@@ -1,7 +1,10 @@
 {
   "id": "jb_race_wet",
   "title": "JB wet",
-  "required": ["%GAME_MODE in %%levels/jb_race_wet/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/jb_race_wet/game_modes"]
+  },
   "on_execute": [
     {"include": "osm_resource_jb_race_open_alpha_wet.scn.json"},
     {"include": "scene_jb_race.scn.json"}

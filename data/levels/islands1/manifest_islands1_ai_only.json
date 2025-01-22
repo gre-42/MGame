@@ -1,7 +1,10 @@
 {
   "id": "islands1_ai_only",
   "title": "Islands 1 (AI only)",
-  "required": ["%GAME_MODE in %%levels/islands1_ai_only/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/islands1_ai_only/game_modes"]
+  },
   "on_execute": {
     "include": "scene_islands1.scn.json"
   },

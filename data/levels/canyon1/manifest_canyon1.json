@@ -1,7 +1,10 @@
 {
   "id": "canyon1",
   "title": "WIP: Canyon 1",
-  "required": ["%GAME_MODE in %%levels/canyon1/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/canyon1/game_modes"]
+  },
   "on_execute": {
     "include": "scene_canyon1.scn"
   },

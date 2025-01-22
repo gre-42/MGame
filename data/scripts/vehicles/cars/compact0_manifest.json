@@ -50,5 +50,8 @@
     "wheels": "R33_wheel",
     "engine_audio": "car2"
   },
-  "required": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car'}"]
+  }
 }

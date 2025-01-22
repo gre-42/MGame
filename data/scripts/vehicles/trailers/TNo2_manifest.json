@@ -50,5 +50,8 @@
     "wheels": "R30_wheel",
     "engine_audio": null
   },
-  "required": ["%GAME_MODE in {}"]
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in {}"]
+  }
 }

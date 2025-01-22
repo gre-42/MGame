@@ -1,7 +1,10 @@
 {
   "id": "nyc_with_traffic",
   "title": "NYC with traffic",
-  "required": ["%GAME_MODE in %%levels/nyc_with_traffic/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/nyc_with_traffic/game_modes"]
+  },
   "on_execute": {
     "include": "scene_nyc_with_traffic.scn.json"
   },

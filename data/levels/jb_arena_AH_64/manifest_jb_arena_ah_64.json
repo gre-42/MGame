@@ -1,7 +1,10 @@
 {
   "id": "jb_arena_ah_64",
   "title": "JB arena AH-64",
-  "required": ["%GAME_MODE in %%levels/jb_arena_ah_64/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/jb_arena_ah_64/game_modes"]
+  },
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
     "arguments": {

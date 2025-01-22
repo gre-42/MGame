@@ -1,7 +1,10 @@
 {
   "id": "aircraft_carrier0",
   "title": "Aircraft carrier 0",
-  "required": ["%GAME_MODE in %%levels/aircraft_carrier0/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/aircraft_carrier0/game_modes"]
+  },
   "on_execute": {
     "include": "scene_aircraft_carrier0.scn.json"
   },

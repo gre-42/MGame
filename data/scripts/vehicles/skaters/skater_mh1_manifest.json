@@ -18,5 +18,8 @@
     "max_tire_angle": null,
     "brake_torque": 400
   },
-  "required": ["%GAME_MODE in {'skating'}"]
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in {'skating'}"]
+  }
 }

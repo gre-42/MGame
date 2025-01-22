@@ -1,7 +1,10 @@
 {
   "id": "nyc_with_traffic_track2",
   "title": "NYC with traffic, track 2",
-  "required": ["%GAME_MODE in %%levels/nyc_with_traffic_track2/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/nyc_with_traffic_track2/game_modes"]
+  },
   "on_execute": {
     "include": "scene_nyc_with_traffic_track2.scn.json"
   },

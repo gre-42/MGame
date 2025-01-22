@@ -1,7 +1,10 @@
 {
   "id": "retro_race_track1",
   "title": "Retro race track 1",
-  "required": ["%GAME_MODE in %%levels/retro_race_track1/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/retro_race_track1/game_modes"]
+  },
   "on_execute": {
     "include": "scene_retro_race_track1.scn.json"
   },

@@ -1,7 +1,10 @@
 {
   "id": "skate0",
   "title": "Skate 0",
-  "required": ["%GAME_MODE in %%levels/skate0/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/skate0/game_modes"]
+  },
   "on_execute": {
     "include": "scene_skate0.scn.json"
   },

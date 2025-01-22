@@ -1,7 +1,10 @@
 {
   "id": "island0",
   "title": "Island 0",
-  "required": ["%GAME_MODE in %%levels/island0/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/island0/game_modes"]
+  },
   "on_execute": {
     "include": "scene_island0.scn.json"
   },

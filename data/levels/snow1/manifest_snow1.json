@@ -1,7 +1,10 @@
 {
   "id": "snow1",
   "title": "Snow 1",
-  "required": ["%GAME_MODE in %%levels/snow1/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/snow1/game_modes"]
+  },
   "on_execute": {
     "include": "scene_snow1.scn.json"
   },

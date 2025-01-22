@@ -1,7 +1,10 @@
 {
   "id": "jb_arena",
   "title": "JB arena",
-  "required": ["%GAME_MODE in %%levels/jb_arena/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/jb_arena/game_modes"]
+  },
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
     "arguments": {

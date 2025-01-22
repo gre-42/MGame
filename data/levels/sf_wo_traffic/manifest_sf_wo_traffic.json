@@ -1,7 +1,10 @@
 {
   "id": "sf_wo_traffic",
   "title": "WIP: San Francisco without traffic",
-  "required": ["%GAME_MODE in %%levels/sf_wo_traffic/game_modes"],
+  "required": {
+    "fixed": [],
+    "dynamic": ["%GAME_MODE in %%levels/sf_wo_traffic/game_modes"]
+  },
   "on_execute": {
     "include": "scene_sf_wo_traffic.scn"
   },

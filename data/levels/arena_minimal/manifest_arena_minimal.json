@@ -1,7 +1,10 @@
 {
   "id": "arena_minimal",
   "title": "WIP: Arena minimal",
-  "required": ["%GAME_MODE in %%levels/arena_minimal/game_modes"],
+  "required": {
+    "fixed": ["%IF_DEVEL"],
+    "dynamic": ["%GAME_MODE in %%levels/arena_minimal/game_modes"]
+  },
   "on_execute": {
     "include": "scene_arena_minimal.scn.json"
   },
