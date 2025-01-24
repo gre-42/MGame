@@ -2,17 +2,17 @@
   "declare_macro": "create_skater_cameras",
   "content": [
     {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "'45_deg_camera'", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
-    {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$SUFFIX", "name": "follower_camera", "position": [0, 10, 10]}},
-    {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_camera_node$SUFFIX", "position": [0, 2, 5]}},
+    {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$suffix", "name": "follower_camera", "position": [0, 10, 10]}},
+    {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_camera_node$suffix", "position": [0, 2, 5]}},
     {"call": "perspective_camera", "arguments": {"node": "'45_deg_camera'", "y_fov": 30, "near_plane": 1, "far_plane": 10000, "requires_postprocessing": false}},
-    {"call": "perspective_camera", "arguments": {"node": "follower_camera", "y_fov": 60, "near_plane": 1, "far_plane": "%FAR_PLANE", "requires_postprocessing": true}},
-    {"call": "perspective_camera", "arguments": {"node": "main_gun_camera_node$SUFFIX", "y_fov": 60, "near_plane": 1, "far_plane": "%FAR_PLANE", "requires_postprocessing": true}},
-    {"call": "look_at_node", "arguments": {"follower": "'45_deg_camera'", "followed": "skater_node$SUFFIX"}},
+    {"call": "perspective_camera", "arguments": {"node": "follower_camera", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
+    {"call": "perspective_camera", "arguments": {"node": "main_gun_camera_node$suffix", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
+    {"call": "look_at_node", "arguments": {"follower": "'45_deg_camera'", "followed": "skater_node$suffix"}},
     {
       "call": "follow_node",
       "arguments": {
         "follower": "follower_camera",
-        "followed": "skater_node$SUFFIX",
+        "followed": "skater_node$suffix",
         "distance": 5,
         "node_displacement": [0, 1, 0],
         "look_at_displacement": [0, 1, 0],
@@ -22,10 +22,10 @@
       }
     },
     {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["'45_deg_camera'", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
-    {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["follower_camera", "main_gun_camera_node$SUFFIX"]}},
+    {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["follower_camera", "main_gun_camera_node$suffix"]}},
     {"call": "set_camera", "arguments": {"name": "follower_camera"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "'45_deg_camera'"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "follower_camera"}},
-    {"call": "append_externals_deleter", "arguments": {"player": "%EXTERNALS_PLAYER_NAME", "node": "main_gun_camera_node$SUFFIX"}}
+    {"call": "append_externals_deleter", "arguments": {"player": "%externals_player_name", "node": "'45_deg_camera'"}},
+    {"call": "append_externals_deleter", "arguments": {"player": "%externals_player_name", "node": "follower_camera"}},
+    {"call": "append_externals_deleter", "arguments": {"player": "%externals_player_name", "node": "main_gun_camera_node$suffix"}}
   ]
 }

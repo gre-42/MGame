@@ -5,16 +5,16 @@
       {
         "call": "player_create",
         "arguments": {
-          "name": "%PLAYER_NAME",
-          "team": "%TEAM",
-          "game_mode": "%GAME_MODE",
-          "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%INITIAL_BEHAVIOR",
+          "name": "%player_name",
+          "team": "%team",
+          "game_mode": "%game_mode",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "%initial_behavior",
           "driving_direction": "center"
         }
       },
-      { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%ROLE" } },
+      { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "role": "%role" } },
       {
         "playback": "set_player_skills"
       }
@@ -26,16 +26,16 @@
       {
         "call": "player_create",
         "arguments": {
-          "name": "%PLAYER_NAME",
-          "team": "%TEAM",
-          "game_mode": "%GAME_MODE",
-          "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%INITIAL_BEHAVIOR",
+          "name": "%player_name",
+          "team": "%team",
+          "game_mode": "%game_mode",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "%initial_behavior",
           "driving_direction": "center"
         }
       },
-      { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%ROLE" } },
+      { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "role": "%role" } },
       {
         "playback": "set_player_skills"
       }
@@ -56,15 +56,15 @@
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%player_name",
           "mode": "npc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%ROLE"
+          "player": "%player_name",
+          "role": "%role"
         }
       }
     ]
@@ -87,7 +87,7 @@
       {
         "call": "visual_node_status_3rd",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "format": "health",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "offset": [0, 0.3],
@@ -99,15 +99,15 @@
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%player_name",
           "mode": "npc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%ROLE"
+          "player": "%player_name",
+          "role": "%role"
         }
       }
     ]
@@ -121,7 +121,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "teams.create_avatar_for_npc"
           }
@@ -138,7 +138,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "teams.create_car_for_npc"
           }

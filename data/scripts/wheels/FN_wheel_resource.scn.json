@@ -5,8 +5,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "%NAME",
-          "filename": "models/SR/$NAME.obj",
+          "name": "%name",
+          "filename": "models/SR/$name.obj",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
@@ -15,7 +15,7 @@
             "blend_mode": "off",
             "alpha_distances": [0, 0, "inf", "inf"],
             "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%OCCLUDER_PASS",
+            "occluder_pass": "%occluder_pass",
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "emissive_factor": "%STUNT_RALLY_EMISSIVE_FACTOR",
@@ -32,12 +32,12 @@
   {
     "declare_macro": "load_FN_wheels",
     "content": [
-      {"playback": "load_FN_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "NAME": "FN/FN_wheel$DECIMATE"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_front$SUFFIX"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$DECIMATE"], "dest_name": "FN/wheel_rear$SUFFIX"}}
+      {"playback": "load_FN_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "name": "FN/FN_wheel$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$decimate"], "dest_name": "FN/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$decimate"], "dest_name": "FN/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "_d3", "SUFFIX": "_d3"}},
-  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d0.5", "SUFFIX": "_lowres"}}
+  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
+  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none",               "decimate": "_d3", "suffix": "_d3"}},
+  {"playback": "load_FN_wheels", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d0.5", "suffix": "_lowres"}}
 ]

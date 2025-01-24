@@ -6,26 +6,26 @@
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
-          "name": "human_node$SUFFIX",
+          "name": "human_node$suffix",
           "scale": 1,
-          "position": "%HUMAN_NODE_POSITION",
-          "rotation": [0, "%HUMAN_NODE_ANGLE_Y", 0]
+          "position": "%human_node_position",
+          "rotation": [0, "%human_node_angle_y", 0]
         }
       },
       {
         "call": "add_color_style",
-        "required": ["%IF_HUMAN_STYLE"],
+        "required": ["%if_human_style"],
         "arguments": {
-          "node": "human_node$SUFFIX",
-          "ambient": "%COLOR",
-          "diffuse": "%COLOR"
+          "node": "human_node$suffix",
+          "ambient": "%color",
+          "diffuse": "%color"
         }
       },
       {
-        "required": ["%IF_HUMAN_STYLE"],
+        "required": ["%if_human_style"],
         "call": "set_animation_state",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "node": "human_node$suffix",
           "animation_loop_name": "xonotic_pyria.idle",
           "animation_loop_begin": 0,
           "animation_loop_end": "full",
@@ -33,7 +33,7 @@
         }
       },
       {
-        "playback": "create_$HUMAN_NAME"
+        "playback": "create_$human_name"
       },
       {
         "playback": "create_avatar_cameras_persistent"
@@ -42,21 +42,21 @@
         "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "arguments": {
-          "asset_id": "%HUMAN_NAME",
-          "suffix": "%SUFFIX",
-          "spawner": "%SPAWNER_NAME"
+          "asset_id": "%human_name",
+          "suffix": "%suffix",
+          "spawner": "%spawner_name"
         }
       },
       {
         "required": ["%IF_SPAWNER"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
-          "time": "%RESPAWN_COOLDOWN_TIME"
+          "spawner": "%spawner_name",
+          "time": "%respawn_cooldown_time"
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light_$HUMAN_NAME LSUFFIX:_human$SUFFIX CSUFFIX:SUFFIX;"
+        "comment": "IF_SHADOW macro_playback add_attached_light_$human_name lsuffix:_human$suffix CSUFFIX:suffix;"
       },
       {
         "required": ["%IF_SPAWNER"],
@@ -68,13 +68,13 @@
           "internals": {
             "playback": "create_player_avatar_internals"
           },
-          "spawner": "%SPAWNER_NAME"
+          "spawner": "%spawner_name"
         }
       },
       {
         "comment": {
           "playback": "visual_node_status_3rd",
-          "node": "human_node$SUFFIX",
+          "node": "human_node$suffix",
           "format": 8,
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "offset": "0 0.3",
@@ -88,7 +88,7 @@
     "declare_macro": "create_player_avatar_externals",
     "content": [
       {
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "playback": "create_avatar_cameras_pc"
       }
     ]
@@ -97,23 +97,20 @@
     "declare_macro": "create_player_avatar_internals",
     "content": [
       {
-        "playback": "create_player_avatar_internals_$HUMAN_NAME"
+        "playback": "create_player_avatar_internals_$human_name"
       },
       {
-        "required": ["%IF_PC"],
-        "playback": "create_avatar_key_bindings",
-        "arguments": {
-          "role": "driver"
-        }
+        "required": ["%if_pc"],
+        "playback": "create_avatar_key_bindings"
       },
       {
         "call": "hud_target_point",
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "gun_node": "main_gun_end_node$SUFFIX",
+          "player": "%externals_player_name",
+          "gun_node": "main_gun_end_node$suffix",
           "exclusive_node": null,
-          "ypln_node": "human_node$SUFFIX",
+          "ypln_node": "human_node$suffix",
           "center": [0, 0],
           "size": [0.05, 0.05],
           "error_behavior": "center",
@@ -121,9 +118,9 @@
       },
       {
         "call": "visual_player_bullet_count",
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "left": "bullet_count_left",
           "right": "bullet_count_right",
           "bottom": "bullet_count_bottom",
@@ -139,8 +136,8 @@
         "required": ["%IF_WITH_GUN"],
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "gun_node": "main_gun_end_node$SUFFIX"
+          "player": "%externals_player_name",
+          "gun_node": "main_gun_end_node$suffix"
         }
       },
       {
@@ -148,8 +145,8 @@
         "arguments": {
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "max_tire_angle": "%%vehicles/$HUMAN_NAME/max_tire_angle"
+          "player": "%externals_player_name",
+          "max_tire_angle": "%%vehicles/$human_name/max_tire_angle"
         }
       }
     ]

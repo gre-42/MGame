@@ -2,19 +2,19 @@
   {
     "declare_macro": "create_tiger_tank_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "chassis$suffix", "node": "car_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Left|Right|Hull"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Machine_Gun|Main_Turret|Hatch"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "Tiger$decimate", "included_names": "Main_Gun"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_0_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_0_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_1_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_1_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_2_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_2_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_3_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_3_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_4_node$node_suffix", "resource": "M3/M3_wheel-decimate"}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS"], "call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_4_node_visual$node_suffix", "resource": "M3/M3_wheel-decimate"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "Tiger$lod_decimate", "included_names": "Left|Right|Hull"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$lod_suffix", "node": "turret_shift_node$node_suffix", "resource": "Tiger$lod_decimate", "included_names": "Machine_Gun|Main_Turret|Hatch"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$lod_suffix", "node": "main_gun_shift_node$node_suffix", "resource": "Tiger$lod_decimate", "included_names": "Main_Gun"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_left_0_node$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_right_0_node_visual$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_left_1_node$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_right_1_node_visual$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_left_2_node$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_right_2_node_visual$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_left_3_node$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_right_3_node_visual$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_left_4_node$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}},
+      {"required": ["%if_show_debug_wheels"], "call": "child_renderable_instance", "arguments": {"name": "wheel$lod_suffix", "node": "wheel_right_4_node_visual$node_suffix", "resource": "M3/M3_wheel-lod_decimate"}}
     ]
   },
   {
@@ -23,55 +23,55 @@
       {
         "call": "rigid_cuboid",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "hitboxes": "tiger_tank_hitboxes",
           "mass": "%mass",
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
-          "collidable_mode": "%COLLIDABLE_MODE",
+          "collidable_mode": "%collidable_mode",
           "waypoint_dy": 1.5,
-          "name": "tiger_tank$SUFFIX",
+          "name": "tiger_tank$suffix",
           "asset_id": "tiger_tank"
         }
       },
-      {"comment": {"call": "damageable", "arguments": {"node": "car_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": true}}},
+      {"comment": {"call": "damageable", "arguments": {"node": "car_node$suffix", "health": 200, "delete_node_when_health_leq_zero": true}}},
       {
         "call": "aim_at",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "parent_follower_rigid_body_node": "car_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "parent_follower_rigid_body_node": "car_node$suffix",
           "bullet_start_offset": 0,
           "bullet_velocity": 900,
           "bullet_feels_gravity": true,
           "gravity": 9.8,
           "locked_on_angle": 20,
-          "velocity_error_std": "%VELOCITY_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "velocity_error_std": "%velocity_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
       {
         "call": "yaw_pitch_look_at_nodes",
         "arguments": {
-          "yaw_node": "turret_node$SUFFIX",
-          "pitch_node": "main_gun_node$SUFFIX",
-          "gun_node": "main_gun_end_node$SUFFIX",
+          "yaw_node": "turret_node$suffix",
+          "pitch_node": "main_gun_node$suffix",
+          "gun_node": "main_gun_end_node$suffix",
           "dyaw_max": 0.8,
           "pitch_min": -10,
           "pitch_max": 45,
           "dpitch_max": 0.8,
-          "yaw_error_std": "%YAW_ERROR_STD",
-          "pitch_error_std": "%PITCH_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "yaw_error_std": "%yaw_error_std",
+          "pitch_error_std": "%pitch_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
-      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "tiger_tank_ammo", "capacity": 2000}},
-      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "tiger_tank_ammo", "amount": 500}},
+      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$suffix", "item_type": "tiger_tank_ammo", "capacity": 2000}},
+      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$suffix", "item_type": "tiger_tank_ammo", "amount": 500}},
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "car_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "car_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "cool_down": 10,
           "ammo_type": "tiger_tank_ammo",
           "bullet_type": "tiger_tank_bullet",
@@ -83,7 +83,7 @@
         "comment": {
           "call": "visual_node_status_3rd",
           "arguments": {
-            "node": "car_node$SUFFIX",
+            "node": "car_node$suffix",
             "format": 264,
             "ttf_file": "fonts/RobotoMono-Bold.ttf",
             "offset": [0, 0.3],
@@ -95,7 +95,7 @@
       {
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "car_node$SUFFIX",
+          "rigid_body": "car_node$suffix",
           "name": "main",
           "angular_vels": [-2500, -2000, -800, 0],
           "powers": ["nan", 3.6e8, 3.6e8, 0],
@@ -113,27 +113,27 @@
       },
       {
         "call": "create_delta_engine",
-        "arguments": { "rigid_body": "car_node$SUFFIX", "name": "left" }
+        "arguments": { "rigid_body": "car_node$suffix", "name": "left" }
       },
       {
         "call": "create_delta_engine",
-        "arguments": { "rigid_body": "car_node$SUFFIX", "name": "right" }
+        "arguments": { "rigid_body": "car_node$suffix", "name": "right" }
       },
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_left_0_node$SUFFIX",  "vehicle_mount_0": [-1.8, -0.0, -2.4], "vehicle_mount_1": [-1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 0}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_right_0_node$SUFFIX", "vehicle_mount_0": [ 1.8, -0.0, -2.4], "vehicle_mount_1": [ 1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 1}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_left_1_node$SUFFIX",  "vehicle_mount_0": [-1.8, -0.8, -0.8], "vehicle_mount_1": [-1.8, 0.5, -0.8], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 2}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_right_1_node$SUFFIX", "vehicle_mount_0": [ 1.8, -0.8, -0.8], "vehicle_mount_1": [ 1.8, 0.5, -0.8], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 3}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_left_2_node$SUFFIX",  "vehicle_mount_0": [-1.8, -0.8,  0.8], "vehicle_mount_1": [-1.8, 0.5,  0.8], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 3.00e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 4}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_right_2_node$SUFFIX", "vehicle_mount_0": [ 1.8, -0.8,  0.8], "vehicle_mount_1": [ 1.8, 0.5,  0.8], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 3.00e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 5}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_left_3_node$SUFFIX",  "vehicle_mount_0": [-1.8, -0.8,  2.4], "vehicle_mount_1": [-1.8, 0.5,  2.4], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 6}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_right_3_node$SUFFIX", "vehicle_mount_0": [ 1.8, -0.8,  2.4], "vehicle_mount_1": [ 1.8, 0.5,  2.4], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 7}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_left_4_node$SUFFIX",  "vehicle_mount_0": [-1.8, -0.0,  4  ], "vehicle_mount_1": [-1.8, 0.5,  4  ], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 8}},
-      {"call": "wheel", "arguments": {"vehicle": "car_node$SUFFIX", "wheel": "wheel_right_4_node$SUFFIX", "vehicle_mount_0": [ 1.8, -0.0,  4  ], "vehicle_mount_1": [ 1.8, 0.5,  4  ], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 9}},
-      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$SUFFIX", "door_distance": 3}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_0_node$suffix",  "vehicle_mount_0": [-1.8, -0.0, -2.4], "vehicle_mount_1": [-1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 0}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_0_node$suffix", "vehicle_mount_0": [ 1.8, -0.0, -2.4], "vehicle_mount_1": [ 1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 1}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_1_node$suffix",  "vehicle_mount_0": [-1.8, -0.8, -0.8], "vehicle_mount_1": [-1.8, 0.5, -0.8], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 2}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_1_node$suffix", "vehicle_mount_0": [ 1.8, -0.8, -0.8], "vehicle_mount_1": [ 1.8, 0.5, -0.8], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 3}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_2_node$suffix",  "vehicle_mount_0": [-1.8, -0.8,  0.8], "vehicle_mount_1": [-1.8, 0.5,  0.8], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 3.00e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 4}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_2_node$suffix", "vehicle_mount_0": [ 1.8, -0.8,  0.8], "vehicle_mount_1": [ 1.8, 0.5,  0.8], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 3.00e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 5}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_3_node$suffix",  "vehicle_mount_0": [-1.8, -0.8,  2.4], "vehicle_mount_1": [-1.8, 0.5,  2.4], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 6}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_3_node$suffix", "vehicle_mount_0": [ 1.8, -0.8,  2.4], "vehicle_mount_1": [ 1.8, 0.5,  2.4], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 7}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_4_node$suffix",  "vehicle_mount_0": [-1.8, -0.0,  4  ], "vehicle_mount_1": [-1.8, 0.5,  4  ], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 8}},
+      {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_4_node$suffix", "vehicle_mount_0": [ 1.8, -0.0,  4  ], "vehicle_mount_1": [ 1.8, 0.5,  4  ], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 9}},
+      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$suffix", "door_distance": 3}},
       {
         "call": "create_tank_controller",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "left_tire_ids": [0, 2, 4, 6, 8],
           "right_tire_ids": [1, 3, 5, 7, 9],
           "delta_power": 7e8
@@ -142,7 +142,7 @@
       {
         "call": "set_available_roles",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "value": ["driver"]
         }
       }
@@ -151,109 +151,109 @@
   {
     "declare_macro": "create_tiger_tank",
     "let": {
-      "DECIMATE": ""
+      "decimate": ""
     },
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_0_node$SUFFIX",  "position": [-1.8, -0.0, -2.4]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_0_node$SUFFIX", "position": [ 1.8, -0.0, -2.4]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_1_node$SUFFIX",  "position": [-1.8, -0.8, -0.8]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_1_node$SUFFIX", "position": [ 1.8, -0.8, -0.8]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_2_node$SUFFIX",  "position": [-1.8, -0.8,  0.8]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_2_node$SUFFIX", "position": [ 1.8, -0.8,  0.8]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_3_node$SUFFIX",  "position": [-1.8, -0.8,  2.4]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_3_node$SUFFIX", "position": [ 1.8, -0.8,  2.4]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_left_4_node$SUFFIX",  "position": [-1.8, -0.0,  4  ]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "wheel_right_4_node$SUFFIX", "position": [ 1.8, -0.0,  4  ]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_0_node$SUFFIX", "name": "wheel_right_0_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_1_node$SUFFIX", "name": "wheel_right_1_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_2_node$SUFFIX", "name": "wheel_right_2_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_3_node$SUFFIX", "name": "wheel_right_3_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%IF_SHOW_DEBUG_WHEELS", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_4_node$SUFFIX", "name": "wheel_right_4_node_visual$SUFFIX", "rotation": [0, 180, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_0_node$suffix",  "position": [-1.8, -0.0, -2.4]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_0_node$suffix", "position": [ 1.8, -0.0, -2.4]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_1_node$suffix",  "position": [-1.8, -0.8, -0.8]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_1_node$suffix", "position": [ 1.8, -0.8, -0.8]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_2_node$suffix",  "position": [-1.8, -0.8,  0.8]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_2_node$suffix", "position": [ 1.8, -0.8,  0.8]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_3_node$suffix",  "position": [-1.8, -0.8,  2.4]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_3_node$suffix", "position": [ 1.8, -0.8,  2.4]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_4_node$suffix",  "position": [-1.8, -0.0,  4  ]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_4_node$suffix", "position": [ 1.8, -0.0,  4  ]}},
+      {"required": ["%if_show_debug_wheels", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_0_node$suffix", "name": "wheel_right_0_node_visual$suffix", "rotation": [0, 180, 0]}},
+      {"required": ["%if_show_debug_wheels", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_1_node$suffix", "name": "wheel_right_1_node_visual$suffix", "rotation": [0, 180, 0]}},
+      {"required": ["%if_show_debug_wheels", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_2_node$suffix", "name": "wheel_right_2_node_visual$suffix", "rotation": [0, 180, 0]}},
+      {"required": ["%if_show_debug_wheels", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_3_node$suffix", "name": "wheel_right_3_node_visual$suffix", "rotation": [0, 180, 0]}},
+      {"required": ["%if_show_debug_wheels", "if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_4_node$suffix", "name": "wheel_right_4_node_visual$suffix", "rotation": [0, 180, 0]}},
       {"comment": [
-        {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": [0, -0.5, 1]}},
+        {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "com_node$suffix", "position": [0, -0.5, 1]}},
         "",
-        "renderable_instance name=gizmo node=com_node$SUFFIX resource=gizmo;",
+        "renderable_instance name=gizmo node=com_node$suffix resource=gizmo;",
         "",
-        "car_node$SUFFIX;",
-        "    turret_node$SUFFIX (0 0 1, yaw_node);",
-        "        turret_shift_node$SUFFIX (0 0 -1, renderable);",
-        "            main_gun_node$SUFFIX (0 1.2 -0.3, pitch_node);",
-        "                main_gun_shift_node$SUFFIX (0 -1.2 0.3, renderable);",
-        "                main_gun_end_node$SUFFIX (0 0 -20);"]
+        "car_node$suffix;",
+        "    turret_node$suffix (0 0 1, yaw_node);",
+        "        turret_shift_node$suffix (0 0 -1, renderable);",
+        "            main_gun_node$suffix (0 1.2 -0.3, pitch_node);",
+        "                main_gun_shift_node$suffix (0 -1.2 0.3, renderable);",
+        "                main_gun_end_node$suffix (0 0 -20);"]
       },
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "turret_node$SUFFIX", "position": [0, 0, 1], "rotation": [0, 45, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$SUFFIX", "name": "turret_shift_node$SUFFIX", "position": [0, 0, -1]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0, 1.2, -0.3], "rotation": [30, 0, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -1.2, 0.3]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "turret_node$suffix", "position": [0, 0, 1], "rotation": [0, 45, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$suffix", "name": "turret_shift_node$suffix", "position": [0, 0, -1]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$suffix", "name": "main_gun_node$suffix", "position": [0, 1.2, -0.3], "rotation": [30, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_punch_angle_node$suffix", "position": [0, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_shift_node$suffix", "position": [0, -1.2, 0.3]}},
       {"comment": [
-        "renderable_instance name=flag-inst node=car_node$SUFFIX resource=flag",
-        "renderable_instance name=car_box$SUFFIX node=car_node$SUFFIX resource=tiger_tank_hitbox",
-        "collidable-mesh rigid_body-node=car_node$SUFFIX node=car_node$SUFFIX resource=tiger_tank_hitbox"]
+        "renderable_instance name=flag-inst node=car_node$suffix resource=flag",
+        "renderable_instance name=car_box$suffix node=car_node$suffix resource=tiger_tank_hitbox",
+        "collidable-mesh rigid_body-node=car_node$suffix node=car_node$suffix resource=tiger_tank_hitbox"]
       },
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -20]}},
-      {"required": ["%if_with_graphics"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%if_with_graphics"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d3$SUFFIX", "decimate": "_d3"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix", "position": [0, 0, -20]}},
+      {"required": ["%if_with_graphics"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
+      {"required": ["%if_with_graphics"], "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d3$suffix", "lod_decimate": "_d3"}},
       {"required": ["%if_with_physics"], "playback": "create_tiger_tank_physics", "arguments": {
         "mass": 56e3,
-        "COLLIDABLE_MODE": "moving"
+        "collidable_mode": "moving"
       }}
     ]
   },
   {
     "declare_macro": "create_player_car_internals_tiger_tank",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_car_key_bindings", "arguments": {
-        "IF_HAS_GUN": true
+      {"required": ["%if_pc"], "playback": "create_car_key_bindings", "arguments": {
+        "if_has_gun": true
       }},
-      {"required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "gun_node": "main_gun_end_node$SUFFIX",
-        "exclusive_node": "main_gun_camera_node$SUFFIX",
-        "ypln_node": "turret_node$SUFFIX",
+      {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
+        "player": "%externals_player_name",
+        "gun_node": "main_gun_end_node$suffix",
+        "exclusive_node": "main_gun_camera_node$suffix",
+        "ypln_node": "turret_node$suffix",
         "filename": "textures/hud/crosshair.png",
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "center"}},
-      {"required": ["%IF_PC"], "call": "hud_target_point", "arguments": {
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "gun_node": "main_gun_end_node$SUFFIX",
+      {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
+        "player": "%externals_player_name",
+        "gun_node": "main_gun_end_node$suffix",
         "exclusive_node": "follower_camera",
-        "ypln_node": "turret_node$SUFFIX",
+        "ypln_node": "turret_node$suffix",
         "filename": "textures/hud/crosshair.png",
         "center": [0, 0],
         "size": [0.05, 0.05],
         "error_behavior": "hide"}},
       {
-        "required": ["%BEHAVIOR != 'none'"],
+        "required": ["%behavior != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%EXTERNALS_PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/car_$BEHAVIOR/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/car_$BEHAVIOR/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/car_$BEHAVIOR/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/car_$BEHAVIOR/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/car_$BEHAVIOR/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/car_$BEHAVIOR/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/car_$BEHAVIOR/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$BEHAVIOR/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_distance"
+              "player": "%externals_player_name",
+              "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/car_$behavior/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/car_$behavior/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/car_$behavior/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$behavior/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%EXTERNALS_PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/car_$BEHAVIOR/stuck_velocity",
-              "stuck_duration": "%%driving_modes/car_$BEHAVIOR/stuck_duration",
-              "unstuck_duration": "%%driving_modes/car_$BEHAVIOR/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/car_$BEHAVIOR/player_way_points_filter",
+              "player": "%externals_player_name",
+              "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
+              "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
+              "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/car_$behavior/player_way_points_filter",
               "vehicle_way_points_filter": "explicit_ground|street"
             }
           }
@@ -264,16 +264,16 @@
   {
     "declare_macro": "create_player_car_externals_tiger_tank",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank"},
+      {"required": ["%if_pc"], "playback": "create_car_cameras_tank"},
       {"call": "player_set_aiming_gun", "arguments": {
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "gun_node": "main_gun_end_node$SUFFIX"}},
-      {"comment": {"exclude": ["%IF_ANDROID"], "required": ["%IF_PC"], "playback": "create_player_car_engine_rpm_meter", "arguments": {
+        "player": "%externals_player_name",
+        "gun_node": "main_gun_end_node$suffix"}},
+      {"comment": {"exclude": ["%if_android"], "required": ["%if_pc"], "playback": "create_player_car_engine_rpm_meter", "arguments": {
         "ENGINE_NAME": "left"}}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/tiger_tank/max_tire_angle",
@@ -286,7 +286,7 @@
     "declare_macro": "add_attached_light_tiger_tank",
     "content": [
       {"playback": "add_attached_light_tank", "arguments": {
-        "LSUFFIX": "%LSUFFIX",
+        "lsuffix": "%lsuffix",
         "CSUFFIX": "%CSUFFIX"}}
     ]
   }

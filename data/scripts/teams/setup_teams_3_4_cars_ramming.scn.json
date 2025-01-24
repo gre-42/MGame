@@ -5,44 +5,44 @@
       {
         "call": "set_spawn_points",
         "arguments": {
-          "location": "%OSM_LOCATION",
+          "location": "%osm_location",
           "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
         }
       },
       {
         "call": "set_way_points",
         "arguments": {
-          "location": "%OSM_LOCATION",
+          "location": "%osm_location",
           "resource": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "M3",
-          "PLAYER_NAME": "npc1",
-          "TEAM": "red",
-          "GAME_MODE": "ramming",
+          "car_name": "M3",
+          "player_name": "npc1",
+          "team": "red",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "M3",
-          "PLAYER_NAME": "npc2",
-          "TEAM": "red",
-          "GAME_MODE": "ramming",
+          "car_name": "M3",
+          "player_name": "npc2",
+          "team": "red",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "M3",
-          "PLAYER_NAME": "npc3",
-          "TEAM": "red",
-          "GAME_MODE": "ramming",
+          "car_name": "M3",
+          "player_name": "npc3",
+          "team": "red",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
@@ -50,50 +50,50 @@
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "XZ",
-          "PLAYER_NAME": "npc4",
-          "TEAM": "blue",
-          "GAME_MODE": "ramming",
+          "car_name": "XZ",
+          "player_name": "npc4",
+          "team": "blue",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "XZ",
-          "PLAYER_NAME": "npc5",
-          "TEAM": "blue",
-          "GAME_MODE": "ramming",
+          "car_name": "XZ",
+          "player_name": "npc5",
+          "team": "blue",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "XZ",
-          "PLAYER_NAME": "npc6",
-          "TEAM": "blue",
-          "GAME_MODE": "ramming",
+          "car_name": "XZ",
+          "player_name": "npc6",
+          "team": "blue",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "playback": "teams.create_player_and_car_for_npc",
         "arguments": {
-          "CAR_NAME": "XZ",
-          "PLAYER_NAME": "npc7",
-          "TEAM": "blue",
-          "GAME_MODE": "ramming",
+          "car_name": "XZ",
+          "player_name": "npc7",
+          "team": "blue",
+          "game_mode": "ramming",
           "TEAMS_WAY_POINTS_RESOURCE": "%TEAMS_WAY_POINTS_RESOURCE"
         }
       },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "player": "%VIP_NAME",
+          "player": "%vip_name",
           "macro": "teams.create_car_for_pc",
           "parameters": {
-            "CAR_NAME": "M3"
+            "car_name": "M3"
           }
         }
       }

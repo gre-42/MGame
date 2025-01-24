@@ -6,12 +6,12 @@
       "call": "globals",
       "arguments": {
         "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
-        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$SELECTED_LEVEL_ID.checkpoints.m",
-        "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-        "AGGREGATE_MODE": "instances_sorted",
-        "VIP_NAME": "you",
-        "ROLE": "driver",
-        "OSM_LOCATION": {
+        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$selected_level_id.checkpoints.m",
+        "loaded_level_id": "%selected_level_id",
+        "aggregate_mode": "instances_sorted",
+        "vip_name": "you",
+        "player_role": "driver",
+        "osm_location": {
           "position": [-90, -2000, 0],
           "rotation": [-90, 0, 0],
           "scale": 1
@@ -56,16 +56,16 @@
         "let": {
           "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
           "IF_PC_PLAYER_PLAYBACK": false,
-          "CAR_NODE_POSITION": [
+          "car_node_position": [
             "'12.826221_deg'",
             "'47.117129_deg'",
             "'2150'"],
-          "CAR_NODE_ANGLES": [0, -90, 0],
-          "VEHICLE_VELOCITY": [0, 0, 0],
-          "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
+          "car_node_angles": [0, -90, 0],
+          "vehicle_velocity": [0, 0, 0],
+          "vehicle_angular_velocity": [0, 0, 0],
           "RECORDINGS_DIR": "%__DIR__",
-          "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
-          "CHECKPOINTS": null,
+          "CHECKPOINTS_FILE": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+          "checkpoints": null,
           "PACENOTES_FILE": "$__DIR__/pacenotes.json",
           "IF_PLAYBACK_CHECKPOINTS": false,
           "IF_PLAYBACK_TRACK_1": false,

@@ -1,6 +1,6 @@
 [
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.walking",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_forward",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_backward",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.idle",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_left",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_right",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.die",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left.jump",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right.jump",
@@ -121,7 +121,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left.jump.skateboard",
@@ -132,7 +132,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right.jump.skateboard",

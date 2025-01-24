@@ -5,16 +5,16 @@
       "call": "root_node_instance",
       "arguments": {
         "dynamics": "moving",
-        "name": "%NODE_NAME",
-        "position": "%POSITION",
-        "rotation": "%ROTATION",
+        "name": "%node_name",
+        "position": "%position",
+        "rotation": "%rotation",
         "scale": 1
       }
     },
     {
       "call": "perspective_camera",
       "arguments": {
-        "node": "%NODE_NAME",
+        "node": "%node_name",
         "y_fov": 60,
         "near_plane": 1,
         "far_plane": 10000,
@@ -24,7 +24,7 @@
     {
       "call": "relative_transformer",
       "arguments": {
-        "node": "%NODE_NAME"
+        "node": "%node_name"
       }
     }
   ]

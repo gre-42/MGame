@@ -3,11 +3,11 @@
   {
     "call": "globals",
     "arguments": {
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "AGGREGATE_MODE": "instances_sorted",
-      "VIP_NAME": "you",
-      "ROLE": "driver",
-      "OSM_LOCATION": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_role": "driver",
+      "osm_location": {
         "position": [-90, -220, 0],
         "rotation": [-90, 0, 0],
         "scale": 1
@@ -52,16 +52,16 @@
       "let": {
         "IF_CREATE_PC_CAR": "!IF_TRIPOD_MODE",
         "IF_PC_PLAYER_PLAYBACK": false,
-        "CAR_NODE_POSITION": [
+        "car_node_position": [
           "'-1.224895021433151783e+02_deg'",
           "'3.783904946168483718e+01_deg'",
           "'3.683313063486510686e+01'"],
-        "CAR_NODE_ANGLES": [0, 180, 0],
-        "VEHICLE_VELOCITY": [0, 0, 0],
-        "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
+        "car_node_angles": [0, 180, 0],
+        "vehicle_velocity": [0, 0, 0],
+        "vehicle_angular_velocity": [0, 0, 0],
         "RECORDINGS_DIR": "%__DIR__",
-        "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
-        "CHECKPOINTS": null,
+        "CHECKPOINTS_FILE": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+        "checkpoints": null,
         "PACENOTES_FILE": "$__DIR__/pacenotes.json",
         "IF_PLAYBACK_CHECKPOINTS": false,
         "IF_PLAYBACK_TRACK_1": false,

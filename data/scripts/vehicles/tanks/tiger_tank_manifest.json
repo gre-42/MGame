@@ -8,17 +8,17 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "tiger_tank"
+      "selected_vehicle_id": "tiger_tank"
     }
   },
   "database": {
-    "SUFFIX": "tiger_tank",
-    "CLASS": "car",
+    "suffix": "tiger_tank",
+    "class": "car",
     "NODE_PREFIXES": ["car_node"],
     "max_tire_angle": 45
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in {'team_deathmatch'}"]
+    "dynamic": ["%game_mode in {'team_deathmatch'}"]
   }
 }

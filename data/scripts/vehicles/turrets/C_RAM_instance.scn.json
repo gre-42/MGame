@@ -2,9 +2,9 @@
   {
     "declare_macro": "create_C_RAM_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "chassis$suffix", "node": "car_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "^Base$"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$suffix", "node": "turret_shift_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "Yaw"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$suffix", "node": "main_gun_shift_node$node_suffix", "resource": "C_RAM$decimate", "included_names": "Gun"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "^Base$"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$lod_suffix", "node": "turret_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "Yaw"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$lod_suffix", "node": "main_gun_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "Gun"}}
     ]
   },
   {
@@ -13,54 +13,54 @@
       {
         "call": "rigid_cuboid",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "hitboxes": "C_RAM_hitboxes",
           "mass": "%mass",
           "size": [2, 4.5, 2],
           "com": [0, -1, 0],
-          "collidable_mode": "%COLLIDABLE_MODE",
+          "collidable_mode": "%collidable_mode",
           "waypoint_dy": 1.5,
-          "name": "C_RAM$SUFFIX",
+          "name": "C_RAM$suffix",
           "asset_id": "C_RAM"
         }
       },
       {
         "call": "aim_at",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "parent_follower_rigid_body_node": "car_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "parent_follower_rigid_body_node": "car_node$suffix",
           "bullet_start_offset": 0,
           "bullet_velocity": 900,
           "bullet_feels_gravity": true,
           "gravity": 9.8,
           "locked_on_angle": 20,
-          "velocity_error_std": "%VELOCITY_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "velocity_error_std": "%velocity_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
       {
         "call": "yaw_pitch_look_at_nodes",
         "arguments": {
-          "yaw_node": "turret_node$SUFFIX",
-          "pitch_node": "main_gun_node$SUFFIX",
-          "gun_node": "main_gun_end_node$SUFFIX",
+          "yaw_node": "turret_node$suffix",
+          "pitch_node": "main_gun_node$suffix",
+          "gun_node": "main_gun_end_node$suffix",
           "dyaw_max": 0.8,
           "pitch_min": -10,
           "pitch_max": 45,
           "dpitch_max": 0.8,
-          "yaw_error_std": "%YAW_ERROR_STD",
-          "pitch_error_std": "%PITCH_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "yaw_error_std": "%yaw_error_std",
+          "pitch_error_std": "%pitch_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
-      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "C_RAM_ammo", "capacity": 20000}},
-      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$SUFFIX", "item_type": "C_RAM_ammo", "amount": 20000}},
+      {"call": "set_inventory_capacity", "arguments": {"inventory_node": "car_node$suffix", "item_type": "C_RAM_ammo", "capacity": 20000}},
+      {"call": "add_to_inventory", "arguments": {"inventory_node": "car_node$suffix", "item_type": "C_RAM_ammo", "amount": 20000}},
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "car_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "car_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "cool_down": 0.1,
           "ammo_type": "C_RAM_ammo",
           "bullet_type": "C_RAM_bullet",
@@ -71,7 +71,7 @@
       {
         "call": "set_available_roles",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "value": ["driver"]
         }
       }
@@ -80,34 +80,34 @@
   {
     "declare_macro": "create_C_RAM",
     "let": {
-      "DECIMATE": ""
+      "decimate": ""
     },
     "content": [
       {"comment": [
-        {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "com_node$SUFFIX", "position": [0, -0.5, 1]}},
+        {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "com_node$suffix", "position": [0, -0.5, 1]}},
         "",
-        "renderable_instance name=gizmo node=com_node$SUFFIX resource=gizmo;",
+        "renderable_instance name=gizmo node=com_node$suffix resource=gizmo;",
         "",
-        "car_node$SUFFIX;",
-        "    turret_node$SUFFIX (0 0 1, yaw_node);",
-        "        turret_shift_node$SUFFIX (0 0 -1, renderable);",
-        "            main_gun_node$SUFFIX (0 1.2 -0.3, pitch_node);",
-        "                main_gun_shift_node$SUFFIX (0 -1.2 0.3, renderable);",
-        "                main_gun_end_node$SUFFIX (0 0 -20);"]
+        "car_node$suffix;",
+        "    turret_node$suffix (0 0 1, yaw_node);",
+        "        turret_shift_node$suffix (0 0 -1, renderable);",
+        "            main_gun_node$suffix (0 1.2 -0.3, pitch_node);",
+        "                main_gun_shift_node$suffix (0 -1.2 0.3, renderable);",
+        "                main_gun_end_node$suffix (0 0 -20);"]
       },
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$SUFFIX", "name": "turret_node$SUFFIX", "position": [0, 0, 0], "rotation": [0, 45, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$SUFFIX", "name": "turret_shift_node$SUFFIX", "position": [0, 0, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0, 0.2, 0], "rotation": [30, 0, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0, 0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_shift_node$SUFFIX", "position": [0, -0.2, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "turret_node$suffix", "position": [0, 0, 0], "rotation": [0, 45, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_node$suffix", "name": "turret_shift_node$suffix", "position": [0, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "turret_shift_node$suffix", "name": "main_gun_node$suffix", "position": [0, 0.2, 0], "rotation": [30, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_punch_angle_node$suffix", "position": [0, 0, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_shift_node$suffix", "position": [0, -0.2, 0]}},
 
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX", "position": [0, 0, -10]}},
-      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "%SUFFIX", "decimate": "%DECIMATE"}},
-      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%SUFFIX", "suffix": "_d$SUFFIX", "decimate": "_d"}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$SUFFIX", "resource": "C_RAM_hitbox"}}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix", "position": [0, 0, -10]}},
+      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
+      {"required": ["%if_with_graphics"], "playback": "create_C_RAM_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d$suffix", "lod_decimate": "_d"}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "C_RAM_hitbox", "node": "car_node$suffix", "resource": "C_RAM_hitbox"}}},
       {"required": ["%if_with_physics"], "playback": "create_C_RAM_physics", "arguments": {
         "mass": 56e3,
-        "COLLIDABLE_MODE": "moving"
+        "collidable_mode": "moving"
       }}
     ]
   },
@@ -118,10 +118,10 @@
   {
     "declare_macro": "create_player_car_externals_C_RAM",
     "content": [
-      {"required": ["%IF_PC"], "playback": "create_car_cameras_tank"},
+      {"required": ["%if_pc"], "playback": "create_car_cameras_tank"},
       {"call": "player_set_aiming_gun", "arguments": {
-        "player": "%PLAYER_NAME",
-        "gun_node": "main_gun_end_node$SUFFIX"}}
+        "player": "%player_name",
+        "gun_node": "main_gun_end_node$suffix"}}
     ]
   }
 ]

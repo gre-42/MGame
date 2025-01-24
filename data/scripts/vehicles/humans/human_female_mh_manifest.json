@@ -8,17 +8,17 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "female_mh"
+      "selected_vehicle_id": "female_mh"
     }
   },
   "database": {
-    "SUFFIX": "female_mh",
-    "CLASS": "avatar",
+    "suffix": "female_mh",
+    "class": "avatar",
     "NODE_PREFIXES": ["human_node"],
     "max_tire_angle": null
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in {'team_deathmatch'}"]
+    "dynamic": ["%game_mode in {'team_deathmatch'}"]
   }
 }

@@ -4,22 +4,22 @@
     "content": {
       "call": "obj_resource",
       "arguments": {
-        "name": "%NAME",
-        "filename": "models/sketchfab.com/AH-64-apache/$FILENAME",
+        "name": "%name",
+        "filename": "models/sketchfab.com/AH-64-apache/$filename",
         "config": {
           "position": [0, 0, -0.3],
           "rotation": [-5, 180, 0],
           "scale": [1, 1, 1],
-          "center_distances": "%CENTER_DISTANCES",
-          "blend_mode": "%BLEND_MODE",
+          "center_distances": "%center_distances",
+          "blend_mode": "%blend_mode",
           "alpha_distances": [0, 0, "inf", "inf"],
           "cull_faces_alpha": false,
           "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
+          "occluder_pass": "%occluder_pass",
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
-          "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE"
+          "rectangle_triangulation_mode": "%rectangle_triangulation_mode"
         }
       }
     }
@@ -27,23 +27,23 @@
   {
     "playback": "_load_AH_64_part",
     "arguments": {
-      "NAME": "AH_box_64_hitbox_front",
-      "FILENAME": "hitbox_front.obj",
-      "CENTER_DISTANCES": [0, "inf"],
-      "BLEND_MODE": "off",
-      "OCCLUDER_PASS": "none",
-      "RECTANGLE_TRIANGULATION_MODE": "disabled"
+      "name": "AH_box_64_hitbox_front",
+      "filename": "hitbox_front.obj",
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "occluder_pass": "none",
+      "rectangle_triangulation_mode": "disabled"
     }
   },
   {
     "playback": "_load_AH_64_part",
     "arguments": {
-      "NAME": "AH_box_64_hitbox_rear",
-      "FILENAME": "hitbox_rear.obj",
-      "CENTER_DISTANCES": [0, "inf"],
-      "BLEND_MODE": "off",
-      "OCCLUDER_PASS": "none",
-      "RECTANGLE_TRIANGULATION_MODE": "disabled"
+      "name": "AH_box_64_hitbox_rear",
+      "filename": "hitbox_rear.obj",
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "occluder_pass": "none",
+      "rectangle_triangulation_mode": "disabled"
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "AH_box_64_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
@@ -81,28 +81,28 @@
       {
         "playback": "_load_AH_64_part",
         "arguments": {
-          "NAME": "AH_64$DECIMATE",
-          "FILENAME": "AH_64$DECIMATE.obj",
-          "CENTER_DISTANCES": "%CENTER_DISTANCES",
-          "BLEND_MODE": "continuous",
-          "OCCLUDER_PASS": "%OCCLUDER_PASS",
-          "RECTANGLE_TRIANGULATION_MODE": "delaunay"
+          "name": "AH_64$decimate",
+          "filename": "AH_64$decimate.obj",
+          "center_distances": "%center_distances",
+          "blend_mode": "continuous",
+          "occluder_pass": "%occluder_pass",
+          "rectangle_triangulation_mode": "delaunay"
         }
       },
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "blades_AH_64$DECIMATE",
-          "filename": "models/sketchfab.com/AH-64-apache/AH_64$DECIMATE.obj",
+          "name": "blades_AH_64$decimate",
+          "filename": "models/sketchfab.com/AH-64-apache/AH_64$decimate.obj",
           "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
-          "center_distances": "%CENTER_DISTANCES",
+          "center_distances": "%center_distances",
           "blend_mode": "continuous",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
+          "occluder_pass": "%occluder_pass",
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero"
@@ -112,17 +112,17 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "tail_rotor_spinning_AH_64$DECIMATE",
-          "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$DECIMATE.obj",
+          "name": "tail_rotor_spinning_AH_64$decimate",
+          "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$decimate.obj",
           "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
-          "center_distances": "%CENTER_DISTANCES",
+          "center_distances": "%center_distances",
           "blend_mode": "continuous",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
+          "occluder_pass": "%occluder_pass",
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero"
@@ -131,8 +131,8 @@
       }
     ]
   },
-  {"playback": "load_AH_64", "arguments": {"CENTER_DISTANCES": [  0,  100], "OCCLUDER_PASS": "none", "DECIMATE": ""}},
-  {"playback": "load_AH_64", "arguments": {"CENTER_DISTANCES": [100, 1000], "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d5"}},
+  {"playback": "load_AH_64", "arguments": {"center_distances": [  0,  100], "occluder_pass": "none", "decimate": ""}},
+  {"playback": "load_AH_64", "arguments": {"center_distances": [100, 1000], "occluder_pass": "lightmap_black_movables", "decimate": "_d5"}},
   {
     "call": "obj_resource",
     "arguments": {

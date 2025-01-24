@@ -4,8 +4,8 @@
   {
     "declare_macro": "delete_weapon",
     "content": [
-      { "call": "clear_node", "arguments": { "node": "main_gun_end_node$SUFFIX" } },
-      { "call": "clear_node", "arguments": { "node": "main_gun_node_visual$SUFFIX" } }
+      { "call": "clear_node", "arguments": { "node": "main_gun_end_node$suffix" } },
+      { "call": "clear_node", "arguments": { "node": "main_gun_node_visual$suffix" } }
     ]
   },
   {
@@ -13,9 +13,9 @@
     "content": {
       "call": "set_node_hider",
       "arguments": {
-        "node_to_hide": "main_gun_node_visual$SUFFIX",
-        "camera_node": "human_head_camera_node$SUFFIX",
-        "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+        "node_to_hide": "main_gun_node_visual$suffix",
+        "camera_node": "human_head_camera_node$suffix",
+        "punch_angle_node": "main_gun_punch_angle_node$suffix",
         "on_hide": {
           "playback": "_add_weapon_closeup_scheduler_on_hide",
           "context": "weapon_closeup"
@@ -43,7 +43,7 @@
           "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
-            "node": "main_gun_node_visual$SUFFIX",
+            "node": "main_gun_node_visual$suffix",
             "resource": "box"
           }
         }
@@ -52,16 +52,16 @@
         "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
-          "node": "main_gun_node_visual$SUFFIX",
+          "node": "main_gun_node_visual$suffix",
           "resource": "M4A1"
         }
       },
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "human_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "human_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "muzzle_flash_resource": "muzzle_flash_0",
@@ -72,7 +72,7 @@
             "arguments": {
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
-              "POSITION": [0, 0.062, -0.66],
+              "position": [0, 0.062, -0.66],
               "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
           },
@@ -84,8 +84,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "ypln_node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
           "bullet_type": "%BULLET_TYPE"
         }
@@ -107,7 +107,7 @@
           "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
-            "node": "main_gun_node_visual$SUFFIX",
+            "node": "main_gun_node_visual$suffix",
             "resource": "box"
           }
         }
@@ -116,16 +116,16 @@
         "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
-          "node": "main_gun_node_visual$SUFFIX",
+          "node": "main_gun_node_visual$suffix",
           "resource": "Beretta92"
         }
       },
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "human_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "human_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "muzzle_flash_resource": "muzzle_flash_0",
@@ -136,7 +136,7 @@
             "arguments": {
               "RESOURCE": "muzzle_flash_0",
               "ANIMATION_TIME": 0.1,
-              "POSITION": [0, 0.086, -0.265],
+              "position": [0, 0.086, -0.265],
               "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
             }
           },
@@ -148,8 +148,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "ypln_node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
           "bullet_type": "%BULLET_TYPE"
         }
@@ -171,7 +171,7 @@
           "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
-            "node": "main_gun_node_visual$SUFFIX",
+            "node": "main_gun_node_visual$suffix",
             "resource": "box"
           }
         }
@@ -180,16 +180,16 @@
         "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
-          "node": "main_gun_node_visual$SUFFIX",
+          "node": "main_gun_node_visual$suffix",
           "resource": "frag_grenade"
         }
       },
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "human_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "human_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
@@ -200,8 +200,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "ypln_node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "ypln_node": "human_node$suffix",
           "dpitch_head": -15,
           "bullet_type": "%BULLET_TYPE"
         }
@@ -223,7 +223,7 @@
           "call": "child_renderable_instance",
           "arguments": {
             "name": "main_gun_node_visual-box",
-            "node": "main_gun_node_visual$SUFFIX",
+            "node": "main_gun_node_visual$suffix",
             "resource": "box"
           }
         }
@@ -232,16 +232,16 @@
         "call": "child_renderable_instance",
         "arguments": {
           "name": "main_gun_node_visual-inst",
-          "node": "main_gun_node_visual$SUFFIX",
+          "node": "main_gun_node_visual$suffix",
           "resource": "m72_law"
         }
       },
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "parent_rigid_body_node": "human_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "parent_rigid_body_node": "human_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
           "cool_down": "%COOL_DOWN",
@@ -252,8 +252,8 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "ypln_node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
           "bullet_type": "%BULLET_TYPE"
         }
@@ -272,8 +272,8 @@
       {
         "call": "gun",
         "arguments": {
-          "node": "main_gun_end_node$SUFFIX",
-          "punch_angle_node": "main_gun_punch_angle_node$SUFFIX",
+          "node": "main_gun_end_node$suffix",
+          "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "cool_down": "inf",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
@@ -285,7 +285,7 @@
       {
         "call": "ypln_update_bullet_properties",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "%PARENT_RIGID_BODY_NODE",
           "dpitch_head": 0,
           "bullet_type": "%BULLET_TYPE"

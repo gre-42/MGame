@@ -4,9 +4,9 @@
     "# content": {
       "playback": "generic_car.create",
       "let": {
-        "NAME": "TNo2",
-        "TESUFFIX": "%TRAILER_SUFFIX",
-        "DECIMATE": "",
+        "name": "TNo2",
+        "tesuffix": "%TRAILER_SUFFIX",
+        "decimate": "",
         "wheels": "%%vehicles/TNo2/wheels",
         "engine_audio": "%%vehicles/TNo2/engine_audio"
       }
@@ -14,9 +14,9 @@
     "content": {
       "call": "create_generic_car",
       "arguments": {
-        "NAME": "TNo2",
-        "TESUFFIX": "%TRAILER_SUFFIX",
-        "DECIMATE": "",
+        "name": "TNo2",
+        "tesuffix": "%TRAILER_SUFFIX",
+        "decimate": "",
         "if_with_graphics": "%if_with_graphics",
         "if_with_physics": "%if_with_physics",
         "mute": "%mute",
@@ -30,7 +30,7 @@
     "declare_macro": "create_player_car_internals_TNo2",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": { "ASSET_ID": "TNo2" }
+      "arguments": { "asset_id": "TNo2" }
     }
   },
   {
@@ -38,9 +38,9 @@
     "content": {
       "playback": "generic_car.create_player_externals",
       "let": {
-        "ASSET_ID": "TNo2",
-        "CAMERA_CLASS": "sedan",
-        "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
+        "asset_id": "TNo2",
+        "camera_class": "sedan",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
       }
     }
   }

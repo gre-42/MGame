@@ -3,7 +3,7 @@
   "title": "Snow 1",
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in %%levels/snow1/game_modes"]
+    "dynamic": ["%game_mode in %%levels/snow1/game_modes"]
   },
   "on_execute": {
     "include": "scene_snow1.scn.json"
@@ -11,13 +11,13 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_LEVEL_ID": "snow1",
-      "LEVEL_ICON_FILE": "levels/snow1/icon.png",
-      "MINIMAP_FILE": null
+      "selected_level_id": "snow1",
+      "level_icon_file": "levels/snow1/icon.png",
+      "minimap_file": null
     }
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": false,
+    "if_raceway_circular": false,
     "game_modes": ["rally"]
   }
 }

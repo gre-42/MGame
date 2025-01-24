@@ -3,17 +3,17 @@
   {
     "call": "globals",
     "arguments": {
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "AGGREGATE_MODE": "none",
-      "VIP_NAME": "you"
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "none",
+      "vip_name": "you"
     }
   },
   {
     "call": "resource_locations",
     "arguments": {
-      "rw_resource_files": "%%levels/$LOADED_LEVEL_ID/rw_resource_files",
-      "rw_ide_files": "%%levels/$LOADED_LEVEL_ID/rw_ide_files",
-      "pssg_files": "%%levels/$LOADED_LEVEL_ID/pssg_files",
+      "rw_resource_files": "%%levels/$loaded_level_id/rw_resource_files",
+      "rw_ide_files": "%%levels/$loaded_level_id/rw_ide_files",
+      "pssg_files": "%%levels/$loaded_level_id/pssg_files",
       "double_precision": false,
       "resource_variable": "available_resources",
       "instantiables_variable": "available_instantiables",
@@ -29,7 +29,7 @@
         "occluder_pass": "none",
         "anisotropic_filtering_level": 16,
         "magnifying_interpolation_mode": "linear",
-        "aggregate_mode": "%AGGREGATE_MODE",
+        "aggregate_mode": "%aggregate_mode",
         "transformation_mode": "all",
         "emissive_factor": "%RW_EMISSIVE_FACTOR",
         "ambient_factor": "%RW_AMBIENT_FACTOR",
@@ -49,7 +49,7 @@
   {
     "call": "modify_physics_material_tags",
     "arguments": {
-      "resource_names": "%%levels/$LOADED_LEVEL_ID/invisible_resources",
+      "resource_names": "%%levels/$loaded_level_id/invisible_resources",
       "remove": "attr_visible|attr_collide"
     }
   },
@@ -57,7 +57,7 @@
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_names": "%available_resources",
-      "included_names": "%%levels/$LOADED_LEVEL_ID/no_collide_included_names",
+      "included_names": "%%levels/$loaded_level_id/no_collide_included_names",
       "remove": "attr_collide"
     }
   },
@@ -65,7 +65,7 @@
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_names": "%available_resources",
-      "included_names": "%%levels/$LOADED_LEVEL_ID/tarmac_included_names",
+      "included_names": "%%levels/$loaded_level_id/tarmac_included_names",
       "add": "surface_base_tarmac|attr_contains_skidmarks"
     }
   },
@@ -73,7 +73,7 @@
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_names": "%available_resources",
-      "excluded_names": "%%levels/$LOADED_LEVEL_ID/tarmac_included_names",
+      "excluded_names": "%%levels/$loaded_level_id/tarmac_included_names",
       "add": "surface_base_concrete"
     }
   },
@@ -113,22 +113,22 @@
     "call": "instantiate",
     "context": "primary_scene",
     "arguments": {
-      "ipl_files": "%%levels/$LOADED_LEVEL_ID/ipl_files",
+      "ipl_files": "%%levels/$loaded_level_id/ipl_files",
       "instantiables": "%available_instantiables",
-      "required_prefixes": "%%levels/$LOADED_LEVEL_ID/instantiated_required_prefixes",
-      "except": "%%levels/$LOADED_LEVEL_ID/instantiated_exclude",
+      "required_prefixes": "%%levels/$loaded_level_id/instantiated_required_prefixes",
+      "except": "%%levels/$loaded_level_id/instantiated_exclude",
       "dynamics": "static",
       "min_vertex_distance": 0.05,
       "instantiated_resources": "instantiated_resources"
     }
   },
   {
-    "required": ["%%levels/$LOADED_LEVEL_ID/grass_files != %null"],
+    "required": ["%%levels/$loaded_level_id/grass_files != %null"],
     "call": "instantiate_grass",
     "context": "primary_scene",
     "arguments": {
-      "filenames": "%%levels/$LOADED_LEVEL_ID/grass_files",
-      "resources": "%%levels/$LOADED_LEVEL_ID/grass_resources",
+      "filenames": "%%levels/$loaded_level_id/grass_files",
+      "resources": "%%levels/$loaded_level_id/grass_resources",
       "height_tolerance": 1.5
     }
   },
@@ -155,19 +155,19 @@
       "let": {
         "IF_CREATE_PC_CAR": true,
         "IF_PC_PLAYER_PLAYBACK": false,
-        "CAR_NODE_POSITION": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_POSITION",
-        "CAR_NODE_ANGLES": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_ANGLES",
-        "VEHICLE_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_VELOCITY",
-        "VEHICLE_ANGULAR_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_ANGULAR_VELOCITY",
+        "car_node_position": "%%levels/$loaded_level_id/car_node_position",
+        "car_node_angles": "%%levels/$loaded_level_id/car_node_angles",
+        "vehicle_velocity": "%%levels/$loaded_level_id/vehicle_velocity",
+        "vehicle_angular_velocity": "%%levels/$loaded_level_id/vehicle_angular_velocity",
         "RECORDINGS_DIR": "%__DIR__",
         "CHECKPOINTS_FILE": null,
-        "CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS",
+        "checkpoints": "%%levels/$loaded_level_id/checkpoints",
         "PACENOTES_FILE": null,
         "IF_PLAYBACK_CHECKPOINTS": false,
         "IF_PLAYBACK_TRACK_1": false,
         "IF_PLAYBACK_TRACK_2": false,
         "IF_PLAYBACK_TRACK_3": false,
-        "IF_CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS != %null",
+        "IF_CHECKPOINTS": "%%levels/$loaded_level_id/checkpoints != %null",
         "IF_BURN_IN": false
       }
     }

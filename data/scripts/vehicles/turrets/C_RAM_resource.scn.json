@@ -29,8 +29,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "%NAME",
-          "filename": "models/gre42/C-RAM/$NAME.obj",
+          "name": "%name",
+          "filename": "models/gre42/C-RAM/$name.obj",
           "config": {
           "position": [0, -1, 0],
           "rotation": [0, 90, 0],
@@ -39,7 +39,7 @@
           "blend_mode": "off",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
+          "occluder_pass": "%occluder_pass",
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
@@ -53,6 +53,6 @@
       }
     ]
   },
-  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                    "NAME": "C_RAM"}},
-  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "NAME": "C_RAM_d"}}
+  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "occluder_pass": "none",                    "name": "C_RAM"}},
+  {"playback": "load_C_RAM", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "occluder_pass": "lightmap_black_movables", "name": "C_RAM_d"}}
 ]

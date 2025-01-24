@@ -3,46 +3,46 @@
     "comment": "Ground003"
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "generate_blend_maps_2_8",
     "arguments": {
-      "NAME": "Ground003",
+      "name": "Ground003",
       "TEXTURE": "#Ground003"
     }
   },
   {
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "NAME": "Ground037_Rock028",
-      "COLOR_TEXTURE": "#Ground037_Rock028",
-      "FEATHER_TEXTURE": null,
-      "WEIGHT_TEXTURE": null,
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Ground037_Rock028",
+      "color_texture": "#Ground037_Rock028",
+      "feather_texture": null,
+      "weight_texture": null,
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "summand"
     }
   },
   {
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "NAME": "Ground037_island",
-      "COLOR_TEXTURE": "#Ground037_island",
-      "FEATHER_TEXTURE": null,
-      "WEIGHT_TEXTURE": null,
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Ground037_island",
+      "color_texture": "#Ground037_island",
+      "feather_texture": null,
+      "weight_texture": null,
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "detail_color"
     }
   },
   {
     "playback": "generate_blend_maps_1_8",
     "arguments": {
-      "NAME": "Ground037",
+      "name": "Ground037",
       "TEXTURE": "#Ground037"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground037_dark27_1",
@@ -57,7 +57,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground037_dark27_8",
@@ -72,77 +72,77 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "NAME": "Ground037_Sl",
-      "COLOR_TEXTURE": "#Ground037_Sl",
-      "FEATHER_TEXTURE": null,
-      "WEIGHT_TEXTURE": null,
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Ground037_Sl",
+      "color_texture": "#Ground037_Sl",
+      "feather_texture": null,
+      "weight_texture": null,
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "summand"
     }
   },
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "NAME": "Rock028_200",
-      "COLOR_TEXTURE": "#Rock028",
-      "FEATHER_TEXTURE": "#Detail",
-      "WEIGHT_TEXTURE": "#Rock028_Displacement",
-      "NORMAL": [0, 1, 0],
-      "COSINE": [-1, -1, 0.8, 0.85],
+      "name": "Rock028_200",
+      "color_texture": "#Rock028",
+      "feather_texture": "#Detail",
+      "weight_texture": "#Rock028_Displacement",
+      "normal": [0, 1, 0],
+      "cosine": [-1, -1, 0.8, 0.85],
       "role": "summand"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "NAME": "Rock028_029_200",
-      "COLOR_TEXTURE": "#Rock028_029",
-      "FEATHER_TEXTURE": "#Detail",
-      "WEIGHT_TEXTURE": "#Rock028_Displacement",
-      "NORMAL": [0, 1, 0],
-      "COSINE": [-1, -1, 0.8, 0.85],
+      "name": "Rock028_029_200",
+      "color_texture": "#Rock028_029",
+      "feather_texture": "#Detail",
+      "weight_texture": "#Rock028_Displacement",
+      "normal": [0, 1, 0],
+      "cosine": [-1, -1, 0.8, 0.85],
       "role": "summand"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "NAME": "Rock028_gc2_mountain",
-      "COLOR_TEXTURE": "#Rock028_gc2_mountain",
-      "FEATHER_TEXTURE": "#Detail",
-      "WEIGHT_TEXTURE": "#Rock028_Displacement",
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Rock028_gc2_mountain",
+      "color_texture": "#Rock028_gc2_mountain",
+      "feather_texture": "#Detail",
+      "weight_texture": "#Rock028_Displacement",
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "summand"
     }
   },
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "NAME": "Rock028_Dune",
-      "COLOR_TEXTURE": "#Rock028_Dune",
-      "FEATHER_TEXTURE": null,
-      "WEIGHT_TEXTURE": null,
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Rock028_Dune",
+      "color_texture": "#Rock028_Dune",
+      "feather_texture": null,
+      "weight_texture": null,
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "detail_color"
     }
   },
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "NAME": "Rock028_Snow",
-      "COLOR_TEXTURE": "#Rock028_Snow",
-      "FEATHER_TEXTURE": null,
-      "WEIGHT_TEXTURE": null,
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Rock028_Snow",
+      "color_texture": "#Rock028_Snow",
+      "feather_texture": null,
+      "weight_texture": null,
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "role": "summand"
     }
   },
@@ -150,7 +150,7 @@
     "comment": "grass_ground"
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_1",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_8",

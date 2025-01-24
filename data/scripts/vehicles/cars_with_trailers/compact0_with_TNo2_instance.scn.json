@@ -9,9 +9,9 @@
         "required": ["%if_with_physics"],
         "call": "create_trailer_node",
         "arguments": {
-          "car_instance": "car_node$SUFFIX",
+          "car_instance": "car_node$suffix",
           "trailer_asset_id": "TNo2",
-          "trailer_node": "car_node_trailer$SUFFIX"
+          "trailer_node": "car_node_trailer$suffix"
         }
       },
       {
@@ -19,7 +19,7 @@
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
-          "name": "car_node_trailer$SUFFIX",
+          "name": "car_node_trailer$suffix",
           "position": [0, 0, 0],
           "rotation": [0, 0, 0]
         }
@@ -27,15 +27,15 @@
       {
         "playback": "create_TNo2",
         "let": {
-          "TRAILER_SUFFIX": "_trailer$SUFFIX"
+          "TRAILER_SUFFIX": "_trailer$suffix"
         }
       },
       {
         "required": ["%if_with_physics"],
         "call": "connect_trailer",
         "arguments": {
-          "car": "car_node$SUFFIX",
-          "trailer": "car_node_trailer$SUFFIX"
+          "car": "car_node$suffix",
+          "trailer": "car_node_trailer$suffix"
         }
       }
     ]
@@ -45,7 +45,7 @@
     "content": {
       "playback": "generic_car.create_player_internals",
       "let": {
-        "ASSET_ID": "compact0_with_TNo2"
+        "asset_id": "compact0_with_TNo2"
       }
     }
   },
@@ -54,9 +54,9 @@
     "content": {
       "playback": "generic_car.create_player_externals",
       "let": {
-        "ASSET_ID": "compact0_with_TNo2",
-        "CAMERA_CLASS": "car_with_trailer",
-        "COCKPIT_CAMERA_POSITION": [-0.4, 0.5, -0.1]
+        "asset_id": "compact0_with_TNo2",
+        "camera_class": "car_with_trailer",
+        "cockpit_camera_position": [-0.4, 0.5, -0.1]
       }
     }
   }

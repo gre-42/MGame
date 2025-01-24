@@ -29,8 +29,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "$DIR$DECIMATE",
-          "filename": "models/MakeHuman/$DIR/t_pose_lowpoly$DECIMATE.obj",
+          "name": "$DIR$decimate",
+          "filename": "models/MakeHuman/$DIR/t_pose_lowpoly$decimate.obj",
           "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
@@ -39,7 +39,7 @@
           "blend_mode": "off",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%OCCLUDER_PASS",
+          "occluder_pass": "%occluder_pass",
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
@@ -50,24 +50,24 @@
           }
         }
       },
-      {"call": "import_bone_weights", "arguments": {"destination": "$DIR$DECIMATE", "source": "female_mh_orig", "max_distance": 0.1}},
+      {"call": "import_bone_weights", "arguments": {"destination": "$DIR$decimate", "source": "female_mh_orig", "max_distance": 0.1}},
       {
         "call": "set_bounds",
         "arguments": {
-          "resource": "$DIR$DECIMATE",
+          "resource": "$DIR$decimate",
           "aabb": {"min": [-1, 0, -1], "max": [1, 2, 1]},
           "sphere": {"center": [0, 1, 0], "radius": 1.5}
         }
       }
     ]
   },
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_mh"}},
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_mh"}},
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "execute": [
-      {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "OCCLUDER_PASS": "none",                    "DECIMATE": "_d2", "DIR": "female_skirt"}},
-      {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d1", "DIR": "female_skirt"}}
+      {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_skirt"}},
+      {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_skirt"}}
     ]
   }
 ]

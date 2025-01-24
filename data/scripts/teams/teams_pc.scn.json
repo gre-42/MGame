@@ -5,16 +5,16 @@
       {
         "call": "player_create",
         "arguments": {
-          "name": "%PLAYER_NAME",
-          "team": "%TEAM",
-          "game_mode": "%GAME_MODE",
+          "name": "%player_name",
+          "team": "%team",
+          "game_mode": "%game_mode",
           "unstuck_mode": "off",
-          "behavior": "%INITIAL_BEHAVIOR",
+          "behavior": "%initial_behavior",
           "driving_direction": "center"
         }
       },
-      { "call": "spawner_create", "arguments": { "name": "%PLAYER_NAME", "team": "%TEAM" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%PLAYER_NAME", "role": "%ROLE" } },
+      { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "role": "%role" } },
       {
         "playback": "set_player_skills"
       }
@@ -35,15 +35,15 @@
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%player_name",
           "mode": "pc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%ROLE"
+          "player": "%player_name",
+          "role": "%role"
         }
       }
     ]
@@ -66,15 +66,15 @@
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%PLAYER_NAME",
+          "player": "%player_name",
           "mode": "pc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "role": "%ROLE"
+          "player": "%player_name",
+          "role": "%role"
         }
       }
     ]
@@ -88,7 +88,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "teams.create_avatar_for_pc"
           }
@@ -105,7 +105,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "teams.create_car_for_pc"
           }

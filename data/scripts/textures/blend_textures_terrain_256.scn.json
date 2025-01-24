@@ -4,14 +4,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_1",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [0, 0, 15, 25],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 1,
+        "name": "$name-_1",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [0, 0, 15, 25],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 1,
         "FEATHER_SCALE": 1,
         "role": "%role"
       }
@@ -19,14 +19,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_8",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [15, 25, "inf", "inf"],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.125,
+        "name": "$name-_8",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [15, 25, "inf", "inf"],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.125,
         "FEATHER_SCALE": 0.125,
         "role": "%role"
       }
@@ -34,14 +34,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_8_1",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [15, 25, 200, 300],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.125,
+        "name": "$name-_8_1",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [15, 25, 200, 300],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.125,
         "FEATHER_SCALE": 0.125,
         "role": "%role"
       }
@@ -49,14 +49,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_64",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [200, 300, 1000, 1500],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.015625,
+        "name": "$name-_64",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [200, 300, 1000, 1500],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.015625,
         "FEATHER_SCALE": 0.015625,
         "role": "%role"
       }
@@ -64,14 +64,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_256",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [1000, 1500, "inf", "inf"],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.00390625,
+        "name": "$name-_256",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [1000, 1500, "inf", "inf"],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.00390625,
         "FEATHER_SCALE": 0.00390625,
         "role": "%role"
       }

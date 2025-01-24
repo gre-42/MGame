@@ -1,6 +1,6 @@
 [
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "basketball_hoop",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light",
@@ -61,7 +61,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "traffic_cone",
@@ -121,7 +121,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard",
@@ -178,7 +178,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard2",
@@ -266,7 +266,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light_hitbox",
@@ -293,7 +293,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "dumpster",
@@ -323,7 +323,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan1",
@@ -354,7 +354,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan2",
@@ -384,7 +384,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "mailbox",
@@ -414,7 +414,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "bench",
@@ -444,7 +444,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "table_and_chairs",
@@ -475,7 +475,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "ship",
@@ -506,7 +506,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "tire_barrier2",
@@ -536,7 +536,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "crate",
@@ -571,8 +571,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "%NAME",
-          "filename": "%FILENAME",
+          "name": "%name",
+          "filename": "%filename",
           "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
@@ -602,8 +602,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "%NAME",
-          "filename": "models/opengameart/Facade/$NAME.obj",
+          "name": "%name",
+          "filename": "models/opengameart/Facade/$name.obj",
           "config": {
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
@@ -627,48 +627,48 @@
     ]
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "execute": [
       {
         "playback": "load_hedge",
         "arguments": {
-          "NAME": "hedge_long",
-          "FILENAME": "models/opengameart/Hedge/Long/HedgeLongExp.obj"
+          "name": "hedge_long",
+          "filename": "models/opengameart/Hedge/Long/HedgeLongExp.obj"
         }
       },
       {
         "playback": "load_hedge",
         "arguments": {
-          "NAME": "hedge_small",
-          "FILENAME": "models/opengameart/Hedge/Small/HedgeSmallExp.obj"
+          "name": "hedge_small",
+          "filename": "models/opengameart/Hedge/Small/HedgeSmallExp.obj"
         }
       },
       {
         "playback": "load_hedge",
         "arguments": {
-          "NAME": "hedge_long_round",
-          "FILENAME": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj"
+          "name": "hedge_long_round",
+          "filename": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj"
         }
       },
       {
         "playback": "load_hedge",
         "arguments": {
-          "NAME": "hedge_small_round",
-          "FILENAME": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj"
+          "name": "hedge_small_round",
+          "filename": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj"
         }
       },
-      { "playback": "load_facade", "arguments": { "NAME": "entrance0" } },
-      { "playback": "load_facade", "arguments": { "NAME": "entrance1" } },
+      { "playback": "load_facade", "arguments": { "name": "entrance0" } },
+      { "playback": "load_facade", "arguments": { "name": "entrance1" } },
 
-      { "playback": "load_facade", "arguments": { "NAME": "sign0" } },
-      { "playback": "load_facade", "arguments": { "NAME": "sign1" } },
-      { "playback": "load_facade", "arguments": { "NAME": "sign2" } },
-      { "playback": "load_facade", "arguments": { "NAME": "sign3" } },
-      { "playback": "load_facade", "arguments": { "NAME": "sign4" } },
-      { "playback": "load_facade", "arguments": { "NAME": "sign5" } },
+      { "playback": "load_facade", "arguments": { "name": "sign0" } },
+      { "playback": "load_facade", "arguments": { "name": "sign1" } },
+      { "playback": "load_facade", "arguments": { "name": "sign2" } },
+      { "playback": "load_facade", "arguments": { "name": "sign3" } },
+      { "playback": "load_facade", "arguments": { "name": "sign4" } },
+      { "playback": "load_facade", "arguments": { "name": "sign5" } },
 
-      { "playback": "load_facade", "arguments": { "NAME": "door0" } },
-      { "playback": "load_facade", "arguments": { "NAME": "door1" } }
+      { "playback": "load_facade", "arguments": { "name": "door0" } },
+      { "playback": "load_facade", "arguments": { "name": "door1" } }
     ]
   }
 ]

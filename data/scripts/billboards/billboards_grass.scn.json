@@ -3,7 +3,7 @@
     "comment": "# square_resource name=grass texture_filename=textures/grass.png min=-2 0 max=2 4;"
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "blending_x_resource",
     "arguments": {
       "name": "grass",
@@ -14,7 +14,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "blending_x_resource",
     "arguments": {
       "name": "tree",
@@ -25,7 +25,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "blending_x_resource",
     "arguments": {
       "name": "tree2",
@@ -71,7 +71,7 @@
     ]
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "bgrass-large",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "bgrass-large2",
@@ -109,7 +109,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "bgrass-large3",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass12y",
@@ -147,7 +147,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass12y_near_Ground037_Sl",
@@ -166,7 +166,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r",
@@ -185,7 +185,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_dark27",
@@ -204,7 +204,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_Ground003",
@@ -241,7 +241,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037",
@@ -260,7 +260,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_Sl",
@@ -279,7 +279,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_Sl_large",
@@ -334,7 +334,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass2g_near",
@@ -353,7 +353,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "grass3g",
@@ -514,7 +514,7 @@
     ]
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "kuudere_lisadikaprio_casual_smile",
@@ -533,7 +533,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "female-standing1",
@@ -552,7 +552,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "female-standing2",
@@ -571,7 +571,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "female-standing3",
@@ -590,7 +590,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "female-standing4",
@@ -609,7 +609,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "kuudere_lisadikaprio_school_uniform_smile",
@@ -628,7 +628,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "kuudere_lisadikaprio_jacket_school_uniform_smile",
@@ -652,7 +652,7 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "$NAME-_0",
+          "name": "$name-_0",
           "color": "models/opengameart/Hedge/$FILENAME_0",
           "color_mode": "rgba",
           "histogram": "textures/histograms/TexturesCom_Trees0130_1.png",
@@ -662,7 +662,7 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "$NAME-_90",
+          "name": "$name-_90",
           "color": "models/opengameart/Hedge/$FILENAME_90",
           "color_mode": "rgba",
           "histogram": "textures/histograms/TexturesCom_Trees0130_1.png",
@@ -677,7 +677,7 @@
       {
         "call": "binary_x_resource",
         "arguments": {
-          "name": "x_$SUFFIX",
+          "name": "x_$suffix",
           "texture_filename_0": "%TEXTURE_0",
           "texture_filename_90": "%TEXTURE_90",
           "center_distances": [0, 501],
@@ -696,7 +696,7 @@
       {
         "call": "square_resource",
         "arguments": {
-          "name": "square_$SUFFIX",
+          "name": "square_$suffix",
           "texture_filename": "%TEXTURE_0",
           "center_distances": [0, 501],
           "occluded_pass": "lightmap_black_global_static",
@@ -719,16 +719,16 @@
   {
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
-      "NAME": "hedge_small",
+      "name": "hedge_small",
       "FILENAME_0": "Small/HedgeSmall.png",
       "FILENAME_90": "Small/HedgeSmall90.png"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
-      "NAME": "hedge_small_round",
+      "name": "hedge_small_round",
       "FILENAME_0": "SmallRound/HedgeSmallRound.png",
       "FILENAME_90": "SmallRound/HedgeSmallRound90.png"
     }
@@ -736,16 +736,16 @@
   {
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
-      "NAME": "hedge_long",
+      "name": "hedge_long",
       "FILENAME_0": "Long/HedgeLong.png",
       "FILENAME_90": "Long/HedgeLong90.png"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
-      "NAME": "hedge_long_round",
+      "name": "hedge_long_round",
       "FILENAME_0": "LongRound/HedgeLongRound.png",
       "FILENAME_90": "LongRound/HedgeLongRound90.png"
     }
@@ -758,7 +758,7 @@
     "arguments": {
       "min": [-1.5, 0],
       "max": [1.5, 3],
-      "SUFFIX": "hedge_small_billboard",
+      "suffix": "hedge_small_billboard",
       "TEXTURE_0": "#hedge_small_0",
       "TEXTURE_90": "#hedge_small_90"
     }
@@ -768,7 +768,7 @@
     "arguments": {
       "min": [-1.5, 0],
       "max": [1.5, 3],
-      "SUFFIX": "hedge_small_round_billboard",
+      "suffix": "hedge_small_round_billboard",
       "TEXTURE_0": "#hedge_small_round_0",
       "TEXTURE_90": "#hedge_small_round_90"
     }
@@ -778,7 +778,7 @@
     "arguments": {
       "min": [-1.5, 0],
       "max": [1.5, 6],
-      "SUFFIX": "hedge_long_billboard",
+      "suffix": "hedge_long_billboard",
       "TEXTURE_0": "#hedge_long_0",
       "TEXTURE_90": "#hedge_long_90"
     }
@@ -788,7 +788,7 @@
     "arguments": {
       "min": [-1.5, 0],
       "max": [1.5, 6],
-      "SUFFIX": "hedge_long_round_billboard",
+      "suffix": "hedge_long_round_billboard",
       "TEXTURE_0": "#hedge_long_round_0",
       "TEXTURE_90": "#hedge_long_round_90"
     }

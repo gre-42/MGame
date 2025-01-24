@@ -6,7 +6,7 @@
       "arguments": {
         "name": "osm_map",
         "filename": "$__DIR__/map_nyc.osm",
-        "cache_filename": "$__APPDATA__/$LOADED_LEVEL_ID.cereal.binary",
+        "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
         "heightmap": "$__DIR__/heightmap.pgm",
         "terrain_undefined_textures": ["textures/debug/pink.png"],
         "terrain_grass_textures": ["#Ground037_Sl"],
@@ -191,7 +191,7 @@
         "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
         "racing_line_texture": "#racing_line",
         "racing_line_track": "%LOADED_RACING_LINE_TRACK",
-        "racing_line_playback": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
+        "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
         "trashcan_resource_names": [
           "dumpster(yangle:0)(p:0.1)(hitbox:box_02_1_02_hitbox)",
           "trashcan1(yangle:90)(p:0.1)(hitbox:box_02_1_02_hitbox)",

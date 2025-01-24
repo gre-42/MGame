@@ -16,18 +16,18 @@
         "world": "common",
         "focus_mask": "scene|countdown_any|game_over_countdown_any",
         "submenus": [],
-        "fly": "%PRIMARY_SCENE_FLY",
-        "rotate": "%PRIMARY_SCENE_ROTATE",
-        "depth_fog": "%PRIMARY_SCENE_DEPTH_FOG",
-        "low_pass": "%PRIMARY_SCENE_LOW_PASS",
-        "high_pass": "%PRIMARY_SCENE_HIGH_PASS",
-        "bloom_iterations": "%PRIMARY_SCENE_BLOOM_ITERATIONS",
-        "bloom_thresholds": "%PRIMARY_SCENE_BLOOM_THRESHOLDS",
-        "with_skybox": "%PRIMARY_SCENE_WITH_SKYBOX",
-        "with_flying_logic": "%PRIMARY_SCENE_WITH_FLYING_LOGIC",
+        "fly": "%primary_scene_fly",
+        "rotate": "%primary_scene_rotate",
+        "depth_fog": "%primary_scene_depth_fog",
+        "low_pass": "%primary_scene_low_pass",
+        "high_pass": "%primary_scene_high_pass",
+        "bloom_iterations": "%primary_scene_bloom_iterations",
+        "bloom_thresholds": "%primary_scene_bloom_thresholds",
+        "with_skybox": "%primary_scene_with_skybox",
+        "with_flying_logic": "%primary_scene_with_flying_logic",
         "clear_mode": "color_and_depth",
         "max_tracks": 5,
-        "save_playback": "%PRIMARY_SCENE_SAVE_PLAYBACK"
+        "save_playback": "%primary_scene_save_playback"
       }
     },
     {

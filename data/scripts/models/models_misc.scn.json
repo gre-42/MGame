@@ -1,7 +1,7 @@
 [
   {
     "comment": {
-      "exclude": ["%IF_ANDROID"],
+      "exclude": ["%if_android"],
       "call": "obj_resource",
       "arguments": {
         "name": "checkpoint_arrow",
@@ -47,7 +47,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "box",
@@ -73,7 +73,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "box_on_ground",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "topdown_locator",
@@ -126,7 +126,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "flag",
@@ -152,7 +152,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "flag_z",
@@ -178,7 +178,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "beacon",
@@ -204,7 +204,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "sphere",
@@ -231,7 +231,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "beacon1",
@@ -257,7 +257,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "gizmo",
@@ -283,7 +283,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "obj_resource",
     "arguments": {
       "name": "tank_bullet_renderable",
@@ -309,7 +309,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "execute": [
       {
         "call": "obj_resource",

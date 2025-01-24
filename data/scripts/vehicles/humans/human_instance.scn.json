@@ -2,71 +2,71 @@
   {
     "declare_macro": "generic_avatar.create",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "animation_node$SUFFIX", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "animation_node$suffix", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$SUFFIX", "name": "main_gun_node$SUFFIX", "position": [0.1, 0.5, 0]}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX", "name": "main_gun_node_visual$SUFFIX", "position": [0, 0, -0.2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "main_gun_node$suffix", "position": [0.1, 0.5, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_node_visual$suffix", "position": [0, 0, -0.2]}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$SUFFIX",             "name": "main_gun_punch_angle_node$SUFFIX", "position": [0, 0  , -0.5]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$SUFFIX", "name": "main_gun_end_node$SUFFIX",         "position": [0, 0  ,    0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "animation_node$SUFFIX",            "name": "human_head_node$SUFFIX",           "position": [0, 1.7,    0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node$SUFFIX",           "name": "human_head_node2$SUFFIX",          "rotation": [0, 180,    0]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node2$SUFFIX",          "name": "human_head_camera_node$SUFFIX"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix",             "name": "main_gun_punch_angle_node$suffix", "position": [0, 0  , -0.5]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix",         "position": [0, 0  ,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "animation_node$suffix",            "name": "human_head_node$suffix",           "position": [0, 1.7,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node$suffix",           "name": "human_head_node2$suffix",          "rotation": [0, 180,    0]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node2$suffix",          "name": "human_head_camera_node$suffix"}},
       {
         "call": "rigid_cuboid",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "node": "human_node$suffix",
           "hitboxes": "human_hitboxes",
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "collidable_mode": "moving",
           "flags": "is_activated_avatar",
           "waypoint_dy": 0.7,
-          "name": "human$SUFFIX",
-          "asset_id": "%ASSET_ID"
+          "name": "human$suffix",
+          "asset_id": "%asset_id"
         }
       },
       {
         "call": "aim_at",
         "arguments": {
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "parent_follower_rigid_body_node": "human_node$SUFFIX",
+          "gun_node": "main_gun_end_node$suffix",
+          "parent_follower_rigid_body_node": "human_node$suffix",
           "bullet_start_offset": 0,
           "bullet_velocity": "nan",
           "bullet_feels_gravity": true,
           "gravity": 9.8,
           "locked_on_angle": 20,
-          "velocity_error_std": "%VELOCITY_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "velocity_error_std": "%velocity_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
       {
         "call": "yaw_pitch_look_at_nodes",
         "arguments": {
-          "yaw_node": "human_node$SUFFIX",
-          "pitch_node": "main_gun_node$SUFFIX",
-          "gun_node": "main_gun_end_node$SUFFIX",
-          "head_node": "human_head_camera_node$SUFFIX",
+          "yaw_node": "human_node$suffix",
+          "pitch_node": "main_gun_node$suffix",
+          "gun_node": "main_gun_end_node$suffix",
+          "head_node": "human_head_camera_node$suffix",
           "dyaw_max": 10,
           "pitch_min": -60,
           "pitch_max": 60,
           "dpitch_max": 10,
-          "yaw_error_std": "%YAW_ERROR_STD",
-          "pitch_error_std": "%PITCH_ERROR_STD",
-          "error_alpha": "%ERROR_ALPHA"
+          "yaw_error_std": "%yaw_error_std",
+          "pitch_error_std": "%pitch_error_std",
+          "error_alpha": "%error_alpha"
         }
       },
-      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$SUFFIX"}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "m4a1_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "beretta92_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "frag_grenade", "capacity": 10}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "m72_law_rocket", "capacity": 2}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$SUFFIX", "item_type": "none_weapon_ammo_type", "capacity": 0}},
+      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$suffix"}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m72_law_rocket", "capacity": 2}},
+      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "none_weapon_ammo_type", "capacity": 0}},
       {
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "arguments": {
-          "cycle_node": "human_node$SUFFIX",
+          "cycle_node": "human_node$suffix",
           "entry_name": "m4a1",
           "ammo_type": "m4a1_ammo",
           "bullet_type": "m4a1_bullet",
@@ -82,7 +82,7 @@
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "arguments": {
-          "cycle_node": "human_node$SUFFIX",
+          "cycle_node": "human_node$suffix",
           "entry_name": "beretta92",
           "ammo_type": "beretta92_ammo",
           "bullet_type": "beretta92_bullet",
@@ -98,7 +98,7 @@
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "arguments": {
-          "cycle_node": "human_node$SUFFIX",
+          "cycle_node": "human_node$suffix",
           "entry_name": "frag_grenade",
           "ammo_type": "frag_grenade",
           "bullet_type": "frag_grenade",
@@ -114,7 +114,7 @@
         "required": ["%IF_WITH_GUN"],
         "call": "add_weapon_to_cycle",
         "arguments": {
-          "cycle_node": "human_node$SUFFIX",
+          "cycle_node": "human_node$suffix",
           "entry_name": "m72_law",
           "ammo_type": "m72_law_rocket",
           "bullet_type": "m72_law_rocket",
@@ -131,7 +131,7 @@
         "call": "set_desired_weapon",
         "arguments": {
           "player": null,
-          "cycle_node": "human_node$SUFFIX",
+          "cycle_node": "human_node$suffix",
           "weapon": "m4a1",
           "equip_instantly": false
         }
@@ -139,18 +139,18 @@
       {
         "playback": "create_none_weapon",
         "let": {
-          "PARENT_RIGID_BODY_NODE": "human_node$SUFFIX",
+          "PARENT_RIGID_BODY_NODE": "human_node$suffix",
           "AMMO_TYPE": "none_weapon_ammo_type",
           "BULLET_TYPE": "none_weapon_bullet_type"
         }
       },
-      {"call": "damageable", "arguments": {"node": "human_node$SUFFIX", "health": 200, "delete_node_when_health_leq_zero": false}},
-      {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "human_node$SUFFIX", "value": 17}},
+      {"call": "damageable", "arguments": {"node": "human_node$suffix", "health": 200, "delete_node_when_health_leq_zero": false}},
+      {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "human_node$suffix", "value": 17}},
       {
         "required": ["%if_with_physics"],
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "human_node$SUFFIX",
+          "rigid_body": "human_node$suffix",
           "name": "legs",
           "angular_vels": [-4000, -2500, 0],
           "powers": ["nan", 2.7, 2.7],
@@ -162,7 +162,7 @@
         "required": ["%if_with_physics"],
         "call": "wheel",
         "arguments": {
-          "vehicle": "human_node$SUFFIX",
+          "vehicle": "human_node$suffix",
           "vehicle_mount_0": [0, 0, 0],
           "vehicle_mount_1": [0, 1, 0],
           "radius": 1,
@@ -173,13 +173,13 @@
           "tire_id": 0
         }
       },
-      {"required": ["%if_with_physics"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$SUFFIX", "steering_multiplier": 1}},
-      {"required": ["%if_with_physics"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$SUFFIX"}},
+      {"required": ["%if_with_physics"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$suffix", "steering_multiplier": 1}},
+      {"required": ["%if_with_physics"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$suffix"}},
       {
         "call": "set_avatar_style_updater",
         "arguments": {
-          "avatar_node": "human_node$SUFFIX",
-          "gun_node": "main_gun_end_node$SUFFIX",
+          "avatar_node": "human_node$suffix",
+          "gun_node": "main_gun_end_node$suffix",
           "resource_wo_gun": "cmu_mocap",
           "resource_w_gun": "xonotic_pyria"
         }
@@ -187,19 +187,19 @@
       {
         "call": "set_node_bone",
         "arguments": {
-          "node": "human_head_node$SUFFIX",
+          "node": "human_head_node$suffix",
           "bone": "head",
           "smoothness": 0.9,
           "rotation_strength": 0.2
         }
       },
-      {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$SUFFIX resource=human_hitbox"},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID$DECIMATE"}},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$SUFFIX", "resource": "$ASSET_ID-_d1"}},
+      {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
+      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
+      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$suffix", "resource": "$asset_id-_d1"}},
       {
         "call": "set_available_roles",
         "arguments": {
-          "node": "human_node$SUFFIX",
+          "node": "human_node$suffix",
           "value": ["driver"]
         }
       }
@@ -209,35 +209,35 @@
     "declare_macro": "generic_avatar.create_player_internals",
     "content": [
       {
-        "required": ["%BEHAVIOR != 'none'"],
+        "required": ["%behavior != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/avatar_$BEHAVIOR/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/avatar_$BEHAVIOR/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/avatar_$BEHAVIOR/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/avatar_$BEHAVIOR/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/avatar_$BEHAVIOR/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/avatar_$BEHAVIOR/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/avatar_$BEHAVIOR/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/avatar_$BEHAVIOR/collision_avoidance_step_aside_distance"
+              "player": "%player_name",
+              "waypoint_reached_radius":                 "%%driving_modes/avatar_$behavior/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/avatar_$behavior/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/avatar_$behavior/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/avatar_$behavior/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/avatar_$behavior/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/avatar_$behavior/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/avatar_$behavior/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/avatar_$behavior/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/avatar_$behavior/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/avatar_$behavior/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/avatar_$behavior/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/avatar_$behavior/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/avatar_$behavior/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%EXTERNALS_PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/avatar_$BEHAVIOR/stuck_velocity",
-              "stuck_duration": "%%driving_modes/avatar_$BEHAVIOR/stuck_duration",
-              "unstuck_duration": "%%driving_modes/avatar_$BEHAVIOR/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/avatar_$BEHAVIOR/player_way_points_filter",
+              "player": "%externals_player_name",
+              "stuck_velocity": "%%driving_modes/avatar_$behavior/stuck_velocity",
+              "stuck_duration": "%%driving_modes/avatar_$behavior/stuck_duration",
+              "unstuck_duration": "%%driving_modes/avatar_$behavior/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/avatar_$behavior/player_way_points_filter",
               "vehicle_way_points_filter": "explicit_ground|sidewalk"
             }
           }

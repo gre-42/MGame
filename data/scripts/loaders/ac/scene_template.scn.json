@@ -3,16 +3,16 @@
   {
     "call": "globals",
     "arguments": {
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "OSM_LOCATION": {
+      "loaded_level_id": "%selected_level_id",
+      "osm_location": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": 1
       },
-      "AGGREGATE_MODE": "sorted",
+      "aggregate_mode": "sorted",
       "RENDERING_STRATEGY": "mesh_sorted_continuously",
-      "VIP_NAME": "you",
-      "ROLE": "driver"
+      "vip_name": "you",
+      "player_role": "driver"
     }
   },
   {"include": "osm_resource_template.scn.json"},
@@ -52,26 +52,25 @@
       "let": {
         "IF_CREATE_PC_CAR": true,
         "IF_PC_PLAYER_PLAYBACK": false,
-        "CAR_NODE_POSITION": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_POSITION",
-        "CAR_NODE_ANGLES": "%%levels/$LOADED_LEVEL_ID/CAR_NODE_ANGLES",
-        "VEHICLE_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_VELOCITY",
-        "VEHICLE_ANGULAR_VELOCITY": "%%levels/$LOADED_LEVEL_ID/VEHICLE_ANGULAR_VELOCITY",
-        "HUMAN_NODE_ANGLE_Y": null,
-        "HUMAN_NODE_POSITION": null,
+        "car_node_position": "%%levels/$loaded_level_id/car_node_position",
+        "car_node_angles": "%%levels/$loaded_level_id/car_node_angles",
+        "vehicle_velocity": "%%levels/$loaded_level_id/vehicle_velocity",
+        "vehicle_angular_velocity": "%%levels/$loaded_level_id/vehicle_angular_velocity",
+        "human_node_angle_y": null,
+        "human_node_position": null,
         "SKATER_NODE_POSITION": null,
         "SKATER_NODE_ANGLE_Y": null,
         "RECORDINGS_DIR": "%__DIR__",
         "CHECKPOINTS_FILE": null,
-        "CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS",
+        "checkpoints": "%%levels/$loaded_level_id/checkpoints",
         "PACENOTES_FILE": null,
-        "ERROR_ALPHA": null,
         "TEAMS_SPAWN_POINTS_RESOURCE": null,
         "TEAMS_WAY_POINTS_RESOURCE": null,
         "IF_PLAYBACK_CHECKPOINTS": false,
         "IF_PLAYBACK_TRACK_1": false,
         "IF_PLAYBACK_TRACK_2": false,
         "IF_PLAYBACK_TRACK_3": false,
-        "IF_CHECKPOINTS": "%%levels/$LOADED_LEVEL_ID/CHECKPOINTS != %null",
+        "IF_CHECKPOINTS": "%%levels/$loaded_level_id/checkpoints != %null",
         "IF_BURN_IN": false
       }
     }

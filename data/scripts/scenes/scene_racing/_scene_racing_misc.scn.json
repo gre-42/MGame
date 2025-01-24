@@ -4,12 +4,12 @@
     "content": {
       "playback": "create_car",
       "let": {
-        "CAR_NAME": "%PLAYBACK_CAR",
-        "CAR_NODE_POSITION": [1, 2, 3],
-        "CAR_NODE_ANGLES": [4, 5, 6],
+        "car_name": "%PLAYBACK_CAR",
+        "car_node_position": [1, 2, 3],
+        "car_node_angles": [4, 5, 6],
         "velocity": null,
         "angular_velocity": null,
-        "SUFFIX": "_playback_track$PSUFFIX",
+        "suffix": "_playback_track$PSUFFIX",
         "if_with_graphics": true,
         "if_with_physics": false,
         "IF_PLAYBACK_TRACK": true,
@@ -21,10 +21,11 @@
         "IF_PLAYER": false,
         "IF_SHADOW": true,
         "IF_DAMAGEABLE": false,
-        "IF_CAR_BODY_RENDERABLE_STYLE": false,
-        "VELOCITY_ERROR_STD": 0,
-        "YAW_ERROR_STD": 0,
-        "PITCH_ERROR_STD": 0
+        "if_car_body_renderable_style": false,
+        "velocity_error_std": 0,
+        "error_alpha": null,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0
       }
     }
   },
@@ -34,12 +35,12 @@
       {
         "playback": "create_car",
         "let": {
-          "CAR_NAME": "%PLAYBACK_CAR",
-          "CAR_NODE_POSITION": [1, 2, 3],
-          "CAR_NODE_ANGLES": [4, 5, 6],
+          "car_name": "%PLAYBACK_CAR",
+          "car_node_position": [1, 2, 3],
+          "car_node_angles": [4, 5, 6],
           "velocity": null,
           "angular_velocity": null,
-          "SUFFIX": "_playback_winner$PSUFFIX",
+          "suffix": "_playback_winner$PSUFFIX",
           "hand_brake_pulled": null,
           "mute": null,
           "if_with_graphics": true,
@@ -52,10 +53,11 @@
           "IF_PLAYER": false,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": false,
-          "IF_CAR_BODY_RENDERABLE_STYLE": true,
-          "VELOCITY_ERROR_STD": 0,
-          "YAW_ERROR_STD": 0,
-          "PITCH_ERROR_STD": 0
+          "if_car_body_renderable_style": true,
+          "velocity_error_std": 0,
+          "error_alpha": null,
+          "yaw_error_std": 0,
+          "pitch_error_std": 0
         }
       },
       {
@@ -95,7 +97,7 @@
         "required": ["%LOADED_GAME_MODE == 'rally'"],
         "call": "set_race_identifier_and_reload_history",
         "arguments": {
-          "level_id": "%LOADED_LEVEL_ID",
+          "level_id": "%loaded_level_id",
           "time_of_day": "%LOADED_TIME_OF_DAY",
           "restrictions": "%LOADED_RACE_RESTRICTIONS",
           "session": "%LOADED_RACE_SESSION",

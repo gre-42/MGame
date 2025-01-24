@@ -3,7 +3,7 @@
   "title": "Skate 0",
   "required": {
     "fixed": ["%IF_DEVEL"],
-    "dynamic": ["%GAME_MODE in %%levels/skate0/game_modes"]
+    "dynamic": ["%game_mode in %%levels/skate0/game_modes"]
   },
   "on_execute": {
     "include": "scene_skate0.scn.json"
@@ -11,13 +11,13 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_LEVEL_ID": "skate0",
-      "LEVEL_ICON_FILE": "#black",
-      "MINIMAP_FILE": null
+      "selected_level_id": "skate0",
+      "level_icon_file": "#black",
+      "minimap_file": null
     }
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": false,
+    "if_raceway_circular": false,
     "game_modes": ["skating"]
   }
 }

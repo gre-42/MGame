@@ -3,7 +3,7 @@
   "title": "Race track 1",
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in %%levels/race_track1/game_modes"]
+    "dynamic": ["%game_mode in %%levels/race_track1/game_modes"]
   },
   "on_execute": {
     "include": "scene_race_track1.scn.json"
@@ -11,13 +11,13 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_LEVEL_ID": "race_track1",
-      "LEVEL_ICON_FILE": "#black",
-      "MINIMAP_FILE": null
+      "selected_level_id": "race_track1",
+      "level_icon_file": "#black",
+      "minimap_file": null
     }
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": true,
+    "if_raceway_circular": true,
     "game_modes": ["rally"]
   }
 }

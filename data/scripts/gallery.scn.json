@@ -31,7 +31,7 @@
   { "playback": "_add_menu_icon", "arguments": { "name": "laps" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "replay" } },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "execute": [
       { "playback": "_add_menu_icon", "arguments": { "name": "render_fps" } },
       { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/tripod.png", "instance": "tripod_icon", "color_mode": "rgba" } }

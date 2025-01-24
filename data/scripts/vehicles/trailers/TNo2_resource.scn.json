@@ -5,8 +5,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "TNo2_obj/$NAME",
-          "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
+          "name": "TNo2_obj/$name",
+          "filename": "models/sketchfab.com/trailer-with-wood-no2/$name.obj",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 90, 0],
@@ -16,7 +16,7 @@
             "alpha_distances": [0, 0, "inf", "inf"],
             "cull_faces_alpha": false,
             "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%OCCLUDER_PASS",
+            "occluder_pass": "%occluder_pass",
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "reflectance": "%REFLECTANCE",
@@ -41,10 +41,10 @@
       {
         "playback": "load_TNo2_part",
         "arguments": {
-          "NAME": "%NAME",
+          "name": "%name",
           "DIST_MIN": 0,
           "DIST_MAX": "inf",
-          "OCCLUDER_PASS": "none",
+          "occluder_pass": "none",
           "REFLECTANCE": [0, 0, 0],
           "REFLECTION_MAP": null
         }
@@ -53,17 +53,17 @@
         "required": ["%IF_GEN_TRIANGLE_RAYS"],
         "call": "gen_triangle_rays",
         "arguments": {
-          "name": "TNo2_obj/$NAME",
+          "name": "TNo2_obj/$name",
           "npoints": 5,
           "lengths": [0.7, 0.7, 0.7],
           "delete_triangles": false
         }
       },
-      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_obj/$NAME", "add": "obj_chassis|attr_convex"}}  
+      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_obj/$name", "add": "obj_chassis|attr_convex"}}  
     ]
   },
-  {"playback": "load_TNo2_hitbox_part", "arguments": {"NAME": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
-  {"playback": "load_TNo2_hitbox_part", "arguments": {"NAME": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
 
   {
     "call": "obj_resource",
@@ -121,8 +121,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "TNo2_obj/$NAME",
-          "filename": "models/sketchfab.com/trailer-with-wood-no2/$NAME.obj",
+          "name": "TNo2_obj/$name",
+          "filename": "models/sketchfab.com/trailer-with-wood-no2/$name.obj",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 90, 0],
@@ -132,7 +132,7 @@
             "alpha_distances": [0, 0, "inf", "inf"],
             "cull_faces_alpha": false,
             "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%OCCLUDER_PASS",
+            "occluder_pass": "%occluder_pass",
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "reflectance": "%REFLECTANCE",
@@ -154,13 +154,13 @@
   {
     "declare_macro": "load-TNo2",
     "content": [
-      {"playback": "load_TNo2_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "chassis$DECIMATE"}},
-      {"playback": "load_TNo2_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "NAME": "wheel$DECIMATE"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/chassis$DECIMATE"], "dest_name": "TNo2/main$SUFFIX"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_front$SUFFIX"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$DECIMATE"], "dest_name": "TNo2/wheel_rear$SUFFIX"}}
+      {"playback": "load_TNo2_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "name": "chassis$decimate"}},
+      {"playback": "load_TNo2_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "name": "wheel$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/chassis$decimate"], "dest_name": "TNo2/main$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$decimate"], "dest_name": "TNo2/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$decimate"], "dest_name": "TNo2/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none", "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d9", "SUFFIX": "_lowres"}}
+  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none", "decimate": "", "suffix": ""}},
+  {"playback": "load-TNo2", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d9", "suffix": "_lowres"}}
 ]

@@ -5,19 +5,19 @@
     "content": {
       "playback": "generic_avatar.create",
       "let": {
-        "ASSET_ID": "female_mh",
-        "DECIMATE": "_d2"
+        "asset_id": "female_mh",
+        "decimate": "_d2"
       }
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "declare_macro": "create_female_skirt",
     "content": {
       "playback": "generic_avatar.create",
       "let": {
-        "ASSET_ID": "female_skirt",
-        "DECIMATE": "_d2"
+        "asset_id": "female_skirt",
+        "decimate": "_d2"
       }
     }
   },
@@ -28,7 +28,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "declare_macro": "create_player_avatar_internals_female_skirt",
     "content": {
       "playback": "generic_avatar.create_player_internals"
@@ -37,7 +37,7 @@
   {
     "comment": {
       "declare_macro": "add_attached_light_female_mh",
-      "content": {"playback": "add_attached_light_human", "arguments": {"LSUFFIX": "%LSUFFIX", "CSUFFIX": "%CSUFFIX"}}
+      "content": {"playback": "add_attached_light_human", "arguments": {"lsuffix": "%lsuffix", "CSUFFIX": "%CSUFFIX"}}
     }
   }
 ]

@@ -6,7 +6,7 @@
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
-          "name": "light_node$LSUFFIX",
+          "name": "light_node$lsuffix",
           "position": [0, 0, 0],
           "rotation": [-45, 90, 0],
           "scale": 1
@@ -15,7 +15,7 @@
       {
         "call": "keep_offset_from_movable",
         "arguments": {
-          "follower": "light_node$LSUFFIX",
+          "follower": "light_node$lsuffix",
           "followed": "car_node-CSUFFIX",
           "offset": [10, 10, 0]
         }
@@ -23,7 +23,7 @@
       {
         "call": "ortho_camera",
         "arguments": {
-          "node": "light_node$LSUFFIX",
+          "node": "light_node$lsuffix",
           "near_plane": 1,
           "far_plane": 10000,
           "left_plane": -3,
@@ -36,7 +36,7 @@
       {
         "call": "light",
         "arguments": {
-          "node": "light_node$LSUFFIX",
+          "node": "light_node$lsuffix",
           "black_node": "car_node$CSUFFIX",
           "render_pass": "lightmap_black_node",
           "with_depth_texture": false,
@@ -44,12 +44,12 @@
           "diffuse": [1, 1, 1],
           "specular": [1, 1, 1],
           "shadow": true,
-          "width": "%BLACK_LIGHTMAP_WIDTH",
-          "height": "%BLACK_LIGHTMAP_HEIGHT"
+          "width": "%black_lightmap_width",
+          "height": "%black_lightmap_height"
         }
       },
       {
-        "comment": "renderable_instance name=light_node_follower-LSUFFIX node=light_node-LSUFFIX resource=box"
+        "comment": "renderable_instance name=light_node_follower-lsuffix node=light_node-lsuffix resource=box"
       }
     ]
   }

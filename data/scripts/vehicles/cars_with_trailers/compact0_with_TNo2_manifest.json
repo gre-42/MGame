@@ -5,12 +5,12 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "compact0_with_TNo2"
+      "selected_vehicle_id": "compact0_with_TNo2"
     }
   },
   "database": {
-    "SUFFIX": "compact0_with_TNo2",
-    "CLASS": "car",
+    "suffix": "compact0_with_TNo2",
+    "class": "car",
     "NODE_PREFIXES": ["car_node", "car_node_trailer"],
     "max_tire_angle": 45,
     "front_engine": "engine",
@@ -20,6 +20,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE == 'rally'", "%RACE_RESTRICTIONS in {'', 'car_with_trailer'}"]
+    "dynamic": ["%game_mode == 'rally'", "%RACE_RESTRICTIONS in {'', 'car_with_trailer'}"]
   }
 }

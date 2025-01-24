@@ -4,9 +4,9 @@
     "# content": {
       "playback": "generic_car.create",
       "let": {
-        "NAME": "sedan0",
-        "TESUFFIX": "%SUFFIX",
-        "DECIMATE": "",
+        "name": "sedan0",
+        "tesuffix": "%suffix",
+        "decimate": "",
         "wheels": "%%vehicles/sedan0/wheels",
         "engine_audio": "%%vehicles/sedan0/engine_audio"
       }
@@ -14,9 +14,9 @@
     "content": {
       "call": "create_generic_car",
       "arguments": {
-        "NAME": "sedan0",
-        "TESUFFIX": "%SUFFIX",
-        "DECIMATE": "",
+        "name": "sedan0",
+        "tesuffix": "%suffix",
+        "decimate": "",
         "if_with_graphics": "%if_with_graphics",
         "if_with_physics": "%if_with_physics",
         "mute": "%mute",
@@ -30,7 +30,7 @@
     "declare_macro": "create_player_car_internals_sedan0",
     "content": {
       "playback": "generic_car.create_player_internals",
-      "arguments": { "ASSET_ID": "sedan0" }
+      "arguments": { "asset_id": "sedan0" }
     }
   },
   {
@@ -38,9 +38,9 @@
     "content": {
       "playback": "generic_car.create_player_externals",
       "let": {
-        "ASSET_ID": "sedan0",
-        "CAMERA_CLASS": "sedan",
-        "COCKPIT_CAMERA_POSITION": [-0.4, 0.4, -0.3]
+        "asset_id": "sedan0",
+        "camera_class": "sedan",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
       }
     }
   }

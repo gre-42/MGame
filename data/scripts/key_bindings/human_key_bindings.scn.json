@@ -4,16 +4,16 @@
     {
       "call": "avatar_controller_idle_binding",
       "arguments": {
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX"
+        "player": "%externals_player_name",
+        "node": "human_node$suffix"
       }
     },
     {
       "comment": {
         "call": "abs_key_binding",
         "arguments": {
-          "player": "%PLAYER_NAME",
-          "node": "human_node$SUFFIX",
+          "player": "%player_name",
+          "node": "human_node$suffix",
           "key": "LEFT_SHIFT",
           "gamepad_button": "B",
           "force": [0, 2000, 0],
@@ -25,9 +25,9 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "avatar.jump",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "wants_to_jump": true
       }
     },
@@ -35,9 +35,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_left",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "surface_power": "inf",
         "legs_z": [-1, 0, 0]
       }
@@ -46,9 +46,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.strafe_right",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "surface_power": "inf",
         "legs_z": [1, 0, 0]
       }
@@ -57,9 +57,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_left",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "yaw": true,
         "press_factor": 0.1,
         "repeat_factor": 1,
@@ -71,9 +71,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_right",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "yaw": true,
         "press_factor": 0.1,
         "repeat_factor": 1,
@@ -85,9 +85,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.forward",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "surface_power": "inf",
         "legs_z": [0, 0, -1]
       }
@@ -96,9 +96,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.backwards",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "surface_power": "inf",
         "legs_z": [0, 0, 1]
       }
@@ -107,9 +107,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_up",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "pitch": true,
         "press_factor": 0.1,
         "repeat_factor": 1,
@@ -121,9 +121,9 @@
       "call": "avatar_controller_key_binding",
       "arguments": {
         "id": "avatar.rotate_down",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "human_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "human_node$suffix",
         "pitch": true,
         "press_factor": 0.1,
         "repeat_factor": 1,
@@ -135,8 +135,8 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.next_weapon",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
         "weapon_increment": 1
       }
     },
@@ -144,8 +144,8 @@
       "call": "weapon_cycle_key_binding",
       "arguments": {
         "id": "avatar.previous_weapon",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
         "weapon_increment": -1
       }
     },
@@ -153,16 +153,16 @@
       "call": "gun_key_binding",
       "arguments": {
         "id": "avatar.shoot",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME"
+        "role": "%externals_role",
+        "player": "%externals_player_name"
       }
     },
     {
       "call": "player_key_binding",
       "arguments": {
         "id": "avatar.select_next_vehicle",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
         "select_next_vehicle": true
       }
     }

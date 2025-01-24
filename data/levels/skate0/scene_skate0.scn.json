@@ -2,11 +2,11 @@
   {
     "call": "globals",
     "arguments": {
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "AGGREGATE_MODE": "instances_sorted",
-      "VIP_NAME": "you",
-      "ROLE": "driver",
-      "OSM_LOCATION": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_role": "driver",
+      "osm_location": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": 1
@@ -53,13 +53,12 @@
         "IF_PC_PLAYER_PLAYBACK": false,
         "SKATER_NODE_POSITION": [0, 5, 10],
         "SKATER_NODE_ANGLE_Y": 0,
-        "VEHICLE_VELOCITY": null,
-        "VEHICLE_ANGULAR_VELOCITY": null,
+        "vehicle_velocity": null,
+        "vehicle_angular_velocity": null,
         "RECORDINGS_DIR": null,
         "CHECKPOINTS_FILE": null,
-        "CHECKPOINTS": null,
+        "checkpoints": null,
         "PACENOTES_FILE": null,
-        "ERROR_ALPHA": 0,
 
         "IF_PLAYBACK_CHECKPOINTS": false,
         "IF_PLAYBACK_TRACK_1": false,

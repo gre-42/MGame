@@ -3,84 +3,84 @@
     "declare_macro": "create_plane_key_bindings",
     "content": [
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "car_controller_idle_binding",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX"
+          "player": "%externals_player_name",
+          "node": "car_node$suffix"
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "car_controller_key_binding",
         "arguments": {
           "id": "plane.steer_left",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "steer_left_amount": 1
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "car_controller_key_binding",
         "arguments": {
           "id": "plane.steer_right",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "steer_left_amount": -1
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_idle_binding",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX"
+          "player": "%externals_player_name",
+          "node": "car_node$suffix"
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.roll_left",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "roll": -5
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.roll_right",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "roll": 5
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.pitch_up",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "pitch": 10
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.pitch_down",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "pitch": -10
         }
       },
@@ -88,7 +88,7 @@
         "comment": {
           "call": "abs_key_binding",
           "arguments": {
-            "node": "car_node$SUFFIX",
+            "node": "car_node$suffix",
             "key": "LEFT_SHIFT",
             "gamepad_button": "B",
             "force": [0, 20000, 0]
@@ -96,46 +96,46 @@
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.forward",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "turbine_power": "inf"
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.brake",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "brake": 20
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.yaw_left",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "yaw": -20
         }
       },
       {
-        "required": ["%IF_MANUAL_DRIVE"],
+        "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
           "id": "plane.yaw_right",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
-          "node": "car_node$SUFFIX",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
+          "node": "car_node$suffix",
           "yaw": 20
         }
       },
@@ -143,8 +143,8 @@
         "call": "weapon_cycle_key_binding",
         "arguments": {
           "id": "plane.next_weapon",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
           "weapon_increment": 1
         }
       },
@@ -152,27 +152,27 @@
         "call": "weapon_cycle_key_binding",
         "arguments": {
           "id": "plane.previous_weapon",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
           "weapon_increment": -1
         }
       },
       {
-        "required": ["%IF_HAS_GUN"],
+        "required": ["%if_has_gun"],
         "call": "gun_key_binding",
         "arguments": {
           "id": "plane.shoot",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME"
+          "role": "%externals_role",
+          "player": "%externals_player_name"
         }
       },
       {
-        "required": ["%IF_HAS_GUN"],
+        "required": ["%if_has_gun"],
         "call": "player_key_binding",
         "arguments": {
           "id": "plane.select_next_opponent",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
           "select_next_opponent": true
         }
       },
@@ -180,8 +180,8 @@
         "call": "player_key_binding",
         "arguments": {
           "id": "plane.select_next_vehicle",
-          "role": "%ROLE",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "role": "%externals_role",
+          "player": "%externals_player_name",
           "select_next_vehicle": true
         }
       }

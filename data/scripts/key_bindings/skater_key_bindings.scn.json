@@ -4,8 +4,8 @@
     {
       "call": "car_controller_idle_binding",
       "arguments": {
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "surface_power": "inf",
         "drive_relaxation": 1
       }
@@ -14,9 +14,9 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_left",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": 3,
         "angular_velocity_repeat": 3,
@@ -27,9 +27,9 @@
       "call": "rel_key_binding",
       "arguments": {
         "id": "skater.rotate_right",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": -3,
         "angular_velocity_repeat": -3,
@@ -40,7 +40,7 @@
       "comment": {
         "call": "abs_key_binding",
         "arguments": {
-          "node": "skater_node$SUFFIX",
+          "node": "skater_node$suffix",
           "key": "%LEFT_SHIFT",
           "gamepad_button": "Y",
           "force": [0, 2000, 0]
@@ -51,9 +51,9 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.jump",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "wants_to_jump": true
       }
     },
@@ -61,9 +61,9 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.grind",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "wants_to_grind": true
       }
     },
@@ -71,9 +71,9 @@
       "call": "abs_key_binding",
       "arguments": {
         "id": "skater.forward",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "fly_forward_factor": 100
       }
     },
@@ -81,9 +81,9 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "id": "skater.brake",
-        "role": "%EXTERNALS_ROLE",
-        "player": "%EXTERNALS_PLAYER_NAME",
-        "node": "skater_node$SUFFIX",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "node": "skater_node$suffix",
         "surface_power": "nan"
       }
     }

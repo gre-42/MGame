@@ -4,12 +4,12 @@
     {
       "playback": "create_tripod_camera",
       "arguments": {
-        "NODE_NAME": "tripod_node0",
-        "POSITION": [
+        "node_name": "tripod_node0",
+        "position": [
           "'-113.3258598_deg'",
           "'35.7393636_deg'",
           "'142'"],
-        "ROTATION": [0, 0, 0]
+        "rotation": [0, 0, 0]
       }
     },
     {

@@ -2,28 +2,28 @@
   "declare_macro": "feathered_blend_textures",
   "content": [
     {
-      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "required": ["%weight_texture != %null", "%feather_texture != %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Weight",
-        "texture": "%WEIGHT_TEXTURE",
+        "name": "$name-_Weight",
+        "texture": "%weight_texture",
         "min_height": "-inf",
         "max_height": "inf",
-        "distances": "%DISTANCES",
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": ["%SCALE", "%SCALE"],
+        "distances": "%distances",
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": ["%scale", "%scale"],
         "weight": 1,
         "role": "detail_mask_r",
         "reduction": "times"
       }
     },
     {
-      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "required": ["%weight_texture != %null", "%feather_texture != %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Feather",
-        "texture": "%FEATHER_TEXTURE",
+        "name": "$name-_Feather",
+        "texture": "%feather_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],
@@ -38,50 +38,50 @@
       }
     },
     {
-      "required": ["%WEIGHT_TEXTURE != %null", "%FEATHER_TEXTURE != %null"],
+      "required": ["%weight_texture != %null", "%feather_texture != %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME",
-        "texture": "%COLOR_TEXTURE",
+        "name": "$name",
+        "texture": "%color_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],
         "normal": [0, 0, 0],
         "cosine": [-1, -1, 1, 1],
-        "scale": ["%SCALE", "%SCALE"],
+        "scale": ["%scale", "%scale"],
         "weight": 0,
         "role": "%role",
         "reduction": "blend"
       }
     },
     {
-      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE == %null"],
+      "required": ["%weight_texture == %null", "%feather_texture == %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME",
-        "texture": "%COLOR_TEXTURE",
+        "name": "$name",
+        "texture": "%color_texture",
         "min_height": "-inf",
         "max_height": "inf",
-        "distances": "%DISTANCES",
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
-        "scale": ["%SCALE", "%SCALE"],
+        "distances": "%distances",
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": ["%scale", "%scale"],
         "weight": 1,
         "role": "%role",
         "reweight": "disabled"
       }
     },
     {
-      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
+      "required": ["%weight_texture == %null", "%feather_texture != %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Feather",
-        "texture": "%FEATHER_TEXTURE",
+        "name": "$name-_Feather",
+        "texture": "%feather_texture",
         "min_height": "-inf",
         "max_height": "inf",
-        "distances": "%DISTANCES",
-        "normal": "%NORMAL",
-        "cosine": "%COSINE",
+        "distances": "%distances",
+        "normal": "%normal",
+        "cosine": "%cosine",
         "scale": ["%FEATHER_SCALE", "%FEATHER_SCALE"],
         "weight": 1,
         "role": "detail_mask_r",
@@ -92,17 +92,17 @@
       }
     },
     {
-      "required": ["%WEIGHT_TEXTURE == %null", "%FEATHER_TEXTURE != %null"],
+      "required": ["%weight_texture == %null", "%feather_texture != %null"],
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME",
-        "texture": "%COLOR_TEXTURE",
+        "name": "$name",
+        "texture": "%color_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],
         "normal": [0, 0, 0],
         "cosine": [-1, -1, 1, 1],
-        "scale": ["%SCALE", "%SCALE"],
+        "scale": ["%scale", "%scale"],
         "weight": 0,
         "role": "%role",
         "reduction": "blend"

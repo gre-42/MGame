@@ -2,29 +2,29 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "main$suffix", "node": "car_node$node_suffix", "resource": "$NAME/main$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main$suffix", "node": "car_node$node_suffix", "resource": "$name/main$decimate"}},
 
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$NAME/wheel_front$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$NAME/wheel_front$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$NAME/wheel_rear$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$NAME/wheel_rear$decimate"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$name/wheel_front$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$name/wheel_front$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$name/wheel_rear$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$name/wheel_rear$decimate"}}
     ]
   },
   {
     "declare_macro": "generic_car.create_lights",
     "content": [
       {
-        "required": ["%%vehicles/$NAME/light_left_front_position != %null"],
+        "required": ["%%vehicles/$name/light_left_front_position != %null"],
         "execute": [
-          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_left_front$TESUFFIX",  "position": "%%vehicles/$NAME/light_left_front_position"}},
-          {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_left_front$TESUFFIX",  "resource": "car_light_beam"}}
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "light_left_front$tesuffix",  "position": "%%vehicles/$name/light_left_front_position"}},
+          {"call": "child_renderable_instance", "arguments": {"name": "blob$tesuffix", "node": "light_left_front$tesuffix",  "resource": "car_light_beam"}}
         ]
       },
       {
-        "required": ["%%vehicles/$NAME/light_right_front_position != %null"],
+        "required": ["%%vehicles/$name/light_right_front_position != %null"],
         "execute": [
-          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "light_right_front$TESUFFIX", "position": "%%vehicles/$NAME/light_right_front_position"}},
-          {"call": "child_renderable_instance", "arguments": {"name": "blob$TESUFFIX", "node": "light_right_front$TESUFFIX", "resource": "car_light_beam"}}
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "light_right_front$tesuffix", "position": "%%vehicles/$name/light_right_front_position"}},
+          {"call": "child_renderable_instance", "arguments": {"name": "blob$tesuffix", "node": "light_right_front$tesuffix", "resource": "car_light_beam"}}
         ]
       }
     ]
@@ -35,17 +35,17 @@
       {
         "call": "rigid_cuboid",
         "arguments": {
-          "node": "car_node$TESUFFIX",
-          "hitboxes": "$NAME-_hitboxes",
+          "node": "car_node$tesuffix",
+          "hitboxes": "$name-_hitboxes",
           "v": "%velocity",
           "w": "%angular_velocity",
-          "mass": "%%vehicles/$NAME/mass",
-          "size": "%%vehicles/$NAME/size",
-          "com": "%%vehicles/$NAME/com",
+          "mass": "%%vehicles/$name/mass",
+          "size": "%%vehicles/$name/size",
+          "com": "%%vehicles/$name/com",
           "collidable_mode": "moving",
-          "name": "generic_car_$NAME$TESUFFIX",
+          "name": "generic_car_$name$tesuffix",
           "waypoint_dy": 1.2,
-          "asset_id": "%NAME"
+          "asset_id": "%name"
         }
       },
       {
@@ -54,7 +54,7 @@
             "required": ["%CAPSULE_POSITION != %null", "%CAPSULE_ROTATION != %null"],
             "call": "set_capsule_surface_normal",
             "arguments": {
-              "node": "car_node$TESUFFIX",
+              "node": "car_node$tesuffix",
               "position": "%CAPSULE_POSITION",
               "rotation": "%CAPSULE_ROTATION"
             }
@@ -63,7 +63,7 @@
             "required": ["%BEVEL_BOX_MIN != %null", "%BEVEL_BOX_MAX != %null"],
             "call": "set_bevel_box_surface_normal",
             "arguments": {
-              "node": "car_node$TESUFFIX",
+              "node": "car_node$tesuffix",
               "min": "%BEVEL_BOX_MIN",
               "max": "%BEVEL_BOX_MAX",
               "radius": "%BEVEL_BOX_RADIUS"
@@ -72,7 +72,7 @@
           {
             "call": "set_sliding_normal_modifier",
             "arguments": {
-              "node": "car_node$TESUFFIX",
+              "node": "car_node$tesuffix",
               "fac": 0.5,
               "max_overlap": 0.2
             }
@@ -80,22 +80,22 @@
         ]
       },
 
-      {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "com_node$TESUFFIX", "position": "%COM"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$TESUFFIX", "resource": "gizmo"}}},
+      {"comment": {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "com_node$tesuffix", "position": "%COM"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$tesuffix", "resource": "gizmo"}}},
 
       {
-        "required": ["%%vehicles/$NAME/front_engine != %%vehicles/$NAME/rear_engine"],
+        "required": ["%%vehicles/$name/front_engine != %%vehicles/$name/rear_engine"],
         "execute": [
           {
             "call": "create_engine",
             "arguments": {
-              "rigid_body": "car_node$TESUFFIX",
+              "rigid_body": "car_node$tesuffix",
               "name": "front",
-              "angular_vels": "%%vehicles/$NAME/angular_vels_front",
-              "powers": "%%vehicles/$NAME/powers_front",
-              "gear_ratios": "%%vehicles/$NAME/gear_ratios",
-              "w_clutch": "%%vehicles/$NAME/w_clutch",
-              "max_dw": "%%vehicles/$NAME/max_dw",
+              "angular_vels": "%%vehicles/$name/angular_vels_front",
+              "powers": "%%vehicles/$name/powers_front",
+              "gear_ratios": "%%vehicles/$name/gear_ratios",
+              "w_clutch": "%%vehicles/$name/w_clutch",
+              "max_dw": "%%vehicles/$name/max_dw",
               "hand_brake_pulled": "%hand_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
@@ -108,13 +108,13 @@
           {
             "call": "create_engine",
             "arguments": {
-              "rigid_body": "car_node$TESUFFIX",
+              "rigid_body": "car_node$tesuffix",
               "name": "rear",
-              "angular_vels": "%%vehicles/$NAME/angular_vels_rear",
-              "powers": "%%vehicles/$NAME/powers_rear",
-              "gear_ratios": "%%vehicles/$NAME/gear_ratios",
-              "w_clutch": "%%vehicles/$NAME/w_clutch",
-              "max_dw": "%%vehicles/$NAME/max_dw",
+              "angular_vels": "%%vehicles/$name/angular_vels_rear",
+              "powers": "%%vehicles/$name/powers_rear",
+              "gear_ratios": "%%vehicles/$name/gear_ratios",
+              "w_clutch": "%%vehicles/$name/w_clutch",
+              "max_dw": "%%vehicles/$name/max_dw",
               "hand_brake_pulled": "%hand_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
@@ -128,17 +128,17 @@
       },
       {
         "required": [
-          "%%vehicles/$NAME/front_engine == %%vehicles/$NAME/rear_engine",
-          "%%vehicles/$NAME/powers != %null"],
+          "%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine",
+          "%%vehicles/$name/powers != %null"],
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "car_node$TESUFFIX",
+          "rigid_body": "car_node$tesuffix",
           "name": "engine",
-          "angular_vels": "%%vehicles/$NAME/angular_vels",
-          "powers": "%%vehicles/$NAME/powers",
-          "gear_ratios": "%%vehicles/$NAME/gear_ratios",
-          "w_clutch": "%%vehicles/$NAME/w_clutch",
-          "max_dw": "%%vehicles/$NAME/max_dw",
+          "angular_vels": "%%vehicles/$name/angular_vels",
+          "powers": "%%vehicles/$name/powers",
+          "gear_ratios": "%%vehicles/$name/gear_ratios",
+          "w_clutch": "%%vehicles/$name/w_clutch",
+          "max_dw": "%%vehicles/$name/max_dw",
           "hand_brake_pulled": "%hand_brake_pulled",
           "audio": {
             "name": "%%engine_audio/$engine_audio/name",
@@ -150,11 +150,11 @@
       },
       {
         "required": [
-          "%%vehicles/$NAME/front_engine == %%vehicles/$NAME/rear_engine",
-          "%%vehicles/$NAME/powers == %null"],
+          "%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine",
+          "%%vehicles/$name/powers == %null"],
         "call": "create_engine",
         "arguments": {
-          "rigid_body": "car_node$TESUFFIX",
+          "rigid_body": "car_node$tesuffix",
           "name": "engine",
           "hand_brake_pulled": "%hand_brake_pulled"
         }
@@ -163,28 +163,28 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_left_front_node$TESUFFIX",
+          "node": "wheel_left_front_node$tesuffix",
           "hitboxes": null,
           "mass": "%%wheels/$wheels/mass",
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_front$NAME$TESUFFIX",
-          "asset_id": "wheel_left_front$NAME"
+          "name": "wheel_left_front$name$tesuffix",
+          "asset_id": "wheel_left_front$name"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$TESUFFIX",
-          "wheel": "wheel_left_front_node$TESUFFIX",
-          "vehicle_mount_0": "%%vehicles/$NAME/wheel_left_front_mount_0",
-          "vehicle_mount_1": "%%vehicles/$NAME/wheel_left_front_mount_1",
+          "vehicle": "car_node$tesuffix",
+          "wheel": "wheel_left_front_node$tesuffix",
+          "vehicle_mount_0": "%%vehicles/$name/wheel_left_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$name/wheel_left_front_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$NAME/front_engine",
+          "engine": "%%vehicles/$name/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/brake_torque",
+          "brake_torque": "%%vehicles/$name/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -196,28 +196,28 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_right_front_node$TESUFFIX",
+          "node": "wheel_right_front_node$tesuffix",
           "hitboxes": null,
           "mass": "%%wheels/$wheels/mass",
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_front$NAME$TESUFFIX",
-          "asset_id": "wheel_right_front$NAME"
+          "name": "wheel_right_front$name$tesuffix",
+          "asset_id": "wheel_right_front$name"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$TESUFFIX",
-          "wheel": "wheel_right_front_node$TESUFFIX",
-          "vehicle_mount_0": "%%vehicles/$NAME/wheel_right_front_mount_0",
-          "vehicle_mount_1": "%%vehicles/$NAME/wheel_right_front_mount_1",
+          "vehicle": "car_node$tesuffix",
+          "wheel": "wheel_right_front_node$tesuffix",
+          "vehicle_mount_0": "%%vehicles/$name/wheel_right_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$name/wheel_right_front_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$NAME/front_engine",
+          "engine": "%%vehicles/$name/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/brake_torque",
+          "brake_torque": "%%vehicles/$name/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -229,28 +229,28 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_left_rear_node$TESUFFIX",
+          "node": "wheel_left_rear_node$tesuffix",
           "hitboxes": null,
           "mass": "%%wheels/$wheels/mass",
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_rear$NAME$TESUFFIX",
-          "asset_id": "wheel_left_rear$NAME"
+          "name": "wheel_left_rear$name$tesuffix",
+          "asset_id": "wheel_left_rear$name"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$TESUFFIX",
-          "wheel": "wheel_left_rear_node$TESUFFIX",
-          "vehicle_mount_0": "%%vehicles/$NAME/wheel_left_rear_mount_0",
-          "vehicle_mount_1": "%%vehicles/$NAME/wheel_left_rear_mount_1",
+          "vehicle": "car_node$tesuffix",
+          "wheel": "wheel_left_rear_node$tesuffix",
+          "vehicle_mount_0": "%%vehicles/$name/wheel_left_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$name/wheel_left_rear_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$NAME/rear_engine",
+          "engine": "%%vehicles/$name/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/brake_torque",
+          "brake_torque": "%%vehicles/$name/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -262,28 +262,28 @@
       {
         "call": "rigid_disk",
         "arguments": {
-          "node": "wheel_right_rear_node$TESUFFIX",
+          "node": "wheel_right_rear_node$tesuffix",
           "hitboxes": null,
           "mass": "%%wheels/$wheels/mass",
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_rear$NAME$TESUFFIX",
-          "asset_id": "wheel_right_rear$NAME"
+          "name": "wheel_right_rear$name$tesuffix",
+          "asset_id": "wheel_right_rear$name"
         }
       },
       {
         "call": "wheel",
         "arguments": {
-          "vehicle": "car_node$TESUFFIX",
-          "wheel": "wheel_right_rear_node$TESUFFIX",
-          "vehicle_mount_0": "%%vehicles/$NAME/wheel_right_rear_mount_0",
-          "vehicle_mount_1": "%%vehicles/$NAME/wheel_right_rear_mount_1",
+          "vehicle": "car_node$tesuffix",
+          "wheel": "wheel_right_rear_node$tesuffix",
+          "vehicle_mount_0": "%%vehicles/$name/wheel_right_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$name/wheel_right_rear_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$NAME/rear_engine",
+          "engine": "%%vehicles/$name/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$NAME/brake_torque",
+          "brake_torque": "%%vehicles/$name/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -294,26 +294,26 @@
 
       {
         "call": "set_trailer_hitch_positions",
-        "arguments": {"rigid_body": "car_node$TESUFFIX", "asset_id": "%NAME"}
+        "arguments": {"rigid_body": "car_node$tesuffix", "asset_id": "%name"}
       },
 
       {
         "call": "create_car_controller",
         "arguments": {
-          "node": "car_node$TESUFFIX",
-          "front_engine": "%%vehicles/$NAME/front_engine",
-          "rear_engine": "%%vehicles/$NAME/rear_engine",
+          "node": "car_node$tesuffix",
+          "front_engine": "%%vehicles/$name/front_engine",
+          "rear_engine": "%%vehicles/$name/rear_engine",
           "front_tire_ids": [0, 1],
-          "max_tire_angle": "%%vehicles/$NAME/max_tire_angle",
-          "tire_angle_velocities": "%%vehicles/$NAME/tire_angle_velocities",
-          "tire_angles": "%%vehicles/$NAME/tire_angles"
+          "max_tire_angle": "%%vehicles/$name/max_tire_angle",
+          "tire_angle_velocities": "%%vehicles/$name/tire_angle_velocities",
+          "tire_angles": "%%vehicles/$name/tire_angles"
         }
       },
 
       {
         "call": "set_available_roles",
         "arguments": {
-          "node": "car_node$TESUFFIX",
+          "node": "car_node$tesuffix",
           "value": ["driver"]
         }
       }
@@ -322,26 +322,26 @@
   {
     "declare_macro": "generic_car.create",
     "content": [
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_front_node$TESUFFIX",  "position": "%%vehicles/$NAME/wheel_left_front_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_front_node$TESUFFIX", "position": "%%vehicles/$NAME/wheel_right_front_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_left_rear_node$TESUFFIX",   "position": "%%vehicles/$NAME/wheel_left_rear_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$TESUFFIX", "name": "wheel_right_rear_node$TESUFFIX",  "position": "%%vehicles/$NAME/wheel_right_rear_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_left_front_node$tesuffix",  "position": "%%vehicles/$name/wheel_left_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_right_front_node$tesuffix", "position": "%%vehicles/$name/wheel_right_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_left_rear_node$tesuffix",   "position": "%%vehicles/$name/wheel_left_rear_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_right_rear_node$tesuffix",  "position": "%%vehicles/$name/wheel_right_rear_mount_0"}},
 
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_hitboxes"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$TESUFFIX", "node": "car_node$TESUFFIX", "resource": "$NAME-_massbox"}}},
-      {"comment": "renderable_instance name=generic_car_topdown_locator$TESUFFIX node=car_node$node_suffix resource=topdown_locator"},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$tesuffix", "node": "car_node$tesuffix", "resource": "$name-_hitboxes"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$tesuffix", "node": "car_node$tesuffix", "resource": "$name-_massbox"}}},
+      {"comment": "renderable_instance name=generic_car_topdown_locator$tesuffix node=car_node$node_suffix resource=topdown_locator"},
 
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$TESUFFIX", "name": "wheel_right_front_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$TESUFFIX", "name": "wheel_right_rear_node_visual$TESUFFIX", "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$tesuffix", "name": "wheel_right_front_node_visual$tesuffix", "rotation": [0, 180, 0]}},
+      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$tesuffix", "name": "wheel_right_rear_node_visual$tesuffix", "rotation": [0, 180, 0]}},
       {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
-        "node_suffix": "%TESUFFIX",
-        "suffix": "%TESUFFIX",
-        "decimate": "%DECIMATE"
+        "node_suffix": "%tesuffix",
+        "suffix": "%tesuffix",
+        "decimate": "%decimate"
         }
       },
       {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
-        "node_suffix": "%TESUFFIX",
-        "suffix": "_lowres$TESUFFIX",
+        "node_suffix": "%tesuffix",
+        "suffix": "_lowres$tesuffix",
         "decimate": "_lowres"
         }
       },
@@ -353,16 +353,16 @@
     "declare_macro": "generic_car.create_player_externals",
     "content": [
       {
-        "required": ["%IF_PC"],
-        "playback": "create_car_cameras_$CAMERA_CLASS"
+        "required": ["%if_pc"],
+        "playback": "create_car_cameras_$camera_class"
       },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "max_tire_angle": "%%vehicles/$ASSET_ID/max_tire_angle",
+          "max_tire_angle": "%%vehicles/$asset_id/max_tire_angle",
           "tire_angle_pid": {"pid": [1, 1, 0], "alpha": 0.2}
         }
       }
@@ -372,50 +372,50 @@
     "declare_macro": "generic_car.create_player_internals",
     "content": [
       {
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
         "arguments": {
-          "IF_HAS_GUN": false
+          "if_has_gun": false
         }
       },
       {
-        "required": ["%IF_PC"],
-        "exclude": ["%IF_ANDROID"],
+        "required": ["%if_pc"],
+        "exclude": ["%if_android"],
         "playback": "create_player_car_engine_rpm_meter",
         "arguments": {
-          "ENGINE_NAME": "%%vehicles/$ASSET_ID/front_engine"
+          "ENGINE_NAME": "%%vehicles/$asset_id/front_engine"
         }
       },
       {
-        "required": ["%BEHAVIOR != 'none'"],
+        "required": ["%behavior != 'none'"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%PLAYER_NAME",
-              "waypoint_reached_radius":                 "%%driving_modes/car_$BEHAVIOR/waypoint_reached_radius",
-              "rest_radius":                             "%%driving_modes/car_$BEHAVIOR/rest_radius",
-              "lookahead_velocity":                      "%%driving_modes/car_$BEHAVIOR/lookahead_velocity",
-              "takeoff_velocity":                        "%%driving_modes/car_$BEHAVIOR/takeoff_velocity",
-              "takeoff_velocity_delta":                  "%%driving_modes/car_$BEHAVIOR/takeoff_velocity_delta",
-              "max_velocity":                            "%%driving_modes/car_$BEHAVIOR/max_velocity",
-              "max_delta_velocity_brake":                "%%driving_modes/car_$BEHAVIOR/max_delta_velocity_brake",
-              "collision_avoidance_radius_brake":        "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_brake",
-              "collision_avoidance_radius_wait":         "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_wait",
-              "collision_avoidance_radius_correct":      "%%driving_modes/car_$BEHAVIOR/collision_avoidance_radius_correct",
-              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$BEHAVIOR/collision_avoidance_intersect_angle",
-              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_angle",
-              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$BEHAVIOR/collision_avoidance_step_aside_distance"
+              "player": "%player_name",
+              "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
+              "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
+              "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
+              "takeoff_velocity":                        "%%driving_modes/car_$behavior/takeoff_velocity",
+              "takeoff_velocity_delta":                  "%%driving_modes/car_$behavior/takeoff_velocity_delta",
+              "max_velocity":                            "%%driving_modes/car_$behavior/max_velocity",
+              "max_delta_velocity_brake":                "%%driving_modes/car_$behavior/max_delta_velocity_brake",
+              "collision_avoidance_radius_brake":        "%%driving_modes/car_$behavior/collision_avoidance_radius_brake",
+              "collision_avoidance_radius_wait":         "%%driving_modes/car_$behavior/collision_avoidance_radius_wait",
+              "collision_avoidance_radius_correct":      "%%driving_modes/car_$behavior/collision_avoidance_radius_correct",
+              "collision_avoidance_intersect_angle":     "%%driving_modes/car_$behavior/collision_avoidance_intersect_angle",
+              "collision_avoidance_step_aside_angle":    "%%driving_modes/car_$behavior/collision_avoidance_step_aside_angle",
+              "collision_avoidance_step_aside_distance": "%%driving_modes/car_$behavior/collision_avoidance_step_aside_distance"
             }
           },
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%EXTERNALS_PLAYER_NAME",
-              "stuck_velocity": "%%driving_modes/car_$BEHAVIOR/stuck_velocity",
-              "stuck_duration": "%%driving_modes/car_$BEHAVIOR/stuck_duration",
-              "unstuck_duration": "%%driving_modes/car_$BEHAVIOR/unstuck_duration",
-              "player_way_points_filter": "%%driving_modes/car_$BEHAVIOR/player_way_points_filter",
+              "player": "%externals_player_name",
+              "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
+              "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
+              "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
+              "player_way_points_filter": "%%driving_modes/car_$behavior/player_way_points_filter",
               "vehicle_way_points_filter": "explicit_ground|street"
             }
           }
@@ -428,7 +428,7 @@
     "content": {
       "playback": "add_attached_light_sedan",
       "arguments": {
-        "LSUFFIX": "%LSUFFIX",
+        "lsuffix": "%lsuffix",
         "CSUFFIX": "%CSUFFIX"
       }
     }

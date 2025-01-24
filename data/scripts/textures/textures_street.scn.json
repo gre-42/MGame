@@ -33,7 +33,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_2_Lanes",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_GH",
@@ -58,7 +58,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_Wide_Continuous_2_Lanes",
@@ -69,7 +69,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_Bright_No_Lines",
@@ -101,7 +101,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_Yellow_1x_Lane",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_Yellow_2_Lanes",
@@ -123,7 +123,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_White_1x_Lane",
@@ -134,7 +134,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_Broad_White_1_Lane",
@@ -165,7 +165,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "RoadOld_Yellow",
@@ -177,7 +177,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Road007_White_2_Lanes",
@@ -188,7 +188,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "concrete1_2K_wh_street",
@@ -248,7 +248,7 @@
   {
     "comment": [
       {
-        "exclude": ["%IF_ANDROID"],
+        "exclude": ["%if_android"],
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "Ground029_Street_Canyon",
@@ -273,7 +273,7 @@
         }
       },
       {
-        "exclude": ["%IF_ANDROID"],
+        "exclude": ["%if_android"],
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "Ground029_Street_Desert_Wet",
@@ -310,7 +310,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Gravel010_Alpha",

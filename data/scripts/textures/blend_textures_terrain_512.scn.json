@@ -4,15 +4,15 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_8",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [0, 0, 300, 500],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
+        "name": "$name-_8",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [0, 0, 300, 500],
+        "normal": "%normal",
+        "cosine": "%cosine",
         "DISCRETENESS": 0,
-        "SCALE": 0.125,
+        "scale": 0.125,
         "FEATHER_SCALE": 0.125,
         "role": "%role"
       }
@@ -20,14 +20,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_128",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [300, 500, 1000, 1500],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.0078125,
+        "name": "$name-_128",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [300, 500, 1000, 1500],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.0078125,
         "FEATHER_SCALE": 0.0078125,
         "role": "%role"
       }
@@ -35,14 +35,14 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "NAME": "$NAME-_512",
-        "WEIGHT_TEXTURE": "%WEIGHT_TEXTURE",
-        "FEATHER_TEXTURE": "%FEATHER_TEXTURE",
-        "COLOR_TEXTURE": "%COLOR_TEXTURE",
-        "DISTANCES": [1000, 1500, "inf", "inf"],
-        "NORMAL": "%NORMAL",
-        "COSINE": "%COSINE",
-        "SCALE": 0.001953125,
+        "name": "$name-_512",
+        "weight_texture": "%weight_texture",
+        "feather_texture": "%feather_texture",
+        "color_texture": "%color_texture",
+        "distances": [1000, 1500, "inf", "inf"],
+        "normal": "%normal",
+        "cosine": "%cosine",
+        "scale": 0.001953125,
         "FEATHER_SCALE": 0.001953125,
         "role": "%role"
       }

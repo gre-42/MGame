@@ -1,6 +1,6 @@
 [
     {
-        "exclude": ["%IF_ANDROID"],
+        "exclude": ["%if_android"],
         "call": "add_texture_descriptor",
         "arguments": {
             "name": "hedge0",

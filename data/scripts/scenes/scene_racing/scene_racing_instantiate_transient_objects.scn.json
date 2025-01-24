@@ -6,33 +6,34 @@
     },
     {
       "required": ["%IF_CREATE_PC_CAR"],
-      "playback":  "create_$$vehicles/$SELECTED_VEHICLE_ID/CLASS",
+      "playback":  "create_$$vehicles/$selected_vehicle_id/class",
       "let": {
-        "HUMAN_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "SKATER_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "CAR_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "velocity": "%VEHICLE_VELOCITY",
-        "angular_velocity": "%VEHICLE_ANGULAR_VELOCITY",
-        "IF_HUMAN_STYLE": true,
+        "human_name": "%%vehicles/$selected_vehicle_id/suffix",
+        "SKATER_NAME": "%%vehicles/$selected_vehicle_id/suffix",
+        "car_name": "%%vehicles/$selected_vehicle_id/suffix",
+        "velocity": "%vehicle_velocity",
+        "angular_velocity": "%vehicle_angular_velocity",
+        "if_human_style": true,
         "IF_SKATER_STYLE": true,
-        "IF_CAR_BODY_RENDERABLE_STYLE": true,
-        "COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR",
-        "SUFFIX": "",
+        "if_car_body_renderable_style": true,
+        "color": "%SELECTED_PLAYER_VEHICLE_COLOR",
+        "suffix": "",
         "if_with_graphics": true,
         "if_with_physics": true,
         "IF_WITH_GUN": false,
         "hand_brake_pulled": false,
         "mute": false,
-        "VELOCITY_ERROR_STD": 0,
-        "YAW_ERROR_STD": 0,
-        "PITCH_ERROR_STD": 0,
-        "RESPAWN_COOLDOWN_TIME": 0,
+        "velocity_error_std": 0,
+        "error_alpha": null,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0,
+        "respawn_cooldown_time": 0,
         "IF_SHADOW": true,
         "IF_PLAYBACK_TRACK": false,
         "IF_PLAYBACK_WINNER": false,
         "IF_SPAWNER": true,
         "IF_DAMAGEABLE": false,
-        "SPAWNER_NAME": "%VIP_NAME"
+        "spawner_name": "%vip_name"
       }
     },
     {
@@ -46,12 +47,12 @@
       "comment": "Recording"
     },
     {
-      "required": ["%IF_RECORD_TRACK"],
+      "required": ["%if_record_track"],
       "call": "record_track",
       "arguments": { "node": "car_node", "filename": "/tmp/track.m" }
     },
     {
-      "required": ["%IF_RECORD_TRACK"],
+      "required": ["%if_record_track"],
       "call": "record_track_gpx",
       "arguments": { "node": "car_node", "filename": "/tmp/track.gpx" }
     },
@@ -109,7 +110,7 @@
         "RANK": 0,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER0_VEHICLE",
-        "COLOR": "%WINNER0_COLOR",
+        "color": "%WINNER0_COLOR",
         "PSUFFIX": "'1'"
       }
     },
@@ -120,7 +121,7 @@
         "RANK": 1,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER1_VEHICLE",
-        "COLOR": "%WINNER1_COLOR",
+        "color": "%WINNER1_COLOR",
         "PSUFFIX": "'2'"
       }
     },
@@ -131,7 +132,7 @@
         "RANK": 2,
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR":"$WINNER2_VEHICLE",
-        "COLOR": "%WINNER2_COLOR",
+        "color": "%WINNER2_COLOR",
         "PSUFFIX": "'3'"
       }
     },
@@ -139,18 +140,18 @@
       "required": ["%IF_CHECKPOINTS"],
       "call": "check_points",
       "arguments": {
-        "moving_asset_id": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
+        "moving_asset_id": "%%vehicles/$selected_vehicle_id/suffix",
         "moving_suffix": "",
         "resource": "glow",
-        "player": "%VIP_NAME",
+        "player": "%vip_name",
         "nbeacons": 40,
         "distance": 30,
         "nahead": 30,
         "radius": 30,
         "height_changed": false,
         "track_filename": "%CHECKPOINTS_FILE",
-        "track": "%CHECKPOINTS",
-        "circular": "%%levels/$LOADED_LEVEL_ID/IF_RACEWAY_CIRCULAR",
+        "track": "%checkpoints",
+        "circular": "%%levels/$loaded_level_id/if_raceway_circular",
         "laps": "%RACE_LAPS",
         "pacenotes_filename": "%PACENOTES_FILE",
         "pacenotes_meters_ahead": 50,
@@ -204,14 +205,14 @@
         {
           "call": "create_externals",
           "arguments": {
-            "player": "%VIP_NAME",
+            "player": "%vip_name",
             "mode": "pc"
           }
         },
         {
           "call": "create_internals",
           "arguments": {
-            "player": "%VIP_NAME",
+            "player": "%vip_name",
             "role": "driver"
           }
         }

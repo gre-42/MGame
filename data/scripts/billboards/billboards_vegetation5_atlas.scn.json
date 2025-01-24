@@ -14,8 +14,8 @@
         "color_mode": "rgba",
         "histogram": "textures/histograms/desert_bush.png",
         "anisotropic_filtering_level": 16,
-        "name": "%NAME",
-        "color": "%FILENAME"
+        "name": "%name",
+        "color": "%filename"
       }
     }
   },
@@ -29,8 +29,8 @@
         "histogram": "textures/histograms/snow_tree.png",
         "lighten": [-0.1, -0.1, -0.1],
         "anisotropic_filtering_level": 16,
-        "name": "%NAME",
-        "color": "%FILENAME"
+        "name": "%name",
+        "color": "%filename"
       }
     }
   },
@@ -44,8 +44,8 @@
         "lighten_top": [0.3, 0.3, 0.3],
         "lighten_bottom": [-0.3, -0.3, -0.3],
         "anisotropic_filtering_level": 16,
-        "name": "%NAME",
-        "color": "%FILENAME"
+        "name": "%name",
+        "color": "%filename"
       }
     }
   },
@@ -60,8 +60,8 @@
         "lighten_top": [0.3, 0.3, 0.3],
         "lighten_bottom": [-0.3, -0.3, -0.3],
         "anisotropic_filtering_level": 16,
-        "name": "%NAME",
-        "color": "%FILENAME"
+        "name": "%name",
+        "color": "%filename"
       }
     }
   },
@@ -69,53 +69,53 @@
     "declare_macro": "_add_vegetation5",
     "content": [
       {
-        "playback": "_add_hist_tree5$SUFFIX",
+        "playback": "_add_hist_tree5$suffix",
         "arguments": {
-          "NAME": "Trees0023$SUFFIX",
-          "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0023_masked_S.png"
+          "name": "Trees0023$suffix",
+          "filename": "textures/textures.com/bushes/TexturesCom_Trees0023_masked_S.png"
         }
       },
       {
-        "playback": "_add_hist_tree5$SUFFIX",
+        "playback": "_add_hist_tree5$suffix",
         "arguments": {
-          "NAME": "Trees0024$SUFFIX",
-          "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0024_1_masked_S.png"
+          "name": "Trees0024$suffix",
+          "filename": "textures/textures.com/bushes/TexturesCom_Trees0024_1_masked_S.png"
         }
       },
       {
-        "playback": "_add_hist_tree5$SUFFIX",
+        "playback": "_add_hist_tree5$suffix",
         "arguments": {
-          "NAME": "Trees0029$SUFFIX",
-          "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0029_masked_S.png"
+          "name": "Trees0029$suffix",
+          "filename": "textures/textures.com/bushes/TexturesCom_Trees0029_masked_S.png"
         }
       },
       {
-        "playback": "_add_hist_tree5$SUFFIX",
+        "playback": "_add_hist_tree5$suffix",
         "arguments": {
-          "NAME": "Trees0096$SUFFIX",
-          "FILENAME": "textures/textures.com/bushes/TexturesCom_Trees0096_masked_S.png"
+          "name": "Trees0096$suffix",
+          "filename": "textures/textures.com/bushes/TexturesCom_Trees0096_masked_S.png"
         }
       },
       {
-        "playback": "_add_hist_grass5$SUFFIX",
+        "playback": "_add_hist_grass5$suffix",
         "arguments": {
-          "NAME": "grass_tbdpec3r$SUFFIX",
-          "FILENAME": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png"
+          "name": "grass_tbdpec3r$suffix",
+          "filename": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png"
         }
       },
       {
         "call": "add_texture_atlas",
         "arguments": {
-          "name": "vegetation5$SUFFIX",
+          "name": "vegetation5$suffix",
           "width": 4096,
           "height": 2048,
           "color_mode": "rgba",
           "images": [
-            {"target_position": [   0,    0], "texture": "#Trees0023$SUFFIX"},
-            {"target_position": [1024,    0], "texture": "#Trees0024$SUFFIX"},
-            {"target_position": [   0, 1024], "texture": "#Trees0029$SUFFIX"},
-            {"target_position": [1024, 1024], "texture": "#Trees0096$SUFFIX"},
-            {"target_position": [2048,    0], "texture": "#grass_tbdpec3r$SUFFIX"}
+            {"target_position": [   0,    0], "texture": "#Trees0023$suffix"},
+            {"target_position": [1024,    0], "texture": "#Trees0024$suffix"},
+            {"target_position": [   0, 1024], "texture": "#Trees0029$suffix"},
+            {"target_position": [1024, 1024], "texture": "#Trees0096$suffix"},
+            {"target_position": [2048,    0], "texture": "#grass_tbdpec3r$suffix"}
           ]
         }
       },
@@ -123,8 +123,8 @@
         "comment": {
           "call": "save_texture_png",
           "arguments": {
-            "name": "vegetation5$SUFFIX",
-            "filename": "/tmp/vegetation5$SUFFIX.png",
+            "name": "vegetation5$suffix",
+            "filename": "/tmp/vegetation5$suffix.png",
             "color_mode": "rgba"
           }
         }
@@ -132,8 +132,8 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "vegetation5$SUFFIX",
-          "color": "#vegetation5$SUFFIX",
+          "name": "vegetation5$suffix",
+          "color": "#vegetation5$suffix",
           "color_mode": "rgba",
           "anisotropic_filtering_level": 16,
           "wrap_mode_s": "clamp_to_edge",
@@ -143,8 +143,8 @@
       {
         "call": "square_resource",
         "arguments": {
-          "name": "vegetation5$SUFFIX",
-          "texture_filename": "#vegetation5$SUFFIX",
+          "name": "vegetation5$suffix",
+          "texture_filename": "#vegetation5$suffix",
           "min": [-0.5, 0],
           "max": [0.5, 1],
           "occluded_pass": "none",
@@ -171,13 +171,13 @@
   {
     "playback": "_add_vegetation5",
     "arguments": {
-      "SUFFIX": "_desert"
+      "suffix": "_desert"
     }
   },
   {
     "playback": "_add_vegetation5",
     "arguments": {
-      "SUFFIX": "_snow"
+      "suffix": "_snow"
     }
   }
 ]

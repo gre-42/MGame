@@ -8,17 +8,17 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "C_RAM"
+      "selected_vehicle_id": "C_RAM"
     }
   },
   "database": {
-    "SUFFIX": "C_RAM",
-    "CLASS": "car",
+    "suffix": "C_RAM",
+    "class": "car",
     "NODE_PREFIXES": ["car_node"],
     "max_tire_angle": null
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in {'team_deathmatch'}"]
+    "dynamic": ["%game_mode in {'team_deathmatch'}"]
   }
 }

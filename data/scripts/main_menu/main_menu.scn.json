@@ -38,8 +38,8 @@
     "content": {
       "playback": "__change_showroom_vehicle_in_physics_thread",
       "let": {
-        "VEHICLE_NAME": "%%vehicles/$SELECTED_VEHICLE_ID/SUFFIX",
-        "VEHICLE_CLASS": "%%vehicles/$SELECTED_VEHICLE_ID/CLASS",
+        "VEHICLE_NAME": "%%vehicles/$selected_vehicle_id/suffix",
+        "VEHICLE_CLASS": "%%vehicles/$selected_vehicle_id/class",
         "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR"
       }
     }
@@ -108,9 +108,9 @@
           },
           "hide_if_trivial": true,
           "parameters": [
-            {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "rally"}}},
-            {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "skating"}}},
-            {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"GAME_MODE": "team_deathmatch"}}}
+            {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"game_mode": "rally"}}},
+            {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"game_mode": "skating"}}},
+            {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"game_mode": "team_deathmatch"}}}
           ]
         }
       }
@@ -122,7 +122,7 @@
       "call": "update_gallery",
       "arguments": {
         "instance": "level_icon",
-        "resource": "%LEVEL_ICON_FILE",
+        "resource": "%level_icon_file",
         "color_mode": "rgb"
       }
     }
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "exclude": ["%IF_ANDROID"],
+        "exclude": ["%if_android"],
         "call": "controls",
         "arguments": {
           "id": "controls",
@@ -211,7 +211,7 @@
         }
       },
       {
-        "required": ["%IF_ANDROID"],
+        "required": ["%if_android"],
         "playback": "create_tap_buttons"
       }
     ]
@@ -322,7 +322,7 @@
           "id": "restrictions_selector",
           "title": "Restrictions",
           "icon": "restrictions_icon",
-          "required": ["%GAME_MODE == 'rally'"],
+          "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -366,7 +366,7 @@
           "id": "car_color_selector",
           "title": "Color",
           "icon": "color_icon",
-          "required": ["%GAME_MODE == 'rally'"],
+          "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -397,7 +397,7 @@
           "id": "session_selector",
           "title": "Session",
           "icon": "session_icon",
-          "required": ["%GAME_MODE == 'rally'"],
+          "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -427,7 +427,7 @@
           "id": "laps_selector",
           "title": "Laps",
           "icon": "laps_icon",
-          "required": ["%GAME_MODE == 'rally'", "%%levels/$SELECTED_LEVEL_ID/IF_RACEWAY_CIRCULAR"],
+          "required": ["%game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -453,7 +453,7 @@
           "id": "playback_ranks_selector",
           "title": "Playback ranks",
           "icon": "replay_icon",
-          "required": ["%GAME_MODE == 'rally'"],
+          "required": ["%game_mode == 'rally'"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -478,7 +478,7 @@
       },
       {
         "required": ["%IF_DEVEL"],
-        "exclude": ["%IF_ANDROID"],
+        "exclude": ["%if_android"],
         "call": "parameter_setter",
         "arguments": {
           "id": "render_fps_selector",
@@ -512,7 +512,7 @@
           "id": "playback_speed_selector",
           "title": "Playback speed",
           "icon": "missing_icon",
-          "required": ["%GAME_MODE == 'rally'"],
+          "required": ["%game_mode == 'rally'"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",

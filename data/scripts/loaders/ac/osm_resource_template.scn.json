@@ -4,8 +4,8 @@
     {
       "call": "obj_resource",
       "arguments": {
-        "name": "%LOADED_LEVEL_ID",
-        "filename": "%STAGE_INI_FILENAME",
+        "name": "%loaded_level_id",
+        "filename": "%stage_ini_filename",
         "double_precision": true,
         "config": {
           "position": [0, 0, 0],
@@ -18,7 +18,7 @@
           "occluder_pass": "none",
           "anisotropic_filtering_level": 16,
           "magnifying_interpolation_mode": "linear",
-          "aggregate_mode": "%AGGREGATE_MODE",
+          "aggregate_mode": "%aggregate_mode",
           "transformation_mode": "all",
           "emissive_factor": "%AC_EMISSIVE_FACTOR",
           "ambient_factor": "%AC_AMBIENT_FACTOR",
@@ -34,7 +34,7 @@
       "comment": {
         "call": "delete_mesh",
         "arguments": {
-          "resource_name": "%LOADED_LEVEL_ID",
+          "resource_name": "%loaded_level_id",
           "where": "obj_grass"
         }
       }
@@ -42,7 +42,7 @@
     {
       "call": "cleanup_mesh",
       "arguments": {
-        "resource_name": "%LOADED_LEVEL_ID",
+        "resource_name": "%loaded_level_id",
         "min_distance_material_filter": "attr_collide",
         "min_vertex_distance": 1e-2
       }
@@ -50,10 +50,10 @@
     {
       "call": "merge_textures",
       "arguments": {
-        "resource_name": "%LOADED_LEVEL_ID",
-        "merged_resource_name": "$LOADED_LEVEL_ID-_trees",
-        "merged_texture_name": "$LOADED_LEVEL_ID-_trees",
-        "merged_array_name": "$LOADED_LEVEL_ID-_trees",
+        "resource_name": "%loaded_level_id",
+        "merged_resource_name": "$loaded_level_id-_trees",
+        "merged_texture_name": "$loaded_level_id-_trees",
+        "merged_array_name": "$loaded_level_id-_trees",
         "merged_blend_mode": "semi_continuous_02",
         "merged_continuous_blending_z_order": 1,
         "merged_occluded_pass": "none",
@@ -66,11 +66,11 @@
       }
     },
     {
-      "exclude": ["%IF_ANDROID"],
+      "exclude": ["%if_android"],
       "call": "add_foliage",
       "arguments": {
-        "mesh_resource_name": "%LOADED_LEVEL_ID",
-        "foliage_resource_name": "$LOADED_LEVEL_ID-_foliage",
+        "mesh_resource_name": "%loaded_level_id",
+        "foliage_resource_name": "$loaded_level_id-_foliage",
         "near_grass_resource_names": ["vegetation10_close.0"],
         "dirty_near_grass_resource_names": ["vegetation10_close.1"],
         "near_grass_distance": 3,
@@ -81,7 +81,7 @@
     {
       "call": "replace_terrain_material",
       "arguments": {
-        "resource_name": "%LOADED_LEVEL_ID",
+        "resource_name": "%loaded_level_id",
         "textures": [
           "#Ground037_Sl_1",
           "#Ground037_Sl_8_1",
@@ -94,7 +94,7 @@
     {
       "call": "compound_resource",
       "arguments": {
-        "source_names": ["%LOADED_LEVEL_ID"],
+        "source_names": ["%loaded_level_id"],
         "dest_name": "osm_map"
       }
     }

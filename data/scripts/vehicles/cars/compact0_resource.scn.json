@@ -66,8 +66,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "%NAME",
-          "filename": "models/gre42/$NAME.obj",
+          "name": "%name",
+          "filename": "models/gre42/$name.obj",
           "config": {
             "position": [0, -0.3, 0],
             "rotation": [0, 90, 0],
@@ -77,7 +77,7 @@
             "alpha_distances": [0, 0, "inf", "inf"],
             "cull_faces_alpha": true,
             "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%OCCLUDER_PASS",
+            "occluder_pass": "%occluder_pass",
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "reflection_map": "%REFLECTION_MAP",
@@ -100,17 +100,17 @@
   {
     "declare_macro": "load_compact0",
     "content": [
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "compact0/compact0_chassis$DECIMATE"}},
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "NAME": "compact0/compact0_glass$DECIMATE"}},
-      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "OCCLUDER_PASS": "%OCCLUDER_PASS", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null, "NAME": "compact0/compact0_misc$DECIMATE"}},
-      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "compact0/main$SUFFIX"}},
-      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_chassis$DECIMATE"}},
-      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_glass$DECIMATE"}},
-      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$SUFFIX", "companion_resource": "compact0/compact0_misc$DECIMATE"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "compact0/wheel_front$SUFFIX"}},
-      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$DECIMATE"], "dest_name": "compact0/wheel_rear$SUFFIX"}}
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "name": "compact0/compact0_chassis$decimate"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [1, 1, 1], "REFLECTION_MAP": "car", "name": "compact0/compact0_glass$decimate"}},
+      {"playback": "load_compact0_part",  "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null, "name": "compact0/compact0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "compact0/main$suffix"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$suffix", "companion_resource": "compact0/compact0_chassis$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$suffix", "companion_resource": "compact0/compact0_glass$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$suffix", "companion_resource": "compact0/compact0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "compact0/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "compact0/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load_compact0", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "OCCLUDER_PASS": "none",               "DECIMATE": "", "SUFFIX": ""}},
-  {"playback": "load_compact0", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE": "_d3", "SUFFIX": "_lowres"}}
+  {"playback": "load_compact0", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
+  {"playback": "load_compact0", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d3", "suffix": "_lowres"}}
 ]

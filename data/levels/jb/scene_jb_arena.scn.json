@@ -4,11 +4,11 @@
     "arguments": {
       "LOADED_GAME_LEVEL": "real_heightmap",
       "LOADED_HEIGHTMAP": "$__DIR__/real_heightmap.png",
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "AGGREGATE_MODE": "instances_sorted",
-      "VIP_NAME": "you",
-      "ROLE": "driver",
-      "OSM_LOCATION": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_role": "driver",
+      "osm_location": {
         "position": [0, -220, 0],
         "rotation": [-90, 0, 0],
         "scale": 1

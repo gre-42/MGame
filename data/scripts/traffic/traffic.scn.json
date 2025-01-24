@@ -5,17 +5,17 @@
       {
         "call": "spawner_create",
         "arguments": {
-          "name": "%SPAWNER_NAME",
+          "name": "%spawner_name",
           "team": "red"
         }
       },
       {
         "call": "player_create",
         "arguments": {
-          "name": "%SPAWNER_NAME",
+          "name": "%spawner_name",
           "team": "red",
           "game_mode": "bystander",
-          "unstuck_mode": "%UNSTUCK_MODE",
+          "unstuck_mode": "%unstuck_mode",
           "behavior": "pedestrian",
           "driving_direction": "right"
         }
@@ -23,12 +23,12 @@
       {
         "call": "set_can_drive",
         "arguments": {
-          "player": "%SPAWNER_NAME",
+          "player": "%spawner_name",
           "source": "ai",
           "value": true
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME", "role": "driver" } }
+      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "role": "driver" } }
     ]
   },
   {
@@ -37,26 +37,26 @@
       {
         "call": "spawner_create",
         "arguments": {
-          "name": "%SPAWNER_NAME",
+          "name": "%spawner_name",
           "team": "red"
         }
       },
       {
         "call": "player_create",
         "arguments": {
-          "name": "%SPAWNER_NAME",
+          "name": "%spawner_name",
           "team": "red",
           "game_mode": "bystander",
-          "unstuck_mode": "%UNSTUCK_MODE",
-          "behavior": "%INITIAL_BEHAVIOR",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "%initial_behavior",
           "driving_direction": "right"
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%SPAWNER_NAME", "role": "driver" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "role": "driver" } },
       {
         "call": "set_can_drive",
         "arguments": {
-          "player": "%SPAWNER_NAME",
+          "player": "%spawner_name",
           "source": "ai",
           "value": true
         }
@@ -71,27 +71,27 @@
         "let": {
           "IF_WITH_GUN": false,
           "IF_SHADOW": false,
-          "IF_HUMAN_STYLE": true,
+          "if_human_style": true,
           "IF_SPAWNER": true,
           "IF_PLAYER": true,
-          "VELOCITY_ERROR_STD": 0.3,
-          "YAW_ERROR_STD": 0.02,
-          "PITCH_ERROR_STD": 0.02,
-          "ERROR_ALPHA": 0.002
+          "velocity_error_std": 0.3,
+          "yaw_error_std": 0.02,
+          "pitch_error_std": 0.02,
+          "error_alpha": 0.002
         }
       },
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
+          "player": "%spawner_name",
           "mode": "npc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
-          "role": "%ROLE"
+          "player": "%spawner_name",
+          "role": "%role"
         }
       }
     ]
@@ -108,25 +108,25 @@
           "IF_PLAYER": true,
           "IF_SHADOW": false,
           "IF_DAMAGEABLE": false,
-          "IF_CAR_BODY_RENDERABLE_STYLE": true,
-          "VELOCITY_ERROR_STD": null,
-          "YAW_ERROR_STD": null,
-          "PITCH_ERROR_STD": null,
-          "ERROR_ALPHA": null
+          "if_car_body_renderable_style": true,
+          "velocity_error_std": null,
+          "yaw_error_std": null,
+          "pitch_error_std": null,
+          "error_alpha": null
         }
       },
       {
         "call": "create_externals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
+          "player": "%spawner_name",
           "mode": "npc"
         }
       },
       {
         "call": "create_internals",
         "arguments": {
-          "player": "%SPAWNER_NAME",
-          "role": "%ROLE"
+          "player": "%spawner_name",
+          "role": "%role"
         }
       }
     ]
@@ -137,17 +137,17 @@
       {
         "playback": "traffic.create_avatar_npc_player",
         "arguments": {
-          "UNSTUCK_MODE": "delete"
+          "unstuck_mode": "delete"
         }
       },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "traffic.create_avatar",
             "let": {
-              "RESPAWN_COOLDOWN_TIME": 0
+              "respawn_cooldown_time": 0
             }
           }
         }
@@ -160,20 +160,20 @@
       {
         "playback": "traffic.create_car_npc_player",
         "arguments": {
-          "UNSTUCK_MODE": "off",
-          "INITIAL_BEHAVIOR": "none"
+          "unstuck_mode": "off",
+          "initial_behavior": "none"
         }
       },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "traffic.create_car",
             "let": {
               "hand_brake_pulled": true,
               "mute": true,
-              "RESPAWN_COOLDOWN_TIME": 0
+              "respawn_cooldown_time": 0
             }
           }
         }
@@ -186,20 +186,20 @@
       {
         "playback": "traffic.create_car_npc_player",
         "arguments": {
-          "UNSTUCK_MODE": "delete",
-          "INITIAL_BEHAVIOR": "city"
+          "unstuck_mode": "delete",
+          "initial_behavior": "city"
         }
       },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
+          "spawner": "%spawner_name",
           "macro": {
             "playback": "traffic.create_car",
             "let": {
               "hand_brake_pulled": false,
               "mute": false,
-              "RESPAWN_COOLDOWN_TIME": 0
+              "respawn_cooldown_time": 0
             }
           }
         }

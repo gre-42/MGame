@@ -2,13 +2,13 @@
   {
     "playback": "bushed_blend_textures",
     "arguments": {
-      "NAME": "Bushmap",
-      "WEIGHT_TEXTURE": "#Bushmap_Weight_Texture",
-      "FEATHER_TEXTURE": "#Bushmap_Feather_Texture",
-      "COLOR_TEXTURE": "#Bushmap_Color_Texture",
-      "DISTANCES": [0, 0, "inf", "inf"],
-      "NORMAL": [0, 0, 0],
-      "COSINE": [-1, -1, 1, 1],
+      "name": "Bushmap",
+      "weight_texture": "#Bushmap_Weight_Texture",
+      "feather_texture": "#Bushmap_Feather_Texture",
+      "color_texture": "#Bushmap_Color_Texture",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
       "WEIGHT_SCALE": 0.0009765625,
       "FEATHER_SCALE": 0.00390625,
       "COLOR_SCALE": 1

@@ -4,8 +4,8 @@
     {
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Weight",
-        "texture": "%WEIGHT_TEXTURE",
+        "name": "$name-_Weight",
+        "texture": "%weight_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],
@@ -20,8 +20,8 @@
     {
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Feather",
-        "texture": "%FEATHER_TEXTURE",
+        "name": "$name-_Feather",
+        "texture": "%feather_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],
@@ -38,8 +38,8 @@
     {
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$NAME-_Color",
-        "texture": "%COLOR_TEXTURE",
+        "name": "$name-_Color",
+        "texture": "%color_texture",
         "min_height": "-inf",
         "max_height": "inf",
         "distances": [0, 0, "inf", "inf"],

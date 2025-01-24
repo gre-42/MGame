@@ -98,7 +98,7 @@
     }
   },
   {
-    "required": ["%FLAVOR == 'extended'"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "checkerboard",

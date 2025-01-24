@@ -6,7 +6,7 @@
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
-          "name": "skater_node$SUFFIX",
+          "name": "skater_node$suffix",
           "scale": 1,
           "position": "%SKATER_NODE_POSITION",
           "rotation": [0, "%SKATER_NODE_ANGLE_Y", 0]
@@ -16,16 +16,16 @@
         "required": ["%IF_SKATER_STYLE"],
         "call": "add_color_style",
         "arguments": {
-          "node": "skater_node$SUFFIX",
-          "ambient": "%COLOR",
-          "diffuse": "%COLOR"
+          "node": "skater_node$suffix",
+          "ambient": "%color",
+          "diffuse": "%color"
         }
       },
       {
         "required": ["%IF_SKATER_STYLE"],
         "call": "set_animation_state",
         "arguments": {
-          "node": "skater_node$SUFFIX",
+          "node": "skater_node$suffix",
           "animation_loop_name": "skate.right",
           "animation_loop_begin": 0,
           "animation_loop_end": "full",
@@ -40,20 +40,20 @@
         "call": "spawner_set_nodes",
         "arguments": {
           "asset_id": "%SKATER_NAME",
-          "suffix": "%SUFFIX",
-          "spawner": "%SPAWNER_NAME"
+          "suffix": "%suffix",
+          "spawner": "%spawner_name"
         }
       },
       {
         "required": ["%IF_SPAWNER"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
-          "time": "%RESPAWN_COOLDOWN_TIME"
+          "spawner": "%spawner_name",
+          "time": "%respawn_cooldown_time"
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light-SKATER_NAME LSUFFIX:_skater$SUFFIX CSUFFIX:SUFFIX"
+        "comment": "IF_SHADOW macro_playback add_attached_light-SKATER_NAME lsuffix:_skater$suffix CSUFFIX:suffix"
       },
       {
         "required": ["%IF_SPAWNER"],
@@ -65,14 +65,14 @@
           "internals": {
             "playback": "create_player_skater_internals"
           },
-          "spawner": "%SPAWNER_NAME"
+          "spawner": "%spawner_name"
         }
       },
       {
         "comment": {
           "call": "visual_node_status_3rd",
           "arguments": {
-            "node": "skater_node$SUFFIX",
+            "node": "skater_node$suffix",
             "format": 8,
             "ttf_file": "fonts/RobotoMono-Bold.ttf",
             "offset": [0, 0.3],
@@ -89,7 +89,7 @@
       {
         "playback": "create_player_skater_externals_$SKATER_NAME",
         "arguments": {
-          "NAME": "%SKATER_NAME"
+          "name": "%SKATER_NAME"
         }
       }
     ]
@@ -100,7 +100,7 @@
       {
         "playback": "create_player_skater_internals_$SKATER_NAME",
         "arguments": {
-          "NAME": "%SKATER_NAME"
+          "name": "%SKATER_NAME"
         }
       }
     ]

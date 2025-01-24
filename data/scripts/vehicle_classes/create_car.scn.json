@@ -6,29 +6,29 @@
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
-          "name": "car_node$SUFFIX",
-          "position": "%CAR_NODE_POSITION",
-          "rotation": "%CAR_NODE_ANGLES"
+          "name": "car_node$suffix",
+          "position": "%car_node_position",
+          "rotation": "%car_node_angles"
         }
       },
       {
         "call": "add_color_style",
-        "required": ["%IF_CAR_BODY_RENDERABLE_STYLE"],
+        "required": ["%if_car_body_renderable_style"],
         "arguments": {
           "selector": "body|chassis|turret|main_gun",
-          "node": "car_node$SUFFIX",
-          "ambient": "%COLOR",
-          "diffuse": "%COLOR"
+          "node": "car_node$suffix",
+          "ambient": "%color",
+          "diffuse": "%color"
         }
       },
       {
-        "playback": "create_$CAR_NAME"
+        "playback": "create_$car_name"
       },
       {
         "required": ["%IF_PLAYBACK_TRACK"],
         "call": "playback_track",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "speed": "%PLAYBACK_SPEED",
           "filename": "%PLAYBACK_FILENAME"
         }
@@ -37,8 +37,8 @@
         "required": ["%IF_PLAYBACK_WINNER"],
         "call": "playback_winner_track",
         "arguments": {
-          "asset_id": "%CAR_NAME",
-          "suffix": "%SUFFIX",
+          "asset_id": "%car_name",
+          "suffix": "%suffix",
           "speed": "%PLAYBACK_SPEED",
           "rank": "%RANK"
         }
@@ -47,27 +47,27 @@
         "required": ["%IF_SPAWNER"],
         "call": "spawner_set_nodes",
         "arguments": {
-          "asset_id": "%CAR_NAME",
-          "suffix": "%SUFFIX",
-          "spawner": "%SPAWNER_NAME"
+          "asset_id": "%car_name",
+          "suffix": "%suffix",
+          "spawner": "%spawner_name"
         }
       },
       {
         "required": ["%IF_SPAWNER"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
-          "spawner": "%SPAWNER_NAME",
-          "time": "%RESPAWN_COOLDOWN_TIME"
+          "spawner": "%spawner_name",
+          "time": "%respawn_cooldown_time"
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light_$CAR_NAME LSUFFIX:_car$SUFFIX CSUFFIX:SUFFIX"
+        "comment": "IF_SHADOW macro_playback add_attached_light_$car_name lsuffix:_car$suffix CSUFFIX:suffix"
       },
       {
         "required": ["%IF_DAMAGEABLE"],
         "call": "damageable",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "health": 200,
           "delete_node_when_health_leq_zero": true
         }
@@ -76,7 +76,7 @@
         "required": ["%IF_DAMAGEABLE"],
         "call": "crash",
         "arguments": {
-          "node": "car_node$SUFFIX",
+          "node": "car_node$suffix",
           "damage": 0.000001
         }
       },
@@ -90,14 +90,14 @@
           "internals": {
             "playback": "create_player_car_internals"
           },
-          "spawner": "%SPAWNER_NAME"
+          "spawner": "%spawner_name"
         }
       },
       {
         "comment": {
           "call": "visual_node_status_3rd",
           "arguments": {
-            "node": "car_node$SUFFIX",
+            "node": "car_node$suffix",
             "format": 256,
             "ttf_file": "fonts/RobotoMono-Bold.ttf",
             "offset": [0, 0.3],
@@ -112,7 +112,7 @@
     "declare_macro": "create_player_car_externals",
     "content": [
       {
-        "playback": "create_player_car_externals_$CAR_NAME"
+        "playback": "create_player_car_externals_$car_name"
       }
     ]
   },
@@ -120,10 +120,10 @@
     "declare_macro": "create_player_car_internals",
     "content": [
       {
-        "playback": "create_player_car_internals_$CAR_NAME"
+        "playback": "create_player_car_internals_$car_name"
       },
       {
-        "required": ["%IF_PC", "%IF_DEVEL"],
+        "required": ["%if_pc", "%IF_DEVEL"],
         "call": "visual_player_status",
         "arguments": {
           "format": "position|speed|diameter|energy",
@@ -135,15 +135,15 @@
           "font_color": "%UI_FONT_COLOR",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       },
       {
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "call": "visual_player_status",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "format": "speed",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_speed_left",
@@ -167,25 +167,25 @@
         }
       },
       {
-        "required": ["%IF_PC", "%MINIMAP_FILE != %null"],
+        "required": ["%if_pc", "%minimap_file != %null"],
         "call": "minimap",
         "arguments": {
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "left": "minimap_widget_left",
           "right": "minimap_widget_right",
           "bottom": "minimap_widget_bottom",
           "top": "minimap_widget_top",
           "locator_size": "minimap_locator_size",
-          "minimap": "%MINIMAP_FILE",
+          "minimap": "%minimap_file",
           "locator": "textures/dot.png",
           "pointer_reference_length": 200,
-          "pointer_scale": "%MINIMAP_SCALE",
-          "pointer_size": "%MINIMAP_SIZE",
-          "pointer_offset": "%MINIMAP_OFFSET"
+          "pointer_scale": "%minimap_scale",
+          "pointer_size": "%minimap_size",
+          "pointer_offset": "%minimap_offset"
         }
       },
       {
-        "required": ["%IF_PC"],
+        "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
         "arguments": {
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -196,7 +196,7 @@
           "font_color": [1, 1, 1],
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%EXTERNALS_PLAYER_NAME",
+          "player": "%externals_player_name",
           "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       }
@@ -229,7 +229,7 @@
             "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
           },
           "focus_mask": "scene|countdown_any|game_over_countdown_any",
-          "player": "%EXTERNALS_PLAYER_NAME"
+          "player": "%externals_player_name"
         }
       }
     ]

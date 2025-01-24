@@ -1,6 +1,6 @@
 [
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "blob0",
@@ -11,7 +11,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "square_resource",
     "arguments": {
       "name": "street_light_blob",

@@ -14,8 +14,8 @@
           "depth_fog": false,
           "low_pass": false,
           "high_pass": false,
-          "bloom_iterations": "%PRIMARY_SCENE_BLOOM_ITERATIONS",
-          "bloom_thresholds": "%PRIMARY_SCENE_BLOOM_THRESHOLDS",
+          "bloom_iterations": "%primary_scene_bloom_iterations",
+          "bloom_thresholds": "%primary_scene_bloom_thresholds",
           "with_skybox": false,
           "with_flying_logic": false,
           "clear_mode": "depth"
@@ -32,24 +32,24 @@
     "content": {
       "playback": "create_$VEHICLE_CLASS",
       "let": {
-        "HUMAN_NAME": "%VEHICLE_NAME",
+        "human_name": "%VEHICLE_NAME",
         "SKATER_NAME": "%VEHICLE_NAME",
-        "CAR_NAME": "%VEHICLE_NAME",
-        "HUMAN_NODE_POSITION": [0, 0.7, -11],
+        "car_name": "%VEHICLE_NAME",
+        "human_node_position": [0, 0.7, -11],
         "SKATER_NODE_POSITION": [0, 0.7, -11],
-        "CAR_NODE_POSITION": [0, 0.7, -11],
-        "HUMAN_NODE_ANGLE_Y": 135,
+        "car_node_position": [0, 0.7, -11],
+        "human_node_angle_y": 135,
         "SKATER_NODE_ANGLE_Y": 135,
-        "CAR_NODE_ANGLES": [0, 135, 0],
+        "car_node_angles": [0, 135, 0],
         "velocity": [0, 0, 0],
         "angular_velocity": [0, 0, 0],
         "BULLET_VELOCITY": [0, 0, 0],
         "BULLET_ANGULAR_VELOCITY": [0, 0, 0],
-        "IF_HUMAN_STYLE": true,
+        "if_human_style": true,
         "IF_SKATER_STYLE": true,
-        "IF_CAR_BODY_RENDERABLE_STYLE": true,
-        "COLOR": "%VEHICLE_COLOR",
-        "SUFFIX": "",
+        "if_car_body_renderable_style": true,
+        "color": "%VEHICLE_COLOR",
+        "suffix": "",
         "BULLET_SUFFIX": "",
         "if_with_graphics": true,
         "if_with_physics": true,
@@ -58,11 +58,11 @@
         "IF_WITH_PHYSICS_BULLET": true,
         "hand_brake_pulled": true,
         "mute": true,
-        "VELOCITY_ERROR_STD": 0,
-        "YAW_ERROR_STD": 0,
-        "PITCH_ERROR_STD": 0,
-        "ERROR_ALPHA": 1,
-        "RESPAWN_COOLDOWN_TIME": 0,
+        "velocity_error_std": 0,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0,
+        "error_alpha": null,
+        "respawn_cooldown_time": 0,
         "IF_SHADOW": true,
         "IF_PLAYBACK_TRACK": false,
         "IF_PLAYBACK_WINNER": false,
@@ -264,7 +264,7 @@
       {
         "comment": {
           "playback": "add_local_blob_instances_light",
-          "arguments": { "LSUFFIX": "_blobs" }
+          "arguments": { "lsuffix": "_blobs" }
         }
       }
     ]

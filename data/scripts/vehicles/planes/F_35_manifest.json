@@ -8,17 +8,17 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_VEHICLE_ID": "F_35"
+      "selected_vehicle_id": "F_35"
     }
   },
   "database": {
-    "SUFFIX": "F_35",
-    "CLASS": "car",
+    "suffix": "F_35",
+    "class": "car",
     "NODE_PREFIXES": ["car_node"],
     "max_tire_angle": 60
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in {'team_deathmatch'}"]
+    "dynamic": ["%game_mode in {'team_deathmatch'}"]
   }
 }

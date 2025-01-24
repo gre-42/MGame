@@ -42,7 +42,7 @@
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "box_10_10_10_hitbox",

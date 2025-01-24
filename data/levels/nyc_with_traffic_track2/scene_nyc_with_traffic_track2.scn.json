@@ -2,11 +2,11 @@
   {
     "call": "globals",
     "arguments": {
-      "LOADED_LEVEL_ID": "%SELECTED_LEVEL_ID",
-      "AGGREGATE_MODE": "instances_sorted",
-      "VIP_NAME": "you",
-      "ROLE": "driver",
-      "OSM_LOCATION": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_role": "driver",
+      "osm_location": {
         "position": [0, -220, 0],
         "rotation": [-90, 0, 0],
         "scale": 1
@@ -61,13 +61,13 @@
       "let": {
         "IF_CREATE_PC_CAR": true,
         "IF_PC_PLAYER_PLAYBACK": false,
-        "CAR_NODE_POSITION": [1301, -172, -150],
-        "CAR_NODE_ANGLES": [0, 110, 0],
-        "VEHICLE_VELOCITY": [0, 0, 0],
-        "VEHICLE_ANGULAR_VELOCITY": [0, 0, 0],
+        "car_node_position": [1301, -172, -150],
+        "car_node_angles": [0, 110, 0],
+        "vehicle_velocity": [0, 0, 0],
+        "vehicle_angular_velocity": [0, 0, 0],
         "RECORDINGS_DIR": "%__DIR__",
-        "CHECKPOINTS_FILE": "$__APPDATA__/$LOADED_LEVEL_ID.checkpoints.m",
-        "CHECKPOINTS": null,
+        "CHECKPOINTS_FILE": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+        "checkpoints": null,
         "PACENOTES_FILE": "",
 
         "IF_PLAYBACK_CHECKPOINTS": false,

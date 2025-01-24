@@ -5,7 +5,7 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "wall_$NAME",
+          "name": "wall_$name",
           "color": "%WALL_COLOR",
           "normal": "%WALL_NORMAL",
           "color_mode": "rgb",
@@ -16,8 +16,8 @@
       {
         "call": "add_blend_map_texture",
         "arguments": {
-          "name": "wall_$NAME-_Base",
-          "texture": "#wall_$NAME",
+          "name": "wall_$name-_Base",
+          "texture": "#wall_$name",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [0, 0, "inf", "inf"],
@@ -35,12 +35,12 @@
       {
         "call": "add_texture_atlas",
         "arguments": {
-          "name": "color_$NAME",
+          "name": "color_$name",
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
           "images": [
-            {"target_position": [0, 0], "texture": "#wall_$NAME"},
+            {"target_position": [0, 0], "texture": "#wall_$name"},
             {"target_position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
           ]
         }
@@ -48,7 +48,7 @@
       {
         "call": "add_texture_atlas",
         "arguments": {
-          "name": "normal_$NAME",
+          "name": "normal_$name",
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
@@ -61,9 +61,9 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "%NAME",
-          "color": "#color_$NAME",
-          "normal": "#normal_$NAME",
+          "name": "%name",
+          "color": "#color_$name",
+          "normal": "#normal_$name",
           "color_mode": "rgb",
           "anisotropic_filtering_level": 16
         }
@@ -76,7 +76,7 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "wall_$NAME",
+          "name": "wall_$name",
           "color": "%WALL_COLOR",
           "normal": "%WALL_NORMAL",
           "color_mode": "rgb",
@@ -86,8 +86,8 @@
       {
         "call": "add_blend_map_texture",
         "arguments": {
-          "name": "wall_$NAME-_Base",
-          "texture": "#wall_$NAME",
+          "name": "wall_$name-_Base",
+          "texture": "#wall_$name",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [0, 0, "inf", "inf"],
@@ -105,7 +105,7 @@
       {
         "call": "add_texture_atlas",
         "arguments": {
-          "name": "color_$NAME",
+          "name": "color_$name",
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
@@ -118,7 +118,7 @@
       {
         "call": "add_texture_atlas",
         "arguments": {
-          "name": "normal_$NAME",
+          "name": "normal_$name",
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
@@ -131,9 +131,9 @@
       {
         "call": "add_texture_descriptor",
         "arguments": {
-          "name": "%NAME",
-          "color": "#color_$NAME",
-          "normal": "#normal_$NAME",
+          "name": "%name",
+          "color": "#color_$name",
+          "normal": "#normal_$name",
           "color_mode": "rgb",
           "anisotropic_filtering_level": 16
         }
@@ -143,26 +143,26 @@
   {
     "playback": "add_facade_texture_with_histogram",
     "arguments": {
-      "NAME": "facade_bricks_red",
+      "name": "facade_bricks_red",
       "HISTOGRAM": "textures/histograms/google_maps/bricks.png",
       "WALL_COLOR": "textures/cc0textures/Bricks059_2K_Color.jpg",
       "WALL_NORMAL": "textures/cc0textures/Bricks059_2K_NormalGL.jpg"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "add_facade_texture",
     "arguments": {
-      "NAME": "facade_plaster_orange",
+      "name": "facade_plaster_orange",
       "WALL_COLOR": "textures/cc0textures/Plaster003_2K_Color.jpg",
       "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "add_facade_texture",
     "arguments": {
-      "NAME": "facade_plaster_gray",
+      "name": "facade_plaster_gray",
       "WALL_COLOR": "#Plaster003_Gray",
       "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
     }
@@ -170,25 +170,25 @@
   {
     "playback": "add_facade_texture",
     "arguments": {
-      "NAME": "facade_plaster_white",
+      "name": "facade_plaster_white",
       "WALL_COLOR": "#Plaster003_White",
       "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "add_facade_texture",
     "arguments": {
-      "NAME": "facade_plaster_green",
+      "name": "facade_plaster_green",
       "WALL_COLOR": "#Plaster003_Green",
       "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
     }
   },
   {
-    "exclude": ["%IF_ANDROID"],
+    "exclude": ["%if_android"],
     "playback": "add_facade_texture",
     "arguments": {
-      "NAME": "facade_plaster_blue",
+      "name": "facade_plaster_blue",
       "WALL_COLOR": "#Plaster003_Blue",
       "WALL_NORMAL": "textures/cc0textures/Plaster003_2K_NormalGL.jpg"
     }

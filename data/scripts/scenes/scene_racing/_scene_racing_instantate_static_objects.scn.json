@@ -55,7 +55,7 @@
             "call": "register_geographic_mapping",
             "arguments": {
               "name": "world",
-              "transformation": "%OSM_LOCATION",
+              "transformation": "%osm_location",
               "resource": "osm_map"
             }
           },
@@ -63,7 +63,7 @@
             "call": "root_renderable_instances",
             "arguments": {
               "name": "osm_inst",
-              "transformation": "%OSM_LOCATION",
+              "transformation": "%osm_location",
               "resource": "osm_map"
             }
           },
@@ -82,7 +82,7 @@
             "call": "root_renderable_instances",
             "arguments": {
               "name": "osm_overlay_inst",
-              "transformation": "%OSM_LOCATION",
+              "transformation": "%osm_location",
               "resource": "osm_map_overlay"
             }
           },
@@ -113,7 +113,7 @@
           {
             "call": "rigid_statics",
             "arguments": {
-              "transformation": "%OSM_LOCATION",
+              "transformation": "%osm_location",
               "hitboxes": "osm_map_hitboxes",
               "name": "osm_map",
               "asset_id": "osm_map_no_id"
@@ -129,7 +129,7 @@
           {
             "call": "player_create",
             "arguments": {
-              "name": "%VIP_NAME",
+              "name": "%vip_name",
               "team": "red",
               "game_mode": "rally",
               "unstuck_mode": "off",
@@ -137,31 +137,31 @@
               "driving_direction": "center"
             }
           },
-          { "call": "spawner_create", "arguments": { "name": "%VIP_NAME", "team": "red" } },
-          { "call": "spawner_set_player", "arguments": { "name": "%VIP_NAME", "role": "driver" } },
+          { "call": "spawner_create", "arguments": { "name": "%vip_name", "team": "red" } },
+          { "call": "spawner_set_player", "arguments": { "name": "%vip_name", "role": "driver" } },
           {
             "call": "set_can_drive",
-            "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
+            "arguments": { "player": "%vip_name", "source": "user", "value": true }
           },
           {
             "call": "set_can_aim",
-            "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
+            "arguments": { "player": "%vip_name", "source": "user", "value": true }
           },
           {
             "call": "set_can_shoot",
-            "arguments": { "player": "%VIP_NAME", "source": "user", "value": true }
+            "arguments": { "player": "%vip_name", "source": "user", "value": true }
           }
         ]
       },
       {
         "required": ["%IF_PC_PLAYER_PLAYBACK"],
         "call": "set_playback_way_points",
-        "arguments": { "player": "%VIP_NAME", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
+        "arguments": { "player": "%vip_name", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
       },
       {
         "required": ["%IF_PC_PLAYER_PLAYBACK"],
         "call": "set_can_drive",
-        "arguments": { "player": "%VIP_NAME", "source": "ai", "value": true }
+        "arguments": { "player": "%vip_name", "source": "ai", "value": true }
       },
       {
         "call": "ui_background",
@@ -267,8 +267,8 @@
         "arguments": {
           "dynamics": "moving",
           "name": "dirtmap_node",
-          "position": "%/OSM_LOCATION/position",
-          "rotation": "%/OSM_LOCATION/rotation",
+          "position": "%/osm_location/position",
+          "rotation": "%/osm_location/rotation",
           "scale": 1
         }
       },

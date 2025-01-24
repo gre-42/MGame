@@ -2,15 +2,15 @@
   {
     "declare_macro": "create_missile0_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_center$suffix", "node": "car_node$node_suffix", "resource": "missile0_center$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_left$suffix", "node": "wing_front_left_node$node_suffix", "resource": "missile0_wing_front_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_right$suffix", "node": "wing_front_right_visual_node$node_suffix", "resource": "missile0_wing_front_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_bottom$suffix", "node": "wing_front_bottom_visual_node$node_suffix", "resource": "missile0_wing_front_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_top$suffix", "node": "wing_front_top_visual_node$node_suffix", "resource": "missile0_wing_front_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_left$suffix", "node": "wing_rear_left_node$node_suffix", "resource": "missile0_wing_rear_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_right$suffix", "node": "wing_rear_right_visual_node$node_suffix", "resource": "missile0_wing_rear_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_bottom$suffix", "node": "wing_rear_bottom_visual_node$node_suffix", "resource": "missile0_wing_rear_left$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_top$suffix", "node": "wing_rear_top_visual_node$node_suffix", "resource": "missile0_wing_rear_left$decimate"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_center$lod_suffix", "node": "car_node$node_suffix", "resource": "missile0_center$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_left$lod_suffix", "node": "wing_front_left_node$node_suffix", "resource": "missile0_wing_front_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_right$lod_suffix", "node": "wing_front_right_visual_node$node_suffix", "resource": "missile0_wing_front_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_bottom$lod_suffix", "node": "wing_front_bottom_visual_node$node_suffix", "resource": "missile0_wing_front_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_front_top$lod_suffix", "node": "wing_front_top_visual_node$node_suffix", "resource": "missile0_wing_front_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_left$lod_suffix", "node": "wing_rear_left_node$node_suffix", "resource": "missile0_wing_rear_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_right$lod_suffix", "node": "wing_rear_right_visual_node$node_suffix", "resource": "missile0_wing_rear_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_bottom$lod_suffix", "node": "wing_rear_bottom_visual_node$node_suffix", "resource": "missile0_wing_rear_left$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "missile0_wing_rear_top$lod_suffix", "node": "wing_rear_top_visual_node$node_suffix", "resource": "missile0_wing_rear_left$lod_decimate"}}
     ]
   },
   {
@@ -233,7 +233,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$BULLET_SUFFIX"              , "name": "wing_rear_top_node$BULLET_SUFFIX",          "position": [0, 0.1, 1.2]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_rear_top_node$BULLET_SUFFIX"    , "name": "wing_rear_top_visual_node$BULLET_SUFFIX",   "rotation": [0, 0, -90]}},
 
-      {"required": ["%IF_WITH_GRAPHICS_BULLET"], "playback": "create_missile0_graphics", "arguments": {"node_suffix": "%BULLET_SUFFIX", "suffix": "%BULLET_SUFFIX", "decimate": ""}},
+      {"required": ["%IF_WITH_GRAPHICS_BULLET"], "playback": "create_missile0_graphics", "arguments": {"node_suffix": "%BULLET_SUFFIX", "lod_suffix": "%BULLET_SUFFIX", "lod_decimate": ""}},
       {
         "required": ["%IF_WITH_PHYSICS_BULLET"],
         "playback": "create_missile0_physics"

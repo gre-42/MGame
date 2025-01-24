@@ -4,8 +4,8 @@
     "content": {
       "call": "obj_resource",
       "arguments": {
-        "name": "%NAME",
-        "filename": "models/sketchfab.com/f-35c-lightning-ii/$SUBDIR/$NAME.obj",
+        "name": "%name",
+        "filename": "models/sketchfab.com/f-35c-lightning-ii/$SUBDIR/$name.obj",
         "config": {
         "position": [0, -3, 0],
         "rotation": [0, 180, 0],
@@ -15,7 +15,7 @@
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces_alpha": false,
         "occluded_pass": "lightmap_black_global_and_local",
-        "occluder_pass": "%OCCLUDER_PASS",
+        "occluder_pass": "%occluder_pass",
         "aggregate_mode": "none",
         "transformation_mode": "all",
         "triangle_tangent_error_behavior": "zero",
@@ -28,7 +28,7 @@
         "fresnel_max": 0.4,
         "fresnel_exponent": 5,
         "fresnel_ambient": [1, 1, 1],
-        "rectangle_triangulation_mode": "%RECTANGLE_TRIANGULATION_MODE",
+        "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
         "dynamically_lighted": true
         }
       }
@@ -40,32 +40,32 @@
       {
         "playback": "load_F_35_part",
         "arguments": {
-          "NAME": "%NAME",
+          "name": "%name",
           "SUBDIR": "hitbox",
           "DIST_MIN": 0,
           "DIST_MAX": "inf",
-          "OCCLUDER_PASS": "none",
-          "RECTANGLE_TRIANGULATION_MODE": "disabled"
+          "occluder_pass": "none",
+          "rectangle_triangulation_mode": "disabled"
         }
       },
-      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%NAME", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%NAME", "add": "obj_hitbox|attr_convex"}}
+      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%name", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%name", "add": "obj_hitbox|attr_convex"}}
     ]
   },
-  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_front"}},
-  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_mid"}},
-  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rear"}},
-  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_left"}},
-  {"playback": "load_F_35_hitbox_part", "arguments": {"NAME": "F_35_hitbox_rudder_right"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_front"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_mid"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rear"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_left"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_right"}},
   {
     "playback": "load_F_35_part",
     "arguments": {
-      "NAME": "F_35_distancebox",
+      "name": "F_35_distancebox",
       "SUBDIR": "hitbox",
       "DIST_MIN": 0,
       "DIST_MAX": "inf",
-      "OCCLUDER_PASS": "none",
-      "RECTANGLE_TRIANGULATION_MODE": "disabled"
+      "occluder_pass": "none",
+      "rectangle_triangulation_mode": "disabled"
     }
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_distancebox", "add": "obj_distancebox|attr_convex"}},
@@ -113,16 +113,16 @@
     "content": {
       "playback": "load_F_35_part",
       "arguments": {
-        "NAME": "F_35$DECIMATE",
+        "name": "F_35$decimate",
         "SUBDIR": "obj",
         "DIST_MIN": "%DIST_MIN",
         "DIST_MAX": "%DIST_MAX",
-        "OCCLUDER_PASS": "%OCCLUDER_PASS",
-        "RECTANGLE_TRIANGULATION_MODE": "delaunay"
+        "occluder_pass": "%occluder_pass",
+        "rectangle_triangulation_mode": "delaunay"
       }
     }
   },
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                     "DECIMATE":""}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "OCCLUDER_PASS": "none",                     "DECIMATE":"_d3"}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "OCCLUDER_PASS": "lightmap_black_movables", "DECIMATE":"_d1"}}
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "occluder_pass": "none",                     "decimate":""}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "occluder_pass": "none",                     "decimate":"_d3"}},
+  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "occluder_pass": "lightmap_black_movables", "decimate":"_d1"}}
 ]

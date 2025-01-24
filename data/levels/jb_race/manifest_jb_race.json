@@ -3,7 +3,7 @@
   "title": "JB",
   "required": {
     "fixed": [],
-    "dynamic": ["%GAME_MODE in %%levels/jb_race/game_modes"]
+    "dynamic": ["%game_mode in %%levels/jb_race/game_modes"]
   },
   "on_execute": [
     {"include": "osm_resource_jb_race_open_alpha.scn.json"},
@@ -12,13 +12,13 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "SELECTED_LEVEL_ID": "jb_race",
-      "LEVEL_ICON_FILE": "levels/jb_race/icon.png",
-      "MINIMAP_FILE": null
+      "selected_level_id": "jb_race",
+      "level_icon_file": "levels/jb_race/icon.png",
+      "minimap_file": null
     }
   },
   "database": {
-    "IF_RACEWAY_CIRCULAR": false,
+    "if_raceway_circular": false,
     "game_modes": ["rally"]
   }
 }
