@@ -287,9 +287,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}}},
-            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}},
-            {"id": "", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "synthwave"}}}
+            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
+            {"id": "", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
           ]
         }
       },
@@ -311,8 +311,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox", "TIME_OF_DAY": "day"}}},
-            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"SKYBOX": "skybox_night", "TIME_OF_DAY": "night"}}}
+            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
           ]
         }
       },

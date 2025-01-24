@@ -48,7 +48,7 @@
         "playback": "create_avatar",
         "let": {
           "IF_WITH_GUN": true,
-          "IF_SPAWNER": true,
+          "if_spawner": true,
           "IF_PLAYER": true,
           "IF_SHADOW": true
         }
@@ -77,7 +77,7 @@
         "let": {
           "IF_PLAYBACK_TRACK": false,
           "IF_PLAYBACK_WINNER": false,
-          "IF_SPAWNER": true,
+          "if_spawner": true,
           "IF_PLAYER": true,
           "IF_SHADOW": true,
           "IF_DAMAGEABLE": true,

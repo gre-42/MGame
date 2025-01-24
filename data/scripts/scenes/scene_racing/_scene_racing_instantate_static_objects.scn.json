@@ -30,28 +30,28 @@
             "playback": "_create_osm_map_resource",
             "arguments": {
               "OSM_MAP": "osm_map",
-              "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
-              "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
-              "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
-              "BARRIER_DEPTH": "%BARRIER_DEPTH"
+              "if_extract_alignment_planes": "%if_extract_alignment_planes",
+              "if_gen_grind_lines": "%if_gen_grind_lines",
+              "if_gen_instances": "%if_gen_instances",
+              "barrier_depth": "%barrier_depth"
             }
           },
           {
-            "required": ["%IF_HAS_OVERLAY"],
+            "required": ["%if_has_overlay"],
             "playback": "_create_osm_map_resource",
             "arguments": {
               "OSM_MAP": "osm_map_overlay",
-              "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
-              "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
-              "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
-              "BARRIER_DEPTH": "%BARRIER_DEPTH"
+              "if_extract_alignment_planes": "%if_extract_alignment_planes",
+              "if_gen_grind_lines": "%if_gen_grind_lines",
+              "if_gen_instances": "%if_gen_instances",
+              "barrier_depth": "%barrier_depth"
             }
           },
           {
             "comment": "Must be below extractions"
           },
           {
-            "required": ["%IF_WITH_GEOGRAPHIC_MAPPING"],
+            "required": ["%if_with_geographic_mapping"],
             "call": "register_geographic_mapping",
             "arguments": {
               "name": "world",
@@ -78,7 +78,7 @@
             }
           },
           {
-            "required": ["%IF_HAS_OVERLAY"],
+            "required": ["%if_has_overlay"],
             "call": "root_renderable_instances",
             "arguments": {
               "name": "osm_overlay_inst",
@@ -87,7 +87,7 @@
             }
           },
           {
-            "required": ["%IF_HAS_OVERLAY"],
+            "required": ["%if_has_overlay"],
             "call": "compound_resource",
             "arguments": {
               "source_names": [
@@ -100,7 +100,7 @@
             }
           },
           {
-            "exclude": ["%IF_HAS_OVERLAY"],
+            "exclude": ["%if_has_overlay"],
             "call": "compound_resource",
             "arguments": {
               "source_names": [
@@ -124,7 +124,7 @@
       {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
       {"comment": "Player"},
       {
-        "required": ["%IF_CREATE_PC_PLAYER"],
+        "required": ["%if_create_pc_player"],
         "execute": [
           {
             "call": "player_create",
@@ -154,12 +154,12 @@
         ]
       },
       {
-        "required": ["%IF_PC_PLAYER_PLAYBACK"],
+        "required": ["%if_pc_player_playback"],
         "call": "set_playback_way_points",
-        "arguments": { "player": "%vip_name", "filename": "%PC_PLAYER_PLAYBACK", "speedup": "%PC_PLAYER_PLAYBACK_SPEEDUP" }
+        "arguments": { "player": "%vip_name", "filename": "%pc_player_playback", "speedup": "%pc_player_playback_speedup" }
       },
       {
-        "required": ["%IF_PC_PLAYER_PLAYBACK"],
+        "required": ["%if_pc_player_playback"],
         "call": "set_can_drive",
         "arguments": { "player": "%vip_name", "source": "ai", "value": true }
       },
@@ -188,7 +188,7 @@
           "font_color": [1, 1, 1],
           "font_height": "normal",
           "line_distance": "normal",
-          "score_board": "%SCORE_BOARD",
+          "score_board": "%score_board",
           "focus_mask": "always"
         }
       },
@@ -262,7 +262,7 @@
         "comment": "Dirtmap"
       },
       {
-        "required": ["%IF_DIRTMAP"],
+        "required": ["%if_dirtmap"],
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
@@ -273,38 +273,38 @@
         }
       },
       {
-        "required": ["%IF_DIRTMAP"],
+        "required": ["%if_dirtmap"],
         "call": "ortho_camera",
         "arguments": {
           "node": "dirtmap_node",
           "near_plane": 1,
           "far_plane": 10000,
-          "left_plane": "%DIRTMAP_LEFT",
-          "right_plane": "%DIRTMAP_RIGHT",
-          "bottom_plane": "%DIRTMAP_BOTTOM",
-          "top_plane": "%DIRTMAP_TOP",
+          "left_plane": "%dirtmap_left",
+          "right_plane": "%dirtmap_right",
+          "bottom_plane": "%dirtmap_bottom",
+          "top_plane": "%dirtmap_top",
           "requires_postprocessing": false
         }
       },
       {
-        "required": ["%IF_DIRTMAP"],
+        "required": ["%if_dirtmap"],
         "call": "set_dirtmap",
         "arguments": {
-          "filename": "%DIRTMAP_TEXTURE",
-          "offset": "%DIRTMAP_OFFSET",
-          "discreteness": "%DIRTMAP_DISCRETENESS",
-          "scale": "%DIRT_SCALE",
-          "wrap_mode": "%DIRTMAP_WRAP_MODE"
+          "filename": "%dirtmap_texture",
+          "offset": "%dirtmap_offset",
+          "discreteness": "%dirtmap_discreteness",
+          "scale": "%dirt_scale",
+          "wrap_mode": "%dirtmap_wrap_mode"
         }
       },
       {
         "comment": "Soft light"
       },
       {
-        "required": ["%SOFT_LIGHT_TEXTURE != %null"],
+        "required": ["%soft_light_texture != %null"],
         "call": "set_soft_light",
         "arguments": {
-          "filename": "%SOFT_LIGHT_TEXTURE"
+          "filename": "%soft_light_texture"
         }
       },
       {
@@ -318,7 +318,7 @@
         "arguments": {
           "dynamics": "moving",
           "name": "stadium_camera",
-          "position": "%STADIUM_CAMERA_POSITION",
+          "position": "%stadium_camera_position",
           "rotation": [-45, 0, 0],
           "scale": 1
         }

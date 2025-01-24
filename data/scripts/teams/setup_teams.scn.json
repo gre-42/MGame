@@ -5,14 +5,14 @@
       "call": "set_way_points",
       "arguments": {
         "location": "%osm_location",
-        "resource": "%TEAMS_WAY_POINTS_RESOURCE"
+        "resource": "%teams_way_points_resource"
       }
     },
     {
       "call": "set_spawn_points",
       "arguments": {
         "location": "%osm_location",
-        "resource": "%TEAMS_SPAWN_POINTS_RESOURCE"
+        "resource": "%teams_spawn_points_resource"
       }
     },
     {

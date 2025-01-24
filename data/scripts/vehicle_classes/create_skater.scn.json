@@ -8,12 +8,12 @@
           "dynamics": "moving",
           "name": "skater_node$suffix",
           "scale": 1,
-          "position": "%SKATER_NODE_POSITION",
-          "rotation": [0, "%SKATER_NODE_ANGLE_Y", 0]
+          "position": "%skater_node_position",
+          "rotation": [0, "%skater_node_angle_y", 0]
         }
       },
       {
-        "required": ["%IF_SKATER_STYLE"],
+        "required": ["%if_skater_style"],
         "call": "add_color_style",
         "arguments": {
           "node": "skater_node$suffix",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "required": ["%IF_SKATER_STYLE"],
+        "required": ["%if_skater_style"],
         "call": "set_animation_state",
         "arguments": {
           "node": "skater_node$suffix",
@@ -33,19 +33,19 @@
         }
       },
       {
-        "playback": "create_$SKATER_NAME"
+        "playback": "create_$skater_name"
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "spawner_set_nodes",
         "arguments": {
-          "asset_id": "%SKATER_NAME",
+          "asset_id": "%skater_name",
           "suffix": "%suffix",
           "spawner": "%spawner_name"
         }
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
           "spawner": "%spawner_name",
@@ -53,10 +53,10 @@
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light-SKATER_NAME lsuffix:_skater$suffix CSUFFIX:suffix"
+        "comment": "IF_SHADOW macro_playback add_attached_light-skater_name lsuffix:_skater$suffix CSUFFIX:suffix"
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_externals_creator",
         "arguments": {
           "externals": {
@@ -87,9 +87,9 @@
     "declare_macro": "create_player_skater_externals",
     "content": [
       {
-        "playback": "create_player_skater_externals_$SKATER_NAME",
+        "playback": "create_player_skater_externals_$skater_name",
         "arguments": {
-          "name": "%SKATER_NAME"
+          "name": "%skater_name"
         }
       }
     ]
@@ -98,9 +98,9 @@
     "declare_macro": "create_player_skater_internals",
     "content": [
       {
-        "playback": "create_player_skater_internals_$SKATER_NAME",
+        "playback": "create_player_skater_internals_$skater_name",
         "arguments": {
-          "name": "%SKATER_NAME"
+          "name": "%skater_name"
         }
       }
     ]

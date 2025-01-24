@@ -4,7 +4,7 @@
     {"comment": "OSM instance"},
     {"comment": "Must be above instantiation, and should be above transformations"},
     {
-      "required": ["%IF_EXTRACT_ALIGNMENT_PLANES"],
+      "required": ["%if_extract_alignment_planes"],
       "call": "modify_physics_material_tags",
       "arguments": {
         "resource_name": "%OSM_MAP",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "required": ["%IF_GEN_GRIND_LINES"],
+      "required": ["%if_gen_grind_lines"],
       "call": "gen_grind_lines",
       "arguments": {
         "source_name": "%OSM_MAP",
@@ -51,7 +51,7 @@
       }
     },
     {
-      "exclude": ["%IF_GEN_GRIND_LINES"],
+      "exclude": ["%if_gen_grind_lines"],
       "call": "obj_resource",
       "arguments": {
         "name": "$OSM_MAP-_grind_lines",
@@ -71,7 +71,7 @@
       }
     },
     {
-      "exclude": ["%IF_GEN_GRIND_LINES"],
+      "exclude": ["%if_gen_grind_lines"],
       "call": "modify_physics_material_tags",
       "arguments": {
         "resource_name": "$OSM_MAP-_grind_lines",
@@ -79,21 +79,21 @@
       }
     },
     {
-      "required": ["%IF_GEN_INSTANCES"],
+      "required": ["%if_gen_instances"],
       "call": "gen_instances",
       "arguments": {
         "name": "%OSM_MAP"
       }
     },
     {
-      "required": ["%BARRIER_DEPTH != 0"],
+      "required": ["%barrier_depth != 0"],
       "call": "create_barrier_triangle_hitboxes",
       "arguments": {
         "resource_name": "%OSM_MAP",
         "included_names": "",
         "included_tags": "attr_collide|attr_two_sided",
         "excluded_tags": "",
-        "depth": "%BARRIER_DEPTH",
+        "depth": "%barrier_depth",
         "destination_physics_material": "attr_concave|attr_collide"
       }
     }

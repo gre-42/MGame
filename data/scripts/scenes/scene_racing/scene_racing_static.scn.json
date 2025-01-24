@@ -2,11 +2,11 @@
   "declare_macro": "scene_racing_static",
   "content": [
     {
-      "required": ["%OSM_MAP_RESOURCE != %null"],
-      "playback": "%OSM_MAP_RESOURCE"
+      "required": ["%osm_map_resource != %null"],
+      "playback": "%osm_map_resource"
     },
     {
-      "required": ["%IF_HAS_OVERLAY"],
+      "required": ["%if_has_overlay"],
       "playback": "%OSM_MAP_OVERLAY_RESOURCE"
     },
     {
@@ -67,30 +67,30 @@
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
       "arguments": {
-        "IF_INSTANTIATE_OSM_MAP": "%OSM_MAP_RESOURCE != %null",
-        "IF_CREATE_PC_PLAYER": "%IF_CREATE_PC_PLAYER",
-        "IF_PC_PLAYER_PLAYBACK": "%IF_PC_PLAYER_PLAYBACK",
-        "PC_PLAYER_PLAYBACK": "%PC_PLAYER_PLAYBACK",
-        "PC_PLAYER_PLAYBACK_SPEEDUP": "%PC_PLAYER_PLAYBACK_SPEEDUP",
-        "SCORE_BOARD": "%SCORE_BOARD",
-        "IF_GEN_GRIND_LINES": "%IF_GEN_GRIND_LINES",
-        "IF_GEN_INSTANCES": "%IF_GEN_INSTANCES",
-        "IF_EXTRACT_ALIGNMENT_PLANES": "%IF_EXTRACT_ALIGNMENT_PLANES",
-        "BARRIER_DEPTH": "%BARRIER_DEPTH",
-        "IF_WITH_GEOGRAPHIC_MAPPING": "%IF_WITH_GEOGRAPHIC_MAPPING",
-        "STADIUM_CAMERA_POSITION": "%STADIUM_CAMERA_POSITION",
-        "IF_HAS_OVERLAY": "%IF_HAS_OVERLAY",
-        "DIRTMAP_LEFT": "%DIRTMAP_LEFT",
-        "DIRTMAP_RIGHT": "%DIRTMAP_RIGHT",
-        "DIRTMAP_BOTTOM": "%DIRTMAP_BOTTOM",
-        "DIRTMAP_TOP": "%DIRTMAP_TOP",
-        "IF_DIRTMAP": "%IF_DIRTMAP",
-        "DIRTMAP_TEXTURE": "%DIRTMAP_TEXTURE",
-        "DIRTMAP_OFFSET": "%DIRTMAP_OFFSET",
-        "DIRTMAP_DISCRETENESS": "%DIRTMAP_DISCRETENESS",
-        "DIRT_SCALE": "%DIRT_SCALE",
-        "DIRTMAP_WRAP_MODE": "%DIRTMAP_WRAP_MODE",
-        "SOFT_LIGHT_TEXTURE": "%SOFT_LIGHT_TEXTURE"
+        "IF_INSTANTIATE_OSM_MAP": "%osm_map_resource != %null",
+        "if_create_pc_player": "%if_create_pc_player",
+        "if_pc_player_playback": "%if_pc_player_playback",
+        "pc_player_playback": "%pc_player_playback",
+        "pc_player_playback_speedup": "%pc_player_playback_speedup",
+        "score_board": "%score_board",
+        "if_gen_grind_lines": "%if_gen_grind_lines",
+        "if_gen_instances": "%if_gen_instances",
+        "if_extract_alignment_planes": "%if_extract_alignment_planes",
+        "barrier_depth": "%barrier_depth",
+        "if_with_geographic_mapping": "%if_with_geographic_mapping",
+        "stadium_camera_position": "%stadium_camera_position",
+        "if_has_overlay": "%if_has_overlay",
+        "dirtmap_left": "%dirtmap_left",
+        "dirtmap_right": "%dirtmap_right",
+        "dirtmap_bottom": "%dirtmap_bottom",
+        "dirtmap_top": "%dirtmap_top",
+        "if_dirtmap": "%if_dirtmap",
+        "dirtmap_texture": "%dirtmap_texture",
+        "dirtmap_offset": "%dirtmap_offset",
+        "dirtmap_discreteness": "%dirtmap_discreteness",
+        "dirt_scale": "%dirt_scale",
+        "dirtmap_wrap_mode": "%dirtmap_wrap_mode",
+        "soft_light_texture": "%soft_light_texture"
       }
     },
     {

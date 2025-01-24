@@ -3,17 +3,17 @@
     "declare_macro": "_create_lights_for_time_of_day",
     "content": [
       {
-        "required": ["%TIME_OF_DAY == 'day'"],
+        "required": ["%time_of_day == 'day'"],
         "call": "set_background_color",
         "arguments": { "color": [0.68, 0.85, 1] }
       },
       {
-        "required": ["%TIME_OF_DAY == 'night'"],
+        "required": ["%time_of_day == 'night'"],
         "call": "set_background_color",
         "arguments": { "color": [0, 0, 0] }
       },
       {
-        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "required": ["%time_of_day == 'synthwave'"],
         "call": "set_background_color",
         "arguments": { "color": [0.65, 0.36, 0.91] }
       },
@@ -24,26 +24,26 @@
         "comment": "Light"
       },
       {
-        "required": ["%TIME_OF_DAY == 'day'"],
+        "required": ["%time_of_day == 'day'"],
         "playback": "add_distant_light_day"
       },
       {
-        "required": ["%TIME_OF_DAY == 'day'"],
+        "required": ["%time_of_day == 'day'"],
         "playback": "add_sky_light_day"
       },
       {
-        "required": ["%TIME_OF_DAY == 'night'"],
+        "required": ["%time_of_day == 'night'"],
         "playback": "add_distant_light_night"
       },
       {
-        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "required": ["%time_of_day == 'synthwave'"],
         "playback": "add_distant_light_night"
       },
       {
         "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
         "execute": [
           {
-            "required": ["%TIME_OF_DAY == 'day'"],
+            "required": ["%time_of_day == 'day'"],
             "execute": [
               {"playback": "add_local_instances_light"},
               {"playback": "add_movables_light"}
@@ -55,7 +55,7 @@
         "required": ["%aggregate_mode == 'none'"],
         "execute": [
           {
-            "required": ["%TIME_OF_DAY == 'day'"],
+            "required": ["%time_of_day == 'day'"],
             "execute": [
               {"playback": "add_movables_light"}
             ]
@@ -63,14 +63,14 @@
         ]
       },
       {
-        "required": ["%TIME_OF_DAY in {'night', 'synthwave'}"],
+        "required": ["%time_of_day in {'night', 'synthwave'}"],
         "playback": "add_local_blob_instances_light"
       },
       {
         "comment": "Reflection map"
       },
       {
-        "required": ["%TIME_OF_DAY == 'day'"],
+        "required": ["%time_of_day == 'day'"],
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {
@@ -81,7 +81,7 @@
         }
       },
       {
-        "required": ["%TIME_OF_DAY == 'night'"],
+        "required": ["%time_of_day == 'night'"],
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {
@@ -91,7 +91,7 @@
           }
       },
       {
-        "required": ["%TIME_OF_DAY == 'synthwave'"],
+        "required": ["%time_of_day == 'synthwave'"],
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {
@@ -117,7 +117,7 @@
       { "playback": "_delete_lights_for_time_of_day" },
       { "playback": "_create_lights_for_time_of_day" },
       { "call": "clear_skybox" },
-      { "call": "set_skybox", "arguments": { "alias": "%SKYBOX"} },
+      { "call": "set_skybox", "arguments": { "alias": "%skybox"} },
       { "playback": "update_weapon_closeup_lights", "context": "weapon_closeup" }
     ]
   }

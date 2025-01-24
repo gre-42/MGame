@@ -39,7 +39,7 @@
         "playback": "create_avatar_cameras_persistent"
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "spawner_set_nodes",
         "arguments": {
           "asset_id": "%human_name",
@@ -48,7 +48,7 @@
         }
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
           "spawner": "%spawner_name",
@@ -59,7 +59,7 @@
         "comment": "IF_SHADOW macro_playback add_attached_light_$human_name lsuffix:_human$suffix CSUFFIX:suffix;"
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_externals_creator",
         "arguments": {
           "externals": {

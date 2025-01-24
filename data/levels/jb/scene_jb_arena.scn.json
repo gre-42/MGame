@@ -21,31 +21,31 @@
   {
     "playback": "scene_racing_static",
     "arguments": {
-      "IF_CREATE_PC_PLAYER": false,
-      "IF_PC_PLAYER_PLAYBACK": false,
-      "PC_PLAYER_PLAYBACK": null,
-      "PC_PLAYER_PLAYBACK_SPEEDUP": null,
-      "STADIUM_CAMERA_POSITION": [0, 500, 500],
-      "SCORE_BOARD": "player|team|car_hp|nkills",
-      "OSM_MAP_RESOURCE": "osm_resource_jb_race",
-      "IF_HAS_OVERLAY": true,
+      "if_create_pc_player": false,
+      "if_pc_player_playback": false,
+      "pc_player_playback": null,
+      "pc_player_playback_speedup": null,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|team|car_hp|nkills",
+      "osm_map_resource": "osm_resource_jb_race",
+      "if_has_overlay": true,
       "OSM_MAP_OVERLAY_RESOURCE": "osm_resource_jb_wpts1",
-      "IF_DIRTMAP": true,
-      "IF_EXTRACT_ALIGNMENT_PLANES": false,
-      "IF_GEN_GRIND_LINES": false,
-      "IF_GEN_INSTANCES": false,
-      "BARRIER_DEPTH": 0,
-      "IF_WITH_GEOGRAPHIC_MAPPING": true,
-      "DIRTMAP_TEXTURE": "#grf_2048",
-      "DIRTMAP_OFFSET": 0,
-      "DIRTMAP_DISCRETENESS": 1,
-      "DIRT_SCALE": 1,
-      "DIRTMAP_WRAP_MODE": "repeat",
-      "DIRTMAP_LEFT": -500,
-      "DIRTMAP_RIGHT": 500,
-      "DIRTMAP_BOTTOM": -500,
-      "DIRTMAP_TOP": 500,
-      "SOFT_LIGHT_TEXTURE": null
+      "if_dirtmap": true,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": "#grf_2048",
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 1,
+      "dirtmap_wrap_mode": "repeat",
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "soft_light_texture": null
     }
   },
   {
@@ -53,15 +53,15 @@
     "content": {
       "playback": "scene_racing_instantiate_transient_objects",
       "let": {
-        "IF_CREATE_PC_CAR": false,
-        "IF_PC_PLAYER_PLAYBACK": false,
+        "if_create_pc_car": false,
+        "if_pc_player_playback": false,
 
-        "IF_PLAYBACK_CHECKPOINTS": false,
-        "IF_PLAYBACK_TRACK_1": false,
-        "IF_PLAYBACK_TRACK_2": false,
-        "IF_PLAYBACK_TRACK_3": false,
-        "IF_CHECKPOINTS": false,
-        "IF_BURN_IN": false
+        "if_playback_checkpoints": false,
+        "if_playback_track_1": false,
+        "if_playback_track_2": false,
+        "if_playback_track_3": false,
+        "if_checkpoints": false,
+        "if_burn_in": false
       }
     }
   },
@@ -70,8 +70,8 @@
     "context": "primary_scene",
     "arguments": {
       "PLAYERS_JSON": "%PLAYERS_JSON",
-      "TEAMS_SPAWN_POINTS_RESOURCE": "osm_map_overlay",
-      "TEAMS_WAY_POINTS_RESOURCE": "osm_map_overlay",
+      "teams_spawn_points_resource": "osm_map_overlay",
+      "teams_way_points_resource": "osm_map_overlay",
       "OBJECTIVE": "kill_count"
     }
   },

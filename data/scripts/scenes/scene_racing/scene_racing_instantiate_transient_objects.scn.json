@@ -5,16 +5,16 @@
       "comment": "Car instance"
     },
     {
-      "required": ["%IF_CREATE_PC_CAR"],
+      "required": ["%if_create_pc_car"],
       "playback":  "create_$$vehicles/$selected_vehicle_id/class",
       "let": {
         "human_name": "%%vehicles/$selected_vehicle_id/suffix",
-        "SKATER_NAME": "%%vehicles/$selected_vehicle_id/suffix",
+        "skater_name": "%%vehicles/$selected_vehicle_id/suffix",
         "car_name": "%%vehicles/$selected_vehicle_id/suffix",
         "velocity": "%vehicle_velocity",
         "angular_velocity": "%vehicle_angular_velocity",
         "if_human_style": true,
-        "IF_SKATER_STYLE": true,
+        "if_skater_style": true,
         "if_car_body_renderable_style": true,
         "color": "%SELECTED_PLAYER_VEHICLE_COLOR",
         "suffix": "",
@@ -31,13 +31,13 @@
         "IF_SHADOW": true,
         "IF_PLAYBACK_TRACK": false,
         "IF_PLAYBACK_WINNER": false,
-        "IF_SPAWNER": true,
+        "if_spawner": true,
         "IF_DAMAGEABLE": false,
         "spawner_name": "%vip_name"
       }
     },
     {
-      "required": ["%IF_BURN_IN"],
+      "required": ["%if_burn_in"],
       "call": "burn_in",
       "arguments": {
         "seconds": 20
@@ -57,40 +57,40 @@
       "arguments": { "node": "car_node", "filename": "/tmp/track.gpx" }
     },
     {
-      "required": ["%IF_PLAYBACK_CHECKPOINTS"],
+      "required": ["%if_playback_checkpoints"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "%CHECKPOINTS_FILE",
+        "PLAYBACK_FILENAME": "%checkpoints_file",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
         "PSUFFIX": "checkpoints"
       }
     },
     {
-      "required": ["%IF_PLAYBACK_TRACK_1"],
+      "required": ["%if_playback_track_1"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track1.m",
+        "PLAYBACK_FILENAME": "$recordings_dir/track1.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "M3",
         "PSUFFIX": "track1"
       }
     },
     {
-      "required": ["%IF_PLAYBACK_TRACK_2"],
+      "required": ["%if_playback_track_2"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track2.m",
+        "PLAYBACK_FILENAME": "$recordings_dir/track2.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "XZ",
         "PSUFFIX": "track2"
       }
     },
     {
-      "required": ["%IF_PLAYBACK_TRACK_3"],
+      "required": ["%if_playback_track_3"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$RECORDINGS_DIR/track3.m",
+        "PLAYBACK_FILENAME": "$recordings_dir/track3.m",
         "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
         "PLAYBACK_CAR": "FN",
         "PSUFFIX": "track3"
@@ -137,7 +137,7 @@
       }
     },
     {
-      "required": ["%IF_CHECKPOINTS"],
+      "required": ["%if_checkpoints"],
       "call": "check_points",
       "arguments": {
         "moving_asset_id": "%%vehicles/$selected_vehicle_id/suffix",
@@ -149,11 +149,11 @@
         "nahead": 30,
         "radius": 30,
         "height_changed": false,
-        "track_filename": "%CHECKPOINTS_FILE",
+        "track_filename": "%checkpoints_file",
         "track": "%checkpoints",
         "circular": "%%levels/$loaded_level_id/if_raceway_circular",
         "laps": "%RACE_LAPS",
-        "pacenotes_filename": "%PACENOTES_FILE",
+        "pacenotes_filename": "%pacenotes_file",
         "pacenotes_meters_ahead": 50,
         "pacenotes_minimum_covered_meters": 200,
         "pacenotes_maximum_number": 3,
@@ -187,8 +187,8 @@
         "pacenotes_picture_right": "pacenotes_picture_right",
         "pacenotes_picture_bottom": "pacenotes_picture_bottom",
         "pacenotes_picture_top": "pacenotes_picture_top",
-        "selection_emissivity": "%CHECK_POINTS_ACTIVE_COLOR",
-        "deselection_emissivity": "%CHECK_POINTS_INACTIVE_COLOR",
+        "selection_emissivity": "%check_points_active_color",
+        "deselection_emissivity": "%check_points_inactive_color",
         "on_finish": {
           "call": "set_focuses",
           "arguments": {"focuses": ["menu", "game_over_countdown_pending"]}
@@ -200,7 +200,7 @@
       "comment": "Cameras"
     },
     {
-      "required": ["%IF_CREATE_PC_CAR"],
+      "required": ["%if_create_pc_car"],
       "execute": [
         {
           "call": "create_externals",

@@ -33,20 +33,20 @@
       "playback": "create_$VEHICLE_CLASS",
       "let": {
         "human_name": "%VEHICLE_NAME",
-        "SKATER_NAME": "%VEHICLE_NAME",
+        "skater_name": "%VEHICLE_NAME",
         "car_name": "%VEHICLE_NAME",
         "human_node_position": [0, 0.7, -11],
-        "SKATER_NODE_POSITION": [0, 0.7, -11],
+        "skater_node_position": [0, 0.7, -11],
         "car_node_position": [0, 0.7, -11],
         "human_node_angle_y": 135,
-        "SKATER_NODE_ANGLE_Y": 135,
+        "skater_node_angle_y": 135,
         "car_node_angles": [0, 135, 0],
         "velocity": [0, 0, 0],
         "angular_velocity": [0, 0, 0],
         "BULLET_VELOCITY": [0, 0, 0],
         "BULLET_ANGULAR_VELOCITY": [0, 0, 0],
         "if_human_style": true,
-        "IF_SKATER_STYLE": true,
+        "if_skater_style": true,
         "if_car_body_renderable_style": true,
         "color": "%VEHICLE_COLOR",
         "suffix": "",
@@ -66,7 +66,7 @@
         "IF_SHADOW": true,
         "IF_PLAYBACK_TRACK": false,
         "IF_PLAYBACK_WINNER": false,
-        "IF_SPAWNER": false,
+        "if_spawner": false,
         "IF_PLAYER": false,
         "IF_DAMAGEABLE": false
       }
@@ -92,7 +92,7 @@
       {
         "playback": "scene_minimal",
         "arguments": {
-          "IF_DIRTMAP": false,
+          "if_dirtmap": false,
           "IF_SKYBOX": false
         }
       },

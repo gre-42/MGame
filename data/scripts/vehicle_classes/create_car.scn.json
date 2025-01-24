@@ -44,7 +44,7 @@
         }
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "spawner_set_nodes",
         "arguments": {
           "asset_id": "%car_name",
@@ -53,7 +53,7 @@
         }
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_respawn_cooldown_time",
         "arguments": {
           "spawner": "%spawner_name",
@@ -81,7 +81,7 @@
         }
       },
       {
-        "required": ["%IF_SPAWNER"],
+        "required": ["%if_spawner"],
         "call": "set_externals_creator",
         "arguments": {
           "externals": {
