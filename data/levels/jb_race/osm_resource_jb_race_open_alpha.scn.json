@@ -6,7 +6,7 @@
       "name": "osm_map",
       "filename": "$__DIR__/../jb/map_jb.osm",
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
-      "heightmap": "%LOADED_HEIGHTMAP",
+      "heightmap": "%loaded_heightmap",
       "grass_foliagemap": "textures/noise/foliagemap.png",
       "terrain_undefined_textures": ["textures/debug/pink.png"],
       "terrain_grass_textures": [
@@ -280,13 +280,13 @@
       "# path_surface_central_resource_name": "road_cylinder2_central",
       "# path_surface_endpoint0_resource_name": "road_cylinder2_endpoint_0",
       "# path_surface_endpoint1_resource_name": "road_cylinder2_endpoint_1",
-      "game_level": "%LOADED_GAME_LEVEL",
-      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
-      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
-      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
-      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
-      "fog_distances": "%FOG_DISTANCES",
-      "fog_ambient": "%FOG_AMBIENT"
+      "game_level": "%loaded_game_level",
+      "emissive_factor": "%vanilla_rally_emissive_factor",
+      "ambient_factor": "%vanilla_rally_ambient_factor",
+      "diffuse_factor": "%vanilla_rally_diffuse_factor",
+      "specular_factor": "%vanilla_rally_specular_factor",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient"
     }
   }
 }

@@ -5,8 +5,8 @@
     {
       "call": "globals",
       "arguments": {
-        "LOADED_RACING_LINE_TRACK": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
-        "LOADED_RACING_LINE_PLAYBACK": "$__APPDATA__/$selected_level_id.checkpoints.m",
+        "loaded_racing_line_track": "$__DIR__/racing_line_grossglockner_hochalpenstrasse.m",
+        "loaded_racing_line_playback": "$__APPDATA__/$selected_level_id.checkpoints.m",
         "loaded_level_id": "%selected_level_id",
         "aggregate_mode": "instances_sorted",
         "vip_name": "you",

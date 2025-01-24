@@ -43,11 +43,11 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
-          "emissive_factor": "%BLENDER_EMISSIVE_FACTOR",
-          "ambient_factor": "%BLENDER_AMBIENT_FACTOR",
-          "diffuse_factor": "%BLENDER_DIFFUSE_FACTOR",
-          "specular_factor": "%BLENDER_SPECULAR_FACTOR",
-          "fresnel_ambient": "%BLENDER_FRESNEL_AMBIENT"
+          "emissive_factor": "%blender_emissive_factor",
+          "ambient_factor": "%blender_ambient_factor",
+          "diffuse_factor": "%blender_diffuse_factor",
+          "specular_factor": "%blender_specular_factor",
+          "fresnel_ambient": "%blender_fresnel_AMBIENT"
           }
         }
       }

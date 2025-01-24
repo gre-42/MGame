@@ -64,8 +64,8 @@
       "cull_faces": true,
       "aggregate_mode": "instances_sorted",
       "transformation_mode": "position_lookat",
-      "fog_distances": "%FOG_DISTANCES",
-      "fog_ambient": "%FOG_AMBIENT",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient",
       "billboards": [
         {"uv_scale": [0.125, 0.5],  "uv_offset": [0,     0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
         {"uv_scale": [0.125, 0.5],  "uv_offset": [0.125, 0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},

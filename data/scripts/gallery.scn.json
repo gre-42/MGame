@@ -9,7 +9,7 @@
           "color": "textures/ui/menu/$name.png",
           "color_mode": "rgba",
           "color_to_replace": [1, 1, 1],
-          "replacement_color": "%UI_FONT_COLOR",
+          "replacement_color": "%ui_font_color",
           "replacement_tolerance": 0.01,
           "anisotropic_filtering_level": 0
         }
@@ -51,7 +51,7 @@
           "color": "textures/pacenotes/$GEAR.png",
           "color_mode": "rgba",
           "color_to_replace": [0, 0, 0],
-          "replacement_color": "%SCENE_FONT_COLOR",
+          "replacement_color": "%scene_font_color",
           "replacement_tolerance": 0.01,
           "anisotropic_filtering_level": 0
         }

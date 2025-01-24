@@ -20,11 +20,11 @@
           "magnifying_interpolation_mode": "linear",
           "aggregate_mode": "%aggregate_mode",
           "transformation_mode": "all",
-          "emissive_factor": "%AC_EMISSIVE_FACTOR",
-          "ambient_factor": "%AC_AMBIENT_FACTOR",
-          "diffuse_factor": "%AC_DIFFUSE_FACTOR",
-          "specular_factor": "%AC_SPECULAR_FACTOR",
-          "fresnel_ambient": "%AC_FRESNEL_AMBIENT",
+          "emissive_factor": "%ac_emissive_factor",
+          "ambient_factor": "%ac_ambient_factor",
+          "diffuse_factor": "%ac_diffuse_factor",
+          "specular_factor": "%ac_specular_factor",
+          "fresnel_ambient": "%ac_fresnel_AMBIENT",
           "physics_material": "attr_visible|attr_concave",
           "triangle_tangent_error_behavior": "zero"
         }

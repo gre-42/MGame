@@ -18,10 +18,10 @@
             "occluder_pass": "%occluder_pass",
             "aggregate_mode": "none",
             "transformation_mode": "all",
-            "emissive_factor": "%STUNT_RALLY_EMISSIVE_FACTOR",
-            "ambient_factor": "%STUNT_RALLY_AMBIENT_FACTOR",
-            "diffuse_factor": "%STUNT_RALLY_DIFFUSE_FACTOR",
-            "specular_factor": "%STUNT_RALLY_SPECULAR_FACTOR",
+            "emissive_factor": "%stunt_rally_emissive_factor",
+            "ambient_factor": "%stunt_rally_ambient_factor",
+            "diffuse_factor": "%stunt_rally_diffuse_factor",
+            "specular_factor": "%stunt_rally_specular_factor",
             "werror": false
           }
         }

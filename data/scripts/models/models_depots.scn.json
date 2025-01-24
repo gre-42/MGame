@@ -16,13 +16,13 @@
       "aggregate_mode": "none",
       "transformation_mode": "all",
       "triangle_tangent_error_behavior": "zero",
-      "emissive_factor": "%SKETCHFAB_EMISSIVE_FACTOR",
-      "ambient_factor": "%SKETCHFAB_AMBIENT_FACTOR",
-      "diffuse_factor": "%SKETCHFAB_DIFFUSE_FACTOR",
-      "specular_factor": "%SKETCHFAB_SPECULAR_FACTOR",
-      "fresnel_min": "%SKETCHFAB_FRESNEL_MIN",
-      "fresnel_max": "%SKETCHFAB_FRESNEL_MAX",
-      "fresnel_exponent": "%SKETCHFAB_FRESNEL_EXPONENT"
+      "emissive_factor": "%sketchfab_emissive_factor",
+      "ambient_factor": "%sketchfab_ambient_factor",
+      "diffuse_factor": "%sketchfab_diffuse_factor",
+      "specular_factor": "%sketchfab_specular_factor",
+      "fresnel_min": "%sketchfab_fresnel_min",
+      "fresnel_max": "%sketchfab_fresnel_max",
+      "fresnel_exponent": "%sketchfab_fresnel_exponent"
       }
     }
   }

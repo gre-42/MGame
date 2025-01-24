@@ -137,8 +137,8 @@
         }],
       "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
       "racing_line_texture": "#racing_line",
-      "racing_line_track": "%LOADED_RACING_LINE_TRACK",
-      "racing_line_playback": "%LOADED_RACING_LINE_PLAYBACK",
+      "racing_line_track": "%loaded_racing_line_track",
+      "racing_line_playback": "%loaded_racing_line_playback",
 
       "road_bollard_resource_names": [
         "road_bollard3(hitbox:road_bollard_hitbox)"],
@@ -274,13 +274,13 @@
       "# path_surface_central_resource_name": "road_extrudable_central",
       "# path_surface_endpoint0_resource_name": "road_extrudable_endpoint_0",
       "# path_surface_endpoint1_resource_name": "road_extrudable_endpoint_1",
-      "game_level": "%LOADED_GAME_LEVEL",
-      "emissive_factor": "%VANILLA_RALLY_EMISSIVE_FACTOR",
-      "ambient_factor": "%VANILLA_RALLY_AMBIENT_FACTOR",
-      "diffuse_factor": "%VANILLA_RALLY_DIFFUSE_FACTOR",
-      "specular_factor": "%VANILLA_RALLY_SPECULAR_FACTOR",
-      "fog_distances": "%FOG_DISTANCES",
-      "fog_ambient": "%FOG_AMBIENT"
+      "game_level": "%loaded_game_level",
+      "emissive_factor": "%vanilla_rally_emissive_factor",
+      "ambient_factor": "%vanilla_rally_ambient_factor",
+      "diffuse_factor": "%vanilla_rally_diffuse_factor",
+      "specular_factor": "%vanilla_rally_specular_factor",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient"
     }
   }
 }

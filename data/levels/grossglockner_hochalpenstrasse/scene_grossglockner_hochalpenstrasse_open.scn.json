@@ -1,6 +1,6 @@
 [
   {"include": "scene_grossglockner_hochalpenstrasse.scn.json"},
-  {"call": "globals", "arguments": { "LOADED_GAME_LEVEL": "open" }},
+  {"call": "globals", "arguments": { "loaded_game_level": "open" }},
   {
     "playback": "create_grossglockner_hochalpenstrasse",
     "arguments": {"STYLE": "_open"}
