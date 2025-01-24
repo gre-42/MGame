@@ -87,7 +87,7 @@
           "position": [0, -1, 0],
           "rotation": [0, 92, 0],
           "scale": [0.0025, 0.0025, 0.0025],
-          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+          "center_distances": ["%dist_min", "%dist_max"],
           "blend_mode": "off",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
@@ -105,6 +105,6 @@
       }
     ]
   },
-  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 0  , "DIST_MAX":   100, "occluder_pass": "none",                    "name": "Tiger"}},
-  {"playback": "load_tiger_tank", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "occluder_pass": "lightmap_black_movables", "name": "Tiger_d3"}}
+  {"playback": "load_tiger_tank", "arguments": {"dist_min": 0  , "dist_max":   100, "occluder_pass": "none",                    "name": "Tiger"}},
+  {"playback": "load_tiger_tank", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "name": "Tiger_d3"}}
 ]

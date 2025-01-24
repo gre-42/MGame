@@ -10,7 +10,7 @@
         "position": [0, -3, 0],
         "rotation": [0, 180, 0],
         "scale": [10, 10, 10],
-        "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+        "center_distances": ["%dist_min", "%dist_max"],
         "blend_mode": "continuous",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces_alpha": false,
@@ -42,8 +42,8 @@
         "arguments": {
           "name": "%name",
           "SUBDIR": "hitbox",
-          "DIST_MIN": 0,
-          "DIST_MAX": "inf",
+          "dist_min": 0,
+          "dist_max": "inf",
           "occluder_pass": "none",
           "rectangle_triangulation_mode": "disabled"
         }
@@ -62,8 +62,8 @@
     "arguments": {
       "name": "F_35_distancebox",
       "SUBDIR": "hitbox",
-      "DIST_MIN": 0,
-      "DIST_MAX": "inf",
+      "dist_min": 0,
+      "dist_max": "inf",
       "occluder_pass": "none",
       "rectangle_triangulation_mode": "disabled"
     }
@@ -115,14 +115,14 @@
       "arguments": {
         "name": "F_35$decimate",
         "SUBDIR": "obj",
-        "DIST_MIN": "%DIST_MIN",
-        "DIST_MAX": "%DIST_MAX",
+        "dist_min": "%dist_min",
+        "dist_max": "%dist_max",
         "occluder_pass": "%occluder_pass",
         "rectangle_triangulation_mode": "delaunay"
       }
     }
   },
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "occluder_pass": "none",                     "decimate":""}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 0  , "DIST_MAX": 100 , "occluder_pass": "none",                     "decimate":"_d3"}},
-  {"playback": "load_F_35", "arguments": {"DIST_MIN": 100, "DIST_MAX": "inf", "occluder_pass": "lightmap_black_movables", "decimate":"_d1"}}
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100 , "occluder_pass": "none",                     "decimate":""}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100 , "occluder_pass": "none",                     "decimate":"_d3"}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "decimate":"_d1"}}
 ]

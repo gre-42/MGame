@@ -11,7 +11,7 @@
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
             "scale": [1, 1, 1],
-            "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+            "center_distances": ["%dist_min", "%dist_max"],
             "blend_mode": "off",
             "alpha_distances": [0, 0, "inf", "inf"],
             "occluded_pass": "lightmap_black_global_and_local",
@@ -31,12 +31,12 @@
   {
     "declare_macro": "load_XZ_wheels",
     "content": [
-      {"playback": "load_XZ_wheel", "arguments": {"DIST_MIN": "%DIST_MIN", "DIST_MAX": "%DIST_MAX", "occluder_pass": "%occluder_pass", "REFLECTANCE": [0, 0, 0], "REFLECTION_MAP": null,  "name": "XZ/XZ_wheel$decimate"}},
+      {"playback": "load_XZ_wheel", "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null,  "name": "XZ/XZ_wheel$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "XZ/wheel_front$suffix"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "XZ/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load_XZ_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
-  {"playback": "load_XZ_wheels", "arguments": {"DIST_MIN": 0,   "DIST_MAX": 100,  "occluder_pass": "none",               "decimate": "_d3", "suffix": "_d3"}},
-  {"playback": "load_XZ_wheels", "arguments": {"DIST_MIN": 100, "DIST_MAX": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "suffix": "_lowres"}}
+  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
+  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "_d3", "suffix": "_d3"}},
+  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "suffix": "_lowres"}}
 ]

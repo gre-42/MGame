@@ -10,7 +10,7 @@
         "position": [0, 0, 0],
         "rotation": [-90, 0, 0],
         "scale": [1, 1, 1],
-        "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+        "center_distances": ["%dist_min", "%dist_max"],
         "blend_mode": "continuous",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces_alpha": false,
@@ -47,14 +47,14 @@
       "playback": "load_missile0_part",
       "arguments": {
         "name": "missile0_center$decimate",
-        "DIST_MIN": "%DIST_MIN",
-        "DIST_MAX": "%DIST_MAX",
+        "dist_min": "%dist_min",
+        "dist_max": "%dist_max",
         "occluder_pass": "%occluder_pass",
         "rectangle_triangulation_mode": "delaunay"
       }
     }
   },
-  {"playback": "load_missile0_center", "arguments": {"DIST_MIN": 0, "DIST_MAX": 1000, "occluder_pass": "none", "decimate":""}},
-  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_front_left", "DIST_MIN": 0, "DIST_MAX": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}},
-  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_rear_left", "DIST_MIN": 0, "DIST_MAX": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}}
+  {"playback": "load_missile0_center", "arguments": {"dist_min": 0, "dist_max": 1000, "occluder_pass": "none", "decimate":""}},
+  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_front_left", "dist_min": 0, "dist_max": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}},
+  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_rear_left", "dist_min": 0, "dist_max": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}}
 ]

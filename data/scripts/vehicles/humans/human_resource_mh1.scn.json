@@ -35,7 +35,7 @@
           "position": [0, 0, 0],
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
-          "center_distances": ["%DIST_MIN", "%DIST_MAX"],
+          "center_distances": ["%dist_min", "%dist_max"],
           "blend_mode": "off",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "lightmap_black_global_and_local",
@@ -61,13 +61,13 @@
       }
     ]
   },
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_mh"}},
-  {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_mh"}},
   {
     "exclude": ["%if_android"],
     "execute": [
-      {"playback": "load_mh1", "arguments": {"DIST_MIN":  0, "DIST_MAX": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_skirt"}},
-      {"playback": "load_mh1", "arguments": {"DIST_MIN":100, "DIST_MAX":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_skirt"}}
+      {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_skirt"}},
+      {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_skirt"}}
     ]
   }
 ]
