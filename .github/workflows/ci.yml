@@ -76,8 +76,8 @@ jobs:
             mingw-w64-x86_64-glfw \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-openal \
+            mingw-w64-x86_64-openssl \
             mingw-w64-x86_64-vulkan-devel \
-            mingw-w64-x86_64-openssl-devel \
             rsync
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
