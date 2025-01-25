@@ -2,7 +2,7 @@
   "id": "nyc_with_traffic_track2",
   "title": "NYC with traffic, track 2",
   "required": {
-    "fixed": [],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/nyc_with_traffic_track2/game_modes"]
   },
   "on_execute": {
