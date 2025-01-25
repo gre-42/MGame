@@ -2,7 +2,7 @@
   "id": "islands1",
   "title": "Islands 1",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/islands1/game_modes"]
   },
   "on_execute": {

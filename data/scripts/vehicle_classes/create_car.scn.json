@@ -123,7 +123,7 @@
         "playback": "create_player_car_internals_$car_name"
       },
       {
-        "required": ["%if_pc", "%IF_DEVEL"],
+        "required": ["%if_pc", "%if_devel"],
         "call": "visual_player_status",
         "arguments": {
           "format": "position|speed|diameter|energy",

@@ -2,7 +2,7 @@
   "id": "arena_cars",
   "title": "WIP: Arena cars",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/arena_cars/game_modes"]
   },
   "on_execute": {

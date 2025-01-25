@@ -2,7 +2,7 @@
   "id": "grossglockner_hochalpenstrasse_closed",
   "title": "WIP: Grossglockner hochalpenstrasse (closed)",
   "required": {
-    "fixed": [],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_closed/game_modes"]
   },
   "on_execute": {

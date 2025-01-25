@@ -353,7 +353,7 @@
         "arguments": {"id": "change_camera.near", "tpe": "near"}
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "camera_key_binding",
         "arguments": {"id": "change_camera.tripod", "tpe": "tripod"}
       },

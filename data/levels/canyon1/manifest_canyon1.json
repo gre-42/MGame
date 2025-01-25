@@ -2,7 +2,7 @@
   "id": "canyon1",
   "title": "WIP: Canyon 1",
   "required": {
-    "fixed": [],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/canyon1/game_modes"]
   },
   "on_execute": {

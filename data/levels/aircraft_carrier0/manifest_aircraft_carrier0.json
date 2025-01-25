@@ -2,7 +2,7 @@
   "id": "aircraft_carrier0",
   "title": "Aircraft carrier 0",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/aircraft_carrier0/game_modes"]
   },
   "on_execute": {

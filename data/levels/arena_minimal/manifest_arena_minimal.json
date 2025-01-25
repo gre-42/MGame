@@ -2,7 +2,7 @@
   "id": "arena_minimal",
   "title": "WIP: Arena minimal",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/arena_minimal/game_modes"]
   },
   "on_execute": {

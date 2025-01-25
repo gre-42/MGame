@@ -2,7 +2,7 @@
   "id": "jb_arena",
   "title": "JB arena",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/jb_arena/game_modes"]
   },
   "on_execute": {

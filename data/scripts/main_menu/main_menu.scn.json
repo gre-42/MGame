@@ -167,7 +167,7 @@
       {
         "playback": "parameter_setters",
         "arguments": {
-          "IF_DEVEL": "%IF_DEVEL"
+          "if_devel": "%if_devel"
         }
       },
       {
@@ -270,7 +270,7 @@
         "arguments": { "SELECTED_PLAYER_VEHICLE_COLOR": [1, 1, 0] }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -294,7 +294,7 @@
         }
       },
       {
-        "exclude": ["%IF_DEVEL"],
+        "exclude": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -391,7 +391,7 @@
         }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
@@ -418,7 +418,7 @@
       },
       {
         "call": "globals",
-        "exclude": ["%IF_DEVEL"],
+        "exclude": ["%if_devel"],
         "arguments": { "RACE_SESSION": "session1" }
       },
       {
@@ -447,7 +447,7 @@
         }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
@@ -473,11 +473,11 @@
       },
       {
         "call": "globals",
-        "exclude": ["%IF_DEVEL"],
+        "exclude": ["%if_devel"],
         "arguments": { "IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "exclude": ["%if_android"],
         "call": "parameter_setter",
         "arguments": {
@@ -506,7 +506,7 @@
         }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
@@ -533,11 +533,11 @@
       },
       {
         "call": "globals",
-        "exclude": ["%IF_DEVEL"],
+        "exclude": ["%if_devel"],
         "arguments": { "PLAYBACK_SPEED": 1 }
       },
       {
-        "required": ["%IF_DEVEL"],
+        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
@@ -560,7 +560,7 @@
       },
       {
         "call": "globals",
-        "exclude": ["%IF_DEVEL"],
+        "exclude": ["%if_devel"],
         "arguments": { "IF_TRIPOD_MODE": false }
       }
     ]

@@ -2,7 +2,7 @@
   "id": "skate0",
   "title": "Skate 0",
   "required": {
-    "fixed": ["%IF_DEVEL"],
+    "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/skate0/game_modes"]
   },
   "on_execute": {
