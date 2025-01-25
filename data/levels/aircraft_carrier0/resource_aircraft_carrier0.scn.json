@@ -7,18 +7,18 @@
         "name": "ofs_kestrel",
         "filename": "models/sketchfab.com/ofs-kestrel/obj/OFS Kestrel.obj",
         "config": {
-        "position": [0, 0, 0],
-        "rotation": [0, 0, 0],
-        "scale": [200, 200, 200],
-        "center_distances": [0, "inf"],
-        "blend_mode": "binary_05",
-        "alpha_distances": [0, 0, "inf", "inf"],
-        "cull_faces_alpha": false,
-        "occluded_pass": "none",
-        "occluder_pass": "lightmap_black_global_static",
-        "aggregate_mode": "none",
-        "transformation_mode": "all",
-        "triangle_tangent_error_behavior": "zero"
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": [200, 200, 200],
+          "center_distances": [0, "inf"],
+          "blend_mode": "binary_05",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": false,
+          "occluded_pass": "none",
+          "occluder_pass": "lightmap_black_global_static",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero"
         }
       }
     },
@@ -36,17 +36,17 @@
           "name": "ocean",
           "filename": "$__DIR__/ocean.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [100, 200, 100],
-          "center_distances": [0, "inf"],
-          "blend_mode": "binary_05",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "cull_faces_alpha": 0,
-          "occluded_pass": "lightmap_black_local_instances",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all"
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [100, 200, 100],
+            "center_distances": [0, "inf"],
+            "blend_mode": "binary_05",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": 0,
+            "occluded_pass": "lightmap_black_local_instances",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
           }
         }
       }
@@ -66,8 +66,11 @@
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces": true,
-        "rotation": [-90, 0, 0],
-        "translation": [-25e3, -30, 25e3],
+        "location": {
+          "position": [-25e3, -30, 25e3],
+          "rotation": [-90, 0, 0],
+          "scale": 1
+        },
         "scale": 1,
         "uv_scale": 50,
         "period": 0.02,

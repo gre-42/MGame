@@ -7,8 +7,8 @@
       "vip_name": "you",
       "player_role": "driver",
       "osm_location": {
-        "position": [0, -220, 0],
-        "rotation": [-90, 0, 0],
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
         "scale": 1
       }
     }
@@ -25,9 +25,6 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|team|car_hp",
       "osm_map_resource": "osm_resource_aircraft_carrier0",
-      "osm_position": [0, 0, 0],
-      "osm_rotation": [0, 0, 0],
-      "osm_scale": 1,
       "if_has_overlay": false,
       "if_dirtmap": false,
       "if_extract_alignment_planes": false,
