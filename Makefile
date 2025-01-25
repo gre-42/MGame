@@ -52,6 +52,7 @@ package:
 	if [ "$$OSTYPE" = "msys" ] ; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
+			Mlib/$(platform_dir)/Bin/download_heightmap.exe \
 			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
 			Mlib/$(platform_dir)/Bin/libMlibArray.dll \
 			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
@@ -102,6 +103,7 @@ package:
 			/usr/lib/x86_64-linux-gnu/libalut.so* \
 			/usr/lib/x86_64-linux-gnu/libglfw.so* \
 			/usr/lib/x86_64-linux-gnu/libopenal.so* \
+			Mlib/$(platform_dir)/Bin/download_heightmap \
 			Mlib/$(platform_dir)/Bin/render_scene_file \
 			Mlib/$(platform_dir)/Lib/ \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
