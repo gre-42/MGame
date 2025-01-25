@@ -32,6 +32,7 @@ jobs:
             libglfw3-dev \
             libopenal-dev \
             libalut-dev \
+            libssl-dev \
             g++-14
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -76,6 +77,7 @@ jobs:
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-openal \
             mingw-w64-x86_64-vulkan-devel \
+            mingw-w64-x86_64-openssl-devel \
             rsync
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
