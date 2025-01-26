@@ -91,7 +91,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%spawner_name",
-          "role": "%role"
+          "role": "driver"
         }
       }
     ]
@@ -126,7 +126,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%spawner_name",
-          "role": "%role"
+          "role": "driver"
         }
       }
     ]
