@@ -113,8 +113,8 @@ package:
 	fi
 
 test:
-	$(bin_dir)/download_heightmap --help > /dev/null || exit /b
-	$(bin_dir)/render_scene_file --help > /dev/null || exit /b
+	$(bin_dir)/download_heightmap --help > /dev/null
+	$(bin_dir)/render_scene_file --help > /dev/null
 
 run:
 	LD_LIBRARY_PATH=$(bin_dir) \
