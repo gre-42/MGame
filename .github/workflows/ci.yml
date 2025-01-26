@@ -40,7 +40,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build and package
+      - name: Build, package and test
         # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
         run: CC=gcc-14 CXX=g++-14 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
         # run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
@@ -85,7 +85,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Build and package
+      - name: Build, package and test
         # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
         run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
@@ -160,6 +160,7 @@ jobs:
       # https://github.com/actions/upload-artifact?tab=readme-ov-file#permission-loss
       - name: Create ZIP archive
         run: |
+          chmod +x MGame/osm_racing_game MGame/GURelease/download_heightmap
           chmod +x MGame/osm_racing_game MGame/GURelease/render_scene_file
           zip -r MGame.zip MGame
 

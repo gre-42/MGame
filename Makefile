@@ -1,4 +1,4 @@
-.PHONY: recastnavigation build package run run_dev
+.PHONY: recastnavigation build package test run run_dev
 
 CMAKE_BUILD_TYPE ?= Release
 BUILD_PREFIX ?= G
@@ -10,7 +10,7 @@ platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
 ostype != echo "$$OSTYPE";
 bin_dir = $(platform_dir)
 
-all: recastnavigation build package
+all: recastnavigation build package test
 
 recastnavigation:
 	make -C Mlib recastnavigation \
@@ -111,6 +111,10 @@ package:
 			Mlib/RecastBuild/Recast/libRecast.so* \
 			$(bin_dir)/; \
 	fi
+
+test:
+	$(bin_dir)/download_heightmap --help > /dev/null || exit /b
+	$(bin_dir)/render_scene_file --help > /dev/null || exit /b
 
 run:
 	LD_LIBRARY_PATH=$(bin_dir) \
