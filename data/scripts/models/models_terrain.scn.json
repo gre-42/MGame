@@ -5,22 +5,22 @@
       "name": "raceway_beacon",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 500, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.2, 500, 0.2],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "lightmap_black_global_static",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 500, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.2, 500, 0.2],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "fog_distances": "%fog_distances",
+        "fog_ambient": "%fog_ambient"
       }
     }
   }

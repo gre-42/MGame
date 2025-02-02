@@ -47,14 +47,17 @@
       "comment": "Recording"
     },
     {
-      "required": ["%if_record_track"],
-      "call": "record_track",
-      "arguments": { "node": "car_node", "filename": "/tmp/track.m" }
-    },
-    {
-      "required": ["%if_record_track"],
-      "call": "record_track_gpx",
-      "arguments": { "node": "car_node", "filename": "/tmp/track.gpx" }
+      "required": ["%record_track_basename != %null"],
+      "execute": [
+        {
+          "call": "record_track",
+          "arguments": { "node": "car_node", "filename": "$record_track_basename.m" }
+        },
+        {
+          "call": "record_track_gpx",
+          "arguments": { "node": "car_node", "filename": "$record_track_basename.gpx" }
+        }
+      ]
     },
     {
       "required": ["%if_playback_checkpoints"],
