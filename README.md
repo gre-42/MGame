@@ -49,3 +49,9 @@ For instructions how to add a custom stage, see the [CONTRIBUTING.md](CONTRIBUTI
 
 ### Team deathmatch 0
 ![Screenshot-TD0-2023-02-25](media/Screenshot-TD0-2023-02-25.png)
+
+## Acknowledgments  
+
+Special thanks to the [OpenStreetMap community](https://www.openstreetmap.org/) for
+providing high-quality mapping data. Join the OpenStreetMap community to contribute
+to the mapping data that powers MGame!
