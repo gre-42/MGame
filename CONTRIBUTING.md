@@ -11,8 +11,6 @@
         file](#the-terrain_contour_triangles_filename-file)
 -   [Adjusting osm
     files](#adjusting-osm-files)
-    -   [Add an additional node to
-        bridges](#add-an-additional-node-to-bridges)
     -   [Buildings intersecting
         roads](#buildings-intersecting-roads)
     -   [Roundabouts](#roundabouts)
