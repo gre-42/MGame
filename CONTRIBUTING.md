@@ -100,20 +100,6 @@ roads that can be inspected with [Blender](https://www.blender.org/).
 The following adjustments have to be made to .osm files for them to be
 compatible with MGame.
 
-### Add an additional node to bridges
-
-An additional node has to be added to bridges, before the point where
-the bridge touches the ground, **and the \"layer\" attribute of the new
-way segment that is at the crossing has to be removed**:
-
-Before:
-
-![Image](https://github.com/user-attachments/assets/e1b4934d-8d65-4757-8cb7-c144d6093313)
-
-After:
-
-![Image](https://github.com/user-attachments/assets/26425d91-f194-4f1c-9c2e-ef23dc0525a3)
-
 ### Buildings intersecting roads
 
 The roads either have to be made more narrow or moved somewhere else. To
@@ -165,11 +151,22 @@ After:
 
 ### Bridges and tunnels
 
-Bridges require at least 3 nodes: 2 nodes that are on the ground and 1
-node that is in the air. The same goes for tunnels (3 nodes makes two
-entrances and one point in the middle).
+Bridges and tunnels require at least 4 nodes: 2 nodes that are on the ground and 2
+nodes in the air or underground.
 
 ![Image](https://github.com/user-attachments/assets/8c83f440-7022-42be-96f0-1c0715e12134)
+
+Bridges and tunnels cannot start from from road intersections, and therefore require an
+additional node before the point where the bridge or tunnel begins.
+**The \"layer\" attribute of the new way segment that is at the crossing has to be removed**:
+
+Before:
+
+![Image](https://github.com/user-attachments/assets/e1b4934d-8d65-4757-8cb7-c144d6093313)
+
+After:
+
+![Image](https://github.com/user-attachments/assets/26425d91-f194-4f1c-9c2e-ef23dc0525a3)
 
 Also, bridges should have the fields \"bridge:yes, \"bridge_height:0\"
 and \"bridge_height_reference:ground\". Otherwise their height is
