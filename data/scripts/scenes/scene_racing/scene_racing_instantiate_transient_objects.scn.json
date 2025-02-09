@@ -194,7 +194,7 @@
         "deselection_emissivity": "%check_points_inactive_color",
         "on_finish": {
           "call": "set_focuses",
-          "arguments": {"focuses": ["menu", "game_over_countdown_pending"]}
+          "arguments": {"focuses": ["main_menu", "game_over_countdown_pending"]}
         },
         "focus_mask": "scene|countdown_any|game_over_countdown_any"
       }
