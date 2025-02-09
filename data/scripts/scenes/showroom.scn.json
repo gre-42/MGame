@@ -7,7 +7,7 @@
         "arguments": {
           "name": "showroom",
           "world": "common",
-          "focus_mask": "menu",
+          "focus_mask": "new_game_menu",
           "submenus": ["car_selector", "car_color_selector"],
           "fly": false,
           "rotate": false,

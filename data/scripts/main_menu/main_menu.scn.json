@@ -1,8 +1,5 @@
 [
   {
-    "include": "reload.scn.json"
-  },
-  {
     "declare_macro": "_reload_transient_objects_in_physics_thread",
     "content":  [
       {
@@ -57,40 +54,14 @@
           "bottom": "min",
           "top": "end",
           "delay_load_policy": "no_delay",
-          "focus_mask": "menu|loading"
-        }
-      },
-      {
-        "call": "tab_menu",
-        "arguments": {
-          "key": "ENTER",
-          "gamepad_button": "A",
-          "tap_button": "START",
-          "id": "submenus",
-          "selection_marker": "selection_marker",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "icon_left": "tabmenu_icon_left",
-          "icon_right": "tabmenu_icon_right",
-          "icon_bottom": "tabmenu_icon_bottom",
-          "icon_top": "tabmenu_icon_top",
-          "left": "tabmenu_left",
-          "right": "tabmenu_right",
-          "bottom": "tabmenu_bottom",
-          "top": "tabmenu_top",
-          "font_color": "%ui_font_color",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "deflt": 0,
-          "reload_transient_objects": {
-            "playback": "_reload_transient_objects_in_physics_thread"
-          },
-          "z_order": 2
+          "focus_mask": "menu_any|loading"
         }
       },
       {
         "call": "parameter_setter",
         "arguments": {
           "id": "game_mode_selector",
+          "focus_mask": "new_game_menu",
           "title": "Game mode",
           "icon": "game_mode_icon",
           "left": "submenu_left",
@@ -140,7 +111,7 @@
           "bottom": "scene_icon_bottom",
           "top": "scene_icon_top",
           "delay_load_policy": "delay",
-          "focus_mask": "menu|loading",
+          "focus_mask": "new_game_menu",
           "submenus": ["scene_selector"]
         }
       },
@@ -198,6 +169,12 @@
         }
       },
       {
+        "playback": "tab_menus",
+        "arguments": {
+          "if_devel": "%if_devel"
+        }
+      },
+      {
         "#comment": "Currently not used, countdown is used instead",
         "call": "focused_text",
         "arguments": {
@@ -243,7 +220,7 @@
       "arguments": {
         "texture_name": "scene",
         "size": [500, 300],
-        "focus_mask": "menu",
+        "focus_mask": "new_game_menu",
         "submenus": ["car_selector", "car_color_selector"]
       }
     },
@@ -256,14 +233,124 @@
         "right": "showroom_right",
         "bottom": "showroom_bottom",
         "top": "showroom_top",
-        "focus_mask": "menu",
+        "focus_mask": "new_game_menu",
         "submenus": ["car_selector", "car_color_selector"]
       }
     }
   },
   {
+    "declare_macro": "tab_menus",
+    "content": [
+      {
+        "call": "tab_menu",
+        "arguments": {
+          "id": "main_submenus",
+          "focus_mask": "main_menu",
+          "selection_marker": "selection_marker",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "icon_left": "tabmenu_icon_left",
+          "icon_right": "tabmenu_icon_right",
+          "icon_bottom": "tabmenu_icon_bottom",
+          "icon_top": "tabmenu_icon_top",
+          "left": "tabmenu_left",
+          "right": "tabmenu_right",
+          "bottom": "tabmenu_bottom",
+          "top": "tabmenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "z_order": 2
+        }
+      },
+      {
+        "call": "tab_menu",
+        "arguments": {
+          "id": "settings_submenus",
+          "focus_mask": "settings_menu",
+          "selection_marker": "selection_marker",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "icon_left": "tabmenu_icon_left",
+          "icon_right": "tabmenu_icon_right",
+          "icon_bottom": "tabmenu_icon_bottom",
+          "icon_top": "tabmenu_icon_top",
+          "left": "tabmenu_left",
+          "right": "tabmenu_right",
+          "bottom": "tabmenu_bottom",
+          "top": "tabmenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "z_order": 2
+        }
+      },
+      {
+        "call": "tab_menu",
+        "arguments": {
+          "id": "new_game_submenus",
+          "focus_mask": "new_game_menu",
+          "selection_marker": "selection_marker",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "icon_left": "tabmenu_icon_left",
+          "icon_right": "tabmenu_icon_right",
+          "icon_bottom": "tabmenu_icon_bottom",
+          "icon_top": "tabmenu_icon_top",
+          "left": "tabmenu_left",
+          "right": "tabmenu_right",
+          "bottom": "tabmenu_bottom",
+          "top": "tabmenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "on_execute": [
+            {
+              "required": ["%selected_level_id != %loaded_level_id"],
+              "execute": {
+                "call": "reload_scene"
+              }
+            },
+            {
+              "required": ["%selected_level_id == %loaded_level_id"],
+              "execute": {
+                "playback": "_reload_transient_objects_in_physics_thread"
+              }
+            }
+          ],
+          "z_order": 2
+        }
+      }
+    ]
+  },
+  {
     "declare_macro": "parameter_setters",
     "content": [
+      {
+        "call": "parameter_setter",
+        "arguments": {
+          "id": "main_menu",
+          "focus_mask": "main_menu",
+          "submenus": [],
+          "title": "Main menu",
+          "icon": "main_icon",
+          "required": [],
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"id": "new_game", "title": "New game", "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}},
+            {"id": "settings", "title": "Settings", "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}},
+            {"id": "exit", "title": "Exit", "on_execute": { "call": "exit" }}
+          ]
+        }
+      },
       {
         "#comment": "Some initial color so the code does not crash until the real color is defined",
         "call": "globals",
@@ -274,6 +361,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
+          "focus_mask": "new_game_menu",
           "title": "Time of day",
           "icon": "time_of_day_icon",
           "required": [],
@@ -287,9 +375,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
-            {"id": "", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
+            {"id": "day", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "night", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
+            {"id": "synthwave", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
           ]
         }
       },
@@ -298,6 +386,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
+          "focus_mask": "new_game_menu",
           "title": "Time of day",
           "icon": "time_of_day_icon",
           "required": [],
@@ -311,8 +400,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
+            {"id": "day", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "night", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
           ]
         }
       },
@@ -320,6 +409,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "restrictions_selector",
+          "focus_mask": "new_game_menu",
           "title": "Restrictions",
           "icon": "restrictions_icon",
           "required": ["%game_mode == 'rally'"],
@@ -333,8 +423,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Car", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
-            {"id": "", "title": "Car with trailer", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
+            {"id": "car", "title": "Car", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
+            {"id": "car_with_trailer", "title": "Car with trailer", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
           ]
         }
       },
@@ -342,6 +432,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "car_selector",
+          "focus_mask": "new_game_menu",
           "title": "Car",
           "icon": "car_icon",
           "left": "submenu_left",
@@ -364,6 +455,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "car_color_selector",
+          "focus_mask": "new_game_menu",
           "title": "Color",
           "icon": "color_icon",
           "required": ["%game_mode == 'rally'"],
@@ -381,12 +473,12 @@
             "context": "showroom"
           },
           "parameters": [
-            {"id": "", "title": "White", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
-            {"id": "", "title": "Gray",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
-            {"id": "", "title": "Red",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
-            {"id": "", "title": "Green", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
-            {"id": "", "title": "Blue",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
-            {"id": "", "title": "Black", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
+            {"id": "white", "title": "White", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
+            {"id": "gray", "title": "Gray",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
+            {"id": "red", "title": "Red",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
+            {"id": "green", "title": "Green", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
+            {"id": "blue", "title": "Blue",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
+            {"id": "black", "title": "Black", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
           ]
         }
       },
@@ -395,6 +487,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
+          "focus_mask": "new_game_menu",
           "title": "Session",
           "icon": "session_icon",
           "required": ["%game_mode == 'rally'"],
@@ -408,11 +501,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session1"}}},
-            {"id": "", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session2"}}},
-            {"id": "", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session3"}}},
-            {"id": "", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session4"}}},
-            {"id": "", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session5"}}}
+            {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session1"}}},
+            {"id": "'2'", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session2"}}},
+            {"id": "'3'", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session3"}}},
+            {"id": "'4'", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session4"}}},
+            {"id": "'5'", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session5"}}}
           ]
         }
       },
@@ -425,6 +518,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
+          "focus_mask": "new_game_menu",
           "title": "Laps",
           "icon": "laps_icon",
           "required": ["%game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
@@ -438,11 +532,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 1}}},
-            {"id": "", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 2}}},
-            {"id": "", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 4}}},
-            {"id": "", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 8}}},
-            {"id": "", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 16}}}
+            {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 1}}},
+            {"id": "'2'", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 2}}},
+            {"id": "'4'", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 4}}},
+            {"id": "'8'", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 8}}},
+            {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 16}}}
           ]
         }
       },
@@ -451,6 +545,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
+          "focus_mask": "new_game_menu",
           "title": "Playback ranks",
           "icon": "replay_icon",
           "required": ["%game_mode == 'rally'"],
@@ -464,10 +559,10 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "", "title": "No replay", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
-            {"id": "", "title": "Rank 1", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
-            {"id": "", "title": "Ranks 1-2", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": false}}},
-            {"id": "", "title": "Ranks 1-3", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": true}}}
+            {"id": "none", "title": "No replay", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": false, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "rank1", "title": "Rank 1", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": false, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "ranks1-2", "title": "Ranks 1-2", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": false}}},
+            {"id": "ranks1-3", "title": "Ranks 1-3", "on_before_select": { "call": "globals", "arguments": {"IF_PLAYBACK_WINNER_0": true, "IF_PLAYBACK_WINNER_1": true, "IF_PLAYBACK_WINNER_2": true}}}
           ]
         }
       },
@@ -482,6 +577,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "render_fps_selector",
+          "focus_mask": "settings_menu",
           "title": "Render FPS",
           "icon": "render_fps_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -500,8 +596,8 @@
             }
           },
           "parameters": [
-            {"id": "", "title": "'30'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 30}}},
-            {"id": "", "title": "'60'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 60}}}
+            {"id": "'30'", "title": "'30'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 30}}},
+            {"id": "'60'", "title": "'60'", "on_before_select": { "call": "globals", "arguments": {"RENDER_FPS": 60}}}
           ]
         }
       },
@@ -510,6 +606,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
+          "focus_mask": "new_game_menu",
           "title": "Playback speed",
           "icon": "missing_icon",
           "required": ["%game_mode == 'rally'"],
@@ -523,11 +620,11 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"id": "", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.8}}},
-            {"id": "", "title": "'90%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.9}}},
-            {"id": "", "title": "'100%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1}}},
-            {"id": "", "title": "'110%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.1}}},
-            {"id": "", "title": "'120%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.2}}}
+            {"id": "'80'", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.8}}},
+            {"id": "'90'", "title": "'90%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.9}}},
+            {"id": "'100'", "title": "'100%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1}}},
+            {"id": "'110'", "title": "'110%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.1}}},
+            {"id": "'120'", "title": "'120%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.2}}}
           ]
         }
       },
@@ -541,6 +638,7 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
+          "focus_mask": "new_game_menu",
           "title": "Tripod mode",
           "icon": "tripod_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -553,8 +651,8 @@
           "line_distance": "normal",
           "deflt": 1,
           "parameters": [
-            {"id": "", "title": "Enabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": true}}},
-            {"id": "", "title": "Disabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": false}}}
+            {"id": "enabled", "title": "Enabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": true}}},
+            {"id": "disabled", "title": "Disabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": false}}}
           ]
         }
       },
