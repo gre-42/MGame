@@ -86,7 +86,7 @@ Want MGame in your language? Help translate by contributing to the localization 
 Get creative! Get your own tracks using OpenStreetMap data. [Guide Coming Soon]
 
 ## License  
-MGame is open-source software licensed under the [MIT License](LICENSE).  
+MGame does not have a license yet.
 
 ## Acknowledgments  
 Special thanks to the [OpenStreetMap community](https://www.openstreetmap.org/) for providing high-quality mapping data. Join the OpenStreetMap community to contribute to the mapping data that powers MGame!
