@@ -1,0 +1,15 @@
+[
+  {
+    "call": "load_key_configurations",
+    "arguments": {
+      "filename": "$__APPDATA__/key_configurations.json",
+      "fallback_filename": "$__DIR__/key_configurations.json"
+    }
+  },
+  {
+    "call": "load_key_descriptions",
+    "arguments": {
+      "filename": "$__DIR__/key_descriptions.json"
+    }
+  }
+]

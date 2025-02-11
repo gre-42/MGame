@@ -247,6 +247,7 @@
           "id": "main_submenus",
           "focus_mask": "main_menu",
           "selection_marker": "selection_marker",
+          "style": "icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -269,6 +270,30 @@
           "id": "settings_submenus",
           "focus_mask": "settings_menu",
           "selection_marker": "selection_marker",
+          "style": "icon",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "icon_left": "tabmenu_icon_left",
+          "icon_right": "tabmenu_icon_right",
+          "icon_bottom": "tabmenu_icon_bottom",
+          "icon_top": "tabmenu_icon_top",
+          "left": "tabmenu_left",
+          "right": "tabmenu_right",
+          "bottom": "tabmenu_bottom",
+          "top": "tabmenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "z_order": 2
+        }
+      },
+      {
+        "call": "tab_menu",
+        "arguments": {
+          "id": "controls_submenus",
+          "focus_mask": "controls_menu",
+          "selection_marker": "selection_marker",
+          "style": "text",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -291,6 +316,7 @@
           "id": "new_game_submenus",
           "focus_mask": "new_game_menu",
           "selection_marker": "selection_marker",
+          "style": "icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -346,7 +372,7 @@
           "deflt": 0,
           "parameters": [
             {"id": "new_game", "title": "New game", "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}},
-            {"id": "settings", "title": "Settings", "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}},
+            {"id": "controls", "title": "Controls", "on_execute": { "call": "append_focuses", "arguments": {"content": ["controls_menu"]}}},
             {"id": "exit", "title": "Exit", "on_execute": { "call": "exit" }}
           ]
         }
@@ -660,6 +686,60 @@
         "call": "globals",
         "exclude": ["%if_devel"],
         "arguments": { "IF_TRIPOD_MODE": false }
+      },
+      {
+        "call": "key_bindings",
+        "arguments": {
+          "id": "key_bindings_debug",
+          "focus_mask": "controls_menu",
+          "section": "debug",
+          "title": "Debug",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0
+        }
+      },
+      {
+        "call": "key_bindings",
+        "arguments": {
+          "id": "key_bindings_avatar",
+          "focus_mask": "controls_menu",
+          "section": "avatar",
+          "title": "Avatar",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0
+        }
+      },
+      {
+        "call": "key_bindings",
+        "arguments": {
+          "id": "key_bindings_car_heli",
+          "focus_mask": "controls_menu",
+          "section": "car_or_heli",
+          "title": "Car or heli",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0
+        }
       }
     ]
   }
