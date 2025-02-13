@@ -677,15 +677,40 @@
           "line_distance": "normal",
           "deflt": 1,
           "parameters": [
-            {"id": "enabled", "title": "Enabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": true}}},
-            {"id": "disabled", "title": "Disabled", "on_before_select": { "call": "globals", "arguments": {"IF_TRIPOD_MODE": false}}}
+            {"id": "enabled", "title": "Enabled", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": true}}},
+            {"id": "disabled", "title": "Disabled", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": false}}}
           ]
         }
       },
       {
         "call": "globals",
         "exclude": ["%if_devel"],
-        "arguments": { "IF_TRIPOD_MODE": false }
+        "arguments": { "if_tripod_mode": false }
+      },
+      {
+        "call": "parameter_setter",
+        "arguments": {
+          "id": "input_type",
+          "focus_mask": "controls_menu",
+          "title": "Input type",
+          "icon": null,
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "parameters": [
+            {"id": "keyboard", "title": "Keyboard", "on_before_select": { "call": "globals", "arguments": {"input_type": "keyboard"}}},
+            {"id": "mouse", "title": "Mouse", "on_before_select": { "call": "globals", "arguments": {"input_type": "mouse"}}},
+            {"id": "tap_button", "title": "Tap button", "on_before_select": { "call": "globals", "arguments": {"input_type": "tap_button"}}},
+            {"id": "joystick", "title": "Joystick/gamepad", "on_before_select": { "call": "globals", "arguments": {"input_type": "joystick"}}},
+            {"id": "all", "title": "All", "on_before_select": { "call": "globals", "arguments": {"input_type": "all"}}}
+          ]
+        }
       },
       {
         "call": "key_bindings",

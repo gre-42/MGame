@@ -50,11 +50,11 @@
     "content": []
   },
   {
-    "required": ["%PLAYERS_JSON_BASENAME != %null"],
+    "required": ["%players_json_basename != %null"],
     "playback": "setup_teams",
     "context": "primary_scene",
     "arguments": {
-      "PLAYERS_JSON": "$__DIR__/$PLAYERS_JSON_BASENAME",
+      "PLAYERS_JSON": "$__DIR__/$players_json_basename",
       "teams_spawn_points_resource": "osm_map",
       "teams_way_points_resource": "osm_map",
       "OBJECTIVE": "kill_count"

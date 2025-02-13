@@ -50,7 +50,7 @@
     "content": {
       "playback": "scene_racing_instantiate_transient_objects",
       "let": {
-        "if_create_pc_car": "!IF_TRIPOD_MODE",
+        "if_create_pc_car": "!if_tripod_mode",
         "if_pc_player_playback": false,
         "car_node_position": [
           "'-1.224895021433151783e+02_deg'",
@@ -67,8 +67,8 @@
         "if_playback_track_1": false,
         "if_playback_track_2": false,
         "if_playback_track_3": false,
-        "if_checkpoints": "!IF_TRIPOD_MODE",
-        "if_burn_in": "!IF_TRIPOD_MODE"
+        "if_checkpoints": "!if_tripod_mode",
+        "if_burn_in": "!if_tripod_mode"
       }
     }
   },
