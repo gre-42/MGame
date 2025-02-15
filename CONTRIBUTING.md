@@ -1,7 +1,6 @@
 # Contributing
 
--   [Adding a new
-    stage](#adding-a-new-stage)
+-   [Adding a new stage](#adding-a-new-stage)
 -   [Stage editor](#stage-editor)
 -   [Caching](#caching)
 -   [Debugging](#debugging)
@@ -19,6 +18,12 @@
         tunnels](#bridges-and-tunnels)
     -   [Add waypoints (including start/finish) to a race
         track](#add-waypoints-including-startfinish-to-a-race-track)
+-   [Enhanced 3D rendering](#enhanced-3d-rendering)
+    -   [Custom 3D elements in .obj
+        format](#custom-3d-elements-in-obj-format)
+    - [Building colors](#building-colors)
+    - [Roofs with angles](#roofs-with-angles)
+    - [Terrain regions](#terrain-regions)
 
 ## Adding a new stage
 
@@ -238,3 +243,41 @@ MGame/Mlib/racing_line/recording_to_mgame.py \
 9.  Start MGame, which should now have a racing line.
 
 ![Image](https://github.com/user-attachments/assets/5e0ac608-1523-49f5-8050-e9dc56c36aaa)
+
+## Enhanced 3D rendering
+
+### Custom 3D elements in obj format
+
+Custom 3D objects can be displayed by assigning the attribute `model:name` and optionally the `yangle:degrees` attributes to a node.
+
+![Image](https://github.com/user-attachments/assets/fba2eb52-4007-4ea5-99cd-dd11a1c8d2cc)
+
+Instead of the `yangle:degrees` attribute, way segments to neighboring nodes can be used to define the rotation.
+
+### Building colors
+
+The `building:color` (not `building:colour`) attribute is supported.
+
+### Roofs with angles
+
+One kind of roof with angles is supported:
+
+![Image](https://github.com/user-attachments/assets/85d20131-5102-448e-95cb-bc75ea925cd1)
+
+### Terrain regions
+
+The attributes `terrain_region:trees` and `terrain_region:flowers` can be used to display vegetation in some regions.
+
+![Image](https://github.com/user-attachments/assets/ff07edcb-6646-4a1f-8908-4b49bf10dd2a)
+
+The terrain-style inside the regions can then be set using the `terrain_flowers_textures` and `terrain_trees_textures` attributes in the JSON-file. 
+
+![Image](https://github.com/user-attachments/assets/bc39288d-4f88-4648-8720-0c1cd57099dd)
+
+The trees and flowers to be shown are specified using the `far_flowers_resource_names` and `far_trees_resource_names` attributes.
+
+![Image](https://github.com/user-attachments/assets/91cda7ef-a4d0-4ef8-9014-270df60678ea)
+
+The `much_far_flowers_distance` and `much_far_trees_distance` attributes define the vegetation density.
+
+![Image](https://github.com/user-attachments/assets/20830061-363e-439c-a35d-24ca6fce79f3)
