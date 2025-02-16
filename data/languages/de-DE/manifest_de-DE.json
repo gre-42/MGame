@@ -1,0 +1,17 @@
+{
+  "id": "de-DE",
+  "title": "Deutsch, Deutschland",
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_language": "de-DE"
+    }
+  },
+  "database": {
+    "Language": "Sprache",
+    "Input type": "Eingabegerät",
+    "Debug": "Entwicklung",
+    "Avatar": "Avatar",
+    "Car or heli": "Auto oder Heli"
+  }
+}

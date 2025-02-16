@@ -154,18 +154,20 @@
         ]
       },
       {
-        "exclude": ["%if_android"],
-        "call": "controls",
-        "arguments": {
-          "id": "controls",
-          "title": "Controls",
-          "icon": "controls_icon",
-          "left": "submenu_left",
-          "right": "controls_right",
-          "bottom": "controls_bottom",
-          "top": "submenu_top",
-          "delay_load_policy": "no_delay",
-          "gamepad_texture": "textures/ui/menu/gamepad.png"
+        "comment": {
+          "exclude": ["%if_android"],
+          "call": "controls",
+          "arguments": {
+            "id": "controls",
+            "title": "Controls",
+            "icon": "controls_icon",
+            "left": "submenu_left",
+            "right": "controls_right",
+            "bottom": "controls_bottom",
+            "top": "submenu_top",
+            "delay_load_policy": "no_delay",
+            "gamepad_texture": "textures/ui/menu/gamepad.png"
+          }
         }
       },
       {
@@ -334,7 +336,10 @@
             {
               "required": ["%selected_level_id != %loaded_level_id"],
               "execute": {
-                "call": "reload_scene"
+                "call": "reload_scene",
+                "arguments": {
+                  "change_scene": true
+                }
               }
             },
             {
@@ -355,6 +360,63 @@
       {
         "call": "parameter_setter",
         "arguments": {
+          "id": "language",
+          "focus_mask": "settings_menu",
+          "title": "%%languages/$loaded_language/Language",
+          "icon": "main_icon",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "persistent": "language",
+          "assets": "languages",
+          "on_change": [
+            {
+              "required": ["%selected_language != %loaded_language"],
+              "execute": {
+                "call": "set_requires_reload",
+                "arguments": {
+                  "id": "language",
+                  "reason": "Language changed"
+                }
+              }
+            },
+            {
+              "required": ["%selected_language == %loaded_language"],
+              "execute": {
+                "call": "clear_requires_reload",
+                "arguments": {
+                  "id": "language"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "call": "reload_required",
+        "arguments": {
+          "title": "Reload required to apply the following changes:",
+          "focus_mask": "main_menu",
+          "left": "showroom_left",
+          "right": "showroom_right",
+          "bottom": "showroom_bottom",
+          "top": "showroom_top",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "z_order": 2
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "arguments": {
           "id": "main_menu",
           "focus_mask": "main_menu",
           "submenus": [],
@@ -372,7 +434,8 @@
           "deflt": 0,
           "parameters": [
             {"id": "new_game", "title": "New game", "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}},
-            {"id": "controls", "title": "Controls", "on_execute": { "call": "append_focuses", "arguments": {"content": ["controls_menu"]}}},
+            {"id": "settings", "title": "Settings", "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}},
+            {"id": "reload", "title": "Reload", "on_execute": { "call": "reload_scene", "arguments": {"change_scene": false}}},
             {"id": "exit", "title": "Exit", "on_execute": { "call": "exit" }}
           ]
         }
@@ -691,9 +754,9 @@
         "call": "parameter_setter",
         "arguments": {
           "id": "input_type",
-          "focus_mask": "controls_menu",
+          "focus_mask": "settings_menu",
           "title": "Input type",
-          "icon": null,
+          "icon": "controls_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -703,6 +766,12 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
+          "on_execute": {
+            "call": "append_focuses",
+            "arguments": {
+              "content": ["controls_menu"]
+            }
+          },
           "parameters": [
             {"id": "keyboard", "title": "Keyboard", "on_before_select": { "call": "globals", "arguments": {"input_type": "keyboard"}}},
             {"id": "mouse", "title": "Mouse", "on_before_select": { "call": "globals", "arguments": {"input_type": "mouse"}}},
