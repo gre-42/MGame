@@ -254,6 +254,41 @@ Custom 3D objects can be displayed by assigning the attribute `model:name` and o
 
 Instead of the `yangle:degrees` attribute, way segments to neighboring nodes can be used to define the rotation.
 
+To add new element in the game, the `models_urban.scn.json` file must be updated with the description of the object :
+```
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "roadReflectorPost01_LP",
+      "filename": "models/roadReflectorPost01_LP/roadReflectorPost01_LP.obj",
+      "config": {
+      "position": [0, 0.8, 0],
+      "rotation":[270, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position_yangle",
+      "triangle_tangent_error_behavior": "zero",
+      "emissive_factor": "%vanilla_rally_emissive_factor",
+      "ambient_factor": "%vanilla_rally_ambient_factor",
+      "diffuse_factor": "%vanilla_rally_diffuse_factor",
+      "specular_factor": "%vanilla_rally_specular_factor",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient",
+      "fresnel_min": 0,
+      "fresnel_max": 0.4,
+      "fresnel_exponent": 4,
+      "fresnel_ambient": [1, 1, 1]
+      }
+    }
+  },
+```
+
 ### Building colors
 
 The `building:color` (not `building:colour`) attribute is supported.
