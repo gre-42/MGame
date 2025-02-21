@@ -358,9 +358,17 @@
     "declare_macro": "parameter_setters",
     "content": [
       {
+        "call": "add_charset",
+        "arguments": {
+          "name": "language",
+          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZç<>,()[]{}'"
+        }
+      },
+      {
         "call": "parameter_setter",
         "arguments": {
           "id": "language",
+          "charset": "language",
           "focus_mask": "settings_menu",
           "title": "%%languages/$loaded_language/Language",
           "icon": "main_icon",
