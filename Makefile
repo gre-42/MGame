@@ -2,7 +2,7 @@
 
 CMAKE_BUILD_TYPE ?= Release
 BUILD_PREFIX ?= G
-platform_dir != if [ "$$OSTYPE" = "msys" ] ; then \
+platform_dir != if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
         echo $(BUILD_PREFIX)M$(CMAKE_BUILD_TYPE); \
     else \
         echo $(BUILD_PREFIX)U$(CMAKE_BUILD_TYPE); \
