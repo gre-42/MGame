@@ -14,7 +14,8 @@
           "loaded_language": "language"
         }
       },
-      { "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} }
+      { "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} },
+      { "call": "load_replacement_parameters", "arguments": {"id": "translations", "directory": "translations"} }
     ]
   },
   {

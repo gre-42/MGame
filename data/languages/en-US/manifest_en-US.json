@@ -7,11 +7,13 @@
       "selected_language": "en-US"
     }
   },
-  "database": {
-    "Language": "Language",
-    "Input type": "Input type",
-    "Debug": "Debug",
-    "Avatar": "Avatar",
-    "Car or heli": "Car or heli"
-  }
+  "on_init": [
+    {
+      "call": "add_charset",
+      "arguments": {
+        "name": "en-US",
+        "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>,;:()[]{}\"'"
+      }
+    }
+  ]
 }

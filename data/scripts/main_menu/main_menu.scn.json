@@ -250,6 +250,7 @@
           "focus_mask": "main_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -273,6 +274,7 @@
           "focus_mask": "settings_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -296,6 +298,7 @@
           "focus_mask": "controls_menu",
           "selection_marker": "selection_marker",
           "style": "text",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -319,6 +322,7 @@
           "focus_mask": "new_game_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "icon_left": "tabmenu_icon_left",
           "icon_right": "tabmenu_icon_right",
@@ -361,7 +365,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZç<>,()[]{}'"
+          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>,;:()[]{}\"ç'"
         }
       },
       {
@@ -370,7 +374,7 @@
           "id": "language",
           "charset": "language",
           "focus_mask": "settings_menu",
-          "title": "%%languages/$loaded_language/Language",
+          "title": "%%translations/main/Language/$loaded_language",
           "icon": "main_icon",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -435,16 +439,33 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "new_game", "title": "New game", "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}},
-            {"id": "settings", "title": "Settings", "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}},
-            {"id": "reload", "title": "Reload", "on_execute": { "call": "reload_scene", "arguments": {"change_scene": false}}},
-            {"id": "exit", "title": "Exit", "on_execute": { "call": "exit" }}
+            {
+              "id": "new_game",
+              "title": "%%translations/main/New_game/$loaded_language",
+              "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}
+            },
+            {
+              "id": "settings",
+              "title": "%%translations/main/Settings/$loaded_language",
+              "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}
+            },
+            {
+              "id": "reload",
+              "title": "%%translations/main/Reload/$loaded_language",
+              "on_execute": { "call": "reload_scene", "arguments": {"change_scene": false}}
+            },
+            {
+              "id": "exit",
+              "title": "%%translations/main/Exit/$loaded_language",
+              "on_execute": { "call": "exit" }
+            }
           ]
         }
       },
@@ -795,7 +816,8 @@
           "id": "key_bindings_debug",
           "focus_mask": "controls_menu",
           "section": "debug",
-          "title": "Debug",
+          "title": "%%translations/main/Debug/$loaded_language",
+          "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",
@@ -813,7 +835,7 @@
           "id": "key_bindings_avatar",
           "focus_mask": "controls_menu",
           "section": "avatar",
-          "title": "Avatar",
+          "title": "%%translations/main/Avatar/$loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",
@@ -831,7 +853,7 @@
           "id": "key_bindings_car_heli",
           "focus_mask": "controls_menu",
           "section": "car_or_heli",
-          "title": "Car or heli",
+          "title": "%%translations/main/Car_or_heli/$loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",

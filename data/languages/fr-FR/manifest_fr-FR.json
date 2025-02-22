@@ -7,11 +7,13 @@
       "selected_language": "fr-FR"
     }
   },
-  "database": {
-    "Language": "Langue",
-    "Input type": "Unité de saisie",
-    "Debug": "Développement",
-    "Avatar": "Avatar",
-    "Car or heli": "Voiture ou Heli"
-  }
+  "on_init": [
+    {
+      "call": "add_charset",
+      "arguments": {
+        "name": "fr-FR",
+        "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>,;:()[]{}\"çéè'"
+      }
+    }
+  ]
 }
