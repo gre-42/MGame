@@ -252,14 +252,18 @@
           "style": "icon",
           "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "icon_left": "tabmenu_icon_left",
-          "icon_right": "tabmenu_icon_right",
-          "icon_bottom": "tabmenu_icon_bottom",
-          "icon_top": "tabmenu_icon_top",
-          "left": "tabmenu_left",
-          "right": "tabmenu_right",
-          "bottom": "tabmenu_bottom",
-          "top": "tabmenu_top",
+          "reference_widget": {
+            "left": "tabmenu_reference_left",
+            "right": "tabmenu_reference_right",
+            "bottom": "tabmenu_reference_bottom",
+            "top": "tabmenu_reference_top"
+          },
+          "widget": {
+            "left": "tabmenu_left",
+            "right": "tabmenu_right",
+            "bottom": "tabmenu_bottom",
+            "top": "tabmenu_top"
+          },
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
@@ -276,14 +280,30 @@
           "style": "icon",
           "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "icon_left": "tabmenu_icon_left",
-          "icon_right": "tabmenu_icon_right",
-          "icon_bottom": "tabmenu_icon_bottom",
-          "icon_top": "tabmenu_icon_top",
-          "left": "tabmenu_left",
-          "right": "tabmenu_right",
-          "bottom": "tabmenu_bottom",
-          "top": "tabmenu_top",
+          "reference_widget": {
+            "left": "tabmenu_reference_left",
+            "right": "tabmenu_reference_right",
+            "bottom": "tabmenu_reference_bottom",
+            "top": "tabmenu_reference_top"
+          },
+          "icon_widget": {
+            "left": "tabmenu_icon_left",
+            "right": "tabmenu_icon_right",
+            "bottom": "tabmenu_icon_bottom",
+            "top": "tabmenu_icon_top"
+          },
+          "title_widget": {
+            "left": "tabmenu_title_left",
+            "right": "tabmenu_title_right",
+            "bottom": "tabmenu_title_bottom",
+            "top": "tabmenu_title_top"
+          },
+          "widget": {
+            "left": "tabmenu_left",
+            "right": "tabmenu_right",
+            "bottom": "tabmenu_bottom",
+            "top": "tabmenu_top"
+          },
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
@@ -300,14 +320,18 @@
           "style": "text",
           "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "icon_left": "tabmenu_icon_left",
-          "icon_right": "tabmenu_icon_right",
-          "icon_bottom": "tabmenu_icon_bottom",
-          "icon_top": "tabmenu_icon_top",
-          "left": "tabmenu_left",
-          "right": "tabmenu_right",
-          "bottom": "tabmenu_bottom",
-          "top": "tabmenu_top",
+          "reference_widget": {
+            "left": "tabmenu_reference_left",
+            "right": "tabmenu_reference_right",
+            "bottom": "tabmenu_reference_bottom",
+            "top": "tabmenu_reference_top"
+          },
+          "widget": {
+            "left": "tabmenu_left",
+            "right": "tabmenu_right",
+            "bottom": "tabmenu_bottom",
+            "top": "tabmenu_top"
+          },
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
@@ -324,14 +348,18 @@
           "style": "icon",
           "charset": "%loaded_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "icon_left": "tabmenu_icon_left",
-          "icon_right": "tabmenu_icon_right",
-          "icon_bottom": "tabmenu_icon_bottom",
-          "icon_top": "tabmenu_icon_top",
-          "left": "tabmenu_left",
-          "right": "tabmenu_right",
-          "bottom": "tabmenu_bottom",
-          "top": "tabmenu_top",
+          "reference_widget": {
+            "left": "tabmenu_reference_left",
+            "right": "tabmenu_reference_right",
+            "bottom": "tabmenu_reference_bottom",
+            "top": "tabmenu_reference_top"
+          },
+          "widget": {
+            "left": "tabmenu_left",
+            "right": "tabmenu_right",
+            "bottom": "tabmenu_bottom",
+            "top": "tabmenu_top"
+          },
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
