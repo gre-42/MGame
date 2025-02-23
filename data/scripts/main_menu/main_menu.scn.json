@@ -62,7 +62,7 @@
         "arguments": {
           "id": "game_mode_selector",
           "focus_mask": "new_game_menu",
-          "title": "Game mode",
+          "title": "%%translations/main/Game_mode/$selected_language",
           "icon": "game_mode_icon",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -119,7 +119,7 @@
         "call": "scene_selector",
         "arguments": {
           "id": "scene_selector",
-          "title": "Scene",
+          "title": "%%translations/main/Scene/$selected_language",
           "icon": "scene_selector_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -533,7 +533,7 @@
         "arguments": {
           "id": "time_of_day_selector",
           "focus_mask": "new_game_menu",
-          "title": "Time of day",
+          "title": "%%translations/main/Time_of_day/$selected_language",
           "icon": "time_of_day_icon",
           "required": [],
           "left": "submenu_left",
@@ -581,7 +581,7 @@
         "arguments": {
           "id": "restrictions_selector",
           "focus_mask": "new_game_menu",
-          "title": "Restrictions",
+          "title": "%%translations/main/Restrictions/$selected_language",
           "icon": "restrictions_icon",
           "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
@@ -604,7 +604,7 @@
         "arguments": {
           "id": "car_selector",
           "focus_mask": "new_game_menu",
-          "title": "Car",
+          "title": "%%translations/main/Car/$selected_language",
           "icon": "car_icon",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -627,7 +627,7 @@
         "arguments": {
           "id": "car_color_selector",
           "focus_mask": "new_game_menu",
-          "title": "Color",
+          "title": "%%translations/main/Color/$selected_language",
           "icon": "color_icon",
           "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
@@ -659,7 +659,7 @@
         "arguments": {
           "id": "session_selector",
           "focus_mask": "new_game_menu",
-          "title": "Session",
+          "title": "%%translations/main/Session/$selected_language",
           "icon": "session_icon",
           "required": ["%game_mode == 'rally'"],
           "left": "submenu_left",
@@ -690,7 +690,7 @@
         "arguments": {
           "id": "laps_selector",
           "focus_mask": "new_game_menu",
-          "title": "Laps",
+          "title": "%%translations/main/Laps/$selected_language",
           "icon": "laps_icon",
           "required": ["%game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -717,7 +717,7 @@
         "arguments": {
           "id": "playback_ranks_selector",
           "focus_mask": "new_game_menu",
-          "title": "Playback ranks",
+          "title": "%%translations/main/Playback_ranks/$selected_language",
           "icon": "replay_icon",
           "required": ["%game_mode == 'rally'"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -778,7 +778,7 @@
         "arguments": {
           "id": "playback_speed_selector",
           "focus_mask": "new_game_menu",
-          "title": "Playback speed",
+          "title": "%%translations/main/Playback_speed/$selected_language",
           "icon": "missing_icon",
           "required": ["%game_mode == 'rally'"],
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -810,7 +810,7 @@
         "arguments": {
           "id": "tripod_mode",
           "focus_mask": "new_game_menu",
-          "title": "Tripod mode",
+          "title": "%%translations/main/Spectator_mode/$selected_language",
           "icon": "tripod_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
