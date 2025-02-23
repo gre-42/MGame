@@ -49,7 +49,7 @@ build_tsan_clang:
 package:
 	@echo "OS Type: $(ostype)"
 	@echo "Platform dir: $(platform_dir)"
-	if [ "$$OSTYPE" = "msys" ] ; then \
+	if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(platform_dir)/Bin/download_heightmap.exe \
