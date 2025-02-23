@@ -1,6 +1,6 @@
 {
   "id": "desert1",
-  "title": "Desert 1",
+  "title": "%%levels/desert1/title/$selected_language",
   "required": {
     "fixed": [],
     "dynamic": ["%game_mode in %%levels/desert1/game_modes"]
@@ -18,6 +18,11 @@
   },
   "database": {
     "if_raceway_circular": false,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "title": {
+      "de-DE": "Wüste 1",
+      "en-US": "Desert 1",
+      "fr-FR": "Désert 1"
+    }
   }
 }

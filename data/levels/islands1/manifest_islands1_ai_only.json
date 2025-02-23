@@ -1,6 +1,6 @@
 {
   "id": "islands1_ai_only",
-  "title": "Islands 1 (AI only)",
+  "title": "%%levels/islands1_ai_only/title/$selected_language",
   "required": {
     "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/islands1_ai_only/game_modes"]
@@ -19,6 +19,11 @@
   },
   "database": {
     "if_raceway_circular": false,
-    "game_modes": ["team_deathmatch"]
+    "game_modes": ["team_deathmatch"],
+    "title": {
+      "de-DE": "Inseln 1 (nur KI)",
+      "en-US": "Islands 1 (AI only)",
+      "fr-FR": "Îles 1 (Seulement l'IA)"
+    }
   }
 }

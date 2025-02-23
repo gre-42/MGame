@@ -1,6 +1,6 @@
 {
   "id": "retro_race_track1",
-  "title": "Retro race track 1",
+  "title": "%%levels/retro_race_track1/title/$selected_language",
   "required": {
     "fixed": [],
     "dynamic": ["%game_mode in %%levels/retro_race_track1/game_modes"]
@@ -18,6 +18,11 @@
   },
   "database": {
     "if_raceway_circular": true,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "title": {
+      "de-DE": "Retro Rennstrecke 1",
+      "en-US": "Retro race track 1",
+      "fr-FR": "Piste de course rétro 1"
+    }
   }
 }

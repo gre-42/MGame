@@ -1,6 +1,6 @@
 {
   "id": "islands1",
-  "title": "Islands 1",
+  "title": "%%levels/islands1/title/$selected_language",
   "required": {
     "fixed": ["%if_devel"],
     "dynamic": ["%game_mode in %%levels/islands1/game_modes"]
@@ -19,6 +19,11 @@
   },
   "database": {
     "if_raceway_circular": false,
-    "game_modes": ["team_deathmatch"]
+    "game_modes": ["team_deathmatch"],
+    "title": {
+      "de-DE": "Inseln 1",
+      "en-US": "Islands 1",
+      "fr-FR": "Îles 1"
+    }
   }
 }

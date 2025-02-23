@@ -1,6 +1,6 @@
 {
   "id": "race_track1",
-  "title": "Race track 1",
+  "title": "%%levels/race_track1/title/$selected_language",
   "required": {
     "fixed": [],
     "dynamic": ["%game_mode in %%levels/race_track1/game_modes"]
@@ -18,6 +18,11 @@
   },
   "database": {
     "if_raceway_circular": true,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "title": {
+      "de-DE": "Rennstrecke 1",
+      "en-US": "Race track 1",
+      "fr-FR": "Piste de course 1"
+    }
   }
 }

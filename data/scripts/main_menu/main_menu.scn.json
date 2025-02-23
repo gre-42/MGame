@@ -121,6 +121,7 @@
           "id": "scene_selector",
           "title": "%%translations/main/Scene/$selected_language",
           "icon": "scene_selector_icon",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -405,7 +406,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%\"ç'"
+          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%'\"ç'"
         }
       },
       {
@@ -558,7 +559,7 @@
         "arguments": {
           "id": "time_of_day_selector",
           "focus_mask": "new_game_menu",
-          "title": "Time of day",
+          "title": "%%translations/main/Time_of_day/$selected_language",
           "icon": "time_of_day_icon",
           "required": [],
           "left": "submenu_left",
@@ -864,6 +865,7 @@
         }
       },
       {
+        "required": ["%if_devel"],
         "call": "key_bindings",
         "arguments": {
           "id": "key_bindings_debug",

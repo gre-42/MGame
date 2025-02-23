@@ -1,6 +1,6 @@
 {
   "id": "island0",
-  "title": "Island 0",
+  "title": "%%levels/island0/title/$selected_language",
   "required": {
     "fixed": [],
     "dynamic": ["%game_mode in %%levels/island0/game_modes"]
@@ -18,6 +18,11 @@
   },
   "database": {
     "if_raceway_circular": true,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "title": {
+      "de-DE": "Insel 0",
+      "en-US": "Island 0",
+      "fr-FR": "Île 0"
+    }
   }
 }
