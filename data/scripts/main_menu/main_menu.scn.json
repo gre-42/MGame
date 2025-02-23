@@ -250,7 +250,7 @@
           "focus_mask": "main_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
-          "charset": "%loaded_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "reference_widget": {
             "left": "tabmenu_reference_left",
@@ -278,7 +278,7 @@
           "focus_mask": "settings_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
-          "charset": "%loaded_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "reference_widget": {
             "left": "tabmenu_reference_left",
@@ -318,7 +318,7 @@
           "focus_mask": "controls_menu",
           "selection_marker": "selection_marker",
           "style": "text",
-          "charset": "%loaded_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "reference_widget": {
             "left": "tabmenu_reference_left",
@@ -346,13 +346,25 @@
           "focus_mask": "new_game_menu",
           "selection_marker": "selection_marker",
           "style": "icon",
-          "charset": "%loaded_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "reference_widget": {
             "left": "tabmenu_reference_left",
             "right": "tabmenu_reference_right",
             "bottom": "tabmenu_reference_bottom",
             "top": "tabmenu_reference_top"
+          },
+          "icon_widget": {
+            "left": "tabmenu_icon_left",
+            "right": "tabmenu_icon_right",
+            "bottom": "tabmenu_icon_bottom",
+            "top": "tabmenu_icon_top"
+          },
+          "title_widget": {
+            "left": "tabmenu_title_left",
+            "right": "tabmenu_title_right",
+            "bottom": "tabmenu_title_bottom",
+            "top": "tabmenu_title_top"
           },
           "widget": {
             "left": "tabmenu_left",
@@ -393,7 +405,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<>,;:()[]{}\"ç'"
+          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%\"ç'"
         }
       },
       {
@@ -402,8 +414,8 @@
           "id": "language",
           "charset": "language",
           "focus_mask": "settings_menu",
-          "title": "%%translations/main/Language/$loaded_language",
-          "icon": "main_icon",
+          "title": "%%translations/main/Language/$selected_language",
+          "icon": "language_icon",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -415,14 +427,15 @@
           "deflt": 0,
           "persistent": "language",
           "assets": "languages",
-          "on_change": [
+          "# on_change": [
             {
               "required": ["%selected_language != %loaded_language"],
               "execute": {
                 "call": "set_requires_reload",
                 "arguments": {
                   "id": "language",
-                  "reason": "Language changed"
+                  "reason": "'%%translations/main/Language_changed/$selected_language'",
+                  "indicator": "reload_required"
                 }
               }
             },
@@ -431,24 +444,32 @@
               "execute": {
                 "call": "clear_requires_reload",
                 "arguments": {
-                  "id": "language"
+                  "id": "language",
+                  "indicator": "reload_required"
                 }
               }
             }
-          ]
+          ],
+          "on_execute": {
+            "call": "set_focuses",
+            "arguments": {
+              "focuses": ["main_menu"]
+            }
+          }
         }
       },
       {
         "call": "reload_required",
         "arguments": {
-          "title": "Reload required to apply the following changes:",
+          "title": "$$translations/main/Reload_required/$selected_language:",
           "focus_mask": "main_menu",
           "left": "showroom_left",
           "right": "showroom_right",
           "bottom": "showroom_bottom",
           "top": "showroom_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": "%ui_font_color",
+          "font_color": "%ui_highlighted_font_color",
           "font_height": "normal",
           "line_distance": "normal",
           "z_order": 2
@@ -467,7 +488,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
-          "charset": "%loaded_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
@@ -476,22 +497,26 @@
           "parameters": [
             {
               "id": "new_game",
-              "title": "%%translations/main/New_game/$loaded_language",
+              "title": "%%translations/main/New_game/$selected_language",
               "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}
             },
             {
               "id": "settings",
-              "title": "%%translations/main/Settings/$loaded_language",
+              "title": "$$translations/main/Settings/$selected_language (Ѭҿ)",
               "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}
             },
             {
+              "required": {
+                "fixed": [],
+                "dynamic": ["%reload_required"]
+              },
               "id": "reload",
-              "title": "%%translations/main/Reload/$loaded_language",
+              "title": "%%translations/main/Reload/$selected_language",
               "on_execute": { "call": "reload_scene", "arguments": {"change_scene": false}}
             },
             {
               "id": "exit",
-              "title": "%%translations/main/Exit/$loaded_language",
+              "title": "%%translations/main/Exit/$selected_language",
               "on_execute": { "call": "exit" }
             }
           ]
@@ -724,7 +749,7 @@
         "arguments": {
           "id": "render_fps_selector",
           "focus_mask": "settings_menu",
-          "title": "Render FPS",
+          "title": "%%translations/main/Render_FPS/$selected_language",
           "icon": "render_fps_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -812,7 +837,7 @@
         "arguments": {
           "id": "input_type",
           "focus_mask": "settings_menu",
-          "title": "Input type",
+          "title": "%%translations/main/Input_type/$selected_language",
           "icon": "controls_icon",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -844,8 +869,8 @@
           "id": "key_bindings_debug",
           "focus_mask": "controls_menu",
           "section": "debug",
-          "title": "%%translations/main/Debug/$loaded_language",
-          "charset": "%loaded_language",
+          "title": "%%translations/main/Debug/$selected_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",
@@ -863,7 +888,7 @@
           "id": "key_bindings_avatar",
           "focus_mask": "controls_menu",
           "section": "avatar",
-          "title": "%%translations/main/Avatar/$loaded_language",
+          "title": "%%translations/main/Avatar/$selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",
@@ -881,7 +906,7 @@
           "id": "key_bindings_car_heli",
           "focus_mask": "controls_menu",
           "section": "car_or_heli",
-          "title": "%%translations/main/Car_or_heli/$loaded_language",
+          "title": "%%translations/main/Car_or_heli/$selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",

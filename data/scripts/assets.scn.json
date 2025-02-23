@@ -11,7 +11,7 @@
       {
         "call": "persisted_globals",
         "arguments": {
-          "loaded_language": "language"
+          "selected_language": "language"
         }
       },
       { "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} },

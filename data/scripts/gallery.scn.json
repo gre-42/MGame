@@ -8,6 +8,24 @@
           "name": "%name",
           "color": "textures/ui/menu/$name.png",
           "color_mode": "rgba",
+          "anisotropic_filtering_level": 0
+        }
+      },
+      {
+        "call": "add_to_gallery",
+        "arguments": { "resource": "#$name", "instance": "$name-_icon", "color_mode": "rgba" }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_add_menu_icon_subst",
+    "content": [
+      {
+        "call": "add_texture_descriptor",
+        "arguments": {
+          "name": "%name",
+          "color": "textures/ui/menu/$name.png",
+          "color_mode": "rgba",
           "color_to_replace": [1, 1, 1],
           "replacement_color": "%ui_font_color",
           "replacement_tolerance": 0.01,
@@ -26,20 +44,21 @@
   { "playback": "_add_menu_icon", "arguments": { "name": "color" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "game_mode" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "controls" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "scene_selector" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "scene_selector" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/time_of_day.png", "instance": "time_of_day_icon", "color_mode": "rgba" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "session" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "session" } },
   { "playback": "_add_menu_icon", "arguments": { "name": "laps" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "replay" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "replay" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "language" } },
   {
     "exclude": ["%if_android"],
     "execute": [
-      { "playback": "_add_menu_icon", "arguments": { "name": "render_fps" } },
+      { "playback": "_add_menu_icon_subst", "arguments": { "name": "render_fps" } },
       { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/tripod.png", "instance": "tripod_icon", "color_mode": "rgba" } }
     ]
   },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "missing_icon", "color_mode": "rgba" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "dots" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "dots" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/selection_marker.png", "instance": "selection_marker", "color_mode": "rgba" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "level_icon", "color_mode": "rgb" } },
   {

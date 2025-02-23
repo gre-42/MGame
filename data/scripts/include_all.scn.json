@@ -1,4 +1,5 @@
 [
+  {"call": "globals", "arguments": {"reload_required": false}},
   {"include": "color_profiles.scn.json"},
   {"include": "assets.scn.json"},
   {"playback": "load_languages"},
