@@ -502,6 +502,16 @@
               "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}
             },
             {
+              "required": {
+                "fixed": [],
+                "dynamic": [],
+                "focus_mask": "query_contains|scene"
+              },
+              "id": "continue_game",
+              "title": "%%translations/main/Continue_game/$selected_language",
+              "on_execute": { "call": "pop_focus", "arguments": {"expected": "main_menu"}}
+            },
+            {
               "id": "settings",
               "title": "$$translations/main/Settings/$selected_language (Ѭҿ)",
               "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}
