@@ -557,9 +557,9 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "day", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "night", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
-            {"id": "synthwave", "title": "Synthwave", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
+            {"id": "day", "title": "%%translations/main/Day/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "night", "title": "%%translations/main/Night/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
+            {"id": "synthwave", "title": "%%translations/main/Synthwave/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
           ]
         }
       },
@@ -582,8 +582,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "day", "title": "Day", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "night", "title": "Night", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
+            {"id": "day", "title": "%%translations/main/Day/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
+            {"id": "night", "title": "%%translations/main/Night/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
           ]
         }
       },
@@ -605,8 +605,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "car", "title": "Car", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
-            {"id": "car_with_trailer", "title": "Car with trailer", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
+            {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
+            {"id": "car_with_trailer", "title": "%%translations/main/Car_with_trailer/$selected_language", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
           ]
         }
       },
@@ -615,7 +615,7 @@
         "arguments": {
           "id": "car_selector",
           "focus_mask": "new_game_menu",
-          "title": "%%translations/main/Car/$selected_language",
+          "title": "%%translations/main/Vehicle/$selected_language",
           "icon": "car_icon",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -655,12 +655,12 @@
             "context": "showroom"
           },
           "parameters": [
-            {"id": "white", "title": "White", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
-            {"id": "gray", "title": "Gray",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
-            {"id": "red", "title": "Red",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
-            {"id": "green", "title": "Green", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
-            {"id": "blue", "title": "Blue",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
-            {"id": "black", "title": "Black", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
+            {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
+            {"id": "gray", "title": "%%translations/main/Gray/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
+            {"id": "red", "title": "%%translations/main/Red/$selected_language",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
+            {"id": "green", "title": "%%translations/main/Green/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
+            {"id": "blue", "title": "%%translations/main/Blue/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
+            {"id": "black", "title": "%%translations/main/Black/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
           ]
         }
       },
