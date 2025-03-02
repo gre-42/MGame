@@ -180,6 +180,7 @@
         "call": "players_stats",
         "arguments": {
           "z_order": 2,
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "highscore_left",
           "right": "highscore_right",
@@ -198,6 +199,7 @@
       {
         "call": "visual_global_log",
         "arguments": {
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "highscore_left",
           "right": "highscore_right",
@@ -231,6 +233,7 @@
         "arguments": {
           "node": "countdown",
           "z_order": 1,
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
           "font_color": "%scene_font_color",
@@ -247,6 +250,7 @@
         "arguments": {
           "node": "game_over_countdown",
           "z_order": 1,
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
           "font_color": "%scene_font_color",

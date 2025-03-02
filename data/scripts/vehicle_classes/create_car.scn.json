@@ -128,6 +128,7 @@
         "call": "visual_player_status",
         "arguments": {
           "format": "position|speed|diameter|energy",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_status_left",
           "right": "player_status_right",
@@ -146,6 +147,7 @@
         "arguments": {
           "player": "%externals_player_name",
           "format": "speed",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_speed_left",
           "right": "player_speed_right",
@@ -189,6 +191,7 @@
         "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
         "arguments": {
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "bullet_count_left",
           "right": "bullet_count_right",
@@ -211,6 +214,7 @@
         "arguments": {
           "child": ["engines", "%ENGINE_NAME"],
           "format": "abs_angular_velocity",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "player_engine_rpm_left",
           "right": "player_engine_rpm_right",

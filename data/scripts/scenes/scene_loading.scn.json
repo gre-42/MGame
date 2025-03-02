@@ -25,6 +25,7 @@
       {
         "call": "thread_top",
         "arguments": {
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", 0],
           "font_color": "%ui_font_color",
@@ -37,6 +38,7 @@
       {
         "call": "focused_text",
         "arguments": {
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
           "font_color": "%ui_font_color",

@@ -183,6 +183,7 @@
         "call": "focused_text",
         "arguments": {
           "position": ["nan", "nan"],
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "huge",
@@ -407,7 +408,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "' 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%'\"ç'"
+          "chars": "'. 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%'\"ç'"
         }
       },
       {
