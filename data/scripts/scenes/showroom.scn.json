@@ -18,7 +18,8 @@
           "bloom_thresholds": "%primary_scene_bloom_thresholds",
           "with_skybox": false,
           "with_flying_logic": false,
-          "clear_mode": "depth"
+          "clear_mode": "depth",
+          "gid": { "group": "translations", "id": "scene" }
         }
       },
       {

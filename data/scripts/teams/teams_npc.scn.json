@@ -89,6 +89,7 @@
         "arguments": {
           "node": "car_node$suffix",
           "format": "health",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "offset": [0, 0.3],
           "font_color": "%scene_font_color",

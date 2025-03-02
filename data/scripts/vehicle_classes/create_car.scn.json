@@ -69,7 +69,8 @@
         "arguments": {
           "node": "car_node$suffix",
           "health": 200,
-          "delete_node_when_health_leq_zero": true
+          "delete_node_when_health_leq_zero": true,
+          "gid": { "group": "translations", "id": "scene" }
         }
       },
       {

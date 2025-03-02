@@ -68,6 +68,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
@@ -509,7 +510,7 @@
               },
               "id": "continue_game",
               "title": "%%translations/main/Continue_game/$selected_language",
-              "on_execute": { "call": "pop_focus", "arguments": {"expected": "main_menu"}}
+              "on_execute": { "call": "pop_focus", "arguments": {"expected": "main_menu", "preserve_last": true}}
             },
             {
               "id": "settings",
@@ -539,7 +540,6 @@
         "arguments": { "SELECTED_PLAYER_VEHICLE_COLOR": [1, 1, 0] }
       },
       {
-        "required": ["%if_devel"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -551,39 +551,47 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "day", "title": "%%translations/main/Day/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "night", "title": "%%translations/main/Night/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}},
-            {"id": "synthwave", "title": "%%translations/main/Synthwave/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "synthwave"}}}
-          ]
-        }
-      },
-      {
-        "exclude": ["%if_devel"],
-        "call": "parameter_setter",
-        "arguments": {
-          "id": "time_of_day_selector",
-          "focus_mask": "new_game_menu",
-          "title": "%%translations/main/Time_of_day/$selected_language",
-          "icon": "time_of_day_icon",
-          "required": [],
-          "left": "submenu_left",
-          "right": "submenu_right",
-          "bottom": "submenu_bottom",
-          "top": "submenu_top",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": "%ui_font_color",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "deflt": 0,
-          "parameters": [
-            {"id": "day", "title": "%%translations/main/Day/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox", "time_of_day": "day"}}},
-            {"id": "night", "title": "%%translations/main/Night/$selected_language", "on_before_select": { "call": "globals", "arguments": {"skybox": "skybox_night", "time_of_day": "night"}}}
+            {
+              "id": "day",
+              "title": "%%translations/main/Day/$selected_language",
+              "on_before_select": {
+                "call": "globals",
+                "arguments": {
+                  "skybox": "skybox",
+                  "time_of_day": "day"
+                }
+              }
+            },
+            {
+              "id": "night",
+              "title": "%%translations/main/Night/$selected_language",
+              "on_before_select": {
+                "call": "globals",
+                "arguments": {
+                  "skybox": "skybox_night",
+                  "time_of_day": "night"
+                }
+              }
+            },
+            {
+              "required": {"fixed": ["%if_devel"], "dynamic": []},
+              "id": "synthwave",
+              "title": "%%translations/main/Synthwave/$selected_language",
+              "on_before_select": {
+                "call": "globals",
+                "arguments": {
+                  "skybox": "skybox_night",
+                  "time_of_day": "synthwave"
+                }
+              }
+            }
           ]
         }
       },
@@ -599,6 +607,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
@@ -621,6 +630,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
@@ -678,6 +688,7 @@
           "right": "submenu_right",
           "bottom": "submenu_bottom",
           "top": "submenu_top",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": "%ui_font_color",
           "font_height": "normal",
@@ -705,6 +716,7 @@
           "title": "%%translations/main/Laps/$selected_language",
           "icon": "laps_icon",
           "required": ["%game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -732,6 +744,7 @@
           "title": "%%translations/main/Playback_ranks/$selected_language",
           "icon": "replay_icon",
           "required": ["%game_mode == 'rally'"],
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -763,6 +776,7 @@
           "focus_mask": "settings_menu",
           "title": "%%translations/main/Render_FPS/$selected_language",
           "icon": "render_fps_icon",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -793,6 +807,7 @@
           "title": "%%translations/main/Playback_speed/$selected_language",
           "icon": "missing_icon",
           "required": ["%game_mode == 'rally'"],
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -852,6 +867,7 @@
           "focus_mask": "settings_menu",
           "title": "%%translations/main/Input_type/$selected_language",
           "icon": "controls_icon",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "submenu_right",
@@ -903,6 +919,7 @@
           "focus_mask": "controls_menu",
           "section": "avatar",
           "title": "%%translations/main/Avatar/$selected_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",
@@ -921,6 +938,7 @@
           "focus_mask": "controls_menu",
           "section": "car_or_heli",
           "title": "%%translations/main/Car_or_heli/$selected_language",
+          "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
           "right": "end",

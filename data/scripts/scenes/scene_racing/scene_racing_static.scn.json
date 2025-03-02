@@ -27,7 +27,8 @@
         "with_flying_logic": "%primary_scene_with_flying_logic",
         "clear_mode": "color_and_depth",
         "max_tracks": 5,
-        "save_playback": "%primary_scene_save_playback"
+        "save_playback": "%primary_scene_save_playback",
+        "gid": { "group": "translations", "id": "scene" }
       }
     },
     {
@@ -56,7 +57,8 @@
         "bloom_thresholds": [1, 1, 1],
         "with_skybox": false,
         "with_flying_logic": false,
-        "clear_mode": "depth"
+        "clear_mode": "depth",
+        "gid": { "group": "translations", "id": "scene" }
       }
     },
     {
