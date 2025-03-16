@@ -116,14 +116,14 @@
             {
               "call": "set_actor_task",
               "arguments": {
-                "vehicle": "car_node$BULLET_SUFFIX",
+                "vehicle": "car_node$bullet_suffix",
                 "task": "air_cruise"
               }
             },
             {
               "call": "create_missile_ai",
               "arguments": {
-                "missile": "car_node$BULLET_SUFFIX",
+                "missile": "car_node$bullet_suffix",
                 "pid": {
                   "pid": [0.5, 0.16, 6],
                   "alpha": 0.2
@@ -141,8 +141,8 @@
             {
               "call": "create_vehicle_follower_ai",
               "arguments": {
-                "missile": "car_node$BULLET_SUFFIX",
-                "target": "%BULLET_TARGET"
+                "missile": "car_node$bullet_suffix",
+                "target": "%bullet_target"
               }
             }
           ]
