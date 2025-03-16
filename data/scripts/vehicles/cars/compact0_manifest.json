@@ -11,7 +11,7 @@
   "database": {
     "suffix": "compact0",
     "class": "car",
-    "NODE_PREFIXES": ["car_node"],
+    "node_prefixes": ["car_node"],
     "trailer_hitch_position_female": null,
     "trailer_hitch_position_male": [0, -0.2, 2],
     "max_tire_angle": 45,

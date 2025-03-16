@@ -6,35 +6,75 @@
     },
     {
       "required": ["%if_create_pc_car"],
-      "playback":  "create_$$vehicles/$selected_vehicle_id/class",
-      "let": {
-        "human_name": "%%vehicles/$selected_vehicle_id/suffix",
-        "skater_name": "%%vehicles/$selected_vehicle_id/suffix",
-        "car_name": "%%vehicles/$selected_vehicle_id/suffix",
-        "velocity": "%vehicle_velocity",
-        "angular_velocity": "%vehicle_angular_velocity",
-        "if_human_style": true,
-        "if_skater_style": true,
-        "if_car_body_renderable_style": true,
-        "color": "%SELECTED_PLAYER_VEHICLE_COLOR",
-        "suffix": "",
-        "if_with_graphics": true,
-        "if_with_physics": true,
-        "IF_WITH_GUN": false,
-        "hand_brake_pulled": false,
-        "mute": false,
-        "velocity_error_std": 0,
-        "error_alpha": null,
-        "yaw_error_std": 0,
-        "pitch_error_std": 0,
-        "respawn_cooldown_time": 0,
-        "IF_SHADOW": true,
-        "IF_PLAYBACK_TRACK": false,
-        "IF_PLAYBACK_WINNER": false,
-        "if_spawner": true,
-        "IF_DAMAGEABLE": false,
-        "spawner_name": "%vip_name"
-      }
+      "execute": [
+        {
+          "call": "set_preferred_car_spawner",
+          "without": ["car_node_position", "car_node_angles"],
+          "arguments": {
+            "spawner": "%vip_name",
+            "already_set_behavior": "update",
+            "macro": [
+              {
+                "playback":  "create_$$vehicles/$selected_vehicle_id/class",
+                "let": {
+                  "human_name": "%%vehicles/$selected_vehicle_id/suffix",
+                  "skater_name": "%%vehicles/$selected_vehicle_id/suffix",
+                  "car_name": "%%vehicles/$selected_vehicle_id/suffix",
+                  "if_human_style": true,
+                  "if_skater_style": true,
+                  "if_car_body_renderable_style": true,
+                  "color": "%selected_player_vehicle_color",
+                  "if_with_gun": false,
+                  "hand_brake_pulled": false,
+                  "mute": false,
+                  "velocity_error_std": 0,
+                  "error_alpha": null,
+                  "yaw_error_std": 0,
+                  "pitch_error_std": 0,
+                  "respawn_cooldown_time": 0,
+                  "if_shadow": true,
+                  "if_playback_track": false,
+                  "if_playback_winner": false,
+                  "if_spawner": true,
+                  "if_damageable": false,
+                  "spawner_name": "%vip_name"
+                }
+              },
+              {
+                "comment": "Cameras"
+              },
+              {
+                "required": ["%if_create_pc_car"],
+                "execute": [
+                  {
+                    "call": "create_externals",
+                    "arguments": {
+                      "player": "%vip_name",
+                      "mode": "pc"
+                    }
+                  },
+                  {
+                    "call": "create_internals",
+                    "arguments": {
+                      "player": "%vip_name",
+                      "role": "driver"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "call": "spawn",
+          "arguments": {
+            "spawner": "%vip_name",
+            "team": "",
+            "position": "%car_node_position",
+            "rotation": "%car_node_angles"
+          }
+        }
+      ]
     },
     {
       "required": ["%if_burn_in"],
@@ -63,40 +103,40 @@
       "required": ["%if_playback_checkpoints"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "%checkpoints_file",
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "M3",
-        "PSUFFIX": "checkpoints"
+        "playback_filename": "%checkpoints_file",
+        "playback_speed": "%playback_speed",
+        "playback_car": "M3",
+        "psuffix": "checkpoints"
       }
     },
     {
       "required": ["%if_playback_track_1"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$recordings_dir/track1.m",
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "M3",
-        "PSUFFIX": "track1"
+        "playback_filename": "$recordings_dir/track1.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "M3",
+        "psuffix": "track1"
       }
     },
     {
       "required": ["%if_playback_track_2"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$recordings_dir/track2.m",
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "XZ",
-        "PSUFFIX": "track2"
+        "playback_filename": "$recordings_dir/track2.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "XZ",
+        "psuffix": "track2"
       }
     },
     {
       "required": ["%if_playback_track_3"],
       "playback": "create_playback",
       "arguments": {
-        "PLAYBACK_FILENAME": "$recordings_dir/track3.m",
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR": "FN",
-        "PSUFFIX": "track3"
+        "playback_filename": "$recordings_dir/track3.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "FN",
+        "psuffix": "track3"
       }
     },
     {
@@ -110,33 +150,33 @@
       "required": ["%IF_PLAYBACK_WINNER_0", "%IF_WINNER_RANK0_EXISTS"],
       "playback": "_create_winner_playback",
       "arguments": {
-        "RANK": 0,
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"$WINNER0_VEHICLE",
+        "rank": 0,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$WINNER0_VEHICLE",
         "color": "%WINNER0_COLOR",
-        "PSUFFIX": "'1'"
+        "psuffix": "'1'"
       }
     },
     {
       "required": ["%IF_PLAYBACK_WINNER_1", "%IF_WINNER_RANK1_EXISTS"],
       "playback": "_create_winner_playback",
       "arguments": {
-        "RANK": 1,
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"$WINNER1_VEHICLE",
+        "rank": 1,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$WINNER1_VEHICLE",
         "color": "%WINNER1_COLOR",
-        "PSUFFIX": "'2'"
+        "psuffix": "'2'"
       }
     },
     {
       "required": ["%IF_PLAYBACK_WINNER_2", "%IF_WINNER_RANK2_EXISTS"],
       "playback": "_create_winner_playback",
       "arguments": {
-        "RANK": 2,
-        "PLAYBACK_SPEED": "%PLAYBACK_SPEED",
-        "PLAYBACK_CAR":"$WINNER2_VEHICLE",
+        "rank": 2,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$WINNER2_VEHICLE",
         "color": "%WINNER2_COLOR",
-        "PSUFFIX": "'3'"
+        "psuffix": "'3'"
       }
     },
     {
@@ -199,28 +239,6 @@
         },
         "focus_mask": "scene|countdown_any|game_over_countdown_any"
       }
-    },
-    {
-      "comment": "Cameras"
-    },
-    {
-      "required": ["%if_create_pc_car"],
-      "execute": [
-        {
-          "call": "create_externals",
-          "arguments": {
-            "player": "%vip_name",
-            "mode": "pc"
-          }
-        },
-        {
-          "call": "create_internals",
-          "arguments": {
-            "player": "%vip_name",
-            "role": "driver"
-          }
-        }
-      ]
     }
   ]
 }

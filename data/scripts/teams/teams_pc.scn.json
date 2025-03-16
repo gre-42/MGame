@@ -26,10 +26,10 @@
       {
         "playback": "create_avatar",
         "let": {
-          "IF_WITH_GUN": true,
+          "if_with_gun": true,
           "if_spawner": true,
-          "IF_PLAYER": true,
-          "IF_SHADOW": true
+          "if_player": true,
+          "if_shadow": true
         }
       },
       {
@@ -54,12 +54,12 @@
       {
         "playback": "create_car",
         "let": {
-          "IF_PLAYBACK_TRACK": false,
-          "IF_PLAYBACK_WINNER": false,
+          "if_playback_track": false,
+          "if_playback_winner": false,
           "if_spawner": true,
-          "IF_PLAYER": true,
-          "IF_SHADOW": true,
-          "IF_DAMAGEABLE": true,
+          "if_player": true,
+          "if_shadow": true,
+          "if_damageable": true,
           "hand_brake_pulled": false
         }
       },
@@ -89,6 +89,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "already_set_behavior": "throw",
           "macro": {
             "playback": "teams.create_avatar_for_pc"
           }
@@ -106,6 +107,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "already_set_behavior": "throw",
           "macro": {
             "playback": "teams.create_car_for_pc"
           }

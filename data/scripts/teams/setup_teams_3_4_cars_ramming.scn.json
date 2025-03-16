@@ -91,6 +91,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "player": "%vip_name",
+          "already_set_behavior": "throw",
           "macro": "teams.create_car_for_pc",
           "parameters": {
             "car_name": "M3"

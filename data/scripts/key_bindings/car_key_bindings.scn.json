@@ -170,6 +170,15 @@
         "player": "%externals_player_name",
         "select_next_vehicle": true
       }
+    },
+    {
+      "call": "player_key_binding",
+      "arguments": {
+        "id": "car_or_heli.reset_vehicle",
+        "role": "%externals_role",
+        "player": "%externals_player_name",
+        "reset_vehicle": true
+      }
     }
   ]
 }

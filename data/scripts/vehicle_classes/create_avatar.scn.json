@@ -56,7 +56,7 @@
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light_$human_name lsuffix:_human$suffix CSUFFIX:suffix;"
+        "comment": "if_shadow macro_playback add_attached_light_$human_name lsuffix:_human$suffix CSUFFIX:suffix;"
       },
       {
         "required": ["%if_spawner"],
@@ -134,7 +134,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "player_set_aiming_gun",
         "arguments": {
           "player": "%externals_player_name",

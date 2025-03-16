@@ -69,11 +69,11 @@
       {
         "playback": "create_avatar",
         "let": {
-          "IF_WITH_GUN": false,
-          "IF_SHADOW": false,
+          "if_with_gun": false,
+          "if_shadow": false,
           "if_human_style": true,
           "if_spawner": true,
-          "IF_PLAYER": true,
+          "if_player": true,
           "velocity_error_std": 0.3,
           "yaw_error_std": 0.02,
           "pitch_error_std": 0.02,
@@ -102,12 +102,12 @@
       {
         "playback": "create_car",
         "let": {
-          "IF_PLAYBACK_TRACK": false,
-          "IF_PLAYBACK_WINNER": false,
+          "if_playback_track": false,
+          "if_playback_winner": false,
           "if_spawner": true,
-          "IF_PLAYER": true,
-          "IF_SHADOW": false,
-          "IF_DAMAGEABLE": false,
+          "if_player": true,
+          "if_shadow": false,
+          "if_damageable": false,
           "if_car_body_renderable_style": true,
           "velocity_error_std": null,
           "yaw_error_std": null,
@@ -144,6 +144,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_avatar",
             "let": {
@@ -168,6 +169,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_car",
             "let": {
@@ -194,6 +196,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_car",
             "let": {

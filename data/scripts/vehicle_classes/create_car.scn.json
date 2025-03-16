@@ -25,22 +25,22 @@
         "playback": "create_$car_name"
       },
       {
-        "required": ["%IF_PLAYBACK_TRACK"],
+        "required": ["%if_playback_track"],
         "call": "playback_track",
         "arguments": {
           "node": "car_node$suffix",
-          "speed": "%PLAYBACK_SPEED",
-          "filename": "%PLAYBACK_FILENAME"
+          "speed": "%playback_speed",
+          "filename": "%playback_filename"
         }
       },
       {
-        "required": ["%IF_PLAYBACK_WINNER"],
+        "required": ["%if_playback_winner"],
         "call": "playback_winner_track",
         "arguments": {
           "asset_id": "%car_name",
           "suffix": "%suffix",
-          "speed": "%PLAYBACK_SPEED",
-          "rank": "%RANK"
+          "speed": "%playback_speed",
+          "rank": "%rank"
         }
       },
       {
@@ -61,10 +61,10 @@
         }
       },
       {
-        "comment": "IF_SHADOW macro_playback add_attached_light_$car_name lsuffix:_car$suffix CSUFFIX:suffix"
+        "comment": "if_shadow macro_playback add_attached_light_$car_name lsuffix:_car$suffix CSUFFIX:suffix"
       },
       {
-        "required": ["%IF_DAMAGEABLE"],
+        "required": ["%if_damageable"],
         "call": "damageable",
         "arguments": {
           "node": "car_node$suffix",
@@ -74,7 +74,7 @@
         }
       },
       {
-        "required": ["%IF_DAMAGEABLE"],
+        "required": ["%if_damageable"],
         "call": "crash",
         "arguments": {
           "node": "car_node$suffix",

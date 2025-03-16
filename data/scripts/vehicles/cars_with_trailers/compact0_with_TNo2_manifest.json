@@ -11,7 +11,7 @@
   "database": {
     "suffix": "compact0_with_TNo2",
     "class": "car",
-    "NODE_PREFIXES": ["car_node", "car_node_trailer"],
+    "node_prefixes": ["car_node", "car_node_trailer"],
     "max_tire_angle": 45,
     "front_engine": "engine",
     "rear_engine": "engine",

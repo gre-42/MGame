@@ -137,7 +137,7 @@
               "driving_direction": "center"
             }
           },
-          { "call": "spawner_create", "arguments": { "name": "%vip_name", "team": "red" } },
+          { "call": "spawner_create", "arguments": { "name": "%vip_name", "suffix": "", "team": "red" } },
           { "call": "spawner_set_player", "arguments": { "name": "%vip_name", "role": "driver" } },
           {
             "call": "set_can_drive",

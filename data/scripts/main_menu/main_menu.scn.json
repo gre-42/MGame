@@ -37,7 +37,7 @@
       "let": {
         "VEHICLE_NAME": "%%vehicles/$selected_vehicle_id/suffix",
         "VEHICLE_CLASS": "%%vehicles/$selected_vehicle_id/class",
-        "VEHICLE_COLOR": "%SELECTED_PLAYER_VEHICLE_COLOR"
+        "vehicle_color": "%selected_player_vehicle_color"
       }
     }
   },
@@ -538,7 +538,7 @@
       {
         "#comment": "Some initial color so the code does not crash until the real color is defined",
         "call": "globals",
-        "arguments": { "SELECTED_PLAYER_VEHICLE_COLOR": [1, 1, 0] }
+        "arguments": { "selected_player_vehicle_color": [1, 1, 0] }
       },
       {
         "call": "parameter_setter",
@@ -667,12 +667,12 @@
             "context": "showroom"
           },
           "parameters": [
-            {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [1,    1,    1]}}},
-            {"id": "gray", "title": "%%translations/main/Gray/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.5,  0.5,  0.5]}}},
-            {"id": "red", "title": "%%translations/main/Red/$selected_language",   "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.7,  0.05, 0.09]}}},
-            {"id": "green", "title": "%%translations/main/Green/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.52, 0.63, 0.54]}}},
-            {"id": "blue", "title": "%%translations/main/Blue/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.51, 0.56, 0.62]}}},
-            {"id": "black", "title": "%%translations/main/Black/$selected_language", "on_before_select": { "call": "globals", "arguments": {"SELECTED_PLAYER_VEHICLE_COLOR": [0.06, 0.07, 0.06]}}}
+            {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [1,    1,    1]}}},
+            {"id": "gray", "title": "%%translations/main/Gray/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.5,  0.5,  0.5]}}},
+            {"id": "red", "title": "%%translations/main/Red/$selected_language",   "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.7,  0.05, 0.09]}}},
+            {"id": "green", "title": "%%translations/main/Green/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.52, 0.63, 0.54]}}},
+            {"id": "blue", "title": "%%translations/main/Blue/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.51, 0.56, 0.62]}}},
+            {"id": "black", "title": "%%translations/main/Black/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.06, 0.07, 0.06]}}}
           ]
         }
       },
@@ -819,18 +819,18 @@
           "line_distance": "normal",
           "deflt": 2,
           "parameters": [
-            {"id": "'80'", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.8}}},
-            {"id": "'90'", "title": "'90%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 0.9}}},
-            {"id": "'100'", "title": "'100%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1}}},
-            {"id": "'110'", "title": "'110%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.1}}},
-            {"id": "'120'", "title": "'120%'", "on_before_select": { "call": "globals", "arguments": {"PLAYBACK_SPEED": 1.2}}}
+            {"id": "'80'", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 0.8}}},
+            {"id": "'90'", "title": "'90%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 0.9}}},
+            {"id": "'100'", "title": "'100%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 1}}},
+            {"id": "'110'", "title": "'110%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 1.1}}},
+            {"id": "'120'", "title": "'120%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 1.2}}}
           ]
         }
       },
       {
         "call": "globals",
         "exclude": ["%if_devel"],
-        "arguments": { "PLAYBACK_SPEED": 1 }
+        "arguments": { "playback_speed": 1 }
       },
       {
         "required": ["%if_devel"],

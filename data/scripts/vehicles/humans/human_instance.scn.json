@@ -57,13 +57,13 @@
         }
       },
       {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$suffix"}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m72_law_rocket", "capacity": 2}},
-      {"required": ["%IF_WITH_GUN"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "none_weapon_ammo_type", "capacity": 0}},
+      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
+      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
+      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
+      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m72_law_rocket", "capacity": 2}},
+      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "none_weapon_ammo_type", "capacity": 0}},
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -79,7 +79,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -95,7 +95,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -111,7 +111,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -127,7 +127,7 @@
         }
       },
       {
-        "required": ["%IF_WITH_GUN"],
+        "required": ["%if_with_gun"],
         "call": "set_desired_weapon",
         "arguments": {
           "player": null,
