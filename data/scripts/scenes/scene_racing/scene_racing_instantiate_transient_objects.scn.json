@@ -233,6 +233,11 @@
         "pacenotes_picture_top": "pacenotes_picture_top",
         "selection_emissivity": "%check_points_active_color",
         "deselection_emissivity": "%check_points_inactive_color",
+        "respawn_config": {
+          "vehicle_length": 20,
+          "max_horizontal_angle": 30,
+          "max_vertical_angle": 5
+        },
         "on_finish": {
           "call": "set_focuses",
           "arguments": {"focuses": ["main_menu", "game_over_countdown_pending"]}
