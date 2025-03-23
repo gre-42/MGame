@@ -1,0 +1,21 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "roof",
+      "filename": "models/roof.obj",
+      "config": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+      }
+    }
+  }
+]
