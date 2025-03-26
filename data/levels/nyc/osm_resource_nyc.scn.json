@@ -61,7 +61,7 @@
         "air_curb_path_texture": "#Metal038",
         "air_support_texture": "#Concrete020",
         "socle_textures": [
-          {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+          {"textures": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"]}],
         "entrance_textures": [
           {
             "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
@@ -238,7 +238,8 @@
         "default_building_top": 10,
         "default_barrier_top": 3,
         "default_snap_building_height": true,
-        "default_building_vertical_subdivision": "entrances",
+        "socle_height": 0.2,
+        "default_building_vertical_subdivision": "socle|entrances",
         "remove_backfacing_triangles": true,
         "with_tree_nodes": true,
         "forest_outline_tree_distance": 10,
