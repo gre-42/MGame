@@ -111,12 +111,14 @@
             }
           },
           {
-            "call": "rigid_statics",
-            "arguments": {
-              "transformation": "%osm_location",
-              "hitboxes": "osm_map_hitboxes",
-              "name": "osm_map",
-              "asset_id": "osm_map_no_id"
+            "comment": {
+              "call": "rigid_statics",
+              "arguments": {
+                "transformation": "%osm_location",
+                "hitboxes": "osm_map_hitboxes",
+                "name": "osm_map",
+                "asset_id": "osm_map_no_id"
+              }
             }
           },
           {
