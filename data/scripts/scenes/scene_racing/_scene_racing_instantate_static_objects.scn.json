@@ -118,6 +118,13 @@
               "name": "osm_map",
               "asset_id": "osm_map_no_id"
             }
+          },
+          {
+            "call": "instantiate_statics",
+            "context": "primary_scene",
+            "arguments": {
+              "min_vertex_distance": 0.05
+            }
           }
         ]
       },

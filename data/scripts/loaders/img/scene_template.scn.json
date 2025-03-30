@@ -118,8 +118,14 @@
       "required_prefixes": "%%levels/$loaded_level_id/instantiated_required_prefixes",
       "except": "%%levels/$loaded_level_id/instantiated_exclude",
       "dynamics": "static",
-      "min_vertex_distance": 0.05,
       "instantiated_resources": "instantiated_resources"
+    }
+  },
+  {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
     }
   },
   {
