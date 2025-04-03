@@ -16,7 +16,7 @@
         "aggregate_mode": "none",
         "transformation_mode": "position",
         "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_visible|attr_collide|attr_convex"
+        "physics_material": "attr_collide|attr_convex"
       }
     }
   },
@@ -37,7 +37,7 @@
         "aggregate_mode": "none",
         "transformation_mode": "position_yangle",
         "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_visible|attr_collide|attr_convex"
+        "physics_material": "attr_collide|attr_convex"
       }
     }
   },
@@ -59,7 +59,7 @@
         "aggregate_mode": "none",
         "transformation_mode": "position_yangle",
         "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_visible|attr_collide|attr_convex"
+        "physics_material": "attr_collide|attr_convex"
       }
     }
   }

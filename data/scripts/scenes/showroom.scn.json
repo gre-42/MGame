@@ -154,7 +154,7 @@
             "call": "save_to_obj_file",
             "arguments": {
               "resource": "showroom_garage",
-              "prefix": "C:\\Users\\Acer\\Desktop\\tmp"
+              "prefix": "/tmp/showroom_garage"
             }
           }
         ]
@@ -175,15 +175,9 @@
             "occluder_pass": "none",
             "aggregate_mode": "none",
             "transformation_mode": "all",
-            "rectangle_triangulation_mode": "disabled"
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "attr_collide|attr_convex"
           }
-        }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "showroom_ground_hitbox",
-          "add": "attr_convex"
         }
       },
       {
