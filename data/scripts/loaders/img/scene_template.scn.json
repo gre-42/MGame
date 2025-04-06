@@ -11,6 +11,10 @@
   {
     "call": "resource_locations",
     "arguments": {
+      "filters": [
+        {"included_tags": "attr_visible"},
+        {"included_tags": "attr_collide"}
+      ],
       "rw_resource_files": "%%levels/$loaded_level_id/rw_resource_files",
       "rw_ide_files": "%%levels/$loaded_level_id/rw_ide_files",
       "pssg_files": "%%levels/$loaded_level_id/pssg_files",
