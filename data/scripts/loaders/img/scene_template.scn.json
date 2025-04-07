@@ -51,6 +51,15 @@
     }
   },
   {
+    "comment": {
+      "call": "save_to_obj_file",
+      "arguments": {
+        "resource": "tracksplit.pssg#!1g",
+        "prefix": "/tmp/tracksplit_elem.obj"
+      }
+    }
+  },
+  {
     "call": "modify_physics_material_tags",
     "arguments": {
       "resource_names": "%%levels/$loaded_level_id/invisible_resources",
