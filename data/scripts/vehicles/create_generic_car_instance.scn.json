@@ -39,6 +39,7 @@
           "hitboxes": "$name-_hitboxes",
           "v": "%velocity",
           "w": "%angular_velocity",
+          "with_penetration_limits": true,
           "mass": "%%vehicles/$name/mass",
           "size": "%%vehicles/$name/size",
           "com": "%%vehicles/$name/com",

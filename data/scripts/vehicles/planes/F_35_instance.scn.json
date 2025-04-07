@@ -25,6 +25,7 @@
         "arguments": {
           "node": "car_node$suffix",
           "hitboxes": "F_35_hitboxes",
+          "with_penetration_limits": true,
           "mass": "%mass",
           "size": [1.5, 1.5, 12],
           "com": [0, -0.2, -0.2],

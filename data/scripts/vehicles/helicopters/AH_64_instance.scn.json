@@ -24,6 +24,7 @@
           "hitboxes": "AH_box_64_hitboxes",
           "v": "%velocity",
           "w": "%angular_velocity",
+          "with_penetration_limits": true,
           "mass": "%mass",
           "size": [2, 2, 9],
           "com": [0, 2.2, 0],

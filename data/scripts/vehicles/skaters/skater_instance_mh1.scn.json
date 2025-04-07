@@ -11,6 +11,7 @@
         "arguments": {
           "node": "skater_node$suffix",
           "hitboxes": "skater_hitboxes",
+          "with_penetration_limits": true,
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "com": [0, -0.6, 0],

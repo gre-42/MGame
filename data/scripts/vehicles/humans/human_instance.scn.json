@@ -17,6 +17,7 @@
         "arguments": {
           "node": "human_node$suffix",
           "hitboxes": "human_hitboxes",
+          "with_penetration_limits": true,
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "collidable_mode": "moving",

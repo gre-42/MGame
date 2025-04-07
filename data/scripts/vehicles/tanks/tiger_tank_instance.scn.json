@@ -25,6 +25,7 @@
         "arguments": {
           "node": "car_node$suffix",
           "hitboxes": "tiger_tank_hitboxes",
+          "with_penetration_limits": true,
           "mass": "%mass",
           "size": [3.6, 3, 8],
           "com": [0, -0.5, 1],
