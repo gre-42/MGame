@@ -76,6 +76,7 @@
           "reflection_maps": {
             "car": "reflection_map",
             "wet_street": "reflection_map",
+            "window": "reflection_map",
             "ground": ""
           }
         }
@@ -87,6 +88,7 @@
           "reflection_maps": {
             "car": "reflection_map_night",
             "wet_street":  "reflection_map_night",
+            "window": "reflection_map_night",
             "ground": ""}
           }
       },
@@ -96,6 +98,8 @@
         "arguments": {
           "reflection_maps": {
             "car": "reflection_map_synthwave",
+            "wet_street": "reflection_map_synthwave",
+            "window": "reflection_map_synthwave",
             "ground": "reflection_map_synthwave"
           }
         }
