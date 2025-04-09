@@ -61,6 +61,13 @@
         "air_curb_street_texture": "#Metal038",
         "air_curb_path_texture": "#Metal038",
         "air_support_texture": "#Concrete020",
+        "building_colors": [
+          { "color": [1, 0.95, 0.95], "probability": 1 },
+          { "color": [0.95, 1, 0.95], "probability": 1 },
+          { "color": [0.95, 0.95, 1], "probability": 1 },
+          { "color": [1, 1, 1], "probability": 1 },
+          { "color": [0.95, 0.95, 0.95], "probability": 1 }
+        ],
         "socle_textures": [
           {
             "textures": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
