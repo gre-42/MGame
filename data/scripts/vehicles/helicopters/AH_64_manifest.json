@@ -19,6 +19,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in {'team_deathmatch'}"]
+    "dynamic": [["%game_mode in {'team_deathmatch'}", "%if_devel"]]
   }
 }
