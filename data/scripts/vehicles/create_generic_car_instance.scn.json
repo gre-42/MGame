@@ -2,12 +2,12 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "main$suffix", "node": "car_node$node_suffix", "resource": "$name/main$decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main$name_suffix", "node": "car_node$node_suffix", "resource": "$name/main$lod_decimate"}},
 
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$name/wheel_front$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$name/wheel_front$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$name/wheel_rear$decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$name/wheel_rear$decimate"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$name/wheel_front$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$name/wheel_front$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$name/wheel_rear$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$name/wheel_rear$lod_decimate"}}
     ]
   },
   {
@@ -336,14 +336,14 @@
       {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$tesuffix", "name": "wheel_right_rear_node_visual$tesuffix", "rotation": [0, 180, 0]}},
       {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%tesuffix",
-        "suffix": "%tesuffix",
-        "decimate": "%decimate"
+        "name_suffix": "%tesuffix",
+        "lod_decimate": "%tedecimate"
         }
       },
       {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%tesuffix",
-        "suffix": "_lowres$tesuffix",
-        "decimate": "_lowres"
+        "name_suffix": "_lowres$tesuffix",
+        "lod_decimate": "_lowres"
         }
       },
       {"required": ["%if_with_graphics"], "playback": "generic_car.create_lights"},
