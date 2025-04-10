@@ -103,10 +103,12 @@
       {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "van0/van0_chassis$decimate"}},
       {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "van0/van0_glass$decimate"}},
       {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null, "name": "van0/van0_misc$decimate"}},
+      {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null, "name": "van0/van0_interior$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "van0/main$suffix"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_chassis$decimate"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_glass$decimate"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_misc$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_interior$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "van0/wheel_front$suffix"}},
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "van0/wheel_rear$suffix"}}
     ]
