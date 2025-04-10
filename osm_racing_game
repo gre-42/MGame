@@ -10,7 +10,7 @@ SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 cd "$SCRIPTPATH"
 
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:GURelease" GURelease/render_scene_file \
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH:-}:GURelease" GURelease/render_scene_file \
     data \
     data/levels/main/main.scn.json \
     --app_reldir .osm_rally \
