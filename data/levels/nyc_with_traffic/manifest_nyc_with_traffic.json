@@ -1,8 +1,8 @@
 {
   "id": "nyc_with_traffic",
-  "title": "NYC with traffic",
+  "title": "%%levels/nyc_with_traffic/title/$selected_language",
   "required": {
-    "fixed": ["%if_devel"],
+    "fixed": [],
     "dynamic": ["%game_mode in %%levels/nyc_with_traffic/game_modes"]
   },
   "on_execute": {
@@ -12,12 +12,17 @@
     "call": "globals",
     "arguments": {
       "selected_level_id": "nyc_with_traffic",
-      "level_icon_file": "#black",
+      "level_icon_file": "levels/nyc_with_traffic_track2/icon.png",
       "minimap_file": null
     }
   },
   "database": {
     "if_raceway_circular": false,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "title": {
+      "de-DE": "NYC mit Verkehr",
+      "en-US": "NYC with traffic",
+      "fr-FR": "New York avec trafic"
+    }
   }
 }
