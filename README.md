@@ -32,6 +32,9 @@ For instructions how to add a custom stage, see [CONTRIBUTING](CONTRIBUTING.md).
 ### Großglockner High Alpine Road
 ![Screenshot-GH-2024-01-27](media/Screenshot-GH-2024-12-26.png)
 
+### New York City
+![Screenshot-NYC-2025-04-10](media/Screenshot-NYC-2025-04-10.png)
+
 ## Acknowledgments  
 
 Special thanks to the [OpenStreetMap community](https://www.openstreetmap.org/) for
