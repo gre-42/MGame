@@ -1,0 +1,116 @@
+[
+  {"include": "scripts/wheels/XZ_wheel_resource.scn.json"},
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "van0_hitbox",
+      "filename": "models/primitives/box.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.9, 0.5, 2.3],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      }
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "van0_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "van0_distancebox",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "van0_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "van0_tirelines", "from": [-0.8, -0.2, -1.7], "to": [-0.8, -1, -1.7]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "van0_tirelines", "from": [ 0.8, -0.2, -1.7], "to": [ 0.8, -1, -1.7]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "van0_tirelines", "from": [-0.8, -0.2,  1.7], "to": [-0.8, -1,  1.7]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "van0_tirelines", "from": [ 0.8, -0.2,  1.7], "to": [ 0.8, -1,  1.7]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "arguments": {"source_names": ["van0_hitbox", "van0_distancebox", "van0_tirelines"], "dest_name": "van0_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["van0_hitbox"], "dest_name": "van0_massbox"}},
+
+  {
+    "declare_macro": "load_van0_part",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "models/gre42/$name.obj",
+          "config": {
+            "position": [0, 0.15, 0.6],
+            "rotation": [0, 0, 0],
+            "scale": [2.05, 2.05, 2.05],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": true,
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "%reflection_map",
+            "reflectance": "%reflectance",
+            "emissive_factor": "%blender_emissive_factor",
+            "ambient_factor": "%blender_ambient_factor",
+            "diffuse_factor": "%blender_diffuse_factor",
+            "specular_factor": "%blender_specular_factor",
+            "fresnel_min": "%stunt_rally_fresnel_min",
+            "fresnel_max": "%stunt_rally_fresnel_max",
+            "fresnel_exponent": "%stunt_rally_fresnel_exponent",
+            "fresnel_ambient": "%blender_fresnel_AMBIENT",
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_van0",
+    "content": [
+      {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "van0/van0_chassis$decimate"}},
+      {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "van0/van0_glass$decimate"}},
+      {"playback": "load_van0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null, "name": "van0/van0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "van0/main$suffix"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_chassis$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_glass$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "van0/main$suffix", "companion_resource": "van0/van0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "van0/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "van0/wheel_rear$suffix"}}
+    ]
+  },
+  {"playback": "load_van0", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
+  {"playback": "load_van0", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d3", "suffix": "_lowres"}}
+]

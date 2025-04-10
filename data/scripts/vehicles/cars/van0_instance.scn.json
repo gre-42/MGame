@@ -1,0 +1,47 @@
+[
+  {
+    "declare_macro": "create_van0",
+    "# content": {
+      "playback": "generic_car.create",
+      "let": {
+        "name": "van0",
+        "tesuffix": "%suffix",
+        "decimate": "",
+        "wheels": "%%vehicles/van0/wheels",
+        "engine_audio": "%%vehicles/van0/engine_audio"
+      }
+    },
+    "content": {
+      "call": "create_generic_car",
+      "arguments": {
+        "name": "van0",
+        "tesuffix": "%suffix",
+        "decimate": "",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "mute": "%mute",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "hand_brake_pulled": "%hand_brake_pulled"
+      }
+    }
+  },
+  {
+    "declare_macro": "create_player_car_internals_van0",
+    "content": {
+      "playback": "generic_car.create_player_internals",
+      "arguments": { "asset_id": "van0" }
+    }
+  },
+  {
+    "declare_macro": "create_player_car_externals_van0",
+    "content": {
+      "playback": "generic_car.create_player_externals",
+      "let": {
+        "asset_id": "van0",
+        "camera_class": "truck",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
+      }
+    }
+  }
+]
