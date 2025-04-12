@@ -22,7 +22,7 @@
         }
       },
       {
-        "playback": "create_$car_name"
+        "playback": "create_$asset_id"
       },
       {
         "required": ["%if_playback_track"],
@@ -37,7 +37,7 @@
         "required": ["%if_playback_winner"],
         "call": "playback_winner_track",
         "arguments": {
-          "asset_id": "%car_name",
+          "asset_id": "%asset_id",
           "suffix": "%suffix",
           "speed": "%playback_speed",
           "rank": "%rank"
@@ -47,7 +47,7 @@
         "required": ["%if_spawner"],
         "call": "spawner_set_nodes",
         "arguments": {
-          "asset_id": "%car_name",
+          "asset_id": "%asset_id",
           "suffix": "%suffix",
           "spawner": "%spawner_name"
         }
@@ -61,7 +61,7 @@
         }
       },
       {
-        "comment": "if_shadow macro_playback add_attached_light_$car_name lsuffix:_car$suffix CSUFFIX:suffix"
+        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix CSUFFIX:suffix"
       },
       {
         "required": ["%if_damageable"],
@@ -113,7 +113,7 @@
     "declare_macro": "create_player_car_externals",
     "content": [
       {
-        "playback": "create_player_car_externals_$car_name"
+        "playback": "create_player_car_externals_$asset_id"
       }
     ]
   },
@@ -121,7 +121,7 @@
     "declare_macro": "create_player_car_internals",
     "content": [
       {
-        "playback": "create_player_car_internals_$car_name"
+        "playback": "create_player_car_internals_$asset_id"
       },
       {
         "required": ["%if_pc", "%if_devel"],
@@ -212,7 +212,7 @@
       {
         "call": "visual_player_status",
         "arguments": {
-          "child": ["engines", "%ENGINE_NAME"],
+          "child": ["engines", "%engine_name"],
           "format": "abs_angular_velocity",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",

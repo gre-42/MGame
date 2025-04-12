@@ -384,7 +384,7 @@
         "exclude": ["%if_android"],
         "playback": "create_player_car_engine_rpm_meter",
         "arguments": {
-          "ENGINE_NAME": "%%vehicles/$asset_id/front_engine"
+          "engine_name": "%%vehicles/$asset_id/front_engine"
         }
       },
       {

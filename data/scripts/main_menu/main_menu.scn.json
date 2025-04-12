@@ -35,8 +35,8 @@
     "content": {
       "playback": "__change_showroom_vehicle_in_physics_thread",
       "let": {
-        "VEHICLE_NAME": "%%vehicles/$selected_vehicle_id/suffix",
-        "VEHICLE_CLASS": "%%vehicles/$selected_vehicle_id/class",
+        "vehicle_name": "%%vehicles/$selected_vehicle_id/suffix",
+        "vehicle_class": "%%vehicles/$selected_vehicle_id/class",
         "vehicle_color": "%selected_player_vehicle_color"
       }
     }

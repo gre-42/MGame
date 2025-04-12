@@ -43,10 +43,7 @@
   {
     "declare_macro": "create_player_car_internals_compact0_with_TNo2",
     "content": {
-      "playback": "generic_car.create_player_internals",
-      "let": {
-        "asset_id": "compact0_with_TNo2"
-      }
+      "playback": "generic_car.create_player_internals"
     }
   },
   {
@@ -54,7 +51,6 @@
     "content": {
       "playback": "generic_car.create_player_externals",
       "let": {
-        "asset_id": "compact0_with_TNo2",
         "camera_class": "car_with_trailer",
         "cockpit_camera_position": [-0.4, 0.5, -0.1]
       }

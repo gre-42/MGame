@@ -270,7 +270,7 @@
         "player": "%externals_player_name",
         "gun_node": "main_gun_end_node$suffix"}},
       {"comment": {"exclude": ["%if_android"], "required": ["%if_pc"], "playback": "create_player_car_engine_rpm_meter", "arguments": {
-        "ENGINE_NAME": "left"}}},
+        "engine_name": "left"}}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {

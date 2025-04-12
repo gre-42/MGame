@@ -31,11 +31,9 @@
   {
     "declare_macro": "_create_showroom_vehicle",
     "content": {
-      "playback": "create_$VEHICLE_CLASS",
+      "playback": "create_$vehicle_class",
       "let": {
-        "human_name": "%VEHICLE_NAME",
-        "skater_name": "%VEHICLE_NAME",
-        "car_name": "%VEHICLE_NAME",
+        "asset_id": "%vehicle_name",
         "human_node_position": [0, 0.7, -11],
         "skater_node_position": [0, 0.7, -11],
         "car_node_position": [0, 0.7, -11],

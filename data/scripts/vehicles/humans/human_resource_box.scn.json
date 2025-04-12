@@ -21,26 +21,38 @@
   },
   {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_hitbox", "add": "obj_hitbox"}},
   {
-    "call": "obj_resource",
-    "arguments": {
-      "name": "human_distancebox",
-      "filename": "models/primitives/box.obj",
-      "config": {
-      "position": [0, 0.35, -0.25],
-      "rotation": [0, 0, 0],
-      "scale": [0.25, 0.7, 0.5],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+    "comment": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "human_distancebox",
+        "filename": "models/primitives/box.obj",
+        "config": {
+          "position": [0, 0.35, -0.25],
+          "rotation": [0, 0, 0],
+          "scale": [0.25, 0.7, 0.5],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "physics_material": "obj_distancebox|attr_visible|attr_collide|attr_convex"
+        }
       }
     }
   },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "human_distancebox",
+      "min": [-0.55, -0.35, -0.55],
+      "max": [0.55, 1.05, 0.55],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_collide|attr_convex"
+    }
+  },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_distancebox", "add": "obj_distancebox|attr_convex"}},
   {
     "call": "obj_resource",
     "arguments": {

@@ -12,14 +12,13 @@
           "without": ["car_node_position", "car_node_angles"],
           "arguments": {
             "spawner": "%vip_name",
+            "asset_id": "%selected_vehicle_id",
             "already_set_behavior": "update",
             "macro": [
               {
                 "playback":  "create_$$vehicles/$selected_vehicle_id/class",
                 "let": {
-                  "human_name": "%%vehicles/$selected_vehicle_id/suffix",
-                  "skater_name": "%%vehicles/$selected_vehicle_id/suffix",
-                  "car_name": "%%vehicles/$selected_vehicle_id/suffix",
+                  "asset_id": "%selected_vehicle_id",
                   "if_human_style": true,
                   "if_skater_style": true,
                   "if_car_body_renderable_style": true,

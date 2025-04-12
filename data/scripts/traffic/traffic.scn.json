@@ -144,6 +144,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
           "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_avatar",
@@ -169,6 +170,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
           "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_car",
@@ -196,6 +198,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
           "already_set_behavior": "throw",
           "macro": {
             "playback": "traffic.create_car",
