@@ -36,7 +36,7 @@
       {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$decimate"], "dest_name": "XZ/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
-  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "_d3", "suffix": "_d3"}},
+  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",                    "decimate": "", "suffix": ""}},
+  {"playback": "load_XZ_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "none",                    "decimate": "_d3", "suffix": "_d3"}},
   {"playback": "load_XZ_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "suffix": "_lowres"}}
 ]

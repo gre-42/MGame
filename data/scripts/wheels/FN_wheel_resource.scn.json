@@ -37,7 +37,7 @@
       {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$decimate"], "dest_name": "FN/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load_FN_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
-  {"playback": "load_FN_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "_d3", "suffix": "_d3"}},
-  {"playback": "load_FN_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d0.5", "suffix": "_lowres"}}
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",                    "decimate": "",       "suffix": ""}},
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "none",                    "decimate": "_d3",    "suffix": "_d3"}},
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d0.5",  "suffix": "_lowres"}}
 ]
