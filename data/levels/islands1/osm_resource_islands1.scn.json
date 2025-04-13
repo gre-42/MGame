@@ -51,7 +51,8 @@
             "street_hole": "none",
             "building_hole": "none",
             "ocean_ground": "none",
-            "undefined": "none"},
+            "undefined": "none"
+          },
           "street_materials": "surface_base_tarmac",
           "taxiway_materials": "surface_base_tarmac",
           "runway_materials": "surface_base_tarmac",
@@ -90,14 +91,28 @@
             {"lanes": 1, "textures": ["#Road007"]}],
           "runway_displacement_threshold_textures": [
             {"lanes": 1, "textures": ["#Road007"]}],
+          "window_reflection_map": "window",
           "socle_textures": [
-            {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+            {
+              "textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone"
+            }
+          ],
           "facade_textures": [
-            {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
-            {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+            {
+              "facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone",
+              "max_height": 5
+            },
+            {
+              "facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone",
+              "max_height": 5
+            },
             {
               "selector": "brick",
               "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone",
               "min_height": 5,
               "max_height": 20,
               "interior": {
@@ -108,11 +123,13 @@
                 "right": "DE21F2_industryWindow00001_right",
                 "floor": "DE21F2_industryWindow00001_bottom",
                 "ceiling": "DE21F2_industryWindow00001_top",
-                "back": "DE21F2_industryWindow00001_1k"
+                "back": "DE21F2_industryWindow00001_512",
+                "back_specular": "DE21F2_industryWindow00001_512_specular"
               }
             },
             {
               "facade": ["Concrete020_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone",
               "min_height": 5,
               "interior": {
                 "facade_edge_size": [1, 1],
@@ -122,11 +139,13 @@
                 "right": "DE21F2_industryWindow00001_right",
                 "floor": "DE21F2_industryWindow00001_bottom",
                 "ceiling": "DE21F2_industryWindow00001_top",
-                "back": "building_big_office3_window"
+                "back": "DE21F2_industryWindow00001_512",
+                "back_specular": "DE21F2_industryWindow00001_512_specular"
               }
             },
             {
               "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
+              "material": "surface_base_stone",
               "min_height": 5,
               "interior": {
                 "facade_edge_size": [1, 1],
@@ -136,7 +155,8 @@
                 "right": "DE21F2_industryWindow00001_right",
                 "floor": "DE21F2_industryWindow00001_bottom",
                 "ceiling": "DE21F2_industryWindow00001_top",
-                "back": "building_big_office3_window"
+                "back": "DE21F2_industryWindow00001_512",
+                "back_specular": "DE21F2_industryWindow00001_512_specular"
               }
             }
           ],
@@ -157,7 +177,8 @@
               "fresnel_max": 0.5,
               "fresnel_exponent": 4,
               "fresnel_ambient": [1, 1, 1]
-            }],
+            }
+          ],
           "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
           "roof_rail_texture": "#Metal038",
           "roof_model": "roof",

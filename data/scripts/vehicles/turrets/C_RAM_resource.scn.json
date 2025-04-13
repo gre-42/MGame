@@ -16,13 +16,23 @@
         "aggregate_mode": "none",
         "transformation_mode": "all",
         "triangle_tangent_error_behavior": "zero",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
       }
     }
   },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "C_RAM_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "C_RAM_hitbox", "add": "obj_chassis|attr_convex|surface_base_metal"}},
-  {"call": "compound_resource", "arguments": {"source_names": ["C_RAM_hitbox"], "dest_name": "C_RAM_hitboxes"}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "C_RAM_distancebox",
+      "min": [-1, -1, -1],
+      "max": [1, 3.7, 1],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {"call": "compound_resource", "arguments": {"source_names": ["C_RAM_hitbox", "C_RAM_distancebox"], "dest_name": "C_RAM_hitboxes"}},
   {
     "declare_macro": "load_C_RAM",
     "content": [

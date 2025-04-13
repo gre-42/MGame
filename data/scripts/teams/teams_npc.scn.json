@@ -141,6 +141,7 @@
         "call": "set_preferred_car_spawner",
         "arguments": {
           "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
           "already_set_behavior": "throw",
           "macro": {
             "playback": "teams.create_car_for_npc"
