@@ -58,6 +58,7 @@
       "street_crossing_textures": ["#Road007_No_Lines"],
       "street_textures": [
         {"lanes": 1, "textures": ["#Road007_Base_Detail_Base", "#Gravel010_Detail_Desaturated"]}],
+      "window_reflection_map": "window",
       "path_crossing_textures": ["#Gravel010"],
       "path_texture": "#Gravel010",
       "curb_street_texture": "#Rock018",
@@ -68,13 +69,26 @@
       "air_curb_path_texture": "#Rock018",
       "air_support_texture": "#Concrete020",
       "socle_textures": [
-        {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+        {
+          "textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone"
+        }
+      ],
       "facade_textures": [
-        {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
-        {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {
+          "facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
+          "max_height": 5
+        },
+        {
+          "facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
+          "max_height": 5
+        },
         {
           "selector": "brick",
           "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 5,
           "max_height": 20,
           "interior": {
@@ -91,7 +105,9 @@
         },
         {
           "facade": ["Concrete020_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 5,
+          "max_height": 50,
           "interior": {
             "facade_edge_size": [1, 1],
             "facade_inner_size": [2, 1.5],
@@ -106,6 +122,7 @@
         },
         {
           "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 5,
           "interior": {
             "facade_edge_size": [1, 1],
@@ -138,9 +155,14 @@
           "fresnel_exponent": 4,
           "fresnel_ambient": [1, 1, 1]
         }],
-      "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+      "roof_texture": "#RoofingTiles002Red",
       "roof_rail_texture": "#Metal038",
       "roof_model": "roof",
+      "default_roof_9_2_max_building_height": 50,
+      "default_roof_9_2": {
+        "width": 2,
+        "height": 1
+      },
       "racing_line_texture": "#racing_line",
       "racing_line_track": "%loaded_racing_line_track",
       "racing_line_playback": "%loaded_racing_line_playback",
