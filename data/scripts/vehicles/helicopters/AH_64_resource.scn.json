@@ -19,7 +19,8 @@
           "aggregate_mode": "none",
           "transformation_mode": "all",
           "triangle_tangent_error_behavior": "zero",
-          "rectangle_triangulation_mode": "%rectangle_triangulation_mode"
+          "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
+          "delaunay_error_behavior": "warn"
         }
       }
     }
@@ -65,16 +66,16 @@
       "name": "AH_64_tirelines",
       "filename": "models/primitives/empty.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
       }
     }
   },
@@ -109,17 +110,18 @@
           "name": "blades_AH_64$decimate",
           "filename": "models/sketchfab.com/AH-64-apache/AH_64$decimate.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [1, 1, 1],
-          "center_distances": "%center_distances",
-          "blend_mode": "continuous",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%occluder_pass",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "triangle_tangent_error_behavior": "zero"
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": "%center_distances",
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "triangle_tangent_error_behavior": "zero",
+            "delaunay_error_behavior": "warn"
           }
         }
       },
@@ -129,17 +131,17 @@
           "name": "tail_rotor_spinning_AH_64$decimate",
           "filename": "models/sketchfab.com/AH-64-apache/tail_rotor_spinning$decimate.obj",
           "config": {
-          "position": [0, 0, 0],
-          "rotation": [0, 0, 0],
-          "scale": [1, 1, 1],
-          "center_distances": "%center_distances",
-          "blend_mode": "continuous",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%occluder_pass",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "triangle_tangent_error_behavior": "zero"
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": "%center_distances",
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "triangle_tangent_error_behavior": "zero"
           }
         }
       }
@@ -153,16 +155,16 @@
       "name": "ah64_blades",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0, -0.1],
-      "rotation": [0, 0, 0],
-      "scale": [5, 5, 0.1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 0, -0.1],
+        "rotation": [0, 0, 0],
+        "scale": [5, 5, 0.1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
       }
     }
   },

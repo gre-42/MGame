@@ -118,7 +118,8 @@
             "fresnel_min": 0,
             "fresnel_max": 0.4,
             "fresnel_exponent": 4,
-            "fresnel_ambient": [1, 1, 1]
+            "fresnel_ambient": [1, 1, 1],
+            "physics_material": "attr_visible"
           }
         }
       },
