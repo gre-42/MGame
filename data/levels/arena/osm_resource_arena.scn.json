@@ -40,14 +40,28 @@
       "path_crossing_textures": ["#Road007_No_Lines_Detail_Base", "#Gravel010_Detail"],
       "path_textures": [{
         "lanes": 1, "textures": ["#Road007_2_Lanes_Detail_Base", "#Gravel010_Detail"]}],
+      "window_reflection_map": "window",
       "socle_textures": [
-        {"textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"]}],
+        {
+          "textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone"
+        }
+      ],
       "facade_textures": [
-        {"facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
-        {"facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"], "max_height": 5},
+        {
+          "facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
+          "max_height": 5
+        },
+        {
+          "facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
+          "max_height": 5
+        },
         {
           "selector": "brick",
           "facade": ["wall_facade_bricks_red_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 5,
           "max_height": 50,
           "interior": {
@@ -64,6 +78,7 @@
         },
         {
           "facade": ["wall_facade_plaster_orange_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 5,
           "max_height": 50,
           "interior": {
@@ -80,6 +95,7 @@
         },
         {
           "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
@@ -94,6 +110,7 @@
         },
         {
           "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
@@ -108,6 +125,7 @@
         },
         {
           "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
           "min_height": 50,
           "interior": {
             "facade_edge_size": [0.5, 0.5],
@@ -120,7 +138,11 @@
             "back": "room.back"
           }
         },
-        {"facade": ["MarekWindow00001_512", "concrete1_2K_wh_Detail"], "min_height": 50}
+        {
+          "facade": ["MarekWindow00001_512", "concrete1_2K_wh_Detail"],
+          "material": "surface_base_stone",
+          "min_height": 50
+        }
       ],
       "ceiling_texture": "#Asphalt015",
       "barrier_styles": [
