@@ -15,6 +15,7 @@
   },
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "../nyc/osm_resource_nyc.scn.json"},
+  {"include": "create_tripod_cameras_nyc_with_traffic_track2.scn.json"},
   {
     "call": "globals",
     "arguments": {

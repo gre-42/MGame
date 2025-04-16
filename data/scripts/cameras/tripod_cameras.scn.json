@@ -26,6 +26,16 @@
       "arguments": {
         "node": "%node_name"
       }
+    },
+    {
+      "comment": {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "topdown_locator",
+          "node": "%node_name",
+          "resource": "topdown_locator"
+        }
+      }
     }
   ]
 }
