@@ -178,7 +178,7 @@
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
         "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_collide|attr_convex"
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
       }
     }
   },
@@ -297,7 +297,7 @@
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
         "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_collide|attr_convex"
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
       }
     }
   },

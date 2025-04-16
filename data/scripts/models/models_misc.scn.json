@@ -69,7 +69,7 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "physics_material": "attr_collide|attr_convex"
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
       }
     }
   },
