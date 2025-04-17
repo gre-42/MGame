@@ -146,40 +146,40 @@
       }
     },
     {
-      "required": ["%IF_PLAYBACK_WINNER_0", "%IF_WINNER_RANK0_EXISTS"],
+      "required": ["%if_playback_winner_0", "%if_winner_rank0_exists"],
       "playback": "_create_winner_playback",
       "arguments": {
         "rank": 0,
         "playback_speed": "%playback_speed",
-        "playback_car":"$WINNER0_VEHICLE",
-        "color": "%WINNER0_COLOR",
+        "playback_car":"$winner0_vehicle",
+        "color": "%winner0_color",
         "psuffix": "'1'"
       }
     },
     {
-      "required": ["%IF_PLAYBACK_WINNER_1", "%IF_WINNER_RANK1_EXISTS"],
+      "required": ["%if_playback_winner_1", "%if_winner_rank1_exists"],
       "playback": "_create_winner_playback",
       "arguments": {
         "rank": 1,
         "playback_speed": "%playback_speed",
         "playback_car":"$WINNER1_VEHICLE",
-        "color": "%WINNER1_COLOR",
+        "color": "%winner1_color",
         "psuffix": "'2'"
       }
     },
     {
-      "required": ["%IF_PLAYBACK_WINNER_2", "%IF_WINNER_RANK2_EXISTS"],
+      "required": ["%if_playback_winner_2", "%if_winner_rank2_exists"],
       "playback": "_create_winner_playback",
       "arguments": {
         "rank": 2,
         "playback_speed": "%playback_speed",
-        "playback_car":"$WINNER2_VEHICLE",
-        "color": "%WINNER2_COLOR",
+        "playback_car":"$winner2_vehicle",
+        "color": "%winner2_color",
         "psuffix": "'3'"
       }
     },
     {
-      "required": ["%if_checkpoints"],
+      "required": ["%if_create_pc_car", "%if_checkpoints"],
       "call": "check_points",
       "arguments": {
         "moving_asset_id": "%%vehicles/$selected_vehicle_id/suffix",

@@ -15,6 +15,7 @@
   },
   {"include": "../../scripts/include_all.scn.json"},
   {"include": "../nyc/osm_resource_nyc.scn.json"},
+  {"include": "create_tripod_cameras_nyc_with_traffic_track.scn.json"},
   {
     "call": "globals",
     "arguments": {
@@ -61,8 +62,8 @@
       "let": {
         "if_create_pc_car": true,
         "if_pc_player_playback": false,
-        "car_node_position": [-117, -170, 120],
-        "car_node_angles": [0, 120, 0],
+        "car_node_position": [-124, -169, 126],
+        "car_node_angles": [0, 147, 0],
         "vehicle_velocity": [0, 0, 0],
         "vehicle_angular_velocity": [0, 0, 0],
         "recordings_dir": "%__DIR__",
