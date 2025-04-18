@@ -10,19 +10,14 @@
         "position": [0, -220, 0],
         "rotation": [-90, 0, 0],
         "scale": 1
-      }
-    }
-  },
-  {"include": "../../scripts/include_all.scn.json"},
-  {"include": "../nyc/osm_resource_nyc.scn.json"},
-  {"include": "create_tripod_cameras_nyc_with_traffic_track2.scn.json"},
-  {
-    "call": "globals",
-    "arguments": {
+      },
       "loaded_game_level": "'2'",
       "loaded_racing_line_track": "$__DIR__/racing_line_nyc_with_traffic_track2.m"
     }
   },
+  {"include": "scripts/include_all.scn.json"},
+  {"include": "../nyc/osm_resource_nyc.scn.json"},
+  {"include": "create_tripod_cameras_nyc_with_traffic_track2.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -33,9 +28,6 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|history|laps|rank|race_time",
       "osm_map_resource": "osm_resource_nyc",
-      "osm_position": [0, -220, 0],
-      "osm_rotation": [-90, 0, 0],
-      "osm_scale": 1e3,
       "if_has_overlay": false,
       "if_dirtmap": true,
       "if_extract_alignment_planes": false,
@@ -69,8 +61,7 @@
         "recordings_dir": "%__DIR__",
         "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
         "checkpoints": null,
-        "pacenotes_file": "",
-
+        "pacenotes_file": null,
         "if_playback_checkpoints": false,
         "if_playback_track_1": false,
         "if_playback_track_2": false,
