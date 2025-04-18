@@ -233,6 +233,7 @@
         "selection_emissivity": "%check_points_active_color",
         "deselection_emissivity": "%check_points_inactive_color",
         "respawn_config": {
+          "max_respawn_distance": 200,
           "vehicle_length": 20,
           "max_horizontal_angle": 30,
           "max_vertical_angle": 5
