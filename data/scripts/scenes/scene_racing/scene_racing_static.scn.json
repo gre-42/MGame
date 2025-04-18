@@ -69,7 +69,7 @@
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
       "arguments": {
-        "IF_INSTANTIATE_OSM_MAP": "%osm_map_resource != %null",
+        "if_instantiate_osm_map": "%osm_map_resource != %null",
         "if_create_pc_player": "%if_create_pc_player",
         "if_pc_player_playback": "%if_pc_player_playback",
         "pc_player_playback": "%pc_player_playback",

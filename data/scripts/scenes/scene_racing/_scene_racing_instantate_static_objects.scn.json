@@ -13,7 +13,7 @@
     "declare_macro": "_scene_racing_instantiate_static_objects",
     "content": [
       {
-        "required": ["%IF_INSTANTIATE_OSM_MAP"],
+        "required": ["%if_instantiate_osm_map"],
         "execute": [
           {
             "playback": "_preload_osm_map"
