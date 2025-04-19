@@ -93,10 +93,12 @@
           "ambient": [0.7, 0.7, 0.7],
           "diffuse": [0.5, 0.5, 0.5],
           "specular": [0, 0, 0],
-          "fresnel_min": 0,
-          "fresnel_max": 0.5,
-          "fresnel_exponent": 4,
-          "fresnel_ambient": [1, 1, 1]
+          "fresnel": {
+            "min": 0,
+            "max": 0.5,
+            "exponent": 4,
+            "ambient": [1, 1, 1]
+          }
         }],
       "boundary_barrier_style": "tape",
       "boundary_barrier_height": 1.25,

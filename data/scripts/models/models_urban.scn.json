@@ -22,10 +22,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -54,10 +56,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -85,10 +89,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -116,10 +122,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -147,10 +155,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -205,10 +215,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -235,10 +247,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -265,10 +279,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -324,10 +340,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -356,10 +374,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -387,10 +407,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -418,10 +440,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -449,10 +473,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -481,10 +507,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -513,10 +541,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -544,10 +574,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }
@@ -575,10 +607,12 @@
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
-        "fresnel_min": 0,
-        "fresnel_max": 0.4,
-        "fresnel_exponent": 4,
-        "fresnel_ambient": [1, 1, 1],
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        },
         "physics_material": "attr_visible"
       }
     }

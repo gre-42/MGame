@@ -15,7 +15,7 @@
       "terrain_elevated_grass_base_textures": ["#Concrete020"],
       "terrain_stone_textures": ["#concrete1_2K_ye"],
       "terrain_asphalt_textures": ["#Road007_No_Lines"],
-      "terrain_water_floor_textures": ["#ocean"],
+      "terrain_water_floor_textures": ["#ocean_uniform"],
       "terrain_water_floor_base_textures": ["#Concrete020"],
       "bounding_terrain_type": "water_floor",
       "default_terrain_type": "stone",
@@ -29,8 +29,8 @@
         "elevated_grass_base": "surface_base_stone",
         "stone": "surface_base_stone",
         "asphalt": "surface_base_tarmac",
-        "water_floor": "none",
-        "water_floor_base": "none",
+        "water_floor": "surface_base_water",
+        "water_floor_base": "surface_base_stone",
         "street_hole": "none",
         "building_hole": "none",
         "ocean_ground": "none",
@@ -126,10 +126,12 @@
           "ambient": [0.7, 0.7, 0.7],
           "diffuse": [0.5, 0.5, 0.5],
           "specular": [0, 0, 0],
-          "fresnel_min": 0,
-          "fresnel_max": 0.5,
-          "fresnel_exponent": 4,
-          "fresnel_ambient": [1, 1, 1]
+          "fresnel": {
+            "min": 0,
+            "max": 0.5,
+            "exponent": 4,
+            "ambient": [1, 1, 1]
+          }
         }
       ],
       "roof_texture": "#RoofingTiles002Red",

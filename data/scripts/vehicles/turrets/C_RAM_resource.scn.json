@@ -42,22 +42,27 @@
           "name": "%name",
           "filename": "models/gre42/C-RAM/$name.obj",
           "config": {
-          "position": [0, -1, 0],
-          "rotation": [0, 90, 0],
-          "scale": [1, 1, 1],
-          "center_distances": ["%dist_min", "%dist_max"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "lightmap_black_global_and_local",
-          "occluder_pass": "%occluder_pass",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "triangle_tangent_error_behavior": "zero",
-          "emissive_factor": "%blender_emissive_factor",
-          "ambient_factor": "%blender_ambient_factor",
-          "diffuse_factor": "%blender_diffuse_factor",
-          "specular_factor": "%blender_specular_factor",
-          "fresnel_ambient": "%blender_fresnel_AMBIENT"
+            "position": [0, -1, 0],
+            "rotation": [0, 90, 0],
+            "scale": [1, 1, 1],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "triangle_tangent_error_behavior": "zero",
+            "emissive_factor": "%blender_emissive_factor",
+            "ambient_factor": "%blender_ambient_factor",
+            "diffuse_factor": "%blender_diffuse_factor",
+            "specular_factor": "%blender_specular_factor",
+            "fresnel": {
+              "min": 0,
+              "max": 0.3,
+              "exponent": 4,
+              "ambient": "%blender_fresnel_ambient"
+            }
           }
         }
       }
