@@ -13,6 +13,7 @@
           "arguments": {
             "spawner": "%vip_name",
             "asset_id": "%selected_vehicle_id",
+            "y_offset": "%%vehicles/$selected_vehicle_id/spawn_y_offset",
             "already_set_behavior": "update",
             "macro": [
               {

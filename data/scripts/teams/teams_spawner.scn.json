@@ -55,6 +55,7 @@
         "arguments": {
           "spawner": "%spawner_name",
           "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
           "already_set_behavior": "throw",
           "macro": {
             "playback": "teams.create_car_for_spawner"
