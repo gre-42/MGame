@@ -2,7 +2,7 @@
   "id": "sf_with_traffic",
   "title": "San Francisco with traffic",
   "required": {
-    "fixed": ["%if_devel"],
+    "fixed": [],
     "dynamic": ["%game_mode in %%levels/sf_with_traffic/game_modes"]
   },
   "on_execute": {
