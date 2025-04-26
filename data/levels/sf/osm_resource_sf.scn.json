@@ -145,6 +145,14 @@
       "racing_line_texture": "#racing_line",
       "racing_line_track": "%racing_line_track",
       "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+      "waysides_surface": [
+        {
+          "resources": ["street_light2_with_blob(hitbox:box_02_1_02_hitbox)"],
+          "tangential_distance": 30,
+          "normal_distance": 1,
+          "gradient_dx": "nan",
+          "max_gradient": "nan"
+        }],
       "tree_resource_names": [
         "vegetation2.0(hitbox:box_02_1_02_hitbox)",
         "vegetation2.1(hitbox:box_02_1_02_hitbox)",
