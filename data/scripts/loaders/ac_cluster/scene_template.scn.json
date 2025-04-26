@@ -1,0 +1,217 @@
+[
+  {"include": "scripts/include_all.scn.json"},
+  {
+    "call": "globals",
+    "arguments": {
+      "loaded_level_id": "%selected_level_id",
+      "osm_location": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": 1
+      },
+      "aggregate_mode": "none",
+      "vip_name": "you",
+      "player_role": "driver"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "%loaded_level_id",
+      "filename": "%stage_ini_filename",
+      "double_precision": true,
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "max_triangle_distance": 300,
+        "blend_mode": "semi_continuous_02",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "anisotropic_filtering_level": 16,
+        "magnifying_interpolation_mode": "linear",
+        "aggregate_mode": "%aggregate_mode",
+        "transformation_mode": "all",
+        "emissive_factor": "%ac_emissive_factor",
+        "ambient_factor": "%ac_ambient_factor",
+        "diffuse_factor": "%ac_diffuse_factor",
+        "specular_factor": "%ac_specular_factor",
+        "fresnel": {
+          "min": -1,
+          "max": -1,
+          "exponent": -1,
+          "ambient": "%ac_fresnel_ambient"
+        },
+        "physics_material": "none",
+        "triangle_tangent_error_behavior": "zero"
+      }
+    }
+  },
+  {
+    "call": "register_geographic_mapping",
+    "arguments": {
+      "name": "world",
+      "transformation": "%osm_location",
+      "resource": "%loaded_level_id"
+    }
+  },
+  {
+    "comment": {
+      "call": "delete_mesh",
+      "arguments": {
+        "resource_name": "%loaded_level_id",
+        "where": "obj_grass"
+      }
+    }
+  },
+  {
+    "call": "cleanup_mesh",
+    "arguments": {
+      "resource_name": "%loaded_level_id",
+      "min_distance_material_filter": "attr_collide",
+      "min_vertex_distance": 1e-2
+    }
+  },
+  {
+    "call": "merge_textures",
+    "arguments": {
+      "resource_name": "%loaded_level_id",
+      "merged_resource_name": "$loaded_level_id-_trees",
+      "merged_texture_name": "$loaded_level_id-_trees",
+      "merged_array_name": "$loaded_level_id-_trees",
+      "merged_blend_mode": "semi_continuous_02",
+      "merged_continuous_blending_z_order": 1,
+      "merged_occluded_pass": "none",
+      "merged_occluder_pass": "lightmap_black_global_and_local",
+      "merged_aggregate_mode": "sorted",
+      "merged_max_triangle_distance": 300,
+      "merged_cull_faces": true,
+      "merged_mip_level_count": 8,
+      "merged_anisotropic_filtering_level": 0
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "add_foliage",
+    "arguments": {
+      "mesh_resource_name": "%loaded_level_id",
+      "foliage_resource_name": "$loaded_level_id-_foliage",
+      "near_grass_resource_names": ["vegetation10_close.0"],
+      "dirty_near_grass_resource_names": ["vegetation10_close.1"],
+      "near_grass_distance": 3,
+      "near_grass_foliagemap": "textures/noise/foliagemap.png",
+      "near_grass_foliagemap_period": 0.01
+    }
+  },
+  {
+    "call": "replace_terrain_material",
+    "arguments": {
+      "resource_name": "%loaded_level_id",
+      "textures": [
+        "#Ground037_Sl_1",
+        "#Ground037_Sl_8_1",
+        "#Ground037_Sl_64",
+        "#Ground037_Sl_256"],
+      "uv_scale": 3e-1,
+      "uv_period": 256
+    }
+  },
+  {
+    "call": "cluster_elements",
+    "arguments": {
+      "resource_names": ["%loaded_level_id", "$loaded_level_id-_trees"],
+      "width": [500, 500, 500],
+      "rendering_dynamics": "static",
+      "resource_variable": "available_resources",
+      "instantiables_variable": "available_instantiables"
+    }
+  },
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "if_create_pc_player": true,
+      "if_pc_player_playback": false,
+      "pc_player_playback": "$__DIR__/checkpoints.m",
+      "pc_player_playback_speedup": 1,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|history|laps|rank|race_time",
+      "osm_map_resource": null,
+      "if_has_overlay": false,
+      "if_dirtmap": false,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": null,
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 0.5,
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "soft_light_texture": null
+    }
+  },
+  {
+    "call": "instantiate",
+    "context": "primary_scene",
+    "arguments": {
+      "ipl_files": [],
+      "instantiables": "%available_instantiables",
+      "required_prefixes": [""],
+      "except": [],
+      "dynamics": "static",
+      "instantiated_resources": "instantiated_resources"
+    }
+  },
+  {
+    "call": "set_textures_lazy",
+    "context": "primary_scene",
+    "let": {
+      "resources": "%instantiated_resources"
+    },
+    "arguments": {
+      "command": {
+        "call": "preload",
+        "arguments": {
+          "resources": "%resources",
+          "tire_contacts": "%resources"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "if_create_pc_car": true,
+        "if_pc_player_playback": false,
+        "car_node_position": "%%levels/$loaded_level_id/car_node_position",
+        "car_node_angles": "%%levels/$loaded_level_id/car_node_angles",
+        "vehicle_velocity": "%%levels/$loaded_level_id/vehicle_velocity",
+        "vehicle_angular_velocity": "%%levels/$loaded_level_id/vehicle_angular_velocity",
+        "recordings_dir": "%__DIR__",
+        "checkpoints_file": null,
+        "checkpoints": "%%levels/$loaded_level_id/checkpoints",
+        "pacenotes_file": null,
+        "teams_spawn_points_resource": null,
+        "teams_way_points_resource": null,
+        "if_playback_checkpoints": false,
+        "if_playback_track_1": false,
+        "if_playback_track_2": false,
+        "if_playback_track_3": false,
+        "if_checkpoints": "%%levels/$loaded_level_id/checkpoints != %null",
+        "if_burn_in": false
+      }
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
+  },
+  {"playback": "create_main_menu"}
+]
