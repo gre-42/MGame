@@ -213,11 +213,11 @@
             "Leaf018_2_Red",
             "Paper(p:0.1)"],
           "default_street_width": 14,
-          "wayside_resource_names": [
+          "waysides_vertex": [
             {
               "min_dist": 4.5,
               "max_dist": 6,
-              "resource_names": [
+              "resources": [
                 "Stone_model_tex_small(p:0.2)(hitbox:box_02_1_02_hitbox)",
                 "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"]}],
           "water_height": "%water_height",

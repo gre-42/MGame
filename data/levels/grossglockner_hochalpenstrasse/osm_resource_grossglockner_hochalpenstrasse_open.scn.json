@@ -169,8 +169,14 @@
       "racing_line_track": "%loaded_racing_line_track",
       "racing_line_playback": "%loaded_racing_line_playback",
 
-      "road_bollard_resource_names": [
-        "road_bollard3(hitbox:road_bollard_hitbox)"],
+      "waysides_surface": [
+        {
+          "resources": ["road_bollard3(hitbox:road_bollard_hitbox)"],
+          "tangential_distance": 3,
+          "normal_distance": 0.25,
+          "gradient_dx": 0.1,
+          "max_gradient": -0.1
+        }],
       "tree_resource_names": [
         "vegetation11.0(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation11.1(p:1)(hitbox:box_02_1_02_hitbox)",

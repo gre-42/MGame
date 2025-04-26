@@ -238,16 +238,26 @@
         "racing_line_texture": "#racing_line",
         "racing_line_track": "%loaded_racing_line_track",
         "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
-        "trashcan_resource_names": [
-          "dumpster(yangle:0)(p:0.1)(hitbox:box_02_1_02_hitbox)",
-          "trashcan1(yangle:90)(p:0.1)(hitbox:box_02_1_02_hitbox)",
-          "trashcan2(yangle:90)(hitbox:box_02_1_02_hitbox)",
-          "mailbox(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)",
-          "bench(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)"],
-        "trashcan_distances": {
-          "tangential_distance": 120,
-          "normal_distance": 1
-        },
+        "waysides_surface": [
+          {
+            "resources": [
+              "dumpster(yangle:0)(p:0.1)(hitbox:box_02_1_02_hitbox)",
+              "trashcan1(yangle:90)(p:0.1)(hitbox:box_02_1_02_hitbox)",
+              "trashcan2(yangle:90)(hitbox:box_02_1_02_hitbox)",
+              "mailbox(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)",
+              "bench(yangle:0)(p:0.2)(hitbox:box_02_1_02_hitbox)"],
+            "tangential_distance": 120,
+            "normal_distance": 1,
+            "gradient_dx": "nan",
+            "max_gradient": "nan"
+          },
+          {
+            "resources": ["street_light(hitbox:box_02_1_02_hitbox)"],
+            "tangential_distance": 20,
+            "normal_distance": 1,
+            "gradient_dx": "nan",
+            "max_gradient": "nan"
+          }],
         "tree_resource_names": [
           "vegetation2.0(hitbox:box_02_1_02_hitbox)",
           "vegetation2.1(hitbox:box_02_1_02_hitbox)",
