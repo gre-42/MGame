@@ -169,6 +169,13 @@
     }
   },
   {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
+    }
+  },
+  {
     "call": "set_textures_lazy",
     "context": "primary_scene",
     "let": {
