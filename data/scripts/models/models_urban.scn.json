@@ -101,6 +101,13 @@
     }
   },
   {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": ["street_light_blob", "street_light2"],
+      "dest_name": "street_light2_with_blob"
+    }
+  },
+  {
     "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {

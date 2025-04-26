@@ -16,8 +16,8 @@
     "arguments": {
       "name": "street_light_blob",
       "texture_filename": "#blob0",
-      "min": [-6, -6],
-      "max": [6, 6],
+      "min": [-6, -3],
+      "max": [6, 9],
       "center_distances": [0, 501],
       "occluded_pass": "none",
       "occluder_pass": "lightmap_blobs",
@@ -28,7 +28,7 @@
       "rotation": [-90, 0, 0],
       "translation": [0, 0, 0],
       "aggregate_mode": "instances_sorted",
-      "transformation_mode": "position"
+      "transformation_mode": "position_yangle"
     }
   },
   {

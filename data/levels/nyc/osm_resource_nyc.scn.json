@@ -252,7 +252,7 @@
             "max_gradient": "nan"
           },
           {
-            "resources": ["street_light2(hitbox:box_02_1_02_hitbox)"],
+            "resources": ["street_light2_with_blob(hitbox:box_02_1_02_hitbox)"],
             "tangential_distance": 30,
             "normal_distance": 1,
             "gradient_dx": "nan",
@@ -342,7 +342,7 @@
         "extrude_air_support_amount": -0.5,
         "extrude_grass_amount": -0.1,
         "extrude_elevated_grass_amount": 0.5,
-        "street_light_resource_names": ["street_light_blob"],
+        "street_light_resource_names": [],
         "max_wall_width": 10,
         "with_height_bindings": true,
         "street_node_smoothness": 1,
