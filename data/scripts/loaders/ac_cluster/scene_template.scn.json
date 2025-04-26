@@ -122,6 +122,7 @@
     "arguments": {
       "resource_names": ["%loaded_level_id", "$loaded_level_id-_trees"],
       "width": [500, 500, 500],
+      "center_distances": [0, 3000],
       "rendering_dynamics": "static",
       "resource_variable": "available_resources",
       "instantiables_variable": "available_instantiables"
