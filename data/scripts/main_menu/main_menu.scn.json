@@ -615,8 +615,8 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car"}}},
-            {"id": "car_with_trailer", "title": "%%translations/main/Car_with_trailer/$selected_language", "on_before_select": { "call": "globals", "arguments": {"RACE_RESTRICTIONS": "car_with_trailer"}}}
+            {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car"}}},
+            {"id": "car_with_trailer", "title": "%%translations/main/Car_with_trailer/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car_with_trailer"}}}
           ]
         }
       },
@@ -696,18 +696,18 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session1"}}},
-            {"id": "'2'", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session2"}}},
-            {"id": "'3'", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session3"}}},
-            {"id": "'4'", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session4"}}},
-            {"id": "'5'", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"RACE_SESSION": "session5"}}}
+            {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"race_session": "session1"}}},
+            {"id": "'2'", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"race_session": "session2"}}},
+            {"id": "'3'", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"race_session": "session3"}}},
+            {"id": "'4'", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"race_session": "session4"}}},
+            {"id": "'5'", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"race_session": "session5"}}}
           ]
         }
       },
       {
         "call": "globals",
         "exclude": ["%if_devel"],
-        "arguments": { "RACE_SESSION": "session1" }
+        "arguments": { "race_session": "session1" }
       },
       {
         "call": "parameter_setter",
@@ -728,11 +728,11 @@
           "line_distance": "normal",
           "deflt": 0,
           "parameters": [
-            {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 1}}},
-            {"id": "'2'", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 2}}},
-            {"id": "'4'", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 4}}},
-            {"id": "'8'", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 8}}},
-            {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"RACE_LAPS": 16}}}
+            {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"race_laps": 1}}},
+            {"id": "'2'", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 2}}},
+            {"id": "'4'", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 4}}},
+            {"id": "'8'", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 8}}},
+            {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"race_laps": 16}}}
           ]
         }
       },

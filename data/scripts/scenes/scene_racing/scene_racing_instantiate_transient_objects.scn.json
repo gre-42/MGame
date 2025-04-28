@@ -195,7 +195,7 @@
         "track_filename": "%checkpoints_file",
         "track": "%checkpoints",
         "circular": "%%levels/$loaded_level_id/if_raceway_circular",
-        "laps": "%RACE_LAPS",
+        "laps": "%race_laps",
         "pacenotes_filename": "%pacenotes_file",
         "pacenotes_meters_ahead": 50,
         "pacenotes_minimum_covered_meters": 200,

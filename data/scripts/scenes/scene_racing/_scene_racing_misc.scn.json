@@ -94,19 +94,19 @@
         "playback": "_update_time_of_day"
       },
       {
-        "required": ["%LOADED_GAME_MODE == 'rally'"],
+        "required": ["%loaded_game_mode == 'rally'"],
         "call": "set_race_identifier_and_reload_history",
         "arguments": {
           "level_id": "%loaded_level_id",
-          "time_of_day": "%LOADED_TIME_OF_DAY",
-          "restrictions": "%LOADED_RACE_RESTRICTIONS",
-          "session": "%LOADED_RACE_SESSION",
-          "laps": "%LOADED_RACE_LAPS",
+          "time_of_day": "%loaded_time_of_day",
+          "restrictions": "%loaded_race_restrictions",
+          "session": "%loaded_race_session",
+          "laps": "%loaded_race_laps",
           "milliseconds": 0
         }
       },
       {
-        "required": ["%LOADED_GAME_MODE == 'rally'"],
+        "required": ["%loaded_game_mode == 'rally'"],
         "call": "start_race",
         "arguments": {
           "readonly": false
