@@ -76,7 +76,7 @@
           "max_height": 5
         },
         {
-          "facade": ["wall_facade_plaster_gray_Base", "concrete1_2K_wh_Detail"],
+          "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
           "material": "surface_base_stone",
           "min_height": 5,
           "max_height": 50,
@@ -219,7 +219,7 @@
       "raise_streets_amount": 0,
       "extrude_curb_amount": 0,
       "extrude_street_amount": -0.05,
-      "extrude_grass_amount": -0.05,
+      "extrude_grass_amount": 0.05,
       "extrude_elevated_grass_amount": 0.5,
       "extrude_water_floor_amout": -2,
       "building_grass_width": 0,
