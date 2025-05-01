@@ -528,6 +528,10 @@
               "on_execute": { "call": "reload_scene", "arguments": {"change_scene": false}}
             },
             {
+              "required": {
+                "fixed": ["!if_android"],
+                "dynamic": []
+              },
               "id": "exit",
               "title": "%%translations/main/Exit/$selected_language",
               "on_execute": { "call": "exit" }
