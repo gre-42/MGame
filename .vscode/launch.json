@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/Mlib/GURelWithDebInfo/Bin/render_scene_file",
             "args": [
-                "data",
+                "data\\;/media/kl/Acer/Daten/Art/3D-Scenes\\;/media/kl/Acer/Daten/Art/3D-Scenes/city-buildings-asset-pack\\;/media/kl/Acer/Daten/MyPrograms/MGame_Private\\;/media/Daten/Games/Steam/steamapps/common",
                 "data/levels/main/main.scn.json",
                 "--print_render_residual_time",
                 "--print_physics_residual_time",
