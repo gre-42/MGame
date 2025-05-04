@@ -68,7 +68,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_No_Lines_Detail_Base",
@@ -102,7 +101,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "RoadOld_Yellow_Detail_Base",
@@ -119,7 +117,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_White_1x_Lane_Detail_Base",

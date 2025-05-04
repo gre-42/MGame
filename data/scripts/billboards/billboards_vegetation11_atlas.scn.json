@@ -23,10 +23,10 @@
   },
   {
     "comment": {
-      "call": "save_texture_png",
+      "call": "save_texture_array_png",
       "arguments": {
         "name": "vegetation11",
-        "filename": "/tmp/vegetation11.png",
+        "filename_prefix": "/tmp/vegetation11_",
         "color_mode": "rgba"
       }
     }

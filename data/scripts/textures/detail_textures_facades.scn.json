@@ -16,7 +16,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Base",
@@ -33,7 +32,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Plaster003_Gray_Base",
@@ -50,7 +48,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "MarekWindow00001_512_Base",

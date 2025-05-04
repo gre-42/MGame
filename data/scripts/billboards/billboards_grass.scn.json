@@ -725,7 +725,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
       "name": "hedge_small_round",
@@ -742,7 +741,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "playback": "_add_hist_hedge_0_90",
     "arguments": {
       "name": "hedge_long_round",

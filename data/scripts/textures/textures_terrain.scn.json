@@ -41,7 +41,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003",
@@ -52,7 +51,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_Gray",
@@ -119,7 +117,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Pavement_ConcreteSidewalk3",
@@ -607,7 +604,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "fence1",
@@ -636,7 +632,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "ocean",

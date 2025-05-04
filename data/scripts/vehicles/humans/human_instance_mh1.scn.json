@@ -10,7 +10,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "declare_macro": "create_female_skirt",
     "content": {
       "playback": "generic_avatar.create",
@@ -26,7 +25,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "declare_macro": "create_player_avatar_internals_female_skirt",
     "content": {
       "playback": "generic_avatar.create_player_internals"

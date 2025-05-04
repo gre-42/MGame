@@ -1,10 +1,9 @@
 [
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "basketball_hoop",
-      "filename": "models/Basketball/BasketballHoop.obj",
+      "filename": "models/gre42/Basketball/BasketballHoop.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -33,11 +32,10 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light",
-      "filename": "models/street_light/street_light.obj",
+      "filename": "models/gre42/street_light/street_light.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -67,11 +65,10 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "street_light2",
-      "filename": "models/street_light/street_light2.obj",
+      "filename": "models/gre42/street_light/street_light2.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 180, 0],
@@ -108,11 +105,10 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "traffic_cone",
-      "filename": "models/traffic_cone/traffic_cone.obj",
+      "filename": "models/gre42/traffic_cone/traffic_cone.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -174,11 +170,10 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard",
-      "filename": "models/road_bollard/road_bollard.obj",
+      "filename": "models/gre42/road_bollard/road_bollard.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -238,7 +233,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard2",
-      "filename": "models/road_bollard/road_bollard2.obj",
+      "filename": "models/gre42/road_bollard/road_bollard2.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -270,7 +265,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "road_bollard3",
-      "filename": "models/road_bollard/road_bollard3.obj",
+      "filename": "models/gre42/road_bollard/road_bollard3.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -359,7 +354,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "dumpster",
@@ -392,7 +386,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan1",
@@ -426,7 +419,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "trashcan2",
@@ -459,7 +451,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "mailbox",
@@ -492,7 +483,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "bench",
@@ -525,7 +515,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "obj_resource",
     "arguments": {
       "name": "table_and_chairs",
@@ -718,7 +707,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "execute": [
       {
         "playback": "load_hedge",

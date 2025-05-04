@@ -18,10 +18,10 @@
   },
   {
     "comment": {
-      "call": "save_texture_png",
+      "call": "save_texture_array_png",
       "arguments": {
         "name": "vegetation0",
-        "filename": "/tmp/vegetation0.png",
+        "filename_prefix": "/tmp/vegetation0_",
         "color_mode": "rgba"
       }
     }

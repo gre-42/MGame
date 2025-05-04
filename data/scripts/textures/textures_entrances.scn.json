@@ -1,6 +1,5 @@
 [
   {
-    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "TCom_Shops0106_S",
@@ -10,7 +9,6 @@
     }
   },
   {
-    "exclude": ["%if_android"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "TCom_Shops0200_S",
