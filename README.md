@@ -33,7 +33,7 @@ For instructions how to add a custom stage, see [CONTRIBUTING](CONTRIBUTING.md).
 ![Screenshot-GH-2024-01-27](media/Screenshot-GH-2024-12-26.png)
 
 ### New York City
-![Screenshot-NYC-2025-04-10](media/Screenshot-NYC-2025-04-10.png)
+![Screenshot-NYC-2025-05-05](media/Screenshot-NYC-2025-05-05.png)
 
 ### San Francisco
 ![Screenshot-SF-2025-04-21](media/Screenshot-SF-2025-04-21.jpg)
