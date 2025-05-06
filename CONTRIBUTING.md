@@ -264,6 +264,13 @@ One kind of roof with angles is supported:
 
 ![Image](https://github.com/user-attachments/assets/85d20131-5102-448e-95cb-bc75ea925cd1)
 
+- Roofs have a rain pipe, if the attributes`"roof_rail_texture"` and `"roof_model"` are set in the JSON file.
+- The 9.2 model is automatically applied to all buildings, if the `"default_roof_9_2"` attribute is set.
+
+![Image](https://github.com/user-attachments/assets/40287ba3-27f0-412f-87ed-3fc733253c2d)
+
+![Image](https://github.com/user-attachments/assets/5597ee72-9129-4ed0-bde2-cde26b097d81)
+
 ### Terrain regions
 
 The attributes `terrain_region:trees` and `terrain_region:flowers` can be used to display vegetation in some regions.
