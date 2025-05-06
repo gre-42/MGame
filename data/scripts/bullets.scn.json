@@ -73,10 +73,12 @@
         "lifetime": 30,
         "size": [2.4, 2.4, 20],
         "trail": {
-          "resource": "smoke_3d",
-          "dt": 0.005,
-          "air_resistance": 0.01,
-          "animation_duration": 0.5
+          "particle": {
+            "resource": "smoke_3d",
+            "air_resistance": 0.01,
+            "animation_duration": 0.5
+          },
+          "generation_dt": 0.005
         },
         "rigid_body_flags": "feels_no_gravity",
         "velocity": 50,

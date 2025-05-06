@@ -8,24 +8,28 @@
     "friction_coefficient": "nan",
     "smoke": [
       {
-        "resource_name": "skidmarks_a20_black",
+        "particle": {
+          "resource": "skidmarks_a20_black",
+          "air_resistance": 0,
+          "animation_duration": "inf"        
+        },
         "instance_prefix": "skidmarks_a20_black",
         "tire": {
           "vehicle_velocities": [4, 5, 50],
           "particle_frequencies": [0, 20, 200]
-        },
-        "air_resistance": 0,
-        "animation_duration": "inf"
+        }
       },
       {
-        "resource_name": "particles_gravel_3d",
+        "particle": {
+          "resource": "particles_gravel_3d",
+          "air_resistance": 0.01,
+          "animation_duration": 1.5
+        },
         "instance_prefix": "particles_gravel",
         "vehicle": {
           "vehicle_velocities": [4, 5, 50],
           "particle_frequencies": [0, 2.5, 25]
-        },
-        "air_resistance": 0.01,
-        "animation_duration": 1.5
+        }
       }
     ]
   }
