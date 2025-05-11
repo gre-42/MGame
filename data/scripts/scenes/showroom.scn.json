@@ -34,9 +34,9 @@
       "playback": "create_$vehicle_class",
       "let": {
         "asset_id": "%vehicle_name",
-        "human_node_position": [0, 0.7, -11],
-        "skater_node_position": [0, 0.7, -11],
-        "car_node_position": [0, 0.7, -11],
+        "human_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
+        "skater_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
+        "car_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
         "human_node_angle_y": 135,
         "skater_node_angle_y": 135,
         "car_node_angles": [0, 135, 0],
