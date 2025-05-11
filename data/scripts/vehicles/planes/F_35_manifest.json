@@ -16,7 +16,26 @@
     "class": "car",
     "node_prefixes": ["car_node"],
     "spawn_y_offset": 1,
-    "max_tire_angle": 60
+    "max_tire_angle": 60,
+    "engine_exhaust": [
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito_blue",
+            "air_resistance": 0,
+            "animation_duration": 2,
+            "substrate": "air"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0, -0.5, 7],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      }
+    ]
   },
   "required": {
     "fixed": [],

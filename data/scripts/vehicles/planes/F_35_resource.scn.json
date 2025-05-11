@@ -5,7 +5,7 @@
       "call": "obj_resource",
       "arguments": {
         "name": "%name",
-        "filename": "models/sketchfab.com/f-35c-lightning-ii/$SUBDIR/$name.obj",
+        "filename": "models/sketchfab.com/f-35c-lightning-ii/$subdir/$name.obj",
         "config": {
           "position": [0, -3, 0],
           "rotation": [0, 180, 0],
@@ -45,7 +45,7 @@
         "playback": "load_F_35_part",
         "arguments": {
           "name": "%name",
-          "SUBDIR": "hitbox",
+          "subdir": "hitbox",
           "dist_min": 0,
           "dist_max": "inf",
           "occluder_pass": "none",
@@ -65,7 +65,7 @@
     "playback": "load_F_35_part",
     "arguments": {
       "name": "F_35_distancebox",
-      "SUBDIR": "hitbox",
+      "subdir": "hitbox",
       "dist_min": 0,
       "dist_max": "inf",
       "occluder_pass": "none",
@@ -118,7 +118,7 @@
       "playback": "load_F_35_part",
       "arguments": {
         "name": "F_35$decimate",
-        "SUBDIR": "obj",
+        "subdir": "obj",
         "dist_min": "%dist_min",
         "dist_max": "%dist_max",
         "occluder_pass": "%occluder_pass",
@@ -126,7 +126,7 @@
       }
     }
   },
-  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100 , "occluder_pass": "none",                     "decimate":""}},
-  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100 , "occluder_pass": "none",                     "decimate":"_d3"}},
-  {"playback": "load_F_35", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "decimate":"_d1"}}
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100  , "occluder_pass": "none",                    "decimate": ""}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100  , "occluder_pass": "none",                    "decimate": "_d3"}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "decimate": "_d1"}}
 ]
