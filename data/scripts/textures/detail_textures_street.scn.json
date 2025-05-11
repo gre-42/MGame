@@ -3,32 +3,36 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Way_Wheels_7_Detail_Base",
-      "texture": "#Way_Wheels_7",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Way_Wheels_7",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Way_Wheels_9_Detail_Base",
-      "texture": "#Way_Wheels_9",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Way_Wheels_9",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
@@ -38,16 +42,18 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Base_Detail_Base",
-      "texture": "#Road007_Base",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1.5,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_Base",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1.5,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
@@ -55,32 +61,36 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_2_Lanes_Detail_Base",
-      "texture": "#Road007_2_Lanes",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 2,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_2_Lanes",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 2,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_No_Lines_Detail_Base",
-      "texture": "#Road007_No_Lines",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 2,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_No_Lines",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 2,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
@@ -88,112 +98,126 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Yellow_2_Lanes_Base",
-      "texture": "#Road007_Yellow_2_Lanes",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 2,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_Yellow_2_Lanes",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 2,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "RoadOld_Yellow_Detail_Base",
-      "texture": "#RoadOld_Yellow",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 2,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#RoadOld_Yellow",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 2,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_White_1x_Lane_Detail_Base",
-      "texture": "#Road007_White_1x_Lane",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 2,
-      "role": "detail_base",
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_White_1x_Lane",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 2,
+        "role": "detail_base",
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Gravel010_Detail",
-      "texture": "#Gravel010",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.2, 0.2],
-      "weight": 1,
-      "role": "detail_color",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Gravel010",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 1,
+        "role": "detail_color",
+        "uv_source": "horizontal"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Gravel010_Detail_Desaturated",
-      "texture": "#Gravel010_Desaturated",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.4, 0.4],
-      "weight": 1.1,
-      "role": "detail_color",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Gravel010_Desaturated",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.4, 0.4],
+        "weight": 1.1,
+        "role": "detail_color",
+        "uv_source": "horizontal"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Gravel010_Detail_Desert",
-      "texture": "#Gravel010_Desert",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.2, 0.2],
-      "weight": 1,
-      "role": "detail_color",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Gravel010_Desert",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 1,
+        "role": "detail_color",
+        "uv_source": "horizontal"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground029_Detail_Snow",
-      "texture": "#Ground029_Snow",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.2, 0.2],
-      "weight": 1,
-      "role": "detail_color",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Ground029_Snow",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 1,
+        "role": "detail_color",
+        "uv_source": "horizontal"
+      }
     }
   },
   {
@@ -203,16 +227,18 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground038_dark27_Detail",
-      "texture": "#Ground038_dark27",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.2, 0.2],
-      "weight": 1,
-      "role": "detail_color",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Ground038_dark27",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 1,
+        "role": "detail_color",
+        "uv_source": "horizontal"
+      }
     }
   }
 ]

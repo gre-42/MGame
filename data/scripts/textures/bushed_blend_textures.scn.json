@@ -5,51 +5,57 @@
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Weight",
-        "texture": "%weight_texture",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [0, 0, "inf", "inf"],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
-        "scale": ["%WEIGHT_SCALE", "%WEIGHT_SCALE"],
-        "weight": 1,
-        "role": "detail_mask_r",
-        "reduction": "times"
+        "parameters": {
+          "texture": "%weight_texture",
+          "min_height": "-inf",
+          "max_height": "inf",
+          "distances": [0, 0, "inf", "inf"],
+          "normal": [0, 0, 0],
+          "cosine": [-1, -1, 1, 1],
+          "scale": ["%WEIGHT_SCALE", "%WEIGHT_SCALE"],
+          "weight": 1,
+          "role": "detail_mask_r",
+          "reduction": "times"
+        }
       }
     },
     {
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Feather",
-        "texture": "%feather_texture",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [0, 0, "inf", "inf"],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
-        "scale": ["%FEATHER_SCALE", "%FEATHER_SCALE"],
-        "weight": 0,
-        "discreteness": 5,
-        "plus": -0.5,
-        "role": "detail_mask_r",
-        "reduction": "feather"
+        "parameters": {
+          "texture": "%feather_texture",
+          "min_height": "-inf",
+          "max_height": "inf",
+          "distances": [0, 0, "inf", "inf"],
+          "normal": [0, 0, 0],
+          "cosine": [-1, -1, 1, 1],
+          "scale": ["%FEATHER_SCALE", "%FEATHER_SCALE"],
+          "weight": 0,
+          "discreteness": 5,
+          "plus": -0.5,
+          "role": "detail_mask_r",
+          "reduction": "feather"
+        }
       }
     },
     {
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Color",
-        "texture": "%color_texture",
-        "min_height": "-inf",
-        "max_height": "inf",
-        "distances": [0, 0, "inf", "inf"],
-        "normal": [0, 0, 0],
-        "cosine": [-1, -1, 1, 1],
-        "scale": ["%COLOR_SCALE", "%COLOR_SCALE"],
-        "weight": 0,
-        "discreteness": 1,
-        "role": "summand",
-        "reduction": "colorize"
+        "parameters": {
+          "texture": "%color_texture",
+          "min_height": "-inf",
+          "max_height": "inf",
+          "distances": [0, 0, "inf", "inf"],
+          "normal": [0, 0, 0],
+          "cosine": [-1, -1, 1, 1],
+          "scale": ["%COLOR_SCALE", "%COLOR_SCALE"],
+          "weight": 0,
+          "discreteness": 1,
+          "role": "summand",
+          "reduction": "colorize"
+        }
       }
     }
   ]

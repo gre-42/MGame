@@ -46,14 +46,16 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground037_dark27_1",
-      "texture": "#Ground037_dark27",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1
+      "parameters": {
+        "texture": "#Ground037_dark27",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, 15, 25],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1
+      }
     }
   },
   {
@@ -61,14 +63,16 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Ground037_dark27_8",
-      "texture": "#Ground037_dark27",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.125, 0.125],
-      "weight": 1
+      "parameters": {
+        "texture": "#Ground037_dark27",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [15, 25, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.125, 0.125],
+        "weight": 1
+      }
     }
   },
   {
@@ -154,14 +158,16 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_1",
-      "texture": "#grass_ground",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1
+      "parameters": {
+        "texture": "#grass_ground",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, 15, 25],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1
+      }
     }
   },
   {
@@ -169,14 +175,16 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_8",
-      "texture": "#grass_ground",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.125, 0.125],
-      "weight": 1
+      "parameters": {
+        "texture": "#grass_ground",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [15, 25, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.125, 0.125],
+        "weight": 1
+      }
     }
   }
 ]

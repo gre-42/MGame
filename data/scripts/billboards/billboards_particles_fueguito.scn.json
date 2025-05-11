@@ -1,0 +1,154 @@
+[
+  {
+    "declare_macro": "add_fueguito",
+    "content": [
+      {
+        "call": "suppress_texture_warnings",
+        "arguments": {
+          "filename": "textures/opengameart/fueguito/$name.png",
+          "flags": "power_of_two"
+        }
+      },
+      {
+        "call": "add_texture_descriptor",
+        "arguments": {
+          "name": "%name",
+          "color": "textures/opengameart/fueguito/$name.png",
+          "color_mode": "rgb",
+          "multiply_with_alpha": true,
+          "alpha_fac": 0.2,
+          "rotate": 90,
+          "anisotropic_filtering_level": 16
+        }
+      }
+    ]
+  },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00000" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00002" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00004" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00006" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00008" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00010" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00012" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00014" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00016" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00018" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00020" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00022" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00024" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00026" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00028" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00030" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00032" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00034" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00036" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00038" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00040" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00042" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00044" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00046" } },
+  { "playback": "add_fueguito", "arguments": { "name": "efecto_fuego_00048" } },
+  {
+    "comment": {
+      "call": "save_texture_png",
+      "arguments": {
+        "name": "efecto_fuego_00000",
+        "filename": "/tmp/efecto_fuego_00000_90.png",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
+    "call": "add_texture_atlas",
+    "arguments": {
+      "name": "fueguito",
+      "width": 256,
+      "height": 512,
+      "layers": 50,
+      "depth_interpolation": "linear",
+      "color_mode": "rgba",
+      "images": [
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  0, "texture": "#efecto_fuego_00000"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  1, "texture": "#efecto_fuego_00002"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  2, "texture": "#efecto_fuego_00004"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  3, "texture": "#efecto_fuego_00006"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  4, "texture": "#efecto_fuego_00008"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  5, "texture": "#efecto_fuego_00010"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  6, "texture": "#efecto_fuego_00012"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  7, "texture": "#efecto_fuego_00014"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  8, "texture": "#efecto_fuego_00016"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer":  9, "texture": "#efecto_fuego_00018"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 10, "texture": "#efecto_fuego_00020"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 11, "texture": "#efecto_fuego_00022"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 12, "texture": "#efecto_fuego_00024"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 13, "texture": "#efecto_fuego_00026"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 14, "texture": "#efecto_fuego_00028"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 15, "texture": "#efecto_fuego_00030"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 16, "texture": "#efecto_fuego_00032"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 17, "texture": "#efecto_fuego_00034"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 18, "texture": "#efecto_fuego_00036"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 19, "texture": "#efecto_fuego_00038"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 20, "texture": "#efecto_fuego_00040"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 21, "texture": "#efecto_fuego_00042"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 22, "texture": "#efecto_fuego_00044"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 23, "texture": "#efecto_fuego_00046"},
+        {"source_position": [0, 0], "size": [144, 432], "target_position": [0, 0], "target_layer": 24, "texture": "#efecto_fuego_00048"}
+      ]
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_array_png",
+      "arguments": {
+        "name": "fueguito",
+        "filename_prefix": "/tmp/textures_",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "fueguito_segment",
+      "filename": "models/trail_segment.obj",
+      "config": {
+        "position": [0, 0, -0.5],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "ambient_factor": [1, 1, 1],
+        "diffuse_factor": [0, 0, 0],
+        "specular_factor": [0, 0, 0],
+        "blend_mode": "continuous_add",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_default": false,
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "textures": ["fueguito"],
+        "billboards": [
+          {"uv_scale": [0.5625, 0.84375], "uv_offset": [0, 0], "vertex_scale": [0.1, 0.1, 0.25], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}]
+      }
+    }
+  },
+  {
+    "call": "animatable_billboards",
+    "arguments": {
+      "name": "animatable_fueguito",
+      "billboards": "fueguito_segment",
+      "max_num_instances": 10000,
+      "substrate": "air"
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "fueguito",
+      "animatable": "animatable_fueguito",
+      "frames": [0],
+      "final_texture_w": 1,
+      "duration": 2
+    }
+  }
+]

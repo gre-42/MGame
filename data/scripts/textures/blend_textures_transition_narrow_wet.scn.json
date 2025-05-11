@@ -25,15 +25,17 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "TimesBlend_Narrow_Wet",
-      "texture": "#Blend_Narrow_Wet",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "reduction": "times"
+      "parameters": {
+        "texture": "#Blend_Narrow_Wet",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "reduction": "times"
+      }
     }
   }
 ]

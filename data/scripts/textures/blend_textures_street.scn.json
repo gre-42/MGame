@@ -3,45 +3,51 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Broad_White_1_Lane_near",
-      "texture": "#Road007_Broad_White_1_Lane_near",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, 15, 25],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_Broad_White_1_Lane_near",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, 15, 25],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Broad_White_1_Lane_far",
-      "texture": "#Road007_Broad_White_1_Lane_far",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [15, 25, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_Broad_White_1_Lane_far",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [15, 25, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "reweight": "enabled"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Alpha_ScaledY8",
-      "texture": "#Road007_Alpha",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 8],
-      "weight": 1,
-      "reweight": "enabled"
+      "parameters": {
+        "texture": "#Road007_Alpha",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 8],
+        "weight": 1,
+        "reweight": "enabled"
+      }
     }
   }
 ]

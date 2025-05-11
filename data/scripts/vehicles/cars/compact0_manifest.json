@@ -49,7 +49,43 @@
     "gear_ratios": [0.75, 1.5, 3, 6, 9, -9],
 
     "wheels": "R33_wheel",
-    "engine_audio": "car2"
+    "engine_audio": "car2",
+    "engine_exhaust": [
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito",
+            "air_resistance": 0,
+            "animation_duration": 2,
+            "substrate": "air"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0.58, -0.53, 2.1],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      },
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito",
+            "air_resistance": 0,
+            "animation_duration": 2,
+            "substrate": "air"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0.45, -0.53, 2.1],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      }
+    ]
   },
   "required": {
     "fixed": [],

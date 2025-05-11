@@ -92,16 +92,16 @@
       "name": "trail_segment_20x20",
       "filename": "models/trail_segment.obj",
       "config": {
-      "position": [0, 0, -0.5],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 0.5],
-      "center_distances": [0, "inf"],
-      "blend_mode": "continuous",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 0, -0.5],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 0.5],
+        "center_distances": [0, "inf"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
       }
     }
   },
@@ -111,16 +111,16 @@
       "name": "trail_segment_5x5",
       "filename": "models/trail_segment.obj",
       "config": {
-      "position": [0, 0, -0.5],
-      "rotation": [0, 0, 0],
-      "scale": [0.25, 0.25, 0.5],
-      "center_distances": [0, "inf"],
-      "blend_mode": "continuous",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 0, -0.5],
+        "rotation": [0, 0, 0],
+        "scale": [0.25, 0.25, 0.5],
+        "center_distances": [0, "inf"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
       }
     }
   },
@@ -130,16 +130,16 @@
       "name": "trail_segment_2x2",
       "filename": "models/trail_segment.obj",
       "config": {
-      "position": [0, 0, -0.5],
-      "rotation": [0, 0, 0],
-      "scale": [0.1, 0.1, 0.5],
-      "center_distances": [0, "inf"],
-      "blend_mode": "continuous",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 0, -0.5],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.5],
+        "center_distances": [0, "inf"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
       }
     }
   },

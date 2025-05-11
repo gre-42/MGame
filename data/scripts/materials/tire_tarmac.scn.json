@@ -11,7 +11,8 @@
         "particle": {
           "resource": "skidmarks_a20_black",
           "air_resistance": 0,
-          "animation_duration": "inf"
+          "animation_duration": "inf",
+          "substrate": "skidmark"
         },
         "instance_prefix": "skidmarks_a20_black",
         "tire": {
@@ -23,7 +24,8 @@
         "particle": {
           "resource": "particles_dust_3d",
           "air_resistance": 0.01,
-          "animation_duration": 2
+          "animation_duration": 2,
+          "substrate": "air"
         },
         "instance_prefix": "particles_dust",
         "tire": {

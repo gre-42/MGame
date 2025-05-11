@@ -49,32 +49,36 @@
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "PlusDetail",
-      "texture": "#Detail",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [0.2, 0.2],
-      "weight": 2.5,
-      "plus": -2,
-      "reduction": "plus",
-      "uv_source": "horizontal"
+      "parameters": {
+        "texture": "#Detail",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 2.5,
+        "plus": -2,
+        "reduction": "plus",
+        "uv_source": "horizontal"
+      }
     }
   },
   {
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "TimesBlend5",
-      "texture": "#Blend5",
-      "min_height": "-inf",
-      "max_height": "inf",
-      "distances": [0, 0, "inf", "inf"],
-      "normal": [0, 0, 0],
-      "cosine": [-1, -1, 1, 1],
-      "scale": [1, 1],
-      "weight": 1,
-      "reduction": "times"
+      "parameters": {
+        "texture": "#Blend5",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "reduction": "times"
+      }
     }
   },
   {

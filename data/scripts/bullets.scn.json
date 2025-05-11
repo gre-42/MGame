@@ -76,7 +76,8 @@
           "particle": {
             "resource": "smoke_3d",
             "air_resistance": 0.01,
-            "animation_duration": 0.5
+            "animation_duration": 0.5,
+            "substrate": "air"
           },
           "generation_dt": 0.005
         },
