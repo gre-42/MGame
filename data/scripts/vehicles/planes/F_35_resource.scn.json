@@ -62,17 +62,68 @@
   {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_left"}},
   {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_right"}},
   {
-    "playback": "load_F_35_part",
+    "call": "add_swept_sphere_aabb",
     "arguments": {
-      "name": "F_35_distancebox",
-      "subdir": "hitbox",
-      "dist_min": 0,
-      "dist_max": "inf",
-      "occluder_pass": "none",
-      "rectangle_triangulation_mode": "disabled"
+      "name": "F_35_rear_wings",
+      "min": [-3.9934635162353516, -0.5222139358520508, 5.172699928283691],
+      "max": [3.9934635162353516, 1.4777860641479492, 7.172699928283691],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
     }
   },
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "F_35_distancebox", "add": "obj_distancebox|attr_convex"}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "F_35_center_wings",
+      "min": [-6.571484565734863, -1.3471401929855347, 1.7136850357055664],
+      "max": [6.571484565734863, 0.6528598070144653, 3.7136850357055664],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "F_35_body",
+      "min": [-1.6410852670669556, -1.3471401929855347, -7.79599666595459],
+      "max": [1.6410852670669556, 0.6528598070144653, 8.20400333404541],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "comment": [
+      {
+        "playback": "load_F_35_part",
+        "arguments": {
+          "name": "F_35_distancebox",
+          "subdir": "hitbox",
+          "dist_min": 0,
+          "dist_max": "inf",
+          "occluder_pass": "none",
+          "rectangle_triangulation_mode": "disabled"
+        }
+      },
+      {
+        "call": "modify_physics_material_tags",
+        "arguments": {
+          "resource_name": "F_35_distancebox",
+          "add": "attr_collide|obj_distancebox|attr_convex"
+        }
+      }
+    ]
+  },
+  {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": [
+        "F_35_rear_wings",
+        "F_35_center_wings",
+        "F_35_body"
+      ],
+      "dest_name": "F_35_distancebox"
+    }
+  },
   {
     "call": "obj_resource",
     "arguments": {
