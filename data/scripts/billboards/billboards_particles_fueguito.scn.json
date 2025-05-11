@@ -116,9 +116,12 @@
         "rotation": [0, 0, 0],
         "scale": [1, 1, 1],
         "center_distances": [0, "inf"],
-        "ambient_factor": [1, 1, 1],
-        "diffuse_factor": [0, 0, 0],
-        "specular_factor": [0, 0, 0],
+        "shading": {
+          "emissive": [1, 1, 1],
+          "ambient": [0, 0, 0],
+          "diffuse": [0, 0, 0],
+          "specular": [0, 0, 0]
+        },
         "blend_mode": "continuous_add",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces_default": false,

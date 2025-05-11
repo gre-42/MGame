@@ -67,8 +67,10 @@
         "ambient_factor": "%vanilla_rally_ambient_factor",
         "diffuse_factor": "%vanilla_rally_diffuse_factor",
         "specular_factor": "%vanilla_rally_specular_factor",
-        "fog_distances": "%fog_distances",
-        "fog_ambient": "%fog_ambient",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        },
         "physics_material": "obj_chassis|attr_collide|attr_convex"
       }
     }
@@ -80,22 +82,24 @@
       "name": "box_on_ground",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 1, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 1, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -106,24 +110,26 @@
       "name": "topdown_locator",
       "filename": "models/TransparentBox/tbox.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [4, 1, 8],
-      "center_distances": [0, "inf"],
-      "blend_mode": "continuous",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "cull_faces_alpha": false,
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient",
-      "physics_material": "attr_visible"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [4, 1, 8],
+        "center_distances": [0, "inf"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        },
+        "physics_material": "attr_visible"
       }
     }
   },
@@ -134,22 +140,24 @@
       "name": "flag",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 500, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 500, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 500, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 500, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -160,22 +168,24 @@
       "name": "flag_z",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0, 500],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 500],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 0, 500],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 500],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -186,22 +196,24 @@
       "name": "beacon",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.1, 0.1, 0.1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -212,23 +224,25 @@
       "name": "sphere",
       "filename": "models/primitives/sphere.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "reflection_map": "car",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "reflection_map": "car",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -239,22 +253,24 @@
       "name": "beacon1",
       "filename": "models/primitives/box.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [0.1, 0.1, 0.1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -265,22 +281,24 @@
       "name": "gizmo",
       "filename": "models/gizmo.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },
@@ -291,22 +309,24 @@
       "name": "tank_bullet_renderable",
       "filename": "models/bullet.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [-90, 0, 0],
-      "scale": [0.2, 0.4, 0.2],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "lightmap_black_global_static",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
+        "position": [0, 0, 0],
+        "rotation": [-90, 0, 0],
+        "scale": [0.2, 0.4, 0.2],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
         "emissive_factor": "%vanilla_rally_emissive_factor",
         "ambient_factor": "%vanilla_rally_ambient_factor",
         "diffuse_factor": "%vanilla_rally_diffuse_factor",
         "specular_factor": "%vanilla_rally_specular_factor",
-        "fog_distances": "%fog_distances",
-        "fog_ambient": "%fog_ambient"
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
       }
     }
   },

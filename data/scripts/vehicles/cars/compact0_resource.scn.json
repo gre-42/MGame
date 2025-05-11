@@ -81,16 +81,18 @@
             "aggregate_mode": "none",
             "transformation_mode": "all",
             "reflection_map": "%reflection_map",
-            "reflectance": "%reflectance",
             "emissive_factor": "%blender_emissive_factor",
             "ambient_factor": "%blender_ambient_factor",
             "diffuse_factor": "%blender_diffuse_factor",
             "specular_factor": "%blender_specular_factor",
-            "fresnel": {
-              "min": "%stunt_rally_fresnel_min",
-              "max": "%stunt_rally_fresnel_max",
-              "exponent": "%stunt_rally_fresnel_exponent",
-              "ambient": "%blender_fresnel_ambient"
+            "shading": {
+            "reflectance": "%reflectance",
+              "fresnel": {
+                "min": "%stunt_rally_fresnel_min",
+                "max": "%stunt_rally_fresnel_max",
+                "exponent": "%stunt_rally_fresnel_exponent",
+                "ambient": "%blender_fresnel_ambient"
+              }
             },
             "triangle_tangent_error_behavior": "zero",
             "werror": false

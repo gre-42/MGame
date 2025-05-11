@@ -5,26 +5,28 @@
       "name": "frag_grenade_depot",
       "filename": "models/sketchfab.com/frag_grenade/frag_grenade.obj",
       "config": {
-      "position": [0, 1, 0],
-      "rotation": [0, 0, 45],
-      "scale": [20, 20, 20],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "lightmap_black_global_static",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "triangle_tangent_error_behavior": "zero",
-      "emissive_factor": "%sketchfab_emissive_factor",
-      "ambient_factor": "%sketchfab_ambient_factor",
-      "diffuse_factor": "%sketchfab_diffuse_factor",
-      "specular_factor": "%sketchfab_specular_factor",
-      "fresnel": {
-        "min": "%sketchfab_fresnel_min",
-        "max": "%sketchfab_fresnel_max",
-        "exponent": "%sketchfab_fresnel_exponent"
-      }
+        "position": [0, 1, 0],
+        "rotation": [0, 0, 45],
+        "scale": [20, 20, 20],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero",
+        "emissive_factor": "%sketchfab_emissive_factor",
+        "ambient_factor": "%sketchfab_ambient_factor",
+        "diffuse_factor": "%sketchfab_diffuse_factor",
+        "specular_factor": "%sketchfab_specular_factor",
+        "shading": {
+          "fresnel": {
+            "min": "%sketchfab_fresnel_min",
+            "max": "%sketchfab_fresnel_max",
+            "exponent": "%sketchfab_fresnel_exponent"
+          }
+        }
       }
     }
   }

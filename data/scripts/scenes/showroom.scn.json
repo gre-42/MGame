@@ -114,12 +114,14 @@
             "emissive_factor": "%vanilla_rally_emissive_factor",
             "ambient_factor": "%vanilla_rally_ambient_factor",
             "diffuse_factor": "%vanilla_rally_diffuse_factor",
-            "specular_factor": "%vanilla_rally_specular_factor",    
-            "fresnel": {
-              "min": 0,
-              "max": 0.4,
-              "exponent": 4,
-              "ambient": [1, 1, 1]
+            "specular_factor": "%vanilla_rally_specular_factor",
+            "shading": {
+              "fresnel": {
+                "min": 0,
+                "max": 0.4,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
             },
             "physics_material": "attr_visible"
           }

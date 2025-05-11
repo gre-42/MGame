@@ -24,11 +24,13 @@
         "ambient_factor": "%blender_ambient_factor",
         "diffuse_factor": "%blender_diffuse_factor",
         "specular_factor": "%blender_specular_factor",
-        "fresnel": {
-          "min": 0,
-          "max": 0.4,
-          "exponent": 5,
-          "ambient": [1, 1, 1]
+        "shading": {
+          "fresnel": {
+            "min": 0,
+            "max": 0.4,
+            "exponent": 5,
+            "ambient": [1, 1, 1]
+          }
         },
         "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
         "dynamically_lighted": true

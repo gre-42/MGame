@@ -40,11 +40,13 @@
         "diffuse_factor": "%rw_diffuse_factor",
         "specular_factor": "%rw_specular_factor",
         "physics_material": "obj_chassis|attr_visible|attr_collide|attr_concave",
-        "fresnel": {
-          "min": "%rw_fresnel_min",
-          "max": "%rw_fresnel_max",
-          "exponent": "%rw_fresnel_exponent",
-          "ambient": "%rw_fresnel_ambient"
+        "shading": {
+          "fresnel": {
+            "min": "%rw_fresnel_min",
+            "max": "%rw_fresnel_max",
+            "exponent": "%rw_fresnel_exponent",
+            "ambient": "%rw_fresnel_ambient"
+          }
         },
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",

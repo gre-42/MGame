@@ -24,11 +24,13 @@
           "ambient_factor": "%ac_ambient_factor",
           "diffuse_factor": "%ac_diffuse_factor",
           "specular_factor": "%ac_specular_factor",
-          "fresnel": {
-            "min": -1,
-            "max": -1,
-            "exponent": -1,
-            "ambient": "%ac_fresnel_ambient"
+          "shading": {
+            "fresnel": {
+              "min": -1,
+              "max": -1,
+              "exponent": -1,
+              "ambient": "%ac_fresnel_ambient"
+            }
           },
           "physics_material": "none",
           "triangle_tangent_error_behavior": "zero"
