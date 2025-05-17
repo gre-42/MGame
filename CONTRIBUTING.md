@@ -296,7 +296,11 @@ To add new element in the game, the `models_urban.scn.json` file must be updated
 
 ### Building colors
 
-The `building:color` (not `building:colour`) attribute is supported.
+The currently supported attribute name is `color` (not `colour`, `building:colo[u]r`, `roof:colo[u]r`). Roof colors are not yet supported at all. Also, the colors must be rgb-values with format r g b. Each component has a range from 0 to 1.
+
+Applying the `color` attribute only results in the desired final color if the texture that is applied to a building is gray or white. Otherwise, the texture color and the `building:colour/roof:colour` attributes would multiply and result in a wrong final color.
+
+This might have been the reason why the color attribute was chosen as a non-standard attribute back in the day.
 
 ### Roofs with angles
 
