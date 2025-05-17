@@ -343,7 +343,7 @@
         "extrude_grass_amount": 0.1,
         "extrude_elevated_grass_amount": 0.5,
         "building_grass_width": 0.5,
-        "street_light_resource_names": [],
+        "stop_sign_resource_names": ["stop_sign(hitbox:box_02_1_02_hitbox)"],
         "max_wall_width": 10,
         "with_height_bindings": true,
         "street_node_smoothness": 1,
