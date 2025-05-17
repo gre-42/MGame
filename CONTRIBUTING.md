@@ -254,8 +254,9 @@ Custom 3D objects can be displayed by assigning the attribute `model:name` and o
 
 Instead of the `yangle:degrees` attribute, way segments to neighboring nodes can be used to define the rotation.
 
-To add new element in the game, the `models_urban.scn.json` file must be updated with the description of the object :
-```
+To add new element in the game, the `models_urban.scn.json` file must be updated with the description of the object:
+
+```json
   {
     "exclude": ["%if_android"],
     "call": "obj_resource",
