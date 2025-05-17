@@ -257,13 +257,13 @@ Instead of the `yangle:degrees` attribute, way segments to neighboring nodes can
 To add new element in the game, the `models_urban.scn.json` file must be updated with the description of the object:
 
 ```json
-  {
-    "exclude": ["%if_android"],
-    "call": "obj_resource",
-    "arguments": {
-      "name": "roadReflectorPost01_LP",
-      "filename": "models/roadReflectorPost01_LP/roadReflectorPost01_LP.obj",
-      "config": {
+{
+  "exclude": ["%if_android"],
+  "call": "obj_resource",
+  "arguments": {
+    "name": "roadReflectorPost01_LP",
+    "filename": "models/roadReflectorPost01_LP/roadReflectorPost01_LP.obj",
+    "config": {
       "position": [0, 0.8, 0],
       "rotation":[270, 0, 0],
       "scale": [1, 1, 1],
@@ -279,15 +279,19 @@ To add new element in the game, the `models_urban.scn.json` file must be updated
       "ambient_factor": "%vanilla_rally_ambient_factor",
       "diffuse_factor": "%vanilla_rally_diffuse_factor",
       "specular_factor": "%vanilla_rally_specular_factor",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient",
-      "fresnel_min": 0,
-      "fresnel_max": 0.4,
-      "fresnel_exponent": 4,
-      "fresnel_ambient": [1, 1, 1]
+      "shading": {
+        "fog_distances": "%fog_distances",
+        "fog_ambient": "%fog_ambient",
+        "fresnel": {
+          "min": 0,
+          "max": 0.4,
+          "exponent": 4,
+          "ambient": [1, 1, 1]
+        }
       }
     }
-  },
+  }
+},
 ```
 
 ### Building colors
