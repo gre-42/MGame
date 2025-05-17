@@ -2,7 +2,7 @@
   "declare_macro": "setup_traffic_with_pedestrians",
   "content": [
     {"call": "set_spawn_points", "arguments": {"location": "%osm_location", "resource": "osm_map"}},
-    {"call": "set_way_points", "arguments": {"location": "%osm_location", "resource": "osm_map"}},
+    {"call": "set_way_points", "arguments": {"location": "%osm_location", "resource": "osm_map", "#renderable": "beacon_instance"}},
 
     {"playback": "traffic.create_npc_and_human", "let": {"spawner_name": "h_npc1",  "player_name": "h_npc1",  "asset_id": "female_mh",    "color": [-1, -1, -1]}},
     {"playback": "traffic.create_npc_and_human", "let": {"spawner_name": "h_npc2",  "player_name": "h_npc2",  "asset_id": "female_mh",    "color": [-1, -1, -1]}},
