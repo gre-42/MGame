@@ -12,12 +12,12 @@
         "scale": 1
       },
       "loaded_game_level": "'1'",
-      "loaded_racing_line_track": "$__DIR__/racing_line_nyc_with_traffic.m"
+      "loaded_racing_line_track": "$__DIR__/racing_line_nyc_track1.m"
     }
   },
   {"include": "scripts/include_all.scn.json"},
   {"include": "../nyc/osm_resource_nyc.scn.json"},
-  {"include": "create_tripod_cameras_nyc_with_traffic_track.scn.json"},
+  {"include": "create_tripod_cameras_nyc_track1.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
