@@ -688,6 +688,41 @@
     }
   },
   {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "stop_sign",
+      "filename": "models/gre42/stop_sign/stop_sign.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.5, 0.5, 0.5],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "lightmap_black_local_instances",
+        "aggregate_mode": "instances_sorted",
+        "transformation_mode": "position_yangle",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient",
+          "fresnel": {
+            "min": 0,
+            "max": 0.4,
+            "exponent": 4,
+            "ambient": [1, 1, 1]
+          }
+        },
+        "triangle_tangent_error_behavior": "zero",
+        "physics_material": "attr_visible"
+      }
+    }
+  },
+  {
     "declare_macro": "load_hedge",
     "content": {
       "call": "obj_resource",

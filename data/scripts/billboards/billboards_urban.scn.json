@@ -3,7 +3,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "stop_front",
-      "color": "textures/gre/stop_front.png",
+      "color": "textures/gre42/stop_front.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -12,7 +12,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "stop_back",
-      "color": "textures/gre/stop_back.png",
+      "color": "textures/gre42/stop_back.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -65,7 +65,7 @@
     "call": "compound_resource",
     "arguments": {
       "source_names": ["stop_front", "stop_back"],
-      "dest_name": "stop_sign"
+      "dest_name": "stop_sign_billboard"
     }
   }
 ]
