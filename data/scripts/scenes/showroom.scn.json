@@ -3,12 +3,20 @@
     "declare_macro": "create_showroom_scene",
     "content": [
       {
-        "call": "create_scene",
+        "call": "create_physics_scene",
         "arguments": {
-          "name": "showroom",
+          "name": "showroom_$user_name",
           "world": "common",
           "focus_mask": "new_game_menu",
           "submenus": ["car_selector", "car_color_selector"],
+          "gid": { "group": "translations", "id": "scene" }
+        }
+      },
+      {
+        "call": "create_renderable_scene",
+        "arguments": {
+          "name": "showroom_$user_name",
+          "physics": "showroom_$user_name",
           "fly": false,
           "rotate": false,
           "depth_fog": false,
@@ -19,12 +27,13 @@
           "with_skybox": false,
           "with_flying_logic": false,
           "clear_mode": "depth",
-          "gid": { "group": "translations", "id": "scene" }
+          "layout": "tiled",
+          "user_id": "%user_id"
         }
       },
       {
         "playback": "_initialize_showroom_scene",
-        "context": "showroom"
+        "context": "showroom_$user_name"
       }
     ]
   },
@@ -86,15 +95,8 @@
     ]
   },
   {
-    "declare_macro": "_initialize_showroom_scene",
+    "declare_macro": "_create_showroom_resources",
     "content": [
-      {
-        "playback": "scene_minimal",
-        "arguments": {
-          "if_dirtmap": false,
-          "IF_SKYBOX": false
-        }
-      },
       {
         "call": "obj_resource",
         "arguments": {
@@ -125,6 +127,39 @@
             },
             "physics_material": "attr_visible"
           }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "showroom_ground_hitbox",
+          "filename": "models/cylinder_hitbox.obj",
+          "config": {
+            "position": [0, 0.03, 0],
+            "rotation": [0, 0, 0],
+            "scale": [10, 0.1, 10],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_node",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "obj_chassis|attr_collide|attr_convex"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_initialize_showroom_scene",
+    "content": [
+      {
+        "playback": "scene_minimal",
+        "arguments": {
+          "if_dirtmap": false,
+          "if_skybox": false
         }
       },
       {
@@ -161,27 +196,6 @@
             }
           }
         ]
-      },
-      {
-        "call": "obj_resource",
-        "arguments": {
-          "name": "showroom_ground_hitbox",
-          "filename": "models/cylinder_hitbox.obj",
-          "config": {
-            "position": [0, 0.03, 0],
-            "rotation": [0, 0, 0],
-            "scale": [10, 0.1, 10],
-            "center_distances": [0, "inf"],
-            "blend_mode": "off",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "lightmap_black_node",
-            "occluder_pass": "none",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "rectangle_triangulation_mode": "disabled",
-            "physics_material": "obj_chassis|attr_collide|attr_convex"
-          }
-        }
       },
       {
         "call": "root_node_instance",

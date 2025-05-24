@@ -71,7 +71,7 @@
       },
       {
         "call": "set_skybox",
-        "required": ["%IF_SKYBOX"],
+        "required": ["%if_skybox"],
         "arguments": {
           "alias": "skybox"
         }

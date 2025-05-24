@@ -202,19 +202,30 @@
     "declare_macro": "create_main_menu",
     "content": [
       {
-        "playback": "_setup_menu_primary_scene_game_mode_selector",
-        "context": "primary_scene"
+        "playback": "_create_showroom_resources"
       },
       {
-        "playback": "create_showroom_scene"
-      },
-      {
-        "playback": "_setup_menu_showroom",
-        "context": "showroom"
-      },
-      {
-        "playback": "_setup_menu_primary_scene_rest",
-        "context": "primary_scene"
+        "call": "for_each_user",
+        "context": "primary_scene",
+        "arguments": {
+          "content": [
+            {
+              "playback": "_setup_menu_primary_scene_game_mode_selector",
+              "context": "primary_scene_$user_name"
+            },
+            {
+              "playback": "create_showroom_scene"
+            },
+            {
+              "playback": "_setup_menu_showroom",
+              "context": "showroom_$user_name"
+            },
+            {
+              "playback": "_setup_menu_primary_scene_rest",
+              "context": "showroom_$user_name"
+            }
+          ]
+        }
       }
     ]
   },
@@ -232,7 +243,7 @@
     "content": {
       "call": "scene_to_pixel_region",
       "arguments": {
-        "target_scene": "primary_scene",
+        "target_scene": "primary_scene_$user_name",
         "z_order": 2,
         "left": "showroom_left",
         "right": "showroom_right",
@@ -405,6 +416,7 @@
     "declare_macro": "parameter_setters",
     "content": [
       {
+        "required": ["%user_id == 0"],
         "call": "add_charset",
         "arguments": {
           "name": "language",
@@ -412,6 +424,7 @@
         }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "language",
@@ -643,7 +656,7 @@
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
-            "context": "showroom"
+            "context": "showroom_$user_name"
           },
           "assets": "vehicles"
         }
@@ -668,7 +681,7 @@
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
-            "context": "showroom"
+            "context": "showroom_$user_name"
           },
           "parameters": [
             {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [1,    1,    1]}}},

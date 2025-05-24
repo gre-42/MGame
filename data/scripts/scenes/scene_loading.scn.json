@@ -6,7 +6,7 @@
         "playback": "scene_minimal",
         "arguments": {
           "if_dirtmap": false,
-          "IF_SKYBOX": false
+          "if_skybox": false
         }
       },
       {
@@ -54,12 +54,20 @@
     "declare_macro": "create_scene_loading",
     "content": [
       {
-        "call": "create_scene",
+        "call": "create_physics_scene",
         "arguments": {
           "name": "loading",
           "world": "common",
           "focus_mask": "loading",
           "submenus": [],
+          "gid": { "group": "translations", "id": "scene" }
+        }
+      },
+      {
+        "call": "create_renderable_scene",
+        "arguments": {
+          "name": "loading",
+          "physics": "loading",
           "fly": false,
           "rotate": false,
           "depth_fog": false,
@@ -70,7 +78,7 @@
           "with_skybox": false,
           "with_flying_logic": false,
           "clear_mode": "color_and_depth",
-          "gid": { "group": "translations", "id": "scene" }
+          "layout": "full_screen"
         }
       },
       {
