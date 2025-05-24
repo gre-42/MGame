@@ -73,6 +73,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "database_filter": {
             "database": "levels",
@@ -131,6 +132,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "on_change": {
             "playback": "_update_scene_icon"
           },
@@ -281,6 +283,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -321,6 +324,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -349,6 +353,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -389,6 +394,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "on_execute": [
             {
@@ -440,6 +446,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "persistent": "language",
           "assets": "languages",
@@ -509,6 +516,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {
@@ -574,6 +582,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {
@@ -630,6 +639,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car"}}},
@@ -653,6 +663,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
@@ -678,6 +689,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
@@ -711,6 +723,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"race_session": "session1"}}},
@@ -743,6 +756,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"race_laps": 1}}},
@@ -771,6 +785,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "parameters": [
             {"id": "none", "title": "No replay", "on_before_select": { "call": "globals", "arguments": {"if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false}}},
@@ -803,6 +818,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 1,
           "on_change": {
             "call": "set_render_fps",
@@ -834,6 +850,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 2,
           "parameters": [
             {"id": "'80'", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 0.8}}},
@@ -866,6 +883,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 1,
           "parameters": [
             {"id": "enabled", "title": "%%translations/main/Enabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": true}}},
@@ -894,6 +912,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
+          "user_id": "%user_id",
           "deflt": 0,
           "on_execute": {
             "call": "append_focuses",
@@ -927,7 +946,8 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "deflt": 0
+          "deflt": 0,
+          "user_id": "%user_id"
         }
       },
       {
@@ -946,7 +966,8 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "deflt": 0
+          "deflt": 0,
+          "user_id": "%user_id"
         }
       },
       {
@@ -965,7 +986,8 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "deflt": 0
+          "deflt": 0,
+          "user_id": "%user_id"
         }
       }
     ]

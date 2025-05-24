@@ -1,0 +1,24 @@
+[
+  {
+    "call": "load_key_configurations",
+    "arguments": {
+      "user_id": 0,
+      "filename": "$__APPDATA__/key_configurations_0.json",
+      "fallback_filename": "key_configurations/key_configurations_0.json"
+    }
+  },
+  {
+    "call": "load_key_configurations",
+    "arguments": {
+      "user_id": 1,
+      "filename": "$__APPDATA__/key_configurations_1.json",
+      "fallback_filename": "key_configurations/key_configurations_1.json"
+    }
+  },
+  {
+    "call": "load_key_descriptions",
+    "arguments": {
+      "filename": "key_configurations/key_descriptions.json"
+    }
+  }
+]
