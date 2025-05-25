@@ -27,7 +27,7 @@
   { "call": "additive_screen_constraint", "arguments": {"name": "minimap_widget_right",  "value": 2,     "anchor": "center", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "minimap_widget_bottom", "value": -0.25, "anchor": "center", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "minimap_widget_top",    "value": 1.25,  "anchor": "center", "units": "inches"} },
-  { "call": "constant_screen_constraint", "arguments": {"name": "minimap_locator_size",  "value": 0.1,   "anchor": "center", "units": "inches"} },
+  { "call": "length_screen_constraint",   "arguments": {"name": "minimap_locator_size",  "value": 0.1, "units": "inches"} },
   { "comment": "Bullet count" },
   { "call": "additive_screen_constraint", "arguments": {"name": "bullet_count_left",   "value": -1,  "anchor": "end", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "bullet_count_right",  "value": 0,   "anchor": "end", "units": "inches"} },
