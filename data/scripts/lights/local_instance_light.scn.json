@@ -1,60 +1,74 @@
 [
   {
-    "declare_macro": "add_local_instances_light",
-    "let": { "lsuffix": "_local_instances" },
-    "content": [
-      {
-        "comment": "Instances light"
+    "declare_macro": "add_local_instances_light_scene",
+    "content": {
+      "let": {
+        "lsuffix": "_local_instances_$user_name"
       },
-      {
-        "call": "root_node_instance",
-        "arguments": {
-          "dynamics": "moving",
-          "name": "light_node_instances$lsuffix",
-          "position": [0, 0, 0],
-          "rotation": [-45, 0, 0],
-          "scale": 1,
-          "interpolation": "disabled",
-          "user_id": "%user_id"
+      "execute": [
+        {
+          "comment": "Instances light"
+        },
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "dynamics": "moving",
+            "name": "light_node_instances$lsuffix",
+            "position": [0, 0, 0],
+            "rotation": [-45, 0, 0],
+            "scale": 1,
+            "interpolation": "disabled",
+            "user_id": "%user_id"
+          }
+        },
+        {
+          "call": "ortho_camera",
+          "arguments": {
+            "node": "light_node_instances$lsuffix",
+            "near_plane": -1000,
+            "far_plane": 1000,
+            "left_plane": -100,
+            "right_plane": 100,
+            "bottom_plane": -100,
+            "top_plane": 100,
+            "requires_postprocessing": false
+          }
         }
+      ]
+    }
+  },
+  {
+    "declare_macro": "add_local_instances_light_render",
+    "content": {
+      "let": {
+        "lsuffix": "_local_instances_$user_name"
       },
-      {
-        "call": "ortho_camera",
-        "arguments": {
-          "node": "light_node_instances$lsuffix",
-          "near_plane": -1000,
-          "far_plane": 1000,
-          "left_plane": -100,
-          "right_plane": 100,
-          "bottom_plane": -100,
-          "top_plane": 100,
-          "requires_postprocessing": false
+      "execute": [
+        {
+          "call": "keep_offset_from_camera",
+          "arguments": {
+            "follower": "light_node_instances$lsuffix",
+            "offset": [0, 0, 0],
+            "texture_width": "%scene_lightmap_width",
+            "texture_height": "%scene_lightmap_height"
+          }
+        },
+        {
+          "call": "light_only_shadow",
+          "arguments": {
+            "node": "light_node_instances$lsuffix",
+            "black_node": "",
+            "lightmap_width": "%scene_lightmap_width",
+            "lightmap_height": "%scene_lightmap_height",
+            "smooth_niterations": [2, 2],
+            "render_pass": "lightmap_black_local_instances"
+          }
+        },
+        {
+          "comment": "renderable_instance name=light_node_follower-lsuffix node=light_node_instances-lsuffix resource=box;"
         }
-      },
-      {
-        "call": "keep_offset_from_camera",
-        "arguments": {
-          "follower": "light_node_instances$lsuffix",
-          "offset": [0, 0, 0],
-          "texture_width": "%scene_lightmap_width",
-          "texture_height": "%scene_lightmap_height"
-        }
-      },
-      {
-        "call": "light_only_shadow",
-        "arguments": {
-          "node": "light_node_instances$lsuffix",
-          "black_node": "",
-          "lightmap_width": "%scene_lightmap_width",
-          "lightmap_height": "%scene_lightmap_height",
-          "smooth_niterations": [2, 2],
-          "render_pass": "lightmap_black_local_instances"
-        }
-      },
-      {
-        "comment": "renderable_instance name=light_node_follower-lsuffix node=light_node_instances-lsuffix resource=box;"
-      }
-    ]
+      ]
+    }
   },
   {
     "declare_macro": "add_movables_light_scene",

@@ -47,7 +47,15 @@
             "content": [
               {
                 "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
-                "playback": "add_local_instances_light"
+                "execute": [
+                  {
+                    "playback": "add_local_instances_light_scene"
+                  },
+                  {
+                    "context": "primary_scene_$user_name",
+                    "playback": "add_local_instances_light_render"
+                  }
+                ]
               },
               {
                 "playback": "add_movables_light_scene"
