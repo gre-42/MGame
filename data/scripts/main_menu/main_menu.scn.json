@@ -42,52 +42,53 @@
     }
   },
   {
-    "declare_macro": "_setup_menu_primary_scene_game_mode_selector",
-    "content": [
-      {
-        "call": "ui_background",
-        "arguments": {
-          "z_order": 1,
-          "texture": "#ui_background_cars",
-          "left": "min",
-          "right": "end",
-          "bottom": "min",
-          "top": "end",
-          "delay_load_policy": "no_delay",
-          "focus_mask": "menu_any|loading"
-        }
-      },
-      {
-        "call": "parameter_setter",
-        "arguments": {
-          "id": "game_mode_selector",
-          "focus_mask": "new_game_menu",
-          "title": "%%translations/main/Game_mode/$selected_language",
-          "icon": "game_mode_icon",
-          "left": "submenu_left",
-          "right": "submenu_right",
-          "bottom": "submenu_bottom",
-          "top": "submenu_top",
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": "%ui_font_color",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "user_id": "%user_id",
-          "deflt": 0,
-          "database_filter": {
-            "database": "levels",
-            "variable": "game_modes"
-          },
-          "hide_if_trivial": true,
-          "parameters": [
-            {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"game_mode": "rally"}}},
-            {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"game_mode": "skating"}}},
-            {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"game_mode": "team_deathmatch"}}}
-          ]
-        }
+    "declare_macro": "_setup_menu_primary_scene_background",
+    "content": {
+      "call": "ui_background",
+      "arguments": {
+        "z_order": 1,
+        "texture": "#ui_background_cars",
+        "left": "min",
+        "right": "end",
+        "bottom": "min",
+        "top": "end",
+        "delay_load_policy": "no_delay",
+        "focus_mask": "menu_any|loading"
       }
-    ]
+    }
+  },
+  {
+    "declare_macro": "_setup_game_mode_selector",
+    "content": {
+      "call": "parameter_setter",
+      "arguments": {
+        "id": "game_mode_selector",
+        "focus_mask": "new_game_menu",
+        "title": "%%translations/main/Game_mode/$selected_language",
+        "icon": "game_mode_icon",
+        "left": "submenu_left",
+        "right": "submenu_right",
+        "bottom": "submenu_bottom",
+        "top": "submenu_top",
+        "charset": "%selected_language",
+        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+        "font_color": "%ui_font_color",
+        "font_height": "normal",
+        "line_distance": "normal",
+        "user_id": "%user_id",
+        "deflt": 0,
+        "database_filter": {
+          "database": "levels",
+          "variable": "game_modes"
+        },
+        "hide_if_trivial": true,
+        "parameters": [
+          {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"game_mode": "rally"}}},
+          {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"game_mode": "skating"}}},
+          {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"game_mode": "team_deathmatch"}}}
+        ]
+      }
+    }
   },
   {
     "declare_macro": "_update_scene_icon",
@@ -104,6 +105,7 @@
     "declare_macro": "_setup_menu_primary_scene_rest",
     "content": [
       {
+        "required": ["%user_id == 0"],
         "call": "ui_exhibit",
         "arguments": {
           "z_order": 1,
@@ -118,6 +120,7 @@
         }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "scene_selector",
         "arguments": {
           "id": "scene_selector",
@@ -212,7 +215,12 @@
         "arguments": {
           "content": [
             {
-              "playback": "_setup_menu_primary_scene_game_mode_selector",
+              "playback": "_setup_menu_primary_scene_background",
+              "context": "primary_scene_$user_name"
+            },
+            {
+              "required": ["%user_id == 0"],
+              "playback": "_setup_game_mode_selector",
               "context": "primary_scene_$user_name"
             },
             {
@@ -482,6 +490,7 @@
         }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "reload_required",
         "arguments": {
           "title": "$$translations/main/Reload_required/$selected_language:",
@@ -566,6 +575,7 @@
         "arguments": { "selected_player_vehicle_color": [1, 1, 0] }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -623,6 +633,7 @@
         }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "restrictions_selector",
@@ -706,7 +717,7 @@
         }
       },
       {
-        "required": ["%if_devel"],
+        "required": ["%if_devel", "%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
@@ -736,10 +747,12 @@
       },
       {
         "call": "globals",
+        "required": ["%user_id == 0"],
         "exclude": ["%if_devel"],
         "arguments": { "race_session": "session1" }
       },
       {
+        "required": ["%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
@@ -768,7 +781,7 @@
         }
       },
       {
-        "required": ["%if_devel"],
+        "required": ["%if_devel", "%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
@@ -797,11 +810,12 @@
       },
       {
         "call": "globals",
+        "required": ["%user_id == 0"],
         "exclude": ["%if_devel"],
         "arguments": { "if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false }
       },
       {
-        "required": ["%if_devel"],
+        "required": ["%if_devel", "%user_id == 0"],
         "exclude": ["%if_android"],
         "call": "parameter_setter",
         "arguments": {
@@ -833,7 +847,7 @@
         }
       },
       {
-        "required": ["%if_devel"],
+        "required": ["%if_devel", "%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
@@ -863,11 +877,12 @@
       },
       {
         "call": "globals",
+        "required": ["%user_id == 0"],
         "exclude": ["%if_devel"],
         "arguments": { "playback_speed": 1 }
       },
       {
-        "required": ["%if_devel"],
+        "required": ["%if_devel", "%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
@@ -893,6 +908,7 @@
       },
       {
         "call": "globals",
+        "required": ["%user_id == 0"],
         "exclude": ["%if_devel"],
         "arguments": { "if_tripod_mode": false }
       },
