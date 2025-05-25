@@ -204,9 +204,14 @@
   {
     "declare_macro": "create_player_car_internals_tiger_tank",
     "content": [
-      {"required": ["%if_pc"], "playback": "create_car_key_bindings", "arguments": {
-        "if_has_gun": true
-      }},
+      {
+        "required": ["%if_pc"],
+        "playback": "create_car_key_bindings",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "if_has_gun": true
+        }
+      },
       {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
         "player": "%externals_player_name",
         "gun_node": "main_gun_end_node$suffix",
@@ -219,7 +224,7 @@
       {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
         "player": "%externals_player_name",
         "gun_node": "main_gun_end_node$suffix",
-        "exclusive_node": "follower_camera",
+        "exclusive_node": "follower_camera_$user_name",
         "ypln_node": "turret_node$suffix",
         "filename": "textures/hud/crosshair.png",
         "center": [0, 0],

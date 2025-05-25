@@ -19,11 +19,30 @@
       "exclude": ["%if_tripod_mode", "%if_tripod_mode_old"],
       "context": "primary_scene",
       "execute": [
-        {"call": "set_camera_cycle", "arguments": {"name": "tripod", "cameras": []}},
-        {"call": "delete_root_nodes", "arguments": {"regex": "^tripod_node.*$"}},
         {
-          "required": ["%if_tripod_mode"],
-          "playback": "create_tripod_cameras"
+          "call": "for_each_user",
+          "arguments": {
+            "content": [
+              {
+                "call": "set_camera_cycle",
+                "context": "primary_scene_$user_name",
+                "arguments": {
+                  "name": "tripod",
+                  "cameras": []
+                }
+              },
+              {
+                "call": "delete_root_nodes",
+                "arguments": {
+                  "regex": "^tripod_node.*$"
+                }
+              },
+              {
+                "required": ["%if_tripod_mode"],
+                "playback": "create_tripod_cameras"
+              }
+            ]
+          }
         },
         {
           "call": "globals",

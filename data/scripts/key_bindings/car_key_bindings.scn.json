@@ -13,6 +13,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.steer_left",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -24,6 +25,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.steer_right",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -46,6 +48,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.forward",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -57,6 +60,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.backwards",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -68,6 +72,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.ascend",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -79,6 +84,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.descend",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -90,6 +96,7 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_left",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -104,6 +111,7 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_right",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -118,6 +126,7 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_up",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -132,6 +141,7 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_down",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -146,6 +156,7 @@
       "required": ["%if_has_gun"],
       "call": "gun_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.shoot",
         "role": "%externals_role",
         "player": "%externals_player_name"
@@ -156,6 +167,7 @@
       "exclude": ["%if_manual_aim"],
       "call": "player_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.select_next_opponent",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -165,6 +177,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.select_next_vehicle",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -174,6 +187,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "car_or_heli.reset_vehicle",
         "role": "%externals_role",
         "player": "%externals_player_name",

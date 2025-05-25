@@ -344,9 +344,7 @@
     "content": [
       {
         "required": ["%if_pc"],
-        "playback": "create_car_cameras_heli",
-        "arguments": {
-          }
+        "playback": "create_car_cameras_heli"
       },
       {
         "call": "player_set_aiming_gun",

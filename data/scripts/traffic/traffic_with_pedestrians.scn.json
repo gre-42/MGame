@@ -28,6 +28,6 @@
     {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc1", "player_name": "dc_npc1", "asset_id": "compact0", "color": [0.07, 0.22, 0.24]}},
     {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc2", "player_name": "dc_npc2", "asset_id": "sedan0",   "color": [0.95, 0.80, 0.25]}},
     {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc3", "player_name": "dc_npc3", "asset_id": "van0",     "color": [0.74, 0.22, 0.24]}},
-    {"call": "set_vip", "arguments": {"player": "%vip_name"}}
+    {"call": "set_vip", "arguments": {"player": "$vip_name-_0"}}
   ]
 }

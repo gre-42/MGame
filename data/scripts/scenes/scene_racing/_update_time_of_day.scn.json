@@ -40,27 +40,25 @@
         "playback": "add_distant_light_night"
       },
       {
-        "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
-        "execute": [
-          {
-            "required": ["%time_of_day == 'day'"],
-            "execute": [
-              {"playback": "add_local_instances_light"},
-              {"playback": "add_movables_light"}
+        "required": ["%time_of_day == 'day'"],
+        "execute": {
+          "call": "for_each_user",
+          "arguments": {
+            "content": [
+              {
+                "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
+                "playback": "add_local_instances_light"
+              },
+              {
+                "playback": "add_movables_light_scene"
+              },
+              {
+                "context": "primary_scene_$user_name",
+                "playback": "add_movables_light_render"
+              }
             ]
           }
-        ]
-      },
-      {
-        "required": ["%aggregate_mode == 'none'"],
-        "execute": [
-          {
-            "required": ["%time_of_day == 'day'"],
-            "execute": [
-              {"playback": "add_movables_light"}
-            ]
-          }
-        ]
+        }
       },
       {
         "required": ["%time_of_day in {'night', 'synthwave'}"],
@@ -120,9 +118,22 @@
     "content": [
       { "playback": "_delete_lights_for_time_of_day" },
       { "playback": "_create_lights_for_time_of_day" },
-      { "call": "clear_skybox" },
-      { "call": "set_skybox", "arguments": { "alias": "%skybox"} },
-      { "playback": "update_weapon_closeup_lights", "context": "weapon_closeup" }
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "context": "primary_scene_$user_name",
+            "execute": [
+              { "call": "clear_skybox" },
+              { "call": "set_skybox", "arguments": { "alias": "%skybox"} },
+              {
+                "playback": "update_weapon_closeup_lights",
+                "context": "weapon_closeup_$user_name"
+              }
+            ]
+          }
+        }
+      }
     ]
   }
 ]

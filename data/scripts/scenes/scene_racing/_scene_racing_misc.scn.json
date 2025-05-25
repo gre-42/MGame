@@ -122,7 +122,13 @@
         "call": "reset_supply_depot_cooldowns"
       },
       {
-        "call": "invalidate_aggregate_renderers"
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "invalidate_aggregate_renderers",
+            "context": "primary_scene_$user_name"
+          }
+        }
       }
     ]
   }

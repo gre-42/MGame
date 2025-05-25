@@ -375,6 +375,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "if_has_gun": false
         }

@@ -1,48 +1,62 @@
-{
-  "declare_macro": "add_local_skidmarks",
-  "let": {
-    "suffix": "_local_skidmarks"
-  },
-  "content": [
-    {
-      "call": "root_node_instance",
-      "arguments": {
-        "dynamics": "moving",
-        "name": "skidmark_node$suffix",
-        "position": [0, 0, 0],
-        "rotation": [-90, 0, 0],
-        "scale": 1
-      }
-    },
-    {
-      "call": "ortho_camera",
-      "arguments": {
-        "node": "skidmark_node$suffix",
-        "near_plane": -1000,
-        "far_plane": 1000,
-        "left_plane": -100,
-        "right_plane": 100,
-        "bottom_plane": -100,
-        "top_plane": 100,
-        "requires_postprocessing": false
-      }
-    },
-    {
-      "call": "keep_offset_from_camera",
-      "arguments": {
-        "follower": "skidmark_node$suffix",
-        "offset": [0, 0, 0],
-        "texture_width": "%scene_skidmarks_width",
-        "texture_height": "%scene_skidmarks_height"
-      }
-    },
-    {
-      "call": "create_skidmark",
-      "arguments": {
-        "node": "skidmark_node$suffix",
-        "texture_width": "%scene_skidmarks_width",
-        "texture_height": "%scene_skidmarks_height"
-      }
+[
+  {
+    "declare_macro": "add_local_skidmarks_scene",
+    "content": {
+      "let": {
+        "suffix": "_local_skidmarks_$user_name"
+      },
+      "execute": [
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "dynamics": "moving",
+            "name": "skidmark_node$suffix",
+            "position": [0, 0, 0],
+            "rotation": [-90, 0, 0],
+            "scale": 1
+          }
+        },
+        {
+          "call": "ortho_camera",
+          "arguments": {
+            "node": "skidmark_node$suffix",
+            "near_plane": -1000,
+            "far_plane": 1000,
+            "left_plane": -100,
+            "right_plane": 100,
+            "bottom_plane": -100,
+            "top_plane": 100,
+            "requires_postprocessing": false
+          }
+        }
+      ]
     }
-  ]
-}
+  },
+  {
+    "declare_macro": "add_local_skidmarks_render",
+    "content": {
+      "let": {
+        "suffix": "_local_skidmarks_$user_name"
+      },
+      "execute": [
+        {
+          "call": "keep_offset_from_camera",
+          "arguments": {
+            "follower": "skidmark_node$suffix",
+            "offset": [0, 0, 0],
+            "texture_width": "%scene_skidmarks_width",
+            "texture_height": "%scene_skidmarks_height"
+          }
+        },
+        {
+          "call": "create_skidmark",
+          "arguments": {
+            "node": "skidmark_node$suffix",
+            "texture_width": "%scene_skidmarks_width",
+            "texture_height": "%scene_skidmarks_height"
+          }
+        }
+      ]
+    }
+  }
+]

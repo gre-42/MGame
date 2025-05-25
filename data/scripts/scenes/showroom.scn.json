@@ -9,7 +9,8 @@
           "world": "common",
           "focus_mask": "new_game_menu",
           "submenus": ["car_selector", "car_color_selector"],
-          "gid": { "group": "translations", "id": "scene" }
+          "gid": { "group": "translations", "id": "scene" },
+          "primary_user_id": "%user_id"
         }
       },
       {
@@ -268,10 +269,16 @@
         }
       },
       {
-        "playback": "add_movables_light"
+        "playback": "add_movables_light_scene"
       },
       {
-        "playback": "add_local_skidmarks"
+        "playback": "add_movables_light_render"
+      },
+      {
+        "playback": "add_local_skidmarks_scene"
+      },
+      {
+        "playback": "add_local_skidmarks_render"
       },
       {
         "comment": {

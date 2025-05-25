@@ -121,7 +121,8 @@
     "declare_macro": "create_player_car_internals",
     "content": [
       {
-        "playback": "create_player_car_internals_$asset_id"
+        "playback": "create_player_car_internals_$asset_id",
+        "context": "primary_scene_$user_name"
       },
       {
         "required": ["%if_pc", "%if_devel"],
