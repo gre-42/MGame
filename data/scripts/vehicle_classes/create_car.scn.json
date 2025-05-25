@@ -119,101 +119,102 @@
   },
   {
     "declare_macro": "create_player_car_internals",
-    "content": {
-      "context": "primary_scene_$user_name",
-      "execute": [
-        {
-          "playback": "create_player_car_internals_$asset_id"
-        },
-        {
-          "required": ["%if_pc", "%if_devel"],
-          "call": "visual_player_status",
-          "arguments": {
-            "format": "position|speed|diameter|energy",
-            "charset": "%selected_language",
-            "ttf_file": "fonts/RobotoMono-Bold.ttf",
-            "left": "player_status_left",
-            "right": "player_status_right",
-            "bottom": "player_status_bottom",
-            "top": "player_status_top",
-            "font_color": "%ui_font_color",
-            "font_height": "normal",
-            "line_distance": "normal",
-            "player": "%externals_player_name",
-            "focus_mask": "scene|countdown_any|game_over_countdown_any"
-          }
-        },
-        {
-          "required": ["%if_pc"],
-          "call": "visual_player_status",
-          "arguments": {
-            "player": "%externals_player_name",
-            "format": "speed",
-            "charset": "%selected_language",
-            "ttf_file": "fonts/RobotoMono-Bold.ttf",
-            "left": "player_speed_left",
-            "right": "player_speed_right",
-            "bottom": "player_speed_bottom",
-            "top": "player_speed_top",
-            "font_color": "%scene_font_color",
-            "font_height": "normal",
-            "line_distance": "normal",
-            "circular": {
-              "pointer": "textures/pointer.png",
-              "tick_radius": "tick_radius",
-              "pointer_width": "pointer_width",
-              "pointer_length": "pointer_length",
-              "minimum_value": 0,
-              "maximum_value": 250,
-              "blank_angle": 60,
-              "ticks": ["'0'", "'30'", "'60'", "'90'", "'120'", "'150'", "'180'", "'210'", "'240'"]
-            },
-            "focus_mask": "scene|countdown_any|game_over_countdown_any"
-          }
-        },
-        {
-          "required": ["%if_pc", "%minimap_file != %null"],
-          "call": "minimap",
-          "arguments": {
-            "player": "%externals_player_name",
-            "left": "minimap_widget_left",
-            "right": "minimap_widget_right",
-            "bottom": "minimap_widget_bottom",
-            "top": "minimap_widget_top",
-            "locator_size": "minimap_locator_size",
-            "minimap": "%minimap_file",
-            "locator": "textures/dot.png",
-            "pointer_reference_length": 200,
-            "pointer_scale": "%minimap_scale",
-            "pointer_size": "%minimap_size",
-            "pointer_offset": "%minimap_offset"
-          }
-        },
-        {
-          "required": ["%if_pc"],
-          "call": "visual_player_bullet_count",
-          "arguments": {
-            "charset": "%selected_language",
-            "ttf_file": "fonts/RobotoMono-Bold.ttf",
-            "left": "bullet_count_left",
-            "right": "bullet_count_right",
-            "bottom": "bullet_count_bottom",
-            "top": "bullet_count_top",
-            "font_color": [1, 1, 1],
-            "font_height": "normal",
-            "line_distance": "normal",
-            "player": "%externals_player_name",
-            "focus_mask": "scene|countdown_any|game_over_countdown_any"
-          }
+    "content": [
+      {
+        "playback": "create_player_car_internals_$asset_id"
+      },
+      {
+        "required": ["%if_pc", "%if_devel"],
+        "call": "visual_player_status",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "format": "position|speed|diameter|energy",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "player_status_left",
+          "right": "player_status_right",
+          "bottom": "player_status_bottom",
+          "top": "player_status_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "player": "%externals_player_name",
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
-      ]
-    }
+      },
+      {
+        "required": ["%if_pc"],
+        "call": "visual_player_status",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "player": "%externals_player_name",
+          "format": "speed",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "player_speed_left",
+          "right": "player_speed_right",
+          "bottom": "player_speed_bottom",
+          "top": "player_speed_top",
+          "font_color": "%scene_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "circular": {
+            "pointer": "textures/pointer.png",
+            "tick_radius": "tick_radius",
+            "pointer_width": "pointer_width",
+            "pointer_length": "pointer_length",
+            "minimum_value": 0,
+            "maximum_value": 250,
+            "blank_angle": 60,
+            "ticks": ["'0'", "'30'", "'60'", "'90'", "'120'", "'150'", "'180'", "'210'", "'240'"]
+          },
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
+        }
+      },
+      {
+        "required": ["%if_pc", "%minimap_file != %null"],
+        "call": "minimap",
+        "arguments": {
+          "player": "%externals_player_name",
+          "left": "minimap_widget_left",
+          "right": "minimap_widget_right",
+          "bottom": "minimap_widget_bottom",
+          "top": "minimap_widget_top",
+          "locator_size": "minimap_locator_size",
+          "minimap": "%minimap_file",
+          "locator": "textures/dot.png",
+          "pointer_reference_length": 200,
+          "pointer_scale": "%minimap_scale",
+          "pointer_size": "%minimap_size",
+          "pointer_offset": "%minimap_offset"
+        }
+      },
+      {
+        "required": ["%if_pc"],
+        "call": "visual_player_bullet_count",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "bullet_count_left",
+          "right": "bullet_count_right",
+          "bottom": "bullet_count_bottom",
+          "top": "bullet_count_top",
+          "font_color": [1, 1, 1],
+          "font_height": "normal",
+          "line_distance": "normal",
+          "player": "%externals_player_name",
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
+        }
+      }
+    ]
   },
   {
     "declare_macro": "create_player_car_engine_rpm_meter",
     "content": [
       {
         "call": "visual_player_status",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "child": ["engines", "%engine_name"],
           "format": "abs_angular_velocity",

@@ -117,8 +117,9 @@
           "filename": "textures/hud/crosshair.png"}
       },
       {
-        "call": "visual_player_bullet_count",
         "required": ["%if_pc"],
+        "call": "visual_player_bullet_count",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "player": "%externals_player_name",
           "left": "bullet_count_left",

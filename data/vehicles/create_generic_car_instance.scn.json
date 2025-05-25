@@ -384,6 +384,7 @@
         "required": ["%if_pc"],
         "exclude": ["%if_android"],
         "playback": "create_player_car_engine_rpm_meter",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "engine_name": "%%vehicles/$asset_id/front_engine"
         }
