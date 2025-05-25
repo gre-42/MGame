@@ -9,6 +9,7 @@
       },
       {
         "call": "for_each_user",
+        "context": "primary_scene",
         "arguments": {
           "content": {
             "call": "set_focuses",
@@ -19,6 +20,7 @@
       },
       {
         "call": "execute_in_physics_thread",
+        "context": "primary_scene",
         "arguments": {
           "command": { "playback": "scene_racing_setup_new_round" }
         }
@@ -423,7 +425,8 @@
             {
               "required": ["%selected_level_id == %loaded_level_id"],
               "execute": {
-                "playback": "_reload_transient_objects_in_physics_thread"
+                "playback": "_reload_transient_objects_in_physics_thread",
+                "without": ["user_id", "user_name"]
               }
             }
           ],
