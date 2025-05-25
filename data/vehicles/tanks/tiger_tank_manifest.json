@@ -8,7 +8,7 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "selected_vehicle_id": "tiger_tank"
+      "selected_vehicle_id_$user_name": "tiger_tank"
     }
   },
   "database": {

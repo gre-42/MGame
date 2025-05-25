@@ -14,14 +14,14 @@
             "without": ["car_node_position", "car_node_angles"],
             "arguments": {
               "spawner": "$vip_name-_$user_name",
-              "asset_id": "%selected_vehicle_id",
-              "y_offset": "%%vehicles/$selected_vehicle_id/spawn_y_offset",
+              "asset_id": "${selected_vehicle_id_$user_name}",
+              "y_offset": "%%vehicles/${selected_vehicle_id_$user_name}/spawn_y_offset",
               "already_set_behavior": "update",
               "macro": [
                 {
-                  "playback":  "create_$$vehicles/$selected_vehicle_id/class",
+                  "playback":  "create_$$vehicles/${selected_vehicle_id_$user_name}/class",
                   "let": {
-                    "asset_id": "%selected_vehicle_id",
+                    "asset_id": "${selected_vehicle_id_$user_name}",
                     "if_human_style": true,
                     "if_skater_style": true,
                     "if_car_body_renderable_style": true,
@@ -81,7 +81,7 @@
             "context": "primary_scene_$user_name",
             "call": "check_points",
             "arguments": {
-              "moving_asset_id": "%%vehicles/$selected_vehicle_id/suffix",
+              "moving_asset_id": "%%vehicles/${selected_vehicle_id_$user_name}/suffix",
               "moving_suffix": "",
               "resource": "glow",
               "user_id": "%user_id",
