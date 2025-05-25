@@ -69,8 +69,14 @@
     "declare_macro": "_setup_new_round",
     "content": [
       {
-        "call": "set_focuses",
-        "arguments": {"focuses": ["scene", "countdown_pending"]}
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "set_focuses",
+            "context": "primary_scene_$user_name",
+            "arguments": {"focuses": ["scene", "countdown_pending"]}
+          }
+        }
       },
       {
         "call": "delete_root_nodes",

@@ -8,8 +8,14 @@
           "thread can read the global parameters without data races"]
       },
       {
-        "call": "set_focuses",
-        "arguments": {"focuses": []}
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "set_focuses",
+            "context": "primary_scene_$user_name",
+            "arguments": {"focuses": []}
+          }
+        }
       },
       {
         "call": "execute_in_physics_thread",
