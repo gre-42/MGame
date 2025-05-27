@@ -13,8 +13,6 @@
     "arguments": {
       "name": "primary_scene",
       "world": "common",
-      "focus_mask": "scene",
-      "submenus": [],
       "gid": { "group": "translations", "id": "scene" },
       "primary_user_id": 0
     }
@@ -36,6 +34,8 @@
           "arguments": {
             "name": "primary_scene_$user_name",
             "physics": "primary_scene",
+            "focus_mask": "scene",
+            "submenus": [],
             "fly": false,
             "rotate": false,
             "depth_fog": false,

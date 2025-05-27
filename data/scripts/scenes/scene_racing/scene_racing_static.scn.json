@@ -14,8 +14,6 @@
       "arguments": {
         "name": "primary_scene",
         "world": "common",
-        "focus_mask": "scene|countdown_any|game_over_countdown_any",
-        "submenus": [],
         "max_tracks": 5,
         "save_playback": "%primary_scene_save_playback",
         "gid": { "group": "translations", "id": "scene" },
@@ -39,6 +37,8 @@
             "arguments": {
               "name": "primary_scene_$user_name",
               "physics": "primary_scene",
+              "focus_mask": "scene|countdown_any|game_over_countdown_any",
+              "submenus": [],
               "fly": "%primary_scene_fly",
               "rotate": "%primary_scene_rotate",
               "depth_fog": "%primary_scene_depth_fog",
@@ -58,8 +58,6 @@
             "arguments": {
               "name": "weapon_closeup_$user_name",
               "world": "common",
-              "focus_mask": "scene|countdown_any|game_over_countdown_any",
-              "submenus": [],
               "gid": { "group": "translations", "id": "scene" },
               "primary_user_id": "%user_id"
             }
@@ -69,6 +67,8 @@
             "arguments": {
               "name": "weapon_closeup_$user_name",
               "physics": "weapon_closeup_$user_name",
+              "focus_mask": "scene|countdown_any|game_over_countdown_any",
+              "submenus": [],
               "fly": false,
               "rotate": false,
               "depth_fog": false,

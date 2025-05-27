@@ -58,8 +58,6 @@
         "arguments": {
           "name": "loading",
           "world": "common",
-          "focus_mask": "loading",
-          "submenus": [],
           "gid": { "group": "translations", "id": "scene" },
           "primary_user_id": 0
         }
@@ -69,6 +67,8 @@
         "arguments": {
           "name": "loading",
           "physics": "loading",
+          "focus_mask": "loading",
+          "submenus": [],
           "fly": false,
           "rotate": false,
           "depth_fog": false,

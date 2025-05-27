@@ -7,8 +7,6 @@
         "arguments": {
           "name": "showroom_$user_name",
           "world": "common",
-          "focus_mask": "new_game_menu",
-          "submenus": ["car_selector", "car_color_selector"],
           "gid": { "group": "translations", "id": "scene" },
           "primary_user_id": "%user_id"
         }
@@ -18,6 +16,8 @@
         "arguments": {
           "name": "showroom_$user_name",
           "physics": "showroom_$user_name",
+          "focus_mask": "new_game_menu",
+          "submenus": ["car_selector", "car_color_selector"],
           "fly": false,
           "rotate": false,
           "depth_fog": false,
