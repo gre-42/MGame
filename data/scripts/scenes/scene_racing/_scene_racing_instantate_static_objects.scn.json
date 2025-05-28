@@ -133,14 +133,15 @@
       {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
       {"comment": "Player"},
       {
-        "required": ["%if_create_pc_player"],
         "call": "for_each_user",
         "let": {
+          "if_create_pc_player": "%if_create_pc_player",
           "score_board": "%score_board"
         },
         "arguments": {
           "content": [
             {
+              "required": ["%if_create_pc_player"],
               "call": "player_create",
               "arguments": {
                 "name": "$vip_name-_$user_name",
@@ -152,22 +153,31 @@
               }
             },
             {
-              "call": "spawner_create", "arguments": {
+              "required": ["%if_create_pc_player"],
+              "call": "spawner_create",
+              "arguments": {
                 "name": "$vip_name-_$user_name",
                 "suffix": "_$user_name",
                 "team": "red"
               }
             },
-            { "call": "spawner_set_player", "arguments": { "name": "$vip_name-_$user_name", "role": "driver" } },
             {
+              "required": ["%if_create_pc_player"],
+              "call": "spawner_set_player",
+              "arguments": { "name": "$vip_name-_$user_name", "role": "driver" }
+            },
+            {
+              "required": ["%if_create_pc_player"],
               "call": "set_can_drive",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
             {
+              "required": ["%if_create_pc_player"],
               "call": "set_can_aim",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
             {
+              "required": ["%if_create_pc_player"],
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },

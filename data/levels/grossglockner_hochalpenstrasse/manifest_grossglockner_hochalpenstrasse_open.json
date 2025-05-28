@@ -3,7 +3,7 @@
   "title": "%%levels/grossglockner_hochalpenstrasse_open/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_open/game_modes"]
+    "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_open/game_modes", "%user_count <= %%levels/grossglockner_hochalpenstrasse_open/max_users"]
   },
   "on_execute": {
     "include": "scene_grossglockner_hochalpenstrasse_open.scn.json"
@@ -17,6 +17,14 @@
     }
   },
   "database": {
+    "max_users": 1,
+    "0": {
+      "car_node_position": [
+        "12.826221_deg",
+        "47.117129_deg",
+        "2150"],
+      "car_node_angles": [0, -90, 0]
+    },
     "if_raceway_circular": false,
     "game_modes": ["rally"],
     "title": {

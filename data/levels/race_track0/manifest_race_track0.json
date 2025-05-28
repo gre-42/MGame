@@ -3,7 +3,7 @@
   "title": "%%levels/race_track0/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/race_track0/game_modes"]
+    "dynamic": ["%game_mode in %%levels/race_track0/game_modes", "%user_count <= %%levels/race_track0/max_users"]
   },
   "on_execute": {
     "include": "scene_race_track0.scn.json"
@@ -19,15 +19,11 @@
   "database": {
     "0": {
       "car_node_position": [3, -170, -242],
-      "car_node_angles": [180, -13, -180],
-      "vehicle_velocity": [0, 0, 0],
-      "vehicle_angular_velocity": [0, 0, 0]
+      "car_node_angles": [180, -13, -180]
     },
     "1": {
       "car_node_position": [-3, -170, -242],
-      "car_node_angles": [180, -13, -180],
-      "vehicle_velocity": [0, 0, 0],
-      "vehicle_angular_velocity": [0, 0, 0]
+      "car_node_angles": [180, -13, -180]
     },
     "if_raceway_circular": true,
     "game_modes": ["rally"],

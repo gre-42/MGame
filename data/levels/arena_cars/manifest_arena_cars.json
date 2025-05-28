@@ -3,7 +3,7 @@
   "title": "WIP: Arena cars",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/arena_cars/game_modes"]
+    "dynamic": ["%game_mode in %%levels/arena_cars/game_modes", "%user_count <= %%levels/arena_cars/max_users"]
   },
   "on_execute": {
     "include": "scene_arena_cars.scn"
@@ -17,6 +17,7 @@
     }
   },
   "database": {
+    "max_users": 1,
     "if_raceway_circular": false,
     "game_modes": ["team_deathmatch"]
   }

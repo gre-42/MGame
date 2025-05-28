@@ -3,7 +3,7 @@
   "title": "%%levels/desert1/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/desert1/game_modes"]
+    "dynamic": ["%game_mode in %%levels/desert1/game_modes", "%user_count <= %%levels/desert1/max_users"]
   },
   "on_execute": {
     "include": "scene_desert1.scn.json"
@@ -17,6 +17,14 @@
     }
   },
   "database": {
+    "max_users": 1,
+    "0": {
+      "car_node_position": [
+        "-113.3258598_deg",
+        "35.7393636_deg",
+        "142"],
+      "car_node_angles": [0, 140, 0]
+    },
     "if_raceway_circular": false,
     "game_modes": ["rally"],
     "title": {

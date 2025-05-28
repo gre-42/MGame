@@ -3,7 +3,7 @@
   "title": "%%levels/islands1/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/islands1/game_modes"]
+    "dynamic": ["%game_mode in %%levels/islands1/game_modes", "%user_count <= %%levels/islands1/max_users"]
   },
   "on_execute": {
     "include": "scene_islands1.scn.json"
@@ -18,6 +18,7 @@
     }
   },
   "database": {
+    "max_users": 1,
     "if_raceway_circular": false,
     "game_modes": ["team_deathmatch"],
     "title": {

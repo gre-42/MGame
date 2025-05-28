@@ -3,7 +3,7 @@
   "title": "JB",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/jb_race/game_modes"]
+    "dynamic": ["%game_mode in %%levels/jb_race/game_modes", "%user_count <= %%levels/jb_race/max_users"]
   },
   "on_execute": [
     {"include": "osm_resource_jb_race_open_alpha.scn.json"},
@@ -18,6 +18,14 @@
     }
   },
   "database": {
+    "max_users": 1,
+    "0": {
+      "car_node_position": [
+        "1.008363134939195760e+01_deg",
+        "4.911385574724339875e+01_deg",
+        "4.46791362989359e+1"],
+      "car_node_angles": [0, 140, 0]
+    },
     "if_raceway_circular": false,
     "game_modes": ["rally"]
   }

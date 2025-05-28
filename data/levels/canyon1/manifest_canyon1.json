@@ -3,7 +3,7 @@
   "title": "WIP: Canyon 1",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/canyon1/game_modes"]
+    "dynamic": ["%game_mode in %%levels/canyon1/game_modes", "%user_count <= %%levels/canyon1/max_users"]
   },
   "on_execute": {
     "include": "scene_canyon1.scn"
@@ -17,6 +17,7 @@
     }
   },
   "database": {
+    "max_users": 1,
     "if_raceway_circular": false,
     "game_modes": ["rally"]
   }

@@ -179,10 +179,6 @@
       "let": {
         "if_create_pc_car": true,
         "if_pc_player_playback": false,
-        "car_node_position": "%%levels/$loaded_level_id/car_node_position",
-        "car_node_angles": "%%levels/$loaded_level_id/car_node_angles",
-        "vehicle_velocity": "%%levels/$loaded_level_id/vehicle_velocity",
-        "vehicle_angular_velocity": "%%levels/$loaded_level_id/vehicle_angular_velocity",
         "recordings_dir": "%__DIR__",
         "checkpoints_file": null,
         "checkpoints": "%%levels/$loaded_level_id/checkpoints",

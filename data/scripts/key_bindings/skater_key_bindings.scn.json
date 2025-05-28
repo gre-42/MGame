@@ -13,6 +13,7 @@
     {
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.rotate_left",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -26,6 +27,7 @@
     {
       "call": "rel_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.rotate_right",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -40,6 +42,7 @@
       "comment": {
         "call": "abs_key_binding",
         "arguments": {
+          "user_id": "%user_id",
           "node": "skater_node$suffix",
           "key": "%LEFT_SHIFT",
           "gamepad_button": "Y",
@@ -50,6 +53,7 @@
     {
       "call": "abs_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.jump",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -60,6 +64,7 @@
     {
       "call": "abs_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.grind",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -70,6 +75,7 @@
     {
       "call": "abs_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.forward",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -80,6 +86,7 @@
     {
       "call": "car_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "skater.brake",
         "role": "%externals_role",
         "player": "%externals_player_name",

@@ -21,8 +21,10 @@
           "ambient_factor": "%vanilla_rally_ambient_factor",
           "diffuse_factor": "%vanilla_rally_diffuse_factor",
           "specular_factor": "%vanilla_rally_specular_factor",
-          "fog_distances": "%fog_distances",
-          "fog_ambient": "%fog_ambient"
+          "shading": {
+            "fog_distances": "%fog_distances",
+            "fog_ambient": "%fog_ambient"
+          }
         }
       }
     },

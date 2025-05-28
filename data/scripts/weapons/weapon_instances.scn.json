@@ -18,19 +18,19 @@
         "punch_angle_node": "main_gun_punch_angle_node$suffix",
         "on_hide": {
           "playback": "_add_weapon_closeup_scheduler_on_hide",
-          "context": "weapon_closeup"
+          "context": "weapon_closeup_$user_name"
         },
         "on_destroy": {
           "playback": "_add_weapon_closeup_scheduler_on_destroy",
-          "context": "weapon_closeup"
+          "context": "weapon_closeup_$user_name"
         },
         "on_update": {
           "playback": "_add_weapon_closeup_scheduler_on_update",
-          "context": "weapon_closeup"
+          "context": "weapon_closeup_$user_name"
         }
       },
       "let": {
-        "RESOURCE": "%RESOURCE"
+        "resource": "%resource"
       }
     }
   },
@@ -70,15 +70,15 @@
           "generate_muzzle_flash_hider": {
             "playback": "_generate_muzzle_flash_hider",
             "arguments": {
-              "RESOURCE": "muzzle_flash_0",
-              "ANIMATION_TIME": 0.1,
+              "resource": "muzzle_flash_0",
+              "animation_time": 0.1,
               "position": [0, 0.062, -0.66],
-              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
+              "muzzle_flash_suffix": "%muzzle_flash_suffix"
             }
           },
-          "cool_down": "%COOL_DOWN",
-          "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE"
+          "cool_down": "%cool_down",
+          "ammo_type": "%ammo_type",
+          "bullet_type": "%bullet_type"
         }
       },
       {
@@ -87,13 +87,19 @@
           "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
-          "bullet_type": "%BULLET_TYPE"
+          "bullet_type": "%bullet_type"
         }
       },
       {
-        "playback": "_set_node_hider",
+        "call": "for_each_user",
+        "without": ["user_id", "user_name"],
         "arguments": {
-          "RESOURCE": "M4A1"
+          "content": {
+            "playback": "_set_node_hider",
+            "arguments": {
+              "resource": "M4A1"
+            }
+          }
         }
       }
     ]
@@ -134,15 +140,15 @@
           "generate_muzzle_flash_hider": {
             "playback": "_generate_muzzle_flash_hider",
             "arguments": {
-              "RESOURCE": "muzzle_flash_0",
-              "ANIMATION_TIME": 0.1,
+              "resource": "muzzle_flash_0",
+              "animation_time": 0.1,
               "position": [0, 0.086, -0.265],
-              "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
+              "muzzle_flash_suffix": "%muzzle_flash_suffix"
             }
           },
-          "cool_down": "%COOL_DOWN",
-          "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE"
+          "cool_down": "%cool_down",
+          "ammo_type": "%ammo_type",
+          "bullet_type": "%bullet_type"
         }
       },
       {
@@ -151,13 +157,19 @@
           "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
-          "bullet_type": "%BULLET_TYPE"
+          "bullet_type": "%bullet_type"
         }
       },
       {
-        "playback": "_set_node_hider",
+        "call": "for_each_user",
+        "without": ["user_id", "user_name"],
         "arguments": {
-          "RESOURCE": "Beretta92"
+          "content": {
+            "playback": "_set_node_hider",
+            "arguments": {
+              "resource": "Beretta92"
+            }
+          }
         }
       }
     ]
@@ -192,9 +204,9 @@
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
-          "cool_down": "%COOL_DOWN",
-          "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE"
+          "cool_down": "%cool_down",
+          "ammo_type": "%ammo_type",
+          "bullet_type": "%bullet_type"
         }
       },
       {
@@ -203,13 +215,19 @@
           "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "human_node$suffix",
           "dpitch_head": -15,
-          "bullet_type": "%BULLET_TYPE"
+          "bullet_type": "%bullet_type"
         }
       },
       {
-        "playback": "_set_node_hider",
+        "call": "for_each_user",
+        "without": ["user_id", "user_name"],
         "arguments": {
-          "RESOURCE": "frag_grenade"
+          "content": {
+            "playback": "_set_node_hider",
+            "arguments": {
+              "resource": "frag_grenade"
+            }
+          }
         }
       }
     ]
@@ -244,9 +262,9 @@
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
-          "cool_down": "%COOL_DOWN",
-          "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE"
+          "cool_down": "%cool_down",
+          "ammo_type": "%ammo_type",
+          "bullet_type": "%bullet_type"
         }
       },
       {
@@ -255,13 +273,19 @@
           "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
-          "bullet_type": "%BULLET_TYPE"
+          "bullet_type": "%bullet_type"
         }
       },
       {
-        "playback": "_set_node_hider",
+        "call": "for_each_user",
+        "without": ["user_id", "user_name"],
         "arguments": {
-          "RESOURCE": "m72_law"
+          "content": {
+            "playback": "_set_node_hider",
+            "arguments": {
+              "resource": "m72_law"
+            }
+          }
         }
       }
     ]
@@ -278,8 +302,8 @@
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
           "parent_rigid_body_node": "%PARENT_RIGID_BODY_NODE",
-          "ammo_type": "%AMMO_TYPE",
-          "bullet_type": "%BULLET_TYPE"
+          "ammo_type": "%ammo_type",
+          "bullet_type": "%bullet_type"
         }
       },
       {
@@ -288,7 +312,7 @@
           "gun_node": "main_gun_end_node$suffix",
           "ypln_node": "%PARENT_RIGID_BODY_NODE",
           "dpitch_head": 0,
-          "bullet_type": "%BULLET_TYPE"
+          "bullet_type": "%bullet_type"
         }
       }
     ]

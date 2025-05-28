@@ -3,7 +3,7 @@
   "title": "Aircraft carrier 0",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/aircraft_carrier0/game_modes"]
+    "dynamic": ["%game_mode in %%levels/aircraft_carrier0/game_modes", "%user_count <= %%levels/aircraft_carrier0/max_users"]
   },
   "on_execute": {
     "include": "scene_aircraft_carrier0.scn.json"
@@ -17,6 +17,11 @@
     }
   },
   "database": {
+    "max_users": 1,
+    "0": {
+      "car_node_position": [0, 5, 10],
+      "car_node_angles": [0, 0, 0]
+    },
     "if_raceway_circular": false,
     "game_modes": ["team_deathmatch"]
   }

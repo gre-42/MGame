@@ -51,13 +51,6 @@
       "let": {
         "if_create_pc_car": true,
         "if_pc_player_playback": false,
-        "car_node_position": [
-          "'1.008363134939195760e+01_deg'",
-          "'4.911385574724339875e+01_deg'",
-          "'4.46791362989359e+1'"],
-        "car_node_angles": [0, 140, 0],
-        "vehicle_velocity": [0, 0, 0],
-        "vehicle_angular_velocity": [0, 0, 0],
         "recordings_dir": "%__DIR__",
         "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
         "checkpoints": null,

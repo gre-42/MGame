@@ -101,11 +101,13 @@
       },
       {
         "required": ["%if_pc"],
-        "playback": "create_avatar_key_bindings"
+        "playback": "create_avatar_key_bindings",
+        "context": "primary_scene_$user_name"
       },
       {
-        "call": "hud_target_point",
         "required": ["%if_pc"],
+        "call": "hud_target_point",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "player": "%externals_player_name",
           "gun_node": "main_gun_end_node$suffix",

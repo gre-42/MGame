@@ -5,7 +5,7 @@
       {
         "call": "try_delete_node",
         "arguments": {
-          "name": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX"
+          "name": "muzzle_flash_closeup_node_$muzzle_flash_suffix"
         }
       }
     ]
@@ -42,7 +42,7 @@
         "arguments": {
           "type": "dynamic",
           "parent": "punch_angle_node_closeup",
-          "name": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
+          "name": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
           "position": "%position",
           "rotation": [0, 0, 0],
           "scale": 1
@@ -51,9 +51,9 @@
       {
         "call": "set_animation_state",
         "arguments": {
-          "node": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
+          "node": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
           "aperiodic_animation_begin": 0,
-          "aperiodic_animation_end": "%ANIMATION_TIME",
+          "aperiodic_animation_end": "%animation_time",
           "aperiodic_animation_time": 0
         }
       },
@@ -61,8 +61,8 @@
         "call": "child_renderable_instance",
         "arguments": {
           "name": "closeup-inst",
-          "node": "muzzle_flash_closeup_node_$MUZZLE_FLASH_SUFFIX",
-          "resource": "%RESOURCE"
+          "node": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
+          "resource": "%resource"
         }
       }
     ]
@@ -72,22 +72,34 @@
     "content": {
       "call": "set_node_hider",
       "arguments": {
-        "node_to_hide": "muzzle_flash_node$MUZZLE_FLASH_SUFFIX",
+        "node_to_hide": "muzzle_flash_node$muzzle_flash_suffix",
         "camera_node": "human_head_camera_node$suffix",
         "on_hide": {
-          "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
-          "context": "weapon_closeup"
+          "call": "for_each_user",
+          "without": ["user_id", "user_name"],
+          "arguments": {
+            "content": {
+              "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
+              "context": "weapon_closeup_$user_name"
+            }
+          }
         },
         "on_destroy": {
-          "playback": "_add_muzzle_flash_closeup_scheduler_on_destroy",
-          "context": "weapon_closeup"
+          "call": "for_each_user",
+          "without": ["user_id", "user_name"],
+          "arguments": {
+            "content": {
+              "playback": "_add_muzzle_flash_closeup_scheduler_on_destroy",
+              "context": "weapon_closeup_$user_name"
+            }
+          }
         }
       },
       "let": {
         "position": "%position",
-        "RESOURCE": "%RESOURCE",
-        "ANIMATION_TIME": "%ANIMATION_TIME",
-        "MUZZLE_FLASH_SUFFIX": "%MUZZLE_FLASH_SUFFIX"
+        "resource": "%resource",
+        "animation_time": "%animation_time",
+        "muzzle_flash_suffix": "%muzzle_flash_suffix"
       }
     }
   }

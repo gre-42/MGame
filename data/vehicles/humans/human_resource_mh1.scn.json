@@ -29,8 +29,8 @@
       {
         "call": "obj_resource",
         "arguments": {
-          "name": "$DIR$decimate",
-          "filename": "models/MakeHuman/$DIR/t_pose_lowpoly$decimate.obj",
+          "name": "$dir$decimate",
+          "filename": "models/MakeHuman/$dir/t_pose_lowpoly$decimate.obj",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
@@ -50,22 +50,22 @@
           }
         }
       },
-      {"call": "import_bone_weights", "arguments": {"destination": "$DIR$decimate", "source": "female_mh_orig", "max_distance": 0.1}},
+      {"call": "import_bone_weights", "arguments": {"destination": "$dir$decimate", "source": "female_mh_orig", "max_distance": 0.1}},
       {
         "call": "set_bounds",
         "arguments": {
-          "resource": "$DIR$decimate",
+          "resource": "$dir$decimate",
           "aabb": {"min": [-1, 0, -1], "max": [1, 2, 1]},
           "sphere": {"center": [0, 1, 0], "radius": 1.5}
         }
       }
     ]
   },
-  {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_mh"}},
-  {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "dir": "female_mh"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "dir": "female_mh"}},
 
-  {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "DIR": "female_skirt"}},
-  {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "DIR": "female_skirt"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":  0, "dist_max": 100, "occluder_pass": "none",                    "decimate": "_d2", "dir": "female_skirt"}},
+  {"playback": "load_mh1", "arguments": {"dist_min":100, "dist_max":1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "dir": "female_skirt"}},
 
   {"call": "compound_resource", "arguments": {"source_names": ["human_distancebox"], "dest_name": "female_mh_distancebox"}},
   {"call": "compound_resource", "arguments": {"source_names": ["human_distancebox"], "dest_name": "female_skirt_distancebox"}}

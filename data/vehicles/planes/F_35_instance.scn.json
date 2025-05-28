@@ -162,7 +162,7 @@
           "create": {
             "call": "player_change_aiming_gun",
             "arguments": {
-              "player": "%WEAPON_DEMANDER",
+              "player": "%weapon_demander",
               "gun_node": "main_gun_end_node$suffix"
             }
           }
@@ -181,7 +181,7 @@
           "create": {
             "call": "player_change_aiming_gun",
             "arguments": {
-              "player": "%WEAPON_DEMANDER",
+              "player": "%weapon_demander",
               "gun_node": "missile0_launcher_node$suffix"
             }
           }

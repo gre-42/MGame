@@ -32,6 +32,10 @@
   "players": [
     {
       "controller": "pc", "name": "you", "team": "red",
+      "user": {
+        "id": 0,
+        "name": "'0'"
+      },
       "skills": {
         "ai": {
           "can_drive": false,

@@ -3,7 +3,7 @@
   "title": "WIP: Grossglockner hochalpenstrasse (closed)",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_closed/game_modes"]
+    "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_closed/game_modes", "%user_count <= %%levels/grossglockner_hochalpenstrasse_closed/max_users"]
   },
   "on_execute": {
     "include": "scene_grossglockner_hochalpenstrasse_closed.scn"
@@ -17,6 +17,7 @@
     }
   },
   "database": {
+    "max_users": 1,
     "if_raceway_circular": false,
     "game_modes": ["rally"]
   }

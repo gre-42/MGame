@@ -24,6 +24,7 @@
     {
       "call": "abs_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.jump",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -34,6 +35,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.strafe_left",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -45,6 +47,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.strafe_right",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -56,6 +59,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.rotate_left",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -70,6 +74,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.rotate_right",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -84,6 +89,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.forward",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -95,6 +101,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.backwards",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -106,6 +113,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.rotate_up",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -120,6 +128,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.rotate_down",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -134,6 +143,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.next_weapon",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -143,6 +153,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.previous_weapon",
         "role": "%externals_role",
         "player": "%externals_player_name",
@@ -152,6 +163,7 @@
     {
       "call": "gun_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.shoot",
         "role": "%externals_role",
         "player": "%externals_player_name"
@@ -160,6 +172,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
+        "user_id": "%user_id",
         "id": "avatar.select_next_vehicle",
         "role": "%externals_role",
         "player": "%externals_player_name",
