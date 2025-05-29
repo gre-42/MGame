@@ -41,6 +41,8 @@
         "specular_factor": "%rw_specular_factor",
         "physics_material": "obj_chassis|attr_visible|attr_collide|attr_concave",
         "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient",
           "fresnel": {
             "min": "%rw_fresnel_min",
             "max": "%rw_fresnel_max",
@@ -48,8 +50,6 @@
             "ambient": "%rw_fresnel_ambient"
           }
         },
-        "fog_distances": "%fog_distances",
-        "fog_ambient": "%fog_ambient",
         "triangle_tangent_error_behavior": "zero"
       }
     }
