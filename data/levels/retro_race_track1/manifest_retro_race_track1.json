@@ -19,6 +19,14 @@
   "database": {
     "if_raceway_circular": true,
     "game_modes": ["rally"],
+    "max_users": 1,
+    "0": {
+      "car_node_position": [
+        "-122.404612_deg",
+        "37.773448_deg",
+        "172"],
+      "car_node_angles": [180, -13, -180]
+    },
     "title": {
       "de-DE": "Retro Rennstrecke 1",
       "en-US": "Retro race track 1",

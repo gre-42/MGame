@@ -17,6 +17,9 @@
     }
   },
   "database": {
+    "if_raceway_circular": false,
+    "game_modes": ["rally"],
+    "max_users": 1,
     "0": {
       "car_node_position": [1301, -172, -150],
       "car_node_angles": [0, 110, 0],
@@ -29,8 +32,6 @@
       "vehicle_velocity": [0, 0, 0],
       "vehicle_angular_velocity": [0, 0, 0]
     },
-    "if_raceway_circular": false,
-    "game_modes": ["rally"],
     "title": {
       "de-DE": "NYC, Strecke 2",
       "en-US": "NYC, track 2",

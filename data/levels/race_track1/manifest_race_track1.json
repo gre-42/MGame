@@ -19,6 +19,11 @@
   "database": {
     "if_raceway_circular": true,
     "game_modes": ["rally"],
+    "max_users": 1,
+    "0": {
+      "car_node_position": [3, -170, -242],
+      "car_node_angles": [180, -13, -180]
+    },
     "title": {
       "de-DE": "Rennstrecke 1",
       "en-US": "Race track 1",

@@ -19,6 +19,11 @@
   "database": {
     "if_raceway_circular": false,
     "game_modes": ["rally"],
+    "max_users": 1,
+    "0": {
+      "car_node_position": [-124, -169, 126],
+      "car_node_angles": [0, 147, 0]
+    },
     "title": {
       "de-DE": "NYC, Strecke 1",
       "en-US": "NYC, track 1",

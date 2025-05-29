@@ -18,6 +18,11 @@
   },
   "database": {
     "if_raceway_circular": false,
-    "game_modes": ["rally"]
+    "game_modes": ["rally"],
+    "max_users": 1,
+    "0": {
+      "car_node_position": [-618, -174, -689],
+      "car_node_angles": [0, -90, 0]
+    }
   }
 }
