@@ -5,6 +5,8 @@
       {
         "call": "player_create",
         "arguments": {
+          "user_id": "%user_id",
+          "user_name": "%user_name",
           "name": "%player_name",
           "team": "%team",
           "game_mode": "%game_mode",

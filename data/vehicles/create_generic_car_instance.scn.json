@@ -375,7 +375,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "if_has_gun": false
         }
@@ -384,7 +384,7 @@
         "required": ["%if_pc"],
         "exclude": ["%if_android"],
         "playback": "create_player_car_engine_rpm_meter",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "engine_name": "%%vehicles/$asset_id/front_engine"
         }
@@ -432,7 +432,7 @@
       "playback": "add_attached_light_sedan",
       "arguments": {
         "lsuffix": "%lsuffix",
-        "CSUFFIX": "%CSUFFIX"
+        "csuffix": "%csuffix"
       }
     }
   }

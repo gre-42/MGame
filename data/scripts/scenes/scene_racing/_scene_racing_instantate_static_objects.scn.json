@@ -144,6 +144,8 @@
               "required": ["%if_create_pc_player"],
               "call": "player_create",
               "arguments": {
+                "user_id": "%user_id",
+                "user_name": "%user_name",
                 "name": "$vip_name-_$user_name",
                 "team": "red",
                 "game_mode": "rally",

@@ -16,7 +16,7 @@
         "call": "keep_offset_from_movable",
         "arguments": {
           "follower": "light_node$lsuffix",
-          "followed": "skater_node$CSUFFIX",
+          "followed": "skater_node$csuffix",
           "offset": [10, 10, 0]
         }
       },
@@ -37,7 +37,7 @@
         "call": "light",
         "arguments": {
           "node": "light_node$lsuffix",
-          "black_node": "skater_node$CSUFFIX",
+          "black_node": "skater_node$csuffix",
           "render_pass": "lightmap_black_node",
           "with_depth_texture": false,
           "ambient": [0.5, 0.5, 0.5],

@@ -14,6 +14,7 @@
         "required": ["%if_manual_drive"],
         "call": "car_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.steer_left",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -25,6 +26,7 @@
         "required": ["%if_manual_drive"],
         "call": "car_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.steer_right",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -44,6 +46,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.roll_left",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -55,6 +58,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.roll_right",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -66,6 +70,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.pitch_up",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -77,6 +82,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.pitch_down",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -88,6 +94,7 @@
         "comment": {
           "call": "abs_key_binding",
           "arguments": {
+            "user_id": "%externals_user_id",
             "node": "car_node$suffix",
             "key": "LEFT_SHIFT",
             "gamepad_button": "B",
@@ -99,6 +106,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.forward",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -110,6 +118,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.brake",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -121,6 +130,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.yaw_left",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -132,6 +142,7 @@
         "required": ["%if_manual_drive"],
         "call": "plane_controller_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.yaw_right",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -142,6 +153,7 @@
       {
         "call": "weapon_cycle_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.next_weapon",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -151,6 +163,7 @@
       {
         "call": "weapon_cycle_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.previous_weapon",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -161,6 +174,7 @@
         "required": ["%if_has_gun"],
         "call": "gun_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.shoot",
           "role": "%externals_role",
           "player": "%externals_player_name"
@@ -170,6 +184,7 @@
         "required": ["%if_has_gun"],
         "call": "player_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.select_next_opponent",
           "role": "%externals_role",
           "player": "%externals_player_name",
@@ -179,6 +194,7 @@
       {
         "call": "player_key_binding",
         "arguments": {
+          "user_id": "%externals_user_id",
           "id": "plane.select_next_vehicle",
           "role": "%externals_role",
           "player": "%externals_player_name",

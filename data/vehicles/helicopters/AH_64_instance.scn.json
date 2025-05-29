@@ -319,7 +319,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -327,7 +327,7 @@
       {
         "required": ["%if_pc"],
         "call": "hud_target_point",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "gun_node": "main_gun_end_node$suffix",
@@ -373,7 +373,7 @@
       "playback": "add_attached_light_heli",
       "arguments": {
         "lsuffix": "%lsuffix",
-        "CSUFFIX": "%CSUFFIX"
+        "csuffix": "%csuffix"
       }
     }
   }

@@ -186,8 +186,8 @@
     "declare_macro": "create_player_skater_internals_skating_mh1",
     "content": {
       "required": ["%if_pc"],
-      "context": "primary_scene_$user_name",
       "playback": "create_skater_key_bindings",
+      "context": "primary_scene_$externals_user_name",
       "arguments": {"role": "driver"}
     }
   },
@@ -209,7 +209,7 @@
   {
     "declare_macro": "add_attached_light_skating_mh1",
     "content": [
-      {"playback": "add_attached_light_skater", "arguments": {"lsuffix": "%lsuffix", "CSUFFIX": "%CSUFFIX"}}
+      {"playback": "add_attached_light_skater", "arguments": {"lsuffix": "%lsuffix", "csuffix": "%csuffix"}}
     ]
   }
 ]

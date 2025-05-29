@@ -56,7 +56,7 @@
         }
       },
       {
-        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_human$suffix CSUFFIX:suffix;"
+        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_human$suffix csuffix:suffix;"
       },
       {
         "required": ["%if_spawner"],
@@ -121,7 +121,7 @@
       {
         "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "left": "bullet_count_left",

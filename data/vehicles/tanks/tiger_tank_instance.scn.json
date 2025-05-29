@@ -207,29 +207,41 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "if_has_gun": true
         }
       },
-      {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
-        "player": "%externals_player_name",
-        "gun_node": "main_gun_end_node$suffix",
-        "exclusive_node": "main_gun_camera_node$suffix",
-        "ypln_node": "turret_node$suffix",
-        "filename": "textures/hud/crosshair.png",
-        "center": [0, 0],
-        "size": [0.05, 0.05],
-        "error_behavior": "center"}},
-      {"required": ["%if_pc"], "call": "hud_target_point", "arguments": {
-        "player": "%externals_player_name",
-        "gun_node": "main_gun_end_node$suffix",
-        "exclusive_node": "follower_camera_$user_name",
-        "ypln_node": "turret_node$suffix",
-        "filename": "textures/hud/crosshair.png",
-        "center": [0, 0],
-        "size": [0.05, 0.05],
-        "error_behavior": "hide"}},
+      {
+        "required": ["%if_pc"],
+        "call": "hud_target_point",
+        "context": "primary_scene_$externals_user_name",
+        "arguments": {
+          "player": "%externals_player_name",
+          "gun_node": "main_gun_end_node$suffix",
+          "exclusive_node": "main_gun_camera_node$suffix",
+          "ypln_node": "turret_node$suffix",
+          "filename": "textures/hud/crosshair.png",
+          "center": [0, 0],
+          "size": [0.05, 0.05],
+          "error_behavior": "center"
+        }
+      },
+      {
+        "required": ["%if_pc"],
+        "call": "hud_target_point",
+        "context": "primary_scene_$externals_user_name",
+        "arguments": {
+          "player": "%externals_player_name",
+          "gun_node": "main_gun_end_node$suffix",
+          "exclusive_node": "follower_camera_$externals_user_name",
+          "ypln_node": "turret_node$suffix",
+          "filename": "textures/hud/crosshair.png",
+          "center": [0, 0],
+          "size": [0.05, 0.05],
+          "error_behavior": "hide"
+        }
+      },
       {
         "required": ["%behavior != 'none'"],
         "execute": [
@@ -270,12 +282,28 @@
   {
     "declare_macro": "create_player_car_externals_tiger_tank",
     "content": [
-      {"required": ["%if_pc"], "playback": "create_car_cameras_tank"},
-      {"call": "player_set_aiming_gun", "arguments": {
-        "player": "%externals_player_name",
-        "gun_node": "main_gun_end_node$suffix"}},
-      {"comment": {"exclude": ["%if_android"], "required": ["%if_pc"], "playback": "create_player_car_engine_rpm_meter", "arguments": {
-        "engine_name": "left"}}},
+      {
+        "required": ["%if_pc"],
+        "playback": "create_car_cameras_tank"
+      },
+      {
+        "call": "player_set_aiming_gun",
+        "arguments": {
+          "player": "%externals_player_name",
+          "gun_node": "main_gun_end_node$suffix"
+        }
+      },
+      {
+        "comment": {
+          "exclude": ["%if_android"],
+          "required": ["%if_pc"],
+          "playback": "create_player_car_engine_rpm_meter",
+          "context": "primary_scene_$externals_user_name",
+          "arguments": {
+            "engine_name": "left"
+          }
+        }
+      },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
@@ -291,9 +319,13 @@
   {
     "declare_macro": "add_attached_light_tiger_tank",
     "content": [
-      {"playback": "add_attached_light_tank", "arguments": {
-        "lsuffix": "%lsuffix",
-        "CSUFFIX": "%CSUFFIX"}}
+      {
+        "playback": "add_attached_light_tank",
+        "arguments": {
+          "lsuffix": "%lsuffix",
+          "csuffix": "%csuffix"
+        }
+      }
     ]
   }
 ]

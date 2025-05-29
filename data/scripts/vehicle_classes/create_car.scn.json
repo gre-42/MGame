@@ -61,7 +61,7 @@
         }
       },
       {
-        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix CSUFFIX:suffix"
+        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix csuffix:suffix"
       },
       {
         "required": ["%if_damageable"],
@@ -126,7 +126,7 @@
       {
         "required": ["%if_pc", "%if_devel"],
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "format": "position|speed|diameter|energy",
           "charset": "%selected_language",
@@ -145,7 +145,7 @@
       {
         "required": ["%if_pc"],
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "format": "speed",
@@ -174,7 +174,7 @@
       {
         "required": ["%if_pc", "%minimap_file != %null"],
         "call": "minimap",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "left": "minimap_widget_left",
@@ -193,7 +193,7 @@
       {
         "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",

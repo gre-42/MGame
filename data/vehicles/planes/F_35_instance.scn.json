@@ -576,6 +576,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_plane_key_bindings",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -583,6 +584,7 @@
       {
         "required": ["%if_pc"],
         "call": "hud_opponent_tracker",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "exclusive_node": null,
@@ -593,8 +595,9 @@
         }
       },
       {
-        "call": "hud_opponent_zoom",
         "required": ["%if_pc"],
+        "call": "hud_opponent_zoom",
+        "context": "primary_scene_$externals_user_name",
         "arguments": {
           "player": "%externals_player_name",
           "exclusive_node": null,
@@ -651,7 +654,7 @@
         "required": ["%if_pc"],
         "playback": "create_car_cameras_plane",
         "arguments": {
-              "cockpit_camera_position": [-0.4, 0.3, -0.3]
+          "cockpit_camera_position": [-0.4, 0.3, -0.3]
         }
       },
       {
@@ -679,7 +682,7 @@
       "playback": "add_attached_light_sedan",
       "arguments": {
         "lsuffix": "%lsuffix",
-        "CSUFFIX": "%CSUFFIX"
+        "csuffix": "%csuffix"
       }
     }
   }

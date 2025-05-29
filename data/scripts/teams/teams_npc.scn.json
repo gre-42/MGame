@@ -85,16 +85,22 @@
         }
       },
       {
-        "call": "visual_node_status_3rd",
+        "call": "for_each_user",
         "arguments": {
-          "node": "car_node$suffix",
-          "format": "health",
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "offset": [0, 0.3],
-          "font_color": "%scene_font_color",
-          "font_height": "normal",
-          "line_distance": "normal"
+          "content": {
+            "call": "visual_node_status_3rd",
+            "context": "primary_scene_$user_name",
+            "arguments": {
+              "node": "car_node$suffix",
+              "format": "health",
+              "charset": "%selected_language",
+              "ttf_file": "fonts/RobotoMono-Bold.ttf",
+              "offset": [0, 0.3],
+              "font_color": "%scene_font_color",
+              "font_height": "normal",
+              "line_distance": "normal"
+            }
+          }
         }
       },
       {
