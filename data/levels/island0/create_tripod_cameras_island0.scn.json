@@ -4,16 +4,17 @@
     {
       "playback": "create_tripod_camera",
       "arguments": {
-        "node_name": "tripod_node0",
+        "node_name": "tripod_node_$user_name",
         "position": [104.084, -191.073, 25.1868],
         "rotation": [-13.1569, -3.00326, 0]
       }
     },
     {
       "call": "set_camera_cycle",
+      "context": "primary_scene_$user_name",
       "arguments": {
         "name": "tripod",
-        "cameras": ["tripod_node0"]
+        "cameras": ["tripod_node_$user_name"]
       }
     }
   ]
