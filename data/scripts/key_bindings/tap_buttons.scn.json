@@ -25,6 +25,7 @@
         {
           "call": "create_tap_button",
           "arguments": {
+            "user_id": "%user_id",
             "key": "LEFT",
             "left": "left_button_left",
             "right": "left_button_right",
@@ -49,6 +50,7 @@
         {
           "call": "create_tap_button",
           "arguments": {
+            "user_id": "%user_id",
             "key": "RIGHT",
             "left": "right_button_left",
             "right": "right_button_right",
@@ -72,6 +74,7 @@
         {
           "call": "create_tap_button",
           "arguments": {
+            "user_id": "%user_id",
             "key": "DOWN",
             "left": "down_button_left",
             "right": "down_button_right",
@@ -95,6 +98,7 @@
         {
           "call": "create_tap_button",
           "arguments": {
+            "user_id": "%user_id",
             "key": "UP",
             "left": "up_button_left",
             "right": "up_button_right",
@@ -121,6 +125,7 @@
     {
       "call": "create_tap_button",
       "arguments": {
+        "user_id": "%user_id",
         "x_axis": 0,
         "y_axis": 1,
         "left": "left_analog_left",
@@ -146,6 +151,7 @@
     {
       "call": "create_tap_button",
       "arguments": {
+        "user_id": "%user_id",
         "x_axis": 2,
         "y_axis": 3,
         "left": "right_analog_left",
@@ -171,6 +177,7 @@
     {
       "call": "create_tap_button",
       "arguments": {
+        "user_id": "%user_id",
         "key": "ESCAPE",
         "left": "escape_button_left",
         "right": "escape_button_right",
@@ -208,6 +215,7 @@
     {
       "call": "create_tap_button",
       "arguments": {
+        "user_id": "%user_id",
         "key": "START",
         "left": "start_button_left",
         "right": "start_button_right",
