@@ -443,7 +443,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "'. 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%'\"ç'"
+          "chars": "'. 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/<>,;:()[]{}$€£%@'\"ç'"
         }
       },
       {
@@ -952,6 +952,25 @@
             {"id": "joystick", "title": "Joystick/gamepad", "on_before_select": { "call": "globals", "arguments": {"input_type_$user_name": "joystick"}}},
             {"id": "all", "title": "All", "on_before_select": { "call": "globals", "arguments": {"input_type_$user_name": "all"}}}
           ]
+        }
+      },
+      {
+        "exclude": ["%if_android"],
+        "call": "video_mode_selector",
+        "arguments": {
+          "id": "video_modes",
+          "title": "%%translations/main/Video_modes/$selected_language",
+          "icon": "video_mode_icon",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "user_id": "%user_id"
         }
       },
       {
