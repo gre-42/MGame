@@ -25,7 +25,7 @@
         "required": ["%if_human_style"],
         "call": "set_animation_state",
         "arguments": {
-          "node": "human_node$suffix",
+          "nodes": ["human_node$suffix"],
           "animation_loop_name": "xonotic_pyria.idle",
           "animation_loop_begin": 0,
           "animation_loop_end": "full",

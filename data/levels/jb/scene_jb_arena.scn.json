@@ -29,7 +29,7 @@
       "score_board": "player|team|car_hp|nkills",
       "osm_map_resource": "osm_resource_jb_race",
       "if_has_overlay": true,
-      "OSM_MAP_OVERLAY_RESOURCE": "osm_resource_jb_wpts1",
+      "osm_map_overlay_resource": "osm_resource_jb_wpts1",
       "if_dirtmap": true,
       "if_extract_alignment_planes": false,
       "if_gen_grind_lines": false,
@@ -68,10 +68,10 @@
     "playback": "setup_teams",
     "context": "primary_scene",
     "arguments": {
-      "PLAYERS_JSON": "%PLAYERS_JSON",
+      "players_json": "%players_json",
       "teams_spawn_points_resource": "osm_map_overlay",
       "teams_way_points_resource": "osm_map_overlay",
-      "OBJECTIVE": "kill_count"
+      "objective": "kill_count"
     }
   },
   {

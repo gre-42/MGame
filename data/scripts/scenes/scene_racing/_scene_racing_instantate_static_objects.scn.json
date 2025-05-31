@@ -29,7 +29,7 @@
           {
             "playback": "_create_osm_map_resource",
             "arguments": {
-              "OSM_MAP": "osm_map",
+              "osm_map": "osm_map",
               "if_extract_alignment_planes": "%if_extract_alignment_planes",
               "if_gen_grind_lines": "%if_gen_grind_lines",
               "if_gen_instances": "%if_gen_instances",
@@ -40,7 +40,7 @@
             "required": ["%if_has_overlay"],
             "playback": "_create_osm_map_resource",
             "arguments": {
-              "OSM_MAP": "osm_map_overlay",
+              "osm_map": "osm_map_overlay",
               "if_extract_alignment_planes": "%if_extract_alignment_planes",
               "if_gen_grind_lines": "%if_gen_grind_lines",
               "if_gen_instances": "%if_gen_instances",

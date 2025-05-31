@@ -8,7 +8,7 @@
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
     "arguments": {
-      "PLAYERS_JSON": "$__DIR__/players.json"
+      "players_json": "$__DIR__/players.json"
     }
   },
   "on_before_select": {

@@ -64,10 +64,10 @@
     "playback": "setup_teams",
     "context": "primary_scene",
     "arguments": {
-      "PLAYERS_JSON": "$__DIR__/scene_arena_minimal.json",
+      "players_json": "$__DIR__/scene_arena_minimal.json",
       "teams_spawn_points_resource": "osm_map",
       "teams_way_points_resource": "osm_map",
-      "OBJECTIVE": "kill_count"
+      "objective": "kill_count"
     }
   },
   {

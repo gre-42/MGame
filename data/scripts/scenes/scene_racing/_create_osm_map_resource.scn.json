@@ -7,7 +7,7 @@
       "required": ["%if_extract_alignment_planes"],
       "call": "modify_physics_material_tags",
       "arguments": {
-        "resource_name": "%OSM_MAP",
+        "resource_name": "%osm_map",
         "add": "obj_alignment_plane",
         "remove": "attr_visible",
         "included_names": "\\balignment_plane(?:\\b|_)"
@@ -16,7 +16,7 @@
     {
       "call": "modify_physics_material_tags",
       "arguments": {
-        "resource_name": "%OSM_MAP",
+        "resource_name": "%osm_map",
         "remove": "attr_visible",
         "included_names": "\\bHitbox(?:\\b|_)"
       }
@@ -24,7 +24,7 @@
     {
       "call": "modify_physics_material_tags",
       "arguments": {
-        "resource_name": "%OSM_MAP",
+        "resource_name": "%osm_map",
         "remove": "attr_collide",
         "included_names": "\\bVisual(?:\\b|_)"
       }
@@ -32,7 +32,7 @@
     {
       "call": "modify_physics_material_tags",
       "arguments": {
-        "resource_name": "%OSM_MAP",
+        "resource_name": "%osm_map",
         "add": "attr_align_strict",
         "included_names": "\\bAlignStrict(?:\\b|_)"
       }
@@ -41,8 +41,8 @@
       "required": ["%if_gen_grind_lines"],
       "call": "gen_grind_lines",
       "arguments": {
-        "source_name": "%OSM_MAP",
-        "dest_name": "$OSM_MAP-_grind_lines",
+        "source_name": "%osm_map",
+        "dest_name": "$osm_map-_grind_lines",
         "edge_angle": 20,
         "averaged_normal_angle": 60,
         "excluded_names": "\\bNoGrind(?:\\b|_)",
@@ -54,7 +54,7 @@
       "exclude": ["%if_gen_grind_lines"],
       "call": "obj_resource",
       "arguments": {
-        "name": "$OSM_MAP-_grind_lines",
+        "name": "$osm_map-_grind_lines",
         "filename": "models/primitives/empty.obj",
         "config": {
         "position": [0, 0, 0],
@@ -74,7 +74,7 @@
       "exclude": ["%if_gen_grind_lines"],
       "call": "modify_physics_material_tags",
       "arguments": {
-        "resource_name": "$OSM_MAP-_grind_lines",
+        "resource_name": "$osm_map-_grind_lines",
         "add": "obj_grind_line"
       }
     },
@@ -82,14 +82,14 @@
       "required": ["%if_gen_instances"],
       "call": "gen_instances",
       "arguments": {
-        "name": "%OSM_MAP"
+        "name": "%osm_map"
       }
     },
     {
       "required": ["%barrier_depth != 0"],
       "call": "create_barrier_triangle_hitboxes",
       "arguments": {
-        "resource_name": "%OSM_MAP",
+        "resource_name": "%osm_map",
         "included_names": "",
         "included_tags": "attr_collide|attr_two_sided",
         "excluded_tags": "",

@@ -25,7 +25,7 @@
         "required": ["%if_skater_style"],
         "call": "set_animation_state",
         "arguments": {
-          "node": "skater_node$suffix",
+          "nodes": ["skater_node$suffix"],
           "animation_loop_name": "skate.right",
           "animation_loop_begin": 0,
           "animation_loop_end": "full",

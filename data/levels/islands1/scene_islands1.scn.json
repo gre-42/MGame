@@ -45,6 +45,44 @@
     }
   },
   {
+    "call": "cluster_elements",
+    "arguments": {
+      "resource_names": ["ocean"],
+      "location": "%osm_location",
+      "width": [500, 500, 500],
+      "center_distances": [0, 3000],
+      "rendering_dynamics": "static",
+      "instantiables_variable": "available_instantiables"
+    }
+  },
+  {
+    "call": "instantiate",
+    "context": "primary_scene",
+    "arguments": {
+      "ipl_files": [],
+      "instantiables": "%available_instantiables",
+      "required_prefixes": [""],
+      "except": [],
+      "dynamics": "static",
+      "instantiated_root_nodes": "instantiated_root_nodes"
+    }
+  },
+  {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
+    }
+  },
+  {
+    "call": "set_animation_state",
+    "context": "primary_scene",
+    "arguments": {
+      "nodes": "%instantiated_root_nodes",
+      "periodic_reference_time_duration": 3
+    }
+  },
+  {
     "declare_macro": "instantiate_transient_objects",
     "content": []
   },
@@ -53,10 +91,10 @@
     "playback": "setup_teams",
     "context": "primary_scene",
     "arguments": {
-      "PLAYERS_JSON": "$__DIR__/$players_json_basename",
+      "players_json": "$__DIR__/$players_json_basename",
       "teams_spawn_points_resource": "osm_map",
       "teams_way_points_resource": "osm_map",
-      "OBJECTIVE": "kill_count"
+      "objective": "kill_count"
     }
   },
   {

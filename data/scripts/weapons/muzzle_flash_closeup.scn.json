@@ -51,7 +51,7 @@
       {
         "call": "set_animation_state",
         "arguments": {
-          "node": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
+          "nodes": ["muzzle_flash_closeup_node_$muzzle_flash_suffix"],
           "aperiodic_animation_begin": 0,
           "aperiodic_animation_end": "%animation_time",
           "aperiodic_animation_time": 0

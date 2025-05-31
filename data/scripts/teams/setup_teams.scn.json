@@ -18,13 +18,13 @@
     {
       "call": "load_players",
       "arguments": {
-        "json": "%PLAYERS_JSON"
+        "json": "%players_json"
       }
     },
     {
       "call": "set_objective",
       "arguments": {
-        "objective": "%OBJECTIVE"
+        "objective": "%objective"
       }
     }
   ]

@@ -7,7 +7,7 @@
     },
     {
       "required": ["%if_has_overlay"],
-      "playback": "%OSM_MAP_OVERLAY_RESOURCE"
+      "playback": "%osm_map_overlay_resource"
     },
     {
       "call": "create_physics_scene",

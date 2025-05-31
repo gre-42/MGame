@@ -308,6 +308,12 @@
         "ambient": [0, 0, 0],
         "diffuse": [1, 1, 1],
         "specular": [0.5, 0.5, 0.5],
+        "fresnel": {
+          "min": 0,
+          "max": 0.5,
+          "exponent": 5,
+          "ambient": [1, 1, 1]
+        },
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
         "cull_faces": true,
@@ -317,9 +323,9 @@
           "scale": 1
         },
         "scale": "%scale",
-        "uv_scale": 50,
-        "period": 0.02,
-        "aggregate_mode": "once",
+        "uv_scale": 0.1,
+        "period": 10,
+        "aggregate_mode": "none",
         "transformation_mode": "all",
         "emissive_factor": "%vanilla_rally_emissive_factor",
         "ambient_factor": "%vanilla_rally_ambient_factor",
@@ -333,13 +339,13 @@
       "call": "modify_physics_material_tags",
       "arguments": {
         "resource_name": "ocean",
-        "add": "attr_concave"
+        "add": "attr_visible|attr_collide|attr_concave|obj_chassis"
       }
     },
     {
       "call": "compound_resource",
       "arguments": {
-        "source_names": ["islands1", "ocean"],
+        "source_names": ["islands1"],
         "dest_name": "osm_map"
       }
     }
