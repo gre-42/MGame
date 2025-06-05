@@ -64,6 +64,8 @@
             "arguments": {
               "name": "osm_inst",
               "transformation": "%osm_location",
+              "object_cluster_width": 500,
+              "triangle_cluster_width": 3e3,
               "resource": "osm_map"
             }
           },
