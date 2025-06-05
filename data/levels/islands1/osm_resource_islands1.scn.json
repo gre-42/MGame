@@ -1,5 +1,6 @@
 {
   "let": {
+    "underwater_height": 65,
     "water_height": 70,
     "scale": 1
   },
@@ -223,8 +224,8 @@
           "water": {
             "texture": "#ocean_uniform",
             "animation_duration": 3,
-            "height": "%water_height",
-            "holes_from_terrain": false,
+            "heights": ["%underwater_height", "%water_height"],
+            "holes_from_terrain": true,
             "aabb": {
               "min": [-25e3, -25e3],
               "max": [25e3, 25e3]
