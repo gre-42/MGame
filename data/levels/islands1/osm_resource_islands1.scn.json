@@ -225,6 +225,7 @@
             "texture": "#ocean_uniform",
             "animation_duration": 3,
             "heights": ["%underwater_height", "%water_height"],
+            "generate_tiles": true,
             "holes_from_terrain": true,
             "aabb": {
               "min": [-25e3, -25e3],

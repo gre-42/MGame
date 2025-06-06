@@ -29,7 +29,7 @@
         "elevated_grass_base": "surface_base_stone",
         "stone": "surface_base_stone",
         "asphalt": "surface_base_tarmac",
-        "water_floor": "surface_base_water",
+        "water_floor": "surface_base_water|attr_animated_color|attr_animated_normal",
         "water_floor_base": "surface_base_stone",
         "street_hole": "none",
         "building_hole": "none",
@@ -233,8 +233,22 @@
       "terrain_edge_smoothness": 0.1,
       "driving_direction": "right",
       "blend_street": false,
-      "water_texture": "",
-      "water_height": 40,
+      "water": {
+        "texture": "",
+        "animation_duration": 3,
+        "heights": [35, 40],
+        "generate_tiles": false,
+        "holes_from_terrain": false,
+        "aabb": {
+          "min": [-25e3, -25e3],
+          "max": [25e3, 25e3]
+        },
+        "cell_size": [5e2, 5e2],
+        "duplicate_distance": 5,
+        "coast": {
+          "width": 10
+        }
+      },
       "use_terrain_holes": true,
       "emissive_factor": "%vanilla_rally_emissive_factor",
       "ambient_factor": "%vanilla_rally_ambient_factor",

@@ -359,8 +359,22 @@
         "tunnel_bdry_resource_name": "pipe_box_boundary",
         "default_tunnel_pipe_width": 1,
         "default_tunnel_pipe_height": 6,
-        "water_texture": "#ocean",
-        "water_height": 40,
+        "water": {
+          "texture": "#ocean_uniform",
+          "animation_duration": 3,
+          "heights": [35, 40],
+          "generate_tiles": true,
+          "holes_from_terrain": false,
+          "aabb": {
+            "min": [-25e3, -25e3],
+            "max": [25e3, 25e3]
+          },
+          "cell_size": [5e2, 5e2],
+          "duplicate_distance": 5,
+          "coast": {
+            "width": 10
+          }
+        },
         "street_surface_central_resource_name": "road_cylinder2_central",
         "street_surface_endpoint0_resource_name": "road_cylinder2_endpoint_0",
         "street_surface_endpoint1_resource_name": "road_cylinder2_endpoint_1",
