@@ -6,7 +6,7 @@
       "name": "osm_map",
       "filename": "$__DIR__/map_island0.osm",
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
-      "heightmap": "$__DIR__/../forest0/heightmap.pgm",
+      "heightmap": "$__DIR__/heightmap.png",
       "grass_foliagemap": "textures/noise/foliagemap.png",
       "terrain_undefined_textures": ["textures/debug/pink.png"],
       "terrain_grass_textures": [
@@ -77,8 +77,29 @@
           "max_dist": 3,
           "resources": [
             "Stone_model_tex_small(p:0.2)(hitbox:box_02_1_02_hitbox)",
-            "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"]}],
+            "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"
+          ]
+        }
+      ],
+      "water": {
+        "textures_color": ["#ocean_uniform"],
+        "textures_alpha": ["#ocean_uniform_feather_blend_map"],
+        "animation_duration": 3,
+        "heights": [15, 25],
+        "generate_tiles": true,
+        "holes_from_terrain": true,
+        "aabb": {
+          "min": [-25e3, -25e3],
+          "max": [25e3, 25e3]
+        },
+        "cell_size": [5e2, 5e2],
+        "duplicate_distance": 5,
+        "coast": {
+          "width": 20
+        }
+      },
       "scale": 1,
+      "height_scale": 1e2,
       "grass_foliagemap_period": 38.4,
       "uv_scale_terrain": 3e-1,
       "uv_period_terrain": 128,
