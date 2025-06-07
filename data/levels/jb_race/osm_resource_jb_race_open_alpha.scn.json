@@ -297,6 +297,22 @@
       "driving_direction": "right",
       "blend_street": true,
       "blend_path": true,
+      "water": {
+        "texture": "",
+        "animation_duration": 3,
+        "heights": [-5, 0],
+        "generate_tiles": false,
+        "holes_from_terrain": false,
+        "aabb": {
+          "min": [-25e3, -25e3],
+          "max": [25e3, 25e3]
+        },
+        "cell_size": [5e2, 5e2],
+        "duplicate_distance": 5,
+        "coast": {
+          "width": 10
+        }
+      },
       "# street_surface_central_resource_name": "road_cylinder2_central",
       "# street_surface_endpoint0_resource_name": "road_cylinder2_endpoint_0",
       "# street_surface_endpoint1_resource_name": "road_cylinder2_endpoint_1",
