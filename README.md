@@ -18,7 +18,7 @@ For instructions how to add a custom stage, see [CONTRIBUTING](CONTRIBUTING.md).
 ![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
 
 ### Island 0
-![Screenshot-I0-2024-12-26](media/Screenshot-I0-2024-12-26.png)
+![Screenshot-I0-2025-06-01](media/Screenshot-I0-2025-06-01.png)
 
 ### Forest 0
 ![Screenshot-F0-2024-12-26](media/Screenshot-F0-2024-12-26.png)
