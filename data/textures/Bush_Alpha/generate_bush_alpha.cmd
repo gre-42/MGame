@@ -1,7 +1,7 @@
 python ..\..\..\Mlib\Mlib\Render\blend_terrain_street.py ^
 	--detail ^
-		..\hf_heightmap.png[-2] ^
-		..\hf_heightmap.png[0] ^
+		..\hf_heightmap0.png[-2] ^
+		..\hf_heightmap0.png[0] ^
 	--width 1024 ^
 	--height 1024 ^
 	--detail_fac 4 50 ^

@@ -69,5 +69,42 @@
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
+  },
+  {
+    "call": "add_texture_atlas",
+    "arguments": {
+      "name": "ocean_uniform_feather_atlas",
+      "width": 256,
+      "height": 256,
+      "layers": 3,
+      "depth_interpolation": "linear",
+      "mipmap_mode": "with_mipmaps_2d",
+      "color_mode": "grayscale",
+      "images": [
+        {"target_position": [0, 0], "target_layer": 0, "texture": "textures/noise/hf_heightmap0.png"},
+        {"target_position": [0, 0], "target_layer": 1, "texture": "textures/noise/hf_heightmap1.png"},
+        {"target_position": [0, 0], "target_layer": 2, "texture": "textures/noise/hf_heightmap0.png"}
+      ]
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "ocean_uniform_feather_blend_map",
+      "parameters": {
+        "texture": "#ocean_uniform_feather_atlas",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 0,
+        "discreteness": 1,
+        "plus": 0,
+        "role": "summand",
+        "reduction": "feather"
+      }
+    }
   }
 ]

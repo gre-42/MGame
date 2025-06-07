@@ -220,9 +220,13 @@
               "max_dist": 6,
               "resources": [
                 "Stone_model_tex_small(p:0.2)(hitbox:box_02_1_02_hitbox)",
-                "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"]}],
+                "desert_rock01_small(p:0.2)(hitbox:box_02_1_02_hitbox)"
+              ]
+            }
+          ],
           "water": {
-            "texture": "#ocean_uniform",
+            "textures_color": ["#ocean_uniform"],
+            "textures_alpha": ["#ocean_uniform_feather_blend_map"],
             "animation_duration": 3,
             "heights": ["%underwater_height", "%water_height"],
             "generate_tiles": true,
