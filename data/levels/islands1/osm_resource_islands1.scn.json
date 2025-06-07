@@ -1,6 +1,6 @@
 {
   "let": {
-    "underwater_height": 65,
+    "underwater_height": 60,
     "water_height": 70,
     "scale": 1
   },
@@ -238,7 +238,7 @@
             "cell_size": [5e2, 5e2],
             "duplicate_distance": 5,
             "coast": {
-              "width": 10
+              "width": 20
             }
           },
           "scale": "%scale",
