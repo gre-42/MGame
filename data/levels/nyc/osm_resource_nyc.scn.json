@@ -360,7 +360,10 @@
         "default_tunnel_pipe_width": 1,
         "default_tunnel_pipe_height": 6,
         "water": {
-          "texture": "#ocean_uniform",
+          "textures": {
+            "color": ["#ocean_uniform"],
+            "alpha": []
+          },
           "animation_duration": 3,
           "heights": [35, 40],
           "generate_tiles": true,
