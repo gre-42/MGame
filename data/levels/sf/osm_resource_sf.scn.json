@@ -29,7 +29,7 @@
         "elevated_grass_base": "surface_base_stone",
         "stone": "surface_base_stone",
         "asphalt": "surface_base_tarmac",
-        "water_floor": "surface_base_water|attr_liquid|attr_animated_color|attr_animated_normal",
+        "water_floor": "surface_base_water|attr_liquid|attr_animated_textures",
         "water_floor_base": "surface_base_stone",
         "street_hole": "none",
         "building_hole": "none",
@@ -234,7 +234,10 @@
       "driving_direction": "right",
       "blend_street": false,
       "water": {
-        "texture": "",
+        "textures": {
+          "color": ["#ocean_uniform"],
+          "alpha": ["#ocean_uniform_feather_blend_map"]
+        },
         "animation_duration": 3,
         "heights": [35, 40],
         "generate_tiles": false,

@@ -225,8 +225,10 @@
             }
           ],
           "water": {
-            "textures_color": ["#ocean_uniform"],
-            "textures_alpha": ["#ocean_uniform_feather_blend_map"],
+            "textures": {
+              "color": ["#ocean_uniform"],
+              "alpha": ["#ocean_uniform_feather_blend_map"]
+            },
             "animation_duration": 3,
             "heights": ["%underwater_height", "%water_height"],
             "generate_tiles": true,
