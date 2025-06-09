@@ -8,6 +8,7 @@
         "filename": "$__DIR__/map_nyc.osm",
         "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
         "heightmap": "$__DIR__/heightmap.pgm",
+        "heightmap_dilation": 5,
         "terrain_undefined_textures": ["textures/debug/pink.png"],
         "terrain_grass_textures": ["#Ground037_Sl"],
         "terrain_elevated_grass_textures": ["#Ground037_Sl"],
@@ -362,18 +363,19 @@
         "water": {
           "textures": {
             "color": ["#ocean_uniform"],
-            "alpha": []
+            "alpha": ["#ocean_uniform_feather_blend_map"]
           },
           "animation_duration": 3,
-          "heights": [35, 40],
+          "heights": [10, 27],
           "generate_tiles": true,
-          "holes_from_terrain": false,
+          "holes_from_terrain": true,
           "aabb": {
             "min": [-25e3, -25e3],
             "max": [25e3, 25e3]
           },
           "cell_size": [5e2, 5e2],
-          "duplicate_distance": 5,
+          "yangle": 22,
+          "duplicate_distance": 1,
           "coast": {
             "width": 10
           }
