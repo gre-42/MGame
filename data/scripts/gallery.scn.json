@@ -55,7 +55,8 @@
     "execute": [
       { "playback": "_add_menu_icon_subst", "arguments": { "name": "video_mode" } },
       { "playback": "_add_menu_icon_subst", "arguments": { "name": "render_fps" } },
-      { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/tripod.png", "instance": "tripod_icon", "color_mode": "rgba" } }
+      { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/tripod.png", "instance": "tripod_icon", "color_mode": "rgba" } },
+      { "playback": "_add_menu_icon_subst", "arguments": { "name": "users" } }
     ]
   },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "missing_icon", "color_mode": "rgba" } },

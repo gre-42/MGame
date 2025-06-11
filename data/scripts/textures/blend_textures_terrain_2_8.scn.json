@@ -6,7 +6,7 @@
       "arguments": {
         "name": "$name-_2",
         "parameters": {
-          "texture": "%TEXTURE",
+          "texture": "%texture",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [0, 0, 50, 70],
@@ -23,7 +23,7 @@
       "arguments": {
         "name": "$name-_8",
         "parameters": {
-          "texture": "%TEXTURE",
+          "texture": "%texture",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [50, 70, "inf", "inf"],

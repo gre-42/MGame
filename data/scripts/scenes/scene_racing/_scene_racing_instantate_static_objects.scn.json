@@ -136,10 +136,6 @@
       {"comment": "Player"},
       {
         "call": "for_each_user",
-        "let": {
-          "if_create_pc_player": "%if_create_pc_player",
-          "score_board": "%score_board"
-        },
         "arguments": {
           "content": [
             {
@@ -310,7 +306,7 @@
         "comment": "Dirtmap"
       },
       {
-        "required": ["%if_dirtmap"],
+        "required": ["%if_primary_dirtmap"],
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
@@ -321,7 +317,7 @@
         }
       },
       {
-        "required": ["%if_dirtmap"],
+        "required": ["%if_primary_dirtmap"],
         "call": "ortho_camera",
         "arguments": {
           "node": "dirtmap_node",
@@ -335,7 +331,7 @@
         }
       },
       {
-        "required": ["%if_dirtmap"],
+        "required": ["%if_primary_dirtmap"],
         "call": "set_dirtmap",
         "arguments": {
           "filename": "%dirtmap_texture",

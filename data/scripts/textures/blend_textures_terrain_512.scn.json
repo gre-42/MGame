@@ -4,14 +4,13 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "name": "$name-_8",
+        "name": "$prefix-_8",
         "weight_texture": "%weight_texture",
         "feather_texture": "%feather_texture",
         "color_texture": "%color_texture",
         "distances": [0, 0, 300, 500],
         "normal": "%normal",
         "cosine": "%cosine",
-        "DISCRETENESS": 0,
         "scale": 0.125,
         "feather_scale": 0.125,
         "role": "%role"
@@ -20,7 +19,7 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "name": "$name-_128",
+        "name": "$prefix-_128",
         "weight_texture": "%weight_texture",
         "feather_texture": "%feather_texture",
         "color_texture": "%color_texture",
@@ -35,7 +34,7 @@
     {
       "playback": "feathered_blend_textures",
       "arguments": {
-        "name": "$name-_512",
+        "name": "$prefix-_512",
         "weight_texture": "%weight_texture",
         "feather_texture": "%feather_texture",
         "color_texture": "%color_texture",

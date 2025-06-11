@@ -7,13 +7,13 @@
     "playback": "generate_blend_maps_2_8",
     "arguments": {
       "name": "Ground003",
-      "TEXTURE": "#Ground003"
+      "texture": "#Ground003"
     }
   },
   {
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "name": "Ground037_Rock028",
+      "prefix": "Ground037_Rock028",
       "color_texture": "#Ground037_Rock028",
       "feather_texture": null,
       "weight_texture": null,
@@ -25,7 +25,7 @@
   {
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "name": "Ground037_island",
+      "prefix": "Ground037_island",
       "color_texture": "#Ground037_island",
       "feather_texture": null,
       "weight_texture": null,
@@ -37,8 +37,8 @@
   {
     "playback": "generate_blend_maps_1_8",
     "arguments": {
-      "name": "Ground037",
-      "TEXTURE": "#Ground037"
+      "prefix": "Ground037",
+      "texture": "#Ground037"
     }
   },
   {
@@ -79,7 +79,7 @@
     "exclude": ["%if_android"],
     "playback": "generate_blend_maps_256",
     "arguments": {
-      "name": "Ground037_Sl",
+      "prefix": "Ground037_Sl",
       "color_texture": "#Ground037_Sl",
       "feather_texture": null,
       "weight_texture": null,
@@ -91,7 +91,7 @@
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "name": "Rock028_200",
+      "prefix": "Rock028_200",
       "color_texture": "#Rock028",
       "feather_texture": "#Detail",
       "weight_texture": "#Rock028_Displacement",
@@ -104,7 +104,7 @@
     "exclude": ["%if_android"],
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "name": "Rock028_029_200",
+      "prefix": "Rock028_029_200",
       "color_texture": "#Rock028_029",
       "feather_texture": "#Detail",
       "weight_texture": "#Rock028_Displacement",
@@ -117,7 +117,7 @@
     "exclude": ["%if_android"],
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "name": "Rock028_gc2_mountain",
+      "prefix": "Rock028_gc2_mountain",
       "color_texture": "#Rock028_gc2_mountain",
       "feather_texture": "#Detail",
       "weight_texture": "#Rock028_Displacement",
@@ -129,7 +129,7 @@
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "name": "Rock028_Dune",
+      "prefix": "Rock028_Dune",
       "color_texture": "#Rock028_Dune",
       "feather_texture": null,
       "weight_texture": null,
@@ -141,7 +141,7 @@
   {
     "playback": "generate_blend_maps_512",
     "arguments": {
-      "name": "Rock028_Snow",
+      "prefix": "Rock028_Snow",
       "color_texture": "#Rock028_Snow",
       "feather_texture": null,
       "weight_texture": null,

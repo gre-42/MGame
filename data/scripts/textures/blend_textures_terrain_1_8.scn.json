@@ -4,9 +4,9 @@
     {
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$name-_1",
+        "name": "$prefix-_1",
         "parameters": {
-          "texture": "%TEXTURE",
+          "texture": "%texture",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [0, 0, 15, 25],
@@ -21,9 +21,9 @@
     {
       "call": "add_blend_map_texture",
       "arguments": {
-        "name": "$name-_8",
+        "name": "$prefix-_8",
         "parameters": {
-          "texture": "%TEXTURE",
+          "texture": "%texture",
           "min_height": "-inf",
           "max_height": "inf",
           "distances": [15, 25, "inf", "inf"],

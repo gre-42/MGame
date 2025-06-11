@@ -104,29 +104,7 @@
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
       "arguments": {
-        "if_instantiate_osm_map": "%osm_map_resource != %null",
-        "if_create_pc_player": "%if_create_pc_player",
-        "if_pc_player_playback": "%if_pc_player_playback",
-        "pc_player_playback": "%pc_player_playback",
-        "pc_player_playback_speedup": "%pc_player_playback_speedup",
-        "score_board": "%score_board",
-        "if_gen_grind_lines": "%if_gen_grind_lines",
-        "if_gen_instances": "%if_gen_instances",
-        "if_extract_alignment_planes": "%if_extract_alignment_planes",
-        "barrier_depth": "%barrier_depth",
-        "if_with_geographic_mapping": "%if_with_geographic_mapping",
-        "stadium_camera_position": "%stadium_camera_position",
-        "if_has_overlay": "%if_has_overlay",
-        "dirtmap_left": "%dirtmap_left",
-        "dirtmap_right": "%dirtmap_right",
-        "dirtmap_bottom": "%dirtmap_bottom",
-        "dirtmap_top": "%dirtmap_top",
-        "if_dirtmap": "%if_dirtmap",
-        "dirtmap_texture": "%dirtmap_texture",
-        "dirtmap_offset": "%dirtmap_offset",
-        "dirtmap_discreteness": "%dirtmap_discreteness",
-        "dirt_scale": "%dirt_scale",
-        "soft_light_texture": "%soft_light_texture"
+        "if_instantiate_osm_map": "%osm_map_resource != %null"
       }
     },
     {

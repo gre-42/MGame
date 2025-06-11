@@ -559,7 +559,7 @@
             },
             {
               "required": {
-                "fixed": [],
+                "fixed": ["%user_id == 0"],
                 "dynamic": ["%reload_required"]
               },
               "id": "reload",
@@ -971,6 +971,61 @@
           "font_height": "normal",
           "line_distance": "normal",
           "user_id": "%user_id"
+        }
+      },
+      {
+        "required": ["%user_id == 0"],
+        "call": "parameter_setter",
+        "arguments": {
+          "id": "user_count_selector",
+          "focus_mask": "settings_menu",
+          "title": "%%translations/main/Users/$selected_language",
+          "icon": "users_icon",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "user_id": "%user_id",
+          "deflt": 0,
+          "on_change": [
+            {
+              "required": ["%selected_user_count != %user_count"],
+              "execute": {
+                "call": "set_requires_reload",
+                "arguments": {
+                  "id": "user_count",
+                  "reason": "'%%translations/main/User_count_changed/$selected_language'",
+                  "indicator": "reload_required"
+                }
+              }
+            },
+            {
+              "required": ["%selected_user_count == %user_count"],
+              "execute": {
+                "call": "clear_requires_reload",
+                "arguments": {
+                  "id": "user_count",
+                  "user_id": "%user_id",
+                  "indicator": "reload_required"
+                }
+              }
+            }
+          ],
+          "on_execute": {
+            "call": "set_focuses",
+            "arguments": {
+              "focuses": ["main_menu"]
+            }
+          },
+          "parameters": [
+            {"id": "single_user", "title": "%%translations/main/One_user/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_user_count": 1}}},
+            {"id": "two_users", "title": "%%translations/main/Two_users/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_user_count": 2}}}
+          ]
         }
       },
       {
