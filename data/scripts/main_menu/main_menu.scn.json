@@ -974,6 +974,7 @@
         }
       },
       {
+        "exclude": ["%if_android"],
         "required": ["%user_id == 0"],
         "call": "parameter_setter",
         "arguments": {
