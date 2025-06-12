@@ -206,7 +206,7 @@
       {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
       {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$suffix", "resource": "$asset_id-_d1"}},
       {
-        "call": "set_available_roles",
+        "call": "set_available_seats",
         "arguments": {
           "node": "human_node$suffix",
           "value": ["driver"]

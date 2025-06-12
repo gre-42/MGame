@@ -28,7 +28,7 @@
           "value": true
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "role": "driver" } }
+      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "seat": "driver" } }
     ]
   },
   {
@@ -52,7 +52,7 @@
           "driving_direction": "right"
         }
       },
-      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "role": "driver" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "seat": "driver" } },
       {
         "call": "set_can_drive",
         "arguments": {
@@ -91,7 +91,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%spawner_name",
-          "role": "driver"
+          "seat": "driver"
         }
       }
     ]
@@ -126,7 +126,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%spawner_name",
-          "role": "driver"
+          "seat": "driver"
         }
       }
     ]

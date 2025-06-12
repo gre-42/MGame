@@ -16,7 +16,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.steer_left",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "steer_left_amount": 1
@@ -28,7 +28,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.steer_right",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "steer_left_amount": -1
@@ -48,7 +48,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.roll_left",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "roll": -5
@@ -60,7 +60,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.roll_right",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "roll": 5
@@ -72,7 +72,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.pitch_up",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "pitch": 10
@@ -84,7 +84,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.pitch_down",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "pitch": -10
@@ -108,7 +108,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.forward",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "turbine_power": "inf"
@@ -120,7 +120,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.brake",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "brake": 20
@@ -132,7 +132,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.yaw_left",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "yaw": -20
@@ -144,7 +144,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.yaw_right",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "node": "car_node$suffix",
           "yaw": 20
@@ -155,7 +155,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.next_weapon",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "weapon_increment": 1
         }
@@ -165,7 +165,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.previous_weapon",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "weapon_increment": -1
         }
@@ -176,7 +176,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.shoot",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name"
         }
       },
@@ -186,7 +186,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.select_next_opponent",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "select_next_opponent": true
         }
@@ -196,7 +196,7 @@
         "arguments": {
           "user_id": "%externals_user_id",
           "id": "plane.select_next_vehicle",
-          "role": "%externals_role",
+          "seat": "%externals_seat",
           "player": "%externals_player_name",
           "select_next_vehicle": true
         }

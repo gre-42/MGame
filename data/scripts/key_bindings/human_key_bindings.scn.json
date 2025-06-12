@@ -26,7 +26,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.jump",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "wants_to_jump": true
@@ -37,7 +37,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.strafe_left",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "surface_power": "inf",
@@ -49,7 +49,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.strafe_right",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "surface_power": "inf",
@@ -61,7 +61,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.rotate_left",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "yaw": true,
@@ -76,7 +76,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.rotate_right",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "yaw": true,
@@ -91,7 +91,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.forward",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "surface_power": "inf",
@@ -103,7 +103,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.backwards",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "surface_power": "inf",
@@ -115,7 +115,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.rotate_up",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "pitch": true,
@@ -130,7 +130,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.rotate_down",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "human_node$suffix",
         "pitch": true,
@@ -145,7 +145,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.next_weapon",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "weapon_increment": 1
       }
@@ -155,7 +155,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.previous_weapon",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "weapon_increment": -1
       }
@@ -165,7 +165,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.shoot",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name"
       }
     },
@@ -174,7 +174,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "avatar.select_next_vehicle",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "select_next_vehicle": true
       }

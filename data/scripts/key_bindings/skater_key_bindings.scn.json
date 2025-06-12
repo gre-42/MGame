@@ -15,7 +15,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.rotate_left",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
@@ -29,7 +29,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.rotate_right",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
@@ -55,7 +55,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.jump",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "wants_to_jump": true
@@ -66,7 +66,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.grind",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "wants_to_grind": true
@@ -77,7 +77,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.forward",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "fly_forward_factor": 100
@@ -88,7 +88,7 @@
       "arguments": {
         "user_id": "%user_id",
         "id": "skater.brake",
-        "role": "%externals_role",
+        "seat": "%externals_seat",
         "player": "%externals_player_name",
         "node": "skater_node$suffix",
         "surface_power": "nan"

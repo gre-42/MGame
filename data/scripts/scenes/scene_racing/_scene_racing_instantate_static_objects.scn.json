@@ -164,7 +164,7 @@
             {
               "required": ["%if_create_pc_player"],
               "call": "spawner_set_player",
-              "arguments": { "name": "$vip_name-_$user_name", "role": "driver" }
+              "arguments": { "name": "$vip_name-_$user_name", "seat": "driver" }
             },
             {
               "required": ["%if_create_pc_player"],

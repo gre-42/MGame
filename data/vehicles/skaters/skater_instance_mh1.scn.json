@@ -174,7 +174,7 @@
       {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$suffix", "resource": "female_mh_d1"}},
       {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$suffix", "resource": "skateboard"}},
       {
-        "call": "set_available_roles",
+        "call": "set_available_seats",
         "arguments": {
           "node": "skater_node$suffix",
           "value": ["driver"]
@@ -188,13 +188,13 @@
       "required": ["%if_pc"],
       "playback": "create_skater_key_bindings",
       "context": "primary_scene_$externals_user_name",
-      "arguments": {"role": "driver"}
+      "arguments": {"seat": "driver"}
     }
   },
   {
     "declare_macro": "create_player_skater_externals_skating_mh1",
     "content": [
-      {"required": ["%if_pc"], "playback": "create_skater_cameras", "arguments": {"role": "driver"}},
+      {"required": ["%if_pc"], "playback": "create_skater_cameras", "arguments": {"seat": "driver"}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {

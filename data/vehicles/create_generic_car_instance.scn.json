@@ -312,7 +312,7 @@
       },
 
       {
-        "call": "set_available_roles",
+        "call": "set_available_seats",
         "arguments": {
           "node": "car_node$tesuffix",
           "value": ["driver"]
