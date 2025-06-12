@@ -3,7 +3,7 @@
   "title": "San Francisco with traffic",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/sf_with_traffic/game_modes", "%user_count <= %%levels/sf_with_traffic/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/sf_with_traffic/game_modes", "%user_count <= %%levels/sf_with_traffic/max_users"]
   },
   "on_execute": {
     "include": "scene_sf_with_traffic.scn.json"

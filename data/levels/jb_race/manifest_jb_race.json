@@ -3,7 +3,7 @@
   "title": "JB",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/jb_race/game_modes", "%user_count <= %%levels/jb_race/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/jb_race/game_modes", "%user_count <= %%levels/jb_race/max_users"]
   },
   "on_execute": [
     {"include": "osm_resource_jb_race_open_alpha.scn.json"},

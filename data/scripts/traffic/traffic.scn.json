@@ -14,7 +14,8 @@
         "arguments": {
           "name": "%spawner_name",
           "team": "red",
-          "game_mode": "bystander",
+          "game_mode": "%game_mode",
+          "player_role": "bystander",
           "unstuck_mode": "%unstuck_mode",
           "behavior": "pedestrian",
           "driving_direction": "right"
@@ -46,7 +47,8 @@
         "arguments": {
           "name": "%spawner_name",
           "team": "red",
-          "game_mode": "bystander",
+          "game_mode": "%game_mode",
+          "player_role": "bystander",
           "unstuck_mode": "%unstuck_mode",
           "behavior": "%initial_behavior",
           "driving_direction": "right"

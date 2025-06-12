@@ -3,7 +3,7 @@
   "title": "WIP: San Francisco without traffic",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/sf_wo_traffic/game_modes", "%user_count <= %%levels/sf_wo_traffic/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/sf_wo_traffic/game_modes", "%user_count <= %%levels/sf_wo_traffic/max_users"]
   },
   "on_execute": {
     "include": "scene_sf_wo_traffic.scn"

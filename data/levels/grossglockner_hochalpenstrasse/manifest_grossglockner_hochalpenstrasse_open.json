@@ -3,7 +3,7 @@
   "title": "%%levels/grossglockner_hochalpenstrasse_open/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/grossglockner_hochalpenstrasse_open/game_modes", "%user_count <= %%levels/grossglockner_hochalpenstrasse_open/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/grossglockner_hochalpenstrasse_open/game_modes", "%user_count <= %%levels/grossglockner_hochalpenstrasse_open/max_users"]
   },
   "on_execute": {
     "include": "scene_grossglockner_hochalpenstrasse_open.scn.json"

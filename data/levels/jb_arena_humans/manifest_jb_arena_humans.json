@@ -3,7 +3,7 @@
   "title": "JB arena humans",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/jb_arena_humans/game_modes", "%user_count <= %%levels/jb_arena_humans/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/jb_arena_humans/game_modes", "%user_count <= %%levels/jb_arena_humans/max_users"]
   },
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",

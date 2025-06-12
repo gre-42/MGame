@@ -3,7 +3,7 @@
   "title": "WIP: Canyon 1",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/canyon1/game_modes", "%user_count <= %%levels/canyon1/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/canyon1/game_modes", "%user_count <= %%levels/canyon1/max_users"]
   },
   "on_execute": {
     "include": "scene_canyon1.scn"

@@ -8,13 +8,14 @@
           "name": "%player_name",
           "team": "%team",
           "game_mode": "%game_mode",
+          "player_role": "%player_role",
           "unstuck_mode": "%unstuck_mode",
           "behavior": "%initial_behavior",
           "driving_direction": "center"
         }
       },
       { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "role": "%role" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
       {
         "playback": "set_player_skills"
       }
@@ -29,13 +30,14 @@
           "name": "%player_name",
           "team": "%team",
           "game_mode": "%game_mode",
+          "player_role": "%player_role",
           "unstuck_mode": "%unstuck_mode",
           "behavior": "%initial_behavior",
           "driving_direction": "center"
         }
       },
       { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
-      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "role": "%role" } },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
       {
         "playback": "set_player_skills"
       }
@@ -64,7 +66,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%player_name",
-          "role": "%role"
+          "seat": "%seat"
         }
       }
     ]
@@ -114,7 +116,7 @@
         "call": "create_internals",
         "arguments": {
           "player": "%player_name",
-          "role": "%role"
+          "seat": "%seat"
         }
       }
     ]

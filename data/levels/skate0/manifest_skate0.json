@@ -3,7 +3,7 @@
   "title": "Skate 0",
   "required": {
     "fixed": ["%if_devel"],
-    "dynamic": ["%game_mode in %%levels/skate0/game_modes", "%user_count <= %%levels/skate0/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/skate0/game_modes", "%user_count <= %%levels/skate0/max_users"]
   },
   "on_execute": {
     "include": "scene_skate0.scn.json"

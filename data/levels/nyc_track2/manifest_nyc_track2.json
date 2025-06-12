@@ -3,7 +3,7 @@
   "title": "%%levels/nyc_track2/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/nyc_track2/game_modes", "%user_count <= %%levels/nyc_track2/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/nyc_track2/game_modes", "%user_count <= %%levels/nyc_track2/max_users"]
   },
   "on_execute": {
     "include": "scene_nyc_track2.scn.json"

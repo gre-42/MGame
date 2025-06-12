@@ -3,7 +3,7 @@
   "title": "%%levels/island0/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/island0/game_modes", "%user_count <= %%levels/island0/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/island0/game_modes", "%user_count <= %%levels/island0/max_users"]
   },
   "on_execute": {
     "include": "scene_island0.scn.json"

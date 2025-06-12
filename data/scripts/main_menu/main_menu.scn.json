@@ -91,9 +91,9 @@
         },
         "hide_if_trivial": true,
         "parameters": [
-          {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"game_mode": "rally"}}},
-          {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"game_mode": "skating"}}},
-          {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"game_mode": "team_deathmatch"}}}
+          {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "rally"}}},
+          {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "skating"}}},
+          {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "team_deathmatch"}}}
         ]
       }
     }
@@ -649,7 +649,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Restrictions/$selected_language",
           "icon": "restrictions_icon",
-          "required": ["%game_mode == 'rally'"],
+          "required": ["%selected_game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -699,7 +699,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Color/$selected_language",
           "icon": "color_icon",
-          "required": ["%game_mode == 'rally'"],
+          "required": ["%selected_game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -733,7 +733,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Session/$selected_language",
           "icon": "session_icon",
-          "required": ["%game_mode == 'rally'"],
+          "required": ["%selected_game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -768,7 +768,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Laps/$selected_language",
           "icon": "laps_icon",
-          "required": ["%game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
+          "required": ["%selected_game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -797,7 +797,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Playback_ranks/$selected_language",
           "icon": "replay_icon",
-          "required": ["%game_mode == 'rally'"],
+          "required": ["%selected_game_mode == 'rally'"],
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -863,7 +863,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Playback_speed/$selected_language",
           "icon": "missing_icon",
-          "required": ["%game_mode == 'rally'"],
+          "required": ["%selected_game_mode == 'rally'"],
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",

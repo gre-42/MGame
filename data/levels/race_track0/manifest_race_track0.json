@@ -3,7 +3,7 @@
   "title": "%%levels/race_track0/title/$selected_language",
   "required": {
     "fixed": [],
-    "dynamic": ["%game_mode in %%levels/race_track0/game_modes", "%user_count <= %%levels/race_track0/max_users"]
+    "dynamic": ["%selected_game_mode in %%levels/race_track0/game_modes", "%user_count <= %%levels/race_track0/max_users"]
   },
   "on_execute": {
     "include": "scene_race_track0.scn.json"
