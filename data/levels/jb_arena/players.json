@@ -6,6 +6,7 @@
   },
   "defaults": {
     "game_mode": "team_deathmatch",
+    "player_role": "competitor",
     "unstuck_mode": "reverse",
     "behavior": "fighter",
     "seat": "driver",
@@ -32,6 +33,10 @@
   "players": [
     {
       "controller": "pc", "name": "you", "team": "red",
+      "user": {
+        "id": 0,
+        "name": "'0'"
+      },
       "skills": {
         "ai": {
           "can_drive": false,

@@ -298,7 +298,10 @@
       "blend_street": true,
       "blend_path": true,
       "water": {
-        "texture": "",
+        "textures": {
+          "color": [],
+          "alpha": []
+        },
         "animation_duration": 3,
         "heights": [-5, 0],
         "generate_tiles": false,

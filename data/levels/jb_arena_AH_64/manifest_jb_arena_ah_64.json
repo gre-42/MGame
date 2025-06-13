@@ -7,7 +7,7 @@
   },
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
-    "arguments": {
+    "let": {
       "players_json": "$__DIR__/players.json"
     }
   },
