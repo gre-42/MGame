@@ -1,11 +1,11 @@
 {
-  "let": {
-    "underwater_height": 60,
-    "water_height": 70,
-    "scale": 1
-  },
   "execute": [
     {
+      "let": {
+        "underwater_height": 60,
+        "water_height": 70,
+        "scale": 1
+      },
       "declare_macro": "osm_resource_islands1",
       "content": {
         "call": "osm_resource",
