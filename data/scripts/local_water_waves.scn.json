@@ -1,0 +1,103 @@
+[
+  {
+    "declare_macro": "add_local_water_waves_scene",
+    "content": {
+      "let": {
+        "suffix": "_local_water_waves_$user_name"
+      },
+      "execute": [
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "dynamics": "moving",
+            "name": "water_waves_node$suffix",
+            "position": [0, 0, 0],
+            "rotation": [-90, 0, 0],
+            "scale": 1,
+            "user_id": "%user_id"
+          }
+        },
+        {
+          "call": "ortho_camera",
+          "arguments": {
+            "node": "water_waves_node$suffix",
+            "near_plane": -1000,
+            "far_plane": 1000,
+            "left_plane": -100,
+            "right_plane": 100,
+            "bottom_plane": -100,
+            "top_plane": 100,
+            "requires_postprocessing": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "declare_macro": "add_local_water_waves_render",
+    "content": {
+      "let": {
+        "suffix": "_local_water_waves_$user_name"
+      },
+      "execute": [
+        {
+          "call": "keep_offset_from_camera",
+          "arguments": {
+            "follower": "water_waves_node$suffix",
+            "offset": [0, 0, 0],
+            "texture_width": "%scene_water_waves_width",
+            "texture_height": "%scene_water_waves_height"
+          }
+        },
+        {
+          "comment": {
+            "call": "create_fluid_subdomain",
+            "arguments": {
+              "node": "water_waves_node$suffix",
+              "texture_width": "%scene_water_waves_width",
+              "texture_height": "%scene_water_waves_height",
+              "directional_velocity": [0, 0],
+              "radial_velocity": 0.3,
+              "velocity_region": {
+                "min": [0.48, 0.48],
+                "max": [0.52, 0.52]
+              },
+              "angular_velocity": 20,
+              "velocity_dt": 0.001,
+              "speed_of_sound": 1.1,
+              "time_relaxation_constant": 0.55,
+              "visual_density": [0.8, 1.2]
+            }
+          }
+        },
+        {
+          "call": "create_acoustic_subdomain",
+          "arguments": {
+            "node": "water_waves_node$suffix",
+            "texture_width": "%scene_water_waves_width",
+            "texture_height": "%scene_water_waves_height",
+            "directional_velocity": [0, 0],
+            "radial_velocity": 0.3,
+            "velocity_region": {
+              "min": [0.48, 0.48],
+              "max": [0.52, 0.52]
+            },
+            "angular_velocity": 20,
+            "velocity_dt": 0.001,
+            "c": 0.2,
+            "dt": 1,
+            "dx": 1,
+            "intensity_normalization": 0.97,
+            "reference_inner_directional_velocity": 50,
+            "maximum_inner_velocity": 0.3,
+            "velocity_limitation": {
+              "v_max": 0.3,
+              "falloff": 0.8
+            },
+            "skidmark_strength": 1.5
+          }
+        }
+      ]
+    }
+  }
+]

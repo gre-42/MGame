@@ -182,9 +182,8 @@
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
-            {
-              "playback": "add_local_skidmarks_scene"
-            },
+            { "playback": "add_local_skidmarks_scene" },
+            { "playback": "add_local_water_waves_scene" },
             {
               "context": "primary_scene_$user_name",
               "execute": [
@@ -285,9 +284,8 @@
                     "text": "Game over"
                   }
                 },
-                {
-                  "playback": "add_local_skidmarks_render"
-                }
+                { "playback": "add_local_skidmarks_render" },
+                { "playback": "add_local_water_waves_render" }
               ]
             }
           ]

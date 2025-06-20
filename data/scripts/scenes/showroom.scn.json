@@ -268,18 +268,14 @@
           "TOP": 200
         }
       },
-      {
-        "playback": "add_movables_light_scene"
-      },
-      {
-        "playback": "add_movables_light_render"
-      },
-      {
-        "playback": "add_local_skidmarks_scene"
-      },
-      {
-        "playback": "add_local_skidmarks_render"
-      },
+      { "playback": "add_movables_light_scene" },
+      { "playback": "add_movables_light_render" },
+      { "playback": "add_local_skidmarks_scene" },
+      { "playback": "add_local_skidmarks_render" },
+      { "playback": "add_local_water_waves_scene" },
+      { "playback": "add_local_water_waves_render" },
+      { "playback": "add_local_sea_spray_scene" },
+      { "playback": "add_local_sea_spray_render" },
       {
         "comment": {
           "playback": "add_local_blob_instances_light",

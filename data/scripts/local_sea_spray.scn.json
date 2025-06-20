@@ -1,16 +1,16 @@
 [
   {
-    "declare_macro": "add_local_skidmarks_scene",
+    "declare_macro": "add_local_sea_spray_scene",
     "content": {
       "let": {
-        "suffix": "_local_skidmarks_$user_name"
+        "suffix": "_local_sea_spray_$user_name"
       },
       "execute": [
         {
           "call": "root_node_instance",
           "arguments": {
             "dynamics": "moving",
-            "name": "skidmark_node$suffix",
+            "name": "sea_spray_node$suffix",
             "position": [0, 0, 0],
             "rotation": [-90, 0, 0],
             "scale": 1,
@@ -20,7 +20,7 @@
         {
           "call": "ortho_camera",
           "arguments": {
-            "node": "skidmark_node$suffix",
+            "node": "sea_spray_node$suffix",
             "near_plane": -1000,
             "far_plane": 1000,
             "left_plane": -100,
@@ -34,28 +34,28 @@
     }
   },
   {
-    "declare_macro": "add_local_skidmarks_render",
+    "declare_macro": "add_local_sea_spray_render",
     "content": {
       "let": {
-        "suffix": "_local_skidmarks_$user_name"
+        "suffix": "_local_sea_spray_$user_name"
       },
       "execute": [
         {
           "call": "keep_offset_from_camera",
           "arguments": {
-            "follower": "skidmark_node$suffix",
+            "follower": "sea_spray_node$suffix",
             "offset": [0, 0, 0],
-            "texture_width": "%scene_skidmarks_width",
-            "texture_height": "%scene_skidmarks_height"
+            "texture_width": "%scene_sea_spray_width",
+            "texture_height": "%scene_sea_spray_height"
           }
         },
         {
           "call": "create_skidmark",
           "arguments": {
-            "particle_type": "skidmark",
-            "node": "skidmark_node$suffix",
-            "texture_width": "%scene_skidmarks_width",
-            "texture_height": "%scene_skidmarks_height"
+            "particle_type": "sea_spray",
+            "node": "sea_spray_node$suffix",
+            "texture_width": "%scene_sea_spray_width",
+            "texture_height": "%scene_sea_spray_height"
           }
         }
       ]

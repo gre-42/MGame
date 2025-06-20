@@ -12,7 +12,7 @@
           "resource": "skidmarks_a20_black",
           "air_resistance": 0,
           "animation_duration": "inf",
-          "substrate": "skidmark"
+          "type": "skidmark"
         },
         "instance_prefix": "skidmarks_a20_black",
         "tire": {
@@ -25,7 +25,7 @@
           "resource": "particles_snow_3d",
           "air_resistance": 0.01,
           "animation_duration": 1.5,
-          "substrate": "air"
+          "type": "smoke"
         },
         "instance_prefix": "particles_snow",
         "vehicle": {
