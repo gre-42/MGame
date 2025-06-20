@@ -32,6 +32,19 @@
           "vehicle_velocities": [16, 20, 50],
           "particle_frequencies": [0, 10, 20]
         }
+      },
+      {
+        "particle": {
+          "resource": "sea_spray_a20",
+          "air_resistance": 0,
+          "animation_duration": "inf",
+          "type": "sea_spray"
+        },
+        "instance_prefix": "sea_spray_a20",
+        "vehicle": {
+          "vehicle_velocities": [2, 5, 50],
+          "particle_frequencies": [0, 10, 20]
+        }
       }
     ]
   }

@@ -184,6 +184,7 @@
             },
             { "playback": "add_local_skidmarks_scene" },
             { "playback": "add_local_water_waves_scene" },
+            { "playback": "add_local_sea_spray_scene" },
             {
               "context": "primary_scene_$user_name",
               "execute": [
@@ -285,7 +286,8 @@
                   }
                 },
                 { "playback": "add_local_skidmarks_render" },
-                { "playback": "add_local_water_waves_render" }
+                { "playback": "add_local_water_waves_render" },
+                { "playback": "add_local_sea_spray_render" }
               ]
             }
           ]
