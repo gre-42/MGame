@@ -19,7 +19,7 @@
               "already_set_behavior": "update",
               "macro": [
                 {
-                  "playback":  "create_$$vehicles/${selected_vehicle_id_$user_name}/class",
+                  "playback":  "create_$$vehicles/${selected_vehicle_id_$user_name}/vehicle_class",
                   "let": {
                     "asset_id": "${selected_vehicle_id_$user_name}",
                     "if_human_style": true,

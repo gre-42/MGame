@@ -1,0 +1,113 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "ship0_hitbox",
+      "filename": "models/primitives/box.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.9, 0.5, 2.3],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      }
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "ship0_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "ship0_distancebox",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "ship0_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "ship0_tirelines", "from": [-0.77, -0.2, -1.37], "to": [-0.77, -1, -1.37]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "ship0_tirelines", "from": [ 0.77, -0.2, -1.37], "to": [ 0.77, -1, -1.37]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "ship0_tirelines", "from": [-0.77, -0.2,  1.26], "to": [-0.77, -1,  1.26]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "ship0_tirelines", "from": [ 0.77, -0.2,  1.26], "to": [ 0.77, -1,  1.26]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "arguments": {"source_names": ["ship0_hitbox", "ship0_distancebox", "ship0_tirelines"], "dest_name": "ship0_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["ship0_hitbox"], "dest_name": "ship0_massbox"}},
+
+  {
+    "declare_macro": "load_ship0_part",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "models/gre42/$name.obj",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": true,
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "%reflection_map",
+            "emissive_factor": "%blender_emissive_factor",
+            "ambient_factor": "%blender_ambient_factor",
+            "diffuse_factor": "%blender_diffuse_factor",
+            "specular_factor": "%blender_specular_factor",
+            "shading": {
+            "reflectance": "%reflectance",
+              "fresnel": {
+                "min": "%stunt_rally_fresnel_min",
+                "max": "%stunt_rally_fresnel_max",
+                "exponent": "%stunt_rally_fresnel_exponent",
+                "ambient": "%blender_fresnel_ambient"
+              }
+            },
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_ship0",
+    "content": [
+      {"playback": "load_ship0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "ship0/ship0$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "ship0/main$suffix"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "ship0/main$suffix", "companion_resource": "ship0/ship0$decimate"}}
+    ]
+  },
+  {"playback": "load_ship0", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",                    "decimate": "", "suffix": ""}},
+  {"playback": "load_ship0", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_lowres", "suffix": "_lowres"}}
+]

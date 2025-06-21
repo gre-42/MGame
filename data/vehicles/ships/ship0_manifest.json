@@ -1,16 +1,16 @@
 {
-  "id": "compact0",
-  "title": "Compact 0",
-  "on_init": {"include": "compact0.scn.json"},
+  "id": "ship0",
+  "title": "Ship 0",
+  "on_init": {"include": "ship0.scn.json"},
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "selected_vehicle_id_$user_name": "compact0"
+      "selected_vehicle_id_$user_name": "ship0"
     }
   },
   "database": {
-    "suffix": "compact0",
-    "vehicle_class": "car",
+    "suffix": "ship0",
+    "vehicle_class": "ship",
     "node_prefixes": ["car_node"],
     "spawn_y_offset": 0.7,
     "trailer_hitch_position_female": null,
@@ -50,42 +50,7 @@
 
     "wheels": "R33_wheel",
     "engine_audio": "car2",
-    "engine_exhaust": [
-      {
-        "particle": {
-          "particle": {
-            "resource": "fueguito",
-            "air_resistance": 0,
-            "animation_duration": 2,
-            "type": "smoke"
-          },
-          "generation_dt": 0.2
-        },
-        "location": {
-          "position": [0.58, -0.53, 2.1],
-          "rotation": [0, 0, 0],
-          "scale": 1
-        },
-        "p_reference": 30
-      },
-      {
-        "particle": {
-          "particle": {
-            "resource": "fueguito",
-            "air_resistance": 0,
-            "animation_duration": 2,
-            "type": "smoke"
-          },
-          "generation_dt": 0.2
-        },
-        "location": {
-          "position": [0.45, -0.53, 2.1],
-          "rotation": [0, 0, 0],
-          "scale": 1
-        },
-        "p_reference": 30
-      }
-    ]
+    "engine_exhaust": null
   },
   "required": {
     "fixed": [],
