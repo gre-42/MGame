@@ -1,0 +1,26 @@
+{
+  "call": "set_surface_contact_info",
+  "arguments": {
+    "material0": "surface_base_tire",
+    "material1": "surface_base_water",
+    "stiction_factor": 1,
+    "stiction_coefficient": "nan",
+    "friction_coefficient": "nan",
+    "smoke": [
+      {
+        "particle": {
+          "resource": "sea_spray_a20",
+          "air_resistance": 0,
+          "animation_duration": "inf",
+          "rotation": "random_yangle",
+          "type": "sea_spray"
+        },
+        "instance_prefix": "sea_spray_a20",
+        "vehicle": {
+          "vehicle_velocities": [2, 5, 50],
+          "particle_frequencies": [0, 10, 20]
+        }
+      }
+    ]
+  }
+}
