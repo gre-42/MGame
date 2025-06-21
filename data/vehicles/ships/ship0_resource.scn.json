@@ -68,7 +68,7 @@
           "name": "%name",
           "filename": "models/gre42/$name.obj",
           "config": {
-            "position": [0, 0, 0],
+            "position": [0, -0.3, 0],
             "rotation": [0, 0, 0],
             "scale": [1, 1, 1],
             "center_distances": ["%dist_min", "%dist_max"],
@@ -103,7 +103,7 @@
   {
     "declare_macro": "load_ship0",
     "content": [
-      {"playback": "load_ship0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "ship0/ship0$decimate"}},
+      {"playback": "load_ship0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "", "name": "ship0/ship0$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "ship0/main$suffix"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "ship0/main$suffix", "companion_resource": "ship0/ship0$decimate"}}
     ]
