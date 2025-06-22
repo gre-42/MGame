@@ -71,30 +71,59 @@
           }
         },
         {
-          "call": "create_acoustic_subdomain",
+          "comment": {
+            "call": "create_acoustic_velocity_subdomain",
+            "arguments": {
+              "node": "water_waves_node$suffix",
+              "texture_width": "%scene_water_waves_width",
+              "texture_height": "%scene_water_waves_height",
+              "directional_velocity": [0, 0],
+              "radial_velocity": 0.3,
+              "velocity_region": {
+                "min": [0.48, 0.48],
+                "max": [0.52, 0.52]
+              },
+              "angular_velocity": 20,
+              "velocity_dt": 0.001,
+              "c": 0.2,
+              "dt": 1,
+              "dx": 1,
+              "intensity_normalization": 0.97,
+              "reference_inner_directional_velocity": 50,
+              "maximum_inner_velocity": 0.3,
+              "velocity_limitation": {
+                "max": 0.3,
+                "falloff": 0.8
+              },
+              "skidmark_strength": 1.5
+            }
+          }
+        },
+        {
+          "call": "create_acoustic_pressure_subdomain",
           "arguments": {
             "node": "water_waves_node$suffix",
             "texture_width": "%scene_water_waves_width",
             "texture_height": "%scene_water_waves_height",
-            "directional_velocity": [0, 0],
-            "radial_velocity": 0.3,
-            "velocity_region": {
-              "min": [0.48, 0.48],
-              "max": [0.52, 0.52]
+            "inner_pressure": 0,
+            "inner_region": {
+              "min": [0.2, 0],
+              "max": [0.3, 1]
             },
-            "angular_velocity": 20,
-            "velocity_dt": 0.001,
-            "c": 0.2,
+            "inner_angular_velocity": 20,
+            "wind_amplitude": 0.0002,
+            "wind_angular_velocity": 10,
+            "wind_texture": "#white_blurred",
+            "c": 0.1,
             "dt": 1,
             "dx": 1,
-            "intensity_normalization": 0.97,
-            "reference_inner_directional_velocity": 50,
-            "maximum_inner_velocity": 0.3,
-            "velocity_limitation": {
-              "v_max": 0.3,
-              "falloff": 0.8
+            "intensity_normalization": 0.95,
+            "pressure_limitation": {
+              "max": 0.3,
+              "falloff": 1
             },
-            "skidmark_strength": 1.5
+            "periodicity": "periodic",
+            "skidmark_strength": 4
           }
         }
       ]
