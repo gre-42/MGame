@@ -111,8 +111,9 @@
               "max": [0.3, 1]
             },
             "inner_angular_velocity": 20,
-            "wind_amplitude": 0.0002,
-            "wind_angular_velocity": 10,
+            "wind_amplitude": 0.001,
+            "wind_angular_velocity": 4,
+            "wind_cutoff": 0.8,
             "wind_texture": "#white_blurred",
             "c": 0.1,
             "dt": 1,
