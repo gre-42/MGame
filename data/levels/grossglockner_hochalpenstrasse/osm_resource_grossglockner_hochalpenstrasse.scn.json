@@ -1,5 +1,5 @@
 {
-  "declare_macro": "osm_resource_grossglockner_hochalpenstrasse_open",
+  "declare_macro": "osm_resource_grossglockner_hochalpenstrasse",
   "content": {
     "call": "osm_resource",
     "arguments": {
@@ -309,7 +309,6 @@
       "# path_surface_central_resource_name": "road_extrudable_central",
       "# path_surface_endpoint0_resource_name": "road_extrudable_endpoint_0",
       "# path_surface_endpoint1_resource_name": "road_extrudable_endpoint_1",
-      "game_level": "%loaded_game_level",
       "emissive_factor": "%vanilla_rally_emissive_factor",
       "ambient_factor": "%vanilla_rally_ambient_factor",
       "diffuse_factor": "%vanilla_rally_diffuse_factor",
