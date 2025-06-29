@@ -121,5 +121,11 @@
         }
       }
     ]
+  },
+  {
+    "declare_macro": "teams.create_player_and_ship_for_pc",
+    "content": {
+      "playback": "teams.create_player_and_car_for_pc"
+    }
   }
 ]
