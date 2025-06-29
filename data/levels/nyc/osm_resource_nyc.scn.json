@@ -236,6 +236,11 @@
           "width": 2,
           "height": 1
         },
+        "bridge_pier_model": "bridge_pier0",
+        "bridge_pier_radius": 1,
+        "bridge_pier_textures": [
+          "#Pavement_ConcreteSidewalk3_Base",
+          "#concrete1_2K_wh_Detail"],
         "racing_line_texture": "#racing_line",
         "racing_line_track": "%loaded_racing_line_track",
         "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
