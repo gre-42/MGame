@@ -258,6 +258,7 @@
           "vehicle_domain": "air"
         }
       },
+      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$suffix", "door_distance": "%%vehicles/AH_64/door_distance"}},
       {
         "call": "set_available_seats",
         "arguments": {

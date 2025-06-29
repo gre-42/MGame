@@ -431,7 +431,7 @@
           "wing_id": 6
         }
       },
-      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$suffix", "door_distance": 5}},
+      {"call": "set_rigid_body_door_distance", "arguments": {"node": "car_node$suffix", "door_distance": "%%vehicles/F_35/door_distance"}},
       {
         "call": "create_plane_controller",
         "arguments": {
