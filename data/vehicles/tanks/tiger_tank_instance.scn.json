@@ -207,7 +207,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -215,9 +215,9 @@
       {
         "required": ["%if_pc"],
         "call": "hud_target_point",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_node": "main_gun_camera_node$suffix",
           "ypln_node": "turret_node$suffix",
@@ -230,11 +230,11 @@
       {
         "required": ["%if_pc"],
         "call": "hud_target_point",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
-          "exclusive_node": "follower_camera_$externals_user_name",
+          "exclusive_node": "follower_camera_$user_name",
           "ypln_node": "turret_node$suffix",
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
@@ -248,7 +248,7 @@
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%externals_player_name",
+              "player": "%player_name",
               "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
               "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
               "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
@@ -267,7 +267,7 @@
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%externals_player_name",
+              "player": "%player_name",
               "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
               "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
               "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
@@ -289,7 +289,7 @@
       {
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix"
         }
       },
@@ -298,7 +298,7 @@
           "exclude": ["%if_android"],
           "required": ["%if_pc"],
           "playback": "create_player_car_engine_rpm_meter",
-          "context": "primary_scene_$externals_user_name",
+          "context": "primary_scene_$user_name",
           "arguments": {
             "engine_name": "left"
           }
@@ -307,7 +307,7 @@
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/tiger_tank/max_tire_angle",

@@ -1,0 +1,77 @@
+[
+  {
+    "call": "globals",
+    "arguments": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_seat": "driver",
+      "osm_location": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1
+      },
+      "loaded_game_level": "photos",
+      "loaded_racing_line_track": null,
+      "loaded_racing_line_playback": null
+    }
+  },
+  {"include": "scripts/include_all.scn.json"},
+  {"include": "../nyc/osm_resource_nyc.scn.json"},
+  {"include": "create_tripod_cameras_nyc_photos0.scn.json"},
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "if_create_pc_player": true,
+      "if_pc_player_playback": false,
+      "pc_player_playback": null,
+      "pc_player_playback_speedup": null,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|history|laps|rank|race_time",
+      "osm_map_resource": "osm_resource_nyc",
+      "osm_layers": ["$__DIR__/../nyc/map_nyc.osm", "$__DIR__/map_nyc_photos0.osm"],
+      "if_has_overlay": false,
+      "if_primary_dirtmap": true,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": "#dirtmap_dense",
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 0.5,
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "soft_light_texture": null
+    }
+  },
+  {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": []
+  },
+  {
+    "playback": "setup_teams",
+    "context": "primary_scene",
+    "arguments": {
+      "players_json": "$__DIR__/players.json",
+      "teams_spawn_points_resource": "osm_map",
+      "teams_way_points_resource": "osm_map",
+      "objective": "photos"
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
+  },
+  {"playback": "create_main_menu"}
+]

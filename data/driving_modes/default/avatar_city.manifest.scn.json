@@ -1,0 +1,23 @@
+{
+  "id": "avatar_city",
+  "title": "Avatar city",
+  "database": {
+    "waypoint_reached_radius": 2,
+    "rest_radius": 1,
+    "lookahead_velocity": 70,
+    "takeoff_velocity": "nan",
+    "takeoff_velocity_delta": "nan",
+    "max_velocity": 5,
+    "max_delta_velocity_brake": 1,
+    "collision_avoidance_radius_brake": 0,
+    "collision_avoidance_radius_wait": 1,
+    "collision_avoidance_radius_correct": 0,
+    "collision_avoidance_intersect_angle": 30,
+    "collision_avoidance_step_aside_angle": 50,
+    "collision_avoidance_step_aside_distance": 3,
+    "stuck_velocity": 2,
+    "stuck_duration": 6,
+    "unstuck_duration": 5,
+    "player_way_points_filter": "sidewalk"
+  }
+}

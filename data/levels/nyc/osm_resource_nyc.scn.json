@@ -5,7 +5,7 @@
       "call": "osm_resource",
       "arguments": {
         "name": "osm_map",
-        "filename": "$__DIR__/map_nyc.osm",
+        "filenames": "%osm_layers",
         "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
         "heightmap": "$__DIR__/heightmap.pgm",
         "heightmap_dilation": 5,
@@ -243,7 +243,7 @@
           "#concrete1_2K_wh_Detail"],
         "racing_line_texture": "#racing_line",
         "racing_line_track": "%loaded_racing_line_track",
-        "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+        "racing_line_playback": "%loaded_racing_line_playback",
         "waysides_surface": [
           {
             "resources": [
@@ -307,6 +307,7 @@
         "much_near_grass_distance": 2,
         "raceway_beacon_distance": "inf",
         "waypoint_distance": 10,
+        "refine_explicit_waypoints": false,
         "with_terrain": true,
         "with_buildings": true,
         "only_raceways_and_walls": false,

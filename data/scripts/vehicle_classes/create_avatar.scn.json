@@ -61,6 +61,7 @@
       {
         "required": ["%if_spawner"],
         "call": "set_externals_creator",
+        "without": ["user_id", "user_name", "player_name"],
         "arguments": {
           "externals": {
             "playback": "create_player_avatar_externals"
@@ -109,7 +110,7 @@
         "call": "hud_target_point",
         "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_node": null,
           "ypln_node": "human_node$suffix",
@@ -121,9 +122,9 @@
       {
         "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "left": "bullet_count_left",
           "right": "bullet_count_right",
           "bottom": "bullet_count_bottom",
@@ -140,7 +141,7 @@
         "required": ["%if_with_gun"],
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix"
         }
       },
@@ -149,7 +150,7 @@
         "arguments": {
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "max_tire_angle": "%%vehicles/$asset_id/max_tire_angle"
         }
       }

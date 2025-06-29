@@ -319,7 +319,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_car_key_bindings",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -327,9 +327,9 @@
       {
         "required": ["%if_pc"],
         "call": "hud_target_point",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_node": "main_gun_camera_node$suffix",
           "ypln_node": "turret_node$suffix",
@@ -351,14 +351,14 @@
       {
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix"
         }
       },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/AH_64/max_tire_angle",

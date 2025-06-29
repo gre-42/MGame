@@ -576,7 +576,7 @@
       {
         "required": ["%if_pc"],
         "playback": "create_plane_key_bindings",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -584,9 +584,9 @@
       {
         "required": ["%if_pc"],
         "call": "hud_opponent_tracker",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "exclusive_node": null,
           "center": [0, 0],
           "size": [0.05, 0.05],
@@ -597,9 +597,9 @@
       {
         "required": ["%if_pc"],
         "call": "hud_opponent_zoom",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "exclusive_node": null,
           "left": "opponent_zoom_left",
           "right": "opponent_zoom_right",
@@ -616,7 +616,7 @@
           {
             "call": "create_drive_or_walk_ai",
             "arguments": {
-              "player": "%externals_player_name",
+              "player": "%player_name",
               "waypoint_reached_radius":                 "%%driving_modes/car_$behavior/waypoint_reached_radius",
               "rest_radius":                             "%%driving_modes/car_$behavior/rest_radius",
               "lookahead_velocity":                      "%%driving_modes/car_$behavior/lookahead_velocity",
@@ -635,7 +635,7 @@
           {
             "call": "set_behavior",
             "arguments": {
-              "player": "%externals_player_name",
+              "player": "%player_name",
               "stuck_velocity": "%%driving_modes/car_$behavior/stuck_velocity",
               "stuck_duration": "%%driving_modes/car_$behavior/stuck_duration",
               "unstuck_duration": "%%driving_modes/car_$behavior/unstuck_duration",
@@ -660,14 +660,14 @@
       {
         "call": "player_set_aiming_gun",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix"
         }
       },
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/F_35/max_tire_angle",

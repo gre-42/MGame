@@ -187,7 +187,7 @@
     "content": {
       "required": ["%if_pc"],
       "playback": "create_skater_key_bindings",
-      "context": "primary_scene_$externals_user_name",
+      "context": "primary_scene_$user_name",
       "arguments": {"seat": "driver"}
     }
   },
@@ -198,7 +198,7 @@
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "surface_power_forward": "inf",
           "surface_power_backward": "-inf",
           "max_tire_angle": "%%vehicles/skating_mh1/max_tire_angle"

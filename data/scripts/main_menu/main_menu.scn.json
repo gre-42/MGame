@@ -91,9 +91,22 @@
         },
         "hide_if_trivial": true,
         "parameters": [
-          {"id": "rally", "title": "Rally", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "rally"}}},
-          {"id": "skating", "title": "Skating", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "skating"}}},
-          {"id": "team_deathmatch", "title": "Team deathmatch", "on_before_select": { "call": "globals", "arguments": {"selected_game_mode": "team_deathmatch"}}}
+          {
+            "id": "rally", "title": "%%translations/main/Rally/$selected_language",
+            "on_before_select": {"call": "globals", "arguments": {"selected_game_mode": "rally"}}
+          },
+          {
+            "id": "photos", "title": "%%translations/main/Photos/$selected_language",
+            "on_before_select": {"call": "globals", "arguments": {"selected_game_mode": "photos"}}
+          },
+          {
+            "id": "skating", "title": "%%translations/main/Skating/$selected_language",
+            "on_before_select": {"call": "globals", "arguments": {"selected_game_mode": "skating"}}
+          },
+          {
+            "id": "team_deathmatch", "title": "%%translations/main/Team_deathmatch/$selected_language",
+            "on_before_select": {"call": "globals", "arguments": {"selected_game_mode": "team_deathmatch"}}
+          }
         ]
       }
     }

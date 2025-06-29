@@ -16,7 +16,7 @@
           "driving_direction": "center"
         }
       },
-      { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team" } },
+      { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team", "group": "%spawn_group" } },
       { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
       {
         "playback": "set_player_skills"

@@ -241,7 +241,7 @@
         {
           "call": "set_behavior",
           "arguments": {
-            "player": "%externals_player_name",
+            "player": "%player_name",
             "stuck_velocity": "%%driving_modes/avatar_$behavior/stuck_velocity",
             "stuck_duration": "%%driving_modes/avatar_$behavior/stuck_duration",
             "unstuck_duration": "%%driving_modes/avatar_$behavior/unstuck_duration",

@@ -1,0 +1,81 @@
+{
+  "library": "teams",
+  "teams": {
+    "red": { "style": { "color": [1, 0.8, 0.8] } },
+    "blue": { "style": { "color": [0.8, 0.8, 1] } }
+  },
+  "defaults": {
+    "game_mode": "photos",
+    "player_role": "competitor",
+    "unstuck_mode": "reverse",
+    "behavior": "city",
+    "seat": "driver",
+    "skills": {
+      "ai": {
+        "can_drive": true,
+        "can_aim": true,
+        "can_shoot": true,
+        "can_select_opponent": true,
+        "can_select_weapon": true,
+        "velocity_error_std": 1,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0,
+        "error_alpha": 0.002,
+        "respawn_cooldown_time": 0
+      },
+      "user": {
+        "can_drive": false,
+        "can_aim": false,
+        "can_shoot": false
+      }
+    }
+  },
+  "players": [
+    {
+      "controller": "pc", "name": "you", "team": "red",
+      "user": {
+        "id": 0,
+        "name": "'0'"
+      },
+      "skills": {
+        "ai": {
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false,
+          "can_select_opponent": false,
+          "can_select_weapon": false
+        },
+        "user": {
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true
+        }
+      },
+      "spawn": {
+        "group": "player0",
+        "vehicle": { "type": "female_mh" }
+      }
+    },
+    {
+      "name": "extra_AH_64", "team": "red",
+      "spawn": {
+        "group": "heli0",
+        "vehicle": { "type": "AH_64" }
+      }
+    },
+    {
+      "name": "extra_van0", "team": "red",
+      "spawn": {
+        "group": "car0",
+        "vehicle": { "type": "van0" }
+      }
+    },
+    {
+      "name": "extra_ship0", "team": "red",
+      "spawn": {
+        "group": "ship0",
+        "vehicle": { "type": "ship0" }
+      }
+    }
+  ]
+}

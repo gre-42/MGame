@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-143034' action='modify' visible='true' lat='40.70836965676' lon='-73.99186215924' />
+  <node id='-143035' action='modify' visible='true' lat='40.70833819669' lon='-73.99204979229' />
+  <node id='-143036' action='modify' visible='true' lat='40.70980056923' lon='-73.99210503253' />
+  <node id='-143037' action='modify' visible='true' lat='40.70977814252' lon='-73.99222337572' />
+  <node id='-143047' action='modify' visible='true' lat='40.71012127041' lon='-73.99223077217' />
+  <node id='-143048' action='modify' visible='true' lat='40.70993064402' lon='-73.99217160058' />
+  <node id='-143076' action='modify' visible='true' lat='40.70969292094' lon='-73.9926538491' />
+  <node id='-143077' action='modify' visible='true' lat='40.70971310501' lon='-73.99252367158' />
+  <way id='-240287' action='modify' visible='true'>
+    <nd ref='-143034' />
+    <nd ref='-143035' />
+    <tag k='spawn:group' v='ship0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-240321' action='modify' visible='true'>
+    <nd ref='-143036' />
+    <nd ref='-143037' />
+    <tag k='spawn:group' v='car0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-240400' action='modify' visible='true'>
+    <nd ref='-143047' />
+    <nd ref='-143048' />
+    <tag k='spawn:group' v='heli0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-240433' action='modify' visible='true'>
+    <nd ref='-143076' />
+    <nd ref='-143077' />
+    <tag k='spawn:group' v='player0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+</osm>

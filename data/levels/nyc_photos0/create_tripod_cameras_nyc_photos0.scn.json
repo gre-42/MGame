@@ -1,0 +1,21 @@
+{
+  "declare_macro": "create_tripod_cameras",
+  "content": [
+    {
+      "playback": "create_tripod_camera",
+      "arguments": {
+        "node_name": "tripod_node_$user_name",
+        "position": [-124, -169, 126],
+        "rotation": [0, 147, 0]
+      }
+    },
+    {
+      "call": "set_camera_cycle",
+      "context": "primary_scene_$user_name",
+      "arguments": {
+        "name": "tripod",
+        "cameras": ["tripod_node_$user_name"]
+      }
+    }
+  ]
+}

@@ -5,7 +5,7 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_idle_binding",
       "arguments": {
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix"
       }
     },
@@ -13,10 +13,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.steer_left",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "steer_left_amount": 1
       }
@@ -25,10 +25,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.steer_right",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "steer_left_amount": -1
       }
@@ -48,10 +48,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.forward",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "surface_power": "inf"
       }
@@ -60,10 +60,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.backwards",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "surface_power": "-inf"
       }
@@ -72,10 +72,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.ascend",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "ascend_velocity": 10
       }
@@ -84,10 +84,10 @@
       "required": ["%if_manual_drive"],
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.descend",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "car_node$suffix",
         "ascend_velocity": -10
       }
@@ -96,10 +96,10 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_left",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": 0.1,
@@ -111,10 +111,10 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_right",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": -0.1,
@@ -126,10 +126,10 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_up",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [1, 0, 0],
         "angular_velocity_press": 0.1,
@@ -141,10 +141,10 @@
       "required": ["%if_has_gun"],
       "call": "rel_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.rotate_gun_down",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [1, 0, 0],
         "angular_velocity_press": -0.1,
@@ -156,10 +156,10 @@
       "required": ["%if_has_gun"],
       "call": "gun_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.shoot",
         "seat": "%externals_seat",
-        "player": "%externals_player_name"
+        "player": "%player_name"
       }
     },
     {
@@ -167,30 +167,30 @@
       "exclude": ["%if_manual_aim"],
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.select_next_opponent",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "select_next_opponent": true
       }
     },
     {
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.select_next_vehicle",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "select_next_vehicle": true
       }
     },
     {
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%externals_user_id",
+        "user_id": "%user_id",
         "id": "car_or_heli.reset_vehicle",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "reset_vehicle": true
       }
     }

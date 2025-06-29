@@ -126,7 +126,7 @@
       {
         "required": ["%if_pc", "%if_devel"],
         "call": "visual_player_status",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "format": "position|speed|diameter|energy",
           "charset": "%selected_language",
@@ -138,16 +138,16 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       },
       {
         "required": ["%if_pc"],
         "call": "visual_player_status",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "format": "speed",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -174,9 +174,9 @@
       {
         "required": ["%if_pc", "%minimap_file != %null"],
         "call": "minimap",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "left": "minimap_widget_left",
           "right": "minimap_widget_right",
           "bottom": "minimap_widget_bottom",
@@ -193,7 +193,7 @@
       {
         "required": ["%if_pc"],
         "call": "visual_player_bullet_count",
-        "context": "primary_scene_$externals_user_name",
+        "context": "primary_scene_$user_name",
         "arguments": {
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
@@ -204,7 +204,7 @@
           "font_color": [1, 1, 1],
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%externals_player_name",
+          "player": "%player_name",
           "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       }
@@ -239,7 +239,7 @@
             "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
           },
           "focus_mask": "scene|countdown_any|game_over_countdown_any",
-          "player": "%externals_player_name"
+          "player": "%player_name"
         }
       }
     ]

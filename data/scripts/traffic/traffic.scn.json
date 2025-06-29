@@ -6,7 +6,8 @@
         "call": "spawner_create",
         "arguments": {
           "name": "%spawner_name",
-          "team": "red"
+          "team": "red",
+          "group": ""
         }
       },
       {
@@ -17,7 +18,7 @@
           "game_mode": "%game_mode",
           "player_role": "bystander",
           "unstuck_mode": "%unstuck_mode",
-          "behavior": "pedestrian",
+          "behavior": "city",
           "driving_direction": "right"
         }
       },
@@ -39,7 +40,8 @@
         "call": "spawner_create",
         "arguments": {
           "name": "%spawner_name",
-          "team": "red"
+          "team": "red",
+          "group": ""
         }
       },
       {

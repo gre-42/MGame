@@ -4,7 +4,7 @@
     {
       "call": "car_controller_idle_binding",
       "arguments": {
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "surface_power": "inf",
         "drive_relaxation": 1
@@ -16,7 +16,7 @@
         "user_id": "%user_id",
         "id": "skater.rotate_left",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": 3,
@@ -30,7 +30,7 @@
         "user_id": "%user_id",
         "id": "skater.rotate_right",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
         "angular_velocity_press": -3,
@@ -56,7 +56,7 @@
         "user_id": "%user_id",
         "id": "skater.jump",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "wants_to_jump": true
       }
@@ -67,7 +67,7 @@
         "user_id": "%user_id",
         "id": "skater.grind",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "wants_to_grind": true
       }
@@ -78,7 +78,7 @@
         "user_id": "%user_id",
         "id": "skater.forward",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "fly_forward_factor": 100
       }
@@ -89,7 +89,7 @@
         "user_id": "%user_id",
         "id": "skater.brake",
         "seat": "%externals_seat",
-        "player": "%externals_player_name",
+        "player": "%player_name",
         "node": "skater_node$suffix",
         "surface_power": "nan"
       }

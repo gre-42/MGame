@@ -13,7 +13,8 @@
         "scale": 1
       },
       "loaded_game_level": "'2'",
-      "loaded_racing_line_track": "$__DIR__/racing_line_nyc_track2.m"
+      "loaded_racing_line_track": "$__DIR__/racing_line_nyc_track2.m",
+      "loaded_racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m"
     }
   },
   {"include": "scripts/include_all.scn.json"},
