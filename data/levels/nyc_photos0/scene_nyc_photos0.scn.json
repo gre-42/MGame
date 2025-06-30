@@ -3,6 +3,7 @@
     "call": "globals",
     "arguments": {
       "loaded_level_id": "%selected_level_id",
+      "game_mode": "photos",
       "aggregate_mode": "instances_sorted",
       "vip_name": "you",
       "player_seat": "driver",
@@ -22,7 +23,7 @@
   {
     "playback": "scene_racing_static",
     "arguments": {
-      "if_create_pc_player": true,
+      "if_create_pc_player": false,
       "if_pc_player_playback": false,
       "pc_player_playback": null,
       "pc_player_playback_speedup": null,
@@ -73,5 +74,6 @@
     "playback": "scene_racing_setup_new_round",
     "context": "primary_scene"
   },
+  {"playback": "setup_traffic_with_pedestrians", "context": "primary_scene"},
   {"playback": "create_main_menu"}
 ]

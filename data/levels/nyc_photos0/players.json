@@ -5,7 +5,6 @@
     "blue": { "style": { "color": [0.8, 0.8, 1] } }
   },
   "defaults": {
-    "game_mode": "photos",
     "player_role": "competitor",
     "unstuck_mode": "reverse",
     "behavior": "city",
@@ -32,7 +31,7 @@
   },
   "players": [
     {
-      "controller": "pc", "name": "you", "team": "red",
+      "controller": "pc", "name": "you_0", "team": "red",
       "user": {
         "id": 0,
         "name": "'0'"
