@@ -178,7 +178,7 @@
           "engine": "legs",
           "brake_force": 5000,
           "brake_torque": 400,
-          "Ks": 1e5, "Ka": 3e3, "musF": [0], "musC": [5],
+          "Ks": 1e5, "Ka": 3e3, "Ke": 1.5, "musF": [0], "musC": [5],
           "tire_id": 0
         }
       },

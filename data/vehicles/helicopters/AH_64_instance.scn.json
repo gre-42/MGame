@@ -39,11 +39,11 @@
         "call": "rigid_disk",
         "arguments": {
             "node": "blades$suffix",
-            "hitboxes": "ah64_blades",
+            "# hitboxes": "ah64_blades",
             "mass": 30,
             "radius": 7.3,
             "com": [0, 0, 0],
-            "collidable_mode": "%collidable_mode",
+            "collidable_mode": "none",
             "name": "blades$suffix",
             "asset_id": "blades_no_id"
         }
@@ -164,6 +164,7 @@
           "brake_torque": 400,
           "Ks": 1.67e6,
           "Ka": 6.7e4,
+          "Ke": 1.5,
           "musF": [6.7e4, 1.33e5],
           "musC": [1.1, 0.97],
           "tire_id": 0
@@ -182,6 +183,7 @@
           "brake_torque": 400,
           "Ks": 1.67e6,
           "Ka": 6.7e4,
+          "Ke": 1.5,
           "musF": [6.7e4, 1.33e5],
           "musC": [1.1, 0.97],
           "tire_id": 1
@@ -200,6 +202,7 @@
           "brake_torque": 400,
           "Ks": 1.67e6,
           "Ka": 6.7e4,
+          "Ke": 1.5,
           "musF": [6.7e4, 1.33e5],
           "musC": [1.1, 0.97],
           "tire_id": 2

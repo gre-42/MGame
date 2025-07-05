@@ -6,8 +6,9 @@
     "mass": 10,
     "brake_force": 50000,
     "brake_torque": 400,
-    "Ks": 1e5,
-    "Ka": 1.5e4,
+    "Ks": 2e5,
+    "Ka": 1.2e4,
+    "Ke": 1.5,
     "musF": [4e3, 8e3],
     "musC": [1.1, 0.97]
   }
