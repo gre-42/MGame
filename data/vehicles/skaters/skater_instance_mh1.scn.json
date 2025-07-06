@@ -55,7 +55,7 @@
       {
         "playback": "create_none_weapon",
         "let": {
-          "PARENT_RIGID_BODY_NODE": "skater_node$suffix",
+          "parent_rigid_body_node": "skater_node$suffix",
           "ammo_type": "none_weapon_ammo_type",
           "bullet_type": "none_weapon_bullet_type"
         }

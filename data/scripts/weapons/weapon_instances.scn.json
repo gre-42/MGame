@@ -298,7 +298,7 @@
           "cool_down": "inf",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
-          "parent_rigid_body_node": "%PARENT_RIGID_BODY_NODE",
+          "parent_rigid_body_node": "%parent_rigid_body_node",
           "ammo_type": "%ammo_type",
           "bullet_type": "%bullet_type"
         }
@@ -307,7 +307,7 @@
         "call": "ypln_update_bullet_properties",
         "arguments": {
           "gun_node": "main_gun_end_node$suffix",
-          "ypln_node": "%PARENT_RIGID_BODY_NODE",
+          "ypln_node": "%parent_rigid_body_node",
           "dpitch_head": 0,
           "bullet_type": "%bullet_type"
         }
