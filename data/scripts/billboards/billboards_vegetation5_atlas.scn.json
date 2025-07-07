@@ -110,6 +110,9 @@
           "width": 4096,
           "height": 2048,
           "color_mode": "rgba",
+          "anisotropic_filtering_level": 16,
+          "wrap_mode_s": "clamp_to_edge",
+          "wrap_mode_t": "clamp_to_edge",
           "images": [
             {"target_position": [   0,    0], "texture": "#Trees0023$suffix"},
             {"target_position": [1024,    0], "texture": "#Trees0024$suffix"},
@@ -134,10 +137,7 @@
         "arguments": {
           "name": "vegetation5$suffix",
           "color": "#vegetation5$suffix",
-          "color_mode": "rgba",
-          "anisotropic_filtering_level": 16,
-          "wrap_mode_s": "clamp_to_edge",
-          "wrap_mode_t": "clamp_to_edge"
+          "add_colormap": false
         }
       },
       {

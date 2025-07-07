@@ -41,6 +41,7 @@
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
+          "anisotropic_filtering_level": 16,
           "images": [
             {"target_position": [0, 0], "texture": "#wall_$name"},
             {"target_position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
@@ -54,6 +55,7 @@
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
+          "anisotropic_filtering_level": 16,
           "images": [
             {"target_position": [0, 0], "texture": "%WALL_NORMAL" },
             {"target_position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}
@@ -113,6 +115,7 @@
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
+          "anisotropic_filtering_level": 16,
           "images": [
             {"target_position": [0, 0], "texture": "%WALL_COLOR"},
             {"target_position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k.png"}
@@ -126,6 +129,7 @@
           "width": 2048,
           "height": 2048,
           "color_mode": "rgb",
+          "anisotropic_filtering_level": 16,
           "images": [
             {"target_position": [0, 0], "texture": "%WALL_NORMAL"},
             {"target_position": [512, 512], "texture": "textures/osm/DE21F2_industryWindow00001_1k_NormalGL.png"}

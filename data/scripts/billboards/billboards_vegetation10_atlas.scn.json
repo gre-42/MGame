@@ -6,6 +6,9 @@
       "width": 1024,
       "height": 1024,
       "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 20], "texture": "#grass_tbdpec3r_Ground037_dark3"},
         {"target_position": [0, 532], "texture": "#grass_tbdpec3r_Ground037_dark1"}
@@ -27,10 +30,7 @@
     "arguments": {
       "name": "vegetation10",
       "color": "#vegetation10",
-      "color_mode": "rgba",
-      "anisotropic_filtering_level": 16,
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge"
+      "add_colormap": false
     }
   },
   {

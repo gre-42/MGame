@@ -6,6 +6,9 @@
       "width": 4096,
       "height": 2048,
       "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 0], "texture": "textures/proctree/one_24/out-1-5.png"},
         {"target_position": [1024, 0], "texture": "textures/proctree/one_24/out-2-5.png"},
@@ -35,10 +38,7 @@
     "arguments": {
       "name": "vegetation3",
       "color": "#vegetation3",
-      "color_mode": "rgba",
-      "anisotropic_filtering_level": 16,
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge"
+      "add_colormap": false
     }
   },
   {

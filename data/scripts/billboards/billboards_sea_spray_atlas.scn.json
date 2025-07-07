@@ -6,6 +6,9 @@
       "width": 512,
       "height": 512,
       "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0,   0], "texture": "#sea_spray_a100"},
         {"target_position": [256, 0], "texture": "#sea_spray_a20"}

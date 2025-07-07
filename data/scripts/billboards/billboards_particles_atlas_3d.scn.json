@@ -9,6 +9,9 @@
       "depth_interpolation": "linear",
       "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"source_position": [   0, 0], "size": [128, 128], "target_position": [0,   0], "target_layer":  0, "texture": "#smoke"},
         {"source_position": [ 128, 0], "size": [128, 128], "target_position": [0,   0], "target_layer":  1, "texture": "#smoke"},

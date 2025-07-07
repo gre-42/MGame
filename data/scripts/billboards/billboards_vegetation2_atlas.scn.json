@@ -6,6 +6,9 @@
       "width": 4096,
       "height": 2048,
       "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 0], "texture": "textures/textures.com/TexturesCom_Trees0129_1_masked_S_5x1k.png"},
         {"target_position": [512, 0], "texture": "textures/textures.com/TexturesCom_Trees0130_1_masked_S_5x1k.png"},
@@ -35,10 +38,7 @@
     "arguments": {
       "name": "vegetation2",
       "color": "#vegetation2",
-      "color_mode": "rgba",
-      "anisotropic_filtering_level": 16,
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge"
+      "add_colormap": false
     }
   },
   {

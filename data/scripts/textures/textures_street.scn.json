@@ -197,10 +197,10 @@
     }
   },
   {
-    "call": "add_texture_descriptor",
+    "call": "add_colormap",
     "arguments": {
       "name": "Way_Wheels_Normal_512",
-      "color": "textures/Way_Alpha/Way_Wheels_512.png",
+      "filename": "textures/Way_Alpha/Way_Wheels_512.png",
       "times": 0.2,
       "height_to_normals": true,
       "color_mode": "rgb",

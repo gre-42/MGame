@@ -124,6 +124,9 @@
       "height": 4096,
       "layers": 2,
       "color_mode": "rgba",
+      "anisotropic_filtering_level": 16,
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
       "images": [
         {"target_position": [   0,    0], "target_layer": 0, "texture": "#tc0"},
         {"target_position": [1024,    0], "target_layer": 0, "texture": "#tc3"},
@@ -156,10 +159,7 @@
     "arguments": {
       "name": "vegetation1",
       "color": "#vegetation1",
-      "color_mode": "rgba",
-      "anisotropic_filtering_level": 16,
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge"
+      "add_colormap": false
     }
   },
   {

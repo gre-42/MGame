@@ -81,6 +81,9 @@
       "depth_interpolation": "linear",
       "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "rgb",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
       "images": [
         {"source_position": [0, 0], "size": [144, 432], "target_position": [  0, 0], "target_layer":  0, "texture": "#efecto_fuego_00000"},
         {"source_position": [0, 0], "size": [144, 432], "target_position": [  0, 0], "target_layer":  1, "texture": "#efecto_fuego_00002"},
