@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map",
-      "filename": "$__DIR__/map_island0.osm",
+      "filenames": ["$__DIR__/map_island0.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
       "heightmap": "$__DIR__/heightmap.png",
       "grass_foliagemap": "textures/noise/foliagemap.png",

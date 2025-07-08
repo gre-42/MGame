@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map",
-      "filename": "$__DIR__/map_retro_race_track1.osm",
+      "filenames": ["$__DIR__/map_retro_race_track1.osm"],
       "cache_filename": "$__APPDATA__/retro_race_track1.cereal.binary",
       "heightmap": "$__DIR__/../jb/heightmap.pgm",
       "height_scale": 3,

@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map",
-      "filename": "$__DIR__/map_arena_minimal.osm",
+      "filenames": ["$__DIR__/map_arena_minimal.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
       "heightmap": "$__DIR__/../arena/heightmap.pgm",
       "terrain_undefined_textures": ["textures/debug/pink.png"],

@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map",
-      "filename": "$__DIR__/map_grossglockner_hochalpenstrasse.osm",
+      "filenames": ["$__DIR__/map_grossglockner_hochalpenstrasse.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
       "heightmap": "$__DIR__/heightmap_large.png",
       "terrain_grass_textures": [

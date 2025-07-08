@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map",
-      "filename": "$__DIR__/map_forest0.osm",
+      "filenames": ["$__DIR__/map_forest0.osm"],
       "cache_filename": "$__APPDATA__/forest0.cereal.binary",
       "heightmap": "$__DIR__/heightmap.pgm",
       "terrain_undefined_textures": ["textures/debug/pink.png"],

@@ -4,7 +4,7 @@
     "call": "osm_resource",
     "arguments": {
       "name": "osm_map_overlay",
-      "filename": "$__DIR__/map_jb_wpts1.osm",
+      "filenames": ["$__DIR__/map_jb_wpts1.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id-_wpts1.cereal.binary",
       "with_terrain": false,
       "scale": 1,
