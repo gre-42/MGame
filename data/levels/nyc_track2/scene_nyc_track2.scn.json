@@ -30,6 +30,7 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|history|laps|rank|race_time",
       "osm_map_resource": "osm_resource_nyc",
+      "osm_layers": ["$__DIR__/../nyc/map_nyc.osm"],
       "if_has_overlay": false,
       "if_primary_dirtmap": true,
       "if_extract_alignment_planes": false,
