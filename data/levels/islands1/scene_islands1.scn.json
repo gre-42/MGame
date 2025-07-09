@@ -3,6 +3,7 @@
     "call": "globals",
     "arguments": {
       "loaded_level_id": "%selected_level_id",
+      "game_mode": "team_deathmatch",
       "aggregate_mode": "instances_sorted",
       "vip_name": "you",
       "player_seat": "driver",
@@ -13,7 +14,7 @@
       }
     }
   },
-  {"include": "../../scripts/include_all.scn.json"},
+  {"include": "scripts/include_all.scn.json"},
   {"include": "osm_resource_islands1.scn.json"},
   {"include": "create_tripod_cameras_islands1.scn.json"},
   {
