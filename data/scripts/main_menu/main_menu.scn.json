@@ -687,6 +687,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Vehicle/$selected_language",
           "icon": "car_icon",
+          "required": ["%selected_game_mode == 'rally'"],
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -729,11 +730,11 @@
             "context": "showroom_$user_name"
           },
           "parameters": [
-            {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [1,    1,    1]}}},
-            {"id": "gray", "title": "%%translations/main/Gray/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.5,  0.5,  0.5]}}},
-            {"id": "red", "title": "%%translations/main/Red/$selected_language",   "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.7,  0.05, 0.09]}}},
+            {"id": "white", "title": "%%translations/main/White/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [1, 1, 1]}}},
+            {"id": "gray", "title": "%%translations/main/Gray/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.5, 0.5, 0.5]}}},
+            {"id": "red", "title": "%%translations/main/Red/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.7, 0.05, 0.09]}}},
             {"id": "green", "title": "%%translations/main/Green/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.52, 0.63, 0.54]}}},
-            {"id": "blue", "title": "%%translations/main/Blue/$selected_language",  "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.51, 0.56, 0.62]}}},
+            {"id": "blue", "title": "%%translations/main/Blue/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.51, 0.56, 0.62]}}},
             {"id": "black", "title": "%%translations/main/Black/$selected_language", "on_before_select": { "call": "globals", "arguments": {"selected_player_vehicle_color": [0.06, 0.07, 0.06]}}}
           ]
         }
