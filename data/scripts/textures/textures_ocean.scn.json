@@ -33,8 +33,8 @@
       "depth_interpolation": "linear",
       "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "rgb",
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge",
+      "wrap_mode_s": "repeat",
+      "wrap_mode_t": "repeat",
       "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 0], "target_layer": 0, "texture": "textures/prococean/ocean_uniform.png"},
@@ -53,8 +53,8 @@
       "depth_interpolation": "linear",
       "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "rgb",
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge",
+      "wrap_mode_s": "repeat",
+      "wrap_mode_t": "repeat",
       "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 0], "target_layer": 0, "texture": "#ocean_uniform_normalmap_2"},
@@ -86,8 +86,8 @@
       "depth_interpolation": "linear",
       "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "grayscale",
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge",
+      "wrap_mode_s": "repeat",
+      "wrap_mode_t": "repeat",
       "anisotropic_filtering_level": 16,
       "images": [
         {"target_position": [0, 0], "target_layer": 0, "texture": "textures/noise/hf_heightmap0.png"},
