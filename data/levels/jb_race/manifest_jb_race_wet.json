@@ -2,8 +2,8 @@
   "id": "jb_race_wet",
   "title": "JB wet",
   "required": {
-    "fixed": [],
-    "dynamic": ["%selected_game_mode in %%levels/jb_race_wet/game_modes", "%user_count <= %%levels/jb_race_wet/max_users"]
+    "fixed": ["%user_count <= %max_users"],
+    "dynamic": ["%selected_game_mode in %game_modes"]
   },
   "on_execute": [
     {"include": "osm_resource_jb_race_open_alpha_wet.scn.json"},

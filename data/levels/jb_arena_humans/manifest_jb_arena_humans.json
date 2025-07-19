@@ -2,8 +2,8 @@
   "id": "jb_arena_humans",
   "title": "JB arena humans",
   "required": {
-    "fixed": ["%if_devel"],
-    "dynamic": ["%selected_game_mode in %%levels/jb_arena_humans/game_modes", "%user_count <= %%levels/jb_arena_humans/max_users"]
+    "fixed": ["%if_devel", "%user_count <= %max_users"],
+    "dynamic": ["%selected_game_mode in %game_modes"]
   },
   "on_execute": {
     "include": "../jb/scene_jb_arena.scn.json",
