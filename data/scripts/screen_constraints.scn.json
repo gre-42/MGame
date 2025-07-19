@@ -55,15 +55,26 @@
   { "comment": "Upper buttons" },
   { "call": "additive_screen_constraint", "arguments": {"name": "upper_buttons_bottom", "value": -0.5, "anchor": "end", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "upper_buttons_top",    "value": 0,    "anchor": "end", "units": "inches"} },
-  { "comment": "Upper left buttons" },
-  { "call": "additive_screen_constraint", "arguments": {"name": "escape_button_left",  "value": -1,    "anchor": "highscore_left", "units": "inches"} },
-  { "call": "additive_screen_constraint", "arguments": {"name": "escape_button_right", "value": -0.5,  "anchor": "highscore_left", "units": "inches"} },
-  { "comment": "Upper right buttons" },
-  { "call": "additive_screen_constraint", "arguments": {"name": "start_button_left",  "value": -0.5,   "anchor": "highscore_left", "units": "inches"} },
-  { "call": "additive_screen_constraint", "arguments": {"name": "start_button_right", "value": 0,      "anchor": "highscore_left", "units": "inches"} },
+  { "required": "%if_android",
+    "execute": [
+      { "comment": "Upper left buttons" },
+      { "call": "additive_screen_constraint", "arguments": {"name": "escape_button_left",  "value": -1,    "anchor": "highscore_left", "units": "inches"} },
+      { "call": "additive_screen_constraint", "arguments": {"name": "escape_button_right", "value": -0.5,  "anchor": "highscore_left", "units": "inches"} },
+      { "comment": "Upper right buttons" },
+      { "call": "additive_screen_constraint", "arguments": {"name": "start_button_left",  "value": -0.5,   "anchor": "highscore_left", "units": "inches"} },
+      { "call": "additive_screen_constraint", "arguments": {"name": "start_button_right", "value": 0,      "anchor": "highscore_left", "units": "inches"} }
+    ]
+  },
   { "comment": "Tabmenu" },
   { "call": "constant_screen_constraint", "arguments": {"name": "tabmenu_left",   "value": 0,    "units": "inches"} },
-  { "call": "additive_screen_constraint", "arguments": {"name": "tabmenu_right",  "value": 0,    "anchor": "escape_button_left", "units": "inches"} },
+  {
+    "required": "%if_android",
+    "call": "additive_screen_constraint", "arguments": {"name": "tabmenu_right",  "value": 0,    "anchor": "escape_button_left", "units": "inches"}
+  },
+  {
+    "exclude": "%if_android",
+    "call": "additive_screen_constraint", "arguments": {"name": "tabmenu_right",  "value": 0,    "anchor": "end", "units": "inches"}
+  },
   { "call": "additive_screen_constraint", "arguments": {"name": "tabmenu_bottom", "value": 0,    "anchor": "upper_horizontal_separator", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "tabmenu_top",    "value": 0,    "anchor": "end", "units": "inches"} },
   { "comment": "Tabmenu reference" },
