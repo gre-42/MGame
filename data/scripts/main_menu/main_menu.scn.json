@@ -1006,7 +1006,7 @@
           "font_height": "normal",
           "line_distance": "normal",
           "user_id": "%user_id",
-          "deflt": 0,
+          "deflt": "%user_count - 1",
           "on_change": [
             {
               "required": ["%selected_user_count != %user_count"],
