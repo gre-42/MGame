@@ -56,6 +56,31 @@
       }
     },
     {
+      "controller": "pc", "name": "you_1", "team": "red",
+      "user": {
+        "id": 1,
+        "name": "'1'"
+      },
+      "skills": {
+        "ai": {
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false,
+          "can_select_opponent": false,
+          "can_select_weapon": false
+        },
+        "user": {
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true
+        }
+      },
+      "spawn": {
+        "group": "player1",
+        "vehicle": { "type": "female_mh" }
+      }
+    },
+    {
       "name": "extra_AH_64", "team": "red",
       "spawn": {
         "group": "heli0",

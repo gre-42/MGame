@@ -3,7 +3,7 @@
     "declare_macro": "create_avatar_cameras_persistent",
     "content": [
       {"call": "perspective_camera", "arguments": {"node": "human_head_camera_node$suffix", "y_fov": 60, "near_plane": 0.1, "far_plane": "%far_plane", "requires_postprocessing": true}},
-      {"call": "set_node_hider", "arguments": {"node_to_hide": "human_node$suffix", "camera_node": "human_head_camera_node$suffix"}}
+      {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "human_node$suffix", "camera_node": "human_head_camera_node$suffix"}}
     ]
   },
   {

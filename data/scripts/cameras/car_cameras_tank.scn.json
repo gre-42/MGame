@@ -34,6 +34,6 @@
     {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "c45_deg_camera_$user_name"}},
     {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "follower_camera_$user_name"}},
     {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "main_gun_camera_node$suffix"}},
-    {"call": "set_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "main_gun_camera_node$suffix"}}
+    {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "main_gun_camera_node$suffix"}}
   ]
 }

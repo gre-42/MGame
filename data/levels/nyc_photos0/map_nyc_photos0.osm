@@ -8,6 +8,8 @@
   <node id='-143048' action='modify' visible='true' lat='40.70993064402' lon='-73.99217160058' />
   <node id='-143076' action='modify' visible='true' lat='40.70969292094' lon='-73.9926538491' />
   <node id='-143077' action='modify' visible='true' lat='40.70971310501' lon='-73.99252367158' />
+  <node id='-143081' action='modify' visible='true' lat='40.70975928129' lon='-73.99267875792' />
+  <node id='-143082' action='modify' visible='true' lat='40.70977946534' lon='-73.9925485804' />
   <way id='-240287' action='modify' visible='true'>
     <nd ref='-143034' />
     <nd ref='-143035' />
@@ -30,6 +32,12 @@
     <nd ref='-143076' />
     <nd ref='-143077' />
     <tag k='spawn:group' v='player0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-240436' action='modify' visible='true'>
+    <nd ref='-143081' />
+    <nd ref='-143082' />
+    <tag k='spawn:group' v='player1' />
     <tag k='spawn_line' v='yes' />
   </way>
 </osm>

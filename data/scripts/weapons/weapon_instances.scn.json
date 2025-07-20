@@ -11,7 +11,7 @@
   {
     "declare_macro": "_set_node_hider",
     "content": {
-      "call": "set_node_hider",
+      "call": "insert_renderable_node_hider",
       "arguments": {
         "node_to_hide": "main_gun_node_visual$suffix",
         "camera_node": "human_head_camera_node$suffix",
@@ -93,6 +93,7 @@
         "arguments": {
           "content": {
             "playback": "_set_node_hider",
+            "context": "primary_scene_$user_name",
             "arguments": {
               "resource": "M4A1"
             }
@@ -163,6 +164,7 @@
         "arguments": {
           "content": {
             "playback": "_set_node_hider",
+            "context": "primary_scene_$user_name",
             "arguments": {
               "resource": "Beretta92"
             }
@@ -221,6 +223,7 @@
         "arguments": {
           "content": {
             "playback": "_set_node_hider",
+            "context": "primary_scene_$user_name",
             "arguments": {
               "resource": "frag_grenade"
             }
@@ -279,6 +282,7 @@
         "arguments": {
           "content": {
             "playback": "_set_node_hider",
+            "context": "primary_scene_$user_name",
             "arguments": {
               "resource": "m72_law"
             }
