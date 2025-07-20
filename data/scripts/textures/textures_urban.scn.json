@@ -84,7 +84,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00002",
@@ -94,7 +93,6 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "DE21F2_industryWindow00003_gray",
