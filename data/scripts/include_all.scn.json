@@ -27,7 +27,7 @@
   {"include": "vehicle_classes/create_ship.scn.json"},
   {"include": "vehicle_classes/create_skater.scn.json"},
   {"include": "billboards/billboards.scn.json"},
-  {"required": ["%flavor == 'extended'"], "include": "weapons/weapon_instances.scn.json"},
+  {"required": ["!if_android"], "include": "weapons/weapon_instances.scn.json"},
   {"required": ["%flavor == 'extended'"], "include": "weapons/weapon_resources.scn.json"},
   {"required": ["%flavor == 'extended'"], "include": "models/models_depots.scn.json"},
   {"include": "models/models_bridge_pier.scn.json"},
