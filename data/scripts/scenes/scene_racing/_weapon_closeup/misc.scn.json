@@ -12,6 +12,7 @@
       "call": "scene_to_pixel_region",
       "arguments": {
         "target_scene": "primary_scene_$user_name",
+        "target_list": "scene",
         "z_order": 1,
         "left": "weapon_closeup_left",
         "right": "weapon_closeup_right",

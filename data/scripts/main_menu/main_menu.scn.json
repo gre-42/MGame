@@ -275,6 +275,7 @@
       "call": "scene_to_pixel_region",
       "arguments": {
         "target_scene": "primary_scene_$user_name",
+        "target_list": "render",
         "z_order": 2,
         "left": "showroom_left",
         "right": "showroom_right",
