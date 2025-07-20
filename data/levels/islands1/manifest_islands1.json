@@ -2,7 +2,7 @@
   "id": "islands1",
   "title": "%%levels/islands1/title/$selected_language",
   "required": {
-    "fixed": ["%user_count <= %max_users"],
+    "fixed": ["%flavor == 'extended'", "%user_count <= %max_users"],
     "dynamic": ["%selected_game_mode in %game_modes"]
   },
   "on_execute": {
