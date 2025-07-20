@@ -40,37 +40,47 @@
         "playback": "add_distant_light_night"
       },
       {
-        "required": ["%time_of_day == 'day'"],
-        "execute": {
-          "call": "for_each_user",
-          "arguments": {
-            "content": [
-              {
-                "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
-                "execute": [
-                  {
-                    "playback": "add_local_instances_light_scene"
-                  },
-                  {
-                    "context": "primary_scene_$user_name",
-                    "playback": "add_local_instances_light_render"
-                  }
-                ]
-              },
-              {
-                "playback": "add_movables_light_scene"
-              },
-              {
-                "context": "primary_scene_$user_name",
-                "playback": "add_movables_light_render"
-              }
-            ]
-          }
+        "call": "for_each_user",
+        "arguments": {
+          "content": [
+            {
+              "required": ["%time_of_day == 'day'"],
+              "execute": [
+                {
+                  "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
+                  "execute": [
+                    {
+                      "playback": "add_local_instances_light_scene"
+                    },
+                    {
+                      "context": "primary_scene_$user_name",
+                      "playback": "add_local_instances_light_render"
+                    }
+                  ]
+                },
+                {
+                  "playback": "add_movables_light_scene"
+                },
+                {
+                  "context": "primary_scene_$user_name",
+                  "playback": "add_movables_light_render"
+                }
+              ]
+            },
+            {
+              "required": ["%time_of_day in {'night', 'synthwave'}"],
+              "execute": [
+                {
+                  "playback": "add_local_blob_instances_light_scene"
+                },
+                {
+                  "context": "primary_scene_$user_name",
+                  "playback": "add_local_blob_instances_light_render"
+                }
+              ]
+            }
+          ]
         }
-      },
-      {
-        "required": ["%time_of_day in {'night', 'synthwave'}"],
-        "playback": "add_local_blob_instances_light"
       },
       {
         "comment": "Reflection map"

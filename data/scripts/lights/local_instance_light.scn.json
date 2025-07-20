@@ -88,6 +88,7 @@
             "position": [0, 0, 0],
             "rotation": [-45, 0, 0],
             "scale": 1,
+            "interpolation": "disabled",
             "user_id": "%user_id"
           }
         },
@@ -138,58 +139,74 @@
     }
   },
   {
-    "declare_macro": "add_local_blob_instances_light",
-    "let": { "lsuffix": "_blobs" },
-    "content": [
-      {
-        "call": "root_node_instance",
-        "arguments": {
-          "dynamics": "moving",
-          "name": "light_node$lsuffix",
-          "position": [0, 0, 0],
-          "rotation": [-90, 0, 0],
-          "scale": 1
-        }
+    "declare_macro": "add_local_blob_instances_light_scene",
+    "content": {
+      "let": {
+        "lsuffix": "_blobs_$user_name"
       },
-      {
-        "call": "ortho_camera",
-        "arguments": {
-          "node": "light_node$lsuffix",
-          "near_plane": -1000,
-          "far_plane": 1000,
-          "left_plane": -100,
-          "right_plane": 100,
-          "bottom_plane": -100,
-          "top_plane": 100,
-          "requires_postprocessing": false
+      "execute": [
+        {
+          "call": "root_node_instance",
+          "arguments": {
+            "dynamics": "moving",
+            "name": "light_node$lsuffix",
+            "position": [0, 0, 0],
+            "rotation": [-90, 0, 0],
+            "scale": 1,
+            "interpolation": "disabled",
+            "user_id": "%user_id"
+          }
+        },
+        {
+          "call": "ortho_camera",
+          "arguments": {
+            "node": "light_node$lsuffix",
+            "near_plane": -1000,
+            "far_plane": 1000,
+            "left_plane": -100,
+            "right_plane": 100,
+            "bottom_plane": -100,
+            "top_plane": 100,
+            "requires_postprocessing": false
+          }
         }
+      ]
+    }
+  },
+  {
+    "declare_macro": "add_local_blob_instances_light_render",
+    "content": {
+      "let": {
+        "lsuffix": "_blobs_$user_name"
       },
-      {
-        "call": "keep_offset_from_camera",
-        "arguments": {
-          "follower": "light_node$lsuffix",
-          "offset": [0, 0, 0],
-          "texture_width": "%scene_lightmap_width",
-          "texture_height": "%scene_lightmap_height"
+      "execute": [
+        {
+          "call": "keep_offset_from_camera",
+          "arguments": {
+            "follower": "light_node$lsuffix",
+            "offset": [0, 0, 0],
+            "texture_width": "%scene_lightmap_width",
+            "texture_height": "%scene_lightmap_height"
+          }
+        },
+        {
+          "call": "light_with_shadow",
+          "arguments": {
+            "node": "light_node$lsuffix",
+            "black_node": "",
+            "render_pass": "lightmap_blobs",
+            "with_depth_texture": false,
+            "ambient": [1, 1, 1],
+            "diffuse": [1, 1, 1],
+            "specular": [1, 1, 1],
+            "fresnel_ambient": [0, 0, 0],
+            "fog_ambient": [0, 0, 0],
+            "lightmap_width": "%scene_lightmap_width",
+            "lightmap_height": "%scene_lightmap_height",
+            "smooth_niterations": [0, 0]
+          }
         }
-      },
-      {
-        "call": "light_with_shadow",
-        "arguments": {
-          "node": "light_node$lsuffix",
-          "black_node": "",
-          "render_pass": "lightmap_blobs",
-          "with_depth_texture": false,
-          "ambient": [1, 1, 1],
-          "diffuse": [1, 1, 1],
-          "specular": [1, 1, 1],
-          "fresnel_ambient": [0, 0, 0],
-          "fog_ambient": [0, 0, 0],
-          "lightmap_width": "%scene_lightmap_width",
-          "lightmap_height": "%scene_lightmap_height",
-          "smooth_niterations": [0, 0]
-        }
-      }
-    ]
+      ]
+    }
   }
 ]
