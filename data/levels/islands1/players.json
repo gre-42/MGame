@@ -50,32 +50,32 @@
           "can_shoot": true
         }
       },
-      "spawn": { "vehicle": {"type": "female_mh" } }
+      "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "controller": "npc", "name": "npc1", "team": "red",
-      "spawn": { "vehicle": {"type": "tiger_tank" } }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "controller": "npc", "name": "npc2", "team": "blue",
-      "spawn": { "vehicle": {"type": "tiger_tank" } }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
       "skills": { "ai": { "respawn_cooldown_time": 60 } },
-      "spawn": { "vehicle": {"type": "C_RAM" } }
+      "spawn": { "vehicle": { "type": "C_RAM" } }
     },
     {
       "controller": "npc", "name": "npc4", "team": "blue",
-      "spawn": { "vehicle": {"type": "tiger_tank" } }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "name": "extra_tiger_red", "team": "red",
-      "spawn": { "vehicle": {"type": "tiger_tank" } }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "name": "extra_F_35", "team": "red",
-      "spawn": { "vehicle": {"type": "F_35" } }
+      "spawn": { "vehicle": { "type": "F_35" } }
     }
   ]
 }
