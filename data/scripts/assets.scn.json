@@ -22,7 +22,7 @@
   {
     "declare_macro": "load_assets",
     "content": [
-      {"call": "add_ac_loader", "arguments": {"id": "levels", "script": "scripts/loaders/ac_cluster/scene_template.scn.json"}},
+      {"call": "add_ac_loader", "arguments": {"id": "levels", "script": "scripts/loaders/ac/scene_template.scn.json"}},
       {"call": "load_asset_manifests", "arguments": {"id": "levels", "directory": "."}},
       {"call": "load_replacement_parameters", "arguments": {"id": "levels", "directory": "levels"}},
       {"call": "load_replacement_parameters", "arguments": {"id": "vehicles", "directory": "vehicles"}},

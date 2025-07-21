@@ -12,6 +12,8 @@
           "rotation": [0, 0, 0],
           "scale": [1, 1, 1],
           "max_triangle_distance": 300,
+          "triangle_cluster_width": "%dense_triangle_cluster_width",
+          "center_distances": [0, 1000],
           "blend_mode": "semi_continuous_02",
           "alpha_distances": [0, 0, "inf", "inf"],
           "occluded_pass": "none",
