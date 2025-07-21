@@ -54,7 +54,7 @@
     "engine_exhaust": null
   },
   "required": {
-    "fixed": [],
+    "fixed": ["%if_devel"],
     "dynamic": ["%selected_game_mode == 'rally'", "%race_restrictions in {'', 'car'}"]
   }
 }
