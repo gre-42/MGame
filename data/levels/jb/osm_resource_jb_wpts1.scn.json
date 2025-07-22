@@ -3,6 +3,8 @@
   "content": {
     "call": "osm_resource",
     "arguments": {
+      "sparse_triangle_cluster_width": "%sparse_triangle_cluster_width",
+      "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
       "name": "osm_map_overlay",
       "filenames": ["$__DIR__/map_jb_wpts1.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id-_wpts1.cereal.binary",
