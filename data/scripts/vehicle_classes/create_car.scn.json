@@ -218,6 +218,7 @@
         "call": "visual_player_status",
         "context": "primary_scene_$user_name",
         "arguments": {
+          "player": "%player_name",
           "child": ["engines", "%engine_name"],
           "format": "abs_angular_velocity",
           "charset": "%selected_language",
@@ -239,8 +240,7 @@
             "blank_angle": 60,
             "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
           },
-          "focus_mask": "scene|countdown_any|game_over_countdown_any",
-          "player": "%player_name"
+          "focus_mask": "scene|countdown_any|game_over_countdown_any"
         }
       }
     ]
