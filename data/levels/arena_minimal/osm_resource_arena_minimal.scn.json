@@ -5,6 +5,7 @@
     "arguments": {
       "sparse_triangle_cluster_width": "%sparse_triangle_cluster_width",
       "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
+      "object_cluster_width": "%object_cluster_width",
       "name": "osm_map",
       "filenames": ["$__DIR__/map_arena_minimal.osm"],
       "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",

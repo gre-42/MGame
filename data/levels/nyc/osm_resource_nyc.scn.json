@@ -6,6 +6,7 @@
       "arguments": {
         "sparse_triangle_cluster_width": "%sparse_triangle_cluster_width",
         "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
+        "object_cluster_width": "%object_cluster_width",
         "name": "osm_map",
         "filenames": "%osm_layers",
         "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
