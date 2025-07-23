@@ -11,6 +11,7 @@
         "call": "osm_resource",
         "arguments": {
           "sparse_triangle_cluster_width": "%sparse_triangle_cluster_width",
+          "medium_triangle_cluster_width": "%medium_triangle_cluster_width",
           "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
           "object_cluster_width": "%object_cluster_width",
           "name": "islands1",
