@@ -457,7 +457,7 @@
         "call": "add_charset",
         "arguments": {
           "name": "language",
-          "chars": "'. 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-+*/&|<>,;:()[]{}$€£%@'\"ç'"
+          "chars": "'. 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ=-+*/&|<>,;:()[]{}$€£%@'\"ç'"
         }
       },
       {
@@ -1103,6 +1103,44 @@
           "line_distance": "normal",
           "deflt": 0,
           "user_id": "%user_id"
+        }
+      },
+      {
+        "call": "key_bindings",
+        "arguments": {
+          "id": "key_bindings_helicopter",
+          "focus_mask": "controls_menu",
+          "section": "helicopter",
+          "title": "%%translations/main/Helicopter/$selected_language",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "deflt": 0,
+          "user_id": "%user_id"
+        }
+      },
+      {
+        "call": "input_state",
+        "arguments": {
+          "id": "input_state",
+          "focus_mask": "controls_menu",
+          "title": "%%translations/main/Input_state/$selected_language",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "end",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "update_interval_ms": 100
         }
       }
     ]
