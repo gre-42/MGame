@@ -2,7 +2,7 @@
   {
     "id": "change_camera.near",
     "key": "C",
-    "gamepad_button": {"gamepad_id": 0, "button": "BACK"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "BACK"}}
   },
   {
     "id": "change_camera.tripod",
@@ -45,7 +45,7 @@
   {
     "id": "car_or_heli.steer_left",
     "key": "A",
-    "tap_button": {"gamepad_id": 0, "button": "LEFT"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "LEFT"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 1, "sign_and_scale": -1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 1, "sign_and_scale": -1.2}
@@ -54,7 +54,7 @@
   {
     "id": "car_or_heli.steer_right",
     "key": "D",
-    "tap_button": {"gamepad_id": 0, "button": "RIGHT"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "RIGHT"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 1, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 1, "sign_and_scale": 1.2}
@@ -63,9 +63,9 @@
   {
     "id": "car_or_heli.forward",
     "key": "W",
-    "gamepad_button": {"gamepad_id": 0, "button": "X"},
-    "tap_button": {"gamepad_id": 0, "button": "UP"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "X"}},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "UP"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"driver": {
       "joystick": {"gamepad_id": 0, "axis": 6, "sign_and_scale": 0},
       "tap"     : {"gamepad_id": 0, "axis": 4, "sign_and_scale": -1.2}
@@ -74,9 +74,9 @@
   {
     "id": "car_or_heli.backwards",
     "key": "S",
-    "gamepad_button": {"gamepad_id": 0, "button": "A"},
-    "tap_button": {"gamepad_id": 0, "button": "DOWN"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "DOWN"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"driver": {
       "joystick": {"gamepad_id": 0, "axis": 5, "sign_and_scale": 0},
       "tap"     : {"gamepad_id": 0, "axis": 4, "sign_and_scale": 1.2}
@@ -85,25 +85,26 @@
   {
     "id": "car_or_heli.ascend",
     "key": "E",
+    "gamepad_button": {"driver": {"gamepad_id": 0, "button": "RIGHT_BUMPER"}},
     "analog_digital_axes": {"gunner": {
       "joystick": {"gamepad_id": 0, "axis": 6, "sign_and_threshold": 0.5},
       "tap"     : {"gamepad_id": 0, "axis": 6, "sign_and_threshold": 0.5}
     }},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "not_gamepad_button": {"gunner": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.descend",
     "key": "Q",
-    "gamepad_button": {"gamepad_id": 0, "button": "RIGHT_BUMPER"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "LEFT_BUMPER"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.rotate_gun_left",
     "key": "LEFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "LEFT_BUMPER"},
+    "gamepad_button": {"gunner": {"gamepad_id": 0, "button": "LEFT_BUMPER"}},
     "cursor_axis": 0,
     "cursor_sign_and_scale": -0.03,
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "not_gamepad_button": {"gunner": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.rotate_gun_right",
@@ -114,7 +115,7 @@
     }},
     "cursor_axis": 0,
     "cursor_sign_and_scale": 0.03,
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "not_gamepad_button": {"gunner": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.rotate_gun_up",
@@ -125,7 +126,7 @@
     }},
     "cursor_axis": 1,
     "cursor_sign_and_scale": -0.03,
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.rotate_gun_down",
@@ -136,28 +137,28 @@
     }},
     "cursor_axis": 1,
     "cursor_sign_and_scale": 0.03,
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.shoot",
     "key": "SPACE",
     "mouse_button": "LEFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "Y"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "Y"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "car_or_heli.select_next_opponent",
     "key": "T",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "key2": "T",
-    "gamepad_button2": {"gamepad_id": 0, "button": "Y"}
+    "gamepad_button2": {"default": {"gamepad_id": 0, "button": "Y"}}
   },
   {
     "id": "car_or_heli.select_next_vehicle",
     "key": "F",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "key2": "F",
-    "gamepad_button2": {"gamepad_id": 0, "button": "A"}
+    "gamepad_button2": {"default": {"gamepad_id": 0, "button": "A"}}
   },
   {
     "id": "car_or_heli.reset_vehicle",
@@ -166,7 +167,7 @@
   {
     "id": "avatar.jump",
     "key": "LEFT_SHIFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "avatar.strafe_left",
@@ -187,7 +188,7 @@
   {
     "id": "avatar.rotate_left",
     "key": "LEFT",
-    "tap_button": {"gamepad_id": 0, "button": "LEFT"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "LEFT"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5},
       "tap"     : {"gamepad_id": 0, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5}
@@ -198,7 +199,7 @@
   {
     "id": "avatar.rotate_right",
     "key": "RIGHT",
-    "tap_button": {"gamepad_id": 0, "button": "RIGHT"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "RIGHT"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5},
       "tap"     : {"gamepad_id": 0, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5}
@@ -209,7 +210,7 @@
   {
     "id": "avatar.forward",
     "key": "W",
-    "tap_button": {"gamepad_id": 0, "button": "UP"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "UP"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01}
@@ -218,7 +219,7 @@
   {
     "id": "avatar.backwards",
     "key": "S",
-    "tap_button": {"gamepad_id": 0, "button": "DOWN"},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "DOWN"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01}
@@ -260,12 +261,12 @@
     "id": "avatar.shoot",
     "key": "SPACE",
     "mouse_button": "LEFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "TRIANGLE"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "TRIANGLE"}}
   },
   {
     "id": "avatar.select_next_vehicle",
     "key": "F",
-    "gamepad_button": {"gamepad_id": 0, "button": "A"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}}
   },
   {
     "id": "skater.rotate_left",
@@ -290,12 +291,12 @@
   {
     "id": "skater.jump",
     "key": "LEFT_SHIFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "A"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}}
   },
   {
     "id": "skater.grind",
     "key": "Q",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "skater.forward",
@@ -330,7 +331,7 @@
   {
     "id": "plane.roll_left",
     "key": "A",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 1, "sign_and_scale": -1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 1, "sign_and_scale": -1, "deadzone": 0.01}
@@ -339,7 +340,7 @@
   {
     "id": "plane.roll_right",
     "key": "D",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 1, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 1, "sign_and_scale": 1, "deadzone": 0.01}
@@ -348,7 +349,7 @@
   {
     "id": "plane.pitch_up",
     "key": "UP",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01}
@@ -357,7 +358,7 @@
   {
     "id": "plane.pitch_down",
     "key": "DOWN",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01}
@@ -366,9 +367,9 @@
   {
     "id": "plane.forward",
     "key": "W",
-    "gamepad_button": {"gamepad_id": 0, "button": "X"},
-    "tap_button": {"gamepad_id": 0, "button": "UP"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "X"}},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "UP"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01}
@@ -377,9 +378,9 @@
   {
     "id": "plane.brake",
     "key": "S",
-    "gamepad_button": {"gamepad_id": 0, "button": "A"},
-    "tap_button": {"gamepad_id": 0, "button": "DOWN"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}},
+    "tap_button": {"default": {"gamepad_id": 0, "button": "DOWN"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01}
@@ -388,7 +389,7 @@
   {
     "id": "plane.yaw_left",
     "key": "LEFT",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 5, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01}
@@ -397,7 +398,7 @@
   {
     "id": "plane.yaw_right",
     "key": "RIGHT",
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
       "joystick": {"gamepad_id": 0, "axis": 6, "sign_and_scale": 1, "deadzone": 0.01},
       "tap"     : {"gamepad_id": 0, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01}
@@ -406,14 +407,14 @@
   {
     "id": "plane.next_weapon",
     "key": "R",
-    "gamepad_button": {"gamepad_id": 0, "button": "RIGHT_BUMPER"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "RIGHT_BUMPER"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": 1
   },
   {
     "id": "plane.previous_weapon",
     "key": "E",
-    "gamepad_button": {"gamepad_id": 0, "button": "LEFT_BUMPER"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "LEFT_BUMPER"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": -1
   },
@@ -421,21 +422,21 @@
     "id": "plane.shoot",
     "key": "SPACE",
     "mouse_button": "LEFT",
-    "gamepad_button": {"gamepad_id": 0, "button": "Y"},
-    "not_gamepad_button": {"gamepad_id": 0, "button": "B"}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "Y"}},
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
   },
   {
     "id": "plane.select_next_opponent",
     "key": "T",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "key2": "T",
-    "gamepad_button2": {"gamepad_id": 0, "button": "Y"}
+    "gamepad_button2": {"default": {"gamepad_id": 0, "button": "Y"}}
   },
   {
     "id": "plane.select_next_vehicle",
     "key": "F",
-    "gamepad_button": {"gamepad_id": 0, "button": "B"},
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "key2": "F",
-    "gamepad_button2": {"gamepad_id": 0, "button": "A"}
+    "gamepad_button2": {"default": {"gamepad_id": 0, "button": "A"}}
   }
 ]
