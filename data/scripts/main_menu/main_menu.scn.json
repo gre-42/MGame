@@ -554,7 +554,7 @@
             {
               "id": "new_game",
               "title": "%%translations/main/New_game/$selected_language",
-              "on_execute": { "call": "append_focuses", "arguments": {"content": ["new_game_menu"]}}
+              "on_execute": { "call": "try_append_focuses", "arguments": {"content": ["new_game_menu"]}}
             },
             {
               "required": {
@@ -569,7 +569,7 @@
             {
               "id": "settings",
               "title": "$$translations/main/Settings/$selected_language (Ѭҿ)",
-              "on_execute": { "call": "append_focuses", "arguments": {"content": ["settings_menu"]}}
+              "on_execute": { "call": "try_append_focuses", "arguments": {"content": ["settings_menu"]}}
             },
             {
               "required": {
@@ -955,7 +955,7 @@
           "user_id": "%user_id",
           "deflt": 0,
           "on_execute": {
-            "call": "append_focuses",
+            "call": "try_append_focuses",
             "arguments": {
               "content": ["controls_menu"]
             }
