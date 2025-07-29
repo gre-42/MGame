@@ -9,13 +9,13 @@ For instructions how to add a custom stage, see [CONTRIBUTING](CONTRIBUTING.md).
 ## Screenshots
 
 ### Track JB
-![Screenshot-JB-2024-12-26](media/Screenshot-JB-2024-12-26.png)
+![Screenshot-JB-2024-12-26](media/Screenshot-JB-2025-07-29.png)
 
 ### Snow 1
 ![Screenshot-S1-2024-12-26](media/Screenshot-S1-2024-12-26.png)
 
 ### Retro race track 1
-![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2023-02-25.png)
+![Screenshot-RR1-2022-10-17](media/Screenshot-RR1-2025-07-29.png)
 
 ### Island 0
 ![Screenshot-I0-2025-06-01](media/Screenshot-I0-2025-06-01.png)
