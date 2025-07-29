@@ -159,7 +159,7 @@ nodes in the air or underground.
 
 ![Image](https://github.com/user-attachments/assets/8c83f440-7022-42be-96f0-1c0715e12134)
 
-Bridges and tunnels cannot start from from road intersections, and therefore require an
+Bridges and tunnels cannot start from road intersections, and therefore require an
 additional node before the point where the bridge or tunnel begins.
 **The \"layer\" attribute of the new way segment that is at the crossing has to be removed**:
 
