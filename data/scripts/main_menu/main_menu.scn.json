@@ -772,7 +772,7 @@
       {
         "call": "globals",
         "required": ["%user_id == 0"],
-        "exclude": ["%if_devel"],
+        "exclude": "%if_devel",
         "arguments": { "race_session": "session1" }
       },
       {
@@ -803,6 +803,12 @@
             {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"race_laps": 16}}}
           ]
         }
+      },
+      {
+        "call": "globals",
+        "required": ["%user_id == 0", "%selected_game_mode == 'rally'"],
+        "exclude": "%%levels/$selected_level_id/if_raceway_circular",
+        "arguments": { "race_laps": 1 }
       },
       {
         "required": ["%if_devel", "%user_id == 0"],

@@ -123,7 +123,7 @@
     "content": {
       "call": "delete_root_nodes",
       "arguments": {
-        "regex": "^light_node.*$"
+        "regex": "'^light_node.*$'"
       }
     }
   },

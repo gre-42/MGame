@@ -34,7 +34,7 @@
               {
                 "call": "delete_root_nodes",
                 "arguments": {
-                  "regex": "^tripod_node.*$"
+                  "regex": "'^tripod_node.*$'"
                 }
               },
               {
