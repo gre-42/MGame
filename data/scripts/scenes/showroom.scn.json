@@ -90,7 +90,7 @@
       {
         "call": "delete_root_nodes",
         "arguments": {
-          "regex": "^(car|human|skater)_node(_trailer)?$"
+          "regex": "'^(car|human|skater)_node(_trailer)?$'"
         }
       },
       {
@@ -172,7 +172,7 @@
           "resource_name": "showroom_garage",
           "blend_mode": "off",
           "occluded_pass": "lightmap_black_node",
-          "included_names": "^Platform$"
+          "included_names": "'^Platform$'"
         }
       },
       {
@@ -180,7 +180,7 @@
         "arguments": {
           "resource_name": "showroom_garage",
           "histogram": "textures/histograms/google_maps/bricks.png",
-          "included_names": "^Walls$"
+          "included_names": "'^Walls$'"
         }
       },
       {
@@ -217,7 +217,7 @@
           "name": "static_garage",
           "node": "static_garage",
           "resource": "showroom_garage",
-          "excluded_names": "^Platform$"
+          "excluded_names": "'^Platform$'"
         }
       },
       {
@@ -236,7 +236,7 @@
           "name": "stage",
           "node": "stage",
           "resource": "showroom_garage",
-          "included_names": "^Platform$"
+          "included_names": "'^Platform$'"
         }
       },
       {
