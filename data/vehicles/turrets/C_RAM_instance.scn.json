@@ -2,9 +2,9 @@
   {
     "declare_macro": "create_C_RAM_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "^Base$"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "turret$lod_suffix", "node": "turret_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "Yaw"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$lod_suffix", "node": "main_gun_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "Gun"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "'^Base'"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "turret$lod_suffix", "node": "turret_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "'^Yaw'"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main_gun$lod_suffix", "node": "main_gun_shift_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "'^Gun'"}}
     ]
   },
   {
