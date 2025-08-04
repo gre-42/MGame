@@ -5,7 +5,6 @@
     "blue": { "style": { "color": [0.8, 0.8, 1] } }
   },
   "defaults": {
-    "game_mode": "team_deathmatch",
     "player_role": "competitor",
     "unstuck_mode": "reverse",
     "skills": {
@@ -42,19 +41,19 @@
           "can_shoot": true
         }
       },
-      "spawned_vehicle": { "type": "female_mh" }
+      "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "controller": "npc", "name": "npc1", "team": "red",
-      "spawned_vehicle": { "type": "female_mh" }
+      "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "controller": "npc", "name": "npc2", "team": "blue",
-      "spawned_vehicle": { "type": "female_mh" }
+      "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
-      "spawned_vehicle": { "type": "female_mh" }
+      "spawn": { "vehicle": { "type": "female_mh" } }
     }
   ]
 }

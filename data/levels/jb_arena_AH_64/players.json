@@ -5,7 +5,6 @@
     "blue": { "style": { "color": [0.8, 0.8, 1] } }
   },
   "defaults": {
-    "game_mode": "team_deathmatch",
     "player_role": "competitor",
     "unstuck_mode": "reverse",
     "behavior": "fighter",
@@ -48,23 +47,23 @@
           "can_shoot": true
         }
       },
-      "spawned_vehicle": { "type": "AH_64" }
+      "spawn": { "vehicle": { "type": "AH_64" } }
     },
     {
       "controller": "npc", "name": "npc1", "team": "red",
-      "spawned_vehicle": { "type": "tiger_tank" }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "controller": "npc", "name": "npc2", "team": "blue",
-      "spawned_vehicle": { "type": "tiger_tank" }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "controller": "npc", "name": "npc3", "team": "blue",
-      "spawned_vehicle": { "type": "tiger_tank" }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     },
     {
       "name": "npc4", "team": "red",
-      "spawned_vehicle": { "type": "tiger_tank" }
+      "spawn": { "vehicle": { "type": "tiger_tank" } }
     }
   ]
 }
