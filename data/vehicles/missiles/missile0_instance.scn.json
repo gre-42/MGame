@@ -70,7 +70,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 0
@@ -87,7 +87,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 1
@@ -104,7 +104,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 2
@@ -121,7 +121,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 3
@@ -138,7 +138,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 4
@@ -155,7 +155,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 5
@@ -172,7 +172,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 6
@@ -189,7 +189,7 @@
           "fac_v": [0, 300, 600, 850],
           "fac_c": [1, 1, 0.25, 0.125],
           "lift_c": 0,
-          "angle_yz": 0.01,
+          "angle_yz": 0.05,
           "angle_zz": 0,
           "drag": [0.07, 0.6, 0.07],
           "wing_id": 7
@@ -200,16 +200,21 @@
         "arguments": {
           "node": "car_node$bullet_suffix",
           "wing_controllers": [
-            {"i": 0, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0},
-            {"i": 1, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0},
-            {"i": 2, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0},
-            {"i": 3, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0},
-            {"i": 4, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0},
-            {"i": 5, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0},
-            {"i": 6, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0},
-            {"i": 7, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0}
+            {"i": 0, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 1, "angle_of_attack":  30, "normal_angle": 90, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 2, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 3, "angle_of_attack":  30, "normal_angle":  0, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 4, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 5, "angle_of_attack": -30, "normal_angle": 90, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 6, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0, "max_angle": 45},
+            {"i": 7, "angle_of_attack": -30, "normal_angle":  0, "antiroll_angle": 0, "max_angle": 45}
           ],
-          "engine": "rocket_engine"
+          "engine": "rocket_engine",
+          "dt_ref": 0.016667,
+          "pid": {
+            "pid": [4, 0.16, 6],
+            "alpha": 0.9
+          }
         }
       }
     ]

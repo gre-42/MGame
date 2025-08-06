@@ -125,10 +125,6 @@
               "call": "create_missile_ai",
               "arguments": {
                 "missile": "car_node$bullet_suffix",
-                "pid": {
-                  "pid": [0.5, 0.16, 6],
-                  "alpha": 0.2
-                },
                 "dy": {
                   "velocity": [0, 500],
                   "dy": [0.2, 0.1]
@@ -465,14 +461,19 @@
         "arguments": {
           "node": "car_node$suffix",
           "wing_controllers": [
-            {"i": 0, "angle_of_attack":  40, "normal_angle":  80, "antiroll_angle":  5},
-            {"i": 1, "angle_of_attack":  40, "normal_angle": 100, "antiroll_angle": -5},
-            {"i": 2, "angle_of_attack": -40, "normal_angle":  80, "antiroll_angle":  5},
-            {"i": 3, "angle_of_attack": -40, "normal_angle": 100, "antiroll_angle": -5},
-            {"i": 4, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0},
-            {"i": 5, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0}
+            {"i": 0, "angle_of_attack":  40, "normal_angle":  80, "antiroll_angle":  5, "max_angle": 45},
+            {"i": 1, "angle_of_attack":  40, "normal_angle": 100, "antiroll_angle": -5, "max_angle": 45},
+            {"i": 2, "angle_of_attack": -40, "normal_angle":  80, "antiroll_angle":  5, "max_angle": 45},
+            {"i": 3, "angle_of_attack": -40, "normal_angle": 100, "antiroll_angle": -5, "max_angle": 45},
+            {"i": 4, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0, "max_angle": 45},
+            {"i": 5, "angle_of_attack":  20, "normal_angle":   0, "antiroll_angle":  0, "max_angle": 45}
           ],
-          "engine": "turbine"
+          "engine": "turbine",
+          "dt_ref": 0.016667,
+          "pid": {
+            "pid": [4, 0.16, 4],
+            "alpha": 0.9
+          }
         }
       },
       {
@@ -548,10 +549,6 @@
         "call": "create_missile_ai",
         "arguments": {
           "missile": "car_node$suffix",
-          "pid": {
-            "pid": [0.5, 0.16, 4],
-            "alpha": 0.2
-          },
           "dy": {
             "velocity": [0, 400],
             "dy": [0.1, 0.02]
