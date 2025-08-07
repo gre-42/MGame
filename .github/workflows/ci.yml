@@ -114,7 +114,9 @@ jobs:
       - name: Install dependencies
         shell: cmd
         run: |
-          choco install openssl -y || exit /b
+          # Disabled because the OpenSSL version was outdated (07.08.2025)
+          # choco install openssl -y || exit /b
+          PowerShell -ExecutionPolicy Bypass install_openssl.ps1 || exit /b
           PowerShell -ExecutionPolicy Bypass Mlib/build_openal_soft_and_freealut.ps1 || exit /b
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           cmd /C Mlib\build_recastnavigation.cmd || exit /b
