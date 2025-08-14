@@ -1,0 +1,47 @@
+[
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "foot_step.dirt",
+      "filename": "sounds/opengameart/foot-walking-step/stepdirt_1.wav",
+      "gain": 1
+    }
+  },
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "foot_step.snow",
+      "filename": "sounds/opengameart/foot-walking-step/stepsnow_1.wav",
+      "gain": 1
+    }
+  },
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "foot_step.stone",
+      "filename": "sounds/opengameart/foot-walking-step/stepstone_1.wav",
+      "gain": 1
+    }
+  },
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "foot_step.water",
+      "filename": "sounds/opengameart/foot-walking-step/stepwater_1.wav",
+      "gain": 1
+    }
+  },
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "foot_step.wood",
+      "filename": "sounds/opengameart/foot-walking-step/stepwood_1.wav",
+      "gain": 1
+    }
+  }
+]

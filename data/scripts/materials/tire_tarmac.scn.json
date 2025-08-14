@@ -6,28 +6,32 @@
     "stiction_factor": 1,
     "stiction_coefficient": "nan",
     "friction_coefficient": "nan",
-    "smoke": [
+    "emission": [
       {
-        "particle": {
-          "resource": "skidmarks_a20_black",
-          "air_resistance": 0,
-          "animation_duration": "inf",
-          "type": "skidmark"
+        "visual": {
+          "particle": {
+            "resource": "skidmarks_a20_black",
+            "air_resistance": 0,
+            "animation_duration": "inf",
+            "type": "skidmark"
+          },
+          "instance_prefix": "skidmarks_a20_black"
         },
-        "instance_prefix": "skidmarks_a20_black",
         "tire": {
           "vehicle_velocities": [4, 5, 50],
           "particle_frequencies": [0, 20, 200]
         }
       },
       {
-        "particle": {
-          "resource": "particles_dust_3d",
-          "air_resistance": 0.01,
-          "animation_duration": 2,
-          "type": "smoke"
+        "visual": {
+          "particle": {
+            "resource": "particles_dust_3d",
+            "air_resistance": 0.01,
+            "animation_duration": 2,
+            "type": "smoke"
+          },
+          "instance_prefix": "particles_dust"
         },
-        "instance_prefix": "particles_dust",
         "tire": {
           "vehicle_velocities": [16, 20, 50],
           "particle_frequencies": [0, 10, 20]

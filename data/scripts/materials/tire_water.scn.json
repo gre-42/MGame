@@ -6,16 +6,18 @@
     "stiction_factor": 1,
     "stiction_coefficient": "nan",
     "friction_coefficient": "nan",
-    "smoke": [
+    "emission": [
       {
-        "particle": {
-          "resource": "sea_spray_a20",
-          "air_resistance": 0,
-          "animation_duration": "inf",
-          "rotation": "random_yangle",
-          "type": "sea_spray"
+        "visual": {
+          "particle": {
+            "resource": "sea_spray_a20",
+            "air_resistance": 0,
+            "animation_duration": "inf",
+            "rotation": "random_yangle",
+            "type": "sea_spray"
+          },
+          "instance_prefix": "sea_spray_a20"
         },
-        "instance_prefix": "sea_spray_a20",
         "vehicle": {
           "vehicle_velocities": [2, 5, 50],
           "particle_frequencies": [0, 5, 50]

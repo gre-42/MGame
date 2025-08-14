@@ -1,0 +1,19 @@
+{
+  "call": "set_surface_contact_info",
+  "arguments": {
+    "material0": "surface_base_foot",
+    "material1": "surface_base_water",
+    "stiction_factor": 1,
+    "stiction_coefficient": "nan",
+    "friction_coefficient": "nan",
+    "emission": [
+      {
+        "audio": "foot_step.water",
+        "tire": {
+          "vehicle_velocities": [0, 5],
+          "particle_frequencies": [0, 2]
+        }
+      }
+    ]
+  }
+}
