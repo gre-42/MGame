@@ -1,0 +1,11 @@
+[
+  {
+    "required": "%flavor == 'extended'",
+    "call": "add_audio",
+    "arguments": {
+      "name": "explodemini_fast",
+      "filename": "sounds/opengameart/explosions/explodemini_fast.wav",
+      "gain": 1
+    }
+  }
+]
