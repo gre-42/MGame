@@ -1,0 +1,42 @@
+{
+  "call": "set_surface_contact_info",
+  "arguments": {
+    "material0": "surface_base_tire",
+    "material1": "surface_base_stone",
+    "stiction_factor": 1,
+    "stiction_coefficient": "nan",
+    "friction_coefficient": "nan",
+    "emission": [
+      {
+        "visual": {
+          "particle": {
+            "resource": "skidmarks_a20_black",
+            "air_resistance": 0,
+            "animation_duration": "inf",
+            "type": "skidmark"
+          },
+          "instance_prefix": "skidmarks_a20_black"
+        },
+        "tire": {
+          "vehicle_velocities": [4, 5, 50],
+          "particle_frequencies": [0, 20, 200]
+        }
+      },
+      {
+        "visual": {
+          "particle": {
+            "resource": "particles_dust_3d",
+            "air_resistance": 0.01,
+            "animation_duration": 2,
+            "type": "smoke"
+          },
+          "instance_prefix": "particles_dust"
+        },
+        "tire": {
+          "vehicle_velocities": [16, 20, 50],
+          "particle_frequencies": [0, 10, 20]
+        }
+      }
+    ]
+  }
+}
