@@ -8,6 +8,7 @@
     "friction_coefficient": "nan",
     "emission": [
       {
+        "affinity": "pair",
         "visual": {
           "particle": {
             "resource": "skidmarks_a20_black",
@@ -23,6 +24,7 @@
         }
       },
       {
+        "affinity": "pair",
         "visual": {
           "particle": {
             "resource": "particles_snow_3d",
