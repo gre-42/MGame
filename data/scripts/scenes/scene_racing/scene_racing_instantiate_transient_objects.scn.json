@@ -71,7 +71,6 @@
             "call": "spawn",
             "arguments": {
               "spawner": "$vip_name-_$user_name",
-              "team": "",
               "position": "%%levels/$loaded_level_id/$user_name/car_node_position",
               "rotation": "%%levels/$loaded_level_id/$user_name/car_node_angles"
             }

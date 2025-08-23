@@ -8,7 +8,7 @@
           "name": "%spawner_name",
           "team": "red",
           "group": "",
-          "trigger": "bystanders"
+          "trigger": "%spawn_trigger"
         }
       },
       {
@@ -122,18 +122,23 @@
         }
       },
       {
-        "call": "create_externals",
-        "arguments": {
-          "player": "%spawner_name",
-          "mode": "npc"
-        }
-      },
-      {
-        "call": "create_internals",
-        "arguments": {
-          "player": "%spawner_name",
-          "seat": "driver"
-        }
+        "#comment": "This is now done when the avatar enters the vehicle",
+        "comment": [
+          {
+            "call": "create_externals",
+            "arguments": {
+              "player": "%spawner_name",
+              "mode": "npc"
+            }
+          },
+          {
+            "call": "create_internals",
+            "arguments": {
+              "player": "%spawner_name",
+              "seat": "driver"
+            }
+          }
+        ]
       }
     ]
   },
@@ -196,10 +201,12 @@
     "declare_macro": "traffic.create_npc_and_driving_car",
     "content": [
       {
-        "playback": "traffic.create_car_npc_player",
+        "call": "spawner_create",
         "arguments": {
-          "unstuck_mode": "delete",
-          "initial_behavior": "city"
+          "name": "%spawner_name",
+          "team": "red",
+          "group": "",
+          "trigger": "bystanders"
         }
       },
       {
@@ -209,14 +216,32 @@
           "asset_id": "%asset_id",
           "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
           "already_set_behavior": "throw",
-          "macro": {
-            "playback": "traffic.create_car",
-            "let": {
-              "hand_brake_pulled": false,
-              "mute": false,
-              "respawn_cooldown_time": 0
+          "macro": [
+            {
+              "playback": "traffic.create_car",
+              "let": {
+                "hand_brake_pulled": false,
+                "mute": false,
+                "respawn_cooldown_time": 0
+              }
+            },
+            {
+              "call": "spawn",
+              "arguments": {
+                "spawner": "%driver_name",
+                "position": [0, 0, 0],
+                "rotation": [0, 0, 0]
+              }
+            },
+            {
+              "call": "enter_or_exit_vehicle",
+              "arguments": {
+                "player": "%driver_name",
+                "destination": "%spawner_name",
+                "seat": "driver"
+              }
             }
-          }
+          ]
         }
       }
     ]
