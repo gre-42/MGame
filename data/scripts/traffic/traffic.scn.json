@@ -212,6 +212,7 @@
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
+          "dependencies": ["%driver_name"],
           "spawner": "%spawner_name",
           "asset_id": "%asset_id",
           "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
