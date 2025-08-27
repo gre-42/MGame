@@ -145,15 +145,6 @@
           "bullet_type": "none_weapon_bullet_type"
         }
       },
-      {
-        "call": "damageable",
-        "arguments": {
-          "node": "human_node$suffix",
-          "health": 200,
-          "delete_node_when_health_leq_zero": false,
-          "gid": { "group": "translations", "id": "scene" }
-        }
-      },
       {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "human_node$suffix", "value": 17}},
       {
         "required": ["%if_with_physics"],

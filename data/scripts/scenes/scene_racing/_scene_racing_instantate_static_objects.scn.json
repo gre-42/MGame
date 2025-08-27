@@ -222,19 +222,34 @@
                   "comment": "Global log"
                 },
                 {
+                  "call": "ui_background",
+                  "arguments": {
+                    "z_order": 2,
+                    "texture": "#ui_gray_fade",
+                    "left": "log_left",
+                    "right": "log_right",
+                    "bottom": "log_bottom",
+                    "top": "log_top",
+                    "delay_load_policy": "no_delay",
+                    "focus_mask": "always"
+                  }
+                },
+                {
                   "call": "visual_global_log",
                   "arguments": {
+                    "z_order": 2,
                     "charset": "%selected_language",
                     "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "highscore_left",
-                    "right": "highscore_right",
-                    "bottom": "highscore_bottom",
-                    "top": "highscore_top",
+                    "left": "log_left",
+                    "right": "log_right",
+                    "bottom": "log_bottom",
+                    "top": "log_top",
                     "font_color": "%ui_font_color",
                     "font_height": "normal",
                     "line_distance": "normal",
                     "nentries": 10,
-                    "severity": "critical"
+                    "severity": "critical",
+                    "focus_mask": "always"
                   }
                 },
                 {

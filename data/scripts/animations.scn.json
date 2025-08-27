@@ -14,6 +14,17 @@
     "required": ["%flavor == 'extended'"],
     "call": "add_bvh_resource",
     "arguments": {
+      "name": "cmu_mocap.die",
+      "filename": "animations/Xonotic/pyria_dietwo.bvh",
+      "smooth_radius": 0,
+      "smooth_alpha": "nan",
+      "periodic": false
+    }
+  },
+  {
+    "required": ["%flavor == 'extended'"],
+    "call": "add_bvh_resource",
+    "arguments": {
       "name": "xonotic_pyria.run_forward",
       "filename": "animations/Xonotic/pyria_run_forward_retargeted.bvh",
       "smooth_radius": 0,

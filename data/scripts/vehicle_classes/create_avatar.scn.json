@@ -59,6 +59,24 @@
         "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_human$suffix csuffix:suffix;"
       },
       {
+        "required": ["%if_damageable"],
+        "call": "damageable",
+        "arguments": {
+          "node": "human_node$suffix",
+          "health": 200,
+          "delete_node_when_health_leq_zero": false,
+          "gid": { "group": "translations", "id": "scene" }
+        }
+      },
+      {
+        "required": ["%if_damageable"],
+        "call": "crash",
+        "arguments": {
+          "node": "human_node$suffix",
+          "damage": 0.000001
+        }
+      },
+      {
         "required": ["%if_spawner"],
         "call": "set_externals_creator",
         "without": ["user_id", "user_name", "player_name"],
@@ -74,13 +92,15 @@
       },
       {
         "comment": {
-          "playback": "visual_node_status_3rd",
-          "node": "human_node$suffix",
-          "format": 8,
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "offset": "0 0.3",
-          "font_height": 16,
-          "line_distance": 16
+          "call": "visual_node_status_3rd",
+          "arguments": {
+            "node": "human_node$suffix",
+            "format": 8,
+            "ttf_file": "fonts/RobotoMono-Bold.ttf",
+            "offset": [0, 0.3],
+            "font_height": 16,
+            "line_distance": 16
+          }
         }
       }
     ]

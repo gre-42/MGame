@@ -6,10 +6,50 @@
   <node id='-143037' action='modify' visible='true' lat='40.70977814252' lon='-73.99222337572' />
   <node id='-143047' action='modify' visible='true' lat='40.71012127041' lon='-73.99223077217' />
   <node id='-143048' action='modify' visible='true' lat='40.70993064402' lon='-73.99217160058' />
-  <node id='-143076' action='modify' visible='true' lat='40.70969292094' lon='-73.9926538491' />
-  <node id='-143077' action='modify' visible='true' lat='40.70971310501' lon='-73.99252367158' />
-  <node id='-143081' action='modify' visible='true' lat='40.70975928129' lon='-73.99267875792' />
-  <node id='-143082' action='modify' visible='true' lat='40.70977946534' lon='-73.9925485804' />
+  <node id='-143076' action='modify' visible='true' lat='40.71158571138' lon='-73.9923002988' />
+  <node id='-143077' action='modify' visible='true' lat='40.71150946257' lon='-73.99229142306' />
+  <node id='-143081' action='modify' visible='true' lat='40.70928159037' lon='-73.99457520762' />
+  <node id='-143082' action='modify' visible='true' lat='40.70930177456' lon='-73.9944450301' />
+  <node id='-146917' action='modify' visible='true' lat='40.71139516124' lon='-73.99243991795'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='20' />
+  </node>
+  <node id='-146918' action='modify' visible='true' lat='40.71137258872' lon='-73.99245309629' />
+  <node id='-146919' action='modify' visible='true' lat='40.71137591891' lon='-73.99241672912' />
+  <node id='-146920' action='modify' visible='true' lat='40.70933977081' lon='-73.99429938541'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='20' />
+  </node>
+  <node id='-146921' action='modify' visible='true' lat='40.7093171976' lon='-73.99431256375' />
+  <node id='-146922' action='modify' visible='true' lat='40.70932052788' lon='-73.99427619658' />
+  <node id='-146923' action='modify' visible='true' lat='40.71159587518' lon='-73.99424465168'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='20' />
+  </node>
+  <node id='-146924' action='modify' visible='true' lat='40.71157330273' lon='-73.99425783002' />
+  <node id='-146925' action='modify' visible='true' lat='40.71157663291' lon='-73.99422146285' />
+  <node id='-146926' action='modify' visible='true' lat='40.70963692722' lon='-73.99236003777'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='20' />
+  </node>
+  <node id='-146927' action='modify' visible='true' lat='40.70961435411' lon='-73.99237321611' />
+  <node id='-146928' action='modify' visible='true' lat='40.70961768439' lon='-73.99233684894' />
   <way id='-240287' action='modify' visible='true'>
     <nd ref='-143034' />
     <nd ref='-143035' />
@@ -39,5 +79,29 @@
     <nd ref='-143082' />
     <tag k='spawn:group' v='player1' />
     <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-245190' action='modify' visible='true'>
+    <nd ref='-146917' />
+    <nd ref='-146918' />
+    <nd ref='-146919' />
+    <nd ref='-146917' />
+  </way>
+  <way id='-245196' action='modify' visible='true'>
+    <nd ref='-146920' />
+    <nd ref='-146921' />
+    <nd ref='-146922' />
+    <nd ref='-146920' />
+  </way>
+  <way id='-245216' action='modify' visible='true'>
+    <nd ref='-146923' />
+    <nd ref='-146924' />
+    <nd ref='-146925' />
+    <nd ref='-146923' />
+  </way>
+  <way id='-245217' action='modify' visible='true'>
+    <nd ref='-146926' />
+    <nd ref='-146927' />
+    <nd ref='-146928' />
+    <nd ref='-146926' />
   </way>
 </osm>
