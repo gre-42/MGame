@@ -520,15 +520,15 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "main_gun_end_node$suffix", "position": [0, -3, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "missile0_launcher_node$suffix", "position": [1, -3, 0]}},
       {"comment": "Graphics"},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$suffix", "name": "wheel_right_front_node_visual$suffix", "rotation": [0, 180, 0]}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$suffix",  "name": "wheel_right_rear_node_visual$suffix",  "rotation": [0, 180, 0]}},
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$suffix", "name": "wheel_right_front_node_visual$suffix", "rotation": [0, 180, 0]}},
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$suffix",  "name": "wheel_right_rear_node_visual$suffix",  "rotation": [0, 180, 0]}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_front", "node": "car_node$suffix", "resource": "F_35_hitbox_front"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_mid", "node": "car_node$suffix", "resource": "F_35_hitbox_mid"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rear", "node": "car_node$suffix", "resource": "F_35_hitbox_rear"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_left", "node": "car_node$suffix", "resource": "F_35_hitbox_rudder_left"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_right", "node": "car_node$suffix", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": ["%if_with_graphics"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
-      {"required": ["%if_with_graphics"], "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d1$suffix", "lod_decimate": "_d1"}},
+      {"required": "%if_with_graphics", "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
+      {"required": "%if_with_graphics", "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d1$suffix", "lod_decimate": "_d1"}},
       {"comment": [
         "if_with_graphics child_node_instance type=dynamic parent=car_node$suffix name=gizmo_node$suffix position=0 0 0 rotation=0 0 0 scale=1",
         "if_with_graphics renderable_instance name=gizmo node=gizmo_node$suffix resource=gizmo",
@@ -538,7 +538,7 @@
       ]},
       {"comment": "Physics"},
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "playback": "create_F_35_physics",
         "arguments": {
             "mass": 20000,
@@ -575,7 +575,7 @@
     "declare_macro": "create_player_car_internals_F_35",
     "content": [
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "playback": "create_plane_key_bindings",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -583,7 +583,7 @@
         }
       },
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "call": "hud_opponent_tracker",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -596,7 +596,7 @@
         }
       },
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "call": "hud_opponent_zoom",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -652,7 +652,7 @@
     "declare_macro": "create_player_car_externals_F_35",
     "content": [
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "playback": "create_car_cameras_plane",
         "arguments": {
           "cockpit_camera_position": [-0.4, 0.3, -0.3]

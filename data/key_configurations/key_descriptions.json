@@ -6,7 +6,7 @@
     "id": "change_camera.near"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Change the \"tripod\" camera",
     "unique": "",
@@ -19,49 +19,49 @@
     "id": "take_screenshot"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "camera",
     "title": "Print camera GPS coordinates",
     "unique": "",
     "id": "print_camera_node_info"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move up",
     "unique": "",
     "id": "tripod.move_up"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move down",
     "unique": "",
     "id": "tripod.move_down"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move to the left",
     "unique": "",
     "id": "tripod.move_left"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move to the right",
     "unique": "",
     "id": "tripod.move_right"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move forward",
     "unique": "",
     "id": "tripod.move_forward"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "debug",
     "title": "Tripod camera: Move backwards",
     "unique": "",
@@ -240,42 +240,42 @@
     "id": "avatar.select_next_vehicle"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Rotate left",
     "unique": "skater",
     "id": "skater.rotate_left"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Rotate right",
     "unique": "skater",
     "id": "skater.rotate_right"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Jump",
     "unique": "skater",
     "id": "skater.jump"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Grind",
     "unique": "skater",
     "id": "skater.grind"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Drive forward",
     "unique": "skater",
     "id": "skater.forward"
   },
   {
-    "required": ["%if_devel"],
+    "required": "%if_devel",
     "section": "skater",
     "title": "Brake",
     "unique": "skater",

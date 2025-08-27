@@ -65,7 +65,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$suffix", "name": "wheel_left_rear_node$suffix",   "position": [-0.15, -0.5,  0.35]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$suffix", "name": "wheel_right_rear_node$suffix",  "position": [ 0.15, -0.5,  0.35]}},
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "create_engine",
         "arguments": {
             "rigid_body": "skater_node$suffix",
@@ -79,7 +79,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "wheel",
         "arguments": {
           "vehicle": "skater_node$suffix",
@@ -99,7 +99,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "wheel",
         "arguments": {
           "vehicle": "skater_node$suffix",
@@ -119,7 +119,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "wheel",
         "arguments": {
           "vehicle": "skater_node$suffix",
@@ -139,7 +139,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "wheel",
         "arguments": {
           "vehicle": "skater_node$suffix",
@@ -167,16 +167,16 @@
           "front_tire_ids": []
         }
       },
-      {"required": ["%if_with_physics"], "call": "set_grind_point", "arguments": {"node": "skater_node$suffix", "position": [0, -0.6, 0]}},
-      {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "skater_node$suffix", "value": 4}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$suffix", "name": "skateboard_node$suffix", "position": [0, -0.5, 0]}},
-      {"required": ["%if_with_graphics"], "call": "set_skater_style_updater", "arguments": {"skater_node": "skater_node$suffix", "skateboard_node": "skateboard_node$suffix", "resource": "skate"}},
-      {"required": ["%if_with_graphics"], "call": "set_node_bone", "arguments": {"node": "skateboard_node$suffix", "bone": "node", "smoothness": 0, "rotation_strength": 1}},
-      {"comment": {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater_hitbox", "node": "skater_node$suffix", "resource": "skater_hitbox"}}},
-      {"comment": {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater_grind_contact", "node": "skater_node$suffix", "resource": "skater_grind_contacts"}}},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst", "node": "animation_node$suffix", "resource": "female_mh_d2"}},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$suffix", "resource": "female_mh_d1"}},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$suffix", "resource": "skateboard"}},
+      {"required": "%if_with_physics", "call": "set_grind_point", "arguments": {"node": "skater_node$suffix", "position": [0, -0.6, 0]}},
+      {"required": "%if_with_physics", "call": "set_jump_dv", "arguments": {"node": "skater_node$suffix", "value": 4}},
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "skater_node$suffix", "name": "skateboard_node$suffix", "position": [0, -0.5, 0]}},
+      {"required": "%if_with_graphics", "call": "set_skater_style_updater", "arguments": {"skater_node": "skater_node$suffix", "skateboard_node": "skateboard_node$suffix", "resource": "skate"}},
+      {"required": "%if_with_graphics", "call": "set_node_bone", "arguments": {"node": "skateboard_node$suffix", "bone": "node", "smoothness": 0, "rotation_strength": 1}},
+      {"comment": {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "skater_hitbox", "node": "skater_node$suffix", "resource": "skater_hitbox"}}},
+      {"comment": {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "skater_grind_contact", "node": "skater_node$suffix", "resource": "skater_grind_contacts"}}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "skater-inst", "node": "animation_node$suffix", "resource": "female_mh_d2"}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "skater-inst-d1", "node": "animation_node$suffix", "resource": "female_mh_d1"}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "skater_skateboard", "node": "skateboard_node$suffix", "resource": "skateboard"}},
       {
         "call": "set_available_seats",
         "arguments": {
@@ -189,7 +189,7 @@
   {
     "declare_macro": "create_player_skater_internals_skating_mh1",
     "content": {
-      "required": ["%if_pc"],
+      "required": "%if_pc",
       "playback": "create_skater_key_bindings",
       "context": "primary_scene_$user_name",
       "arguments": {"seat": "driver"}
@@ -198,7 +198,7 @@
   {
     "declare_macro": "create_player_skater_externals_skating_mh1",
     "content": [
-      {"required": ["%if_pc"], "playback": "create_skater_cameras", "arguments": {"seat": "driver"}},
+      {"required": "%if_pc", "playback": "create_skater_cameras", "arguments": {"seat": "driver"}},
       {
         "call": "player_set_vehicle_control_parameters",
         "arguments": {

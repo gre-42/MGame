@@ -54,7 +54,7 @@
         }
       },
       {
-        "required": ["%IF_GEN_TRIANGLE_RAYS"],
+        "required": "%IF_GEN_TRIANGLE_RAYS",
         "call": "gen_triangle_rays",
         "arguments": {
           "name": "TNo2_obj/$name",

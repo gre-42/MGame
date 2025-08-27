@@ -38,7 +38,7 @@
                 }
               },
               {
-                "required": ["%if_tripod_mode"],
+                "required": "%if_tripod_mode",
                 "playback": "create_tripod_cameras"
               }
             ]

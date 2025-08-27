@@ -332,29 +332,29 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$tesuffix", "node": "car_node$tesuffix", "resource": "$name-_massbox"}}},
       {"comment": "renderable_instance name=generic_car_topdown_locator$tesuffix node=car_node$node_suffix resource=topdown_locator"},
 
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$tesuffix", "name": "wheel_right_front_node_visual$tesuffix", "rotation": [0, 180, 0]}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$tesuffix", "name": "wheel_right_rear_node_visual$tesuffix", "rotation": [0, 180, 0]}},
-      {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$tesuffix", "name": "wheel_right_front_node_visual$tesuffix", "rotation": [0, 180, 0]}},
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_rear_node$tesuffix", "name": "wheel_right_rear_node_visual$tesuffix", "rotation": [0, 180, 0]}},
+      {"required": "%if_with_graphics", "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%tesuffix",
         "name_suffix": "%tesuffix",
         "lod_decimate": "%tedecimate"
         }
       },
-      {"required": ["%if_with_graphics"], "playback": "generic_car.create_graphics", "arguments": {
+      {"required": "%if_with_graphics", "playback": "generic_car.create_graphics", "arguments": {
         "node_suffix": "%tesuffix",
         "name_suffix": "_lowres$tesuffix",
         "lod_decimate": "_lowres"
         }
       },
-      {"required": ["%if_with_graphics"], "playback": "generic_car.create_lights"},
-      {"required": ["%if_with_physics"], "playback": "generic_car.create_physics"}
+      {"required": "%if_with_graphics", "playback": "generic_car.create_lights"},
+      {"required": "%if_with_physics", "playback": "generic_car.create_physics"}
     ]
   },
   {
     "declare_macro": "generic_car.create_player_externals",
     "content": [
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "playback": "create_car_cameras_$camera_class"
       },
       {
@@ -373,7 +373,7 @@
     "declare_macro": "generic_car.create_player_internals",
     "content": [
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "playback": "create_car_key_bindings",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -381,7 +381,7 @@
         }
       },
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "exclude": ["%if_android"],
         "playback": "create_player_car_engine_rpm_meter",
         "context": "primary_scene_$user_name",

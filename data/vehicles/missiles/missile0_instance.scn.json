@@ -238,9 +238,9 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$bullet_suffix"              , "name": "wing_rear_top_node$bullet_suffix",          "position": [0, 0.1, 1.2]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wing_rear_top_node$bullet_suffix"    , "name": "wing_rear_top_visual_node$bullet_suffix",   "rotation": [0, 0, -90]}},
 
-      {"required": ["%if_with_graphics_bullet"], "playback": "create_missile0_graphics", "arguments": {"node_suffix": "%bullet_suffix", "lod_suffix": "%bullet_suffix", "lod_decimate": ""}},
+      {"required": "%if_with_graphics_bullet", "playback": "create_missile0_graphics", "arguments": {"node_suffix": "%bullet_suffix", "lod_suffix": "%bullet_suffix", "lod_decimate": ""}},
       {
-        "required": ["%if_with_physics_bullet"],
+        "required": "%if_with_physics_bullet",
         "playback": "create_missile0_physics"
       }
     ]

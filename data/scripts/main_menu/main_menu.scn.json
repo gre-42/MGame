@@ -219,7 +219,7 @@
         }
       },
       {
-        "required": ["%if_android"],
+        "required": "%if_android",
         "playback": "create_tap_buttons"
       }
     ]
@@ -1051,7 +1051,7 @@
         }
       },
       {
-        "required": ["%if_devel"],
+        "required": "%if_devel",
         "call": "key_bindings",
         "arguments": {
           "id": "key_bindings_debug",

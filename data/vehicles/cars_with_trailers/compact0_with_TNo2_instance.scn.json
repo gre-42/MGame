@@ -6,7 +6,7 @@
         "playback": "create_compact0"
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "create_trailer_node",
         "arguments": {
           "car_instance": "car_node$suffix",
@@ -31,7 +31,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "connect_trailer",
         "arguments": {
           "car": "car_node$suffix",

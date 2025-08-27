@@ -5,7 +5,7 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "animation_node$suffix", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "main_gun_node$suffix", "position": [0.1, 0.5, 0]}},
-      {"required": ["%if_with_graphics"], "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_node_visual$suffix", "position": [0, 0, -0.2]}},
+      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_node_visual$suffix", "position": [0, 0, -0.2]}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix",             "name": "main_gun_punch_angle_node$suffix", "position": [0, 0  , -0.5]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix",         "position": [0, 0  ,    0]}},
@@ -58,13 +58,13 @@
         }
       },
       {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$suffix"}},
-      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
-      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
-      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
-      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m72_law_rocket", "capacity": 2}},
-      {"required": ["%if_with_gun"], "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "none_weapon_ammo_type", "capacity": 0}},
+      {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
+      {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
+      {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
+      {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m72_law_rocket", "capacity": 2}},
+      {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "none_weapon_ammo_type", "capacity": 0}},
       {
-        "required": ["%if_with_gun"],
+        "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -80,7 +80,7 @@
         }
       },
       {
-        "required": ["%if_with_gun"],
+        "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -96,7 +96,7 @@
         }
       },
       {
-        "required": ["%if_with_gun"],
+        "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -112,7 +112,7 @@
         }
       },
       {
-        "required": ["%if_with_gun"],
+        "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
         "arguments": {
           "cycle_node": "human_node$suffix",
@@ -128,7 +128,7 @@
         }
       },
       {
-        "required": ["%if_with_gun"],
+        "required": "%if_with_gun",
         "call": "set_desired_weapon",
         "arguments": {
           "player": null,
@@ -145,9 +145,9 @@
           "bullet_type": "none_weapon_bullet_type"
         }
       },
-      {"required": ["%if_with_physics"], "call": "set_jump_dv", "arguments": {"node": "human_node$suffix", "value": 17}},
+      {"required": "%if_with_physics", "call": "set_jump_dv", "arguments": {"node": "human_node$suffix", "value": 17}},
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "create_engine",
         "arguments": {
           "rigid_body": "human_node$suffix",
@@ -159,7 +159,7 @@
         }
       },
       {
-        "required": ["%if_with_physics"],
+        "required": "%if_with_physics",
         "call": "wheel",
         "arguments": {
           "vehicle": "human_node$suffix",
@@ -173,8 +173,8 @@
           "tire_id": 0
         }
       },
-      {"required": ["%if_with_physics"], "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$suffix", "steering_multiplier": 1}},
-      {"required": ["%if_with_physics"], "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$suffix"}},
+      {"required": "%if_with_physics", "call": "create_avatar_as_car_controller", "arguments": {"node": "human_node$suffix", "steering_multiplier": 1}},
+      {"required": "%if_with_physics", "call": "create_avatar_as_avatar_controller", "arguments": {"node": "human_node$suffix"}},
       {
         "call": "set_avatar_style_updater",
         "arguments": {
@@ -194,8 +194,8 @@
         }
       },
       {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
-      {"required": ["%if_with_graphics"], "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$suffix", "resource": "$asset_id-_d1"}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$suffix", "resource": "$asset_id-_d1"}},
       {
         "call": "set_available_seats",
         "arguments": {

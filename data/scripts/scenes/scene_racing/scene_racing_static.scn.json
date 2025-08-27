@@ -6,7 +6,7 @@
       "playback": "%osm_map_resource"
     },
     {
-      "required": ["%if_has_overlay"],
+      "required": "%if_has_overlay",
       "playback": "%osm_map_overlay_resource"
     },
     {

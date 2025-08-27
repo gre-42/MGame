@@ -27,7 +27,7 @@
       },
       {
         "call": "root_node_instance",
-        "required": ["%if_dirtmap"],
+        "required": "%if_dirtmap",
         "arguments": {
           "dynamics": "moving",
           "name": "dirtmap_node",
@@ -38,7 +38,7 @@
       },
       {
         "call": "ortho_camera",
-        "required": ["%if_dirtmap"],
+        "required": "%if_dirtmap",
         "arguments": {
           "node": "dirtmap_node",
           "near_plane": 1,
@@ -52,7 +52,7 @@
       },
       {
         "call": "set_dirtmap",
-        "required": ["%if_dirtmap"],
+        "required": "%if_dirtmap",
         "arguments": {
           "offset": 0,
           "discreteness": 4,
@@ -71,7 +71,7 @@
       },
       {
         "call": "set_skybox",
-        "required": ["%if_skybox"],
+        "required": "%if_skybox",
         "arguments": {
           "alias": "skybox"
         }

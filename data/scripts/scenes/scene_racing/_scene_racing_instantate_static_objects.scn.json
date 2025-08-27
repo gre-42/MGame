@@ -13,7 +13,7 @@
     "declare_macro": "_scene_racing_instantiate_static_objects",
     "content": [
       {
-        "required": ["%if_instantiate_osm_map"],
+        "required": "%if_instantiate_osm_map",
         "execute": [
           {
             "playback": "_preload_osm_map"
@@ -37,7 +37,7 @@
             }
           },
           {
-            "required": ["%if_has_overlay"],
+            "required": "%if_has_overlay",
             "playback": "_create_osm_map_resource",
             "arguments": {
               "osm_map": "osm_map_overlay",
@@ -51,7 +51,7 @@
             "comment": "Must be below extractions"
           },
           {
-            "required": ["%if_with_geographic_mapping"],
+            "required": "%if_with_geographic_mapping",
             "call": "register_geographic_mapping",
             "arguments": {
               "name": "world",
@@ -78,7 +78,7 @@
             }
           },
           {
-            "required": ["%if_has_overlay"],
+            "required": "%if_has_overlay",
             "call": "root_renderable_instances",
             "arguments": {
               "name": "osm_overlay_inst",
@@ -87,7 +87,7 @@
             }
           },
           {
-            "required": ["%if_has_overlay"],
+            "required": "%if_has_overlay",
             "call": "compound_resource",
             "arguments": {
               "source_names": [
@@ -137,7 +137,7 @@
         "arguments": {
           "content": [
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "player_create",
               "arguments": {
                 "user_id": "%user_id",
@@ -152,7 +152,7 @@
               }
             },
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "spawner_create",
               "arguments": {
                 "name": "$vip_name-_$user_name",
@@ -163,22 +163,22 @@
               }
             },
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "spawner_set_player",
               "arguments": { "name": "$vip_name-_$user_name", "seat": "driver" }
             },
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "set_can_drive",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "set_can_aim",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
             {
-              "required": ["%if_create_pc_player"],
+              "required": "%if_create_pc_player",
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
             },
@@ -222,35 +222,40 @@
                   "comment": "Global log"
                 },
                 {
-                  "call": "ui_background",
-                  "arguments": {
-                    "z_order": 2,
-                    "texture": "#ui_gray_fade",
-                    "left": "log_left",
-                    "right": "log_right",
-                    "bottom": "log_bottom",
-                    "top": "log_top",
-                    "delay_load_policy": "no_delay",
-                    "focus_mask": "always"
-                  }
-                },
-                {
-                  "call": "visual_global_log",
-                  "arguments": {
-                    "z_order": 2,
-                    "charset": "%selected_language",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "log_left",
-                    "right": "log_right",
-                    "bottom": "log_bottom",
-                    "top": "log_top",
-                    "font_color": "%ui_font_color",
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "nentries": 10,
-                    "severity": "critical",
-                    "focus_mask": "always"
-                  }
+                  "required": "%if_show_global_log",
+                  "execute": [
+                    {
+                      "call": "ui_background",
+                      "arguments": {
+                        "z_order": 2,
+                        "texture": "#ui_gray_fade",
+                        "left": "log_left",
+                        "right": "log_right",
+                        "bottom": "log_bottom",
+                        "top": "log_top",
+                        "delay_load_policy": "no_delay",
+                        "focus_mask": "always"
+                      }
+                    },
+                    {
+                      "call": "visual_global_log",
+                      "arguments": {
+                        "z_order": 2,
+                        "charset": "%selected_language",
+                        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                        "left": "log_left",
+                        "right": "log_right",
+                        "bottom": "log_bottom",
+                        "top": "log_top",
+                        "font_color": "%ui_font_color",
+                        "font_height": "normal",
+                        "line_distance": "normal",
+                        "nentries": 10,
+                        "severity": "critical",
+                        "focus_mask": "always"
+                      }
+                    }
+                  ]
                 },
                 {
                   "comment": "Countdown"
@@ -309,12 +314,12 @@
         }
       },
       {
-        "required": ["%if_pc_player_playback"],
+        "required": "%if_pc_player_playback",
         "call": "set_playback_way_points",
         "arguments": { "player": "$vip_name-_0", "filename": "%pc_player_playback", "speedup": "%pc_player_playback_speedup" }
       },
       {
-        "required": ["%if_pc_player_playback"],
+        "required": "%if_pc_player_playback",
         "call": "set_can_drive",
         "arguments": { "player": "$vip_name-_0", "source": "ai", "value": true }
       },
@@ -322,7 +327,7 @@
         "comment": "Dirtmap"
       },
       {
-        "required": ["%if_primary_dirtmap"],
+        "required": "%if_primary_dirtmap",
         "call": "root_node_instance",
         "arguments": {
           "dynamics": "moving",
@@ -333,7 +338,7 @@
         }
       },
       {
-        "required": ["%if_primary_dirtmap"],
+        "required": "%if_primary_dirtmap",
         "call": "ortho_camera",
         "arguments": {
           "node": "dirtmap_node",
@@ -347,7 +352,7 @@
         }
       },
       {
-        "required": ["%if_primary_dirtmap"],
+        "required": "%if_primary_dirtmap",
         "call": "set_dirtmap",
         "arguments": {
           "filename": "%dirtmap_texture",
@@ -415,7 +420,7 @@
                 "arguments": {"user_id": "%user_id", "id": "change_camera.near", "tpe": "near"}
               },
               {
-                "required": ["%if_devel"],
+                "required": "%if_devel",
                 "call": "camera_key_binding",
                 "arguments": {"user_id": "%user_id", "id": "change_camera.tripod", "tpe": "tripod"}
               }

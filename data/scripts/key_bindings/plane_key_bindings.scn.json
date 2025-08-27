@@ -3,7 +3,7 @@
     "declare_macro": "create_plane_key_bindings",
     "content": [
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "car_controller_idle_binding",
         "arguments": {
           "player": "%player_name",
@@ -11,7 +11,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "car_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -23,7 +23,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "car_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -35,7 +35,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_idle_binding",
         "arguments": {
           "player": "%player_name",
@@ -43,7 +43,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -55,7 +55,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -67,7 +67,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -79,7 +79,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -103,7 +103,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -115,7 +115,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -127,7 +127,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -139,7 +139,7 @@
         }
       },
       {
-        "required": ["%if_manual_drive"],
+        "required": "%if_manual_drive",
         "call": "plane_controller_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -171,7 +171,7 @@
         }
       },
       {
-        "required": ["%if_has_gun"],
+        "required": "%if_has_gun",
         "call": "gun_key_binding",
         "arguments": {
           "user_id": "%user_id",
@@ -181,7 +181,7 @@
         }
       },
       {
-        "required": ["%if_has_gun"],
+        "required": "%if_has_gun",
         "call": "player_key_binding",
         "arguments": {
           "user_id": "%user_id",

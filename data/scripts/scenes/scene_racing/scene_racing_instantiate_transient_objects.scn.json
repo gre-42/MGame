@@ -5,7 +5,7 @@
       "comment": "Car instance"
     },
     {
-      "required": ["%if_create_pc_car"],
+      "required": "%if_create_pc_car",
       "call": "for_each_user",
       "arguments": {
         "content": [
@@ -46,7 +46,7 @@
                   "comment": "Cameras"
                 },
                 {
-                  "required": ["%if_create_pc_car"],
+                  "required": "%if_create_pc_car",
                   "execute": [
                     {
                       "call": "create_externals",
@@ -148,7 +148,7 @@
       }
     },
     {
-      "required": ["%if_burn_in"],
+      "required": "%if_burn_in",
       "call": "burn_in",
       "arguments": {
         "seconds": 20
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "required": ["%if_playback_checkpoints"],
+      "required": "%if_playback_checkpoints",
       "playback": "create_playback",
       "arguments": {
         "playback_filename": "%checkpoints_file",
@@ -181,7 +181,7 @@
       }
     },
     {
-      "required": ["%if_playback_track_1"],
+      "required": "%if_playback_track_1",
       "playback": "create_playback",
       "arguments": {
         "playback_filename": "$recordings_dir/track1.m",
@@ -191,7 +191,7 @@
       }
     },
     {
-      "required": ["%if_playback_track_2"],
+      "required": "%if_playback_track_2",
       "playback": "create_playback",
       "arguments": {
         "playback_filename": "$recordings_dir/track2.m",
@@ -201,7 +201,7 @@
       }
     },
     {
-      "required": ["%if_playback_track_3"],
+      "required": "%if_playback_track_3",
       "playback": "create_playback",
       "arguments": {
         "playback_filename": "$recordings_dir/track3.m",

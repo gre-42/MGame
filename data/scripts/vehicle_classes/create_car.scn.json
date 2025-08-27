@@ -13,7 +13,7 @@
       },
       {
         "call": "add_color_style",
-        "required": ["%if_car_body_renderable_style"],
+        "required": "%if_car_body_renderable_style",
         "arguments": {
           "selector": "body|chassis|turret|main_gun",
           "node": "car_node$suffix",
@@ -25,7 +25,7 @@
         "playback": "create_$asset_id"
       },
       {
-        "required": ["%if_playback_track"],
+        "required": "%if_playback_track",
         "call": "playback_track",
         "arguments": {
           "node": "car_node$suffix",
@@ -34,7 +34,7 @@
         }
       },
       {
-        "required": ["%if_playback_winner"],
+        "required": "%if_playback_winner",
         "call": "playback_winner_track",
         "arguments": {
           "asset_id": "%asset_id",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "spawner_set_nodes",
         "arguments": {
           "asset_id": "%asset_id",
@@ -53,7 +53,7 @@
         }
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "set_respawn_cooldown_time",
         "arguments": {
           "spawner": "%spawner_name",
@@ -64,7 +64,7 @@
         "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix csuffix:suffix"
       },
       {
-        "required": ["%if_damageable"],
+        "required": "%if_damageable",
         "call": "damageable",
         "arguments": {
           "node": "car_node$suffix",
@@ -74,7 +74,7 @@
         }
       },
       {
-        "required": ["%if_damageable"],
+        "required": "%if_damageable",
         "call": "crash",
         "arguments": {
           "node": "car_node$suffix",
@@ -82,7 +82,7 @@
         }
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "set_externals_creator",
         "without": ["user_id", "user_name", "player_name"],
         "arguments": {
@@ -144,7 +144,7 @@
         }
       },
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "call": "visual_player_status",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -192,7 +192,7 @@
         }
       },
       {
-        "required": ["%if_pc"],
+        "required": "%if_pc",
         "call": "visual_player_bullet_count",
         "context": "primary_scene_$user_name",
         "arguments": {

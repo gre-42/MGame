@@ -13,7 +13,7 @@
         }
       },
       {
-        "required": ["%if_skater_style"],
+        "required": "%if_skater_style",
         "call": "add_color_style",
         "arguments": {
           "node": "skater_node$suffix",
@@ -22,7 +22,7 @@
         }
       },
       {
-        "required": ["%if_skater_style"],
+        "required": "%if_skater_style",
         "call": "set_animation_state",
         "arguments": {
           "nodes": ["skater_node$suffix"],
@@ -36,7 +36,7 @@
         "playback": "create_$asset_id"
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "spawner_set_nodes",
         "arguments": {
           "asset_id": "%asset_id",
@@ -45,7 +45,7 @@
         }
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "set_respawn_cooldown_time",
         "arguments": {
           "spawner": "%spawner_name",
@@ -56,7 +56,7 @@
         "comment": "if_shadow macro_playback add_attached_light-asset_id lsuffix:_skater$suffix csuffix:suffix"
       },
       {
-        "required": ["%if_spawner"],
+        "required": "%if_spawner",
         "call": "set_externals_creator",
         "without": ["user_id", "user_name", "player_name"],
         "arguments": {

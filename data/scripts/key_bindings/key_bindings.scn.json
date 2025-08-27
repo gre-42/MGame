@@ -3,6 +3,6 @@
   {"include": "human_key_bindings.scn.json"},
   {"include": "plane_key_bindings.scn.json"},
   {"include": "skater_key_bindings.scn.json"},
-  {"required": ["%if_android"], "include": "tap_buttons.scn.json"},
+  {"required": "%if_android", "include": "tap_buttons.scn.json"},
   {"include": "tripod_key_bindings.scn.json"}
 ]
