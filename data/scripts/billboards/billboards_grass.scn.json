@@ -10,6 +10,7 @@
       "texture_filename": "textures/grass.png",
       "min": [-2, 0],
       "max": [2, 4],
+      "ambient": [1, 1, 1],
       "aggregate_mode": "sorted"
     }
   },
@@ -21,6 +22,7 @@
       "texture_filename": "textures/00210_Baeume_Key_LOW-cropped.png",
       "min": [-5, 0],
       "max": [5, 10],
+      "ambient": [1, 1, 1],
       "aggregate_mode": "sorted"
     }
   },
@@ -32,6 +34,7 @@
       "texture_filename": "textures/pine_norm_gr1.png",
       "min": [-5, 0],
       "max": [5, 10],
+      "ambient": [1, 1, 1],
       "aggregate_mode": "sorted"
     }
   },
