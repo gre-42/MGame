@@ -5,7 +5,8 @@
     "arguments": {
       "name": "pistol.shot",
       "filename": "sounds/opengameart/chaingun-pistol-rifle-shotgun-shots/pistol.wav",
-      "gain": 1
+      "gain": 1,
+      "distance_clamping": [5, 20]
     }
   },
   {
@@ -14,7 +15,8 @@
     "arguments": {
       "name": "cg1.shot",
       "filename": "sounds/opengameart/chaingun-pistol-rifle-shotgun-shots/cg1.wav",
-      "gain": 1
+      "gain": 1,
+      "distance_clamping": [5, 20]
     }
   }
 ]
