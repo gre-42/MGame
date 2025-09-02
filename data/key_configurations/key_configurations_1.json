@@ -119,16 +119,16 @@
     "id": "avatar.rotate_left",
     "tap_button": {"default": {"gamepad_id": 1, "button": "LEFT"}},
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5},
-      "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5}
+      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": -0.4, "deadzone": 0.01, "exponent": 1.5},
+      "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": -0.4, "deadzone": 0.01, "exponent": 1.5}
     }}
   },
   {
     "id": "avatar.rotate_right",
     "tap_button": {"default": {"gamepad_id": 1, "button": "RIGHT"}},
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5},
-      "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5}
+      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": 0.4, "deadzone": 0.01, "exponent": 1.5},
+      "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": 0.4, "deadzone": 0.01, "exponent": 1.5}
     }}
   },
   {
@@ -150,15 +150,27 @@
   {
     "id": "avatar.rotate_up",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5},
-      "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.5}
+      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": -0.4, "deadzone": 0.01, "exponent": 1.5},
+      "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": -0.4, "deadzone": 0.01, "exponent": 1.5}
     }}
   },
   {
     "id": "avatar.rotate_down",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5},
-      "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.5}
+      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": 0.4, "deadzone": 0.01, "exponent": 1.5},
+      "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": 0.4, "deadzone": 0.01, "exponent": 1.5}
+    }}
+  },
+  {
+    "id": "avatar.next_weapon",
+    "analog_digital_axes": {"default": {
+      "joystick": {"gamepad_id": 1, "axis": 6, "sign_and_threshold": 0.5}
+    }}
+  },
+  {
+    "id": "avatar.previous_weapon",
+    "analog_digital_axes": {"default": {
+      "joystick": {"gamepad_id": 1, "axis": 5, "sign_and_threshold": 0.5}
     }}
   },
   {
