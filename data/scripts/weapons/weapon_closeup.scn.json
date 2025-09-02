@@ -75,6 +75,29 @@
           "node": "punch_angle_node_closeup",
           "resource": "%resource"
         }
+      },
+      {
+        "required": "%muzzle_flash_position != %null",
+        "execute": [
+          {
+            "call": "child_node_instance",
+            "arguments": {
+              "type": "dynamic",
+              "parent": "punch_angle_node_closeup",
+              "name": "muzzle_flash_closeup_node_$suffix",
+              "position": "%muzzle_flash_position",
+              "rotation": [0, 0, 0],
+              "scale": 1
+            }
+          },
+          {
+            "call": "set_particle_renderer",
+            "arguments": {
+              "node": "muzzle_flash_closeup_node_$suffix",
+              "renderable": "particle_renderer"
+            }
+          }
+        ]
       }
     ]
   },
@@ -85,6 +108,36 @@
       "arguments": {
         "name": "punch_angle_node_closeup",
         "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
+      }
+    }
+  },
+  {
+    "declare_macro": "_generate_weapon_hider",
+    "content": {
+      "call": "for_each_user",
+      "without": ["user_id", "user_name"],
+      "arguments": {
+        "content": {
+          "call": "insert_renderable_node_hider",
+          "context": "primary_scene_$user_name",
+          "arguments": {
+            "node_to_hide": "main_gun_node_visual$suffix",
+            "camera_node": "human_head_camera_node$suffix",
+            "punch_angle_node": "main_gun_punch_angle_node$suffix",
+            "on_hide": {
+              "playback": "_add_weapon_closeup_scheduler_on_hide",
+              "context": "weapon_closeup_$user_name"
+            },
+            "on_destroy": {
+              "playback": "_add_weapon_closeup_scheduler_on_destroy",
+              "context": "weapon_closeup_$user_name"
+            },
+            "on_update": {
+              "playback": "_add_weapon_closeup_scheduler_on_update",
+              "context": "weapon_closeup_$user_name"
+            }
+          }
+        }
       }
     }
   }

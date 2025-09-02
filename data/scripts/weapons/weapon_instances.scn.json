@@ -9,24 +9,16 @@
     ]
   },
   {
-    "declare_macro": "_set_node_hider",
+    "declare_macro": "_generate_muzzle_flash",
     "content": {
-      "call": "insert_renderable_node_hider",
+      "call": "emit_child_particle",
       "arguments": {
-        "node_to_hide": "main_gun_node_visual$suffix",
-        "camera_node": "human_head_camera_node$suffix",
-        "punch_angle_node": "main_gun_punch_angle_node$suffix",
-        "on_hide": {
-          "playback": "_add_weapon_closeup_scheduler_on_hide",
-          "context": "weapon_closeup_$user_name"
-        },
-        "on_destroy": {
-          "playback": "_add_weapon_closeup_scheduler_on_destroy",
-          "context": "weapon_closeup_$user_name"
-        },
-        "on_update": {
-          "playback": "_add_weapon_closeup_scheduler_on_update",
-          "context": "weapon_closeup_$user_name"
+        "node": "muzzle_flash_node_$suffix",
+        "resource": "%resource",
+        "location": {
+          "position": [0, 0, 0],
+          "rotation": [0, 0, 0],
+          "scale": 1
         }
       }
     }
@@ -54,6 +46,13 @@
         }
       },
       {
+        "playback": "_generate_weapon_hider",
+        "arguments": {
+          "resource": "M4A1",
+          "muzzle_flash_position": [0, 0.062, -0.66]
+        }
+      },
+      {
         "call": "gun",
         "arguments": {
           "node": "main_gun_end_node$suffix",
@@ -61,18 +60,20 @@
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
-          "muzzle_flash_resource": "muzzle_flash_0",
-          "muzzle_flash_position": [0, 0.05, -0.45],
-          "muzzle_flash_animation_time": 0.1,
-          "generate_muzzle_flash_hider": {
-            "playback": "_generate_muzzle_flash_hider",
-            "arguments": {
-              "resource": "muzzle_flash_0",
-              "animation_time": 0.1,
-              "position": [0, 0.062, -0.66],
-              "muzzle_flash_suffix": "%muzzle_flash_suffix"
+          "generate_muzzle_flash": [
+            {
+              "playback": "_generate_muzzle_flash",
+              "arguments": {
+                "resource": "muzzle_flash_0_3d_orange_brown"
+              }
+            },
+            {
+              "playback": "_generate_muzzle_flash_closeup",
+              "arguments": {
+                "resource": "muzzle_flash_0_3d_orange_brown"
+              }
             }
-          },
+          ],
           "cool_down": "%cool_down",
           "ammo_type": "%ammo_type",
           "bullet_type": "%bullet_type",
@@ -89,16 +90,21 @@
         }
       },
       {
-        "call": "for_each_user",
-        "without": ["user_id", "user_name"],
+        "call": "child_node_instance",
         "arguments": {
-          "content": {
-            "playback": "_set_node_hider",
-            "context": "primary_scene_$user_name",
-            "arguments": {
-              "resource": "M4A1"
-            }
-          }
+          "type": "dynamic",
+          "parent": "main_gun_end_node$suffix",
+          "name": "muzzle_flash_node_$suffix",
+          "position": [0, 0.05, -0.45],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "set_particle_renderer",
+        "arguments": {
+          "node": "muzzle_flash_node_$suffix",
+          "renderable": "particle_renderer"
         }
       }
     ]
@@ -126,6 +132,13 @@
         }
       },
       {
+        "playback": "_generate_weapon_hider",
+        "arguments": {
+          "resource": "Beretta92",
+          "muzzle_flash_position": [0, 0.086, -0.265]
+        }
+      },
+      {
         "call": "gun",
         "arguments": {
           "node": "main_gun_end_node$suffix",
@@ -133,18 +146,20 @@
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
-          "muzzle_flash_resource": "muzzle_flash_0",
-          "muzzle_flash_position": [0, 0.05, 0],
-          "muzzle_flash_animation_time": 0.1,
-          "generate_muzzle_flash_hider": {
-            "playback": "_generate_muzzle_flash_hider",
-            "arguments": {
-              "resource": "muzzle_flash_0",
-              "animation_time": 0.1,
-              "position": [0, 0.086, -0.265],
-              "muzzle_flash_suffix": "%muzzle_flash_suffix"
+          "generate_muzzle_flash": [
+            {
+              "playback": "_generate_muzzle_flash",
+              "arguments": {
+                "resource": "muzzle_flash_0_3d_orange_brown"
+              }
+            },
+            {
+              "playback": "_generate_muzzle_flash_closeup",
+              "arguments": {
+                "resource": "muzzle_flash_0_3d_orange_brown"
+              }
             }
-          },
+          ],
           "cool_down": "%cool_down",
           "ammo_type": "%ammo_type",
           "bullet_type": "%bullet_type",
@@ -161,16 +176,21 @@
         }
       },
       {
-        "call": "for_each_user",
-        "without": ["user_id", "user_name"],
+        "call": "child_node_instance",
         "arguments": {
-          "content": {
-            "playback": "_set_node_hider",
-            "context": "primary_scene_$user_name",
-            "arguments": {
-              "resource": "Beretta92"
-            }
-          }
+          "type": "dynamic",
+          "parent": "main_gun_end_node$suffix",
+          "name": "muzzle_flash_node_$suffix",
+          "position": [0, 0.05, 0],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "set_particle_renderer",
+        "arguments": {
+          "node": "muzzle_flash_node_$suffix",
+          "renderable": "particle_renderer"
         }
       }
     ]
@@ -198,6 +218,13 @@
         }
       },
       {
+        "playback": "_generate_weapon_hider",
+        "arguments": {
+          "resource": "frag_grenade",
+          "muzzle_flash_position": null
+        }
+      },
+      {
         "call": "gun",
         "arguments": {
           "node": "main_gun_end_node$suffix",
@@ -217,19 +244,6 @@
           "ypln_node": "human_node$suffix",
           "dpitch_head": -15,
           "bullet_type": "%bullet_type"
-        }
-      },
-      {
-        "call": "for_each_user",
-        "without": ["user_id", "user_name"],
-        "arguments": {
-          "content": {
-            "playback": "_set_node_hider",
-            "context": "primary_scene_$user_name",
-            "arguments": {
-              "resource": "frag_grenade"
-            }
-          }
         }
       }
     ]
@@ -257,6 +271,13 @@
         }
       },
       {
+        "playback": "_generate_weapon_hider",
+        "arguments": {
+          "resource": "m72_law",
+          "muzzle_flash_position": null
+        }
+      },
+      {
         "call": "gun",
         "arguments": {
           "node": "main_gun_end_node$suffix",
@@ -276,19 +297,6 @@
           "ypln_node": "human_node$suffix",
           "dpitch_head": 0,
           "bullet_type": "%bullet_type"
-        }
-      },
-      {
-        "call": "for_each_user",
-        "without": ["user_id", "user_name"],
-        "arguments": {
-          "content": {
-            "playback": "_set_node_hider",
-            "context": "primary_scene_$user_name",
-            "arguments": {
-              "resource": "m72_law"
-            }
-          }
         }
       }
     ]

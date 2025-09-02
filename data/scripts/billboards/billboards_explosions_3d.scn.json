@@ -1,0 +1,67 @@
+[
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "explosion_3d",
+      "texture_filename": "#explosions_3d",
+      "min": [-1, -1],
+      "max": [1, 1],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_lookat",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient",
+      "billboards": [
+        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [5  , 5  , 5  ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [0.5, 0.5, 0.5], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [0.1, 0.1, 0.1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+      ]
+    }
+  },
+  {
+    "call": "animatable_billboards",
+    "arguments": {
+      "name": "animatable_explosion_3d",
+      "billboards": "explosion_3d",
+      "max_num_instances": 10000,
+      "type": "smoke"
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "large_explosion_3d",
+      "animatable": "animatable_explosion_3d",
+      "frames": [0],
+      "final_texture_w": 1,
+      "duration": 0.6
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "medium_explosion_3d",
+      "animatable": "animatable_explosion_3d",
+      "frames": [1],
+      "final_texture_w": 1,
+      "duration": 0.1
+    }
+  },
+  {
+    "call": "animated_billboards",
+    "arguments": {
+      "name": "small_explosion_3d",
+      "animatable": "animatable_explosion_3d",
+      "frames": [2],
+      "final_texture_w": 1,
+      "duration": 0.1
+    }
+  }
+]

@@ -15,7 +15,7 @@
       "alpha_distances": [0, 0, "inf", "inf"],
       "cull_faces": true,
       "aggregate_mode": "none",
-      "transformation_mode": "position_lookat",
+      "transformation_mode": "position_flat",
       "number_of_frames": 16
     }
   },
@@ -35,7 +35,7 @@
       "alpha_distances": [0, 0, "inf", "inf"],
       "cull_faces": true,
       "aggregate_mode": "none",
-      "transformation_mode": "position_lookat",
+      "transformation_mode": "position_flat",
       "number_of_frames": 16
     }
   },
@@ -46,9 +46,14 @@
       "texture_filename": "#explosion_01",
       "min": [-5, -5],
       "max": [5, 5],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
       "emissive": [1, 1, 1],
       "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
       "aggregate_mode": "none",
+      "transformation_mode": "all",
       "number_of_frames": 16
     }
   },
@@ -155,9 +160,14 @@
       "texture_filename": "#explosion_gray",
       "min": [-0.5, -0.5],
       "max": [0.5, 0.5],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
       "emissive": [1, 1, 1],
       "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
       "aggregate_mode": "none",
+      "transformation_mode": "all",
       "number_of_frames": 4
     }
   }

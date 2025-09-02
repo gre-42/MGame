@@ -1,91 +1,31 @@
 [
   {
-    "declare_macro": "_delete_muzzle_flash_closeup_nodes",
-    "content": [
-      {
-        "call": "try_delete_node",
-        "arguments": {
-          "name": "muzzle_flash_closeup_node_$muzzle_flash_suffix"
-        }
-      }
-    ]
-  },
-  {
-    "declare_macro": "_add_muzzle_flash_closeup_scheduler_on_hide",
-    "content": {
-      "call": "execute_in_physics_thread",
-      "arguments": {
-        "command": {
-          "playback": "_add_muzzle_flash_closeup"
-        }
-      }
-    }
-  },
-  {
-    "declare_macro": "_add_muzzle_flash_closeup_scheduler_on_destroy",
-    "content": [
-      {
-        "call": "execute_in_physics_thread",
-        "arguments": {
-          "command": {
-            "playback": "_delete_muzzle_flash_closeup_nodes"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "declare_macro": "_add_muzzle_flash_closeup",
-    "content": [
-      {
-        "call": "child_node_instance",
-        "arguments": {
-          "type": "dynamic",
-          "parent": "punch_angle_node_closeup",
-          "name": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
-          "position": "%position",
-          "rotation": [0, 0, 0],
-          "scale": 1
-        }
-      },
-      {
-        "call": "set_animation_state",
-        "arguments": {
-          "nodes": ["muzzle_flash_closeup_node_$muzzle_flash_suffix"],
-          "aperiodic_animation_begin": 0,
-          "aperiodic_animation_end": "%animation_time",
-          "aperiodic_animation_time": 0
-        }
-      },
-      {
-        "call": "child_renderable_instance",
-        "arguments": {
-          "name": "closeup-inst",
-          "node": "muzzle_flash_closeup_node_$muzzle_flash_suffix",
-          "resource": "%resource"
-        }
-      }
-    ]
-  },
-  {
-    "declare_macro": "_generate_muzzle_flash_hider",
+    "declare_macro": "_generate_muzzle_flash_closeup",
     "content": {
       "call": "for_each_user",
       "without": ["user_id", "user_name"],
       "arguments": {
         "content": {
-          "call": "insert_renderable_node_hider",
-          "context": "primary_scene_$user_name",
+          "call": "execute_in_physics_thread",
+          "context": "weapon_closeup_$user_name",
           "arguments": {
-            "node_to_hide": "muzzle_flash_node$muzzle_flash_suffix",
-            "camera_node": "human_head_camera_node$suffix",
-            "on_hide": {
-              "playback": "_add_muzzle_flash_closeup_scheduler_on_hide",
-              "context": "weapon_closeup_$user_name"
-            },
-            "on_destroy": {
-              "playback": "_add_muzzle_flash_closeup_scheduler_on_destroy",
-              "context": "weapon_closeup_$user_name"
+            "command": {
+              "call": "execute_if_node_exists",
+              "arguments": {
+                "node": "muzzle_flash_closeup_node_$suffix",
+                "command": {
+                  "call": "emit_child_particle",
+                  "arguments": {
+                    "node": "muzzle_flash_closeup_node_$suffix",
+                    "resource": "%resource",
+                    "location": {
+                      "position": [0, 0, 0],
+                      "rotation": [0, 0, 0],
+                      "scale": 1
+                    }
+                  }
+                }
+              }
             }
           }
         }
