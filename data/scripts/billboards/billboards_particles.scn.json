@@ -23,7 +23,7 @@
     "call": "square_resource",
     "arguments": {
       "name": "large_explosion",
-      "texture_filename": "#explosion_01",
+      "texture_filename": "#explosion_3d",
       "min": [-5, -5],
       "max": [5, 5],
       "center_distances": [0, 1501],
@@ -36,14 +36,14 @@
       "cull_faces": true,
       "aggregate_mode": "none",
       "transformation_mode": "position_flat",
-      "number_of_frames": 16
+      "has_animated_textures": true
     }
   },
   {
     "call": "blending_x_resource",
     "arguments": {
       "name": "large_explosion_cross",
-      "texture_filename": "#explosion_01",
+      "texture_filename": "#explosion_3d",
       "min": [-5, -5],
       "max": [5, 5],
       "occluded_pass": "none",
@@ -54,7 +54,7 @@
       "alpha_distances": [0, 0, "inf", "inf"],
       "aggregate_mode": "none",
       "transformation_mode": "all",
-      "number_of_frames": 16
+      "has_animated_textures": true
     }
   },
   {
