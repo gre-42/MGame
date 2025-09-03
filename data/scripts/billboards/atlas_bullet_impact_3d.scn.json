@@ -1,0 +1,33 @@
+[
+  {
+    "call": "add_texture_atlas",
+    "arguments": {
+      "name": "bullet_impact_3d",
+      "width": 256,
+      "height": 256,
+      "layers": 4,
+      "depth_interpolation": "linear",
+      "mipmap_mode": "with_mipmaps_2d",
+      "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
+      "images": [
+        {"source_position": [   0, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  0, "texture": "#explosion_gray"},
+        {"source_position": [ 256, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  1, "texture": "#explosion_gray"},
+        {"source_position": [ 512, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  2, "texture": "#explosion_gray"},
+        {"source_position": [ 768, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  3, "texture": "#explosion_gray"}
+      ]
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_array_png",
+      "arguments": {
+        "name": "bullet_impact_3d",
+        "filename_prefix": "/tmp/textures_",
+        "color_mode": "rgba"
+      }
+    }
+  }
+]

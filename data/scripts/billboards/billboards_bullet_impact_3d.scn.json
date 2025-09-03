@@ -2,8 +2,8 @@
   {
     "call": "square_resource",
     "arguments": {
-      "name": "muzzle_flash_0_3d",
-      "texture_filename": "#muzzle_flash_3d",
+      "name": "bullet_impact_3d",
+      "texture_filename": "#bullet_impact_3d",
       "min": [-1, -1],
       "max": [1, 1],
       "center_distances": [0, 501],
@@ -19,15 +19,15 @@
       "fog_distances": "%fog_distances",
       "fog_ambient": "%fog_ambient",
       "billboards": [
-        {"uv_scale": [1, 1], "uv_offset": [0, 0], "vertex_scale": [0.15, 0.15, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+        {"uv_scale": [1, 1], "uv_offset": [0  , 0], "vertex_scale": [0.15, 0.15, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
       ]
     }
   },
   {
     "call": "animatable_billboards",
     "arguments": {
-      "name": "animatable_muzzle_flash_0_3d",
-      "billboards": "muzzle_flash_0_3d",
+      "name": "animatable_bullet_impact_3d",
+      "billboards": "bullet_impact_3d",
       "max_num_instances": 10000,
       "type": "smoke"
     }
@@ -35,8 +35,8 @@
   {
     "call": "animated_billboards",
     "arguments": {
-      "name": "muzzle_flash_0_3d_orange_brown",
-      "animatable": "animatable_muzzle_flash_0_3d",
+      "name": "bullet_impact_3d",
+      "animatable": "animatable_bullet_impact_3d",
       "frames": [0],
       "final_texture_w": 1,
       "duration": 0.1
