@@ -1,4 +1,5 @@
 {
+  "required": "%flavor == 'extended'",
   "call": "set_surface_contact_info",
   "arguments": {
     "material0": "surface_base_foot",

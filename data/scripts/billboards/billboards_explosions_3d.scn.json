@@ -3,7 +3,7 @@
     "call": "square_resource",
     "arguments": {
       "name": "explosion_3d",
-      "texture_filename": "#explosions_3d",
+      "texture_filename": "#explosion_3d",
       "min": [-1, -1],
       "max": [1, 1],
       "center_distances": [0, 501],
@@ -19,9 +19,9 @@
       "fog_distances": "%fog_distances",
       "fog_ambient": "%fog_ambient",
       "billboards": [
-        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [5  , 5  , 5  ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [0.5, 0.5, 0.5], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
-        {"uv_scale": [0.25, 0.25], "uv_offset": [0, 0], "vertex_scale": [0.1, 0.1, 0.1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
+        {"uv_scale": [1, 1], "uv_offset": [0, 0], "vertex_scale": [5  , 5  , 5  ], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [1, 1], "uv_offset": [0, 0], "vertex_scale": [0.5, 0.5, 0.5], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [1, 1], "uv_offset": [0, 0], "vertex_scale": [0.1, 0.1, 0.1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}
       ]
     }
   },
