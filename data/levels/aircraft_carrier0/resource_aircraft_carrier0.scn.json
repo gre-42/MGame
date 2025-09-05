@@ -55,9 +55,10 @@
       "call": "grid_resource",
       "arguments": {
         "name": "ocean",
-        "texture_filename": "#ocean_uniform",
+        "textures_color": ["ocean_uniform"],
         "size": [50, 50],
         "tile_length": 1e3,
+        "triangle_cluster_width": "%sparse_triangle_cluster_width",
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "none",
         "ambient": [0, 0, 0],
@@ -78,16 +79,18 @@
           "scale": 1
         },
         "scale": 1,
-        "uv_scale": 0.1,
-        "period": 10,
-        "aggregate_mode": "once",
+        "uv_scale": 0.01,
+        "period": 100,
+        "aggregate_mode": "node_triangles",
         "transformation_mode": "all",
         "emissive_factor": "%vanilla_rally_emissive_factor",
         "ambient_factor": "%vanilla_rally_ambient_factor",
         "diffuse_factor": "%vanilla_rally_diffuse_factor",
         "specular_factor": "%vanilla_rally_specular_factor",
         "fog_distances": "%fog_distances",
-        "fog_ambient": "%fog_ambient"
+        "fog_ambient": "%fog_ambient",
+        "physics_material": "surface_base_water",
+        "has_animated_textures": true
       }
     },
     {

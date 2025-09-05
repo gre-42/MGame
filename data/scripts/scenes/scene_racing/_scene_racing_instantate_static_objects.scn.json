@@ -4,8 +4,8 @@
     "content": {
       "call": "preload",
       "arguments": {
-        "resources": ["osm_map"],
-        "tire_contacts": ["osm_map"]
+        "resources": ["compound_osm_map"],
+        "tire_contacts": ["compound_osm_map"]
       }
     }
   },
@@ -15,6 +15,26 @@
       {
         "required": "%if_instantiate_osm_map",
         "execute": [
+          {
+            "required": "%if_has_overlay",
+            "execute": {
+              "call": "compound_resource",
+              "arguments": {
+                "source_names": ["osm_map", "osm_map_overlay"],
+                "dest_name": "compound_osm_map"
+              }
+            }
+          },
+          {
+            "exclude": "%if_has_overlay",
+            "execute": {
+              "call": "compound_resource",
+              "arguments": {
+                "source_names": ["osm_map"],
+                "dest_name": "compound_osm_map"
+              }
+            }
+          },
           {
             "playback": "_preload_osm_map"
           },
@@ -29,18 +49,7 @@
           {
             "playback": "_create_osm_map_resource",
             "arguments": {
-              "osm_map": "osm_map",
-              "if_extract_alignment_planes": "%if_extract_alignment_planes",
-              "if_gen_grind_lines": "%if_gen_grind_lines",
-              "if_gen_instances": "%if_gen_instances",
-              "barrier_depth": "%barrier_depth"
-            }
-          },
-          {
-            "required": "%if_has_overlay",
-            "playback": "_create_osm_map_resource",
-            "arguments": {
-              "osm_map": "osm_map_overlay",
+              "osm_map": "compound_osm_map",
               "if_extract_alignment_planes": "%if_extract_alignment_planes",
               "if_gen_grind_lines": "%if_gen_grind_lines",
               "if_gen_instances": "%if_gen_instances",
@@ -56,7 +65,7 @@
             "arguments": {
               "name": "world",
               "transformation": "%osm_location",
-              "resource": "osm_map"
+              "resource": "compound_osm_map"
             }
           },
           {
@@ -64,43 +73,30 @@
             "arguments": {
               "name": "osm_inst",
               "transformation": "%osm_location",
-              "resource": "osm_map"
+              "resource": "compound_osm_map",
+              "instantiated_root_nodes": "instantiated_root_nodes"
+            }
+          },
+          {
+            "required": "%periodic_reference_time_duration != %null",
+            "call": "set_animation_state",
+            "context": "primary_scene",
+            "arguments": {
+              "nodes": "%instantiated_root_nodes",
+              "periodic_reference_time_duration": "%periodic_reference_time_duration"
             }
           },
           {
             "comment": {
               "call": "save_to_obj_file",
               "arguments": {
-                "resource": "osm_map",
+                "resource": "compound_osm_map",
                 "node": "osm_map_node",
                 "prefix": "/tmp/osm_map_"
               }
             }
           },
           {
-            "required": "%if_has_overlay",
-            "call": "root_renderable_instances",
-            "arguments": {
-              "name": "osm_overlay_inst",
-              "transformation": "%osm_location",
-              "resource": "osm_map_overlay"
-            }
-          },
-          {
-            "required": "%if_has_overlay",
-            "call": "compound_resource",
-            "arguments": {
-              "source_names": [
-                "osm_map",
-                "osm_map_grind_lines",
-                "osm_map_overlay",
-                "osm_map_overlay_grind_lines"
-              ],
-              "dest_name": "osm_map_hitboxes"
-            }
-          },
-          {
-            "exclude": ["%if_has_overlay"],
             "call": "compound_resource",
             "arguments": {
               "source_names": [
@@ -130,7 +126,7 @@
           }
         ]
       },
-      {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=osm_map"},
+      {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=compound_osm_map"},
       {"comment": "Player"},
       {
         "call": "for_each_user",
