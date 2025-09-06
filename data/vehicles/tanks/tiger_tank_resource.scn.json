@@ -69,7 +69,8 @@
         "occluded_pass": "none",
         "occluder_pass": "none",
         "aggregate_mode": "none",
-        "transformation_mode": "all"
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_tire"
       }
     }
   },
@@ -83,7 +84,6 @@
   {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8, -0.5,  2.4], "to": [ 1.8, -1.3,  2.4]}}, {"comment": "right 3"},
   {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8,  0.3,  4  ], "to": [-1.8, -0.5,  4  ]}}, {"comment": "left  rear"},
   {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8,  0.3,  4  ], "to": [ 1.8, -0.5,  4  ]}}, {"comment": "right rear"},
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "tiger_tank_tirelines", "add": "obj_tire_line"}},
   {"call": "compound_resource", "arguments": {"source_names": ["tiger_tank_hitbox", "tiger_tank_distancebox", "tiger_tank_tirelines"], "dest_name": "tiger_tank_hitboxes"}},
   {
     "declare_macro": "load_tiger_tank",
