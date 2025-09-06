@@ -167,7 +167,7 @@
   {
     "id": "avatar.jump",
     "key": "LEFT_SHIFT",
-    "gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "TRIANGLE"}}
   },
   {
     "id": "avatar.strafe_left",
@@ -267,7 +267,7 @@
     "id": "avatar.shoot",
     "key": "SPACE",
     "mouse_button": "LEFT",
-    "gamepad_button": {"default": {"gamepad_id": 0, "button": "TRIANGLE"}}
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "RIGHT_BUMPER"}}
   },
   {
     "id": "avatar.select_next_vehicle",
