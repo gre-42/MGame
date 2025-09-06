@@ -97,25 +97,27 @@
             }
           },
           {
-            "call": "compound_resource",
-            "arguments": {
-              "source_names": [
-                "osm_map",
-                "osm_map_grind_lines"
-              ],
-              "dest_name": "osm_map_hitboxes"
-            }
-          },
-          {
-            "comment": {
-              "call": "rigid_statics",
-              "arguments": {
-                "transformation": "%osm_location",
-                "hitboxes": "osm_map_hitboxes",
-                "name": "osm_map",
-                "asset_id": "osm_map_no_id"
+            "comment": [
+              {
+                "call": "compound_resource",
+                "arguments": {
+                  "source_names": [
+                    "compound_osm_map",
+                    "compound_osm_map_grind_lines"
+                  ],
+                  "dest_name": "compound_osm_map_hitboxes"
+                }
+              },
+              {
+                "call": "rigid_statics",
+                "arguments": {
+                  "transformation": "%osm_location",
+                  "hitboxes": "osm_map_hitboxes",
+                  "name": "osm_map",
+                  "asset_id": "osm_map_no_id"
+                }
               }
-            }
+            ]
           },
           {
             "call": "instantiate_statics",
