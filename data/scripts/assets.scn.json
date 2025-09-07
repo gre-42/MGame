@@ -5,7 +5,11 @@
       {
         "call": "default_persistent",
         "arguments": {
-          "language": "en-US"
+          "user_count": "%user_count",
+          "variables": {
+            "language": "en-US",
+            "pacenotes": "disabled"
+          }
         }
       },
       {

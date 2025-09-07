@@ -552,6 +552,10 @@
           "deflt": 0,
           "parameters": [
             {
+              "required": {
+                "fixed": [],
+                "dynamic": ["%selected_user_count == %user_count"]
+              },
               "id": "new_game",
               "title": "%%translations/main/New_game/$selected_language",
               "on_execute": { "call": "try_append_focuses", "arguments": {"content": ["new_game_menu"]}}
@@ -972,6 +976,31 @@
             {"id": "tap_button", "title": "Tap button", "on_before_select": { "call": "globals", "arguments": {"input_type_$user_name": "tap_button"}}},
             {"id": "joystick", "title": "Joystick/gamepad", "on_before_select": { "call": "globals", "arguments": {"input_type_$user_name": "joystick"}}},
             {"id": "all", "title": "All", "on_before_select": { "call": "globals", "arguments": {"input_type_$user_name": "all"}}}
+          ]
+        }
+      },
+      {
+        "call": "parameter_setter",
+        "arguments": {
+          "id": "pacenotes",
+          "focus_mask": "settings_menu",
+          "title": "%%translations/main/Pacenotes/$selected_language",
+          "icon": "pacenotes_icon",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "submenu_left",
+          "right": "submenu_right",
+          "bottom": "submenu_bottom",
+          "top": "submenu_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "user_id": "%user_id",
+          "deflt": 1,
+          "persistent": "pacenotes",
+          "parameters": [
+            {"id": "enabled", "title": "%%translations/main/Enabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_selected_pacenotes_$user_name": true}}},
+            {"id": "disabled", "title": "%%translations/main/Disabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_selected_pacenotes_$user_name": false}}}
           ]
         }
       },

@@ -59,6 +59,7 @@
       { "playback": "_add_menu_icon_subst", "arguments": { "name": "users" } }
     ]
   },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "pacenotes" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/missing.png", "instance": "missing_icon", "color_mode": "rgba" } },
   { "playback": "_add_menu_icon_subst", "arguments": { "name": "dots" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/selection_marker.png", "instance": "selection_marker", "color_mode": "rgba" } },
