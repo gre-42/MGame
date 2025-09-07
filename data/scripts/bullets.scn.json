@@ -172,8 +172,8 @@
       "properties": {
         "renderable": null,
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "small_explosion",
-        "explosion_animation_time": 0.3,
+        "explosion_resource": "bullet_impact_cross",
+        "explosion_animation_time": 0.1,
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 900,
