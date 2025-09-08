@@ -12,6 +12,12 @@
       }
     },
     {
+      "call": "reset_countdown_start",
+      "arguments": {
+        "duration": 5
+      }
+    },
+    {
       "playback": "_setup_new_round",
       "context": "primary_scene"
     },

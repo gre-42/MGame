@@ -37,7 +37,7 @@
             "arguments": {
               "name": "primary_scene_$user_name",
               "physics": "primary_scene",
-              "focus_mask": "scene|countdown_any|game_over_countdown_any",
+              "focus_mask": "scene",
               "submenus": [],
               "fly": "%primary_scene_fly",
               "rotate": "%primary_scene_rotate",
@@ -70,7 +70,7 @@
             "arguments": {
               "name": "weapon_closeup_$user_name",
               "physics": "weapon_closeup_$user_name",
-              "focus_mask": "scene|countdown_any|game_over_countdown_any",
+              "focus_mask": "always",
               "submenus": [],
               "fly": false,
               "rotate": false,

@@ -205,20 +205,6 @@
         }
       },
       {
-        "#comment": "Currently not used, countdown is used instead",
-        "call": "focused_text",
-        "arguments": {
-          "position": ["nan", "nan"],
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": "%ui_font_color",
-          "font_height": "huge",
-          "line_distance": "huge",
-          "focus_mask": "game_over",
-          "text": "Game over"
-        }
-      },
-      {
         "required": "%if_android",
         "playback": "create_tap_buttons"
       }

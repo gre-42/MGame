@@ -74,7 +74,7 @@
           "content": {
             "call": "set_focuses",
             "context": "primary_scene_$user_name",
-            "arguments": {"focuses": ["scene", "countdown_pending"]}
+            "arguments": {"focuses": ["scene"]}
           }
         }
       },

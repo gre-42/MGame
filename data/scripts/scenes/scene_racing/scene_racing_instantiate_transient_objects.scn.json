@@ -140,9 +140,9 @@
               },
               "on_finish": {
                 "call": "set_focuses",
-                "arguments": {"focuses": ["main_menu", "game_over_countdown_pending"]}
+                "arguments": {"focuses": ["main_menu"]}
               },
-              "focus_mask": "scene|countdown_any|game_over_countdown_any"
+              "focus_mask": "always"
             }
           }
         ]

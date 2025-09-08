@@ -259,20 +259,22 @@
                   "comment": "Countdown"
                 },
                 {
-                  "call": "ui_background",
-                  "arguments": {
-                    "z_order": 1,
-                    "texture": "textures/ui/background/gray.png",
-                    "left": "min",
-                    "right": "end",
-                    "bottom": "min",
-                    "top": "end",
-                    "delay_load_policy": "no_delay",
-                    "focus_mask": "countdown_any|game_over_countdown_any"
+                  "comment": {
+                    "call": "ui_background",
+                    "arguments": {
+                      "z_order": 1,
+                      "texture": "textures/ui/background/gray.png",
+                      "left": "min",
+                      "right": "end",
+                      "bottom": "min",
+                      "top": "end",
+                      "delay_load_policy": "no_delay",
+                      "focus_mask": "countdown_any|game_over_countdown_any"
+                    }
                   }
                 },
                 {
-                  "call": "countdown",
+                  "call": "countdown_start",
                   "arguments": {
                     "z_order": 1,
                     "charset": "%selected_language",
@@ -281,14 +283,11 @@
                     "font_color": "%scene_font_color",
                     "font_height": "huge",
                     "line_distance": "huge",
-                    "nseconds": 5,
-                    "pending_focus": "countdown_pending",
-                    "counting_focus": "countdown_counting",
                     "text": ""
                   }
                 },
                 {
-                  "call": "countdown",
+                  "call": "focused_text",
                   "arguments": {
                     "z_order": 1,
                     "charset": "%selected_language",
@@ -297,9 +296,7 @@
                     "font_color": "%scene_font_color",
                     "font_height": "huge",
                     "line_distance": "huge",
-                    "nseconds": 3,
-                    "pending_focus": "game_over_countdown_pending",
-                    "counting_focus": "game_over_countdown_counting",
+                    "focus_mask": "game_over",
                     "text": "Game over"
                   }
                 },

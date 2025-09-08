@@ -38,6 +38,7 @@
       {
         "call": "focused_text",
         "arguments": {
+          "z_order": 1,
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "position": ["nan", "nan"],
