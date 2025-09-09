@@ -140,7 +140,7 @@
               },
               "on_finish": {
                 "call": "set_focuses",
-                "arguments": {"focuses": ["main_menu"]}
+                "arguments": {"focuses": ["game_over", "main_menu"]}
               },
               "focus_mask": "always"
             }

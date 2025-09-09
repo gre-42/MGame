@@ -296,7 +296,7 @@
                     "font_color": "%scene_font_color",
                     "font_height": "huge",
                     "line_distance": "huge",
-                    "focus_mask": "game_over",
+                    "focus_mask": "query_contains|game_over",
                     "text": "Game over"
                   }
                 },
