@@ -95,27 +95,27 @@
     "section": "helicopter",
     "title": "Ascend",
     "unique": "car_or_heli",
-    "id": "car_or_heli.ascend"
+    "id": "heli.ascend"
   },
   {
     "section": "helicopter",
     "title": "Descend",
     "unique": "car_or_heli",
-    "id": "car_or_heli.descend"
+    "id": "heli.descend"
   },
   {
     "required": ["%flavor == 'extended'"],
     "section": "car_or_heli",
     "title": "Rotate the gun to the left",
     "unique": "car_or_heli",
-    "id": "car_or_heli.rotate_gun_left"
+    "id": "heli_or_tank.rotate_gun_left"
   },
   {
     "required": ["%flavor == 'extended'"],
     "section": "car_or_heli",
     "title": "Rotate the gun to the right",
     "unique": "car_or_heli",
-    "id": "car_or_heli.rotate_gun_right"
+    "id": "heli_or_tank.rotate_gun_right"
   },
   {
     "required": ["%flavor == 'extended'"],
@@ -143,13 +143,13 @@
     "section": "car_or_heli",
     "title": "Select next opponent",
     "unique": "car_or_heli",
-    "id": "car_or_heli.select_next_opponent"
+    "id": "any.select_next_opponent"
   },
   {
     "section": "car_or_heli",
     "title": "Exit the vehicle",
     "unique": "car_or_heli",
-    "id": "car_or_heli.select_next_vehicle"
+    "id": "car_heli_tank.select_next_vehicle"
   },
   {
     "section": "car_or_heli",
@@ -227,10 +227,10 @@
   },
   {
     "required": ["%flavor == 'extended'"],
-    "section": "avatar",
+    "section": "avatar|car|heli|plane",
     "title": "Shoot",
-    "unique": "avatar",
-    "id": "avatar.shoot"
+    "unique": "avatar|car|heli|plane",
+    "id": "any.shoot"
   },
   {
     "required": ["%flavor == 'extended'"],
@@ -367,7 +367,7 @@
     "section": "plane",
     "title": "Select next opponent",
     "unique": "plane",
-    "id": "plane.select_next_opponent"
+    "id": "any.select_next_opponent"
   },
   {
     "required": ["%flavor == 'extended'"],

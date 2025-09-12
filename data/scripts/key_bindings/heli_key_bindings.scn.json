@@ -1,5 +1,5 @@
 {
-  "declare_macro": "create_car_key_bindings",
+  "declare_macro": "create_heli_key_bindings",
   "content": [
     {
       "required": "%if_manual_drive",
@@ -49,7 +49,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "user_id": "%user_id",
-        "id": "car_or_tank.forward",
+        "id": "heli.forward",
         "seat": "%externals_seat",
         "player": "%player_name",
         "node": "car_node$suffix",
@@ -61,7 +61,7 @@
       "call": "car_controller_key_binding",
       "arguments": {
         "user_id": "%user_id",
-        "id": "car_or_tank.backwards",
+        "id": "heli.backwards",
         "seat": "%externals_seat",
         "player": "%player_name",
         "node": "car_node$suffix",
@@ -69,11 +69,95 @@
       }
     },
     {
+      "required": "%if_manual_drive",
+      "call": "car_controller_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "heli.ascend",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "car_node$suffix",
+        "ascend_velocity": 10
+      }
+    },
+    {
+      "required": "%if_manual_drive",
+      "call": "car_controller_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "heli.descend",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "car_node$suffix",
+        "ascend_velocity": -10
+      }
+    },
+    {
+      "required": "%if_has_gun",
+      "call": "rel_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "heli_or_tank.rotate_gun_left",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "turret_node$suffix",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity_press": 0.1,
+        "angular_velocity_repeat": 1,
+        "speed_cursor": 0.05
+      }
+    },
+    {
+      "required": "%if_has_gun",
+      "call": "rel_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "heli_or_tank.rotate_gun_right",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "turret_node$suffix",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity_press": -0.1,
+        "angular_velocity_repeat": -1,
+        "speed_cursor": -0.05
+      }
+    },
+    {
+      "required": "%if_has_gun",
+      "call": "rel_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "car_or_heli.rotate_gun_up",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "turret_node$suffix",
+        "rotation_axis": [1, 0, 0],
+        "angular_velocity_press": 0.1,
+        "angular_velocity_repeat": 1,
+        "speed_cursor": 0.05
+      }
+    },
+    {
+      "required": "%if_has_gun",
+      "call": "rel_key_binding",
+      "arguments": {
+        "user_id": "%user_id",
+        "id": "car_or_heli.rotate_gun_down",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "turret_node$suffix",
+        "rotation_axis": [1, 0, 0],
+        "angular_velocity_press": -0.1,
+        "angular_velocity_repeat": -1,
+        "speed_cursor": -0.05
+      }
+    },
+    {
       "required": "%if_has_gun",
       "call": "gun_key_binding",
       "arguments": {
         "user_id": "%user_id",
-        "id": "car_or_heli.shoot",
+        "id": "any.shoot",
         "seat": "%externals_seat",
         "player": "%player_name"
       }

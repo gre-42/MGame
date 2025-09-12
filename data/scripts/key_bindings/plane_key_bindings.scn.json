@@ -185,7 +185,7 @@
         "call": "player_key_binding",
         "arguments": {
           "user_id": "%user_id",
-          "id": "plane.select_next_opponent",
+          "id": "any.select_next_opponent",
           "seat": "%externals_seat",
           "player": "%player_name",
           "select_next_opponent": true
