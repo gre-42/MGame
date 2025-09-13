@@ -79,7 +79,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "required": ["%flavor == 'extended'"],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_gray",

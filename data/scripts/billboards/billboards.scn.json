@@ -1,9 +1,9 @@
 [
-  {"exclude": ["%if_android"], "include": "atlas_bullet_impact_3d.scn.json"},
+  {"include": "atlas_bullet_impact_3d.scn.json"},
   {"include": "atlas_explosions_3d.scn.json"},
   {"include": "atlas_muzzle_flash_3d.scn.json"},
   {"include": "billboards_blobs.scn.json"},
-  {"exclude": ["%if_android"], "include": "billboards_bullet_impact_3d.scn.json"},
+  {"include": "billboards_bullet_impact_3d.scn.json"},
   {"include": "billboards_decals.scn.json"},
   {"include": "billboards_explosions_3d.scn.json"},
   {"include": "billboards_grass.scn.json"},
