@@ -93,9 +93,9 @@
         "call": "child_node_instance",
         "arguments": {
           "type": "dynamic",
-          "parent": "main_gun_end_node$suffix",
+          "parent": "main_gun_node_visual$suffix",
           "name": "muzzle_flash_node_$suffix",
-          "position": [0, 0.05, -0.45],
+          "position": [0, 0.1, -0.65],
           "rotation": [0, 0, 0],
           "scale": 1
         }
@@ -179,9 +179,9 @@
         "call": "child_node_instance",
         "arguments": {
           "type": "dynamic",
-          "parent": "main_gun_end_node$suffix",
+          "parent": "main_gun_node_visual$suffix",
           "name": "muzzle_flash_node_$suffix",
-          "position": [0, 0.05, 0],
+          "position": [0, 0.1, -0.25],
           "rotation": [0, 0, 0],
           "scale": 1
         }

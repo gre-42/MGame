@@ -5,13 +5,42 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "animation_node$suffix", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "main_gun_node$suffix", "position": [0.1, 0.5, 0]}},
-      {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_node_visual$suffix", "position": [0, 0, -0.2]}},
+      {"comment": {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_node_visual$suffix", "position": [0, 0, -0.2]}}},
       {"comment": "-0.5 is inside the opponent's hitbox ending at -0.25 - 0.5"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix",             "name": "main_gun_punch_angle_node$suffix", "position": [0, 0  , -0.5]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix",         "position": [0, 0  ,    0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "animation_node$suffix",            "name": "human_head_node$suffix",           "position": [0, 1.7,    0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node$suffix",           "name": "human_head_node2$suffix",          "rotation": [0, 180,    0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_head_node2$suffix",          "name": "human_head_camera_node$suffix"}},
+      {
+        "required": "%if_with_graphics",
+        "call": "child_node_instance",
+        "arguments": {
+          "type": "dynamic",
+          "parent": "animation_node$suffix",
+          "name": "main_gun_node_visual0$suffix"
+        }
+      },
+      {
+        "comment": {
+          "call": "invert",
+          "arguments": {
+            "rotation": [-90, 90, 0],
+            "position": [0.6, -0.1, 0]
+          }
+        }
+      },
+      {
+        "required": "%if_with_graphics",
+        "call": "child_node_instance",
+        "arguments": {
+          "type": "dynamic",
+          "parent": "main_gun_node_visual0$suffix",
+          "name": "main_gun_node_visual$suffix",
+          "rotation": [90, 0, 90],
+          "position": [-0.075, 0, 0.025]
+        }
+      },
       {
         "call": "rigid_cuboid",
         "arguments": {
@@ -191,6 +220,15 @@
           "bone": "head",
           "smoothness": 0.9,
           "rotation_strength": 0.2
+        }
+      },
+      {
+        "call": "set_node_bone",
+        "arguments": {
+          "node": "main_gun_node_visual0$suffix",
+          "bone": "hand_r",
+          "smoothness": 0,
+          "rotation_strength": 1
         }
       },
       {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
