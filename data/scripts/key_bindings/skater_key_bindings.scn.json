@@ -19,8 +19,9 @@
         "player": "%player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": 3,
-        "angular_velocity_repeat": 3,
+        "angular_velocity": 3,
+        "press_factor": 1,
+        "repeat_factor": 1,
         "speed_cursor": 0.1
       }
     },
@@ -33,8 +34,9 @@
         "player": "%player_name",
         "node": "skater_node$suffix",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": -3,
-        "angular_velocity_repeat": -3,
+        "angular_velocity": -3,
+        "press_factor": 1,
+        "repeat_factor": 1,
         "speed_cursor": -0.1
       }
     },

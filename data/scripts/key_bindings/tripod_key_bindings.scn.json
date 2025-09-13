@@ -16,8 +16,9 @@
         "id": "tripod.move_left",
         "seat": "default",
         "translation": [-1, 0, 0],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -28,8 +29,9 @@
         "id": "tripod.move_right",
         "seat": "default",
         "translation": [1, 0, 0],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -40,8 +42,9 @@
         "id": "tripod.move_up",
         "seat": "default",
         "translation": [0, 1, 0],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -52,8 +55,9 @@
         "id": "tripod.move_down",
         "seat": "default",
         "translation": [0, -1, 0],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -64,8 +68,9 @@
         "id": "tripod.move_forward",
         "seat": "default",
         "translation": [0, 0, -1],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -76,8 +81,9 @@
         "id": "tripod.move_backwards",
         "seat": "default",
         "translation": [0, 0, 1],
-        "velocity_press": 5,
-        "velocity_repeat": 400,
+        "velocity": 400,
+        "press_factor": 0.01,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -88,8 +94,9 @@
         "id": "avatar.rotate_left",
         "seat": "default",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "angular_velocity": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -100,8 +107,9 @@
         "id": "avatar.rotate_right",
         "seat": "default",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "angular_velocity": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": -0.05
       }
     },
@@ -112,8 +120,9 @@
         "id": "avatar.rotate_up",
         "seat": "default",
         "rotation_axis": [1, 0, 0],
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "angular_velocity": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -124,8 +133,9 @@
         "id": "avatar.rotate_down",
         "seat": "default",
         "rotation_axis": [1, 0, 0],
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "angular_velocity": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": -0.05
       }
     }

@@ -102,8 +102,9 @@
         "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "angular_velocity": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -117,8 +118,9 @@
         "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [0, 1, 0],
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "angular_velocity": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": -0.05
       }
     },
@@ -132,8 +134,9 @@
         "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [1, 0, 0],
-        "angular_velocity_press": 0.1,
-        "angular_velocity_repeat": 1,
+        "angular_velocity": 1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": 0.05
       }
     },
@@ -147,8 +150,9 @@
         "player": "%player_name",
         "node": "turret_node$suffix",
         "rotation_axis": [1, 0, 0],
-        "angular_velocity_press": -0.1,
-        "angular_velocity_repeat": -1,
+        "angular_velocity": -1,
+        "press_factor": 0.1,
+        "repeat_factor": 1,
         "speed_cursor": -0.05
       }
     },

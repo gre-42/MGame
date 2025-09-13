@@ -1,5 +1,6 @@
 [
   {
+    "required": ["%flavor == 'extended'"],
     "call": "square_resource",
     "arguments": {
       "name": "bullet_impact_3d",
@@ -24,6 +25,7 @@
     }
   },
   {
+    "required": ["%flavor == 'extended'"],
     "call": "animatable_billboards",
     "arguments": {
       "name": "animatable_bullet_impact_3d",
@@ -33,6 +35,7 @@
     }
   },
   {
+    "required": ["%flavor == 'extended'"],
     "call": "animated_billboards",
     "arguments": {
       "name": "bullet_impact_3d",
