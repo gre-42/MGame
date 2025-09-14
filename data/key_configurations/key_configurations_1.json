@@ -56,28 +56,28 @@
   {
     "id": "heli_or_tank.rotate_gun_left",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3},
+      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3, "filter": "filtered"},
       "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3}
     }}
   },
   {
     "id": "heli_or_tank.rotate_gun_right",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3},
+      "joystick": {"gamepad_id": 1, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3, "filter": "filtered"},
       "tap"     : {"gamepad_id": 1, "axis": 3, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3}
     }}
   },
   {
     "id": "car_or_heli.rotate_gun_up",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3},
+      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3, "filter": "filtered"},
       "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3}
     }}
   },
   {
     "id": "car_or_heli.rotate_gun_down",
     "analog_axes": {"default": {
-      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3},
+      "joystick": {"gamepad_id": 1, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3, "filter": "filtered"},
       "tap"     : {"gamepad_id": 1, "axis": 4, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3}
     }}
   },
