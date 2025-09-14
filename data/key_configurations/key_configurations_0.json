@@ -167,14 +167,22 @@
     "key": "W",
     "gamepad_button": {"default": {"gamepad_id": 0, "button": "X"}},
     "tap_button": {"default": {"gamepad_id": 0, "button": "UP"}},
-    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
+    "analog_axes": {"default": {
+      "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3},
+      "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": -1, "deadzone": 0.01, "exponent": 1.3}
+    }}
   },
   {
     "id": "heli.backwards",
     "key": "S",
     "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}},
     "tap_button": {"default": {"gamepad_id": 0, "button": "DOWN"}},
-    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}}
+    "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
+    "analog_axes": {"default": {
+      "joystick": {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3},
+      "tap"     : {"gamepad_id": 0, "axis": 2, "sign_and_scale": 1, "deadzone": 0.01, "exponent": 1.3}
+    }}
   },
   {
     "id": "avatar.jump",
