@@ -100,6 +100,12 @@
           "player": "%spawner_name",
           "seat": "driver"
         }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%spawner_name"
+        }
       }
     ]
   },
@@ -137,6 +143,12 @@
             "arguments": {
               "player": "%spawner_name",
               "seat": "driver"
+            }
+          },
+          {
+            "call": "create_gun_externals",
+            "arguments": {
+              "player": "%spawner_name"
             }
           }
         ]

@@ -61,6 +61,12 @@
                         "player": "$vip_name-_$user_name",
                         "seat": "driver"
                       }
+                    },
+                    {
+                      "call": "create_gun_externals",
+                      "arguments": {
+                        "player": "$vip_name-_$user_name"
+                      }
                     }
                   ]
                 }

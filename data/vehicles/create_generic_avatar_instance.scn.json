@@ -86,7 +86,13 @@
           "error_alpha": "%error_alpha"
         }
       },
-      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "human_node$suffix"}},
+      {
+        "required": "%if_with_gun",
+        "call": "create_weapon_cycle",
+        "arguments": {
+          "cycle_node": "human_node$suffix"
+        }
+      },
       {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "m4a1_ammo", "capacity": 200}},
       {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "beretta92_ammo", "capacity": 200}},
       {"required": "%if_with_gun", "call": "set_inventory_capacity", "arguments": {"inventory_node": "human_node$suffix", "item_type": "frag_grenade", "capacity": 10}},
@@ -95,6 +101,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "m4a1",
@@ -103,7 +110,7 @@
           "cool_down": 0.1,
           "range_min": 0,
           "range_max": 2000,
-          "create": {
+          "create_weapon": {
             "playback": "add_weapon_m4a1"
           }
         }
@@ -111,6 +118,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "beretta92",
@@ -119,7 +127,7 @@
           "cool_down": 0.5,
           "range_min": 0,
           "range_max": 2000,
-          "create": {
+          "create_weapon": {
             "playback": "add_weapon_beretta92"
           }
         }
@@ -127,6 +135,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "frag_grenade",
@@ -135,7 +144,7 @@
           "cool_down": 0.5,
           "range_min": 8,
           "range_max": 20,
-          "create": {
+          "create_weapon": {
             "playback": "add_weapon_frag_grenade"
           }
         }
@@ -143,6 +152,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "m72_law",
@@ -151,7 +161,7 @@
           "cool_down": 0.5,
           "range_min": 8,
           "range_max": 2000,
-          "create": {
+          "create_weapon": {
             "playback": "add_weapon_m72_law"
           }
         }
@@ -163,10 +173,11 @@
           "player": null,
           "cycle_node": "human_node$suffix",
           "weapon": "m4a1",
-          "equip_instantly": false
+          "equip_instantly": true
         }
       },
       {
+        "exclude": "%if_with_gun",
         "playback": "create_none_weapon",
         "let": {
           "parent_rigid_body_node": "human_node$suffix",

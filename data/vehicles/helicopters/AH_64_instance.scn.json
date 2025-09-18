@@ -81,18 +81,35 @@
         "call": "set_inventory_capacity",
         "arguments": {
           "inventory_node": "car_node$suffix",
-          "item_type": "ah_64_ammo",
+          "item_type": "ah_64_bullet_ammo",
           "capacity": 2000
+        }
+      },
+      {
+        "call": "set_inventory_capacity",
+        "arguments": {
+          "inventory_node": "car_node$suffix",
+          "item_type": "ah_64_rocket_ammo",
+          "capacity": 20
         }
       },
       {
         "call": "add_to_inventory",
         "arguments": {
           "inventory_node": "car_node$suffix",
-          "item_type": "ah_64_ammo",
+          "item_type": "ah_64_bullet_ammo",
           "amount": 1500
         }
       },
+      {
+        "call": "add_to_inventory",
+        "arguments": {
+          "inventory_node": "car_node$suffix",
+          "item_type": "ah_64_rocket_ammo",
+          "amount": 16
+        }
+      },
+      {"call": "create_weapon_cycle", "arguments": {"cycle_node": "car_node$suffix"}},
       {
         "call": "gun",
         "arguments": {
@@ -102,9 +119,83 @@
           "cool_down": 0.1,
           "bullet_type": "ah_64_bullet",
           "shot_audio": "cg1.shot",
-          "ammo_type": "ah_64_ammo",
+          "ammo_type": "ah_64_bullet_ammo",
           "punch_angle_idle_std": 0.01,
           "punch_angle_shoot_std": 0.1
+        }
+      },
+      {
+        "call": "gun",
+        "arguments": {
+          "node": "ah_64_rocket_launcher_node$suffix",
+          "parent_rigid_body_node": "car_node$suffix",
+          "punch_angle_node": null,
+          "cool_down": 0.5,
+          "bullet_type": "m72_law_rocket",
+          "ammo_type": "ah_64_rocket_ammo",
+          "punch_angle_idle_std": 0,
+          "punch_angle_shoot_std": 0
+        }
+      },
+      {
+        "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
+        "arguments": {
+          "cycle_node": "car_node$suffix",
+          "entry_name": "machine_gun",
+          "ammo_type": "ah_64_bullet",
+          "bullet_type": "ah_64_bullet",
+          "cool_down": 0.1,
+          "range_min": 0,
+          "range_max": 2000,
+          "create_externals": [
+            {
+              "call": "player_change_aiming_gun",
+              "arguments": {
+                "player": "%player_name",
+                "gun_node": "main_gun_end_node$suffix"
+              }
+            },
+            {
+              "context": "primary_scene_$user_name",
+              "playback": "select_car_cameras_heli_main_gun"
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_weapon_to_cycle",
+        "without": ["user_id", "user_name", "player_name"],
+        "arguments": {
+          "cycle_node": "car_node$suffix",
+          "entry_name": "ah_64_rocket",
+          "ammo_type": "ah_64_bullet_ammo",
+          "bullet_type": "m72_law_rocket",
+          "cool_down": 0.5,
+          "range_min": 8,
+          "range_max": 2000,
+          "create_externals": [
+            {
+              "call": "player_change_aiming_gun",
+              "arguments": {
+                "player": "%player_name",
+                "gun_node": "ah_64_rocket_launcher_node$suffix"
+              }
+            },
+            {
+              "context": "primary_scene_$user_name",
+              "playback": "select_car_cameras_heli_cockpit"
+            }
+          ]
+        }
+      },
+      {
+        "call": "set_desired_weapon",
+        "arguments": {
+          "player": null,
+          "cycle_node": "car_node$suffix",
+          "weapon": "machine_gun",
+          "equip_instantly": true
         }
       },
       {
@@ -300,6 +391,7 @@
         "collidable-mesh rigid_body-node=car_node$suffix node=car_node$suffix resource=AH_box_64_hitbox"
       ]},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_punch_angle_node$suffix", "name": "main_gun_end_node$suffix", "position": [0, 0, -20]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "ah_64_rocket_launcher_node$suffix", "position": [0, -1, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "blades$suffix", "position": [0, 4.2, 0], "rotation": [90, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "blades$suffix", "name": "blades_shift_node$suffix", "position": [0, 0, 4.2], "rotation": [-90, 0, 0]}},
       {"comment": "child_node_instance type=dynamic parent=car_node$suffix name=rear_rotor_node$suffix position=0 3.4 9.1"},
@@ -338,6 +430,20 @@
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_node": "main_gun_camera_node$suffix",
           "ypln_node": "turret_node$suffix",
+          "filename": "textures/hud/crosshair.png",
+          "center": [0, 0],
+          "size": [0.05, 0.05],
+          "error_behavior": "center"
+        }
+      },
+      {
+        "required": "%if_pc",
+        "call": "hud_target_point",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "player": "%player_name",
+          "gun_node": "ah_64_rocket_launcher_node$suffix",
+          "exclusive_node": "cockpit_camera_node$suffix",
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
           "size": [0.05, 0.05],

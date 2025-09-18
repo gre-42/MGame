@@ -165,7 +165,6 @@
   {
     "id": "heli.forward",
     "key": "W",
-    "gamepad_button": {"default": {"gamepad_id": 0, "button": "X"}},
     "tap_button": {"default": {"gamepad_id": 0, "button": "UP"}},
     "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
@@ -176,7 +175,6 @@
   {
     "id": "heli.backwards",
     "key": "S",
-    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}},
     "tap_button": {"default": {"gamepad_id": 0, "button": "DOWN"}},
     "not_gamepad_button": {"default": {"gamepad_id": 0, "button": "B"}},
     "analog_axes": {"default": {
@@ -426,15 +424,29 @@
   },
   {
     "id": "plane.next_weapon",
-    "key": "R",
+    "key": "T",
     "gamepad_button": {"default": {"gamepad_id": 0, "button": "RIGHT_BUMPER"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": 1
   },
   {
     "id": "plane.previous_weapon",
-    "key": "E",
+    "key": "R",
     "gamepad_button": {"default": {"gamepad_id": 0, "button": "LEFT_BUMPER"}},
+    "scroll_wheel_axis": 1,
+    "scroll_wheel_sign_and_scale": -1
+  },
+  {
+    "id": "heli.next_weapon",
+    "key": "T",
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "X"}},
+    "scroll_wheel_axis": 1,
+    "scroll_wheel_sign_and_scale": 1
+  },
+  {
+    "id": "heli.previous_weapon",
+    "key": "R",
+    "gamepad_button": {"default": {"gamepad_id": 0, "button": "A"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": -1
   }

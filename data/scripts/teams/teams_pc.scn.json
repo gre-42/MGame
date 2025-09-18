@@ -49,6 +49,12 @@
           "player": "%player_name",
           "seat": "%seat"
         }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%player_name"
+        }
       }
     ]
   },
@@ -79,6 +85,12 @@
         "arguments": {
           "player": "%player_name",
           "seat": "%seat"
+        }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%player_name"
         }
       }
     ]
