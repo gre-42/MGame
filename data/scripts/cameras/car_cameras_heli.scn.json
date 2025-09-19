@@ -4,12 +4,11 @@
     "content": [
       {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "c45_deg_camera_$user_name", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "follower_camera_$user_name", "position": [0, 10, 10]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_camera_node$suffix", "position": [0, 0.5, -2]}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "cockpit_camera_node$suffix", "position": [0, 0.5, -1]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_camera_node$user_name", "position": [0, 0.5, -2]}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "cockpit_camera_node$user_name", "position": [0, 0.5, -1]}},
       {"call": "perspective_camera", "arguments": {"node": "c45_deg_camera_$user_name", "y_fov": 30, "near_plane": 1, "far_plane": 10000, "requires_postprocessing": false}},
-      {"call": "perspective_camera", "arguments": {"node": "follower_camera_$user_name", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
-      {"call": "perspective_camera", "arguments": {"node": "main_gun_camera_node$suffix", "y_fov": 30, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
-      {"call": "perspective_camera", "arguments": {"node": "cockpit_camera_node$suffix", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
+      {"call": "perspective_camera", "arguments": {"node": "main_gun_camera_node$user_name", "y_fov": 30, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
+      {"call": "perspective_camera", "arguments": {"node": "cockpit_camera_node$user_name", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
       {"call": "look_at_node", "arguments": {"follower": "c45_deg_camera_$user_name", "followed": "car_node$suffix"}},
       {
         "call": "follow_node",
@@ -24,12 +23,18 @@
           "y_snappiness": 0.05
         }
       },
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "follower_camera_$user_name", "name": "main_gun_follower$user_name"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "follower_camera_$user_name", "name": "cockpit_follower$user_name"}},
+      {"call": "perspective_camera", "arguments": {"node": "main_gun_follower$user_name", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
+      {"call": "perspective_camera", "arguments": {"node": "cockpit_follower$user_name", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},
       {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "c45_deg_camera_$user_name"}},
       {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "follower_camera_$user_name"}},
-      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "main_gun_camera_node$suffix"}},
-      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "cockpit_camera_node$suffix"}},
-      {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "main_gun_camera_node$suffix"}},
-      {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "cockpit_camera_node$suffix"}}
+      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "main_gun_camera_node$user_name"}},
+      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "cockpit_camera_node$user_name"}},
+      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "main_gun_follower$user_name"}},
+      {"call": "append_externals_deleter", "arguments": {"player": "%player_name", "node": "cockpit_follower$user_name"}},
+      {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "main_gun_camera_node$user_name"}},
+      {"call": "insert_physics_node_hider", "arguments": {"node_to_hide": "car_node$suffix", "camera_node": "cockpit_camera_node$user_name"}}
     ]
   },
   {
@@ -38,8 +43,8 @@
       "context": "primary_scene_$user_name",
       "execute": [
         {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["c45_deg_camera_$user_name", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
-        {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["follower_camera_$user_name", "main_gun_camera_node$suffix"]}},
-        {"call": "set_camera", "arguments": {"name": "follower_camera_$user_name"}}
+        {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["main_gun_follower$user_name", "main_gun_camera_node$user_name"]}},
+        {"call": "set_camera", "arguments": {"name": "main_gun_follower$user_name"}}
       ]
     }
   },
@@ -49,8 +54,8 @@
       "context": "primary_scene_$user_name",
       "execute": [
         {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["c45_deg_camera_$user_name", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
-        {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["follower_camera_$user_name", "cockpit_camera_node$suffix"]}},
-        {"call": "set_camera", "arguments": {"name": "cockpit_camera_node$suffix"}}
+        {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["cockpit_follower$user_name", "cockpit_camera_node$user_name"]}},
+        {"call": "set_camera", "arguments": {"name": "cockpit_follower$user_name"}}
       ]
     }
   }

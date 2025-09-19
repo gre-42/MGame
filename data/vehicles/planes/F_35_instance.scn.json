@@ -590,7 +590,7 @@
         "context": "primary_scene_$user_name",
         "arguments": {
           "player": "%player_name",
-          "exclusive_node": null,
+          "exclusive_nodes": null,
           "center": [0, 0],
           "size": [0.05, 0.05],
           "error_behavior": "hide",
@@ -603,7 +603,7 @@
         "context": "primary_scene_$user_name",
         "arguments": {
           "player": "%player_name",
-          "exclusive_node": null,
+          "exclusive_nodes": null,
           "left": "opponent_zoom_left",
           "right": "opponent_zoom_right",
           "bottom": "opponent_zoom_bottom",

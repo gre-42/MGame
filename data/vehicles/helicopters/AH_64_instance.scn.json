@@ -428,7 +428,10 @@
         "arguments": {
           "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
-          "exclusive_node": "main_gun_camera_node$suffix",
+          "exclusive_nodes": [
+            "main_gun_camera_node$user_name",
+            "main_gun_follower$user_name"
+          ],
           "ypln_node": "turret_node$suffix",
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
@@ -443,7 +446,10 @@
         "arguments": {
           "player": "%player_name",
           "gun_node": "ah_64_rocket_launcher_node$suffix",
-          "exclusive_node": "cockpit_camera_node$suffix",
+          "exclusive_nodes": [
+            "cockpit_camera_node$user_name",
+            "cockpit_follower$user_name"
+          ],
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
           "size": [0.05, 0.05],

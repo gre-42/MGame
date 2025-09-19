@@ -220,7 +220,7 @@
         "arguments": {
           "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
-          "exclusive_node": "main_gun_camera_node$suffix",
+          "exclusive_nodes": ["main_gun_camera_node$suffix"],
           "ypln_node": "turret_node$suffix",
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
@@ -235,7 +235,7 @@
         "arguments": {
           "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
-          "exclusive_node": "follower_camera_$user_name",
+          "exclusive_nodes": ["follower_camera_$user_name"],
           "ypln_node": "turret_node$suffix",
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],
