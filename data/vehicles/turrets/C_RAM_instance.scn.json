@@ -61,6 +61,7 @@
         "arguments": {
           "node": "main_gun_end_node$suffix",
           "parent_rigid_body_node": "car_node$suffix",
+          "ypln_node": "turret_node$suffix",
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "cool_down": 0.1,
           "ammo_type": "C_RAM_ammo",
