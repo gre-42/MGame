@@ -1,6 +1,6 @@
 [
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_01",
@@ -79,7 +79,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_gray",

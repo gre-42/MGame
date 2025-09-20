@@ -90,6 +90,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%selected_game_mode == 'rally'", "%race_restrictions in {'', 'car'}"]
+    "dynamic": ["(%selected_game_mode == 'rally')", "(%race_restrictions in {'', 'car'})"]
   }
 }

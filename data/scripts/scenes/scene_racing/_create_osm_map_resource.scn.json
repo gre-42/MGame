@@ -86,7 +86,7 @@
       }
     },
     {
-      "required": ["%barrier_depth != 0"],
+      "required": "(%barrier_depth != 0)",
       "call": "create_barrier_triangle_hitboxes",
       "arguments": {
         "resource_name": "%osm_map",

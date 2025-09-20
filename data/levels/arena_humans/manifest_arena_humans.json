@@ -2,8 +2,8 @@
   "id": "arena_humans",
   "title": "Arena humans",
   "required": {
-    "fixed": ["%if_devel", "%user_count <= %max_users"],
-    "dynamic": ["%selected_game_mode in %game_modes"]
+    "fixed": ["%if_devel", "(%user_count <= %max_users)"],
+    "dynamic": "(%selected_game_mode in %game_modes)"
   },
   "on_execute": {
     "include": "scene_arena_humans.scn.json"

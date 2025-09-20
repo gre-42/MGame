@@ -22,6 +22,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%selected_game_mode in {'skating'}"]
+    "dynamic": "(%selected_game_mode in {'skating'})"
   }
 }

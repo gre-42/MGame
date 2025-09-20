@@ -14,14 +14,14 @@
     "declare_macro": "generic_car.create_lights",
     "content": [
       {
-        "required": ["%%vehicles/$name/light_left_front_position != %null"],
+        "required": "(%%vehicles/$name/light_left_front_position != %null)",
         "execute": [
           {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "light_left_front$tesuffix",  "position": "%%vehicles/$name/light_left_front_position"}},
           {"call": "child_renderable_instance", "arguments": {"name": "blob$tesuffix", "node": "light_left_front$tesuffix",  "resource": "car_light_beam"}}
         ]
       },
       {
-        "required": ["%%vehicles/$name/light_right_front_position != %null"],
+        "required": "(%%vehicles/$name/light_right_front_position != %null)",
         "execute": [
           {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "light_right_front$tesuffix", "position": "%%vehicles/$name/light_right_front_position"}},
           {"call": "child_renderable_instance", "arguments": {"name": "blob$tesuffix", "node": "light_right_front$tesuffix", "resource": "car_light_beam"}}
@@ -52,7 +52,7 @@
       {
         "comment": [
           {
-            "required": ["%CAPSULE_POSITION != %null", "%CAPSULE_ROTATION != %null"],
+            "required": ["(%CAPSULE_POSITION != %null)", "(%CAPSULE_ROTATION != %null)"],
             "call": "set_capsule_surface_normal",
             "arguments": {
               "node": "car_node$tesuffix",
@@ -61,7 +61,7 @@
             }
           },
           {
-            "required": ["%BEVEL_BOX_MIN != %null", "%BEVEL_BOX_MAX != %null"],
+            "required": ["(%BEVEL_BOX_MIN != %null)", "(%BEVEL_BOX_MAX != %null)"],
             "call": "set_bevel_box_surface_normal",
             "arguments": {
               "node": "car_node$tesuffix",
@@ -85,7 +85,7 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$tesuffix", "resource": "gizmo"}}},
 
       {
-        "required": ["%%vehicles/$name/front_engine != %%vehicles/$name/rear_engine"],
+        "required": "(%%vehicles/$name/front_engine != %%vehicles/$name/rear_engine)",
         "execute": [
           {
             "call": "create_engine",
@@ -129,8 +129,8 @@
       },
       {
         "required": [
-          "%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine",
-          "%%vehicles/$name/powers != %null"],
+          "(%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine)",
+          "(%%vehicles/$name/powers != %null)"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$tesuffix",
@@ -151,8 +151,8 @@
       },
       {
         "required": [
-          "%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine",
-          "%%vehicles/$name/powers == %null"],
+          "(%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine)",
+          "(%%vehicles/$name/powers == %null)"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$tesuffix",
@@ -390,7 +390,7 @@
         }
       },
       {
-        "required": ["%behavior != 'none'"],
+        "required": "(%behavior != 'none')",
         "execute": [
           {
             "call": "create_drive_or_walk_ai",

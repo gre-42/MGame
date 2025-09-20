@@ -93,7 +93,7 @@
     "content": []
   },
   {
-    "required": ["%players_json_basename != %null"],
+    "required": "(%players_json_basename != %null)",
     "playback": "setup_teams",
     "context": "primary_scene",
     "arguments": {

@@ -100,7 +100,7 @@
         "playback": "_update_time_of_day"
       },
       {
-        "required": ["%loaded_game_mode == 'rally'"],
+        "required": "(%loaded_game_mode == 'rally')",
         "execute": [
           {
             "call": "set_race_identifier_and_reload_history",

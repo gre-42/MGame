@@ -44,7 +44,23 @@
       "execute": [
         {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["c45_deg_camera_$user_name", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
         {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["main_gun_follower$user_name", "main_gun_camera_node$user_name"]}},
-        {"call": "set_camera", "arguments": {"name": "main_gun_follower$user_name"}}
+        {
+          "call": "with_selected_camera",
+          "arguments": {
+            "content": [
+              {
+                "required": "(%selected_camera == cockpit_camera_node$user_name)",
+                "call": "set_camera",
+                "arguments": {"name": "main_gun_camera_node$user_name"}
+              },
+              {
+                "required": "(%selected_camera != cockpit_camera_node$user_name)",
+                "call": "set_camera",
+                "arguments": {"name": "main_gun_follower$user_name"}
+              }
+            ]
+          }
+        }
       ]
     }
   },
@@ -55,7 +71,23 @@
       "execute": [
         {"call": "set_camera_cycle", "arguments": {"name": "far", "cameras": ["c45_deg_camera_$user_name", "light_node0", "light_node1", "dirtmap_node", "bird_node"]}},
         {"call": "set_camera_cycle", "arguments": {"name": "near", "cameras": ["cockpit_follower$user_name", "cockpit_camera_node$user_name"]}},
-        {"call": "set_camera", "arguments": {"name": "cockpit_follower$user_name"}}
+        {
+          "call": "with_selected_camera",
+          "arguments": {
+            "content": [
+              {
+                "required": "(%selected_camera == main_gun_camera_node$user_name)",
+                "call": "set_camera",
+                "arguments": {"name": "cockpit_camera_node$user_name"}
+              },
+              {
+                "required": "(%selected_camera != main_gun_camera_node$user_name)",
+                "call": "set_camera",
+                "arguments": {"name": "cockpit_follower$user_name"}
+              }
+            ]
+          }
+        }
       ]
     }
   }

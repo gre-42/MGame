@@ -2,8 +2,8 @@
   "id": "nyc_track1",
   "title": "%%levels/nyc_track1/title/$selected_language",
   "required": {
-    "fixed": ["%user_count <= %max_users"],
-    "dynamic": ["%selected_game_mode in %game_modes"]
+    "fixed": "(%user_count <= %max_users)",
+    "dynamic": "(%selected_game_mode in %game_modes)"
   },
   "on_execute": {
     "include": "scene_nyc_track1.scn.json"

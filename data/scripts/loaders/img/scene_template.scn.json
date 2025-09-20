@@ -148,7 +148,7 @@
     }
   },
   {
-    "required": ["%%levels/$loaded_level_id/grass_files != %null"],
+    "required": "(%%levels/$loaded_level_id/grass_files != %null)",
     "call": "instantiate_grass",
     "context": "primary_scene",
     "arguments": {
@@ -188,7 +188,7 @@
         "if_playback_track_1": false,
         "if_playback_track_2": false,
         "if_playback_track_3": false,
-        "if_checkpoints": "%%levels/$loaded_level_id/checkpoints != %null",
+        "if_checkpoints": "(%%levels/$loaded_level_id/checkpoints != %null)",
         "if_burn_in": false
       }
     }

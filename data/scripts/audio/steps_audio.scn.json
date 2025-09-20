@@ -1,6 +1,6 @@
 [
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "foot_step.dirt",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "foot_step.snow",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "foot_step.stone",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "foot_step.water",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "foot_step.wood",

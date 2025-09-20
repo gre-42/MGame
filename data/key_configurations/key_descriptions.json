@@ -104,42 +104,42 @@
     "id": "heli.descend"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Rotate the gun to the left",
     "unique": "car_or_heli",
     "id": "heli_or_tank.rotate_gun_left"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Rotate the gun to the right",
     "unique": "car_or_heli",
     "id": "heli_or_tank.rotate_gun_right"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Rotate the gun up",
     "unique": "car_or_heli",
     "id": "car_or_heli.rotate_gun_up"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Rotate the gun down",
     "unique": "car_or_heli",
     "id": "car_or_heli.rotate_gun_down"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Shoot",
     "unique": "car_or_heli",
     "id": "car_or_heli.shoot"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "car_or_heli",
     "title": "Select next opponent",
     "unique": "car_or_heli",
@@ -212,28 +212,28 @@
     "id": "avatar.rotate_down"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "avatar",
     "title": "Select next weapon",
     "unique": "avatar",
     "id": "avatar.next_weapon"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "avatar",
     "title": "Select previous weapon",
     "unique": "avatar",
     "id": "avatar.previous_weapon"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "avatar|car|heli|plane",
     "title": "Shoot",
     "unique": "avatar|car|heli|plane",
     "id": "any.shoot"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "avatar",
     "title": "Enter nearby vehicle",
     "unique": "avatar",
@@ -342,35 +342,35 @@
     "id": "plane.yaw_right"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "plane",
     "title": "Select next weapon",
     "unique": "plane",
     "id": "plane.next_weapon"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "plane",
     "title": "Select previous weapon",
     "unique": "plane",
     "id": "plane.previous_weapon"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "plane",
     "title": "Shoot",
     "unique": "plane",
     "id": "plane.shoot"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "plane",
     "title": "Select next opponent",
     "unique": "plane",
     "id": "any.select_next_opponent"
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "section": "plane",
     "title": "Exit the vehicle",
     "unique": "plane",

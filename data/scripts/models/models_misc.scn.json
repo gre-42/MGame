@@ -302,7 +302,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "obj_resource",
     "arguments": {
       "name": "tank_bullet_renderable",
@@ -330,7 +330,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "execute": [
       {
         "call": "obj_resource",

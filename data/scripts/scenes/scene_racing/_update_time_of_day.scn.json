@@ -3,17 +3,17 @@
     "declare_macro": "_create_lights_for_time_of_day",
     "content": [
       {
-        "required": ["%loaded_time_of_day == 'day'"],
+        "required": "(%loaded_time_of_day == 'day')",
         "call": "set_background_color",
         "arguments": { "color": [0.68, 0.85, 1] }
       },
       {
-        "required": ["%loaded_time_of_day == 'night'"],
+        "required": "(%loaded_time_of_day == 'night')",
         "call": "set_background_color",
         "arguments": { "color": [0, 0, 0] }
       },
       {
-        "required": ["%loaded_time_of_day == 'synthwave'"],
+        "required": "(%loaded_time_of_day == 'synthwave')",
         "call": "set_background_color",
         "arguments": { "color": [0.65, 0.36, 0.91] }
       },
@@ -24,14 +24,14 @@
         "comment": "Light"
       },
       {
-        "required": ["%loaded_time_of_day == 'day'"],
+        "required": "(%loaded_time_of_day == 'day')",
         "execute": [
           {"playback": "add_distant_light_day"},
           {"playback": "add_sky_light_day"}
         ]
       },
       {
-        "required": ["%loaded_time_of_day in {'night', 'synthwave'}"],
+        "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
         "playback": "add_distant_light_night"
       },
       {
@@ -39,10 +39,10 @@
         "arguments": {
           "content": [
             {
-              "required": ["%loaded_time_of_day == 'day'"],
+              "required": "(%loaded_time_of_day == 'day')",
               "execute": [
                 {
-                  "required": ["%aggregate_mode in {'sorted', 'instances_sorted'}"],
+                  "required": "(%aggregate_mode in {'sorted', 'instances_sorted'})",
                   "execute": [
                     {
                       "playback": "add_local_instances_light_scene"
@@ -63,7 +63,7 @@
               ]
             },
             {
-              "required": ["%loaded_time_of_day in {'night', 'synthwave'}"],
+              "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
               "execute": [
                 {
                   "playback": "add_local_blob_instances_light_scene"
@@ -81,7 +81,7 @@
         "comment": "Reflection map"
       },
       {
-        "required": ["%loaded_time_of_day == 'day'"],
+        "required": "(%loaded_time_of_day == 'day')",
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {
@@ -93,7 +93,7 @@
         }
       },
       {
-        "required": ["%loaded_time_of_day == 'night'"],
+        "required": "(%loaded_time_of_day == 'night')",
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {
@@ -105,7 +105,7 @@
         }
       },
       {
-        "required": ["%loaded_time_of_day == 'synthwave'"],
+        "required": "(%loaded_time_of_day == 'synthwave')",
         "call": "add_color_style",
         "arguments": {
           "reflection_maps": {

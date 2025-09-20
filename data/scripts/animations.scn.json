@@ -11,7 +11,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.die",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_forward",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_backward",
@@ -55,7 +55,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_left",
@@ -66,7 +66,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_right",
@@ -77,7 +77,7 @@
     }
   },
   {
-    "required": ["%flavor == 'extended'"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.die",

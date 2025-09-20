@@ -126,7 +126,7 @@
     "declare_macro": "_setup_menu_primary_scene_rest",
     "content": [
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "ui_exhibit",
         "arguments": {
           "z_order": 1,
@@ -141,7 +141,7 @@
         }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "scene_selector",
         "arguments": {
           "id": "scene_selector",
@@ -226,7 +226,7 @@
               "context": "primary_scene_$user_name"
             },
             {
-              "required": ["%user_id == 0"],
+              "required": "(%user_id == 0)",
               "playback": "_setup_game_mode_selector",
               "context": "primary_scene_$user_name"
             },
@@ -414,7 +414,7 @@
           "deflt": 0,
           "on_execute": [
             {
-              "required": ["%selected_level_id != %loaded_level_id"],
+              "required": "(%selected_level_id != %loaded_level_id)",
               "execute": {
                 "call": "reload_scene",
                 "arguments": {
@@ -423,7 +423,7 @@
               }
             },
             {
-              "required": ["%selected_level_id == %loaded_level_id"],
+              "required": "(%selected_level_id == %loaded_level_id)",
               "execute": {
                 "playback": "_reload_transient_objects_in_physics_thread",
                 "without": ["user_id", "user_name"]
@@ -439,7 +439,7 @@
     "declare_macro": "parameter_setters",
     "content": [
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "add_charset",
         "arguments": {
           "name": "language",
@@ -447,7 +447,7 @@
         }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "language",
@@ -469,7 +469,7 @@
           "assets": "languages",
           "# on_change": [
             {
-              "required": ["%selected_language != %loaded_language"],
+              "required": "(%selected_language != %loaded_language)",
               "execute": {
                 "call": "set_requires_reload",
                 "arguments": {
@@ -480,7 +480,7 @@
               }
             },
             {
-              "required": ["%selected_language == %loaded_language"],
+              "required": "(%selected_language == %loaded_language)",
               "execute": {
                 "call": "clear_requires_reload",
                 "arguments": {
@@ -499,7 +499,7 @@
         }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "reload_required",
         "arguments": {
           "title": "$$translations/main/Reload_required/$selected_language:",
@@ -540,7 +540,7 @@
             {
               "required": {
                 "fixed": [],
-                "dynamic": ["%selected_user_count == %user_count"]
+                "dynamic": "(%selected_user_count == %user_count)"
               },
               "id": "new_game",
               "title": "%%translations/main/New_game/$selected_language",
@@ -563,7 +563,7 @@
             },
             {
               "required": {
-                "fixed": ["%user_id == 0"],
+                "fixed": "(%user_id == 0)",
                 "dynamic": ["%reload_required"]
               },
               "id": "reload",
@@ -588,7 +588,7 @@
         "arguments": { "selected_player_vehicle_color_$user_name": [1, 1, 0] }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -646,14 +646,14 @@
         }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "restrictions_selector",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Restrictions/$selected_language",
           "icon": "restrictions_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -678,7 +678,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Vehicle/$selected_language",
           "icon": "car_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -704,7 +704,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Color/$selected_language",
           "icon": "color_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -731,14 +731,14 @@
         }
       },
       {
-        "required": ["%if_devel", "%user_id == 0"],
+        "required": ["%if_devel", "(%user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Session/$selected_language",
           "icon": "session_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",
@@ -761,19 +761,19 @@
       },
       {
         "call": "globals",
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "exclude": "%if_devel",
         "arguments": { "race_session": "session1" }
       },
       {
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Laps/$selected_language",
           "icon": "laps_icon",
-          "required": ["%selected_game_mode == 'rally'", "%%levels/$selected_level_id/if_raceway_circular"],
+          "required": ["(%selected_game_mode == 'rally')", "%%levels/$selected_level_id/if_raceway_circular"],
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -796,19 +796,19 @@
       },
       {
         "call": "globals",
-        "required": ["%user_id == 0", "%selected_game_mode == 'rally'"],
+        "required": ["(%user_id == 0)", "(%selected_game_mode == 'rally')"],
         "exclude": "%%levels/$selected_level_id/if_raceway_circular",
         "arguments": { "race_laps": 1 }
       },
       {
-        "required": ["%if_devel", "%user_id == 0"],
+        "required": ["%if_devel", "(%user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Playback_ranks/$selected_language",
           "icon": "replay_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -830,12 +830,12 @@
       },
       {
         "call": "globals",
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false }
       },
       {
-        "required": ["%if_devel", "%user_id == 0"],
+        "required": ["%if_devel", "(%user_id == 0)"],
         "exclude": ["%if_android"],
         "call": "parameter_setter",
         "arguments": {
@@ -867,14 +867,14 @@
         }
       },
       {
-        "required": ["%if_devel", "%user_id == 0"],
+        "required": ["%if_devel", "(%user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Playback_speed/$selected_language",
           "icon": "missing_icon",
-          "required": ["%selected_game_mode == 'rally'"],
+          "required": "(%selected_game_mode == 'rally')",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -897,12 +897,12 @@
       },
       {
         "call": "globals",
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "playback_speed": 1 }
       },
       {
-        "required": ["%if_devel", "%user_id == 0"],
+        "required": ["%if_devel", "(%user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
@@ -928,7 +928,7 @@
       },
       {
         "call": "globals",
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "if_tripod_mode": false }
       },
@@ -1011,7 +1011,7 @@
       },
       {
         "exclude": ["%if_android"],
-        "required": ["%user_id == 0"],
+        "required": "(%user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "user_count_selector",
@@ -1028,10 +1028,10 @@
           "font_height": "normal",
           "line_distance": "normal",
           "user_id": "%user_id",
-          "deflt": "%user_count - 1",
+          "deflt": "(%user_count - 1)",
           "on_change": [
             {
-              "required": ["%selected_user_count != %user_count"],
+              "required": "(%selected_user_count != %user_count)",
               "execute": {
                 "call": "set_requires_reload",
                 "arguments": {
@@ -1042,7 +1042,7 @@
               }
             },
             {
-              "required": ["%selected_user_count == %user_count"],
+              "required": "(%selected_user_count == %user_count)",
               "execute": {
                 "call": "clear_requires_reload",
                 "arguments": {

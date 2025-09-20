@@ -2,7 +2,7 @@
   "declare_macro": "scene_racing_static",
   "content": [
     {
-      "required": ["%osm_map_resource != %null"],
+      "required": "(%osm_map_resource != %null)",
       "playback": "%osm_map_resource"
     },
     {
@@ -107,7 +107,7 @@
       "playback": "_scene_racing_instantiate_static_objects",
       "context": "primary_scene",
       "arguments": {
-        "if_instantiate_osm_map": "%osm_map_resource != %null"
+        "if_instantiate_osm_map": "(%osm_map_resource != %null)"
       }
     },
     {

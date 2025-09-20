@@ -176,7 +176,7 @@
         }
       },
       {
-        "required": ["%if_pc", "%minimap_file != %null"],
+        "required": ["%if_pc", "(%minimap_file != %null)"],
         "call": "minimap",
         "context": "primary_scene_$user_name",
         "arguments": {

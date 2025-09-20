@@ -22,6 +22,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%selected_game_mode == 'rally'", "%race_restrictions in {'', 'car_with_trailer'}"]
+    "dynamic": ["(%selected_game_mode == 'rally')", "(%race_restrictions in {'', 'car_with_trailer'})"]
   }
 }

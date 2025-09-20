@@ -2,7 +2,7 @@
   "declare_macro": "feathered_blend_textures",
   "content": [
     {
-      "required": ["%weight_texture != %null", "%feather_texture != %null"],
+      "required": ["(%weight_texture != %null)", "(%feather_texture != %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Weight",
@@ -21,7 +21,7 @@
       }
     },
     {
-      "required": ["%weight_texture != %null", "%feather_texture != %null"],
+      "required": ["(%weight_texture != %null)", "(%feather_texture != %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Feather",
@@ -42,7 +42,7 @@
       }
     },
     {
-      "required": ["%weight_texture != %null", "%feather_texture != %null"],
+      "required": ["(%weight_texture != %null)", "(%feather_texture != %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "required": ["%weight_texture == %null", "%feather_texture == %null"],
+      "required": ["(%weight_texture == %null)", "(%feather_texture == %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "required": ["%weight_texture == %null", "%feather_texture != %null"],
+      "required": ["(%weight_texture == %null)", "(%feather_texture != %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name-_Feather",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "required": ["%weight_texture == %null", "%feather_texture != %null"],
+      "required": ["(%weight_texture == %null)", "(%feather_texture != %null)"],
       "call": "add_blend_map_texture",
       "arguments": {
         "name": "$name",

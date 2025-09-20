@@ -1,6 +1,6 @@
 [
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "pistol.shot",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "required": "%flavor == 'extended'",
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "cg1.shot",

@@ -77,7 +77,7 @@
         }
       },
       {
-        "required": "%muzzle_flash_position != %null",
+        "required": "(%muzzle_flash_position != %null)",
         "execute": [
           {
             "call": "child_node_instance",

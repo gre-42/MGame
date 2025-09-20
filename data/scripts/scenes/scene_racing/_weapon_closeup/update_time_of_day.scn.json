@@ -13,7 +13,7 @@
           }
         },
         {
-        "required": ["%loaded_time_of_day == 'day'"],
+        "required": "(%loaded_time_of_day == 'day')",
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node",
@@ -25,7 +25,7 @@
         }
       },
       {
-        "required": ["%loaded_time_of_day == 'night'"],
+        "required": "(%loaded_time_of_day == 'night')",
         "call": "light_without_shadow",
         "arguments": {
           "node": "light_node",

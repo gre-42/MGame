@@ -78,7 +78,7 @@
             }
           },
           {
-            "required": "%periodic_reference_time_duration != %null",
+            "required": "(%periodic_reference_time_duration != %null)",
             "call": "set_animation_state",
             "context": "primary_scene",
             "arguments": {
@@ -360,7 +360,7 @@
         "comment": "Soft light"
       },
       {
-        "required": ["%soft_light_texture != %null"],
+        "required": "(%soft_light_texture != %null)",
         "call": "set_soft_light",
         "arguments": {
           "filename": "%soft_light_texture"

@@ -165,7 +165,7 @@
       "comment": "Recording"
     },
     {
-      "required": ["%record_track_basename != %null"],
+      "required": "(%record_track_basename != %null)",
       "execute": [
         {
           "call": "record_track",

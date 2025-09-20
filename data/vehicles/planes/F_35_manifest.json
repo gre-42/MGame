@@ -40,6 +40,6 @@
   },
   "required": {
     "fixed": [],
-    "dynamic": ["%selected_game_mode in {'team_deathmatch'}"]
+    "dynamic": "(%selected_game_mode in {'team_deathmatch'})"
   }
 }

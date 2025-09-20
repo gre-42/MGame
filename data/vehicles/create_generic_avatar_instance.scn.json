@@ -257,7 +257,7 @@
   {
     "declare_macro": "generic_avatar.create_player_internals",
     "content": {
-      "required": ["%behavior != 'none'"],
+      "required": "(%behavior != 'none')",
       "execute": [
         {
           "call": "create_drive_or_walk_ai",
