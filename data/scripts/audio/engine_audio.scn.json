@@ -26,5 +26,15 @@
       "gain": 1,
       "hysteresis_step": 0.2
     }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_audio",
+    "arguments": {
+      "name": "thruster",
+      "filename": "sounds/opengameart/thruster/space_ship.wav",
+      "gain": 1,
+      "distance_clamping": [5, 700]
+    }
   }
 ]

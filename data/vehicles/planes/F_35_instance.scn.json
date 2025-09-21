@@ -186,6 +186,15 @@
         }
       },
       {
+        "call": "set_desired_weapon",
+        "arguments": {
+          "player": null,
+          "cycle_node": "car_node$suffix",
+          "weapon": "dumb_bomb",
+          "equip_instantly": true
+        }
+      },
+      {
         "comment": [
           "28000 pounds = 124550 Newton",
           "43000 pounds = 191274 Newton"
@@ -543,7 +552,7 @@
         "required": "%if_with_physics",
         "playback": "create_F_35_physics",
         "arguments": {
-            "mass": 20000,
+          "mass": 20000,
           "collidable_mode": "moving"
         }
       },

@@ -358,13 +358,6 @@
   {
     "required": "(%flavor == 'extended')",
     "section": "plane",
-    "title": "Shoot",
-    "unique": "plane",
-    "id": "plane.shoot"
-  },
-  {
-    "required": "(%flavor == 'extended')",
-    "section": "plane",
     "title": "Select next opponent",
     "unique": "plane",
     "id": "any.select_next_opponent"
