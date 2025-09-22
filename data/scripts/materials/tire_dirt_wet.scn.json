@@ -19,8 +19,8 @@
           "instance_prefix": "skidmarks_a20_black"
         },
         "tire": {
-          "vehicle_velocities": [4, 5, 50],
-          "particle_frequencies": [0, 20, 200]
+          "vehicle_velocities": [4, 5, 200],
+          "particle_frequencies": [0, 20, 300]
         }
       },
       {
@@ -35,9 +35,9 @@
           "instance_prefix": "particles_dirt"
         },
         "vehicle": {
-          "vehicle_velocities": [4, 5, 50],
-          "particle_frequencies": [0, 2.5, 25],
-          "particle_velocities": [2, 5, 25]
+          "vehicle_velocities": [4, 5, 200],
+          "particle_frequencies": [0, 2.5, 200],
+          "particle_velocities": [2, 5, 50]
         }
       }
     ]
