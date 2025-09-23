@@ -50,6 +50,8 @@
       "name": "particles_dirt",
       "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
+      "alpha_fac": 0.6,
+      "alpha_exponent": 0.5,
       "histogram": "textures/histograms/Ground029_Street.png",
       "lighten": [-0.5, -0.5, -0.5],
       "anisotropic_filtering_level": 16
