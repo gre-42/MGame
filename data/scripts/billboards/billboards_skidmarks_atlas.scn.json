@@ -5,13 +5,18 @@
       "name": "skidmarks0",
       "width": 512,
       "height": 512,
+      "layers": 2,
+      "depth_interpolation": "linear",
+      "mipmap_mode": "with_mipmaps_2d",
       "color_mode": "rgba",
       "wrap_mode_s": "clamp_to_edge",
       "wrap_mode_t": "clamp_to_edge",
       "anisotropic_filtering_level": 16,
       "images": [
-        {"target_position": [0,   0], "texture": "#dot256_a100_black"},
-        {"target_position": [256, 0], "texture": "#dot256_a20_black"}
+        {"target_position": [0,   0], "target_layer": 0, "texture": "#dot256_a0_black"},
+        {"target_position": [256, 0], "target_layer": 0, "texture": "#dot256_a0_black"},
+        {"target_position": [0,   0], "target_layer": 1, "texture": "#dot256_a100_black"},
+        {"target_position": [256, 0], "target_layer": 1, "texture": "#dot256_a20_black"}
       ]
     }
   },
