@@ -1,11 +1,21 @@
 [
   {
     "required": "(%flavor == 'extended')",
+    "call": "add_audio_lowpass",
+    "arguments": {
+      "name": "explosion_lowpass",
+      "gain": 1,
+      "high_gain": 0.6
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
     "call": "add_audio",
     "arguments": {
       "name": "explodemini_fast",
       "filename": "sounds/opengameart/explosions/explodemini_fast.wav",
       "gain": 1,
+      "lowpass": "explosion_lowpass",
       "distance_clamping": [25, 700]
     }
   }
