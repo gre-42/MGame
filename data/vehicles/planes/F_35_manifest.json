@@ -23,7 +23,7 @@
         "particle": {
           "particle": {
             "resource": "fueguito_blue",
-            "air_resistance": 0,
+            "air_resistance_halflife": "inf",
             "animation_duration": 2,
             "type": "smoke"
           },

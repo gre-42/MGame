@@ -12,7 +12,7 @@
         "visual": {
           "particle": {
             "resource": "skidmarks_a20_black",
-            "air_resistance": 0,
+            "air_resistance_halflife": "inf",
             "animation_duration": "inf",
             "type": "skidmark"
           },
@@ -32,7 +32,7 @@
         "visual": {
           "particle": {
             "resource": "particles_sand_3d",
-            "air_resistance": 0.01,
+            "air_resistance_halflife": 1,
             "animation_duration": 1.5,
             "type": "smoke"
           },

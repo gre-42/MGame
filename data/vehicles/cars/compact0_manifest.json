@@ -56,7 +56,7 @@
         "particle": {
           "particle": {
             "resource": "fueguito",
-            "air_resistance": 0,
+            "air_resistance_halflife": "inf",
             "animation_duration": 2,
             "type": "smoke"
           },
@@ -73,7 +73,7 @@
         "particle": {
           "particle": {
             "resource": "fueguito",
-            "air_resistance": 0,
+            "air_resistance_halflife": "inf",
             "animation_duration": 2,
             "type": "smoke"
           },

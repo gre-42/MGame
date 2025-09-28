@@ -12,7 +12,7 @@
         "visual": {
           "particle": {
             "resource": "sea_spray_a20",
-            "air_resistance": 0,
+            "air_resistance_halflife": "inf",
             "animation_duration": "inf",
             "rotation": "random_yangle",
             "type": "sea_spray"

@@ -78,7 +78,7 @@
         "trail": {
           "particle": {
             "resource": "smoke_3d",
-            "air_resistance": 0.01,
+            "air_resistance_halflife": 1,
             "animation_duration": 0.5,
             "type": "smoke"
           },
