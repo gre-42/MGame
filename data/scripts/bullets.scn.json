@@ -148,7 +148,23 @@
         "hitbox": "tank_bullet_hitbox",
         "explosions": [
           {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
             "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
             "animation_time": 0.1
           }
         ],
@@ -234,7 +250,23 @@
         "hitbox": "tank_bullet_hitbox",
         "explosions": [
           {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
             "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
             "animation_time": 0.1
           }
         ],
