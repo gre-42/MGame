@@ -15,11 +15,11 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "rectangle_triangulation_mode": "disabled"
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_collide|obj_hitbox|surface_base_avatar"
       }
     }
   },
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "human_hitbox", "add": "obj_hitbox"}},
   {
     "comment": {
       "call": "obj_resource",

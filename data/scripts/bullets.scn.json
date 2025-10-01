@@ -6,8 +6,28 @@
       "properties": {
         "renderable": "",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "bullet_impact_cross",
-        "explosion_animation_time": 0.1,
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "animation_time": 0.1
+          }
+        ],
         "mass": 20,
         "lifetime": 20,
         "size": [2.4, 2.4, 20],
@@ -27,8 +47,28 @@
       "properties": {
         "renderable": "",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "bullet_impact_cross",
-        "explosion_animation_time": 0.1,
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "animation_time": 0.1
+          }
+        ],
         "mass": 20,
         "lifetime": 20,
         "size": [2.4, 2.4, 20],
@@ -48,9 +88,13 @@
       "properties": {
         "renderable": "frag_grenade",
         "hitbox": "grenade_hitbox",
-        "explosion_resource": "large_explosion_cross",
-        "explosion_animation_time": 0.6,
-        "explosion_audio": "explodemini_fast",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          }
+        ],
         "mass": 0.5,
         "lifetime": 30,
         "size": [0.1, 0.1, 0.1],
@@ -68,9 +112,13 @@
       "properties": {
         "renderable": "m72_law_rocket",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "large_explosion_cross",
-        "explosion_animation_time": 0.6,
-        "explosion_audio": "explodemini_fast",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          }
+        ],
         "engine_audio": "thruster",
         "mass": 10,
         "lifetime": 30,
@@ -98,8 +146,12 @@
       "properties": {
         "renderable": "tank_bullet_renderable",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "bullet_impact_cross",
-        "explosion_animation_time": 0.1,
+        "explosions": [
+          {
+            "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          }
+        ],
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 900,
@@ -116,8 +168,7 @@
       "properties": {
         "renderable": "_",
         "hitbox": "_",
-        "explosion_resource": "_",
-        "explosion_animation_time": 0,
+        "explosions": [],
         "rigid_body_flags": "none",
         "mass": 0,
         "velocity": 0,
@@ -134,9 +185,13 @@
       "properties": {
         "renderable": "tank_bullet_renderable",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "large_explosion_cross",
-        "explosion_animation_time": 0.6,
-        "explosion_audio": "explodemini_fast",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          }
+        ],
         "rigid_body_flags": "none",
         "mass": 200,
         "velocity": 0,
@@ -154,9 +209,13 @@
       "properties": {
         "renderable": "tank_bullet_renderable",
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "large_explosion_cross",
-        "explosion_animation_time": 0.6,
-        "explosion_audio": "explodemini_fast",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          }
+        ],
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 900,
@@ -173,8 +232,12 @@
       "properties": {
         "renderable": null,
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "bullet_impact_cross",
-        "explosion_animation_time": 0.1,
+        "explosions": [
+          {
+            "resource": "bullet_impact_cross",
+            "animation_time": 0.1
+          }
+        ],
         "rigid_body_flags": "none",
         "mass": 20,
         "velocity": 900,
@@ -193,9 +256,13 @@
       "properties": {
         "renderable": null,
         "hitbox": "tank_bullet_hitbox",
-        "explosion_resource": "large_explosion_cross",
-        "explosion_animation_time": 0.6,
-        "explosion_audio": "explodemini_fast",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          }
+        ],
         "engine_audio": "thruster",
         "rigid_body_flags": "none",
         "mass": 20,

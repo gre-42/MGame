@@ -170,5 +170,23 @@
       "transformation_mode": "all",
       "has_animated_textures": true
     }
+  },
+  {
+    "call": "blending_x_resource",
+    "arguments": {
+      "name": "bullet_impact_red_cross",
+      "texture_filename": "#bullet_impact_red_3d",
+      "min": [-0.5, -0.5],
+      "max": [0.5, 0.5],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "has_animated_textures": true
+    }
   }
 ]
