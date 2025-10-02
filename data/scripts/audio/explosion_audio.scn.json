@@ -18,5 +18,15 @@
       "lowpass": "explosion_lowpass",
       "distance_clamping": [25, 700]
     }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_audio",
+    "arguments": {
+      "name": "impactcrunch01",
+      "filename": "sounds/opengameart/break-crunch-impacts/impactcrunch01.wav",
+      "gain": 1,
+      "distance_clamping": [5, 700]
+    }
   }
 ]
