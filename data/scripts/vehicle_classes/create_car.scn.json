@@ -65,24 +65,34 @@
       },
       {
         "required": "%if_damageable",
-        "call": "damageable",
-        "arguments": {
-          "node": "car_node$suffix",
-          "health": 200,
-          "delete_node_when_health_leq_zero": true,
-          "explosion_animation": "large_explosion_cross",
-          "explosion_animation_duration": 0.6,
-          "explosion_audio": "explodemini_fast",
-          "gid": { "group": "translations", "id": "scene" }
-        }
-      },
-      {
-        "required": "%if_damageable",
-        "call": "crash",
-        "arguments": {
-          "node": "car_node$suffix",
-          "damage": 0.3
-        }
+        "execute": [
+          {
+            "call": "damageable",
+            "arguments": {
+              "node": "car_node$suffix",
+              "health": 200,
+              "delete_node_when_health_leq_zero": true,
+              "explosion_animation": "large_explosion_cross",
+              "explosion_animation_duration": 0.6,
+              "explosion_audio": "explodemini_fast",
+              "gid": { "group": "translations", "id": "scene" }
+            }
+          },
+          {
+            "call": "crash",
+            "arguments": {
+              "node": "car_node$suffix",
+              "damage": 0.3
+            }
+          },
+          {
+            "call": "set_damage_absorption_direction",
+            "arguments": {
+              "node": "car_node$suffix",
+              "direction": [0, 0, 1]
+            }
+          }
+        ]
       },
       {
         "required": "%if_spawner",
