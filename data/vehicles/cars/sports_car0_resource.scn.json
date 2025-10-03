@@ -116,5 +116,7 @@
     ]
   },
   {"playback": "load_sports_car0", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "suffix": ""}},
-  {"playback": "load_sports_car0", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d3", "suffix": "_lowres"}}
+  {"playback": "load_sports_car0", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d3", "suffix": "_lowres"}},
+  {"playback": "load_sports_car0_part", "arguments": {"dist_min": 0, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "reflectance": [0, 0, 0], "reflection_map": null, "name": "sports_car0/sports_car0_interior"}},
+  {"call": "add_companion_renderable", "arguments": {"resource": "sports_car0/main", "companion_resource": "sports_car0/sports_car0_interior"}}
 ]
