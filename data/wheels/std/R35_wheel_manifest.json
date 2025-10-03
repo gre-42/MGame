@@ -1,0 +1,15 @@
+{
+  "id": "R35_wheel",
+  "title": "R35 wheel",
+  "database": {
+    "radius": 0.35,
+    "mass": 10.6,
+    "brake_force": 50000,
+    "brake_torque": 400,
+    "Ks": 2e5,
+    "Ka": 5e3,
+    "Ke": 1.7,
+    "musF": [4e3, 8e3],
+    "musC": [1.1, 0.97]
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "declare_macro": "load_XZ_wheel_35",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "models/SR/XZ/XZ_wheel$decimate.obj",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1.06, 1.06, 1.06],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "emissive_factor": "%stunt_rally_emissive_factor",
+            "ambient_factor": "%stunt_rally_ambient_factor",
+            "diffuse_factor": "%stunt_rally_diffuse_factor",
+            "specular_factor": "%stunt_rally_specular_factor",
+            "werror": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_XZ_wheels_40",
+    "content": [
+      {"playback": "load_XZ_wheel_35", "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null,  "name": "XZ/XZ_wheel_35$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel_35$decimate"], "dest_name": "XZ/wheel_front_40$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel_35$decimate"], "dest_name": "XZ/wheel_rear_40$suffix"}}
+    ]
+  },
+  {"playback": "load_XZ_wheels_40", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",                    "decimate": "", "suffix": ""}},
+  {"playback": "load_XZ_wheels_40", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "none",                    "decimate": "_d3", "suffix": "_d3"}},
+  {"playback": "load_XZ_wheels_40", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d1", "suffix": "_lowres"}}
+]

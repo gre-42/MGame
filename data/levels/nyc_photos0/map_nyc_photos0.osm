@@ -50,6 +50,8 @@
   </node>
   <node id='-146927' action='modify' visible='true' lat='40.70961435411' lon='-73.99237321611' />
   <node id='-146928' action='modify' visible='true' lat='40.70961768439' lon='-73.99233684894' />
+  <node id='-146932' action='modify' visible='true' lat='40.70974925006' lon='-73.992367186' />
+  <node id='-146933' action='modify' visible='true' lat='40.70972682334' lon='-73.99248552919' />
   <way id='-240287' action='modify' visible='true'>
     <nd ref='-143034' />
     <nd ref='-143035' />
@@ -103,5 +105,11 @@
     <nd ref='-146927' />
     <nd ref='-146928' />
     <nd ref='-146926' />
+  </way>
+  <way id='-245220' action='modify' visible='true'>
+    <nd ref='-146932' />
+    <nd ref='-146933' />
+    <tag k='spawn:group' v='car1' />
+    <tag k='spawn_line' v='yes' />
   </way>
 </osm>
