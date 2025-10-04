@@ -21,13 +21,6 @@
       }
     },
     {
-    "call": "set_user_count",
-      "context": "primary_scene",
-      "arguments": {
-        "user_count": "%user_count"
-      }
-    },
-    {
       "call": "for_each_user",
       "context": "primary_scene",
       "arguments": {
