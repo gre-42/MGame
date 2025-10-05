@@ -140,6 +140,7 @@
               "arguments": {
                 "user_id": "%user_id",
                 "user_name": "%user_name",
+                "user_account_key": "account_$user_name",
                 "name": "$vip_name-_$user_name",
                 "team": "red",
                 "game_mode": "rally",
