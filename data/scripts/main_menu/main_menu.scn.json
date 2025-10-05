@@ -1097,14 +1097,14 @@
           "parameters": [
             {
               "id": "account_name",
-              "title": "$$translations/main/Account_name/$selected_language: ${account_name_$user_name}",
+              "title": "$$translations/main/Account_name/$selected_language: ${/account_$user_name/name}",
               "on_before_select": {
                 "call": "globals",
                 "arguments": {
                   "selected_account_entry_id_$user_name": "account_name",
-                  "selected_account_persisted_$user_name": "account_name",
-                  "selected_account_global_$user_name": "account_name_$user_name",
-                  "selected_account_value_$user_name": "%account_name_$user_name"
+                  "selected_account_persisted_$user_name": ["account", "name"],
+                  "selected_account_global_$user_name": ["account_$user_name", "name"],
+                  "selected_account_value_$user_name": "%/account_$user_name/name"
                 }
               }
             }

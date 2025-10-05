@@ -24,7 +24,9 @@
                 "user_id": "%user_id",
                 "variables": {
                   "pacenotes": "disabled",
-                  "account_name": "Anonymous player"
+                  "account": {
+                    "name": "Anonymous player"
+                  }
                 }
               }
             },
@@ -33,7 +35,7 @@
               "arguments": {
                 "user_id": "%user_id",
                 "variables": {
-                  "account_name_$user_name": "account_name"
+                  "account_$user_name": "account"
                 }
               }
             }
