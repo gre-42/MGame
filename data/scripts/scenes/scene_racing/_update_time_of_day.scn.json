@@ -81,6 +81,9 @@
         "comment": "Reflection map"
       },
       {
+        "call": "clear_color_styles"
+      },
+      {
         "required": "(%loaded_time_of_day == 'day')",
         "call": "add_color_style",
         "arguments": {
