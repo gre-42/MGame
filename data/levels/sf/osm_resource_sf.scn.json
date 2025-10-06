@@ -156,7 +156,22 @@
           "normal_distance": 1,
           "gradient_dx": "nan",
           "max_gradient": "nan"
-        }],
+        },
+        {
+          "resources": [
+            "vegetation2.0(hitbox:box_02_1_02_hitbox)",
+            "vegetation2.1(hitbox:box_02_1_02_hitbox)",
+            "vegetation2.2(hitbox:box_02_1_02_hitbox)",
+            "vegetation2.3(hitbox:box_02_1_02_hitbox)",
+            "vegetation2.4(hitbox:box_02_1_02_hitbox)",
+            "vegetation2.5(hitbox:box_02_1_02_hitbox)"
+          ],
+          "tangential_distance": 25,
+          "normal_distance": 2,
+          "gradient_dx": "nan",
+          "max_gradient": "nan"
+        }
+      ],
       "tree_resource_names": [
         "vegetation2.0(hitbox:box_02_1_02_hitbox)",
         "vegetation2.1(hitbox:box_02_1_02_hitbox)",
