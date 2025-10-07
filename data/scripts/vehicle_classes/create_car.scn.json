@@ -72,9 +72,13 @@
               "node": "car_node$suffix",
               "health": 200,
               "delete_node_when_health_leq_zero": true,
-              "explosion_animation": "large_explosion_cross",
-              "explosion_animation_duration": 0.6,
-              "explosion_audio": "explodemini_fast",
+              "explosions": [
+                {
+                  "animation": "large_explosion_cross",
+                  "animation_duration": 0.6,
+                  "audio": "explodemini_fast"
+                }
+              ],
               "gid": { "group": "translations", "id": "scene" }
             }
           },

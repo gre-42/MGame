@@ -65,7 +65,12 @@
           "node": "human_node$suffix",
           "health": 200,
           "delete_node_when_health_leq_zero": false,
-          "explosion_audio": "impactcrunch01",
+          "explosions": [
+            {
+              "damage_sources": ["crash"],
+              "audio": "impactcrunch01"
+            }
+          ],
           "gid": { "group": "translations", "id": "scene" }
         }
       },
