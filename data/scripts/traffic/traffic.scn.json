@@ -35,41 +35,6 @@
     ]
   },
   {
-    "declare_macro": "traffic.create_car_npc_player",
-    "content": [
-      {
-        "call": "spawner_create",
-        "arguments": {
-          "name": "%spawner_name",
-          "team": "red",
-          "group": "",
-          "trigger": "bystanders"
-        }
-      },
-      {
-        "call": "player_create",
-        "arguments": {
-          "name": "%spawner_name",
-          "team": "red",
-          "game_mode": "%game_mode",
-          "player_role": "bystander",
-          "unstuck_mode": "%unstuck_mode",
-          "behavior": "%initial_behavior",
-          "driving_direction": "right"
-        }
-      },
-      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "seat": "driver" } },
-      {
-        "call": "set_can_drive",
-        "arguments": {
-          "player": "%spawner_name",
-          "source": "ai",
-          "value": true
-        }
-      }
-    ]
-  },
-  {
     "declare_macro": "traffic.create_avatar",
     "content": [
       {
@@ -185,10 +150,12 @@
     "declare_macro": "traffic.create_npc_and_parking_car",
     "content": [
       {
-        "playback": "traffic.create_car_npc_player",
+        "call": "spawner_create",
         "arguments": {
-          "unstuck_mode": "off",
-          "initial_behavior": "none"
+          "name": "%spawner_name",
+          "team": "red",
+          "group": "",
+          "trigger": "bystanders"
         }
       },
       {
@@ -201,7 +168,7 @@
           "macro": {
             "playback": "traffic.create_car",
             "let": {
-              "hand_brake_pulled": true,
+              "parking_brake_pulled": true,
               "mute": true,
               "respawn_cooldown_time": 0
             }
@@ -234,7 +201,7 @@
             {
               "playback": "traffic.create_car",
               "let": {
-                "hand_brake_pulled": false,
+                "parking_brake_pulled": false,
                 "mute": false,
                 "respawn_cooldown_time": 0
               }

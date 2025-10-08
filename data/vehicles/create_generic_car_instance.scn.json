@@ -97,7 +97,7 @@
               "gear_ratios": "%%vehicles/$name/gear_ratios",
               "w_clutch": "%%vehicles/$name/w_clutch",
               "max_dw": "%%vehicles/$name/max_dw",
-              "hand_brake_pulled": "%hand_brake_pulled",
+              "parking_brake_pulled": "%parking_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
                 "p_idle": "%%engine_audio/$engine_audio/p_idle",
@@ -116,7 +116,7 @@
               "gear_ratios": "%%vehicles/$name/gear_ratios",
               "w_clutch": "%%vehicles/$name/w_clutch",
               "max_dw": "%%vehicles/$name/max_dw",
-              "hand_brake_pulled": "%hand_brake_pulled",
+              "parking_brake_pulled": "%parking_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
                 "p_idle": "%%engine_audio/$engine_audio/p_idle",
@@ -140,7 +140,7 @@
           "gear_ratios": "%%vehicles/$name/gear_ratios",
           "w_clutch": "%%vehicles/$name/w_clutch",
           "max_dw": "%%vehicles/$name/max_dw",
-          "hand_brake_pulled": "%hand_brake_pulled",
+          "parking_brake_pulled": "%parking_brake_pulled",
           "audio": {
             "name": "%%engine_audio/$engine_audio/name",
             "p_idle": "%%engine_audio/$engine_audio/p_idle",
@@ -157,7 +157,7 @@
         "arguments": {
           "rigid_body": "car_node$tesuffix",
           "name": "engine",
-          "hand_brake_pulled": "%hand_brake_pulled"
+          "parking_brake_pulled": "%parking_brake_pulled"
         }
       },
 

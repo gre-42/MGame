@@ -74,9 +74,13 @@
             "powers": ["nan", 10, 10, 0],
             "gear_ratios": [-1.2, 1.2],
             "w_clutch": 800,
-            "max_dw": 2000,
-            "hand_brake_pulled": "%hand_brake_pulled"
+            "max_dw": 2000
         }
+      },
+      {
+        "required": ["%if_with_physics", "%parking_brake_pulled"],
+        "call": "park_vehicle",
+        "arguments": { "rigid_body": "car_node$suffix" }
       },
       {
         "required": "%if_with_physics",

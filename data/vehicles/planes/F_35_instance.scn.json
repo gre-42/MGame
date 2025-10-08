@@ -208,8 +208,7 @@
           "angular_vels": [0],
           "powers": [0],
           "gear_ratios": [0],
-          "w_clutch": 0,
-          "hand_brake_pulled": "%hand_brake_pulled"
+          "w_clutch": 0
         }
       },
       {
@@ -221,9 +220,13 @@
           "powers": [260],
           "gear_ratios": [0],
           "w_clutch": 0,
-          "hand_brake_pulled": "%hand_brake_pulled",
           "exhaust": "%%vehicles/F_35/engine_exhaust"
         }
+      },
+      {
+        "required": "%parking_brake_pulled",
+        "call": "park_vehicle",
+        "arguments": { "rigid_body": "car_node$suffix" }
       },
       {
         "call": "wheel",

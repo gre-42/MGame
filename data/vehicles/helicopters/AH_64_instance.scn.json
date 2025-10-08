@@ -208,8 +208,7 @@
           "powers": [0, 3.6e8, 3.6e8],
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
-          "max_dw": 2000,
-          "hand_brake_pulled": "%hand_brake_pulled"
+          "max_dw": 2000
         }
       },
       {
@@ -222,7 +221,6 @@
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
           "max_dw": 2000,
-          "hand_brake_pulled": "%hand_brake_pulled",
           "audio": {
             "name": "car0",
             "p_idle": 4e3,
@@ -240,9 +238,12 @@
           "powers": [0, 400, 0],
           "gear_ratios": [-0.5, -1, -2, -3, 3, 2, 1, 0.5],
           "w_clutch": 800,
-          "max_dw": 2000,
-          "hand_brake_pulled": "%hand_brake_pulled"
+          "max_dw": 2000
         }
+      },
+      {
+        "call": "park_vehicle",
+        "arguments": { "rigid_body": "car_node$suffix" }
       },
       {
         "call": "wheel",

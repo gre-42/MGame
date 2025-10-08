@@ -105,7 +105,6 @@
           "gear_ratios": [10, 20, 40, -40, -20, -10],
           "w_clutch": 800,
           "max_dw": 2000,
-          "hand_brake_pulled": "%hand_brake_pulled",
           "audio": {
             "name": "car0",
             "p_idle": 200e2,
@@ -121,6 +120,11 @@
       {
         "call": "create_delta_engine",
         "arguments": { "rigid_body": "car_node$suffix", "name": "right" }
+      },
+      {
+        "required": "%parking_brake_pulled",
+        "call": "park_vehicle",
+        "arguments": { "rigid_body": "car_node$suffix" }
       },
       {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_left_0_node$suffix",  "vehicle_mount_0": [-1.8, -0.0, -2.4], "vehicle_mount_1": [-1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "left",  "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "Ke": 1.7, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 0}},
       {"call": "wheel", "arguments": {"vehicle": "car_node$suffix", "wheel": "wheel_right_0_node$suffix", "vehicle_mount_0": [ 1.8, -0.0, -2.4], "vehicle_mount_1": [ 1.8, 0.5, -2.4], "radius": 0.25, "engine": "main", "delta_engine": "right", "brake_force": 2.5e5, "brake_torque": 400, "Ks": 1.67e6, "Ka": 6.7e4, "Ke": 1.7, "musF": [6.7e4, 1.33e5], "musC": [1.1, 0.97], "tire_id": 1}},
