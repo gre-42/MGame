@@ -4,31 +4,34 @@
     "declare_macro": "create_female_mh",
     "content": {
       "playback": "generic_avatar.create",
-      "let": {
-        "decimate": "_d2"
-      }
+      "let": { "decimate": "_d2", "decimate1": "_d1" }
     }
   },
   {
     "declare_macro": "create_female_skirt",
     "content": {
       "playback": "generic_avatar.create",
-      "let": {
-        "decimate": "_d2"
-      }
+      "let": { "decimate": "_d2", "decimate1": "_d1" }
+    }
+  },
+  {
+    "declare_macro": "create_male_mh",
+    "content": {
+      "playback": "generic_avatar.create",
+      "let": { "decimate": "_d08", "decimate1": "_d03" }
     }
   },
   {
     "declare_macro": "create_player_avatar_internals_female_mh",
-    "content": {
-      "playback": "generic_avatar.create_player_internals"
-    }
+    "content": { "playback": "generic_avatar.create_player_internals" }
   },
   {
     "declare_macro": "create_player_avatar_internals_female_skirt",
-    "content": {
-      "playback": "generic_avatar.create_player_internals"
-    }
+    "content": { "playback": "generic_avatar.create_player_internals" }
+  },
+  {
+    "declare_macro": "create_player_avatar_internals_male_mh",
+    "content": { "playback": "generic_avatar.create_player_internals" }
   },
   {
     "comment": {

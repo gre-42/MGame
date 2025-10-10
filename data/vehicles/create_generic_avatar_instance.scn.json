@@ -244,7 +244,7 @@
       },
       {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
       {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
-      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst-d1", "node": "animation_node$suffix", "resource": "$asset_id-_d1"}},
+      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst-$decimate1", "node": "animation_node$suffix", "resource": "$asset_id-$decimate1"}},
       {
         "call": "set_available_seats",
         "arguments": {

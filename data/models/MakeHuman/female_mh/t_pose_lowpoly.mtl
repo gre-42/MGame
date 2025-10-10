@@ -9,7 +9,7 @@ Ks 1.000000 1.000000 1.000000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 9
-map_Kd textures/brown_eye.png
+map_Kd ../textures/eyes/materials/brown_eye.png
 
 newmtl female_casualsuit01
 Ns 10.000000
@@ -19,7 +19,7 @@ Ks 0.027450 0.027450 0.027450
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 9
-map_Kd textures/female_casualsuit01_diffuse.png
+map_Kd ../textures/clothes/female_casualsuit01/female_casualsuit01_diffuse.png
 
 newmtl lowpoly-shoes
 Ns 10.000000
@@ -29,7 +29,7 @@ Ks 0.800000 0.800000 0.800000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 9
-map_Kd textures/shoes06_diffuse.png
+map_Kd ../textures/clothes/shoes06/shoes06_diffuse.png
 
 newmtl lowpoly_hairX
 Ns 10.000000
@@ -39,7 +39,7 @@ Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 9
-map_Kd textures/bob02_diffuse.png
+map_Kd ../textures/hair/bob02/bob02_diffuse.png
 
 newmtl middleage_caucasian_female
 Ns 10.000000
@@ -49,4 +49,4 @@ Ks 0.054903 0.054903 0.054903
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 9
-map_Kd textures/middleage_lightskinned_female_diffuse.png
+map_Kd ../textures/skins/middleage_caucasian_female/middleage_lightskinned_female_diffuse.png
