@@ -1,0 +1,122 @@
+[
+  {"include": "wheels/XZ_wheel_35_resource.scn.json"},
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "ambulance0_hitbox",
+      "filename": "models/primitives/box.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.9, 0.5, 2.3],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      }
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "ambulance0_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "ambulance0_distancebox",
+      "min": [-0.85, -0.6, -2.15],
+      "max": [0.85, 0.6, 2.15],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "ambulance0_tirelines",
+      "filename": "models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_tire"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "ambulance0_tirelines", "from": [-0.78, -0.2, -1.6], "to": [-0.78, -1, -1.6]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "ambulance0_tirelines", "from": [ 0.78, -0.2, -1.6], "to": [ 0.78, -1, -1.6]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "ambulance0_tirelines", "from": [-0.78, -0.2,  1.6], "to": [-0.78, -1,  1.6]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "ambulance0_tirelines", "from": [ 0.78, -0.2,  1.6], "to": [ 0.78, -1,  1.6]}}, {"comment": "right rear"},
+
+  {"call": "compound_resource", "arguments": {"source_names": ["ambulance0_hitbox", "ambulance0_distancebox", "ambulance0_tirelines"], "dest_name": "ambulance0_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["ambulance0_hitbox"], "dest_name": "ambulance0_massbox"}},
+
+  {
+    "declare_macro": "load_ambulance0_part",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "models/gre42/$name.obj",
+          "config": {
+            "position": [0, -0.82, 0.3],
+            "rotation": [0, 0, 0],
+            "scale": [2.1, 2.1, 2.1],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "continuous",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "cull_faces_alpha": true,
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "reflection_map": "%reflection_map",
+            "emissive_factor": "%blender_emissive_factor",
+            "ambient_factor": "%blender_ambient_factor",
+            "diffuse_factor": "%blender_diffuse_factor",
+            "specular_factor": "%blender_specular_factor",
+            "shading": {
+              "reflectance": "%reflectance",
+              "fresnel": {
+                "min": "%stunt_rally_fresnel_min",
+                "max": "%stunt_rally_fresnel_max",
+                "exponent": "%stunt_rally_fresnel_exponent",
+                "ambient": "%blender_fresnel_ambient"
+              }
+            },
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_ambulance0",
+    "content": [
+      {"playback": "load_ambulance0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "ambulance0/ambulance0_chassis$decimate"}},
+      {"playback": "load_ambulance0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "ambulance0/ambulance0_glass$decimate"}},
+      {"playback": "load_ambulance0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null, "name": "ambulance0/ambulance0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "ambulance0/main$suffix"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "ambulance0/main$suffix", "companion_resource": "ambulance0/ambulance0_chassis$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "ambulance0/main$suffix", "companion_resource": "ambulance0/ambulance0_glass$decimate"}},
+      {"call": "add_companion_renderable", "arguments": {"resource": "ambulance0/main$suffix", "companion_resource": "ambulance0/ambulance0_misc$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$wheel_decimate"], "dest_name": "ambulance0/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["XZ/XZ_wheel$wheel_decimate"], "dest_name": "ambulance0/wheel_rear$suffix"}}
+    ]
+  },
+  {"playback": "load_ambulance0", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",               "decimate": "", "wheel_decimate": "", "suffix": ""}},
+  {"playback": "load_ambulance0", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d5", "wheel_decimate": "_d3", "suffix": "_lowres"}},
+  {"playback": "load_ambulance0_part", "arguments": {"dist_min": 0, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "reflectance": [0, 0, 0], "reflection_map": null, "name": "ambulance0/ambulance0_interior"}},
+  {"call": "add_companion_renderable", "arguments": {"resource": "ambulance0/main", "companion_resource": "ambulance0/ambulance0_interior"}}
+]

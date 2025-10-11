@@ -1,15 +1,15 @@
 {
-  "id": "sports_car0",
-  "title": "Sports car 0",
-  "on_init": {"include": "sports_car0.scn.json"},
+  "id": "ambulance0",
+  "title": "Ambulance 0",
+  "on_init": {"include": "ambulance0.scn.json"},
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "selected_vehicle_id_$user_name": "sports_car0"
+      "selected_vehicle_id_$user_name": "ambulance0"
     }
   },
   "database": {
-    "suffix": "sports_car0",
+    "suffix": "ambulance0",
     "vehicle_class": "car",
     "node_prefixes": ["car_node"],
     "spawn_y_offset": 0.7,
@@ -24,15 +24,15 @@
     "rear_engine": "engine",
     "light_left_front_position": [-0.5, 0, -22],
     "light_right_front_position": [0.5, 0, -22],
-    "wheel_left_front_mount_0":  [-0.78, -0.59,  -1.42],
-    "wheel_right_front_mount_0": [ 0.78, -0.59,  -1.42],
-    "wheel_left_rear_mount_0":   [-0.78, -0.59,   1.42],
-    "wheel_right_rear_mount_0":  [ 0.78, -0.59,   1.42],
+    "wheel_left_front_mount_0":  [-0.78, -0.59,  -1.6],
+    "wheel_right_front_mount_0": [ 0.78, -0.59,  -1.6],
+    "wheel_left_rear_mount_0":   [-0.78, -0.59,   1.6],
+    "wheel_right_rear_mount_0":  [ 0.78, -0.59,   1.6],
 
-    "wheel_left_front_mount_1":  [-0.78, 0, -1.42],
-    "wheel_right_front_mount_1": [ 0.78, 0, -1.42],
-    "wheel_left_rear_mount_1":   [-0.78, 0,  1.42],
-    "wheel_right_rear_mount_1":  [ 0.78, 0,  1.42],
+    "wheel_left_front_mount_1":  [-0.78, 0, -1.6],
+    "wheel_right_front_mount_1": [ 0.78, 0, -1.6],
+    "wheel_left_rear_mount_1":   [-0.78, 0,  1.6],
+    "wheel_right_rear_mount_1":  [ 0.78, 0,  1.6],
 
     "size": [1.8, 1, 4.6],
     "com": [0, -0.5, 0.2],
@@ -49,7 +49,7 @@
     "max_dw": 2000,
     "gear_ratios": [0.75, 1.5, 3, 6, 9, -9],
 
-    "wheels": "R40_wheel",
+    "wheels": "R33_wheel",
     "engine_audio": "car2",
     "engine_exhaust": [
       {

@@ -1,0 +1,45 @@
+[
+  {
+    "declare_macro": "create_ambulance0",
+    "# content": {
+      "playback": "generic_car.create",
+      "let": {
+        "name": "ambulance0",
+        "tesuffix": "%suffix",
+        "tedecimate": "",
+        "wheels": "%%vehicles/ambulance0/wheels",
+        "engine_audio": "%%vehicles/ambulance0/engine_audio"
+      }
+    },
+    "content": {
+      "call": "create_generic_car",
+      "arguments": {
+        "name": "ambulance0",
+        "tesuffix": "%suffix",
+        "tedecimate": "",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "mute": "%mute",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "parking_brake_pulled": "%parking_brake_pulled"
+      }
+    }
+  },
+  {
+    "declare_macro": "create_player_car_internals_ambulance0",
+    "content": {
+      "playback": "generic_car.create_player_internals"
+    }
+  },
+  {
+    "declare_macro": "create_player_car_externals_ambulance0",
+    "content": {
+      "playback": "generic_car.create_player_externals",
+      "let": {
+        "camera_class": "sedan",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
+      }
+    }
+  }
+]
