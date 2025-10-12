@@ -75,9 +75,14 @@
               "explosions": [
                 {
                   "animation": "large_explosion_cross",
-                  "animation_duration": 0.6,
                   "particle_container": "node",
+                  "animation_duration": 0.6,
                   "audio": "explodemini_fast"
+                },
+                {
+                  "animation": "explosion_rocks",
+                  "particle_container": "physics",
+                  "animation_duration": 1.5
                 }
               ],
               "gid": { "group": "translations", "id": "scene" }
