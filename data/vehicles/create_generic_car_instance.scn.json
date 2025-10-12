@@ -43,7 +43,7 @@
           "mass": "%%vehicles/$name/mass",
           "size": "%%vehicles/$name/size",
           "com": "%%vehicles/$name/com",
-          "collidable_mode": "moving",
+          "collidable_mode": "collide|move",
           "name": "generic_car_$name$tesuffix",
           "waypoint_dy": 1.2,
           "asset_id": "%name"

@@ -203,7 +203,7 @@
       {"required": "%if_with_graphics", "playback": "create_tiger_tank_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d3$suffix", "lod_decimate": "_d3"}},
       {"required": "%if_with_physics", "playback": "create_tiger_tank_physics", "arguments": {
         "mass": 56e3,
-        "collidable_mode": "moving"
+        "collidable_mode": "collide|move"
       }}
     ]
   },

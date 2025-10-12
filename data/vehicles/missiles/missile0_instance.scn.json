@@ -26,7 +26,7 @@
           "w": "%bullet_angular_velocity",
           "size": [0.06, 0.06, 3],
           "com": [0, 0, 0],
-          "collidable_mode": "moving",
+          "collidable_mode": "collide|move",
           "name": "missile0$bullet_suffix",
           "asset_id": "missile0"
         }

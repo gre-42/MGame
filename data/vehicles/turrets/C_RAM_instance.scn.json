@@ -113,7 +113,7 @@
         "playback": "create_C_RAM_physics",
         "arguments": {
           "mass": 56e3,
-          "collidable_mode": "moving"
+          "collidable_mode": "collide|move"
         }
       }
     ]

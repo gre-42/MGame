@@ -49,7 +49,7 @@
           "with_penetration_limits": true,
           "mass": 70,
           "size": ["inf", "inf", "inf"],
-          "collidable_mode": "moving",
+          "collidable_mode": "collide|move",
           "flags": "is_activated_avatar",
           "waypoint_dy": 0.7,
           "name": "human$suffix",

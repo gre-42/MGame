@@ -407,7 +407,7 @@
         "playback": "create_AH_64_physics",
         "arguments": {
           "mass": 6e3,
-          "collidable_mode": "moving"
+          "collidable_mode": "collide|move"
         }
       }
     ]

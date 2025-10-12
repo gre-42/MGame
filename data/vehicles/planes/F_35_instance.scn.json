@@ -556,7 +556,7 @@
         "playback": "create_F_35_physics",
         "arguments": {
           "mass": 20000,
-          "collidable_mode": "moving"
+          "collidable_mode": "collide|move"
         }
       },
       {
