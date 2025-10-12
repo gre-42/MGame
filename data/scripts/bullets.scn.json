@@ -20,11 +20,13 @@
               "surface_base_desert_road"
             ],
             "resource": "bullet_impact_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           },
           {
             "materials": ["surface_base_avatar"],
             "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           }
         ],
@@ -61,11 +63,13 @@
               "surface_base_desert_road"
             ],
             "resource": "bullet_impact_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           },
           {
             "materials": ["surface_base_avatar"],
             "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           }
         ],
@@ -91,8 +95,14 @@
         "explosions": [
           {
             "resource": "large_explosion_cross",
+            "particle_container": "node",
             "animation_time": 0.6,
             "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
           }
         ],
         "mass": 0.5,
@@ -115,8 +125,14 @@
         "explosions": [
           {
             "resource": "large_explosion_cross",
+            "particle_container": "node",
             "animation_time": 0.6,
             "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
           }
         ],
         "engine_audio": "thruster",
@@ -160,11 +176,13 @@
               "surface_base_desert_road"
             ],
             "resource": "bullet_impact_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           },
           {
             "materials": ["surface_base_avatar"],
             "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           }
         ],
@@ -204,8 +222,14 @@
         "explosions": [
           {
             "resource": "large_explosion_cross",
+            "particle_container": "node",
             "animation_time": 0.6,
             "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
           }
         ],
         "rigid_body_flags": "none",
@@ -228,8 +252,14 @@
         "explosions": [
           {
             "resource": "large_explosion_cross",
+            "particle_container": "node",
             "animation_time": 0.6,
             "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
           }
         ],
         "rigid_body_flags": "none",
@@ -262,11 +292,13 @@
               "surface_base_desert_road"
             ],
             "resource": "bullet_impact_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           },
           {
             "materials": ["surface_base_avatar"],
             "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
             "animation_time": 0.1
           }
         ],
@@ -291,8 +323,14 @@
         "explosions": [
           {
             "resource": "large_explosion_cross",
+            "particle_container": "node",
             "animation_time": 0.6,
             "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
           }
         ],
         "engine_audio": "thruster",
