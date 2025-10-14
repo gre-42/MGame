@@ -5,9 +5,7 @@
     "nrocks": 20,
     "rocks": [
       {
-        "renderable": "desert_rock01_small_d1_s3_obj",
-        "mass": 10,
-        "width": 0.2,
+        "bullet": "explosion_rocks",
         "velocity_range": [20, 50],
         "angular_velocity_std": 10
       }

@@ -158,6 +158,34 @@
   {
     "call": "set_bullet_properties",
     "arguments": {
+      "name": "explosion_rocks",
+      "properties": {
+        "renderable": "desert_rock01_small_d1_s3_obj",
+        "hitbox": null,
+        "explosions": [],
+        "engine_audio": null,
+        "mass": 10,
+        "lifetime": 3,
+        "size": [10, 10, 10],
+        "trail": {
+          "particle": {
+            "resource": "smoke_3d",
+            "air_resistance_halflife": 1,
+            "animation_duration": 0.5,
+            "type": "smoke"
+          },
+          "generation_dt": 0.005
+        },
+        "rigid_body_flags": "none",
+        "velocity": 0,
+        "damage": 0,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
       "name": "ah_64_bullet",
       "properties": {
         "renderable": "tank_bullet_renderable",
