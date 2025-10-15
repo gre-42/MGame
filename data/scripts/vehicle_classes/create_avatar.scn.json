@@ -146,7 +146,7 @@
           "filename": "textures/hud/crosshair.png"}
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_damageable"],
         "call": "ui_background",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -162,7 +162,7 @@
         }
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_damageable"],
         "call": "ui_background",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -178,7 +178,7 @@
         }
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_damageable"],
         "call": "visual_player_status",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -197,7 +197,7 @@
         }
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_weapon_cycle"],
         "call": "ui_background",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -213,7 +213,7 @@
         }
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_weapon_cycle"],
         "call": "ui_background",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -229,7 +229,7 @@
         }
       },
       {
-        "required": "%if_pc",
+        "required": ["%if_pc", "%if_weapon_cycle"],
         "call": "visual_player_bullet_count",
         "context": "primary_scene_$user_name",
         "arguments": {
