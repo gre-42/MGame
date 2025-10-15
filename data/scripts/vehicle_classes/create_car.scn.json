@@ -216,19 +216,103 @@
       },
       {
         "required": "%if_pc",
+        "call": "ui_background",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "z_order": 0,
+          "player": "%player_name",
+          "texture": "#health",
+          "left": "health_icon_left",
+          "right": "health_icon_right",
+          "bottom": "health_icon_bottom",
+          "top": "health_icon_top",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "required": "%if_pc",
+        "call": "ui_background",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "z_order": 0,
+          "player": "%player_name",
+          "texture": "#ui_gray_fade",
+          "left": "health_icon_left",
+          "right": "health_icon_right",
+          "bottom": "health_icon_bottom",
+          "top": "health_icon_top",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "required": "%if_pc",
+        "call": "visual_player_status",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "player": "%player_name",
+          "format": "health",
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "health_text_left",
+          "right": "health_text_right",
+          "bottom": "health_text_bottom",
+          "top": "health_text_top",
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "required": "%if_pc",
+        "call": "ui_background",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "z_order": 0,
+          "player": "%player_name",
+          "texture": "#ammunition",
+          "left": "bullet_count_icon_left",
+          "right": "bullet_count_icon_right",
+          "bottom": "bullet_count_icon_bottom",
+          "top": "bullet_count_icon_top",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "required": "%if_pc",
+        "call": "ui_background",
+        "context": "primary_scene_$user_name",
+        "arguments": {
+          "z_order": 0,
+          "player": "%player_name",
+          "texture": "#ui_gray_fade",
+          "left": "bullet_count_icon_left",
+          "right": "bullet_count_icon_right",
+          "bottom": "bullet_count_icon_bottom",
+          "top": "bullet_count_icon_top",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "required": "%if_pc",
         "call": "visual_player_bullet_count",
         "context": "primary_scene_$user_name",
         "arguments": {
+          "z_order": 0,
+          "player": "%player_name",
+          "left": "bullet_count_text_left",
+          "right": "bullet_count_text_right",
+          "bottom": "bullet_count_text_bottom",
+          "top": "bullet_count_text_top",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "left": "bullet_count_left",
-          "right": "bullet_count_right",
-          "bottom": "bullet_count_bottom",
-          "top": "bullet_count_top",
           "font_color": [1, 1, 1],
           "font_height": "normal",
           "line_distance": "normal",
-          "player": "%player_name",
           "focus_mask": "always"
         }
       }
