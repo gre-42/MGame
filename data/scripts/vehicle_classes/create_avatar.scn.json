@@ -163,22 +163,6 @@
       },
       {
         "required": ["%if_pc", "%if_damageable"],
-        "call": "ui_background",
-        "context": "primary_scene_$user_name",
-        "arguments": {
-          "z_order": 0,
-          "player": "%player_name",
-          "texture": "#ui_gray_fade",
-          "left": "health_icon_left",
-          "right": "health_icon_right",
-          "bottom": "health_icon_bottom",
-          "top": "health_icon_top",
-          "delay_load_policy": "no_delay",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": ["%if_pc", "%if_damageable"],
         "call": "visual_player_status",
         "context": "primary_scene_$user_name",
         "arguments": {
@@ -191,8 +175,8 @@
           "bottom": "health_text_bottom",
           "top": "health_text_top",
           "font_color": "%ui_font_color",
-          "font_height": "normal",
-          "line_distance": "normal",
+          "font_height": "large",
+          "line_distance": "large",
           "focus_mask": "always"
         }
       },
@@ -204,22 +188,6 @@
           "z_order": 0,
           "player": "%player_name",
           "texture": "#ammunition",
-          "left": "bullet_count_icon_left",
-          "right": "bullet_count_icon_right",
-          "bottom": "bullet_count_icon_bottom",
-          "top": "bullet_count_icon_top",
-          "delay_load_policy": "no_delay",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": ["%if_pc", "%if_weapon_cycle"],
-        "call": "ui_background",
-        "context": "primary_scene_$user_name",
-        "arguments": {
-          "z_order": 0,
-          "player": "%player_name",
-          "texture": "#ui_gray_fade",
           "left": "bullet_count_icon_left",
           "right": "bullet_count_icon_right",
           "bottom": "bullet_count_icon_bottom",
@@ -242,8 +210,8 @@
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "font_color": [1, 1, 1],
-          "font_height": "normal",
-          "line_distance": "normal",
+          "font_height": "large",
+          "line_distance": "large",
           "focus_mask": "always"
         }
       },

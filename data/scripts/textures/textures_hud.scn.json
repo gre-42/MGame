@@ -5,7 +5,8 @@
       "name": "health",
       "color": "textures/hud/health.png",
       "color_mode": "rgba",
-      "alpha_fac": 0.3,
+      "lighten": [-0.6, -0.6, -0.6],
+      "alpha_fac": 0.6,
       "anisotropic_filtering_level": 0
     }
   },
@@ -15,7 +16,8 @@
       "name": "ammunition",
       "color": "textures/hud/ammunition.png",
       "color_mode": "rgba",
-      "alpha_fac": 0.3,
+      "lighten": [-0.6, -0.6, -0.6],
+      "alpha_fac": 0.6,
       "anisotropic_filtering_level": 0
     }
   }
