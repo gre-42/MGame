@@ -18,4 +18,4 @@ This section contains screenshots of experimental MGame stages.
 ![Screenshot-A0-2022-07-17](media/Screenshot-A0-2022-07-17.png)
 
 ### Team deathmatch 0
-![Screenshot-TD0-2023-02-25](media/Screenshot-TD0-2023-02-25.png)
+![Screenshot-TD0-2025-10-16](media/Screenshot-TD0-2025-10-16.png)
