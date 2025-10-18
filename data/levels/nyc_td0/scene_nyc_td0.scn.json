@@ -3,7 +3,7 @@
     "call": "globals",
     "arguments": {
       "loaded_level_id": "%selected_level_id",
-      "game_mode": "photos",
+      "game_mode": "team_deathmatch",
       "aggregate_mode": "instances_sorted",
       "vip_name": "you",
       "player_seat": "driver",
@@ -12,14 +12,14 @@
         "rotation": [-90, 0, 0],
         "scale": 1
       },
-      "loaded_game_level": "photos",
+      "loaded_game_level": "td0",
       "loaded_racing_line_track": null,
       "loaded_racing_line_playback": null
     }
   },
   {"include": "scripts/include_all.scn.json"},
   {"include": "../nyc/osm_resource_nyc.scn.json"},
-  {"include": "create_tripod_cameras_nyc_photos0.scn.json"},
+  {"include": "create_tripod_cameras_nyc_td0.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -30,7 +30,7 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|history|laps|rank|race_time",
       "osm_map_resource": "osm_resource_nyc",
-      "osm_layers": ["$__DIR__/../nyc/map_nyc.osm", "$__DIR__/map_nyc_photos0.osm"],
+      "osm_layers": ["$__DIR__/../nyc/map_nyc.osm", "$__DIR__/map_nyc_td0.osm"],
       "if_has_overlay": false,
       "if_primary_dirtmap": true,
       "if_extract_alignment_planes": false,
@@ -68,7 +68,7 @@
       "players_json": "$__DIR__/players.json",
       "teams_spawn_points_resource": "osm_map",
       "teams_way_points_resource": "osm_map",
-      "objective": "photos"
+      "objective": "kill_count"
     }
   },
   {
