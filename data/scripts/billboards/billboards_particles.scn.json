@@ -176,8 +176,8 @@
     "arguments": {
       "name": "bullet_impact_red_cross",
       "texture_filename": "#bullet_impact_red_3d",
-      "min": [-0.5, -0.5],
-      "max": [0.5, 0.5],
+      "min": [-0.25, -0.25],
+      "max": [0.25, 0.25],
       "occluded_pass": "none",
       "occluder_pass": "none",
       "emissive": [1, 1, 1],

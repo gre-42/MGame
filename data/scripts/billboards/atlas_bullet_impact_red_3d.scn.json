@@ -14,10 +14,10 @@
       "wrap_mode_t": "clamp_to_edge",
       "anisotropic_filtering_level": 16,
       "images": [
-        {"source_position": [   0, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  0, "texture": "#explosion_red"},
-        {"source_position": [ 256, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  1, "texture": "#explosion_red"},
-        {"source_position": [ 512, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  2, "texture": "#explosion_red"},
-        {"source_position": [ 768, 0], "size": [256, 256], "target_position": [0, 0], "target_layer":  3, "texture": "#explosion_red"}
+        {"target_position": [0, 0], "target_layer":  0, "texture": "#data/textures/gre42/fountain0/fountain0.png"},
+        {"target_position": [0, 0], "target_layer":  1, "texture": "#data/textures/gre42/fountain0/fountain1.png"},
+        {"target_position": [0, 0], "target_layer":  2, "texture": "#data/textures/gre42/fountain0/fountain2.png"},
+        {"target_position": [0, 0], "target_layer":  3, "texture": "#data/textures/gre42/fountain0/fountain3.png"}
       ]
     }
   },
