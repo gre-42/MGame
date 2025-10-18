@@ -1,6 +1,6 @@
 [
   {
-    "exclude": ["%if_android"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.walking",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.idle",
