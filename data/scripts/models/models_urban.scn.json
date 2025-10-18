@@ -481,6 +481,41 @@
   {
     "call": "obj_resource",
     "arguments": {
+      "name": "trashcan_yethiel",
+      "filename": "models/opengameart/trashcan_yethiel/trashcan.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, -90, 0],
+        "scale": [0.4, 0.4, 0.4],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "lightmap_black_local_instances",
+        "aggregate_mode": "instances_sorted",
+        "transformation_mode": "position_yangle",
+        "triangle_tangent_error_behavior": "zero",
+        "emissive_factor": "%vanilla_rally_emissive_factor",
+        "ambient_factor": "%vanilla_rally_ambient_factor",
+        "diffuse_factor": "%vanilla_rally_diffuse_factor",
+        "specular_factor": "%vanilla_rally_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient",
+          "fresnel": {
+            "min": 0,
+            "max": 0.4,
+            "exponent": 4,
+            "ambient": [1, 1, 1]
+          }
+        },
+        "physics_material": "attr_visible"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
       "name": "mailbox",
       "filename": "models/opengameart/Mailbox/Mailbox_flat.obj",
       "config": {

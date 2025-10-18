@@ -172,6 +172,15 @@
           "max_gradient": "nan"
         }
       ],
+      "buildingsides_surface": [
+        {
+          "resources": ["trashcan_yethiel(hitbox:box_02_1_02_hitbox)"],
+          "tangential_distance": 30,
+          "normal_distance": 1.5,
+          "gradient_dx": "nan",
+          "max_gradient": "nan"
+        }
+      ],
       "tree_resource_names": [
         "vegetation2.0(hitbox:box_02_1_02_hitbox)",
         "vegetation2.1(hitbox:box_02_1_02_hitbox)",
