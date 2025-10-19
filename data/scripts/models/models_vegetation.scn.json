@@ -8,9 +8,9 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [0.05, 0.05, 0.05],
-        "center_distances": [0, 100],
+        "center_distances": [0, 500],
         "blend_mode": "semi_continuous_02",
-        "alpha_distances": [0, 0, 50, 80],
+        "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "instances_sorted",
@@ -23,7 +23,8 @@
         "shading": {
           "fog_distances": "%fog_distances",
           "fog_ambient": "%fog_ambient"
-        }
+        },
+        "physics_material": "attr_visible"
       }
     }
   },
@@ -36,9 +37,9 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [0.05, 0.05, 0.05],
-        "center_distances": [0, 100],
+        "center_distances": [0, 500],
         "blend_mode": "semi_continuous_02",
-        "alpha_distances": [0, 0, 50, 80],
+        "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "instances_sorted",
@@ -51,7 +52,8 @@
         "shading": {
           "fog_distances": "%fog_distances",
           "fog_ambient": "%fog_ambient"
-        }
+        },
+        "physics_material": "attr_visible"
       }
     }
   },
@@ -64,9 +66,9 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [0.05, 0.05, 0.05],
-        "center_distances": [0, 100],
+        "center_distances": [0, 500],
         "blend_mode": "semi_continuous_02",
-        "alpha_distances": [0, 0, 50, 80],
+        "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "instances_sorted",
@@ -79,7 +81,8 @@
         "shading": {
           "fog_distances": "%fog_distances",
           "fog_ambient": "%fog_ambient"
-        }
+        },
+        "physics_material": "attr_visible"
       }
     }
   },
@@ -92,9 +95,9 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [0.05, 0.05, 0.05],
-        "center_distances": [0, 100],
+        "center_distances": [0, 500],
         "blend_mode": "semi_continuous_02",
-        "alpha_distances": [0, 0, 50, 80],
+        "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "instances_sorted",
@@ -107,7 +110,8 @@
         "shading": {
           "fog_distances": "%fog_distances",
           "fog_ambient": "%fog_ambient"
-        }
+        },
+        "physics_material": "attr_visible"
       }
     }
   },
@@ -120,9 +124,9 @@
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
         "scale": [0.05, 0.05, 0.05],
-        "center_distances": [0, 100],
+        "center_distances": [0, 500],
         "blend_mode": "semi_continuous_02",
-        "alpha_distances": [0, 0, 50, 80],
+        "alpha_distances": [0, 0, "inf", "inf"],
         "occluded_pass": "lightmap_black_global_static",
         "occluder_pass": "lightmap_black_local_instances",
         "aggregate_mode": "instances_sorted",
@@ -135,7 +139,8 @@
         "shading": {
           "fog_distances": "%fog_distances",
           "fog_ambient": "%fog_ambient"
-        }
+        },
+        "physics_material": "attr_visible"
       }
     }
   }

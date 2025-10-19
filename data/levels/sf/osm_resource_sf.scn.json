@@ -174,7 +174,14 @@
       ],
       "buildingsides_surface": [
         {
-          "resources": ["trashcan_yethiel(hitbox:box_02_1_02_hitbox)"],
+          "resources": [
+            "trashcan_yethiel(hitbox:box_02_1_02_hitbox)",
+            "bamboo          (p:0.1)",
+            "palm            (p:0.4)",
+            "pine            (p:0.4)",
+            "shrub           (p:0.4)",
+            "spikes          (p:0.4)"
+          ],
           "tangential_distance": 30,
           "normal_distance": 1.5,
           "gradient_dx": "nan",
