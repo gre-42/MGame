@@ -78,6 +78,7 @@ package:
 			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
 			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \
 			Mlib/$(platform_dir)/Bin/libMlibRegex.dll \
+			Mlib/$(platform_dir)/Bin/libMlibRemote.dll \
 			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
 			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
 			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.dll \
