@@ -100,44 +100,49 @@
         "playback": "_update_time_of_day"
       },
       {
-        "required": "(%loaded_game_mode == 'rally')",
+        "required": "(%remote_role != 'client')",
         "execute": [
           {
-            "call": "set_race_identifier_and_reload_history",
-            "arguments": {
-              "level_id": "%loaded_level_id",
-              "time_of_day": "%loaded_time_of_day",
-              "restrictions": "%loaded_race_restrictions",
-              "session": "%loaded_race_session",
-              "laps": "%loaded_race_laps",
-              "milliseconds": 0
-            }
+            "required": "(%loaded_game_mode == 'rally')",
+            "execute": [
+              {
+                "call": "set_race_identifier_and_reload_history",
+                "arguments": {
+                  "level_id": "%loaded_level_id",
+                  "time_of_day": "%loaded_time_of_day",
+                  "restrictions": "%loaded_race_restrictions",
+                  "session": "%loaded_race_session",
+                  "laps": "%loaded_race_laps",
+                  "milliseconds": 0
+                }
+              },
+              {
+                "call": "start_race",
+                "arguments": {
+                  "readonly": false
+                }
+              }
+            ]
           },
           {
-            "call": "start_race",
+            "call": "respawn_all_players"
+          },
+          {
+            "playback": "instantiate_transient_objects"
+          },
+          {
+            "call": "reset_supply_depot_cooldowns"
+          },
+          {
+            "call": "for_each_user",
             "arguments": {
-              "readonly": false
+              "content": {
+                "call": "invalidate_aggregate_renderers",
+                "context": "primary_scene_$user_name"
+              }
             }
           }
         ]
-      },
-      {
-        "call": "respawn_all_players"
-      },
-      {
-        "playback": "instantiate_transient_objects"
-      },
-      {
-        "call": "reset_supply_depot_cooldowns"
-      },
-      {
-        "call": "for_each_user",
-        "arguments": {
-          "content": {
-            "call": "invalidate_aggregate_renderers",
-            "context": "primary_scene_$user_name"
-          }
-        }
       }
     ]
   }

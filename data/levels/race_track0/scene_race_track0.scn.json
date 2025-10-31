@@ -15,6 +15,7 @@
   },
   {"include": "scripts/include_all.scn.json"},
   {"include": "osm_resource_race_track0.scn.json"},
+  {"include": "create_tripod_cameras_trace_track0.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -48,33 +49,28 @@
     }
   },
   {
-    "required": "(%remote_role != 'client')",
-    "execute": [
-      {
-        "declare_macro": "instantiate_transient_objects",
-        "content": {
-          "playback": "scene_racing_instantiate_transient_objects",
-          "let": {
-            "if_create_pc_car": true,
-            "if_pc_player_playback": false,
-            "recordings_dir": "%__DIR__",
-            "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
-            "checkpoints": null,
-            "pacenotes_file": "$__DIR__/pacenotes.json",
-            "if_playback_checkpoints": false,
-            "if_playback_track_1": false,
-            "if_playback_track_2": false,
-            "if_playback_track_3": false,
-            "if_checkpoints": true,
-            "if_burn_in": true
-          }
-        }
-      },
-      {
-        "playback": "scene_racing_setup_new_round",
-        "context": "primary_scene"
+    "declare_macro": "instantiate_transient_objects",
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "if_create_pc_car": true,
+        "if_pc_player_playback": false,
+        "recordings_dir": "%__DIR__",
+        "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+        "checkpoints": null,
+        "pacenotes_file": "$__DIR__/pacenotes.json",
+        "if_playback_checkpoints": false,
+        "if_playback_track_1": false,
+        "if_playback_track_2": false,
+        "if_playback_track_3": false,
+        "if_checkpoints": true,
+        "if_burn_in": true
       }
-    ]
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
   },
   {"playback": "create_main_menu"}
 ]
