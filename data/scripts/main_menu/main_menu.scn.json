@@ -236,6 +236,11 @@
             {
               "playback": "_setup_menu_primary_scene_rest",
               "context": "primary_scene_$user_name"
+            },
+            {
+              "required": "(%remote_role != 'none')",
+              "playback": "_setup_user_lobby",
+              "context": "primary_scene_$user_name"
             }
           ]
         }
@@ -1204,6 +1209,41 @@
           "font_height": "normal",
           "line_distance": "normal",
           "update_interval_ms": 100
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_user_lobby",
+    "content": [
+      {
+        "call": "ui_background",
+        "arguments": {
+          "z_order": 2,
+          "texture": "#ui_gray_fade",
+          "left": "showroom_left",
+          "right": "showroom_right",
+          "bottom": "showroom_bottom",
+          "top": "showroom_top",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "main_menu"
+        }
+      },
+      {
+        "call": "players_stats",
+        "arguments": {
+          "z_order": 2,
+          "charset": "%selected_language",
+          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "left": "showroom_left",
+          "right": "showroom_right",
+          "bottom": "showroom_bottom",
+          "top": "showroom_top",
+          "font_color": [1, 1, 1],
+          "font_height": "normal",
+          "line_distance": "normal",
+          "score_board": "user",
+          "focus_mask": "main_menu"
         }
       }
     ]
