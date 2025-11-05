@@ -37,7 +37,7 @@
     {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc6", "driver_name": "dh_npc6", "asset_id": "sports_car0", "color": [0.51, 0.56, 0.62]}},
     {
       "call": "for_each_user",
-      "arguments": {"content": {"call": "add_vip", "arguments": {"player": "$vip_name-_$user_name"}}}
+      "arguments": {"content": {"call": "add_vip", "arguments": {"player": "$vip_name-_$full_user_name"}}}
     }
   ]
 }

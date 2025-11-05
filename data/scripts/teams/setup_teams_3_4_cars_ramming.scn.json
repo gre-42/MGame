@@ -93,7 +93,7 @@
           "content": {
             "call": "set_preferred_car_spawner",
             "arguments": {
-              "player": "$vip_name-_$user_name",
+              "player": "$vip_name-_$full_user_name",
               "already_set_behavior": "throw",
               "macro": "teams.create_car_for_pc",
               "parameters": {

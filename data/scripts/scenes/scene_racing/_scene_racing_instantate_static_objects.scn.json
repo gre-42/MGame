@@ -141,7 +141,7 @@
                 "user_id": "%user_id",
                 "user_name": "%user_name",
                 "user_account_key": "account_$user_name",
-                "name": "$vip_name-_$user_name",
+                "name": "$vip_name-_$full_user_name",
                 "team": "red",
                 "game_mode": "rally",
                 "player_role": "competitor",
@@ -154,7 +154,7 @@
               "required": "%if_create_pc_player",
               "call": "spawner_create",
               "arguments": {
-                "name": "$vip_name-_$user_name",
+                "name": "$vip_name-_$full_user_name",
                 "suffix": "_$user_name",
                 "team": "red",
                 "group": "",
@@ -164,22 +164,22 @@
             {
               "required": "%if_create_pc_player",
               "call": "spawner_set_player",
-              "arguments": { "name": "$vip_name-_$user_name", "seat": "driver" }
+              "arguments": { "name": "$vip_name-_$full_user_name", "seat": "driver" }
             },
             {
               "required": "%if_create_pc_player",
               "call": "set_can_drive",
-              "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
+              "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
             {
               "required": "%if_create_pc_player",
               "call": "set_can_aim",
-              "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
+              "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
             {
               "required": "%if_create_pc_player",
               "call": "set_can_shoot",
-              "arguments": { "player": "$vip_name-_$user_name", "source": "user", "value": true }
+              "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
             { "playback": "add_local_skidmarks_scene" },
             { "playback": "add_local_water_waves_scene" },

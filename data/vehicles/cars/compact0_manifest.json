@@ -5,7 +5,7 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "selected_vehicle_id_$user_name": "compact0"
+      "selected_vehicle_id_$full_user_name": "compact0"
     }
   },
   "database": {
