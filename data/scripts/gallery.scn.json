@@ -47,7 +47,7 @@
   { "playback": "_add_menu_icon_subst", "arguments": { "name": "scene_selector" } },
   { "call": "add_to_gallery", "arguments": { "resource": "textures/ui/menu/time_of_day.png", "instance": "time_of_day_icon", "color_mode": "rgba" } },
   { "playback": "_add_menu_icon_subst", "arguments": { "name": "session" } },
-  { "playback": "_add_menu_icon", "arguments": { "name": "laps" } },
+  { "playback": "_add_menu_icon_subst", "arguments": { "name": "laps" } },
   { "playback": "_add_menu_icon_subst", "arguments": { "name": "replay" } },
   { "playback": "_add_menu_icon_subst", "arguments": { "name": "language" } },
   {
