@@ -131,16 +131,16 @@
       {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=compound_osm_map"},
       {"comment": "Player"},
       {
-        "call": "for_each_user",
+        "required": "(%remote_role != 'client')",
+        "call": "for_each_site_user",
         "arguments": {
           "content": [
             {
               "required": "%if_create_pc_player",
               "call": "player_create",
               "arguments": {
-                "user_id": "%user_id",
-                "user_name": "%user_name",
-                "user_account_key": "account_$user_name",
+                "full_user_name": "%full_user_name",
+                "user_account_key": "account_$full_user_name",
                 "name": "$vip_name-_$full_user_name",
                 "team": "red",
                 "game_mode": "rally",
@@ -155,7 +155,7 @@
               "call": "spawner_create",
               "arguments": {
                 "name": "$vip_name-_$full_user_name",
-                "suffix": "_$user_name",
+                "suffix": "_$full_user_name",
                 "team": "red",
                 "group": "",
                 "trigger": "none"
@@ -181,129 +181,134 @@
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
-            { "playback": "add_local_skidmarks_scene" },
-            { "playback": "add_local_water_waves_scene" },
-            { "playback": "add_local_sea_spray_scene" },
             {
-              "context": "primary_scene_$user_name",
+              "required": "%user_is_local",
               "execute": [
+                { "playback": "add_local_skidmarks_scene" },
+                { "playback": "add_local_water_waves_scene" },
+                { "playback": "add_local_sea_spray_scene" },
                 {
-                  "call": "ui_background",
-                  "arguments": {
-                    "z_order": 2,
-                    "texture": "#ui_gray_fade",
-                    "left": "highscore_left",
-                    "right": "highscore_right",
-                    "bottom": "highscore_bottom",
-                    "top": "highscore_top",
-                    "delay_load_policy": "no_delay",
-                    "focus_mask": "always"
-                  }
-                },
-                {
-                  "call": "players_stats",
-                  "arguments": {
-                    "z_order": 2,
-                    "charset": "%selected_language",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "left": "highscore_left",
-                    "right": "highscore_right",
-                    "bottom": "highscore_bottom",
-                    "top": "highscore_top",
-                    "font_color": [1, 1, 1],
-                    "font_height": "normal",
-                    "line_distance": "normal",
-                    "score_board": "%score_board",
-                    "focus_mask": "always"
-                  }
-                },
-                {
-                  "comment": "Global log"
-                },
-                {
-                  "required": "%if_show_global_log",
+                  "context": "primary_scene_$user_name",
                   "execute": [
                     {
                       "call": "ui_background",
                       "arguments": {
                         "z_order": 2,
                         "texture": "#ui_gray_fade",
-                        "left": "log_left",
-                        "right": "log_right",
-                        "bottom": "log_bottom",
-                        "top": "log_top",
+                        "left": "highscore_left",
+                        "right": "highscore_right",
+                        "bottom": "highscore_bottom",
+                        "top": "highscore_top",
                         "delay_load_policy": "no_delay",
                         "focus_mask": "always"
                       }
                     },
                     {
-                      "call": "visual_global_log",
+                      "call": "players_stats",
                       "arguments": {
                         "z_order": 2,
                         "charset": "%selected_language",
                         "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                        "left": "log_left",
-                        "right": "log_right",
-                        "bottom": "log_bottom",
-                        "top": "log_top",
-                        "font_color": "%ui_font_color",
+                        "left": "highscore_left",
+                        "right": "highscore_right",
+                        "bottom": "highscore_bottom",
+                        "top": "highscore_top",
+                        "font_color": [1, 1, 1],
                         "font_height": "normal",
                         "line_distance": "normal",
-                        "nentries": 10,
-                        "severity": "critical",
+                        "score_board": "%score_board",
                         "focus_mask": "always"
                       }
-                    }
+                    },
+                    {
+                      "comment": "Global log"
+                    },
+                    {
+                      "required": "%if_show_global_log",
+                      "execute": [
+                        {
+                          "call": "ui_background",
+                          "arguments": {
+                            "z_order": 2,
+                            "texture": "#ui_gray_fade",
+                            "left": "log_left",
+                            "right": "log_right",
+                            "bottom": "log_bottom",
+                            "top": "log_top",
+                            "delay_load_policy": "no_delay",
+                            "focus_mask": "always"
+                          }
+                        },
+                        {
+                          "call": "visual_global_log",
+                          "arguments": {
+                            "z_order": 2,
+                            "charset": "%selected_language",
+                            "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                            "left": "log_left",
+                            "right": "log_right",
+                            "bottom": "log_bottom",
+                            "top": "log_top",
+                            "font_color": "%ui_font_color",
+                            "font_height": "normal",
+                            "line_distance": "normal",
+                            "nentries": 10,
+                            "severity": "critical",
+                            "focus_mask": "always"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "comment": "Countdown"
+                    },
+                    {
+                      "comment": {
+                        "call": "ui_background",
+                        "arguments": {
+                          "z_order": 1,
+                          "texture": "textures/ui/background/gray.png",
+                          "left": "min",
+                          "right": "end",
+                          "bottom": "min",
+                          "top": "end",
+                          "delay_load_policy": "no_delay",
+                          "focus_mask": "countdown_any|game_over_countdown_any"
+                        }
+                      }
+                    },
+                    {
+                      "call": "countdown_start",
+                      "arguments": {
+                        "z_order": 1,
+                        "charset": "%selected_language",
+                        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                        "position": ["nan", "nan"],
+                        "font_color": "%scene_font_color",
+                        "font_height": "huge",
+                        "line_distance": "huge",
+                        "text": ""
+                      }
+                    },
+                    {
+                      "call": "focused_text",
+                      "arguments": {
+                        "z_order": 1,
+                        "charset": "%selected_language",
+                        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+                        "position": ["nan", "nan"],
+                        "font_color": "%scene_font_color",
+                        "font_height": "huge",
+                        "line_distance": "huge",
+                        "focus_mask": "query_contains|game_over",
+                        "text": "Game over"
+                      }
+                    },
+                    { "playback": "add_local_skidmarks_render" },
+                    { "playback": "add_local_water_waves_render" },
+                    { "playback": "add_local_sea_spray_render" }
                   ]
-                },
-                {
-                  "comment": "Countdown"
-                },
-                {
-                  "comment": {
-                    "call": "ui_background",
-                    "arguments": {
-                      "z_order": 1,
-                      "texture": "textures/ui/background/gray.png",
-                      "left": "min",
-                      "right": "end",
-                      "bottom": "min",
-                      "top": "end",
-                      "delay_load_policy": "no_delay",
-                      "focus_mask": "countdown_any|game_over_countdown_any"
-                    }
-                  }
-                },
-                {
-                  "call": "countdown_start",
-                  "arguments": {
-                    "z_order": 1,
-                    "charset": "%selected_language",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "position": ["nan", "nan"],
-                    "font_color": "%scene_font_color",
-                    "font_height": "huge",
-                    "line_distance": "huge",
-                    "text": ""
-                  }
-                },
-                {
-                  "call": "focused_text",
-                  "arguments": {
-                    "z_order": 1,
-                    "charset": "%selected_language",
-                    "ttf_file": "fonts/RobotoMono-Bold.ttf",
-                    "position": ["nan", "nan"],
-                    "font_color": "%scene_font_color",
-                    "font_height": "huge",
-                    "line_distance": "huge",
-                    "focus_mask": "query_contains|game_over",
-                    "text": "Game over"
-                  }
-                },
-                { "playback": "add_local_skidmarks_render" },
-                { "playback": "add_local_water_waves_render" },
-                { "playback": "add_local_sea_spray_render" }
+                }
               ]
             }
           ]
@@ -413,12 +418,12 @@
               },
               {
                 "call": "camera_key_binding",
-                "arguments": {"user_id": "%user_id", "id": "change_camera.near", "tpe": "near"}
+                "arguments": {"local_user_id": "%local_user_id", "id": "change_camera.near", "tpe": "near"}
               },
               {
                 "required": "%if_devel",
                 "call": "camera_key_binding",
-                "arguments": {"user_id": "%user_id", "id": "change_camera.tripod", "tpe": "tripod"}
+                "arguments": {"local_user_id": "%local_user_id", "id": "change_camera.tripod", "tpe": "tripod"}
               }
             ]
           }

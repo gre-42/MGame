@@ -147,7 +147,7 @@
       },
       {
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "car_node$suffix",
           "entry_name": "dumb_bomb",
@@ -167,7 +167,7 @@
       },
       {
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "car_node$suffix",
           "entry_name": "missile0",

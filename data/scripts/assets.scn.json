@@ -21,7 +21,7 @@
             {
               "call": "default_persistent",
               "arguments": {
-                "user_id": "%user_id",
+                "local_user_id": "%local_user_id",
                 "variables": {
                   "pacenotes": "disabled",
                   "account": {
@@ -33,9 +33,9 @@
             {
               "call": "persisted_globals",
               "arguments": {
-                "user_id": "%user_id",
+                "local_user_id": "%local_user_id",
                 "variables": {
-                  "account_$user_name": "account"
+                  "account_$full_user_name": "account"
                 }
               }
             }
@@ -45,7 +45,7 @@
       {
         "call": "default_persistent",
         "arguments": {
-          "user_id": 0,
+          "local_user_id": 0,
           "variables": {
             "language": "en-US"
           }
@@ -54,7 +54,7 @@
       {
         "call": "persisted_globals",
         "arguments": {
-          "user_id": 0,
+          "local_user_id": 0,
           "variables": {
             "selected_language": "language"
           }

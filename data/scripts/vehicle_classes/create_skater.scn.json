@@ -58,7 +58,7 @@
       {
         "required": "%if_spawner",
         "call": "set_externals_creator",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "externals": {
             "playback": "create_player_skater_externals"

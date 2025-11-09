@@ -47,7 +47,8 @@
               "with_flying_logic": "%primary_scene_with_flying_logic",
               "clear_mode": "color_and_depth",
               "layout": "tiled",
-              "user_id": "%user_id"
+              "local_user_id": "%local_user_id",
+              "full_user_name": "%full_user_name"
             }
           },
           {
@@ -56,7 +57,7 @@
               "name": "weapon_closeup_$user_name",
               "world": "common",
               "gid": { "group": "translations", "id": "scene" },
-              "primary_user_id": "%user_id"
+              "primary_user_id": "%local_user_id"
             }
           },
           {
@@ -77,7 +78,8 @@
               "with_flying_logic": false,
               "clear_mode": "depth",
               "layout": "child",
-              "user_id": "%user_id"
+              "local_user_id": "%local_user_id",
+              "full_user_name": "%full_user_name"
             }
           },
           {

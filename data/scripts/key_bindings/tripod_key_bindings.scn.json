@@ -4,7 +4,7 @@
     {
       "call": "create_print_camera_node_info_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "print_camera_node_info",
         "seat": "default"
       }
@@ -12,7 +12,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_left",
         "seat": "default",
         "translation": [-1, 0, 0],
@@ -25,7 +25,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_right",
         "seat": "default",
         "translation": [1, 0, 0],
@@ -38,7 +38,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_up",
         "seat": "default",
         "translation": [0, 1, 0],
@@ -51,7 +51,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_down",
         "seat": "default",
         "translation": [0, -1, 0],
@@ -64,7 +64,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_forward",
         "seat": "default",
         "translation": [0, 0, -1],
@@ -77,7 +77,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "tripod.move_backwards",
         "seat": "default",
         "translation": [0, 0, 1],
@@ -90,7 +90,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_left",
         "seat": "default",
         "rotation_axis": [0, 1, 0],
@@ -103,7 +103,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_right",
         "seat": "default",
         "rotation_axis": [0, 1, 0],
@@ -116,7 +116,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_up",
         "seat": "default",
         "rotation_axis": [1, 0, 0],
@@ -129,7 +129,7 @@
     {
       "call": "rel_key_binding_tripod",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_down",
         "seat": "default",
         "rotation_axis": [1, 0, 0],

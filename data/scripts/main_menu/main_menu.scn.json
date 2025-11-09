@@ -83,7 +83,7 @@
         "font_color": "%ui_font_color",
         "font_height": "normal",
         "line_distance": "normal",
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "deflt": 0,
         "database_filter": {
           "database": "levels",
@@ -122,7 +122,7 @@
     "declare_macro": "_setup_menu_primary_scene_rest",
     "content": [
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "ui_exhibit",
         "arguments": {
           "z_order": 1,
@@ -137,7 +137,7 @@
         }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "scene_selector",
         "arguments": {
           "id": "scene_selector",
@@ -152,7 +152,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "on_change": {
             "playback": "_update_scene_icon"
           },
@@ -222,7 +222,7 @@
               "context": "primary_scene_$user_name"
             },
             {
-              "required": "(%user_id == 0)",
+              "required": "(%local_user_id == 0)",
               "playback": "_setup_game_mode_selector",
               "context": "primary_scene_$user_name"
             },
@@ -300,7 +300,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -341,7 +341,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -370,7 +370,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "z_order": 2
         }
@@ -411,7 +411,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "on_execute": [
             {
@@ -427,7 +427,7 @@
               "required": "(%selected_level_id == %loaded_level_id)",
               "execute": {
                 "playback": "_reload_transient_objects_in_physics_thread",
-                "without": ["user_id", "user_name"]
+                "without": ["full_user_name"]
               }
             }
           ],
@@ -440,7 +440,7 @@
     "declare_macro": "parameter_setters",
     "content": [
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "add_charset",
         "arguments": {
           "name": "language",
@@ -448,7 +448,7 @@
         }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "language",
@@ -464,7 +464,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "persistent": "language",
           "assets": "languages",
@@ -500,7 +500,7 @@
         }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "reload_required",
         "arguments": {
           "title": "$$translations/main/Reload_required/$selected_language:",
@@ -535,7 +535,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {
@@ -564,8 +564,8 @@
             },
             {
               "required": {
-                "fixed": "(%user_id == 0)",
-                "dynamic": ["%reload_required"]
+                "fixed": "(%local_user_id == 0)",
+                "dynamic": "%reload_required"
               },
               "id": "reload",
               "title": "%%translations/main/Reload/$selected_language",
@@ -573,7 +573,7 @@
             },
             {
               "required": {
-                "fixed": ["!if_android"],
+                "fixed": "!if_android",
                 "dynamic": []
               },
               "id": "exit",
@@ -589,7 +589,7 @@
         "arguments": { "selected_vehicle_color_$full_user_name": [1, 1, 0] }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "time_of_day_selector",
@@ -606,7 +606,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {
@@ -647,7 +647,7 @@
         }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "restrictions_selector",
@@ -664,7 +664,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car"}}},
@@ -689,7 +689,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
@@ -715,7 +715,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "on_change": {
             "playback": "_change_showroom_vehicle_in_physics_thread",
@@ -732,7 +732,7 @@
         }
       },
       {
-        "required": ["%if_devel", "(%user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
@@ -749,7 +749,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"race_session": "session1"}}},
@@ -762,12 +762,12 @@
       },
       {
         "call": "globals",
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "exclude": "%if_devel",
         "arguments": { "race_session": "session1" }
       },
       {
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
@@ -784,7 +784,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"race_laps": 1}}},
@@ -797,12 +797,12 @@
       },
       {
         "call": "globals",
-        "required": ["(%user_id == 0)", "(%selected_game_mode == 'rally')"],
+        "required": ["(%local_user_id == 0)", "(%selected_game_mode == 'rally')"],
         "exclude": "%%levels/$selected_level_id/if_raceway_circular",
         "arguments": { "race_laps": 1 }
       },
       {
-        "required": ["%if_devel", "(%user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
@@ -819,7 +819,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
             {"id": "none", "title": "No replay", "on_before_select": { "call": "globals", "arguments": {"if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false}}},
@@ -831,12 +831,12 @@
       },
       {
         "call": "globals",
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false }
       },
       {
-        "required": ["%if_devel", "(%user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)"],
         "exclude": ["%if_android"],
         "call": "parameter_setter",
         "arguments": {
@@ -853,7 +853,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 1,
           "on_change": {
             "call": "set_render_fps",
@@ -868,7 +868,7 @@
         }
       },
       {
-        "required": ["%if_devel", "(%user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",
@@ -885,7 +885,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 2,
           "parameters": [
             {"id": "'80'", "title": "'80%'", "on_before_select": { "call": "globals", "arguments": {"playback_speed": 0.8}}},
@@ -898,12 +898,12 @@
       },
       {
         "call": "globals",
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "playback_speed": 1 }
       },
       {
-        "required": ["%if_devel", "(%user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
           "id": "tripod_mode",
@@ -919,7 +919,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 1,
           "parameters": [
             {"id": "enabled", "title": "%%translations/main/Enabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": true}}},
@@ -929,7 +929,7 @@
       },
       {
         "call": "globals",
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "exclude": ["%if_devel"],
         "arguments": { "if_tripod_mode": false }
       },
@@ -949,7 +949,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "on_execute": {
             "call": "try_append_focuses",
@@ -982,7 +982,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 1,
           "persistent": "pacenotes",
           "parameters": [
@@ -1007,12 +1007,12 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {
         "exclude": ["%if_android"],
-        "required": "(%user_id == 0)",
+        "required": "(%local_user_id == 0)",
         "call": "parameter_setter",
         "arguments": {
           "id": "user_count_selector",
@@ -1028,7 +1028,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": "(%user_count - 1)",
           "on_change": [
             {
@@ -1048,7 +1048,7 @@
                 "call": "clear_requires_reload",
                 "arguments": {
                   "id": "user_count",
-                  "user_id": "%user_id",
+                  "local_user_id": "%local_user_id",
                   "indicator": "reload_required"
                 }
               }
@@ -1083,7 +1083,7 @@
           "font_color": "%ui_font_color",
           "font_height": "normal",
           "line_distance": "normal",
-          "user_id": "%user_id",
+          "local_user_id": "%local_user_id",
           "deflt": 0,
           "on_execute": {
             "call": "toggle_edit",
@@ -1098,14 +1098,14 @@
           "parameters": [
             {
               "id": "account_name",
-              "title": "$$translations/main/Account_name/$selected_language: ${/account_$user_name/name}",
+              "title": "$$translations/main/Account_name/$selected_language: ${/account_$full_user_name/name}",
               "on_before_select": {
                 "call": "globals",
                 "arguments": {
                   "selected_account_entry_id_$user_name": "account_name",
                   "selected_account_persisted_$user_name": ["account", "name"],
-                  "selected_account_global_$user_name": ["account_$user_name", "name"],
-                  "selected_account_value_$user_name": "%/account_$user_name/name"
+                  "selected_account_global_$user_name": ["account_$full_user_name", "name"],
+                  "selected_account_value_$user_name": "%/account_$full_user_name/name"
                 }
               }
             }
@@ -1130,7 +1130,7 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {
@@ -1150,7 +1150,7 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {
@@ -1170,7 +1170,7 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {
@@ -1190,7 +1190,7 @@
           "font_height": "normal",
           "line_distance": "normal",
           "deflt": 0,
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {

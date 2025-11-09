@@ -101,7 +101,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "m4a1",
@@ -118,7 +118,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "beretta92",
@@ -135,7 +135,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "frag_grenade",
@@ -152,7 +152,7 @@
       {
         "required": "%if_with_gun",
         "call": "add_weapon_to_cycle",
-        "without": ["user_id", "user_name", "player_name"],
+        "without": ["full_user_name", "player_name"],
         "arguments": {
           "cycle_node": "human_node$suffix",
           "entry_name": "m72_law",

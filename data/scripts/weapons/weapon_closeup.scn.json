@@ -115,7 +115,7 @@
     "declare_macro": "_generate_weapon_hider",
     "content": {
       "call": "for_each_user",
-      "without": ["user_id", "user_name"],
+      "without": ["full_user_name"],
       "arguments": {
         "content": {
           "call": "insert_renderable_node_hider",

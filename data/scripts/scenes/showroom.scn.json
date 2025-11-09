@@ -8,7 +8,7 @@
           "name": "showroom_$user_name",
           "world": "common",
           "gid": { "group": "translations", "id": "scene" },
-          "primary_user_id": "%user_id"
+          "primary_user_id": "%local_user_id"
         }
       },
       {
@@ -32,7 +32,7 @@
           "with_flying_logic": false,
           "clear_mode": "depth",
           "layout": "child",
-          "user_id": "%user_id"
+          "local_user_id": "%local_user_id"
         }
       },
       {
