@@ -208,7 +208,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_internals_tiger_tank",
+    "declare_macro": "create_player_vehicle_internals_tiger_tank",
     "content": [
       {
         "required": "%if_pc",
@@ -286,7 +286,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_externals_tiger_tank",
+    "declare_macro": "create_player_vehicle_externals_tiger_tank",
     "content": [
       {
         "required": "%if_pc",

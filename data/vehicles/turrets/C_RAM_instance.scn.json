@@ -119,11 +119,11 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_internals_C_RAM",
+    "declare_macro": "create_player_vehicle_internals_C_RAM",
     "content": { "comment": "Do nothing" }
   },
   {
-    "declare_macro": "create_player_car_externals_C_RAM",
+    "declare_macro": "create_player_vehicle_externals_C_RAM",
     "content": [
       {
         "required": "%if_pc",

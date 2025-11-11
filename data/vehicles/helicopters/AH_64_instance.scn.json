@@ -413,7 +413,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_internals_AH_64",
+    "declare_macro": "create_player_vehicle_internals_AH_64",
     "content": [
       {
         "required": "%if_pc",
@@ -461,7 +461,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_externals_AH_64",
+    "declare_macro": "create_player_vehicle_externals_AH_64",
     "content": [
       {
         "required": "%if_pc",

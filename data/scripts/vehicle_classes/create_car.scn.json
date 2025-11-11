@@ -106,16 +106,27 @@
       },
       {
         "required": "%if_spawner",
-        "call": "set_externals_creator",
+        "call": "set_externals_creator_safe",
         "without": ["full_user_name", "player_name"],
         "arguments": {
-          "externals": {
-            "playback": "create_player_car_externals"
-          },
-          "internals": {
-            "playback": "create_player_car_internals"
-          },
-          "spawner": "%spawner_name"
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id"
+        }
+      },
+      {
+        "comment": {
+          "required": "%if_spawner",
+          "call": "set_externals_creator_unsafe",
+          "without": ["full_user_name", "player_name"],
+          "arguments": {
+            "spawner": "%spawner_name",
+            "externals": {
+              "playback": "create_player_vehicle_externals"
+            },
+            "internals": {
+              "playback": "create_player_vehicle_internals"
+            }
+          }
         }
       },
       {
@@ -134,18 +145,18 @@
     ]
   },
   {
-    "declare_macro": "create_player_car_externals",
+    "declare_macro": "create_player_vehicle_externals",
     "content": [
       {
-        "playback": "create_player_car_externals_$asset_id"
+        "playback": "create_player_vehicle_externals_$asset_id"
       }
     ]
   },
   {
-    "declare_macro": "create_player_car_internals",
+    "declare_macro": "create_player_vehicle_internals",
     "content": [
       {
-        "playback": "create_player_car_internals_$asset_id"
+        "playback": "create_player_vehicle_internals_$asset_id"
       },
       {
         "required": ["%if_pc", "%if_devel"],
