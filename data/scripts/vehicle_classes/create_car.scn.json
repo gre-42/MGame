@@ -161,7 +161,7 @@
       {
         "required": ["%if_pc", "%if_devel"],
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "format": "position|speed|diameter|energy",
           "charset": "%selected_language",
@@ -180,7 +180,7 @@
       {
         "required": "%if_pc",
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "format": "speed",
@@ -209,7 +209,7 @@
       {
         "required": ["%if_pc", "(%minimap_file != %null)"],
         "call": "minimap",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "left": "minimap_widget_left",
@@ -228,7 +228,7 @@
       {
         "required": ["%if_pc", "%if_damageable"],
         "call": "ui_background",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "z_order": 0,
           "player": "%player_name",
@@ -244,7 +244,7 @@
       {
         "required": ["%if_pc", "%if_damageable"],
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "format": "health",
@@ -263,7 +263,7 @@
       {
         "required": ["%if_pc", "%if_weapon_cycle"],
         "call": "ui_background",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "z_order": 0,
           "player": "%player_name",
@@ -279,7 +279,7 @@
       {
         "required": ["%if_pc", "%if_weapon_cycle"],
         "call": "visual_player_bullet_count",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "z_order": 0,
           "player": "%player_name",
@@ -302,7 +302,7 @@
     "content": [
       {
         "call": "visual_player_status",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "child": ["engines", "%engine_name"],

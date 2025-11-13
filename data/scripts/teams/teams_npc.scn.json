@@ -98,7 +98,7 @@
         "arguments": {
           "content": {
             "call": "visual_node_status_3rd",
-            "context": "primary_scene_$user_name",
+            "context": "primary_scene_$full_user_name",
             "arguments": {
               "node": "car_node$suffix",
               "format": "health",

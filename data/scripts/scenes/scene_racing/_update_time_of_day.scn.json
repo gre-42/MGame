@@ -48,7 +48,7 @@
                       "playback": "add_local_instances_light_scene"
                     },
                     {
-                      "context": "primary_scene_$user_name",
+                      "context": "primary_scene_$full_user_name",
                       "playback": "add_local_instances_light_render"
                     }
                   ]
@@ -57,7 +57,7 @@
                   "playback": "add_movables_light_scene"
                 },
                 {
-                  "context": "primary_scene_$user_name",
+                  "context": "primary_scene_$full_user_name",
                   "playback": "add_movables_light_render"
                 }
               ]
@@ -69,7 +69,7 @@
                   "playback": "add_local_blob_instances_light_scene"
                 },
                 {
-                  "context": "primary_scene_$user_name",
+                  "context": "primary_scene_$full_user_name",
                   "playback": "add_local_blob_instances_light_render"
                 }
               ]
@@ -139,7 +139,7 @@
         "call": "for_each_user",
         "arguments": {
           "content": {
-            "context": "primary_scene_$user_name",
+            "context": "primary_scene_$full_user_name",
             "execute": [
               { "call": "clear_skybox" },
               { "call": "set_skybox", "arguments": { "alias": "%skybox"} },

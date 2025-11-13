@@ -119,7 +119,7 @@
       "arguments": {
         "content": {
           "call": "insert_renderable_node_hider",
-          "context": "primary_scene_$user_name",
+          "context": "primary_scene_$full_user_name",
           "arguments": {
             "node_to_hide": "main_gun_node_visual$suffix",
             "camera_node": "human_head_camera_node$suffix",

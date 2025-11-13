@@ -73,7 +73,7 @@
         "arguments": {
           "content": {
             "call": "set_focuses",
-            "context": "primary_scene_$user_name",
+            "context": "primary_scene_$full_user_name",
             "arguments": {"focuses": ["scene"]}
           }
         }
@@ -138,7 +138,7 @@
             "arguments": {
               "content": {
                 "call": "invalidate_aggregate_renderers",
-                "context": "primary_scene_$user_name"
+                "context": "primary_scene_$full_user_name"
               }
             }
           }

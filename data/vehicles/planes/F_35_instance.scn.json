@@ -591,7 +591,7 @@
       {
         "required": "%if_pc",
         "playback": "create_plane_key_bindings",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -599,7 +599,7 @@
       {
         "required": "%if_pc",
         "call": "hud_opponent_tracker",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "exclusive_nodes": null,
@@ -612,7 +612,7 @@
       {
         "required": "%if_pc",
         "call": "hud_opponent_zoom",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "exclusive_nodes": null,

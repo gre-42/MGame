@@ -158,7 +158,7 @@
               }
             },
             {
-              "context": "primary_scene_$user_name",
+              "context": "primary_scene_$full_user_name",
               "playback": "select_car_cameras_heli_main_gun"
             }
           ]
@@ -184,7 +184,7 @@
               }
             },
             {
-              "context": "primary_scene_$user_name",
+              "context": "primary_scene_$full_user_name",
               "playback": "select_car_cameras_heli_cockpit"
             }
           ]
@@ -418,7 +418,7 @@
       {
         "required": "%if_pc",
         "playback": "create_heli_key_bindings",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "if_has_gun": true
         }
@@ -426,13 +426,13 @@
       {
         "required": "%if_pc",
         "call": "hud_target_point",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_nodes": [
-            "main_gun_camera_node$user_name",
-            "main_gun_follower$user_name"
+            "main_gun_camera_node$full_user_name",
+            "main_gun_follower$full_user_name"
           ],
           "ypln_node": "turret_node$suffix",
           "filename": "textures/hud/crosshair.png",
@@ -444,13 +444,13 @@
       {
         "required": "%if_pc",
         "call": "hud_target_point",
-        "context": "primary_scene_$user_name",
+        "context": "primary_scene_$full_user_name",
         "arguments": {
           "player": "%player_name",
           "gun_node": "ah_64_rocket_launcher_node$suffix",
           "exclusive_nodes": [
-            "cockpit_camera_node$user_name",
-            "cockpit_follower$user_name"
+            "cockpit_camera_node_$full_user_name",
+            "cockpit_follower_$full_user_name"
           ],
           "filename": "textures/hud/crosshair.png",
           "center": [0, 0],

@@ -13,7 +13,7 @@
         "arguments": {
           "content": {
             "call": "set_focuses",
-            "context": "primary_scene_$user_name",
+            "context": "primary_scene_$full_user_name",
             "arguments": {"focuses": []}
           }
         }
@@ -219,12 +219,12 @@
           "content": [
             {
               "playback": "_setup_menu_primary_scene_background",
-              "context": "primary_scene_$user_name"
+              "context": "primary_scene_$full_user_name"
             },
             {
               "required": "(%local_user_id == 0)",
               "playback": "_setup_game_mode_selector",
-              "context": "primary_scene_$user_name"
+              "context": "primary_scene_$full_user_name"
             },
             {
               "playback": "create_showroom_scene"
@@ -235,12 +235,12 @@
             },
             {
               "playback": "_setup_menu_primary_scene_rest",
-              "context": "primary_scene_$user_name"
+              "context": "primary_scene_$full_user_name"
             },
             {
               "required": "(%remote_role != 'none')",
               "playback": "_setup_user_lobby",
-              "context": "primary_scene_$user_name"
+              "context": "primary_scene_$full_user_name"
             }
           ]
         }
@@ -261,7 +261,7 @@
     "content": {
       "call": "scene_to_pixel_region",
       "arguments": {
-        "target_scene": "primary_scene_$user_name",
+        "target_scene": "primary_scene_$full_user_name",
         "target_list": "render",
         "z_order": 2,
         "left": "showroom_left",

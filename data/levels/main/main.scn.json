@@ -26,7 +26,7 @@
         {
           "call": "create_renderable_scene",
           "arguments": {
-            "name": "primary_scene_$user_name",
+            "name": "primary_scene_$full_user_name",
             "physics": "primary_scene",
             "focus_mask": "scene",
             "submenus": [],
@@ -46,7 +46,7 @@
         },
         {
           "call": "try_append_focuses",
-          "context": "primary_scene_$user_name",
+          "context": "primary_scene_$full_user_name",
           "arguments": { "content": ["main_menu"] }
         }
       ]
