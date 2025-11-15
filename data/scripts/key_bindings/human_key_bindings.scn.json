@@ -24,7 +24,7 @@
     {
       "call": "abs_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.jump",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -35,7 +35,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.strafe_left",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -47,7 +47,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.strafe_right",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -59,7 +59,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_left",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -74,7 +74,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_right",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -89,7 +89,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.forward",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -101,7 +101,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.backwards",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -113,7 +113,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_up",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -128,7 +128,7 @@
     {
       "call": "avatar_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.rotate_down",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -143,7 +143,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.next_weapon",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -153,7 +153,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.previous_weapon",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -163,7 +163,7 @@
     {
       "call": "gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "any.shoot",
         "seat": "%externals_seat",
         "player": "%player_name"
@@ -172,7 +172,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "avatar.select_next_vehicle",
         "seat": "%externals_seat",
         "player": "%player_name",
