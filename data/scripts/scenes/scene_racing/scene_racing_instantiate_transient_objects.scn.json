@@ -152,6 +152,7 @@
                     "max_vertical_angle": 5
                   },
                   "on_finish": {
+                    "context": "primary_scene_$full_user_name",
                     "call": "set_focuses",
                     "arguments": {"focuses": ["game_over", "main_menu"]}
                   },

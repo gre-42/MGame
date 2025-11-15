@@ -679,7 +679,7 @@
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Vehicle/$selected_language",
           "icon": "car_icon",
-          "required": "(%selected_game_mode == 'rally')",
+          "required": "(%selected_game_mode in {'rally', 'skating'})",
           "left": "submenu_left",
           "right": "submenu_right",
           "bottom": "submenu_bottom",

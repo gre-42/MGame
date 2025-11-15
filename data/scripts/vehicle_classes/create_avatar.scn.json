@@ -84,16 +84,27 @@
       },
       {
         "required": "%if_spawner",
-        "call": "set_externals_creator",
+        "call": "set_externals_creator_safe",
         "without": ["full_user_name", "player_name"],
         "arguments": {
-          "externals": {
-            "playback": "create_player_avatar_externals"
-          },
-          "internals": {
-            "playback": "create_player_avatar_internals"
-          },
-          "spawner": "%spawner_name"
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id"
+        }
+      },
+      {
+        "comment": {
+          "required": "%if_spawner",
+          "call": "set_externals_creator_unsafe",
+          "without": ["full_user_name", "player_name"],
+          "arguments": {
+            "externals": {
+              "playback": "create_player_avatar_externals"
+            },
+            "internals": {
+              "playback": "create_player_avatar_internals"
+            },
+            "spawner": "%spawner_name"
+          }
         }
       },
       {
@@ -107,129 +118,6 @@
             "font_height": 16,
             "line_distance": 16
           }
-        }
-      }
-    ]
-  },
-  {
-    "declare_macro": "create_player_avatar_externals",
-    "content": [
-      {
-        "required": "%if_pc",
-        "playback": "create_avatar_cameras_pc"
-      }
-    ]
-  },
-  {
-    "declare_macro": "create_player_avatar_internals",
-    "content": [
-      {
-        "playback": "create_player_avatar_internals_$asset_id"
-      },
-      {
-        "required": "%if_pc",
-        "playback": "create_avatar_key_bindings",
-        "context": "primary_scene_$full_user_name"
-      },
-      {
-        "required": "%if_pc",
-        "call": "hud_target_point",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "player": "%player_name",
-          "gun_node": "main_gun_end_node$suffix",
-          "exclusive_nodes": null,
-          "ypln_node": "human_node$suffix",
-          "center": [0, 0],
-          "size": [0.05, 0.05],
-          "error_behavior": "center",
-          "filename": "textures/hud/crosshair.png"}
-      },
-      {
-        "required": ["%if_pc", "%if_damageable"],
-        "call": "ui_background",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "z_order": 0,
-          "player": "%player_name",
-          "texture": "#health",
-          "left": "health_icon_left",
-          "right": "health_icon_right",
-          "bottom": "health_icon_bottom",
-          "top": "health_icon_top",
-          "delay_load_policy": "no_delay",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": ["%if_pc", "%if_damageable"],
-        "call": "visual_player_status",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "player": "%player_name",
-          "format": "health",
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "left": "health_text_left",
-          "right": "health_text_right",
-          "bottom": "health_text_bottom",
-          "top": "health_text_top",
-          "font_color": "%ui_font_color",
-          "font_height": "large",
-          "line_distance": "large",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": ["%if_pc", "%if_weapon_cycle"],
-        "call": "ui_background",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "z_order": 0,
-          "player": "%player_name",
-          "texture": "#ammunition",
-          "left": "bullet_count_icon_left",
-          "right": "bullet_count_icon_right",
-          "bottom": "bullet_count_icon_bottom",
-          "top": "bullet_count_icon_top",
-          "delay_load_policy": "no_delay",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": ["%if_pc", "%if_weapon_cycle"],
-        "call": "visual_player_bullet_count",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "z_order": 0,
-          "player": "%player_name",
-          "left": "bullet_count_text_left",
-          "right": "bullet_count_text_right",
-          "bottom": "bullet_count_text_bottom",
-          "top": "bullet_count_text_top",
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "font_color": [1, 1, 1],
-          "font_height": "large",
-          "line_distance": "large",
-          "focus_mask": "always"
-        }
-      },
-      {
-        "required": "%if_with_gun",
-        "call": "player_set_aiming_gun",
-        "arguments": {
-          "player": "%player_name",
-          "gun_node": "main_gun_end_node$suffix"
-        }
-      },
-      {
-        "call": "player_set_vehicle_control_parameters",
-        "arguments": {
-          "surface_power_forward": "inf",
-          "surface_power_backward": "-inf",
-          "player": "%player_name",
-          "max_tire_angle": "%%vehicles/$asset_id/max_tire_angle"
         }
       }
     ]

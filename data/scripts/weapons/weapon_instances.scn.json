@@ -314,7 +314,7 @@
         "arguments": {
           "node": "main_gun_end_node$suffix",
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
-          "ypln_node": "human_node$suffix",
+          "ypln_node": "%parent_rigid_body_node",
           "cool_down": "inf",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,

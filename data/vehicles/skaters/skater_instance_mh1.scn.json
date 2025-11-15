@@ -80,7 +80,7 @@
       {
         "required": ["%if_with_physics", "%parking_brake_pulled"],
         "call": "park_vehicle",
-        "arguments": { "rigid_body": "car_node$suffix" }
+        "arguments": { "rigid_body": "skater_node$suffix" }
       },
       {
         "required": "%if_with_physics",
@@ -191,7 +191,7 @@
     ]
   },
   {
-    "declare_macro": "create_player_skater_internals_skating_mh1",
+    "declare_macro": "create_player_vehicle_internals_skating_mh1",
     "content": {
       "required": "%if_pc",
       "playback": "create_skater_key_bindings",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "declare_macro": "create_player_skater_externals_skating_mh1",
+    "declare_macro": "create_player_vehicle_externals_skating_mh1",
     "content": [
       {"required": "%if_pc", "playback": "create_skater_cameras", "arguments": {"seat": "driver"}},
       {
