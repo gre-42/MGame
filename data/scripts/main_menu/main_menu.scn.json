@@ -427,7 +427,7 @@
               "required": "(%selected_level_id == %loaded_level_id)",
               "execute": {
                 "playback": "_reload_transient_objects_in_physics_thread",
-                "without": ["full_user_name"]
+                "without": ["full_user_name", "user_name", "local_user_id", "user_is_local"]
               }
             }
           ],
