@@ -13,7 +13,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_or_heli.steer_left",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -25,7 +25,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_or_heli.steer_right",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -48,7 +48,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.forward",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -60,7 +60,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.backwards",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -72,7 +72,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.ascend",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -84,7 +84,7 @@
       "required": "%if_manual_drive",
       "call": "car_controller_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.descend",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -96,7 +96,7 @@
       "required": "%if_has_gun",
       "call": "rotate_gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli_or_tank.rotate_gun_left",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -111,7 +111,7 @@
       "required": "%if_has_gun",
       "call": "rotate_gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli_or_tank.rotate_gun_right",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -126,7 +126,7 @@
       "required": "%if_has_gun",
       "call": "rotate_gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_or_heli.rotate_gun_up",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -141,7 +141,7 @@
       "required": "%if_has_gun",
       "call": "rotate_gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_or_heli.rotate_gun_down",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -155,7 +155,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.next_weapon",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -165,7 +165,7 @@
     {
       "call": "weapon_cycle_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "heli.previous_weapon",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -176,7 +176,7 @@
       "required": "%if_has_gun",
       "call": "gun_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "any.shoot",
         "seat": "%externals_seat",
         "player": "%player_name"
@@ -187,7 +187,7 @@
       "exclude": ["%if_manual_aim"],
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "any.select_next_opponent",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -197,7 +197,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_heli_tank.select_next_vehicle",
         "seat": "%externals_seat",
         "player": "%player_name",
@@ -207,7 +207,7 @@
     {
       "call": "player_key_binding",
       "arguments": {
-        "user_id": "%user_id",
+        "local_user_id": "%local_user_id",
         "id": "car_or_heli.reset_vehicle",
         "seat": "%externals_seat",
         "player": "%player_name",

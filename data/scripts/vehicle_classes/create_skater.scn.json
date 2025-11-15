@@ -58,7 +58,7 @@
       {
         "required": "%if_spawner",
         "call": "set_externals_creator_safe",
-        "without": ["full_user_name", "player_name"],
+        "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
         "arguments": {
           "spawner": "%spawner_name",
           "asset_id": "%asset_id"
@@ -68,7 +68,7 @@
         "comment": {
           "required": "%if_spawner",
           "call": "set_externals_creator",
-          "without": ["full_user_name", "player_name"],
+          "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
           "arguments": {
             "externals": {
               "playback": "create_player_skater_externals"
