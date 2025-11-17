@@ -31,10 +31,9 @@
   },
   "players": [
     {
-      "controller": "pc", "name": "you_0", "team": "red",
+      "controller": "pc", "name": "you", "team": "red",
       "user": {
-        "id": 0,
-        "name": "'0'"
+        "rank": 0
       },
       "skills": {
         "ai": {
@@ -57,10 +56,9 @@
     },
     {
       "required": "(%user_count >= 2)",
-      "controller": "pc", "name": "you_1", "team": "blue",
+      "controller": "pc", "name": "you", "team": "blue",
       "user": {
-        "id": 1,
-        "name": "'1'"
+        "rank": 1
       },
       "skills": {
         "ai": {
