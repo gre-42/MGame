@@ -16,7 +16,18 @@
     "vehicle_class": "avatar",
     "node_prefixes": ["human_node"],
     "spawn_y_offset": 0.7,
-    "max_tire_angle": null
+    "waypoint_dy": 0.7,
+    "max_tire_angle": null,
+    "wheel": "legs",
+    "wheel_mount_0":  [0, 0, 0],
+    "wheel_mount_1":  [0, 1, 0],
+    "mass": 70,
+    "com": [0, 0, 0],
+
+    "angular_vels": [-4000, -2500, 0],
+    "powers": ["nan", 2.7, 2.7],
+    "gear_ratios": [-1, 1],
+    "w_clutch": 800
   },
   "required": {
     "fixed": [],

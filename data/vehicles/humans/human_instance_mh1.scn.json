@@ -3,21 +3,21 @@
   {
     "declare_macro": "create_female_mh",
     "content": {
-      "playback": "generic_avatar.create",
+      "playback": "generic_avatar.create_fast",
       "let": { "decimate": "_d2", "decimate1": "_d1" }
     }
   },
   {
     "declare_macro": "create_female_skirt",
     "content": {
-      "playback": "generic_avatar.create",
+      "playback": "generic_avatar.create_fast",
       "let": { "decimate": "_d2", "decimate1": "_d1" }
     }
   },
   {
     "declare_macro": "create_male_mh",
     "content": {
-      "playback": "generic_avatar.create",
+      "playback": "generic_avatar.create_fast",
       "let": { "decimate": "_d08", "decimate1": "_d03" }
     }
   },

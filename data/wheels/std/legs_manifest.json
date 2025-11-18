@@ -1,0 +1,14 @@
+{
+  "id": "legs",
+  "title": "Legs",
+  "database": {
+    "radius": 1,
+    "brake_force": 5000,
+    "brake_torque": 400,
+    "Ks": 1e5,
+    "Ka": 3e3,
+    "Ke": 1.7,
+    "musF": [0],
+    "musC": [5]
+  }
+}

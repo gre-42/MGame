@@ -67,18 +67,23 @@
     }
   },
   {
-    "playback": "setup_teams",
-    "context": "primary_scene",
-    "arguments": {
-      "players_json": "%players_json",
-      "teams_spawn_points_resource": "osm_map_overlay",
-      "teams_way_points_resource": "osm_map_overlay",
-      "objective": "kill_count"
-    }
-  },
-  {
-    "playback": "scene_racing_setup_new_round",
-    "context": "primary_scene"
+    "required": "(%remote_role != 'client')",
+    "execute": [
+      {
+        "playback": "setup_teams",
+        "context": "primary_scene",
+        "arguments": {
+          "players_json": "%players_json",
+          "teams_spawn_points_resource": "osm_map_overlay",
+          "teams_way_points_resource": "osm_map_overlay",
+          "objective": "kill_count"
+        }
+      },
+      {
+        "playback": "scene_racing_setup_new_round",
+        "context": "primary_scene"
+      }
+    ]
   },
   {"playback": "create_main_menu"}
 ]

@@ -45,7 +45,7 @@
           "com": "%%vehicles/$name/com",
           "collidable_mode": "collide|move",
           "name": "generic_car_$name$tesuffix",
-          "waypoint_dy": 1.2,
+          "waypoint_dy": "%%vehicles/$asset_id/waypoint_dy",
           "asset_id": "%name"
         }
       },

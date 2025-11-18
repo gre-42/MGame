@@ -1,5 +1,36 @@
 [
   {
+    "declare_macro": "generic_avatar.create_fast",
+    "content": {
+      "call": "create_generic_avatar",
+      "arguments": {
+        "name": "%asset_id",
+        "suffix": "%suffix",
+        "decimate": "%decimate",
+        "decimate1": "%decimate1",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "parking_brake_pulled": false,
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "mute": "%mute",
+        "with_gun": "%if_with_gun",
+        "velocity_error_std": "%velocity_error_std",
+        "yaw_error_std": "%yaw_error_std",
+        "pitch_error_std": "%pitch_error_std",
+        "error_alpha": "%error_alpha",
+        "locked_on_angle": 20,
+        "dyaw_max": 10,
+        "pitch_min": -60,
+        "pitch_max": 60,
+        "dpitch_max": 10,
+        "steering_multiplier": 1,
+        "animation_resource_wo_gun": "cmu_mocap",
+        "animation_resource_w_gun": "xonotic_pyria"
+      }
+    }
+  },
+  {
     "declare_macro": "generic_avatar.create",
     "content": [
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "animation_node$suffix", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
@@ -51,7 +82,7 @@
           "size": ["inf", "inf", "inf"],
           "collidable_mode": "collide|move",
           "flags": "is_activated_avatar",
-          "waypoint_dy": 0.7,
+          "waypoint_dy": "%%vehicles/$asset_id/waypoint_dy",
           "name": "human$suffix",
           "asset_id": "%asset_id"
         }

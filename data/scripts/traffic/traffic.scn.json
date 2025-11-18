@@ -139,6 +139,8 @@
           "macro": {
             "playback": "traffic.create_avatar",
             "let": {
+              "parking_brake_pulled": false,
+              "mute": false,
               "respawn_cooldown_time": 0
             }
           }
