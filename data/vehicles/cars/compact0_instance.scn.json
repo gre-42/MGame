@@ -12,17 +12,11 @@
       }
     },
     "content": {
-      "call": "create_generic_car",
-      "arguments": {
+      "playback": "generic_car.create_fast",
+      "let": {
         "name": "compact0",
         "tesuffix": "%suffix",
-        "tedecimate": "",
-        "if_with_graphics": "%if_with_graphics",
-        "if_with_physics": "%if_with_physics",
-        "mute": "%mute",
-        "velocity": "%velocity",
-        "angular_velocity": "%angular_velocity",
-        "parking_brake_pulled": "%parking_brake_pulled"
+        "tedecimate": ""
       }
     }
   },

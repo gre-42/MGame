@@ -324,6 +324,25 @@
     ]
   },
   {
+    "declare_macro": "generic_car.create_fast",
+    "content": {
+      "call": "create_generic_car",
+      "arguments": {
+        "name": "%name",
+        "tesuffix": "%tesuffix",
+        "tedecimate": "%tedecimate",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "mute": "%mute",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "parking_brake_pulled": "%parking_brake_pulled",
+        "if_car_body_renderable_style": "%if_car_body_renderable_style",
+        "color": "%color"
+      }
+    }
+  },
+  {
     "declare_macro": "generic_car.create",
     "content": [
       {
