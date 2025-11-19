@@ -63,22 +63,20 @@
   },
   {
     "required": "(%remote_role != 'client')",
-    "execute": [
-      {
-        "playback": "setup_teams",
-        "context": "primary_scene",
-        "arguments": {
-          "players_json": "$__DIR__/players.json",
-          "teams_spawn_points_resource": "osm_map",
-          "teams_way_points_resource": "osm_map",
-          "objective": "kill_count"
-        }
-      },
-      {
-        "playback": "setup_traffic_with_pedestrians",
-        "context": "primary_scene"
+    "execute": {
+      "playback": "setup_teams",
+      "context": "primary_scene",
+      "arguments": {
+        "players_json": "$__DIR__/players.json",
+        "teams_spawn_points_resource": "osm_map",
+        "teams_way_points_resource": "osm_map",
+        "objective": "kill_count"
       }
-    ]
+    }
+  },
+  {
+    "playback": "setup_traffic_with_pedestrians",
+    "context": "primary_scene"
   },
   {
     "playback": "scene_racing_setup_new_round",

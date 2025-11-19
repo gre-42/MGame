@@ -318,7 +318,7 @@
     "declare_macro": "generic_avatar.create_player_internals",
     "content": [
       {
-        "required": "(%behavior != 'none')",
+        "required": ["(%remote_role != 'client')", "(%behavior != 'none')"],
         "execute": [
           {
             "call": "create_drive_or_walk_ai",
@@ -443,7 +443,7 @@
         }
       },
       {
-        "required": "%if_with_gun",
+        "required": "%if_weapon_cycle",
         "call": "player_set_aiming_gun",
         "arguments": {
           "player": "%player_name",
