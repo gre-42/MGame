@@ -16,9 +16,6 @@
         "playback": "create_$asset_id"
       },
       {
-        "playback": "create_avatar_cameras_persistent"
-      },
-      {
         "required": "%if_spawner",
         "call": "spawner_set_nodes",
         "arguments": {

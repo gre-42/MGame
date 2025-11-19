@@ -1,7 +1,6 @@
 [
-  {
-    "include": "vehicles/create_common_hud.scn.json"
-  },
+  { "include": "scripts/cameras/human_cameras.scn.json" },
+  { "include": "vehicles/create_common_hud.scn.json" },
   {
     "declare_macro": "generic_avatar.create_fast",
     "content": {
@@ -31,7 +30,10 @@
         "dpitch_max": 10,
         "steering_multiplier": 1,
         "animation_resource_wo_gun": "cmu_mocap",
-        "animation_resource_w_gun": "xonotic_pyria"
+        "animation_resource_w_gun": "xonotic_pyria",
+        "y_fov": 60,
+        "near_plane": 0.1,
+        "far_plane": "%far_plane"
       }
     }
   },
@@ -307,7 +309,8 @@
           "node": "human_node$suffix",
           "value": ["driver"]
         }
-      }
+      },
+      { "playback": "create_avatar_cameras_persistent" }
     ]
   },
   {
