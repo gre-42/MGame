@@ -1,5 +1,8 @@
 [
   {
+    "include": "vehicles/create_common_hud.scn.json"
+  },
+  {
     "declare_macro": "generic_car.create_graphics",
     "content": [
       {"call": "child_renderable_instance", "arguments": {"name": "main$name_suffix", "node": "car_node$node_suffix", "resource": "$name/main$lod_decimate"}},
@@ -383,23 +386,6 @@
     "declare_macro": "generic_car.create_player_internals",
     "content": [
       {
-        "required": "%if_pc",
-        "playback": "create_car_key_bindings",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "if_has_gun": false
-        }
-      },
-      {
-        "required": "%if_pc",
-        "exclude": ["%if_android"],
-        "playback": "create_player_car_engine_rpm_meter",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "engine_name": "%%vehicles/$asset_id/front_engine"
-        }
-      },
-      {
         "required": "(%behavior != 'none')",
         "execute": [
           {
@@ -432,6 +418,28 @@
               "vehicle_way_points_filter": "explicit_ground|street"
             }
           }
+        ]
+      },
+      {
+        "required": "%if_pc",
+        "execute": [
+          {
+            "playback": "create_car_key_bindings",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "if_has_gun": false
+            }
+          },
+          {
+            "exclude": ["%if_android"],
+            "playback": "create_rpm_hud",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "engine_name": "%%vehicles/$asset_id/front_engine"
+            }
+          },
+          { "playback": "create_speed_hud" },
+          { "playback": "create_common_hud" }
         ]
       }
     ]

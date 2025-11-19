@@ -1,5 +1,8 @@
 [
   {
+    "include": "vehicles/create_common_hud.scn.json"
+  },
+  {
     "declare_macro": "create_F_35_graphics",
     "content": [
       {"call": "child_renderable_instance", "arguments": {"name": "F_35$lod_suffix", "node": "car_node$node_suffix", "resource": "F_35$lod_decimate", "included_names": "^Mesh_*"}},
@@ -589,43 +592,6 @@
     "declare_macro": "create_player_vehicle_internals_F_35",
     "content": [
       {
-        "required": "%if_pc",
-        "playback": "create_plane_key_bindings",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "if_has_gun": true
-        }
-      },
-      {
-        "required": "%if_pc",
-        "call": "hud_opponent_tracker",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "player": "%player_name",
-          "exclusive_nodes": null,
-          "center": [0, 0],
-          "size": [0.05, 0.05],
-          "error_behavior": "hide",
-          "filename": "textures/hud/crosshair.png"
-        }
-      },
-      {
-        "required": "%if_pc",
-        "call": "hud_opponent_zoom",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "player": "%player_name",
-          "exclusive_nodes": null,
-          "left": "opponent_zoom_left",
-          "right": "opponent_zoom_right",
-          "bottom": "opponent_zoom_bottom",
-          "top": "opponent_zoom_top",
-          "fov": 30,
-          "zoom": 1.5,
-          "background_color": ["nan", "nan", "nan"]
-        }
-      },
-      {
         "required": "(%behavior != 'none')",
         "execute": [
           {
@@ -658,6 +624,47 @@
               "vehicle_way_points_filter": "runway_or_taxiway_or_airway"
             }
           }
+        ]
+      },
+      {
+        "required": "%if_pc",
+        "execute": [
+          {
+            "playback": "create_plane_key_bindings",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "if_has_gun": true
+            }
+          },
+          {
+            "call": "hud_opponent_tracker",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "player": "%player_name",
+              "exclusive_nodes": null,
+              "center": [0, 0],
+              "size": [0.05, 0.05],
+              "error_behavior": "hide",
+              "filename": "textures/hud/crosshair.png"
+            }
+          },
+          {
+            "call": "hud_opponent_zoom",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "player": "%player_name",
+              "exclusive_nodes": null,
+              "left": "opponent_zoom_left",
+              "right": "opponent_zoom_right",
+              "bottom": "opponent_zoom_bottom",
+              "top": "opponent_zoom_top",
+              "fov": 30,
+              "zoom": 1.5,
+              "background_color": ["nan", "nan", "nan"]
+            }
+          },
+          { "playback": "create_speed_hud" },
+          { "playback": "create_common_hud" }
         ]
       }
     ]

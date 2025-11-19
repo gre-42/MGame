@@ -1,5 +1,8 @@
 [
   {
+    "include": "vehicles/create_common_hud.scn.json"
+  },
+  {
     "declare_macro": "create_tiger_tank_graphics",
     "content": [
       {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "Tiger$lod_decimate", "included_names": "Left|Right|Hull"}},
@@ -301,9 +304,9 @@
       },
       {
         "comment": {
-          "exclude": ["%if_android"],
+          "exclude": "%if_android",
           "required": "%if_pc",
-          "playback": "create_player_car_engine_rpm_meter",
+          "playback": "create_rpm_hud",
           "context": "primary_scene_$full_user_name",
           "arguments": {
             "engine_name": "left"
