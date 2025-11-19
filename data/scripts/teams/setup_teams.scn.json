@@ -16,6 +16,9 @@
       }
     },
     {
+      "call": "compute_random_user_ranks"
+    },
+    {
       "call": "load_players",
       "arguments": {
         "json": "%players_json"

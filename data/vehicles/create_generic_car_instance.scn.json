@@ -323,6 +323,16 @@
   {
     "declare_macro": "generic_car.create",
     "content": [
+      {
+        "call": "add_color_style",
+        "required": "%if_car_body_renderable_style",
+        "arguments": {
+          "selector": "body|chassis|turret|main_gun",
+          "node": "car_node$suffix",
+          "ambient": "%color",
+          "diffuse": "%color"
+        }
+      },
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_left_front_node$tesuffix",  "position": "%%vehicles/$name/wheel_left_front_mount_0"}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_right_front_node$tesuffix", "position": "%%vehicles/$name/wheel_right_front_mount_0"}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$tesuffix", "name": "wheel_left_rear_node$tesuffix",   "position": "%%vehicles/$name/wheel_left_rear_mount_0"}},

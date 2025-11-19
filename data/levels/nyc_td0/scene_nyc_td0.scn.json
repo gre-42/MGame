@@ -75,11 +75,14 @@
         }
       },
       {
-        "playback": "scene_racing_setup_new_round",
+        "playback": "setup_traffic_with_pedestrians",
         "context": "primary_scene"
-      },
-      {"playback": "setup_traffic_with_pedestrians", "context": "primary_scene"}
+      }
     ]
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
   },
   {"playback": "create_main_menu"}
 ]

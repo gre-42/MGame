@@ -55,7 +55,7 @@
       }
     },
     {
-      "required": "(%user_count >= 2)",
+      "required": "(%total_user_count >= 2)",
       "controller": "pc", "name": "you", "team": "blue",
       "user": {
         "rank": 1

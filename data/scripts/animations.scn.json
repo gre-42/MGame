@@ -3,6 +3,17 @@
     "required": "(%flavor == 'extended')",
     "call": "add_bvh_resource",
     "arguments": {
+      "name": "cmu_mocap.idle",
+      "filename": "animations/Xonotic/pyria_idle_retargeted.bvh",
+      "smooth_radius": 0,
+      "smooth_alpha": "nan",
+      "periodic": true
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_bvh_resource",
+    "arguments": {
       "name": "cmu_mocap.walking",
       "filename": "animations/CMU_mocap/cmu_mocap.walking.bvh",
       "smooth_radius": 20,

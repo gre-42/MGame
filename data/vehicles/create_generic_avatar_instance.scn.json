@@ -10,6 +10,8 @@
         "decimate1": "%decimate1",
         "if_with_graphics": "%if_with_graphics",
         "if_with_physics": "%if_with_physics",
+        "if_human_style": "%if_human_style",
+        "color": "%color",
         "parking_brake_pulled": false,
         "velocity": "%velocity",
         "angular_velocity": "%angular_velocity",
@@ -33,6 +35,26 @@
   {
     "declare_macro": "generic_avatar.create",
     "content": [
+      {
+        "call": "add_color_style",
+        "required": "%if_human_style",
+        "arguments": {
+          "node": "human_node$suffix",
+          "ambient": "%color",
+          "diffuse": "%color"
+        }
+      },
+      {
+        "required": "%if_human_style",
+        "call": "set_animation_state",
+        "arguments": {
+          "nodes": ["human_node$suffix"],
+          "animation_loop_name": "xonotic_pyria.idle",
+          "animation_loop_begin": 0,
+          "animation_loop_end": "full",
+          "animation_loop_time": 0
+        }
+      },
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "animation_node$suffix", "position": [0, -0.5, 0], "rotation": [0, 180, 0]}},
       {"comment": "The human hitbox has width and length of 0.5 (or \"radius\" or 0.25), so z = -0.3 is out of its hitbox"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "human_node$suffix", "name": "main_gun_node$suffix", "position": [0.1, 0.5, 0]}},

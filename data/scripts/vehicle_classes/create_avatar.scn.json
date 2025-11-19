@@ -13,26 +13,6 @@
         }
       },
       {
-        "call": "add_color_style",
-        "required": "%if_human_style",
-        "arguments": {
-          "node": "human_node$suffix",
-          "ambient": "%color",
-          "diffuse": "%color"
-        }
-      },
-      {
-        "required": "%if_human_style",
-        "call": "set_animation_state",
-        "arguments": {
-          "nodes": ["human_node$suffix"],
-          "animation_loop_name": "xonotic_pyria.idle",
-          "animation_loop_begin": 0,
-          "animation_loop_end": "full",
-          "animation_loop_time": 0
-        }
-      },
-      {
         "playback": "create_$asset_id"
       },
       {

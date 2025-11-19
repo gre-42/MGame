@@ -12,16 +12,6 @@
         }
       },
       {
-        "call": "add_color_style",
-        "required": "%if_car_body_renderable_style",
-        "arguments": {
-          "selector": "body|chassis|turret|main_gun",
-          "node": "car_node$suffix",
-          "ambient": "%color",
-          "diffuse": "%color"
-        }
-      },
-      {
         "playback": "create_$asset_id"
       },
       {
