@@ -50,6 +50,26 @@
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
+      "required": "(%total_user_count >= 2)",
+      "controller": "pc", "name": "you", "team": "blue",
+      "user": {
+        "rank": 1
+      },
+      "skills": {
+        "ai": {
+            "can_drive": false,
+            "can_aim": false,
+            "can_shoot": false
+        },
+        "user": {
+            "can_drive": true,
+            "can_aim": true,
+            "can_shoot": true
+        }
+      },
+      "spawn": { "vehicle": { "type": "male_mh" } }
+    },
+    {
       "controller": "npc", "name": "npc1", "team": "red",
       "spawn": { "vehicle": { "type": "tiger_tank" } }
     },

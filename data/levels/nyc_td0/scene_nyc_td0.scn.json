@@ -2,6 +2,9 @@
   {
     "call": "globals",
     "arguments": {
+      "loaded_game_level": "td0",
+      "loaded_racing_line_track": null,
+      "loaded_racing_line_playback": null,
       "loaded_level_id": "%selected_level_id",
       "game_mode": "team_deathmatch",
       "aggregate_mode": "instances_sorted",
@@ -11,10 +14,7 @@
         "position": [0, -220, 0],
         "rotation": [-90, 0, 0],
         "scale": 1
-      },
-      "loaded_game_level": "td0",
-      "loaded_racing_line_track": null,
-      "loaded_racing_line_playback": null
+      }
     }
   },
   {"include": "scripts/include_all.scn.json"},

@@ -379,12 +379,10 @@
         "required": "%if_pc",
         "execute": [
           {
-            "required": "%if_pc",
             "playback": "create_avatar_key_bindings",
             "context": "primary_scene_$full_user_name"
           },
           {
-            "required": "%if_pc",
             "call": "hud_target_point",
             "context": "primary_scene_$full_user_name",
             "arguments": {

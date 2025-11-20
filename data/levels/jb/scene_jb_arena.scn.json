@@ -16,7 +16,7 @@
       }
     }
   },
-  {"include": "../../scripts/include_all.scn.json"},
+  {"include": "scripts/include_all.scn.json"},
   {"include": "../jb_race/osm_resource_jb_race_open_alpha.scn.json"},
   {"include": "osm_resource_jb_wpts1.scn.json"},
   {
@@ -51,39 +51,24 @@
   },
   {
     "declare_macro": "instantiate_transient_objects",
-    "content": {
-      "playback": "scene_racing_instantiate_transient_objects",
-      "let": {
-        "if_create_pc_car": false,
-        "if_pc_player_playback": false,
-
-        "if_playback_checkpoints": false,
-        "if_playback_track_1": false,
-        "if_playback_track_2": false,
-        "if_playback_track_3": false,
-        "if_checkpoints": false,
-        "if_burn_in": false
+    "content": []
+  },
+  {
+    "required": "(%remote_role != 'client')",
+    "execute": {
+      "playback": "setup_teams",
+      "context": "primary_scene",
+      "arguments": {
+        "players_json": "%players_json",
+        "teams_spawn_points_resource": "osm_map_overlay",
+        "teams_way_points_resource": "osm_map_overlay",
+        "objective": "kill_count"
       }
     }
   },
   {
-    "required": "(%remote_role != 'client')",
-    "execute": [
-      {
-        "playback": "setup_teams",
-        "context": "primary_scene",
-        "arguments": {
-          "players_json": "%players_json",
-          "teams_spawn_points_resource": "osm_map_overlay",
-          "teams_way_points_resource": "osm_map_overlay",
-          "objective": "kill_count"
-        }
-      },
-      {
-        "playback": "scene_racing_setup_new_round",
-        "context": "primary_scene"
-      }
-    ]
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
   },
   {"playback": "create_main_menu"}
 ]

@@ -57,7 +57,7 @@
         }
       },
       {
-        "required": ["%if_pc", "%if_can_shoot"],
+        "required": ["%if_pc", "%if_has_weapon"],
         "call": "ui_background",
         "context": "primary_scene_$full_user_name",
         "arguments": {
@@ -73,7 +73,7 @@
         }
       },
       {
-        "required": ["%if_pc", "%if_can_shoot"],
+        "required": ["%if_pc", "%if_has_weapon"],
         "call": "visual_player_bullet_count",
         "context": "primary_scene_$full_user_name",
         "arguments": {
