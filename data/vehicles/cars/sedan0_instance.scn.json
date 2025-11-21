@@ -5,8 +5,7 @@
       "playback": "generic_car.create",
       "let": {
         "name": "sedan0",
-        "tesuffix": "%suffix",
-        "tedecimate": "",
+        "decimate": "",
         "wheels": "%%vehicles/sedan0/wheels",
         "engine_audio": "%%vehicles/sedan0/engine_audio"
       }
@@ -15,8 +14,7 @@
       "playback": "generic_car.create_fast",
       "let": {
         "name": "sedan0",
-        "tesuffix": "%suffix",
-        "tedecimate": ""
+        "decimate": ""
       }
     }
   },

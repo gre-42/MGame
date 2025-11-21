@@ -25,9 +25,10 @@
         }
       },
       {
+        "without": ["suffix"],
         "playback": "create_TNo2",
         "let": {
-          "TRAILER_SUFFIX": "_trailer$suffix"
+          "suffix": "_trailer$suffix"
         }
       },
       {

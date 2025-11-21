@@ -36,29 +36,6 @@
         "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_human$suffix csuffix:suffix;"
       },
       {
-        "required": "%if_damageable",
-        "call": "damageable",
-        "arguments": {
-          "node": "human_node$suffix",
-          "health": 200,
-          "delete_node_when_health_leq_zero": false,
-          "explosions": [
-            {
-              "damage_sources": ["crash"],
-              "audio": "impactcrunch01"
-            }
-          ]
-        }
-      },
-      {
-        "required": "%if_damageable",
-        "call": "crash",
-        "arguments": {
-          "node": "human_node$suffix",
-          "damage": 0.3
-        }
-      },
-      {
         "required": "%if_spawner",
         "call": "set_externals_creator_safe",
         "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],

@@ -13,6 +13,7 @@
         "if_with_graphics": "%if_with_graphics",
         "if_with_physics": "%if_with_physics",
         "if_human_style": "%if_human_style",
+        "if_damageable": "%if_damageable",
         "color": "%color",
         "parking_brake_pulled": false,
         "velocity": "%velocity",
@@ -310,7 +311,30 @@
           "value": ["driver"]
         }
       },
-      { "playback": "create_avatar_cameras_persistent" }
+      { "playback": "create_avatar_cameras_persistent" },
+      {
+        "required": "%if_damageable",
+        "call": "damageable",
+        "arguments": {
+          "node": "human_node$suffix",
+          "health": 200,
+          "delete_node_when_health_leq_zero": false,
+          "explosions": [
+            {
+              "damage_sources": ["crash"],
+              "audio": "impactcrunch01"
+            }
+          ]
+        }
+      },
+      {
+        "required": "%if_damageable",
+        "call": "crash",
+        "arguments": {
+          "node": "human_node$suffix",
+          "damage": 0.3
+        }
+      }
     ]
   },
   {

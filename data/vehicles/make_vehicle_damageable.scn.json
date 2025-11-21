@@ -1,0 +1,42 @@
+[
+  {
+    "declare_macro": "make_vehicle_damageable",
+    "content": [
+      {
+        "call": "damageable",
+        "arguments": {
+          "node": "car_node$suffix",
+          "health": 200,
+          "delete_node_when_health_leq_zero": true,
+          "explosions": [
+            {
+              "animation": "large_explosion_cross",
+              "particle_container": "node",
+              "animation_duration": 0.6,
+              "audio": "explodemini_fast"
+            },
+            {
+              "animation": "explosion_rocks",
+              "particle_container": "physics",
+              "animation_duration": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "call": "crash",
+        "arguments": {
+          "node": "car_node$suffix",
+          "damage": 0.3
+        }
+      },
+      {
+        "call": "set_damage_absorption_direction",
+        "arguments": {
+          "node": "car_node$suffix",
+          "direction": [0, 0, 1]
+        }
+      }
+    ]
+  }
+]

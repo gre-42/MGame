@@ -5,8 +5,7 @@
       "playback": "generic_car.create",
       "let": {
         "name": "sports_car0",
-        "tesuffix": "%suffix",
-        "tedecimate": "",
+        "decimate": "",
         "wheels": "%%vehicles/sports_car0/wheels",
         "engine_audio": "%%vehicles/sports_car0/engine_audio"
       }
@@ -15,8 +14,7 @@
       "playback": "generic_car.create_fast",
       "let": {
         "name": "sports_car0",
-        "tesuffix": "%suffix",
-        "tedecimate": ""
+        "decimate": ""
       }
     }
   },

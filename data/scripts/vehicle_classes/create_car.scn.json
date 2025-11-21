@@ -54,46 +54,6 @@
         "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix csuffix:suffix"
       },
       {
-        "required": "%if_damageable",
-        "execute": [
-          {
-            "call": "damageable",
-            "arguments": {
-              "node": "car_node$suffix",
-              "health": 200,
-              "delete_node_when_health_leq_zero": true,
-              "explosions": [
-                {
-                  "animation": "large_explosion_cross",
-                  "particle_container": "node",
-                  "animation_duration": 0.6,
-                  "audio": "explodemini_fast"
-                },
-                {
-                  "animation": "explosion_rocks",
-                  "particle_container": "physics",
-                  "animation_duration": 1.5
-                }
-              ]
-            }
-          },
-          {
-            "call": "crash",
-            "arguments": {
-              "node": "car_node$suffix",
-              "damage": 0.3
-            }
-          },
-          {
-            "call": "set_damage_absorption_direction",
-            "arguments": {
-              "node": "car_node$suffix",
-              "direction": [0, 0, 1]
-            }
-          }
-        ]
-      },
-      {
         "required": "%if_spawner",
         "call": "set_externals_creator_safe",
         "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],

@@ -1,7 +1,6 @@
 [
-  {
-    "include": "vehicles/create_common_hud.scn.json"
-  },
+  {"include": "vehicles/create_common_hud.scn.json"},
+  {"include": "vehicles/make_vehicle_damageable.scn.json"},
   {
     "declare_macro": "create_tiger_tank_graphics",
     "content": [
@@ -149,13 +148,8 @@
           "delta_power": 2e3
         }
       },
-      {
-        "call": "set_available_seats",
-        "arguments": {
-          "node": "car_node$suffix",
-          "value": ["driver"]
-        }
-      }
+      {"call": "set_available_seats", "arguments": {"node": "car_node$suffix", "value": ["driver"]}},
+      {"required": "%if_damageable", "playback": "make_vehicle_damageable"}
     ]
   },
   {
