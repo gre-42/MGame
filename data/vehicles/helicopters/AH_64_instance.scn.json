@@ -164,6 +164,7 @@
               }
             },
             {
+              "required": "%user_is_local",
               "context": "primary_scene_$full_user_name",
               "playback": "select_car_cameras_heli_main_gun"
             }
@@ -190,6 +191,7 @@
               }
             },
             {
+              "required": "%user_is_local",
               "context": "primary_scene_$full_user_name",
               "playback": "select_car_cameras_heli_cockpit"
             }
