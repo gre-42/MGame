@@ -17,7 +17,7 @@
         "playback": "create_$asset_id"
       },
       {
-        "required": "%make_remote",
+        "required": ["%make_remote", "(%remote_role != 'none')"],
         "playback": "delegate_create_avatar",
         "arguments": { "avatar_creator": "register_local_avatar" }
       },
