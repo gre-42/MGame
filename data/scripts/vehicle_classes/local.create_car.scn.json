@@ -18,9 +18,7 @@
       {
         "required": ["%make_remote", "(%remote_role != 'none')"],
         "playback": "delegate_create_car",
-        "let": {
-          "car_creator": "register_local_car"
-        }
+        "let": { "car_creator": "register_local_car" }
       },
       {
         "required": "%if_playback_track",
