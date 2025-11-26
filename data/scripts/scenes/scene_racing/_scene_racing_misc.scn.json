@@ -2,8 +2,9 @@
   {
     "declare_macro": "_create_playback",
     "content": {
-      "playback": "create_car",
+      "playback": "local.create_car",
       "let": {
+        "make_remote": false,
         "car_name": "%playback_car",
         "car_node_position": [1, 2, 3],
         "car_node_angles": [4, 5, 6],
@@ -33,8 +34,9 @@
     "declare_macro": "_create_winner_playback",
     "content": [
       {
-        "playback": "create_car",
+        "playback": "local.create_car",
         "let": {
+        "make_remote": false,
           "car_name": "%playback_car",
           "car_node_position": [1, 2, 3],
           "car_node_angles": [4, 5, 6],

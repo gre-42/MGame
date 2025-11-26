@@ -1,5 +1,9 @@
 [
   {
+    "declare_macro": "remote.vehicle.create_F_35",
+    "content": { "playback": "create_F_35" }
+  },
+  {
     "include": "vehicles/create_common_hud.scn.json"
   },
   {
@@ -504,9 +508,6 @@
   },
   {
     "declare_macro": "create_F_35",
-    "let": {
-      "decimate": ""
-    },
     "content": [
       {"comment": "Wheels"},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_front_node$suffix",  "position": [-0.7, -0.45, -1.35]}},
@@ -544,7 +545,7 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rear", "node": "car_node$suffix", "resource": "F_35_hitbox_rear"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_left", "node": "car_node$suffix", "resource": "F_35_hitbox_rudder_left"}}},
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "F_35_hitbox_rudder_right", "node": "car_node$suffix", "resource": "F_35_hitbox_rudder_right"}}},
-      {"required": "%if_with_graphics", "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
+      {"required": "%if_with_graphics", "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%%vehicles/F_35/decimate"}},
       {"required": "%if_with_graphics", "playback": "create_F_35_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d1$suffix", "lod_decimate": "_d1"}},
       {"comment": [
         "if_with_graphics child_node_instance type=dynamic parent=car_node$suffix name=gizmo_node$suffix position=0 0 0 rotation=0 0 0 scale=1",

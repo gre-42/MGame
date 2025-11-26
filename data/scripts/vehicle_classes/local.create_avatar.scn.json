@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "create_avatar",
+    "declare_macro": "local.create_avatar",
     "content": [
       {
         "call": "root_node_instance",
@@ -13,7 +13,13 @@
         }
       },
       {
+        "without": ["asset_id"],
         "playback": "create_$asset_id"
+      },
+      {
+        "required": "%make_remote",
+        "playback": "delegate_create_avatar",
+        "arguments": { "avatar_creator": "register_local_avatar" }
       },
       {
         "required": "%if_spawner",

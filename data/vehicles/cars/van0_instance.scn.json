@@ -1,5 +1,9 @@
 [
   {
+    "declare_macro": "remote.vehicle.create_van0",
+    "content": { "playback": "create_van0" }
+  },
+  {
     "declare_macro": "create_van0",
     "# content": {
       "playback": "generic_car.create",
@@ -12,10 +16,7 @@
     },
     "content": {
       "playback": "generic_car.create_fast",
-      "let": {
-        "name": "van0",
-        "decimate": ""
-      }
+      "let": { "asset_id": "van0" }
     }
   },
   {

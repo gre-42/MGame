@@ -1,5 +1,9 @@
 [
   {
+    "declare_macro": "remote.vehicle.create_TNo2",
+    "content": { "playback": "create_TNo2" }
+  },
+  {
     "declare_macro": "create_TNo2",
     "# content": {
       "playback": "generic_car.create",
@@ -12,10 +16,7 @@
     },
     "content": {
       "playback": "generic_car.create_fast",
-      "let": {
-        "name": "TNo2",
-        "decimate": ""
-      }
+      "let": { "asset_id": "TNo2" }
     }
   },
   {

@@ -1,6 +1,6 @@
 [
   {
-    "declare_macro": "create_car",
+    "declare_macro": "local.create_car",
     "content": [
       {
         "call": "root_node_instance",
@@ -12,7 +12,15 @@
         }
       },
       {
+        "without": ["asset_id"],
         "playback": "create_$asset_id"
+      },
+      {
+        "required": "%make_remote",
+        "playback": "delegate_create_car",
+        "let": {
+          "car_creator": "register_local_car"
+        }
       },
       {
         "required": "%if_playback_track",

@@ -33,6 +33,7 @@
         }
       },
       {
+        "without": ["asset_id"],
         "playback": "create_$asset_id"
       },
       {
@@ -107,10 +108,7 @@
     "declare_macro": "create_player_skater_internals",
     "content": [
       {
-        "playback": "create_player_skater_internals_$asset_id",
-        "arguments": {
-          "name": "%asset_id"
-        }
+        "playback": "create_player_skater_internals_$asset_id"
       }
     ]
   }

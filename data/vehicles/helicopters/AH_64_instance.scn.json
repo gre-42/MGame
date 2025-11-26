@@ -1,4 +1,8 @@
 [
+  {
+    "declare_macro": "remote.vehicle.create_AH_64",
+    "content": { "playback": "create_AH_64" }
+  },
   {"include": "vehicles/create_common_hud.scn.json"},
   {"include": "vehicles/make_vehicle_damageable.scn.json"},
   {"include": "wheels/FN_wheel_resource.scn.json"},
@@ -364,9 +368,6 @@
   },
   {
     "declare_macro": "create_AH_64",
-    "let": {
-      "decimate": ""
-    },
     "content": [
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_front_node$suffix",  "position": [-1.0,  0.35, -1.1]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_front_node$suffix", "position": [ 1.0,  0.35, -1.1]}},
@@ -397,7 +398,7 @@
       {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "tail_rotor_node$suffix", "position": [0, 3.4, 9.1]}},
       {"required": "%if_with_graphics", "call": "relative_transformer", "arguments": {"node": "tail_rotor_node$suffix", "w": [300, 0, 0]}},
       {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "tail_rotor_node$suffix", "name": "tail_rotor_shift_node$suffix", "position": [0, -3.4, -9.1]}},
-      {"required": "%if_with_graphics", "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%decimate"}},
+      {"required": "%if_with_graphics", "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "%suffix", "lod_decimate": "%%vehicles/AH_64/decimate"}},
       {"required": "%if_with_graphics", "playback": "create_AH_64_graphics", "arguments": {"node_suffix": "%suffix", "lod_suffix": "_d5$suffix", "lod_decimate": "_d5"}},
       {
         "required": "%if_with_physics",

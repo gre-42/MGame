@@ -1,0 +1,37 @@
+[
+  {
+    "declare_macro": "delegate_create_avatar",
+    "content": {
+      "call": "%avatar_creator",
+      "arguments": {
+        "asset_id": "%asset_id",
+        "suffix": "%suffix",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "if_human_style": "%if_human_style",
+        "if_damageable": "%if_damageable",
+        "color": "%color",
+        "parking_brake_pulled": false,
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "mute": "%mute",
+        "with_gun": "%if_with_gun",
+        "velocity_error_std": "%velocity_error_std",
+        "yaw_error_std": "%yaw_error_std",
+        "pitch_error_std": "%pitch_error_std",
+        "error_alpha": "%error_alpha",
+        "locked_on_angle": 20,
+        "dyaw_max": 10,
+        "pitch_min": -60,
+        "pitch_max": 60,
+        "dpitch_max": 10,
+        "steering_multiplier": 1,
+        "animation_resource_wo_gun": "cmu_mocap",
+        "animation_resource_w_gun": "xonotic_pyria",
+        "y_fov": 60,
+        "near_plane": 0.1,
+        "far_plane": "%far_plane"
+      }
+    }
+  }
+]

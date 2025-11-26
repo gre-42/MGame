@@ -4,38 +4,8 @@
   {
     "declare_macro": "generic_avatar.create_fast",
     "content": {
-      "call": "create_generic_avatar",
-      "arguments": {
-        "name": "%asset_id",
-        "suffix": "%suffix",
-        "decimate": "%decimate",
-        "decimate1": "%decimate1",
-        "if_with_graphics": "%if_with_graphics",
-        "if_with_physics": "%if_with_physics",
-        "if_human_style": "%if_human_style",
-        "if_damageable": "%if_damageable",
-        "color": "%color",
-        "parking_brake_pulled": false,
-        "velocity": "%velocity",
-        "angular_velocity": "%angular_velocity",
-        "mute": "%mute",
-        "with_gun": "%if_with_gun",
-        "velocity_error_std": "%velocity_error_std",
-        "yaw_error_std": "%yaw_error_std",
-        "pitch_error_std": "%pitch_error_std",
-        "error_alpha": "%error_alpha",
-        "locked_on_angle": 20,
-        "dyaw_max": 10,
-        "pitch_min": -60,
-        "pitch_max": 60,
-        "dpitch_max": 10,
-        "steering_multiplier": 1,
-        "animation_resource_wo_gun": "cmu_mocap",
-        "animation_resource_w_gun": "xonotic_pyria",
-        "y_fov": 60,
-        "near_plane": 0.1,
-        "far_plane": "%far_plane"
-      }
+      "playback": "delegate_create_avatar",
+      "arguments": { "avatar_creator": "create_generic_avatar" }
     }
   },
   {
@@ -302,8 +272,16 @@
         }
       },
       {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
-      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
-      {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst-$decimate1", "node": "animation_node$suffix", "resource": "$asset_id-$decimate1"}},
+      {
+        "let": {
+          "decimate": "%%vehicles/$asset_id/decimate",
+          "decimate1": "%%vehicles/$asset_id/decimate1"
+        },
+        "execute": [
+          {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst", "node": "animation_node$suffix", "resource": "$asset_id$decimate"}},
+          {"required": "%if_with_graphics", "call": "child_renderable_instance", "arguments": {"name": "human-inst-$decimate1", "node": "animation_node$suffix", "resource": "$asset_id-$decimate1"}}
+        ]
+      },
       {
         "call": "set_available_seats",
         "arguments": {

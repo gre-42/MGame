@@ -1,5 +1,9 @@
 [
   {
+    "declare_macro": "remote.vehicle.create_compact0",
+    "content": { "playback": "create_compact0" }
+  },
+  {
     "declare_macro": "create_compact0",
     "# content": {
       "playback": "generic_car.create",
@@ -12,10 +16,7 @@
     },
     "content": {
       "playback": "generic_car.create_fast",
-      "let": {
-        "name": "compact0",
-        "decimate": ""
-      }
+      "let": { "asset_id": "compact0" }
     }
   },
   {

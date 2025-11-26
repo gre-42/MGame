@@ -44,8 +44,9 @@
   {
     "declare_macro": "_create_showroom_vehicle",
     "content": {
-      "playback": "create_$vehicle_class",
+      "playback": "local.create_$vehicle_class",
       "let": {
+        "make_remote": false,
         "asset_id": "%vehicle_name",
         "human_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
         "skater_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],

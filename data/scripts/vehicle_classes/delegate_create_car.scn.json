@@ -1,0 +1,25 @@
+[
+  {
+    "declare_macro": "delegate_create_car",
+    "content": {
+      "call": "%car_creator",
+      "arguments": {
+        "asset_id": "%asset_id",
+        "suffix": "%suffix",
+        "if_with_graphics": "%if_with_graphics",
+        "if_with_physics": "%if_with_physics",
+        "if_car_body_renderable_style": "%if_car_body_renderable_style",
+        "if_damageable": "%if_damageable",
+        "color": "%color",
+        "parking_brake_pulled": "%parking_brake_pulled",
+        "velocity": "%velocity",
+        "angular_velocity": "%angular_velocity",
+        "mute": "%mute",
+        "velocity_error_std": "%velocity_error_std",
+        "yaw_error_std": "%yaw_error_std",
+        "pitch_error_std": "%pitch_error_std",
+        "error_alpha": "%error_alpha"
+      }
+    }
+  }
+]

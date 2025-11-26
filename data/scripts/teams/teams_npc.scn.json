@@ -47,8 +47,9 @@
     "declare_macro": "teams.create_avatar_for_npc",
     "content": [
       {
-        "playback": "create_avatar",
+        "playback": "local.create_avatar",
         "let": {
+          "make_remote": true,
           "if_with_gun": true,
           "if_spawner": true,
           "if_player": true,
@@ -82,8 +83,9 @@
     "declare_macro": "teams.create_car_for_npc",
     "content": [
       {
-        "playback": "create_car",
+        "playback": "local.create_car",
         "let": {
+          "make_remote": true,
           "if_playback_track": false,
           "if_playback_winner": false,
           "if_spawner": true,

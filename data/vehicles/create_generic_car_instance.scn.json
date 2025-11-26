@@ -4,28 +4,28 @@
   {
     "declare_macro": "generic_car.create_graphics",
     "content": [
-      {"call": "child_renderable_instance", "arguments": {"name": "main$name_suffix", "node": "car_node$node_suffix", "resource": "$name/main$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "main$name_suffix", "node": "car_node$node_suffix", "resource": "$asset_id/main$lod_decimate"}},
 
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$name/wheel_front$lod_decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$name/wheel_front$lod_decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$name/wheel_rear$lod_decimate"}},
-      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$name/wheel_rear$lod_decimate"}}
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_front_node$node_suffix", "resource": "$asset_id/wheel_front$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_front_node_visual$node_suffix", "resource": "$asset_id/wheel_front$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_left_rear_node$node_suffix", "resource": "$asset_id/wheel_rear$lod_decimate"}},
+      {"call": "child_renderable_instance", "arguments": {"name": "wheel$name_suffix", "node": "wheel_right_rear_node_visual$node_suffix", "resource": "$asset_id/wheel_rear$lod_decimate"}}
     ]
   },
   {
     "declare_macro": "generic_car.create_lights",
     "content": [
       {
-        "required": "(%%vehicles/$name/light_left_front_position != %null)",
+        "required": "(%%vehicles/$asset_id/light_left_front_position != %null)",
         "execute": [
-          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "light_left_front$suffix",  "position": "%%vehicles/$name/light_left_front_position"}},
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "light_left_front$suffix",  "position": "%%vehicles/$asset_id/light_left_front_position"}},
           {"call": "child_renderable_instance", "arguments": {"name": "blob$suffix", "node": "light_left_front$suffix",  "resource": "car_light_beam"}}
         ]
       },
       {
-        "required": "(%%vehicles/$name/light_right_front_position != %null)",
+        "required": "(%%vehicles/$asset_id/light_right_front_position != %null)",
         "execute": [
-          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "light_right_front$suffix", "position": "%%vehicles/$name/light_right_front_position"}},
+          {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "light_right_front$suffix", "position": "%%vehicles/$asset_id/light_right_front_position"}},
           {"call": "child_renderable_instance", "arguments": {"name": "blob$suffix", "node": "light_right_front$suffix", "resource": "car_light_beam"}}
         ]
       }
@@ -38,17 +38,17 @@
         "call": "rigid_cuboid",
         "arguments": {
           "node": "car_node$suffix",
-          "hitboxes": "$name-_hitboxes",
+          "hitboxes": "$asset_id-_hitboxes",
           "v": "%velocity",
           "w": "%angular_velocity",
           "with_penetration_limits": true,
-          "mass": "%%vehicles/$name/mass",
-          "size": "%%vehicles/$name/size",
-          "com": "%%vehicles/$name/com",
+          "mass": "%%vehicles/$asset_id/mass",
+          "size": "%%vehicles/$asset_id/size",
+          "com": "%%vehicles/$asset_id/com",
           "collidable_mode": "collide|move",
-          "name": "generic_car_$name$suffix",
+          "name": "generic_car_$asset_id$suffix",
           "waypoint_dy": "%%vehicles/$asset_id/waypoint_dy",
-          "asset_id": "%name"
+          "asset_id": "%asset_id"
         }
       },
       {
@@ -87,18 +87,18 @@
       {"comment": {"call": "child_renderable_instance", "arguments": {"name": "gizmo", "node": "com_node$suffix", "resource": "gizmo"}}},
 
       {
-        "required": "(%%vehicles/$name/front_engine != %%vehicles/$name/rear_engine)",
+        "required": "(%%vehicles/$asset_id/front_engine != %%vehicles/$asset_id/rear_engine)",
         "execute": [
           {
             "call": "create_engine",
             "arguments": {
               "rigid_body": "car_node$suffix",
               "name": "front",
-              "angular_vels": "%%vehicles/$name/angular_vels_front",
-              "powers": "%%vehicles/$name/powers_front",
-              "gear_ratios": "%%vehicles/$name/gear_ratios",
-              "w_clutch": "%%vehicles/$name/w_clutch",
-              "max_dw": "%%vehicles/$name/max_dw",
+              "angular_vels": "%%vehicles/$asset_id/angular_vels_front",
+              "powers": "%%vehicles/$asset_id/powers_front",
+              "gear_ratios": "%%vehicles/$asset_id/gear_ratios",
+              "w_clutch": "%%vehicles/$asset_id/w_clutch",
+              "max_dw": "%%vehicles/$asset_id/max_dw",
               "parking_brake_pulled": "%parking_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
@@ -113,11 +113,11 @@
             "arguments": {
               "rigid_body": "car_node$suffix",
               "name": "rear",
-              "angular_vels": "%%vehicles/$name/angular_vels_rear",
-              "powers": "%%vehicles/$name/powers_rear",
-              "gear_ratios": "%%vehicles/$name/gear_ratios",
-              "w_clutch": "%%vehicles/$name/w_clutch",
-              "max_dw": "%%vehicles/$name/max_dw",
+              "angular_vels": "%%vehicles/$asset_id/angular_vels_rear",
+              "powers": "%%vehicles/$asset_id/powers_rear",
+              "gear_ratios": "%%vehicles/$asset_id/gear_ratios",
+              "w_clutch": "%%vehicles/$asset_id/w_clutch",
+              "max_dw": "%%vehicles/$asset_id/max_dw",
               "parking_brake_pulled": "%parking_brake_pulled",
               "audio": {
                 "name": "%%engine_audio/$engine_audio/name",
@@ -131,17 +131,17 @@
       },
       {
         "required": [
-          "(%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine)",
-          "(%%vehicles/$name/powers != %null)"],
+          "(%%vehicles/$asset_id/front_engine == %%vehicles/$asset_id/rear_engine)",
+          "(%%vehicles/$asset_id/powers != %null)"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$suffix",
           "name": "engine",
-          "angular_vels": "%%vehicles/$name/angular_vels",
-          "powers": "%%vehicles/$name/powers",
-          "gear_ratios": "%%vehicles/$name/gear_ratios",
-          "w_clutch": "%%vehicles/$name/w_clutch",
-          "max_dw": "%%vehicles/$name/max_dw",
+          "angular_vels": "%%vehicles/$asset_id/angular_vels",
+          "powers": "%%vehicles/$asset_id/powers",
+          "gear_ratios": "%%vehicles/$asset_id/gear_ratios",
+          "w_clutch": "%%vehicles/$asset_id/w_clutch",
+          "max_dw": "%%vehicles/$asset_id/max_dw",
           "parking_brake_pulled": "%parking_brake_pulled",
           "audio": {
             "name": "%%engine_audio/$engine_audio/name",
@@ -153,8 +153,8 @@
       },
       {
         "required": [
-          "(%%vehicles/$name/front_engine == %%vehicles/$name/rear_engine)",
-          "(%%vehicles/$name/powers == %null)"],
+          "(%%vehicles/$asset_id/front_engine == %%vehicles/$asset_id/rear_engine)",
+          "(%%vehicles/$asset_id/powers == %null)"],
         "call": "create_engine",
         "arguments": {
           "rigid_body": "car_node$suffix",
@@ -173,8 +173,8 @@
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_front$name$suffix",
-          "asset_id": "wheel_left_front$name"
+          "name": "wheel_left_front$asset_id$suffix",
+          "asset_id": "wheel_left_front$asset_id"
         }
       },
       {
@@ -182,12 +182,12 @@
         "arguments": {
           "vehicle": "car_node$suffix",
           "wheel": "wheel_left_front_node$suffix",
-          "vehicle_mount_0": "%%vehicles/$name/wheel_left_front_mount_0",
-          "vehicle_mount_1": "%%vehicles/$name/wheel_left_front_mount_1",
+          "vehicle_mount_0": "%%vehicles/$asset_id/wheel_left_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$asset_id/wheel_left_front_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$name/front_engine",
+          "engine": "%%vehicles/$asset_id/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$name/brake_torque",
+          "brake_torque": "%%vehicles/$asset_id/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -206,8 +206,8 @@
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_front$name$suffix",
-          "asset_id": "wheel_right_front$name"
+          "name": "wheel_right_front$asset_id$suffix",
+          "asset_id": "wheel_right_front$asset_id"
         }
       },
       {
@@ -215,12 +215,12 @@
         "arguments": {
           "vehicle": "car_node$suffix",
           "wheel": "wheel_right_front_node$suffix",
-          "vehicle_mount_0": "%%vehicles/$name/wheel_right_front_mount_0",
-          "vehicle_mount_1": "%%vehicles/$name/wheel_right_front_mount_1",
+          "vehicle_mount_0": "%%vehicles/$asset_id/wheel_right_front_mount_0",
+          "vehicle_mount_1": "%%vehicles/$asset_id/wheel_right_front_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$name/front_engine",
+          "engine": "%%vehicles/$asset_id/front_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$name/brake_torque",
+          "brake_torque": "%%vehicles/$asset_id/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -239,8 +239,8 @@
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_left_rear$name$suffix",
-          "asset_id": "wheel_left_rear$name"
+          "name": "wheel_left_rear$asset_id$suffix",
+          "asset_id": "wheel_left_rear$asset_id"
         }
       },
       {
@@ -248,12 +248,12 @@
         "arguments": {
           "vehicle": "car_node$suffix",
           "wheel": "wheel_left_rear_node$suffix",
-          "vehicle_mount_0": "%%vehicles/$name/wheel_left_rear_mount_0",
-          "vehicle_mount_1": "%%vehicles/$name/wheel_left_rear_mount_1",
+          "vehicle_mount_0": "%%vehicles/$asset_id/wheel_left_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$asset_id/wheel_left_rear_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$name/rear_engine",
+          "engine": "%%vehicles/$asset_id/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$name/brake_torque",
+          "brake_torque": "%%vehicles/$asset_id/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -272,8 +272,8 @@
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
           "collidable_mode": "none",
-          "name": "wheel_right_rear$name$suffix",
-          "asset_id": "wheel_right_rear$name"
+          "name": "wheel_right_rear$asset_id$suffix",
+          "asset_id": "wheel_right_rear$asset_id"
         }
       },
       {
@@ -281,12 +281,12 @@
         "arguments": {
           "vehicle": "car_node$suffix",
           "wheel": "wheel_right_rear_node$suffix",
-          "vehicle_mount_0": "%%vehicles/$name/wheel_right_rear_mount_0",
-          "vehicle_mount_1": "%%vehicles/$name/wheel_right_rear_mount_1",
+          "vehicle_mount_0": "%%vehicles/$asset_id/wheel_right_rear_mount_0",
+          "vehicle_mount_1": "%%vehicles/$asset_id/wheel_right_rear_mount_1",
           "radius": "%%wheels/$wheels/radius",
-          "engine": "%%vehicles/$name/rear_engine",
+          "engine": "%%vehicles/$asset_id/rear_engine",
           "brake_force": 50000,
-          "brake_torque": "%%vehicles/$name/brake_torque",
+          "brake_torque": "%%vehicles/$asset_id/brake_torque",
           "Ks": 1e5,
           "Ka": 1.5e4,
           "musF": [4e3, 8e3],
@@ -297,19 +297,19 @@
 
       {
         "call": "set_trailer_hitch_positions",
-        "arguments": {"rigid_body": "car_node$suffix", "asset_id": "%name"}
+        "arguments": {"rigid_body": "car_node$suffix", "asset_id": "%asset_id"}
       },
 
       {
         "call": "create_car_controller",
         "arguments": {
           "node": "car_node$suffix",
-          "front_engine": "%%vehicles/$name/front_engine",
-          "rear_engine": "%%vehicles/$name/rear_engine",
+          "front_engine": "%%vehicles/$asset_id/front_engine",
+          "rear_engine": "%%vehicles/$asset_id/rear_engine",
           "front_tire_ids": [0, 1],
-          "max_tire_angle": "%%vehicles/$name/max_tire_angle",
-          "tire_angle_velocities": "%%vehicles/$name/tire_angle_velocities",
-          "tire_angles": "%%vehicles/$name/tire_angles"
+          "max_tire_angle": "%%vehicles/$asset_id/max_tire_angle",
+          "tire_angle_velocities": "%%vehicles/$asset_id/tire_angle_velocities",
+          "tire_angles": "%%vehicles/$asset_id/tire_angles"
         }
       },
 
@@ -325,21 +325,8 @@
   {
     "declare_macro": "generic_car.create_fast",
     "content": {
-      "call": "create_generic_car",
-      "arguments": {
-        "name": "%name",
-        "suffix": "%suffix",
-        "decimate": "%decimate",
-        "if_with_graphics": "%if_with_graphics",
-        "if_with_physics": "%if_with_physics",
-        "if_damageable": "%if_damageable",
-        "mute": "%mute",
-        "velocity": "%velocity",
-        "angular_velocity": "%angular_velocity",
-        "parking_brake_pulled": "%parking_brake_pulled",
-        "if_car_body_renderable_style": "%if_car_body_renderable_style",
-        "color": "%color"
-      }
+      "playback": "delegate_create_car",
+      "let": { "car_creator": "create_generic_car" }
     }
   },
   {
@@ -355,13 +342,13 @@
           "diffuse": "%color"
         }
       },
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_front_node$suffix",  "position": "%%vehicles/$name/wheel_left_front_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_front_node$suffix", "position": "%%vehicles/$name/wheel_right_front_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_rear_node$suffix",   "position": "%%vehicles/$name/wheel_left_rear_mount_0"}},
-      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_rear_node$suffix",  "position": "%%vehicles/$name/wheel_right_rear_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_front_node$suffix",  "position": "%%vehicles/$asset_id/wheel_left_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_front_node$suffix", "position": "%%vehicles/$asset_id/wheel_right_front_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_rear_node$suffix",   "position": "%%vehicles/$asset_id/wheel_left_rear_mount_0"}},
+      {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_rear_node$suffix",  "position": "%%vehicles/$asset_id/wheel_right_rear_mount_0"}},
 
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$suffix", "node": "car_node$suffix", "resource": "$name-_hitboxes"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$suffix", "node": "car_node$suffix", "resource": "$name-_massbox"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_hitboxes"}}},
+      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_massbox"}}},
       {"comment": "renderable_instance name=generic_car_topdown_locator$suffix node=car_node$node_suffix resource=topdown_locator"},
 
       {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$suffix", "name": "wheel_right_front_node_visual$suffix", "rotation": [0, 180, 0]}},
