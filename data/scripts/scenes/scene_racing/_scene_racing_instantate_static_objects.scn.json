@@ -150,7 +150,13 @@
                 "driving_direction": "center"
               }
             },
-            { "call": "add_vip", "arguments": {"player": "$vip_name-_$full_user_name"} },
+            {
+              "required": "%if_create_pc_player",
+              "call": "add_vip",
+              "arguments": {
+                "player": "$vip_name-_$full_user_name"
+              }
+            },
             {
               "required": "%if_create_pc_player",
               "call": "spawner_create",
