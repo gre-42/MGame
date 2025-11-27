@@ -18,9 +18,8 @@
       },
       { "call": "spawner_create", "arguments": { "name": "%player_name", "team": "%team", "group": "%spawn_group", "trigger": "team_deathmatch" } },
       { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
-      {
-        "playback": "set_player_skills"
-      }
+      { "playback": "set_player_skills" },
+      { "call": "add_vip", "arguments": {"player": "%player_name"} }
     ]
   },
   {

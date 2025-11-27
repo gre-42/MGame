@@ -22,11 +22,7 @@
         {"playback": "traffic.create_npc_and_driving_car", "arguments": {"spawner_name": "npc13", "car_name": "LK4", "color": [0.07, 0.22, 0.24]}},
         {"playback": "traffic.create_npc_and_parking_car", "arguments": {"spawner_name": "npc14", "car_name": "LK4", "color": [0.95, 0.80, 0.25]}},
         {"playback": "traffic.create_npc_and_parking_car", "arguments": {"spawner_name": "npc15", "car_name": "LK4", "color": [0.74, 0.67, 0.56]}},
-        {"playback": "traffic.create_npc_and_parking_car", "arguments": {"spawner_name": "npc16", "car_name": "LK4", "color": [0.85, 0.10, 0.09]}},
-        {
-          "call": "for_each_user",
-          "arguments": {"content": {"call": "add_vip", "arguments": {"player": "$vip_name-_$full_user_name"}}}
-        }
+        {"playback": "traffic.create_npc_and_parking_car", "arguments": {"spawner_name": "npc16", "car_name": "LK4", "color": [0.85, 0.10, 0.09]}}
       ]
     }
   ]

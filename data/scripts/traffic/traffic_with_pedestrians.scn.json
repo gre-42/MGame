@@ -36,11 +36,7 @@
         {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc3", "driver_name": "dh_npc3", "asset_id": "sedan0",      "color": [0.74, 0.22, 0.24]}},
         {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc4", "driver_name": "dh_npc4", "asset_id": "ambulance0",  "color": [1.00, 1.00, 1.00]}},
         {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc5", "driver_name": "dh_npc5", "asset_id": "sedan0",      "color": [0.95, 0.80, 0.25]}},
-        {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc6", "driver_name": "dh_npc6", "asset_id": "sports_car0", "color": [0.51, 0.56, 0.62]}},
-        {
-          "call": "for_each_user",
-          "arguments": {"content": {"call": "add_vip", "arguments": {"player": "$vip_name-_$full_user_name"}}}
-        }
+        {"playback": "traffic.create_npc_and_driving_car", "let": {"spawner_name": "dc_npc6", "driver_name": "dh_npc6", "asset_id": "sports_car0", "color": [0.51, 0.56, 0.62]}}
       ]
     }
   ]
