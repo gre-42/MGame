@@ -187,9 +187,15 @@
               "required": "%if_create_pc_player",
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
-            },
+            }
+          ]
+        }
+      },
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": [
             {
-              "required": "%user_is_local",
               "execute": [
                 { "playback": "add_local_skidmarks_scene" },
                 { "playback": "add_local_water_waves_scene" },
