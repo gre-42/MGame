@@ -1,7 +1,7 @@
 {
   "declare_macro": "create_car_cameras_plane",
   "content": [
-    {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "c45_deg_camera_$full_user_name", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
+    {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "c45_deg_camera_$full_user_name", "position": [0, 2000, 2400], "rotation": [-45, 0, 0], "interpolation": "enabled_wo_checks"}},
     {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "follower_camera_$full_user_name", "position": [0, 10, 10]}},
     {"call": "perspective_camera", "arguments": {"node": "c45_deg_camera_$full_user_name", "y_fov": 30, "near_plane": 1, "far_plane": 10000, "requires_postprocessing": false}},
     {"call": "perspective_camera", "arguments": {"node": "follower_camera_$full_user_name", "y_fov": 60, "near_plane": 1, "far_plane": "%far_plane", "requires_postprocessing": true}},

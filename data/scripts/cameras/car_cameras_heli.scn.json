@@ -2,7 +2,7 @@
   {
     "declare_macro": "create_car_cameras_heli",
     "content": [
-      {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "c45_deg_camera_$full_user_name", "position": [0, 2000, 2400], "rotation": [-45, 0, 0]}},
+      {"call": "root_node_instance", "arguments": {"dynamics": "moving", "name": "c45_deg_camera_$full_user_name", "position": [0, 2000, 2400], "rotation": [-45, 0, 0], "interpolation": "enabled_wo_checks"}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "follower_camera_$full_user_name", "position": [0, 10, 10]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "main_gun_node$suffix", "name": "main_gun_camera_node$full_user_name", "position": [0, 0.5, -2]}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "cockpit_camera_node_$full_user_name", "position": [0, 0.5, -1]}},
