@@ -118,7 +118,7 @@ jobs:
         # Disabled because the OpenSSL version was outdated (07.08.2025)
         # choco install openssl -y || exit /b
         run: |
-          vcpkg install boost-asio boost-headers || exit /b
+          vcpkg install boost-asio boost-headers boost-xpressive || exit /b
           PowerShell -ExecutionPolicy Bypass Mlib/install_openssl.ps1 || exit /b
           PowerShell -ExecutionPolicy Bypass Mlib/build_openal_soft_and_freealut.ps1 || exit /b
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
