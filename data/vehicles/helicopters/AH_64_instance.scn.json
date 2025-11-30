@@ -1,8 +1,4 @@
 [
-  {
-    "declare_macro": "remote.vehicle.create_AH_64",
-    "content": { "playback": "create_AH_64" }
-  },
   {"include": "vehicles/create_common_hud.scn.json"},
   {"include": "vehicles/make_vehicle_damageable.scn.json"},
   {"include": "wheels/FN_wheel_resource.scn.json"},

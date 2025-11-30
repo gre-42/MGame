@@ -1,18 +1,6 @@
 [
   {"include": "vehicles/create_generic_avatar_instance.scn.json"},
   {
-    "declare_macro": "remote.vehicle.create_female_mh",
-    "content": { "playback": "create_female_mh" }
-  },
-  {
-    "declare_macro": "remote.vehicle.create_female_skirt",
-    "content": { "playback": "create_female_skirt" }
-  },
-  {
-    "declare_macro": "remote.vehicle.create_male_mh",
-    "content": { "playback": "create_male_mh" }
-  },
-  {
     "declare_macro": "create_female_mh",
     "content": {
       "playback": "generic_avatar.create_fast",

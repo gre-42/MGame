@@ -1,8 +1,4 @@
 [
-  {
-    "declare_macro": "remote.vehicle.create_tiger_tank",
-    "content": { "playback": "create_tiger_tank" }
-  },
   {"include": "vehicles/create_common_hud.scn.json"},
   {"include": "vehicles/make_vehicle_damageable.scn.json"},
   {

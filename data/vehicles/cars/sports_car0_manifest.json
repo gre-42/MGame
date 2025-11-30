@@ -1,7 +1,13 @@
 {
   "id": "sports_car0",
   "title": "Sports car 0",
-  "on_init": {"include": "sports_car0.scn.json"},
+  "on_init": [
+    { "include": "sports_car0.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_sports_car0",
+      "content": { "playback": "create_sports_car0" }
+    }
+  ],
   "on_before_select": {
     "call": "globals",
     "arguments": {

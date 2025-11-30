@@ -1,9 +1,5 @@
 [
   {
-    "declare_macro": "remote.vehicle.create_C_RAM",
-    "content": { "playback": "create_C_RAM" }
-  },
-  {
     "declare_macro": "create_C_RAM_graphics",
     "content": [
       {"call": "child_renderable_instance", "arguments": {"name": "chassis$lod_suffix", "node": "car_node$node_suffix", "resource": "C_RAM$lod_decimate", "included_names": "'^Base'"}},

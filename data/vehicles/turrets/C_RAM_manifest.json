@@ -2,8 +2,12 @@
   "id": "C_RAM",
   "title": "C-RAM",
   "on_init": [
-    {"include": "C_RAM_resource.scn.json"},
-    {"include": "C_RAM_instance.scn.json"}
+    { "include": "C_RAM_resource.scn.json" },
+    { "include": "C_RAM_instance.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_C_RAM",
+      "content": { "playback": "create_C_RAM" }
+    }
   ],
   "on_before_select": {
     "call": "globals",

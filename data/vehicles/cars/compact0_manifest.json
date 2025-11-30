@@ -1,7 +1,13 @@
 {
   "id": "compact0",
   "title": "Compact 0",
-  "on_init": {"include": "compact0.scn.json"},
+  "on_init": [
+    { "include": "compact0.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_compact0",
+      "content": { "playback": "create_compact0" }
+    }
+  ],
   "on_before_select": {
     "call": "globals",
     "arguments": {
