@@ -3,9 +3,11 @@
     "declare_macro": "load_languages",
     "content": [
       {
-        "call": "set_user_count",
-        "arguments": {
-          "user_count": "%user_count"
+        "comment": {
+          "call": "set_user_count",
+          "arguments": {
+            "user_count": "%user_count"
+          }
         }
       },
       {
