@@ -413,24 +413,27 @@
           "line_distance": "normal",
           "local_user_id": "%local_user_id",
           "deflt": 0,
-          "on_execute": [
-            {
-              "required": "(%selected_level_id != %loaded_level_id)",
-              "execute": {
-                "call": "reload_scene",
-                "arguments": {
-                  "change_scene": true
+          "on_execute": {
+            "required": "(%remote_role != 'client')",
+            "execute": [
+              {
+                "required": "(%selected_level_id != %loaded_level_id)",
+                "execute": {
+                  "call": "reload_scene",
+                  "arguments": {
+                    "change_scene": true
+                  }
+                }
+              },
+              {
+                "required": "(%selected_level_id == %loaded_level_id)",
+                "execute": {
+                  "playback": "_reload_transient_objects_in_physics_thread",
+                  "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"]
                 }
               }
-            },
-            {
-              "required": "(%selected_level_id == %loaded_level_id)",
-              "execute": {
-                "playback": "_reload_transient_objects_in_physics_thread",
-                "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"]
-              }
-            }
-          ],
+            ]
+          },
           "z_order": 2
         }
       }
