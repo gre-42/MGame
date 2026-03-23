@@ -12,5 +12,6 @@ newmtl lambert2
 Ka 0 0 0
 Kd 1 1 1
 Ks 1 1 1
-map_Kd textures/Apache_specular.png
+map_Kd textures/ah64_hull.png
+map_Bump  -bm 1.000000 textures/Apache_nrm.png
 map_Ks textures/Apache_specular.png
