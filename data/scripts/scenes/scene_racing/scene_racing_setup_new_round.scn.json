@@ -23,7 +23,7 @@
       "context": "primary_scene"
     },
     {
-      "exclude": ["%if_tripod_mode", "%if_tripod_mode_old"],
+      "exclude": ["%if_spectator_mode", "%if_spectator_mode_old"],
       "context": "primary_scene",
       "execute": [
         {
@@ -34,26 +34,26 @@
                 "call": "set_camera_cycle",
                 "context": "primary_scene_$full_user_name",
                 "arguments": {
-                  "name": "tripod",
+                  "name": "spectator",
                   "cameras": []
                 }
               },
               {
                 "call": "delete_root_nodes",
                 "arguments": {
-                  "regex": "'^tripod_node.*$'"
+                  "regex": "'^spectator_node.*$'"
                 }
               },
               {
-                "required": "%if_tripod_mode",
-                "playback": "create_tripod_cameras"
+                "required": "%if_spectator_mode",
+                "playback": "create_spectator_cameras"
               }
             ]
           }
         },
         {
           "call": "globals",
-          "arguments": { "if_tripod_mode_old": "%if_tripod_mode" }
+          "arguments": { "if_spectator_mode_old": "%if_spectator_mode" }
         }
       ]
     }

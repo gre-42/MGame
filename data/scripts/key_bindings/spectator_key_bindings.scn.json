@@ -1,5 +1,5 @@
 {
-  "declare_macro": "create_tripod_key_bindings",
+  "declare_macro": "create_spectator_key_bindings",
   "content": [
     {
       "call": "create_print_camera_node_info_key_binding",
@@ -10,10 +10,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_left",
+        "id": "spectator.move_left",
         "seat": "default",
         "translation": [-1, 0, 0],
         "velocity": 400,
@@ -23,10 +23,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_right",
+        "id": "spectator.move_right",
         "seat": "default",
         "translation": [1, 0, 0],
         "velocity": 400,
@@ -36,10 +36,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_up",
+        "id": "spectator.move_up",
         "seat": "default",
         "translation": [0, 1, 0],
         "velocity": 400,
@@ -49,10 +49,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_down",
+        "id": "spectator.move_down",
         "seat": "default",
         "translation": [0, -1, 0],
         "velocity": 400,
@@ -62,10 +62,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_forward",
+        "id": "spectator.move_forward",
         "seat": "default",
         "translation": [0, 0, -1],
         "velocity": 400,
@@ -75,10 +75,10 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "tripod.move_backwards",
+        "id": "spectator.move_backwards",
         "seat": "default",
         "translation": [0, 0, 1],
         "velocity": 400,
@@ -88,7 +88,7 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
         "id": "avatar.rotate_left",
@@ -101,7 +101,7 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
         "id": "avatar.rotate_right",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
         "id": "avatar.rotate_up",
@@ -127,7 +127,7 @@
       }
     },
     {
-      "call": "rel_key_binding_tripod",
+      "call": "rel_key_binding_spectator",
       "arguments": {
         "local_user_id": "%local_user_id",
         "id": "avatar.rotate_down",

@@ -5,7 +5,7 @@
     "gamepad_button": {"default": {"gamepad_id": 0, "button": "BACK"}}
   },
   {
-    "id": "change_camera.tripod",
+    "id": "change_camera.spectator",
     "key": "X"
   },
   {
@@ -19,27 +19,27 @@
     "not_key": "LEFT_CONTROL"
   },
   {
-    "id": "tripod.move_up",
+    "id": "spectator.move_up",
     "key": "O"
   },
   {
-    "id": "tripod.move_down",
+    "id": "spectator.move_down",
     "key": "U"
   },
   {
-    "id": "tripod.move_left",
+    "id": "spectator.move_left",
     "key": "J"
   },
   {
-    "id": "tripod.move_right",
+    "id": "spectator.move_right",
     "key": "L"
   },
   {
-    "id": "tripod.move_forward",
+    "id": "spectator.move_forward",
     "key": "I"
   },
   {
-    "id": "tripod.move_backwards",
+    "id": "spectator.move_backwards",
     "key": "K"
   },
   {

@@ -15,7 +15,7 @@
     }
   },
   {"include": "osm_resource_island0.scn.json"},
-  {"include": "create_tripod_cameras_island0.scn.json"},
+  {"include": "create_spectator_cameras_island0.scn.json"},
   {
     "playback": "scene_racing_static",
     "arguments": {
@@ -50,7 +50,7 @@
     "content": {
       "playback": "scene_racing_instantiate_transient_objects",
       "let": {
-        "if_create_pc_car": "!if_tripod_mode",
+        "if_create_pc_car": "!if_spectator_mode",
         "if_pc_player_playback": false,
         "recordings_dir": "%__DIR__",
         "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
@@ -60,8 +60,8 @@
         "if_playback_track_1": false,
         "if_playback_track_2": false,
         "if_playback_track_3": false,
-        "if_checkpoints": "!if_tripod_mode",
-        "if_burn_in": "!if_tripod_mode"
+        "if_checkpoints": "!if_spectator_mode",
+        "if_burn_in": "!if_spectator_mode"
       }
     }
   },

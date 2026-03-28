@@ -436,7 +436,7 @@
               {
                 "required": "%if_devel",
                 "call": "camera_key_binding",
-                "arguments": {"local_user_id": "%local_user_id", "id": "change_camera.tripod", "tpe": "tripod"}
+                "arguments": {"local_user_id": "%local_user_id", "id": "change_camera.spectator", "tpe": "spectator"}
               }
             ]
           }

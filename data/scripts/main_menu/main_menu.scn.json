@@ -909,10 +909,10 @@
         "required": ["%if_devel", "(%local_user_id == 0)"],
         "call": "parameter_setter",
         "arguments": {
-          "id": "tripod_mode",
+          "id": "spectator_mode",
           "focus_mask": "new_game_menu",
           "title": "%%translations/main/Spectator_mode/$selected_language",
-          "icon": "tripod_icon",
+          "icon": "spectator_icon",
           "charset": "%selected_language",
           "ttf_file": "fonts/RobotoMono-Bold.ttf",
           "left": "submenu_left",
@@ -925,8 +925,8 @@
           "local_user_id": "%local_user_id",
           "deflt": 1,
           "parameters": [
-            {"id": "enabled", "title": "%%translations/main/Enabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": true}}},
-            {"id": "disabled", "title": "%%translations/main/Disabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_tripod_mode": false}}}
+            {"id": "enabled", "title": "%%translations/main/Enabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_spectator_mode": true}}},
+            {"id": "disabled", "title": "%%translations/main/Disabled/$selected_language", "on_before_select": { "call": "globals", "arguments": {"if_spectator_mode": false}}}
           ]
         }
       },
@@ -934,7 +934,7 @@
         "call": "globals",
         "required": "(%local_user_id == 0)",
         "exclude": ["%if_devel"],
-        "arguments": { "if_tripod_mode": false }
+        "arguments": { "if_spectator_mode": false }
       },
       {
         "call": "parameter_setter",

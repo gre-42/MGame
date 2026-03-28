@@ -111,14 +111,14 @@
       "context": "primary_scene",
       "arguments": {
         "content": {
-          "playback": "create_tripod_key_bindings",
+          "playback": "create_spectator_key_bindings",
           "context": "primary_scene_$full_user_name"
         }
       }
     },
     {
       "call": "globals",
-      "arguments": { "if_tripod_mode_old": false }
+      "arguments": { "if_spectator_mode_old": false }
     }
   ]
 }

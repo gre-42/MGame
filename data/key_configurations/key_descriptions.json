@@ -8,9 +8,9 @@
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Change the \"tripod\" camera",
+    "title": "Change the \"spectator\" camera",
     "unique": "",
-    "id": "change_camera.tripod"
+    "id": "change_camera.spectator"
   },
   {
     "section": "camera",
@@ -28,44 +28,44 @@
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move up",
+    "title": "Spectator camera: Move up",
     "unique": "",
-    "id": "tripod.move_up"
+    "id": "spectator.move_up"
   },
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move down",
+    "title": "Spectator camera: Move down",
     "unique": "",
-    "id": "tripod.move_down"
+    "id": "spectator.move_down"
   },
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move to the left",
+    "title": "Spectator camera: Move to the left",
     "unique": "",
-    "id": "tripod.move_left"
+    "id": "spectator.move_left"
   },
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move to the right",
+    "title": "Spectator camera: Move to the right",
     "unique": "",
-    "id": "tripod.move_right"
+    "id": "spectator.move_right"
   },
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move forward",
+    "title": "Spectator camera: Move forward",
     "unique": "",
-    "id": "tripod.move_forward"
+    "id": "spectator.move_forward"
   },
   {
     "required": "%if_devel",
     "section": "debug",
-    "title": "Tripod camera: Move backwards",
+    "title": "Spectator camera: Move backwards",
     "unique": "",
-    "id": "tripod.move_backwards"
+    "id": "spectator.move_backwards"
   },
   {
     "section": "car_or_heli",

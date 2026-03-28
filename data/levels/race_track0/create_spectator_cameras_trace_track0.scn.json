@@ -1,10 +1,10 @@
 {
-  "declare_macro": "create_tripod_cameras",
+  "declare_macro": "create_spectator_cameras",
   "content": [
     {
-      "playback": "create_tripod_camera",
+      "playback": "create_spectator_camera",
       "arguments": {
-        "node_name": "tripod_node_$user_name",
+        "node_name": "spectator_node_$user_name",
         "position": [20, -154, -222],
         "rotation": [-34, 36, 0]
       }
@@ -13,8 +13,8 @@
       "call": "set_camera_cycle",
       "context": "primary_scene_$full_user_name",
       "arguments": {
-        "name": "tripod",
-        "cameras": ["tripod_node_$user_name"]
+        "name": "spectator",
+        "cameras": ["spectator_node_$user_name"]
       }
     }
   ]
