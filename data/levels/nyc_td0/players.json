@@ -87,6 +87,13 @@
       }
     },
     {
+      "name": "extra_tiger_tank", "team": "red",
+      "spawn": {
+        "group": "tank0",
+        "vehicle": { "type": "tiger_tank" }
+      }
+    },
+    {
       "name": "extra_van0", "team": "red",
       "spawn": {
         "group": "car0",

@@ -52,6 +52,8 @@
   <node id='-146928' action='modify' visible='true' lat='40.70961768439' lon='-73.99233684894' />
   <node id='-146932' action='modify' visible='true' lat='40.70974925006' lon='-73.992367186' />
   <node id='-146933' action='modify' visible='true' lat='40.70972682334' lon='-73.99248552919' />
+  <node id='-150772' action='modify' visible='true' lat='40.71063371628' lon='-73.99232248815' />
+  <node id='-150773' action='modify' visible='true' lat='40.71075257625' lon='-73.99236021004' />
   <way id='-240287' action='modify' visible='true'>
     <nd ref='-143034' />
     <nd ref='-143035' />
@@ -110,6 +112,12 @@
     <nd ref='-146932' />
     <nd ref='-146933' />
     <tag k='spawn:group' v='car1' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-249742' action='modify' visible='true'>
+    <nd ref='-150773' />
+    <nd ref='-150772' />
+    <tag k='spawn:group' v='tank0' />
     <tag k='spawn_line' v='yes' />
   </way>
 </osm>
