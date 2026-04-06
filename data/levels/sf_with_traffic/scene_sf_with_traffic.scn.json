@@ -12,7 +12,7 @@
         "rotation": [-90, 0, 0],
         "scale": 1
       },
-      "racing_line_track": "$__DIR__/racing_line_sf_with_traffic.m"
+      "racing_line_track": "file://$__DIR__/racing_line_sf_with_traffic.m"
     }
   },
   {"include": "scripts/include_all.scn.json"},
@@ -54,7 +54,7 @@
         "if_create_pc_car": true,
         "if_pc_player_playback": false,
         "recordings_dir": "%__DIR__",
-        "checkpoints_file": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+        "checkpoints_file": "file://$__APPDATA__/$loaded_level_id.checkpoints.m",
         "checkpoints": null,
         "pacenotes_file": null,
         "if_playback_checkpoints": false,
@@ -79,7 +79,7 @@
       "call": "preload",
       "context": "primary_scene",
       "arguments": {
-        "file": "$__DIR__/resources.json"
+        "file": "file://$__DIR__/resources.json"
       }
     }
   }

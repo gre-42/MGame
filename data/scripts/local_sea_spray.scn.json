@@ -22,12 +22,14 @@
           "call": "ortho_camera",
           "arguments": {
             "node": "sea_spray_node$suffix",
-            "near_plane": -1000,
-            "far_plane": 1000,
-            "left_plane": -100,
-            "right_plane": 100,
-            "bottom_plane": -100,
-            "top_plane": 100,
+            "config": {
+              "near_plane": -1000,
+              "far_plane": 1000,
+              "left_plane": -100,
+              "right_plane": 100,
+              "bottom_plane": -100,
+              "top_plane": 100
+            },
             "requires_postprocessing": false
           }
         }

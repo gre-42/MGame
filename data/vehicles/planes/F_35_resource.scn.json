@@ -5,7 +5,7 @@
       "call": "obj_resource",
       "arguments": {
         "name": "%name",
-        "filename": "models/sketchfab.com/f-35c-lightning-ii/$subdir/$name.obj",
+        "filename": "file://models/sketchfab.com/f-35c-lightning-ii/$subdir/$name.$mesh",
         "config": {
           "position": [0, -3, 0],
           "rotation": [0, 180, 0],
@@ -128,7 +128,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "F_35_tirelines",
-      "filename": "models/primitives/empty.obj",
+      "filename": "file://models/primitives/empty.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -140,7 +140,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_tire"
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
       }
     }
   },

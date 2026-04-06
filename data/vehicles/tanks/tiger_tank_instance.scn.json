@@ -90,7 +90,7 @@
           "arguments": {
             "node": "car_node$suffix",
             "format": 264,
-            "ttf_file": "fonts/RobotoMono-Bold.ttf",
+            "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
             "offset": [0, 0.3],
             "font_height": 16,
             "line_distance": 16
@@ -221,7 +221,7 @@
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_nodes": ["main_gun_camera_node$suffix"],
           "ypln_node": "turret_node$suffix",
-          "filename": "textures/hud/crosshair.png",
+          "filename": "file://textures/hud/crosshair.png",
           "center": [0, 0],
           "size": [0.05, 0.05],
           "error_behavior": "center"
@@ -236,7 +236,7 @@
           "gun_node": "main_gun_end_node$suffix",
           "exclusive_nodes": ["follower_camera_$full_user_name"],
           "ypln_node": "turret_node$suffix",
-          "filename": "textures/hud/crosshair.png",
+          "filename": "file://textures/hud/crosshair.png",
           "center": [0, 0],
           "size": [0.05, 0.05],
           "error_behavior": "hide"

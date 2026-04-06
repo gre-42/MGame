@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "M4A1",
-      "filename": "models/M4A1/m4a1_d36d.obj",
+      "filename": "file://models/M4A1/m4a1_d36d.$mesh",
       "config": {
       "position": [0, -0.25, 0.25],
       "rotation": [0, 180, 0],
@@ -23,7 +23,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "Beretta92",
-      "filename": "models/opengameart/textured-pistol/pistol.obj",
+      "filename": "file://models/opengameart/textured-pistol/pistol.$mesh",
       "config": {
       "position": [0, 0, -0.1],
       "rotation": [0, -90, 90],
@@ -43,7 +43,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "frag_grenade",
-      "filename": "models/sketchfab.com/frag_grenade/frag_grenade.obj",
+      "filename": "file://models/sketchfab.com/frag_grenade/frag_grenade.$mesh",
       "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],
@@ -63,7 +63,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "m72_law",
-      "filename": "models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher.obj",
+      "filename": "file://models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher.$mesh",
       "config": {
       "position": [0, 0, -0.5],
       "rotation": [0, 90, 0],
@@ -83,7 +83,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "m72_law_rocket",
-      "filename": "models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher-rocket.obj",
+      "filename": "file://models/sketchfab.com/m72-law-rocket-launcher/m72-law-rocket-launcher-rocket.$mesh",
       "config": {
       "position": [0, 0, 0],
       "rotation": [0, 90, 0],

@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "human_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 0.35, 0],
         "rotation": [0, 0, 0],
@@ -25,7 +25,7 @@
       "call": "obj_resource",
       "arguments": {
         "name": "human_distancebox",
-        "filename": "models/primitives/box.obj",
+        "filename": "file://models/primitives/box.$mesh",
         "config": {
           "position": [0, 0.35, -0.25],
           "rotation": [0, 0, 0],
@@ -57,7 +57,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "human_tirelines",
-      "filename": "models/primitives/empty.obj",
+      "filename": "file://models/primitives/empty.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],

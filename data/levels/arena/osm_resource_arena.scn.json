@@ -8,10 +8,10 @@
       "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
       "object_cluster_width": "%object_cluster_width",
       "name": "osm_map",
-      "filenames": ["$__DIR__/map_arena.osm"],
-      "cache_filename": "$__APPDATA__/$loaded_level_id.cereal.binary",
-      "heightmap": "$__DIR__/heightmap.pgm",
-      "terrain_undefined_textures": ["textures/debug/pink.png"],
+      "filenames": ["file://$__DIR__/map_arena.osm"],
+      "cache_filename": "file://$__APPDATA__/$loaded_level_id.cereal.binary",
+      "heightmap": "file://$__DIR__/heightmap.pgm",
+      "terrain_undefined_textures": ["file://textures/debug/pink.png"],
       "terrain_grass_textures": [
         "#Gravel010_Base",
         "#Ground037_1",
@@ -163,7 +163,7 @@
             "ambient": [1, 1, 1]
           }
         }],
-      "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+      "roof_texture": "file://textures/cc0textures/RoofingTiles002_2K_Color.jpg",
       "grass_resource_names": [
         "vegetation2.0(p:1)(hitbox:box_02_1_02_hitbox)",
         "vegetation2.1(p:1)(hitbox:box_02_1_02_hitbox)",
@@ -237,10 +237,10 @@
       "driving_direction": "right",
       "blend_street": true,
       "blend_path": true,
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
+      "emissive_factor": "%default_emissive_factor",
+      "ambient_factor": "%default_ambient_factor",
+      "diffuse_factor": "%default_diffuse_factor",
+      "specular_factor": "%default_specular_factor",
       "fog_distances": "%fog_distances",
       "fog_ambient": "%fog_ambient"
     }

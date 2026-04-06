@@ -1,6 +1,6 @@
 [
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "sea_spray0",
       "width": 512,
@@ -13,6 +13,14 @@
         {"target_position": [0,   0], "texture": "#sea_spray_a100"},
         {"target_position": [256, 0], "texture": "#sea_spray_a20"}
       ]
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "sea_spray0",
+      "color": "#sea_spray0",
+      "add_colormap": false
     }
   },
   {

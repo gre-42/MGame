@@ -4,7 +4,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "compact0_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -16,7 +16,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "rectangle_triangulation_mode": "disabled",
+        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
         "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
       }
     }
@@ -36,7 +36,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "compact0_tirelines",
-      "filename": "models/primitives/empty.obj",
+      "filename": "file://models/primitives/empty.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -48,7 +48,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_tire"
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
       }
     }
   },
@@ -67,7 +67,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "%name",
-          "filename": "models/gre42/$name.obj",
+          "filename": "file://models/gre42/$name.$mesh",
           "config": {
             "position": [0, -0.3, 0],
             "rotation": [0, 90, 0],
@@ -104,8 +104,8 @@
   {
     "declare_macro": "load_compact0",
     "content": [
-      {"playback": "load_compact0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "compact0/compact0_chassis$decimate"}},
-      {"playback": "load_compact0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "compact0/compact0_glass$decimate"}},
+      {"playback": "load_compact0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "#car", "name": "compact0/compact0_chassis$decimate"}},
+      {"playback": "load_compact0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "#car", "name": "compact0/compact0_glass$decimate"}},
       {"playback": "load_compact0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null, "name": "compact0/compact0_misc$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "compact0/main$suffix"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "compact0/main$suffix", "companion_resource": "compact0/compact0_chassis$decimate"}},

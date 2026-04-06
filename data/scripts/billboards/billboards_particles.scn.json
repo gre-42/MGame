@@ -1,5 +1,6 @@
 [
   {
+    "required": "(%flavor == 'extended')",
     "call": "square_resource",
     "arguments": {
       "name": "small_explosion",
@@ -20,6 +21,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "square_resource",
     "arguments": {
       "name": "large_explosion",
@@ -40,6 +42,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "blending_x_resource",
     "arguments": {
       "name": "large_explosion_cross",
@@ -154,6 +157,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "blending_x_resource",
     "arguments": {
       "name": "bullet_impact_cross",
@@ -172,6 +176,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "blending_x_resource",
     "arguments": {
       "name": "bullet_impact_red_cross",

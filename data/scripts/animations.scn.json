@@ -1,21 +1,21 @@
 [
   {
-    "required": "(%flavor == 'extended')",
+    "required": [["(%flavor == 'extended')", "%if_devel"]],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.idle",
-      "filename": "animations/Xonotic/pyria_idle_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_idle_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
     }
   },
   {
-    "required": "(%flavor == 'extended')",
+    "required": [["(%flavor == 'extended')", "%if_devel"]],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.walking",
-      "filename": "animations/CMU_mocap/cmu_mocap.walking.bvh",
+      "filename": "file://animations/CMU_mocap/cmu_mocap.walking.bvh",
       "smooth_radius": 20,
       "smooth_alpha": 0.9,
       "periodic": true
@@ -26,7 +26,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.die",
-      "filename": "animations/Xonotic/pyria_dietwo.bvh",
+      "filename": "file://animations/Xonotic/pyria_dietwo.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": false
@@ -37,7 +37,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_forward",
-      "filename": "animations/Xonotic/pyria_run_forward_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_run_forward_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -48,7 +48,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.run_backward",
-      "filename": "animations/Xonotic/pyria_run_backward_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_run_backward_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -59,7 +59,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.idle",
-      "filename": "animations/Xonotic/pyria_idle_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_idle_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -70,7 +70,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_left",
-      "filename": "animations/Xonotic/pyria_strafe_left_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_strafe_left_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -81,7 +81,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.strafe_right",
-      "filename": "animations/Xonotic/pyria_strafe_right_retargeted.bvh",
+      "filename": "file://animations/Xonotic/pyria_strafe_right_retargeted.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -92,7 +92,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "xonotic_pyria.die",
-      "filename": "animations/Xonotic/pyria_dietwo.bvh",
+      "filename": "file://animations/Xonotic/pyria_dietwo.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": false
@@ -103,7 +103,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left",
-      "filename": "animations/Skate/skate_left.bvh",
+      "filename": "file://animations/Skate/skate_left.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -114,7 +114,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right",
-      "filename": "animations/Skate/skate_right.bvh",
+      "filename": "file://animations/Skate/skate_right.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -125,7 +125,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left.jump",
-      "filename": "animations/Skate/skate_left_jump.bvh",
+      "filename": "file://animations/Skate/skate_left_jump.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -136,7 +136,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right.jump",
-      "filename": "animations/Skate/skate_right_jump.bvh",
+      "filename": "file://animations/Skate/skate_right_jump.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -147,7 +147,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.left.jump.skateboard",
-      "filename": "animations/Skate/skate_left_jump_skateboard.bvh",
+      "filename": "file://animations/Skate/skate_left_jump_skateboard.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true
@@ -158,7 +158,7 @@
     "call": "add_bvh_resource",
     "arguments": {
       "name": "skate.right.jump.skateboard",
-      "filename": "animations/Skate/skate_right_jump_skateboard.bvh",
+      "filename": "file://animations/Skate/skate_right_jump_skateboard.bvh",
       "smooth_radius": 0,
       "smooth_alpha": "nan",
       "periodic": true

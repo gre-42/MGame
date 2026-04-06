@@ -5,17 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch Mgame",
+            "name": "(gdb) Launch Mgame (Server)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Mlib/GURelWithDebInfo/Bin/render_scene_file",
+            "program": "${workspaceFolder}/Mlib/LGURelWithDebInfo/Bin/render_scene_file",
+            // "program": "${workspaceFolder}/Mlib/GURelWithDebInfo/Bin/remote_test",
             "args": [
-                "data",
+                "data\\;/media/kl/Acer/Daten/Art/3D-Scenes\\;/media/kl/Acer/Daten/Art/3D-Scenes/city-buildings-asset-pack\\;/media/kl/Acer/Daten/MyPrograms/MGame_Private\\;/media/Daten/Games/Steam/steamapps/common",
                 "data/levels/main/main.scn.json",
                 "--print_render_residual_time",
                 "--print_physics_residual_time",
                 "--show_mouse_cursor",
                 "--devel_mode",
+                "--flavor", "extended",
+                "--user_count", "1",
+                "--remote_site_id", "42", "--remote_role", "server", "--remote_ip", "127.0.0.1", "--remote_port", "8042",
                 "--app_reldir", ".osm_rally"
                 ],
             "stopAtEntry": false,
@@ -23,6 +27,44 @@
             "environment": [
                 {"name": "ENABLE_OSM_MAP_CACHE", "value": "0"},
                 {"name": "OMP_NUM_THREADS", "value": "1"},
+                //{"name": "NET_DEBUG", "value": "1"},
+                //{"name": "PROXY_DEBUG", "value": "1"},
+                {"name": "TSAN_OPTIONS", "value": "second_deadlock_stack=1 suppressions=Mlib/suppressions.txt"},
+            ],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        },
+        {
+            "name": "(gdb) Launch Mgame (Client)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Mlib/LGURelWithDebInfo/Bin/render_scene_file",
+            // "program": "${workspaceFolder}/Mlib/GURelWithDebInfo/Bin/remote_test",
+            "args": [
+                "data\\;/media/kl/Acer/Daten/Art/3D-Scenes\\;/media/kl/Acer/Daten/Art/3D-Scenes/city-buildings-asset-pack\\;/media/kl/Acer/Daten/MyPrograms/MGame_Private\\;/media/Daten/Games/Steam/steamapps/common",
+                "data/levels/main/main.scn.json",
+                "--print_render_residual_time",
+                "--print_physics_residual_time",
+                "--show_mouse_cursor",
+                "--devel_mode",
+                "--flavor", "extended",
+                "--user_count", "1",
+                "--remote_site_id", "43", "--remote_role", "client", "--remote_ip", "127.0.0.1", "--remote_port", "8042",
+                "--app_reldir", ".osm_rally_client"
+                ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {"name": "ENABLE_OSM_MAP_CACHE", "value": "0"},
+                {"name": "OMP_NUM_THREADS", "value": "1"},
+                //{"name": "NET_DEBUG", "value": "1"},
+                {"name": "PROXY_DEBUG", "value": "1"},
                 {"name": "TSAN_OPTIONS", "value": "second_deadlock_stack=1 suppressions=Mlib/suppressions.txt"},
             ],
             "MIMode": "gdb",

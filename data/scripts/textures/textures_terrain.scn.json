@@ -3,7 +3,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Curb_Grass_Asphalt",
-      "color": "textures/curb_grass_asphalt.png",
+      "color": "file://textures/curb_grass_asphalt.png",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -12,8 +12,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Gravel010",
-      "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
-      "# normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Gravel010_2K_Color.jpg",
+      "# normal": "file://textures/cc0textures/Gravel010_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -22,10 +22,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Gravel010_Desert",
-      "color": "textures/cc0textures/Gravel010_2K_Color.jpg",
-      "# normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Gravel010_2K_Color.jpg",
+      "# normal": "file://textures/cc0textures/Gravel010_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/desert_road.png",
+      "histogram": "file://textures/histograms/desert_road.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -33,8 +33,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Gravel010_Desaturated",
-      "color": "textures/cc0textures/Gravel010_1K_Color_White.jpg",
-      "normal": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Gravel010_1K_Color_White.jpg",
+      "normal": "file://textures/cc0textures/Gravel010_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16,
       "desaturate": 1
@@ -44,8 +44,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003",
-      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Plaster003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -54,8 +54,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_Gray",
-      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Plaster003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "mean_color": [0.65, 0.65, 0.65],
       "anisotropic_filtering_level": 16
@@ -65,8 +65,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_White",
-      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Plaster003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "mean_color": [0.91, 0.91, 0.91],
       "anisotropic_filtering_level": 16
@@ -77,8 +77,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_Green",
-      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Plaster003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "mean_color": [0.6, 0.65, 0.6],
       "anisotropic_filtering_level": 16
@@ -89,8 +89,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Plaster003_Blue",
-      "color": "textures/cc0textures/Plaster003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Plaster003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Plaster003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "mean_color": [0.6, 0.6, 0.65],
       "anisotropic_filtering_level": 16
@@ -100,8 +100,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Concrete020",
-      "color": "textures/cc0textures/Concrete020_2K_Color.jpg",
-      "normal": "textures/cc0textures/Concrete020_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Concrete020_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Concrete020_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -110,8 +110,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Asphalt015",
-      "color": "textures/cc0textures/Asphalt015_2K_Color.jpg",
-      "normal": "textures/cc0textures/Asphalt015_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Asphalt015_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Asphalt015_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -120,8 +120,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Pavement_ConcreteSidewalk3",
-      "color": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_albedo.png",
-      "normal": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_normal.png",
+      "color": "file://textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_albedo.png",
+      "normal": "file://textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_normal.png",
       "color_mode": "rgb",
       "desaturate": 0.8,
       "times": 2,
@@ -134,8 +134,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "PavingStones038",
-      "color": "textures/cc0textures/PavingStones038_2K_Color.jpg",
-      "normal": "textures/cc0textures/PavingStones038_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/PavingStones038_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/PavingStones038_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -145,8 +145,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "PavingStones035",
-      "color": "textures/cc0textures/PavingStones035_2K_Color_da.jpg",
-      "normal": "textures/cc0textures/PavingStones035_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/PavingStones035_2K_Color_da.jpg",
+      "normal": "file://textures/cc0textures/PavingStones035_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -155,8 +155,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Metal038",
-      "color": "textures/cc0textures/Metal038_2K_Color.jpg",
-      "normal": "textures/cc0textures/Metal038_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Metal038_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Metal038_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -166,8 +166,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_ground",
-      "color": "textures/SR/grass_ground_d.jpg",
-      "normal": "textures/SR/grass_ground_n.jpg",
+      "color": "file://textures/SR/grass_ground_d.jpg",
+      "normal": "file://textures/SR/grass_ground_n.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -177,8 +177,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground003",
-      "color": "textures/cc0textures/Ground003_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground003_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground003_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground003_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -187,8 +187,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground029",
-      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground029_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground029_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground029_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -198,9 +198,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground029_Crossing_Canyon",
-      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Ground029_2K_Color.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/gc2_road.png",
+      "histogram": "file://textures/histograms/gc2_road.png",
       "lighten": [-0.2, -0.2, -0.2],
       "anisotropic_filtering_level": 16
     }
@@ -209,9 +209,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground029_Crossing_Desert",
-      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Ground029_2K_Color.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/desert_road.png",
+      "histogram": "file://textures/histograms/desert_road.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -219,9 +219,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground029_Crossing_Snow",
-      "color": "textures/cc0textures/Ground029_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Ground029_2K_Color.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/snow.png",
+      "histogram": "file://textures/histograms/snow.png",
       "lighten": [-0.2, -0.2, -0.2],
       "anisotropic_filtering_level": 16
     }
@@ -230,8 +230,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground037_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -240,10 +240,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037_island",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground037_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/island_ground.png",
+      "histogram": "file://textures/histograms/island_ground.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -252,8 +252,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037_dark27",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground037_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "lighten": [
         -0.27,
@@ -267,10 +267,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037_Sl",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground037_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/Billboard_2K_Albedo_Lower.png",
+      "histogram": "file://textures/histograms/Billboard_2K_Albedo_Lower.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -278,8 +278,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground037_Rock028",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground037_Rock028_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground037_Rock028_2K_NormalGL.jpg",
       "lighten": [-0.1, -0.1, -0.1],
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
@@ -289,8 +289,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground025",
-      "color": "textures/cc0textures/Ground025_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground025_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground025_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground025_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -300,10 +300,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground038_gc2",
-      "color": "textures/cc0textures/Ground038_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground038_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground038_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/gc2_road.png",
+      "histogram": "file://textures/histograms/gc2_road.png",
       "lighten": [-0.2, -0.2, -0.2],
       "anisotropic_filtering_level": 16
     }
@@ -312,8 +312,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground038",
-      "color": "textures/cc0textures/Ground038_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground038_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground038_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -322,8 +322,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground038_dark27",
-      "color": "textures/cc0textures/Ground038_2K_Color.jpg",
-      "normal": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Ground038_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Ground038_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "lighten": [-0.27, -0.27, -0.27],
       "anisotropic_filtering_level": 16
@@ -334,9 +334,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass12y_Ground037_Sl",
-      "color": "textures/SR/grass12y-.png",
+      "color": "file://textures/SR/grass12y-.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color_Sl.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -345,7 +345,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass2g",
-      "color": "textures/SR/grass2g.png",
+      "color": "file://textures/SR/grass2g.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -355,7 +355,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
@@ -366,9 +366,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_island_bright",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/island_grass_bright.png",
+      "histogram": "file://textures/histograms/island_grass_bright.png",
       "lighten": [-0.05, -0.05, -0.05],
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
@@ -379,9 +379,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_island_green0",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/island_grass_green0.png",
+      "histogram": "file://textures/histograms/island_grass_green0.png",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
@@ -391,9 +391,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_island_green1",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/island_grass_green1.png",
+      "histogram": "file://textures/histograms/island_grass_green1.png",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
@@ -404,7 +404,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_dark27",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
       "lighten": [-0.27, -0.27, -0.27],
       "anisotropic_filtering_level": 16
@@ -415,9 +415,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_Ground003",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground003_2K_Color.png",
+      "histogram": "file://textures/histograms/Ground003_2K_Color.png",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
@@ -427,9 +427,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_desert_bush",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/desert_bush.png",
+      "histogram": "file://textures/histograms/desert_bush.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -438,9 +438,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_dark3",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color_Sl.png",
       "lighten": [-0.3, -0.3, -0.3],
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
@@ -452,9 +452,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_dark1",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color_Sl.png",
       "lighten": [-0.1, -0.1, -0.1],
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
@@ -465,9 +465,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037_Sl",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color_Sl.png",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
@@ -477,9 +477,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r_Ground037",
-      "color": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+      "color": "file://textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color.png",
       "lighten_top": [0.3, 0.3, 0.3],
       "lighten_bottom": [-0.3, -0.3, -0.3],
       "anisotropic_filtering_level": 16
@@ -489,8 +489,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock018",
-      "color": "textures/cc0textures/Rock018_2K_Color.jpg",
-      "normal": "textures/cc0textures/Rock018_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Rock018_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Rock018_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -499,7 +499,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_Displacement",
-      "color": "textures/cc0textures/Rock028_2K_Displacement.png",
+      "color": "file://textures/cc0textures/Rock028_2K_Displacement.png",
       "color_mode": "grayscale",
       "anisotropic_filtering_level": 16
     }
@@ -508,9 +508,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028",
-      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
-      "histogram": "textures/histograms/gh_rock2.png",
+      "color": "file://textures/cc0textures/Rock028_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "histogram": "file://textures/histograms/gh_rock2.png",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -520,10 +520,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_029",
-      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Rock028_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Rock028_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/Rock029.png",
+      "histogram": "file://textures/histograms/Rock029.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -532,10 +532,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_gc2_mountain",
-      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
-      "normal": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/Rock028_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/Rock028_2K_NormalGL.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/gc2_mountain.png",
+      "histogram": "file://textures/histograms/gc2_mountain.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -543,9 +543,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_Dune",
-      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Rock028_2K_Color.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/desert_dune.png",
+      "histogram": "file://textures/histograms/desert_dune.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -553,9 +553,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Rock028_Snow",
-      "color": "textures/cc0textures/Rock028_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Rock028_2K_Color.jpg",
       "color_mode": "rgb",
-      "histogram": "textures/histograms/snow.png",
+      "histogram": "file://textures/histograms/snow.png",
       "lighten": [-0.2, -0.2, -0.2],
       "anisotropic_filtering_level": 16
     }
@@ -564,7 +564,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Asphalt016_Dirt",
-      "color": "textures/cc0textures/Asphalt016_2K_Dirt.png",
+      "color": "file://textures/cc0textures/Asphalt016_2K_Dirt.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -573,8 +573,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "concrete1_2K_wh",
-      "color": "textures/cc0textures/concrete1_2K.jpg",
-      "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
+      "color": "file://textures/cc0textures/concrete1_2K.jpg",
+      "normal": "file://textures/cc0textures/concrete1_2K_normGL.jpg",
       "color_mode": "rgb",
       "desaturate": 1,
       "times": 2,
@@ -587,8 +587,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "concrete1_2K_ye",
-      "color": "textures/cc0textures/concrete1_2K.jpg",
-      "normal": "textures/cc0textures/concrete1_2K_normGL.jpg",
+      "color": "file://textures/cc0textures/concrete1_2K.jpg",
+      "normal": "file://textures/cc0textures/concrete1_2K_normGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -597,8 +597,8 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "PavingStones046",
-      "color": "textures/cc0textures/PavingStones046_2K_Color.jpg",
-      "normal": "textures/cc0textures/PavingStones046_2K_NormalGL.jpg",
+      "color": "file://textures/cc0textures/PavingStones046_2K_Color.jpg",
+      "normal": "file://textures/cc0textures/PavingStones046_2K_NormalGL.jpg",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }
@@ -607,7 +607,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "fence1",
-      "color": "textures/barriers/fence1.png",
+      "color": "file://textures/barriers/fence1.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -616,7 +616,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "barrier_tape",
-      "color": "textures/barriers/tape.png",
+      "color": "file://textures/barriers/tape.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16,
       "wrap_mode_t": "clamp_to_edge"
@@ -626,7 +626,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "traffic_barrier",
-      "color": "textures/barriers/traffic_barrier.png",
+      "color": "file://textures/barriers/traffic_barrier.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -635,7 +635,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "ocean",
-      "color": "textures/altphotos/water/sea-ocean-water-texture-seamless3.png",
+      "color": "file://textures/altphotos/water/sea-ocean-water-texture-seamless3.png",
       "color_mode": "rgb",
       "anisotropic_filtering_level": 16
     }

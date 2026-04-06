@@ -13,7 +13,7 @@
     "call": "add_audio",
     "arguments": {
       "name": "explodemini_fast",
-      "filename": "sounds/opengameart/explosions/explodemini_fast.wav",
+      "filename": "file://sounds/opengameart/explosions/explodemini_fast.wav",
       "gain": 1,
       "lowpass": "explosion_lowpass",
       "distance_clamping": [25, 700]
@@ -24,7 +24,7 @@
     "call": "add_audio",
     "arguments": {
       "name": "impactcrunch01",
-      "filename": "sounds/opengameart/break-crunch-impacts/impactcrunch01.wav",
+      "filename": "file://sounds/opengameart/break-crunch-impacts/impactcrunch01.wav",
       "gain": 1,
       "distance_clamping": [5, 700]
     }

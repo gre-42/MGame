@@ -1,43 +1,43 @@
 [
   {
     "declare_macro": "load_TNo2_part",
-    "content": [
-      {
-        "call": "obj_resource",
-        "arguments": {
-          "name": "TNo2_obj/$name",
-          "filename": "models/sketchfab.com/trailer-with-wood-no2/$name.obj",
-          "config": {
-            "position": [0, 0, 0],
-            "rotation": [0, 90, 0],
-            "scale": [1, 1, 1],
-            "center_distances": ["%dist_min", "%dist_max"],
-            "blend_mode": "continuous",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "cull_faces_alpha": false,
-            "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%occluder_pass",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "reflection_map": "%reflection_map",
-            "triangle_tangent_error_behavior": "zero",
-            "werror": false,
-            "emissive_factor": "%sketchfab_emissive_factor",
-            "ambient_factor": "%sketchfab_ambient_factor",
-            "diffuse_factor": "%sketchfab_diffuse_factor",
-            "specular_factor": "%sketchfab_specular_factor",
-            "shading": {
-              "reflectance": "%reflectance",
-              "fresnel": {
-                "min": "%sketchfab_fresnel_min",
-                "max": "%sketchfab_fresnel_max",
-                "exponent": "%sketchfab_fresnel_exponent"
-              }
+    "content": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "TNo2_obj/$name",
+        "filename": "file://models/sketchfab.com/trailer-with-wood-no2/4-wheels/$name.$mesh",
+        "config": {
+          "position": [0, 0, 0],
+          "rotation": [0, 90, 0],
+          "scale": [1, 1, 1],
+          "center_distances": ["%dist_min", "%dist_max"],
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": false,
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%occluder_pass",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "reflection_map": "%reflection_map",
+          "triangle_tangent_error_behavior": "zero",
+          "werror": false,
+          "emissive_factor": "%sketchfab_emissive_factor",
+          "ambient_factor": "%sketchfab_ambient_factor",
+          "diffuse_factor": "%sketchfab_diffuse_factor",
+          "specular_factor": "%sketchfab_specular_factor",
+          "shading": {
+            "reflectance": "%reflectance",
+            "fresnel": {
+              "min": "%sketchfab_fresnel_min",
+              "max": "%sketchfab_fresnel_max",
+              "exponent": "%sketchfab_fresnel_exponent"
             }
-          }
+          },
+          "physics_material": "%physics_material",
+          "rectangle_triangulation_mode": "%rectangle_triangulation_mode"
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "load_TNo2_hitbox_part",
@@ -50,11 +50,13 @@
           "dist_max": "inf",
           "occluder_pass": "none",
           "reflectance": [0, 0, 0],
-          "reflection_map": null
+          "reflection_map": null,
+          "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal",
+          "rectangle_triangulation_mode": "%hitbox_massbox_triangulation"
         }
       },
       {
-        "required": "%IF_GEN_TRIANGLE_RAYS",
+        "required": "%gen_triangle_rays",
         "call": "gen_triangle_rays",
         "arguments": {
           "name": "TNo2_obj/$name",
@@ -62,62 +64,68 @@
           "lengths": [0.7, 0.7, 0.7],
           "delete_triangles": false
         }
-      },
-      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_obj/$name", "add": "obj_chassis|attr_convex"}}  
+      }
     ]
   },
-  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_front", "IF_GEN_TRIANGLE_RAYS": false}},
-  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_rear", "IF_GEN_TRIANGLE_RAYS": false}},
-
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_front", "gen_triangle_rays": false}},
+  {"playback": "load_TNo2_hitbox_part", "arguments": {"name": "hitbox_rear", "gen_triangle_rays": false}},
   {
     "call": "obj_resource",
     "arguments": {
       "name": "TNo2_massbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
-      "position": [0, 1.3, 0.3],
-      "rotation": [0, 0, 0],
-      "scale": [1.1, 1.3, 3.5],
-      "center_distances": [0, "inf"],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all"
+        "position": [0, 1.3, 0.3],
+        "rotation": [0, 0, 0],
+        "scale": [1.1, 1.3, 3.5],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation"
       }
     }
   },
-
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "TNo2_distancebox",
+      "min": [-1.1, 0.5, -3.2],
+      "max": [1.1, 2.6, 3.8],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
   {
     "call": "obj_resource",
     "arguments": {
       "name": "TNo2_tirelines",
-      "filename": "models/primitives/empty.obj",
+      "filename": "file://models/primitives/empty.obj",
       "config": {
-      "position": [0, 0, 0],
-      "rotation": [0, 0, 0],
-      "scale": [1, 1, 1],
-      "center_distances": [0, 501],
-      "blend_mode": "off",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "occluded_pass": "none",
-      "occluder_pass": "none",
-      "aggregate_mode": "none",
-      "transformation_mode": "all",
-      "physics_material": "attr_collide"
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
       }
     }
   },
-
-  {"call": "modify_physics_material_tags", "arguments": {"resource_name": "TNo2_tirelines", "add": "obj_tire_line"}},
-
   {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [-1, 0.2, 0.9], "to": [-1, -0.5, 0.9]}}, {"comment": "left front"},
   {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 0.9], "to": [ 1, -0.5, 0.9]}}, {"comment": "right front"},
   {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [-1, 0.2, 1.6], "to": [-1, -0.5, 1.6]}}, {"comment": "left rear"},
   {"call": "gen_ray", "arguments": {"name": "TNo2_tirelines", "from": [ 1, 0.2, 1.6], "to": [ 1, -0.5, 1.6]}}, {"comment": "right rear"},
 
-  {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/hitbox_front", "TNo2_obj/hitbox_rear"], "dest_name": "TNo2_hitbox"}},
+  {"call": "compound_resource", "arguments": {"source_names": ["TNo2_hitbox", "TNo2_distancebox", "TNo2_tirelines"], "dest_name": "TNo2_hitboxes"}},
 
   {
     "declare_macro": "load_TNo2_wheel",
@@ -126,7 +134,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "TNo2_obj/$name",
-          "filename": "models/sketchfab.com/trailer-with-wood-no2/$name.obj",
+          "filename": "file://models/sketchfab.com/trailer-with-wood-no2/4-wheels/$name.$mesh",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 90, 0],
@@ -160,15 +168,15 @@
     ]
   },
   {
-    "declare_macro": "load-TNo2",
+    "declare_macro": "load_TNo2",
     "content": [
-      {"playback": "load_TNo2_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "car", "name": "chassis$decimate"}},
-      {"playback": "load_TNo2_wheel", "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null,  "name": "wheel$decimate"}},
+      {"playback": "load_TNo2_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "#car", "name": "chassis$decimate", "physics_material": null, "rectangle_triangulation_mode": null}},
+      {"playback": "load_TNo2_wheel", "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null,  "name": "wheel$decimate", "physics_material": null, "rectangle_triangulation_mode": null}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/chassis$decimate"], "dest_name": "TNo2/main$suffix"}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$decimate"], "dest_name": "TNo2/wheel_front$suffix"}},
       {"call": "compound_resource", "arguments": {"source_names": ["TNo2_obj/wheel$decimate"], "dest_name": "TNo2/wheel_rear$suffix"}}
     ]
   },
-  {"playback": "load-TNo2", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none", "decimate": "", "suffix": ""}},
-  {"playback": "load-TNo2", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d9", "suffix": "_lowres"}}
+  {"playback": "load_TNo2", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none", "decimate": "", "suffix": ""}},
+  {"playback": "load_TNo2", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d9", "suffix": "_lowres"}}
 ]

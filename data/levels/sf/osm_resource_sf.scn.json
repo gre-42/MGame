@@ -8,12 +8,12 @@
       "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
       "object_cluster_width": "%object_cluster_width",
       "name": "osm_map",
-      "filenames": ["$__DIR__/map_sf.osm"],
-      "cache_filename": "$__APPDATA__/sf.cereal.binary",
-      "heightmap": "$__DIR__/heightmap.pgm",
-      "heightmap_mask": "$__DIR__/heightmap_mask.pgm",
+      "filenames": ["file://$__DIR__/map_sf.osm"],
+      "cache_filename": "file://$__APPDATA__/sf.cereal.binary",
+      "heightmap": "file://$__DIR__/heightmap.pgm",
+      "heightmap_mask": "file://$__DIR__/heightmap_mask.pgm",
       "heightmap_extension": 500,
-      "terrain_undefined_textures": ["textures/debug/pink.png"],
+      "terrain_undefined_textures": ["file://textures/debug/pink.png"],
       "terrain_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_base_textures": ["#Concrete020"],
@@ -148,7 +148,7 @@
       },
       "racing_line_texture": "#racing_line",
       "racing_line_track": "%racing_line_track",
-      "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+      "racing_line_playback": "file://$__APPDATA__/$loaded_level_id.checkpoints.m",
       "waysides_surface": [
         {
           "resources": ["street_light2_with_blob(hitbox:box_02_1_02_hitbox)"],
@@ -290,10 +290,10 @@
         }
       },
       "use_terrain_holes": true,
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
+      "emissive_factor": "%default_emissive_factor",
+      "ambient_factor": "%default_ambient_factor",
+      "diffuse_factor": "%default_diffuse_factor",
+      "specular_factor": "%default_specular_factor",
       "fog_distances": "%fog_distances",
       "fog_ambient": "%fog_ambient"
     }

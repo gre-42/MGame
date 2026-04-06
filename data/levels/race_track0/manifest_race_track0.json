@@ -7,7 +7,7 @@
   },
   "on_init": {
     "declare_macro": "remote.level.load_race_track0",
-    "content": { "call": "load_scene", "arguments": { "filename": "$__DIR__/scene_race_track0.scn.json" } }
+    "content": { "call": "load_scene", "arguments": { "filename": "file://$__DIR__/scene_race_track0.scn.json" } }
   },
   "on_execute": {
     "include": "scene_race_track0.scn.json"
@@ -16,7 +16,7 @@
     "call": "globals",
     "arguments": {
       "selected_level_id": "race_track0",
-      "level_icon_file": "levels/race_track0/icon.png",
+      "level_icon_file": "file://levels/race_track0/icon.png",
       "minimap_file": null
     }
   },

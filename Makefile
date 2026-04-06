@@ -2,13 +2,13 @@
 
 CMAKE_BUILD_TYPE ?= Release
 BUILD_PREFIX ?= G
-platform_dir != if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
+PLATFORM_DIR != if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
         echo $(BUILD_PREFIX)M$(CMAKE_BUILD_TYPE); \
     else \
         echo $(BUILD_PREFIX)U$(CMAKE_BUILD_TYPE); \
     fi
 ostype != echo "$$OSTYPE";
-bin_dir = $(platform_dir)
+BIN_DIR = $(PLATFORM_DIR)
 
 all: recastnavigation build package test
 
@@ -18,7 +18,7 @@ recastnavigation:
 
 build_any:
 	BUILD_PREFIX=$(BUILD_PREFIX) \
-	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF -DBUILD_CV=OFF -DBUILD_SFM=OFF -DBUILD_OPENCV=OFF" \
+	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF" \
 		make -C Mlib $(TARGET) \
 			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
@@ -48,46 +48,46 @@ build_tsan_clang:
 
 package:
 	@echo "OS Type: $(ostype)"
-	@echo "Platform dir: $(platform_dir)"
+	@echo "Platform dir: $(PLATFORM_DIR)"
 	if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
-			Mlib/$(platform_dir)/Bin/download_heightmap.exe \
-			Mlib/$(platform_dir)/Bin/render_scene_file.exe \
-			Mlib/$(platform_dir)/Bin/libMlibArray.dll \
-			Mlib/$(platform_dir)/Bin/libMlibAudio.dll \
-			Mlib/$(platform_dir)/Bin/libMlibComponents.dll \
-			Mlib/$(platform_dir)/Bin/libMlibCppHttplib.dll \
-			Mlib/$(platform_dir)/Bin/libMlib.dll \
-			Mlib/$(platform_dir)/Bin/libMlibGeography.dll \
-			Mlib/$(platform_dir)/Bin/libMlibGeometry.dll \
-			Mlib/$(platform_dir)/Bin/libMlibGlad.dll \
-			Mlib/$(platform_dir)/Bin/libMlibHalf.dll \
-			Mlib/$(platform_dir)/Bin/libMlibImages.dll \
-			Mlib/$(platform_dir)/Bin/libMlibIo.dll \
-			Mlib/$(platform_dir)/Bin/libMlibJson.dll \
-			Mlib/$(platform_dir)/Bin/libMlibLayout.dll \
-			Mlib/$(platform_dir)/Bin/libMlibMacroExecutor.dll \
-			Mlib/$(platform_dir)/Bin/libMlibMath.dll \
-			Mlib/$(platform_dir)/Bin/libMlibMemory.dll \
-			Mlib/$(platform_dir)/Bin/libMlibNavigation.dll \
-			Mlib/$(platform_dir)/Bin/libMlibNvDds.dll \
-			Mlib/$(platform_dir)/Bin/libMlibOs.dll \
-			Mlib/$(platform_dir)/Bin/libMlibOsmLoader.dll \
-			Mlib/$(platform_dir)/Bin/libMlibPhysics.dll \
-			Mlib/$(platform_dir)/Bin/libMlibPlayers.dll \
-			Mlib/$(platform_dir)/Bin/libMlibPoly2Tri.dll \
-			Mlib/$(platform_dir)/Bin/libMlibRegex.dll \
-			Mlib/$(platform_dir)/Bin/libMlibRemote.dll \
-			Mlib/$(platform_dir)/Bin/libMlibRender.dll \
-			Mlib/$(platform_dir)/Bin/libMlibScene.dll \
-			Mlib/$(platform_dir)/Bin/libMlibSceneGraph.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStats.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStbCpp.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStb.dll \
-			Mlib/$(platform_dir)/Bin/libMlibStrings.dll \
-			Mlib/$(platform_dir)/Bin/libMlibThreads.dll \
-			Mlib/$(platform_dir)/Bin/libMlibTime.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/download_heightmap.exe \
+			Mlib/$(PLATFORM_DIR)/Bin/render_scene_file.exe \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibArray.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibAudio.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibComponents.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibCppHttplib.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlib.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibGeography.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibGeometry.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibGlad.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibHalf.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibImages.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibIo.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibJson.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibLayout.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibMacroExecutor.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibMath.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibMemory.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibNavigation.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibNvDds.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibOs.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibOsmLoader.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibPhysics.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibPlayers.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibPoly2Tri.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibRegex.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibRemote.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibRender.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibScene.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibSceneGraph.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibStats.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibStbCpp.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibStb.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibStrings.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibThreads.dll \
+			Mlib/$(PLATFORM_DIR)/Bin/libMlibTime.dll \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/RecastBuild/Detour/libDetour.dll \
 			Mlib/RecastBuild/Recast/libRecast.dll \
@@ -98,28 +98,28 @@ package:
 			/mingw64/bin/libwinpthread-1.dll \
 			/mingw64/bin/libopenal-1.dll \
 			/mingw64/bin/libalut-0.dll \
-			$(bin_dir)/; \
+			$(BIN_DIR)/; \
 	else \
 		rsync -avh --checksum \
 			/usr/lib/x86_64-linux-gnu/libalut.so* \
 			/usr/lib/x86_64-linux-gnu/libglfw.so* \
 			/usr/lib/x86_64-linux-gnu/libopenal.so* \
-			Mlib/$(platform_dir)/Bin/download_heightmap \
-			Mlib/$(platform_dir)/Bin/render_scene_file \
-			Mlib/$(platform_dir)/Lib/ \
+			Mlib/$(PLATFORM_DIR)/Bin/download_heightmap \
+			Mlib/$(PLATFORM_DIR)/Bin/render_scene_file \
+			Mlib/$(PLATFORM_DIR)/Lib/ \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
 			Mlib/RecastBuild/Detour/libDetour.so* \
 			Mlib/RecastBuild/Recast/libRecast.so* \
-			$(bin_dir)/; \
+			$(BIN_DIR)/; \
 	fi
 
 test:
-	LD_LIBRARY_PATH=$(bin_dir) $(bin_dir)/download_heightmap --help > /dev/null
-	LD_LIBRARY_PATH=$(bin_dir) $(bin_dir)/render_scene_file --help > /dev/null
+	LD_LIBRARY_PATH=$(BIN_DIR) $(BIN_DIR)/download_heightmap --help > /dev/null
+	LD_LIBRARY_PATH=$(BIN_DIR) $(BIN_DIR)/render_scene_file --help > /dev/null
 
 run:
-	LD_LIBRARY_PATH=$(bin_dir) \
-		$(bin_dir)/render_scene_file \
+	LD_LIBRARY_PATH=$(BIN_DIR) \
+		$(BIN_DIR)/render_scene_file \
 		data \
 		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \
@@ -130,7 +130,7 @@ run:
 		--windowed_height 900
 
 run_dev: build
-	gdb -ex="catch throw" --ex=r --args Mlib/$(platform_dir)/Bin/render_scene_file \
+	gdb -ex="catch throw" --ex=r --args Mlib/$(PLATFORM_DIR)/Bin/render_scene_file \
 		data \
 		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \
@@ -145,7 +145,7 @@ run_dev: build
 run_tsan:
 	OMP_NUM_THREADS=1 \
 	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=Mlib/suppressions.txt" \
-		Mlib/TGURelWithDebInfo/Bin/render_scene_file \
+		Mlib/T$(PLATFORM_DIR)/Bin/render_scene_file \
 		data \
 		data/levels/main/main.scn.json \
 		--app_reldir .osm_rally \

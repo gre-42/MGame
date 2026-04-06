@@ -1,5 +1,6 @@
 [
   {
+    "required": "(%flavor == 'extended')",
     "call": "square_resource",
     "arguments": {
       "name": "explosion_3d",
@@ -26,6 +27,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "animatable_billboards",
     "arguments": {
       "name": "animatable_explosion_3d",
@@ -35,6 +37,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "animated_billboards",
     "arguments": {
       "name": "large_explosion_3d",
@@ -45,6 +48,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "animated_billboards",
     "arguments": {
       "name": "medium_explosion_3d",
@@ -55,6 +59,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "animated_billboards",
     "arguments": {
       "name": "small_explosion_3d",

@@ -6,7 +6,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "%name",
-          "filename": "models/SR/$name.obj",
+          "filename": "file://models/SR/$name.$mesh",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],

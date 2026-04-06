@@ -1,6 +1,7 @@
 [
   {
-    "call": "add_texture_atlas",
+    "required": "(%flavor == 'extended')",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "explosion_3d",
       "width": 128,
@@ -30,13 +31,21 @@
     }
   },
   {
-    "comment": {
-      "call": "save_texture_array_png",
-      "arguments": {
-        "name": "explosion_3d",
-        "filename_prefix": "/tmp/textures_",
-        "color_mode": "rgba"
-      }
+    "required": "(%flavor == 'extended')",
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "explosion_3d",
+      "color": "#explosion_3d",
+      "add_colormap": false
+    }
+  },
+  {
+    "required": ["(%flavor == 'extended')", "%false"],
+    "call": "save_texture_array_png",
+    "arguments": {
+      "name": "explosion_3d",
+      "filename_prefix": "/tmp/textures_",
+      "color_mode": "rgba"
     }
   }
 ]

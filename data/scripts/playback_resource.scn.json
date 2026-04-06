@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "playback_box",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
       "position": [0, 0, 0],
       "rotation": [0, 0, 0],

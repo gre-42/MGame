@@ -25,12 +25,14 @@
           "call": "ortho_camera",
           "arguments": {
             "node": "light_node_instances$lsuffix",
-            "near_plane": -1000,
-            "far_plane": 1000,
-            "left_plane": -100,
-            "right_plane": 100,
-            "bottom_plane": -100,
-            "top_plane": 100,
+            "config": {
+              "near_plane": -1000,
+              "far_plane": 1000,
+              "left_plane": -100,
+              "right_plane": 100,
+              "bottom_plane": -100,
+              "top_plane": 100
+            },
             "requires_postprocessing": false
           }
         }
@@ -96,12 +98,14 @@
           "call": "ortho_camera",
           "arguments": {
             "node": "light_node_movables$lsuffix",
-            "near_plane": -1000,
-            "far_plane": 1000,
-            "left_plane": -100,
-            "right_plane": 100,
-            "bottom_plane": -100,
-            "top_plane": 100,
+            "config": {
+              "near_plane": -1000,
+              "far_plane": 1000,
+              "left_plane": -100,
+              "right_plane": 100,
+              "bottom_plane": -100,
+              "top_plane": 100
+            },
             "requires_postprocessing": false
           }
         }
@@ -154,19 +158,21 @@
             "rotation": [-90, 0, 0],
             "scale": 1,
             "interpolation": "disabled",
-            "user_id": "%user_id"
+            "full_user_name": "%full_user_name"
           }
         },
         {
           "call": "ortho_camera",
           "arguments": {
             "node": "light_node$lsuffix",
-            "near_plane": -1000,
-            "far_plane": 1000,
-            "left_plane": -100,
-            "right_plane": 100,
-            "bottom_plane": -100,
-            "top_plane": 100,
+            "config": {
+              "near_plane": -1000,
+              "far_plane": 1000,
+              "left_plane": -100,
+              "right_plane": 100,
+              "bottom_plane": -100,
+              "top_plane": 100
+            },
             "requires_postprocessing": false
           }
         }

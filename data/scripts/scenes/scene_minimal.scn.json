@@ -41,12 +41,14 @@
         "required": "%if_dirtmap",
         "arguments": {
           "node": "dirtmap_node",
-          "near_plane": 1,
-          "far_plane": 10000,
-          "left_plane": -2000,
-          "right_plane": 2000,
-          "bottom_plane": -1000,
-          "top_plane": 1000,
+          "config": {
+            "near_plane": 1,
+            "far_plane": 10000,
+            "left_plane": -2000,
+            "right_plane": 2000,
+            "bottom_plane": -1000,
+            "top_plane": 1000
+          },
           "requires_postprocessing": false
         }
       },
@@ -58,7 +60,7 @@
           "discreteness": 4,
           "scale": 1,
           "wrap_mode": "clamp_to_edge",
-          "filename": "textures/dirtmap.png"
+          "filename": "file://textures/dirtmap.png"
         }
       },
       {

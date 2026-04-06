@@ -8,11 +8,11 @@
       "dense_triangle_cluster_width": "%dense_triangle_cluster_width",
       "object_cluster_width": "%object_cluster_width",
       "name": "osm_map",
-      "filenames": ["$__DIR__/map_retro_race_track1.osm"],
-      "cache_filename": "$__APPDATA__/retro_race_track1.cereal.binary",
-      "heightmap": "$__DIR__/../jb/heightmap.pgm",
+      "filenames": ["file://$__DIR__/map_retro_race_track1.osm"],
+      "cache_filename": "file://$__APPDATA__/retro_race_track1.cereal.binary",
+      "heightmap": "file://$__DIR__/../jb/heightmap.pgm",
       "height_scale": 3,
-      "terrain_undefined_textures": ["textures/debug/pink.png"],
+      "terrain_undefined_textures": ["file://textures/debug/pink.png"],
       "terrain_grass_textures": [
         "#Ground037_Sl_1",
         "#Ground037_Sl_8_1",
@@ -84,10 +84,10 @@
             "ambient": [1, 1, 1]
           }
         }],
-      "roof_texture": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+      "roof_texture": "file://textures/cc0textures/RoofingTiles002_2K_Color.jpg",
       "racing_line_texture": "#racing_line",
-      "racing_line_track": "$__DIR__/racing_line_retro_race_track1.m",
-      "racing_line_playback": "$__APPDATA__/$loaded_level_id.checkpoints.m",
+      "racing_line_track": "file://$__DIR__/racing_line_retro_race_track1.m",
+      "racing_line_playback": "file://$__APPDATA__/$loaded_level_id.checkpoints.m",
       "near_wayside1_grass_resource_names": [
         "bflower2(p:0.01)(max_bdry:10)",
         "grass_tbdpec3r_Ground037_Sl_low(max_bdry:10)",
@@ -160,10 +160,10 @@
       "street_surface_central_resource_name": "road_cylinder2_central",
       "street_surface_endpoint0_resource_name": "road_cylinder2_endpoint_0",
       "street_surface_endpoint1_resource_name": "road_cylinder2_endpoint_1",
-      "emissive_factor": "%vanilla_rally_emissive_factor",
-      "ambient_factor": "%vanilla_rally_ambient_factor",
-      "diffuse_factor": "%vanilla_rally_diffuse_factor",
-      "specular_factor": "%vanilla_rally_specular_factor",
+      "emissive_factor": "%default_emissive_factor",
+      "ambient_factor": "%default_ambient_factor",
+      "diffuse_factor": "%default_diffuse_factor",
+      "specular_factor": "%default_specular_factor",
       "fog_distances": "%fog_distances",
       "fog_ambient": "%fog_ambient"
     }

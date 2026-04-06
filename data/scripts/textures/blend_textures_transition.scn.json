@@ -3,7 +3,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "white_blurred",
-      "color": "textures/noise/white_blurred.png",
+      "color": "file://textures/noise/white_blurred.png",
       "color_mode": "grayscale",
       "plus": 0.45,
       "anisotropic_filtering_level": 16
@@ -23,7 +23,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Detail",
-      "color": "textures/cc0textures/Ground037_2K_Color.jpg",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.jpg",
       "color_mode": "grayscale",
       "selected_color": [0.67, 0.75, 0.3],
       "selected_color_near": 0.2,
@@ -47,7 +47,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ramp5",
-      "color": "textures/Way_Alpha/Way_Alpha5_512.png",
+      "color": "file://textures/Way_Alpha/Way_Alpha5_512.png",
       "color_mode": "grayscale",
       "anisotropic_filtering_level": 16
     }
@@ -56,7 +56,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Blend5",
-      "color": "textures/Way_Alpha/Way_Alpha5_512.png",
+      "color": "file://textures/Way_Alpha/Way_Alpha5_512.png",
       "color_mode": "grayscale",
       "times": 2,
       "plus": -1,
@@ -105,7 +105,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Weight_Texture",
-      "color": "textures/noise/lf_heightmap.png",
+      "color": "file://textures/noise/lf_heightmap.png",
       "color_mode": "grayscale",
       "times": 12,
       "plus": -3,
@@ -116,7 +116,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Feather_Texture",
-      "color": "textures/noise/hf_heightmap0.png",
+      "color": "file://textures/noise/hf_heightmap0.png",
       "color_mode": "grayscale",
       "anisotropic_filtering_level": 16
     }
@@ -126,7 +126,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "checkerboard",
-      "color": "textures/noise/checkerboard.png",
+      "color": "file://textures/noise/checkerboard.png",
       "color_mode": "grayscale",
       "anisotropic_filtering_level": 16
     }
@@ -135,7 +135,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Bushmap_Color_Texture",
-      "color": "textures/debug/white.png",
+      "color": "file://textures/debug/white.png",
       "color_mode": "rgb",
       "mean_color": [0.85, 0.85, 0.85],
       "anisotropic_filtering_level": 16

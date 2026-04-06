@@ -1,5 +1,6 @@
 [
   {
+    "exclude": "%if_web",
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Broad_White_1_Lane_near",
@@ -17,6 +18,7 @@
     }
   },
   {
+    "exclude": "%if_web",
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "Road007_Broad_White_1_Lane_far",

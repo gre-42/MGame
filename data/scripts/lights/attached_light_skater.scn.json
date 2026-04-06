@@ -24,12 +24,14 @@
         "call": "ortho_camera",
         "arguments": {
           "node": "light_node$lsuffix",
-          "near_plane": 1,
-          "far_plane": 10000,
-          "left_plane": -2,
-          "right_plane": 2,
-          "bottom_plane": -2,
-          "top_plane": 2,
+          "config": {
+            "near_plane": 1,
+            "far_plane": 10000,
+            "left_plane": -2,
+            "right_plane": 2,
+            "bottom_plane": -2,
+            "top_plane": 2
+          },
           "requires_postprocessing": false
         }
       },

@@ -20,7 +20,7 @@
     "arguments": {
       "if_create_pc_player": true,
       "if_pc_player_playback": false,
-      "pc_player_playback": "$__DIR__/checkpoints.m",
+      "pc_player_playback": "file://$__DIR__/checkpoints.m",
       "pc_player_playback_speedup": 1,
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|history|laps|rank|race_time",

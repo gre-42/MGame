@@ -106,7 +106,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "showroom_garage",
-          "filename": "models/garage/garage.obj",
+          "filename": "file://models/garage/garage.$mesh",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
@@ -118,10 +118,10 @@
             "occluder_pass": "none",
             "aggregate_mode": "none",
             "transformation_mode": "all",
-            "emissive_factor": "%vanilla_rally_emissive_factor",
-            "ambient_factor": "%vanilla_rally_ambient_factor",
-            "diffuse_factor": "%vanilla_rally_diffuse_factor",
-            "specular_factor": "%vanilla_rally_specular_factor",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
             "shading": {
               "fresnel": {
                 "min": 0,
@@ -138,7 +138,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "showroom_ground_hitbox",
-          "filename": "models/cylinder_hitbox.obj",
+          "filename": "file://models/cylinder_hitbox.$mesh",
           "config": {
             "position": [0, 0.03, 0],
             "rotation": [0, 0, 0],
@@ -180,7 +180,7 @@
         "call": "modify_rendering_material",
         "arguments": {
           "resource_name": "showroom_garage",
-          "histogram": "textures/histograms/google_maps/bricks.png",
+          "histogram": "file://textures/histograms/google_maps/bricks.png",
           "included_names": "'^Walls$'"
         }
       },

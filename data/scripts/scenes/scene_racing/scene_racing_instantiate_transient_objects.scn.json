@@ -2,6 +2,13 @@
   "declare_macro": "scene_racing_instantiate_transient_objects",
   "content": [
     {
+      "required": "(%remote_role == 'client')",
+      "call": "throw",
+      "arguments": {
+        "message": "This macro must not be called by network clients"
+      }
+    },
+    {
       "comment": "Car instance"
     },
     {
@@ -24,8 +31,9 @@
                   "already_set_behavior": "update",
                   "macro": [
                     {
-                      "playback":  "create_$$vehicles/${selected_vehicle_id_$full_user_name}/vehicle_class",
+                      "playback":  "local.create_$$vehicles/${selected_vehicle_id_$full_user_name}/vehicle_class",
                       "let": {
+                        "make_remote": true,
                         "asset_id": "${selected_vehicle_id_$full_user_name}",
                         "if_human_style": true,
                         "if_skater_style": true,
@@ -131,7 +139,7 @@
                     "pacenote_r6",
                     "pacenote_r7"],
                   "pacenotes_charset": "%selected_language",
-                  "pacenotes_ttf": "fonts/RobotoMono-Bold.ttf",
+                  "pacenotes_ttf": "file://fonts/RobotoMono-Bold.ttf",
                   "pacenotes_font_color": "%scene_font_color",
                   "pacenotes_font_height": "huge",
                   "pacenotes_widget_distance": "pacenotes_widget_distance",

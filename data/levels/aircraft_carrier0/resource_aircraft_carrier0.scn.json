@@ -34,7 +34,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "ocean",
-          "filename": "$__DIR__/ocean.obj",
+          "filename": "file://$__DIR__/ocean.obj",
           "config": {
             "position": [0, 0, 0],
             "rotation": [0, 0, 0],
@@ -83,10 +83,10 @@
         "period": 100,
         "aggregate_mode": "node_triangles",
         "transformation_mode": "all",
-        "emissive_factor": "%vanilla_rally_emissive_factor",
-        "ambient_factor": "%vanilla_rally_ambient_factor",
-        "diffuse_factor": "%vanilla_rally_diffuse_factor",
-        "specular_factor": "%vanilla_rally_specular_factor",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
         "fog_distances": "%fog_distances",
         "fog_ambient": "%fog_ambient",
         "physics_material": "surface_base_water",

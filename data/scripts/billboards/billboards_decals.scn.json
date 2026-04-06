@@ -3,9 +3,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Leaf018_2",
-      "color": "textures/cc0textures/decals/LeafSet018_2K_Color2.png",
+      "color": "file://textures/cc0textures/decals/LeafSet018_2K_Color2.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Ground037_2K_Color_Sl.png",
+      "histogram": "file://textures/histograms/Ground037_2K_Color_Sl.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -13,9 +13,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Leaf018_2_Red",
-      "color": "textures/cc0textures/decals/LeafSet018_2K_Color2.png",
+      "color": "file://textures/cc0textures/decals/LeafSet018_2K_Color2.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/twig24.png",
+      "histogram": "file://textures/histograms/twig24.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -23,7 +23,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Paper",
-      "color": "textures/decals/Paper.png",
+      "color": "file://textures/decals/Paper.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }

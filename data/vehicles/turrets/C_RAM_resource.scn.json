@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "C_RAM_hitbox",
-      "filename": "models/gre42/C-RAM/C_RAM_hitbox_simple.obj",
+      "filename": "file://models/gre42/C-RAM/C_RAM_hitbox_simple.$mesh",
       "config": {
         "position": [0, -1, 0],
         "rotation": [0, 90, 0],
@@ -40,7 +40,7 @@
         "call": "obj_resource",
         "arguments": {
           "name": "%name",
-          "filename": "models/gre42/C-RAM/$name.obj",
+          "filename": "file://models/gre42/C-RAM/$name.$mesh",
           "config": {
             "position": [0, -1, 0],
             "rotation": [0, 90, 0],

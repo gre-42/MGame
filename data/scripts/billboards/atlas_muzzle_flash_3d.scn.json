@@ -1,6 +1,6 @@
 [
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "muzzle_flash_3d",
       "width": 256,
@@ -18,6 +18,14 @@
         {"source_position": [ 512, 0], "size": [256, 256], "target_position": [0,   0], "target_layer":  2, "texture": "#explosion_orange_brown_1"},
         {"source_position": [ 768, 0], "size": [256, 256], "target_position": [0,   0], "target_layer":  3, "texture": "#explosion_orange_brown_1"}
       ]
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "muzzle_flash_3d",
+      "color": "#muzzle_flash_3d",
+      "add_colormap": false
     }
   },
   {

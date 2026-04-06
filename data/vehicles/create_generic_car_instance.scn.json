@@ -347,8 +347,8 @@
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_left_rear_node$suffix",   "position": "%%vehicles/$asset_id/wheel_left_rear_mount_0"}},
       {"call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "car_node$suffix", "name": "wheel_right_rear_node$suffix",  "position": "%%vehicles/$asset_id/wheel_right_rear_mount_0"}},
 
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_hitboxes"}}},
-      {"comment": {"call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_massbox"}}},
+      {"required": "%show_hitbox", "call": "child_renderable_instance", "arguments": {"name": "generic_car_hitbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_hitboxes"}},
+      {"required": "%show_massbox", "call": "child_renderable_instance", "arguments": {"name": "generic_car_massbox$suffix", "node": "car_node$suffix", "resource": "$asset_id-_massbox"}},
       {"comment": "renderable_instance name=generic_car_topdown_locator$suffix node=car_node$node_suffix resource=topdown_locator"},
 
       {"required": "%if_with_graphics", "call": "child_node_instance", "arguments": {"type": "dynamic", "parent": "wheel_right_front_node$suffix", "name": "wheel_right_front_node_visual$suffix", "rotation": [0, 180, 0]}},

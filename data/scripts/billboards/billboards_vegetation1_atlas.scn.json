@@ -3,9 +3,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tc0",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_2K_0.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Tree0.png",
+      "histogram": "file://textures/histograms/Tree0.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -18,9 +18,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tc3",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_2K_3.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Tree5.png",
+      "histogram": "file://textures/histograms/Tree5.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -33,9 +33,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tc4",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_2K_4.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Tree0.png",
+      "histogram": "file://textures/histograms/Tree0.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -48,9 +48,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tc5",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_2K_5.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Tree5.png",
+      "histogram": "file://textures/histograms/Tree5.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -63,9 +63,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tc6",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_2K_6.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/Tree0.png",
+      "histogram": "file://textures/histograms/Tree0.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -78,9 +78,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tcd0",
-      "color": "textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png",
+      "color": "file://textures/opengameart/high-res-tree-textures/tree_collection_dead_2K_0.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/TreeDead0.png",
+      "histogram": "file://textures/histograms/TreeDead0.png",
       "lighten": [0.05, 0.05, 0.05],
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
@@ -93,9 +93,9 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "tb",
-      "color": "textures/opengameart/vaious-vegetation-sprites/thin-bush.png",
+      "color": "file://textures/opengameart/vaious-vegetation-sprites/thin-bush.png",
       "color_mode": "rgba",
-      "histogram": "textures/histograms/thin-bush.png",
+      "histogram": "file://textures/histograms/thin-bush.png",
       "lighten_left": [0.1, 0.1, 0.1],
       "lighten_right": [-0.1, -0.1, -0.1],
       "anisotropic_filtering_level": 16,
@@ -107,7 +107,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "foliage_gradient",
-      "color": "textures/cc0textures/Foliage002_2K_Color_Dense_1k.png",
+      "color": "file://textures/cc0textures/Foliage002_2K_Color_Dense_1k.png",
       "color_mode": "rgba",
       "lighten_top": [0.05, 0.05, 0.05],
       "lighten_bottom": [-0.2, -0.2, -0.2],
@@ -117,7 +117,7 @@
     }
   },
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "vegetation1",
       "width": 4096,
@@ -138,7 +138,7 @@
         {"target_position": [3072,  522], "target_layer": 0, "texture": "#grass_tbdpec3r_island_green1"},
         {"target_position": [3072, 1034], "target_layer": 0, "texture": "#foliage_gradient"},
         {"target_position": [3072, 2048], "target_layer": 0, "texture": "#tb"},
-        {"target_position": [3072, 3072], "target_layer": 0, "texture": "textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"},
+        {"target_position": [3072, 3072], "target_layer": 0, "texture": "file://textures/opengameart/vaious-vegetation-sprites/dry-slim-bush1.png"},
         {"target_position": [   0,    0], "target_layer": 1, "texture": "#Trees0058_3"},
         {"target_position": [1024,    0], "target_layer": 1, "texture": "#Trees0122_1"}
       ]

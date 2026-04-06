@@ -25,7 +25,7 @@
     "max_tire_angle": 45
   },
   "required": {
-    "fixed": [],
-    "dynamic": "(%selected_game_mode in {'team_deathmatch'})"
+    "fixed": "(%flavor == 'extended')",
+    "dynamic": [["%if_devel", "(%selected_game_mode in {'team_deathmatch'})"]]
   }
 }

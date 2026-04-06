@@ -30,7 +30,7 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|team|nkills",
       "osm_map_resource": "osm_resource_nyc",
-      "osm_layers": ["$__DIR__/../nyc/map_nyc.osm", "$__DIR__/map_nyc_td0.osm"],
+      "osm_layers": ["file://$__DIR__/../nyc/map_nyc.osm", "$__DIR__/map_nyc_td0.osm"],
       "if_has_overlay": false,
       "if_primary_dirtmap": true,
       "if_extract_alignment_planes": false,
@@ -67,7 +67,7 @@
       "playback": "setup_teams",
       "context": "primary_scene",
       "arguments": {
-        "players_json": "$__DIR__/players.json",
+        "players_json": "file://$__DIR__/players.json",
         "teams_spawn_points_resource": "osm_map",
         "teams_way_points_resource": "osm_map",
         "objective": "kill_count"

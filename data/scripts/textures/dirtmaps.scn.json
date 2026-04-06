@@ -3,7 +3,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "dirtmap_dense",
-      "color": "textures/noise/dirtmap_dense.png",
+      "color": "file://textures/noise/dirtmap_dense.png",
       "color_mode": "grayscale",
       "wrap_mode_s": "repeat",
       "wrap_mode_t": "repeat",

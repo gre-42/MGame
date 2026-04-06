@@ -3,7 +3,7 @@
     "comment": "Ground003"
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_web", "%if_android"]],
     "playback": "generate_blend_maps_2_8",
     "arguments": {
       "name": "Ground003",
@@ -154,7 +154,7 @@
     "comment": "grass_ground"
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_web", "%if_android"]],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_1",
@@ -171,7 +171,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_web", "%if_android"]],
     "call": "add_blend_map_texture",
     "arguments": {
       "name": "grass_ground_8",

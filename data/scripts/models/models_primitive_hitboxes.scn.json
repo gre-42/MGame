@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "box_02_1_02_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -24,7 +24,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "box_50_16_01_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 0.8, 0],
         "rotation": [0, 0, 0],
@@ -46,7 +46,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "box_10_10_10_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 1, 0],
         "rotation": [0, 0, 0],

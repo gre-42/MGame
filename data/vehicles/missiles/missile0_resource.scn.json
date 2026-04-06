@@ -5,7 +5,7 @@
       "call": "obj_resource",
       "arguments": {
         "name": "%name",
-        "filename": "models/missiles/missile0/$name.obj",
+        "filename": "file://models/missiles/missile0/$name.$mesh",
         "config": {
         "position": [0, 0, 0],
         "rotation": [-90, 0, 0],

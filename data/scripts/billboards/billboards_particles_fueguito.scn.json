@@ -5,7 +5,7 @@
       {
         "call": "suppress_texture_warnings",
         "arguments": {
-          "filename": "textures/opengameart/fueguito/$name.png",
+          "filename": "file://textures/opengameart/fueguito/$name.png",
           "flags": "power_of_two"
         }
       },
@@ -13,7 +13,7 @@
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "%name",
-          "color": "textures/opengameart/fueguito/$name.png",
+          "color": "file://textures/opengameart/fueguito/$name.png",
           "color_mode": "rgb",
           "multiply_with_alpha": true,
           "alpha_fac": 0.2,
@@ -25,7 +25,7 @@
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "$name-_blue",
-          "color": "textures/opengameart/fueguito/$name.png",
+          "color": "file://textures/opengameart/fueguito/$name.png",
           "color_mode": "rgb",
           "multiply_with_alpha": true,
           "mean_color": [0, 0, 1],
@@ -72,7 +72,7 @@
     }
   },
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "fueguito",
       "width": 512,
@@ -149,10 +149,18 @@
     }
   },
   {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "fueguito",
+      "color": "#fueguito",
+      "add_colormap": false
+    }
+  },
+  {
     "call": "obj_resource",
     "arguments": {
       "name": "fueguito_segment",
-      "filename": "models/trail_segment.obj",
+      "filename": "file://models/trail_segment.$mesh",
       "config": {
         "position": [0, 0, -0.5],
         "rotation": [0, 0, 0],
@@ -171,7 +179,8 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "textures": ["fueguito"],
+        "physics_material": "attr_visible",
+        "textures": ["#fueguito"],
         "billboards": [
           {"uv_scale": [0.28125, 0.84375], "uv_offset": [0, 0], "vertex_scale": [0.1, 0.1, 0.25], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
           {"uv_scale": [0.28125, 0.84375], "uv_offset": [0.5, 0], "vertex_scale": [0.5, 0.5, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"}

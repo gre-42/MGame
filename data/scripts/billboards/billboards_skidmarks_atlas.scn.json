@@ -1,6 +1,6 @@
 [
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "skidmarks0",
       "width": 512,
@@ -18,6 +18,14 @@
         {"target_position": [0,   0], "target_layer": 1, "texture": "#dot256_a100_black"},
         {"target_position": [256, 0], "target_layer": 1, "texture": "#dot256_a20_black"}
       ]
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "skidmarks0",
+      "color": "#skidmarks0",
+      "add_colormap": false
     }
   },
   {

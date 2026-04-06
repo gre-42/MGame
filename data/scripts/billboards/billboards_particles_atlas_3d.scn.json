@@ -1,6 +1,6 @@
 [
   {
-    "call": "add_texture_atlas",
+    "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "particles0_3d",
       "width": 512,
@@ -102,6 +102,14 @@
         "filename_prefix": "/tmp/textures_",
         "color_mode": "rgba"
       }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "particles0_3d",
+      "color": "#particles0_3d",
+      "add_colormap": false
     }
   },
   {

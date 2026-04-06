@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "pipe",
-      "filename": "models/pipe.obj",
+      "filename": "file://models/pipe.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -22,7 +22,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "pipe_box",
-      "filename": "models/pipe_box.obj",
+      "filename": "file://models/pipe_box.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -41,7 +41,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "pipe_box_boundary",
-      "filename": "models/pipe_box_boundary.obj",
+      "filename": "file://models/pipe_box_boundary.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -167,8 +167,8 @@
       "CENTRAL_NAME": "road_central1",
       "ENDPOINT0_NAME": "road_endpoint1_0",
       "ENDPOINT1_NAME": "road_endpoint1_1",
-      "CENTRAL": "models/road/central1.obj",
-      "ENDPOINT": "models/road/endpoint1.obj"
+      "CENTRAL": "file://models/road/central1.$mesh",
+      "ENDPOINT": "file://models/road/endpoint1.$mesh"
     }
   },
   {
@@ -177,8 +177,8 @@
       "CENTRAL_NAME": "road_low_central",
       "ENDPOINT0_NAME": "road_low_endpoint_0",
       "ENDPOINT1_NAME": "road_low_endpoint_1",
-      "CENTRAL": "models/road/low_central.obj",
-      "ENDPOINT": "models/road/low_endpoint.obj"
+      "CENTRAL": "file://models/road/low_central.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint.$mesh"
     }
   },
   {
@@ -187,8 +187,8 @@
       "CENTRAL_NAME": "road_low_central2",
       "ENDPOINT0_NAME": "road_low_endpoint2_0",
       "ENDPOINT1_NAME": "road_low_endpoint2_1",
-      "CENTRAL": "models/road/low_central2.obj",
-      "ENDPOINT": "models/road/low_endpoint2.obj"
+      "CENTRAL": "file://models/road/low_central2.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint2.$mesh"
     }
   },
   {
@@ -197,8 +197,8 @@
       "CENTRAL_NAME": "road_low_central3",
       "ENDPOINT0_NAME": "road_low_endpoint3_0",
       "ENDPOINT1_NAME": "road_low_endpoint3_1",
-      "CENTRAL": "models/road/low_central3.obj",
-      "ENDPOINT": "models/road/low_endpoint3.obj"
+      "CENTRAL": "file://models/road/low_central3.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint3.$mesh"
     }
   },
   {
@@ -207,8 +207,8 @@
       "CENTRAL_NAME": "road_ditch_central",
       "ENDPOINT0_NAME": "road_ditch_endpoint_0",
       "ENDPOINT1_NAME": "road_ditch_endpoint_1",
-      "CENTRAL": "models/road/ditch_central.obj",
-      "ENDPOINT": "models/road/ditch_endpoint.obj"
+      "CENTRAL": "file://models/road/ditch_central.$mesh",
+      "ENDPOINT": "file://models/road/ditch_endpoint.$mesh"
     }
   },
   {
@@ -217,8 +217,8 @@
       "CENTRAL_NAME": "road_extrudable_central",
       "ENDPOINT0_NAME": "road_extrudable_endpoint_0",
       "ENDPOINT1_NAME": "road_extrudable_endpoint_1",
-      "CENTRAL": "models/road/extrudable.curb-curb.obj",
-      "ENDPOINT": "models/road/extrudable.plain-curb.obj"
+      "CENTRAL": "file://models/road/extrudable.curb-curb.$mesh",
+      "ENDPOINT": "file://models/road/extrudable.plain-curb.$mesh"
     }
   },
   {
@@ -227,8 +227,8 @@
       "CENTRAL_NAME": "road_cylinder_central",
       "ENDPOINT0_NAME": "road_cylinder_endpoint_0",
       "ENDPOINT1_NAME": "road_cylinder_endpoint_1",
-      "CENTRAL": "models/road/cylinder_central.obj",
-      "ENDPOINT": "models/road/cylinder_endpoint.obj"
+      "CENTRAL": "file://models/road/cylinder_central.$mesh",
+      "ENDPOINT": "file://models/road/cylinder_endpoint.$mesh"
     }
   },
   {
@@ -237,8 +237,8 @@
       "CENTRAL_NAME": "road_cylinder2_central",
       "ENDPOINT0_NAME": "road_cylinder2_endpoint_0",
       "ENDPOINT1_NAME": "road_cylinder2_endpoint_1",
-      "CENTRAL": "models/road/cylinder2_central.obj",
-      "ENDPOINT": "models/road/cylinder2_endpoint.obj"
+      "CENTRAL": "file://models/road/cylinder2_central.$mesh",
+      "ENDPOINT": "file://models/road/cylinder2_endpoint.$mesh"
     }
   },
   {
@@ -247,8 +247,8 @@
       "CENTRAL_NAME": "road_bumps_central",
       "ENDPOINT0_NAME": "road_bumps_endpoint_0",
       "ENDPOINT1_NAME": "road_bumps_endpoint_1",
-      "CENTRAL": "models/road/bumps_central_d.obj",
-      "ENDPOINT": "models/road/bumps_endpoint_d.obj"
+      "CENTRAL": "file://models/road/bumps_central_d.$mesh",
+      "ENDPOINT": "file://models/road/bumps_endpoint_d.$mesh"
     }
   },
   {
@@ -256,7 +256,7 @@
     "arguments": {
       "LEFT_NAME": "road_parking_edge_left.central-central",
       "RIGHT_NAME": "road_parking_edge_right.central-central",
-      "MODEL": "models/road/parking_edge.plain-plain.obj"
+      "MODEL": "file://models/road/parking_edge.plain-plain.$mesh"
     }
   }
 ]

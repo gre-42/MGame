@@ -3,7 +3,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "ship0_hitbox",
-      "filename": "models/primitives/box.obj",
+      "filename": "file://models/primitives/box.$mesh",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -35,7 +35,7 @@
     "call": "obj_resource",
     "arguments": {
       "name": "ship0_tirelines",
-      "filename": "models/primitives/empty.obj",
+      "filename": "file://models/primitives/empty.obj",
       "config": {
         "position": [0, 0, 0],
         "rotation": [0, 0, 0],
@@ -47,7 +47,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_tire"
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
       }
     }
   },
@@ -61,49 +61,47 @@
 
   {
     "declare_macro": "load_ship0_part",
-    "content": [
-      {
-        "call": "obj_resource",
-        "arguments": {
-          "name": "%name",
-          "filename": "models/gre42/$name.obj",
-          "config": {
-            "position": [0, -0.3, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": ["%dist_min", "%dist_max"],
-            "blend_mode": "continuous",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "cull_faces_alpha": true,
-            "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%occluder_pass",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "reflection_map": "%reflection_map",
-            "emissive_factor": "%blender_emissive_factor",
-            "ambient_factor": "%blender_ambient_factor",
-            "diffuse_factor": "%blender_diffuse_factor",
-            "specular_factor": "%blender_specular_factor",
-            "shading": {
+    "content": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "%name",
+        "filename": "file://models/gre42/$name.$mesh",
+        "config": {
+          "position": [0, -0.3, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1, 1, 1],
+          "center_distances": ["%dist_min", "%dist_max"],
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": true,
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%occluder_pass",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "reflection_map": "%reflection_map",
+          "emissive_factor": "%blender_emissive_factor",
+          "ambient_factor": "%blender_ambient_factor",
+          "diffuse_factor": "%blender_diffuse_factor",
+          "specular_factor": "%blender_specular_factor",
+          "shading": {
             "reflectance": "%reflectance",
-              "fresnel": {
-                "min": "%stunt_rally_fresnel_min",
-                "max": "%stunt_rally_fresnel_max",
-                "exponent": "%stunt_rally_fresnel_exponent",
-                "ambient": "%blender_fresnel_ambient"
-              }
-            },
-            "triangle_tangent_error_behavior": "zero",
-            "werror": false
-          }
+            "fresnel": {
+              "min": "%stunt_rally_fresnel_min",
+              "max": "%stunt_rally_fresnel_max",
+              "exponent": "%stunt_rally_fresnel_exponent",
+              "ambient": "%blender_fresnel_ambient"
+            }
+          },
+          "triangle_tangent_error_behavior": "zero",
+          "werror": false
         }
       }
-    ]
+    }
   },
   {
     "declare_macro": "load_ship0",
     "content": [
-      {"playback": "load_ship0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": "", "name": "ship0/ship0$decimate"}},
+      {"playback": "load_ship0_part",  "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [1, 1, 1], "reflection_map": null, "name": "ship0/ship0$decimate"}},
       {"call": "compound_resource", "arguments": {"source_names": [], "dest_name": "ship0/main$suffix"}},
       {"call": "add_companion_renderable", "arguments": {"resource": "ship0/main$suffix", "companion_resource": "ship0/ship0$decimate"}}
     ]

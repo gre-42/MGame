@@ -14,7 +14,7 @@
           "top": "minimap_widget_top",
           "locator_size": "minimap_locator_size",
           "minimap": "%minimap_file",
-          "locator": "textures/dot.png",
+          "locator": "file://textures/dot.png",
           "pointer_reference_length": 200,
           "pointer_scale": "%minimap_scale",
           "pointer_size": "%minimap_size",
@@ -45,7 +45,7 @@
           "player": "%player_name",
           "format": "health",
           "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
           "left": "health_text_left",
           "right": "health_text_right",
           "bottom": "health_text_bottom",
@@ -84,7 +84,7 @@
           "bottom": "bullet_count_text_bottom",
           "top": "bullet_count_text_top",
           "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
+          "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
           "font_color": [1, 1, 1],
           "font_height": "large",
           "line_distance": "large",
@@ -102,7 +102,7 @@
       "arguments": {
         "format": "position|speed|diameter|energy",
         "charset": "%selected_language",
-        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+        "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
         "left": "player_status_left",
         "right": "player_status_right",
         "bottom": "player_status_bottom",
@@ -125,7 +125,7 @@
         "player": "%player_name",
         "format": "speed",
         "charset": "%selected_language",
-        "ttf_file": "fonts/RobotoMono-Bold.ttf",
+        "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
         "left": "player_speed_left",
         "right": "player_speed_right",
         "bottom": "player_speed_bottom",
@@ -134,7 +134,7 @@
         "font_height": "normal",
         "line_distance": "normal",
         "circular": {
-          "pointer": "textures/pointer.png",
+          "pointer": "file://textures/pointer.png",
           "tick_radius": "tick_radius",
           "pointer_width": "pointer_width",
           "pointer_length": "pointer_length",
@@ -149,36 +149,34 @@
   },
   {
     "declare_macro": "create_rpm_hud",
-    "content": [
-      {
-        "call": "visual_player_status",
-        "context": "primary_scene_$full_user_name",
-        "arguments": {
-          "player": "%player_name",
-          "child": ["engines", "%engine_name"],
-          "format": "abs_angular_velocity",
-          "charset": "%selected_language",
-          "ttf_file": "fonts/RobotoMono-Bold.ttf",
-          "left": "player_engine_rpm_left",
-          "right": "player_engine_rpm_right",
-          "bottom": "player_engine_rpm_bottom",
-          "top": "player_engine_rpm_top",
-          "font_color": "%scene_font_color",
-          "font_height": "normal",
-          "line_distance": "normal",
-          "circular": {
-            "pointer": "textures/pointer.png",
-            "tick_radius": "tick_radius",
-            "pointer_width": "pointer_width",
-            "pointer_length": "pointer_length",
-            "minimum_value": 0,
-            "maximum_value": 8400,
-            "blank_angle": 60,
-            "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
-          },
-          "focus_mask": "always"
-        }
+    "content": {
+      "call": "visual_player_status",
+      "context": "primary_scene_$full_user_name",
+      "arguments": {
+        "player": "%player_name",
+        "child": ["engines", "%engine_name"],
+        "format": "abs_angular_velocity",
+        "charset": "%selected_language",
+        "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+        "left": "player_engine_rpm_left",
+        "right": "player_engine_rpm_right",
+        "bottom": "player_engine_rpm_bottom",
+        "top": "player_engine_rpm_top",
+        "font_color": "%scene_font_color",
+        "font_height": "normal",
+        "line_distance": "normal",
+        "circular": {
+          "pointer": "file://textures/pointer.png",
+          "tick_radius": "tick_radius",
+          "pointer_width": "pointer_width",
+          "pointer_length": "pointer_length",
+          "minimum_value": 0,
+          "maximum_value": 8400,
+          "blank_angle": 60,
+          "ticks": ["'0'", "'1200'", "'2400'", "'3600'", "'4800'", "'6000'", "'7200'", "'8400'"]
+        },
+        "focus_mask": "always"
       }
-    ]
+    }
   }
 ]

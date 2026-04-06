@@ -4,7 +4,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_01",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -13,7 +13,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "smoke",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "desaturate": 1,
       "mean_color": [0.6, 0.6, 0.6],
@@ -25,11 +25,11 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "particles_gravel",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "alpha_fac": 0.2,
       "desaturate": 1,
-      "histogram": "textures/histograms/Ground029_Street.png",
+      "histogram": "file://textures/histograms/Ground029_Street.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -37,10 +37,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "particles_sand",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "alpha_fac": 0.2,
-      "histogram": "textures/histograms/Ground029_Street.png",
+      "histogram": "file://textures/histograms/Ground029_Street.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -48,11 +48,11 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "particles_dirt",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "alpha_fac": 0.6,
       "alpha_exponent": 0.5,
-      "histogram": "textures/histograms/Ground029_Street.png",
+      "histogram": "file://textures/histograms/Ground029_Street.png",
       "lighten": [-0.5, -0.5, -0.5],
       "anisotropic_filtering_level": 16
     }
@@ -61,10 +61,10 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "particles_snow",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "desaturate": 1,
-      "histogram": "textures/histograms/snow.png",
+      "histogram": "file://textures/histograms/snow.png",
       "anisotropic_filtering_level": 16
     }
   },
@@ -72,11 +72,11 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "particles_dust",
-      "color": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+      "color": "file://textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
       "color_mode": "rgba",
       "alpha_fac": 0.2,
       "desaturate": 1,
-      "histogram": "textures/histograms/snow.png",
+      "histogram": "file://textures/histograms/snow.png",
       "lighten": [-0.1, -0.1, -0.1],
       "anisotropic_filtering_level": 16
     }
@@ -86,7 +86,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_orange_brown_1",
-      "color": "textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
+      "color": "file://textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
       "color_mode": "rgba",
       "anisotropic_filtering_level": 16
     }
@@ -96,7 +96,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_gray",
-      "color": "textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
+      "color": "file://textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
       "color_mode": "rgba",
       "desaturate": 1,
       "anisotropic_filtering_level": 16
@@ -107,7 +107,7 @@
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "explosion_red",
-      "color": "textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
+      "color": "file://textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
       "color_mode": "rgba",
       "mean_color": [0.471, 0.023, 0.023],
       "anisotropic_filtering_level": 16

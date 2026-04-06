@@ -20,10 +20,9 @@
   {"include": "gallery.scn.json"},
 
   {"include": "textures/textures.scn.json"},
-  
+
   {"include": "animations.scn.json"},
   {"include": "vehicle_classes/vehicle_classes.scn.json"},
-  {"include": "billboards/billboards.scn.json"},
   {"include": "explosion_rocks.scn.json"},
   {"required": "(%flavor == 'extended')", "include": "weapons/weapon_instances.scn.json"},
   {"required": "(%flavor == 'extended')", "include": "weapons/weapon_resources.scn.json"},
@@ -40,6 +39,8 @@
   {"include": "models/models_urban.scn.json"},
   {"exclude": ["%if_android"], "include": "models/models_vegetation.scn.json"},
   {"required": "(%flavor == 'extended')", "include": "trails.scn.json"},
+
+  {"include": "billboards/billboards.scn.json"},
 
   {"include": "lights/lights.scn.json"},
   {"include": "local_skidmarks.scn.json"},
