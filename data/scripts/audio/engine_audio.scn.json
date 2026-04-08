@@ -32,7 +32,7 @@
     "call": "add_audio",
     "arguments": {
       "name": "thruster",
-      "filename": "file://sounds/opengameart/thruster/space_ship.mp3",
+      "filename": "file://sounds/opengameart/thruster/space_ship.$audio",
       "gain": 1,
       "distance_clamping": [5, 700]
     }

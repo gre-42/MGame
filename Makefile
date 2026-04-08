@@ -1,14 +1,72 @@
-.PHONY: recastnavigation build package test run run_dev
+.PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph
 
-CMAKE_BUILD_TYPE ?= Release
-BUILD_PREFIX ?= G
-PLATFORM_DIR != if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
-        echo $(BUILD_PREFIX)M$(CMAKE_BUILD_TYPE); \
-    else \
-        echo $(BUILD_PREFIX)U$(CMAKE_BUILD_TYPE); \
-    fi
-ostype != echo "$$OSTYPE";
-BIN_DIR = $(PLATFORM_DIR)
+COMPRESS_SOURCE_DATA_DIRS ?= data
+COMPRESS_FLAGS ?=
+COMPRESS_CONFIGS ?= $(shell echo "             \
+compressed=compression.json;                   \
+compressed.extended=compression.extended.json" | sed "s/ //g")
+
+BUILD_TARGET ?= build
+SOURCE_C_DIR ?= .
+export CMAKE_BUILD_TYPE ?= Release
+BUILD_PREFIX ?= LU
+BUILD_SUBDIR = $(BUILD_PREFIX)$(CMAKE_BUILD_TYPE)
+PACKAGE_DIR = $(BUILD_SUBDIR)
+BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
+ASSET_DIRS ?= data
+RUN_ARGS ?=
+REMOTE_ARGS = $(shell                          \
+    if [ "$(REMOTE_ROLE)" = server ]; then     \
+        echo --remote_site_id 42               \
+         --remote_role server                  \
+         --remote_ip 127.0.0.1                 \
+         --remote_port 8042;                   \
+    elif [ "$(REMOTE_ROLE)" = client ]; then   \
+        echo --remote_site_id 43               \
+         --remote_role client                  \
+         --remote_ip 127.0.0.1                 \
+         --remote_port 8042;                   \
+    fi                                         \
+    )
+BIN_DIR = $(shell                              \
+    if [ "$(PACKAGE)" != 0 ]; then             \
+        echo "$(BIN_ARTIFACT_DIR)";            \
+	else                                       \
+	    echo "$(BUILD_SUBDIR)";                \
+    fi                                         \
+    )
+GDB_ARGS = $(shell                                  \
+    if [ "$(GDB)" != 0 ]; then                      \
+        echo "gdb -ex='catch throw' -ex=r --args";  \
+    fi                                              \
+    )
+SHOW_MOUSE_CURSOR_ARGS = $(shell    \
+    if [ "$(CURSOR)" != 0 ]; then   \
+        echo --show_mouse_cursor;   \
+    fi                              \
+    )
+PERF_ARGS = $(shell                                \
+    if [ "$(PERF)" = 1 ]; then                     \
+        echo sudo -E perf record -F 99 -a -g --;   \
+    fi                                             \
+    )
+PRINT_MATERIALS_ARGS = $(shell             \
+    if [ "$(PMAT)" = 1 ]; then             \
+        echo --print_rendered_materials;   \
+    fi                                     \
+    )
+CHK_ARGS = $(shell                         \
+    if [ "$(CHK)" = 1 ]; then              \
+        echo --check_gl_errors;            \
+    fi                                     \
+    )
+OMP_ENV = $(shell                 \
+    if [ "$(OMP)" = 0 ]; then     \
+        echo OMP_NUM_THREADS=1;   \
+    fi                            \
+    )
+
+CACHE ?= 0
 
 all: recastnavigation build package test
 
@@ -16,35 +74,29 @@ recastnavigation:
 	make -C Mlib recastnavigation \
 		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
 
-build_any:
-	BUILD_PREFIX=$(BUILD_PREFIX) \
-	CMAKE_OPTIONS="-DBUILD_TRIANGLE=OFF" \
-		make -C Mlib $(TARGET) \
-			CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
-
 build:
-	make build_any TARGET=build
+	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
 
-build_clang:
-	make build_any TARGET=build_clang
+run:
+	$(OMP_ENV)                                                     \
+	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=$(SOURCE_C_DIR)/suppressions.txt" \
+	ENABLE_OSM_MAP_CACHE=$(CACHE)                                  \
+	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
+		"$(ASSET_DIRS)"                                            \
+		data/levels/main/main.scn.json                             \
+		--app_reldir .vanilla_rally                                \
+		--print_render_residual_time                               \
+		--nsamples_msaa 2                                          \
+		$(SHOW_MOUSE_CURSOR_ARGS)                                  \
+		$(PRINT_MATERIALS_ARGS)                                    \
+		--windowed_width 1500                                      \
+		--windowed_height 900                                      \
+		$(CHK_ARGS) $(REMOTE_ARGS) $(RUN_ARGS)
 
-build_clang_libcpp:
-	make build_any TARGET=build_clang_libcpp
+test: build compress run
 
-build_asan:
-	make build_any TARGET=build_asan
-
-build_tsan:
-	make build_any TARGET=build_tsan
-
-build_ubsan:
-	make build_any TARGET=build_ubsan
-
-build_asan_clang:
-	make build_any TARGET=build_asan_clang
-
-build_tsan_clang:
-	make build_any TARGET=build_tsan_clang
+compress:
+	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 package:
 	@echo "OS Type: $(ostype)"
@@ -98,7 +150,7 @@ package:
 			/mingw64/bin/libwinpthread-1.dll \
 			/mingw64/bin/libopenal-1.dll \
 			/mingw64/bin/libalut-0.dll \
-			$(BIN_DIR)/; \
+			$(PACKAGE_DIR)/; \
 	else \
 		rsync -avh --checksum \
 			/usr/lib/x86_64-linux-gnu/libalut.so* \
@@ -110,49 +162,29 @@ package:
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
 			Mlib/RecastBuild/Detour/libDetour.so* \
 			Mlib/RecastBuild/Recast/libRecast.so* \
-			$(BIN_DIR)/; \
+			$(PACKAGE_DIR)/; \
 	fi
 
 test:
-	LD_LIBRARY_PATH=$(BIN_DIR) $(BIN_DIR)/download_heightmap --help > /dev/null
-	LD_LIBRARY_PATH=$(BIN_DIR) $(BIN_DIR)/render_scene_file --help > /dev/null
+	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/download_heightmap --help > /dev/null
+	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/render_scene_file --help > /dev/null
 
-run:
-	LD_LIBRARY_PATH=$(BIN_DIR) \
-		$(BIN_DIR)/render_scene_file \
-		data \
-		data/levels/main/main.scn.json \
-		--app_reldir .osm_rally \
-		--print_render_residual_time \
-		--nsamples_msaa 2 \
-		--show_mouse_cursor \
-		--windowed_width 1500 \
-		--windowed_height 900
+pack_snap:
+	$(MAKE) build BUILD_TARGET="recastnavigation build" CMAKE_BUILD_TYPE=Release BUILD_PREFIX=L GDB=0
+	rsync --archive "$(SOURCE_C_DIR)/Mlib/LURelease/Bin/" Bin
+	rsync --archive \
+		--include='*.so' \
+		--include='*.so.?' \
+		--include='*.so.?.?.?' \
+		--exclude='*' \
+		"$(SOURCE_C_DIR)/Mlib/LURelease/Lib/" \
+		"$(SOURCE_C_DIR)/Mlib/RecastBuild/DebugUtils/" \
+		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Detour/" \
+		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Recast/" \
+		Lib
+	$(MAKE) -f Makefile.user compress CMAKE_BUILD_TYPE=Release BUILD_PREFIX=L GDB=0
+	snapcraft pack
 
-run_dev: build
-	gdb -ex="catch throw" --ex=r --args Mlib/$(PLATFORM_DIR)/Bin/render_scene_file \
-		data \
-		data/levels/main/main.scn.json \
-		--app_reldir .osm_rally \
-		--print_render_residual_time \
-		--print_physics_residual_time \
-		--nsamples_msaa 2 \
-		--show_mouse_cursor \
-		--windowed_width 1500 \
-		--windowed_height 900 \
-		--devel_mode
-
-run_tsan:
-	OMP_NUM_THREADS=1 \
-	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=Mlib/suppressions.txt" \
-		Mlib/T$(PLATFORM_DIR)/Bin/render_scene_file \
-		data \
-		data/levels/main/main.scn.json \
-		--app_reldir .osm_rally \
-		--print_render_residual_time \
-		--print_physics_residual_time \
-		--nsamples_msaa 2 \
-		--show_mouse_cursor \
-		--windowed_width 1500 \
-		--windowed_height 900 \
-		--devel_mode
+flame_graph:
+	sudo perf script | stackcollapse-perf.pl > out.perf-folded
+	flamegraph.pl out.perf-folded > perf.svg

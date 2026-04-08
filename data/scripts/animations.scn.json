@@ -1,6 +1,5 @@
 [
   {
-    "required": [["(%flavor == 'extended')", "%if_devel"]],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.idle",
@@ -11,7 +10,6 @@
     }
   },
   {
-    "required": [["(%flavor == 'extended')", "%if_devel"]],
     "call": "add_bvh_resource",
     "arguments": {
       "name": "cmu_mocap.walking",
