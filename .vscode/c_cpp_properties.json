@@ -15,9 +15,27 @@
                 "/usr/include/SDL2"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/g++-14",
+            "compilerPath": "/usr/bin/clang++-20",
             "cppStandard": "c++23",
-            "intelliSenseMode": "linux-gcc-x64",
+            "intelliSenseMode": "linux-clang-x64",
+            "compilerArgs": ["-Wall", "-Wno-unknown-pragmas", "-Wmismatched-tags", "-Wconversion", "-Werror"]
+        },
+        {
+            "name": "Android",
+            "includePath": [
+                "${workspaceFolder}/Mlib",
+                "${workspaceFolder}/Mlib/cereal/include",
+                "${workspaceFolder}/Mlib/recastnavigation/DebugUtils/Include",
+                "${workspaceFolder}/Mlib/recastnavigation/Detour/Include",
+                "${workspaceFolder}/Mlib/recastnavigation/Recast/Include",
+                "/usr/include/AL",
+                "/opt/AndroidSdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include",
+                "/opt/AndroidSdk/ndk/30.0.14904198/sources/android/native_app_glue"
+            ],
+            "defines": ["WITHOUT_LAME"],
+            "compilerPath": "/opt/AndroidSdk/ndk/30.0.14904198/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++",
+            "cppStandard": "c++23",
+            "intelliSenseMode": "linux-clang-x64",
             "compilerArgs": ["-Wall", "-Wno-unknown-pragmas", "-Wmismatched-tags", "-Wconversion", "-Werror"]
         },
         {

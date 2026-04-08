@@ -44,8 +44,8 @@
       "path_texture": "#Gravel010",
       "curb_street_texture": "#Curb_Grass_Asphalt",
       "curb_path_texture": "#Curb_Grass_Asphalt",
-      "curb2_street_texture": "",
-      "curb2_path_texture": "",
+      "curb2_street_texture": null,
+      "curb2_path_texture": null,
       "barrier_styles": [
         {
           "name": "traffic_barrier",
@@ -107,7 +107,7 @@
       "uv_scale_ceiling": 1e-1,
       "uv_scale_barrier_wall": 1e0,
       "uv_scale_highway_wall": 3e-1,
-      "with_roofs": true,
+      "with_roofs": false,
       "with_ceilings": true,
       "building_bottom": 0,
       "default_building_top": 10,

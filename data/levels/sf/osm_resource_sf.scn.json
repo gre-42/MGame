@@ -50,7 +50,7 @@
       ],
       "path_crossing_textures": ["#concrete1_2K_wh"],
       "path_texture": "#concrete1_2K_wh_street",
-      "window_reflection_map": "window",
+      "window_reflection_map": "#window",
       "curb_street_texture": "#PavingStones035",
       "curb_path_texture": "#PavingStones035",
       "curb2_street_texture": "#PavingStones038",
@@ -64,23 +64,23 @@
       ],
       "socle_textures": [
         {
-          "textures": ["Bricks058_Base", "concrete1_2K_wh_Detail"],
+          "textures": ["#Bricks058_Base", "#concrete1_2K_wh_Detail"],
           "material": "surface_base_stone"
         }
       ],
       "facade_textures": [
         {
-          "facade": ["Plaster003_Base", "concrete1_2K_wh_Detail"],
+          "facade": ["#Plaster003_Base", "#concrete1_2K_wh_Detail"],
           "material": "surface_base_stone",
           "max_height": 5
         },
         {
-          "facade": ["Plaster003_Gray_Base", "concrete1_2K_wh_Detail"],
+          "facade": ["#Plaster003_Gray_Base", "#concrete1_2K_wh_Detail"],
           "material": "surface_base_stone",
           "max_height": 5
         },
         {
-          "facade": ["wall_facade_plaster_white_Base", "concrete1_2K_wh_Detail"],
+          "facade": ["#wall_facade_plaster_white_Base", "#concrete1_2K_wh_Detail"],
           "material": "surface_base_stone",
           "min_height": 5,
           "max_height": 50,
@@ -88,31 +88,31 @@
             "facade_edge_size": [0.5, 0.5],
             "facade_inner_size": [1.4, 1.4],
             "interior_size": [1.5, 1.5, 0.2],
-            "left": "DE21F2_industryWindow00001_left",
-            "right": "DE21F2_industryWindow00001_right",
-            "floor": "DE21F2_industryWindow00001_bottom",
-            "ceiling": "DE21F2_industryWindow00001_top",
-            "back": "DE21F2_industryWindow00001_512",
-            "back_specular": "DE21F2_industryWindow00001_512_specular"
+            "left": "#DE21F2_industryWindow00001_left",
+            "right": "#DE21F2_industryWindow00001_right",
+            "floor": "#DE21F2_industryWindow00001_bottom",
+            "ceiling": "#DE21F2_industryWindow00001_top",
+            "back": "#DE21F2_industryWindow00001_512",
+            "back_specular": "#DE21F2_industryWindow00001_512_specular"
           }
         },
         {
-          "facade": ["DE21F2_industryWindow00001_512"],
+          "facade": ["#DE21F2_industryWindow00001_512"],
           "material": "surface_base_stone",
           "min_height": 50
         },
         {
-          "facade": ["DE21F2_industryWindow00002"],
+          "facade": ["#DE21F2_industryWindow00002"],
           "material": "surface_base_stone",
           "min_height": 50
         },
         {
-          "facade": ["DE21F2_industryWindow00003_gray"],
+          "facade": ["#DE21F2_industryWindow00003_gray"],
           "material": "surface_base_stone",
           "min_height": 50
         },
         {
-          "facade": ["MarekWindow00001_512"],
+          "facade": ["#MarekWindow00001_512"],
           "material": "surface_base_stone",
           "min_height": 50
         }
