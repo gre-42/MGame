@@ -9,13 +9,19 @@ compressed.extended=compression.extended.json" | sed "s/ //g")
 BUILD_TARGET ?= build
 SOURCE_C_DIR ?= .
 export CMAKE_BUILD_TYPE ?= Release
-BUILD_PREFIX ?= LU
-BUILD_SUBDIR = $(BUILD_PREFIX)$(CMAKE_BUILD_TYPE)
+BUILD_SUBDIR != $(MAKE) --silent          \
+    ASAN=$(ASAN)                          \
+    TSAN=$(TSAN)                          \
+    UBSAN=$(UBSAN)                        \
+    CLANG=$(CLANG)                        \
+    LIBCPP=$(LIBCPP)                      \
+    CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
+    -C Mlib echo_build_dir
 PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
-REMOTE_ARGS = $(shell                          \
+REMOTE_ARGS !=                                 \
     if [ "$(REMOTE_ROLE)" = server ]; then     \
         echo --remote_site_id 42               \
          --remote_role server                  \
@@ -26,45 +32,37 @@ REMOTE_ARGS = $(shell                          \
          --remote_role client                  \
          --remote_ip 127.0.0.1                 \
          --remote_port 8042;                   \
-    fi                                         \
-    )
-BIN_DIR = $(shell                              \
+    fi
+BIN_DIR !=                                     \
     if [ "$(PACKAGE)" != 0 ]; then             \
         echo "$(BIN_ARTIFACT_DIR)";            \
-	else                                       \
-	    echo "$(BUILD_SUBDIR)";                \
-    fi                                         \
-    )
-GDB_ARGS = $(shell                                  \
+    else                                       \
+        echo "$(BUILD_SUBDIR)";                \
+    fi
+GDB_ARGS !=                                         \
     if [ "$(GDB)" != 0 ]; then                      \
         echo "gdb -ex='catch throw' -ex=r --args";  \
-    fi                                              \
-    )
-SHOW_MOUSE_CURSOR_ARGS = $(shell    \
+    fi
+SHOW_MOUSE_CURSOR_ARGS !=           \
     if [ "$(CURSOR)" != 0 ]; then   \
         echo --show_mouse_cursor;   \
-    fi                              \
-    )
-PERF_ARGS = $(shell                                \
+    fi
+PERF_ARGS !=                                       \
     if [ "$(PERF)" = 1 ]; then                     \
         echo sudo -E perf record -F 99 -a -g --;   \
-    fi                                             \
-    )
-PRINT_MATERIALS_ARGS = $(shell             \
+    fi
+PRINT_MATERIALS_ARGS !=                    \
     if [ "$(PMAT)" = 1 ]; then             \
         echo --print_rendered_materials;   \
-    fi                                     \
-    )
-CHK_ARGS = $(shell                         \
+    fi
+CHK_ARGS !=                                \
     if [ "$(CHK)" = 1 ]; then              \
         echo --check_gl_errors;            \
-    fi                                     \
-    )
-OMP_ENV = $(shell                 \
+    fi
+OMP_ENV !=                        \
     if [ "$(OMP)" = 0 ]; then     \
         echo OMP_NUM_THREADS=1;   \
-    fi                            \
-    )
+    fi
 
 CACHE ?= 0
 
@@ -73,6 +71,9 @@ all: recastnavigation build package test
 recastnavigation:
 	make -C Mlib recastnavigation \
 		CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)
+
+echo_build_dir:
+	@echo "$(BUILD_SUBDIR)"
 
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
@@ -170,7 +171,7 @@ test:
 	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/render_scene_file --help > /dev/null
 
 pack_snap:
-	$(MAKE) build BUILD_TARGET="recastnavigation build" CMAKE_BUILD_TYPE=Release BUILD_PREFIX=L GDB=0
+	$(MAKE) build BUILD_TARGET="recastnavigation build" CMAKE_BUILD_TYPE=Release CLANG=1 GDB=0
 	rsync --archive "$(SOURCE_C_DIR)/Mlib/LURelease/Bin/" Bin
 	rsync --archive \
 		--include='*.so' \
@@ -182,7 +183,7 @@ pack_snap:
 		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Detour/" \
 		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Recast/" \
 		Lib
-	$(MAKE) -f Makefile.user compress CMAKE_BUILD_TYPE=Release BUILD_PREFIX=L GDB=0
+	$(MAKE) -f Makefile.user compress CMAKE_BUILD_TYPE=Release CLANG=1 GDB=0
 	snapcraft pack
 
 flame_graph:
