@@ -66,7 +66,7 @@ OMP_ENV !=                        \
 
 CACHE ?= 0
 
-all: recastnavigation build package test
+all: recastnavigation cmake build package test
 
 recastnavigation:
 	make -C Mlib recastnavigation \
@@ -74,6 +74,9 @@ recastnavigation:
 
 echo_build_dir:
 	@echo "$(BUILD_SUBDIR)"
+
+cmake:
+	$(MAKE) build BUILD_TARGET=cmake
 
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
