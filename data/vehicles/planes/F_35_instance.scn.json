@@ -499,7 +499,8 @@
           "node": "car_node$suffix",
           "value": ["driver"]
         }
-      }
+      },
+      {"required": "%if_damageable", "playback": "make_vehicle_damageable"}
     ]
   },
   {

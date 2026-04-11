@@ -348,7 +348,8 @@
             "occluder_pass": "none",
             "aggregate_mode": "none",
             "transformation_mode": "all",
-            "rectangle_triangulation_mode": "disabled"
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "attr_collide|obj_bullet_line_segment"
           }
         }
       },
@@ -358,13 +359,6 @@
           "name": "tank_bullet_hitbox",
           "from": [0, 0, 0],
           "to": [0, 0, -20]
-        }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "tank_bullet_hitbox",
-          "add": "obj_bullet_line_segment"
         }
       },
       {
@@ -383,15 +377,9 @@
             "occluder_pass": "none",
             "aggregate_mode": "none",
             "transformation_mode": "all",
-            "rectangle_triangulation_mode": "disabled"
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "attr_collide|obj_bullet_mesh"
           }
-        }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "grenade_hitbox",
-          "add": "obj_bullet_mesh"
         }
       }
     ]
