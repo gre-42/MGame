@@ -318,14 +318,12 @@
   },
   {
     "declare_macro": "add_attached_light_tiger_tank",
-    "content": [
-      {
+    "content": {
         "playback": "add_attached_light_tank",
         "arguments": {
           "lsuffix": "%lsuffix",
           "csuffix": "%csuffix"
         }
       }
-    ]
   }
 ]

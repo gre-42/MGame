@@ -194,10 +194,20 @@
       "call": "player_key_binding",
       "arguments": {
         "local_user_id": "%local_user_id",
-        "id": "plane.select_next_vehicle",
+        "id": "car_heli_tank_plane.select_next_vehicle",
         "seat": "%externals_seat",
         "player": "%player_name",
         "select_next_vehicle": true
+      }
+    },
+    {
+      "call": "player_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "car_heli_tank_plane.reset_vehicle",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "reset_vehicle": true
       }
     }
   ]
