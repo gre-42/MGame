@@ -1,5 +1,7 @@
 .PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph
 
+ostype != uname
+
 COMPRESS_SOURCE_DATA_DIRS ?= data
 COMPRESS_FLAGS ?=
 COMPRESS_CONFIGS ?= $(shell echo "             \
@@ -102,48 +104,49 @@ test: build compress run
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
+package: SHELL := /bin/bash
 package:
 	@echo "OS Type: $(ostype)"
-	@echo "Platform dir: $(PLATFORM_DIR)"
-	if [ "$$OSTYPE" = "msys" ] || [ "$$OSTYPE" = "cygwin" ]; then \
+	@echo "Platform dir: $(BUILD_SUBDIR)"
+	if [[ "$(ostype)" = MSYS* ]] || [[ "$(ostype)" = CYGWIN* ]]; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/download_heightmap.exe \
-			Mlib/$(PLATFORM_DIR)/Bin/render_scene_file.exe \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibArray.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibAudio.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibComponents.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibCppHttplib.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlib.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibGeography.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibGeometry.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibGlad.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibHalf.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibImages.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibIo.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibJson.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibLayout.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibMacroExecutor.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibMath.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibMemory.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibNavigation.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibNvDds.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibOs.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibOsmLoader.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibPhysics.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibPlayers.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibPoly2Tri.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibRegex.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibRemote.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibRender.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibScene.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibSceneGraph.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibStats.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibStbCpp.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibStb.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibStrings.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibThreads.dll \
-			Mlib/$(PLATFORM_DIR)/Bin/libMlibTime.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap.exe \
+			Mlib/$(BUILD_SUBDIR)/Bin/render_scene_file.exe \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibArray.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibAudio.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibComponents.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibCppHttplib.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlib.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeography.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeometry.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGlad.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibHalf.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibImages.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibIo.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibJson.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibLayout.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMacroExecutor.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMath.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMemory.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNavigation.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNvDds.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOs.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOsmLoader.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPhysics.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPlayers.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPoly2Tri.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRegex.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRemote.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRender.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibScene.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibSceneGraph.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStats.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStbCpp.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStb.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStrings.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibThreads.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibTime.dll \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/RecastBuild/Detour/libDetour.dll \
 			Mlib/RecastBuild/Recast/libRecast.dll \
@@ -160,9 +163,9 @@ package:
 			/usr/lib/x86_64-linux-gnu/libalut.so* \
 			/usr/lib/x86_64-linux-gnu/libglfw.so* \
 			/usr/lib/x86_64-linux-gnu/libopenal.so* \
-			Mlib/$(PLATFORM_DIR)/Bin/download_heightmap \
-			Mlib/$(PLATFORM_DIR)/Bin/render_scene_file \
-			Mlib/$(PLATFORM_DIR)/Lib/ \
+			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap \
+			Mlib/$(BUILD_SUBDIR)/Bin/render_scene_file \
+			Mlib/$(BUILD_SUBDIR)/Lib/ \
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
 			Mlib/RecastBuild/Detour/libDetour.so* \
 			Mlib/RecastBuild/Recast/libRecast.so* \
