@@ -68,7 +68,7 @@ OMP_ENV !=                        \
 
 CACHE ?= 0
 
-all: recastnavigation cmake build package test
+all: recastnavigation cmake build package test_package
 
 recastnavigation:
 	make -C Mlib recastnavigation \
@@ -98,8 +98,6 @@ run:
 		--windowed_width 1500                                      \
 		--windowed_height 900                                      \
 		$(CHK_ARGS) $(REMOTE_ARGS) $(RUN_ARGS)
-
-test: build compress run
 
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
@@ -172,7 +170,7 @@ package:
 			$(PACKAGE_DIR)/; \
 	fi
 
-test:
+test_package:
 	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/download_heightmap --help > /dev/null
 	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/render_scene_file --help > /dev/null
 

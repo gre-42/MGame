@@ -75,7 +75,7 @@ jobs:
             mingw-w64-x86_64-boost \
             mingw-w64-x86_64-cmake \
             mingw-w64-x86_64-freealut \
-            mingw-w64-x86_64-gcc \
+            mingw-w64-x86_64-gcc-14 \
             mingw-w64-x86_64-glfw \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-openal \
@@ -90,7 +90,7 @@ jobs:
 
       - name: Build, package and test
         # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: CC=gcc-14 CXX=g++-14 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
