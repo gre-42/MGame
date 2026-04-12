@@ -20,7 +20,7 @@ on:
 
 jobs:
   build-ubuntu:
-    if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-ubuntu')
+    if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-ubuntu')
     runs-on: ubuntu-24.04
 
     steps:
@@ -58,7 +58,9 @@ jobs:
             osm_racing_game.cmd
 
   build-msys2:
-    if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msys2')
+    # MSYS2-build disabled default, because downgrading to g++-14 is not straightforward.
+    # if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msys2')
+    if: contains(github.event.inputs.job_name, 'build-msys2')
     runs-on: windows-latest
 
     defaults:
@@ -75,7 +77,7 @@ jobs:
             mingw-w64-x86_64-boost \
             mingw-w64-x86_64-cmake \
             mingw-w64-x86_64-freealut \
-            mingw-w64-x86_64-gcc-14 \
+            mingw-w64-x86_64-gcc \
             mingw-w64-x86_64-glfw \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-openal \
@@ -90,7 +92,7 @@ jobs:
 
       - name: Build, package and test
         # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        run: CC=gcc-14 CXX=g++-14 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
@@ -100,7 +102,7 @@ jobs:
             GM${{ github.event.inputs.build_type || 'Release' }}
 
   build-msvc:
-    if: (github.event.inputs.job_name == '') || (github.event.inputs.job_name == 'build-msvc')
+    if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msvc')
     runs-on: windows-latest
 
     steps:
