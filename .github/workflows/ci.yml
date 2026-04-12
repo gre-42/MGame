@@ -58,9 +58,7 @@ jobs:
             osm_racing_game.cmd
 
   build-msys2:
-    # MSYS2-build disabled default, because downgrading to g++-14 is not straightforward.
-    # if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msys2')
-    if: contains(github.event.inputs.job_name, 'build-msys2')
+    if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msys2')
     runs-on: windows-latest
 
     defaults:
@@ -77,7 +75,7 @@ jobs:
             mingw-w64-x86_64-boost \
             mingw-w64-x86_64-cmake \
             mingw-w64-x86_64-freealut \
-            mingw-w64-x86_64-gcc \
+            mingw-w64-x86_64-clang \
             mingw-w64-x86_64-glfw \
             mingw-w64-x86_64-ninja \
             mingw-w64-x86_64-openal \
