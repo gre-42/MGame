@@ -69,18 +69,21 @@ jobs:
       - uses: msys2/setup-msys2@v2
 
       - name: Install dependencies
-        run: |
-          pacman --noconfirm -S \
-            make \
-            mingw-w64-x86_64-boost \
-            mingw-w64-x86_64-cmake \
-            mingw-w64-x86_64-freealut \
-            mingw-w64-x86_64-clang \
-            mingw-w64-x86_64-glfw \
-            mingw-w64-x86_64-ninja \
-            mingw-w64-x86_64-openal \
-            mingw-w64-x86_64-openssl \
-            mingw-w64-x86_64-vulkan-devel \
+        with:
+          msystem: CLANG64
+          update: true
+          install: >-
+            make
+            mingw-w64-clang-x86_64-boost
+            mingw-w64-clang-x86_64-cmake
+            mingw-w64-clang-x86_64-freealut
+            mingw-w64-clang-x86_64-clang
+            mingw-w64-clang-x86_64-toolchain
+            mingw-w64-clang-x86_64-glfw
+            mingw-w64-clang-x86_64-ninja
+            mingw-w64-clang-x86_64-openal
+            mingw-w64-clang-x86_64-openssl
+            mingw-w64-clang-x86_64-vulkan-devel
             rsync
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
