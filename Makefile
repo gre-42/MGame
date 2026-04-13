@@ -1,4 +1,5 @@
 .PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph
+SHELL := /bin/bash
 
 ostype != uname
 
@@ -19,6 +20,7 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     LIBCPP=$(LIBCPP)                      \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
     -C Mlib echo_build_dir
+PLATFORM_CHAR != $(MAKE) -C Mlib echo_platform_char
 PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
@@ -102,13 +104,10 @@ run:
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
-package: SHELL := /bin/bash
 package:
 	@echo "OS Type: $(ostype)"
 	@echo "Platform dir: $(BUILD_SUBDIR)"
-	if [[ "$(ostype)" = MSYS* ]] || \
-	   [[ "$(ostype)" = CYGWIN* ]] || \
-	   [[ "$(ostype)" = MINGW* ]]; then \
+	if [[ "$(PLATFORM_CHAR)" = M ]]; then \
 		rsync -avh --checksum \
 			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap.exe \
 			Mlib/$(BUILD_SUBDIR)/Bin/render_scene_file.exe \
