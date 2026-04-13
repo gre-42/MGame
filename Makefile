@@ -106,7 +106,9 @@ package: SHELL := /bin/bash
 package:
 	@echo "OS Type: $(ostype)"
 	@echo "Platform dir: $(BUILD_SUBDIR)"
-	if [[ "$(ostype)" = MSYS* ]] || [[ "$(ostype)" = CYGWIN* ]]; then \
+	if [[ "$(ostype)" = MSYS* ]] || \
+	   [[ "$(ostype)" = CYGWIN* ]] || \
+	   [[ "$(ostype)" = MINGW* ]]; then \
 		rsync -avh --checksum \
 			/mingw64/bin/glfw3.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap.exe \
