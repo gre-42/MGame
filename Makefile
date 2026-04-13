@@ -110,14 +110,12 @@ package:
 	   [[ "$(ostype)" = CYGWIN* ]] || \
 	   [[ "$(ostype)" = MINGW* ]]; then \
 		rsync -avh --checksum \
-			/mingw64/bin/glfw3.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap.exe \
 			Mlib/$(BUILD_SUBDIR)/Bin/render_scene_file.exe \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibArray.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibAudio.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibComponents.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibCppHttplib.dll \
-			Mlib/$(BUILD_SUBDIR)/Bin/libMlib.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeography.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeometry.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGlad.dll \
@@ -129,8 +127,10 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMacroExecutor.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMath.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMemory.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMisc.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNavigation.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNvDds.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOpenGL.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOs.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOsmLoader.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPhysics.dll \
@@ -138,7 +138,6 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPoly2Tri.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRegex.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRemote.dll \
-			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRender.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibScene.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibSceneGraph.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStats.dll \
@@ -150,13 +149,14 @@ package:
 			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/RecastBuild/Detour/libDetour.dll \
 			Mlib/RecastBuild/Recast/libRecast.dll \
-			/mingw64/bin/libgcc_s_seh-1.dll \
-			/mingw64/bin/libgomp-1.dll \
-			/mingw64/bin/libstdc++-6.dll \
-			/mingw64/bin/vulkan-1.dll \
-			/mingw64/bin/libwinpthread-1.dll \
-			/mingw64/bin/libopenal-1.dll \
-			/mingw64/bin/libalut-0.dll \
+			/clang64/bin/glfw3.dll \
+			/clang64/bin/libunwind.dll \
+			/clang64/bin/libomp.dll \
+			/clang64/bin/libc++.dll \
+			/clang64/bin/vulkan-1.dll \
+			/clang64/bin/libwinpthread-1.dll \
+			/clang64/bin/libopenal-1.dll \
+			/clang64/bin/libalut-0.dll \
 			$(PACKAGE_DIR)/; \
 	else \
 		rsync -avh --checksum \
