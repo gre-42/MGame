@@ -65,7 +65,7 @@ OMP_ENV !=                        \
     if [ "$(OMP)" = 0 ]; then     \
         echo OMP_NUM_THREADS=1;   \
     fi
-
+SKIP_TESTS ?= 0
 CACHE ?= 0
 
 all: recastnavigation cmake build package test_package
@@ -173,8 +173,12 @@ package:
 	fi
 
 test_package:
-	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/download_heightmap --help > /dev/null
-	LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/render_scene_file --help > /dev/null
+	@if [ "$(SKIP_TESTS)" = 1 ]; then \
+		echo "Skipping tests (SKIP_TESTS=1)"; \
+	else \
+		LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/download_heightmap --help > /dev/null; \
+		LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/render_scene_file --help > /dev/null; \
+	fi
 
 pack_snap:
 	$(MAKE) build BUILD_TARGET="recastnavigation build" CMAKE_BUILD_TYPE=Release CLANG=1 GDB=0
