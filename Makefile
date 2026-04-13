@@ -150,13 +150,13 @@ package:
 			Mlib/RecastBuild/Detour/libDetour.dll \
 			Mlib/RecastBuild/Recast/libRecast.dll \
 			/clang64/bin/glfw3.dll \
-			/clang64/bin/libunwind.dll \
-			/clang64/bin/libomp.dll \
-			/clang64/bin/libc++.dll \
-			/clang64/bin/vulkan-1.dll \
-			/clang64/bin/libwinpthread-1.dll \
-			/clang64/bin/libopenal-1.dll \
 			/clang64/bin/libalut-0.dll \
+			/clang64/bin/libc++.dll \
+			/clang64/bin/libomp.dll \
+			/clang64/bin/libopenal-1.dll \
+			/clang64/bin/libunwind.dll \
+			/clang64/bin/libwinpthread-1.dll \
+			/clang64/bin/vulkan-1.dll \
 			$(PACKAGE_DIR)/; \
 	else \
 		rsync -avh --checksum \
