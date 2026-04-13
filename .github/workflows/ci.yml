@@ -17,6 +17,10 @@ on:
         description: "The CMake build-type"
         default: Release
         required: true
+      skip_tests:
+        description: "Set to 1 to skip test execution"
+        default: 0
+        required: true
 
 jobs:
   build-ubuntu:
@@ -43,9 +47,9 @@ jobs:
           submodules: recursive
 
       - name: Build, package and test
-        # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        run: CC=gcc-14 CXX=g++-14 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        # run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        run: CC=gcc-14 CXX=g++-14 make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        # run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
@@ -91,8 +95,8 @@ jobs:
           submodules: recursive
 
       - name: Build, package and test
-        # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
-        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
+        # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
