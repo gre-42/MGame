@@ -20,7 +20,7 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     LIBCPP=$(LIBCPP)                      \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
     -C Mlib echo_build_dir
-PLATFORM_CHAR != $(MAKE) -C Mlib echo_platform_char
+PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
 PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
