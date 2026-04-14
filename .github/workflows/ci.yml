@@ -52,7 +52,7 @@ jobs:
         # run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: osm-rally-artifact-ubuntu
           path: |
@@ -99,7 +99,7 @@ jobs:
         run: make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: osm-rally-artifact-msys2
           path: |
@@ -146,7 +146,7 @@ jobs:
           cmd /C Mlib\package_scene_renderer.cmd || exit /b
 
       - name: Archive artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: osm-rally-artifact-msvc
           path: |
