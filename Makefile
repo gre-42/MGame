@@ -114,6 +114,7 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibArray.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibAudio.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibComponents.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibCompression.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibCppHttplib.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeography.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibGeometry.dll \
@@ -126,19 +127,21 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMacroExecutor.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMath.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMemory.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMiniMp3.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibMisc.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNavigation.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibNvDds.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOpenGL.dll \
-			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOs.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOsmLoader.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibOs.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPhysics.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPlayers.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibPoly2Tri.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibProctree.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRegex.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRemote.dll \
-			Mlib/$(BUILD_SUBDIR)/Bin/libMlibScene.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibSceneGraph.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibScene.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStats.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStbCpp.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStb.dll \
