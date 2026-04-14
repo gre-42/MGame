@@ -154,8 +154,9 @@ package:
 			/clang64/bin/glfw3.dll \
 			/clang64/bin/libalut-0.dll \
 			/clang64/bin/libc++.dll \
-			/clang64/bin/libicuin78.dll \
-			/clang64/bin/libicuuc78.dll \
+			/clang64/bin/libicudt*.dll \
+			/clang64/bin/libicuin*.dll \
+			/clang64/bin/libicuuc*.dll \
 			/clang64/bin/libomp.dll \
 			/clang64/bin/libopenal-1.dll \
 			/clang64/bin/libunwind.dll \
