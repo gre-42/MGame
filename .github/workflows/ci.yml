@@ -103,7 +103,7 @@ jobs:
         with:
           name: osm-rally-artifact-msys2
           path: |
-            ML${{ github.event.inputs.build_type || 'Release' }}
+            LM${{ github.event.inputs.build_type || 'Release' }}
 
   build-msvc:
     if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msvc')
