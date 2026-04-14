@@ -158,13 +158,13 @@ jobs:
     needs: [build-ubuntu, build-msvc]
     steps:
       - name: Download Ubuntu artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: osm-rally-artifact-ubuntu
           path: MGame
 
       - name: Download MSVC artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: osm-rally-artifact-msvc
           path: MGame/GVS${{ github.event.inputs.build_type || 'Release' }}
