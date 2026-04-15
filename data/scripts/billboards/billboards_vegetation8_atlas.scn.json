@@ -16,13 +16,11 @@
     }
   },
   {
-    "comment": {
-      "call": "save_texture_array_png",
-      "arguments": {
-        "name": "vegetation8",
-        "filename_prefix": "/tmp/vegetation8_",
-        "color_mode": "rgba"
-      }
+    "required": "%false",
+    "call": "save_texture_array_png",
+    "arguments": {
+      "name": "#vegetation8",
+      "filename_prefix": "file:///tmp/vegetation8_"
     }
   },
   {
