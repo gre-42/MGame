@@ -9,7 +9,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 # curl -o gh2.xml https://overpass-api.de/api/map?bbox=12.594,47.069,12.985,47.379
 
-../../../Mlib/GURelease/Bin/download_heightmap \
+../../../Mlib/LURelease/Bin/download_heightmap \
     --zoom 12 \
     --min_lat 35.7353000 \
     --min_lon -113.3753000 \
