@@ -57,7 +57,7 @@ jobs:
           name: osm-rally-artifact-ubuntu
           path: |
             data
-            GU${{ github.event.inputs.build_type || 'Release' }}
+            U${{ github.event.inputs.build_type || 'Release' }}
             osm_racing_game
             osm_racing_game.cmd
 
@@ -175,8 +175,9 @@ jobs:
       # https://github.com/actions/upload-artifact?tab=readme-ov-file#permission-loss
       - name: Create ZIP archive
         run: |
-          chmod +x MGame/osm_racing_game MGame/URelease/download_heightmap
-          chmod +x MGame/osm_racing_game MGame/URelease/render_scene_file
+          chmod +x MGame/osm_racing_game
+          chmod +x MGame/U${{ github.event.inputs.build_type || 'Release' }}/download_heightmap
+          chmod +x MGame/U${{ github.event.inputs.build_type || 'Release' }}/render_scene_file
           zip -r MGame.zip MGame
 
       - name: Create release
