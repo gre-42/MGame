@@ -175,8 +175,8 @@ jobs:
       # https://github.com/actions/upload-artifact?tab=readme-ov-file#permission-loss
       - name: Create ZIP archive
         run: |
-          chmod +x MGame/osm_racing_game MGame/LURelease/download_heightmap
-          chmod +x MGame/osm_racing_game MGame/LURelease/render_scene_file
+          chmod +x MGame/osm_racing_game MGame/URelease/download_heightmap
+          chmod +x MGame/osm_racing_game MGame/URelease/render_scene_file
           zip -r MGame.zip MGame
 
       - name: Create release
