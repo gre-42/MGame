@@ -139,7 +139,7 @@ jobs:
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           cmd /C Mlib\build_scene_renderer.cmd || exit /b
         env:
-          CMAKE_BUILD_PARALLEL_LEVEL: 2
+          CMAKE_BUILD_PARALLEL_LEVEL: 4
 
       - name: Package
         shell: cmd
