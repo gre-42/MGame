@@ -276,7 +276,9 @@
             }
           }
         ]
-      }
+      },
+      { "playback": "create_speed_hud" },
+      { "playback": "create_common_hud" }
     ]
   },
   {
