@@ -33,7 +33,8 @@
             }
           },
           "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
-          "dynamically_lighted": true
+          "dynamically_lighted": true,
+          "physics_material": "%physics_material"
         }
       }
     }
@@ -49,11 +50,11 @@
           "dist_min": 0,
           "dist_max": "inf",
           "occluder_pass": "none",
-          "rectangle_triangulation_mode": "disabled"
+          "rectangle_triangulation_mode": "disabled",
+          "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
         }
       },
-      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%name", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
-      {"call": "modify_physics_material_tags", "arguments": {"resource_name": "%name", "add": "obj_hitbox|attr_convex"}}
+      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%name", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}}
     ]
   },
   {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_front"}},
@@ -92,26 +93,18 @@
     }
   },
   {
-    "comment": [
-      {
-        "playback": "load_F_35_part",
-        "arguments": {
-          "name": "F_35_distancebox",
-          "subdir": "hitbox",
-          "dist_min": 0,
-          "dist_max": "inf",
-          "occluder_pass": "none",
-          "rectangle_triangulation_mode": "disabled"
-        }
-      },
-      {
-        "call": "modify_physics_material_tags",
-        "arguments": {
-          "resource_name": "F_35_distancebox",
-          "add": "attr_collide|obj_distancebox|attr_convex"
-        }
+    "comment": {
+      "playback": "load_F_35_part",
+      "arguments": {
+        "name": "F_35_distancebox",
+        "subdir": "hitbox",
+        "dist_min": 0,
+        "dist_max": "inf",
+        "occluder_pass": "none",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_collide|obj_distancebox|attr_convex"
       }
-    ]
+    }
   },
   {
     "call": "compound_resource",
@@ -173,7 +166,8 @@
         "dist_min": "%dist_min",
         "dist_max": "%dist_max",
         "occluder_pass": "%occluder_pass",
-        "rectangle_triangulation_mode": "delaunay"
+        "rectangle_triangulation_mode": "delaunay",
+        "physics_material": "attr_visible"
       }
     }
   },
