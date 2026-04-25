@@ -18,6 +18,7 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     UBSAN=$(UBSAN)                        \
     CLANG=$(CLANG)                        \
     LIBCPP=$(LIBCPP)                      \
+    EMSDK=$(EMSDK)                        \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
     -C Mlib echo_build_dir
 PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
@@ -81,6 +82,9 @@ echo_build_dir:
 
 cmake:
 	$(MAKE) build BUILD_TARGET=cmake
+
+login:
+	$(MAKE) build BUILD_TARGET=login
 
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
@@ -148,11 +152,10 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStrings.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibThreads.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibTime.dll \
-			Mlib/RecastBuild/DebugUtils/libDebugUtils.dll \
-			Mlib/RecastBuild/Detour/libDetour.dll \
-			Mlib/RecastBuild/Recast/libRecast.dll \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/DebugUtils/libDebugUtils.dll \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/Detour/libDetour.dll \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/Recast/libRecast.dll \
 			/clang64/bin/glfw3.dll \
-			/clang64/bin/libalut-0.dll \
 			/clang64/bin/libc++.dll \
 			/clang64/bin/libicudt*.dll \
 			/clang64/bin/libicuin*.dll \
@@ -165,15 +168,14 @@ package:
 			$(PACKAGE_DIR)/; \
 	else \
 		rsync -avh --checksum \
-			/usr/lib/x86_64-linux-gnu/libalut.so* \
 			/usr/lib/x86_64-linux-gnu/libglfw.so* \
 			/usr/lib/x86_64-linux-gnu/libopenal.so* \
 			Mlib/$(BUILD_SUBDIR)/Bin/download_heightmap \
 			Mlib/$(BUILD_SUBDIR)/Bin/render_scene_file \
 			Mlib/$(BUILD_SUBDIR)/Lib/ \
-			Mlib/RecastBuild/DebugUtils/libDebugUtils.so* \
-			Mlib/RecastBuild/Detour/libDetour.so* \
-			Mlib/RecastBuild/Recast/libRecast.so* \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/DebugUtils/libDebugUtils.so* \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/Detour/libDetour.so* \
+			Mlib/$(PLATFORM_CHAR)RecastBuild/Recast/libRecast.so* \
 			$(PACKAGE_DIR)/; \
 	fi
 
@@ -194,9 +196,9 @@ pack_snap:
 		--include='*.so.?.?.?' \
 		--exclude='*' \
 		"$(SOURCE_C_DIR)/Mlib/LURelease/Lib/" \
-		"$(SOURCE_C_DIR)/Mlib/RecastBuild/DebugUtils/" \
-		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Detour/" \
-		"$(SOURCE_C_DIR)/Mlib/RecastBuild/Recast/" \
+		"$(SOURCE_C_DIR)/Mlib/$(PLATFORM_CHAR)RecastBuild/DebugUtils/" \
+		"$(SOURCE_C_DIR)/Mlib/$(PLATFORM_CHAR)RecastBuild/Detour/" \
+		"$(SOURCE_C_DIR)/Mlib/$(PLATFORM_CHAR)RecastBuild/Recast/" \
 		Lib
 	$(MAKE) -f Makefile.user compress CMAKE_BUILD_TYPE=Release CLANG=1 GDB=0
 	snapcraft pack

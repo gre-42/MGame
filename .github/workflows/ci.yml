@@ -35,7 +35,6 @@ jobs:
             ninja-build \
             libglfw3-dev \
             libopenal-dev \
-            libalut-dev \
             libssl-dev \
             libboost-dev \
             libboost-regex-dev \
@@ -79,7 +78,6 @@ jobs:
             make
             mingw-w64-clang-x86_64-boost
             mingw-w64-clang-x86_64-cmake
-            mingw-w64-clang-x86_64-freealut
             mingw-w64-clang-x86_64-clang
             mingw-w64-clang-x86_64-toolchain
             mingw-w64-clang-x86_64-glfw
@@ -127,7 +125,7 @@ jobs:
         run: |
           vcpkg install icu boost-asio boost-headers boost-xpressive boost-regex[icu] || exit /b
           PowerShell -ExecutionPolicy Bypass Mlib/install_openssl.ps1 || exit /b
-          PowerShell -ExecutionPolicy Bypass Mlib/build_openal_soft_and_freealut.ps1 || exit /b
+          PowerShell -ExecutionPolicy Bypass Mlib/build_openal_soft.ps1 || exit /b
           set CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }}
           cmd /C Mlib\build_recastnavigation.cmd || exit /b
           cmd /C Mlib\build_zlib.cmd || exit /b

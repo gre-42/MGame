@@ -8,8 +8,8 @@
             "name": "(gdb) Launch Mgame (Server)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Mlib/LGURelWithDebInfo/Bin/render_scene_file",
-            // "program": "${workspaceFolder}/Mlib/GURelWithDebInfo/Bin/remote_test",
+            "program": "${workspaceFolder}/Mlib/LURelWithDebInfo/Bin/render_scene_file",
+            // "program": "${workspaceFolder}/Mlib/URelWithDebInfo/Bin/remote_test",
             "args": [
                 "data\\;/media/kl/Acer/Daten/Art/3D-Scenes\\;/media/kl/Acer/Daten/Art/3D-Scenes/city-buildings-asset-pack\\;/media/kl/Acer/Daten/MyPrograms/MGame_Private\\;/media/Daten/Games/Steam/steamapps/common",
                 "data/levels/main/main.scn.json",
