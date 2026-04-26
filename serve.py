@@ -10,4 +10,7 @@ class WASMHandler(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 if __name__ == "__main__":
-    http.server.test(HandlerClass=WASMHandler, port=8000)
+    http.server.test(
+        HandlerClass=WASMHandler,
+        bind='127.0.0.1',
+        port=8000)

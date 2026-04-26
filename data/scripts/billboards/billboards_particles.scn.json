@@ -137,6 +137,7 @@
     }
   },
   {
+    "required": "(%flavor == 'extended')",
     "call": "square_resource",
     "arguments": {
       "name": "muzzle_flash_0",
