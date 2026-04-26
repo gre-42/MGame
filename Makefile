@@ -86,6 +86,9 @@ cmake:
 login:
 	$(MAKE) build BUILD_TARGET=login
 
+empackage:
+	$(MAKE) build BUILD_TARGET=empackage
+
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
 
