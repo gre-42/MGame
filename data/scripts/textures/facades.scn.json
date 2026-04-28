@@ -35,7 +35,7 @@
         "comment": "Draw a window into the center of a facade texture"
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_atlas_cpu",
         "arguments": {
           "name": "color_$name",
@@ -50,7 +50,7 @@
         }
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_atlas_cpu",
         "arguments": {
           "name": "normal_$name",
@@ -65,7 +65,7 @@
         }
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "%name",
@@ -112,7 +112,7 @@
         "comment": "Draw a window into the center of a facade texture"
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_atlas_cpu",
         "arguments": {
           "name": "color_$name",
@@ -127,7 +127,7 @@
         }
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_atlas_cpu",
         "arguments": {
           "name": "normal_$name",
@@ -142,7 +142,7 @@
         }
       },
       {
-        "exclude": "%if_web",
+        "exclude": "%if_compressed",
         "call": "add_texture_descriptor",
         "arguments": {
           "name": "%name",
@@ -207,7 +207,7 @@
     }
   },
   {
-    "exclude": "%if_web",
+    "exclude": "%if_compressed",
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "building_big_office3_window",

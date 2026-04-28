@@ -83,6 +83,9 @@ echo_build_dir:
 cmake:
 	$(MAKE) build BUILD_TARGET=cmake
 
+cmake_fresh:
+	$(MAKE) build BUILD_TARGET=cmake_fresh
+
 login:
 	$(MAKE) build BUILD_TARGET=login
 

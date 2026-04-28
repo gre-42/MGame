@@ -1,6 +1,6 @@
 [
   {
-    "exclude": "%if_web",
+    "exclude": "%if_compressed",
     "call": "add_texture_atlas_cpu",
     "arguments": {
       "name": "vegetation3",
@@ -35,7 +35,7 @@
     }
   },
   {
-    "exclude": "%if_web",
+    "exclude": "%if_compressed",
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "vegetation3",
@@ -52,7 +52,7 @@
     ]
   },
   {
-    "exclude": "%if_web",
+    "exclude": "%if_compressed",
     "call": "square_resource",
     "arguments": {
       "name": "vegetation3",
