@@ -2,35 +2,33 @@
 <html>
   <head>
     <style>
-      body { background: #222; color: #fff; margin: 0; }
-      #canvas { width: 100vw; height: 80vh; display: block; background: black; }
-      #output { height: 20vh; overflow-y: auto; padding: 10px; font-family: monospace; }
+      /* Ensure the body fills the entire viewport */
+      html, body { 
+        height: 100%; 
+        margin: 0; 
+        overflow: hidden; /* Prevents scrollbars from canvas rounding issues */
+      }
+      body { background: #222; color: #fff; }
+      #canvas { display: block; background: black; }
     </style>
   </head>
   <body>
-    <!-- 1. The Canvas for the 3D game -->
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-    
-    <!-- 2. The Output area for console logs -->
-    <p id="output"></p>
-
     <script>
       var Module = {
-        print: (function() {
-          var element = document.getElementById('output');
-          return function(text) {
-            element.innerHTML += text + "<br>";
-            element.scrollTop = element.scrollHeight; // Auto-scroll
-          };
+        print: (function(text) {
+          console.log(text);
         })(),
         printErr: function(text) {
           console.error(text);
-        },        
+        },
         canvas: (function() {
           var canvas = document.getElementById('canvas');
           return canvas;
         })()
       };
+      Module.canvas.width = document.body.clientWidth;
+      Module.canvas.height = document.body.clientHeight;
     </script>
     <script async src="assets.js"></script> 
     <script async src="Mlib/EURelease/Bin/RenderSceneFileActivity.js"></script>
