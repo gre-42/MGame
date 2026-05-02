@@ -2,14 +2,18 @@
 <html>
   <head>
     <style>
-      /* Ensure the body fills the entire viewport */
-      html, body { 
-        height: 100%; 
-        margin: 0; 
-        overflow: hidden; /* Prevents scrollbars from canvas rounding issues */
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #222;
+        color: #fff;
       }
-      body { background: #222; color: #fff; }
-      #canvas { display: block; background: black; }
+      #canvas {
+        width: 100vw;
+        height: 100dvh;
+        display: block;
+        background: #000;
+      }
     </style>
   </head>
   <body>
@@ -39,7 +43,7 @@
         }
       });
     </script>
-    <script async src="assets.js"></script> 
+    <script async src="assets.js"></script>
     <script async src="Mlib/EURelease/Bin/RenderSceneFileActivity.js"></script>
   </body>
 </html>
