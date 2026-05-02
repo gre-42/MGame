@@ -16,19 +16,28 @@
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script>
       var Module = {
-        print: (function(text) {
+        print: text => {
           console.log(text);
-        })(),
-        printErr: function(text) {
+        },
+        printErr: text => {
           console.error(text);
         },
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
-          return canvas;
-        })()
+        canvas: document.getElementById('canvas'),
+        arguments: ["/;/data", "/levels/main/main.scn.json"]
       };
       Module.canvas.width = document.body.clientWidth;
       Module.canvas.height = document.body.clientHeight;
+      const params = new URLSearchParams(window.location.search);
+      params.forEach((value, key) => {
+        // Treat as a switch if value is empty or "true"
+        if (value === "" || value === "true" || value === "1") {
+            Module.arguments.push("--" + key);
+        } else {
+            // Otherwise, treat as a named value pair
+            Module.arguments.push("--" + key);
+            Module.arguments.push(value);
+        }
+      });
     </script>
     <script async src="assets.js"></script> 
     <script async src="Mlib/EURelease/Bin/RenderSceneFileActivity.js"></script>
