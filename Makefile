@@ -89,6 +89,9 @@ cmake_fresh:
 login:
 	$(MAKE) build BUILD_TARGET=login
 
+daemon:
+	$(MAKE) build BUILD_TARGET=daemon
+
 empackage:
 	$(MAKE) build BUILD_TARGET=empackage
 
