@@ -19,6 +19,8 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     CLANG=$(CLANG)                        \
     LIBCPP=$(LIBCPP)                      \
     EMSDK=$(EMSDK)                        \
+	EMSDK32=$(EMSDK32)                    \
+	PROF=$(PROF)                          \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
     -C Mlib echo_build_dir
 PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
@@ -60,9 +62,9 @@ PRINT_MATERIALS_ARGS !=                    \
     if [ "$(PMAT)" = 1 ]; then             \
         echo --print_rendered_materials;   \
     fi
-CHK_ARGS !=                                \
-    if [ "$(CHK)" = 1 ]; then              \
-        echo --check_gl_errors;            \
+CHK_ARGS !=                                         \
+    if [ "$(CHK)" = 1 ]; then                       \
+        echo --check_al_errors --check_gl_errors;   \
     fi
 OMP_ENV !=                        \
     if [ "$(OMP)" = 0 ]; then     \
