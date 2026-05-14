@@ -1,0 +1,27 @@
+FROM ubuntu:26.04
+
+RUN apt-get update \
+ && apt-get install -y \
+    clang \
+    cmake \
+    libboost-dev \
+    libboost-regex-dev \
+    libboost-url-dev \
+    libomp-dev \
+    libssl-dev \
+    make \
+    ninja-build
+
+COPY Mlib /app/Mlib/
+COPY Makefile /app/
+WORKDIR app
+
+RUN --mount=type=cache,target=/app/Mlib/LHURelease \
+    --mount=type=cache,target=/app/Mlib/URecastBuild \
+    make -C Mlib CLANG=1 CMAKE_BUILD_TYPE=Release SKIP_TESTS=0 HEADLESS=1 \
+ && echo "Copy artifacts to their destination" 1>&2 \
+ && mkdir Build \
+ && cp -a Mlib/LHURelease/Bin/* Mlib/LHURelease/Lib/* \
+    Mlib/URecastBuild/DebugUtils/*.so* Mlib/URecastBuild/Detour/*.so* \
+    Mlib/URecastBuild/Recast/*.so* Mlib/URecastBuild/DetourTileCache/*.so* \
+    Build/

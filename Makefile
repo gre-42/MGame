@@ -1,4 +1,4 @@
-.PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph
+.PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph headless_up headless_down
 SHELL := /bin/bash
 
 ostype != uname
@@ -19,8 +19,8 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     CLANG=$(CLANG)                        \
     LIBCPP=$(LIBCPP)                      \
     EMSDK=$(EMSDK)                        \
-	EMSDK32=$(EMSDK32)                    \
-	PROF=$(PROF)                          \
+    EMSDK32=$(EMSDK32)                    \
+    PROF=$(PROF)                          \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
     -C Mlib echo_build_dir
 PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
@@ -28,18 +28,22 @@ PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
-REMOTE_ARGS !=                                 \
-    if [ "$(REMOTE_ROLE)" = server ]; then     \
-        echo --remote_site_id 42               \
-         --remote_role server                  \
-         --remote_ip 127.0.0.1                 \
-         --remote_port 8042;                   \
-    elif [ "$(REMOTE_ROLE)" = client ]; then   \
-        echo --remote_site_id 43               \
-         --remote_role client                  \
-         --remote_ip 127.0.0.1                 \
-         --remote_port 8042;                   \
-    fi
+ifeq ($(REMOTE_ROLE),server)
+    REMOTE_ARGS = --remote_site_id 42   \
+                  --remote_role server  \
+                  --remote_ip 127.0.0.1 \
+                  --remote_port 8042
+else ifeq ($(REMOTE_ROLE),client)
+    REMOTE_ARGS = --remote_site_id 43   \
+                  --remote_role client  \
+                  --remote_ip 127.0.0.1 \
+                  --remote_port 8042
+else ifeq ($(REMOTE_ROLE),podman)
+    REMOTE_ARGS = --remote_site_id 42      \
+                  --remote_role server     \
+                  --remote_ip 0.0.0.0      \
+                  --remote_port 8042
+endif
 BIN_DIR !=                                     \
     if [ "$(PACKAGE)" != 0 ]; then             \
         echo "$(BIN_ARTIFACT_DIR)";            \
@@ -118,6 +122,12 @@ run:
 
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
+
+headless_up:
+	podman-compose -f docker-compose.serve.yaml up --build
+
+headless_down:
+	podman-compose -f docker-compose.serve.yaml down
 
 package:
 	@echo "OS Type: $(ostype)"

@@ -1,0 +1,16 @@
+**/Dockerfile*
+**/Caches
+**/*Debug
+**/*Release
+**/*RelWithDebInfo
+**/*VS*
+**/*RecastBuild
+**/*.pyc
+**/*.py
+**/*.txt
+!**/CMakeLists.txt
+**/*.sh
+**/*.cmd
+**/OpenAL
+**/engine-sim
+**/Android

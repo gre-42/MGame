@@ -9,58 +9,63 @@
     }
   },
   {
-    "call": "create_physics_scene",
-    "arguments": {
-      "name": "primary_scene",
-      "world": "common",
-      "gid": { "group": "translations", "id": "scene" },
-      "primary_user_id": 0,
-      "remote_params": "%remote_params"
-    }
-  },
-  {
-    "call": "for_each_user",
-    "context": "primary_scene",
-    "arguments": {
-      "content": [
-        {
-          "call": "create_renderable_scene",
-          "arguments": {
-            "name": "primary_scene_$full_user_name",
-            "physics": "primary_scene",
-            "focus_mask": "scene",
-            "submenus": [],
-            "fly": false,
-            "rotate": false,
-            "depth_fog": false,
-            "low_pass": false,
-            "high_pass": false,
-            "bloom_iterations": [0, 0],
-            "bloom_thresholds": [1, 1, 1],
-            "with_skybox": false,
-            "with_flying_logic": true,
-            "clear_mode": "color_and_depth",
-            "layout": "tiled",
-            "local_user_id": "%local_user_id"
-          }
-        },
-        {
-          "call": "try_append_focuses",
-          "context": "primary_scene_$full_user_name",
-          "arguments": { "content": ["main_menu"] }
+    "required": "%if_graphics",
+    "execute": [
+      {
+        "call": "create_physics_scene",
+        "arguments": {
+          "name": "primary_scene",
+          "world": "common",
+          "gid": { "group": "translations", "id": "scene" },
+          "primary_user_id": 0,
+          "remote_params": "%remote_params"
         }
-      ]
-    }
-  },
-  {
-    "playback": "scene_minimal",
-    "context": "primary_scene",
-    "arguments": {
-      "if_dirtmap": false,
-      "if_skybox": false
-    }
-  },
-  {
-    "playback": "create_main_menu"
+      },
+      {
+        "call": "for_each_user",
+        "context": "primary_scene",
+        "arguments": {
+          "content": [
+            {
+              "call": "create_renderable_scene",
+              "arguments": {
+                "name": "primary_scene_$full_user_name",
+                "physics": "primary_scene",
+                "focus_mask": "scene",
+                "submenus": [],
+                "fly": false,
+                "rotate": false,
+                "depth_fog": false,
+                "low_pass": false,
+                "high_pass": false,
+                "bloom_iterations": [0, 0],
+                "bloom_thresholds": [1, 1, 1],
+                "with_skybox": false,
+                "with_flying_logic": true,
+                "clear_mode": "color_and_depth",
+                "layout": "tiled",
+                "local_user_id": "%local_user_id"
+              }
+            },
+            {
+              "call": "try_append_focuses",
+              "context": "primary_scene_$full_user_name",
+              "arguments": { "content": ["main_menu"] }
+            }
+          ]
+        }
+      },
+      {
+        "playback": "scene_minimal",
+        "context": "primary_scene",
+        "arguments": {
+          "if_dirtmap": false,
+          "if_skybox": false
+        }
+      },
+      {
+        "playback": "create_main_menu"
+      }
+    ]
   }
 ]

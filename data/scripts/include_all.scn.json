@@ -9,18 +9,19 @@
   {"include": "color_profiles.scn.json"},
   {"include": "assets.scn.json"},
   {"playback": "load_languages"},
-  {"include": "ui/textures_ui.scn.json"},
-  {"include": "screen_constraints.scn.json"},
-  {"include": "scenes/scene_minimal.scn.json"},
-  {"include": "scenes/scene_loading.scn.json"},
-  {"playback": "create_scene_loading"},
-
-  {"include": "ui/textures_ui2.scn.json"},
-  {"include": "audio/audio.scn.json"},
-  {"include": "gallery.scn.json"},
-
-  {"include": "textures/textures.scn.json"},
-
+  { "required": "%if_graphics",
+    "execute": [
+      {"include": "ui/textures_ui.scn.json"},
+      {"include": "screen_constraints.scn.json"},
+      {"include": "scenes/scene_minimal.scn.json"},
+      {"include": "scenes/scene_loading.scn.json"},
+      {"playback": "create_scene_loading"},
+      {"include": "ui/textures_ui2.scn.json"},
+      {"include": "gallery.scn.json"},
+      {"include": "textures/textures.scn.json"}
+    ]
+  },
+  { "required": "%if_audio", "include": "audio/audio.scn.json"},
   {"include": "animations.scn.json"},
   {"include": "vehicle_classes/vehicle_classes.scn.json"},
   {"include": "explosion_rocks.scn.json"},
@@ -38,22 +39,27 @@
   {"include": "models/models_terrain.scn.json"},
   {"include": "models/models_urban.scn.json"},
   {"exclude": ["%if_android"], "include": "models/models_vegetation.scn.json"},
-  {"required": "(%flavor == 'extended')", "include": "trails.scn.json"},
+  {
+    "required": "%if_graphics",
+    "execute": [
+      {"required": "(%flavor == 'extended')", "include": "trails.scn.json"},
 
-  {"include": "billboards/billboards.scn.json"},
+      {"include": "billboards/billboards.scn.json"},
 
-  {"include": "lights/lights.scn.json"},
-  {"include": "local_skidmarks.scn.json"},
-  {"include": "local_water_waves.scn.json"},
-  {"include": "local_sea_spray.scn.json"},
-  {"include": "main_menu/main_menu.scn.json"},
-  {"include": "scenes/scene_racing.scn.json"},
-  {"include": "scenes/showroom.scn.json"},
+      {"include": "lights/lights.scn.json"},
+      {"include": "local_skidmarks.scn.json"},
+      {"include": "local_water_waves.scn.json"},
+      {"include": "local_sea_spray.scn.json"},
+      {"include": "main_menu/main_menu.scn.json"},
+      {"include": "scenes/scene_racing.scn.json"},
+      {"include": "scenes/showroom.scn.json"},
+      {"include": "key_bindings/key_bindings.scn.json"},
+      {"include": "key_configuration.scn.json"}
+    ]
+  },
   {"include": "teams/teams.scn.json"},
   {"include": "traffic/traffic.scn.json"},
   {"include": "cameras/cameras.scn.json"},
-  {"include": "key_bindings/key_bindings.scn.json"},
-  {"include": "key_configuration.scn.json"},
 
   {"include": "materials/materials.scn.json"},
   {"include": "bullets.scn.json"},

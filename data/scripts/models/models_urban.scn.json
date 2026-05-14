@@ -755,6 +755,7 @@
         }
       },
       {
+        "required": "%if_graphics",
         "call": "render_resource_to_textures",
         "arguments": {
           "resource": "%name",

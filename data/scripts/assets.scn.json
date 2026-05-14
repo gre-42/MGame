@@ -45,6 +45,7 @@
         }
       },
       {
+        "required": "(%user_count > 0)",
         "call": "default_persistent",
         "arguments": {
           "local_user_id": 0,
@@ -54,6 +55,7 @@
         }
       },
       {
+        "required": "(%user_count > 0)",
         "call": "persisted_globals",
         "arguments": {
           "local_user_id": 0,
@@ -62,7 +64,8 @@
           }
         }
       },
-      { "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} },
+      { "required": "%if_graphics",
+        "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} },
       { "call": "load_replacement_parameters", "arguments": {"id": "translations", "directory": "translations"} },
       { "call": "set_language_variable", "arguments": { "var": "selected_language" }}
     ]

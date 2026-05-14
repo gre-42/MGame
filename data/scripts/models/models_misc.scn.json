@@ -28,6 +28,7 @@
     }
   },
   {
+    "required": "%if_graphics",
     "call": "square_resource",
     "arguments": {
       "name": "glow",

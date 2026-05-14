@@ -27,7 +27,11 @@
           console.error(text);
         },
         canvas: document.getElementById('canvas'),
-        arguments: ["/;/data", "/levels/main/main.scn.json"]
+        arguments: ["/;/data", "/levels/main/main.scn.json"],
+        websocket: {
+            url: 'ws://ws',
+            subprotocol: 'binary'
+        }
       };
       Module.canvas.width = document.body.clientWidth;
       Module.canvas.height = document.body.clientHeight;
@@ -44,6 +48,6 @@
       });
     </script>
     <script async src="assets.js"></script>
-    <script async src="Mlib/E32URelease/Bin/RenderSceneFileActivity.js"></script>
+    <script async src="../game/RenderSceneFileActivity.js"></script>
   </body>
 </html>
