@@ -9,18 +9,18 @@
     }
   },
   {
+    "call": "create_physics_scene",
+    "arguments": {
+      "name": "primary_scene",
+      "world": "common",
+      "gid": { "group": "translations", "id": "scene" },
+      "primary_user_id": 0,
+      "remote": true
+    }
+  },
+  {
     "required": "%if_graphics",
     "execute": [
-      {
-        "call": "create_physics_scene",
-        "arguments": {
-          "name": "primary_scene",
-          "world": "common",
-          "gid": { "group": "translations", "id": "scene" },
-          "primary_user_id": 0,
-          "remote_params": "%remote_params"
-        }
-      },
       {
         "call": "for_each_user",
         "context": "primary_scene",

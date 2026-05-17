@@ -18,7 +18,6 @@ services:
       "--app_reldir", ".vanilla_rally",
       "--print_render_residual_time",
       "--remote_site_id", "42",
-      "--remote_role", "server",
       "--udp_ip", "0.0.0.0",
       "--udp_port", "8042",
       "--http_ip", "0.0.0.0",
@@ -31,7 +30,7 @@ services:
       - ./data:/app/data:ro
       - ./static/server:/app/static/server:ro
       - ./static/client:/app/static/client:ro
-      - ./Mlib/EURelease/Bin:/app/static/game:ro
+      - ./Mlib/E32URelease/Bin:/app/static/game:ro
   # # This works, but was replaced with Boost.Beast in the main application
   # udp-proxy:
   #   build:

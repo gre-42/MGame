@@ -18,8 +18,13 @@
   </head>
   <body>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
-    <script>
-      var Module = {
+    <script type="module">
+      import createModule from '../game/RenderSceneFileActivity.js';
+      import assetLoaderFactory from './assets.js';
+      const config = {
+        preRun: (Module) => {
+          assetLoaderFactory(Module);
+        },
         print: text => {
           console.log(text);
         },
@@ -27,27 +32,26 @@
           console.error(text);
         },
         canvas: document.getElementById('canvas'),
-        arguments: ["/;/data", "/levels/main/main.scn.json"],
+        arguments: ["data", "/data/levels/main/main.scn.json"],
         websocket: {
-            url: 'ws://ws',
-            subprotocol: 'binary'
+          url: 'ws://ws',
+          subprotocol: 'binary'
         }
       };
-      Module.canvas.width = document.body.clientWidth;
-      Module.canvas.height = document.body.clientHeight;
+      config.canvas.width = document.body.clientWidth;
+      config.canvas.height = document.body.clientHeight;
       const params = new URLSearchParams(window.location.search);
       params.forEach((value, key) => {
-        // Treat as a switch if value is empty or "true"
         if (value === "" || value === "true" || value === "1") {
-            Module.arguments.push("--" + key);
+            config.arguments.push("--" + key);
         } else {
-            // Otherwise, treat as a named value pair
-            Module.arguments.push("--" + key);
-            Module.arguments.push(value);
+            config.arguments.push("--" + key);
+            config.arguments.push(value);
         }
       });
+      createModule(config).then((Module) => {
+        console.log("WASM Module successfully initialized!");
+      });
     </script>
-    <script async src="assets.js"></script>
-    <script async src="../game/RenderSceneFileActivity.js"></script>
   </body>
 </html>

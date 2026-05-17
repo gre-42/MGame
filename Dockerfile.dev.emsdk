@@ -1,0 +1,13 @@
+FROM docker.io/emscripten/emsdk:latest
+
+RUN apt-get update \
+ && apt-get install -y \
+    openssh-server \
+    ninja-build \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config.d/ssh_root.conf \
+ && echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config.d/ssh_root.conf \
+ && mkdir /var/run/sshd \
+ && chmod 0755 /var/run/sshd \
+ && echo 'root:root' | chpasswd

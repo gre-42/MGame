@@ -18,7 +18,7 @@ BUILD_SUBDIR != $(MAKE) --silent          \
     UBSAN=$(UBSAN)                        \
     CLANG=$(CLANG)                        \
     LIBCPP=$(LIBCPP)                      \
-    EMSDK=$(EMSDK)                        \
+    EMSDK64=$(EMSDK64)                    \
     EMSDK32=$(EMSDK32)                    \
     PROF=$(PROF)                          \
     CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
@@ -31,18 +31,18 @@ RUN_ARGS ?=
 ifeq ($(REMOTE_ROLE),server)
     REMOTE_ARGS = --remote_site_id 42   \
                   --remote_role server  \
-                  --remote_ip 127.0.0.1 \
-                  --remote_port 8042
+                  --udp_ip 127.0.0.1 \
+                  --udp_port 8042
 else ifeq ($(REMOTE_ROLE),client)
     REMOTE_ARGS = --remote_site_id 43   \
                   --remote_role client  \
-                  --remote_ip 127.0.0.1 \
-                  --remote_port 8042
+                  --udp_ip 127.0.0.1 \
+                  --udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
     REMOTE_ARGS = --remote_site_id 42      \
                   --remote_role server     \
-                  --remote_ip 0.0.0.0      \
-                  --remote_port 8042
+                  --udp_ip 0.0.0.0      \
+                  --udp_port 8042
 endif
 BIN_DIR !=                                     \
     if [ "$(PACKAGE)" != 0 ]; then             \
@@ -99,7 +99,12 @@ daemon:
 	$(MAKE) build BUILD_TARGET=daemon
 
 empackage:
-	$(MAKE) build BUILD_TARGET=empackage
+	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
+		python3 /emsdk/upstream/emscripten/tools/file_packager.py \
+		static/client/assets.data \
+		--preload data \
+		--js-output=static/client/assets.js \
+		--export-es6
 
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib

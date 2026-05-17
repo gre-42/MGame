@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  my-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev.emsdk
+    image: mgame/emsdk
+    container_name: mgame-emsdk-dev
+    ports:
+      - "2222:22"
+    volumes:
+      - ./:/src
+    command: /usr/sbin/sshd -D

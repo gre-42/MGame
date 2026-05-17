@@ -16,7 +16,10 @@
                 // Generated using: em++ -std=c++23 -v main.cpp -o out.js
                 "/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1",
                 "/emsdk/upstream/lib/clang/23/include",
-                "/emsdk/upstream/emscripten/cache/sysroot/include"
+                "/emsdk/upstream/emscripten/cache/ports/boost_headers",
+                "/emsdk/upstream/emscripten/cache/sysroot/include",
+                "/usr/include",
+                "/usr/include/x86_64-linux-gnu"
             ],
             "defines": [
                 "USE_PCM_FILTERS",
