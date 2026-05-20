@@ -31,6 +31,7 @@ services:
       - ./static/server:/app/static/server:ro
       - ./static/client:/app/static/client:ro
       - ./Mlib/E32URelease/Bin:/app/static/game:ro
+      - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
   # # This works, but was replaced with Boost.Beast in the main application
   # udp-proxy:
   #   build:
