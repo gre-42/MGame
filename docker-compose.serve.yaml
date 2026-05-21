@@ -1,9 +1,4 @@
 services:
-  # game:
-  #   image: docker.io/subfuzion/netcat
-  #   ports:
-  #     - "8042:8042/udp"
-  #   command: ["-u", "-l", "-p", "8042"]
   game:
     build:
       context: .
@@ -25,13 +20,40 @@ services:
       "--flavor", "extended"
     ]
     environment:
+      CERT_HASH_FILENAME: /app/wt-hash.json
       LD_LIBRARY_PATH: Build
     volumes:
       - ./data:/app/data:ro
       - ./static/server:/app/static/server:ro
       - ./static/client:/app/static/client:ro
-      - ./Mlib/E32URelease/Bin:/app/static/game:ro
+      - ./Mlib/E32URelWithDebInfo/Bin:/app/static/game:ro
       - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
+    networks:
+      - game-net
+
+  wt-udp-proxy:
+    build:
+      context: Mlib/Web_Transport_Udp
+    ports:
+      - "8443:443/udp" # WebTransport/HTTP/3 requires UDP
+      - "8443:443/tcp" # TCP required for initial HTTP handshake
+    environment:
+      TARGET_UDP_HOST: "game"
+      TARGET_UDP_PORT: "8042"
+    volumes:
+      - ./Mlib/Web_Transport_Udp/certs:/etc/ssl/certs
+    networks:
+      - game-net
+
+networks:
+  game-net:
+    driver: bridge
+
+  # udp-proxy:
+  #   image: docker.io/subfuzion/netcat
+  #   ports:
+  #     - "8042:8042/udp"
+  #   command: ["-u", "-l", "-p", "8042"]
   # # This works, but was replaced with Boost.Beast in the main application
   # udp-proxy:
   #   build:

@@ -129,10 +129,10 @@ compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
-	podman-compose -f docker-compose.serve.yaml --profile all up --build
+	podman-compose -f docker-compose.serve.yaml up --build
 
 headless_down:
-	podman-compose -f docker-compose.serve.yaml --profile all down
+	podman-compose -f docker-compose.serve.yaml down
 
 package:
 	@echo "OS Type: $(ostype)"
