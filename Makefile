@@ -1,4 +1,4 @@
-.PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph headless_up headless_down
+.PHONY: recastnavigation build run run_dev test compress pack_snap flame_graph headless_up headless_down headless_logs emsdk_up emsdk_down
 SHELL := /bin/bash
 
 ostype != uname
@@ -29,25 +29,34 @@ BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
 ifeq ($(REMOTE_ROLE),server)
-    REMOTE_ARGS = --remote_site_id 42   \
-                  --remote_role server  \
-                  --udp_ip 127.0.0.1 \
-                  --udp_port 8042
+    RUN_ARGS := $(RUN_ARGS)           \
+                --remote_site_id 42   \
+                --remote_role server  \
+                --udp_ip 127.0.0.1    \
+                --udp_port 8042
 else ifeq ($(REMOTE_ROLE),client)
-    REMOTE_ARGS = --remote_site_id 43   \
-                  --remote_role client  \
-                  --udp_ip 127.0.0.1 \
-                  --udp_port 8042
+    RUN_ARGS := $(RUN_ARGS)           \
+                --remote_site_id 43   \
+                --remote_role client  \
+                --udp_ip 127.0.0.1    \
+                --udp_port 8042
 else ifeq ($(REMOTE_ROLE),client2)
-    REMOTE_ARGS = --remote_site_id 44   \
-                  --remote_role client  \
-                  --udp_ip 127.0.0.1 \
-                  --udp_port 8042
+    RUN_ARGS := $(RUN_ARGS)           \
+                --remote_site_id 73   \
+                --remote_role client  \
+                --udp_ip 127.0.0.1    \
+                --udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
-    REMOTE_ARGS = --remote_site_id 42      \
-                  --remote_role server     \
-                  --udp_ip 0.0.0.0      \
-                  --udp_port 8042
+    RUN_ARGS := $(RUN_ARGS)           \
+                --remote_site_id 42   \
+                --remote_role server  \
+                --udp_ip 0.0.0.0      \
+                --udp_port 8042
+endif
+ifeq ($(REMOTE_DEBUG),1)
+    RUN_ARGS := $(RUN_ARGS)           \
+                --print_remote_data   \
+                --print_remote_metadata
 endif
 BIN_DIR !=                                     \
     if [ "$(PACKAGE)" != 0 ]; then             \
@@ -128,16 +137,25 @@ run:
 		$(PRINT_MATERIALS_ARGS)                                    \
 		--windowed_width 1500                                      \
 		--windowed_height 900                                      \
-		$(CHK_ARGS) $(REMOTE_ARGS) $(RUN_ARGS)
+		$(CHK_ARGS) $(RUN_ARGS)
 
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
-	podman-compose -f docker-compose.serve.yaml up --build
+	podman-compose -p mgame-serve -f docker-compose.serve.yaml up --build -d
 
 headless_down:
-	podman-compose -f docker-compose.serve.yaml down
+	podman-compose -p mgame-serve -f docker-compose.serve.yaml down
+
+headless_logs:
+	podman-compose -f docker-compose.serve.yaml -p mgame-serve logs -f
+
+emsdk_up:
+	podman-compose -p mgame-emsdk -f docker-compose.dev.emsdk.yaml up -d
+
+emsdk_down:
+	podman-compose -p mgame-emsdk -f docker-compose.dev.emsdk.yaml down
 
 package:
 	@echo "OS Type: $(ostype)"
