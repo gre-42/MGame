@@ -38,6 +38,11 @@ else ifeq ($(REMOTE_ROLE),client)
                   --remote_role client  \
                   --udp_ip 127.0.0.1 \
                   --udp_port 8042
+else ifeq ($(REMOTE_ROLE),client2)
+    REMOTE_ARGS = --remote_site_id 44   \
+                  --remote_role client  \
+                  --udp_ip 127.0.0.1 \
+                  --udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
     REMOTE_ARGS = --remote_site_id 42      \
                   --remote_role server     \
