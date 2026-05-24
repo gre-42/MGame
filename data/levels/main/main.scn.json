@@ -67,5 +67,9 @@
         "playback": "create_main_menu"
       }
     ]
+  },
+  {
+    "exclude": "%if_graphics",
+    "playback": "create_html_scene_selector"
   }
 ]

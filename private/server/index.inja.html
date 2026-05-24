@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h>MGame web</h>
+    <h1>MGame web</h1>
+    <h2>Join</h2>
     <ul>
         <li><a href="client/game.html">Single player</a></li>
         <li><a href="client/game.html?remote_site_id=43&remote_role=client&remote_ip=localhost&remote_port=8443&cert_hash={{cert_hash}}">Multiplayer, ID=43</a></li>
         <li><a href="client/game.html?remote_site_id=73&remote_role=client&remote_ip=localhost&remote_port=8443&cert_hash={{cert_hash}}">Multiplayer, ID=73</a></li>
     </ul>
+    <button data-endpoint="new_game">New game</button>
+    <h2>Configuration</h2>
+    {{ render_lists(config) }}
+
+    <script src="server/server.js"></script>
   </body>
 </html>

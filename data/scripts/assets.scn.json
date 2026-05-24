@@ -76,6 +76,7 @@
       {"call": "add_ac_loader", "arguments": {"id": "levels", "script": "scripts/loaders/ac/scene_template.scn.json"}},
       {"call": "load_asset_manifests", "arguments": {"id": "levels", "directory": "."}},
       {"call": "load_replacement_parameters", "arguments": {"id": "levels", "directory": "levels"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "game_modes", "directory": "game_modes"}},
       {"call": "load_replacement_parameters", "arguments": {"id": "vehicles", "directory": "vehicles"}},
       {"call": "load_replacement_parameters", "arguments": {"id": "wheels", "directory": "wheels"}},
       {"call": "load_replacement_parameters", "arguments": {"id": "engine_audio", "directory": "engine_audio"}},

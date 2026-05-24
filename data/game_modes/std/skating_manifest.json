@@ -1,0 +1,17 @@
+{
+  "id": "skating",
+  "title": "%/title/$selected_language",
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_game_mode": "skating"
+    }
+  },
+  "database": {
+    "title": {
+      "de-DE": "Skating",
+      "en-US": "Skating",
+      "fr-FR": "Skating"
+    }
+  }
+}

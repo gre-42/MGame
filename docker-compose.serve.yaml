@@ -24,6 +24,7 @@ services:
       LD_LIBRARY_PATH: Build
     volumes:
       - ./data:/app/data:ro
+      - ./private:/app/private:ro
       - ./static/server:/app/static/server:ro
       - ./static/client:/app/static/client:ro
       - ./Mlib/E32URelWithDebInfo/Bin:/app/static/game:ro

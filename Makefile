@@ -12,22 +12,20 @@ compressed.extended=compression.extended.json" | sed "s/ //g")
 BUILD_TARGET ?= build
 SOURCE_C_DIR ?= .
 export CMAKE_BUILD_TYPE ?= Release
-BUILD_SUBDIR != $(MAKE) --silent          \
-    ASAN=$(ASAN)                          \
-    TSAN=$(TSAN)                          \
-    UBSAN=$(UBSAN)                        \
-    CLANG=$(CLANG)                        \
-    LIBCPP=$(LIBCPP)                      \
-    EMSDK64=$(EMSDK64)                    \
-    EMSDK32=$(EMSDK32)                    \
-    PROF=$(PROF)                          \
-    CMAKE_BUILD_TYPE=$(CMAKE_BUILD_TYPE)  \
-    -C Mlib echo_build_dir
+BUILD_SUBDIR != $(MAKE) --silent -C Mlib echo_build_dir
 PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
 PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
+ifeq ($(HEADLESS),1)
+    RUN_ARGS := $(RUN_ARGS)           \
+                --remote_site_id 42   \
+                --udp_ip 127.0.0.1    \
+                --udp_port 8042       \
+                --http_ip 127.0.0.1   \
+                --http_port 8082
+endif
 ifeq ($(REMOTE_ROLE),server)
     RUN_ARGS := $(RUN_ARGS)           \
                 --remote_site_id 42   \
