@@ -7,7 +7,7 @@
   },
   "on_init": {
     "declare_macro": "remote.level.load_nyc_td0",
-    "content": { "call": "load_scene", "arguments": { "filename": "file://$__DIR__/scene_nyc_td0.scn.json" } }
+    "content": { "call": "load_scene", "arguments": { "filename": "$__DIR__/scene_nyc_td0.scn.json" } }
   },
   "on_execute": {
     "include": "scene_nyc_td0.scn.json"

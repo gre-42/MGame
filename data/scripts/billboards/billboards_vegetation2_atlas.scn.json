@@ -1,82 +1,94 @@
 [
   {
-    "call": "add_texture_atlas_cpu",
-    "arguments": {
-      "name": "vegetation2",
-      "width": 4096,
-      "height": 2048,
-      "color_mode": "rgba",
-      "wrap_mode_s": "clamp_to_edge",
-      "wrap_mode_t": "clamp_to_edge",
-      "anisotropic_filtering_level": 16,
-      "images": [
-        {"target_position": [0, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0129_1_masked_S_5x1k.png"},
-        {"target_position": [512, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0130_1_masked_S_5x1k.png"},
-        {"target_position": [1024, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0131_1_masked_S_5x1k.png"},
-        {"target_position": [1536, 0], "texture": "#Trees0058_2"},
-        {"target_position": [0, 1024], "texture": "#Trees0058_3"},
-        {"target_position": [1024, 1024], "texture": "#Trees0122_1"},
-        {"target_position": [3072, 0], "texture": "#hedge_long_0"},
-        {"target_position": [3584, 0], "texture": "#hedge_long_round_0"},
-        {"target_position": [3072, 1024], "texture": "#hedge_small_0"},
-        {"target_position": [3584, 1024], "texture": "#hedge_small_round_0"}
-      ]
-    }
-  },
-  {
-    "exclude": "%true",
-    "call": "save_texture_array_png",
-    "arguments": {
-      "name": "vegetation2",
-      "filename_prefix": "/tmp/vegetation2_",
-      "color_mode": "rgba"
-    }
-  },
-  {
-    "call": "add_texture_descriptor",
-    "arguments": {
-      "name": "vegetation2",
-      "color": "#vegetation2",
-      "add_colormap": false
-    }
-  },
-  {
-    "comment": [
-      "6: hedge_long;",
-      "7: hedge_long_round;",
-      "8: hedge_small;",
-      "9: hedge_small_round;"
-    ]
-  },
-  {
-    "call": "square_resource",
-    "arguments": {
-      "name": "vegetation2",
-      "texture_filename": "#vegetation2",
-      "min": [-0.5, 0],
-      "max": [0.5, 1],
-      "occluded_pass": "lightmap_blobs",
-      "occluder_pass": "lightmap_black_global_and_local",
-      "ambient": [1, 1, 1],
-      "blend_mode": "semi_continuous_02",
-      "alpha_distances": [0, 0, "inf", "inf"],
-      "cull_faces": true,
-      "aggregate_mode": "instances_sorted",
-      "transformation_mode": "position_lookat",
-      "fog_distances": "%fog_distances",
-      "fog_ambient": "%fog_ambient",
-      "billboards": [
-        {"uv_scale": [0.125, 0.5],  "uv_offset": [0,     0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.5],  "uv_offset": [0.125, 0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.5],  "uv_offset": [0.25,  0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.25,  0.5],  "uv_offset": [0.375, 0],   "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.25,  0.5],  "uv_offset": [0,     0.5], "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.25,  0.5],  "uv_offset": [0.25,  0.5], "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.5],  "uv_offset": [0.75,  0],   "vertex_scale": [3  ,  6, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.5],  "uv_offset": [0.875, 0],   "vertex_scale": [3  ,  6, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.25], "uv_offset": [0.75,  0.5], "vertex_scale": [3  ,  3, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
-        {"uv_scale": [0.125, 0.25], "uv_offset": [0.875, 0.5], "vertex_scale": [3  ,  3, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"}
-      ]
+    "required": "%if_graphics",
+    "execute": [
+      {
+        "call": "add_texture_atlas_cpu",
+        "arguments": {
+          "name": "vegetation2",
+          "width": 4096,
+          "height": 2048,
+          "color_mode": "rgba",
+          "wrap_mode_s": "clamp_to_edge",
+          "wrap_mode_t": "clamp_to_edge",
+          "anisotropic_filtering_level": 16,
+          "images": [
+            {"target_position": [0, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0129_1_masked_S_5x1k.png"},
+            {"target_position": [512, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0130_1_masked_S_5x1k.png"},
+            {"target_position": [1024, 0], "texture": "file://textures/textures.com/trees/TexturesCom_Trees0131_1_masked_S_5x1k.png"},
+            {"target_position": [1536, 0], "texture": "#Trees0058_2"},
+            {"target_position": [0, 1024], "texture": "#Trees0058_3"},
+            {"target_position": [1024, 1024], "texture": "#Trees0122_1"},
+            {"target_position": [3072, 0], "texture": "#hedge_long_0"},
+            {"target_position": [3584, 0], "texture": "#hedge_long_round_0"},
+            {"target_position": [3072, 1024], "texture": "#hedge_small_0"},
+            {"target_position": [3584, 1024], "texture": "#hedge_small_round_0"}
+          ]
+        }
+      },
+      {
+        "exclude": "%true",
+        "call": "save_texture_array_png",
+        "arguments": {
+          "name": "vegetation2",
+          "filename_prefix": "/tmp/vegetation2_",
+          "color_mode": "rgba"
+        }
+      },
+      {
+        "call": "add_texture_descriptor",
+        "arguments": {
+          "name": "vegetation2",
+          "color": "#vegetation2",
+          "add_colormap": false
+        }
+      },
+      {
+        "comment": [
+          "6: hedge_long;",
+          "7: hedge_long_round;",
+          "8: hedge_small;",
+          "9: hedge_small_round;"
+        ]
+      },
+      {
+        "call": "square_resource",
+        "arguments": {
+          "name": "vegetation2",
+          "texture_filename": "#vegetation2",
+          "min": [-0.5, 0],
+          "max": [0.5, 1],
+          "occluded_pass": "lightmap_blobs",
+          "occluder_pass": "lightmap_black_global_and_local",
+          "ambient": [1, 1, 1],
+          "blend_mode": "semi_continuous_02",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces": true,
+          "aggregate_mode": "instances_sorted",
+          "transformation_mode": "position_lookat",
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient",
+          "billboards": [
+            {"uv_scale": [0.125, 0.5],  "uv_offset": [0,     0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.5],  "uv_offset": [0.125, 0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.5],  "uv_offset": [0.25,  0],   "vertex_scale": [7.5, 15, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.25,  0.5],  "uv_offset": [0.375, 0],   "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.25,  0.5],  "uv_offset": [0,     0.5], "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.25,  0.5],  "uv_offset": [0.25,  0.5], "vertex_scale": [5  ,  5, 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.5],  "uv_offset": [0.75,  0],   "vertex_scale": [3  ,  6, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.5],  "uv_offset": [0.875, 0],   "vertex_scale": [3  ,  6, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.25], "uv_offset": [0.75,  0.5], "vertex_scale": [3  ,  3, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"},
+            {"uv_scale": [0.125, 0.25], "uv_offset": [0.875, 0.5], "vertex_scale": [3  ,  3, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "lightmap_black_global_and_local"}
+          ]
+        }
+      }
+    ],
+    "else_": {
+      "call": "invisible_resource",
+      "arguments": {
+        "name": "vegetation2",
+        "aggregate_mode": "instances_sorted"
+      }
     }
   }
 ]
