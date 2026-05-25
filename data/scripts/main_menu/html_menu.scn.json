@@ -30,14 +30,6 @@
         }
       },
       {
-        "call": "globals",
-        "arguments": {
-          "selected_game_mode": "rally",
-          "selected_level_id": "",
-          "race_laps": 1
-        }
-      },
-      {
         "call": "add_assets_html_endpoint",
         "arguments": {
           "items_path": "game_modes",
@@ -53,6 +45,24 @@
           "selection_path": "selected_level_id",
           "assets": "levels",
           "title": "%%translations/main/Scene/$selected_language"
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "time_of_day",
+          "selection_path": "selected_time_of_day",
+          "assets": "time_of_day",
+          "title": "%%translations/main/Time_of_day/$selected_language"
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "race_restrictions",
+          "selection_path": "selected_race_restrictions",
+          "assets": "race_restrictions",
+          "title": "%%translations/main/Restrictions/$selected_language"
         }
       }
     ]

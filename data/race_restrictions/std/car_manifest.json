@@ -1,0 +1,17 @@
+{
+  "id": "car",
+  "title": "%/title/$selected_language",
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_race_restrictions": "car"
+    }
+  },
+  "database": {
+    "title": {
+      "de-DE": "Auto",
+      "en-US": "Car",
+      "fr-FR": "Voiture"
+    }
+  }
+}

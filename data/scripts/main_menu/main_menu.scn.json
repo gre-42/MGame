@@ -556,42 +556,7 @@
           "line_distance": "normal",
           "local_user_id": "%local_user_id",
           "deflt": 0,
-          "parameters": [
-            {
-              "id": "day",
-              "title": "%%translations/main/Day/$selected_language",
-              "on_before_select": {
-                "call": "globals",
-                "arguments": {
-                  "skybox": "skybox",
-                  "time_of_day": "day"
-                }
-              }
-            },
-            {
-              "id": "night",
-              "title": "%%translations/main/Night/$selected_language",
-              "on_before_select": {
-                "call": "globals",
-                "arguments": {
-                  "skybox": "skybox_night",
-                  "time_of_day": "night"
-                }
-              }
-            },
-            {
-              "required": {"fixed": ["%if_devel"], "dynamic": []},
-              "id": "synthwave",
-              "title": "%%translations/main/Synthwave/$selected_language",
-              "on_before_select": {
-                "call": "globals",
-                "arguments": {
-                  "skybox": "skybox_night",
-                  "time_of_day": "synthwave"
-                }
-              }
-            }
-          ]
+          "assets": "time_of_day"
         }
       },
       {
@@ -614,10 +579,7 @@
           "line_distance": "normal",
           "local_user_id": "%local_user_id",
           "deflt": 0,
-          "parameters": [
-            {"id": "car", "title": "%%translations/main/Car/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car"}}},
-            {"id": "car_with_trailer", "title": "%%translations/main/Car_with_trailer/$selected_language", "on_before_select": { "call": "globals", "arguments": {"race_restrictions": "car_with_trailer"}}}
-          ]
+          "assets": "race_restrictions"
         }
       },
       {
@@ -700,11 +662,11 @@
           "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
-            {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"race_session": "session1"}}},
-            {"id": "'2'", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"race_session": "session2"}}},
-            {"id": "'3'", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"race_session": "session3"}}},
-            {"id": "'4'", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"race_session": "session4"}}},
-            {"id": "'5'", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"race_session": "session5"}}}
+            {"id": "'1'", "title": "Session1", "on_before_select": { "call": "globals", "arguments": {"selected_race_session": "session1"}}},
+            {"id": "'2'", "title": "Session2", "on_before_select": { "call": "globals", "arguments": {"selected_race_session": "session2"}}},
+            {"id": "'3'", "title": "Session3", "on_before_select": { "call": "globals", "arguments": {"selected_race_session": "session3"}}},
+            {"id": "'4'", "title": "Session4", "on_before_select": { "call": "globals", "arguments": {"selected_race_session": "session4"}}},
+            {"id": "'5'", "title": "Session5", "on_before_select": { "call": "globals", "arguments": {"selected_race_session": "session5"}}}
           ]
         }
       },
@@ -712,7 +674,7 @@
         "call": "globals",
         "required": "(%local_user_id == 0)",
         "exclude": "%if_devel",
-        "arguments": { "race_session": "session1" }
+        "arguments": { "selected_race_session": "session1" }
       },
       {
         "required": "(%local_user_id == 0)",
@@ -735,11 +697,11 @@
           "local_user_id": "%local_user_id",
           "deflt": 0,
           "parameters": [
-            {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"race_laps": 1}}},
-            {"id": "'2'", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 2}}},
-            {"id": "'4'", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 4}}},
-            {"id": "'8'", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"race_laps": 8}}},
-            {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"race_laps": 16}}}
+            {"id": "'1'", "title": "'1 Lap'",   "on_before_select": { "call": "globals", "arguments": {"selected_race_laps": 1}}},
+            {"id": "'2'", "title": "'2 Laps'",  "on_before_select": { "call": "globals", "arguments": {"selected_race_laps": 2}}},
+            {"id": "'4'", "title": "'4 Laps'",  "on_before_select": { "call": "globals", "arguments": {"selected_race_laps": 4}}},
+            {"id": "'8'", "title": "'8 Laps'",  "on_before_select": { "call": "globals", "arguments": {"selected_race_laps": 8}}},
+            {"id": "'16'", "title": "'16 Laps'", "on_before_select": { "call": "globals", "arguments": {"selected_race_laps": 16}}}
           ]
         }
       },
@@ -747,7 +709,7 @@
         "call": "globals",
         "required": ["(%local_user_id == 0)", "(%selected_game_mode == 'rally')"],
         "exclude": "%%levels/$selected_level_id/if_raceway_circular",
-        "arguments": { "race_laps": 1 }
+        "arguments": { "selected_race_laps": 1 }
       },
       {
         "required": ["%if_devel", "(%local_user_id == 0)"],

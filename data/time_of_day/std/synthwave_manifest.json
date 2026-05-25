@@ -1,0 +1,19 @@
+{
+  "id": "synthwave",
+  "title": "%/title/$selected_language",
+  "required": {"fixed": ["%if_devel"], "dynamic": []},
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "skybox": "skybox_night",
+      "time_of_day": "synthwave"
+    }
+  },
+  "database": {
+    "title": {
+      "de-DE": "Synthwave",
+      "en-US": "Synthwave",
+      "fr-FR": "Synthwave"
+    }
+  }
+}

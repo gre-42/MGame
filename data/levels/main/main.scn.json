@@ -70,6 +70,21 @@
   },
   {
     "exclude": "%if_graphics",
-    "playback": "create_html_scene_selector"
+    "execute": [
+      {
+        "call": "globals",
+        "arguments": {
+          "selected_game_mode": "rally",
+          "selected_level_id": "",
+          "selected_race_restrictions": "car",
+          "selected_race_session": "session1",
+          "selected_time_of_day": "day",
+          "selected_race_laps": 1
+        }
+      },
+      {
+        "playback": "create_html_scene_selector"
+      }
+    ]
   }
 ]

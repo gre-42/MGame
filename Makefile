@@ -19,73 +19,78 @@ BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
 ifeq ($(HEADLESS),1)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --remote_site_id 42   \
-                --udp_ip 127.0.0.1    \
-                --udp_port 8042       \
-                --http_ip 127.0.0.1   \
-                --http_port 8082
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --remote_site_id 42   \
+        --udp_ip 127.0.0.1    \
+        --udp_port 8042       \
+        --http_ip 127.0.0.1   \
+        --http_port 8082
 endif
 ifeq ($(REMOTE_ROLE),server)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --remote_site_id 42   \
-                --remote_role server  \
-                --udp_ip 127.0.0.1    \
-                --udp_port 8042
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --remote_site_id 42   \
+        --remote_role server  \
+        --udp_ip 127.0.0.1    \
+        --udp_port 8042
 else ifeq ($(REMOTE_ROLE),client)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --remote_site_id 43   \
-                --remote_role client  \
-                --udp_ip 127.0.0.1    \
-                --udp_port 8042
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --remote_site_id 43   \
+        --remote_role client  \
+        --udp_ip 127.0.0.1    \
+        --udp_port 8042
 else ifeq ($(REMOTE_ROLE),client2)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --remote_site_id 73   \
-                --remote_role client  \
-                --udp_ip 127.0.0.1    \
-                --udp_port 8042
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --remote_site_id 73   \
+        --remote_role client  \
+        --udp_ip 127.0.0.1    \
+        --udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --remote_site_id 42   \
-                --remote_role server  \
-                --udp_ip 0.0.0.0      \
-                --udp_port 8042
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --remote_site_id 42   \
+        --remote_role server  \
+        --udp_ip 0.0.0.0      \
+        --udp_port 8042
 endif
 ifeq ($(REMOTE_DEBUG),1)
-    RUN_ARGS := $(RUN_ARGS)           \
-                --print_remote_data   \
-                --print_remote_metadata
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
+        --print_remote_data   \
+        --print_remote_metadata
 endif
-BIN_DIR !=                                     \
-    if [ "$(PACKAGE)" != 0 ]; then             \
-        echo "$(BIN_ARTIFACT_DIR)";            \
-    else                                       \
-        echo "$(BUILD_SUBDIR)";                \
-    fi
-GDB_ARGS !=                                         \
-    if [ "$(GDB)" != 0 ]; then                      \
-        echo "gdb -ex='catch throw' -ex=r --args";  \
-    fi
-SHOW_MOUSE_CURSOR_ARGS !=           \
-    if [ "$(CURSOR)" != 0 ]; then   \
-        echo --show_mouse_cursor;   \
-    fi
-PERF_ARGS !=                                       \
-    if [ "$(PERF)" = 1 ]; then                     \
-        echo sudo -E perf record -F 99 -a -g --;   \
-    fi
-PRINT_MATERIALS_ARGS !=                    \
-    if [ "$(PMAT)" = 1 ]; then             \
-        echo --print_rendered_materials;   \
-    fi
-CHK_ARGS !=                                         \
-    if [ "$(CHK)" = 1 ]; then                       \
-        echo --check_al_errors --check_gl_errors;   \
-    fi
-OMP_ENV !=                        \
-    if [ "$(OMP)" = 0 ]; then     \
-        echo OMP_NUM_THREADS=1;   \
-    fi
+ifeq ($(PACKAGE),0)
+    BIN_DIR := $(BUILD_SUBDIR)
+else
+    BIN_DIR := $(BIN_ARTIFACT_DIR)
+endif
+GDB_ARGS :=
+ifneq ($(GDB),0)
+    GDB_ARGS := gdb -ex='catch throw' -ex=r --args
+endif
+SHOW_MOUSE_CURSOR_ARGS :=
+ifneq ($(CURSOR),0)
+    SHOW_MOUSE_CURSOR_ARGS := --show_mouse_cursor
+endif
+PERF_ARGS :=
+ifeq ($(PERF),1)
+    PERF_ARGS := sudo -E perf record -F 99 -a -g --
+endif
+PRINT_MATERIALS_ARGS :=
+ifeq ($(PMAT),1)
+    PRINT_MATERIALS_ARGS := --print_rendered_materials
+endif
+CHK_ARGS :=
+ifeq ($(CHK),1)
+    CHK_ARGS := --check_al_errors --check_gl_errors
+endif
+OMP_ENV :=
+ifeq ($(OMP),0)
+    OMP_ENV := OMP_NUM_THREADS=1
+endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
 

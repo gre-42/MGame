@@ -1,0 +1,17 @@
+{
+  "id": "car_with_trailer",
+  "title": "%/title/$selected_language",
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_race_restrictions": "car_with_trailer"
+    }
+  },
+  "database": {
+    "title": {
+      "de-DE": "Auto mit Anhänger",
+      "en-US": "Car with trailer",
+      "fr-FR": "Voiture avec remorque"
+    }
+  }
+}
