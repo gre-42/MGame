@@ -87,8 +87,9 @@
   {"call": "compound_resource", "arguments": {"source_names": ["tiger_tank_hitbox", "tiger_tank_distancebox", "tiger_tank_tirelines"], "dest_name": "tiger_tank_hitboxes"}},
   {
     "declare_macro": "load_tiger_tank",
-    "content": [
-      {
+    "content": {
+      "required": "%if_graphics",
+      "execute": {
         "call": "obj_resource",
         "arguments": {
           "name": "%name",
@@ -112,8 +113,15 @@
           "dynamically_lighted": true
           }
         }
+      },
+      "else_": {
+        "call": "invisible_resource",
+        "arguments": {
+          "name": "%name",
+          "aggregate_mode": "none"
+        }
       }
-    ]
+    }
   },
   {"playback": "load_tiger_tank", "arguments": {"dist_min": 0  , "dist_max":   100, "occluder_pass": "none",                    "name": "Tiger"}},
   {"playback": "load_tiger_tank", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "name": "Tiger_d3"}}

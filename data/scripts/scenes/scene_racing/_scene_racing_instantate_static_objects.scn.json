@@ -39,6 +39,7 @@
             "playback": "_preload_osm_map"
           },
           {
+            "required": "%if_graphics",
             "call": "set_textures_lazy",
             "arguments": {
               "command": {
@@ -368,7 +369,7 @@
         }
       },
       {
-        "required": "%if_primary_dirtmap",
+        "required": ["%if_primary_dirtmap", "%if_graphics"],
         "call": "set_dirtmap",
         "arguments": {
           "filename": "%dirtmap_texture",
@@ -381,7 +382,7 @@
         "comment": "Soft light"
       },
       {
-        "required": "(%soft_light_texture != %null)",
+        "required": ["(%soft_light_texture != %null)", "%if_graphics"],
         "call": "set_soft_light",
         "arguments": {
           "filename": "%soft_light_texture"

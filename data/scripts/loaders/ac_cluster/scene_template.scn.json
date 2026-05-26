@@ -178,6 +178,7 @@
     }
   },
   {
+    "required": "%if_graphics",
     "call": "set_textures_lazy",
     "context": "primary_scene",
     "let": {

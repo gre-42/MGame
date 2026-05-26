@@ -25,9 +25,9 @@ services:
     volumes:
       - ./data:/app/data:ro
       - ./private:/app/private:ro
-      - ./static/server:/app/static/server:ro
-      - ./static/client:/app/static/client:ro
-      - ./Mlib/E32URelWithDebInfo/Bin:/app/static/game:ro
+      - ./public/server:/app/public/server:ro
+      - ./public/client:/app/public/client:ro
+      - ./Mlib/E32URelWithDebInfo/Bin:/app/public/game:ro
       - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
     networks:
       - game-net

@@ -31,6 +31,7 @@
   },
   "players": [
     {
+      "required": "(%total_user_count >= 1)",
       "controller": "pc", "name": "you", "team": "red",
       "user": {
         "rank": 0

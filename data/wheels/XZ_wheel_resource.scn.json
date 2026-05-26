@@ -1,8 +1,9 @@
 [
   {
     "declare_macro": "load_XZ_wheel",
-    "content": [
-      {
+    "content": {
+      "required": "%if_graphics",
+      "execute": {
         "call": "obj_resource",
         "arguments": {
           "name": "%name",
@@ -25,8 +26,15 @@
             "werror": false
           }
         }
+      },
+      "else_": {
+        "call": "invisible_resource",
+        "arguments": {
+          "name": "%name",
+          "aggregate_mode": "none"
+        }
       }
-    ]
+    }
   },
   {
     "declare_macro": "load_XZ_wheels",

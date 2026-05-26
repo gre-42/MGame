@@ -71,13 +71,22 @@
       }
     ],
     "else_": {
-      "execute": {
-        "call": "invisible_resource",
-        "arguments": {
-          "name": "street_light_blob",
-          "aggregate_mode": "instances_sorted"
+      "execute": [
+        {
+          "call": "invisible_resource",
+          "arguments": {
+            "name": "street_light_blob",
+            "aggregate_mode": "instances_sorted"
+          }
+        },
+        {
+          "call": "invisible_resource",
+          "arguments": {
+            "name": "car_light_beam",
+            "aggregate_mode": "none"
+          }
         }
-      }
+      ]
     }
   }
 ]

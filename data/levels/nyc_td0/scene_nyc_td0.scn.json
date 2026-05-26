@@ -82,5 +82,8 @@
     "playback": "scene_racing_setup_new_round",
     "context": "primary_scene"
   },
-  {"playback": "create_main_menu"}
+  {
+    "required": "%if_graphics",
+    "playback": "create_main_menu"
+  }
 ]

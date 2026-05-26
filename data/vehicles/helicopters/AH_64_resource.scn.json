@@ -93,61 +93,87 @@
   },
   {
     "declare_macro": "load_AH_64",
-    "content": [
-      {
-        "playback": "_load_AH_64_part",
-        "arguments": {
-          "name": "AH_64$decimate",
-          "filename": "AH_64$decimate.$mesh",
-          "center_distances": "%center_distances",
-          "blend_mode": "continuous",
-          "occluder_pass": "%occluder_pass",
-          "rectangle_triangulation_mode": "delaunay",
-          "physics_material": "attr_visible"
-        }
-      },
-      {
-        "call": "obj_resource",
-        "arguments": {
-          "name": "blades_AH_64$decimate",
-          "filename": "file://models/sketchfab.com/AH-64-apache/AH_64$decimate.$mesh",
-          "config": {
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
+    "content": {
+      "required": "%if_graphics",
+      "execute": [
+        {
+          "playback": "_load_AH_64_part",
+          "arguments": {
+            "name": "AH_64$decimate",
+            "filename": "AH_64$decimate.$mesh",
             "center_distances": "%center_distances",
             "blend_mode": "continuous",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "lightmap_black_global_and_local",
             "occluder_pass": "%occluder_pass",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "triangle_tangent_error_behavior": "zero",
-            "delaunay_error_behavior": "warn"
+            "rectangle_triangulation_mode": "delaunay",
+            "physics_material": "attr_visible"
+          }
+        },
+        {
+          "call": "obj_resource",
+          "arguments": {
+            "name": "blades_AH_64$decimate",
+            "filename": "file://models/sketchfab.com/AH-64-apache/AH_64$decimate.$mesh",
+            "config": {
+              "position": [0, 0, 0],
+              "rotation": [0, 0, 0],
+              "scale": [1, 1, 1],
+              "center_distances": "%center_distances",
+              "blend_mode": "continuous",
+              "alpha_distances": [0, 0, "inf", "inf"],
+              "occluded_pass": "lightmap_black_global_and_local",
+              "occluder_pass": "%occluder_pass",
+              "aggregate_mode": "none",
+              "transformation_mode": "all",
+              "triangle_tangent_error_behavior": "zero",
+              "delaunay_error_behavior": "warn"
+            }
+          }
+        },
+        {
+          "call": "obj_resource",
+          "arguments": {
+            "name": "tail_rotor_spinning_AH_64$decimate",
+            "filename": "file://models/sketchfab.com/AH-64-apache/tail_rotor_spinning$decimate.$mesh",
+            "config": {
+              "position": [0, 0, 0],
+              "rotation": [0, 0, 0],
+              "scale": [1, 1, 1],
+              "center_distances": "%center_distances",
+              "blend_mode": "continuous",
+              "alpha_distances": [0, 0, "inf", "inf"],
+              "occluded_pass": "lightmap_black_global_and_local",
+              "occluder_pass": "%occluder_pass",
+              "aggregate_mode": "none",
+              "transformation_mode": "all",
+              "triangle_tangent_error_behavior": "zero"
+            }
           }
         }
-      },
-      {
-        "call": "obj_resource",
-        "arguments": {
-          "name": "tail_rotor_spinning_AH_64$decimate",
-          "filename": "file://models/sketchfab.com/AH-64-apache/tail_rotor_spinning$decimate.$mesh",
-          "config": {
-            "position": [0, 0, 0],
-            "rotation": [0, 0, 0],
-            "scale": [1, 1, 1],
-            "center_distances": "%center_distances",
-            "blend_mode": "continuous",
-            "alpha_distances": [0, 0, "inf", "inf"],
-            "occluded_pass": "lightmap_black_global_and_local",
-            "occluder_pass": "%occluder_pass",
-            "aggregate_mode": "none",
-            "transformation_mode": "all",
-            "triangle_tangent_error_behavior": "zero"
+      ],
+      "else_": [
+        {
+          "call": "invisible_resource",
+          "arguments": {
+            "name": "AH_64$decimate",
+            "aggregate_mode": "none"
+          }
+        },
+        {
+          "call": "invisible_resource",
+          "arguments": {
+            "name": "blades_AH_64$decimate",
+            "aggregate_mode": "none"
+          }
+        },
+        {
+          "call": "invisible_resource",
+          "arguments": {
+            "name": "tail_rotor_spinning_AH_64$decimate",
+            "aggregate_mode": "none"
           }
         }
-      }
-    ]
+      ]
+    }
   },
   {"playback": "load_AH_64", "arguments": {"center_distances": [  0,  100], "occluder_pass": "none", "decimate": ""}},
   {"playback": "load_AH_64", "arguments": {"center_distances": [100, 1000], "occluder_pass": "lightmap_black_movables", "decimate": "_d5"}},
