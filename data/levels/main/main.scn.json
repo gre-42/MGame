@@ -66,11 +66,8 @@
       {
         "playback": "create_main_menu"
       }
-    ]
-  },
-  {
-    "exclude": "%if_graphics",
-    "execute": [
+    ],
+    "else_": [
       {
         "call": "globals",
         "arguments": {

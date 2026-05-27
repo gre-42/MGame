@@ -84,6 +84,11 @@
   },
   {
     "required": "%if_graphics",
-    "playback": "create_main_menu"
+    "execute": {
+      "playback": "create_main_menu"
+    },
+    "else_": {
+      "playback": "create_html_scene_selector"
+    }
   }
 ]
