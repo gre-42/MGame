@@ -7,7 +7,22 @@
   },
   "on_init": {
     "declare_macro": "remote.level.load_nyc_td0",
-    "content": { "call": "load_scene", "arguments": { "filename": "$__DIR__/scene_nyc_td0.scn.json" } }
+    "content": [
+      {
+        "call": "globals",
+        "arguments": {
+          "loaded_level_id": "nyc_td0",
+          "loaded_game_level": "td0",
+          "minimap_file": null
+        }
+      },
+      {
+        "call": "load_scene",
+        "arguments": {
+          "filename": "$__DIR__/scene_nyc_td0.scn.json"
+        }
+      }
+    ]
   },
   "on_execute": {
     "include": "scene_nyc_td0.scn.json"
@@ -16,8 +31,7 @@
     "call": "globals",
     "arguments": {
       "selected_level_id": "nyc_td0",
-      "level_icon_file": "file://levels/nyc_td0/icon.png",
-      "minimap_file": null
+      "level_icon_file": "file://levels/nyc_td0/icon.png"
     }
   },
   "database": {

@@ -131,7 +131,20 @@
     }
   },
   {
-    "declare_macro": "_update_time_of_day",
+    "declare_macro": "_set_skybox_for_time_of_day",
+    "content": [
+      {
+        "required": "(%loaded_time_of_day == 'day')",
+        "call": "set_skybox", "arguments": { "alias": "skybox"}
+      },
+      {
+        "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
+        "call": "set_skybox", "arguments": { "alias": "skybox_night"}
+      }
+    ]
+  },
+  {
+    "declare_macro": "update_time_of_day",
     "content": [
       { "playback": "_delete_lights_for_time_of_day" },
       { "playback": "_create_lights_for_time_of_day" },
@@ -142,7 +155,7 @@
             "context": "primary_scene_$full_user_name",
             "execute": [
               { "call": "clear_skybox" },
-              { "call": "set_skybox", "arguments": { "alias": "%skybox"} },
+              { "playback": "_set_skybox_for_time_of_day" },
               {
                 "playback": "update_weapon_closeup_lights",
                 "context": "weapon_closeup_$user_name"

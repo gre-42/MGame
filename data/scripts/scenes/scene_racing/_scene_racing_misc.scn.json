@@ -100,7 +100,7 @@
       },
       {
         "required": "%if_graphics",
-        "playback": "_update_time_of_day"
+        "playback": "update_time_of_day"
       },
       {
         "required": "(%remote_role != 'client')",

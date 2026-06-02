@@ -5,8 +5,7 @@
   "on_before_select": {
     "call": "globals",
     "arguments": {
-      "skybox": "skybox_night",
-      "time_of_day": "synthwave"
+      "selected_time_of_day": "synthwave"
     }
   },
   "database": {

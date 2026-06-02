@@ -3,12 +3,20 @@
     "declare_macro": "apply_level_selection",
     "content": {
       "required": "(%selected_level_id != %loaded_level_id)",
-      "execute": {
-        "call": "reload_scene",
-        "arguments": {
-          "change_scene": true
+      "execute": [
+        {
+          "call": "echo",
+          "arguments": {
+            "message": "Reloading scene. Selected level ID: $selected_level_id. Loaded level ID: $loaded_level_id"
+          }
+        },
+        {
+          "call": "reload_scene",
+          "arguments": {
+            "change_scene": true
+          }
         }
-      },
+      ],
       "else_": {
         "playback": "_reload_transient_objects_in_physics_thread",
         "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"]

@@ -2,6 +2,7 @@
   "declare_macro": "scene_racing_setup_new_round",
   "content": [
     {
+      "required": "(%remote_role != 'client')",
       "call": "globals",
       "arguments": {
         "loaded_game_mode": "%selected_game_mode",

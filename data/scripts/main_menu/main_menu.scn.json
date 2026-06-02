@@ -84,7 +84,7 @@
     "declare_macro": "_setup_menu_primary_scene_rest",
     "content": [
       {
-        "required": "(%local_user_id == 0)",
+        "required": ["(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "ui_exhibit",
         "arguments": {
           "z_order": 1,
@@ -99,17 +99,18 @@
         }
       },
       {
-        "required": "(%local_user_id == 0)",
+        "required": ["(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "rendered_scene_selector",
         "arguments": {
           "id": "scene_selector",
           "title": "%%translations/main/Scene/$selected_language",
+          "icon": "scene_selector_icon",
           "on_change": {
             "playback": "_update_scene_icon"
           },
           "assets": "levels",
+          "local_user_id": "%local_user_id",
           "appearance": {
-            "icon": "scene_selector_icon",
             "charset": "%selected_language",
             "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
             "left": "submenu_left",
@@ -118,8 +119,7 @@
             "top": "submenu_top",
             "font_color": "%ui_font_color",
             "font_height": "normal",
-            "line_distance": "normal",
-            "local_user_id": "%local_user_id"
+            "line_distance": "normal"
           }
         }
       },
@@ -642,7 +642,7 @@
         }
       },
       {
-        "required": ["%if_devel", "(%local_user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "parameter_setter",
         "arguments": {
           "id": "session_selector",
@@ -677,7 +677,7 @@
         "arguments": { "selected_race_session": "session1" }
       },
       {
-        "required": "(%local_user_id == 0)",
+        "required": ["(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "parameter_setter",
         "arguments": {
           "id": "laps_selector",
@@ -707,12 +707,12 @@
       },
       {
         "call": "globals",
-        "required": ["(%local_user_id == 0)", "(%selected_game_mode == 'rally')"],
+        "required": ["(%local_user_id == 0)", "(%selected_game_mode == 'rally')", "(%remote_role != 'client')"],
         "exclude": "%%levels/$selected_level_id/if_raceway_circular",
         "arguments": { "selected_race_laps": 1 }
       },
       {
-        "required": ["%if_devel", "(%local_user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_ranks_selector",
@@ -741,7 +741,7 @@
       },
       {
         "call": "globals",
-        "required": "(%local_user_id == 0)",
+        "required": ["(%local_user_id == 0)", "(%remote_role != 'client')"],
         "exclude": ["%if_devel"],
         "arguments": { "if_playback_winner_0": false, "if_playback_winner_1": false, "if_playback_winner_2": false }
       },
@@ -778,7 +778,7 @@
         }
       },
       {
-        "required": ["%if_devel", "(%local_user_id == 0)"],
+        "required": ["%if_devel", "(%local_user_id == 0)", "(%remote_role != 'client')"],
         "call": "parameter_setter",
         "arguments": {
           "id": "playback_speed_selector",

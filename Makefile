@@ -59,6 +59,11 @@ endif
 ifeq ($(REMOTE_DEBUG),1)
     override RUN_ARGS :=      \
         $(RUN_ARGS)           \
+        --print_remote_metadata
+endif
+ifeq ($(REMOTE_DEBUG),2)
+    override RUN_ARGS :=      \
+        $(RUN_ARGS)           \
         --print_remote_data   \
         --print_remote_metadata
 endif
@@ -118,9 +123,9 @@ daemon:
 empackage:
 	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
 		python3 /emsdk/upstream/emscripten/tools/file_packager.py \
-		static/client/assets.data \
+		public/client/assets.data \
 		--preload data \
-		--js-output=static/client/assets.js \
+		--js-output=public/client/assets.js \
 		--export-es6
 
 build:
