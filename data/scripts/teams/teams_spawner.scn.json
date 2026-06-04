@@ -36,7 +36,19 @@
   {
     "declare_macro": "teams.create_spawner_and_human",
     "content": [
-      { "call": "spawner_create", "arguments": { "name": "%spawner_name", "team": "%team", "group": "%spawn_group", "trigger": "team_deathmatch" } },
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "%team",
+          "group": "%spawn_group",
+          "trigger": "team_deathmatch",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {
@@ -52,7 +64,19 @@
   {
     "declare_macro": "teams.create_spawner_and_car",
     "content": [
-      { "call": "spawner_create", "arguments": { "name": "%spawner_name", "team": "%team", "group": "%spawn_group", "trigger": "team_deathmatch" } },
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "%team",
+          "group": "%spawn_group",
+          "trigger": "team_deathmatch",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
       {
         "call": "set_preferred_car_spawner",
         "arguments": {

@@ -271,7 +271,15 @@
           "rotation_strength": 1
         }
       },
-      {"comment": "if_with_graphics renderable_instance name=human_hitbox node=human_node$suffix resource=human_hitbox"},
+      {
+        "required": ["%show_hitbox", "%if_with_graphics"],
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "human_hitbox",
+          "node": "human_node$suffix",
+          "resource": "human_hitbox"
+        }
+      },
       {
         "let": {
           "decimate": "%%vehicles/$asset_id/decimate",

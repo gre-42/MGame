@@ -8,7 +8,11 @@
           "name": "%spawner_name",
           "team": "red",
           "group": "",
-          "trigger": "%spawn_trigger"
+          "trigger": "%spawn_trigger",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
         }
       },
       {
@@ -159,7 +163,11 @@
           "name": "%spawner_name",
           "team": "red",
           "group": "",
-          "trigger": "bystanders"
+          "trigger": "bystanders",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
         }
       },
       {
@@ -190,7 +198,11 @@
           "name": "%spawner_name",
           "team": "red",
           "group": "",
-          "trigger": "bystanders"
+          "trigger": "bystanders",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
         }
       },
       {

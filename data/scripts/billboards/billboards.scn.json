@@ -9,12 +9,8 @@
       {"include": "billboards_bullet_impact_3d.scn.json"},
       {"include": "billboards_explosions_3d.scn.json"},
       {"include": "billboards_muzzle_flash_3d.scn.json"},
-      {"include": "billboards_particles_atlas_3d.scn.json"},
       {"include": "billboards_particles_atlas.scn.json"},
-      {"include": "billboards_particles_fueguito.scn.json"},
       {"include": "billboards_particles.scn.json"},
-      {"include": "billboards_sea_spray_atlas.scn.json"},
-      {"include": "billboards_skidmarks_atlas.scn.json"},
       {"include": "billboards_vegetation0_atlas.scn.json"},
       {"exclude": "%if_compressed", "include": "billboards_vegetation1_atlas.scn.json"},
       {"exclude": [["%if_compressed", "%if_android"]], "include": "billboards_vegetation3_atlas.scn.json"},
@@ -28,6 +24,10 @@
       {"exclude": "%if_compressed", "include": "billboards_vegetation11_atlas.scn.json"}
     ]
   },
+  {"include": "billboards_sea_spray_atlas.scn.json"},
+  {"include": "billboards_particles_atlas_3d.scn.json"},
+  {"include": "billboards_skidmarks_atlas.scn.json"},
+  {"include": "billboards_particles_fueguito.scn.json"},
   {"include": "billboards_blobs.scn.json"},
   {"include": "billboards_decals.scn.json"},
   {"include": "billboards_grass.scn.json"},
