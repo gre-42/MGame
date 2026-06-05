@@ -93,10 +93,10 @@
           "if_shadow": false,
           "if_damageable": "(%flavor == 'extended')",
           "if_car_body_renderable_style": true,
-          "velocity_error_std": null,
-          "yaw_error_std": null,
-          "pitch_error_std": null,
-          "error_alpha": null
+          "velocity_error_std": 0,
+          "yaw_error_std": 0,
+          "pitch_error_std": 0,
+          "error_alpha": 0
         }
       },
       {
