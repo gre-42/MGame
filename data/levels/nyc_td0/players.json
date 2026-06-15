@@ -32,7 +32,7 @@
   "players": [
     {
       "required": "(%total_user_count >= 1)",
-      "controller": "pc", "name": "you", "team": "red",
+      "controller": "pc", "name": "you", "team": "red", "behavior": "none",
       "user": {
         "rank": 0
       },
@@ -57,7 +57,7 @@
     },
     {
       "required": "(%total_user_count >= 2)",
-      "controller": "pc", "name": "you", "team": "blue",
+      "controller": "pc", "name": "you", "team": "blue", "behavior": "none",
       "user": {
         "rank": 1
       },
