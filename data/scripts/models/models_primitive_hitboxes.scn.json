@@ -5,9 +5,9 @@
       "name": "box_02_1_02_hitbox",
       "filename": "file://models/primitives/box.$mesh",
       "config": {
-        "position": [0, 0, 0],
+        "position": [0, 0.5, 0],
         "rotation": [0, 0, 0],
-        "scale": [0.2, 1, 0.2],
+        "scale": [0.2, 0.5, 0.2],
         "center_distances": [0, 501],
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
@@ -23,12 +23,12 @@
   {
     "call": "obj_resource",
     "arguments": {
-      "name": "box_50_16_01_hitbox",
+      "name": "box_50_12_01_hitbox",
       "filename": "file://models/primitives/box.$mesh",
       "config": {
-        "position": [0, 0.8, 0],
+        "position": [0, 1.2, 0],
         "rotation": [0, 0, 0],
-        "scale": [5, 1.6, 0.1],
+        "scale": [5, 1.2, 0.1],
         "center_distances": [0, 501],
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
@@ -48,9 +48,9 @@
       "name": "box_10_10_10_hitbox",
       "filename": "file://models/primitives/box.$mesh",
       "config": {
-        "position": [0, 1, 0],
+        "position": [0, 0.5, 0],
         "rotation": [0, 0, 0],
-        "scale": [1, 1, 1],
+        "scale": [1, 0.5, 1],
         "center_distances": [0, 501],
         "blend_mode": "off",
         "alpha_distances": [0, 0, "inf", "inf"],
