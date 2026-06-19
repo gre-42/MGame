@@ -21,24 +21,22 @@
     }
   },
   {
-    "comment": {
-      "call": "obj_resource",
-      "arguments": {
-        "name": "human_distancebox",
-        "filename": "file://models/primitives/box.$mesh",
-        "config": {
-          "position": [0, 0.35, -0.25],
-          "rotation": [0, 0, 0],
-          "scale": [0.25, 0.7, 0.5],
-          "center_distances": [0, "inf"],
-          "blend_mode": "off",
-          "alpha_distances": [0, 0, "inf", "inf"],
-          "occluded_pass": "none",
-          "occluder_pass": "none",
-          "aggregate_mode": "none",
-          "transformation_mode": "all",
-          "physics_material": "obj_distancebox|attr_visible|attr_collide|attr_convex"
-        }
+    "call": "obj_resource",
+    "arguments": {
+      "name": "human_distancebox_debug_mesh",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.35, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.55, 0.7, 0.55],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible"
       }
     }
   },

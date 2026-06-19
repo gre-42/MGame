@@ -21,6 +21,26 @@
       }
     }
   },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "van0_distancebox_debug_mesh",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.25, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.9, 0.8, 2.6],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible"
+      }
+    }
+  },
   {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "van0_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
   {
     "call": "add_swept_sphere_aabb",
