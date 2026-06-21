@@ -12,7 +12,8 @@
         "times": 1.6,
         "plus": -0.1,
         "desaturate": 1,
-        "desaturation_exponent": 0.5
+        "desaturation_exponent": 0.5,
+        "add_aliases": false
       }
     }
   },
@@ -25,7 +26,8 @@
         "color": "%filename",
         "color_mode": "rgb",
         "anisotropic_filtering_level": 0,
-        "desaturate": 1
+        "desaturate": 1,
+        "add_aliases": false
       }
     }
   },

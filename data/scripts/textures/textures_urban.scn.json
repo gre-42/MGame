@@ -11,7 +11,8 @@
           "plus": 1,
           "multiply_color": "%color",
           "color_mode": "rgb",
-          "anisotropic_filtering_level": 16
+          "anisotropic_filtering_level": 16,
+          "add_aliases": false
         }
       },
       {
@@ -31,7 +32,8 @@
           "color": "%specular",
           "color_mode": "rgb",
           "anisotropic_filtering_level": 16,
-          "lighten": [-0.1, -0.1, -0.1]
+          "lighten": [-0.1, -0.1, -0.1],
+          "add_aliases": false
         }
       }
     ]
@@ -51,7 +53,8 @@
       "color": "file://textures/osm/DE21F2_industryWindow00001_boundary_top.png",
       "color_mode": "rgb",
       "lighten": [-0.3, -0.3, -0.3],
-      "anisotropic_filtering_level": 16
+      "anisotropic_filtering_level": 16,
+      "add_aliases": false
     }
   },
   {
@@ -62,7 +65,8 @@
       "color_mode": "rgb",
       "lighten": [0.3, 0.3, 0.3
       ],
-      "anisotropic_filtering_level": 16
+      "anisotropic_filtering_level": 16,
+      "add_aliases": false
     }
   },
   {
@@ -71,7 +75,8 @@
       "name": "DE21F2_industryWindow00001_left",
       "color": "file://textures/osm/DE21F2_industryWindow00001_boundary_left.png",
       "color_mode": "rgb",
-      "anisotropic_filtering_level": 16
+      "anisotropic_filtering_level": 16,
+      "add_aliases": false
     }
   },
   {
@@ -80,7 +85,8 @@
       "name": "DE21F2_industryWindow00001_right",
       "color": "file://textures/osm/DE21F2_industryWindow00001_boundary_right.png",
       "color_mode": "rgb",
-      "anisotropic_filtering_level": 16
+      "anisotropic_filtering_level": 16,
+      "add_aliases": false
     }
   },
   {

@@ -1,0 +1,77 @@
+[
+  {
+    "declare_macro": "add_debug_renderable",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "context": "primary_scene",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "debug_node$suffix",
+          "scale": 1,
+          "position": "%position",
+          "rotation": "%rotation"
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "context": "primary_scene",
+        "arguments": {
+          "name": "%resource",
+          "node": "debug_node$suffix",
+          "resource": "%resource"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "add_debug_file",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "context": "primary_scene",
+        "arguments": {
+          "dynamics": "moving",
+          "node": "debug_node$suffix",
+          "scale": 1,
+          "position": "%position",
+          "rotation": "%rotation"
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "polygon_debug_mesh$suffix",
+          "filename": "%polygon_filename",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "triangle_tangent_error_behavior": "zero",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "context": "primary_scene",
+        "arguments": {
+          "name": "polygon_debug_mesh$suffix",
+          "node": "debug_node$suffix",
+          "resource": "polygon_debug_mesh$suffix"
+        }
+      }
+    ]
+  }
+]

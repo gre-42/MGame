@@ -13,7 +13,7 @@
       "heightmap": "file://$__DIR__/heightmap.pgm",
       "heightmap_mask": "file://$__DIR__/heightmap_mask.pgm",
       "heightmap_extension": 500,
-      "terrain_undefined_textures": ["file://textures/debug/pink.png"],
+      "terrain_undefined_textures": ["#pink"],
       "terrain_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_textures": ["#Ground037_Sl"],
       "terrain_elevated_grass_base_textures": ["#Concrete020"],
