@@ -125,6 +125,7 @@ empackage:
 		python3 /emsdk/upstream/emscripten/tools/file_packager.py \
 		public/client/assets.data \
 		--preload data \
+		--preload appdata \
 		--js-output=public/client/assets.js \
 		--export-es6
 
