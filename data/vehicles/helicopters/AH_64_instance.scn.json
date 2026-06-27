@@ -145,7 +145,7 @@
         "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
         "arguments": {
           "cycle_node": "car_node$suffix",
-          "entry_name": "machine_gun",
+          "entry_name": "MG",
           "ammo_type": "ah_64_bullet_ammo",
           "bullet_type": "ah_64_bullet",
           "cool_down": 0.1,
@@ -199,7 +199,7 @@
         "arguments": {
           "player": null,
           "cycle_node": "car_node$suffix",
-          "weapon": "machine_gun",
+          "weapon": "MG",
           "equip_instantly": true
         }
       },
