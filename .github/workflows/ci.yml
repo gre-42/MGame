@@ -40,7 +40,7 @@ jobs:
             libboost-dev \
             libboost-regex-dev \
             libboost-url-dev \
-            g++
+            clang
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v6
@@ -48,8 +48,8 @@ jobs:
           submodules: recursive
 
       - name: Build, package and test
-        # run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
-        run: CC=gcc CXX=g++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        # run: CC=gcc CXX=g++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
         # run: make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
