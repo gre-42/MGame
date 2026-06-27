@@ -1,0 +1,56 @@
+[
+  {
+    "declare_macro": "add_attached_light_human",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "light_node$lsuffix",
+          "position": [0, 0, 0],
+          "rotation": [-45, 90, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "keep_offset_from_movable",
+        "arguments": {
+          "follower": "light_node$lsuffix",
+          "followed": "human_node$csuffix",
+          "offset": [10, 10, 0]
+        }
+      },
+      {
+        "call": "ortho_camera",
+        "arguments": {
+          "node": "light_node$lsuffix",
+          "config": {
+            "near_plane": 1,
+            "far_plane": 10000,
+            "left_plane": -2,
+            "right_plane": 2,
+            "bottom_plane": -2,
+            "top_plane": 2
+          },
+          "requires_postprocessing": false
+        }
+      },
+      {
+        "call": "light",
+        "arguments": {
+          "node": "light_node$lsuffix",
+          "black_node": "human_node$csuffix",
+          "render_pass": "lightmap_black_node",
+          "with_depth_texture": false,
+          "ambient": [0.5, 0.5, 0.5],
+          "diffuse": [1, 1, 1],
+          "specular": [1, 1, 1],
+          "shadow": true
+        }
+      },
+      {
+        "comment": "renderable_instance name=light_node_follower-lsuffix node=light_node-lsuffix resource=box"
+      }
+    ]
+  }
+]

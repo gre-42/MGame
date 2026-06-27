@@ -1,0 +1,152 @@
+[
+  {
+    "declare_macro": "_create_playback",
+    "content": {
+      "playback": "local.create_car",
+      "let": {
+        "make_remote": false,
+        "car_name": "%playback_car",
+        "car_node_position": [1, 2, 3],
+        "car_node_angles": [4, 5, 6],
+        "velocity": null,
+        "angular_velocity": null,
+        "suffix": "_playback_track$psuffix",
+        "if_with_graphics": true,
+        "if_with_physics": false,
+        "if_playback_track": true,
+        "if_playback_winner": false,
+        "playback_speed": "%playback_speed",
+        "playback_filename": "%playback_filename",
+        "psuffix": "%psuffix",
+        "if_spawner": false,
+        "if_player": false,
+        "if_shadow": true,
+        "if_damageable": false,
+        "if_car_body_renderable_style": false,
+        "velocity_error_std": 0,
+        "error_alpha": null,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0
+      }
+    }
+  },
+  {
+    "declare_macro": "_create_winner_playback",
+    "content": [
+      {
+        "playback": "local.create_car",
+        "let": {
+        "make_remote": false,
+          "car_name": "%playback_car",
+          "car_node_position": [1, 2, 3],
+          "car_node_angles": [4, 5, 6],
+          "velocity": null,
+          "angular_velocity": null,
+          "suffix": "_playback_winner$psuffix",
+          "parking_brake_pulled": null,
+          "mute": null,
+          "if_with_graphics": true,
+          "if_with_physics": false,
+          "if_playback_track": false,
+          "if_playback_winner": true,
+          "playback_speed": "%playback_speed",
+          "rank": "%rank",
+          "if_spawner": false,
+          "if_player": false,
+          "if_shadow": true,
+          "if_damageable": false,
+          "if_car_body_renderable_style": true,
+          "velocity_error_std": 0,
+          "error_alpha": null,
+          "yaw_error_std": 0,
+          "pitch_error_std": 0
+        }
+      },
+      {
+        "comment": "add_node_not_allowed_to_be_unregistered name=light_node_car_playback_winner-psuffix"
+      }
+    ]
+  },
+  {
+    "declare_macro": "_setup_new_round",
+    "content": [
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "set_focuses",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {"focuses": ["scene"]}
+          }
+        }
+      },
+      {
+        "call": "delete_root_nodes",
+        "arguments": {
+          "regex": "'^(car|human|skater)_node(_trailer)?_playback_track\\d+$'"
+        }
+      },
+      {
+        "call": "delete_root_nodes",
+        "arguments": {
+          "regex": "'^(car|human|skater)_node(_trailer)?_playback_winner\\d+$'"
+        }
+      },
+      {
+        "call": "delete_root_nodes",
+        "arguments": {
+          "regex": "'^(bullet|trail|particles_\\w+|snow|explosion)___\\d+$'"
+        }
+      },
+      {
+        "required": "%if_graphics",
+        "playback": "update_time_of_day"
+      },
+      {
+        "required": "(%remote_role != 'client')",
+        "execute": [
+          {
+            "required": "(%loaded_game_mode == 'rally')",
+            "execute": [
+              {
+                "call": "set_race_identifier_and_reload_history",
+                "arguments": {
+                  "level_id": "%loaded_level_id",
+                  "time_of_day": "%loaded_time_of_day",
+                  "restrictions": "%loaded_race_restrictions",
+                  "session": "%loaded_race_session",
+                  "laps": "%loaded_race_laps",
+                  "milliseconds": 0
+                }
+              },
+              {
+                "call": "start_race",
+                "arguments": {
+                  "readonly": false
+                }
+              }
+            ]
+          },
+          {
+            "call": "respawn_all_players"
+          },
+          {
+            "playback": "instantiate_transient_objects"
+          },
+          {
+            "call": "reset_supply_depot_cooldowns"
+          },
+          {
+            "call": "for_each_user",
+            "arguments": {
+              "content": {
+                "call": "invalidate_aggregate_renderers",
+                "context": "primary_scene_$full_user_name"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

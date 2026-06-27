@@ -1,0 +1,40 @@
+[
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_audio_sequence",
+    "arguments": {
+      "name": "car0.driving",
+      "filename": "file://sounds/ange-engine-sim/sequence0/meta.json",
+      "gain": 1,
+      "hysteresis_step": 0.2
+    }
+  },
+  {
+    "call": "add_audio_sequence",
+    "arguments": {
+      "name": "car1.driving",
+      "filename": "file://sounds/ange-engine-sim/sequence1/meta.json",
+      "gain": 1,
+      "hysteresis_step": 0.2
+    }
+  },
+  {
+    "call": "add_audio_sequence",
+    "arguments": {
+      "name": "car2.driving",
+      "filename": "file://sounds/ange-engine-sim/sequence2/meta.json",
+      "gain": 1,
+      "hysteresis_step": 0.2
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_audio",
+    "arguments": {
+      "name": "thruster",
+      "filename": "file://sounds/opengameart/thruster/space_ship.$audio",
+      "gain": 1,
+      "distance_clamping": [5, 700]
+    }
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "declare_macro": "local.create_avatar",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "human_node$suffix",
+          "scale": 1,
+          "position": "%human_node_position",
+          "rotation": [0, "%human_node_angle_y", 0]
+        }
+      },
+      {
+        "without": ["asset_id"],
+        "playback": "create_$asset_id"
+      },
+      {
+        "required": ["%make_remote", "(%remote_role != 'none')"],
+        "playback": "delegate_create_avatar",
+        "let": { "avatar_creator": "register_local_avatar" }
+      },
+      {
+        "required": "%if_spawner",
+        "call": "spawner_set_nodes",
+        "arguments": {
+          "asset_id": "%asset_id",
+          "suffix": "%suffix",
+          "spawner": "%spawner_name"
+        }
+      },
+      {
+        "required": "%if_spawner",
+        "call": "set_respawn_cooldown_time",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "time": "%respawn_cooldown_time"
+        }
+      },
+      {
+        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_human$suffix csuffix:suffix;"
+      },
+      {
+        "required": "%if_spawner",
+        "call": "set_externals_creator_safe",
+        "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id"
+        }
+      },
+      {
+        "comment": {
+          "required": "%if_spawner",
+          "call": "set_externals_creator_unsafe",
+          "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+          "arguments": {
+            "externals": {
+              "playback": "create_player_avatar_externals"
+            },
+            "internals": {
+              "playback": "create_player_avatar_internals"
+            },
+            "spawner": "%spawner_name"
+          }
+        }
+      },
+      {
+        "comment": {
+          "call": "visual_node_status_3rd",
+          "arguments": {
+            "node": "human_node$suffix",
+            "format": 8,
+            "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+            "offset": [0, 0.3],
+            "font_height": 16,
+            "line_distance": 16
+          }
+        }
+      }
+    ]
+  }
+]

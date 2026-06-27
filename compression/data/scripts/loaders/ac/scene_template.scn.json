@@ -1,0 +1,74 @@
+[
+  {"include": "scripts/include_all.scn.json"},
+  {
+    "call": "globals",
+    "arguments": {
+      "loaded_level_id": "%selected_level_id",
+      "osm_location": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": 1
+      },
+      "aggregate_mode": "node_triangles",
+      "vip_name": "you",
+      "player_seat": "driver"
+    }
+  },
+  {"include": "osm_resource_template.scn.json"},
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "if_create_pc_player": true,
+      "if_pc_player_playback": false,
+      "pc_player_playback": "file://$__DIR__/checkpoints.m",
+      "pc_player_playback_speedup": 1,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|history|laps|rank|race_time",
+      "osm_map_resource": "osm_resource_template",
+      "if_has_overlay": false,
+      "if_primary_dirtmap": true,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": "#dirtmap_dense",
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 0.5,
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "periodic_reference_time_duration": null,
+      "soft_light_texture": null
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "if_create_pc_car": true,
+        "if_pc_player_playback": false,
+        "recordings_dir": "%__DIR__",
+        "checkpoints_file": null,
+        "checkpoints": "%%levels/$loaded_level_id/checkpoints",
+        "pacenotes_file": null,
+        "teams_spawn_points_resource": null,
+        "teams_way_points_resource": null,
+        "if_playback_checkpoints": false,
+        "if_playback_track_1": false,
+        "if_playback_track_2": false,
+        "if_playback_track_3": false,
+        "if_checkpoints": "(%%levels/$loaded_level_id/checkpoints != %null)",
+        "if_burn_in": false
+      }
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
+  },
+  {"playback": "create_main_menu"}
+]

@@ -1,0 +1,14 @@
+{
+  "call": "explosion_rocks",
+  "arguments": {
+    "name": "explosion_rocks",
+    "nrocks": 20,
+    "rocks": [
+      {
+        "bullet": "explosion_rocks",
+        "velocity_range": [20, 50],
+        "angular_velocity_std": 10
+      }
+    ]
+  }
+}

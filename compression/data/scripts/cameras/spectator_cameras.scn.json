@@ -1,0 +1,41 @@
+{
+  "declare_macro": "create_spectator_camera",
+  "content": [
+    {
+      "call": "root_node_instance",
+      "arguments": {
+        "dynamics": "moving",
+        "name": "%node_name",
+        "position": "%position",
+        "rotation": "%rotation",
+        "scale": 1
+      }
+    },
+    {
+      "call": "perspective_camera",
+      "arguments": {
+        "node": "%node_name",
+        "y_fov": 60,
+        "near_plane": 1,
+        "far_plane": 10000,
+        "requires_postprocessing": false
+      }
+    },
+    {
+      "call": "relative_transformer",
+      "arguments": {
+        "node": "%node_name"
+      }
+    },
+    {
+      "comment": {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "topdown_locator",
+          "node": "%node_name",
+          "resource": "topdown_locator"
+        }
+      }
+    }
+  ]
+}

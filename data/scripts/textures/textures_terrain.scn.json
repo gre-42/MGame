@@ -162,7 +162,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_compressed", "%if_android"]],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_ground",
@@ -173,7 +173,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_compressed", "%if_android"]],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "Ground003",
@@ -330,7 +330,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_compressed", "%if_android"]],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass12y_Ground037_Sl",
@@ -341,7 +341,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_compressed", "%if_android"]],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass2g",
@@ -351,7 +351,7 @@
     }
   },
   {
-    "exclude": ["%if_android"],
+    "exclude": [["%if_compressed", "%if_android"]],
     "call": "add_texture_descriptor",
     "arguments": {
       "name": "grass_tbdpec3r",

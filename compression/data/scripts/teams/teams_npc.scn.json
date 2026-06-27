@@ -1,0 +1,203 @@
+[
+  {
+    "declare_macro": "teams.create_player_for_avatar_and_npc",
+    "content": [
+      {
+        "call": "player_create",
+        "arguments": {
+          "name": "%player_name",
+          "team": "%team",
+          "game_mode": "%game_mode",
+          "player_role": "%player_role",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "%initial_behavior",
+          "driving_direction": "center"
+        }
+      },
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%player_name",
+          "team": "%team",
+          "group": "%spawn_group",
+          "trigger": "team_deathmatch",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
+      {
+        "playback": "set_player_skills"
+      }
+    ]
+  },
+  {
+    "declare_macro": "teams.create_player_for_car_and_npc",
+    "content": [
+      {
+        "call": "player_create",
+        "arguments": {
+          "name": "%player_name",
+          "team": "%team",
+          "game_mode": "%game_mode",
+          "player_role": "%player_role",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "%initial_behavior",
+          "driving_direction": "center"
+        }
+      },
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%player_name",
+          "team": "%team",
+          "group": "%spawn_group",
+          "trigger": "team_deathmatch",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
+      { "call": "spawner_set_player", "arguments": { "name": "%player_name", "seat": "%seat" } },
+      {
+        "playback": "set_player_skills"
+      }
+    ]
+  },
+  {
+    "declare_macro": "teams.create_avatar_for_npc",
+    "content": [
+      {
+        "playback": "local.create_avatar",
+        "let": {
+          "make_remote": true,
+          "if_with_gun": true,
+          "if_spawner": true,
+          "if_player": true,
+          "if_shadow": true,
+          "if_damageable": true
+        }
+      },
+      {
+        "call": "create_externals",
+        "arguments": {
+          "player": "%player_name",
+          "mode": "npc"
+        }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%player_name",
+          "seat": "%seat"
+        }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%player_name"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "teams.create_car_for_npc",
+    "content": [
+      {
+        "playback": "local.create_car",
+        "let": {
+          "make_remote": true,
+          "if_playback_track": false,
+          "if_playback_winner": false,
+          "if_spawner": true,
+          "if_player": true,
+          "if_shadow": true,
+          "if_damageable": true,
+          "parking_brake_pulled": false
+        }
+      },
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "visual_node_status_3rd",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {
+              "node": "car_node$suffix",
+              "format": "health",
+              "charset": "%selected_language",
+              "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+              "offset": [0, 0.3],
+              "font_color": "%scene_font_color",
+              "font_height": "normal",
+              "line_distance": "normal"
+            }
+          }
+        }
+      },
+      {
+        "call": "create_externals",
+        "arguments": {
+          "player": "%player_name",
+          "mode": "npc"
+        }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%player_name",
+          "seat": "%seat"
+        }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%player_name"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "teams.create_player_and_avatar_for_npc",
+    "content": [
+      {
+        "playback": "teams.create_player_for_avatar_and_npc"
+      },
+      {
+        "call": "set_preferred_car_spawner",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
+          "already_set_behavior": "throw",
+          "macro": {
+            "playback": "teams.create_avatar_for_npc"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "teams.create_player_and_car_for_npc",
+    "content": [
+      {
+        "playback": "teams.create_player_for_car_and_npc"
+      },
+      {
+        "call": "set_preferred_car_spawner",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
+          "already_set_behavior": "throw",
+          "macro": {
+            "playback": "teams.create_car_for_npc"
+          }
+        }
+      }
+    ]
+  }
+]

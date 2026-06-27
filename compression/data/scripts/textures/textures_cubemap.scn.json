@@ -1,0 +1,173 @@
+[
+  {
+    "declare_macro": "_lighten_skybox",
+    "content": {
+      "call": "add_texture_descriptor",
+      "arguments": {
+        "name": "%name",
+        "color": "%filename",
+        "color_mode": "rgb",
+        "anisotropic_filtering_level": 0,
+        "# lighten": [0.4, 0.4, 0.4],
+        "times": 1.6,
+        "plus": -0.1,
+        "desaturate": 1,
+        "desaturation_exponent": 0.5,
+        "add_aliases": false
+      }
+    }
+  },
+  {
+    "declare_macro": "_desaturate_skybox",
+    "content": {
+      "call": "add_texture_descriptor",
+      "arguments": {
+        "name": "%name",
+        "color": "$prefix.luma.png",
+        "chrominance": "$prefix.chrominance.png",
+        "color_mode": "rgb",
+        "anisotropic_filtering_level": 0,
+        "desaturate": 0.5,
+        "add_aliases": false
+      }
+    }
+  },
+  {
+    "declare_macro": "_compose_luma_chrominance",
+    "content": {
+      "call": "add_texture_descriptor",
+      "arguments": {
+        "name": "%name",
+        "color": "$prefix.luma.png",
+        "chrominance": "$prefix.chrominance.png",
+        "color_mode": "rgb",
+        "anisotropic_filtering_level": 0
+      }
+    }
+  },
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_right", "filename": "file://textures/skybox/learnopengl.com/right.jpg"}},
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_left", "filename": "file://textures/skybox/learnopengl.com/left.jpg"}},
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_top", "filename": "file://textures/skybox/learnopengl.com/top.jpg"}},
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_bottom", "filename": "file://textures/skybox/learnopengl.com/bottom.jpg"}},
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_front", "filename": "file://textures/skybox/learnopengl.com/front.jpg"}},
+  {"playback": "_lighten_skybox","arguments": {"name": "skybox_learnopengl_com_back", "filename": "file://textures/skybox/learnopengl.com/back.jpg"}},
+  {
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "skybox",
+      "filenames": [
+        "#skybox_learnopengl_com_right",
+        "#skybox_learnopengl_com_left",
+        "#skybox_learnopengl_com_top",
+        "#skybox_learnopengl_com_bottom",
+        "#skybox_learnopengl_com_front",
+        "#skybox_learnopengl_com_back"
+      ]
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "skybox_rgb",
+      "filenames": [
+        "file://textures/skybox/rgb/right.png",
+        "file://textures/skybox/rgb/left.png",
+        "file://textures/skybox/rgb/top.png",
+        "file://textures/skybox/rgb/bottom.png",
+        "file://textures/skybox/rgb/front.png",
+        "file://textures/skybox/rgb/back.png"
+      ]
+    }
+  },
+  {
+    "exclude": [["%if_compressed", "%if_android"]],
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "skybox_ocean",
+      "filenames": [
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/px.png",
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/nx.png",
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/py.png",
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/ny.png",
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/pz.png",
+        "file://textures/skybox/artstation.com/1-skybox-studio-hyper-realistic-mountains-lake/nz.png"
+      ]
+    }
+  },
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_px", "prefix": "file://textures/skybox/cc0textures.com/px"}},
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_nx", "prefix": "file://textures/skybox/cc0textures.com/nx"}},
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_py", "prefix": "file://textures/skybox/cc0textures.com/py"}},
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_ny", "prefix": "file://textures/skybox/cc0textures.com/ny"}},
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_pz", "prefix": "file://textures/skybox/cc0textures.com/pz"}},
+  {"playback": "_desaturate_skybox", "arguments": {"name": "skybox_cc0textures_com_nz", "prefix": "file://textures/skybox/cc0textures.com/nz"}},
+  {
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "reflection_map",
+      "filenames": [
+        "#skybox_cc0textures_com_px",
+        "#skybox_cc0textures_com_nx",
+        "#skybox_cc0textures_com_py",
+        "#skybox_cc0textures_com_ny",
+        "#skybox_cc0textures_com_pz",
+        "#skybox_cc0textures_com_nz"
+      ]
+    }
+  },
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/4", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/4"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/2", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/2"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/6", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/6"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/5", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/5"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/1", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/1"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0/3", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0/3"}},
+  {
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "skybox_night",
+      "filenames": [
+        "#space-skybox-0/4",
+        "#space-skybox-0/2",
+        "#space-skybox-0/6",
+        "#space-skybox-0/5",
+        "#space-skybox-0/1",
+        "#space-skybox-0/3"
+      ]
+    }
+  },
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/4", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/4"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/2", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/2"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/6", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/6"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/5", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/5"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/1", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/1"}},
+  {"playback": "_compose_luma_chrominance", "arguments": {"name": "space-skybox-0-lights/3", "prefix": "file://textures/skybox/opengameart.org/space-skybox-0-lights/3"}},
+  {
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "reflection_map_night",
+      "filenames": [
+        "#space-skybox-0-lights/4",
+        "#space-skybox-0-lights/2",
+        "#space-skybox-0-lights/6",
+        "#space-skybox-0-lights/5",
+        "#space-skybox-0-lights/1",
+        "#space-skybox-0-lights/3"
+      ]
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "add_cubemap",
+    "arguments": {
+      "alias": "reflection_map_synthwave",
+      "filenames": [
+        "file://textures/skybox/synthwave/1.png",
+        "file://textures/skybox/synthwave/1.png",
+        "file://textures/skybox/synthwave/1.png",
+        "file://textures/skybox/synthwave/1.png",
+        "file://textures/skybox/synthwave/1.png",
+        "file://textures/skybox/synthwave/1.png"
+      ]
+    }
+  }
+]

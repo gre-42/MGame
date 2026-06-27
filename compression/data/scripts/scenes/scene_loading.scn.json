@@ -1,0 +1,93 @@
+[
+  {
+    "declare_macro": "_setup_scene_loading",
+    "content": [
+      {
+        "playback": "scene_minimal",
+        "arguments": {
+          "if_dirtmap": false,
+          "if_skybox": false
+        }
+      },
+      {
+        "call": "ui_background",
+        "arguments": {
+          "z_order": 1,
+          "texture": "#ui_background_cars",
+          "left": "min",
+          "right": "end",
+          "bottom": "min",
+          "top": "end",
+          "delay_load_policy": "no_delay",
+          "focus_mask": "always"
+        }
+      },
+      {
+        "call": "thread_top",
+        "arguments": {
+          "charset": "%selected_language",
+          "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+          "position": ["nan", 0],
+          "font_color": "%ui_font_color",
+          "font_height": "normal",
+          "line_distance": "normal",
+          "focus_mask": "always",
+          "update_interval_ms": 1000
+        }
+      },
+      {
+        "call": "focused_text",
+        "arguments": {
+          "z_order": 1,
+          "charset": "%selected_language",
+          "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+          "position": ["nan", "nan"],
+          "font_color": "%ui_font_color",
+          "font_height": "huge",
+          "line_distance": "huge",
+          "focus_mask": "always",
+          "text": "$$translations/main/Loading/$selected_language..."
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_scene_loading",
+    "content": [
+      {
+        "call": "create_physics_scene",
+        "arguments": {
+          "name": "loading",
+          "world": "common",
+          "gid": { "group": "translations", "id": "scene" },
+          "primary_user_id": 0
+        }
+      },
+      {
+        "call": "create_renderable_scene",
+        "arguments": {
+          "name": "loading",
+          "physics": "loading",
+          "focus_mask": "loading",
+          "submenus": [],
+          "fly": false,
+          "rotate": false,
+          "depth_fog": false,
+          "low_pass": false,
+          "bloom_iterations": [0, 0],
+          "bloom_thresholds": [1, 1, 1],
+          "high_pass": false,
+          "with_skybox": false,
+          "with_flying_logic": false,
+          "clear_mode": "color_and_depth",
+          "layout": "full_screen",
+          "local_user_id": 0
+        }
+      },
+      {
+        "playback": "_setup_scene_loading",
+        "context": "loading"
+      }
+    ]
+  }
+]

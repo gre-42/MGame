@@ -1,0 +1,12 @@
+[
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "compact0_with_TNo2_distancebox",
+      "min": [-0.9, -0.55, -2.15],
+      "max": [0.9, 1.05, 9.5],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  }
+]

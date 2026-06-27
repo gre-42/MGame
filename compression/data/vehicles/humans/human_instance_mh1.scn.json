@@ -1,0 +1,54 @@
+[
+  {"include": "vehicles/create_generic_avatar_instance.scn.json"},
+  {
+    "declare_macro": "create_female_mh",
+    "content": {
+      "playback": "generic_avatar.create_fast",
+      "let": { "asset_id": "female_mh" }
+    }
+  },
+  {
+    "declare_macro": "create_female_skirt",
+    "content": {
+      "playback": "generic_avatar.create_fast",
+      "let": { "asset_id": "female_skirt" }
+    }
+  },
+  {
+    "declare_macro": "create_male_mh",
+    "content": {
+      "playback": "generic_avatar.create_fast",
+      "let": { "asset_id": "male_mh" }
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals_female_mh",
+    "content": { "playback": "generic_avatar.create_player_externals" }
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals_female_skirt",
+    "content": { "playback": "generic_avatar.create_player_externals" }
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals_male_mh",
+    "content": { "playback": "generic_avatar.create_player_externals" }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals_female_mh",
+    "content": { "playback": "generic_avatar.create_player_internals" }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals_female_skirt",
+    "content": { "playback": "generic_avatar.create_player_internals" }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals_male_mh",
+    "content": { "playback": "generic_avatar.create_player_internals" }
+  },
+  {
+    "comment": {
+      "declare_macro": "add_attached_light_female_mh",
+      "content": {"playback": "add_attached_light_human", "arguments": {"lsuffix": "%lsuffix", "csuffix": "%csuffix"}}
+    }
+  }
+]

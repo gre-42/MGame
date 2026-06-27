@@ -1,0 +1,124 @@
+{
+  "declare_macro": "scene_racing_static",
+  "content": [
+    {
+      "required": "(%osm_map_resource != %null)",
+      "playback": "%osm_map_resource"
+    },
+    {
+      "required": "%if_has_overlay",
+      "playback": "%osm_map_overlay_resource"
+    },
+    {
+      "call": "create_physics_scene",
+      "arguments": {
+        "name": "primary_scene",
+        "world": "common",
+        "max_tracks": 5,
+        "save_playback": "%primary_scene_save_playback",
+        "gid": { "group": "translations", "id": "scene" },
+        "primary_user_id": 0,
+        "remote": true
+      }
+    },
+    {
+      "call": "for_each_user",
+      "context": "primary_scene",
+      "arguments": {
+        "content": [
+          {
+            "call": "create_renderable_scene",
+            "arguments": {
+              "name": "primary_scene_$full_user_name",
+              "physics": "primary_scene",
+              "focus_mask": "scene",
+              "submenus": [],
+              "fly": "%primary_scene_fly",
+              "rotate": "%primary_scene_rotate",
+              "depth_fog": "%primary_scene_depth_fog",
+              "low_pass": "%primary_scene_low_pass",
+              "high_pass": "%primary_scene_high_pass",
+              "bloom_iterations": "%primary_scene_bloom_iterations",
+              "bloom_thresholds": "%primary_scene_bloom_thresholds",
+              "bloom_intensities": "%primary_scene_bloom_intensities",
+              "bloom_std": "%primary_scene_bloom_std",
+              "bloom_mode": "%primary_scene_bloom_mode",
+              "with_skybox": "%primary_scene_with_skybox",
+              "with_flying_logic": "%primary_scene_with_flying_logic",
+              "clear_mode": "color_and_depth",
+              "layout": "tiled",
+              "local_user_id": "%local_user_id",
+              "full_user_name": "%full_user_name"
+            }
+          },
+          {
+            "call": "create_physics_scene",
+            "arguments": {
+              "name": "weapon_closeup_$user_name",
+              "world": "common",
+              "gid": { "group": "translations", "id": "scene" },
+              "primary_user_id": "%local_user_id"
+            }
+          },
+          {
+            "call": "create_renderable_scene",
+            "arguments": {
+              "name": "weapon_closeup_$user_name",
+              "physics": "weapon_closeup_$user_name",
+              "focus_mask": "always",
+              "submenus": [],
+              "fly": false,
+              "rotate": false,
+              "depth_fog": false,
+              "low_pass": false,
+              "high_pass": false,
+              "bloom_iterations": [0, 0],
+              "bloom_thresholds": [1, 1, 1],
+              "with_skybox": false,
+              "with_flying_logic": false,
+              "clear_mode": "depth",
+              "layout": "child",
+              "local_user_id": "%local_user_id",
+              "full_user_name": "%full_user_name"
+            }
+          },
+          {
+            "playback": "_setup_weapon_closeup",
+            "context": "weapon_closeup_$user_name"
+          }
+        ]
+      }
+    },
+    {
+      "call": "instantiate_game_logic",
+      "context": "primary_scene",
+      "arguments": {
+        "setup_new_round": {
+          "playback": "_setup_new_round",
+          "context": "primary_scene"
+        }
+      }
+    },
+    {
+      "playback": "_scene_racing_instantiate_static_objects",
+      "context": "primary_scene",
+      "arguments": {
+        "if_instantiate_osm_map": "(%osm_map_resource != %null)"
+      }
+    },
+    {
+      "call": "for_each_user",
+      "context": "primary_scene",
+      "arguments": {
+        "content": {
+          "playback": "create_spectator_key_bindings",
+          "context": "primary_scene_$full_user_name"
+        }
+      }
+    },
+    {
+      "call": "globals",
+      "arguments": { "if_spectator_mode_old": false }
+    }
+  ]
+}

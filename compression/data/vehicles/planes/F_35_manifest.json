@@ -1,0 +1,50 @@
+{
+  "id": "F_35",
+  "title": "F-35",
+  "on_init": [
+    { "include": "F_35_resource.scn.json" },
+    { "include": "F_35_instance.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_F_35",
+      "content": { "playback": "create_F_35" }
+    }
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "F_35"
+    }
+  },
+  "database": {
+    "suffix": "F_35",
+    "vehicle_class": "car",
+    "node_prefixes": ["car_node"],
+    "decimate": "",
+    "spawn_y_offset": 2,
+    "door_distance": 5,
+    "max_tire_angle": 60,
+    "engine_exhaust": [
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito_blue",
+            "air_resistance_halflife": "inf",
+            "animation_duration": 2,
+            "type": "smoke"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0, -0.5, 7],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      }
+    ]
+  },
+  "required": {
+    "fixed": [],
+    "dynamic": "(%selected_game_mode in {'team_deathmatch'})"
+  }
+}

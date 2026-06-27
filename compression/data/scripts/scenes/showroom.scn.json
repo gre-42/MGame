@@ -1,0 +1,291 @@
+[
+  {
+    "declare_macro": "create_showroom_scene",
+    "content": [
+      {
+        "call": "create_physics_scene",
+        "arguments": {
+          "name": "showroom_$user_name",
+          "world": "common",
+          "gid": { "group": "translations", "id": "scene" },
+          "primary_user_id": "%local_user_id"
+        }
+      },
+      {
+        "call": "create_renderable_scene",
+        "arguments": {
+          "name": "showroom_$user_name",
+          "physics": "showroom_$user_name",
+          "focus_mask": "new_game_menu",
+          "submenus": ["car_selector", "car_color_selector"],
+          "fly": false,
+          "rotate": false,
+          "depth_fog": false,
+          "low_pass": false,
+          "high_pass": false,
+          "bloom_iterations": "%primary_scene_bloom_iterations",
+          "bloom_thresholds": "%primary_scene_bloom_thresholds",
+          "bloom_intensities": "%primary_scene_bloom_intensities",
+          "bloom_std": "%primary_scene_bloom_std",
+          "bloom_mode": "%primary_scene_bloom_mode",
+          "with_skybox": false,
+          "with_flying_logic": false,
+          "clear_mode": "depth",
+          "layout": "child",
+          "local_user_id": "%local_user_id"
+        }
+      },
+      {
+        "playback": "_initialize_showroom_scene",
+        "context": "showroom_$user_name"
+      }
+    ]
+  },
+  {
+    "declare_macro": "_create_showroom_vehicle",
+    "content": {
+      "playback": "local.create_$vehicle_class",
+      "let": {
+        "make_remote": false,
+        "asset_id": "%vehicle_name",
+        "human_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
+        "skater_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
+        "car_node_position": [0, "%%vehicles/$vehicle_name/spawn_y_offset", -11],
+        "human_node_angle_y": 135,
+        "skater_node_angle_y": 135,
+        "car_node_angles": [0, 135, 0],
+        "velocity": [0, 0, 0],
+        "angular_velocity": [0, 0, 0],
+        "bullet_velocity": [0, 0, 0],
+        "bullet_angular_velocity": [0, 0, 0],
+        "if_human_style": true,
+        "if_skater_style": true,
+        "if_car_body_renderable_style": true,
+        "color": "%vehicle_color",
+        "suffix": "",
+        "bullet_suffix": "",
+        "if_with_graphics": true,
+        "if_with_physics": true,
+        "if_with_gun": false,
+        "if_with_graphics_bullet": true,
+        "if_with_physics_bullet": true,
+        "parking_brake_pulled": true,
+        "mute": true,
+        "velocity_error_std": 0,
+        "yaw_error_std": 0,
+        "pitch_error_std": 0,
+        "error_alpha": null,
+        "respawn_cooldown_time": 0,
+        "if_shadow": true,
+        "if_playback_track": false,
+        "if_playback_winner": false,
+        "if_spawner": false,
+        "if_player": false,
+        "if_damageable": false
+      }
+    }
+  },
+  {
+    "declare_macro": "change_showroom_vehicle",
+    "content": [
+      {
+        "call": "delete_root_nodes",
+        "arguments": {
+          "regex": "'^(car|human|skater)_node(_trailer)?$'"
+        }
+      },
+      {
+        "playback": "_create_showroom_vehicle"
+      }
+    ]
+  },
+  {
+    "declare_macro": "_create_showroom_resources",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "showroom_garage",
+          "filename": "file://models/garage/garage.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "binary_05",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fresnel": {
+                "min": 0,
+                "max": 0.4,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "showroom_ground_hitbox",
+          "filename": "file://models/cylinder_hitbox.$mesh",
+          "config": {
+            "position": [0, 0.03, 0],
+            "rotation": [0, 0, 0],
+            "scale": [10, 0.1, 10],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_node",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "obj_chassis|attr_collide|attr_convex"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_initialize_showroom_scene",
+    "content": [
+      {
+        "playback": "scene_minimal",
+        "arguments": {
+          "if_dirtmap": false,
+          "if_skybox": false
+        }
+      },
+      {
+        "call": "modify_rendering_material",
+        "arguments": {
+          "resource_name": "showroom_garage",
+          "blend_mode": "off",
+          "occluded_pass": "lightmap_black_node",
+          "included_names": "'^Platform$'"
+        }
+      },
+      {
+        "call": "modify_rendering_material",
+        "arguments": {
+          "resource_name": "showroom_garage",
+          "histogram": "file://textures/histograms/google_maps/bricks.png",
+          "included_names": "'^Walls$'"
+        }
+      },
+      {
+        "comment": [
+          {
+            "call": "shade_auto",
+            "arguments": {
+              "resource_name": "showroom_garage",
+              "seam_angle": 45
+            }
+          },
+          {
+            "call": "save_to_obj_file",
+            "arguments": {
+              "resource": "showroom_garage",
+              "prefix": "/tmp/showroom_garage"
+            }
+          }
+        ]
+      },
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "static_garage",
+          "position": [0, -1.3, -11],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "static_garage",
+          "node": "static_garage",
+          "resource": "showroom_garage",
+          "excluded_names": "'^Platform$'"
+        }
+      },
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "stage",
+          "position": [0, -1.3, -11],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "stage",
+          "node": "stage",
+          "resource": "showroom_garage",
+          "included_names": "'^Platform$'"
+        }
+      },
+      {
+        "call": "rigid_cuboid",
+        "arguments": {
+          "node": "stage",
+          "hitboxes": "showroom_ground_hitbox",
+          "mass": "inf",
+          "size": [1, 2, 3],
+          "w": [0, 1.5, 0],
+          "collidable_mode": "collide",
+          "name": "stage",
+          "asset_id": "state_no_id"
+        }
+      },
+      {
+        "call": "relative_transformer",
+        "arguments": {
+          "node": "stage",
+          "w": [0, 1.5, 0]
+        }
+      },
+      {
+        "playback": "add_sky_light_day"
+      },
+      {
+        "playback": "add_distant_light_day",
+        "arguments": {
+          "LEFT": -400,
+          "RIGHT": 400,
+          "BOTTOM": -200,
+          "TOP": 200
+        }
+      },
+      { "playback": "add_movables_light_scene" },
+      { "playback": "add_movables_light_render" },
+      { "playback": "add_local_skidmarks_scene" },
+      { "playback": "add_local_skidmarks_render" },
+      { "playback": "add_local_water_waves_scene" },
+      { "playback": "add_local_water_waves_render" },
+      { "playback": "add_local_sea_spray_scene" },
+      { "playback": "add_local_sea_spray_render" },
+      {
+        "comment": {
+          "playback": "add_local_blob_instances_light",
+          "arguments": { "lsuffix": "_blobs" }
+        }
+      }
+    ]
+  }
+]

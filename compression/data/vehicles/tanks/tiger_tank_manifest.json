@@ -1,0 +1,31 @@
+{
+  "id": "tiger_tank",
+  "title": "Tiger I",
+  "on_init": [
+    { "include": "tiger_tank_resource.scn.json" },
+    { "include": "tiger_tank_instance.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_tiger_tank",
+      "content": { "playback": "create_tiger_tank" }
+    }
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "tiger_tank"
+    }
+  },
+  "database": {
+    "suffix": "tiger_tank",
+    "vehicle_class": "car",
+    "node_prefixes": ["car_node"],
+    "decimate": "",
+    "spawn_y_offset": 1.9,
+    "door_distance": 3,
+    "max_tire_angle": 45
+  },
+  "required": {
+    "fixed": "(%flavor == 'extended')",
+    "dynamic": [["%if_devel", "(%selected_game_mode in {'team_deathmatch'})"]]
+  }
+}

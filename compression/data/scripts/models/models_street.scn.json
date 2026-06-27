@@ -1,0 +1,262 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "pipe",
+      "filename": "file://models/pipe.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "pipe_box",
+      "filename": "file://models/pipe_box.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "pipe_box_boundary",
+      "filename": "file://models/pipe_box_boundary.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
+      }
+    }
+  },
+  {
+    "declare_macro": "load_road",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%CENTRAL_NAME",
+          "filename": "%CENTRAL",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%ENDPOINT0_NAME",
+          "filename": "%ENDPOINT",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%ENDPOINT1_NAME",
+          "filename": "%ENDPOINT",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [-1, -1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "load_parking",
+    "content": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%RIGHT_NAME",
+          "filename": "%MODEL",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%LEFT_NAME",
+          "filename": "%MODEL",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [-1, -1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_central1",
+      "ENDPOINT0_NAME": "road_endpoint1_0",
+      "ENDPOINT1_NAME": "road_endpoint1_1",
+      "CENTRAL": "file://models/road/central1.$mesh",
+      "ENDPOINT": "file://models/road/endpoint1.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_low_central",
+      "ENDPOINT0_NAME": "road_low_endpoint_0",
+      "ENDPOINT1_NAME": "road_low_endpoint_1",
+      "CENTRAL": "file://models/road/low_central.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_low_central2",
+      "ENDPOINT0_NAME": "road_low_endpoint2_0",
+      "ENDPOINT1_NAME": "road_low_endpoint2_1",
+      "CENTRAL": "file://models/road/low_central2.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint2.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_low_central3",
+      "ENDPOINT0_NAME": "road_low_endpoint3_0",
+      "ENDPOINT1_NAME": "road_low_endpoint3_1",
+      "CENTRAL": "file://models/road/low_central3.$mesh",
+      "ENDPOINT": "file://models/road/low_endpoint3.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_ditch_central",
+      "ENDPOINT0_NAME": "road_ditch_endpoint_0",
+      "ENDPOINT1_NAME": "road_ditch_endpoint_1",
+      "CENTRAL": "file://models/road/ditch_central.$mesh",
+      "ENDPOINT": "file://models/road/ditch_endpoint.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_extrudable_central",
+      "ENDPOINT0_NAME": "road_extrudable_endpoint_0",
+      "ENDPOINT1_NAME": "road_extrudable_endpoint_1",
+      "CENTRAL": "file://models/road/extrudable.curb-curb.$mesh",
+      "ENDPOINT": "file://models/road/extrudable.plain-curb.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_cylinder_central",
+      "ENDPOINT0_NAME": "road_cylinder_endpoint_0",
+      "ENDPOINT1_NAME": "road_cylinder_endpoint_1",
+      "CENTRAL": "file://models/road/cylinder_central.$mesh",
+      "ENDPOINT": "file://models/road/cylinder_endpoint.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_cylinder2_central",
+      "ENDPOINT0_NAME": "road_cylinder2_endpoint_0",
+      "ENDPOINT1_NAME": "road_cylinder2_endpoint_1",
+      "CENTRAL": "file://models/road/cylinder2_central.$mesh",
+      "ENDPOINT": "file://models/road/cylinder2_endpoint.$mesh"
+    }
+  },
+  {
+    "playback": "load_road",
+    "arguments": {
+      "CENTRAL_NAME": "road_bumps_central",
+      "ENDPOINT0_NAME": "road_bumps_endpoint_0",
+      "ENDPOINT1_NAME": "road_bumps_endpoint_1",
+      "CENTRAL": "file://models/road/bumps_central_d.$mesh",
+      "ENDPOINT": "file://models/road/bumps_endpoint_d.$mesh"
+    }
+  },
+  {
+    "playback": "load_parking",
+    "arguments": {
+      "LEFT_NAME": "road_parking_edge_left.central-central",
+      "RIGHT_NAME": "road_parking_edge_right.central-central",
+      "MODEL": "file://models/road/parking_edge.plain-plain.$mesh"
+    }
+  }
+]

@@ -1,0 +1,144 @@
+[
+  {
+    "declare_macro": "_delete_weapon_closeup_nodes",
+    "content": {
+      "call": "try_delete_root_node",
+      "arguments": {
+        "name": "weapon_closeup_node"
+      }
+    }
+  },
+  {
+    "declare_macro": "_add_weapon_closeup_scheduler_on_hide",
+    "content": {
+      "call": "execute_in_physics_thread",
+      "arguments": {
+        "command": {
+          "playback": "_add_weapon_closeup"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "_add_weapon_closeup_scheduler_on_destroy",
+    "content": {
+      "call": "execute_in_physics_thread",
+      "arguments": {
+        "command": {
+          "playback": "_delete_weapon_closeup_nodes"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "_add_weapon_closeup_scheduler_on_update",
+    "content": {
+      "call": "execute_in_physics_thread",
+      "arguments": {
+        "command": {
+          "playback": "_update_weapon_closeup"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "_add_weapon_closeup",
+    "content": [
+      {
+        "playback": "_delete_weapon_closeup_nodes"
+      },
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "weapon_closeup_node",
+          "position": [0, 0, -3],
+          "rotation": [20, 10, 0],
+          "scale": 2
+        }
+      },
+      {
+        "call": "child_node_instance",
+        "arguments": {
+          "type": "dynamic",
+          "parent": "weapon_closeup_node",
+          "name": "punch_angle_node_closeup",
+          "position": [0, 0, 0],
+          "scale": 1,
+          "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
+        }
+      },
+      {
+        "call": "child_renderable_instance",
+        "arguments": {
+          "name": "closeup-inst",
+          "node": "punch_angle_node_closeup",
+          "resource": "%resource"
+        }
+      },
+      {
+        "required": "(%muzzle_flash_position != %null)",
+        "execute": [
+          {
+            "call": "child_node_instance",
+            "arguments": {
+              "type": "dynamic",
+              "parent": "punch_angle_node_closeup",
+              "name": "muzzle_flash_closeup_node_$suffix",
+              "position": "%muzzle_flash_position",
+              "rotation": [0, 0, 0],
+              "scale": 1
+            }
+          },
+          {
+            "call": "set_particle_renderer",
+            "arguments": {
+              "node": "muzzle_flash_closeup_node_$suffix",
+              "renderable": "particle_renderer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "declare_macro": "_update_weapon_closeup",
+    "content": {
+      "call": "set_node_rotation",
+      "arguments": {
+        "name": "punch_angle_node_closeup",
+        "rotation": ["%PUNCH_ANGLE_PITCH", "%PUNCH_ANGLE_YAW", 0]
+      }
+    }
+  },
+  {
+    "declare_macro": "_generate_weapon_hider",
+    "content": {
+      "call": "for_each_user",
+      "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+      "arguments": {
+        "content": {
+          "call": "insert_renderable_node_hider",
+          "context": "primary_scene_$full_user_name",
+          "arguments": {
+            "node_to_hide": "main_gun_node_visual$suffix",
+            "camera_node": "human_head_camera_node$suffix",
+            "punch_angle_node": "main_gun_punch_angle_node$suffix",
+            "on_hide": {
+              "playback": "_add_weapon_closeup_scheduler_on_hide",
+              "context": "weapon_closeup_$user_name"
+            },
+            "on_destroy": {
+              "playback": "_add_weapon_closeup_scheduler_on_destroy",
+              "context": "weapon_closeup_$user_name"
+            },
+            "on_update": {
+              "playback": "_add_weapon_closeup_scheduler_on_update",
+              "context": "weapon_closeup_$user_name"
+            }
+          }
+        }
+      }
+    }
+  }
+]

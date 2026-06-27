@@ -1,0 +1,26 @@
+{
+  "declare_macro": "_setup_weapon_closeup",
+  "content": [
+    {
+      "playback": "scene_minimal",
+      "arguments": {
+        "if_dirtmap": false,
+        "if_skybox": false
+      }
+    },
+    {
+      "call": "scene_to_pixel_region",
+      "arguments": {
+        "target_scene": "primary_scene_$full_user_name",
+        "target_list": "scene",
+        "z_order": 1,
+        "left": "weapon_closeup_left",
+        "right": "weapon_closeup_right",
+        "bottom": "weapon_closeup_bottom",
+        "top": "weapon_closeup_top",
+        "focus_mask": "always",
+        "submenus": []
+      }
+    }
+  ]
+}

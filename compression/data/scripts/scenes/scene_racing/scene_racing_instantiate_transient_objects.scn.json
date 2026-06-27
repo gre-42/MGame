@@ -1,0 +1,279 @@
+{
+  "declare_macro": "scene_racing_instantiate_transient_objects",
+  "content": [
+    {
+      "required": "(%remote_role == 'client')",
+      "call": "throw",
+      "arguments": {
+        "message": "This macro must not be called by network clients"
+      }
+    },
+    {
+      "comment": "Car instance"
+    },
+    {
+      "required": "%if_create_pc_car",
+      "execute": [
+        {
+          "call": "compute_random_user_ranks"
+        },
+        {
+          "call": "for_each_site_user",
+          "arguments": {
+            "content": [
+              {
+                "call": "set_preferred_car_spawner",
+                "without": ["car_node_position", "car_node_angles"],
+                "arguments": {
+                  "spawner": "$vip_name-_$full_user_name",
+                  "asset_id": "${selected_vehicle_id_$full_user_name}",
+                  "y_offset": "%%vehicles/${selected_vehicle_id_$full_user_name}/spawn_y_offset",
+                  "already_set_behavior": "update",
+                  "macro": [
+                    {
+                      "playback":  "local.create_$$vehicles/${selected_vehicle_id_$full_user_name}/vehicle_class",
+                      "let": {
+                        "make_remote": true,
+                        "asset_id": "${selected_vehicle_id_$full_user_name}",
+                        "if_human_style": true,
+                        "if_skater_style": true,
+                        "if_car_body_renderable_style": true,
+                        "color": "%selected_vehicle_color_$full_user_name",
+                        "if_with_gun": false,
+                        "parking_brake_pulled": false,
+                        "mute": false,
+                        "velocity_error_std": 0,
+                        "error_alpha": null,
+                        "yaw_error_std": 0,
+                        "pitch_error_std": 0,
+                        "respawn_cooldown_time": 0,
+                        "if_shadow": true,
+                        "if_playback_track": false,
+                        "if_playback_winner": false,
+                        "if_spawner": true,
+                        "if_damageable": false,
+                        "spawner_name": "$vip_name-_$full_user_name"
+                      }
+                    },
+                    {
+                      "comment": "Cameras"
+                    },
+                    {
+                      "required": "%if_create_pc_car",
+                      "execute": [
+                        {
+                          "call": "create_externals",
+                          "arguments": {
+                            "player": "$vip_name-_$full_user_name",
+                            "mode": "pc"
+                          }
+                        },
+                        {
+                          "call": "create_internals",
+                          "arguments": {
+                            "player": "$vip_name-_$full_user_name",
+                            "seat": "driver"
+                          }
+                        },
+                        {
+                          "call": "create_gun_externals",
+                          "arguments": {
+                            "player": "$vip_name-_$full_user_name"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "call": "spawn",
+                "arguments": {
+                  "spawner": "$vip_name-_$full_user_name",
+                  "position": "%%levels/$loaded_level_id/${random_rank_str_$full_user_name}/car_node_position",
+                  "rotation": "%%levels/$loaded_level_id/${random_rank_str_$full_user_name}/car_node_angles"
+                }
+              },
+              {
+                "required": ["%if_create_pc_car", "%if_checkpoints"],
+                "context": "primary_scene",
+                "call": "check_points",
+                "arguments": {
+                  "user_is_local": "%user_is_local",
+                  "renderable_scene": "primary_scene_$full_user_name",
+                  "moving_asset_id": "%%vehicles/${selected_vehicle_id_$full_user_name}/suffix",
+                  "moving_suffix": "",
+                  "resource": "glow",
+                  "full_user_name": "%full_user_name",
+                  "player": "$vip_name-_$full_user_name",
+                  "nbeacons": 40,
+                  "distance": 30,
+                  "nahead": 30,
+                  "radius": 30,
+                  "height_changed": false,
+                  "track_filename": "%checkpoints_file",
+                  "track": "%checkpoints",
+                  "circular": "%%levels/$loaded_level_id/if_raceway_circular",
+                  "laps": "%loaded_race_laps",
+                  "pacenotes_enabled": "%if_selected_pacenotes_$user_name",
+                  "pacenotes_filename": "%pacenotes_file",
+                  "pacenotes_meters_ahead": 50,
+                  "pacenotes_minimum_covered_meters": 200,
+                  "pacenotes_maximum_number": 3,
+                  "pacenotes_pictures_left": [
+                    "pacenote_l0",
+                    "pacenote_l1",
+                    "pacenote_l2",
+                    "pacenote_l3",
+                    "pacenote_l4",
+                    "pacenote_l5",
+                    "pacenote_l6",
+                    "pacenote_l7"],
+                  "pacenotes_pictures_right": [
+                    "pacenote_r0",
+                    "pacenote_r1",
+                    "pacenote_r2",
+                    "pacenote_r3",
+                    "pacenote_r4",
+                    "pacenote_r5",
+                    "pacenote_r6",
+                    "pacenote_r7"],
+                  "pacenotes_charset": "%selected_language",
+                  "pacenotes_ttf": "file://fonts/RobotoMono-Bold.ttf",
+                  "pacenotes_font_color": "%scene_font_color",
+                  "pacenotes_font_height": "huge",
+                  "pacenotes_widget_distance": "pacenotes_widget_distance",
+                  "pacenotes_text_left": "pacenotes_text_left",
+                  "pacenotes_text_right": "pacenotes_text_right",
+                  "pacenotes_text_bottom": "pacenotes_text_bottom",
+                  "pacenotes_text_top": "pacenotes_text_top",
+                  "pacenotes_picture_left": "pacenotes_picture_left",
+                  "pacenotes_picture_right": "pacenotes_picture_right",
+                  "pacenotes_picture_bottom": "pacenotes_picture_bottom",
+                  "pacenotes_picture_top": "pacenotes_picture_top",
+                  "selection_emissivity": "%check_points_active_color",
+                  "deselection_emissivity": "%check_points_inactive_color",
+                  "respawn_config": {
+                    "max_respawn_distance": 200,
+                    "vehicle_length": 20,
+                    "max_horizontal_angle": 30,
+                    "max_vertical_angle": 5
+                  },
+                  "on_finish": {
+                    "context": "primary_scene_$full_user_name",
+                    "call": "set_focuses",
+                    "arguments": {"focuses": ["game_over", "main_menu"]}
+                  },
+                  "focus_mask": "always"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "required": "%if_burn_in",
+      "call": "burn_in",
+      "arguments": {
+        "seconds": 20
+      }
+    },
+    {
+      "comment": "Recording"
+    },
+    {
+      "required": "(%record_track_basename != %null)",
+      "execute": [
+        {
+          "call": "record_track",
+          "arguments": { "node": "car_node", "filename": "$record_track_basename.m" }
+        },
+        {
+          "call": "record_track_gpx",
+          "arguments": { "node": "car_node", "filename": "$record_track_basename.gpx" }
+        }
+      ]
+    },
+    {
+      "required": "%if_playback_checkpoints",
+      "playback": "create_playback",
+      "arguments": {
+        "playback_filename": "%checkpoints_file",
+        "playback_speed": "%playback_speed",
+        "playback_car": "M3",
+        "psuffix": "checkpoints"
+      }
+    },
+    {
+      "required": "%if_playback_track_1",
+      "playback": "create_playback",
+      "arguments": {
+        "playback_filename": "$recordings_dir/track1.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "M3",
+        "psuffix": "track1"
+      }
+    },
+    {
+      "required": "%if_playback_track_2",
+      "playback": "create_playback",
+      "arguments": {
+        "playback_filename": "$recordings_dir/track2.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "XZ",
+        "psuffix": "track2"
+      }
+    },
+    {
+      "required": "%if_playback_track_3",
+      "playback": "create_playback",
+      "arguments": {
+        "playback_filename": "$recordings_dir/track3.m",
+        "playback_speed": "%playback_speed",
+        "playback_car": "FN",
+        "psuffix": "track3"
+      }
+    },
+    {
+      "call": "define_winner_conditionals",
+      "arguments": {
+        "begin_rank": 0,
+        "end_rank": 3
+      }
+    },
+    {
+      "required": ["%if_playback_winner_0", "%if_winner_rank0_exists"],
+      "playback": "_create_winner_playback",
+      "arguments": {
+        "rank": 0,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$winner0_vehicle",
+        "color": "%winner0_color",
+        "psuffix": "'1'"
+      }
+    },
+    {
+      "required": ["%if_playback_winner_1", "%if_winner_rank1_exists"],
+      "playback": "_create_winner_playback",
+      "arguments": {
+        "rank": 1,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$winner1_vehicle",
+        "color": "%winner1_color",
+        "psuffix": "'2'"
+      }
+    },
+    {
+      "required": ["%if_playback_winner_2", "%if_winner_rank2_exists"],
+      "playback": "_create_winner_playback",
+      "arguments": {
+        "rank": 2,
+        "playback_speed": "%playback_speed",
+        "playback_car":"$winner2_vehicle",
+        "color": "%winner2_color",
+        "psuffix": "'3'"
+      }
+    }
+  ]
+}

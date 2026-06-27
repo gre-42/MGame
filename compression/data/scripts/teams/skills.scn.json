@@ -1,0 +1,14 @@
+{
+  "declare_macro": "set_player_skills",
+  "content": [
+    { "call": "set_can_drive", "arguments": { "player": "%player_name", "source": "user", "value": "%user_drive"} },
+    { "call": "set_can_aim", "arguments": { "player": "%player_name", "source": "user", "value": "%user_aim"} },
+    { "call": "set_can_shoot", "arguments": { "player": "%player_name", "source": "user", "value": "%user_shoot"} },
+
+    { "call": "set_can_drive", "arguments": { "player": "%player_name", "source": "ai", "value": "%ai_drive"} },
+    { "call": "set_can_aim", "arguments": { "player": "%player_name", "source": "ai", "value": "%ai_aim"} },
+    { "call": "set_can_shoot", "arguments": { "player": "%player_name", "source": "ai", "value": "%ai_shoot"} },
+    { "call": "set_can_select_opponent", "arguments": { "player": "%player_name", "source": "ai", "value": "%ai_select_opponent"} },
+    { "call": "set_can_select_weapon", "arguments": { "player": "%player_name", "source": "ai", "value": "%ai_select_weapon"} }
+  ]
+}

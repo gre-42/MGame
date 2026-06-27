@@ -1,0 +1,114 @@
+[
+  {
+    "declare_macro": "local.create_car",
+    "content": [
+      {
+        "call": "root_node_instance",
+        "arguments": {
+          "dynamics": "moving",
+          "name": "car_node$suffix",
+          "position": "%car_node_position",
+          "rotation": "%car_node_angles"
+        }
+      },
+      {
+        "without": ["asset_id"],
+        "playback": "create_$asset_id"
+      },
+      {
+        "required": ["%make_remote", "(%remote_role != 'none')"],
+        "playback": "delegate_create_car",
+        "let": { "car_creator": "register_local_car" }
+      },
+      {
+        "required": "%if_playback_track",
+        "call": "playback_track",
+        "arguments": {
+          "node": "car_node$suffix",
+          "speed": "%playback_speed",
+          "filename": "%playback_filename"
+        }
+      },
+      {
+        "required": "%if_playback_winner",
+        "call": "playback_winner_track",
+        "arguments": {
+          "asset_id": "%asset_id",
+          "suffix": "%suffix",
+          "speed": "%playback_speed",
+          "rank": "%rank"
+        }
+      },
+      {
+        "required": "%if_spawner",
+        "call": "spawner_set_nodes",
+        "arguments": {
+          "asset_id": "%asset_id",
+          "suffix": "%suffix",
+          "spawner": "%spawner_name"
+        }
+      },
+      {
+        "required": "%if_spawner",
+        "call": "set_respawn_cooldown_time",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "time": "%respawn_cooldown_time"
+        }
+      },
+      {
+        "comment": "if_shadow macro_playback add_attached_light_$asset_id lsuffix:_car$suffix csuffix:suffix"
+      },
+      {
+        "required": "%if_spawner",
+        "call": "set_externals_creator_safe",
+        "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id"
+        }
+      },
+      {
+        "comment": {
+          "required": "%if_spawner",
+          "call": "set_externals_creator_unsafe",
+          "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+          "arguments": {
+            "spawner": "%spawner_name",
+            "externals": {
+              "playback": "create_player_vehicle_externals"
+            },
+            "internals": {
+              "playback": "create_player_vehicle_internals"
+            }
+          }
+        }
+      },
+      {
+        "comment": {
+          "call": "visual_node_status_3rd",
+          "arguments": {
+            "node": "car_node$suffix",
+            "format": 256,
+            "ttf_file": "file://fonts/RobotoMono-Bold.ttf",
+            "offset": [0, 0.3],
+            "font_height": 6,
+            "line_distance": 16
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals",
+    "content": {
+      "playback": "create_player_vehicle_externals_$asset_id"
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals",
+    "content": {
+      "playback": "create_player_vehicle_internals_$asset_id"
+    }
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "declare_macro": "_create_osm_map_resource",
+  "content": [
+    {"comment": "OSM instance"},
+    {"comment": "Must be above instantiation, and should be above transformations"},
+    {
+      "required": "%if_extract_alignment_planes",
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "%osm_map",
+        "add": "obj_alignment_plane",
+        "remove": "attr_visible",
+        "included_names": "\\balignment_plane(?:\\b|_)"
+      }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "%osm_map",
+        "remove": "attr_visible",
+        "included_names": "\\bHitbox(?:\\b|_)"
+      }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "%osm_map",
+        "remove": "attr_collide",
+        "included_names": "\\bVisual(?:\\b|_)"
+      }
+    },
+    {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "%osm_map",
+        "add": "attr_align_strict",
+        "included_names": "\\bAlignStrict(?:\\b|_)"
+      }
+    },
+    {
+      "required": "%if_gen_grind_lines",
+      "call": "gen_grind_lines",
+      "arguments": {
+        "source_name": "%osm_map",
+        "dest_name": "$osm_map-_grind_lines",
+        "edge_angle": 20,
+        "averaged_normal_angle": 60,
+        "excluded_names": "\\bNoGrind(?:\\b|_)",
+        "included_tags": "attr_collide",
+        "excluded_tags": "obj_alignment_plane"
+      }
+    },
+    {
+      "exclude": ["%if_gen_grind_lines"],
+      "call": "obj_resource",
+      "arguments": {
+        "name": "$osm_map-_grind_lines",
+        "filename": "file://models/primitives/empty.obj",
+        "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all"
+        }
+      }
+    },
+    {
+      "exclude": ["%if_gen_grind_lines"],
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_name": "$osm_map-_grind_lines",
+        "add": "obj_grind_line"
+      }
+    },
+    {
+      "required": "%if_gen_instances",
+      "call": "gen_instances",
+      "arguments": {
+        "name": "%osm_map"
+      }
+    },
+    {
+      "required": "(%barrier_depth != 0)",
+      "call": "create_barrier_triangle_hitboxes",
+      "arguments": {
+        "resource_name": "%osm_map",
+        "included_names": "",
+        "included_tags": "attr_collide|attr_two_sided",
+        "excluded_tags": "",
+        "depth": "%barrier_depth",
+        "destination_physics_material": "attr_concave|attr_collide"
+      }
+    }
+  ]
+}

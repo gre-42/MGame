@@ -1,0 +1,32 @@
+{
+  "id": "AH_64",
+  "title": "AH-64",
+  "on_init": [
+    { "include": "AH_64_resource.scn.json" },
+    { "include": "AH_64_instance.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_AH_64",
+      "content": { "playback": "create_AH_64" }
+    }    
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "AH_64"
+    }
+  },
+  "database": {
+    "suffix": "AH_64",
+    "vehicle_class": "car",
+    "node_prefixes": ["car_node"],
+    "decimate": "",
+    "spawn_y_offset": 0.7,
+    "waypoint_dy": 1.2,
+    "door_distance": 3,
+    "max_tire_angle": 30
+  },
+  "required": {
+    "fixed": "(%flavor == 'extended')",
+    "dynamic": [["%if_devel", "(%selected_game_mode in {'team_deathmatch'})"]]
+  }
+}

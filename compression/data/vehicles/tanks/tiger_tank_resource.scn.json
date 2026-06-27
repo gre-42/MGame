@@ -1,0 +1,128 @@
+[
+  {
+    "comment": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "tiger_tank_hitbox",
+        "filename": "file://models/primitives/box.$mesh",
+        "config": {
+          "position": [0, 0.55, 0],
+          "rotation": [0, 0, 0],
+          "scale": [1.8, 1.3, 4],
+          "center_distances": [0, "inf"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "none",
+          "occluder_pass": "none",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "rectangle_triangulation_mode": "disabled"
+        }
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "tiger_tank_hitbox",
+      "filename": "file://models/free3d.com/tiger_tank/Tiger_Hitbox.$mesh",
+      "config": {
+        "position": [0, -1, 0],
+        "rotation": [0, 90, 0],
+        "scale": [0.6, 0.6, 0.6],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      }
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "tiger_tank_hitbox", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "tiger_tank_distancebox",
+      "min": [-1.8, -0.75, -4],
+      "max": [1.8, 1.85, 4],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "tiger_tank_tirelines",
+      "filename": "file://models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8,  0.3, -2.4], "to": [-1.8, -0.5, -2.4]}}, {"comment": "left  front"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8,  0.3, -2.4], "to": [ 1.8, -0.5, -2.4]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8, -0.5, -0.8], "to": [-1.8, -1.3, -0.8]}}, {"comment": "left  1"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8, -0.5, -0.8], "to": [ 1.8, -1.3, -0.8]}}, {"comment": "right 1"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8, -0.5,  0.8], "to": [-1.8, -1.3,  0.8]}}, {"comment": "left  2"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8, -0.5,  0.8], "to": [ 1.8, -1.3,  0.8]}}, {"comment": "right 2"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8, -0.5,  2.4], "to": [-1.8, -1.3,  2.4]}}, {"comment": "left  3"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8, -0.5,  2.4], "to": [ 1.8, -1.3,  2.4]}}, {"comment": "right 3"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [-1.8,  0.3,  4  ], "to": [-1.8, -0.5,  4  ]}}, {"comment": "left  rear"},
+  {"call": "gen_ray", "arguments": {"name": "tiger_tank_tirelines", "from": [ 1.8,  0.3,  4  ], "to": [ 1.8, -0.5,  4  ]}}, {"comment": "right rear"},
+  {"call": "compound_resource", "arguments": {"source_names": ["tiger_tank_hitbox", "tiger_tank_distancebox", "tiger_tank_tirelines"], "dest_name": "tiger_tank_hitboxes"}},
+  {
+    "declare_macro": "load_tiger_tank",
+    "content": {
+      "required": "%if_graphics",
+      "execute": {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "file://models/free3d.com/tiger_tank/$name.$mesh",
+          "config": {
+          "position": [0, -1, 0],
+          "rotation": [0, 92, 0],
+          "scale": [0.0025, 0.0025, 0.0025],
+          "center_distances": ["%dist_min", "%dist_max"],
+          "blend_mode": "off",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%occluder_pass",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero",
+          "emissive_factor": "%free3d_emissive_factor",
+          "ambient_factor": "%free3d_ambient_factor",
+          "diffuse_factor": "%free3d_diffuse_factor",
+          "specular_factor": "%free3d_specular_factor",
+          "dynamically_lighted": true
+          }
+        }
+      },
+      "else_": {
+        "call": "invisible_resource",
+        "arguments": {
+          "name": "%name",
+          "aggregate_mode": "none"
+        }
+      }
+    }
+  },
+  {"playback": "load_tiger_tank", "arguments": {"dist_min": 0  , "dist_max":   100, "occluder_pass": "none",                    "name": "Tiger"}},
+  {"playback": "load_tiger_tank", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "name": "Tiger_d3"}}
+]

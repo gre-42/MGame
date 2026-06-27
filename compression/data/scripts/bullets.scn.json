@@ -1,0 +1,377 @@
+[
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "m4a1_bullet",
+      "properties": {
+        "renderable": "",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "particle_container": "node",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
+            "animation_time": 0.2
+          }
+        ],
+        "mass": 20,
+        "lifetime": 20,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_bullet",
+        "light_before_impact": "tracer_bullet_light_before_impact",
+        "rigid_body_flags": "none",
+        "velocity": 900,
+        "damage": 10,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "beretta92_bullet",
+      "properties": {
+        "renderable": "",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "particle_container": "node",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
+            "animation_time": 0.2
+          }
+        ],
+        "mass": 20,
+        "lifetime": 20,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_bullet",
+        "light_before_impact": "tracer_bullet_light_before_impact",
+        "rigid_body_flags": "none",
+        "velocity": 900,
+        "damage": 10,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "frag_grenade",
+      "properties": {
+        "renderable": "frag_grenade",
+        "hitbox": "grenade_hitbox",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "particle_container": "node",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
+          }
+        ],
+        "mass": 0.5,
+        "lifetime": 30,
+        "size": [0.1, 0.1, 0.1],
+        "rigid_body_flags": "none",
+        "velocity": 15,
+        "damage": 100,
+        "damage_radius": 5
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "m72_law_rocket",
+      "properties": {
+        "renderable": "m72_law_rocket",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "particle_container": "node",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
+          }
+        ],
+        "engine_audio": "thruster",
+        "mass": 10,
+        "lifetime": 30,
+        "size": [2.4, 2.4, 20],
+        "trail": {
+          "particle": {
+            "resource": "smoke_3d",
+            "air_resistance_halflife": 1,
+            "animation_duration": 0.5,
+            "type": "smoke"
+          },
+          "generation_dt": 0.005
+        },
+        "rigid_body_flags": "feels_no_gravity",
+        "velocity": 50,
+        "damage": 100,
+        "damage_radius": 5
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "explosion_rocks",
+      "properties": {
+        "renderable": "desert_rock01_small_d1_s3_obj",
+        "hitbox": null,
+        "explosions": [],
+        "engine_audio": null,
+        "mass": 10,
+        "lifetime": 3,
+        "size": [10, 10, 10],
+        "trail": {
+          "particle": {
+            "resource": "smoke_3d",
+            "air_resistance_halflife": 1,
+            "animation_duration": 0.5,
+            "type": "smoke"
+          },
+          "generation_dt": 0.005
+        },
+        "rigid_body_flags": "none",
+        "velocity": 0,
+        "damage": 0,
+        "damage_radius": 0
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "ah_64_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "particle_container": "node",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
+            "animation_time": 0.2
+          }
+        ],
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 10,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "none_weapon_bullet_type",
+      "properties": {
+        "renderable": "_",
+        "hitbox": "_",
+        "explosions": [],
+        "rigid_body_flags": "none",
+        "mass": 0,
+        "velocity": 0,
+        "lifetime": 0,
+        "damage": 0,
+        "size": [0, 0, 0]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "dumb_bomb_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "particle_container": "node",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
+          }
+        ],
+        "rigid_body_flags": "none",
+        "mass": 200,
+        "velocity": 0,
+        "lifetime": 160,
+        "damage": 500,
+        "damage_radius": 20,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "tiger_tank_bullet",
+      "properties": {
+        "renderable": "tank_bullet_renderable",
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "particle_container": "node",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
+          }
+        ],
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 20,
+        "damage": 100,
+        "size": [2.4, 2.4, 20]
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "C_RAM_bullet",
+      "properties": {
+        "renderable": null,
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "materials": [
+              "surface_base_tarmac",
+              "surface_base_gravel",
+              "surface_base_snow",
+              "surface_base_ice",
+              "surface_base_stone",
+              "surface_base_metal",
+              "surface_base_concrete",
+              "surface_base_glass",
+              "surface_base_desert_road"
+            ],
+            "resource": "bullet_impact_cross",
+            "particle_container": "node",
+            "animation_time": 0.1
+          },
+          {
+            "materials": ["surface_base_avatar"],
+            "resource": "bullet_impact_red_cross",
+            "particle_container": "node",
+            "animation_time": 0.2
+          }
+        ],
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 900,
+        "lifetime": 9,
+        "damage": 10,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_c_ram",
+        "light_before_impact": "tracer_c_ram_light_before_impact"
+      }
+    }
+  },
+  {
+    "call": "set_bullet_properties",
+    "arguments": {
+      "name": "missile0_bullet",
+      "properties": {
+        "renderable": null,
+        "hitbox": "tank_bullet_hitbox",
+        "explosions": [
+          {
+            "resource": "large_explosion_cross",
+            "particle_container": "node",
+            "animation_time": 0.6,
+            "audio": "explodemini_fast"
+          },
+          {
+            "resource": "explosion_rocks",
+            "particle_container": "physics",
+            "animation_time": 1.5
+          }
+        ],
+        "engine_audio": "thruster",
+        "rigid_body_flags": "none",
+        "mass": 20,
+        "velocity": 0,
+        "lifetime": 20,
+        "damage": 50,
+        "damage_radius": 5,
+        "size": [2.4, 2.4, 20],
+        "trace_storage": "tracer_c_ram",
+        "light_before_impact": "tracer_c_ram_light_before_impact"
+      }
+    }
+  }
+]

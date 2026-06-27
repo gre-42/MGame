@@ -1,0 +1,66 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "box_02_1_02_hitbox",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.5, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.2, 0.5, 0.2],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "box_50_12_01_hitbox",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 1.2, 0],
+        "rotation": [0, 0, 0],
+        "scale": [5, 1.2, 0.1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position_yangle",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "box_10_10_10_hitbox",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.5, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 0.5, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "position_yangle",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "obj_chassis|attr_collide|attr_convex"
+      }
+    }
+  }
+]

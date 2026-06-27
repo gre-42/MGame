@@ -1,0 +1,54 @@
+[
+  {
+    "declare_macro": "apply_level_selection",
+    "content": {
+      "required": "(%selected_level_id != %loaded_level_id)",
+      "execute": [
+        {
+          "call": "echo",
+          "arguments": {
+            "message": "Reloading scene. Selected level ID: $selected_level_id. Loaded level ID: $loaded_level_id"
+          }
+        },
+        {
+          "call": "reload_scene",
+          "arguments": {
+            "change_scene": true
+          }
+        }
+      ],
+      "else_": {
+        "playback": "_reload_transient_objects_in_physics_thread",
+        "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"]
+      }
+    }
+  },
+  {
+    "declare_macro": "_reload_transient_objects_in_physics_thread",
+    "content":  [
+      {
+        "comment": [
+          "Disable GUI modifications in the render thread so the physics",
+          "thread can read the global parameters without data races"]
+      },
+      {
+        "call": "for_each_user",
+        "context": "primary_scene",
+        "arguments": {
+          "content": {
+            "call": "set_focuses",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {"focuses": []}
+          }
+        }
+      },
+      {
+        "call": "execute_in_physics_thread",
+        "context": "primary_scene",
+        "arguments": {
+          "command": { "playback": "scene_racing_setup_new_round" }
+        }
+      }
+    ]
+  }
+]

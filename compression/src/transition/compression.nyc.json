@@ -1,0 +1,8 @@
+[
+  { "path": "levels/nyc/map_nyc.osm", "gzip": {} },
+  { "path": "levels/nyc/osm_resource_nyc.scn.json", "sed": { "substitute": [
+    ["heightmap.pgm", "heightmap.png"],
+    ["\\bGround037_Sl\\b", "Ground037_dark27"],
+    ["\\btrashcan1\\b", "trashcan_yethiel"]] } },
+  { "path": "levels/nyc/heightmap.pgm", "resize": { "size": [0, 0], "periodic": false, "file_extension": ".png" } }
+]

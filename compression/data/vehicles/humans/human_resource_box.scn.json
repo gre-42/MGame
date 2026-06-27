@@ -1,0 +1,76 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "human_hitbox",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.35, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.25, 0.7, 0.25],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_collide|obj_hitbox|surface_base_avatar"
+      }
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "human_distancebox_debug_mesh",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0.35, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.55, 0.7, 0.55],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible"
+      }
+    }
+  },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "human_distancebox",
+      "min": [-0.55, -0.35, -0.55],
+      "max": [0.55, 1.05, 0.55],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_collide|attr_convex"
+    }
+  },
+  {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "human_distancebox", "npoints": 5, "lengths": [0.25, 0.7, 0.25], "delete_triangles": false}}},
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "human_tirelines",
+      "filename": "file://models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_foot"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "human_tirelines", "from": [0, -0.2, 0], "to": [0, -0.8, 0]}},
+  {"call": "compound_resource", "arguments": {"source_names": ["human_hitbox", "human_distancebox", "human_tirelines"], "dest_name": "human_hitboxes"}}
+]

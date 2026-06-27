@@ -1,0 +1,65 @@
+{
+  "call": "globals",
+  "arguments": {
+    "ui_font_color": [0.1, 0.1, 0.1],
+    "ui_highlighted_font_color": [1, 0.1, 0.1],
+    "scene_font_color": [0.9, 0.7, 0],
+    "check_points_active_color": [0.9, 0.7, 0],
+    "check_points_inactive_color": [0.7, 0.7, 0.7],
+
+    "default_emissive_factor": [1, 1, 1],
+    "default_ambient_factor": [0.6, 0.6, 0.6],
+    "default_diffuse_factor": [0.6, 0.6, 0.6],
+    "default_specular_factor": [0.6, 0.6, 0.6],
+
+    "meta_human_emissive_factor": [1, 1, 1],
+    "meta_human_ambient_factor": [0.72, 0.72, 0.72],
+    "meta_human_diffuse_factor": [0.72, 0.72, 0.72],
+    "meta_human_specular_factor": [0.72, 0.72, 0.72],
+
+    "sketchfab_emissive_factor": [1, 1, 1],
+    "sketchfab_ambient_factor": [1, 1, 1],
+    "sketchfab_diffuse_factor": [1, 1, 1],
+    "sketchfab_specular_factor": [1, 1, 1],
+    "sketchfab_fresnel_min": 0.3,
+    "sketchfab_fresnel_max": 0.8,
+    "sketchfab_fresnel_exponent": 4,
+
+    "free3d_emissive_factor": [1, 1, 1],
+    "free3d_ambient_factor": [0.72, 0.72, 0.72],
+    "free3d_diffuse_factor": [0.72, 0.72, 0.72],
+    "free3d_specular_factor": [0.72, 0.72, 0.72],
+
+    "stunt_rally_emissive_factor": [1, 1, 1],
+    "stunt_rally_ambient_factor": [0.7, 0.7, 0.7],
+    "stunt_rally_diffuse_factor": [0.7, 0.7, 0.7],
+    "stunt_rally_specular_factor": [0.7, 0.7, 0.7],
+    "stunt_rally_fresnel_min": 0.3,
+    "stunt_rally_fresnel_max": 0.8,
+    "stunt_rally_fresnel_exponent": 4,
+
+    "ac_emissive_factor": [1, 1, 1],
+    "ac_ambient_factor": [1.7, 1.7, 1.7],
+    "ac_diffuse_factor": [1.7, 1.7, 1.7],
+    "ac_specular_factor": [1.7, 1.7, 1.7],
+    "ac_fresnel_ambient": [1, 1, 1],
+
+    "blender_emissive_factor": [1, 1, 1],
+    "blender_ambient_factor": [0.3, 0.3, 0.3],
+    "blender_diffuse_factor": [0.9, 0.9, 0.9],
+    "blender_specular_factor": [0.9, 0.9, 0.9],
+    "blender_fresnel_ambient": [0.2, 0.2, 0.2],
+
+    "rw_emissive_factor": [1, 1, 1],
+    "rw_ambient_factor": [0.7, 0.7, 0.7],
+    "rw_diffuse_factor": [0.7, 0.7, 0.7],
+    "rw_specular_factor": [0.7, 0.7, 0.7],
+    "rw_fresnel_ambient": [0.7, 0.7, 0.7],
+    "rw_fresnel_min": 0.2,
+    "rw_fresnel_max": 0.5,
+    "rw_fresnel_exponent" : 4,
+
+    "fog_distances": [500, 10000],
+    "fog_ambient": [0.7, 0.8, 0.95]
+  }
+}

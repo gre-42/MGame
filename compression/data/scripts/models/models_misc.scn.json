@@ -1,0 +1,388 @@
+[
+  {
+    "comment": {
+      "exclude": ["%if_android"],
+      "call": "obj_resource",
+      "arguments": {
+        "name": "checkpoint_arrow",
+        "filename": "file://models/Arrow/arrow.$mesh",
+        "config": {
+        "position": [0, 5, 0],
+        "rotation": [0, 90, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "fog_distances": "%fog_distances",
+        "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "required": "%if_graphics",
+    "call": "square_resource",
+    "arguments": {
+      "name": "glow",
+      "texture_filename": "#glow_circle",
+      "min": [-1, 4],
+      "max": [1, 6],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": false,
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "box_on_ground",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 1, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "topdown_locator",
+      "filename": "file://models/TransparentBox/tbox.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [4, 1, 8],
+        "center_distances": [0, "inf"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        },
+        "physics_material": "attr_visible"
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "flag",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 500, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 500, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "flag_z",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0, 500],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 500],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "beacon",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "beacon_instance",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.1],
+        "center_distances": [0, 500],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "instances_sorted",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "sphere",
+      "filename": "file://models/primitives/sphere.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "reflection_map": "#car",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "beacon1",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [0.1, 0.1, 0.1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "exclude": ["%if_android"],
+    "call": "obj_resource",
+    "arguments": {
+      "name": "gizmo",
+      "filename": "file://models/gizmo.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "obj_resource",
+    "arguments": {
+      "name": "tank_bullet_renderable",
+      "filename": "file://models/bullet.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [-90, 0, 0],
+        "scale": [0.2, 0.4, 0.2],
+        "center_distances": [0, "inf"],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_global_static",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        }
+      }
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "execute": [
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "tank_bullet_hitbox",
+          "filename": "file://models/primitives/empty.obj",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "attr_collide|obj_bullet_line_segment"
+          }
+        }
+      },
+      {
+        "call": "gen_ray",
+        "arguments": {
+          "name": "tank_bullet_hitbox",
+          "from": [0, 0, 0],
+          "to": [0, 0, -20]
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "grenade_hitbox",
+          "filename": "file://models/primitives/box.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.3, 0.3, 0.3],
+            "center_distances": [0, "inf"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "rectangle_triangulation_mode": "disabled",
+            "physics_material": "attr_collide|obj_bullet_mesh"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "declare_macro": "load_languages",
+    "content": [
+      {
+        "comment": {
+          "call": "set_user_count",
+          "arguments": {
+            "user_count": "%user_count"
+          }
+        }
+      },
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": [
+            {
+              "call": "globals",
+              "arguments": {
+                "editing_$user_name": false
+              }
+            },
+            {
+              "call": "default_persistent",
+              "arguments": {
+                "local_user_id": "%local_user_id",
+                "variables": {
+                  "pacenotes": "disabled",
+                  "account": {
+                    "name": "Anonymous player"
+                  }
+                }
+              }
+            },
+            {
+              "call": "persisted_globals",
+              "arguments": {
+                "local_user_id": "%local_user_id",
+                "variables": {
+                  "account_$full_user_name": "account"
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "required": "(%user_count > 0)",
+        "call": "default_persistent",
+        "arguments": {
+          "local_user_id": 0,
+          "variables": {
+            "language": "en-US"
+          }
+        }
+      },
+      {
+        "required": "(%user_count > 0)",
+        "call": "persisted_globals",
+        "arguments": {
+          "local_user_id": 0,
+          "variables": {
+            "selected_language": "language"
+          }
+        }
+      },
+      { "required": "%if_graphics",
+        "call": "load_replacement_parameters", "arguments": {"id": "languages", "directory": "languages"} },
+      { "call": "load_replacement_parameters", "arguments": {"id": "translations", "directory": "translations"} },
+      { "call": "set_language_variable", "arguments": { "var": "selected_language" }}
+    ]
+  },
+  {
+    "declare_macro": "load_assets",
+    "content": [
+      {"call": "add_ac_loader", "arguments": {"id": "levels", "script": "scripts/loaders/ac/scene_template.scn.json"}},
+      {"call": "load_asset_manifests", "arguments": {"id": "levels", "directory": "."}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "levels", "directory": "levels"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "game_modes", "directory": "game_modes"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "race_restrictions", "directory": "race_restrictions"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "time_of_day", "directory": "time_of_day"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "vehicles", "directory": "vehicles"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "wheels", "directory": "wheels"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "engine_audio", "directory": "engine_audio"}},
+      {"call": "load_replacement_parameters", "arguments": {"id": "driving_modes", "directory": "driving_modes"}}
+    ]
+  }
+]

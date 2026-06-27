@@ -1,0 +1,51 @@
+[
+  {
+    "declare_macro": "load_FN_wheel",
+    "content": {
+      "required": "%if_graphics",
+      "execute": {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "%name",
+          "filename": "file://models/SR/$name.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": ["%dist_min", "%dist_max"],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "lightmap_black_global_and_local",
+            "occluder_pass": "%occluder_pass",
+            "aggregate_mode": "none",
+            "transformation_mode": "all",
+            "emissive_factor": "%stunt_rally_emissive_factor",
+            "ambient_factor": "%stunt_rally_ambient_factor",
+            "diffuse_factor": "%stunt_rally_diffuse_factor",
+            "specular_factor": "%stunt_rally_specular_factor",
+            "triangle_tangent_error_behavior": "zero",
+            "werror": false
+          }
+        }
+      },
+      "else_": {
+        "call": "invisible_resource",
+        "arguments": {
+          "name": "%name",
+          "aggregate_mode": "none"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "load_FN_wheels",
+    "content": [
+      {"playback": "load_FN_wheel", "arguments": {"dist_min": "%dist_min", "dist_max": "%dist_max", "occluder_pass": "%occluder_pass", "reflectance": [0, 0, 0], "reflection_map": null,  "name": "FN/FN_wheel$decimate"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$decimate"], "dest_name": "FN/wheel_front$suffix"}},
+      {"call": "compound_resource", "arguments": {"source_names": ["FN/FN_wheel$decimate"], "dest_name": "FN/wheel_rear$suffix"}}
+    ]
+  },
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 0,   "dist_max": 100,  "occluder_pass": "none",                    "decimate": "",       "suffix": ""}},
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "none",                    "decimate": "_d3",    "suffix": "_d3"}},
+  {"playback": "load_FN_wheels", "arguments": {"dist_min": 100, "dist_max": 1000, "occluder_pass": "lightmap_black_movables", "decimate": "_d0.5",  "suffix": "_lowres"}}
+]

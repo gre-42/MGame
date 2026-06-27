@@ -1,0 +1,34 @@
+[
+  {
+    "declare_macro": "create_compact0",
+    "# content": {
+      "playback": "generic_car.create",
+      "let": {
+        "name": "compact0",
+        "decimate": "",
+        "wheels": "%%vehicles/compact0/wheels",
+        "engine_audio": "%%vehicles/compact0/engine_audio"
+      }
+    },
+    "content": {
+      "playback": "generic_car.create_fast",
+      "let": { "asset_id": "compact0" }
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals_compact0",
+    "content": {
+      "playback": "generic_car.create_player_internals"
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals_compact0",
+    "content": {
+      "playback": "generic_car.create_player_externals",
+      "let": {
+        "camera_class": "sedan",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
+      }
+    }
+  }
+]

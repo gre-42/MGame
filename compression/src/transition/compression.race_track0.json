@@ -1,0 +1,14 @@
+[
+  { "path": "levels/race_track0/racing_line_race_track0.m", "copy": {} },
+  { "path": "levels/race_track0/manifest_race_track0.json", "copy": {} },
+  { "path": "levels/race_track0/create_spectator_cameras_trace_track0.scn.json", "copy": {} },
+  { "path": "levels/race_track0/icon.png", "copy": {} },
+  { "path": "levels/race_track0/map_race_track0.osm", "gzip": {} },
+  { "path": "levels/race_track0/osm_resource_race_track0.scn.json", "sed": { "substitute": [
+    ["heightmap.pgm", "heightmap.png"],
+    ["map_race_track0.osm", "map_race_track0.osm.gz"],
+    ["\\bGround037_Sl\\b", "Ground037_dark27"],
+    ["\"#Road007_Broad_White_1_Lane_near\", \"#Road007_Broad_White_1_Lane_far\"", "\"#Road007_Broad_White_1_Lane\""]] } },
+  { "path": "levels/race_track0/scene_race_track0.scn.json", "copy": {} },
+  { "path": "levels/race_track0/heightmap.pgm", "resize": { "size": [256, 256], "periodic": false, "file_extension": ".png" } }
+]

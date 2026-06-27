@@ -1,0 +1,30 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "shop42_ad",
+      "filename": "file://models/shop42_ad/shop42_ad.$mesh",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_blobs",
+        "occluder_pass": "lightmap_black_local_instances",
+        "aggregate_mode": "instances_sorted",
+        "emissive_factor": "%default_emissive_factor",
+        "ambient_factor": "%default_ambient_factor",
+        "diffuse_factor": "%default_diffuse_factor",
+        "specular_factor": "%default_specular_factor",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient"
+        },
+        "transformation_mode": "position_yangle",
+        "physics_material": "attr_visible"
+      }
+    }
+  }
+]

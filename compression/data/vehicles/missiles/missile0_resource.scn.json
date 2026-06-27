@@ -1,0 +1,64 @@
+[
+  {
+    "declare_macro": "load_missile0_part",
+    "content": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "%name",
+        "filename": "file://models/missiles/missile0/$name.$mesh",
+        "config": {
+        "position": [0, 0, 0],
+        "rotation": [-90, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": ["%dist_min", "%dist_max"],
+        "blend_mode": "continuous",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "cull_faces_alpha": false,
+        "occluded_pass": "lightmap_black_global_and_local",
+        "occluder_pass": "%occluder_pass",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "triangle_tangent_error_behavior": "zero",
+        "werror": false,
+        "emissive_factor": "%blender_emissive_factor",
+        "ambient_factor": "%blender_ambient_factor",
+        "diffuse_factor": "%blender_diffuse_factor",
+        "specular_factor": "%blender_specular_factor",
+        "shading": {
+          "fresnel": {
+            "min": 0,
+            "max": 0.4,
+            "exponent": 5,
+            "ambient": [1, 1, 1]
+          }
+        },
+        "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
+        "dynamically_lighted": true
+        }
+      }
+    }
+  },
+  {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": ["tank_bullet_hitbox"],
+      "dest_name": "missile0_hitboxes"
+    }
+  },
+  {
+    "declare_macro": "load_missile0_center",
+    "content": {
+      "playback": "load_missile0_part",
+      "arguments": {
+        "name": "missile0_center$decimate",
+        "dist_min": "%dist_min",
+        "dist_max": "%dist_max",
+        "occluder_pass": "%occluder_pass",
+        "rectangle_triangulation_mode": "delaunay"
+      }
+    }
+  },
+  {"playback": "load_missile0_center", "arguments": {"dist_min": 0, "dist_max": 1000, "occluder_pass": "none", "decimate":""}},
+  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_front_left", "dist_min": 0, "dist_max": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}},
+  {"playback": "load_missile0_part", "arguments": { "name": "missile0_wing_rear_left", "dist_min": 0, "dist_max": 300, "occluder_pass": "none", "rectangle_triangulation_mode": "delaunay"}}
+]

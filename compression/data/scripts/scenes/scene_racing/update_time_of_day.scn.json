@@ -1,0 +1,169 @@
+[
+  {
+    "declare_macro": "_create_lights_for_time_of_day",
+    "content": [
+      {
+        "required": "(%loaded_time_of_day == 'day')",
+        "call": "set_background_color",
+        "arguments": { "color": [0.68, 0.85, 1] }
+      },
+      {
+        "required": "(%loaded_time_of_day == 'night')",
+        "call": "set_background_color",
+        "arguments": { "color": [0, 0, 0] }
+      },
+      {
+        "required": "(%loaded_time_of_day == 'synthwave')",
+        "call": "set_background_color",
+        "arguments": { "color": [0.65, 0.36, 0.91] }
+      },
+      {
+        "comment": "include playback_resource.scn"
+      },
+      {
+        "comment": "Light"
+      },
+      {
+        "required": "(%loaded_time_of_day == 'day')",
+        "execute": [
+          {"playback": "add_distant_light_day"},
+          {"playback": "add_sky_light_day"}
+        ]
+      },
+      {
+        "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
+        "playback": "add_distant_light_night"
+      },
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": [
+            {
+              "required": "(%loaded_time_of_day == 'day')",
+              "execute": [
+                {
+                  "required": "(%aggregate_mode in {'sorted', 'instances_sorted'})",
+                  "execute": [
+                    {
+                      "playback": "add_local_instances_light_scene"
+                    },
+                    {
+                      "context": "primary_scene_$full_user_name",
+                      "playback": "add_local_instances_light_render"
+                    }
+                  ]
+                },
+                {
+                  "playback": "add_movables_light_scene"
+                },
+                {
+                  "context": "primary_scene_$full_user_name",
+                  "playback": "add_movables_light_render"
+                }
+              ]
+            },
+            {
+              "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
+              "execute": [
+                {
+                  "playback": "add_local_blob_instances_light_scene"
+                },
+                {
+                  "context": "primary_scene_$full_user_name",
+                  "playback": "add_local_blob_instances_light_render"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "comment": "Reflection map"
+      },
+      {
+        "call": "clear_color_styles"
+      },
+      {
+        "required": "(%loaded_time_of_day == 'day')",
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_maps": {
+            "car": "reflection_map",
+            "wet_street": "reflection_map",
+            "window": "reflection_map",
+            "ground": ""
+          }
+        }
+      },
+      {
+        "required": "(%loaded_time_of_day == 'night')",
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_maps": {
+            "car": "reflection_map_night",
+            "wet_street": "reflection_map_night",
+            "window": "reflection_map_night",
+            "ground": ""
+          }
+        }
+      },
+      {
+        "required": "(%loaded_time_of_day == 'synthwave')",
+        "call": "add_color_style",
+        "arguments": {
+          "reflection_maps": {
+            "car": "reflection_map_synthwave",
+            "wet_street": "reflection_map_synthwave",
+            "window": "reflection_map_synthwave",
+            "ground": "reflection_map_synthwave"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "_delete_lights_for_time_of_day",
+    "content": {
+      "call": "delete_root_nodes",
+      "arguments": {
+        "regex": "'^light_node.*$'"
+      }
+    }
+  },
+  {
+    "declare_macro": "_set_skybox_for_time_of_day",
+    "content": [
+      {
+        "required": "(%loaded_time_of_day == 'day')",
+        "call": "set_skybox", "arguments": { "alias": "skybox"}
+      },
+      {
+        "required": "(%loaded_time_of_day in {'night', 'synthwave'})",
+        "call": "set_skybox", "arguments": { "alias": "skybox_night"}
+      }
+    ]
+  },
+  {
+    "declare_macro": "update_time_of_day",
+    "content": [
+      { "playback": "_delete_lights_for_time_of_day" },
+      { "playback": "_create_lights_for_time_of_day" },
+      {
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "context": "primary_scene_$full_user_name",
+            "execute": [
+              { "call": "clear_skybox" },
+              { "playback": "_set_skybox_for_time_of_day" },
+              {
+                "playback": "update_weapon_closeup_lights",
+                "context": "weapon_closeup_$user_name"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

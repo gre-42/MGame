@@ -1,0 +1,177 @@
+[
+  {
+    "declare_macro": "load_F_35_part",
+    "content": {
+      "call": "obj_resource",
+      "arguments": {
+        "name": "%name",
+        "filename": "file://models/sketchfab.com/f-35c-lightning-ii/$subdir/$name.$mesh",
+        "config": {
+          "position": [0, -3, 0],
+          "rotation": [0, 180, 0],
+          "scale": [10, 10, 10],
+          "center_distances": ["%dist_min", "%dist_max"],
+          "blend_mode": "continuous",
+          "alpha_distances": [0, 0, "inf", "inf"],
+          "cull_faces_alpha": false,
+          "occluded_pass": "lightmap_black_global_and_local",
+          "occluder_pass": "%occluder_pass",
+          "aggregate_mode": "none",
+          "transformation_mode": "all",
+          "triangle_tangent_error_behavior": "zero",
+          "werror": false,
+          "emissive_factor": "%sketchfab_emissive_factor",
+          "ambient_factor": "%sketchfab_ambient_factor",
+          "diffuse_factor": "%sketchfab_diffuse_factor",
+          "specular_factor": "%sketchfab_specular_factor",
+          "shading": {
+            "fresnel": {
+              "min": 0,
+              "max": 0.4,
+              "exponent": 5,
+              "ambient": [1, 1, 1]
+            }
+          },
+          "rectangle_triangulation_mode": "%rectangle_triangulation_mode",
+          "dynamically_lighted": true,
+          "physics_material": "%physics_material"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "load_F_35_hitbox_part",
+    "content": [
+      {
+        "playback": "load_F_35_part",
+        "arguments": {
+          "name": "%name",
+          "subdir": "hitbox",
+          "dist_min": 0,
+          "dist_max": "inf",
+          "occluder_pass": "none",
+          "rectangle_triangulation_mode": "disabled",
+          "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+        }
+      },
+      {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%name", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}}
+    ]
+  },
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_front"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_mid"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rear"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_left"}},
+  {"playback": "load_F_35_hitbox_part", "arguments": {"name": "F_35_hitbox_rudder_right"}},
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "F_35_rear_wings",
+      "min": [-4, -0.5222139358520508, 5.172699928283691],
+      "max": [4, 1.4777860641479492, 7.172699928283691],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "F_35_center_wings",
+      "min": [-6.571484565734863, -1.3471401929855347, 1.7136850357055664],
+      "max": [6.571484565734863, 0.6528598070144653, 3.7136850357055664],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "call": "add_swept_sphere_aabb",
+    "arguments": {
+      "name": "F_35_body",
+      "min": [-1.6410852670669556, -1.3471401929855347, -7.79599666595459],
+      "max": [1.6410852670669556, 0.6528598070144653, 8.20400333404541],
+      "radius": 0.5,
+      "physics_material": "obj_distancebox|attr_convex|surface_base_metal"
+    }
+  },
+  {
+    "comment": {
+      "playback": "load_F_35_part",
+      "arguments": {
+        "name": "F_35_distancebox",
+        "subdir": "hitbox",
+        "dist_min": 0,
+        "dist_max": "inf",
+        "occluder_pass": "none",
+        "rectangle_triangulation_mode": "disabled",
+        "physics_material": "attr_collide|obj_distancebox|attr_convex"
+      }
+    }
+  },
+  {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": [
+        "F_35_rear_wings",
+        "F_35_center_wings",
+        "F_35_body"
+      ],
+      "dest_name": "F_35_distancebox"
+    }
+  },
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "F_35_tirelines",
+      "filename": "file://models/primitives/empty.obj",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "center_distances": [0, 501],
+        "blend_mode": "off",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "none",
+        "occluder_pass": "none",
+        "aggregate_mode": "none",
+        "transformation_mode": "all",
+        "physics_material": "attr_collide|obj_tire_line|surface_base_tire"
+      }
+    }
+  },
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [-0.7, -0.2, -2.35], "to": [-0.7, -2.5, -2.35]}}, {"comment": "left front"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [ 0.7, -0.2, -2.35], "to": [ 0.7, -2.5, -2.35]}}, {"comment": "right front"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [-0.7, -0.2,  2.20], "to": [-0.7, -2.5,  2.20]}}, {"comment": "left rear"},
+  {"call": "gen_ray", "arguments": {"name": "F_35_tirelines", "from": [ 0.7, -0.2,  2.20], "to": [ 0.7, -2.5,  2.20]}}, {"comment": "right rear"},
+  {
+    "call": "compound_resource",
+    "arguments": {
+      "source_names": [
+        "F_35_hitbox_front",
+        "F_35_hitbox_mid",
+        "F_35_hitbox_rear",
+        "F_35_hitbox_rudder_left",
+        "F_35_hitbox_rudder_right",
+        "F_35_distancebox",
+        "F_35_tirelines"
+      ],
+      "dest_name": "F_35_hitboxes"
+    }
+  },
+  {
+    "declare_macro": "load_F_35",
+    "content": {
+      "playback": "load_F_35_part",
+      "arguments": {
+        "name": "F_35$decimate",
+        "subdir": "obj",
+        "dist_min": "%dist_min",
+        "dist_max": "%dist_max",
+        "occluder_pass": "%occluder_pass",
+        "rectangle_triangulation_mode": "delaunay",
+        "physics_material": "attr_visible"
+      }
+    }
+  },
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100  , "occluder_pass": "none",                    "decimate": ""}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 0  , "dist_max": 100  , "occluder_pass": "none",                    "decimate": "_d3"}},
+  {"playback": "load_F_35", "arguments": {"dist_min": 100, "dist_max": "inf", "occluder_pass": "lightmap_black_movables", "decimate": "_d1"}}
+]

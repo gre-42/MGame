@@ -1,0 +1,100 @@
+{
+  "declare_macro": "create_skater_key_bindings",
+  "content": [
+    {
+      "call": "car_controller_idle_binding",
+      "arguments": {
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "surface_power": "inf",
+        "drive_relaxation": 1
+      }
+    },
+    {
+      "call": "rel_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.rotate_left",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity": 3,
+        "press_factor": 1,
+        "repeat_factor": 1,
+        "speed_cursor": 0.1
+      }
+    },
+    {
+      "call": "rel_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.rotate_right",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "rotation_axis": [0, 1, 0],
+        "angular_velocity": -3,
+        "press_factor": 1,
+        "repeat_factor": 1,
+        "speed_cursor": -0.1
+      }
+    },
+    {
+      "comment": {
+        "call": "abs_key_binding",
+        "arguments": {
+          "local_user_id": "%local_user_id",
+          "node": "skater_node$suffix",
+          "key": "%LEFT_SHIFT",
+          "gamepad_button": "Y",
+          "force": [0, 2000, 0]
+        }
+      }
+    },
+    {
+      "call": "abs_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.jump",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "wants_to_jump": true
+      }
+    },
+    {
+      "call": "abs_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.grind",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "wants_to_grind": true
+      }
+    },
+    {
+      "call": "abs_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.forward",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "fly_forward_factor": 100
+      }
+    },
+    {
+      "call": "car_controller_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "skater.brake",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "node": "skater_node$suffix",
+        "surface_power": "nan"
+      }
+    }
+  ]
+}

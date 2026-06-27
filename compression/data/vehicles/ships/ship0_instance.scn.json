@@ -1,0 +1,34 @@
+[
+  {
+    "declare_macro": "create_ship0",
+    "# content": {
+      "playback": "generic_car.create",
+      "let": {
+        "name": "ship0",
+        "decimate": "",
+        "wheels": "%%vehicles/ship0/wheels",
+        "engine_audio": "%%vehicles/ship0/engine_audio"
+      }
+    },
+    "content": {
+      "playback": "generic_car.create_fast",
+      "let": { "asset_id": "ship0" }
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_internals_ship0",
+    "content": {
+      "playback": "generic_car.create_player_internals"
+    }
+  },
+  {
+    "declare_macro": "create_player_vehicle_externals_ship0",
+    "content": {
+      "playback": "generic_car.create_player_externals",
+      "let": {
+        "camera_class": "ship",
+        "cockpit_camera_position": [-0.4, 0.4, -0.3]
+      }
+    }
+  }
+]

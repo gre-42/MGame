@@ -1,0 +1,70 @@
+[
+  {
+    "include": "_level_selection.scn.json"
+  },
+  {
+    "call": "globals",
+    "arguments": {
+      "selected_language": "en-US"
+    }
+  },
+  {
+    "declare_macro": "create_html_scene_selector",
+    "content": [
+      {
+        "call": "add_macro_html_endpoint",
+        "arguments": {
+          "path": "new_game",
+          "content": [
+            {
+              "playback": "apply_level_selection"
+            },
+            {
+              "call": "locals",
+              "arguments": {
+                "response.status": 200,
+                "response.content": "success"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "game_modes",
+          "selection_path": "selected_game_mode",
+          "assets": "game_modes",
+          "title": "%%translations/main/Game_mode/$selected_language"
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "levels",
+          "selection_path": "selected_level_id",
+          "assets": "levels",
+          "title": "%%translations/main/Scene/$selected_language"
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "time_of_day",
+          "selection_path": "selected_time_of_day",
+          "assets": "time_of_day",
+          "title": "%%translations/main/Time_of_day/$selected_language"
+        }
+      },
+      {
+        "call": "add_assets_html_endpoint",
+        "arguments": {
+          "items_path": "race_restrictions",
+          "selection_path": "selected_race_restrictions",
+          "assets": "race_restrictions",
+          "title": "%%translations/main/Restrictions/$selected_language"
+        }
+      }
+    ]
+  }
+]

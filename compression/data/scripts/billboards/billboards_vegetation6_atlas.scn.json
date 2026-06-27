@@ -1,0 +1,93 @@
+[
+  {
+    "call": "add_texture_atlas_cpu",
+    "arguments": {
+      "name": "vegetation6",
+      "width": 4096,
+      "height": 4096,
+      "layers": 2,
+      "color_mode": "rgba",
+      "wrap_mode_s": "clamp_to_edge",
+      "wrap_mode_t": "clamp_to_edge",
+      "anisotropic_filtering_level": 16,
+      "images": [
+        {"target_position": [   0,   20], "target_layer": 0, "texture": "#tc0"},
+        {"target_position": [1024,   20], "target_layer": 0, "texture": "#tc3"},
+        {"target_position": [2048,   20], "target_layer": 0, "texture": "#tc4"},
+        {"target_position": [   0, 2068], "target_layer": 0, "texture": "#tc5"},
+        {"target_position": [1024, 2068], "target_layer": 0, "texture": "#tc6"},
+        {"target_position": [2048, 2068], "target_layer": 0, "texture": "#Trees0023_desert"},
+        {"target_position": [2048, 3092], "target_layer": 0, "texture": "#Trees0024_desert"},
+        {"target_position": [3072,   20], "target_layer": 0, "texture": "#grass_tbdpec3r_island_bright"},
+        {"target_position": [3072,  532], "target_layer": 0, "texture": "#grass_tbdpec3r_island_green1"},
+        {"target_position": [3072, 1044], "target_layer": 0, "texture": "#foliage_gradient"},
+        {"target_position": [3072, 2068], "target_layer": 0, "texture": "#Trees0029_desert"},
+        {"target_position": [3072, 3092], "target_layer": 0, "texture": "#Trees0096_desert"},
+        {"target_position": [   0,    0], "target_layer": 1, "texture": "#Trees0058_3"},
+        {"target_position": [1024,    0], "target_layer": 1, "texture": "#Trees0122_1"}
+      ]
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_array_png",
+      "arguments": {
+        "name": "vegetation6",
+        "filename_prefix": "/tmp/vegetation6_",
+        "color_mode": "rgba"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "vegetation6",
+      "color": "#vegetation6",
+      "add_colormap": false
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "vegetation6",
+      "texture_filename": "#vegetation6",
+      "min": [-0.5, 0],
+      "max": [0.5, 1],
+      "occluded_pass": "lightmap_blobs",
+      "occluder_pass": "lightmap_black_global_and_local",
+      "ambient": [1, 1, 1],
+      "blend_mode": "semi_continuous_02",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "instances_sorted",
+      "transformation_mode": "position_lookat",
+      "fog_distances": "%fog_distances",
+      "fog_ambient": "%fog_ambient",
+      "billboards": [
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.5 ,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0.5  ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0.5  ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.5 ,  0.5  ], "layer": 0, "vertex_scale": [ 3  ,  3   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.5 ,  0.75 ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.125], "uv_offset": [0.75,  0    ], "layer": 0, "vertex_scale": [ 3.5,  1.75, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.25,  0.125], "uv_offset": [0.75,  0.125], "layer": 0, "vertex_scale": [ 3.5,  1.75, 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.25 ], "layer": 0, "vertex_scale": [ 2.5,  2.5 , 1], "alpha_distances": [0, 0, 250, 400], "max_center_distance": 503, "occluder_pass": "none"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.5  ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.75 ], "layer": 0, "vertex_scale": [ 3  ,  3   , 1], "alpha_distances": [0, 0, 450, 600], "max_center_distance": 750, "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.5 ,  0    ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0.5  ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0.5  ], "layer": 0, "vertex_scale": [10  , 20   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.5 ,  0.5  ], "layer": 0, "vertex_scale": [ 3  ,  3   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.5 ,  0.75 ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.5  ], "layer": 0, "vertex_scale": [ 6  ,  6   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.25 ], "uv_offset": [0.75,  0.75 ], "layer": 0, "vertex_scale": [ 3  ,  3   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0   ,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"},
+        {"uv_scale": [0.25,  0.5  ], "uv_offset": [0.25,  0    ], "layer": 1, "vertex_scale": [ 5  , 10   , 1], "alpha_distances": [0, 0, "inf", "inf"], "max_center_distance": "inf", "occluder_pass": "lightmap_black_global_and_local"}
+      ]
+    }
+  }
+]

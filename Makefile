@@ -5,8 +5,13 @@ ostype != uname
 
 COMPRESS_SOURCE_DATA_DIRS ?= data;compression/data_extra
 COMPRESS_FLAGS ?=
-COMPRESS_CONFIGS ?= $(shell echo "                     \
-compression/dest/compressed=compression/src/compression.json;   \
+COMPRESS_CONFIGS ?= $(shell echo "                                                    \
+compression/dest/compressed=compression/src/compression.json;                         \
+compression/dest/compressed=compression/src/transition/compression.arena.json;        \
+compression/dest/compressed=compression/src/transition/compression.arena_humans.json; \
+compression/dest/compressed=compression/src/transition/compression.nyc.json;          \
+compression/dest/compressed=compression/src/transition/compression.nyc_td0.json;      \
+compression/dest/compressed=compression/src/transition/compression.race_track0.json;  \
 compression/dest/compressed.extended=compression/src/compression.extended.json" | sed "s/ //g")
 
 BUILD_TARGET ?= build
@@ -20,8 +25,8 @@ ASSET_DIRS ?= data
 RUN_ARGS ?=
 FILE_EXT_ARGS ?=
 ifeq ($(COMPRESSED),1)
-    override ASSET_DIRS := data;compression/dest/compressed;compression/dest/compressed.extended;compression/dest/compressed.private
-	override FILE_EXT_ARGS := --mesh obj.gz --animated_mesh mhx2.gz --audio mp3
+    override ASSET_DIRS := compression/data;compression/dest/compressed;compression/dest/compressed.extended;compression/dest/compressed.private
+	override FILE_EXT_ARGS := --mesh obj.gz --animated_mesh mhx2.gz --audio mp3 --compressed
 endif
 ifeq ($(HEADLESS),1)
     override RUN_ARGS :=      \

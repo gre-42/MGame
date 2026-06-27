@@ -1,0 +1,466 @@
+[
+  {
+    "declare_macro": "_add_stone_models",
+    "content": [
+      {
+        "exclude": ["%if_android"],
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_black_local_instances",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small_d1_s3$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.3, 0.3, 0.3],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small_d1_s5$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.5, 0.5, 0.5],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small_d1_s6$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.6, 0.6, 0.6],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small_d1_s10$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "desert_rock01_small_d1_s3$suffix",
+          "filename": "file://models/opengameart/desert_rock01/rock01_mean_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.3, 0.3, 0.3],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "desert_rock01_small_d1_s5$suffix",
+          "filename": "file://models/opengameart/desert_rock01/rock01_mean_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.5, 0.5, 0.5],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "desert_rock01_small_d1_s8$suffix",
+          "filename": "file://models/opengameart/desert_rock01/rock01_mean_d1.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [0.8, 0.8, 0.8],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "none",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "Stone_model_tex_small_d4$suffix",
+          "filename": "file://models/opengameart/Stone_model_tex/stone_d4.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1.5, 1.5, 1.5],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_black_local_instances",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "exclude": ["%if_android"],
+        "call": "obj_resource",
+        "arguments": {
+          "name": "desert_rock01_small$suffix",
+          "filename": "file://models/opengameart/desert_rock01/rock01_mean.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1, 1, 1],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_black_local_instances",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      },
+      {
+        "call": "obj_resource",
+        "arguments": {
+          "name": "desert_rock01_small_d2_s15$suffix",
+          "filename": "file://models/opengameart/desert_rock01/rock01_mean_d2.$mesh",
+          "config": {
+            "position": [0, 0, 0],
+            "rotation": [0, 0, 0],
+            "scale": [1.5, 1.5, 1.5],
+            "center_distances": [0, 504],
+            "blend_mode": "off",
+            "alpha_distances": [0, 0, "inf", "inf"],
+            "occluded_pass": "none",
+            "occluder_pass": "lightmap_black_local_instances",
+            "aggregate_mode": "%stone_aggregate_mode",
+            "transformation_mode": "position",
+            "desaturate": "%desaturate",
+            "histogram": "%histogram",
+            "lighten": "%lighten",
+            "emissive_factor": "%default_emissive_factor",
+            "ambient_factor": "%default_ambient_factor",
+            "diffuse_factor": "%default_diffuse_factor",
+            "specular_factor": "%default_specular_factor",
+            "shading": {
+              "fog_distances": "%fog_distances",
+              "fog_ambient": "%fog_ambient",
+              "fresnel": {
+                "min": 0,
+                "max": 0.15,
+                "exponent": 4,
+                "ambient": [1, 1, 1]
+              }
+            },
+            "physics_material": "attr_visible"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "playback": "_add_stone_models",
+    "arguments": {
+      "suffix": "_obj",
+      "stone_aggregate_mode": "none",
+      "desaturate": 0,
+      "histogram": null,
+      "lighten": [0, 0, 0]
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "arguments": {
+      "suffix": "",
+      "stone_aggregate_mode": "instances_sorted",
+      "desaturate": 0,
+      "histogram": null,
+      "lighten": [0, 0, 0]
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "arguments": {
+      "suffix": "_canyon",
+      "stone_aggregate_mode": "instances_sorted",
+      "desaturate": 0,
+      "histogram": "file://textures/histograms/Rock029.png",
+      "lighten": [0, 0, 0]
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "arguments": {
+      "suffix": "_dune",
+      "stone_aggregate_mode": "instances_sorted",
+      "desaturate": 0,
+      "histogram": "file://textures/histograms/desert_dune.png",
+      "lighten": [0, 0, 0]
+    }
+  },
+  {
+    "playback": "_add_stone_models",
+    "arguments": {
+      "suffix": "_snow",
+      "stone_aggregate_mode": "instances_sorted",
+      "desaturate": 1,
+      "histogram": "file://textures/histograms/snow_tree.png",
+      "lighten": [-0.3, -0.3, -0.3]
+    }
+  }
+]

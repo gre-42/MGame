@@ -1,0 +1,39 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "playback_box",
+      "filename": "file://models/primitives/box.$mesh",
+      "config": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1],
+      "center_distances": [0, "inf"],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "aggregate_mode": "none",
+      "transformation_mode": "all"
+      }
+    }
+  },
+  {
+    "call": "root_node_instance",
+    "arguments": {
+      "dynamics": "moving",
+      "name": "box_playback_node",
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": 1
+    }
+  },
+  {
+    "call": "child_renderable_instance",
+    "arguments": {
+      "name": "box_playback",
+      "node": "box_playback_node",
+      "resource": "playback_box"
+    }
+  }
+]

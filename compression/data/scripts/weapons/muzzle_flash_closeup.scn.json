@@ -1,0 +1,36 @@
+[
+  {
+    "declare_macro": "_generate_muzzle_flash_closeup",
+    "content": {
+      "call": "for_each_user",
+      "without": ["full_user_name", "user_name", "local_user_id", "user_is_local", "player_name"],
+      "arguments": {
+        "content": {
+          "call": "execute_in_physics_thread",
+          "context": "weapon_closeup_$user_name",
+          "arguments": {
+            "command": {
+              "call": "execute_if_node_exists",
+              "arguments": {
+                "node": "muzzle_flash_closeup_node_$suffix",
+                "command": {
+                  "call": "emit_child_particle",
+                  "arguments": {
+                    "node": "muzzle_flash_closeup_node_$suffix",
+                    "resource": "%resource",
+                    "time_point": "%time_point",
+                    "location": {
+                      "position": [0, 0, 0],
+                      "rotation": [0, 0, 0],
+                      "scale": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+]

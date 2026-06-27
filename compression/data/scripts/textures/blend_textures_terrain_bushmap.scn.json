@@ -1,0 +1,17 @@
+[
+  {
+    "playback": "bushed_blend_textures",
+    "arguments": {
+      "name": "Bushmap",
+      "weight_texture": "#Bushmap_Weight_Texture",
+      "feather_texture": "#Bushmap_Feather_Texture",
+      "color_texture": "#Bushmap_Color_Texture",
+      "distances": [0, 0, "inf", "inf"],
+      "normal": [0, 0, 0],
+      "cosine": [-1, -1, 1, 1],
+      "weight_scale": 0.0009765625,
+      "feather_scale": 0.00390625,
+      "color_scale": 1
+    }
+  }
+]

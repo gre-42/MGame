@@ -1,0 +1,68 @@
+{
+  "id": "ship0",
+  "title": "Ship 0",
+  "on_init": [
+    {"include": "ship0.scn.json"},
+    {
+      "declare_macro": "remote.vehicle.create_ship0",
+      "content": { "playback": "create_ship0" }
+    }
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "ship0"
+    }
+  },
+  "database": {
+    "suffix": "ship0",
+    "vehicle_class": "ship",
+    "node_prefixes": ["car_node"],
+    "decimate": "",
+    "spawn_y_offset": 0.7,
+    "waypoint_dy": 1.2,
+    "door_distance": 3,
+    "trailer_hitch_position_female": null,
+    "trailer_hitch_position_male": [0, -0.2, 2],
+    "max_tire_angle": 45,
+    "tire_angle_velocities": [10, 80],
+    "tire_angles": [45, 20],
+    "brake_torque": 400,
+    "front_engine": "engine",
+    "rear_engine": "engine",
+    "light_left_front_position": [-0.5, 0, -22],
+    "light_right_front_position": [0.5, 0, -22],
+    "wheel_left_front_mount_0":  [-0.77, -0.59,  -1.37],
+    "wheel_right_front_mount_0": [ 0.77, -0.59,  -1.37],
+    "wheel_left_rear_mount_0":   [-0.77, -0.59,   1.26],
+    "wheel_right_rear_mount_0":  [ 0.77, -0.59,   1.26],
+
+    "wheel_left_front_mount_1":  [-0.77, 0, -1.37],
+    "wheel_right_front_mount_1": [ 0.77, 0, -1.37],
+    "wheel_left_rear_mount_1":   [-0.77, 0,  1.26],
+    "wheel_right_rear_mount_1":  [ 0.77, 0,  1.26],
+
+    "size": [1.8, 1, 4.6],
+    "com": [0, -0.2, 0.2],
+
+    "mass": 2000,
+
+    "angular_vels_front": null,
+    "angular_vels_rear": null,
+    "powers_front": null,
+    "powers_rear": null,
+    "angular_vels": [-6000, -4200, -3000, 0],
+    "powers": [40, 400, 400, 40],
+    "w_clutch": 800,
+    "max_dw": 2000,
+    "gear_ratios": [0.75, 1.5, 3, 6, 9, -9],
+
+    "wheels": "R33_wheel",
+    "engine_audio": "car2",
+    "engine_exhaust": null
+  },
+  "required": {
+    "fixed": [],
+    "dynamic": "%false"
+  }
+}

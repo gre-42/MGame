@@ -1,0 +1,10 @@
+[
+  { "path": "levels/arena/map_arena.osm", "gzip": {} },
+  { "path": "levels/arena/osm_resource_arena.scn.json", "sed": { "substitute": [
+    ["heightmap.pgm", "heightmap.png"],
+    ["map_arena.osm", "map_arena.osm.gz"],
+    ["\"textures/cc0textures/RoofingTiles002_2K_Color.jpg\"", "\"#RoofingTiles002Red\""],
+    ["\"grass_tbdpec3r\"", "\"grass_tbdpec3r_Ground037_Sl\""],
+    [".*vegetation1\\..*\n", ""]] } },
+  { "path": "levels/arena/heightmap.pgm", "resize": { "size": [256, 256], "periodic": false, "file_extension": ".png" } }
+]

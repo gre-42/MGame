@@ -1,0 +1,103 @@
+{
+  "id": "van0",
+  "title": "Van 0",
+  "on_init": [
+    { "include": "van0.scn.json" },
+    {
+      "declare_macro": "remote.vehicle.create_van0",
+      "content": { "playback": "create_van0" }
+    }
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "van0"
+    }
+  },
+  "database": {
+    "suffix": "van0",
+    "vehicle_class": "car",
+    "node_prefixes": ["car_node"],
+    "decimate": "",
+    "spawn_y_offset": 0.7,
+    "waypoint_dy": 1.2,
+    "door_distance": 3,
+    "trailer_hitch_position_female": null,
+    "trailer_hitch_position_male": null,
+    "max_tire_angle": 45,
+    "tire_angle_velocities": [10, 80],
+    "tire_angles": [45, 20],
+    "brake_torque": 400,
+    "front_engine": "engine",
+    "rear_engine": "engine",
+    "light_left_front_position": [-0.5, 0, -22],
+    "light_right_front_position": [0.5, 0, -22],
+    "wheel_left_front_mount_0":  [-0.8, -0.59,  -1.7],
+    "wheel_right_front_mount_0": [ 0.8, -0.59,  -1.7],
+    "wheel_left_rear_mount_0":   [-0.8, -0.59,   1.7],
+    "wheel_right_rear_mount_0":  [ 0.8, -0.59,   1.7],
+
+    "wheel_left_front_mount_1":  [-0.8, 0, -1.7],
+    "wheel_right_front_mount_1": [ 0.8, 0, -1.7],
+    "wheel_left_rear_mount_1":   [-0.8, 0,  1.7],
+    "wheel_right_rear_mount_1":  [ 0.8, 0,  1.7],
+
+    "size": [1.8, 1.6, 5.2],
+    "com": [0, -0.4, 0],
+
+    "mass": 2000,
+
+    "angular_vels_front": null,
+    "angular_vels_rear": null,
+    "powers_front": null,
+    "powers_rear": null,
+    "angular_vels": [-6000, -4200, -3000, 0],
+    "powers": [40, 400, 400, 40],
+    "w_clutch": 800,
+    "max_dw": 2000,
+    "gear_ratios": [0.75, 1.5, 3, 6, 9, -9],
+
+    "wheels": "R33_wheel",
+    "engine_audio": "car2",
+    "engine_exhaust": [
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito",
+            "air_resistance_halflife": "inf",
+            "animation_duration": 2,
+            "type": "smoke"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0.59, -0.55, 2.76],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      },
+      {
+        "particle": {
+          "particle": {
+            "resource": "fueguito",
+            "air_resistance_halflife": "inf",
+            "animation_duration": 2,
+            "type": "smoke"
+          },
+          "generation_dt": 0.2
+        },
+        "location": {
+          "position": [0.45, -0.55, 2.76],
+          "rotation": [0, 0, 0],
+          "scale": 1
+        },
+        "p_reference": 30
+      }
+    ]
+  },
+  "required": {
+    "fixed": [],
+    "dynamic": ["(%selected_game_mode == 'rally')", "(%selected_race_restrictions in {'', 'car'})"]
+  }
+}

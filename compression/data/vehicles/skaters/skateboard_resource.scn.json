@@ -1,0 +1,25 @@
+[
+  {
+    "call": "obj_resource",
+    "arguments": {
+      "name": "skateboard",
+      "filename": "file://models/sketchfab.com/Skate/source/skate_low.$mesh",
+      "config": {
+      "position": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [3.6, 3.6, 3.6],
+      "center_distances": [0, 501],
+      "blend_mode": "off",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "occluded_pass": "lightmap_black_global_static",
+      "occluder_pass": "lightmap_black_local_instances",
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "emissive_factor": "%sketchfab_emissive_factor",
+      "ambient_factor": "%sketchfab_ambient_factor",
+      "diffuse_factor": "%sketchfab_diffuse_factor",
+      "specular_factor": "%sketchfab_specular_factor"
+      }
+    }
+  }
+]

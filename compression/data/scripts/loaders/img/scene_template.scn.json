@@ -1,0 +1,202 @@
+[
+  {"include": "scripts/include_all.scn.json"},
+  {
+    "call": "globals",
+    "arguments": {
+      "loaded_level_id": "%selected_level_id",
+      "aggregate_mode": "none",
+      "vip_name": "you"
+    }
+  },
+  {
+    "call": "resource_locations",
+    "arguments": {
+      "filters": [
+        {"included_tags": "attr_visible"},
+        {"included_tags": "attr_collide"}
+      ],
+      "rw_resource_files": "%%levels/$loaded_level_id/rw_resource_files",
+      "rw_ide_files": "%%levels/$loaded_level_id/rw_ide_files",
+      "pssg_files": "%%levels/$loaded_level_id/pssg_files",
+      "double_precision": false,
+      "resource_variable": "available_resources",
+      "instantiables_variable": "available_instantiables",
+      "# texture": "grid4",
+      "config": {
+        "position": [0, 0, 0],
+        "rotation": [0, 0, 0],
+        "scale": [1, 1, 1],
+        "max_triangle_distance": 1000,
+        "blend_mode": "semi_continuous_02",
+        "alpha_distances": [0, 0, "inf", "inf"],
+        "occluded_pass": "lightmap_black_movables",
+        "occluder_pass": "none",
+        "anisotropic_filtering_level": 16,
+        "magnifying_interpolation_mode": "linear",
+        "aggregate_mode": "%aggregate_mode",
+        "transformation_mode": "all",
+        "emissive_factor": "%rw_emissive_factor",
+        "ambient_factor": "%rw_ambient_factor",
+        "diffuse_factor": "%rw_diffuse_factor",
+        "specular_factor": "%rw_specular_factor",
+        "physics_material": "obj_chassis|attr_visible|attr_collide|attr_concave",
+        "shading": {
+          "fog_distances": "%fog_distances",
+          "fog_ambient": "%fog_ambient",
+          "fresnel": {
+            "min": "%rw_fresnel_min",
+            "max": "%rw_fresnel_max",
+            "exponent": "%rw_fresnel_exponent",
+            "ambient": "%rw_fresnel_ambient"
+          }
+        },
+        "triangle_tangent_error_behavior": "zero"
+      }
+    }
+  },
+  {
+    "comment": {
+      "call": "save_to_obj_file",
+      "arguments": {
+        "resource": "tracksplit.pssg#!1g",
+        "prefix": "/tmp/tracksplit_elem.obj"
+      }
+    }
+  },
+  {
+    "comment": {
+      "call": "modify_physics_material_tags",
+      "arguments": {
+        "resource_names": "%%levels/$loaded_level_id/invisible_resources",
+        "remove": "attr_visible|attr_collide"
+      }
+    }
+  },
+  {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_names": "%available_resources",
+      "included_names": "%%levels/$loaded_level_id/no_collide_included_names",
+      "remove": "attr_collide"
+    }
+  },
+  {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_names": "%available_resources",
+      "included_names": "%%levels/$loaded_level_id/tarmac_included_names",
+      "add": "surface_base_tarmac|attr_contains_skidmarks"
+    }
+  },
+  {
+    "call": "modify_physics_material_tags",
+    "arguments": {
+      "resource_names": "%available_resources",
+      "excluded_names": "%%levels/$loaded_level_id/tarmac_included_names",
+      "add": "surface_base_concrete"
+    }
+  },
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "if_create_pc_player": true,
+      "if_pc_player_playback": false,
+      "pc_player_playback": "file://$__DIR__/checkpoints.m",
+      "pc_player_playback_speedup": 1,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|history|laps|rank|race_time",
+      "osm_map_resource": null,
+      "osm_position": null,
+      "osm_rotation": null,
+      "osm_scale": null,
+      "if_has_overlay": false,
+      "if_primary_dirtmap": false,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": "#dirtmap_dense",
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 0.5,
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "periodic_reference_time_duration": null,
+      "soft_light_texture": null
+    }
+  },
+  {
+    "call": "instantiate",
+    "context": "primary_scene",
+    "arguments": {
+      "ipl_files": "%%levels/$loaded_level_id/ipl_files",
+      "instantiables": "%available_instantiables",
+      "required_prefixes": "%%levels/$loaded_level_id/instantiated_required_prefixes",
+      "except": "%%levels/$loaded_level_id/instantiated_exclude",
+      "dynamics": "static",
+      "instantiated_resources": "instantiated_resources"
+    }
+  },
+  {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
+    }
+  },
+  {
+    "required": "(%%levels/$loaded_level_id/grass_files != %null)",
+    "call": "instantiate_grass",
+    "context": "primary_scene",
+    "arguments": {
+      "filenames": "%%levels/$loaded_level_id/grass_files",
+      "resources": "%%levels/$loaded_level_id/grass_resources",
+      "height_tolerance": 1.5
+    }
+  },
+  {
+    "required": "%if_graphics",
+    "call": "set_textures_lazy",
+    "context": "primary_scene",
+    "let": {
+      "resources": "%instantiated_resources"
+    },
+    "arguments": {
+      "command": {
+        "call": "preload",
+        "arguments": {
+          "resources": "%resources",
+          "tire_contacts": "%resources"
+        }
+      }
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": {
+      "playback": "scene_racing_instantiate_transient_objects",
+      "let": {
+        "if_create_pc_car": true,
+        "if_pc_player_playback": false,
+        "recordings_dir": "%__DIR__",
+        "checkpoints_file": null,
+        "checkpoints": "%%levels/$loaded_level_id/checkpoints",
+        "pacenotes_file": null,
+        "if_playback_checkpoints": false,
+        "if_playback_track_1": false,
+        "if_playback_track_2": false,
+        "if_playback_track_3": false,
+        "if_checkpoints": "(%%levels/$loaded_level_id/checkpoints != %null)",
+        "if_burn_in": false
+      }
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene"
+  },
+  {"playback": "create_main_menu"}
+]

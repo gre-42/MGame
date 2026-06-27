@@ -1,0 +1,248 @@
+[
+  {
+    "declare_macro": "traffic.create_avatar_npc_player",
+    "content": [
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "red",
+          "group": "",
+          "trigger": "%spawn_trigger",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
+      {
+        "call": "player_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "red",
+          "game_mode": "%game_mode",
+          "player_role": "bystander",
+          "unstuck_mode": "%unstuck_mode",
+          "behavior": "city",
+          "driving_direction": "right"
+        }
+      },
+      {
+        "call": "set_can_drive",
+        "arguments": {
+          "player": "%spawner_name",
+          "source": "ai",
+          "value": true
+        }
+      },
+      { "call": "spawner_set_player", "arguments": { "name": "%spawner_name", "seat": "driver" } }
+    ]
+  },
+  {
+    "declare_macro": "traffic.create_avatar",
+    "content": [
+      {
+        "playback": "local.create_avatar",
+        "let": {
+          "make_remote": true,
+          "if_with_gun": false,
+          "if_shadow": false,
+          "if_human_style": true,
+          "if_spawner": true,
+          "if_player": true,
+          "if_damageable": "(%flavor == 'extended')",
+          "velocity_error_std": 0.3,
+          "yaw_error_std": 0.02,
+          "pitch_error_std": 0.02,
+          "error_alpha": 0.002
+        }
+      },
+      {
+        "call": "create_externals",
+        "arguments": {
+          "player": "%spawner_name",
+          "mode": "npc"
+        }
+      },
+      {
+        "call": "create_internals",
+        "arguments": {
+          "player": "%spawner_name",
+          "seat": "driver"
+        }
+      },
+      {
+        "call": "create_gun_externals",
+        "arguments": {
+          "player": "%spawner_name"
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "traffic.create_car",
+    "content": [
+      {
+        "playback": "local.create_car",
+        "let": {
+          "make_remote": true,
+          "if_playback_track": false,
+          "if_playback_winner": false,
+          "if_spawner": true,
+          "if_player": true,
+          "if_shadow": false,
+          "if_damageable": "(%flavor == 'extended')",
+          "if_car_body_renderable_style": true,
+          "velocity_error_std": 0,
+          "yaw_error_std": 0,
+          "pitch_error_std": 0,
+          "error_alpha": 0
+        }
+      },
+      {
+        "#comment": "This is now done when the avatar enters the vehicle",
+        "comment": [
+          {
+            "call": "create_externals",
+            "arguments": {
+              "player": "%spawner_name",
+              "mode": "npc"
+            }
+          },
+          {
+            "call": "create_internals",
+            "arguments": {
+              "player": "%spawner_name",
+              "seat": "driver"
+            }
+          },
+          {
+            "call": "create_gun_externals",
+            "arguments": {
+              "player": "%spawner_name"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "declare_macro": "traffic.create_npc_and_human",
+    "content": [
+      {
+        "playback": "traffic.create_avatar_npc_player",
+        "arguments": {
+          "unstuck_mode": "delete"
+        }
+      },
+      {
+        "call": "set_preferred_car_spawner",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
+          "already_set_behavior": "throw",
+          "macro": {
+            "playback": "traffic.create_avatar",
+            "let": {
+              "parking_brake_pulled": false,
+              "mute": false,
+              "respawn_cooldown_time": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "traffic.create_npc_and_parking_car",
+    "content": [
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "red",
+          "group": "",
+          "trigger": "bystanders",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
+      {
+        "call": "set_preferred_car_spawner",
+        "arguments": {
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
+          "already_set_behavior": "throw",
+          "macro": {
+            "playback": "traffic.create_car",
+            "let": {
+              "parking_brake_pulled": true,
+              "mute": false,
+              "respawn_cooldown_time": 0
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "declare_macro": "traffic.create_npc_and_driving_car",
+    "content": [
+      {
+        "call": "spawner_create",
+        "arguments": {
+          "name": "%spawner_name",
+          "team": "red",
+          "group": "",
+          "trigger": "bystanders",
+          "node": {
+            "if_with_graphics": "%if_graphics",
+            "if_with_physics": true
+          }
+        }
+      },
+      {
+        "call": "set_preferred_car_spawner",
+        "arguments": {
+          "dependencies": ["%driver_name"],
+          "spawner": "%spawner_name",
+          "asset_id": "%asset_id",
+          "y_offset": "%%vehicles/$asset_id/spawn_y_offset",
+          "already_set_behavior": "throw",
+          "macro": [
+            {
+              "playback": "traffic.create_car",
+              "let": {
+                "parking_brake_pulled": false,
+                "mute": false,
+                "respawn_cooldown_time": 0
+              }
+            },
+            {
+              "call": "spawn",
+              "arguments": {
+                "spawner": "%driver_name",
+                "position": [0, 0, 0],
+                "rotation": [0, 0, 0]
+              }
+            },
+            {
+              "call": "enter_or_exit_vehicle",
+              "arguments": {
+                "player": "%driver_name",
+                "destination": "%spawner_name",
+                "seat": "driver"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  { "include": "traffic_with_pedestrians.scn.json" },
+  { "include": "traffic_wo_pedestrians.scn.json" }
+]

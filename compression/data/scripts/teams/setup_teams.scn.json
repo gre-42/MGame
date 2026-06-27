@@ -1,0 +1,34 @@
+{
+  "declare_macro": "setup_teams",
+  "content": [
+    {
+      "call": "set_way_points",
+      "arguments": {
+        "location": "%osm_location",
+        "resource": "%teams_way_points_resource"
+      }
+    },
+    {
+      "call": "set_spawn_points",
+      "arguments": {
+        "location": "%osm_location",
+        "resource": "%teams_spawn_points_resource"
+      }
+    },
+    {
+      "call": "compute_random_user_ranks"
+    },
+    {
+      "call": "load_players",
+      "arguments": {
+        "json": "%players_json"
+      }
+    },
+    {
+      "call": "set_objective",
+      "arguments": {
+        "objective": "%objective"
+      }
+    }
+  ]
+}

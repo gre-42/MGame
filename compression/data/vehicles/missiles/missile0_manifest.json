@@ -1,0 +1,28 @@
+{
+  "id": "missile0",
+  "title": "missile0",
+  "on_init": [
+    {"include": "missile0_resource.scn.json"},
+    {"include": "missile0_instance.scn.json"}
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_vehicle_id_$full_user_name": "missile0"
+    }
+  },
+  "database": {
+    "suffix": "missile0",
+    "vehicle_class": "car",
+    "node_prefixes": ["car_node"],
+    "decimate": null,
+    "spawn_y_offset": 0.7,
+    "waypoint_dy": 1.2,
+    "door_distance": 3,
+    "max_tire_angle": null
+  },
+  "required": {
+    "fixed": [],
+    "dynamic": [["(%selected_game_mode in {'team_deathmatch'})", "%if_devel"]]
+  }
+}

@@ -1,0 +1,198 @@
+[
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "square_resource",
+    "arguments": {
+      "name": "small_explosion",
+      "texture_filename": "#explosion_01",
+      "min": [-0.5, -0.5],
+      "max": [0.5, 0.5],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_flat",
+      "number_of_frames": 16
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "square_resource",
+    "arguments": {
+      "name": "large_explosion",
+      "texture_filename": "#explosion_3d",
+      "min": [-5, -5],
+      "max": [5, 5],
+      "center_distances": [0, 1501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_flat",
+      "has_animated_textures": true
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "blending_x_resource",
+    "arguments": {
+      "name": "large_explosion_cross",
+      "texture_filename": "#explosion_3d",
+      "min": [-5, -5],
+      "max": [5, 5],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "has_animated_textures": true
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "smoke",
+      "texture_filename": "#smoke",
+      "min": [-0.1, -0.1],
+      "max": [0.1, 0.1],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "ambient": [1, 1, 1],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_lookat",
+      "number_of_frames": 16
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "particles_gravel",
+      "texture_filename": "#particles_gravel",
+      "min": [-1, -0.1],
+      "max": [1, 0.9],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "ambient": [1, 1, 1],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_lookat",
+      "number_of_frames": 16
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "particles_dirt",
+      "texture_filename": "#particles_dirt",
+      "min": [-1, -0.1],
+      "max": [1, 0.9],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "ambient": [1, 1, 1],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_lookat",
+      "number_of_frames": 16
+    }
+  },
+  {
+    "call": "square_resource",
+    "arguments": {
+      "name": "particles_snow",
+      "texture_filename": "#particles_snow",
+      "min": [-1, -0.1],
+      "max": [1, 0.9],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "ambient": [1, 1, 1],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_lookat",
+      "number_of_frames": 16
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "square_resource",
+    "arguments": {
+      "name": "muzzle_flash_0",
+      "texture_filename": "#explosion_orange_brown_1",
+      "min": [-0.15, -0.15],
+      "max": [0.15, 0.15],
+      "center_distances": [0, 501],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "cull_faces": true,
+      "aggregate_mode": "none",
+      "transformation_mode": "position_flat",
+      "number_of_frames": 4
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "blending_x_resource",
+    "arguments": {
+      "name": "bullet_impact_cross",
+      "texture_filename": "#bullet_impact_3d",
+      "min": [-0.5, -0.5],
+      "max": [0.5, 0.5],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "has_animated_textures": true
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "blending_x_resource",
+    "arguments": {
+      "name": "bullet_impact_red_cross",
+      "texture_filename": "#bullet_impact_red_3d",
+      "min": [-0.25, -0.25],
+      "max": [0.25, 0.25],
+      "occluded_pass": "none",
+      "occluder_pass": "none",
+      "emissive": [1, 1, 1],
+      "ambient": [0, 0, 0],
+      "blend_mode": "continuous",
+      "alpha_distances": [0, 0, "inf", "inf"],
+      "aggregate_mode": "none",
+      "transformation_mode": "all",
+      "has_animated_textures": true
+    }
+  }
+]

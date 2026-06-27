@@ -1,0 +1,144 @@
+[
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "white_blurred",
+      "color": "file://textures/noise/white_blurred.png",
+      "color_mode": "grayscale",
+      "plus": 0.45,
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_png",
+      "arguments": {
+        "name": "white_blurred",
+        "filename": "/tmp/white_blurred.png",
+        "color_mode": "grayscale"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Detail",
+      "color": "file://textures/cc0textures/Ground037_2K_Color.tiles.json",
+      "color_mode": "grayscale",
+      "selected_color": [0.67, 0.75, 0.3],
+      "selected_color_near": 0.2,
+      "selected_color_far": 0.275,
+      "times": -1,
+      "plus": 1,
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "comment": {
+      "call": "save_texture_png",
+      "arguments": {
+        "name": "Detail",
+        "filename": "detail.png",
+        "color_mode": "grayscale"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Ramp5",
+      "color": "file://textures/Way_Alpha/Way_Alpha5_512.png",
+      "color_mode": "grayscale",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Blend5",
+      "color": "file://textures/Way_Alpha/Way_Alpha5_512.png",
+      "color_mode": "grayscale",
+      "times": 2,
+      "plus": -1,
+      "abs": true,
+      "invert": true,
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "PlusDetail",
+      "parameters": {
+        "texture": "#Detail",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [0.2, 0.2],
+        "weight": 2.5,
+        "plus": -2,
+        "reduction": "plus",
+        "uv_source": "horizontal_xy"
+      }
+    }
+  },
+  {
+    "call": "add_blend_map_texture",
+    "arguments": {
+      "name": "TimesBlend5",
+      "parameters": {
+        "texture": "#Blend5",
+        "min_height": "-inf",
+        "max_height": "inf",
+        "distances": [0, 0, "inf", "inf"],
+        "normal": [0, 0, 0],
+        "cosine": [-1, -1, 1, 1],
+        "scale": [1, 1],
+        "weight": 1,
+        "reduction": "times"
+      }
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Weight_Texture",
+      "color": "file://textures/noise/lf_heightmap.png",
+      "color_mode": "grayscale",
+      "times": 12,
+      "plus": -3,
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Feather_Texture",
+      "color": "file://textures/noise/hf_heightmap0.png",
+      "color_mode": "grayscale",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "checkerboard",
+      "color": "file://textures/noise/checkerboard.png",
+      "color_mode": "grayscale",
+      "anisotropic_filtering_level": 16
+    }
+  },
+  {
+    "call": "add_texture_descriptor",
+    "arguments": {
+      "name": "Bushmap_Color_Texture",
+      "color": "file://textures/debug/white.png",
+      "color_mode": "rgb",
+      "mean_color": [0.85, 0.85, 0.85],
+      "anisotropic_filtering_level": 16
+    }
+  }
+]
