@@ -1,0 +1,1115 @@
+[
+  { "path": "textures/blobs", "glob": "\\.png$", "copy": {} },
+  { "path": "models/SR/XZ/textures/XZ_Tire.png", "luma_chrominance": { "luma": [512, 512], "chrominance": [64, 64] } },
+  { "path": "models/SR/XZ/textures/XZ_Tire_norm.png", "resize": { "size": [512, 512], "periodic": false } },
+  { "path": "models/SR/XZ/textures/XZ_Tire_refl.png", "resize": { "size": [512, 512], "periodic": false } },
+  { "path": "models/SR/FN/textures/FN_wheel.png", "luma_chrominance": { "luma": [512, 512], "chrominance": [64, 64] } },
+  { "path": "models/SR/FN/textures/FN_wheel_norm.png", "resize": { "size": [512, 512], "periodic": false } },
+  { "path": "models/SR/FN/textures/FN_wheel_refl.png", "resize": { "size": [512, 512], "periodic": false } },
+  {
+    "path": "textures/ui/background/cars.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/ui/background/gray.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [0, 0]
+    }
+  },
+  {
+    "path": "textures/ui/menu",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/pacenotes",
+    "glob": "\\.png$",
+    "luma": [0, 0]
+  },
+  {
+    "path": "textures/opengameart/particles/explosion_01_strip13/explosion_01_strip13_p2.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [1024, 64]
+    }
+  },
+  {
+    "path": "textures/opengameart/particles/alotofimpacts-4-frame/ImpactMetal7OrangeBrown 1.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [512, 128]
+    }
+  },
+  {
+    "path": "textures/quixel/tbdpec3r/Billboard_2K_Albedo_Lower.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Gravel010_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Gravel010_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Plaster003_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Plaster003_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Concrete020_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Concrete020_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/concrete1_2K.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/concrete1_2K_normGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones046_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones046_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Asphalt015_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Asphalt015_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Asphalt016_2K_Dirt.png",
+    "fragment": {
+      "fragment_size": [300, 300],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 100,
+      "channels": 4,
+      "alpha_fac": "file://../blobs/blob0_alpha.png",
+      "add": false,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones038_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones038_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones035_2K_Color_da.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/PavingStones035_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Metal032_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Metal038_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Metal038_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Fabric026_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground029_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground029_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground037_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground037_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground037_Rock028_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground025_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground025_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground038_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Ground038_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Rock018_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Rock018_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Rock028_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Rock028_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Rock028_2K_Displacement.png",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 2,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_albedo.png",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/textures.com/TexturesCom_Pavement_ConcreteSidewalk3_2.2x2.2_1K_normal.png",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/altphotos/water/sea-ocean-water-texture-seamless3.png",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Planks026A_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_No_Lines.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90_No_Lines.png",
+    "fragment": {
+      "fragment_size": [300, 300],
+      "assembled_size": [512, 1024],
+      "stepsize": 170,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/textures.com/TexturesCom_Pavement_RoadOld_1K_normal_90.png",
+    "fragment": {
+      "fragment_size": [300, 300],
+      "assembled_size": [512, 1024],
+      "stepsize": 170,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/textures.com/TexturesCom_Pavement_RoadOld_Yellow_1K_albedo_90_Lines.png",
+    "copy": {}
+  },
+  {
+    "path": "textures/cc0textures/concrete1_2K_wh_street_Lines_1_Lane.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_Lines.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_Lines_2_Lanes.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_Wide_Continuous_2_Lanes.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_Yellow_Lines_1x_Lane.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Color_Broad_White_Lines_1_Lane.png",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/textures.com/bushes",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [512, 512],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/textures.com/trees",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/textures.com/shops/TCom_Shops0106_S.jpg",
+    "copy": {}
+  },
+  {
+    "path": "textures/textures.com/shops/TCom_Shops0200_S.jpg",
+    "copy": {}
+  },
+  {
+    "path": "textures/hud",
+    "glob": "\\.png$",
+    "copy": {}
+  },
+  {
+    "path": "textures/Way_Alpha/Way_Alpha_256.png",
+    "copy": {}
+  },
+  {
+    "path": "textures/Way_Alpha/Way_Alpha3.png",
+    "copy": {}
+  },
+  {
+    "path": "textures/Way_Alpha/Way_Horizontal_Gradient_512.png",
+    "copy": {}
+  },
+  {
+    "path": "textures/Way_Alpha/Way_Wheels_512.png",
+    "copy": {}
+  },
+  {
+    "path": "textures/cc0textures/Road007_2K_Base.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/osm/DE21F2_industryWindow00001_512.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/osm/DE21F2_industryWindow00001_512_specular.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [1, 1]
+    }
+  },
+  {
+    "path": "textures/osm",
+    "glob": "DE21F2_industryWindow00001_boundary_.*\\.png$",
+    "copy": {}
+  },
+  {
+    "path": "textures/osm/DE21F2_industryWindow00002.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/osm/DE21F2_industryWindow00003.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/osm/MarekWindow00001_512_specular.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/osm/MarekWindow00001_512.png",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/opengameart/indoors-skyboxes/DallasW",
+    "glob": "\\.jpg$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64],
+      "file_extension": ".png"
+    }
+  },
+  {
+    "path": "textures/opengameart/indoors-skyboxes/MarriottMadisonWest",
+    "glob": "\\.jpg$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64],
+      "file_extension": ".png"
+    }
+  },
+  {
+    "path": "textures/skybox/cc0textures.com",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/skybox/opengameart.org/space-skybox-0",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  {
+    "path": "textures/skybox/opengameart.org/space-skybox-0-lights",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [0, 0],
+      "chrominance": [64, 64]
+    }
+  },
+  { "path": "textures/skybox/synthwave/1.png", "copy": {} },
+  { "path": "textures/skybox/learnopengl.com", "glob": "\\.jpg$", "copy": {} },
+  { "path": "textures/skybox/rgb", "glob": "\\.png$", "copy": {} },
+  { "path": "textures/interiorbox", "glob": "\\.png$", "copy": {} },
+  { "path": "textures/prococean/heightmap_2.png", "copy": {} },
+  { "path": "textures/prococean/heightmap_3.png", "copy": {} },
+  { "path": "textures/prococean/ocean_uniform.png", "copy": {} },
+  { "path": "textures/noise/hf_heightmap0.png", "copy": {} },
+  { "path": "textures/noise/hf_heightmap1.png", "copy": {} },
+  { "path": "textures/noise/foliagemap.png", "resize": { "size": [256, 256], "periodic": true } },
+  { "path": "textures/dot.png", "copy": {} },
+  { "path": "textures/GIMP/Sponge_02.png", "copy": {} },
+  {
+    "path": "textures/cc0textures/Bricks058_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Bricks058_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Bricks059_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/Bricks059_2K_NormalGL.jpg",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [2048, 2048],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/cc0textures/RoofingTiles002_2K_Color.jpg",
+    "fragment": {
+      "fragment_size": [512, 512],
+      "assembled_size": [2048, 2048],
+      "stepsize": 200,
+      "randsize": 100,
+      "channels": 4,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  {
+    "path": "textures/noise/dirtmap_dense.png",
+    "fragment": {
+      "fragment_size": [256, 256],
+      "assembled_size": [1024, 1024],
+      "stepsize": 100,
+      "randsize": 50,
+      "channels": 2,
+      "alpha": "file://../blobs/blob0_alpha.png",
+      "add": true,
+      "upsampling": 1,
+      "ols": true
+    }
+  },
+  { "path": "textures/cc0textures/decals/LeafSet018_2K_Color2.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "textures/decals/Paper.png", "resize": { "size": [128, 128], "periodic": false } },
+  { "path": "textures/cc0textures/Ground037_2K_Color_Sl_GrassFlower.png", "copy": {} },
+  { "path": "textures/cc0textures/FlowerSet001_2K_Color_2.png", "resize": { "size": [128, 128], "periodic": false } },
+  { "path": "textures/cc0textures/Ground037_2K_Color_Sl_GrassFlowers_3_1.png", "copy": {} },
+  { "path": "textures/cc0textures/Ground037_2K_Color_Sl_GrassFlowers_3_2.png", "copy": {} },
+  {
+    "path": "textures/opengameart/fueguito",
+    "glob": "\\.png$",
+    "luma_chrominance": {
+      "luma": [160, 80],
+      "chrominance": [32, 16]
+    }
+  },
+  {
+    "path": "textures/opengameart/glowCircle_1024.png",
+    "luma_chrominance": {
+      "luma": [256, 256],
+      "chrominance": [16, 16]
+    }
+  },
+  { "path": "textures/noise/checkerboard.png", "copy": {} },
+  { "path": "textures/curb_grass_asphalt.png", "copy": {} },
+  { "path": "textures/debug", "glob": "\\.png$", "copy": {} },
+  { "path": "textures/histograms", "glob": "\\.png$", "copy": {} },
+  { "path": "textures/barriers", "glob": "\\.png$", "copy": {} },
+  { "path": "textures/racing_lines/racing_line.png", "luma": [0, 0] },
+  { "path": "textures/noise/white_blurred.png", "resize": { "size": [256, 256], "periodic": true } },
+  { "path": "textures/noise/lf_heightmap.png", "resize": { "size": [256, 256], "periodic": true } },
+  { "path": "textures/Way_Alpha/Way_Alpha5_512.png", "copy": {} },
+  { "path": "textures/Way_Alpha/Way_Alpha_Long_Grf.png", "copy": {} },
+  { "path": "textures/Way_Alpha/Way_Alpha5_Narrow_512.png", "copy": {} },
+  { "path": "textures/Way_Alpha/Way_Alpha_Narrow_Wet.png", "copy": {} },
+  { "path": "textures/gre42/fountain0", "glob": "\\.png$", "copy": {} },
+  { "path": "sounds/ange-engine-sim", "glob": "meta.json$", "sed": { "substitute": [["\\.wav", ".mp3"]] } },
+  { "path": "sounds/ange-engine-sim", "glob": "loop\\.wav$", "audio": { "format": "MP3", "bitrate": 160 } },
+  { "path": "models/trail_segment.obj", "gzip": {} },
+  { "path": "models/primitives/empty.obj", "copy": {} },
+  { "path": "models/primitives/box.obj", "gzip": {} },
+  { "path": "models/primitives/sphere.obj", "gzip": {} },
+  { "path": "models/gizmo.obj", "gzip": {} },
+  { "path": "models/shop42_ad/shop42_ad.mtl", "gzip": {} },
+  { "path": "models/shop42_ad/shop42_ad.obj", "gzip": {} },
+  { "path": "models/shop42_ad/shop42.png", "copy": {} },
+  { "path": "models/roof.obj", "gzip": {} },
+  { "path": "models/pipe.obj", "gzip": {} },
+  { "path": "models/pipe_box.obj", "gzip": {} },
+  { "path": "models/pipe_box_boundary.obj", "gzip": {} },
+  { "path": "models/road/central1.obj", "gzip": {} },
+  { "path": "models/road/endpoint1.obj", "gzip": {} },
+  { "path": "models/road/low_central.obj", "gzip": {} },
+  { "path": "models/road/low_central2.obj", "gzip": {} },
+  { "path": "models/road/low_central3.obj", "gzip": {} },
+  { "path": "models/road/low_endpoint.obj", "gzip": {} },
+  { "path": "models/road/low_endpoint2.obj", "gzip": {} },
+  { "path": "models/road/low_endpoint3.obj", "gzip": {} },
+  { "path": "models/road/ditch_central.obj", "gzip": {} },
+  { "path": "models/road/ditch_endpoint.obj", "gzip": {} },
+  { "path": "models/road/extrudable.curb-curb.obj", "gzip": {} },
+  { "path": "models/road/extrudable.plain-curb.obj", "gzip": {} },
+  { "path": "models/road/cylinder_central.obj", "gzip": {} },
+  { "path": "models/road/cylinder_endpoint.obj", "gzip": {} },
+  { "path": "models/road/cylinder2_central.obj", "gzip": {} },
+  { "path": "models/road/cylinder2_endpoint.obj", "gzip": {} },
+  { "path": "models/road/bumps_central_d.obj", "gzip": {} },
+  { "path": "models/road/bumps_endpoint_d.obj", "gzip": {} },
+  { "path": "models/road/parking_edge.plain-plain.obj", "gzip": {} },
+  { "path": "models/gre42", "glob": "\\.(obj|mtl)$", "gzip": {} },
+  { "path": "models/gre42", "glob": "\\.png$", "copy": {} },
+  { "path": "models/TransparentBox/tbox.obj", "gzip": {} },
+  { "path": "models/opengameart/Stone_model_tex/stone.obj", "gzip": {} },
+  { "path": "models/opengameart/Stone_model_tex/stone_d1.obj", "gzip": {} },
+  { "path": "models/opengameart/Stone_model_tex/stone_d4.obj", "gzip": {} },
+  { "path": "models/opengameart/desert_rock01/rock_diffuse.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/opengameart/desert_rock01/rocktest_normal.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/opengameart/desert_rock01/rock01.mtl", "gzip": {} },
+  { "path": "models/opengameart/desert_rock01/rock01_mean_d1.obj", "gzip": {} },
+  { "path": "models/opengameart/desert_rock01/rock01_mean_d2.obj", "gzip": {} },
+  { "path": "models/opengameart/desert_rock01/rock01_mean.obj", "gzip": {} },
+  { "path": "models/opengameart/Wood/fence_stick.mtl", "gzip": {} },
+  { "path": "models/opengameart/Wood/fence_stick.obj", "gzip": {} },
+  { "path": "models/opengameart/Dumpster/Dumpster.mtl", "gzip": {} },
+  { "path": "models/opengameart/Dumpster/Dumpster.obj", "gzip": {} },
+  { "path": "models/opengameart/Dumpster/Dirty_Steel_02_UV_H_CM_1.jpg", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/opengameart/trashcan_yethiel/trashcan.mtl", "gzip": {} },
+  { "path": "models/opengameart/trashcan_yethiel/trashcan.obj", "gzip": {} },
+  { "path": "models/opengameart/trashcan_yethiel", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/opengameart/Trashcan2/Trashcan.mtl", "gzip": {} },
+  { "path": "models/opengameart/Trashcan2/Trashcan.obj", "gzip": {} },
+  { "path": "models/opengameart/Trashcan2/Texture", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/opengameart/Mailbox/Mailbox.mtl", "sed": { "substitute": [["\\.png", ".jpg"]], "gzip": true } },
+  { "path": "models/opengameart/Mailbox/Mailbox_flat.obj", "gzip": {} },
+  { "path": "models/opengameart/Mailbox/Texturen", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false, "file_extension": ".jpg" } },
+  { "path": "models/opengameart/Bench/bench.mtl", "gzip": {} },
+  { "path": "models/opengameart/Bench/bench.obj", "gzip": {} },
+  { "path": "models/opengameart/Table_And_Chairs/table_and_chairs.mtl", "gzip": {} },
+  { "path": "models/opengameart/Table_And_Chairs/table_and_chairs.obj", "gzip": {} },
+  { "path": "models/opengameart/Table_And_Chairs/chair.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/gre42/ship0/ship0.obj", "gzip": {} },
+  { "path": "models/opengameart/crate-2/Crate.obj", "gzip": {} },
+  { "path": "models/opengameart/crate-2/Crate.mtl", "sed": { "substitute": 
+    [["map_Kd Crate_Base_Color.png", "map_Kd Crate_Base_Color.luma.png\nmap_Kdc Crate_Base_Color.chrominance.png"]],
+    "gzip": true } },
+  { "path": "models/opengameart/crate-2/Crate_Base_Color.png", "luma_chrominance": { "luma": [512, 512], "chrominance": [64, 64] } },
+  { "path": "models/opengameart/crate-2/Crate_Normal.png", "resize": { "size": [512, 512], "periodic": false } },
+  { "path": "models/opengameart/Hedge", "glob": "\\b(diffuse|normal).tga", "resize": { "size": [256, 256], "periodic": false, "file_extension": ".png" } },
+  { "path": "models/opengameart/Hedge/Long/HedgeLongExp.mtl", "sed": {
+    "substitute": [["diffuse.tga", "diffuse.png"], ["normal.tga", "normal.png"]], "gzip": true } },
+  { "path": "models/opengameart/Hedge/Long/HedgeLongExp.obj", "gzip": {} },
+  { "path": "models/opengameart/Hedge/Small/HedgeSmallExp.mtl", "sed": {
+    "substitute": [["diffuse.tga", "diffuse.png"], ["normal.tga", "normal.png"]], "gzip": true } },
+  { "path": "models/opengameart/Hedge/Small/HedgeSmallExp.obj", "gzip": {} },
+  { "path": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.mtl", "sed": {
+    "substitute": [["diffuse.tga", "diffuse.png"], ["normal.tga", "normal.png"]], "gzip": true } },
+  { "path": "models/opengameart/Hedge/LongRound/HedgeLongRoundExp.obj", "gzip": {} },
+  { "path": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.mtl", "sed": {
+    "substitute": [["diffuse.tga", "diffuse.png"], ["normal.tga", "normal.png"]], "gzip": true } },
+  { "path": "models/opengameart/Hedge/SmallRound/HedgeSmallRoundExp.obj", "gzip": {} },
+  { "path": "models/opengameart/Facade", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/opengameart/Facade", "glob": "\\.mtl$", "sed": {
+    "substitute": [
+      ["Fabric026_2K_Color.jpg", "Fabric026_2K_Color.tiles.json"],
+      ["Metal032_2K_Color.jpg", "Metal032_2K_Color.tiles.json"],
+      ["Metal032_2K_NormalGL.jpg", "Metal032_2K_NormalGL.tiles.json"],
+      ["Metal038_2K_Color.jpg", "Metal038_2K_Color.tiles.json"],
+      ["Metal038_2K_NormalGL.jpg", "Metal038_2K_NormalGL.tiles.json"]],
+    "gzip": true
+  } },
+  { "path": "models/opengameart/Facade", "glob": "\\b(sign\\d+).png$", "copy": {} },
+  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "\\.mtl$", "sed": { "substitute": 
+    [["map_Kd ([^\n]+)\\.png", "map_Kd $1.luma.png\nmap_Kdc $1.chrominance.png"],
+     ["map_d ([^\n]+)\\.png", "map_d $1.luma.png"]],
+    "gzip": true } },
+  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "[\\\\/][^_]+\\.png$", "luma_chrominance": { "luma": [256, 256], "chrominance": [64, 64] } },
+  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "[\\\\/][^_]+_normal\\.png$", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/MakeHuman/female_mh", "glob": "\\.(mhx2|mtl|obj)$", "gzip": {} },
+  { "path": "models/MakeHuman/female_skirt", "glob": "\\.(mhx2|mtl|obj)$", "gzip": {} },
+  { "path": "models/MakeHuman/male_mh", "glob": "\\.(mhx2|mtl|obj)$", "gzip": {} },
+  { "path": "models/MakeHuman/textures", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/sketchfab.com/trailer-with-wood-no2", "glob": "(\\b4-wheels[\\\\/][^\\\\/]+\\.obj|.mtl)$", "gzip": {} },
+  { "path": "models/sketchfab.com/trailer-with-wood-no2/textures", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/SR/FN/FN_wheel.obj", "gzip": {} },
+  { "path": "models/SR/FN/FN_wheel.mtl", "sed": { "substitute": 
+    [["map_Kd textures/FN_wheel.png", "map_Kd textures/FN_wheel.luma.png\nmap_Kdc textures/FN_wheel.chrominance.png"]],
+    "gzip": true } },
+  { "path": "models/SR/FN/FN_wheel_d0.5.obj", "gzip": {} },
+  { "path": "models/SR/FN/FN_wheel_d3.obj", "gzip": {} },
+  { "path": "models/SR/XZ/XZ_wheel.obj", "gzip": {} },
+  { "path": "models/SR/XZ/XZ_wheel.mtl", "sed": { "substitute": 
+    [["map_Kd textures/XZ_Tire.png", "map_Kd textures/XZ_Tire.luma.png\nmap_Kdc textures/XZ_Tire.chrominance.png"]],
+    "gzip": true } },
+  { "path": "models/SR/XZ/XZ_wheel_d1.obj", "gzip": {} },
+  { "path": "models/SR/XZ/XZ_wheel_d3.obj", "gzip": {} },
+  { "path": "models/missiles/missile0", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/sketchfab.com/Skate/source/skate_low.obj", "gzip": {} },
+  { "path": "models/fan.obj", "gzip": {} },
+  { "path": "models/garage/garage.mtl", "sed": {
+    "substitute": [
+      ["Bricks059_2K_Color.jpg", "Bricks059_2K_Color.tiles.json"],
+      ["Bricks059_2K_NormalGL.jpg", "Bricks059_2K_NormalGL.tiles.json"],
+      ["Metal038_2K_Color.jpg", "Metal038_2K_Color.tiles.json"],
+      ["Metal038_2K_NormalGL.jpg", "Metal038_2K_NormalGL.tiles.json"]],
+    "gzip": true
+  } },
+  { "path": "models/garage/garage.obj", "gzip": {} },
+  { "path": "models/cylinder_hitbox.obj", "gzip": {} },
+  { "path": "models/gre42/corner_sign/rect1394.png", "copy": {} },
+  { "path": "models/gre42/traffic_cone/curb.png", "copy": {} },
+  { "path": "textures/proctree/bark.jpg", "resize": { "size": [128, 256], "periodic": false } },
+  { "path": "textures/proctree/twig_g.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "textures/pointer.png", "copy": {} }
+]

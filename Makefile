@@ -3,11 +3,11 @@ SHELL := /bin/bash
 
 ostype != uname
 
-COMPRESS_SOURCE_DATA_DIRS ?= data
+COMPRESS_SOURCE_DATA_DIRS ?= data;compression/data_extra
 COMPRESS_FLAGS ?=
-COMPRESS_CONFIGS ?= $(shell echo "             \
-compressed=compression.json;                   \
-compressed.extended=compression.extended.json" | sed "s/ //g")
+COMPRESS_CONFIGS ?= $(shell echo "                     \
+compression/dest/compressed=compression/src/compression.json;   \
+compression/dest/compressed.extended=compression/src/compression.extended.json" | sed "s/ //g")
 
 BUILD_TARGET ?= build
 SOURCE_C_DIR ?= .
@@ -18,6 +18,11 @@ PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
 RUN_ARGS ?=
+FILE_EXT_ARGS ?=
+ifeq ($(COMPRESSED),1)
+    override ASSET_DIRS := data;compression/dest/compressed;compression/dest/compressed.extended;compression/dest/compressed.private
+	override FILE_EXT_ARGS := --mesh obj.gz --animated_mesh mhx2.gz --audio mp3
+endif
 ifeq ($(HEADLESS),1)
     override RUN_ARGS :=      \
         $(RUN_ARGS)           \
@@ -122,7 +127,7 @@ daemon:
 
 empackage:
 	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
-		python3 /emsdk/upstream/emscripten/tools/file_packager.py \
+		python3 /emsdk/upstream/emscripten/tools/file_packager.py   \
 		public/client/assets.data \
 		--preload data \
 		--preload appdata \
@@ -146,10 +151,12 @@ run:
 		$(PRINT_MATERIALS_ARGS)                                    \
 		--windowed_width 1500                                      \
 		--windowed_height 900                                      \
-		$(CHK_ARGS) $(RUN_ARGS)
+		$(CHK_ARGS) $(FILE_EXT_ARGS) $(RUN_ARGS)
 
 compress:
-	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" --source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" --configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
+	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" \
+		--source_dirs "$(COMPRESS_SOURCE_DATA_DIRS)" \
+		--configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
 	podman-compose -p mgame-serve -f docker-compose.serve.yaml up --build -d
