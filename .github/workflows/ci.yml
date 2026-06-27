@@ -39,6 +39,7 @@ jobs:
             libssl-dev \
             libboost-dev \
             libboost-regex-dev \
+            libboost-url-dev \
             g++
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
