@@ -215,6 +215,7 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRegex.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibRemote.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibSceneGraph.dll \
+			Mlib/$(BUILD_SUBDIR)/Bin/libMlibResourceContext.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibScene.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStats.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStbCpp.dll \
@@ -250,7 +251,7 @@ package:
 	fi
 
 test_package:
-	@if [ "$(SKIP_TESTS)" = 1 ]; then \
+	@if [[ "$(SKIP_TESTS)" = 1 ]]; then \
 		echo "Skipping tests (SKIP_TESTS=1)"; \
 	else \
 		LD_LIBRARY_PATH=$(PACKAGE_DIR) $(PACKAGE_DIR)/download_heightmap --help > /dev/null; \
