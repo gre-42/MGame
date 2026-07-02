@@ -25,86 +25,89 @@ ASSET_DIRS ?= data
 RUN_ARGS ?=
 FILE_EXT_ARGS ?=
 ifeq ($(COMPRESSED),1)
-    override ASSET_DIRS := compression/data;compression/dest/compressed;compression/dest/compressed.extended;compression/dest/compressed.private
+	override ASSET_DIRS := compression/data;compression/dest/compressed;compression/dest/compressed.extended;compression/dest/compressed.private
 	override FILE_EXT_ARGS := --mesh obj.gz --animated_mesh mhx2.gz --audio mp3 --compressed
+	APP_RELDIR := .vanilla_rally_compressed
+else
+	APP_RELDIR := .vanilla_rally
 endif
 ifeq ($(HEADLESS),1)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --remote_site_id 42   \
-        --udp_ip 127.0.0.1    \
-        --udp_port 8042       \
-        --http_ip 127.0.0.1   \
-        --http_port 8082
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--remote_site_id 42   \
+		--udp_ip 127.0.0.1    \
+		--udp_port 8042       \
+		--http_ip 127.0.0.1   \
+		--http_port 8082
 endif
 ifeq ($(REMOTE_ROLE),server)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --remote_site_id 42   \
-        --remote_role server  \
-        --udp_ip 127.0.0.1    \
-        --udp_port 8042
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--remote_site_id 42   \
+		--remote_role server  \
+		--udp_ip 127.0.0.1    \
+		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),client)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --remote_site_id 43   \
-        --remote_role client  \
-        --udp_ip 127.0.0.1    \
-        --udp_port 8042
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--remote_site_id 43   \
+		--remote_role client  \
+		--udp_ip 127.0.0.1    \
+		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),client2)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --remote_site_id 73   \
-        --remote_role client  \
-        --udp_ip 127.0.0.1    \
-        --udp_port 8042
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--remote_site_id 73   \
+		--remote_role client  \
+		--udp_ip 127.0.0.1    \
+		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --remote_site_id 42   \
-        --remote_role server  \
-        --udp_ip 0.0.0.0      \
-        --udp_port 8042
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--remote_site_id 42   \
+		--remote_role server  \
+		--udp_ip 0.0.0.0      \
+		--udp_port 8042
 endif
 ifeq ($(REMOTE_DEBUG),1)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --print_remote_metadata
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--print_remote_metadata
 endif
 ifeq ($(REMOTE_DEBUG),2)
-    override RUN_ARGS :=      \
-        $(RUN_ARGS)           \
-        --print_remote_data   \
-        --print_remote_metadata
+	override RUN_ARGS :=      \
+		$(RUN_ARGS)           \
+		--print_remote_data   \
+		--print_remote_metadata
 endif
 ifeq ($(PACKAGE),0)
-    BIN_DIR := $(BUILD_SUBDIR)
+	BIN_DIR := $(BUILD_SUBDIR)
 else
-    BIN_DIR := $(BIN_ARTIFACT_DIR)
+	BIN_DIR := $(BIN_ARTIFACT_DIR)
 endif
 GDB_ARGS :=
 ifneq ($(GDB),0)
-    GDB_ARGS := gdb -ex='catch throw' -ex=r --args
+	GDB_ARGS := gdb -ex='catch throw' -ex=r --args
 endif
 SHOW_MOUSE_CURSOR_ARGS :=
 ifneq ($(CURSOR),0)
-    SHOW_MOUSE_CURSOR_ARGS := --show_mouse_cursor
+	SHOW_MOUSE_CURSOR_ARGS := --show_mouse_cursor
 endif
 PERF_ARGS :=
 ifeq ($(PERF),1)
-    PERF_ARGS := sudo -E perf record -F 99 -a -g --
+	PERF_ARGS := sudo -E perf record -F 99 -a -g --
 endif
 PRINT_MATERIALS_ARGS :=
 ifeq ($(PMAT),1)
-    PRINT_MATERIALS_ARGS := --print_rendered_materials
+	PRINT_MATERIALS_ARGS := --print_rendered_materials
 endif
 CHK_ARGS :=
 ifeq ($(CHK),1)
-    CHK_ARGS := --check_al_errors --check_gl_errors
+	CHK_ARGS := --check_al_errors --check_gl_errors
 endif
 OMP_ENV :=
 ifeq ($(OMP),0)
-    OMP_ENV := OMP_NUM_THREADS=1
+	OMP_ENV := OMP_NUM_THREADS=1
 endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
@@ -149,7 +152,7 @@ run:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
 		"$(ASSET_DIRS)"                                            \
 		data/levels/main/main.scn.json                             \
-		--app_reldir .vanilla_rally                                \
+		--app_reldir $(APP_RELDIR)                                 \
 		--print_render_residual_time                               \
 		--nsamples_msaa 2                                          \
 		$(SHOW_MOUSE_CURSOR_ARGS)                                  \
