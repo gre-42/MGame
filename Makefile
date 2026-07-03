@@ -137,8 +137,9 @@ empackage:
 	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
 		python3 /emsdk/upstream/emscripten/tools/file_packager.py   \
 		public/client/assets.data \
-		--preload data \
-		--preload appdata \
+		--preload \
+			data \
+			appdata \
 		--js-output=public/client/assets.js \
 		--export-es6
 
@@ -146,10 +147,11 @@ empackage_compressed:
 	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
 		python3 /emsdk/upstream/emscripten/tools/file_packager.py   \
 		public/client/assets_compressed.data \
-		--preload compression/data \
-		--preload compression/dest/compressed \
-		--preload compression/dest/compressed.extended \
-		--preload appdata \
+		--preload \
+			compression/data \
+			compression/dest/compressed \
+			compression/dest/compressed.extended \
+			appdata \
 		--js-output=public/client/assets_compressed.js \
 		--export-es6
 
