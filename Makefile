@@ -142,6 +142,17 @@ empackage:
 		--js-output=public/client/assets.js \
 		--export-es6
 
+empackage_compressed:
+	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
+		python3 /emsdk/upstream/emscripten/tools/file_packager.py   \
+		public/client/assets_compressed.data \
+		--preload compression/data \
+		--preload compression/dest/compressed \
+		--preload compression/dest/compressed.extended \
+		--preload appdata \
+		--js-output=public/client/assets_compressed.js \
+		--export-es6
+
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
 
@@ -154,7 +165,6 @@ run:
 		data/levels/main/main.scn.json                             \
 		--app_reldir $(APP_RELDIR)                                 \
 		--print_render_residual_time                               \
-		--nsamples_msaa 2                                          \
 		$(SHOW_MOUSE_CURSOR_ARGS)                                  \
 		$(PRINT_MATERIALS_ARGS)                                    \
 		--windowed_width 1500                                      \

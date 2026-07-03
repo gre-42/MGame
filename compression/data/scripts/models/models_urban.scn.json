@@ -874,7 +874,7 @@
             "top_plane": 6
           },
           "texture_size": [1024, 1024],
-          "nsamples_msaa": 4,
+          "nsamples_msaa": "%imposter_nsamples_msaa",
           "dpi": 96
         }
       }

@@ -20,7 +20,7 @@
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script type="module">
       import createModule from '../game/RenderSceneFileActivity.js';
-      import assetLoaderFactory from './assets.js';
+      import assetLoaderFactory from './assets_compressed.js';
       const config = {
         preRun: (Module) => {
           assetLoaderFactory(Module);
@@ -32,7 +32,13 @@
           console.error(text);
         },
         canvas: document.getElementById('canvas'),
-        arguments: ["data", "/data/levels/main/main.scn.json"],
+        arguments: [
+          "compression/data;compression/dest/compressed;compression/dest/compressed.extended",
+          "compression/dest/compressed/levels/main/main.scn.json",
+          "--mesh", "obj.gz",
+          "--animated_mesh", "mhx2.gz",
+          "--audio", "mp3",
+          "--compressed"],
         websocket: {
           url: 'ws://ws',
           subprotocol: 'binary'
