@@ -54,7 +54,7 @@ services:
       NGINX_ENVSUBST_FILTER: "REMOTE_SECRET"
     volumes:
       - ./nginx.conf.template:/tmp/default.conf.template:ro,U
-      - bitnami_nginx_config:/opt/bitnami/nginx/conf/server_blocks:rw,U
+      - ./bitnami_nginx_config:/opt/bitnami/nginx/conf/server_blocks:rw,U
       - ./certs:/etc/nginx/certs:ro,U
     command: >
       /bin/bash -c "
