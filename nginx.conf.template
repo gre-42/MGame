@@ -7,6 +7,9 @@ server {
     ssl_certificate_key /etc/nginx/certs/myfps.fun.key;
 
     location / {
+        if ($arg_remote_secret != "$REMOTE_SECRET") {
+            return 403;
+        }
         proxy_pass http://game:8082;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
