@@ -6,14 +6,23 @@ server {
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/myfps.fun.key;
 
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    location /game/ {
+        proxy_pass http://game:8082;
+    }
+
+    location /client/ {
+        proxy_pass http://game:8082;
+    }
+
     location / {
         if ($arg_remote_secret != "$REMOTE_SECRET") {
             return 403;
         }
         proxy_pass http://game:8082;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
     }
 }

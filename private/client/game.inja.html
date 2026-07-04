@@ -19,8 +19,8 @@
   <body>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script type="module">
-      import createModule from '../game/RenderSceneFileActivity.js?remote_secret={{remote_secret}}';
-      import assetLoaderFactory from './assets_compressed.js?remote_secret={{remote_secret}}';
+      import createModule from '../game/RenderSceneFileActivity.js';
+      import assetLoaderFactory from './assets_compressed.js';
       const config = {
         preRun: (Module) => {
           assetLoaderFactory(Module);
@@ -42,12 +42,6 @@
         websocket: {
           url: 'ws://ws',
           subprotocol: 'binary'
-        },
-        locateFile: function (path, prefix) {
-          const originalUrl = prefix + path;
-          const url = new URL(originalUrl, window.location.href);
-          url.searchParams.append('remote_secret', '{{remote_secret}}');
-          return url.toString();
         }
       };
       config.canvas.width = document.body.clientWidth;
