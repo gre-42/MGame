@@ -8,7 +8,7 @@
         <li><a href="client/game?remote_site_id=43&remote_role=client{% if remote_secret %}&remote_secret={{remote_secret}}{% endif %}{% if remote_ip %}&remote_ip={{remote_ip}}{% endif %}&remote_port=8443{% if cert_hash %}&cert_hash={{cert_hash}}{% endif %}">Multiplayer, ID=43</a></li>
         <li><a href="client/game?remote_site_id=73&remote_role=client{% if remote_secret %}&remote_secret={{remote_secret}}{% endif %}{% if remote_ip %}&remote_ip={{remote_ip}}{% endif %}&remote_port=8443{% if cert_hash %}&cert_hash={{cert_hash}}{% endif %}">Multiplayer, ID=73</a></li>
     </ul>
-    <button data-endpoint="new_game">New game</button>
+    <button data-endpoint="new_game{% if remote_secret %}?remote_secret={{remote_secret}}{% endif %}">New game</button>
     <h2>Configuration</h2>
     {{ render_lists(config) }}
 
