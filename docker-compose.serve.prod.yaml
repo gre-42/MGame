@@ -27,8 +27,6 @@ services:
       - ./public/server:/app/public/server:ro
       - ./public/client:/app/public/client:ro
       - ./Mlib/E32URelease/Bin:/app/public/game:ro
-    networks:
-      - game-net
 
   wt-udp-proxy:
     build:
@@ -42,8 +40,6 @@ services:
       WT_VERBOSE: "0"
     volumes:
       - ./certs:/etc/ssl/certs
-    networks:
-      - game-net
 
   nginx-proxy:
     # Built natively for rootless environments
@@ -53,11 +49,5 @@ services:
       - "80:8080/tcp"
       - "443:8443/tcp"
     volumes:
-      - ./nginx.conf:/opt/bitnami/nginx/conf/nginx.conf:ro,U
+      - ./nginx.conf:/opt/bitnami/nginx/conf/server_blocks/my_proxy.conf:ro,U
       - ./certs:/etc/nginx/certs:ro,U
-    networks:
-      - game-net
-
-networks:
-  game-net:
-    driver: bridge
