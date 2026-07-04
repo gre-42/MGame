@@ -42,6 +42,15 @@
         websocket: {
           url: 'ws://ws',
           subprotocol: 'binary'
+        },
+        locateFile: function (path, prefix) {
+          if (path.endsWith('.wasm') || path.endsWith('.data')) {
+            const originalUrl = prefix + path;
+            const url = new URL(originalUrl, window.location.href);
+            url.searchParams.append('remote_secret', '{{remote_secret}}');
+            return url.toString();
+          }
+          return prefix + path;
         }
       };
       config.canvas.width = document.body.clientWidth;
