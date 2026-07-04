@@ -109,6 +109,10 @@ OMP_ENV :=
 ifeq ($(OMP),0)
 	OMP_ENV := OMP_NUM_THREADS=1
 endif
+SERVE := prod
+ifeq ($(DEV),1)
+	SERVE := dev
+endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
 
@@ -179,13 +183,13 @@ compress:
 		--configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
-	podman-compose -p mgame-serve -f docker-compose.serve.yaml up --build -d
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml up --build -d
 
 headless_down:
-	podman-compose -p mgame-serve -f docker-compose.serve.yaml down
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml down
 
 headless_logs:
-	podman-compose -f docker-compose.serve.yaml -p mgame-serve logs -f
+	podman-compose -f docker-compose.serve.$(SERVE).yaml -p mgame-serve logs -f
 
 emsdk_up:
 	podman-compose -p mgame-emsdk -f docker-compose.dev.emsdk.yaml up -d

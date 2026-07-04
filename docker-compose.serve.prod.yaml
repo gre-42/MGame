@@ -20,7 +20,6 @@ services:
       "--flavor", "extended"
     ]
     environment:
-      CERT_HASH_FILENAME: /app/wt-hash.json
       LD_LIBRARY_PATH: Build
     volumes:
       - ./data:/app/data:ro
@@ -28,7 +27,6 @@ services:
       - ./public/server:/app/public/server:ro
       - ./public/client:/app/public/client:ro
       - ./Mlib/E32URelease/Bin:/app/public/game:ro
-      - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
     networks:
       - game-net
 
@@ -60,38 +58,3 @@ services:
 networks:
   game-net:
     driver: bridge
-
-  # udp-proxy:
-  #   image: docker.io/subfuzion/netcat
-  #   ports:
-  #     - "8042:8042/udp"
-  #   command: ["-u", "-l", "-p", "8042"]
-  # # This works, but was replaced with Boost.Beast in the main application
-  # udp-proxy:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile.udp-proxy
-  #   volumes:
-  #     - ./websocket_to_udp.py:/usr/bin/websocket_to_udp.py
-  #   ports:
-  #     - "8043:8043/tcp"
-  #   # Test using: echo "Hello Game Server" | websocat -n1 ws://127.0.0.1:8043/ws
-  #   command: ["python3", "/usr/bin/websocket_to_udp.py",
-  #             "--ws_host", "0.0.0.0",
-  #             "--ws_port", "8043",
-  #             "--udp_host", "game",
-  #             "--udp_port", "8042",
-  #             "--listen_udp_port", "5042"]
-  # # Did not get this to work
-  # udp-proxy:
-  #   image: ghcr.io/vi/websocat
-  #   ports:
-  #     - "8043:8043"
-  #   # entrypoint: ["sleep", "infinity"]
-  #   # Listen on WS (binary mode), forward to UDP
-  #   # command: ["-u", "--binary", "ws-l:0.0.0.0:8043", "udp:game:8042"]
-  #   # command: ["-u", "--binary", "ws-l:0.0.0.0:8043", "udp:game:8042"]
-  #   entrypoint: ["/bin/sh"]
-  #   command: >
-  #     "target_ip=$(getent hosts game | awk '{print $$1}') &&
-  #      websocat --binary ws-l:0.0.0.0:8043 udp:$${target_ip}:8042"
