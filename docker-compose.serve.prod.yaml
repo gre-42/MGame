@@ -21,6 +21,7 @@ services:
     ]
     environment:
       LD_LIBRARY_PATH: Build
+      REMOTE_SECRET: "${REMOTE_SECRET}"
     volumes:
       - ./data:/app/data:ro
       - ./private:/app/private:ro
