@@ -41,7 +41,7 @@ services:
       TARGET_UDP_PORT: "8042"
       WT_VERBOSE: "0"
     volumes:
-      - ./Mlib/Web_Transport_Udp/certs:/etc/ssl/certs
+      - ./certs:/etc/ssl/certs
     networks:
       - game-net
 
