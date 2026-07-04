@@ -18,7 +18,7 @@
       {
         "call": "load_scene",
         "arguments": {
-          "filename": "$__DIR__/manifest_jb_race.json"
+          "filename": "file://$__DIR__/manifest_jb_race.json"
         }
       }
     ]
