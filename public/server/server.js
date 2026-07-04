@@ -22,7 +22,7 @@ async function initDynamicSelect(selectElement) {
     let loadedItems = [];
 
     try {
-        if (statusElement) statusElement.textContent = 'Lade Daten...';
+        if (statusElement) statusElement.textContent = 'Loading data...';
 
         const [itemsResponse, selectedResponse] = await Promise.all([
             fetchSafe(itemsUrl),
