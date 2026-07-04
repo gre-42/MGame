@@ -19,8 +19,8 @@
   <body>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script type="module">
-      import createModule from '../game/RenderSceneFileActivity.js';
-      import assetLoaderFactory from './assets_compressed.js';
+      import createModule from '../game/RenderSceneFileActivity.js?remote_secret={{remote_secret}}';
+      import assetLoaderFactory from './assets_compressed.js?remote_secret={{remote_secret}}';
       const config = {
         preRun: (Module) => {
           assetLoaderFactory(Module);
