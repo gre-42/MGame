@@ -48,8 +48,6 @@ services:
       - game-net
 
   nginx-proxy:
-    profiles:
-      - prod
     image: docker.io/library/nginx:alpine
     container_name: nginx-proxy
     ports:

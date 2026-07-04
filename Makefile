@@ -163,15 +163,15 @@ run:
 	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=$(SOURCE_C_DIR)/suppressions.txt" \
 	ENABLE_OSM_MAP_CACHE=$(CACHE)                                  \
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
-		"$(ASSET_DIRS)"                                            \
-		data/levels/main/main.scn.json                             \
-		--app_reldir $(APP_RELDIR)                                 \
-		--print_render_residual_time                               \
-		$(SHOW_MOUSE_CURSOR_ARGS)                                  \
-		$(PRINT_MATERIALS_ARGS)                                    \
-		--windowed_width 1500                                      \
-		--windowed_height 900                                      \
-		$(CHK_ARGS) $(FILE_EXT_ARGS) $(RUN_ARGS)
+	    "$(ASSET_DIRS)"                                            \
+	    data/levels/main/main.scn.json                             \
+	    --app_reldir $(APP_RELDIR)                                 \
+	    --print_render_residual_time                               \
+	    $(SHOW_MOUSE_CURSOR_ARGS)                                  \
+	    $(PRINT_MATERIALS_ARGS)                                    \
+	    --windowed_width 1500                                      \
+	    --windowed_height 900                                      \
+	    $(CHK_ARGS) $(FILE_EXT_ARGS) $(RUN_ARGS)
 
 compress:
 	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_ARTIFACT_DIR)/compress_images" \
