@@ -3,9 +3,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dedicated
-    ports:
-      - "8042:8042/udp"
-      - "8082:8082/tcp"
     command: [
       "Build/render_scene_file",
       "data",
