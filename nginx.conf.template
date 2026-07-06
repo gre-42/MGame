@@ -13,10 +13,12 @@ server {
 
     location /game/ {
         proxy_pass http://game:8082;
+        add_header Cache-Control "public, max-age=31536000, immutable";
     }
 
     location /client/ {
         proxy_pass http://game:8082;
+        add_header Cache-Control "public, max-age=31536000, immutable";
     }
 
     location / {
