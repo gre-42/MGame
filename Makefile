@@ -145,7 +145,8 @@ empackage:
 			data \
 			appdata \
 		--js-output=public/client/assets.js \
-		--export-es6
+		--export-es6 \
+		--use-preload-cache
 
 empackage_compressed:
 	podman run --rm -it -v "$(PWD):/src:Z" -w /src emscripten/emsdk \
@@ -157,7 +158,8 @@ empackage_compressed:
 			compression/dest/compressed.extended \
 			appdata \
 		--js-output=public/client/assets_compressed.js \
-		--export-es6
+		--export-es6 \
+		--use-preload-cache
 
 build:
 	$(MAKE) $(BUILD_TARGET) -C $(SOURCE_C_DIR)/Mlib
