@@ -27,7 +27,7 @@ services:
       - ./private:/app/private:ro
       - ./public/server:/app/public/server:ro
       - ./public/client:/app/public/client:ro
-      - ./Mlib/E32URelease/Bin:/app/public/game:ro
+      - ./Mlib/E64URelease/Bin:/app/public/game:ro
       - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
     networks:
       - game-net

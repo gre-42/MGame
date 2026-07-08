@@ -25,7 +25,7 @@ services:
       - ./private:/app/private:ro
       - ./public/server:/app/public/server:ro
       - ./public/client:/app/public/client:ro
-      - ./Mlib/E32URelease/Bin:/app/public/game:ro
+      - ./Mlib/E64URelease/Bin:/app/public/game:ro
 
   wt-udp-proxy:
     build:
