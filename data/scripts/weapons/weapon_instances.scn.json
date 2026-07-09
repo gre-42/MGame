@@ -183,20 +183,23 @@
           "punch_angle_node": "main_gun_punch_angle_node$suffix",
           "punch_angle_idle_std": 0.1,
           "punch_angle_shoot_std": 0.3,
-          "generate_muzzle_flash": [
-            {
-              "playback": "_generate_muzzle_flash",
-              "arguments": {
-                "resource": "muzzle_flash_0_3d_orange_brown"
+          "generate_muzzle_flash": {
+            "required": "%if_graphics",
+            "execute": [
+              {
+                "playback": "_generate_muzzle_flash",
+                "arguments": {
+                  "resource": "muzzle_flash_0_3d_orange_brown"
+                }
+              },
+              {
+                "playback": "_generate_muzzle_flash_closeup",
+                "arguments": {
+                  "resource": "muzzle_flash_0_3d_orange_brown"
+                }
               }
-            },
-            {
-              "playback": "_generate_muzzle_flash_closeup",
-              "arguments": {
-                "resource": "muzzle_flash_0_3d_orange_brown"
-              }
-            }
-          ],
+            ]
+          },
           "cool_down": "%cool_down",
           "ammo_type": "%ammo_type",
           "bullet_type": "%bullet_type",
