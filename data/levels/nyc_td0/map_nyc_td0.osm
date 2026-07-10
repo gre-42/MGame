@@ -20,7 +20,7 @@
   </node>
   <node id='-146918' action='modify' visible='true' lat='40.71137258872' lon='-73.99245309629' />
   <node id='-146919' action='modify' visible='true' lat='40.71137591891' lon='-73.99241672912' />
-  <node id='-146920' action='modify' visible='true' lat='40.70933977081' lon='-73.99429938541'>
+  <node id='-146920' action='modify' visible='true' lat='40.70932181604' lon='-73.99428754233'>
     <tag k='model' v='frag_grenade_depot' />
     <tag k='supplies:beretta92_ammo' v='100' />
     <tag k='supplies:frag_grenade' v='8' />
@@ -28,8 +28,8 @@
     <tag k='supplies:m72_law_rocket' v='10' />
     <tag k='supplies:meta:cooldown_seconds' v='20' />
   </node>
-  <node id='-146921' action='modify' visible='true' lat='40.7093171976' lon='-73.99431256375' />
-  <node id='-146922' action='modify' visible='true' lat='40.70932052788' lon='-73.99427619658' />
+  <node id='-146921' action='modify' visible='true' lat='40.70929924282' lon='-73.99430072067' />
+  <node id='-146922' action='modify' visible='true' lat='40.7093025731' lon='-73.9942643535' />
   <node id='-146923' action='modify' visible='true' lat='40.71159587518' lon='-73.99424465168'>
     <tag k='model' v='frag_grenade_depot' />
     <tag k='supplies:beretta92_ammo' v='100' />
@@ -54,6 +54,18 @@
   <node id='-146933' action='modify' visible='true' lat='40.70972682334' lon='-73.99248552919' />
   <node id='-150772' action='modify' visible='true' lat='40.71063371628' lon='-73.99232248815' />
   <node id='-150773' action='modify' visible='true' lat='40.71075257625' lon='-73.99236021004' />
+  <node id='-154622' action='modify' visible='true' lat='40.70990371741' lon='-73.99627805519' />
+  <node id='-154623' action='modify' visible='true' lat='40.70984621237' lon='-73.99626901812' />
+  <node id='-154624' action='modify' visible='true' lat='40.70972078256' lon='-73.9961904864'>
+    <tag k='model' v='frag_grenade_depot' />
+    <tag k='supplies:beretta92_ammo' v='100' />
+    <tag k='supplies:frag_grenade' v='8' />
+    <tag k='supplies:m4a1_ammo' v='200' />
+    <tag k='supplies:m72_law_rocket' v='10' />
+    <tag k='supplies:meta:cooldown_seconds' v='20' />
+  </node>
+  <node id='-154625' action='modify' visible='true' lat='40.70969820948' lon='-73.99620366474' />
+  <node id='-154626' action='modify' visible='true' lat='40.70970153974' lon='-73.99616729757' />
   <way id='-240287' action='modify' visible='true'>
     <nd ref='-143034' />
     <nd ref='-143035' />
@@ -119,5 +131,17 @@
     <nd ref='-150772' />
     <tag k='spawn:group' v='tank0' />
     <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-254483' action='modify' visible='true'>
+    <nd ref='-154622' />
+    <nd ref='-154623' />
+    <tag k='spawn:group' v='player2' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+  <way id='-254484' action='modify' visible='true'>
+    <nd ref='-154624' />
+    <nd ref='-154625' />
+    <nd ref='-154626' />
+    <nd ref='-154624' />
   </way>
 </osm>
