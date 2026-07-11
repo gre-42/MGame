@@ -113,6 +113,10 @@ SERVE := prod
 ifeq ($(DEV),1)
 	SERVE := dev
 endif
+BUILD_FLAG := --build
+ifeq ($(BUILD),0)
+	BUILD_FLAG :=
+endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
 
@@ -185,7 +189,7 @@ compress:
 		--configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
-	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml up --build -d
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml up $(BUILD_FLAG) -d
 
 headless_down:
 	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml down

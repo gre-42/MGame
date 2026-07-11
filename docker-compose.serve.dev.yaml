@@ -22,6 +22,7 @@ services:
     environment:
       CERT_HASH_FILENAME: /app/wt-hash.json
       LD_LIBRARY_PATH: Build
+      REMOTE_IP: localhost
     volumes:
       - ./data:/app/data:ro
       - ./private:/app/private:ro
@@ -29,8 +30,6 @@ services:
       - ./public/client:/app/public/client:ro
       - ./Mlib/E64URelease/Bin:/app/public/game:ro
       - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
-    networks:
-      - game-net
 
   wt-udp-proxy:
     build:
@@ -44,12 +43,6 @@ services:
       WT_VERBOSE: "0"
     volumes:
       - ./Mlib/Web_Transport_Udp/certs:/etc/ssl/certs
-    networks:
-      - game-net
-
-networks:
-  game-net:
-    driver: bridge
 
   # udp-proxy:
   #   image: docker.io/subfuzion/netcat
