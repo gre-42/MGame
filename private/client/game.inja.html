@@ -58,6 +58,7 @@
       });
       createModule(config).then((Module) => {
         console.log("WASM Module successfully initialized!");
+        window.ModuleForDebugging = Module;
       });
     </script>
   </body>
