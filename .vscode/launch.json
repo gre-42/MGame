@@ -19,7 +19,7 @@
                 "--devel_mode",
                 "--flavor", "extended",
                 "--user_count", "1",
-                "--remote_site_id", "42", "--remote_role", "server", "--remote_ip", "127.0.0.1", "--remote_port", "8042",
+                "--remote_site_id", "42", "--remote_role", "server", "--udp_ip", "127.0.0.1", "--udp_port", "8042",
                 "--app_reldir", ".osm_rally"
                 ],
             "stopAtEntry": false,
@@ -55,7 +55,7 @@
                 "--devel_mode",
                 "--flavor", "extended",
                 "--user_count", "1",
-                "--remote_site_id", "43", "--remote_role", "client", "--remote_ip", "127.0.0.1", "--remote_port", "8042",
+                "--remote_site_id", "43", "--remote_role", "client", "--udp_ip", "127.0.0.1", "--udp_port", "8042",
                 "--app_reldir", ".osm_rally_client"
                 ],
             "stopAtEntry": false,
