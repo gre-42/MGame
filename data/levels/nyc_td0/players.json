@@ -2,7 +2,9 @@
   "library": "teams",
   "teams": {
     "red": { "style": { "color": [1, 0.8, 0.8] } },
-    "blue": { "style": { "color": [0.8, 0.8, 1] } }
+    "blue": { "style": { "color": [0.8, 0.8, 1] } },
+    "green": { "style": { "color": [0.8, 1, 0.8] } },
+    "none": { "style": { "color": [1, 1, 1] } }
   },
   "prototypes": {
     "spawner": {
@@ -83,7 +85,7 @@
     {
       "required": [["%true", "(%total_user_count >= 3)"]],
       "inherits_from": ["spawner", "player", "pc"],
-      "controller": "pc", "name": "you", "team": "blue", "behavior": "none",
+      "controller": "pc", "name": "you", "team": "green", "behavior": "none",
       "user": {
         "rank": 2
       },
@@ -94,7 +96,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_AH_64", "team": "red",
+      "name": "extra_AH_64", "team": "none",
       "spawn": {
         "group": "heli0",
         "vehicle": { "type": "AH_64" }
@@ -102,7 +104,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank0", "team": "red",
+      "name": "extra_tiger_tank0", "team": "none",
       "spawn": {
         "group": "tank0",
         "vehicle": { "type": "tiger_tank" }
@@ -110,7 +112,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank1", "team": "red",
+      "name": "extra_tiger_tank1", "team": "none",
       "spawn": {
         "group": "tank1",
         "vehicle": { "type": "tiger_tank" }
@@ -118,7 +120,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank2", "team": "red",
+      "name": "extra_tiger_tank2", "team": "none",
       "spawn": {
         "group": "tank2",
         "vehicle": { "type": "tiger_tank" }
@@ -126,7 +128,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_van0", "team": "red",
+      "name": "extra_van0", "team": "none",
       "spawn": {
         "group": "car0",
         "vehicle": { "type": "van0" }
@@ -134,7 +136,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_sports_car0", "team": "red",
+      "name": "extra_sports_car0", "team": "none",
       "spawn": {
         "group": "car1",
         "vehicle": { "type": "sports_car0" }
@@ -142,7 +144,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_ship0", "team": "red",
+      "name": "extra_ship0", "team": "none",
       "spawn": {
         "group": "ship0",
         "vehicle": { "type": "ship0" }
