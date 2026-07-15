@@ -102,9 +102,25 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank", "team": "red",
+      "name": "extra_tiger_tank0", "team": "red",
       "spawn": {
         "group": "tank0",
+        "vehicle": { "type": "tiger_tank" }
+      }
+    },
+    {
+      "inherits_from": ["spawner"],
+      "name": "extra_tiger_tank1", "team": "red",
+      "spawn": {
+        "group": "tank1",
+        "vehicle": { "type": "tiger_tank" }
+      }
+    },
+    {
+      "inherits_from": ["spawner"],
+      "name": "extra_tiger_tank2", "team": "red",
+      "spawn": {
+        "group": "tank2",
         "vehicle": { "type": "tiger_tank" }
       }
     },
