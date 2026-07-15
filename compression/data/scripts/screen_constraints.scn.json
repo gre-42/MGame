@@ -5,7 +5,7 @@
   { "comment": "Highscore" },
   { "call": "additive_screen_constraint", "arguments": {"name": "highscore_left",   "value": -2.5, "anchor": "end", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "highscore_right",  "value": 0,    "anchor": "end", "units": "inches"} },
-  { "call": "additive_screen_constraint", "arguments": {"name": "highscore_bottom", "value": -0.5, "anchor": "end", "units": "inches"} },
+  { "call": "additive_screen_constraint", "arguments": {"name": "highscore_bottom", "value": -0.6, "anchor": "end", "units": "inches"} },
   { "call": "additive_screen_constraint", "arguments": {"name": "highscore_top",    "value": 0,    "anchor": "end", "units": "inches"} },
   { "comment": "Log" },
   { "call": "additive_screen_constraint", "arguments": {"name": "log_left",   "value": 0,  "anchor": "highscore_left",   "units": "inches"} },
