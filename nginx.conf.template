@@ -2,7 +2,7 @@ server {
     listen 8080;
     server_name myfps.fun;
 
-    return 301 https://$host:8443$request_uri;
+    return 301 https://$host$request_uri;
 }
 
 server {
