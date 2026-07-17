@@ -1,5 +1,11 @@
 server {
     listen 8080;
+    server_name myfps.fun;
+
+    return 301 https://$host:8443$request_uri;
+}
+
+server {
     listen 8443 ssl;
     server_name myfps.fun;
 
