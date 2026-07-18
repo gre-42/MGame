@@ -7,23 +7,21 @@
   },
   "on_init": {
     "declare_macro": "remote.level.load_jb_race",
-    "content": [
-      {
-        "call": "globals",
-        "arguments": {
-          "loaded_level_id": "jb_race",
-          "minimap_file": null
-        }
-      },
-      {
-        "call": "load_scene",
-        "arguments": {
-          "filename": "file://$__DIR__/manifest_jb_race.json"
-        }
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_jb_race.json"
       }
-    ]
+    }
   },
   "on_execute": [
+    {
+      "call": "globals",
+      "arguments": {
+        "loaded_level_id": "jb_race",
+        "minimap_file": null
+      }
+    },
     {"include": "osm_resource_jb_race_open_alpha.scn.json"},
     {"include": "scene_jb_race.scn.json"}
   ],

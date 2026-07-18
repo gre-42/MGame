@@ -5,15 +5,31 @@
     "fixed": [["%if_devel", "(%flavor == 'extended')"], "(%user_count <= %max_users)"],
     "dynamic": "(%selected_game_mode in %game_modes)"
   },
-  "on_execute": {
-    "include": "scene_arena_humans.scn.json"
+  "on_init": {
+    "declare_macro": "remote.level.load_arena_humans",
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_arena_humans.json"
+      }
+    }
   },
+  "on_execute": [
+    {
+      "call": "globals",
+      "arguments": {
+        "minimap_file": null
+      }
+    },
+    {
+      "include": "scene_arena_humans.scn.json"
+    }
+  ],
   "on_before_select": {
     "call": "globals",
     "arguments": {
       "selected_level_id": "arena_humans",
-      "level_icon_file": "file://levels/arena_humans/icon.png",
-      "minimap_file": null
+      "level_icon_file": "file://levels/arena_humans/icon.png"
     }
   },
   "database": {

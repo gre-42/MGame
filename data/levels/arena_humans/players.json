@@ -4,80 +4,88 @@
     "red": { "style": { "color": [1, 0.8, 0.8] } },
     "blue": { "style": { "color": [0.8, 0.8, 1] } }
   },
-  "defaults": {
-    "player_role": "competitor",
-    "unstuck_mode": "reverse",
-    "behavior": "fighter",
-    "seat": "driver",
-    "skills": {
-      "ai": {
-        "can_drive": true,
-        "can_aim": true,
-        "can_shoot": true,
-        "can_select_opponent": true,
-        "can_select_weapon": true,
-        "velocity_error_std": 0.3,
-        "yaw_error_std": 0.02,
-        "pitch_error_std": 0.02,
-        "error_alpha": 0.002,
-        "respawn_cooldown_time": 0
-      },
-      "user": {
-        "can_drive": false,
-        "can_aim": false,
-        "can_shoot": false
+  "prototypes": {
+    "spawner": {
+      "skills": {
+        "ai": {
+          "velocity_error_std": 0.3,
+          "yaw_error_std": 0.02,
+          "pitch_error_std": 0.02,
+          "error_alpha": 0.002,
+          "respawn_cooldown_time": 0
+        }
       }
-    }
-  },
-  "players": [
-    {
-      "controller": "pc", "name": "you", "team": "red",
-      "user": {
-        "rank": 0
-      },
+    },
+    "player": {
+      "player_role": "competitor",
+      "unstuck_mode": "reverse",
+      "behavior": "fighter",
+      "seat": "driver"
+    },
+    "npc": {
+      "skills": {
+        "ai": {
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true,
+          "can_select_opponent": true,
+          "can_select_weapon": true
+        },
+        "user": {
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false
+        }
+      }
+    },
+    "pc": {
       "skills": {
         "ai": {
           "can_drive": false,
           "can_aim": false,
-          "can_shoot": false
+          "can_shoot": false,
+          "can_select_opponent": false,
+          "can_select_weapon": false
         },
         "user": {
           "can_drive": true,
           "can_aim": true,
           "can_shoot": true
         }
+      }
+    }
+  },
+  "players": [
+    {
+      "required": [["%true", "(%total_user_count >= 1)"]],
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": {
+        "rank": 0
       },
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
-      "required": "(%total_user_count >= 2)",
+      "required": [["%true", "(%total_user_count >= 2)"]],
+      "inherits_from": ["spawner", "player", "pc"],
       "controller": "pc", "name": "you", "team": "blue",
       "user": {
         "rank": 1
       },
-      "skills": {
-        "ai": {
-            "can_drive": false,
-            "can_aim": false,
-            "can_shoot": false
-        },
-        "user": {
-            "can_drive": true,
-            "can_aim": true,
-            "can_shoot": true
-        }
-      },
       "spawn": { "vehicle": { "type": "male_mh" } }
     },
     {
+      "inherits_from": ["spawner", "player", "npc"],
       "controller": "npc", "name": "npc1", "team": "red",
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
+      "inherits_from": ["spawner", "player", "npc"],
       "controller": "npc", "name": "npc2", "team": "blue",
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
+      "inherits_from": ["spawner", "player", "npc"],
       "controller": "npc", "name": "npc3", "team": "blue",
       "spawn": { "vehicle": { "type": "female_mh" } }
     }
