@@ -6,6 +6,12 @@
       "user_count": "%selected_user_count"
     }
   },
+  {
+    "call": "set_user_count",
+    "arguments": {
+      "user_count": "%user_count"
+    }
+  },
   {"include": "color_profiles.scn.json"},
   {"include": "assets.scn.json"},
   {"playback": "load_languages"},
