@@ -7,12 +7,18 @@
   },
   "on_init": {
     "declare_macro": "remote.level.load_race_track0",
-    "content": { "call": "load_scene", "arguments": { "filename": "file://$__DIR__/scene_race_track0.scn.json" } }
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_race_track0.json"
+      }
+    }
   },
   "on_execute": [
     {
       "call": "globals",
       "arguments": {
+        "loaded_level_id": "race_track0",
         "minimap_file": null
       }
     },
