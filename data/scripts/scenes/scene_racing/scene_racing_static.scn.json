@@ -19,7 +19,7 @@
         "gid": { "group": "translations", "id": "scene" },
         "primary_user_id": 0,
         "remote": true,
-        "with_countdown_start": true
+        "with_countdown_start": "(%remote_role != 'client')"
       }
     },
     {
