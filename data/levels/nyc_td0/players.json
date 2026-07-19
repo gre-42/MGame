@@ -128,18 +128,18 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_van0", "team": "none",
+      "name": "extra_sports_car0", "team": "none",
       "spawn": {
         "group": "car0",
-        "vehicle": { "type": "van0" }
+        "vehicle": { "type": "sports_car0" }
       }
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_sports_car0", "team": "none",
+      "name": "extra_F_35", "team": "none",
       "spawn": {
-        "group": "car1",
-        "vehicle": { "type": "sports_car0" }
+        "group": "plane0",
+        "vehicle": { "type": "F_35" }
       }
     },
     {

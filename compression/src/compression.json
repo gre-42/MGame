@@ -1039,7 +1039,7 @@
   { "path": "models/opengameart/Table_And_Chairs/chair.png", "resize": { "size": [256, 256], "periodic": false } },
   { "path": "models/gre42/ship0/ship0.obj", "gzip": {} },
   { "path": "models/opengameart/crate-2/Crate.obj", "gzip": {} },
-  { "path": "models/opengameart/crate-2/Crate.mtl", "sed": { "substitute": 
+  { "path": "models/opengameart/crate-2/Crate.mtl", "sed": { "substitute":
     [["map_Kd Crate_Base_Color.png", "map_Kd Crate_Base_Color.luma.png\nmap_Kdc Crate_Base_Color.chrominance.png"]],
     "gzip": true } },
   { "path": "models/opengameart/crate-2/Crate_Base_Color.png", "luma_chrominance": { "luma": [512, 512], "chrominance": [64, 64] } },
@@ -1069,7 +1069,7 @@
   } },
   { "path": "models/opengameart/Facade", "glob": "\\b(sign\\d+).png$", "copy": {} },
   { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "\\.obj$", "gzip": {} },
-  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "\\.mtl$", "sed": { "substitute": 
+  { "path": "models/deviantart.com/yughues-Free-Houseplants-356618110", "glob": "\\.mtl$", "sed": { "substitute":
     [["map_Kd ([^\n]+)\\.png", "map_Kd $1.luma.png\nmap_Kdc $1.chrominance.png"],
      ["map_d ([^\n]+)\\.png", "map_d $1.luma.png"]],
     "gzip": true } },
@@ -1080,16 +1080,24 @@
   { "path": "models/MakeHuman/male_mh", "glob": "\\.(mhx2|mtl|obj)$", "gzip": {} },
   { "path": "models/MakeHuman/textures", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
   { "path": "models/sketchfab.com/f-35c-lightning-ii", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii/textures/canophy_1.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii/textures/f35c_00_D.dds_1.png", "luma_chrominance": { "luma": [512, 512], "chrominance": [64, 64] } },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii/textures/f35c_00_N_0.png", "resize": { "size": [256, 256], "periodic": false } },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii/textures/w_msl_a0_D_3.png", "luma_chrominance": { "luma": [256, 256], "chrominance": [64, 64] } },
+  { "path": "models/sketchfab.com/f-35c-lightning-ii/obj/F_35.mtl", "sed": { "substitute":
+    [["map_Kd ../textures/f35c_00_D.dds_1.png", "map_Kd ../textures/f35c_00_D.dds_1.luma.png\nmap_Kdc ../textures/f35c_00_D.dds_1.chrominance.png"],
+     ["map_Kd ../textures/w_msl_a0_D_3.png", "map_Kd ../textures/w_msl_a0_D_3.luma.png\nmap_Kdc ../textures/w_msl_a0_D_3.chrominance.png"]],
+    "gzip": true } },
   { "path": "models/sketchfab.com/trailer-with-wood-no2", "glob": "(\\b4-wheels[\\\\/][^\\\\/]+\\.obj|.mtl)$", "gzip": {} },
   { "path": "models/sketchfab.com/trailer-with-wood-no2/textures", "glob": "\\.png$", "resize": { "size": [256, 256], "periodic": false } },
   { "path": "models/SR/FN/FN_wheel.obj", "gzip": {} },
-  { "path": "models/SR/FN/FN_wheel.mtl", "sed": { "substitute": 
+  { "path": "models/SR/FN/FN_wheel.mtl", "sed": { "substitute":
     [["map_Kd textures/FN_wheel.png", "map_Kd textures/FN_wheel.luma.png\nmap_Kdc textures/FN_wheel.chrominance.png"]],
     "gzip": true } },
   { "path": "models/SR/FN/FN_wheel_d0.5.obj", "gzip": {} },
   { "path": "models/SR/FN/FN_wheel_d3.obj", "gzip": {} },
   { "path": "models/SR/XZ/XZ_wheel.obj", "gzip": {} },
-  { "path": "models/SR/XZ/XZ_wheel.mtl", "sed": { "substitute": 
+  { "path": "models/SR/XZ/XZ_wheel.mtl", "sed": { "substitute":
     [["map_Kd textures/XZ_Tire.png", "map_Kd textures/XZ_Tire.luma.png\nmap_Kdc textures/XZ_Tire.chrominance.png"]],
     "gzip": true } },
   { "path": "models/SR/XZ/XZ_wheel_d1.obj", "gzip": {} },
