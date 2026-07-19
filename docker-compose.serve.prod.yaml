@@ -1,5 +1,8 @@
 services:
   game:
+    profiles:
+      - all
+      - dynamic
     build:
       context: .
       dockerfile: Dockerfile.dedicated
@@ -28,6 +31,9 @@ services:
       - ./Mlib/E64URelease/Bin:/app/public/game:ro
 
   wt-udp-proxy:
+    profiles:
+      - all
+      - dynamic
     build:
       context: Mlib/Web_Transport_Udp
     ports:
@@ -42,6 +48,9 @@ services:
       - ./certs:/etc/ssl/certs
 
   nginx-proxy:
+    profiles:
+      - all
+      - static
     # Built natively for rootless environments
     image: docker.io/bitnami/nginx:latest
     container_name: nginx-proxy

@@ -1,5 +1,8 @@
 services:
   game:
+    profiles:
+      - all
+      - dynamic
     build:
       context: .
       dockerfile: Dockerfile.dedicated
@@ -32,6 +35,9 @@ services:
       - ./Mlib/Web_Transport_Udp/certs/wt-hash.json:/app/wt-hash.json:ro
 
   wt-udp-proxy:
+    profiles:
+      - all
+      - dynamic
     build:
       context: Mlib/Web_Transport_Udp
     ports:
