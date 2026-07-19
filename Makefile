@@ -117,10 +117,6 @@ BUILD_FLAG := --build
 ifeq ($(BUILD),0)
 	BUILD_FLAG :=
 endif
-PROFILE_FLAG := --profile all
-ifeq ($(DYNAMIC),0)
-	PROFILE_FLAG := --profile static
-endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
 
@@ -193,10 +189,10 @@ compress:
 		--configs "$(COMPRESS_CONFIGS)" $(COMPRESS_FLAGS)
 
 headless_up:
-	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml $(PROFILE_FLAG) up $(BUILD_FLAG) -d
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml up $(BUILD_FLAG) -d
 
 headless_down:
-	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml $(PROFILE_FLAG) down
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml down
 
 headless_logs:
 	podman-compose -f docker-compose.serve.$(SERVE).yaml -p mgame-serve logs -f
