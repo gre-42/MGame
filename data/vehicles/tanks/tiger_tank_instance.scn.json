@@ -234,7 +234,7 @@
         "arguments": {
           "player": "%player_name",
           "gun_node": "main_gun_end_node$suffix",
-          "exclusive_nodes": ["follower_camera_$full_user_name"],
+          "exclusive_nodes": ["follower_camera_$full_user_name$s2"],
           "ypln_node": "turret_node$suffix",
           "filename": "file://textures/hud/crosshair.png",
           "center": [0, 0],
