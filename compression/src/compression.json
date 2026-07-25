@@ -1102,7 +1102,7 @@
     "gzip": true } },
   { "path": "models/SR/XZ/XZ_wheel_d1.obj", "gzip": {} },
   { "path": "models/SR/XZ/XZ_wheel_d3.obj", "gzip": {} },
-  { "path": "models/missiles/missile0", "glob": "\\.obj$", "gzip": {} },
+  { "path": "models/missiles/missile0", "glob": "\\.(obj|mtl)$", "gzip": {} },
   { "path": "models/sketchfab.com/Skate/source/skate_low.obj", "gzip": {} },
   { "path": "models/fan.obj", "gzip": {} },
   { "path": "models/garage/garage.mtl", "sed": {
