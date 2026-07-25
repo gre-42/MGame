@@ -94,8 +94,7 @@
             "call": "set_particle_renderer",
             "arguments": {
               "node": "muzzle_flash_closeup_node_$suffix",
-              "renderable": "particle_renderer",
-              "bounding_volume": "empty"
+              "renderable": "particle_renderer"
             }
           }
         ]
