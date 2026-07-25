@@ -100,6 +100,16 @@
       },
       {
         "call": "gun",
+        "without": [
+          "suffix",
+          "parking_brake_pulled",
+          "velocity",
+          "angular_velocity",
+          "velocity_error_std",
+          "yaw_error_std",
+          "pitch_error_std",
+          "error_alpha"
+        ],
         "arguments": {
           "node": "missile0_launcher_node$suffix",
           "parent_rigid_body_node": "car_node$suffix",
@@ -109,43 +119,55 @@
           "bullet_type": "missile0_bullet",
           "punch_angle_idle_std": 0,
           "punch_angle_shoot_std": 0,
-          "generate_smart_bullet": [
-            {
-              "playback": "create_missile0",
-              "let": {
-                "if_with_graphics_bullet": true,
-                "if_with_physics_bullet": true
-              }
+          "generate_smart_bullet": {
+            "required": "%user_is_local",
+            "let": {
+              "asset_id": "missile0",
+              "parking_brake_pulled": false,
+              "velocity_error_std": 0,
+              "yaw_error_std": 0,
+              "pitch_error_std": 0,
+              "error_alpha": 0
             },
-            {
-              "call": "set_actor_task",
-              "arguments": {
-                "vehicle": "car_node$bullet_suffix",
-                "task": "air_cruise"
+            "execute": [
+              {
+                "playback": "create_missile0"
+              },
+              {
+                "required": "(%remote_role != 'none')",
+                "playback": "delegate_create_car",
+                "let": { "car_creator": "register_local_car" }
+              },
+              {
+                "call": "set_actor_task",
+                "arguments": {
+                  "vehicle": "car_node$suffix",
+                  "task": "air_cruise"
+                }
+              },
+              {
+                "call": "create_missile_ai",
+                "arguments": {
+                  "missile": "car_node$suffix",
+                  "dy": {
+                    "velocity": [0, 500],
+                    "dy": [0.2, 0.1]
+                  },
+                  "eta_max": 20,
+                  "waypoint_reached_radius": 2,
+                  "resting_position_reached_radius": 2,
+                  "maximum_velocity": 500
+                }
+              },
+              {
+                "call": "create_vehicle_follower_ai",
+                "arguments": {
+                  "missile": "car_node$suffix",
+                  "target": "%bullet_target"
+                }
               }
-            },
-            {
-              "call": "create_missile_ai",
-              "arguments": {
-                "missile": "car_node$bullet_suffix",
-                "dy": {
-                  "velocity": [0, 500],
-                  "dy": [0.2, 0.1]
-                },
-                "eta_max": 20,
-                "waypoint_reached_radius": 2,
-                "resting_position_reached_radius": 2,
-                "maximum_velocity": 500
-              }
-            },
-            {
-              "call": "create_vehicle_follower_ai",
-              "arguments": {
-                "missile": "car_node$bullet_suffix",
-                "target": "%bullet_target"
-              }
-            }
-          ]
+            ]
+          }
         }
       },
       {

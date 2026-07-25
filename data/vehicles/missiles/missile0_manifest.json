@@ -3,7 +3,11 @@
   "title": "missile0",
   "on_init": [
     {"include": "missile0_resource.scn.json"},
-    {"include": "missile0_instance.scn.json"}
+    {"include": "missile0_instance.scn.json"},
+    {
+      "declare_macro": "remote.vehicle.create_missile0",
+      "content": { "playback": "create_missile0" }
+    }
   ],
   "on_before_select": {
     "call": "globals",
@@ -13,7 +17,7 @@
   },
   "database": {
     "suffix": "missile0",
-    "vehicle_class": "car",
+    "vehicle_class": "missile",
     "node_prefixes": ["car_node"],
     "decimate": null,
     "spawn_y_offset": 0.7,
