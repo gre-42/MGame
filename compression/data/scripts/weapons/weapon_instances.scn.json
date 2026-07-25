@@ -74,7 +74,8 @@
             "call": "set_particle_renderer",
             "arguments": {
               "node": "muzzle_flash_node_$suffix",
-              "renderable": "particle_renderer"
+              "renderable": "particle_renderer",
+              "bounding_volume": "empty"
             }
           }
         ]
@@ -169,7 +170,8 @@
             "call": "set_particle_renderer",
             "arguments": {
               "node": "muzzle_flash_node_$suffix",
-              "renderable": "particle_renderer"
+              "renderable": "particle_renderer",
+              "bounding_volume": "empty"
             }
           }
         ]
