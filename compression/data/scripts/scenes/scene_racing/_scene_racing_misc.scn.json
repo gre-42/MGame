@@ -99,8 +99,7 @@
         }
       },
       {
-        "required": "%if_graphics",
-        "playback": "update_time_of_day"
+        "playback": "_update_time_of_day"
       },
       {
         "required": "(%remote_role != 'client')",
