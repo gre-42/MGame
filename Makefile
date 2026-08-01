@@ -195,7 +195,7 @@ headless_down:
 	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml down
 
 headless_logs:
-	podman-compose -f docker-compose.serve.$(SERVE).yaml -p mgame-serve logs -f
+	podman-compose -p mgame-serve -f docker-compose.serve.$(SERVE).yaml logs -f
 
 emsdk_up:
 	podman-compose -p mgame-emsdk -f docker-compose.dev.emsdk.yaml up -d
