@@ -81,20 +81,20 @@
     "context": "primary_scene"
   },
   {
-    "call": "preload",
-    "context": "primary_scene",
-    "arguments": {
-      "file": "file://$__DIR__/resources.json",
-      "throw_if_file_resource_unknown": "%if_graphics"
-    }
-  },
-  {
     "required": "%if_graphics",
     "execute": {
       "playback": "create_main_menu"
     },
     "else_": {
       "playback": "create_html_scene_selector"
+    }
+  },
+  {
+    "call": "preload",
+    "context": "primary_scene",
+    "arguments": {
+      "file": "file://$__DIR__/resources.json",
+      "throw_if_file_resource_unknown": "%if_graphics"
     }
   }
 ]
