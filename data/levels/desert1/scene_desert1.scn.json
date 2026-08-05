@@ -73,7 +73,8 @@
     "call": "preload",
     "context": "primary_scene",
     "arguments": {
-      "file": "file://$__DIR__/resources.json"
+      "file": "file://$__DIR__/resources.json",
+      "throw_if_resource_unknown": "%if_graphics"
     }
   }
 ]
