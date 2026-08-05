@@ -81,6 +81,13 @@
     "context": "primary_scene"
   },
   {
+    "call": "preload",
+    "context": "primary_scene",
+    "arguments": {
+      "file": "file://$__DIR__/resources.json"
+    }
+  },
+  {
     "required": "%if_graphics",
     "execute": {
       "playback": "create_main_menu"
