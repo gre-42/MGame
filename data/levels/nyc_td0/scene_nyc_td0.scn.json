@@ -85,7 +85,7 @@
     "context": "primary_scene",
     "arguments": {
       "file": "file://$__DIR__/resources.json",
-      "throw_if_resource_unknown": "%if_graphics"
+      "throw_if_file_resource_unknown": "%if_graphics"
     }
   },
   {
