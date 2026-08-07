@@ -93,7 +93,10 @@
     "call": "preload",
     "context": "primary_scene",
     "arguments": {
-      "file": "file://$__DIR__/resources.json",
+      "files": {
+        "resources": "file://$__DIR__/resources.json",
+        "trails": "file://$__DIR__/trails.json"
+      },
       "throw_if_file_resource_unknown": "%if_graphics"
     }
   }
