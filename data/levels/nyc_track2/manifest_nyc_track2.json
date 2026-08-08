@@ -5,10 +5,20 @@
     "fixed": "(%user_count <= %max_users)",
     "dynamic": "(%selected_game_mode in %game_modes)"
   },
+  "on_init": {
+    "declare_macro": "remote.level.load_nyc_track2",
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_nyc_track2.json"
+      }
+    }
+  },
   "on_execute": [
     {
       "call": "globals",
       "arguments": {
+        "loaded_level_id": "nyc_track2",
         "minimap_file": null
       }
     },
