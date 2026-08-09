@@ -246,7 +246,6 @@ package:
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStbCpp.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStb.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibStrings.dll \
-			Mlib/$(BUILD_SUBDIR)/Bin/libMlibThreads.dll \
 			Mlib/$(BUILD_SUBDIR)/Bin/libMlibTime.dll \
 			Mlib/$(PLATFORM_CHAR)RecastBuild/DebugUtils/libDebugUtils.dll \
 			Mlib/$(PLATFORM_CHAR)RecastBuild/Detour/libDetour.dll \
