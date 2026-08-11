@@ -1,0 +1,41 @@
+{
+  "id": "disk0",
+  "title": "Disk0",
+  "required": {
+    "fixed": ["%if_devel", "(%user_count <= %max_users)"],
+    "dynamic": "%true"
+  },
+  "on_init": {
+    "declare_macro": "remote.level.load_disk0",
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_disk0.json"
+      }
+    }
+  },
+  "on_execute": [
+    {
+      "call": "globals",
+      "arguments": {
+        "loaded_level_id": "disk0",
+        "minimap_file": null
+      }
+    },
+    {
+      "include": "scene_disk0.scn.json"
+    }
+  ],
+  "on_before_select": {
+    "call": "globals",
+    "arguments": {
+      "selected_level_id": "disk0",
+      "level_icon_file": "#black"
+    }
+  },
+  "database": {
+    "max_users": 8,
+    "if_raceway_circular": false,
+    "game_modes": ["rally", "team_deathmatch"]
+  }
+}

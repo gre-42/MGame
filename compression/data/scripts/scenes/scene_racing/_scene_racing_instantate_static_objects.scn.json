@@ -124,7 +124,8 @@
             "call": "instantiate_statics",
             "context": "primary_scene",
             "arguments": {
-              "min_vertex_distance": 0.05
+              "min_vertex_distance": 0.05,
+              "w": "%angular_velocity"
             }
           }
         ]

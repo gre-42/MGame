@@ -1,0 +1,108 @@
+{
+  "library": "teams",
+  "teams": {
+    "red": { "style": { "color": [1, 0.8, 0.8] } },
+    "blue": { "style": { "color": [0.8, 0.8, 1] } }
+  },
+  "prototypes": {
+    "spawner": {
+      "skills": {
+        "ai": {
+          "velocity_error_std": 0.3,
+          "yaw_error_std": 0.02,
+          "pitch_error_std": 0.02,
+          "error_alpha": 0.002,
+          "respawn_cooldown_time": 0
+        }
+      }
+    },
+    "player": {
+      "player_role": "bystander",
+      "unstuck_mode": "reverse",
+      "behavior": "none",
+      "seat": "driver"
+    },
+    "npc": {
+      "skills": {
+        "ai": {
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true,
+          "can_select_opponent": true,
+          "can_select_weapon": true
+        },
+        "user": {
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false
+        }
+      }
+    },
+    "pc": {
+      "skills": {
+        "ai": {
+          "can_drive": false,
+          "can_aim": false,
+          "can_shoot": false,
+          "can_select_opponent": false,
+          "can_select_weapon": false
+        },
+        "user": {
+          "can_drive": true,
+          "can_aim": true,
+          "can_shoot": true
+        }
+      }
+    }
+  },
+  "players": [
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 0 },
+      "spawn": { "group": "player0", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 1 },
+      "spawn": { "group": "player1", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 2 },
+      "spawn": { "group": "player2", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 3 },
+      "spawn": { "group": "player3", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 4 },
+      "spawn": { "group": "player4", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 5 },
+      "spawn": { "group": "player5", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 6 },
+      "spawn": { "group": "player6", "vehicle": { "type": "sedan0" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "red",
+      "user": { "rank": 7 },
+      "spawn": { "group": "player7", "vehicle": { "type": "sedan0" } }
+    }
+  ]
+}
