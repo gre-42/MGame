@@ -34,6 +34,7 @@
         "ocean_ground": "none",
         "undefined": "none"},
       "path_materials": "surface_base_gravel",
+      "wall_materials": "surface_base_stone",
       "grass_dirt_texture": "#Ground025",
       "path_alpha_textures": [
         "#PlusDetail",
@@ -43,6 +44,8 @@
       "path_crossing_textures": ["#Road007_No_Lines_Detail_Base", "#Gravel010_Detail"],
       "path_textures": [{
         "lanes": 1, "textures": ["#Road007_2_Lanes_Detail_Base", "#Gravel010_Detail"]}],
+      "wall_textures": [
+        {"lanes": 1, "textures": ["#PavingStones046"], "uvx": 0.15}],
       "ceiling_texture": "#Asphalt015",
       "barrier_styles": [
         {
@@ -69,6 +72,7 @@
       "uv_scale_terrain": 3e-1,
       "uv_period_terrain": 512,
       "uv_scale_path": 1e-1,
+      "uv_scale_wall": 1e-1,
       "uv_scale_facade": 2.5e-1,
       "uv_scale_ceiling": 1e-1,
       "uv_scale_barrier_wall": 5,
@@ -102,6 +106,7 @@
       "raise_streets_amount": 0,
       "extrude_curb_amount": 0,
       "extrude_street_amount": 0,
+      "extrude_wall_amount": 0.3,
       "stop_sign_resource_names": [],
       "max_wall_width": 10,
       "with_height_bindings": true,

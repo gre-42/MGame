@@ -32,7 +32,7 @@ else
 	APP_RELDIR := .vanilla_rally
 endif
 ifeq ($(HEADLESS),1)
-	override RUN_ARGS :=          \
+	override RUN_ARGS :=              \
 		$(RUN_ARGS)               \
 		--remote_site_id 42       \
 		--udp_ip 127.0.0.1        \
@@ -41,28 +41,35 @@ ifeq ($(HEADLESS),1)
 		--http_port 8082
 endif
 ifeq ($(REMOTE_ROLE),server)
-	override RUN_ARGS :=          \
+	override RUN_ARGS :=              \
 		$(RUN_ARGS)               \
 		--remote_site_id 42       \
 		--remote_role server      \
 		--udp_ip 127.0.0.1        \
 		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),client)
-	override RUN_ARGS :=          \
+	override RUN_ARGS :=              \
 		$(RUN_ARGS)               \
 		--remote_site_id 43       \
 		--remote_role client      \
 		--udp_ip 127.0.0.1        \
 		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),client2)
-	override RUN_ARGS :=          \
+	override RUN_ARGS :=              \
 		$(RUN_ARGS)               \
 		--remote_site_id 73       \
 		--remote_role client      \
 		--udp_ip 127.0.0.1        \
 		--udp_port 8042
+else ifeq ($(REMOTE_ROLE),client3)
+	override RUN_ARGS :=              \
+		$(RUN_ARGS)               \
+		--remote_site_id 74       \
+		--remote_role client      \
+		--udp_ip 127.0.0.1        \
+		--udp_port 8042
 else ifeq ($(REMOTE_ROLE),podman)
-	override RUN_ARGS :=          \
+	override RUN_ARGS :=              \
 		$(RUN_ARGS)               \
 		--remote_site_id 42       \
 		--remote_role server      \
