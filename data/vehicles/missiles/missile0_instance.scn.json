@@ -24,6 +24,7 @@
           "mass": 80,
           "v": "%velocity",
           "w": "%angular_velocity",
+          "limit_sources": "remote",
           "size": [0.06, 0.06, 3],
           "com": [0, 0, 0],
           "collidable_mode": "collide|move",

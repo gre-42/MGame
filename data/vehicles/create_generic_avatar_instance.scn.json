@@ -75,7 +75,7 @@
         "arguments": {
           "node": "human_node$suffix",
           "hitboxes": "human_hitboxes",
-          "with_penetration_limits": true,
+          "limit_sources": "penetration|remote",
           "mass": 70,
           "size": ["inf", "inf", "inf"],
           "collidable_mode": "collide|move",

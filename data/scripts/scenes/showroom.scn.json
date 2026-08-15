@@ -245,6 +245,7 @@
           "mass": "inf",
           "size": [1, 2, 3],
           "w": [0, 1.5, 0],
+          "limit_sources": "penetration|remote",
           "collidable_mode": "collide",
           "name": "stage",
           "asset_id": "state_no_id"

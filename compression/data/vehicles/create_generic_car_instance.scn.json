@@ -41,7 +41,7 @@
           "hitboxes": "$asset_id-_hitboxes",
           "v": "%velocity",
           "w": "%angular_velocity",
-          "with_penetration_limits": true,
+          "limit_sources": "penetration|remote",
           "mass": "%%vehicles/$asset_id/mass",
           "size": "%%vehicles/$asset_id/size",
           "com": "%%vehicles/$asset_id/com",
@@ -172,6 +172,7 @@
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
+          "limit_sources": "none",
           "collidable_mode": "none",
           "name": "wheel_left_front$asset_id$suffix",
           "asset_id": "wheel_left_front$asset_id"
@@ -205,6 +206,7 @@
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
+          "limit_sources": "none",
           "collidable_mode": "none",
           "name": "wheel_right_front$asset_id$suffix",
           "asset_id": "wheel_right_front$asset_id"
@@ -238,6 +240,7 @@
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
+          "limit_sources": "none",
           "collidable_mode": "none",
           "name": "wheel_left_rear$asset_id$suffix",
           "asset_id": "wheel_left_rear$asset_id"
@@ -271,6 +274,7 @@
           "radius": "%%wheels/$wheels/radius",
           "com": [0, 0, 0],
           "I_rotation": [0, 90, 0],
+          "limit_sources": "none",
           "collidable_mode": "none",
           "name": "wheel_right_rear$asset_id$suffix",
           "asset_id": "wheel_right_rear$asset_id"
