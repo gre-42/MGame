@@ -5,22 +5,40 @@
     "fixed": ["%if_devel", "(%user_count <= %max_users)"],
     "dynamic": "(%selected_game_mode in %game_modes)"
   },
-  "on_execute": {
-    "include": "scene_islands1.scn.json"
+  "on_init": {
+    "declare_macro": "remote.level.load_islands1_ai_only",
+    "content": {
+      "call": "load_scene",
+      "arguments": {
+        "filename": "file://$__DIR__/manifest_islands1_ai_only.json"
+      }
+    }
   },
+  "on_execute": [
+    {
+      "call": "globals",
+      "arguments": {
+        "loaded_level_id": "islands1_ai_only",
+        "loaded_game_level": "td0",
+        "minimap_file": null,
+        "players_json_basename": "players_ai_only.json"
+      }
+    },
+    {
+      "include": "scene_islands1.scn.json"
+    }
+  ],
   "on_before_select": {
     "call": "globals",
     "arguments": {
       "selected_level_id": "islands1_ai_only",
-      "level_icon_file": "#black",
-      "minimap_file": null,
-      "players_json_basename": "players_ai_only.json"
+      "level_icon_file": "#black"
     }
   },
   "database": {
-    "max_users": 1,
     "if_raceway_circular": false,
     "game_modes": ["team_deathmatch"],
+    "max_users": 1,
     "title": {
       "de-DE": "Inseln 1 (nur KI)",
       "en-US": "Islands 1 (AI only)",
