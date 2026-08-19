@@ -3,8 +3,7 @@
   "teams": {
     "red": { "id": 7, "style": { "color": [1, 0.8, 0.8] } },
     "blue": { "id": 29, "style": { "color": [0.8, 0.8, 1] } },
-    "green": { "id": 34, "style": { "color": [0.8, 1, 0.8] } },
-    "none": { "id": 45, "style": { "color": [1, 1, 1] } }
+    "green": { "id": 34, "style": { "color": [0.8, 1, 0.8] } }
   },
   "prototypes": {
     "spawner": {
@@ -96,7 +95,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_AH_64", "team": "none",
+      "name": "extra_AH_64",
       "spawn": {
         "group": "heli0",
         "vehicle": { "type": "AH_64" }
@@ -104,7 +103,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank0", "team": "none",
+      "name": "extra_tiger_tank0",
       "spawn": {
         "group": "tank0",
         "vehicle": { "type": "tiger_tank" }
@@ -112,7 +111,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank1", "team": "none",
+      "name": "extra_tiger_tank1",
       "spawn": {
         "group": "tank1",
         "vehicle": { "type": "tiger_tank" }
@@ -120,7 +119,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_tiger_tank2", "team": "none",
+      "name": "extra_tiger_tank2",
       "spawn": {
         "group": "tank2",
         "vehicle": { "type": "tiger_tank" }
@@ -128,7 +127,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_sports_car0", "team": "none",
+      "name": "extra_sports_car0",
       "spawn": {
         "group": "car0",
         "vehicle": { "type": "sports_car0" }
@@ -136,7 +135,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_F_35", "team": "none",
+      "name": "extra_F_35",
       "spawn": {
         "group": "plane0",
         "vehicle": { "type": "F_35" }
@@ -144,7 +143,7 @@
     },
     {
       "inherits_from": ["spawner"],
-      "name": "extra_ship0", "team": "none",
+      "name": "extra_ship0",
       "spawn": {
         "group": "ship0",
         "vehicle": { "type": "ship0" }
