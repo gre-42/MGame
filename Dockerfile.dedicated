@@ -2,7 +2,7 @@ FROM ubuntu:26.04
 
 RUN apt-get update \
  && apt-get install -y \
-    clang \
+    clang-22 \
     cmake \
     libboost-dev \
     libboost-regex-dev \
