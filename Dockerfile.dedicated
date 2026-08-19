@@ -7,7 +7,7 @@ RUN apt-get update \
     libboost-dev \
     libboost-regex-dev \
     libboost-url-dev \
-    libomp-dev \
+    libomp-22-dev \
     libssl-dev \
     make \
     ninja-build
