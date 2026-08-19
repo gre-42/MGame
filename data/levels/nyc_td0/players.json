@@ -1,10 +1,10 @@
 {
   "library": "teams",
   "teams": {
-    "red": { "style": { "color": [1, 0.8, 0.8] } },
-    "blue": { "style": { "color": [0.8, 0.8, 1] } },
-    "green": { "style": { "color": [0.8, 1, 0.8] } },
-    "none": { "style": { "color": [1, 1, 1] } }
+    "red": { "id": 7, "style": { "color": [1, 0.8, 0.8] } },
+    "blue": { "id": 29, "style": { "color": [0.8, 0.8, 1] } },
+    "green": { "id": 34, "style": { "color": [0.8, 1, 0.8] } },
+    "none": { "id": 45, "style": { "color": [1, 1, 1] } }
   },
   "prototypes": {
     "spawner": {

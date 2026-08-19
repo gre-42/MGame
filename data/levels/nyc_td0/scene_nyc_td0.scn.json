@@ -60,7 +60,6 @@
     "content": []
   },
   {
-    "required": "(%remote_role != 'client')",
     "execute": {
       "playback": "setup_teams",
       "context": "primary_scene",
