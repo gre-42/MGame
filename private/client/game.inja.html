@@ -9,19 +9,39 @@
         background: #222;
         color: #fff;
       }
-      #canvas {
+      #emscripten_border {
         width: 100vw;
         height: 100dvh;
         display: block;
         background: #000;
       }
+      #canvas {
+        width: 100vw;
+        height: 100dvh;
+        display: block;
+      }
+      #status {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Perfectly centers the text */
+        color: white;
+        font-family: sans-serif;
+        font-size: 18px;
+        z-index: 10; /* Ensures text stays above the canvas layer */
+        pointer-events: none; /* Allows mouse clicks to pass through to the canvas */
+      }
     </style>
   </head>
   <body>
-    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <div class="emscripten_border">
+      <div id="status">Downloading...</div>
+      <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    </div>
     <script type="module">
       import createModule from '../game/RenderSceneFileActivity.js';
       import assetLoaderFactory from './assets_compressed.js';
+      const statusElement = document.getElementById('status');
       const config = {
         preRun: (Module) => {
           assetLoaderFactory(Module);
@@ -31,6 +51,15 @@
         },
         printErr: text => {
           console.error(text);
+        },
+        setStatus: text => {
+          if (text === '') {
+            statusElement.style.display = 'none';
+            statusElement.textContent = 'Loading finished';
+          } else {
+            statusElement.style.display = 'block';
+            statusElement.textContent = text;
+          }
         },
         canvas: document.getElementById('canvas'),
         arguments: [

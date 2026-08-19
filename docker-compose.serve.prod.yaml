@@ -39,7 +39,7 @@ services:
       WT_VERBOSE: "0"
       REMOTE_SECRET: "${REMOTE_SECRET}"
     volumes:
-      - ./certs:/etc/ssl/certs
+      - ./certs:/etc/ssl/certs:ro
 
   nginx-proxy:
     # Built natively for rootless environments
