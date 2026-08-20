@@ -124,6 +124,10 @@ BUILD_FLAG := --build
 ifeq ($(BUILD),0)
 	BUILD_FLAG :=
 endif
+LIMIT_ARGS :=
+ifeq ($(LIMIT),1)
+	LIMIT_ARGS := systemd-run --user --scope -p TasksMax=8 -E LIBDECOR_PLUGIN_DIR=/dev/null
+endif
 SKIP_TESTS ?= 0
 CACHE ?= 0
 
@@ -179,7 +183,7 @@ run:
 	$(OMP_ENV)                                                     \
 	TSAN_OPTIONS="second_deadlock_stack=1 suppressions=$(SOURCE_C_DIR)/suppressions.txt" \
 	ENABLE_OSM_MAP_CACHE=$(CACHE)                                  \
-	$(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
+	$(LIMIT_ARGS) $(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
 	    "$(ASSET_DIRS)"                                            \
 	    data/levels/main/main.scn.json                             \
 	    --app_reldir $(APP_RELDIR)                                 \
