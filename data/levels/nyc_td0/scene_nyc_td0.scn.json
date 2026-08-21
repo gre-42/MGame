@@ -93,8 +93,10 @@
     "context": "primary_scene",
     "arguments": {
       "files": {
-        "resources": "file://$__DIR__/resources.json",
-        "trails": "file://$__DIR__/trails.json"
+        "audio_buffers": "file://$__DIR__/preload/audio_buffers.json",
+        "audio_buffer_sequences": "file://$__DIR__/preload/audio_buffer_sequences.json",
+        "resources": "file://$__DIR__/preload/resources.json",
+        "trails": "file://$__DIR__/preload/trails.json"
       },
       "throw_if_file_resource_unknown": "%if_graphics"
     }
