@@ -21,6 +21,7 @@ services:
       REMOTE_IP: "${REMOTE_IP}"
       REMOTE_SECRET: "${REMOTE_SECRET}"
     volumes:
+      - ./appdata:/root/.vanilla_rally:ro
       - ./data:/app/data:ro
       - ./private:/app/private:ro
       - ./public/server:/app/public/server:ro
