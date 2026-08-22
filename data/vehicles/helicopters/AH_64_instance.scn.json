@@ -251,6 +251,15 @@
         "arguments": { "rigid_body": "car_node$suffix" }
       },
       {
+        "call": "set_actuator_count",
+        "arguments": {
+          "vehicle": "car_node$suffix",
+          "tires": 3,
+          "rotors": 2,
+          "wings": 0
+        }
+      },
+      {
         "call": "wheel",
         "arguments": {
           "vehicle": "car_node$suffix",
@@ -330,7 +339,7 @@
             "alpha": 0.1},
           "drift_reduction_factor": 1,
           "drift_reduction_reference_velocity": 35,
-          "rotor_id": 3}
+          "rotor_id": 0}
       },
       {
         "call": "rotor",
@@ -341,7 +350,7 @@
           "engine": "tail_rotor",
           "power2lift": 5e-2,
           "rpm": 400,
-          "rotor_id": 4}
+          "rotor_id": 1}
       },
       {
         "call": "create_heli_controller",

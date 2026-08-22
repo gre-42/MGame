@@ -50,6 +50,15 @@
         }
       },
       {
+        "call": "set_actuator_count",
+        "arguments": {
+          "vehicle": "car_node$suffix",
+          "tires": 0,
+          "rotors": 1,
+          "wings": 8
+        }
+      },
+      {
         "call": "rotor",
         "arguments": {
           "vehicle": "car_node$suffix",

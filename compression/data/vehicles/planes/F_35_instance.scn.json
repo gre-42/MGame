@@ -254,6 +254,15 @@
         "arguments": { "rigid_body": "car_node$suffix" }
       },
       {
+        "call": "set_actuator_count",
+        "arguments": {
+          "vehicle": "car_node$suffix",
+          "tires": 4,
+          "rotors": 1,
+          "wings": 7
+        }
+      },
+      {
         "call": "wheel",
         "arguments": {
           "vehicle": "car_node$suffix",
@@ -338,7 +347,7 @@
           "engine": "turbine",
           "power2lift": 1,
           "rpm": 0,
-          "rotor_id": 4}
+          "rotor_id": 0}
       },
       {"comment": "0: front left (roll + pitch)"},
       {
