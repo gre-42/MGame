@@ -34,8 +34,8 @@
       "center_distances": [0, "inf"],
       "blend_mode": "off",
       "occluder_pass": "none",
-      "rectangle_triangulation_mode": "disabled",
-      "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+      "physics_material": "%hitbox_massbox_material"
     }
   },
   {
@@ -46,8 +46,8 @@
       "center_distances": [0, "inf"],
       "blend_mode": "off",
       "occluder_pass": "none",
-      "rectangle_triangulation_mode": "disabled",
-      "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+      "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+      "physics_material": "%hitbox_massbox_material"
     }
   },
   {

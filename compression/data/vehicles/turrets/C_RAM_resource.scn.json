@@ -16,8 +16,8 @@
         "aggregate_mode": "none",
         "transformation_mode": "all",
         "triangle_tangent_error_behavior": "zero",
-        "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+        "physics_material": "%hitbox_massbox_material"
       }
     }
   },

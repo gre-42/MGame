@@ -51,8 +51,8 @@
           "occluder_pass": "none",
           "reflectance": [0, 0, 0],
           "reflection_map": null,
-          "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal",
-          "rectangle_triangulation_mode": "%hitbox_massbox_triangulation"
+          "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+          "physics_material": "%hitbox_massbox_material"
         }
       },
       {
@@ -85,7 +85,8 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation"
+        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+        "physics_material": "%hitbox_massbox_material"
       }
     }
   },

@@ -15,8 +15,8 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "rectangle_triangulation_mode": "disabled",
-        "physics_material": "attr_collide|obj_hitbox|surface_base_avatar"
+        "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+        "physics_material": "%hitbox_massbox_material"
       }
     }
   },
@@ -67,7 +67,7 @@
         "occluder_pass": "none",
         "aggregate_mode": "none",
         "transformation_mode": "all",
-        "physics_material": "attr_visible|attr_collide|obj_tire_line|surface_base_foot"
+        "physics_material": "attr_collide|obj_tire_line|surface_base_foot"
       }
     }
   },

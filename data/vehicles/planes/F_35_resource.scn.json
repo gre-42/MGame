@@ -50,8 +50,8 @@
           "dist_min": 0,
           "dist_max": "inf",
           "occluder_pass": "none",
-          "rectangle_triangulation_mode": "disabled",
-          "physics_material": "attr_visible|attr_collide|obj_hitbox|attr_convex|surface_base_metal"
+          "rectangle_triangulation_mode": "%hitbox_massbox_triangulation",
+          "physics_material": "%hitbox_massbox_material"
         }
       },
       {"comment": {"call": "gen_triangle_rays", "arguments": {"name": "%name", "npoints": 5, "lengths": [0.7, 0.7, 0.7], "delete_triangles": false}}}
