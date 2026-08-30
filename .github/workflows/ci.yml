@@ -97,7 +97,7 @@ jobs:
           submodules: recursive
 
       - name: Build, package and test
-        run: CC=clang CXX=clang++ make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        run: CC=clang CXX=clang++ make CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
         # run: make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
