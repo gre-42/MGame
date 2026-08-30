@@ -97,15 +97,15 @@ jobs:
           submodules: recursive
 
       - name: Build, package and test
-        # run: CC=clang CXX=clang++ make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
-        run: make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        run: CC=clang CXX=clang++ make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
+        # run: make CLANG=1 CMAKE_BUILD_TYPE=${{ github.event.inputs.build_type || 'Release' }} SKIP_TESTS=${{ github.event.inputs.skip_tests || 0 }}
 
       - name: Archive artifact
         uses: actions/upload-artifact@v7
         with:
           name: osm-rally-artifact-msys2
           path: |
-            LM${{ github.event.inputs.build_type || 'Release' }}
+            M${{ github.event.inputs.build_type || 'Release' }}
 
   build-msvc:
     if: (github.event.inputs.job_name == '') || contains(github.event.inputs.job_name, 'build-msvc')
