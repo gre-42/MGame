@@ -133,12 +133,18 @@
       {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=compound_osm_map"},
       {"comment": "Player"},
       {
-        "required": "(%remote_role != 'client')",
+        "required": ["(%remote_role != 'client')", "%if_create_pc_player"],
         "call": "for_each_site_user",
         "arguments": {
           "content": [
             {
-              "required": "%if_create_pc_player",
+              "call": "team_create",
+              "arguments": {
+                "id": 42,
+                "name": "red"
+              }
+            },
+            {
               "call": "player_create",
               "arguments": {
                 "full_user_name": "%full_user_name",
@@ -153,14 +159,12 @@
               }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "add_vip",
               "arguments": {
                 "player": "$vip_name-_$full_user_name"
               }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "spawner_create",
               "arguments": {
                 "name": "$vip_name-_$full_user_name",
@@ -175,22 +179,18 @@
               }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "spawner_set_player",
               "arguments": { "name": "$vip_name-_$full_user_name", "seat": "driver" }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "set_can_drive",
               "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "set_can_aim",
               "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             },
             {
-              "required": "%if_create_pc_player",
               "call": "set_can_shoot",
               "arguments": { "player": "$vip_name-_$full_user_name", "source": "user", "value": true }
             }
