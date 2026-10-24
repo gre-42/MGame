@@ -87,6 +87,20 @@
         "required": "(%loaded_time_of_day == 'day')",
         "call": "add_color_style",
         "arguments": {
+          "window_lights_ambient": {
+            "showcase": {
+              "side": [1, 1],
+              "back": [1, 1]
+            },
+            "punched_window": {
+              "side": [0.5, 0.5],
+              "back": [0.5, 0.5]
+            },
+            "glass_facade": {
+              "side": [0.3, 0.3],
+              "back": [0.3, 0.3]
+            }
+          },
           "reflection_maps": {
             "car": "reflection_map",
             "wet_street": "reflection_map",
@@ -99,6 +113,20 @@
         "required": "(%loaded_time_of_day == 'night')",
         "call": "add_color_style",
         "arguments": {
+          "window_lights_ambient": {
+            "showcase": {
+              "side": [1, 1],
+              "back": [1, 1]
+            },
+            "punched_window": {
+              "side": [0.5, 1],
+              "back": [0.5, 1.5]
+            },
+            "glass_facade": {
+              "side": [0.5, 1.5],
+              "back": [0.5, 1.5]
+            }
+          },
           "reflection_maps": {
             "car": "reflection_map_night",
             "wet_street": "reflection_map_night",
@@ -111,6 +139,20 @@
         "required": "(%loaded_time_of_day == 'synthwave')",
         "call": "add_color_style",
         "arguments": {
+          "window_lights_ambient": {
+            "showcase": {
+              "side": [1, 1],
+              "back": [1, 1]
+            },
+            "punched_window": {
+              "side": [0.5, 1],
+              "back": [0.5, 1.5]
+            },
+            "glass_facade": {
+              "side": [0.5, 1.5],
+              "back": [0.5, 1.5]
+            }
+          },
           "reflection_maps": {
             "car": "reflection_map_synthwave",
             "wet_street": "reflection_map_synthwave",

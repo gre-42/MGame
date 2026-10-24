@@ -84,6 +84,7 @@
             "facade": ["#wall_facade_bricks_red_Base", "#concrete1_2K_wh_Detail"],
             "material": "surface_base_stone",
             "interior": {
+              "window_light_ambient": "showcase",
               "facade_edge_size": [2, 0],
               "facade_inner_size": [2, 0.7],
               "interior_size": [7, 4, 0.5],
@@ -99,6 +100,7 @@
             "facade": ["#wall_facade_bricks_red_Base", "#concrete1_2K_wh_Detail"],
             "material": "surface_base_stone",
             "interior": {
+              "window_light_ambient": "showcase",
               "facade_edge_size": [2, 0],
               "facade_inner_size": [2, 0.7],
               "interior_size": [7, 4, 0.5],
@@ -129,6 +131,7 @@
             "min_height": 5,
             "max_height": 50,
             "interior": {
+              "window_light_ambient": "punched_window",
               "facade_edge_size": [0.5, 0.5],
               "facade_inner_size": [1.4, 1.4],
               "interior_size": [1.5, 1.5, 0.2],
@@ -146,6 +149,7 @@
             "min_height": 5,
             "max_height": 50,
             "interior": {
+              "window_light_ambient": "punched_window",
               "facade_edge_size": [0.5, 0.5],
               "facade_inner_size": [1.4, 1.4],
               "interior_size": [1.5, 1.5, 0.2],
@@ -162,6 +166,7 @@
             "material": "surface_base_stone",
             "min_height": 50,
             "interior": {
+              "window_light_ambient": "glass_facade",
               "facade_edge_size": [0.5, 0.5],
               "facade_inner_size": [0.7, 0.7],
               "interior_size": [5, 3, 4],
@@ -178,6 +183,7 @@
             "material": "surface_base_stone",
             "min_height": 50,
             "interior": {
+              "window_light_ambient": "glass_facade",
               "facade_edge_size": [0.5, 0.5],
               "facade_inner_size": [0.7, 0.7],
               "interior_size": [5, 3, 4],
@@ -194,6 +200,7 @@
             "material": "surface_base_stone",
             "min_height": 50,
             "interior": {
+              "window_light_ambient": "glass_facade",
               "facade_edge_size": [0.5, 0.5],
               "facade_inner_size": [0.7, 0.7],
               "interior_size": [5, 3, 4],
