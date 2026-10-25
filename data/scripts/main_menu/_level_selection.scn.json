@@ -7,9 +7,17 @@
       "arguments": {
         "command": [
           {
+            "required": ["(%loaded_level_id != %null)"],
             "call": "echo",
             "arguments": {
               "message": "Reloading scene. Selected level ID: $selected_level_id. Loaded level ID: $loaded_level_id"
+            }
+          },
+          {
+            "required": ["(%loaded_level_id == %null)"],
+            "call": "echo",
+            "arguments": {
+              "message": "Reloading scene. Selected level ID: $selected_level_id"
             }
           },
           {
