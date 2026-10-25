@@ -121,6 +121,7 @@
               "min_height": 5,
               "max_height": 20,
               "interior": {
+                "window_light_ambient": "punched_window",
                 "facade_edge_size": [1, 1],
                 "facade_inner_size": [2, 1.5],
                 "interior_size": [2, 2.5, 0.2],
@@ -137,6 +138,7 @@
               "material": "surface_base_stone",
               "min_height": 5,
               "interior": {
+                "window_light_ambient": "punched_window",
                 "facade_edge_size": [1, 1],
                 "facade_inner_size": [2, 1.5],
                 "interior_size": [2, 2.5, 0.2],
@@ -153,6 +155,7 @@
               "material": "surface_base_stone",
               "min_height": 5,
               "interior": {
+                "window_light_ambient": "punched_window",
                 "facade_edge_size": [1, 1],
                 "facade_inner_size": [2, 1.5],
                 "interior_size": [2, 2.5, 0.2],
