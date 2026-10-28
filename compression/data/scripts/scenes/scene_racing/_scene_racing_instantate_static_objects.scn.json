@@ -131,19 +131,20 @@
         ]
       },
       {"comment": "collidable-mesh rigid_body-node=osm_map_node node=osm_map_node resource=compound_osm_map"},
+      {
+        "required": ["%if_create_pc_player"],
+        "call": "team_create",
+        "arguments": {
+          "id": 42,
+          "name": "red"
+        }
+      },
       {"comment": "Player"},
       {
         "required": ["(%remote_role != 'client')", "%if_create_pc_player"],
         "call": "for_each_site_user",
         "arguments": {
           "content": [
-            {
-              "call": "team_create",
-              "arguments": {
-                "id": 42,
-                "name": "red"
-              }
-            },
             {
               "call": "player_create",
               "arguments": {
