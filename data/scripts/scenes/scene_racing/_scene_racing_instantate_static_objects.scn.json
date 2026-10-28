@@ -142,7 +142,7 @@
       {"comment": "Player"},
       {
         "required": ["(%remote_role != 'client')", "%if_create_pc_player"],
-        "call": "for_each_site_user",
+        "call": "on_site_user_loaded_level",
         "arguments": {
           "content": [
             {
