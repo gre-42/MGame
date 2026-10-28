@@ -18,7 +18,7 @@
           "call": "compute_random_user_ranks"
         },
         {
-          "call": "for_each_site_user",
+          "call": "for_each_loaded_site_user",
           "arguments": {
             "content": [
               {
