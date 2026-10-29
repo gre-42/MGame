@@ -67,7 +67,10 @@
         "call": "execute_in_physics_thread",
         "context": "primary_scene",
         "arguments": {
-          "command": { "playback": "scene_racing_setup_new_round" }
+          "command": {
+            "playback": "scene_racing_setup_new_round",
+            "let": { "if_lobby": false }
+          }
         }
       }
     ]

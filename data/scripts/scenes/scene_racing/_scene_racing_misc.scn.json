@@ -71,12 +71,24 @@
     "declare_macro": "_setup_new_round",
     "content": [
       {
+        "exclude": "%if_lobby",
         "call": "for_each_user",
         "arguments": {
           "content": {
             "call": "set_focuses",
             "context": "primary_scene_$full_user_name",
             "arguments": {"focuses": ["scene"]}
+          }
+        }
+      },
+      {
+        "required": "%if_lobby",
+        "call": "for_each_user",
+        "arguments": {
+          "content": {
+            "call": "set_focuses",
+            "context": "primary_scene_$full_user_name",
+            "arguments": {"focuses": ["main_menu", "new_game_menu"]}
           }
         }
       },
@@ -106,6 +118,7 @@
         "execute": [
           {
             "required": "(%loaded_game_mode == 'rally')",
+            "exclude": "%if_lobby",
             "execute": [
               {
                 "call": "set_race_identifier_and_reload_history",
@@ -127,12 +140,15 @@
             ]
           },
           {
+            "exclude": "%if_lobby",
             "call": "respawn_all_players"
           },
           {
+            "exclude": "%if_lobby",
             "playback": "instantiate_transient_objects"
           },
           {
+            "exclude": "%if_lobby",
             "call": "reset_supply_depot_cooldowns"
           },
           {

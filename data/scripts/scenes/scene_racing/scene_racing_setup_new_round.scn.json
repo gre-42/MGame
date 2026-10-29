@@ -14,6 +14,7 @@
     },
     {
       "required": "(%remote_role != 'client')",
+      "exclude": "%if_lobby",
       "call": "reset_countdown_start",
       "arguments": {
         "duration": 5

@@ -76,10 +76,6 @@
     "context": "primary_scene"
   },
   {
-    "playback": "scene_racing_setup_new_round",
-    "context": "primary_scene"
-  },
-  {
     "required": "%if_graphics",
     "execute": {
       "playback": "create_main_menu"
@@ -87,6 +83,11 @@
     "else_": {
       "playback": "create_html_scene_selector"
     }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene",
+    "let": { "if_lobby": true }
   },
   {
     "call": "preload",
