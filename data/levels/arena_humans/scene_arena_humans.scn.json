@@ -63,7 +63,7 @@
   {
     "playback": "scene_racing_setup_new_round",
     "context": "primary_scene",
-    "let": { "if_lobby": true }
+    "let": { "if_lobby": false }
   },
   {
     "call": "preload",
