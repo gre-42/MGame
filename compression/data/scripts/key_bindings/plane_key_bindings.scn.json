@@ -170,6 +170,16 @@
       }
     },
     {
+      "call": "weapon_cycle_key_binding",
+      "arguments": {
+        "local_user_id": "%local_user_id",
+        "id": "plane.cycle_next_weapon",
+        "seat": "%externals_seat",
+        "player": "%player_name",
+        "weapon_increment": 2
+      }
+    },
+    {
       "required": "%if_has_gun",
       "call": "gun_key_binding",
       "arguments": {

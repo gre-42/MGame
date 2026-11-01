@@ -311,15 +311,17 @@
   },
   {
     "id": "plane.next_weapon",
-    "gamepad_button": {"default": {"gamepad_id": 1, "button": "RIGHT_BUMPER"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": 1
   },
   {
     "id": "plane.previous_weapon",
-    "gamepad_button": {"default": {"gamepad_id": 1, "button": "LEFT_BUMPER"}},
     "scroll_wheel_axis": 1,
     "scroll_wheel_sign_and_scale": -1
+  },
+  {
+    "id": "plane.cycle_next_weapon",
+    "gamepad_button": {"default": {"gamepad_id": 1, "button": "LEFT_BUMPER"}}
   },
   {
     "id": "heli.next_weapon",

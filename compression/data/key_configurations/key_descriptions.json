@@ -358,6 +358,13 @@
   {
     "required": "(%flavor == 'extended')",
     "section": "plane",
+    "title": "Cycle weapon",
+    "unique": "plane",
+    "id": "plane.cycle_next_weapon"
+  },
+  {
+    "required": "(%flavor == 'extended')",
+    "section": "plane",
     "title": "Select next opponent",
     "unique": "plane",
     "id": "any.select_next_opponent"
