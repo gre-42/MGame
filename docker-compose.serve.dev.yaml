@@ -24,7 +24,7 @@ services:
       LD_LIBRARY_PATH: Build
       REMOTE_IP: localhost
     volumes:
-      - ./appdata:/root/.vanilla_rally:ro
+      - ./appdata:/root/.vanilla_rally:rw
       - ./data:/app/data:ro
       - ./private:/app/private:ro
       - ./public/server:/app/public/server:ro
