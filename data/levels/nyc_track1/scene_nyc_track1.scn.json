@@ -74,7 +74,7 @@
   {
     "playback": "scene_racing_setup_new_round",
     "context": "primary_scene",
-    "let": { "if_lobby": true }
+    "let": { "if_lobby": "(%remote_role != 'client')" }
   },
   {"playback": "setup_traffic_with_pedestrians", "context": "primary_scene"},
   {
