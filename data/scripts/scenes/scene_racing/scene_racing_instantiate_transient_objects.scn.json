@@ -20,6 +20,7 @@
         {
           "call": "for_each_loaded_site_user",
           "arguments": {
+            "max_users": "%%levels/$loaded_level_id/max_users",
             "content": [
               {
                 "call": "set_preferred_car_spawner",
@@ -236,43 +237,21 @@
       }
     },
     {
-      "call": "define_winner_conditionals",
+      "call": "for_each_winner",
       "arguments": {
         "begin_rank": 0,
-        "end_rank": 3
-      }
-    },
-    {
-      "required": ["%if_playback_winner_0", "%if_winner_rank0_exists"],
-      "playback": "_create_winner_playback",
-      "arguments": {
-        "rank": 0,
-        "playback_speed": "%playback_speed",
-        "playback_car":"$winner0_vehicle",
-        "color": "%winner0_color",
-        "psuffix": "'1'"
-      }
-    },
-    {
-      "required": ["%if_playback_winner_1", "%if_winner_rank1_exists"],
-      "playback": "_create_winner_playback",
-      "arguments": {
-        "rank": 1,
-        "playback_speed": "%playback_speed",
-        "playback_car":"$winner1_vehicle",
-        "color": "%winner1_color",
-        "psuffix": "'2'"
-      }
-    },
-    {
-      "required": ["%if_playback_winner_2", "%if_winner_rank2_exists"],
-      "playback": "_create_winner_playback",
-      "arguments": {
-        "rank": 2,
-        "playback_speed": "%playback_speed",
-        "playback_car":"$winner2_vehicle",
-        "color": "%winner2_color",
-        "psuffix": "'3'"
+        "end_rank": 3,
+        "content": {
+          "required": "%if_playback_winner_$winner_suffix",
+          "playback": "_create_winner_playback",
+          "arguments": {
+            "rank": "%winner_rank",
+            "playback_speed": "%playback_speed",
+            "playback_car": "%winner_vehicle",
+            "color": "%winner_color",
+            "psuffix": "%winner_suffix"
+          }
+        }
       }
     }
   ]
