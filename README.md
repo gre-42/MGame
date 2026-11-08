@@ -42,6 +42,8 @@ For instructions how to add a custom stage, see [CONTRIBUTING](CONTRIBUTING.md).
 ### San Francisco
 ![Screenshot-SF-2025-10-16](media/Screenshot-SF-2025-10-16.jpg)
 
+![Screenshot-SF-night-2026-11-08](media/Screenshot-SF-night-2026-11-08.jpg)
+
 ## Acknowledgments  
 
 Special thanks to the [OpenStreetMap community](https://www.openstreetmap.org/) for
