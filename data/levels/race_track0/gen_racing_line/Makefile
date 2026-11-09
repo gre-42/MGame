@@ -121,9 +121,9 @@ optimize_race_track0: $(RACE_TRACK0).csv Makefile
 	# podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/opt_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
 	# podman exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < opt_mintime.py.patch"
 
-	# Copy and apply patch to plot to SVG.
-	podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/result_plots_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
-	podman exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < result_plots_mintime.py.patch"
+	# # Copy and apply patch to plot to SVG.
+	# podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/result_plots_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
+	# podman exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < result_plots_mintime.py.patch"
 
 	# # Reoptimize curvature
 	# podman exec $(CONTAINER) sed -i 's/"reopt_mintime_solution": False/"reopt_mintime_solution": True/g' /global_racetrajectory_optimization/main_globaltraj.py
