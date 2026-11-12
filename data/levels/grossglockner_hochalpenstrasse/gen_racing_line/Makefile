@@ -1,0 +1,144 @@
+.PHONY: grossglockner_hochalpenstrasse.1.csv optimize_grossglockner_hochalpenstrasse.1 racing_line_grossglockner_hochalpenstrasse.1.m stats stats.1
+
+CONTAINER ?= racing_line
+GROSSGLOCKNER_HOCHALPENSTRASSE ?= grossglockner_hochalpenstrasse
+OUTPUTS_GROSSGLOCKNER_HOCHALPENSTRASSE ?= outputs_grossglockner_hochalpenstrasse
+
+all: optimize_grossglockner_hochalpenstrasse optimize_grossglockner_hochalpenstrasse.1 racing_line_grossglockner_hochalpenstrasse.1.m deploy
+
+grossglockner_hochalpenstrasse.csv: ../../../../Mlib/Mlib/Racing/Racing_Line/osm_to_race_track.py ../map_grossglockner_hochalpenstrasse.osm Makefile
+	PYTHONPATH=PYTHONPATH:../../../../Mlib ../../../../Mlib/Mlib/Racing/Racing_Line/osm_to_race_track.py \
+		../map_grossglockner_hochalpenstrasse.osm \
+		grossglockner_hochalpenstrasse.csv \
+		--translation grossglockner_hochalpenstrasse_t.m \
+		--rotation grossglockner_hochalpenstrasse_R.m \
+		--start_node_id 309250877 \
+		--only_name "Großglockner Hochalpenstraße" \
+		--street_width 11
+
+grossglockner_hochalpenstrasse.1.csv:
+	../../../../Mlib/Mlib/Racing/Racing_Line/racing_line_to_race_track.py \
+		outputs_grossglockner_hochalpenstrasse \
+		grossglockner_hochalpenstrasse.1.csv \
+		--down_sampling 10 \
+		--street_width 5
+
+optimize_grossglockner_hochalpenstrasse.1:
+	make optimize_grossglockner_hochalpenstrasse \
+		CONTAINER=$(CONTAINER) \
+		GROSSGLOCKNER_HOCHALPENSTRASSE=grossglockner_hochalpenstrasse.1 \
+		OUTPUTS_GROSSGLOCKNER_HOCHALPENSTRASSE=outputs_grossglockner_hochalpenstrasse.1
+
+racing_line_grossglockner_hochalpenstrasse.1.m:
+	../../../../Mlib/Mlib/Racing/Racing_Line/racing_line_to_mgame.py \
+		outputs_grossglockner_hochalpenstrasse.1 \
+		racing_line_grossglockner_hochalpenstrasse.1.m \
+		--translation grossglockner_hochalpenstrasse_t.m \
+		--rotation grossglockner_hochalpenstrasse_R.m
+
+deploy:
+	cp racing_line_grossglockner_hochalpenstrasse.1.m ../racing_line_grossglockner_hochalpenstrasse.m
+
+stats:
+	../../../../Mlib/Mlib/Racing/Racing_Line/racing_line_stats.py \
+		outputs_grossglockner_hochalpenstrasse
+
+stats.1:
+	../../../../Mlib/Mlib/Racing/Racing_Line/racing_line_stats.py \
+		outputs_grossglockner_hochalpenstrasse.1
+
+optimize_grossglockner_hochalpenstrasse: $(GROSSGLOCKNER_HOCHALPENSTRASSE).csv Makefile
+	podman run -dit --rm --name $(CONTAINER) racing_line
+	podman exec -w /trajectory_planning_helpers $(CONTAINER) git pull
+	podman exec -w /global_racetrajectory_optimization $(CONTAINER) git pull
+	podman cp $(GROSSGLOCKNER_HOCHALPENSTRASSE).csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
+	podman exec $(CONTAINER) sed -i s/berlin_2018/$(GROSSGLOCKNER_HOCHALPENSTRASSE)/g /global_racetrajectory_optimization/main_globaltraj.py
+
+	# Enable plotting
+	podman exec $(CONTAINER) sed -i 's/"mincurv_curv_lin": False/"mincurv_curv_lin": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+	podman exec $(CONTAINER) sed -i 's/"imported_bounds": False/"imported_bounds": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+	podman exec $(CONTAINER) sed -i 's/"racetraj_vel_3d": False/"racetraj_vel_3d": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+	podman exec $(CONTAINER) sed -i 's/"spline_normals": False/"spline_normals": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+	podman exec $(CONTAINER) sed -i 's/"mintime_plots": False/"mintime_plots": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+
+	# Increase step size by a factor of 2.
+	podman exec $(CONTAINER) sed -i 's/"stepsize_prep": 1.0/"stepsize_prep": 2.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"stepsize_reg": 3.0/"stepsize_reg": 6.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"stepsize_interp_after_opt": 2.0/"stepsize_interp_after_opt": 4.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# # Increase smoothness of controls
+	# podman exec $(CONTAINER) sed -i 's/"penalty_delta": 10.0/"penalty_delta": 40.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	# podman exec $(CONTAINER) sed -i 's/"penalty_F": 0.01/"penalty_F": 0.04/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set maximum velocity to 288kph
+	podman exec $(CONTAINER) sed -i 's/"v_max": 70.0/"v_max": 80.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set power to 400PS.
+	podman exec $(CONTAINER) sed -i 's/"power_max": 230000.0/"power_max": 294200.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set moment of inertia to 2000kg*m²
+	podman exec $(CONTAINER) sed -i 's/"I_z": 1200.0/"I_z": 2000.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Increase maximum driving force to maximum inside friction bounds (vehicle mass is 1200kg).
+	podman exec $(CONTAINER) sed -i 's/"f_drive_max": 7000.0/"f_drive_max": 11760.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Decrease maximum break force to maximum inside friction bounds (vehicle mass is 1200kg).
+	podman exec $(CONTAINER) sed -i 's/"f_brake_max": 20000.0/"f_brake_max": 11760.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Move COM to origin
+	# podman exec $(CONTAINER) sed -i 's/"cog_z": 0.38/"cog_z": 0.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Enable 4 wheel drive
+	podman exec $(CONTAINER) sed -i 's/"k_brake_front": 0.6/"k_brake_front": 0.5/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"k_drive_front": 0.0/"k_drive_front": 0.5/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set f_z0 to 1/4*(vehicle mass=1200kg)*9.8*1.5.
+	podman exec $(CONTAINER) sed -i 's/"f_z0": 3000.0/"f_z0": 4410.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set mue=1.5.
+	podman exec $(CONTAINER) sed -i 's/"mue": 1.0/"mue": 1.5/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Set gravity=9.8.
+	podman exec $(CONTAINER) sed -i 's/"g": 9.81/"g": 9.8/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Deactivate lift coefficients.
+	podman exec $(CONTAINER) sed -i 's/"liftcoeff_front": 0.45/"liftcoeff_front": 0.0/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"liftcoeff_rear": 0.75/"liftcoeff_rear": 0.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Deactive drag coefficient.
+	podman exec $(CONTAINER) sed -i 's/"dragcoeff": 0.75/"dragcoeff": 0.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Enable limitation of accelerations.
+	podman exec $(CONTAINER) sed -i 's/"safe_traj": false/"safe_traj": true/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"ax_pos_safe": null/"ax_pos_safe": 13.5/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"ax_neg_safe": null/"ax_neg_safe": -13.5/g' /global_racetrajectory_optimization/params/racecar.ini
+	podman exec $(CONTAINER) sed -i 's/"ay_safe": null/"ay_safe": 13.5/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Custom options
+	podman exec $(CONTAINER) sed -i 's/closed=true/closed=false/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# # Retain only static forces
+	# podman exec $(CONTAINER) sed -i 's/f_z_fl = f_zstat_fl + f_zlift_fl + f_zdyn_fl/f_z_fl = f_zstat_fl/g' /global_racetrajectory_optimization/params/racecar.ini
+	# podman exec $(CONTAINER) sed -i 's/f_z_fr = f_zstat_fr + f_zlift_fr + f_zdyn_fr/f_z_fr = f_zstat_fr/g' /global_racetrajectory_optimization/params/racecar.ini
+	# podman exec $(CONTAINER) sed -i 's/f_z_rl = f_zstat_rl + f_zlift_rl + f_zdyn_rl/f_z_rl = f_zstat_rl/g' /global_racetrajectory_optimization/params/racecar.ini
+	# podman exec $(CONTAINER) sed -i 's/f_z_rr = f_zstat_rr + f_zlift_rr + f_zdyn_rr/f_z_rr = f_zstat_rr/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# # Copy and apply patch to simplify acceleration ellipse.
+	# podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/opt_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
+	# podman exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < opt_mintime.py.patch"
+
+	# # Copy and apply patch to plot to SVG.
+	# podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/result_plots_mintime.py.patch $(CONTAINER):/global_racetrajectory_optimization/opt_mintime_traj/src/
+	# podman exec -w /global_racetrajectory_optimization/opt_mintime_traj/src $(CONTAINER) bash -c "patch < result_plots_mintime.py.patch"
+
+	# # Reoptimize curvature
+	# podman exec $(CONTAINER) sed -i 's/"reopt_mintime_solution": False/"reopt_mintime_solution": True/g' /global_racetrajectory_optimization/main_globaltraj.py
+
+	# # Patch min-curvature script to plot to SVG
+	# podman cp ../../../../Mlib/Mlib/Racing/Racing_Line/opt_min_curv.py.patch $(CONTAINER):/tmp/
+	# podman exec $(CONTAINER) bash -c "cd /usr/local/lib/python*/dist-packages/trajectory_planning_helpers && mv /tmp/opt_min_curv.py.patch . && patch < opt_min_curv.py.patch"
+
+	podman exec -t $(CONTAINER) venv/bin/python3 /global_racetrajectory_optimization/main_globaltraj.py
+	rm -rf $(OUTPUTS_GROSSGLOCKNER_HOCHALPENSTRASSE)
+	podman cp $(CONTAINER):/global_racetrajectory_optimization/outputs $(OUTPUTS_GROSSGLOCKNER_HOCHALPENSTRASSE)
+	podman stop $(CONTAINER)

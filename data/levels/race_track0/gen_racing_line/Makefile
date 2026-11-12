@@ -48,6 +48,8 @@ stats.1:
 
 optimize_race_track0: $(RACE_TRACK0).csv Makefile
 	podman run -dit --rm --name $(CONTAINER) racing_line
+	podman exec -w /trajectory_planning_helpers $(CONTAINER) git pull
+	podman exec -w /global_racetrajectory_optimization $(CONTAINER) git pull
 	podman cp $(RACE_TRACK0).csv $(CONTAINER):/global_racetrajectory_optimization/inputs/tracks/
 	podman exec $(CONTAINER) sed -i s/berlin_2018/$(RACE_TRACK0)/g /global_racetrajectory_optimization/main_globaltraj.py
 
@@ -110,6 +112,9 @@ optimize_race_track0: $(RACE_TRACK0).csv Makefile
 	podman exec $(CONTAINER) sed -i 's/"ax_pos_safe": null/"ax_pos_safe": 9.0/g' /global_racetrajectory_optimization/params/racecar.ini
 	podman exec $(CONTAINER) sed -i 's/"ax_neg_safe": null/"ax_neg_safe": -9.0/g' /global_racetrajectory_optimization/params/racecar.ini
 	podman exec $(CONTAINER) sed -i 's/"ay_safe": null/"ay_safe": 9.0/g' /global_racetrajectory_optimization/params/racecar.ini
+
+	# Custom options
+	# podman exec $(CONTAINER) sed -i 's/closed=true/closed=false/g' /global_racetrajectory_optimization/params/racecar.ini
 
 	# # Retain only static forces
 	# podman exec $(CONTAINER) sed -i 's/f_z_fl = f_zstat_fl + f_zlift_fl + f_zdyn_fl/f_z_fl = f_zstat_fl/g' /global_racetrajectory_optimization/params/racecar.ini
