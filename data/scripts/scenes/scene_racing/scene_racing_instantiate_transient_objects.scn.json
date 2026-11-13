@@ -161,6 +161,7 @@
                     "max_vertical_angle": 5
                   },
                   "on_finish": {
+                    "required": "%if_graphics",
                     "call": "set_focuses",
                     "context": "primary_scene_$full_user_name",
                     "arguments": {
