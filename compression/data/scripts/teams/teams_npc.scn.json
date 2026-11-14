@@ -19,6 +19,7 @@
         "arguments": {
           "name": "%player_name",
           "team": "%team",
+          "replacement_rank": "%replacement_rank",
           "group": "%spawn_group",
           "trigger": "team_deathmatch",
           "node": {
@@ -53,6 +54,7 @@
         "arguments": {
           "name": "%player_name",
           "team": "%team",
+          "replacement_rank": "%replacement_rank",
           "group": "%spawn_group",
           "trigger": "team_deathmatch",
           "node": {

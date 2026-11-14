@@ -75,19 +75,47 @@
       "spawn": { "vehicle": { "type": "male_mh" } }
     },
     {
+      "required": [["%true", "(%total_user_count >= 3)"]],
+      "inherits_from": ["spawner", "player", "pc"],
+      "controller": "pc", "name": "you", "team": "blue",
+      "user": {
+        "rank": 2
+      },
+      "spawn": { "vehicle": { "type": "male_mh" } }
+    },
+    {
       "inherits_from": ["spawner", "player", "npc"],
       "controller": "npc", "name": "npc1", "team": "red",
+      "user": {
+        "rank": 0
+      },
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "inherits_from": ["spawner", "player", "npc"],
       "controller": "npc", "name": "npc2", "team": "blue",
+      "user": {
+        "rank": 1
+      },
+      "spawn": { "vehicle": { "type": "male_mh" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "npc"],
+      "controller": "npc", "name": "npc3", "team": "red",
+      "user": {
+        "rank": 2
+      },
       "spawn": { "vehicle": { "type": "female_mh" } }
     },
     {
       "inherits_from": ["spawner", "player", "npc"],
-      "controller": "npc", "name": "npc3", "team": "blue",
+      "controller": "npc", "name": "npc4", "team": "blue",
       "spawn": { "vehicle": { "type": "female_mh" } }
+    },
+    {
+      "inherits_from": ["spawner", "player", "npc"],
+      "controller": "npc", "name": "npc5", "team": "blue",
+      "spawn": { "vehicle": { "type": "male_mh" } }
     }
   ]
 }
