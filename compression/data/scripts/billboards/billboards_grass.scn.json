@@ -838,6 +838,13 @@
     {
       "call": "invisible_resource",
       "arguments": {
+        "name": "grass_tbdpec3r",
+        "aggregate_mode": "instances_sorted"
+      }
+    },
+    {
+      "call": "invisible_resource",
+      "arguments": {
         "name": "grass_tbdpec3r_Ground037_Sl_low",
         "aggregate_mode": "instances_sorted"
       }
