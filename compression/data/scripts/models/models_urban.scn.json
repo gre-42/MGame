@@ -824,6 +824,13 @@
           "name": "basketball_hoop",
           "aggregate_mode": "instances_sorted"
         }
+      },
+      {
+        "call": "invisible_resource",
+        "arguments": {
+          "name": "crate",
+          "aggregate_mode": "instances_sorted"
+        }
       }
     ]
   },
