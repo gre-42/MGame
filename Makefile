@@ -102,7 +102,7 @@ ifneq ($(CURSOR),0)
 endif
 PERF_ARGS :=
 ifeq ($(PERF),1)
-	PERF_ARGS := sudo -E perf record -F 99 -a -g --
+	PERF_ARGS := perf record -F 99 -a -g --
 endif
 PRINT_MATERIALS_ARGS :=
 ifeq ($(PMAT),1)
@@ -310,5 +310,5 @@ pack_snap:
 	snapcraft pack
 
 flame_graph:
-	sudo perf script | stackcollapse-perf.pl > out.perf-folded
+	perf script | stackcollapse-perf.pl > out.perf-folded
 	flamegraph.pl out.perf-folded > perf.svg
