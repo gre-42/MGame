@@ -1,0 +1,106 @@
+[
+  {
+    "call": "globals",
+    "arguments": {
+      "loaded_racing_line_track": null,
+      "loaded_racing_line_playback": null,
+      "game_mode": "team_deathmatch",
+      "aggregate_mode": "instances_sorted",
+      "vip_name": "you",
+      "player_seat": "driver",
+      "osm_location": {
+        "position": [0, -220, 0],
+        "rotation": [-90, 0, 0],
+        "scale": 1
+      }
+    }
+  },
+  {"include": "scripts/include_all.scn.json"},
+  {"include": "../jfk_i11l_airport/osm_resource_jfk_i11l_airport.scn.json"},
+  {"include": "create_spectator_cameras_jfk_i11l_airport_td0.scn.json"},
+  {
+    "playback": "scene_racing_static",
+    "arguments": {
+      "if_create_pc_player": false,
+      "if_pc_player_playback": false,
+      "pc_player_playback": null,
+      "pc_player_playback_speedup": null,
+      "stadium_camera_position": [0, 500, 500],
+      "score_board": "player|team|nkills",
+      "osm_map_resource": "osm_resource_jfk_i11l_airport",
+      "# osm_layers": ["file://$__DIR__/../jfk_i11l_airport/map_jfk_i11l_airport.osm"],
+      "osm_layers": ["file:///tmp/map_jfk_i11l_airport.osm"],
+      "if_has_overlay": false,
+      "if_primary_dirtmap": true,
+      "if_extract_alignment_planes": false,
+      "if_gen_grind_lines": false,
+      "if_gen_instances": false,
+      "barrier_depth": 0,
+      "if_with_geographic_mapping": true,
+      "dirtmap_texture": "#dirtmap_dense",
+      "dirtmap_offset": 0,
+      "dirtmap_discreteness": 1,
+      "dirt_scale": 0.5,
+      "dirtmap_left": -500,
+      "dirtmap_right": 500,
+      "dirtmap_bottom": -500,
+      "dirtmap_top": 500,
+      "periodic_reference_time_duration": null,
+      "soft_light_texture": null
+    }
+  },
+  {
+    "call": "instantiate_statics",
+    "context": "primary_scene",
+    "arguments": {
+      "min_vertex_distance": 0.05
+    }
+  },
+  {
+    "declare_macro": "instantiate_transient_objects",
+    "content": []
+  },
+  {
+    "execute": {
+      "playback": "setup_teams",
+      "context": "primary_scene",
+      "arguments": {
+        "players_json": "file://$__DIR__/players.json",
+        "teams_spawn_points_resource": "osm_map",
+        "teams_way_points_resource": "osm_map",
+        "objective": "kill_count"
+      }
+    }
+  },
+  {
+    "playback": "setup_traffic_with_pedestrians",
+    "context": "primary_scene"
+  },
+  {
+    "required": "%if_graphics",
+    "execute": {
+      "playback": "create_main_menu"
+    },
+    "else_": {
+      "playback": "create_html_scene_selector"
+    }
+  },
+  {
+    "playback": "scene_racing_setup_new_round",
+    "context": "primary_scene",
+    "let": { "if_lobby": false }
+  },
+  {
+    "call": "preload",
+    "context": "primary_scene",
+    "arguments": {
+      "files": {
+        "audio_buffers": "file://$__DIR__/preload/audio_buffers.json",
+        "audio_buffer_sequences": "file://$__DIR__/preload/audio_buffer_sequences.json",
+        "resources": "file://$__DIR__/preload/resources.json",
+        "trails": "file://$__DIR__/preload/trails.json"
+      },
+      "throw_if_file_resource_unknown": "%if_graphics"
+    }
+  }
+]

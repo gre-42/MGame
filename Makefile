@@ -22,6 +22,7 @@ PLATFORM_CHAR != $(MAKE) --silent -C Mlib echo_platform_char
 PACKAGE_DIR = $(BUILD_SUBDIR)
 BIN_ARTIFACT_DIR ?= $(SOURCE_C_DIR)/Mlib/$(BUILD_SUBDIR)/Bin
 ASSET_DIRS ?= data
+LEVEL ?= data/levels/main/main.scn.json
 RUN_ARGS ?=
 FILE_EXT_ARGS ?=
 ifeq ($(COMPRESSED),1)
@@ -185,7 +186,7 @@ run:
 	ENABLE_OSM_MAP_CACHE=$(CACHE)                                  \
 	$(LIMIT_ARGS) $(PERF_ARGS) $(GDB_ARGS) "$(BIN_DIR)/render_scene_file"        \
 	    "$(ASSET_DIRS)"                                            \
-	    data/levels/main/main.scn.json                             \
+	    "$(LEVEL)"                                                 \
 	    --app_reldir $(APP_RELDIR)                                 \
 	    --print_render_residual_time                               \
 	    $(SHOW_MOUSE_CURSOR_ARGS)                                  \
