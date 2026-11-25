@@ -28,8 +28,9 @@
       "stadium_camera_position": [0, 500, 500],
       "score_board": "player|team|nkills",
       "osm_map_resource": "osm_resource_jfk_i11l_airport",
-      "# osm_layers": ["file://$__DIR__/../jfk_i11l_airport/map_jfk_i11l_airport.osm"],
-      "osm_layers": ["file:///tmp/map_jfk_i11l_airport.osm"],
+      "osm_layers": [
+        "file://$__DIR__/../jfk_i11l_airport/map_jfk_i11l_airport.osm",
+        "file://$__DIR__/map_jfk_i11l_airport_td0.osm"],
       "if_has_overlay": false,
       "if_primary_dirtmap": true,
       "if_extract_alignment_planes": false,
