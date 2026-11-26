@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='JOSM'>
+  <node id='-46828' action='modify' visible='true' lat='40.6449534017' lon='-73.77820757492' />
+  <node id='-46829' action='modify' visible='true' lat='40.64489635235' lon='-73.77806437663' />
+  <way id='-55934' action='modify' visible='true'>
+    <nd ref='-46828' />
+    <nd ref='-46829' />
+    <tag k='spawn:group' v='player0' />
+    <tag k='spawn_line' v='yes' />
+  </way>
+</osm>
